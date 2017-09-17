@@ -1,24 +1,29 @@
 ---
-title: "Columnas de datos de Eventos de consultas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "eventos de consultas, categoría de eventos"
+title: Consulta las columnas de datos de eventos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de Eventos de consultas
+# <a name="queries-events-data-columns"></a>Columnas de datos de Eventos de consultas
   La categoría de eventos Eventos de consultas tiene las siguientes clases de eventos:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  En las siguientes tablas se muestran las columnas de datos de cada una de estas clases de eventos.  
   
-## Columnas de datos de la clase Query Begin  
+## <a name="query-begin-classdata-columns"></a>Columnas de datos de la clase Query Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 33
 |RequestParameters|44|9|Contiene los parámetros de las consultas con parámetros y los comandos asociados al evento de consulta.|  
 |RequestProperties|45|9|Contiene las propiedades de las solicitudes de XMLA.|  
   
-## Columnas de datos de la clase Query End  
+## <a name="query-end-classdata-columns"></a>Columnas de datos de la clase Query End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -76,7 +81,7 @@ caps.handback.revision: 33
 |TextData|42|9|Contiene los datos de texto asociados al evento de consulta.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de consulta.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Categoría Eventos de consultas](../../analysis-services/trace-events/queries-events-category.md)  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "Descripci&#243;n de esquemas de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Asistente para generar esquemas, esquema de base de datos"
-  - "esquema de base de datos [Analysis Services]"
-  - "esquema relacional [Analysis Services], esquema de base de datos"
-  - "esquema de área de asunto, opciones [Analysis Services]"
-  - "esquema de área de ensayo, opciones [Analysis Services]"
-  - "esquemas, desnormalización"
+title: "Descripción de los esquemas de base de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Schema Generation Wizard, database schema
+- database schema [Analysis Services]
+- relational schema [Analysis Services], database schema
+- subject area schema options [Analysis Services]
+- staging area schema options [Analysis Services]
+- denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Descripci&#243;n de esquemas de base de datos
+# <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
   El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
   
-## Validación  
+## <a name="validation"></a>Validación  
  Antes de comenzar a generar el esquema relacional subyacente, el Asistente para generar esquemas valida los cubos y dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si el asistente detecta errores, se interrumpe e informa de los errores en la ventana Lista de tareas de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Entre los ejemplos de errores que evitan la generación se incluyen los siguientes:  
   
 -   Dimensiones que tienen más de un atributo clave  
@@ -41,11 +46,11 @@ caps.handback.revision: 28
   
 -   Claves suplentes configuradas incorrectamente, como varios atributos que utilizan el tipo de atributo **ScdOriginalID** o un atributo que utiliza **ScdOriginalID** sin estar enlazado a una columna que utiliza el tipo de datos entero.  
   
-## Tablas de dimensión  
+## <a name="dimension-tables"></a>Tablas de dimensión  
  En cada dimensión, el Asistente para generar esquemas genera una tabla de dimensión que debe incluirse en la base de datos del área de asunto. La estructura de una tabla de dimensión depende de las selecciones realizadas al diseñar la dimensión en la que se basa.  
   
  Columnas  
- El asistente genera una columna para los enlaces asociados a cada atributo de la dimensión en la que se basa la tabla de dimensiones, como los enlaces para las propiedades **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn** y **UnaryOperatorColumn** de cada atributo.  
+ El asistente genera una columna para los enlaces asociados a cada atributo de la dimensión en la que se basa la tabla de dimensiones, como los enlaces para las propiedades **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn**y **UnaryOperatorColumn** de cada atributo.  
   
  Relaciones  
  El asistente genera una relación entre la columna de cada atributo primario y la clave principal de la tabla de dimensión.  
@@ -61,11 +66,11 @@ caps.handback.revision: 28
  Traducciones  
  El asistente genera una tabla independiente para contener los valores traducidos de los atributos que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
-## Tablas de hechos  
+## <a name="fact-tables"></a>Tablas de hechos  
  En cada grupo de medida de un cubo, el Asistente para generar esquemas genera una tabla de hechos que debe incluirse en la base de datos del área de asunto. La estructura de la tabla de hechos depende de las selecciones realizadas al diseñar el grupo de medida en el que se basa y las relaciones establecidas entre el grupo de medida y las dimensiones incluidas.  
   
  Columnas  
- El asistente genera una columna por medida, excepto para las medidas que usan la función de agregación **Count**. Dichas medidas no precisan una columna correspondiente en la tabla de hechos.  
+ El asistente genera una columna por medida, excepto para las medidas que usan la función de agregación **Count** . Dichas medidas no precisan una columna correspondiente en la tabla de hechos.  
   
  El asistente también genera una columna para cada columna de atributo de granularidad de cada relación de dimensión normal en el grupo de medida y una o más columnas para los enlaces asociados a cada atributo de una dimensión que tiene una relación de dimensión de hechos con el grupo de medida en el que se basa la tabla, si procede.  
   
@@ -82,8 +87,8 @@ caps.handback.revision: 28
  Traducciones  
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
-## Conversión de tipo de datos y longitudes predeterminadas  
- El Asistente para generar esquemas omite los tipos de datos en todos los casos, excepto para las columnas que usan el tipo de datos **wchar** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tamaño de datos **wchar** traduce directamente al tipo de datos **nvarchar** . Sin embargo, si la longitud especificada de una columna que utiliza el tamaño **wchar** es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
+## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  
+ El Asistente para generar esquemas omite los tipos de datos en todos los casos, excepto para las columnas que usan el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** data type. El tamaño de datos **wchar** traduce directamente al tipo de datos **nvarchar** . Sin embargo, si la longitud especificada de una columna que utiliza el tamaño **wchar** es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
   
  Si un elemento de datos, como el enlace de un atributo, no posee una longitud especificada, se utilizará en la columna la longitud predeterminada que se muestra en la siguiente tabla.  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 28
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Descripción de la generación incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Administrar los cambios en las vistas del origen de datos y orígenes de datos](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

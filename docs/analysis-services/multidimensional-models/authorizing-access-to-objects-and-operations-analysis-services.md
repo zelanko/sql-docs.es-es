@@ -1,33 +1,38 @@
 ---
-title: "C&#243;mo autorizar el acceso a objetos y operaciones (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.general.f1"
-  - "sql13.asvs.roledesignerdialog.membership.f1"
-helpviewer_keywords: 
-  - "derechos de acceso [Analysis Services], usuarios"
-  - "permisos [Analysis Services], usuarios"
-  - "seguridad [Analysis Services], usuarios"
-  - "derechos de acceso de usuario [Analysis Services]"
-  - "conceder permisos [Analysis Services], usuarios"
+title: Autorizar el acceso a objetos y operaciones (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.general.f1
+- sql13.asvs.roledesignerdialog.membership.f1
+helpviewer_keywords:
+- access rights [Analysis Services], users
+- permissions [Analysis Services], users
+- security [Analysis Services], user access
+- user access rights [Analysis Services]
+- granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# C&#243;mo autorizar el acceso a objetos y operaciones (Analysis Services)
+# <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Cómo autorizar el acceso a objetos y operaciones (Analysis Services)
   El acceso de los usuarios que no sean administradores a los cubos, dimensiones y modelos de minería de datos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se obtiene mediante la pertenencia a uno o varios roles de base de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Los administradores crean estos roles de base de datos, conceden permisos de Lectura o de Lectura y escritura en objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego asignan usuarios y grupos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a cada rol.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece los permisos efectivos para un usuario o grupo específico de Windows al combinar los permisos que están asociados con cada rol de base de datos al que el usuario o grupo pertenece. En consecuencia, si un rol de base de datos no concede a un usuario o grupo permiso para ver una dimensión, medida o atributo y otro rol diferente sí lo hace, el usuario o grupo tendrá permiso para ver el objeto.  
@@ -35,7 +40,7 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Los miembros del rol de administrador de servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y los miembros del rol de base de datos que tienen los permisos de Control total (administrador) tienen acceso a todos los datos y metadatos de la base de datos, y no necesitan permisos adicionales para ver objetos específicos. Además, a los miembros del rol de servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se les puede denegar el acceso a ningún objeto de ninguna base de datos. Además, a los miembros de un rol de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tenga los permisos de Control total (administrador) no se les puede denegar el acceso a ningún objeto de dicha base de datos. Se pueden autorizar operaciones administrativas especializadas, como el procesamiento, a través de roles independientes con menos permisos. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md) para obtener más información.  
   
-## Lista de roles definidos para la base de datos  
+## <a name="list-roles-defined-for-your-database"></a>Lista de roles definidos para la base de datos  
  Los administradores pueden ejecutar una simple consulta DMV en SQL Server Management Studio para obtener una lista de todos los roles definidos en el servidor.  
   
 1.  En SSMS, haga clic con el botón derecho en una base de datos y seleccione **Nueva consulta** | **MDX**.  
@@ -48,7 +53,7 @@ caps.handback.revision: 35
   
      Los resultados incluyen el nombre de la base de datos, una descripción, el nombre de los roles y la fecha de la última modificación. Con esta información como punto de partida, puede ir a bases de datos individuales para comprobar la pertenencia y los permisos de un rol concreto.  
   
-## Introducción general descendente a las autorizaciones en Analysis Services  
+## <a name="top-down-overview-of-analysis-services-authorization"></a>Introducción general descendente a las autorizaciones en Analysis Services  
  Esta sección trata sobre el flujo de trabajo básico para configurar permisos.  
   
  **Paso 1: Administración de servidores**  
@@ -66,7 +71,7 @@ caps.handback.revision: 35
  Las tareas de procesamiento se pueden aislar de otras funciones administrativas, de forma que los administradores de servidor y de base de datos puedan delegar esta tarea a otras personas o bien, configurar un procesamiento desatendido mediante la especificación de cuentas de servicio que ejecuten software de programación. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md) para obtener más información.  
   
 > [!NOTE]  
->  Los usuarios no necesitan ningún permiso para las tablas relacionales en la base de datos relacional subyacente desde la que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] carga sus datos y no necesitan ningún permiso en el nivel de archivo para el equipo en el que se está ejecutando la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Los usuarios no necesitan ningún permiso para las tablas relacionales en la base de datos relacional subyacente desde la que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] carga sus datos y no necesitan ningún permiso en el nivel de archivo para el equipo en el que se está ejecutando la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **Paso 4 (opcional): Permitir o denegar el acceso a objetos interiores del cubo**  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 35
   
  También puede modificar permisos de acuerdo a la identidad del usuario. Por lo general, esta acción se denomina seguridad dinámica y se implementa con la función [UserName &#40;MDX&#41;](../../mdx/username-mdx.md).  
   
-## Procedimientos recomendados  
+## <a name="best-practices"></a>Procedimientos recomendados  
  Para administrar con más eficacia los permisos, se recomienda un enfoque similar al siguiente:  
   
 1.  Cree roles según la función (por ejemplo, dbadmin, cubedeveloper, processadmin), de forma que independientemente de quien ostente el rol, pueda ver rápidamente lo que permite hacer dicho rol. Según se dijo anteriormente, se pueden definir los roles en la definición del modelo, de forma que esos roles se mantienen en implementaciones posteriores de la solución.  
@@ -83,7 +88,7 @@ caps.handback.revision: 35
   
 3.  Genere scripts en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de forma que pueda replicar rápidamente las asignaciones de roles en cualquier ubicación donde se vuelva a implementar el modelo a partir de sus archivos de origen en un servidor. Vea [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) para obtener información sobre cómo generar rápidamente un script.  
   
-4.  Adopte una convención de nomenclatura que refleje el ámbito y la pertenencia del rol. Los nombres de rol solo se ven en las herramientas de diseño y de administración, por tanto, use una convención de nomenclatura que tenga sentido para los especialistas en seguridad de cubos. Por ejemplo, **processadmin-windowsgroup1** indica acceso de lectura y derechos de procesamiento para las personas de la organización cuyas cuentas de usuario de Windows individuales pertenezcan al grupo de seguridad **windowsgroup1**.  
+4.  Adopte una convención de nomenclatura que refleje el ámbito y la pertenencia del rol. Los nombres de rol solo se ven en las herramientas de diseño y de administración, por tanto, use una convención de nomenclatura que tenga sentido para los especialistas en seguridad de cubos. Por ejemplo, **processadmin-windowsgroup1** indica acceso de lectura y derechos de procesamiento para las personas de la organización cuyas cuentas de usuario de Windows individuales pertenezcan al grupo de seguridad **windowsgroup1** .  
   
      Si incluye información sobre la cuenta le resultará útil para llevar un seguimiento de las cuentas que se usan en los diversos roles. Dado que los roles se van sumando unos a otros, los roles combinados asociados a **windowsgroup1** componen el conjunto efectivo de permisos para las personas que pertenecen a ese grupo de seguridad.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 35
   
  Si aplica un enfoque como este, minimizará los cambios en las definiciones de rol y las pertenencias a roles del modelo, y además aportará visibilidad a las asignaciones de rol, lo cual facilita la implementación y mantenimiento de los permisos para los cubos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  

@@ -1,39 +1,44 @@
 ---
-title: "Gr&#225;fico de beneficios (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "precisión, gráficos"
-  - "ingresos, estimar"
-  - "beneficios, estimar"
-  - "gráficos [Analysis Services]"
-  - "gráficos de beneficios [Analysis Services]"
+title: "Gráfico de beneficios (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accuracy, charting
+- revenue, estimating
+- benefits, estimating
+- charts [Analysis Services]
+- profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d2916b5895028aebea5b05f28a09ad7432e509f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Gr&#225;fico de beneficios (Analysis Services - Miner&#237;a de datos)
+# <a name="profit-chart-analysis-services---data-mining"></a>Gráfico de beneficios (Analysis Services - Minería de datos)
   Un gráfico de beneficios muestra la rentabilidad estimada asociada al uso de un modelo de minería de datos. Por ejemplo, suponga que su modelo predice con qué clientes debe ponerse en contacto una compañía en un escenario empresarial. En ese caso, agregaría al gráfico de beneficios información sobre el costo de realizar la campaña de envío de correo directo. Entonces, en el gráfico completo puede ver el beneficio estimado si se dirige correctamente a los clientes en comparación con si se pone en contacto con los clientes de forma aleatoria.  
   
-## Crear un gráfico de beneficios  
+## <a name="build-a-profit-chart"></a>Crear un gráfico de beneficios  
  Un gráfico de beneficios es similar a un gráfico de mejora respecto al modelo predictivo. Empiece creando un gráfico de elevación y, después, agregue la información de costo y beneficios.  
   
  Para crear un gráfico de beneficios, debe tener un modelo existente.  
   
  En este ejemplo, hemos utilizado el modelo de árbol de decisiones de correo directo. El modelo identifica los clientes que es probable que compren una bicicleta. Puede aplicar el **Gráfico de beneficios** para determinar a cuántos de sus clientes debe dirigirse para maximizar el beneficio.  
   
- Si no tiene el modelo de ejemplo, puede crearlo mediante el [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ Si no tiene el modelo de ejemplo, puede crearlo mediante el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 1.  Abra el generador de gráficos de precisión de minería de datos.  
   
@@ -70,12 +75,12 @@ caps.handback.revision: 23
   
 8.  El gráfico se actualiza para mostrar la curva de beneficios.  
   
-## Descripción del gráfico de beneficios  
+## <a name="understanding-the-profit-chart"></a>Descripción del gráfico de beneficios  
  El diagrama siguiente muestra un gráfico basado en estos parámetros. El eje Y del gráfico representa el beneficio, mientras que el eje X representa el porcentaje de los clientes con los que se ha puesto en contacto a través de la campaña de correo directo.  
   
  Como se puede ver aquí, se puede usar un gráfico de beneficios para comparar varios modelos, siempre y cuando todos ellos predigan el mismo atributo discreto.  
   
- ![un gráfico de beneficios que compara tres modelos](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "un gráfico de beneficios que compara tres modelos")  
+ ![comparar tres modelos de gráfico de beneficios](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "comparar tres modelos de gráfico de beneficios")  
   
  Observe la línea gris vertical del gráfico. A medida que hace clic y arrastra la línea, la información sobre herramientas muestra el porcentaje de la población de destino que se incluye en la curva en ese momento.  
   
@@ -83,21 +88,21 @@ caps.handback.revision: 23
   
  Por ejemplo, si utilizara este modelo para decidir a quién va a enviar material promocional, podría decidir dirigirse al 25 % de la población, según las probabilidades de predicción. Sin embargo, el área que hay bajo la curva de beneficios del gráfico es mayor entre el 40 y el 70 por ciento, lo que indica que si se envía el correo a más personas, puede aumentar los ingresos, incluso aunque solo responda un porcentaje global menor.  
   
-## Guardar gráficos  
+## <a name="saving-charts"></a>Guardar gráficos  
  Al crear un gráfico de precisión o un gráfico de beneficios no se crea ningún objeto en el servidor. En su lugar, se ejecutan consultas en un modelo existente y se representan los resultados en el visor. Si necesita guardar los resultados, debe copiar el gráfico o los resultados a Excel u otro archivo.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  Los temas siguientes contienen más información acerca de cómo puede crear y usar gráficos de precisión.  
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Incluye una visita guiada que explica cómo se crea un gráfico de mejora respecto al modelo predictivo para el modelo de distribución de correo directo.|[Tutorial básico de minería de datos](../Topic/Basic%20Data%20Mining%20Tutorial.md)<br /><br /> [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)|  
+|Incluye una visita guiada que explica cómo se crea un gráfico de mejora respecto al modelo predictivo para el modelo de distribución de correo directo.|[Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
 |Explica los tipos de gráficos relacionados.|[Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Describe la validación cruzada en los modelos y estructuras de minería de datos.|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Describe los pasos necesarios para crear gráficos de mejora respecto al modelo predictivo y otros gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+ [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

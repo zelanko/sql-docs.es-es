@@ -1,24 +1,29 @@
 ---
-title: "Borrar las memorias cach&#233; de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Borrar las Analysis Services las memorias caché | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Borrar las memorias cach&#233; de Analysis Services
+# <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
   Analysis Services almacena los datos en memoria caché para mejorar el rendimiento de las consultas. En este tema se proporcionan recomendaciones para usar el comando ClearCache de XMLA con el fin de borrar las memorias caché creadas en respuesta a una consulta MDX. Los efectos de ejecutar ClearCache varían dependiendo de que se use un modelo tabular o multidimensional.  
   
  **Cuándo conviene borrar la memoria caché para los modelos multidimensionales**  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
  En comparación con las recomendaciones para borrar las memorias caché de modelos multidimensionales durante las pruebas de rendimiento, no hay ninguna recomendación general para borrar las memorias caché de modelos tabulares. Si no está administrando la implementación de un modelo tabular que contiene información confidencial, no hay ninguna tarea administrativa específica que requiera borrar la memoria caché.  
   
-## Borrar la memoria caché para los modelos de Analysis Services  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Borrar la memoria caché para los modelos de Analysis Services  
  Para borrar la memoria caché, use XMLA y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede borrar la memoria caché en el nivel de base de datos, cubo, dimensión o tabla, o grupo de medida. Los pasos siguientes para borrar la memoria caché en el nivel de base de datos son aplicables a los modelos tanto multidimensionales como tabulares.  
   
 > [!NOTE]  
@@ -47,15 +52,15 @@ caps.handback.revision: 11
   
  La acción de borrar la memoria caché requiere proporcionar un identificador de objeto a la instrucción **ClearCache** en una consulta XMLA. En el primer paso de este tema se explica cómo obtener un identificador de objeto.  
   
-#### Paso 1: obtener el identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Paso 1: obtener el identificador de objeto  
   
-1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un objeto, seleccione **Propiedades** y copie el valor de la propiedad ID en el panel **Propiedades**. Este enfoque funciona para una base de datos, cubo, dimensión o tabla.  
+1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un objeto, seleccione **Propiedades**y copie el valor de la propiedad ID en el panel **Propiedades** . Este enfoque funciona para una base de datos, cubo, dimensión o tabla.  
   
 2.  Para obtener el identificador de grupo de medida, haga clic con el botón derecho en el grupo de medida y seleccione **Incluir grupo de medidas como**. Elija **Crear** o **Modificar**y envíe la consulta a una ventana. El identificador del grupo de medida estará visible en la definición del objeto. Copie el identificador de la definición del objeto.  
   
-#### Paso 2: ejecutar la consulta  
+#### <a name="step-2-run-the-query"></a>Paso 2: ejecutar la consulta  
   
-1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en una base de datos, señale **Nueva consulta** y seleccione **XMLA**.  
+1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en una base de datos, señale **Nueva consulta**y seleccione **XMLA**.  
   
 2.  Copie el ejemplo de código siguiente en la ventana de consulta XMLA. Cambie **DatabaseID** al identificador de la base de datos en la conexión actual.  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## Vea también  
- [Crear scripts para tareas administrativas en Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>Vea también  
  [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

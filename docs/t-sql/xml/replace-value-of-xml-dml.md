@@ -1,0 +1,206 @@
+---
+title: Reemplace el valor de (XML DML) | Documentos de Microsoft
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- XML DML [SQL Server]
+- update keyword
+- replacement values [XML DML]
+- updating node values
+- replace value of XML DML statement
+ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
+caps.latest.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 7b559d81e2cca495885f740092ac182a4554a012
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Actualiza el valor de un nodo en el documento.  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+replace value of Expression1   
+with Expression2  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *Expression1*  
+ Identifica un nodo cuyo valor se va a actualizar. Debe identificar un solo nodo. Es decir, *Expression1* debe ser un singleton estático. Si el XML tiene un tipo, el tipo del nodo debe ser simple. Si se seleccionan varios nodos, se producirá un error. Si *Expression1* se devuelven sin errores y devuelve una secuencia vacía, se reemplazará ningún valor. *Expression1* debe devolver un solo elemento que tiene un tipo simplemente contenido (tipos de lista o atómicos), un nodo de texto o un nodo de atributo. *Expression1* no puede ser un tipo de unión, un tipo complejo, una instrucción de procesamiento, un nodo de documento o un nodo de comentario. De lo contrario, se devolverá un error.  
+  
+ *Expression2*  
+ Identifica el nuevo valor del nodo. Esto puede deberse a una expresión que devuelve un nodo de tipo simple, **data()** se usará de forma implícita. Si el valor es una lista de valores, el **actualizar** instrucción reemplaza el valor antiguo por la lista. Modifica una instancia XML con tipo, *Expression2* debe ser del mismo tipo o un subtipo de *expresión*1. En caso contrario, se devolverá un error. Modifica una instancia XML sin tipo, *Expression2* debe ser una expresión que se pueda atomizar. En caso contrario, se devolverá un error.  
+  
+## <a name="examples"></a>Ejemplos  
+ Los siguientes ejemplos de la **reemplazar el valor de** instrucción XML DML muestra cómo actualizar los nodos de un documento XML.  
+  
+### <a name="a-replacing-values-in-an-xml-instance"></a>A. Reemplazar valores en una instancia XML  
+ En el ejemplo siguiente, primero se asigna una instancia de documento a una variable de **xml** tipo. A continuación, **reemplazar el valor de** instrucciones XML DML actualizan valores en el documento.  
+  
+```  
+DECLARE @myDoc xml;  
+SET @myDoc = '<Root>  
+<Location LocationID="10"   
+            LaborHours="1.1"  
+            MachineHours=".2" >Manufacturing steps are described here.  
+<step>Manufacturing step 1 at this work center</step>  
+<step>Manufacturing step 2 at this work center</step>  
+</Location>  
+</Root>';  
+SELECT @myDoc;  
+  
+-- update text in the first manufacturing step  
+SET @myDoc.modify('  
+  replace value of (/Root/Location/step[1]/text())[1]  
+  with     "new text describing the manu step"  
+');  
+SELECT @myDoc;  
+-- update attribute value  
+SET @myDoc.modify('  
+  replace value of (/Root/Location/@LaborHours)[1]  
+  with     "100.0"  
+');  
+SELECT @myDoc;  
+```  
+  
+ Tenga en cuenta que el destino que se actualiza debe ser, como máximo, un nodo que se especifica de forma explícita en la expresión de ruta de acceso agregando un "[1]" al final de la expresión.  
+  
+### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Utilizar la expresión if para determinar el valor de reemplazo  
+ Puede especificar el **si** expresión en Expression2 de la **reemplazar el valor de XML DML** instrucción, como se muestra en el ejemplo siguiente. Expression1 identifica que se debe actualizar el atributo LaborHours del primer centro de trabajo. Expression2 utiliza una **si** expresión para determinar el nuevo valor del atributo LaborHours.  
+  
+```  
+DECLARE @myDoc xml  
+SET @myDoc = '<Root>  
+<Location LocationID="10"   
+            LaborHours=".1"  
+            MachineHours=".2" >Manu steps are described here.  
+<step>Manufacturing step 1 at this work center</step>  
+<step>Manufacturing step 2 at this work center</step>  
+</Location>  
+</Root>'  
+--SELECT @myDoc  
+  
+SET @myDoc.modify('  
+  replace value of (/Root/Location[1]/@LaborHours)[1]  
+  with (  
+       if (count(/Root/Location[1]/step) > 3) then  
+         "3.0"  
+       else  
+          "1.0"  
+      )  
+')  
+SELECT @myDoc  
+```  
+  
+### <a name="c-updating-xml-stored-in-an-untyped-xml-column"></a>C. Actualizar XML almacenado en una columna XML sin tipo  
+ En el ejemplo siguiente se actualiza XML almacenado en una columna:  
+  
+```  
+drop table T  
+go  
+CREATE TABLE T (i int, x xml)  
+go  
+INSERT INTO T VALUES(1,'<Root>  
+<ProductDescription ProductID="1" ProductName="Road Bike">  
+<Features>  
+  <Warranty>1 year parts and labor</Warranty>  
+  <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>  
+</Features>  
+</ProductDescription>  
+</Root>')  
+go  
+-- verify the current <ProductDescription> element  
+SELECT x.query(' /Root/ProductDescription')  
+FROM T  
+-- update the ProductName attribute value  
+UPDATE T  
+SET x.modify('  
+  replace value of (/Root/ProductDescription/@ProductName)[1]  
+  with "New Road Bike" ')  
+-- verify the update  
+SELECT x.query(' /Root/ProductDescription')  
+FROM T  
+```  
+  
+### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D. Actualizar XML almacenado en una columna XML con tipo  
+ En este ejemplo se reemplazan valores de un documento de instrucciones de fabricación almacenado en una columna XML con tipo.  
+  
+ En el ejemplo, se crea en primer lugar una tabla (T) con una columna XML con tipo en la base de datos AdventureWorks. A continuación, se copia en la tabla T una instancia XML con instrucciones de fabricación procedentes de la columna Instructions de la tabla ProductModel. Después se aplican las inserciones a XML en la tabla T.  
+  
+```  
+use AdventureWorks  
+go  
+drop table T  
+go  
+create table T(ProductModelID int primary key,   
+Instructions xml (Production.ManuInstructionsSchemaCollection))  
+go  
+insert  T   
+select ProductModelID, Instructions  
+from Production.ProductModel  
+where ProductModelID=7  
+go  
+--insert a new location - <Location 1000/>.   
+update T  
+set Instructions.modify('  
+  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
+           <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
+         </MI:Location>  
+  as first  
+  into   (/MI:root)[1]  
+')  
+go  
+select Instructions  
+from T  
+go  
+-- Now replace manu. tool in location 1000  
+update T  
+set Instructions.modify('  
+  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
+  with   "screwdriver"  
+')  
+go  
+select Instructions  
+from T  
+-- Now replace value of lot size  
+update T  
+set Instructions.modify('  
+  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  replace value of (/MI:root/MI:Location/@LotSize)[1]   
+  with   500 cast as xs:decimal ?  
+')  
+go  
+select Instructions  
+from T  
+```  
+  
+ Tenga en cuenta el uso de **conversión** al reemplazar el valor LotSize. Esto es necesario cuando el valor debe ser de un tipo específico. En este ejemplo, si el valor fuera 500, la conversión explícita no sería necesaria.  
+  
+## <a name="see-also"></a>Vea también  
+ [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Lenguaje de manipulación de datos XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+  
+  
+

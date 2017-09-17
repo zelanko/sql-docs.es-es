@@ -1,31 +1,36 @@
 ---
-title: "Cambiar el nombre de una instancia de Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instancias de Analysis Services, cambiar nombre"
-  - "cambiar el nombre de instancias de Analysis Services"
-  - "nombres [Analysis Services], cambiar nombre de instancias"
-  - "nombres [Analysis Services]"
+title: Cambiar el nombre de una instancia de Analysis Services | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cambiar el nombre de una instancia de Analysis Services
-  Puede cambiar el nombre de una instancia existente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si usa la herramienta **Cambiar nombre de instancia**, que se instala con Management Studio (instalación web).  
+# <a name="rename-an-analysis-services-instance"></a>Cambiar el nombre de una instancia de Analysis Services
+  Puede cambiar el nombre de una instancia existente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si usa la herramienta **Cambiar nombre de instancia** , que se instala con Management Studio (instalación web).  
   
 > [!IMPORTANT]  
 >  Cuando se cambia el nombre de la instancia, la herramienta Cambiar nombre de instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta con privilegios elevados, actualizando el nombre de servicio de Windows, las cuentas de seguridad y las entradas de Registro asociados a esa instancia. Para garantizar que estas acciones se realizan, asegúrese de ejecutar esta herramienta como administrador del sistema local.  
@@ -35,9 +40,9 @@ caps.handback.revision: 53
 > [!NOTE]  
 >  No se admite el uso de la herramienta para cambiar el nombre de instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un entorno de clúster.  
   
-### Para cambiar el nombre de una instancia de Analysis Services  
+### <a name="to-rename-an-instance-of-analysis-services"></a>Para cambiar el nombre de una instancia de Analysis Services  
   
-1.  Inicie la herramienta **Cambiar nombre de instancia**, **asinstancerename.exe**, en C:\Archivos de programa (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
+1.  Inicie la herramienta **Cambiar nombre de instancia** , **asinstancerename.exe**, en C:\Archivos de programa (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
   
 2.  En el cuadro de diálogo **Cambiar nombre de instancia** , seleccione en la lista **Instancia cuyo nombre se cambiará** la instancia cuyo nombre desea cambiar.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 53
   
      La instancia de Analysis Services se detendrá y reiniciará como parte del cambio de nombre.  
   
-### Lista de comprobación posterior al cambio de nombre  
+### <a name="post-rename-checklist"></a>Lista de comprobación posterior al cambio de nombre  
   
 1.  Para reanudar el acceso a las bases de datos que se ejecutan en la instancia a la que se cambia el nombre, deberá actualizar manualmente las conexiones de datos en Excel u otras aplicaciones cliente. También debe comprobar las conexiones predefinidas, como orígenes de datos compartidos de Reporting Services, archivos ODC de Exce o archivos de conexión de modelos semánticos BI, que puedan hacer referencia a la instancia cuyo nombre acaba de cambiar. Para más información, vea [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 53
   
      En el ejemplo siguiente se propociona una ilustración. Suponga que ha instalado un servidor en modo tabular como una instancia denominada “Tabular” utilizando la cuenta virtual predeterminada, dando lugar a la siguiente configuración:  
   
-    1.  Nombre de instancia = \<servidor>\TABULAR  
+    1.  Nombre de instancia = \<servidor > \TABULAR  
   
     2.  Nombre de servicio = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      Suponga ahora suponga que cambia el nombre de la instancia a “TAB2”. Como consecuencia del cambio de nombre, la configuración podría tener ahora el siguiente aspecto:  
   
-    1.  Nombre de instancia = \<servidor>\TAB2  
+    1.  Nombre de instancia = \<servidor > \TAB2  
   
     2.  Nombre de servicio = MSOLAP$TAB2  
   

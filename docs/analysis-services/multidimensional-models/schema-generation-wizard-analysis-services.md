@@ -1,26 +1,31 @@
 ---
-title: "Asistente para generar esquemas (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "esquema relacional [Analysis Services]"
+title: "Asistente para la generación de esquemas (Analysis Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Asistente para generar esquemas (Analysis Services)
+# <a name="schema-generation-wizard-analysis-services"></a>Asistente para generar esquemas (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] admite dos métodos para trabajar con esquemas relacionales al definir objetos OLAP en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Normalmente, los objetos OLAP se definen en función de un modelo de datos lógico creado en una vista de origen de datos de un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta vista del origen de datos se define en función de elementos de esquema de uno o varios orígenes de datos relacionales, personalizados en la vista del origen de datos.  
   
  Como alternativa, puede definir los objetos OLAP en primer lugar, y después generar una vista del origen de datos, un origen de datos y el esquema de la base de datos relacional subyacente que admite estos objetos OLAP. Esta base de datos relacional se conoce como base de datos del área de asunto.  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
  Como regla general, todo cambio que se realice en un objeto generado originalmente mediante el Asistente para generar esquemas se sobrescribe cuando el Asistente para generar esquemas vuelve a generar el objeto. La principal excepción a esta regla es cuando se agregan columnas a una tabla que haya generado el Asistente para generar esquemas. En este caso, el Asistente para generar esquemas conserva las columnas que se hayan agregado a la tabla, así como los datos de dichas columnas.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  La tabla siguiente contiene una lista de temas adicionales en los que se explica cómo trabajar con el Asistente para generar esquemas.  
   
 |Tema|Description|  
@@ -44,7 +49,7 @@ caps.handback.revision: 16
 |[Descripción de esquemas de base de datos](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|Describe el esquema que se genera para las bases de datos del área de asunto y del área de ensayo.|  
 |[Descripción de la generación incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|Describe las capacidades de generación incremental del Asistente para generar esquemas.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Orígenes de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Orígenes de datos admitidos &#40;SSAS - Multidimensionales&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

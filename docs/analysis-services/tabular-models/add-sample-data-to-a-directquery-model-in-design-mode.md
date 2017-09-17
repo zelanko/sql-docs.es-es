@@ -1,22 +1,30 @@
 ---
-title: "Agregar datos de ejemplo a un modelo de DirectQuery en el modo de dise&#241;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar datos de ejemplo con un modelo de DirectQuery en modo de diseño | Documentos de Microsoft"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c470244cfbf90ba7f2c65395a9a0c39064a55bb1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Agregar datos de ejemplo a un modelo de DirectQuery en el modo de dise&#241;o
+# <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Agregar datos de ejemplo a un modelo DirectQuery en el modo de diseño
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
  En el modo DirectQuery, las particiones de tablas se usan para crear subconjuntos de datos de ejemplo usados durante el diseño de modelos, o bien para crear alternativas de una vista de datos completa.
  
  Al implementar un modelo tabular de DirectQuery, solo se permite una partición por tabla y, de forma obligatoria, esa partición tiene que ser de vista de datos completa. El resto de las particiones son sustituciones de la vista de datos completa o son datos de ejemplo. En este tema, vamos a describir cómo se crea una partición de ejemplo con un subconjunto de datos.
@@ -28,14 +36,14 @@ Pero se puede agregar una cantidad más pequeña de datos de ejemplo a la base d
 > [!TIP]  
 >  Incluso en el modo DirectQuery de un modelo vacío, siempre se puede ver un pequeño conjunto de filas integrado para cada tabla. En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en **Tabla** > **Propiedades de tabla** para ver el conjunto de datos de 50 filas.  
   
-## Crear una partición de ejemplo
- Estas instrucciones son para los modelos tabulares creados o actualizados en el nivel de compatibilidad 1200. Los modelos en niveles de compatibilidad inferiores usan otras propiedades para obtener los datos almacenados en caché. Vea las descripciones de las propiedades en [Habilitar el modo DirectQuery en SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md).  
+## <a name="create-a-sample-partition"></a>Crear una partición de ejemplo
+ Estas instrucciones son para los modelos tabulares creados o actualizados al nivel de compatibilidad 1200 o superior. Los modelos en niveles de compatibilidad inferiores usan otras propiedades para obtener los datos almacenados en caché. Vea las descripciones de las propiedades en [Habilitar el modo DirectQuery en SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) .  
   
 1.  En la vista Diagrama o la vista de datos de SQL Server Data Tools, haga clic en una tabla de hechos para abrir su página de propiedades. En las tablas de hechos se proporcionan las medidas y los datos numéricos agregados del modelo. Puede tener más de una.  
   
 2.  Haga clic en **Tabla** > **Propiedades** para abrir el cuadro de diálogo Administración de particiones.  
   
-    Como puede ver, la partición predeterminada es **(DirectQuery) \<nombre de tabla>**. Esta es la vista de datos completa. No elimine esta partición. Esta partición se usará cuando se implemente el modelo.  
+    Tenga en cuenta la partición predeterminada es **(Direct Query) \<nombre de tabla >**. Esta es la vista de datos completa. No elimine esta partición. Esta partición se usará cuando se implemente el modelo.  
   
 4.  Seleccione la partición y haga clic en **Copiar**.  
 
@@ -54,7 +62,7 @@ Pero se puede agregar una cantidad más pequeña de datos de ejemplo a la base d
   
 6.  Haga clic en **Validar** para ver si hay errores de sintaxis.  
   
-     Tenga en cuenta que, en el modo DirectQuery, además de los botones **Nuevo**, **Copiar**y **Eliminar** del cuadro de diálogo Particiones, también hay un botón de alternancia que puede mostrarse como **Establecer como Ejemplo** o como **Establecer como DirectQuery**.  
+     Tenga en cuenta que, en el modo DirectQuery, además de los botones **Nuevo** , **Copiar**y **Eliminar** del cuadro de diálogo Particiones, también hay un botón de alternancia que puede mostrarse como **Establecer como Ejemplo** o como **Establecer como DirectQuery**.  
   
      Solo una partición puede ser la partición de DirectQuery. Para controlar esto, seleccione cualquier partición definida para la tabla y haga clic en **Establecer como Ejemplo**.  
   

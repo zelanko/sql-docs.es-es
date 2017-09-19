@@ -126,7 +126,7 @@ ms.lasthandoff: 08/28/2017
 |Componentes que se comparten entre todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Ruta de acceso fija|  
   
 >[!WARNING]
->Asegúrese de que la carpeta \Archivos de programa\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ esté protegida con permisos limitados.  
+>Asegúrese de que la carpeta \Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ esté protegida con permisos limitados.  
   
 Tenga en cuenta que la unidad predeterminada para las ubicaciones de archivo es *systemdrive*, normalmente la unidad C. Las rutas de acceso de instalación para las características secundarias vienen determinadas por la ruta de instalación de la característica primaria.  
   

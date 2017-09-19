@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
 ms.contentlocale: es-es
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Nuevos y actualizados recientemente: documentos de SQL Server
@@ -34,7 +34,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **23-05-2017** &nbsp; a &nbsp; **17-07-2017**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; **18-07-2017** &nbsp; a &nbsp; **11-09-2017**
 - *Área temática:* &nbsp; **SQL Server**.
 
 
@@ -47,19 +47,13 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [Ediciones y las características admitidas de SQL Server 2017](editions-and-components-of-sql-server-2017.md)
-2. [Configuración de SQL Server para enviar comentarios a Microsoft](sql-server-customer-feedback.md)
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
-
-Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
+1. [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+2. [Notas de la versión de SQL Server 2012](sql-server-2012-release-notes.md)
+3. [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+4. [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+5. [Notas de la versión de SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
+6. [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+7. [Visor de Ayuda y contenido sin conexión para SQL Server](sql-server-help-installation.md)
 
 
 
@@ -75,48 +69,17 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 
 
-&nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd"></a>1. &nbsp; [Programa para la mejora de la experiencia del usuario de SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
-*Actualizado: 14-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Siguiente](#TitleNum_2))
-
-<!-- Source markdown line 25.  ms.author= "sstein".  -->
 
 &nbsp;
 
+<a name="compactupdatedlist"/>
 
-<!-- git diff --ignore-all-space --unified=0 e35a35aaa3c8ee8a4419b6318ebff9db027aa73d 16a623cf0ab4c9e6d7a17f4617804432c863ac86  (PR=2038  ,  Filename=customer-experience-improvement-program-for-sql-server-data-tools.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=be884b2d1b316506592f939167c5be91ddc2a9f6) -->
+## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
 
+Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-
- El Programa para la mejora de la experiencia del usuario está concebido para ayudar a Microsoft a mejorar sus productos a lo largo del tiempo. El programa recopila información sobre el hardware del equipo y la forma en que los usuarios usan el producto sin interrumpir las tareas que realizan en el equipo. La información recopilada ayuda a Microsoft a identificar las características que se deben mejorar. En este documento se explica cómo participar en el CEIP de SQL Server Data Tools (SSDT) para Visual Studio 2017, Visual Studio 2015 y Visual Studio 2013. Asimismo, también se incluyen los detalles para dejar de hacerlo.  
-
-**Elección y control sobre el CEIP y SQL Server Data Tools para Visual Studio 2017**
-
- SSDT para Visual Studio 2017 es la herramienta de modelado de datos incluida en SQL Server 2017. Usa las opciones del CEIP integradas en Visual Studio 2017. Puede obtener más información sobre cómo enviar comentarios a través del CEIP de Visual Studio 2017 en este [documento de ayuda de Visual Studio](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback).  
-  
- En las versiones preliminares de SQL Server 2017, el CEIP está activado de forma predeterminada. Puede desactivarlo o volver a activarlo con las instrucciones siguientes.  
-  
- **En Visual Studio (se aplica a las instalaciones de idioma completo de Visual Studio 2017)**  
-  
- Si ejecuta el programa de instalación de SSDT en un equipo que ya tiene Visual Studio, solo se agregan las plantillas de proyecto de SQL Server y Business Intelligence. En este escenario se pueden usar las opciones de comentarios del cliente que proporciona Visual Studio para participar o no en el CEIP.  
-  
-1.  Inicie Visual Studio.  
-  
-2.  En el menú Ayuda, seleccione **Enviar comentarios** > **Configuración**.  
-  
-3.  Para desactivar el CEIP, haga clic en **No, no deseo participar**, y, a continuación, haga clic en **Aceptar**.  
-  
-     Para activar el CEIP, haga clic en **Sí, deseo participar**y, a continuación, haga clic en **Aceptar**.  
-  
-
-  
- **Uso de una directiva basada en el Registro o una directiva de grupo**  
+1. [Novedades de SQL Server 2016](#TitleNum_1)
 
 
 
@@ -125,85 +88,83 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 &nbsp;
 
----
+<a name="TitleNum_1"/>
 
-<a name="TitleNum_2"/>
+### <a name="1-nbsp-whats-new-in-sql-server-2016what-s-new-in-sql-server-2016md"></a>1. &nbsp;[Novedades de SQL Server 2016](what-s-new-in-sql-server-2016.md)
 
-### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Ediciones y características admitidas de SQL Server 2016](editions-and-components-of-sql-server-2016.md)
+*Actualizado: 08-09-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-*Actualización: 16-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1))
-
-<!-- Source markdown line 113.  ms.author= "mikeray".  -->
+<!-- Source markdown line 34.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 471ad35ebf1898470033d43c7bd43cbac5ddfece 7814e4d7428907161a9a2567280fb9fe20d5f273  (PR=2064  ,  Filename=editions-and-components-of-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=727d9ccd8cd1e40d89cfe74291edae92988b407c) -->
+<!-- git diff --ignore-all-space --unified=0 e5bc0c05f120289f09a535400a4d521e4113ae55 0607d0a9af1c9a8dd9d3d7b0606895ff23bbffdc  (PR=0  ,  Filename=what-s-new-in-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
 
 
 
-**Ediciones Developer y Evaluation**  
-Para obtener las características compatibles con las ediciones Developer y Evaluation, vea las características enumeradas para SQL Server Enterprise Edition en las tablas siguientes.
-Para obtener una lista de las características que se agregaron a la edición Developer de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, vea [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4) (Ediciones de SQL Server 2016 SP1).  
+- Descargue la edición **gratuita** [**SQL Server 2016 Developer**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
+- Descargue la última versión de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+- ¿Tiene una cuenta de Azure? Ponga en marcha una [máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
-La edición Developer sigue siendo compatible con solo un cliente para [SQL Server Distributed Replay--../tools/distributed-replay/sql-server-distributed-replay.md). 
-  
-**<a name="Cross-BoxScaleLimits"></a> Límites de escala  **
+**Motor de base de datos de SQL Server 2016**
 
-  
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Capacidad máxima de cálculo usada por una sola instancia - [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]<sup>1</sup>|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos| 
-|Capacidad máxima de cálculo usada por una sola instancia - [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] o [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
-|Memoria máxima para el grupo de búferes por instancia de [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Sistema operativo máximo|128 GB|64 GB|1410 MB|1410 MB|
-|Memoria máxima para la caché del segmento de almacén de columnas por instancia de [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 GB<sup>2</sup>| 352 GB<sup>2</sup>|  
-|Tamaño máximo de datos optimizados para memoria por base de datos en [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 GB<sup>2</sup>| 352 GB<sup>2</sup>|  
+- Ya puede configurar **varios archivos de base de datos tempDB** durante la instalación y configuración de SQL Server.
+- El nuevo **Almacén de consultas** almacena los textos de las consultas, los planes de ejecución y las métricas de rendimiento dentro de la base de datos, lo que permite supervisar y solucionar los problemas de rendimiento con facilidad. Las consultas que consumen más tiempo, memoria o recursos de CPU se muestran en un panel.
+- Las **tablas temporales** son tablas de historial en las que se registran todos los cambios de datos, junto con la fecha y hora en que se produjeron.
+- La nueva **compatibilidad de JSON** integrada en SQL Server admite importaciones, exportaciones, análisis y almacenamiento de JSON.
+- El nuevo motor de consultas de **PolyBase** integra SQL Server con datos externos en Hadoop o Azure Blob Storage. Puede importar y exportar datos, así como ejecutar consultas.
+- La nueva característica **Stretch Database** permite archivar datos de forma dinámica y segura desde una base de datos de SQL Server local a una instancia de Azure SQL Database en la nube. SQL Server consulta automáticamente los datos locales y remotos en las bases de datos vinculadas.
+- **OLTP en memoria:**
+    - Ahora admite las restricciones FOREIGN KEY, UNIQUE y CHECK, los procedimientos almacenados compilados nativos OR, NOT, SELECT DISTINCT y OUTER JOIN y también las subconsultas en SELECT.
+    - Admite tablas de hasta 2 TB (a partir de 256 GB).
+    - Presenta mejoras del índice de almacenamiento de columnas para fines de ordenación y compatibilidad para el grupo de disponibilidad AlwaysOn.
+- Nuevas características de seguridad:
+    - **Always Encrypted:** cuando se habilita, solo la aplicación que tiene la clave de cifrado puede acceder a la información confidencial cifrada en la base de datos de SQL Server 2016. La clave nunca se pasa a SQL Server.
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## <a name="similar-articles"></a>Artículos similares
 
-En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro del mismo repositorio de GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas temáticas con artículos nuevos o actualizados recientemente
 
-- [Nuevos + Actualizados (4+4) : documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + Actualizados (2+0) : documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Nuevos + Actualizados (1+2) : documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
-- [Nuevos + Actualizados (6+0) : documentos de **Motor de base de datos para SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + Actualizados (13+2): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + Actualizados (1+0) : documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Nuevos + Actualizados (1+0) : documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
-- [Nuevos + Actualizados (8+4) : documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + Actualizados (2+2) : documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + Actualizados (0+1) : documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + Actualizados (1+0) : documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Nuevos + Actualizados (1+0) : documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
-
+- [Nuevos + actualizados (3+12): documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + actualizados (5+0): documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + actualizados (5+1): documentos de **Motor de base de datos para SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + actualizados (19+82): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
+- [Nuevos + actualizados (1+8): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + actualizados (12+1): documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + actualizados (0+1): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos + actualizados (7+1) : documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + actualizados (1+1): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuevos + actualizados (0+2): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
+- [Nuevos + actualizados (1+4): documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuevos + actualizados (4+1): documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuevos + actualizados (0+1): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas temáticas sin artículos nuevos ni actualizados recientemente
 
 - [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
+- [Nuevos + actualizados (0+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)
-- [Nuevos + Actualizados (0+0): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
+- [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Expresiones multidimensionales (MDX) para SQL**](../mdx/new-updated-mdx.md)
+- [Nuevos + Actualizados (0+0): documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
 - [Nuevos + Actualizados (0+0): documentos de **PowerShell para SQL**](../powershell/new-updated-powershell.md)
-- [Nuevos + Actualizados (0+0): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
-- [Nuevos + Actualizados (0+0): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 

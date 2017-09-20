@@ -1,5 +1,5 @@
 ---
-title: Conectarse a un repositorio MDS (agregar de MDS para Excel) | Documentos de Microsoft
+title: Conectarse a un repositorio MDS (complemento MDS para Excel) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 87931c60b791fd106d0476ac037e1dfcd4041fb2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 29208bf4a5d131e47ded0ba55aa167f6ee80ff3f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Conectarse a un repositorio MDS (complemento MDS para Excel)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  En el cuadro de diálogo **Agregar nueva conexión** , en el campo **Descripción** , escriba una descripción de la conexión. Esta conexión se muestra al hacer clic en la flecha situada debajo del botón **Conectar** en la barra de herramientas.  
   
-5.  En el **dirección del servidor MDS** , escriba la dirección URL de la [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] la aplicación web, por ejemplo `http://contoso/mds`.  
+5.  En el cuadro **Dirección del servidor MDS**, escriba la dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]; por ejemplo, `http://contoso/mds`.  
   
     > [!NOTE]  
     >  Asegúrese de utilizar el nombre del equipo; no utilice “localhost”.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)  
+-   [Exportar datos a Excel desde Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)  
   
 -   [Filtrar los datos antes de exportar &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)  
   

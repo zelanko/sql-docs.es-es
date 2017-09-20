@@ -1,5 +1,5 @@
 ---
-title: Modelos (Master Data Services) | Documentos de Microsoft
+title: Modelos (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -48,10 +48,10 @@ ms.lasthandoff: 08/02/2017
   
  Esta imagen muestra las relaciones existentes entre los objetos de un modelo.  
   
- ![Objetos de un modelo de Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "objetos en un modelo de Master Data Services")  
+ ![Objetos de un modelo de Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Objetos de un modelo de Master Data Services")  
   
 > [!NOTE]  
->  Las jerarquías derivadas también son objetos de modelo, pero no se muestran en la imagen. Las jerarquías derivadas se derivan de las relaciones de atributo basadas en dominios que existen entre las entidades. Vea [derivada jerarquías &#40; Master Data Services &#41; ](../master-data-services/derived-hierarchies-master-data-services.md) para obtener más información.  
+>  Las jerarquías derivadas también son objetos de modelo, pero no se muestran en la imagen. Las jerarquías derivadas se derivan de las relaciones de atributo basadas en dominios que existen entre las entidades. Vea [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md) para más información.  
   
  Los datos maestros son los datos contenidos en los objetos de modelo. En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los datos maestros se almacenan como miembros de una entidad.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="model-example"></a>Ejemplo de modelo  
  En el ejemplo siguiente, los objetos del modelo Product agrupan lógicamente los datos relacionados con los productos.  
   
- ![Ejemplo de datos maestros de modelo de producto](../master-data-services/media/mds-conc-model.gif "ejemplo de datos maestros de modelo de producto")  
+ ![Ejemplo de datos maestros de modelo de producto](../master-data-services/media/mds-conc-model.gif "Ejemplo de datos maestros de modelo de producto")  
   
  Otros modelos comunes son:  
   
@@ -74,9 +74,9 @@ ms.lasthandoff: 08/02/2017
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un modelo para organizar los datos maestros.|[Crear un modelo de &#40; Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Cambiar el nombre de un modelo existente.|[Editar modelo &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)|  
-|Eliminar un modelo existente.|[Eliminar un modelo de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|Crear un modelo para organizar los datos maestros.|[Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Cambiar el nombre de un modelo existente.|[Editar modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Eliminar un modelo existente.|[Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/02/2017
   
 -   [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [Atributos &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Implementar modelos &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

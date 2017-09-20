@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   Cmdlets de PowerShell. Para obtener más información, vea [Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
- grupo de disponibilidad  
+ **grupo de disponibilidad**  
  Contenedor para un conjunto de bases de datos, las *bases de datos de disponibilidad*, que conmutan por error juntas.  
   
- base de datos de disponibilidad  
+ **base de datos de disponibilidad**  
  Base de datos que pertenece a un grupo de disponibilidad. Para cada base de datos de disponibilidad, el grupo de disponibilidad mantiene una sola copia de lectura y escritura (la *base de datos principal*) y de una a ocho copias de solo lectura (*bases de datos secundarias*).  
   
- base de datos principal  
+ **base de datos principal**  
  La copia de lectura y escritura de una base de datos de disponibilidad.  
   
- base de datos secundaria  
+ **base de datos secundaria**  
  Una copia de solo lectura de una base de datos de disponibilidad.  
   
- réplica de disponibilidad  
+ **réplica de disponibilidad**  
  Creación de instancia de un grupo de disponibilidad hospedado por una instancia específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y mantiene una copia local de cada base de datos de disponibilidad perteneciente al grupo de disponibilidad. Existen dos tipos de réplicas de disponibilidad: una sola *réplica principal* y de una a ocho *réplicas secundarias*.  
   
- réplica principal  
+ **réplica principal**  
  La réplica de disponibilidad que hace que las bases de datos principales estén disponibles para las conexiones de lectura y escritura de clientes y, además, envía las entradas del registro de transacciones para cada base de datos principal a cada réplica secundaria.  
   
- réplica secundaria  
+ **réplica secundaria**  
  Réplica de disponibilidad que mantiene una copia secundaria de cada base de datos de disponibilidad y actúa como posible destino de conmutación por error para el grupo de disponibilidad. Opcionalmente, una réplica secundaria puede admitir acceso de solo lectura a bases de datos secundarias y la creación de copias de seguridad de bases de datos secundarias.  
   
- agente de escucha de grupo de disponibilidad  
+ **agente de escucha de grupo de disponibilidad**  
  Nombre del servidor al que los clientes pueden conectarse para tener acceso a una base de datos en una réplica principal o secundaria de un grupo de disponibilidad AlwaysOn. Los agentes de escucha del grupo de disponibilidad dirigen las conexiones entrantes a la réplica principal o una réplica secundaria de solo lectura.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Bases de datos independientes](../../../relational-databases/databases/contained-databases.md)  
   
--   [Clave de cifrado de la base de datos](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [Clave de cifrado de la base de datos](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Instantáneas de base de datos](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
@@ -181,8 +181,8 @@ ms.lasthandoff: 08/02/2017
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Información general sobre instrucciones Transact-SQL para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
- [Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Información general sobre instrucciones Transact-SQL para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
+ [Información general de los cmdlets de PowerShell para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
 

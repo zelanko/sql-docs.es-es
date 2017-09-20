@@ -1,5 +1,5 @@
 ---
-title: "Historial de revisión de miembro (Master Data Services) | Documentos de Microsoft"
+title: Historial de revisiones de miembro (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8397d82b231588457a85a65d1d9f19aaec1431f1
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 665a5978f516520c397bdbfe01be84ab93df028c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="member-revision-history-master-data-services"></a>Historial de revisiones de miembro (Master Data Services)
@@ -74,6 +74,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
- [Configuración del sistema &#40; Master Data Services &#41;](../master-data-services/system-settings-master-data-services.md)  
+ [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

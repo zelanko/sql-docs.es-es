@@ -1,5 +1,5 @@
 ---
-title: Crear un modelo (Master Data Services) | Documentos de Microsoft
+title: Crear un modelo (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1a32cc8f778496f5609d44c17b69623b75b8c240
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
   
  Por cada modelo creado, se agrega una fila con ocho columnas a la cuadrícula. Las ocho columnas son:  
   
--   **Estado**: el estado del modelo. Al hacer clic en el **Guardar modelo** botón, el ![actualizar](../master-data-services/media/mds-model-status-updating.png "actualizar") imagen se muestra, lo que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, el ![Error](../master-data-services/media/mds-model-status-error.png "Error") se muestra la imagen. De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+-   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
 -   **Nombre**: el nombre del modelo.  
   
@@ -79,9 +79,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vea también  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Las entidades &#40; Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
- [Eliminar un modelo de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Editar modelo &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Editar modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

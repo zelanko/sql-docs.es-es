@@ -1,7 +1,7 @@
 ---
 title: "Resumen de características de PolyBase con versiones | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumen de características de PolyBase con versiones
@@ -44,8 +44,20 @@ Resumen de las características de PolyBase disponibles para los servicios y pro
 |Ejecutar consultas de PolyBase desde las herramientas de BI de Microsoft|sí|no|sí|sí|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>Operadores T-SQL compatibles con el cálculo de aplicación
+En SQL Server y APS, no todos los operadores T-SQL se pueden aplicar al clúster de Hadoop. En la tabla siguiente se muestran todos los operadores admitidos y un subconjunto de los operadores no admitidos. 
 
-  
+||||
+|-|-|-| 
+|**Tipo de operador**|**Aplicable a Hadoop**|**Aplicable a Blob Storage**|
+|Proyecciones de columna|sí|no|
+|Predicados|sí|no|
+|Agregados|parcialmente|no|
+|Combinaciones entre tablas externas|no|no|
+|Combinaciones entre tablas externas y tablas locales|no|no|
+|Ordenaciones|no|no|
+
+Por "agregación parcial" se entiende que se debe producir una agregación final cuando los datos lleguen a SQL Server, pero una parte de la agregación tiene lugar en Hadoop. Se trata de un método común para calcular agregaciones en los sistemas de procesamiento paralelo masivo.  
 ## <a name="see-also"></a>Vea también  
  [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con el Almacén de claves de Azure (SQL Server)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  En este tema se describe el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Hay información adicional disponible en [Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Usar el conector de SQL Server con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)y [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
 ##  <a name="Uses"></a> ¿Qué es la Administración extensible de claves (EKM) y por qué usarla?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona varios tipos de cifrado que ayudan a proteger información confidencial, como [cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md), [cifrado de nivel de columna](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) y [cifrado de copia de seguridad](../../../relational-databases/backup-restore/backup-encryption.md). En todos estos casos, en esta jerarquía de claves tradicional, los datos se cifran con una clave de cifrado de datos (DEK) simétrica. La clave de cifrado de datos simétrica se protege, además, cifrándose con una jerarquía de claves almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En lugar de este modelo, la alternativa es el modelo de proveedor EKM. El uso de la arquitectura del proveedor EKM permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteger las claves de cifrado de datos con una clave asimétrica que se almacena fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un proveedor de servicios criptográficos externo. Este modelo agrega una capa adicional de seguridad y separa la administración de claves y datos.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona varios tipos de cifrado que ayudan a proteger información confidencial, como [cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), [cifrado de nivel de columna](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) y [cifrado de copia de seguridad](../../../relational-databases/backup-restore/backup-encryption.md). En todos estos casos, en esta jerarquía de claves tradicional, los datos se cifran con una clave de cifrado de datos (DEK) simétrica. La clave de cifrado de datos simétrica se protege, además, cifrándose con una jerarquía de claves almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En lugar de este modelo, la alternativa es el modelo de proveedor EKM. El uso de la arquitectura del proveedor EKM permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteger las claves de cifrado de datos con una clave asimétrica que se almacena fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un proveedor de servicios criptográficos externo. Este modelo agrega una capa adicional de seguridad y separa la administración de claves y datos.  
    
  En la imagen siguiente se compara la jerarquía de claves de administración y servicio tradicional con el sistema del Almacén de claves de Azure.  
   

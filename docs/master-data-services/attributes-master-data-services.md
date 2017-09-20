@@ -1,5 +1,5 @@
 ---
-title: Atributos (Master Data Services) | Documentos de Microsoft
+title: Atributos (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Cómo se relacionan los atributos con otros objetos del modelo  
  Puede considerar un atributo como una columna de una tabla de entidad. Un valor de atributo es el valor que se usa para describir un miembro concreto.  
   
- ![Entidad de Master Data Services representada como tabla](../master-data-services/media/mds-conc-entity-table.gif "entidad de Master Data Services representada como tabla")  
+ ![Entidad de Master Data Services representada como una tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad de Master Data Services representada como una tabla")  
   
  Cuando se crea una entidad que contiene muchos atributos, puede organizar los atributos en grupos de atributos. Para obtener más información, consulte [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>Ejemplos de atributo  
  En el ejemplo siguiente, la entidad tiene los atributos Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
   
- ![Tabla de la entidad de producto de una bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike de la tabla de la entidad de producto")  
+ ![Tabla de entidades de producto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
   
  En el ejemplo siguiente, la entidad Product contiene:  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
  Subcategory es una entidad que se usa como atributo basado en domino de Product. Category es una entidad que se usa como atributo basado en domino de Subcategory. Al igual que la entidad Product, las entidades Category y Subcategory contienen cada una los atributos predeterminados Name y Code.  
   
- ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "estructura de árbol de entidad de producto")  
+ ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "Estructura de árbol de entidad de producto")  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   

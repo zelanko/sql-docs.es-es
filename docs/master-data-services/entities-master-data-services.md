@@ -1,5 +1,5 @@
 ---
-title: Entidades (Master Data Services) | Documentos de Microsoft
+title: Entidades (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="entities-master-data-services"></a>Entidades (Master Data Services)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-entities-relate-to-other-model-objects"></a>Cómo se relacionan las entidades con otros objetos del modelo  
  Una entidad es como una tabla que contiene datos maestros, donde las filas representan miembros y las columnas representan atributos.  
   
- ![Entidad de Master Data Services representada como tabla](../master-data-services/media/mds-conc-entity-table.gif "entidad de Master Data Services representada como tabla")  
+ ![Entidad de Master Data Services representada como una tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad de Master Data Services representada como una tabla")  
   
  Rellene la entidad con una lista de datos maestros que desee administrar.  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 08/02/2017
 ## <a name="entity-examples"></a>Ejemplos de entidad  
  En el ejemplo siguiente se muestra una entidad que tiene estos atributos: Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
   
- ![Tabla de la entidad de producto de una bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike de la tabla de la entidad de producto")  
+ ![Tabla de entidades de producto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
   
  En el ejemplo siguiente, la entidad Product es la entidad central. La entidad Subcategory es un atributo basado en domino de la entidad Product. La entidad Category es un atributo basado en domino de la entidad Subcategory. StandardCost y ListPrice son atributos de forma libre de la entidad Product y FilePhoto es un atributo de archivo de la entidad Product.  
   
- ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "estructura de árbol de entidad de producto")  
+ ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "Estructura de árbol de entidad de producto")  
   
 > [!NOTE]  
 >  Este es un ejemplo basado en la interfaz de usuario (IU) de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La estructura de árbol jerárquica muestra las relaciones entre las entidades y los atributos basados en dominio. El objetivo es mostrar las relaciones más que representar niveles de importancia.  

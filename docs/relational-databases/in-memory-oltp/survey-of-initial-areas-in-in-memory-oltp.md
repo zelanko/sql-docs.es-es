@@ -1,7 +1,7 @@
 ---
 title: "Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
@@ -136,7 +136,7 @@ Las [tablas con optimización para memoria](../../relational-databases/in-memory
   
 #### <a name="natively-compiled-modules"></a>Módulos compilados de forma nativa  
   
-La palabra clave NATIVE_COMPILATION de T-SQL, en la instrucción CREATE PROCEDURE, indica que se crea un proceso nativo. Las instrucciones de T-SQL se compilan en el código máquina la primera vez que se usa el procedimiento nativo cada vez que la base de datos se recorre en línea. Las instrucciones de T-SQL ya no aguantan la interpretación lenta de cada instrucción.  
+La palabra clave NATIVE_COMPILATION de T-SQL, en la instrucción CREATE PROCEDURE, indica que se crea un procedimiento almacenado compilado de forma nativa. Las instrucciones de T-SQL se compilan en el código máquina la primera vez que se usa el procedimiento nativo cada vez que la base de datos se recorre en línea. Las instrucciones de T-SQL ya no aguantan la interpretación lenta de cada instrucción.  
   
 - Hemos visto el resultado de compilación nativa en duraciones de 1/100 de la duración interpretada.  
   
@@ -218,14 +218,12 @@ En Microsoft SQL Server, antes de poder crear una tabla con optimización para m
 En Base de datos SQL de Azure, no es necesario y no se puede crear tal grupo de archivos.  
 
 El siguiente ejemplo de script T-SQL habilita una base de datos para OLTP en memoria y configura todos los ajustes recomendados. Funciona con SQL Server y Azure SQL Database: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
-  
+
+Tenga en cuenta que no todas las características de SQL Server son compatibles con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA. Para más información sobre las limitaciones, vea [Características de SQL Server no admitidas para OLTP en memoria](unsupported-sql-server-features-for-in-memory-oltp.md).
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4. Crear una tabla con optimización para memoria  
-  
-  
-  
   
 La palabra clave de Transact-SQL fundamental es la palabra clave MEMORY_OPTIMIZED.  
   
@@ -302,6 +300,7 @@ La palabra clave fundamental es NATIVE_COMPILATION.
   
 La palabra clave SCHEMABINDING significa que las tablas a las que se hace referencia en el procedimiento nativo no se puede quitar a menos que dicho procedimiento se quite primero. Para obtener detalles, vea [Crear procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md).  
   
+Tenga en cuenta que no es necesario crear un procedimiento almacenado compilado de forma nativa para tener acceso a una tabla optimizada en memoria. También puede hacer referencia a tablas optimizadas en memoria desde procedimientos almacenados tradicionales y desde lotes ad hoc.
   
 <a name="execute-the-native-proc-31e"></a>  
   

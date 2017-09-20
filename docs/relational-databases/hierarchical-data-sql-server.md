@@ -1,7 +1,7 @@
 ---
 title: "Datos jerárquicos (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
@@ -126,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un documento XML es un árbol y, por lo tanto, una única instancia de tipo de datos XML puede representar una jerarquía completa. Cuando se crea un índice XML en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se usan internamente los valores **hierarchyid** para representar la posición en la jerarquía.  
+ Un documento XML es un árbol y, por lo tanto, una única instancia de tipo de datos XML puede representar una jerarquía completa. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML dedex is created, **hierarchyid** values are used deternally to represent the position de the hierarchy.  
   
  Utilizar el tipo de datos XML puede ser mejor opción cuando se cumplen todas las condiciones siguientes:  
   
@@ -247,7 +247,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Observe que la jerarquía is tiene una estructura válida, aunque no sea coherente internamente. Bahia es el único estado. Aparece en la jerarquía como un homólogo de la ciudad Brasilia. Del mismo modo, McMurdo Station no tiene un país primario. Los usuarios deben decidir si este tipo de jerarquía es adecuado para su uso.  
+ Observe que la jerarquía tiene una estructura válida, aunque no sea coherente internamente. Bahia es el único estado. Aparece en la jerarquía como un homólogo de la ciudad Brasilia. Del mismo modo, McMurdo Station no tiene un país primario. Los usuarios deben decidir si este tipo de jerarquía es adecuado para su uso.  
   
  Agregue otra fila y seleccione los resultados.  
   
@@ -533,3 +533,4 @@ GO
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
+

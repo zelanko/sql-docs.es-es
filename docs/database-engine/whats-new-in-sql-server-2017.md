@@ -1,7 +1,7 @@
 ---
 title: Novedades de Motor de base de datos de Microsoft SQL Server 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e3d06068b28a6870a5c34286f073c32519428e39
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
 ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2017
@@ -29,12 +29,9 @@ En este tema, se describen las mejoras realizadas en el [!INCLUDE[ssdenoversion-
 > [!NOTE]  
 > SQL Server 2017 incluye también las características agregadas en los Service Packs de SQL Server 2016. Para esos elementos, consulte [Novedades de SQL Server 2016 (motor de base de datos)](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
+**Mejoras**  
 
-## <a name="sql-server-database-engine-rc1"></a>Motor de base de datos de SQL Server (RC1)  
-- Los ensamblados CLR ahora se pueden agregar a una lista de permitidos como solución alternativa para la característica `clr strict security` que se describe en CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) y [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) se agregan para admitir la lista blanca de ensamblados de confianza.
-
-## <a name="sql-server-database-engine-previous-ctps"></a>Motor de base de datos de SQL Server (CTP anteriores)  
-- CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Para obtener más información, vea [CLR strict security](configure-windows/clr-strict-security.md).  
+- CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Los ensamblados CLR se pueden agregar a una lista blanca como solución alternativa para la característica `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) y [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) se agregan para admitir la lista blanca de ensamblados de confianza. Para obtener más información, vea [CLR strict security](configure-windows/clr-strict-security.md).  
 - Una nueva DMF, [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), se incluye para exponer atributos a nivel de resumen e información sobre los archivos de registro de transacciones; resulta útil para supervisar el estado de los registros de transacciones.  
 - Recompilaciones de índices en línea reanudables. Las recompilaciones de índices en línea reanudables permiten reanudar una operación de recompilación de índices en línea desde donde se detuvo después de un error (como una conmutación por error en una réplica o espacio en disco insuficiente). Las operaciones de recompilación de índices en línea también se pueden pausar y reanudar más adelante. Por ejemplo, puede que necesite liberar recursos del sistema temporalmente para poder ejecutar una tarea de prioridad alta o completar la recompilación de índices en otro período de mantenimiento si los períodos de mantenimiento disponibles son demasiado breves para una tabla grande. Por último, la recompilación de índices en línea reanudable no precisa de un gran espacio de registro, lo que permite realizar el truncamiento del registro mientras la operación de recompilación reanudable se está ejecutando. Vea [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) y [Directrices para operaciones de índices en línea](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **Opción IDENTITY_CACHE para ALTER DATABASE SCOPED CONFIGURATION**. Se ha agregado una nueva opción, IDENTITY_CACHE, a la instrucción T-SQL `ALTER DATABASE SCOPED CONFIGURATION`. Cuando esta opción se establece en `OFF`, el Motor de base de datos puede evitar lagunas en los valores de columnas de identidad si un servidor se reinicia inesperadamente o realiza conmutación por error en un servidor secundario. Vea [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   

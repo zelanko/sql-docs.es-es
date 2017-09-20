@@ -1,5 +1,5 @@
 ---
-title: "Invertir una transacción (Master Data Services) | Documentos de Microsoft"
+title: "Invertir una transacción (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c0adfc3f27bf8767f759a67001020cbbdff9f31
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7bfd5c364d0805f32ea738585794d3b3ec47107d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertir una transacción (Master Data Services)
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/02/2017
 7.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. Se agrega otra transacción a la cuadrícula para registrar la transacción invertida.  
   
 ## <a name="see-also"></a>Vea también  
- [Transacciones &#40; Master Data Services &#41;](../master-data-services/transactions-master-data-services.md)   
- [Reactivar un miembro o recopilación &#40; Master Data Services &#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [Historial de revisiones de miembro de reversión](../master-data-services/rollback-member-revision-history-master-data-services.md)
+ [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
+ [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Revertir el historial de revisiones de miembro](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

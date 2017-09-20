@@ -1,5 +1,5 @@
 ---
-title: Editar una entidad (Master Data Services) | Documentos de Microsoft
+title: "Edición de una entidad (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-an-entity-master-data-services"></a>Edición de una entidad (Master Data Services)
@@ -63,19 +63,19 @@ ms.lasthandoff: 08/02/2017
 ## <a name="status"></a>Estado  
  La columna de estado de la cuadrícula muestra el estado de la operación en la entidad. Al hacer clic en **Guardar entidad**, aparece la imagen siguiente, que indica que la entidad se está actualizando.  
   
- ![Icono de actualización de estado](../master-data-services/media/mds-statusicon-updating.png "icono de actualización de estado")  
+ ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")  
   
  Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.  
   
- ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "icono de estado de error")  
+ ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")  
   
  Si el estado es correcto, se muestra la siguiente imagen.  
   
- ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "icono de estado correcto")  
+ ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")  
   
 ## <a name="see-also"></a>Vea también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Eliminar una entidad &#40; Master Data Services &#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

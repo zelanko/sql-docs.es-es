@@ -1,5 +1,5 @@
 ---
-title: "Información general: Importación de datos de tablas (Master Data Services) | Documentos de Microsoft"
+title: "Información general: Importación de datos de tablas (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Información general: importación de datos de tablas (Master Data Services)
@@ -78,27 +78,27 @@ ms.lasthandoff: 08/02/2017
   
 -   [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Tabla de ensayo de miembros consolidados &#40; Master Data Services &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  Para cada entidad del modelo, hay una tabla de almacenamiento provisional. El nombre de la tabla indica la entidad correspondiente y el tipo de entidad, como miembro hoja. La siguiente imagen muestra las tablas de almacenamiento provisional de las entidades de moneda, cliente y producto.  
   
- ![Las tablas de ensayo en la base de datos MDS](../master-data-services/media/mds-staging-tables.png "tablas de almacenamiento provisional en la base de datos MDS")  
+ ![Tablas de almacenamiento provisional en la base de datos de MDS](../master-data-services/media/mds-staging-tables.png "Tablas de almacenamiento provisional en la base de datos de MDS")  
   
  El nombre de cada tabla se especifica cuando se crea una entidad y no se puede cambiar. Si el nombre de la tabla de ensayo contiene _1 u otro número, otra tabla con ese nombre ya existía cuando se creó la entidad.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] incluye los siguientes tipos de procedimientos almacenados de almacenamiento provisional.  
   
--   stg.udp_\<name > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   stg.udp_\<name > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   stg.udp_\<name > _Relationship  
+-   stg.udp_\<name>_Relationship  
   
  Para cada entidad del modelo, hay tres procedimientos almacenados que corresponden a las tablas de almacenamiento provisional de miembros hoja, miembros consolidados y relaciones.  La siguiente imagen muestra los procedimientos almacenados de almacenamiento provisional de las entidades de moneda, cliente y producto.  
   
- ![Los procedimientos almacenados en la base de datos MDS de ensayo](../master-data-services/media/mds-staging-storedprocedures.png "ensayo procedimientos almacenados en la base de datos MDS")  
+ ![Procedimientos almacenados de almacenamiento provisional en la base de datos de MDS](../master-data-services/media/mds-staging-storedprocedures.png "Procedimientos almacenados de almacenamiento provisional en la base de datos de MDS")  
   
  Para obtener más información sobre los procedimientos almacenados, consulte [Procedimiento almacenado de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Validación &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Validación &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Editar modelo (Master Data Services) | Documentos de Microsoft
+title: Editar modelo (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08291f09ed7bc172fe22534e82b79ecc47ce55e1
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee796a4c002df4e0a843e7a663e60d4a7f24a398
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-model-master-data-services"></a>Editar modelo (Master Data Services)
@@ -56,11 +56,11 @@ ms.lasthandoff: 08/02/2017
   
 8.  Haga clic en **Guardar modelo**.  
   
- La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el **Guardar modelo** botón, el ![actualizar](../master-data-services/media/mds-model-status-updating.png "actualizar") imagen se muestra, lo que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, el ![Error](../master-data-services/media/mds-model-status-error.png "Error") se muestra la imagen. De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+ La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un modelo de &#40; Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)   
- [Eliminar un modelo de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
+ [Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
   

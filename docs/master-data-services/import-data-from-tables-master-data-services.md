@@ -1,5 +1,5 @@
 ---
-title: Importar datos de tablas (Master Data Services) | Documentos de Microsoft
+title: Importar datos de tablas (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 47c83a225b97e203875f940a03fe52db80525060
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7d059b2852c864f734c924383a115e61431bcccc
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar datos de tablas (Master Data Services)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/02/2017
   
  **Requisitos previos**  
   
--   Debe tener permiso para insertar datos en la stg.\<name > _Leaf, la stg.\<nombre > _Consolidated, stg.\<nombre > tabla _Relationship en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
+-   Debe tener permiso para insertar datos en las tablas stg.\<nombre>_Leaf, stg.\<nombre>_Consolidated y stg.\<nombre>_Relationship de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
--   Debe tener permisos para ejecutar cualquiera de los stg.udp_\<nombre > _Leaf, stg.udp\_\<nombre > _Consolidated, o la stg.udp\_\<name > _Relationship procedimiento almacenado en el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
+-   Debe tener permisos para ejecutar el procedimiento almacenado stg.udp_\<nombre>_Leaf, stg.udp\_\<nombre>_Consolidated o stg.udp\_\<nombre>_Relationship en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 -   El modelo no debe tener un estado de **Confirmado**.  
   
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/02/2017
   
 1.  Prepare los miembros para importarlos en la tabla de almacenamiento provisional apropiada de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y proporcione valores para los campos obligatorios. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Para los miembros hoja en la tabla es stg.\<name > _Leaf, donde \<nombre > hace referencia a la entidad correspondiente. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   Para los miembros hoja, la tabla es stg.\<nombre>_Leaf, donde \<nombre> hace referencia a la entidad correspondiente. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   Para los miembros consolidados, la tabla es stg.\<name > _Consolidated. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Para los miembros consolidados, la tabla es stg.\<nombre>_Consolidated. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Para mover la ubicación de los miembros de jerarquías explícitas, la tabla es stg.\<name > _Relationship. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Para mover la ubicación de los miembros de jerarquías explícitas, la tabla es stg.\<nombre>_Relationship. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
   
          Para obtener información general sobre cómo mover miembros en jerarquías explícitas, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/02/2017
   
          En la página **Lotes de almacenamiento provisional** , seleccione el modelo al que va a agregar datos en la lista desplegable y, después, haga clic en **Iniciar lotes**. El estado del procesamiento por lotes se indica en el campo **Estado** . Para obtener más información sobre los estados, consulte [Estados de importación &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Página en Master Data Manager los lotes de almacenamiento provisional](../master-data-services/media/mds-stagingbatchespage.png "página en Master Data Manager los lotes de almacenamiento provisional")  
+         ![Página Lotes de almacenamiento provisional en Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Página Lotes de almacenamiento provisional en Master Data Manager")  
   
          El proceso de almacenamiento provisional se inicia a intervalos definidos por el valor **Intervalo de lote de almacenamiento provisional** de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   

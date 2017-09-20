@@ -1,7 +1,7 @@
 ---
 title: "Información general de la publicación de Oracle | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,20 +20,31 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a7e0593342073272cfe3aae01ea4c28e5e2304
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="oracle-publishing-overview"></a>Información general de la publicación de Oracle
-  A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], puede incluir Publicadores de Oracle en su topología de replicación, empezando por Oracle versión 9i. Los servidores de publicación se pueden implementar en cualquier hardware y sistema operativo admitido por Oracle. La característica se ha creado sobre la sólida base de la replicación transaccional y la replicación de instantáneas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lo que proporciona un rendimiento y una capacidad de uso similares.  
+# <a name="oracle-publishing-overview"></a>Información general de la publicación de Oracle  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], puede incluir Publicadores de Oracle en su topología de replicación, empezando por Oracle versión 9i. Los servidores de publicación se pueden implementar en cualquier hardware y sistema operativo admitido por Oracle. La característica se ha creado sobre la sólida base de la replicación transaccional y la replicación de instantáneas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lo que proporciona un rendimiento y una capacidad de uso similares.  
   
- La publicación de Oracle está desusada. La replicación heterogénea en suscriptores que no son SQL Server está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los siguientes escenarios heterogéneos para la replicación de instantáneas y transaccional:  
   
-> [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   Publicar datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   La publicación de datos en y desde Oracle tiene las siguientes restricciones:  
+  | |2016 o anterior |2017 o posterior |
+  |-------|-------|--------|
+  |Replicación de Oracle |Compatibilidad solo con Oracle 10g o versiones anteriores |Compatibilidad solo con Oracle 10g o versiones anteriores |
+  |Replicación en Oracle |Hasta Oracle 12c |No compatible |
+
+
+ La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
   
 ## <a name="snapshot-replication-for-oracle"></a>Replicación de instantáneas en Oracle  
  Las publicaciones de instantáneas de Oracle se implementan de manera similar a las publicaciones de instantáneas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cuando se ejecuta en una publicación de Oracle, el Agente de instantáneas conecta al publicador de Oracle y procesa cada tabla de la publicación. Cuando se procesa cada tabla, el agente recupera las filas de la tabla y crea scripts del esquema, que a continuación se almacenan en el recurso compartido de instantáneas de la publicación. Todo el conjunto de datos se crea cada vez que se ejecuta el Agente de instantáneas, por lo que el cambio en los desencadenadores de seguimiento no se agrega a las tablas de Oracle como sucede con la replicación transaccional. La replicación de instantáneas proporciona una manera cómoda de migrar datos con el mínimo impacto en el sistema de publicación.  
@@ -49,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [Replicación de bases de datos heterogéneas](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

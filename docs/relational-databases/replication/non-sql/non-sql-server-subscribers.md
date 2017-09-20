@@ -1,7 +1,7 @@
 ---
 title: Suscriptores que no sean de SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>Suscriptores que no son de SQL Server
-  Los siguientes suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
+# <a name="non-sql-server-subscribers"></a>Suscriptores que no son de SQL Server  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Los siguientes suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
   
  La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle|Todas las plataformas que admite Oracle|Proveedor OLE DB de Oracle (suministrado por Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows excepto 9.x|Proveedor OLE DB de Microsoft Host Integration Server (HIS)|  
+
+Información de las versiones de Oracle:  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los siguientes escenarios heterogéneos para la replicación de instantáneas y transaccional:  
   
- Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2, vea [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) y [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+-   Publicar datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   La publicación de datos en y desde Oracle tiene las siguientes restricciones:  
+  | |2016 o anterior |2017 o posterior |
+  |-------|-------|--------|
+  |Replicación de Oracle |Compatibilidad solo con Oracle 10g o versiones anteriores |Compatibilidad solo con Oracle 10g o versiones anteriores |
+  |Replicación en Oracle |Hasta Oracle 12c |No compatible |
+
+
+ La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2, vea [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) y [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Consideraciones para suscriptores que no son de SQL Server  
  Tenga en cuenta las siguientes consideraciones al replicar datos en suscriptores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -55,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Al crear una publicación en el Asistente para nueva publicación y, a continuación, habilitarla para suscriptores que no son de SQL Server mediante el cuadro de diálogo Propiedades de la publicación, no se específica el propietario de todos los objetos en la base de datos de suscripciones para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mientras que para los suscriptores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se establece en el propietario del objeto correspondiente en la base de datos de publicación.  
   
--   Si una publicación va a tener suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se debe habilitar la publicación para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de crear cualquier suscripción a suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Si una publicación tiene suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se debe habilitar la publicación para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de crear cualquier suscripción a suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   De manera predeterminada, los scripts generados por el Agente de instantáneas para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizan identificadores sin comillas en la sintaxis CREATE TABLE. Por lo tanto, una tabla publicada denominada 'test' se replica como 'TEST'. Para usar mayúsculas y minúsculas como en la tabla de la base de datos de publicación, utilice el parámetro **-QuotedIdentifier** para el Agente de distribución. También se debe utilizar el parámetro **-QuotedIdentifier** si los nombres de objeto publicados (como tablas, columnas y restricciones) contienen espacios o palabras que son palabras reservadas en la versión de la base de datos de suscriptor que no es de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de este parámetro, vea [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   De forma predeterminada, los scripts generados por el Agente de instantáneas para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usan identificadores sin comillas en la sintaxis `CREATE TABLE`. Por lo tanto, una tabla publicada denominada 'test' se replica como 'TEST'. Para usar mayúsculas y minúsculas como en la tabla de la base de datos de publicación, utilice el parámetro **-QuotedIdentifier** para el Agente de distribución. También se debe utilizar el parámetro **-QuotedIdentifier** si los nombres de objeto publicados (como tablas, columnas y restricciones) contienen espacios o palabras que son palabras reservadas en la versión de la base de datos de suscriptor que no es de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de este parámetro, vea [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   La cuenta con la que se ejecuta el agente de distribución debe tener acceso de lectura en el directorio de instalación del proveedor OLE DB.  
   
@@ -65,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
     -   En Oracle, un servidor tiene como máximo una base de datos, por lo que no es necesario especificarla.  
   
-    -   En IBM DB2, la base de datos se especifica en la cadena de conexión DB2. Para más información, vea [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   En IBM DB2, la base de datos se especifica en la cadena de conexión DB2. Para más información, consulte [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Si el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta en una plataforma de 64 bits, debe usar la versión de 64 bits del proveedor OLE DB apropiado.  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

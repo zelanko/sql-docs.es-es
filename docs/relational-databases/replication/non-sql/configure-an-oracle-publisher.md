@@ -1,7 +1,7 @@
 ---
 title: Configurar un publicador de Oracle | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar un publicador de Oracle
@@ -30,10 +30,23 @@ ms.lasthandoff: 06/22/2017
   
 2.  En las tablas que publique, conceda permiso SELECT directamente en cada una de ellas (no mediante un rol) al usuario administrativo de Oracle que ha creado en el paso uno.  
   
-3.  Instale el software de cliente de Oracle y el proveedor OLE DB en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si el distribuidor se ejecuta en una plataforma de 64 bits, debe utilizar la versión de 64 bits del proveedor OLE DB de Oracle.  
+3.  Instale el software de cliente de Oracle y el proveedor OLE DB en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si el distribuidor se ejecuta en una plataforma de 64 bits, debe usar la versión de 64 bits del proveedor OLE DB de Oracle.  
   
 4.  Configure la base de datos de Oracle como un publicador en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los siguientes escenarios heterogéneos para la replicación de instantáneas y transaccional:  
   
+-   Publicar datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   La publicación de datos en y desde Oracle tiene las siguientes restricciones:  
+  | |2016 o anterior |2017 o posterior |
+  |-------|-------|--------|
+  |Replicación de Oracle |Compatibilidad solo con Oracle 10g o versiones anteriores |Compatibilidad solo con Oracle 10g o versiones anteriores |
+  |Replicación en Oracle |Hasta Oracle 12c |No compatible |
+
+ La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+
  Para obtener una lista de objetos que se pueden replicar desde una base de datos de Oracle, vea [Consideraciones y limitaciones de diseño de los publicadores de Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el directorio siguiente después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidad>*:\\\Archivos de programa\Microsoft SQL Server\\*\<nombreDeInstancia>*\MSSQL\Install\oracleadmin.sql. También está incluido en el tema [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
- Conéctese a la base de datos de Oracle utilizando una cuenta con privilegios DBA y ejecute el script. Este script solicita el nombre usuario y la contraseña del esquema de usuario administrativo de replicación y también el espacio de tablas predeterminado donde crear los objetos (el espacio de tablas debe existir en la base de datos de Oracle). Para información sobre cómo especificar otros espacios de tablas para objetos, vea [Administrar espacios de tabla de Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Elija un nombre de usuario y una contraseña segura, pero anótelos porque esta información se le pedirá más tarde al configurar la base de datos de Oracle como un publicador. Se recomienda utilizar el esquema solo para los objetos requeridos por la replicación; no cree tablas para publicarlas en este esquema.  
+ Conéctese a la base de datos de Oracle utilizando una cuenta con privilegios DBA y ejecute el script. Este script solicita el nombre usuario y la contraseña del esquema de usuario administrativo de replicación y también el espacio de tablas predeterminado donde crear los objetos (el espacio de tablas debe existir en la base de datos de Oracle). Para información sobre cómo especificar otros espacios de tablas para objetos, vea [Administrar espacios de tabla de Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Elija un nombre de usuario y una contraseña segura, pero anótelos porque deberá proporcionar esta información más tarde al configurar la base de datos de Oracle como un publicador. Se recomienda utilizar el esquema solo para los objetos requeridos por la replicación; no cree tablas para publicarlas en este esquema.  
   
 ### <a name="creating-the-user-schema-manually"></a>Crear el esquema de usuario manualmente  
  Si crea el esquema de usuario administrativo de replicación manualmente, debe conceder al esquema los siguientes permisos, directamente o mediante un rol de base de datos.  
@@ -76,7 +89,7 @@ ms.lasthandoff: 06/22/2017
   
  La forma más directa de instalar y configurar el software de red de cliente es utilizar Oracle Universal Installer (Instalador universal de Oracle) y Net Configuration Assistant (Asistente para configuración de redes) del disco del cliente de Oracle.  
   
- En Oracle Universal Installer proporcione la siguiente información:  
+ En Oracle Universal Installer debe proporcionar la siguiente información:  
   
 |Información|Descripción|  
 |-----------------|-----------------|  
@@ -97,7 +110,7 @@ ms.lasthandoff: 06/22/2017
  A la cuenta con la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor deben concederse permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que esté instalado el software de red de cliente de Oracle.  
   
 ### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>Comprobar la conectividad entre el distribuidor de SQL Server y el publicador de Oracle  
- Casi al final del asistente para configuración de redes puede que aparezca una opción para comprobar la conexión al publicador de Oracle. Antes de comprobar la conexión, asegúrese de que la instancia de la base de datos de Oracle está en línea y que la Escucha de Oracle está ejecutándose. Si la comprobación no es correcta, póngase en contacto con el administrador de bases de datos de Oracle responsable de la base de datos a la intenta conectarse.  
+ Casi al final del asistente para configuración de redes, puede que aparezca una opción para comprobar la conexión con el publicador de Oracle. Antes de comprobar la conexión, asegúrese de que la instancia de la base de datos de Oracle está en línea y que la Escucha de Oracle está ejecutándose. Si la comprobación no es correcta, póngase en contacto con el administrador de bases de datos de Oracle responsable de la base de datos a la intenta conectarse.  
   
  Después de realizar una conexión correcta al publicador de Oracle, intente iniciar la sesión en la base de datos con la cuenta y la contraseña asociados al esquema de usuario administrativo de replicación que ha creado. Debe realizar las siguientes acciones si trabaja con la misma cuenta de Windows que utiliza el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
@@ -109,9 +122,9 @@ ms.lasthandoff: 06/22/2017
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Por ejemplo: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Por ejemplo, `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  Si la configuración de red es correcta, se iniciará la sesión y verá el símbolo de `SQL` .  
+4.  Si la configuración de red es correcta, se iniciará la sesión y verá el símbolo de `SQL`.  
   
 5.  Si tiene problemas de conexión con la base de datos de Oracle, vea la sección acerca de que el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede conectar a la instancia de base de datos de Oracle en el tema [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

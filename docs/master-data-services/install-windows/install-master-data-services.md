@@ -1,5 +1,5 @@
 ---
-title: "Tareas de instalación de Master Data Services | Documentos de Microsoft"
+title: "Tareas de instalación de Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f810e987b5cebe9f4b790e298725d1593499e7ee
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffeb77252907d7b2dfae4c60491ee6d9b239e641
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Tareas de instalación de Master Data Services
-  Este artículo proporciona información general de las tareas de instalación, con vínculos a las instrucciones. Para ver un tutorial de instalación y configuración de Master Data Services, consulte [instalación de servicios de datos maestra y configuración](../../master-data-services/master-data-services-installation-and-configuration.md) 
+  En este artículo se proporciona información general de las tareas de instalación, con vínculos a las instrucciones. Para ver un tutorial de instalación y configuración de Master Data Services, vea [Instalación y configuración de Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md). 
   
 -   [Tareas de preinstalación:](#preinstall)compruebe los requisitos del sistema antes de instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |Acción|Detalles|Temas relacionados|  
 |------------|-------------|--------------------|  
-|Abrir [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para completar las operaciones posteriores a la instalación|Una vez completada la instalación, abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] realiza las siguientes operaciones posteriores a la instalación en el equipo local:<br /><br /> Crea un grupo de Windows, **MDS_ServiceAccounts**, para contener las cuentas de servicio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para los grupos de aplicaciones.<br /><br /> En la ruta de instalación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , crea la carpeta MDSTempDir y asigna permisos para **MDS_ServiceAccounts**. Esta carpeta es donde los archivos de compilación temporales se compilan para la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] archivo Web.config, configura el **tempDirectory** atributo de la  **\<compilación >** elemento con la ruta de acceso a la carpeta MDSTempDir.|[Permisos de carpetas y archivos &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Referencia de la configuración web &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
+|Abrir [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para completar las operaciones posteriores a la instalación|Una vez completada la instalación, abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] realiza las siguientes operaciones posteriores a la instalación en el equipo local:<br /><br /> Crea un grupo de Windows, **MDS_ServiceAccounts**, para contener las cuentas de servicio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para los grupos de aplicaciones.<br /><br /> En la ruta de instalación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , crea la carpeta MDSTempDir y asigna permisos para **MDS_ServiceAccounts**. Esta carpeta es donde los archivos de compilación temporales se compilan para la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> En el archivo Web.config de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], configura el atributo **tempDirectory** del elemento **\<compilation>** con la ruta de acceso a la carpeta MDSTempDir.|[Permisos de carpetas y archivos &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Referencia de la configuración web &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |Crear una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para los datos maestros.|[Crea una base de datos de Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Crear una aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear y configurar una aplicación web para hospedar [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Asociar una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] a una aplicación web|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para asociar la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] a su base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Asociar una base de datos y una aplicación web de Master Data Services](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  

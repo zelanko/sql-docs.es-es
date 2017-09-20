@@ -1,7 +1,7 @@
 ---
 title: "Estimación de cardinalidad (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/04/2016
+ms.date: 09/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,22 +18,22 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6ef57f8467e87b97024fc08b4916ac4f8e7752b
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8b45a33dadae04400fbc0602f2aa4f6fc08d5df1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
-En este artículo se explica cómo evaluar y elegir la mejor configuración de estimación de cardinalidad para su sistema SQL. La mayoría de los sistemas sacan partido de la última estimación de cardinalidad, porque es la más precisa. Con la estimación de cardinalidad se predice cuántas filas va a devolver la consulta casi con toda seguridad. El optimizador de consultas usa la predicción de cardinalidad para generar el mejor plan de consulta posible. Cuanto más precisa es la estimación de cardinalidad, mejor suele ser el plan de consulta.  
+En este artículo se explica cómo evaluar y elegir la mejor configuración de estimación de cardinalidad para su sistema SQL. La mayoría de los sistemas sacan partido de la última estimación de cardinalidad, porque es la más precisa. Con la estimación de cardinalidad se predice cuántas filas va a devolver la consulta casi con toda seguridad. El optimizador de consultas usa la predicción de cardinalidad para generar el mejor plan de consulta posible. Con estimaciones más precisas, el optimizador de consultas normalmente puede hacer mejor su trabajo a la hora de generar un plan de consulta óptimo.  
   
 Es bastante probable que el sistema de aplicaciones tenga una consulta importante cuyo plan cambie a un plan más lento debido a la nueva estimación de cardinalidad. Esa consulta podría ser una de las siguientes:  
   
-- Una consulta OLTP que se ejecuta con tanta frecuencia que, a menudo, coinciden varias instancias al mismo tiempo.  
+- Una consulta OLTP (procesamiento de transacciones en línea) que se ejecuta con tanta frecuencia que, a menudo, coinciden varias instancias al mismo tiempo.  
 - Una instrucción SELECT con agregaciones importantes que se ejecuta durante el horario laboral de OLTP.  
   
 Existen diversas técnicas para detectar una consulta que se ralentiza a raíz de la nueva estimación de cardinalidad. También hay diversas opciones para abordar ese problema de rendimiento.  
@@ -41,7 +41,7 @@ Existen diversas técnicas para detectar una consulta que se ralentiza a raíz d
   
 ## <a name="versions-of-the-ce"></a>Versiones de la estimación de cardinalidad  
   
- En 1998, Microsoft SQL Server 7.0 incorporó una actualización importante de la estimación de cardinalidad, para la que el nivel de compatibilidad fue 70. Luego vinieron más actualizaciones en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, que se tradujeron en los niveles de compatibilidad 120 y 130. Las actualizaciones de estimación de cardinalidad correspondientes a los niveles 120 y 130 incorporan hipótesis y algoritmos que funcionan bien en las cargas de trabajo de almacenamiento de datos y OLTP (procesamiento de transacciones en línea) de hoy día.  
+ En 1998, Microsoft SQL Server 7.0 incorporó una actualización importante de la estimación de cardinalidad, para la que el nivel de compatibilidad fue 70. Las actualizaciones posteriores empezaron por [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], que se tradujo en los niveles de compatibilidad 120 y posteriores. Las actualizaciones de estimación de cardinalidad correspondientes a los niveles 120 y posteriores incorporan hipótesis y algoritmos que funcionan bien en el almacenamiento de datos modernos y en las cargas de trabajo OLTP.  
   
  **Nivel de compatibilidad:** para procurar que la base de datos esté en un nivel determinado, use el siguiente código de Transact-SQL para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
@@ -53,15 +53,15 @@ ALTER DATABASE <yourDatabase>
     SET COMPATIBILITY_LEVEL = 130;  
 go  
   
-SELECT    d.name, d.compatibility_level  
-    FROM  sys.databases AS d  
+SELECT d.name, d.compatibility_level  
+    FROM sys.databases AS d  
     WHERE d.name = 'yourDatabase';  
 go  
 ```  
   
- En el caso de una base de datos de SQL Server con el nivel de compatibilidad 120, la activación de la marca de seguimiento 9481 obliga al sistema a usar la estimación de cardinalidad de nivel 70.  
+ En el caso de una base de datos de SQL Server con el nivel de compatibilidad 120, la activación de la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 obliga al sistema a usar la versión 70 de la estimación de cardinalidad.  
   
- **Estimación de cardinalidad heredada:** en el caso de una base de datos de SQL Server con el nivel de compatibilidad 130, la estimación de cardinalidad de nivel 70 se puede activar con la siguiente instrucción de Transact-SQL relativa a [SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .
+ **Estimación de cardinalidad heredada:** En el caso de una base de datos de SQL Server con el nivel de compatibilidad 130, la versión 70 de la estimación de cardinalidad se puede activar con la instrucción [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```tsql  
 ALTER DATABASE
@@ -69,12 +69,21 @@ ALTER DATABASE
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
 go  
   
-SELECT  name, value  
-    FROM  sys.database_scoped_configurations  
+SELECT name, value  
+    FROM sys.database_scoped_configurations  
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
-  
- **Almacén de consultas:**desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, el almacén de consultas es una herramienta muy práctica para examinar el rendimiento de las consultas.  En SQL Server Management Studio (SSMS.exe), en el **Explorador de objetos** bajo el nodo de la base de datos, hay un nodo **Almacén de consultas** si el almacén de consultas está activado.  
+ 
+ O, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) `FORCE_LEGACY_CARDINALITY_ESTIMATION`.
+ 
+ ```tsql  
+SELECT CustomerId, OrderAddedDate  
+    FROM OrderTable  
+    WHERE OrderAddedDate >= '2016-05-01'; 
+    OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+```
+ 
+ **Almacén de consultas:**desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, el almacén de consultas es una herramienta muy práctica para examinar el rendimiento de las consultas.  En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo **Almacén de consultas** si el almacén de consultas está activado.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -82,7 +91,7 @@ ALTER DATABASE <yourDatabase>
 go  
   
 SELECT  
-        q.actual_state_desc    AS [actual_state_desc-ofQueryStore],  
+        q.actual_state_desc AS [actual_state_desc-ofQueryStore],  
         q.desired_state_desc,  
         q.query_capture_mode_desc  
     FROM  
@@ -93,9 +102,10 @@ ALTER DATABASE <yourDatabase>
     SET QUERY_STORE CLEAR;  
 ```  
   
- *Sugerencia:* se recomienda instalar cada mes la versión más reciente de [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
+ > [!TIP] 
+ > Se recomienda instalar cada mes la versión más reciente de [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
   
- Otra opción para llevar un seguimiento de las predicciones de estimación de cardinalidad consiste en usar el evento extendido denominado **query_optimizer_estimate_cardinality**.  El siguiente código de ejemplo de T-SQL se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escribe un archivo .xel en C:\Temp\ (aunque la ruta de acceso se puede cambiar). Cuando abra el archivo .xel en SSMS, verá información detallada de forma muy sencilla.  
+ Otra opción para llevar un seguimiento del proceso de estimación de cardinalidad consiste en usar el evento extendido denominado **query_optimizer_estimate_cardinality**.  El siguiente código de ejemplo de T-SQL se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escribe un archivo .xel en C:\Temp\ (aunque la ruta de acceso se puede cambiar). Cuando abra el archivo .xel en SSMS, verá información detallada de forma muy sencilla.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -131,21 +141,21 @@ go
   
  Estos son los pasos que se pueden realizar para saber si alguna de las consultas más importantes tiene un peor rendimiento tras la estimación de cardinalidad más reciente. Algunos de estos pasos se llevan a cabo ejecutando código de ejemplo incluido en una sección anterior.  
   
-1.  Abra SSMS. Asegúrese de que la base de datos de  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]está establecida en el nivel de compatibilidad más alto disponible.  
+1.  Abra [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Asegúrese de que la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está establecida en el nivel de compatibilidad más alto disponible.  
   
 2.  Realice los siguientes pasos preliminares:  
   
-    1.  Abra SSMS.  
+    1.  Abra [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
-    2.  Ejecute el código T_SQL para asegurarse de que la base de datos de  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está establecida en el nivel de compatibilidad más alto disponible.  
+    2.  Ejecute el código T_SQL para asegurarse de que la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está establecida en el nivel de compatibilidad más alto disponible.  
   
-    3.  Asegúrese de que la configuración LEGACY_CARDINALITY_ESTIMATION de la base de datos está desactivada.  
+    3.  Asegúrese de que la configuración `LEGACY_CARDINALITY_ESTIMATION` de la base de datos está desactivada.  
   
     4.  BORRE el almacén de consultas. Por supuesto, asegúrese de que el almacén de consultas está activado.  
   
-    5.  Ejecute la instrucción: \`SET NoCount OFF;`  
+    5.  Ejecute la instrucción `SET NOCOUNT OFF;`.  
   
-3.  Ejecute la instrucción: \`SET STATISTICS XML ON;`  
+3.  Ejecute la instrucción `SET STATISTICS XML ON;`.  
   
 4.  Ejecute la consulta importante.  
   
@@ -169,7 +179,7 @@ go
   
 9. Compare el número estimado de filas con el número real de filas. ¿Existe una imprecisión de la estimación de cardinalidad de un 1 % (por encima o por debajo) o de un 10 %?  
   
-10. Ejecute: \`SET STATISTICS XML OFF;`  
+10. Ejecute `SET STATISTICS XML OFF;`.  
   
 11. Ejecute el código T-SQL para rebajar la base de datos un nivel de compatibilidad (por ejemplo, de 130 a 120).  
   
@@ -195,11 +205,11 @@ Supongamos que, con la nueva estimación de cardinalidad, se genera un plan de c
   
 El nivel de compatibilidad se podría establecer en un nivel inferior que el último disponible para toda la base de datos.  
   
-- Así, se activaría la estimación de cardinalidad anterior, pero esto haría que todas las consultas se sometan a la estimación de cardinalidad anterior y menos precisa.  
+- Así, se activaría la estimación de cardinalidad heredada, pero esto haría que todas las consultas se sometiesen a la estimación de cardinalidad anterior y menos precisa.  
   
-- Es más, al establecer ese nivel anterior también se pierden muchas de las fantásticas mejoras en el optimizador de consultas.  
+- Es más, al establecer ese nivel de compatibilidad anterior también se pierden muchas de las fantásticas mejoras en el optimizador de consultas.  
   
-Puede usar LEGACY_CARDINALITY_ESTIMATION para que toda la base de datos use la estimación de cardinalidad anterior y conservar al mismo tiempo las mejoras en el optimizador de consultas.  
+Puede usar `LEGACY_CARDINALITY_ESTIMATION` para que toda la base de datos use la estimación de cardinalidad anterior (o solo una consulta específica) y conservar al mismo tiempo las mejoras en el optimizador de consultas.  
   
 Para tener el mejor control posible, podría *obligar* al sistema SQL a usar el plan que se generó con la estimación de cardinalidad anterior durante las pruebas. Después de *asignar* un plan de su elección, puede configurar toda la base de datos de forma que use el nivel de compatibilidad y la estimación de cardinalidad más recientes. Pasemos a explicar esta opción.  
   
@@ -209,12 +219,12 @@ El almacén de consultas ofrece diferentes formas para obligar al sistema a usar
   
 - Ejecute **sp_query_store_force_plan**.  
   
-- En SSMS, expanda el nodo **Almacén de consultas** , haga clic con el botón derecho en **Top Resource Consuming Nodes**(Nodos que más recursos consumen) y, después, haga clic en **View Top Resource Consuming Nodes**(Ver nodos que más recursos consumen). La pantalla recoge los botones **Forzar plan** y **No forzar plan**.  
+- En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expanda el nodo **Almacén de consultas**, haga clic con el botón derecho en **Consultas que más recursos consumen** y, después, haga clic en **Ver consultas que más recursos consumen**. La pantalla recoge los botones **Forzar plan** y **No forzar plan**.  
   
  Para obtener más información sobre el almacén de consultas, vea [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
   
-## <a name="descriptions-of-advance-ce"></a>Descripciones de estimación de cardinalidad avanzada  
+## <a name="examples-of-ce-improvements"></a>Ejemplos de mejoras en la estimación de cardinalidad  
   
 En esta sección se muestran consultas de ejemplo en las que se saca partido de las mejoras implementadas en la estimación de cardinalidad en versiones recientes. Se trata de información general que no precisa de ninguna acción por su parte.  
   
@@ -230,20 +240,19 @@ SELECT CustomerId, OrderAddedDate
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Ejemplo B. La estimación de cardinalidad entiende que, a menudo, los predicados filtrados en una misma tabla se correlacionan  
   
-En la siguiente instrucción SELECT vemos predicados filtrados en Make y Model. Así, deducimos de manera intuitiva que cuando Make es “Honda”, existe la posibilidad de que Model sea “Civic”, dado que Honda fabrica Civic.  
+En la siguiente instrucción SELECT podemos ver predicados filtrados en Model y ModelVariant. Deducimos de manera intuitiva que, cuando el modelo es "Xbox", hay una posibilidad de que ModelVariant sea "One", dado que Xbox tiene una variante que se llama One.  
   
-La estimación de cardinalidad de nivel 120 entiende que podría haber una correlación entre las dos columnas en la misma tabla, Make y Model. La estimación de cardinalidad hace una estimación más precisa del número de filas que la consulta va a devolver, mientras que el optimizador de consultas genera un plan mucho mejor.  
+La estimación de cardinalidad de nivel 120 entiende que podría haber una correlación entre las dos columnas de la misma tabla, Model y ModelVariant. La estimación de cardinalidad hace una estimación más precisa del número de filas que la consulta va a devolver, mientras que el optimizador de consultas genera un plan mucho mejor.  
   
 ```tsql  
-SELECT Model_Year, Purchase_Price  
-    FROM dbo.Cars  
+SELECT Model, Purchase_Price  
+    FROM dbo.Hardware  
     WHERE  
-        Make  = 'Honda'  AND  
-        Model = 'Civic';  
+        Model  = 'Xbox'  AND  
+        ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Ejemplo C. La estimación de cardinalidad ya no da por hecho ninguna correlación entre los predicados filtrados de tablas distintas  
-  
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Ejemplo C. La estimación de cardinalidad ya no da por hecho ninguna correlación entre los predicados filtrados de tablas distintas. 
 Las nuevas investigaciones exhaustivas en las cargas de trabajo y datos empresariales reales de hoy día han puesto de manifiesto que predicar filtros de tablas distintas no hace que se establezca ningún tipo de correlación entre sí. En la siguiente consulta, la estimación de cardinalidad da por hecho que no hay ninguna correlación entre s.type y r.date. Por tanto, hace una estimación más baja del número de filas devuelto.  
   
 ```tsql  
@@ -260,6 +269,8 @@ SELECT s.ticket, s.customer, r.store
   
 ## <a name="see-also"></a>Vea también  
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
-
+  [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md)  
+ [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)
 

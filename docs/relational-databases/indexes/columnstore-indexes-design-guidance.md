@@ -14,17 +14,17 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Guía de diseño de índices de almacén de columnas
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Recomendaciones de alto nivel para diseñar índices de almacén de columnas. Un número pequeño de decisiones adecuadas le ayuda a lograr un alto rendimiento de compresión de datos y de consultas para lo que los índices de almacén de columnas están diseñados. 
+Recomendaciones de alto nivel para diseñar índices de almacén de columnas. Unas pocas decisiones adecuadas en cuanto al diseño le pueden ayudar a lograr el alto rendimiento de compresión de datos y de consultas para el que se han diseñado los índices de almacén de columnas. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 

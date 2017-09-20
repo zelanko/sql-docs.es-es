@@ -1,5 +1,5 @@
 ---
-title: "Introducción a Master Data Services (MDS) | Documentos de Microsoft"
+title: "Introducción a Master Data Services (MDS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/14/2017
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-overview-mds"></a>Introducción a Master Data Services (MDS)
   En este tema se describen las características de administración y organización de datos principales de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]le permite administrar un conjunto principal de datos de su organización. Puede organizar los datos en modelos, crear reglas para actualizar los datos y de control que actualiza los datos. Con Excel, puede compartir el conjunto de datos maestro con otras personas de su organización. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] le permite administrar un conjunto principal de los datos de su organización. Puede organizar los datos en modelos, crear reglas para actualizar los datos y controlar quién actualiza los datos. Puede usar Excel para compartir el conjunto de datos maestros con otras personas de su organización. 
   
  >  Para obtener una descripción de la arquitectura de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , consulte el artículo [Master Data Services: conceptos básicos](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) en simple-talk.com. Para obtener información sobre las nuevas características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Novedades en Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Para obtener instrucciones sobre cómo instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configurar la base de datos y el sitio web e implementar los modelos de ejemplo, consulte** [Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -39,17 +39,17 @@ ms.lasthandoff: 08/02/2017
   
  Por ejemplo, el modelo de producto en línea puede contener entidades como producto, color y estilo. La entidad de color puede contener miembros para los colores rojo, plata y negro.  
   
- ![Entidad de color](../master-data-services/media/mds-productmodel-colorentity-composite.png "entidad de Color")  
+ ![Entidad de color](../master-data-services/media/mds-productmodel-colorentity-composite.png "Entidad de color")  
   
  Los modelos también contienen atributos que se definen dentro de las entidades. Un atributo contiene valores que ayudan a describir los miembros de entidad. Hay atributos de forma libre y otros basados en dominio.  Un atributo basado en dominio contiene valores que rellenan los miembros de una entidad y que pueden usarse como valores de atributo para otras entidades.  
   
- Por ejemplo, la entidad Producto podría tener los atributos de forma libre Costo y Peso. Además, hay un atributo basado en dominio para el color ![número 1](../master-data-services/media/mds-number1.png "número 1") que contiene valores que se rellenan con los miembros de entidad de color. Esta lista maestra de colores se usa como valores de atributo para la entidad producto ![número 2](../master-data-services/media/mds-number2.png "número 2").  
+ Por ejemplo, la entidad Producto podría tener los atributos de forma libre Costo y Peso. Además, hay un atributo basado en dominio para el color ![Número 1](../master-data-services/media/mds-number1.png "Número 1") que contiene valores que se rellenan con los miembros de la entidad de color. Esta lista maestra de colores se usa como valores de atributo para la entidad Producto ![Número 2](../master-data-services/media/mds-number2.png "Número 2").  
   
- ![Atributo basado en dominio para el color](../master-data-services/media/mds-productentity-color-domainattribute.png "atributo basado en dominio para el color")  
+ ![Atributo basado en dominio para el color](../master-data-services/media/mds-productentity-color-domainattribute.png "Atributo basado en dominio para el color")  
   
- Las jerarquías derivadas proceden de las relaciones entre entidades en un modelo. Estas son las relaciones de atributo basado en dominio. En el modelo de producto, por ejemplo, puede tener una jerarquía de color derivada ![número 1](../master-data-services/media/mds-number1.png "número 1") que proviene de la relación entre el color ![número 2](../master-data-services/media/mds-number2.png "número 2") y producto ![número 3](../master-data-services/media/mds-number3.png "número 3") entidades.  
+ Las jerarquías derivadas proceden de las relaciones entre entidades en un modelo. Estas son las relaciones de atributo basado en dominio. Por ejemplo, en el modelo de producto, puede tener una jerarquía derivada de color ![Número 1](../master-data-services/media/mds-number1.png "Número 1") que proceda de la relación entre las entidades de color ![Número 2](../master-data-services/media/mds-number2.png "Número 2") y producto ![Número 3](../master-data-services/media/mds-number3.png "Número 3").  
   
- ![Jerarquía derivada de color](../master-data-services/media/mds-derivedhierarchy.png "jerarquía derivada de Color")  
+ ![Jerarquía derivada de color](../master-data-services/media/mds-derivedhierarchy.png "Jerarquía derivada de color")  
   
  Una vez que haya definido una estructura básica para los datos, puede empezar a agregar registros de datos (miembros) mediante la característica de importación. Cargue datos en las tabla de almacenamiento provisional, valide los datos con reglas de negocios y cárguelos en tablas de MDS.  También puede utilizar las reglas de negocios para establecer los valores de atributo.  
   

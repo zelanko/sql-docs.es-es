@@ -1,5 +1,5 @@
 ---
-title: Implementar modelos (Master Data Services) | Documentos de Microsoft
+title: Implementar modelos (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>Implementar modelos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un paquete es un archivo XML que contiene una estructura del modelo implementable y, opcionalmente, los datos del modelo. Use los paquetes del modelo para mover las copias de modelos desde un entorno de MDS a otro, o para crear nuevos modelos en el entorno de MDS existente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Herramienta MDSModelDeploy** es compatible con los paquetes creados en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] o superior.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **La herramienta MDSModelDeploy** es compatible con versiones anteriores de los paquetes creados en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] o superior.  
   
 ## <a name="tools-for-deploying-models"></a>Herramientas para implementar modelos  
  Para trabajar con paquetes de modelos, puede usar una de tres herramientas, dependiendo de sus necesidades.  
@@ -74,13 +74,13 @@ ms.lasthandoff: 08/02/2017
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Crear un nuevo paquete de implementación de objetos o datos del modelo mediante la herramienta MDSModelDeploy.|[Crear un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|Crear un nuevo paquete de implementación de objetos del modelo solo con el asistente.|[Crear un paquete de implementación de modelo mediante el Asistente para](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|Crear un nuevo paquete de implementación de objetos del modelo solo con el asistente.|[Crear un paquete de implementación de modelo mediante el asistente](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
 |Implementar un paquete de objetos y datos del modelo mediante la herramienta MDSModelDeploy.|[Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|Implementar un paquete de objetos del modelo solo con el asistente.|[Implementar un paquete de implementación de modelo mediante el Asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
+|Implementar un paquete de objetos del modelo solo con el asistente.|[Implementar un paquete de implementación de modelo mediante el asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |Modifique un paquete de implementación de modelos para implementar porciones seleccionadas de un modelo, en lugar del modelo en su totalidad.|[Editar un paquete de implementación de modelos](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Opciones de implementación de modelo &#40; Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [Opciones de la implementación de modelos &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

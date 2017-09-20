@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
 ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
@@ -45,8 +45,7 @@ En la siguiente imagen se muestra una vista de alto nivel de un grupo de disponi
 <a name="fig1"></a>
 ![Vista de alto nivel de un grupo de disponibilidad distribuido][1]
 
-El movimiento de datos en los grupos de disponibilidad distribuidos se puede configurar como sincrónico o como asincrónico. Con todo, el movimiento de datos en el caso de los grupos de disponibilidad distribuidos es ligeramente distinto al de los grupos de disponibilidad tradicionales. A pesar de que cada grupo de disponibilidad tiene una réplica principal, solo hay una copia de las bases de datos que participan en un grupo de disponibilidad distribuido que puede aceptar inserciones, actualizaciones y eliminaciones. Como se aprecia en la siguiente imagen, AG 1 es el grupo de disponibilidad principal. Su réplica principal envía transacciones tanto a las réplicas secundarias de AG 1 como a la réplica principal de AG 2. De esta forma, la réplica principal de AG 2 mantiene las réplicas secundarias de AG 2 actualizadas. 
-
+El movimiento de datos en los grupos de disponibilidad distribuidos se puede configurar como sincrónico o como asincrónico. Con todo, el movimiento de datos en el caso de los grupos de disponibilidad distribuidos es ligeramente distinto al de los grupos de disponibilidad tradicionales. A pesar de que cada grupo de disponibilidad tiene una réplica principal, solo hay una copia de las bases de datos que participan en un grupo de disponibilidad distribuido que puede aceptar inserciones, actualizaciones y eliminaciones. Como se aprecia en la siguiente imagen, AG 1 es el grupo de disponibilidad principal. Su réplica principal envía transacciones tanto a las réplicas secundarias de AG 1 como a la réplica principal de AG 2. La réplica principal de AG 2 también se denomina *reenviador*. Un reenviador es una réplica principal de un grupo de disponibilidad secundario en un grupo de disponibilidad distribuido. El reenviador recibe las transacciones de la réplica principal del grupo de disponibilidad principal y las reenvía a las réplicas secundarias de su propio grupo de disponibilidad.  De esta forma, el reenviador mantiene actualizadas las réplicas secundarias de AG 2. 
 
 ![Grupo de disponibilidad distribuido y movimiento de datos][2]
 
@@ -136,7 +135,7 @@ Con los grupos de disponibilidad distribuidos, el escalado horizontal de una gra
 * Se puede usar la réplica principal del segundo grupo de disponibilidad de un grupo de disponibilidad distribuido para crear otro grupo de disponibilidad distribuido, aun cuando la base de datos no esté en estado RECOVERY.
 * También puede usar la réplica principal del primer grupo de disponibilidad para crear otro grupo de disponibilidad distribuido.
 
-Dicho de otro modo, una réplica principal puede participar en dos grupos de disponibilidad distribuidos diferentes. En la siguiente imagen se muestran dos grupos, AG 1 y AG 2, y ambos participan en el grupo distribuido AG 1, mientras que AG 2 y AG 3 participan en el grupo distribuido AG 2. La réplica principal de AG 2 es al mismo tiempo una réplica secundaria del grupo Distributed AG 1 y la réplica principal del grupo Distributed AG 2.
+Dicho de otro modo, una réplica principal puede participar en dos grupos de disponibilidad distribuidos diferentes. En la siguiente imagen se muestran dos grupos, AG 1 y AG 2, y ambos participan en el grupo distribuido AG 1, mientras que AG 2 y AG 3 participan en el grupo distribuido AG 2. La réplica principal (o reenviador) de AG 2 es al mismo tiempo una réplica secundaria del grupo Distributed AG 1 y una réplica principal del grupo Distributed AG 2.
 
 ![Escalar lecturas horizontalmente con grupos de disponibilidad distribuidos][5]
 

@@ -1,5 +1,5 @@
 ---
-title: "Cambiar el nombre de una jerarquía derivada (Master Data Services) | Documentos de Microsoft"
+title: "Cambiar el nombre de una jerarquía derivada (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc5f01765ac92ad49b45fbd48b035d8303fd609a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c8451eb8bc285c16720b27bf9592c83caa73a4d9
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Cambiar el nombre de una jerarquía derivada (Master Data Services)
@@ -52,8 +52,8 @@ ms.lasthandoff: 08/02/2017
 8.  Haga clic en **Guardar jerarquía derivada**.  
   
 ## <a name="see-also"></a>Vea también  
- [Jerarquías derivadas &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [Crear una jerarquía derivada &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Eliminar una jerarquía derivada &#40; Master Data Services &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
+ [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [Crear una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Eliminar una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
   
   

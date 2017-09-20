@@ -1,5 +1,5 @@
 ---
-title: Eliminar un grupo de atributos (Master Data Services) | Documentos de Microsoft
+title: Eliminar un grupo de atributos (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0f472ad35afbf5a7f881638560338e1bf5900c3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: d3db0c5966aebb609ff62e5f599ad08a8438696e
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminar un grupo de atributos (Master Data Services)
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 8.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Grupos de atributos &#40; Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Crear un grupo de atributos &#40; Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Crear un grupo de atributos &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

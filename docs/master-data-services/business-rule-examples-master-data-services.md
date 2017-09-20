@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de reglas de negocios (Master Data Services) | Documentos de Microsoft
+title: Ejemplos de reglas de negocios (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 01/05/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73f7c989b5a2d99f4eb826f2445adddc7bf9d374
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 57ecfaefcf4ba428e05617b89423e72774a50a51
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ejemplos de reglas de negocios (Master Data Services)
 En este artículo se muestran ejemplos de reglas de negocios para [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Encontrará estos ejemplos en los modelos de ejemplo que se incluyen con la instalación de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Para obtener instrucciones sobre cómo implementar los modelos de ejemplo, vea [instalación de servicios de datos maestra y configuración](../master-data-services/master-data-services-installation-and-configuration.md).  
+Para obtener instrucciones sobre cómo implementar los modelos de ejemplo, vea [Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
   
 ## <a name="business-rule-examples"></a>Ejemplos de reglas de negocios  
@@ -152,7 +152,7 @@ Else
   
 **Para ver ejemplos de reglas de negocios en los modelos de ejemplo**  
 1. Vaya al sitio web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] que ha configurado después de instalar MDS y haga clic en el cuadro **Administración del sistema** .   
-Para obtener instrucciones sobre cómo configurar el sitio Web, consulte [instalación de servicios de datos maestra y configuración](../master-data-services/master-data-services-installation-and-configuration.md).  
+Para obtener instrucciones sobre cómo configurar el sitio web, vea [Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Haga clic en el modelo de ejemplo que contiene la regla de negocio, como se muestra en las tablas anteriores, y, después, haga clic en **Entidades**.  
 3. Haga clic en la entidad a la que se aplica la regla, como se muestra en las tablas anteriores, y, luego, haga clic en **Reglas de negocios**.  
 4. Haga clic en el nombre de la regla de negocio que quiera ver. La interfaz de usuario se expande y muestra las instrucciones **If**, **Then** y **Else** .  

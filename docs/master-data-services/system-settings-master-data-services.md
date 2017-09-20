@@ -1,5 +1,5 @@
 ---
-title: "Configuración del sistema (Master Data Services) | Documentos de Microsoft"
+title: "Configuración del sistema (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/02/2017
 |-----------------------------------|--------------------|-----------------|  
 |**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
 |**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
-|**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , el número de atributos que se muestran en una lista al hacer doble clic en un valor de atributo basado en dominio de la cuadrícula. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
+|**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nivel de similitud que se usa cuando se utiliza el criterio de filtro **Coincide** . El valor predeterminado es **0.3**. Establezca el valor más próximo a **1** para devolver una coincidencia que se aproxime más al criterio de búsqueda. Establezca el valor en **1** para obtener una coincidencia exacta.|  
   
 ##  <a name="xls"></a> Configuración del complemento para Excel  
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/02/2017
   
 |Configuración del Administrador de configuración|Configuración del sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL para el [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] la aplicación web, que se usa en el vínculo notificaciones por correo electrónico, por ejemplo `http://constoso/mds`.|  
+|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, `http://constoso/mds`.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de objetos de base de datos &#40; Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

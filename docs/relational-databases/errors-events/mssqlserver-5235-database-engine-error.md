@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5235 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6ed08c7ffad0e723dea7ad4774439049de3d99
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 4374db61b2ae314fe9a11307d083588e4b15800c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
@@ -43,24 +43,25 @@ En la siguiente tabla se muestran y se definen los estados de error.
   
 |Estado de error|Definición|  
 |---------------|--------------|  
-|State 0|La instrucción finalizó debido a un daño grave de los metadatos. Este mensaje irá acompañado de una o varias instancias de error 8930.|  
-|State 1|La instrucción finalizó debido a un error interno de comprobación. Este mensaje irá acompañado de una o varias instancias de error 8967.|  
-|State 2|Error en las comprobaciones básicas de las tablas del sistema del motor de almacenamiento principal. Este mensaje irá acompañado de una o varias instancias de error [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) o [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md).|  
-|State 3|Error en la reparación del modo de emergencia DBCC debido a que la base de datos no pudo iniciarse después de volver a generar el registro de transacciones. Este mensaje irá acompañado del error 7909.|  
-|State 4|Se produjo un error de aserción o infracción de acceso durante la ejecución del comando.|  
-|Estado 5|Se produjo un error desconocido que canceló inesperadamente el comando DBCC.|  
+|State 1|La instrucción finalizó debido a un daño grave de los metadatos. Este mensaje va acompañado de una o varias instancias de error 8930.|  
+|State 2|La instrucción finalizó debido a un error interno de comprobación. Este mensaje va acompañado de una o varias instancias de error 8967.|  
+|State 3|Error en las comprobaciones básicas de las tablas del sistema del motor de almacenamiento principal. Este mensaje va acompañado de una o varias instancias de error [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) o [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md).|  
+|State 4|Error en la reparación del modo de emergencia DBCC debido a que la base de datos no pudo iniciarse después de volver a generar el registro de transacciones. Este mensaje va acompañado del error 7909.|  
+|Estado 5|Se produjo un error de aserción o infracción de acceso durante la ejecución del comando.|  
+|Estado 6|Se produjo un error desconocido que canceló inesperadamente el comando DBCC.|  
+|Estado 7|Una finalización anormal debido al error en la réplica (AlwaysOn).|  
   
 ## <a name="user-action"></a>Acción del usuario  
 En la siguiente tabla se muestra la acción apropiada que debe llevar a cabo el usuario para el estado de error especificado.  
   
 |Estado de error|Acción del usuario|  
 |---------------|---------------|  
-|State 0|Restaure mediante la copia de seguridad.|  
-|State 1|Póngase en contacto con el Servicio de atención al cliente y soporte técnico (CSS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|State 2|Restaure mediante la copia de seguridad.|  
+|State 1|Restaure mediante la copia de seguridad.|  
+|State 2|Póngase en contacto con el Servicio de atención al cliente y soporte técnico (CSS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |State 3|Restaure mediante la copia de seguridad.|  
+|State 4|Restaure mediante la copia de seguridad.|  
 |State 4|Póngase en contacto con el CSS.|  
-|Estado 5|Vuelva a ejecutar el comando. Si el problema persiste, póngase en contacto con el CSS.|  
+|Estado 6|Vuelva a ejecutar el comando. Si el problema persiste, póngase en contacto con el CSS.|  
   
 ## <a name="see-also"></a>Vea también  
 [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  

@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Devolver el grupo de disponibilidad a su topología original](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> Responder al error catastrófico del centro de datos principal  
  En la ilustración siguiente se muestra la serie de acciones realizadas en el centro de datos remoto en respuesta a un error catastrófico en el centro de datos principal.  
   
  ![Pasos para responder al error del centro de datos principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Pasos para responder al error del centro de datos principal")  

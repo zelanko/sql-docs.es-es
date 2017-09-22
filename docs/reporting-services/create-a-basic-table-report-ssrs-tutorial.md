@@ -20,17 +20,17 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
 
-En este tutorial, usará el Diseñador de informes en SQL Server Data Tools para crear un [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginados informe con una tabla, según la  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  base de datos. También puede crear [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] informes con el generador de informes paginados. 
+En este tutorial, usará el Diseñador de informes en SQL Server Data Tools para crear un [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginados informe con una tabla, según la ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] ** base de datos. También puede crear [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] informes con el generador de informes paginados. 
 
 Medida que avanza a través de este tutorial, cree un proyecto de informe, configurar la información de conexión, definir una consulta, agregará una región de datos de tabla, agrupar y algunos campos de totales y obtener una vista previa del informe.  
   
@@ -43,7 +43,7 @@ Para usar este tutorial, debe tener el software siguiente instalado en el sistem
   
 -   Las base de datos [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Para obtener más información, consulte [Bases de datos de ejemplo Adventure Works 2014)](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) con los componentes de "SQL Server Reporting Services" instalados para que tenga el Diseñador de informes.    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) con los componentes de "SQL Server Reporting Services" instalados por lo que tendrá el Diseñador de informes.    
   
 También debe disponer de permisos de solo lectura para recuperar datos de la base de datos [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .
 
@@ -66,4 +66,4 @@ También debe disponer de permisos de solo lectura para recuperar datos de la ba
 
 [Tutoriales de Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

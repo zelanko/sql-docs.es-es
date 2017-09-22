@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="database-catalog"></a>Catálogo de base de datos
@@ -33,7 +33,7 @@ WideWorldImporters utiliza esquemas para propósitos diferentes, como almacenami
 
 Estos esquemas contienen los datos. Un número de tablas es necesarios para todos los otros esquemas y se encuentra en el esquema de la aplicación.
 
-|Esquema|Description|
+|esquema|Description|
 |-----------------------------|---------------------|
 |Aplicación|Toda la aplicación a los usuarios, contactos y parámetros. Esto también contiene tablas de referencia con datos que se utilizan por varios esquemas|
 |Purchasing|Elemento en existencias adquiere de proveedores y los detalles sobre los proveedores.|  
@@ -44,7 +44,7 @@ Estos esquemas contienen los datos. Un número de tablas es necesarios para todo
 
 Estos esquemas se utilizan para las aplicaciones externas que no pueden tener acceso directamente a las tablas de datos. Contienen vistas y procedimientos almacenados utilizados por las aplicaciones externas.
 
-|Esquema|Description|
+|esquema|Description|
 |-----------------------------|---------------------|
 |Sitio web|Todo el acceso a la base de datos desde el sitio Web de la empresa es a través de este esquema.|
 |Informes|Todo el acceso a la base de datos de informes de Reporting Services es a través de este esquema.|
@@ -56,7 +56,7 @@ Tenga en cuenta que los informes y Power BI no se utilizan en la versión inicia
 
 Esquemas de propósito especial
 
-|Esquema|Description|
+|esquema|Description|
 |-----------------------------|---------------------|
 |Integración|Objetos y procedimientos necesarios para la integración de almacenamiento de datos (es decir, migrar los datos a la base de datos de WideWorldImportersDW).|
 |Secuencias|Contiene secuencias que se utilizan por todas las tablas de la aplicación.|
@@ -69,7 +69,7 @@ Todas las tablas de la base de datos están en los esquemas de datos.
 
 Detalles de los parámetros y usuarios (usuarios y contactos), junto con las tablas de referencia comunes (comunes a varios otros esquemas).
 
-|Table|Description|
+|Tabla|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contiene los parámetros configurables de todo el sistema.|
 |personas|Contiene los nombres de usuario, información de contacto para todos los usuarios que usan la aplicación y para las personas con las que se encarga de Wide World Importers con en organizaciones de clientes. Esto incluye personal, los clientes, proveedores y los otros contactos. Para las personas que tienen permiso para usar el sistema o el sitio Web, la información incluye detalles de inicio de sesión.|
@@ -84,7 +84,7 @@ Detalles de los parámetros y usuarios (usuarios y contactos), junto con las tab
 
 Detalles de proveedores y de las compras de artículos estándar.
 
-|Table|Description|
+|Tabla|Description|
 |-----------------------------|---------------------|
 |Suppliers|Tabla de la entidad principal para proveedores (entidades)|
 |SupplierCategories|Categorías de proveedores (p. ej., sorpresa, juguetes, ropa, empaquetado, etcetera.)|
@@ -97,7 +97,7 @@ Detalles de proveedores y de las compras de artículos estándar.
 
 Detalles de clientes, vendedores y de ventas de artículos estándar.
 
-|Table|Description|
+|Tabla|Description|
 |-----------------------------|---------------------|
 |Clientes|Tablas de la entidad principal para los clientes (organizaciones o individuos)|
 |CustomerCategories|Categorías de los clientes (es decir novedad tiendas, supermercados, etcetera.)|
@@ -113,7 +113,7 @@ Detalles de clientes, vendedores y de ventas de artículos estándar.
 
 Detalles de elementos de cotizaciones, sus explotaciones y transacciones.
 
-|Table|Description|
+|Tabla|Description|
 |-----------------------------|---------------------|
 |StockItems|Tabla de la entidad principal para los elementos estándar|
 |StockItemHoldings|Columnas no temporales para los elementos estándar. Estas columnas arefrequently actualizado.|
@@ -181,7 +181,7 @@ Se trata de los procedimientos empleados en una aplicación de cliente, como un 
 
 ### <a name="integration-schema"></a>Esquema de integración
 
-Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo necesario para la [paquete ETL](https://msdn.microsoft.com/library/mt734218.aspx).
+Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo necesario para la [paquete ETL](/sql-docs/docs/sample/world-wide-importers/etl-workflow).
 
 ### <a name="dataloadsimulation-schema"></a>Esquema de DataLoadSimulation
 

@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f4f58b682451b7dabf336241ec94797a4d1469e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c6a5fa2872d7888d28ba34aae959aac9b13ea4b0
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Tutorial para las características de rendimiento de SQL Server en Linux
@@ -157,11 +157,11 @@ SQL Server admite los procedimientos almacenados compilados de forma nativa que 
 ### <a name="learn-more-about-in-memory-oltp"></a>Obtener más información sobre OLTP en memoria
 Para obtener más información acerca de OLTP en memoria, vea los temas siguientes:
 
-- [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)
-- [Migrar a OLTP en memoria](https://msdn.microsoft.com/library/dn247639.aspx)
-- [Tabla temporal y variable de tabla más rápidas con optimización para memoria](https://msdn.microsoft.com/library/mt718711.aspx)
-- [Supervisar y solucionar problemas de uso de memoria](https://msdn.microsoft.com/library/dn465869.aspx)
-- [OLTP en memoria (optimización en memoria)](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
+- [Migrar a OLTP en memoria](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
+- [Tabla temporal y variable de tabla más rápidas con optimización para memoria](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
+- [Supervisar y solucionar problemas de uso de memoria](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [OLTP en memoria (optimización en memoria)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## <a name="use-query-store"></a>Use el almacén de consultas
 Almacén de consultas recopila información de rendimiento detallada acerca de las consultas, planes de ejecución y estadísticas en tiempo de ejecución.

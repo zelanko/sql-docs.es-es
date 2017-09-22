@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
      Llame a este procedimiento almacenado para hacer que se detenga un paquete en ejecución y crear un archivo de volcado.  
   
- Si usa el modelo de implementación de paquetes, puede crear archivos de volcado de depuración mediante la utilidad **dtexec** o la utilidad **dtutil** para especificar una opción de volcado de depuración en la línea de comandos. Para obtener más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md) y [dtutil Utility](../../integration-services/dtutil-utility.md). Para más información sobre el modelo de implementación de paquetes, consulte [Implementación de proyectos y paquetes de Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) y [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Si usa el modelo de implementación de paquetes, puede crear archivos de volcado de depuración mediante la utilidad **dtexec** o la utilidad **dtutil** para especificar una opción de volcado de depuración en la línea de comandos. Para obtener más información, consulte [dtexec (utilidad)](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) y [implementación de paquetes heredado &#40; SSIS &#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Formato de los archivos de volcado de depuración  
  Cuando se especifica una opción de volcado de depuración, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea los archivos de volcado de depuración siguientes:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 -   El archivo de volcado de depuración .tmp. Es un archivo de texto con formato.  
   
- De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena estos archivos en la carpeta  *\<unidad >:*\Program SQL Server\110\Shared\ErrorDumps.  
+ De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena estos archivos en la carpeta * \<unidad >:*\Program SQL Server\110\Shared\ErrorDumps.  
   
  En la tabla siguiente solo se describen determinadas secciones del archivo .tmp. El archivo .tmp incluye datos adicionales que no se incluyen en la tabla.  
   

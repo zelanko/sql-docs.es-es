@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 581215c25f688b2f1e5661d370a31b5de4aed652
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propiedades de TCP/IP (pestaña Direcciones IP)
   Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
   
- Los cambios surten efecto cuando se reinicia SQL Server SQL Server. Para información sobre cómo iniciar y detener el servicio SQL Server Browser, consulte [Iniciar y detener el servicio SQL Server Browser](https://msdn.microsoft.com/library/hh403394.aspx).  
+ Los cambios surten efecto cuando se reinicia SQL Server SQL Server. Para información sobre cómo iniciar y detener el servicio SQL Server Browser, consulte [Iniciar y detener el servicio SQL Server Browser](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).  
   
 ## <a name="static-vs-dynamic-ports"></a>Puertos estáticos frente a Puertos dinámicos  
  La instancia predeterminada de SQL Server realiza escuchas para las conexiones entrantes en el puerto 1433. Se puede cambiar el puerto por razones de seguridad o debido a un requisito de la aplicación cliente. De forma predeterminada, las instancias con nombre (incluido SQL Server Express) se configuran para escuchar en los puertos dinámicos. Para configurar un puerto estático, deje en blanco la casilla **Puertos dinámicos TCP** y proporcione un número de puerto disponible en la casilla **Puerto TCP** . Para obtener más información acerca de cómo abrir los puertos del firewall, vea Configurar Firewall de Windows para permitir el acceso a SQL Server en los Libros en pantalla.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vea también  
  [Elegir un protocolo de red](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Crear una cadena de conexión válida con TCP / IP](https://msdn.microsoft.com/library/ms191260.aspx)   
+ [Crear una cadena de conexión válida con TCP / IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
  [Servicio SQL Server Browser](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

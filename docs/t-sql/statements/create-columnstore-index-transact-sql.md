@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -54,12 +54,12 @@ Vaya a ejemplos:
 -   [Ejemplos para los índices no agrupados](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Vaya a escenarios:  
--   [Índices de almacén de columnas para análisis operativos en tiempo real](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [Índices de almacén de columnas para el almacenamiento de datos de](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [Índices de almacén de columnas para análisis operativos en tiempo real](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
+-   [Índices de almacén de columnas para el almacenamiento de datos de](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
   
 Aprende más:  
--   [Guía de índices de almacén de columnas](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Resumen de características de los índices de almacén de columnas](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Guía de índices de almacén de columnas](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
+-   [Resumen de características de los índices de almacén de columnas](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 ##  <a name="LimitRest"></a> Limitaciones y restricciones  
 
 **Cada columna de un índice de almacén de columnas debe ser de uno de los tipos de datos empresariales comunes siguientes:** 
--   DateTimeOffset [(  *n*  )]  
--   datetime2 [(  *n*  )]  
+-   DateTimeOffset [( * n * )]  
+-   datetime2 [( * n * )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   tiempo [(  *n*  )]  
--   float [(  *n*  )]  
--   real [(  *n*  )]  
+-   tiempo [( * n * )]  
+-   float [( * n * )]  
+-   real [( * n * )]  
 -   decimal [( *precisión* [ *, escala* ] **)** ]
 -   numérico [( *precisión* [ *, escala* ] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [( * n * )] 
 -   nvarchar (max) (se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y base de datos de SQL de Azure en premium tarifa, en los índices de almacén de columnas agrupado solo)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [( * n * )]  
+-   varchar [( * n * )]  
 -   varchar (max) (se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y base de datos de SQL de Azure en premium tarifa, en los índices de almacén de columnas agrupado solo)
--   Char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   Char [( * n * )]  
+-   varbinary [( * n * )] 
 -   varbinary (max) (se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y base de datos de SQL de Azure en premium tarifa, en los índices de almacén de columnas agrupado solo)
--   binario [(  *n*  )]  
+-   binario [( * n * )]  
 -   uniqueidentifier (se aplica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores)
   
 Si la tabla subyacente tiene una columna de un tipo de datos que no se admite para los índices de almacén de columnas, se debe omitir esa columna del índice no agrupado de almacén de columnas.  

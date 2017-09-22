@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Cumplimiento de JDBC 4.1 con el controlador JDBC
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |Nueva característica|Description|  
 |-----------------|-----------------|  
-|Nueva función Escape<br /><br /> Secuencia de escape de devolución de filas limitada|Compatibilidad parcial<br /><br /> Sintaxis de escape: límite \<filas > [OFFSET < row_offset >]<br /><br /> La sintaxis de la secuencia de escape tiene dos partes: la parte obligatoria 'filas' especifica el número de filas que se devolverán, la parte opcional 'row_offset' especifica el número de filas que se omiten antes de empezar a devolver filas<br /><br /> El controlador admite solo la parte obligatoria transformando la consulta para que use 'TOP' en lugar de LIMIT (SQL Server no admite "LIMIT").<br /><br /> El controlador producirá una excepción si se usa la parte opcional 'row_offset', ya que SQL Server no tiene ninguna construcción integrada que la admita.<br /><br /> Para obtener más información, consulte [usar secuencias de Escape de SQL](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|Nueva función Escape<br /><br /> Secuencia de escape de devolución de filas limitada|Compatibilidad parcial<br /><br /> Sintaxis de escape: límite \<filas > [OFFSET < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  La especificación de la API de Java Database Connectivity 4.1 es compatible con Microsoft JDBC Driver 4.2 para SQL Server, con las siguientes asignaciones de tipo de datos.  
   

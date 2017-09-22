@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>Instalación y configuración
@@ -28,7 +28,7 @@ Instrucciones de instalación y configuración de base de datos OLTP de Wide Wor
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (o superior) o [base de datos de SQL Azure](https://azure.microsoft.com/services/sql-database/). Para obtener la versión completa del ejemplo, use SQL Server Evaluation, Developer o Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
 
 ## <a name="download"></a>Descargar
 
@@ -56,7 +56,7 @@ Para restaurar una copia de seguridad a una instancia de SQL Server, puede utili
 5. Si es necesario, cambie la ubicación de destino para los datos y archivos de registro, en la **archivos** panel. Tenga en cuenta que es una práctica recomendada para colocar datos y archivos de registro en unidades diferentes.
 6. Haga clic en **Aceptar**. Se iniciará la restauración de base de datos. Una vez que se complete, tendrá la base de datos WideWorldImporters instalados en su instancia de SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Base de datos SQL de Azure
 
 Para importar un bacpac en una base de datos SQL, puede utilizar Management Studio.
 

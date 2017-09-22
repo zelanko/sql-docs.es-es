@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: e16cfa9447a63e1bb9b627bc3045727e7f481ef3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados por un paquete de Integration Services
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  En este tema, se proporciona información sobre los mensajes de eventos comunes que un paquete registra en el registro de eventos de aplicación. De forma predeterminada, los paquetes registran algunos de estos mensajes aunque no se haya habilitado el registro en ellos. Sin embargo, hay otros mensajes que solo se registran si se ha habilitado dicho registro. Con independencia de si el paquete registra de forma predeterminada estos mensajes, o porque se haya habilitado el registro, el origen del evento de los mensajes es SQLISPackage.  
   
- Para información sobre cómo ejecutar paquetes de SSIS, consulte [Ejecución de proyectos y paquetes](https://msdn.microsoft.com/library/ms141708.aspx).  
+ Para información sobre cómo ejecutar paquetes de SSIS, consulte [Ejecución de proyectos y paquetes](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
   
  Para obtener información sobre cómo solucionar problemas de ejecución de paquetes, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   

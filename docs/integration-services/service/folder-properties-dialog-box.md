@@ -19,14 +19,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37ac39c3aa4aea9c4c2d9ed65b7aadde7a27887b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: dc9e7c04025c01db9eee05d467fc9b5317aa11ec
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="folder-properties-dialog-box"></a>Propiedades de la carpeta (cuadro de diálogo)
-  Una carpeta contiene proyectos y entornos del catálogo de **SSISDB** . Cada carpeta define los permisos que se aplican a su contenido. Para más información sobre los permisos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [catalog.grant_permission &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
+  Una carpeta contiene proyectos y entornos del catálogo de **SSISDB** . Cada carpeta define los permisos que se aplican a su contenido. Para más información sobre los permisos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [catalog.grant_permission &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>Para establecer la descripción de la carpeta y los permisos  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 5.  Haga clic en **Aceptar** para aceptar los cambios y cierre el cuadro de diálogo **Propiedades de carpetas** .  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Servidor](https://msdn.microsoft.com/library/ms141134.aspx)   
+ [Integration Services &#40; SSIS &#41; Servidor](/sql-docs/docs/integration-services/integration-services-ssis-packages)   
  [Catalog.grant_permission &#40; Base de datos SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

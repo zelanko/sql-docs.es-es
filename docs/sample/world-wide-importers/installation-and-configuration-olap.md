@@ -16,17 +16,17 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 729df20de5d57a664467a4b799312d066bb3ec63
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c4de8bcf161a8e4a5e33535769d3f8f7b5f7ad7a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW instalación y configuración
 Instrucciones de instalación y configuración para la base de datos de WideWorldImportersDW.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o superior) o [base de datos de SQL Azure](https://azure.microsoft.com/services/sql-database/). Para usar la versión completa del ejemplo, use SQL Server Evaluation, Developer o Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
 
 ## <a name="download"></a>Descargar
 
@@ -54,7 +54,7 @@ Para restaurar una copia de seguridad a una instancia de SQL Server, puede utili
 5. Si es necesario, cambie la ubicación de destino para los datos y archivos de registro, en la **archivos** panel. Tenga en cuenta que es una práctica recomendada para colocar datos y archivos de registro en unidades diferentes.
 6. Haga clic en **Aceptar**. Se iniciará la restauración de base de datos. Una vez que se complete, tendrá la base de datos WideWorldImporters instalados en su instancia de SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Base de datos SQL de Azure
 
 Para importar un bacpac en una base de datos SQL, puede utilizar Management Studio.
 

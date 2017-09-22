@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f42cd86be5f91b54e0ae862bee0fa64fb483c27d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso de la copia masiva con el controlador JDBC
@@ -858,7 +858,7 @@ public class Program
  La aplicación siguiente muestra cómo cargar datos mediante la clase SQLServerBulkCopy. En este ejemplo, se usa un archivo CSV para copiar datos exportados de la tabla Production.Product en la base de datos de AdventureWorks de SQL Server a una tabla similar en la base de datos.  
   
 > [!IMPORTANT]  
->  Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [el programa de instalación de la tabla](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). También debe crear un archivo CSV con los datos exportados de la tabla Production.Product. Puede hacerlo con SQL Server Management Studio (SSMS).  Si no tiene SSMS, puede visitar [descargar SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) para obtenerlo.  
+>  Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [el programa de instalación de la tabla](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) para obtenerlo.  
   
 1.  Abra **SQL Server Management Studio** y conectarse a SQL Server con la base de datos de AdventureWorks.  
   

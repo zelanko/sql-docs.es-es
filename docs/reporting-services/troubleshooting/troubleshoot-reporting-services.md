@@ -15,17 +15,17 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Solución de problemas de Reporting Services
   Los temas de esta sección le ayudarán a identificar y solucionar problemas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
-![Icono pequeño de carpeta de archivo](../../reporting-services/troubleshooting/media/filefolder-small.png)**solución de problemas de Reporting Services**   
+![Icono pequeño de carpeta de archivo](../../reporting-services/troubleshooting/media/filefolder-small.png)**solución de problemas de Reporting Services   **  
 + [Solución de problemas de informes de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Solución de problemas de suscripciones y entrega de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,10 +39,10 @@ ms.lasthandoff: 08/09/2017
 
 +  [Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Solución de problemas de conexión de base de datos y servidor con Reporting Services](https://msdn.microsoft.com/library/mt650905.aspx)  
++  [Solucionar problemas de conexión de base de datos con Reporting Services y servidor](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
 
- ![Icono de carpeta de archivos pequeños](../../reporting-services/troubleshooting/media/filefolder-small.png)**referencia de errores y eventos**   
- + [Errores y eventos referencia &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ ![Icono de carpeta de archivos pequeños](../../reporting-services/troubleshooting/media/filefolder-small.png)**referencia de errores y eventos   **  
+ + [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Causa y resolución de errores de Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 

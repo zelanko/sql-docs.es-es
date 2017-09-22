@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Si el proyecto y todos los paquetes superan la prueba de compatibilidad, haga clic **Aceptar** para convertir el paquete.  
   
-> **NOTA:** Para convertir un proyecto al modelo de implementación de paquetes, use el **Asistente para la conversión de proyectos de Integration Services**. Para más información, consulte [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTA:** Para convertir un proyecto al modelo de implementación de paquetes, use el **Asistente para la conversión de proyectos de Integration Services**. Para más información, consulte [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
 
 ## <a name="integration-services-deployment-wizard"></a>Asistente para implementación de Integration Services
   El **Asistente para implementación de Integration Services** admite dos modelos de implementación:
@@ -309,7 +309,7 @@ Inicie el asistente de una de estas dos formas:
  La página permite revisar la configuración seleccionada. Puede cambiar las selecciones si hace clic en **Anterior**o si hace clic en cualquiera de los pasos del panel izquierdo. Haga clic en **Implementar** para iniciar el proceso de implementación.  
   
 #### <a name="results"></a>Resultado  
- Una vez completado el proceso de implementación, debería ver la página **Resultados** . Esta página muestra si cada acción si se completó correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar informe...**  para guardar los resultados en un archivo XML o haga clic en **cerrar** para salir del asistente.
+ Una vez completado el proceso de implementación, debería ver la página **Resultados** . Esta página muestra si cada acción si se completó correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar informe... ** para guardar los resultados en un archivo XML o haga clic en **cerrar** para salir del asistente.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ Inicie el asistente de una de estas dos formas:
 14. Haga clic en **Aceptar** dos veces para guardar los cambios.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implementar y ejecutar paquetes SSIS mediante procedimientos almacenados
-  Al configurar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para que use el modelo de implementación de proyectos, puede emplear procedimientos almacenados del catálogo de [!INCLUDE[ssIS](../../includes/ssis-md.md)] implementar el proyecto y ejecutar los paquetes. Para obtener información acerca del modelo de implementación de proyectos, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+  Al configurar una [! INCLUIR[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  También puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para implementar el proyecto y ejecutar los paquetes. Para obtener más información, vea los temas de la sección **Vea también** .  
   
@@ -421,9 +421,9 @@ Inicie el asistente de una de estas dos formas:
   
 1.  Llame a [catalog.deploy_project &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) para implementar el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-     Para recuperar el contenido binario de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivo de implementación del proyecto para la  *@project_stream*  parámetro, utilice una instrucción SELECT con la función OPENROWSET y el proveedor de conjunto de filas BULK. El proveedor de conjuntos de filas BULK le permite leer datos de un archivo. El argumento SINGLE_BLOB del proveedor de conjuntos de filas BULK devuelve el contenido del archivo de datos como un conjunto de filas de una sola fila y una sola columna de tipo varbinary(max). Para obtener más información, vea [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Para recuperar el contenido binario del archivo de implementación de proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , para el parámetro *@project_stream* , use una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas BULK. El proveedor de conjuntos de filas BULK le permite leer datos de un archivo. El argumento SINGLE_BLOB del proveedor de conjuntos de filas BULK devuelve el contenido del archivo de datos como un conjunto de filas de una sola fila y una sola columna de tipo varbinary(max). Para obtener más información, vea [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     En el ejemplo siguiente, el proyecto SSISPackages_ProjectDeployment se implementa en la carpeta Paquetes SSIS del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los datos binarios se leen del archivo de proyecto (SSISPackage_ProjectDeployment.ispac) y se almacenan en el parámetro *@ProjectBinary* de tipo varbinary(max). El valor de parámetro *@ProjectBinary* se asigna al parámetro *@project_stream* .  
+     En el ejemplo siguiente, el proyecto SSISPackages_ProjectDeployment se implementa en la carpeta Paquetes SSIS del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Los datos binarios se leen del archivo de proyecto (SSISPackage_ProjectDeployment.ispac) y se almacenan en el parámetro *@ProjectBinary* de tipo varbinary(max). El valor de parámetro *@ProjectBinary* se asigna al parámetro *@project_stream* .  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  

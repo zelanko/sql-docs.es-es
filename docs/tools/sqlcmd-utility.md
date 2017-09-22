@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd (utilidad)
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
   Para ejecutar instrucciones sqlcmd en SSMS, seleccione Modo SQLCMD en la lista desplegable del menú de consulta de la navegación superior.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para la ejecución en normal y el modo SQLCMD en **Editor de consultas**. Cuando **sqlcmd** se ejecuta desde la línea de comandos, ****  usa el controlador ODBC. Dado que se pueden aplicar diferentes opciones predeterminadas, podría obtener un comportamiento diferente al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] y en la utilidad **sqlcmd** .  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para la ejecución en normal y el modo SQLCMD en **Editor de consultas**. Cuando **sqlcmd** se ejecuta desde la línea de comandos, ** ** usa el controlador ODBC. Dado que se pueden aplicar diferentes opciones predeterminadas, podría obtener un comportamiento diferente al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] y en la utilidad **sqlcmd** .  
 >   
   
  Actualmente, **sqlcmd** no requiere un espacio entre la opción de línea de comandos y el valor. Sin embargo, en versiones futuras, se puede requerir un espacio entre la opción de línea de comandos y el valor.  
@@ -177,10 +177,10 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
 **-j** Imprime mensajes de error sin formato en la pantalla.
   
  **-K** *application_intent*  
- Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si no se especifica **-K** , la utilidad sqlcmd no admitirá la conectividad con una réplica secundaria en el grupo de disponibilidad AlwaysOn. Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx).  
+ Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si no se especifica **-K** , la utilidad sqlcmd no admitirá la conectividad con una réplica secundaria en el grupo de disponibilidad AlwaysOn. Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).  
   
  **-M** *conmutación_por_error_de_múltiples_subredes*  
- Especifique siempre **- M** al conectarse al agente de escucha del grupo de disponibilidad de un grupo de disponibilidad de SQL Server o una instancia de clúster de conmutación por error de SQL Server. **-M** proporciona una detección más rápida del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información sobre [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consulte [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx y [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ Especifique siempre **- M** al conectarse al agente de escucha del grupo de disponibilidad de un grupo de disponibilidad de SQL Server o una instancia de clúster de conmutación por error de SQL Server. **-M** proporciona una detección más rápida del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información sobre [! INCLUIR[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [creación y configuración de los grupos de disponibilidad &#40; SQL Server &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, y [secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  Este modificador lo usa el cliente para solicitar una conexión cifrada.  
@@ -215,11 +215,11 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  **-S** [*protocolo*:]*servidor*[**\\***nombre_de_instancia*][**,***puerto*]  
  Especifica la instancia de SQL Server que se va a conectar. Establece la variable de scripting de **sqlcmd** SQLCMDSERVER.  
   
- Especifique *nombre_servidor* para conectarse a la instancia predeterminada de SQL Server en ese equipo servidor. Especifique *nombre_servidor* [  **\\**  *instance_name* ] para conectarse a una instancia con nombre de SQL Server en ese equipo servidor. Si no se especifica ningún equipo de servidor, **sqlcmd** se conecta a la instancia predeterminada de SQL Server en el equipo local. Esta opción es necesaria si **sqlcmd** se ejecuta desde un equipo remoto conectado a la red.  
+ Especifique *nombre_servidor* para conectarse a la instancia predeterminada de SQL Server en ese equipo servidor. Especifique *nombre_servidor* [ ** \\ ** *instance_name* ] para conectarse a una instancia con nombre de SQL Server en ese equipo servidor. Si no se especifica ningún equipo de servidor, **sqlcmd** se conecta a la instancia predeterminada de SQL Server en el equipo local. Esta opción es necesaria si **sqlcmd** se ejecuta desde un equipo remoto conectado a la red.  
   
  *protocolo* puede ser **tcp** (TCP/IP), **lpc** (memoria compartida) o **np** (canalizaciones con nombre).  
   
- Si no especifica un *nombre_servidor* [  **\\**  *instance_name* ] al iniciar **sqlcmd**, SQL Server busca y usa la variable de entorno SQLCMDSERVER.  
+ Si no especifica un *nombre_servidor* [ ** \\ ** *instance_name* ] al iniciar **sqlcmd**, SQL Server busca y usa la variable de entorno SQLCMDSERVER.  
   
 > [!NOTE]  
 >  La variable de entorno OSQLSERVER se ha conservado por motivos de compatibilidad. La variable de entorno SQLCMDSERVER tiene prioridad sobre la variable de entorno OSQLSERVER; esto significa que **sqlcmd** y **osql** se pueden usar una junto a la otra sin interferencias y que los scripts anteriores seguirán funcionando.  
@@ -234,18 +234,18 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  Si se usa la opción **-U** junto con la opción **-E** (descrita más adelante en este tema), se genera un mensaje de error. Si la opción **-U** va seguida de más de un argumento, se genera un mensaje de error y el programa se cierra.  
   
- **-z** *new_password*  
+ **-z** *nueva_contraseña*  
  Cambiar contraseña:  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *new_password*  
+ **-Z** *nueva_contraseña*  
  Cambiar contraseña y salir:  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Opciones de entrada o salida**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:***codepage*]  
+  **-f** *página_de_códigos* | **i:***página_de_códigos*[**,o:***página_de_códigos*] | **o:***página_de_códigos*[**,i:***página_de_códigos*]  
  Especifica las páginas de códigos de entrada y de salida. El número de página de códigos es un valor numérico que especifica una página de códigos instalada en Windows.  
   
  Reglas de conversión de páginas de códigos:  
@@ -685,7 +685,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  **Otros comandos**  
   **:r \<** *filename***>**  
- Analiza las instrucciones de Transact-SQL adicionales y **sqlcmd** comandos desde el archivo especificado por  **\<**  *filename***>**en la caché de instrucciones.  
+ Analiza las instrucciones de Transact-SQL adicionales y **sqlcmd** comandos desde el archivo especificado por ** \< ** *filename***>**en la caché de instrucciones.  
   
  Si el archivo contiene instrucciones de Transact-SQL que no van seguidas **vaya**, debe escribir **vaya** en la línea que sigue a **: r**.  
   
@@ -700,7 +700,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  **:Serverlist**  
  Enumera los servidores configurados localmente y los nombres de los servidores que difunden en la red.  
   
- **:Connect**  *nombre_del_servidor*[**\\***nombre_de_la_instancia*] [-l *tiempo_de_espera*] [-U *nombre_del_usuario* [-P *contraseña*]]  
+ **:Connect**  *nombre_de_servidor*[**\\***nombre_de_instancia*] [-l *tiempo_de_espera*] [-U *nombre_del_usuario* [-P *password*]]  
  Se conecta a una instancia de SQL Server. También cierra la conexión actual.  
   
  Opciones de tiempo de espera:  

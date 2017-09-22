@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
@@ -32,16 +32,16 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Informes, elementos de informe y las definiciones de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Describe la diversidad de términos que se usan para describir un informe en distintos estados, incluyendo la definición inicial, el informe publicado y el informe visualizado tal cual aparece ante el usuario.  
   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explica las diferencias de crear, almacenar y administrar conjuntos de datos incrustados y compartidos.  
   
- [Las regiones de datos y mapas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Describe los tipos de regiones de datos que se pueden agregar al diseño de un informe. Las regiones de datos determinan la apariencia de un informe: en forma de tabla, matriz, lista o gráfico.  
   
- [Concepto de parámetros de informe (Generador de informes y SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  
+ [Concepto de parámetros de informe (generador de informes y SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
  Describe los modos de definir y usar los parámetros de informe, y el modo en que se administran independientemente de la definición de informe en el servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  

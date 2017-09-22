@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
 ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar y exportar datos con el Asistente para importación y exportación de SQL Server
@@ -41,11 +41,11 @@ ms.lasthandoff: 08/17/2017
  El Asistente para importación y exportación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece una manera sencilla de copiar datos de un origen a un destino. Esta introducción describe los orígenes de datos que el asistente pueda utilizar como orígenes y destinos, así como los permisos que necesita para ejecutar al asistente.
 
 ## <a name="get-the-wizard"></a>Obtener el Asistente
-Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si va a ejecutar el asistente, pero no tienes [! INCLUIR[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>¿Qué ocurre cuando ejecuta el Asistente?
 -    **Ver la lista de pasos.** Para obtener una descripción de los pasos del asistente, consulte [los pasos de la importación de SQL Server y el Asistente para exportación de](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). También hay una página independiente de la documentación de cada página del asistente.  
-    \-o\-
+    \- o \-
 -   **Ver un ejemplo sencillo.** Para obtener una visión rápida de las varias pantallas que ve en una sesión típica, eche un vistazo en este sencillo ejemplo de extremo a extremo en una sola página - [empezar a trabajar con este ejemplo sencillo de la importación y el Asistente para exportación de](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>¿Qué orígenes y destinos puedo usar?  

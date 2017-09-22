@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>¿Qué &#39; s nuevo en Analysis Services de SQL Server de 2017
@@ -110,7 +110,7 @@ En SSDT, puede seleccionar el nuevo nivel de compatibilidad 1400 al crear proyec
 >[!NOTE]
 > El área de trabajo integrada en la versión de diciembre de SQL Server Data Tools (SSDT) es compatible con el nivel de compatibilidad 1400. Si crea proyectos de modelos tabulares en una instancia de servidor del área de trabajo, dicha instancia y cualquier instancia en la que implemente deben ser de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1. 
 
-Para actualizar un modelo tabular existente en SSDT, en el Explorador de soluciones, haga clic en **Model.bim**y, a continuación, en **propiedades**, establezca el **nivel de compatibilidad** propiedad  **SQL Server de 2017 (1400)**. 
+Para actualizar un modelo tabular existente en SSDT, en el Explorador de soluciones, haga clic en **Model.bim**y, a continuación, en **propiedades**, establezca el **nivel de compatibilidad** propiedad ** SQL Server de 2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>Mejoras de DAX
-Esta versión incluye un operador `IN` para expresiones DAX. Esto es similar al operador [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) que se suele usar para especificar varios valores en una cláusula `WHERE` .
+Esta versión incluye un operador `IN` para expresiones DAX. Esto es similar al operador [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) que se suele usar para especificar varios valores en una cláusula `WHERE`.
 
 Antes, lo habitual era especificar filtros de valores múltiples mediante el operador lógico `OR` , como en la expresión de medida siguiente:
 

@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Instalar previamente entrenado máquina aprendizaje de los modelos en SQL Server
@@ -37,8 +37,8 @@ Se han realizado previamente entrenados modelos disponibles para admitir a clien
 
 Actualmente, los modelos que están disponibles son modelos de redes neurales profundas (DNN) para las opiniones de análisis y la imagen. Todos los modelos previamente entrenados cuatro se entrenó en CNTK. La configuración de cada red se basa en las implementaciones de referencia siguientes:
 
-+ Resnet-18
-+ Resnet-50
++ ResNet-18
++ ResNet-50
 + ResNet-101
 + AlexNet
 
@@ -133,3 +133,4 @@ La imagen debe cambiarse de tamaño para cumplir los requisitos del modelo entre
 Este ejemplo muestra el uso del modelo previamente entrenado para la clasificación:
 
 [Análisis de opiniones con Caracterizador texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

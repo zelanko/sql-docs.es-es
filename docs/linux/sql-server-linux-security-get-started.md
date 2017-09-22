@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5256cf1d1c63139c43fbb9900876297294f2d30a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 9aaa786ec53296804f6300aad6add8c10b7fd699
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Tutorial sobre las características de seguridad de SQL Server en Linux
@@ -27,7 +27,7 @@ Si es un usuario de Linux que es una novedad de SQL Server, las tareas siguiente
 
 ## <a name="create-a-login-and-a-database-user"></a>Crear un inicio de sesión y un usuario de base de datos 
 
-Conceder a otros usuarios acceso a SQL Server mediante la creación de un inicio de sesión en la base de datos maestra utilizando la [CREATE LOGIN](https://msdn.microsoft.com/library/ms189751.aspx) instrucción. Por ejemplo:
+Conceder a otros usuarios acceso a SQL Server mediante la creación de un inicio de sesión en la base de datos maestra utilizando la [CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql) instrucción. Por ejemplo:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  Utilice siempre una contraseña segura en lugar de los asteriscos anteriores.
 
-Los inicios de sesión pueden conectarse a SQL Server y tener acceso (con permisos limitados) a la base de datos maestra. Para conectarse a una base de datos de usuario, un inicio de sesión necesita una identidad correspondiente en el nivel de base de datos, llama a un usuario de base de datos. Los usuarios son específicos de cada base de datos y se deben crear por separado en cada base de datos para concederles acceso. El siguiente ejemplo se desplaza a la base de datos AdventureWorks2014 y, a continuación, usa el [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) instrucción para crear un usuario denominado Larry que está asociado con el inicio de sesión denominado Larry. Aunque el inicio de sesión y el usuario están relacionadas (asignados entre sí), son objetos diferentes. El inicio de sesión es una entidad de seguridad de nivel de servidor. El usuario es una entidad de seguridad de nivel de base de datos.
+Los inicios de sesión pueden conectarse a SQL Server y tener acceso (con permisos limitados) a la base de datos maestra. Para conectarse a una base de datos de usuario, un inicio de sesión necesita una identidad correspondiente en el nivel de base de datos, llama a un usuario de base de datos. Los usuarios son específicos de cada base de datos y se deben crear por separado en cada base de datos para concederles acceso. El siguiente ejemplo se desplaza a la base de datos AdventureWorks2014 y, a continuación, usa el [CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql) instrucción para crear un usuario denominado Larry que está asociado con el inicio de sesión denominado Larry. Aunque el inicio de sesión y el usuario están relacionadas (asignados entre sí), son objetos diferentes. El inicio de sesión es una entidad de seguridad de nivel de servidor. El usuario es una entidad de seguridad de nivel de base de datos.
 
 ```
 USE AdventureWorks2014;
@@ -67,7 +67,7 @@ Ahora el inicio de sesión Juan puede crear más inicios de sesión y el usuario
 
 Las primeras personas para conectarse a una base de datos de usuario será el administrador y las cuentas de propietario de base de datos. Sin embargo, estos usuarios tienen todos los los permisos disponibles en la base de datos. Se trata de más permisos que debe tener la mayoría de los usuarios. 
 
-Cuando acaba de empezar, puede asignar algunos categorías generales de permisos mediante la integrada *funciones fijas de base de datos*. Por ejemplo, el `db_datareader` rol fijo de base de datos puede leer todas las tablas de la base de datos, pero no realizar ningún cambio. Conceder la pertenencia a un rol fijo de base de datos mediante el uso de la [ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx) instrucción. En el ejemplo siguiente se agrega el usuario `Jerry` a la `db_datareader` rol fijo de base de datos.   
+Cuando acaba de empezar, puede asignar algunos categorías generales de permisos mediante la integrada *funciones fijas de base de datos*. Por ejemplo, el `db_datareader` rol fijo de base de datos puede leer todas las tablas de la base de datos, pero no realizar ningún cambio. Conceder la pertenencia a un rol fijo de base de datos mediante el uso de la [ALTER ROLE](/sql-docs/docs/t-sql/statements/alter-role-transact-sql) instrucción. En el ejemplo siguiente se agrega el usuario `Jerry` a la `db_datareader` rol fijo de base de datos.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,9 +76,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Para obtener una lista de los roles fijos de base de datos, vea [Roles de nivel de base de datos](https://msdn.microsoft.com/library/ms189121.aspx).
+Para obtener una lista de los roles fijos de base de datos, vea [Roles de nivel de base de datos](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles).
 
-Más adelante, cuando esté listo para configurar el acceso más preciso a los datos (altamente recomendados), crear sus propios roles de base de datos definido por el usuario mediante [CREATE ROLE](https://msdn.microsoft.com/library/ms187936.aspx) instrucción. A continuación, asignarle permisos granulares específicos para roles personalizados.
+Más adelante, cuando esté listo para configurar el acceso más preciso a los datos (altamente recomendados), crear sus propios roles de base de datos definido por el usuario mediante [CREATE ROLE](/sql-docs/docs/t-sql/statements/create-role-transact-sql) instrucción. A continuación, asignarle permisos granulares específicos para roles personalizados.
 
 Por ejemplo, las siguientes instrucciones crean un rol de base de datos denominado `Sales`, concede el `Sales` grupo la capacidad de ver, actualizar y eliminar filas de la `Orders` de tabla y, a continuación, agrega el usuario `Jerry` a la `Sales` rol.   
    
@@ -90,12 +90,12 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-Para obtener más información sobre el sistema de permisos, consulte [Getting Started with Database Engine Permissions](https://msdn.microsoft.com/library/mt667986.aspx).
+Para obtener más información sobre el sistema de permisos, consulte [Getting Started with Database Engine Permissions](/sql-docs/docs/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions).
 
 
 ## <a name="configure-row-level-security"></a>Configurar la seguridad de nivel de fila  
 
-[Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx) le permite restringir el acceso a las filas de una base de datos en función de usuario que ejecuta una consulta. Esta característica es útil para escenarios como asegurarse de que los clientes solo pueden tener acceso a sus propios datos o que los trabajadores solo puedan acceder a datos que son pertinentes para su departamento.   
+[Seguridad de nivel de fila](/sql-docs/docs/relational-databases/security/row-level-security) le permite restringir el acceso a las filas de una base de datos en función de usuario que ejecuta una consulta. Esta característica es útil para escenarios como asegurarse de que los clientes solo pueden tener acceso a sus propios datos o que los trabajadores solo puedan acceder a datos que son pertinentes para su departamento.   
 
 Los pasos siguientes tutorial configurar dos usuarios con diferentes acceso a nivel de fila el `Sales.SalesOrderHeader` tabla. 
 
@@ -165,7 +165,7 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>Habilitar el enmascaramiento dinámico de datos
 
-[Enmascaramiento de datos dinámicos](https://msdn.microsoft.com/library/mt130841.aspx) le permite limitar la exposición de datos confidenciales a los usuarios de una aplicación total o parcialmente enmascarando determinadas columnas. 
+[Enmascaramiento de datos dinámicos](/sql-docs/docs/relational-databases/security/dynamic-data-masking) le permite limitar la exposición de datos confidenciales a los usuarios de una aplicación total o parcialmente enmascarando determinadas columnas. 
 
 Use un `ALTER TABLE` instrucción que se va a agregar a la función de enmascaramiento del `EmailAddress` columna en el `Person.EmailAddress` tabla: 
  
@@ -248,9 +248,9 @@ Para quitar TDE, ejecute`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`
 El programa de las operaciones de cifrado y descifrado se ejecutan en subprocesos en segundo plano, con SQL Server. Puede ver el estado de estas operaciones mediante las vistas de catálogo y las vistas de administración dinámica de la lista que se muestra más adelante en este tema.   
 
 >  [!WARNING]
->  Los archivos de copia de seguridad de las bases de datos que tienen habilitado TDE también se cifran mediante la clave de cifrado de la base de datos. Como consecuencia, al restaurar estas copias de seguridad debe estar disponible el certificado que protege la clave de cifrado de la base de datos. Esto significa que, además de hacer copias de seguridad de la base de datos, tiene que asegurarse de que mantiene copias de seguridad de los certificados del servidor para evitar la pérdida de datos. Si el certificado deja de estar disponible, perderá los datos. Para obtener más información, vea [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).  
+>  Los archivos de copia de seguridad de las bases de datos que tienen habilitado TDE también se cifran mediante la clave de cifrado de la base de datos. Como consecuencia, al restaurar estas copias de seguridad debe estar disponible el certificado que protege la clave de cifrado de la base de datos. Esto significa que, además de hacer copias de seguridad de la base de datos, tiene que asegurarse de que mantiene copias de seguridad de los certificados del servidor para evitar la pérdida de datos. Si el certificado deja de estar disponible, perderá los datos. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](/sql-docs/docs/relational-databases/security/sql-server-certificates-and-asymmetric-keys).  
 
-Para obtener más información acerca de TDE, vea [cifrado de datos transparente (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).   
+Para obtener más información acerca de TDE, vea [cifrado de datos transparente (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde).   
 
 
 ## <a name="configure-backup-encryption"></a>Configurar el cifrado de copia de seguridad
@@ -280,10 +280,10 @@ WITH
 GO  
 ```
 
-Para obtener más información, consulte [cifrado de copia de seguridad](https://msdn.microsoft.com/library/dn449489.aspx).
+Para obtener más información, consulte [cifrado de copia de seguridad](/sql-docs/docs/relational-databases/backup-restore/backup-encryption).
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de las características de seguridad de SQL Server, vea [centro de seguridad para el motor de base de datos de SQL Server y base de datos de SQL Azure](https://msdn.microsoft.com/library/bb510589.aspx).
+Para obtener más información acerca de las características de seguridad de SQL Server, vea [centro de seguridad para el motor de base de datos de SQL Server y base de datos de SQL Azure](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
 

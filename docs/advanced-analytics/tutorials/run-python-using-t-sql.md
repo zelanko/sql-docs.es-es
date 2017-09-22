@@ -1,8 +1,8 @@
 ---
 title: Ejecutar Python mediante T-SQL | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>Ejecución de Python mediante T-SQL
@@ -57,7 +57,7 @@ GO
 
 El código siguiente carga el archivo ejecutable de Python, pasa los datos de entrada y para cada fila de datos de entrada, actualiza el nombre de día de la tabla con un número que representa el índice del día de la semana.
 
-Tome nota del parámetro  *@RowsPerRead* . Este parámetro especifica el número de filas que se pasan al tiempo de ejecución de Python de SQL Server.
+Tome nota del parámetro * @RowsPerRead *. Este parámetro especifica el número de filas que se pasan al tiempo de ejecución de Python de SQL Server.
 
 La biblioteca de análisis de datos de Python, conocido como **pandas**, es necesario para pasar datos a SQL Server y se incluye de forma predeterminada con los servicios de aprendizaje de máquina.
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>Paso 3. Ver los resultados
 
-El procedimiento almacenado devuelve los datos originales, se aplica la secuencia de comandos y, a continuación, devuelve los datos modificados en el **resultados** panel de Management Studio u otra herramienta de consulta SQL.
+El procedimiento almacenado obtiene los datos originales, se aplica la secuencia de comandos de Python y, a continuación, devuelve los datos modificados en el **resultados** panel de Management Studio u otra herramienta de consulta SQL.
 
 
 |DayOfWeek (antes)| Amount|DayOfWeek (después) |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ Los mensajes de salida incluyen el directorio de trabajo que se utiliza para la ejecución de secuencias de comandos. En este ejemplo, MSSQLSERVER01 hace referencia a la cuenta del trabajador asignada por SQL Server para administrar el trabajo. El GUID es el nombre de una carpeta temporal que se crea durante la ejecución del script para almacenar los artefactos de datos y la secuencia de comandos. Estas carpetas temporales están protegidas por SQL Server y se limpian mediante el objeto de trabajo de Windows una vez ha finalizado la secuencia de comandos.
++ El **mensaje** salida incluye el directorio de trabajo que se utiliza para la ejecución de secuencias de comandos. En este ejemplo, MSSQLSERVER01 hace referencia a la cuenta del trabajador asignada por SQL Server para administrar el trabajo. 
 
-+ La sección que contiene el mensaje "Hello World" imprime dos veces. Esto sucede porque el valor de  *@RowsPerRead*  ha sido establecida en 5 y hay 10 filas en la tabla; por lo tanto, son necesarias dos llamadas a Python para procesar todas las filas de la tabla.
+    El GUID es el nombre de una carpeta temporal que se crea durante la ejecución del script para almacenar los artefactos de datos y la secuencia de comandos. Estas carpetas temporales están protegidas por SQL Server y se limpian mediante el objeto de trabajo de Windows una vez ha finalizado la secuencia de comandos.
+
++ La sección que contiene el mensaje "Hello World" imprime dos veces. Esto sucede porque el valor de * @RowsPerRead * ha sido establecida en 5 y hay 10 filas en la tabla; por lo tanto, son necesarias dos llamadas a Python para procesar todas las filas de la tabla.
 
     En las ejecuciones de producción, se recomienda que experimente con valores diferentes para determinar el número máximo de filas que se deben pasar en cada lote. El número óptimo de filas es dependiente de los datos y se ve afectado por el número de columnas del conjunto de datos y el tipo de datos que está pasando.
 
@@ -184,9 +186,9 @@ ParamCharN=OUTPUT
 Vea estos ejemplos adicionales de Python y tutoriales para obtener sugerencias avanzadas y demostraciones to-end.
 
 + [Usar revoscalepy de Python para crear un modelo](use-python-revoscalepy-to-create-model.md)
-+ [En bases de datos Python para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md)
++ [En bases de datos de Python para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md)
 + [Crear un modelo de predicción mediante Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
 ## <a name="troubleshooting"></a>Solucionar problemas
 
-Si no se puede encontrar el procedimiento almacenado, `sp_execute_external_script`, significa que probablemente no ha terminado de configurar la instancia para admitir tiempos de ejecución externos. Después de ejecutar el programa de instalación de SQL Server 2017 y seleccionar Python como el lenguaje de aprendizaje automático, debe habilitar explícitamente la característica mediante `sp_configure`y, a continuación, reinicie la instancia. Para obtener más información, consulte [programa de instalación de servicios de aprendizaje de máquina con Python](../python/setup-python-machine-learning-services.md).
+Si no se puede encontrar el procedimiento almacenado, `sp_execute_external_script`, significa que probablemente no ha terminado de configurar la instancia para admitir la ejecución de scripts externos. Después de ejecutar el programa de instalación de SQL Server 2017 y seleccionar Python como el lenguaje de aprendizaje automático, debe habilitar explícitamente la característica mediante `sp_configure`y, a continuación, reinicie la instancia. Para obtener más información, consulte [programa de instalación de servicios de aprendizaje de máquina con Python](../python/setup-python-machine-learning-services.md).

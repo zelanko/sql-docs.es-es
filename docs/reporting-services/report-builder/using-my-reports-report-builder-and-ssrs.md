@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usar Mis informes (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
  Conceptualmente, la carpeta Mis informes es similar a la carpeta Mis documentos del sistema de archivos Windows. Aunque cada usuario dispone de una carpeta denominada Mis informes, la carpeta a la que obtienen acceso cada uno de ellos es distinta de la de los demás. A excepción de los administradores del servidor de informes, el resto de los usuarios no pueden obtener acceso a la carpeta Mis informes de otros usuarios.  
   
- La función Mis informes es opcional y los administradores del servidor de informes pueden deshabilitarla. Cuando está habilitada, la carpeta Mis informes aparece en la carpeta Inicio, a la que se puede tener acceso mediante el Administrador de informes o un explorador web. Para obtener más información, vea [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ La función Mis informes es opcional y los administradores del servidor de informes pueden deshabilitarla. Cuando está habilitada, la carpeta Mis informes aparece en la carpeta Inicio, a la que se puede tener acceso mediante el Administrador de informes o un explorador web. Para obtener más información, vea [buscar y ver informes en el Administrador de informes &#40; El generador de informes y SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
  En un servidor de informes configurado en el modo integrado de SharePoint, no hay equivalente a la carpeta Mis informes. Para obtener más información, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Crear un informe vinculado personal y almacenarlo en Mis informes. No todos los informes permiten la vinculación. Para obtener más información, vea [Crear un informe vinculado](../../reporting-services/reports/create-a-linked-report.md).  
   
--   Cargar un archivo de definición de informe (.rdl), un archivo de modelo de informe (.smdl) u otros archivos del sistema de archivos. Puede cargarse cualquier archivo, pero el servidor de informes solamente procesa los archivos con la extensión .rdl o .smdl. Para obtener más información, vea Definiciones de informe en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312), en los Libros en pantalla de SQL Server y en [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
+-   Cargar un archivo de definición de informe (.rdl), un archivo de modelo de informe (.smdl) u otros archivos del sistema de archivos. Puede cargarse cualquier archivo, pero el servidor de informes solamente procesa los archivos con la extensión .rdl o .smdl. Para obtener más información, vea las definiciones de informe"en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server y [cargar un archivo o informe &#40; El Administrador de informes &#41; ](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   Crear y publicar sus propios informes en Mis informes. Para obtener más información, vea [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md).  
+-   Crear y publicar sus propios informes en Mis informes. Para obtener más información, consulte [la vista de diseño de informes &#40; El generador de informes &#41; ](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  Por lo general, los permisos para la carpeta Mis informes le permiten que sea usted mismo quien administre la carpeta. Sin embargo, siempre es el administrador del servidor de informes quien determina en última instancia las tareas que pueden realizar los usuarios. Si no tiene permisos suficientes para trabajar con la carpeta Mis informes, póngase en contacto con el administrador del servidor de informes.  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  Al realizar búsquedas en una base de datos del servidor de informes, el contenido de la carpeta Mis informes también se incluye en la búsqueda y se excluye el de las carpetas Mis informes de los otros usuarios. Los resultados de la búsqueda solo muestran los informes a los que se tiene acceso.  
   
 ## <a name="see-also"></a>Vea también  
- [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

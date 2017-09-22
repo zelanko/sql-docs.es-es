@@ -1,7 +1,7 @@
 ---
 title: "Configurar una conexión de base de datos del servidor de informes (Administrador de configuración de SSRS) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,31 +9,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [Reporting Services], configuring
-- connections [Reporting Services]
-- report servers [Reporting Services], connections
-- report server database
-- databases [Reporting Services], connections
-- security [Reporting Services], database connections
-ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, modelos de informe, orígenes de datos compartidos, recursos y metadatos administrados por el servidor. La conexión inicial se puede crear durante la instalación de un servidor de informes si va a instalar la configuración predeterminada. En la mayoría de los casos, también puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la conexión una vez completada la instalación. Puede modificar la conexión en cualquier momento para cambiar el tipo de cuenta o restablecer las credenciales. Para obtener instrucciones paso a paso sobre cómo crear la base de datos y configurar la conexión, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, modelos de informe, orígenes de datos compartidos, recursos y metadatos administrados por el servidor. La conexión inicial se puede crear durante la instalación de un servidor de informes si va a instalar la configuración predeterminada. En la mayoría de los casos, también puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la conexión una vez completada la instalación. Puede modificar la conexión en cualquier momento para cambiar el tipo de cuenta o restablecer las credenciales. Para obtener instrucciones paso a paso sobre cómo crear la base de datos y configurar la conexión, consulte [crear una base de datos de servidor de informes de modo nativo &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
  Debe configurar una conexión a la base de datos del servidor de informes en los siguientes casos:  
   
@@ -41,12 +34,12 @@ Cada instancia del servidor de informes requiere una conexión a la base de dato
   
 -   Configurar un servidor de informes para que utilice una base de datos de servidor de informes diferente.  
   
--   Cambiar la cuenta o contraseña de usuario que se utiliza para la conexión a la base de datos. Solo tiene que actualizar la conexión a la base de datos cuando la información de la cuenta esté almacenada en el archivo RSReportServer.config. Si utiliza la cuenta de servicio para la conexión (que utiliza la seguridad integrada de Windows como tipo de credenciales), la contraseña no se almacena, por lo que no es necesario actualizar la información de conexión. Para obtener más información sobre cómo cambiar cuentas, vea [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+-   Cambiar la cuenta o contraseña de usuario que se utiliza para la conexión a la base de datos. Solo tiene que actualizar la conexión a la base de datos cuando la información de la cuenta esté almacenada en el archivo RSReportServer.config. Si utiliza la cuenta de servicio para la conexión (que utiliza la seguridad integrada de Windows como tipo de credenciales), la contraseña no se almacena, por lo que no es necesario actualizar la información de conexión. Para obtener más información sobre cómo cambiar cuentas, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
--   Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para obtener más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para obtener más información acerca de cómo realizar esta operación de varios pasos, consulte [configurar una implementación de ampliación horizontal del servidor de informes de modo nativo &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Cómo se conecta Reporting Services al motor de base de datos  
- El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para obtener más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para obtener más información sobre cómo trabajar con claves de cifrado, vea [configurar y administrar claves de cifrado &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
  La base de datos del servidor de informes es un componente interno, al que solo tiene acceso el servidor de informes. El servidor de informes utiliza exclusivamente las credenciales y la información de conexión que se especifique para la base de datos del servidor de informes. Los usuarios que solicitan los informes no requieren permisos de bases de datos o un inicio de sesión de base de datos para la base de datos del servidor de informes.  
   
@@ -61,7 +54,7 @@ Cada instancia del servidor de informes requiere una conexión a la base de dato
   
 -   Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes.  
   
--   Nombre de la base de datos del servidor de informes. Cuando se crea una conexión por primera vez, puede crear una base de datos del servidor de informes nueva o seleccionar una existente. Para obtener más información, vea [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+-   Nombre de la base de datos del servidor de informes. Cuando se crea una conexión por primera vez, puede crear una base de datos del servidor de informes nueva o seleccionar una existente. Para obtener más información, vea [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
 -   Tipo de credencial. Puede utilizar cuentas de servicio, una cuenta de dominio de Windows o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -101,7 +94,7 @@ Cada instancia del servidor de informes requiere una conexión a la base de dato
 ##### <a name="using-service-accounts-and-integrated-security"></a>Usar cuentas de servicio y seguridad integrada  
  Puede utilizar la seguridad integrada de Windows para conectarse a través de la cuenta del servicio Servidor de informes. A la cuenta se le conceden derechos de inicio de sesión en la base de datos del servidor de informes. Éste es el tipo de credenciales predeterminado que elige el programa de instalación si instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada.  
   
- La cuenta de servicio es una cuenta de confianza que proporciona un modo de administrar la conexión a una base de datos del servidor de informes que requiere poco mantenimiento. Como la cuenta de servicio utiliza la seguridad integrada de Windows para establecer la conexión, no es necesario que se almacenen las credenciales. Sin embargo, si posteriormente cambia la contraseña de la cuenta de servicio o identidad (por ejemplo, pasando de una cuenta integrada a una cuenta de dominio), asegúrese de utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para realizar el cambio. La herramienta actualiza automáticamente los permisos de base de datos para utilizar la información de la cuenta revisada. Para obtener más información, vea [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ La cuenta de servicio es una cuenta de confianza que proporciona un modo de administrar la conexión a una base de datos del servidor de informes que requiere poco mantenimiento. Como la cuenta de servicio utiliza la seguridad integrada de Windows para establecer la conexión, no es necesario que se almacenen las credenciales. Sin embargo, si posteriormente cambia la contraseña de la cuenta de servicio o identidad (por ejemplo, pasando de una cuenta integrada a una cuenta de dominio), asegúrese de utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para realizar el cambio. La herramienta actualiza automáticamente los permisos de base de datos para utilizar la información de la cuenta revisada. Para obtener más información, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
  Si configura la conexión de base de datos para usar la cuenta de servicio, la cuenta deberá contar con permisos de red si la base de datos del servidor de informes se encuentra en un equipo remoto. No utilice la cuenta de servicio si la base de datos del servidor de informes se encuentra en un dominio distinto, detrás de un firewall o si está utilizando seguridad de grupo de trabajo en lugar de seguridad de dominio. Utilice en su lugar una cuenta de usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -132,7 +125,7 @@ Cada instancia del servidor de informes requiere una conexión a la base de dato
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Crear una base de datos del servidor de informes](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Administrar un servidor de informes de modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Configurar la cuenta de servicio del servidor de informes](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

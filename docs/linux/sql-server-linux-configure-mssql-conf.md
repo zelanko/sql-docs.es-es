@@ -1,19 +1,19 @@
 ---
 title: Configurar SQL Server en Linux | Documentos de Microsoft
 description: "En este tema se describe cómo usar la herramienta mssql-conf para configurar SQL Server 2017 en Linux."
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>Cambiar la intercalación de SQL Server
 
-El **conjunto intercalación** opción cambia el valor de intercalación a cualquiera de las intercalaciones admitidas:
+El **conjunto intercalación** opción cambia el valor de intercalación a cualquiera de las intercalaciones admitidas.
+
+1. Primera [las bases de datos de usuario de copia de seguridad](sql-server-linux-backup-and-restore-database.md) en el servidor.
+
+1. A continuación, use la [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) procedimiento almacenado para separar las bases de datos de usuario.
 
 1. Ejecute el **conjunto intercalación** opción y siga las indicaciones:
 
@@ -61,7 +65,9 @@ El **conjunto intercalación** opción cambia el valor de intercalación a cualq
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. La utilidad mssql-conf intentará restaurar las bases de datos con la intercalación especificada y reinicie el servicio. Si hay algún error, revierte la intercalación al valor anterior.
+1. La utilidad mssql-conf intentará cambiar el valor de intercalación especificada y reinicie el servicio. Si hay algún error, revierte la intercalación al valor anterior.
+
+1. Restaurar las copias de seguridad de base de datos de usuario.
 
 Para obtener una lista de intercalaciones admitidas, ejecute el [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) función: `SELECT Name from sys.fn_helpcollations()`.
 

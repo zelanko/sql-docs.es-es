@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5828528bcf8bc05e6cb504ef7dc52769ea9a59a5
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="package-configurations"></a>Configuraciones de paquetes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona configuraciones de paquetes que se pueden usar para actualizar los valores de las propiedades en tiempo de ejecución.  
   
-> **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación del proyecto le permite implementar [! INCLUIR[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  Una configuración es una par propiedad/valor que se agrega a un paquete completo. Normalmente, se crean las propiedades establecidas de un paquete para los objetos del paquete durante el desarrollo y, después, se agrega la configuración al paquete. Cuando se ejecuta el paquete, éste recibe de la configuración los nuevos valores de la propiedad. Por ejemplo, al utilizar una configuración, se puede modificar la cadena de conexión de un administrador de conexiones o actualizar el valor de una variable.  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **COMENTARIOS:**
 >También puede acceder al **Organizador de configuraciones de paquetes** haciendo clic en el botón de puntos suspensivos junto a la propiedad **Configuración** . La propiedad Configuración aparece en la ventana de propiedades del paquete.  
   
->Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+>Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación del proyecto le permite implementar [! INCLUIR[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
 >En el cuadro de diálogo **Organizador de configuraciones de paquetes** , puede habilitar paquetes para usar configuraciones, agregar y eliminar configuraciones, y establecer el orden preferido en que se deben cargar las configuraciones. 
  
@@ -256,13 +256,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>Organizador de configuraciones de paquetes
   Utilice el cuadro de diálogo **Organizador de configuraciones de paquetes** para habilitar las configuraciones de paquetes, ver una lista de configuraciones para el paquete actual y especificar el orden de preferencia en el que se deben cargar las configuraciones.  
   
-> **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación del proyecto le permite implementar [! INCLUIR[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  Si varias configuraciones actualizan la misma propiedad, los valores de las configuraciones que aparezcan más abajo en la lista reemplazarán los valores de aquéllas que ocupen un lugar superior en la lista. El último valor cargado en la propiedad es el valor que se usa cuando se ejecuta el paquete. Asimismo, si el paquete utiliza una combinación de configuración directa, como un archivo de configuración XML, y configuración indirecta, como una variable de entorno, la configuración indirecta que señala a la ubicación de la configuración directa debe ocupar un lugar superior en la lista.  
   
 > **NOTA:** Cuando las configuraciones de paquetes se cargan en el orden preferido, se cargan de arriba a abajo, según la lista que se muestra en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Sin embargo, en tiempo de ejecución, las configuraciones de paquetes podrían no cargarse en el orden preferido. Concretamente, las configuraciones de paquetes principales se cargan después de las configuraciones de otros tipos.  
   
- Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para obtener más información, vea [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para más información, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
 ### <a name="options"></a>Opciones  
  **Habilitar configuraciones de paquetes**  
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
   Use el **Asistente para la configuración de paquetes** para crear configuraciones que actualizan las propiedades de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y sus objetos en tiempo de ejecución. Este asistente se ejecuta al agregar una nueva configuración o modificar una existente en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Para abrir el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Configuraciones de paquetes** en el menú **SSIS** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información, vea [Crear configuraciones de paquetes](../../integration-services/packages/create-package-configurations.md).  
   
-> **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación del proyecto le permite implementar [! INCLUIR[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  En las siguientes secciones se describen las páginas del asistente.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Haga clic con el botón derecho en el proyecto y haga clic en **Propiedades**.  
   
-3.  En el  **\<nombre del proyecto > páginas de propiedades** cuadro de diálogo, haga clic en **utilidad de implementación**.  
+3.  En el ** \<nombre del proyecto > páginas de propiedades** cuadro de diálogo, haga clic en **utilidad de implementación**.  
   
 4.  Para actualizar las configuraciones de paquetes al implementar los paquetes, establezca **AllowConfigurationChanges** en **True**.  
   

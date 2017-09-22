@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Crear y ejecutar trabajos del Agente SQL Server en Linux
@@ -35,7 +35,7 @@ Los pasos siguientes proporcionan un ejemplo de cómo crear un trabajo de agente
 > [!TIP]
 > Puede utilizar a cualquier cliente de T-SQL para ejecutar estos comandos. Por ejemplo, en Linux puede usar [sqlcmd](sql-server-linux-setup-tools.md) o [código de Visual Studio](sql-server-linux-develop-use-vscode.md). Desde un servidor remoto de Windows, también puede ejecutar consultas en SQL Server Management Studio (SSMS) o usar la interfaz del usuario para la administración del trabajo, que se describe en la sección siguiente.
 
-1. **Crear el trabajo**. En el ejemplo siguiente se utiliza [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) para crear un trabajo denominado `Daily AdventureWorks Backup`.
+1. **Crear el trabajo**. En el ejemplo siguiente se utiliza [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) para crear un trabajo denominado `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ Los pasos siguientes proporcionan un ejemplo de cómo crear un trabajo de agente
 
     ```
 
-2. **Agregar uno o varios pasos de trabajo**. El siguiente script de Transact-SQL usa [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) para crear un paso de trabajo que crea una copia de seguridad de la `AdventureWlorks2014` base de datos.
+2. **Agregar uno o varios pasos de trabajo**. El siguiente script de Transact-SQL usa [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) para crear un paso de trabajo que crea una copia de seguridad de la `AdventureWlorks2014` base de datos.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ Los pasos siguientes proporcionan un ejemplo de cómo crear un trabajo de agente
     GO
     ```
 
-3. **Crear una programación de trabajo**. Este ejemplo se utiliza [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) para crear una programación diaria para el trabajo.
+3. **Crear una programación de trabajo**. Este ejemplo se utiliza [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) para crear una programación diaria para el trabajo.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ Los pasos siguientes proporcionan un ejemplo de cómo crear un trabajo de agente
    GO
     ```
 
-4. **Adjuntar la programación de trabajo para el trabajo**. Use [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) para adjuntar la programación de trabajo para el trabajo.
+4. **Adjuntar la programación de trabajo para el trabajo**. Use [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) para adjuntar la programación de trabajo para el trabajo.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ Los pasos siguientes proporcionan un ejemplo de cómo crear un trabajo de agente
     GO
     ```
 
-5. **Asigne el trabajo a un servidor de destino**. Asigne el trabajo a un servidor de destino con [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). En este ejemplo, el servidor local es el destino.
+5. **Asigne el trabajo a un servidor de destino**. Asigne el trabajo a un servidor de destino con [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). En este ejemplo, el servidor local es el destino.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

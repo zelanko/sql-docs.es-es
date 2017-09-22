@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 1fc1445538e541926b4ea3e1d593c93c5ac9d5b7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3c927eece547ccd7fc2fc2ca92bcdf443e0c38a9
 ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformación Limpieza de DQS
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de los datos](https://msdn.microsoft.com/library/hh510417.aspx)  
+-   [Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de datos](/sql-docs/docs/data-quality-services/open-unlock-rename-and-delete-a-data-quality-project)  
   
 -   Artículo sobre la [limpieza de datos complejos con dominios compuestos](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), en social.technet.microsoft.com.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/19/2017
  Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
   
  **Nuevo**  
- Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Establecer las opciones en el cuadro de diálogo Administrador de conexiones de limpieza de DQS](#manager)  
+ Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
   
  **Base de conocimiento de calidad de datos**  
  Seleccione una base de conocimiento de DQS existente para el origen de datos conectado. Para obtener más información acerca de la base de conocimiento de DQS, vea [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 732e6fd574d80d58aef81a149acc54376231e6cc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5796c2d5faefdeef1a9bafe1a438b68c7461dd53
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Paso 3: Prueba de concepto que se conecta a SQL con pymssql
@@ -54,7 +54,7 @@ El [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor
   
 ## <a name="step-3--insert-a-row"></a>Paso 3: Insertar una fila  
   
-En este ejemplo se muestra cómo ejecutar un [insertar](https://msdn.microsoft.com/library/ms174335.aspx) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerabilidad y recuperar el autogenerada[Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) valor.    
+En este ejemplo se muestra cómo ejecutar un [insertar](/sql-docs/docs/t-sql/statements/insert-transact-sql) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valor.    
   
   
 ```python

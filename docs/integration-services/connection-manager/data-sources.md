@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-sources"></a>Orígenes de datos
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 > **NOTA:** Puede agregar orígenes de datos solo a los proyectos configurados para usar el modelo de implementación de paquetes. Si se configura un proyecto para utilizar el modelo de implementación de proyectos, los administradores de conexiones creados en el nivel de proyecto se usan para compartir las conexiones, en lugar de usar orígenes de datos.  
 >   
->  Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx). Para obtener más información sobre cómo convertir un proyecto al modelo de implementación de proyectos, vea [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages). Para obtener más información sobre cómo convertir un proyecto al modelo de implementación de proyectos, vea [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  Estas son algunas de las ventajas de usar orígenes de datos en paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   

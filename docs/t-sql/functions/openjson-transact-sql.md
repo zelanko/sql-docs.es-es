@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -67,7 +67,7 @@ De forma predeterminada, el **OPENJSON** función con valores de tabla devuelve 
   
 ![Sintaxis de con la cláusula en OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON con sintaxis")
 
-*with_clause* contiene una lista de columnas con sus tipos de **OPENJSON** para devolver. De forma predeterminada, **OPENJSON** coincide con las claves en *jsonExpression* con los nombres de columna en *with_clause*. Si un nombre de columna no coincide con un nombre de clave, puede proporcionar una función opcional *column_path*, que es un [expresión de ruta de acceso JSON](../../relational-databases/json/json-path-expressions-sql-server.md) que hace referencia a una clave en el *jsonExpression*. 
+*with_clause* contiene una lista de columnas con sus tipos de **OPENJSON** para devolver. De forma predeterminada, **OPENJSON** coincide con las claves en *jsonExpression* con los nombres de columna en *with_clause* (en este caso, las claves de coincidencias implica que distingue mayúsculas de minúsculas). Si un nombre de columna no coincide con un nombre de clave, puede proporcionar una función opcional *column_path*, que es un [expresión de ruta de acceso JSON](../../relational-databases/json/json-path-expressions-sql-server.md) que hace referencia a una clave en el *jsonExpression*. 
 
 ## <a name="arguments"></a>Argumentos  
 ### <a name="jsonexpression"></a>*jsonExpression*  

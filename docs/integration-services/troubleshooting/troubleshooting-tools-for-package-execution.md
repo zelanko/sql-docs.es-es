@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solución de problemas de la ejecución de paquetes mediante el registro  
  Al habilitar el registro, se puede hacer un seguimiento de gran parte de lo que sucede en los paquetes en ejecución. Los proveedores de registro capturan información sobre los eventos especificados para su análisis posterior y guardan la información en una tabla de base de datos, un archivo plano, un archivo XML u otro formato de salida compatible.  
   
--   **Habilitar el registro**. Se puede precisar la salida del registro seleccionando solamente los eventos y solamente los datos que desea capturar. Para más información, consulte [Registro de Integration Services (SSIS)](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Habilitar el registro**. Se puede precisar la salida del registro seleccionando solamente los eventos y solamente los datos que desea capturar. Para más información, consulte [Registro de Integration Services (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
   
--   **Seleccione el evento Diagnostic del paquete para solucionar problemas relativos al proveedor.** Existen una serie de mensajes de registro que pueden ayudarle a solucionar problemas relacionados con la interacción de un paquete con orígenes de datos externos. Para obtener más información, consulte [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Seleccione el evento Diagnostic del paquete para solucionar problemas relativos al proveedor.** Existen una serie de mensajes de registro que pueden ayudarle a solucionar problemas relacionados con la interacción de un paquete con orígenes de datos externos. Para obtener más información, consulte [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
   
 -   **Mejorar la salida predeterminada del registro**. Normalmente, el registro anexa filas al destino de registro cada vez que se ejecuta un paquete. Si bien cada fila de la salida del registro identifica el paquete por su nombre e identificador único, y también identifica la ejecución del paquete mediante un ExecutionID único, la gran cantidad de datos de salida del registro incluidos en una sola lista puede ser difícil de analizar.  
   

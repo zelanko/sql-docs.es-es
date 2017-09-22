@@ -23,23 +23,23 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
+ms.translationtype: MT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 28ac10f1d46b6af08d452c0c664ef4cd4b5e1d80
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrar Reporting Services en las aplicaciones
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una plataforma de informe abierta y extensible diseñada para proporcionar un conjunto completo de API a los programadores para desarrollar soluciones.  
   
- Hay tres opciones para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas: servicio Web del servidor de informes, también conocido como el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API de SOAP, los controles ReportViewer para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]y el acceso URL. Cada opción proporciona un enfoque diferente para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones.  
+ Hay tres opciones para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas: servicio Web del servidor de informes, también conocido como el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API de SOAP, los controles ReportViewer para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y el acceso URL. Cada opción proporciona un enfoque diferente para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones.  
   
 ## <a name="report-server-web-service"></a>servicio web del servidor de informes  
  El servicio web del servidor de informes es la interfaz principal para el desarrollo de soluciones con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si está desarrollando código para administrar un catálogo de informe o representar informes en un formato admitido, el servicio web expone todos los métodos necesarios para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones. Un ejemplo de una de estas aplicaciones es el Administrador de informes, que se incluye con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; utiliza el servicio Web para administrar la base de datos del servidor de informes.  
   
 ## <a name="reportviewer-controls-for-visual-studio"></a>Controles ReportViewer para Visual Studio  
- Los controles ReportViewer incluidos con [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] se utilizan para integrar la vista del informe en las aplicaciones. Hay dos controles: uno para las aplicaciones basadas en formularios Windows Forms y otro para las aplicaciones de formularios Web Forms. Cada control permite ver los informes implementados en un servidor de informes así como la capacidad de representar los informes que existen en un entorno donde no se haya instalado un servidor de informes.  
+ Los controles ReportViewer disponibles para [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se utilizan para integrar la vista del informe en las aplicaciones. Hay dos controles: uno para las aplicaciones basadas en formularios Windows Forms y otro para las aplicaciones de formularios Web Forms. Cada control permite ver los informes implementados en un servidor de informes así como la capacidad de representar los informes que existen en un entorno donde no se haya instalado un servidor de informes.  
   
 ## <a name="url-access"></a>Acceso URL  
  El acceso URL es otra opción para integrar la vista del informe en las aplicaciones si los controles ReportViewer no son factibles. Además, el acceso URL es útil para enviar vínculos a informes a los usuarios a través de correo electrónico.  
@@ -55,9 +55,9 @@ ms.lasthandoff: 08/09/2017
  Describe cómo integrar la navegación en informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales existentes utilizando el acceso URL.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Elegir entre SOAP y el acceso URL](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [Referencia técnica de &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Servicio Web de servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Servicio web del servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

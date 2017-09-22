@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>Instalar Microsoft R Server desde la línea de comandos
@@ -83,7 +83,7 @@ De forma predeterminada, todo el programa de instalación registros y resúmenes
 
 Se crea una subcarpeta independiente para cada característica instalada.
 
-Para configurar la otra instancia de Microsoft R Server con los mismos parámetros, puede reutilizar el archivo de configuración que se crea durante la instalación. Para obtener más información, vea [Instalar SQL Server mediante un archivo de configuración](https://msdn.microsoft.com/library/dd239405.aspx)
+Para configurar la otra instancia de Microsoft R Server con los mismos parámetros, puede reutilizar el archivo de configuración que se crea durante la instalación. Para obtener más información, vea [instalar SQL Server mediante un archivo de configuración](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>Personalizar el entorno de R

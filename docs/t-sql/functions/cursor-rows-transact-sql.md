@@ -1,7 +1,7 @@
 ---
 title: '@@CURSOR_ROWS (Transact-SQL) | Documentos de Microsoft'
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e3251891dfaa079933ea79c76154f76f7c2e148
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cursorrows-transact-sql"></a>@@CURSOR_ROWS (Transact-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40; @Cursor_rows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. @@CURSOR_ROWS se puede llamar para determinar que el número de filas que se incluyen en un cursor se recupera en el momento @@CURSOR_ROWS se llama.
@@ -40,7 +40,7 @@ Devuelve el número de filas certificadas que se encuentran en el último cursor
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   

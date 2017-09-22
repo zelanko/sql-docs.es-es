@@ -24,11 +24,11 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  Cuando un informe se actualiza localmente o en el servidor de informes, puede observar errores, advertencias y mensajes adicionales. Este es el resultado de los cambios en el modelo de objetos de informe interno y en los componentes de procesamiento, que hacen que estos mensajes se muestren cuando se detectan problemas subyacentes en el informe. Para obtener más información, consulte [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "compatibilidad con versiones anteriores | Reporting Services").  
   
- Para obtener más información sobre las nuevas características para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consulte [What's New in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx).  
+ Para obtener más información sobre las nuevas características para [! INCLUIR[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).  
 
 ##  <a name="bkmk_versionsupported"></a> Versiones admitidas por la actualización  
  Se pueden actualizar los informes que se crearon en cualquier versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se incluyen las versiones siguientes:  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  Cuando se abre un archivo .rdl en el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], si el informe se ha creado para un espacio de nombres anterior, el Diseñador de informes crea automáticamente un archivo de copia de seguridad y actualiza el informe con el espacio de nombres actual. Esta es la única manera en que puede actualizar un archivo de definición de informe.  
   
- Las propiedades de implementación que establece pueden afectar al esquema en el que se guarda el archivo de definición de informe. Para obtener más información, vea [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41; (Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Las propiedades de implementación que establece pueden afectar al esquema en el que se guarda el archivo de definición de informe. Para obtener más información, vea [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
  Puede cargar un archivo .rdl creado en una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a la nueva versión y se actualiza automáticamente en el primer uso. El servidor de informes almacena el archivo de definición de informe en el formato original. El informe se actualiza automáticamente la primera vez que se ve, pero el archivo de definición de informe almacenado permanece intacto.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **No** : elija **No** si no desea convertir los CRI del informe. El procesador de informes no puede mostrar la versión actual de estos CRI. Si el administrador del sistema tiene pensado instalar una nueva versión de los CRI de otros fabricantes de software que es compatible con el nuevo formato de definición de informe, debería elegir **No**. Hasta que estén disponibles las nuevas versiones, los CRI se muestran en el informe como un cuadro de texto vacío con una X roja.  
   
- En cualquier caso, el informe se actualiza al nuevo formato de definición de informe y se guarda una copia de seguridad del informe original como  *\<nombre del informe >* `-` Backup.rdl. Si guarda el informe en la herramienta de creación de informes, está guardando el informe actualizado en el nuevo formato de definición de informe. Si publica el informe, éste se guarda primero en su equipo y, a continuación, se publica en el servidor de informes. En realidad, está publicando la versión actualizada del informe en el servidor de informes.  
+ En cualquier caso, el informe se actualiza al nuevo formato de definición de informe y se guarda una copia de seguridad del informe original como * \<nombre del informe >* `-` Backup.rdl. Si guarda el informe en la herramienta de creación de informes, está guardando el informe actualizado en el nuevo formato de definición de informe. Si publica el informe, éste se guarda primero en su equipo y, a continuación, se publica en el servidor de informes. En realidad, está publicando la versión actualizada del informe en el servidor de informes.  
   
  Si no guarda el informe, el informe original no varía. Sin embargo, no se puede editar este informe en la versión de SQL Server 2016 de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o un entorno que usa un formato de definición de informe más reciente de creación de informes. Puede seguir ejecutando la versión original del informe cargándolo en un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] servidor de informes mediante el portal web. Para obtener más información, consulte [Portal Web](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -153,4 +153,4 @@ ms.lasthandoff: 08/09/2017
 [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Actualización de una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>Recuperar información sobre errores  
  En el ámbito de un bloque CATCH, se pueden utilizar las siguientes funciones del sistema para obtener información acerca del error que provocó la ejecución del bloque CATCH:  
   
--   ERROR_NUMBER() devuelve el número del error.  
+-   [Error_number ()](../../t-sql/functions/error-number-transact-sql.md) devuelve el número del error.  
   
--   ERROR_SEVERITY() devuelve la gravedad.  
+-   [Error_severity ()](../../t-sql/functions/error-severity-transact-sql.md) devuelve la gravedad.  
   
--   ERROR_STATE() devuelve el número de estado del error.  
+-   [Error_state ()](../../t-sql/functions/error-state-transact-sql.md) devuelve el número de estado de error.  
   
--   ERROR_PROCEDURE() devuelve el nombre del procedimiento almacenado o desencadenador donde se produjo el error.  
+-   [Error_procedure ()](../../t-sql/functions/error-procedure-transact-sql.md) devuelve el nombre del procedimiento almacenado o desencadenador que se produjo el error.  
   
--   ERROR_LINE() devuelve el número de línea de la rutina que provocó el error.  
+-   [Error_line ()](../../t-sql/functions/error-line-transact-sql.md) devuelve el número de línea dentro de la rutina que provocó el error.  
   
--   ERROR_MESSAGE() devuelve el texto completo del mensaje de error. El texto incluye los valores proporcionados para los parámetros sustituibles, como las longitudes, nombres de objeto o tiempos.  
+-   [Error_message ()](../../t-sql/functions/error-message-transact-sql.md) devuelve el texto completo del mensaje de error. El texto incluye los valores proporcionados para los parámetros sustituibles, como las longitudes, nombres de objeto o tiempos.  
   
  Estas funciones devuelven NULL si se las llama desde fuera del ámbito del bloque CATCH. Con ellas se puede recuperar información sobre los errores desde cualquier lugar dentro del ámbito del bloque CATCH. Por ejemplo, en el siguiente script se muestra un procedimiento almacenado que contiene funciones de control de errores. Se llama al procedimiento almacenado en el bloque `CATCH` de una construcción `TRY…CATCH` y se devuelve información sobre el error.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- Las funciones de error. * también funcionan en un `CATCH` bloquear dentro de un [procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ El ERROR\_ \* funciones también funcionan en un `CATCH` bloquear dentro de un [procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Errores no afectados por una construcción TRY…CATCH  
  Las construcciones TRY…CATCH no detectan lo siguiente:  
@@ -162,7 +162,7 @@ END CATCH;
   
  En el ejemplo siguiente se muestra cómo la construcción `SELECT` no captura un error de resolución de nombre de objeto generado por una instrucción `TRY…CATCH`, sino que es el bloque `CATCH` el que lo captura cuando la misma instrucción `SELECT` se ejecuta dentro de un procedimiento almacenado.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  Al ejecutar la instrucción `SELECT` dentro de un procedimiento almacenado, el error se produce en un nivel inferior al bloque `TRY`. La construcción `TRY…CATCH` controlará el error.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Usar TRY…CATCH  
  En el siguiente ejemplo se muestra una instrucción `SELECT` que generará un error de división por cero. El error hace que la ejecución salte al bloque `CATCH` asociado.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. Usar TRY…CATCH en una transacción  
  En este ejemplo se muestra cómo funciona un bloque `TRY…CATCH` dentro de una transacción. La instrucción del bloque `TRY` genera un error por infracción de restricción.  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. Usar TRY…CATCH con XACT_STATE  
  En este ejemplo se muestra cómo utilizar la construcción `TRY…CATCH` para controlar los errores que se producen en una transacción. La función `XACT_STATE` determina si la transacción debe confirmarse o revertirse. En este ejemplo `SET XACT_ABORT` es `ON`. Esto hace que la transacción sea no confirmable cuando se produce el error por infracción de restricción.  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. Usar TRY…CATCH  
  En el siguiente ejemplo se muestra una instrucción `SELECT` que generará un error de división por cero. El error hace que la ejecución salte al bloque `CATCH` asociado.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar la búsqueda de texto completo SQL Server en Linux
@@ -86,7 +86,7 @@ Si tiene una instalación sin conexión, busque la descarga del paquete de búsq
 
 ## <a name="supported-languages"></a>Idiomas compatibles
 
-Búsqueda de texto completo utiliza [separadores de palabras](https://msdn.microsoft.com/library/ms142509.aspx) que determinan cómo identificar palabras individuales basándose en el idioma. Puede obtener una lista de separadores de palabras registrados consultando la **sys.fulltext_languages** vista de catálogo. Separadores de palabras para los siguientes idiomas se instalan con SQL Server de 2017 RC2:
+Búsqueda de texto completo utiliza [separadores de palabras](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) que determinan cómo identificar palabras individuales basándose en el idioma. Puede obtener una lista de separadores de palabras registrados consultando la **sys.fulltext_languages** vista de catálogo. Separadores de palabras para los siguientes idiomas se instalan con SQL Server de 2017 RC2:
 
 | Lenguaje | Id. de idioma |
 |---|---|
@@ -146,7 +146,7 @@ Búsqueda de texto completo utiliza [separadores de palabras](https://msdn.micro
 
 ## <a id="filters"></a>Filtros
 
-Búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Pero en este caso, es necesario un filtro instalado para procesar el archivo. Para obtener más información acerca de los filtros, vea [configurar y administrar filtros para búsquedas](https://msdn.microsoft.com/library/ms142499.aspx).
+Búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Pero en este caso, es necesario un filtro instalado para procesar el archivo. Para obtener más información acerca de los filtros, vea [configurar y administrar filtros para búsquedas](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 Puede ver una lista de filtros instalados mediante una llamada a **sp_help_fulltext_system_components 'filter'**. Para SQL Server de 2017 RC2, se instalan los siguientes filtros:
 
@@ -258,9 +258,9 @@ Puede ver una lista de filtros instalados mediante una llamada a **sp_help_fullt
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Búsqueda semántica
-[La búsqueda semántica](https://msdn.microsoft.com/library/gg492075.aspx) se basa en la característica de búsqueda de texto completo para extraer e indizar relevantes estadísticamente *frases clave*. Esto le permite consultar el significado dentro de los documentos en la base de datos. También ayuda a identificar los documentos que son similares.
+[La búsqueda semántica](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) se basa en la característica de búsqueda de texto completo para extraer e indizar relevantes estadísticamente *frases clave*. Esto le permite consultar el significado dentro de los documentos en la base de datos. También ayuda a identificar los documentos que son similares.
 
-Para poder usar la búsqueda semántica, primero debe descargar y adjuntar la [base de datos de estadísticas semánticas de lenguaje](https://msdn.microsoft.com/library/gg509085.aspx).
+Para poder usar la búsqueda semántica, primero debe descargar y adjuntar la [base de datos de estadísticas semánticas de lenguaje](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. En un equipo Windows, [descargar la. Archivo MSI de la base de datos de estadísticas semánticas de lenguaje](https://www.microsoft.com/download/details.aspx?id=54277).
 

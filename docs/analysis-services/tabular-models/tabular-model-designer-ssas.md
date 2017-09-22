@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f8f894ec1836e12eb57a7b2e629ff06464f266fb
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Diseñador de modelos tabulares (SSAS)
-  El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con plantillas adicionales de tipo de proyecto para el desarrollo específico de soluciones de modelos tabulares profesionales.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se instala como una descarga web gratuita. Vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) para más información.   
+  El Diseñador de modelos tabulares forma parte de [! INCLUIR[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) para obtener más información.   
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se agregan nuevas plantillas de proyecto para crear modelos tabulares a los tipos de proyecto disponibles. Una vez creado un proyecto de modelo tabular mediante una de las plantillas, puede empezar a crear modelos mediante las herramientas y los asistentes del diseñador de modelos tabulares.  

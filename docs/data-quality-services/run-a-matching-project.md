@@ -1,26 +1,31 @@
 ---
-title: "Ejecutar un proyecto de coincidencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.matchingproject.map.f1"
-  - "sql13.dqs.matchingproject.matching.f1"
-  - "sql13.dqs.matchingproject.export.f1"
+title: Ejecutar un proyecto de coincidencia | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.matchingproject.map.f1
+- sql13.dqs.matchingproject.matching.f1
+- sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Ejecutar un proyecto de coincidencia
+# <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
   En este tema se describe cómo realizar la búsqueda de coincidencias de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias identifica los clústeres de registros coincidentes en función de las reglas de coincidencia existentes en la directiva de coincidencia, designa un registro de cada clúster como el registro que permanece basándose en una regla de permanencia, y exporta los resultados. DQS realiza el proceso de búsqueda de coincidencias, también denominado eliminación de datos duplicados, en un proceso asistido por PC, pero es usted quien crea las reglas de coincidencia de forma interactiva y quien selecciona la regla de permanencia entre varias opciones, por lo que también es quien controla el proceso de búsqueda de coincidencias.  
   
  La búsqueda de coincidencias se realiza en tres fases: un proceso de asignación en el que se identifica el origen de datos y se asignan los dominios a dicho origen de datos, un proceso de búsqueda de coincidencias en el que se ejecuta el análisis de coincidencia, y un proceso de permanencia y exportación en el que se designa la regla de permanencia y se exportan los resultados de la búsqueda de coincidencias. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso, y cerrar un proceso de búsqueda de coincidencias específico y volver a la misma fase del proceso. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la búsqueda de coincidencias y sobre cómo refinar este proceso.  
@@ -43,11 +48,11 @@ caps.handback.revision: 36
 ##  <a name="StartingaMatchingProject"></a> Primer paso: iniciar un proyecto de búsqueda de coincidencias  
  Realizará la actividad de búsqueda de coincidencias en un proyecto de calidad de datos que creará en la aplicación cliente DQS.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Nuevo proyecto de calidad de datos** para realizar la búsqueda de coincidencias en un proyecto de calidad de datos nuevo. Escriba un nombre y una descripción para el proyecto de calidad de datos y seleccione la base de conocimiento que desea utilizar para la búsqueda de coincidencias en **Usar base de conocimiento**. Haga clic en **Coincidencia** para la actividad. Haga clic en **Siguiente** para pasar a la fase de asignación.  
   
-3.  Haga clic en **Abrir proyecto de calidad de datos** para realizar la búsqueda de coincidencias en un proyecto de calidad de datos existente. Seleccione el proyecto y haga clic en **Siguiente**. (O puede hacer clic en un proyecto bajo **Proyecto de calidad de datos reciente**.) Si abre un proyecto de coincidencia que se haya cerrado, continuará en la fase que se cerró la actividad del proyecto correspondiente (como se indica en la **estado** columna en la tabla del proyecto o en el nombre del proyecto en **reciente proyecto de calidad de datos**). Si abre un proyecto de coincidencia que se ha finalizado, vaya a la **exportar** página (y no puede volver a pantallas anteriores).  
+3.  Haga clic en **Abrir proyecto de calidad de datos** para realizar la búsqueda de coincidencias en un proyecto de calidad de datos existente. Seleccione el proyecto y haga clic en **Siguiente**. (También puede hacer clic en un proyecto en **Proyecto de calidad de datos reciente**). Si abre un proyecto de búsqueda de coincidencias que está cerrado, continuará en la fase en la que se hallaba la actividad de proyecto de búsqueda de coincidencias en el momento en que se cerró; esta fase aparece indicada en la columna **Estado** de la tabla del proyecto o en el nombre del proyecto, debajo de **Proyecto de calidad de datos reciente**. Si abre un proyecto de búsqueda de coincidencias finalizado, irá a la página **Exportar** (no podrá modificar las pantallas anteriores).  
   
 ##  <a name="MappingStage"></a> Fase de asignación  
  En la fase de asignación, deberá identificar el origen de los datos en el que ejecutará el análisis de coincidencia y asignará columnas de origen a los dominios para ponerlos a disposición de la actividad de coincidencia.  
@@ -61,11 +66,11 @@ caps.handback.revision: 36
     > [!NOTE]  
     >  Solo puede asignar los datos de origen para un dominio DQS si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Haga clic en la **más (+)** control para agregar una fila a la tabla asignaciones o **menos (-)** control para quitar una fila.  
+4.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (–)** para eliminarla.  
   
 5.  Haga clic en **Vista previa del origen de datos** para ver los datos de la tabla o vista de SQL Server que ha seleccionado, o para ver la hoja de cálculo de Excel que ha seleccionado.  
   
-6.  Haga clic en **Ver o seleccionar dominios compuestos** para ver una lista de los dominios compuestos disponibles en la base de conocimiento y seleccionar como corresponda para la asignación.  
+6.  Haga clic en **Ver o seleccionar dominios compuestos** para ver una lista de los dominios compuestos disponibles en la base de conocimiento y seleccionar el que corresponda para la asignación.  
   
 7.  Haga clic en **Siguiente** para pasar a la fase de coincidencia.  
   
@@ -77,9 +82,9 @@ caps.handback.revision: 36
   
  En los resultados de búsqueda de coincidencias, podrá filtrar los datos que desee y rechazar las coincidencias que estime oportuno. Podrá mostrar datos de generación de perfiles para el proceso de búsqueda de coincidencias en su conjunto, detalles sobre las reglas de coincidencia aplicadas, y estadísticas globales de los resultados de búsqueda de coincidencias. El proceso de búsqueda de coincidencias puede identificar clústeres superpuestos y no superpuestos y, si se ejecuta varias veces, se puede ejecutar con los datos copiados del origen y reindizados, o con los datos anteriores.  
   
-1.  En la **página coincidencia**, seleccione **superpuestos clústeres** en la lista desplegable para mostrar los registros dinámicos y registros siguientes para todos los clústeres cuando se ejecuta la búsqueda de coincidencias, incluso si los grupos de clústeres tienen registros en común. Seleccione **Clústeres no superpuestos** para mostrar, como un solo clúster, los clústeres que tienen registros en común cuando se ejecute la búsqueda de coincidencias.  
+1.  En la página **Coincidencia**, seleccione **Clústeres superpuestos** en la lista desplegable para mostrar los registros dinámicos y los registros siguientes de todos los clústeres cuando se ejecute la búsqueda de coincidencias, incluso si los grupos de clústeres tienen registros en común. Seleccione **Clústeres no superpuestos** para mostrar, como un solo clúster, los clústeres que tienen registros en común cuando se ejecute la búsqueda de coincidencias.  
   
-2.  Haga clic en **volver a cargar los datos de origen** (predeterminado) para copiar datos desde el origen de datos en la tabla de ensayo y volver a indizar cuando se ejecuta el proyecto correspondiente. Haga clic en **Ejecutar con los datos anteriores** para ejecutar un proyecto de coincidencia sin copiar los datos en la tabla provisional y volver a indizar los datos. **Ejecutar con los datos anteriores** aparece deshabilitado la primera vez que se ejecuta el proyecto de búsqueda de coincidencias, o si cambia la asignación en la página **Asignación** y, a continuación, presiona **Sí** en el cuadro emergente. En ambos casos, es necesario volver a indizar. No será necesario volver a indizar si el proyecto de búsqueda de coincidencias no ha sufrido cambios. La ejecución con los datos anteriores puede mejorar el rendimiento.  
+2.  Haga clic en **Volver a cargar los datos del origen** (valor predeterminado) para copiar los datos del origen de datos en la tabla de ensayo y volverlos a indizar cuando se ejecute el proyecto de búsqueda de coincidencias. Haga clic en **Ejecutar con los datos anteriores** para ejecutar un proyecto de búsqueda de coincidencias sin copiar los datos en la tabla de ensayo ni volver a indizarlos. **Ejecutar con los datos anteriores** aparece deshabilitado la primera vez que se ejecuta el proyecto de búsqueda de coincidencias, o si cambia la asignación en la página **Asignación** y, a continuación, presiona **Sí** en el cuadro emergente. En ambos casos, es necesario volver a indizar. No será necesario volver a indizar si el proyecto de búsqueda de coincidencias no ha sufrido cambios. La ejecución con los datos anteriores puede mejorar el rendimiento.  
   
 3.  Haga clic en **Iniciar** para ejecutar la búsqueda de coincidencias en el origen de datos seleccionado.  
   
@@ -89,13 +94,13 @@ caps.handback.revision: 36
   
 6.  Si la directiva de coincidencia tiene varias reglas de coincidencia, haga clic en la pestaña **Reglas de coincidencia** para identificar el icono de cada regla y, a continuación, compruebe qué regla ha identificado un registro como coincidente; para ello, busque la regla en la columna **Regla** de la tabla **Resultados de búsqueda de coincidencias** .  
   
-7.  Si selecciona un registro no dinámica en la tabla y haga clic en el **Ver detalles** icono (o haga doble clic en el registro), DQS mostrará un **Detalles de puntuación de coincidencia** emergente que muestra el registro doble y su registro dinámico (y los valores de todos sus campos), la puntuación entre ellas y un desglose de la coincidencia de puntuación contribuciones de cada campo. Cuando se hace doble clic en un registro dinámico, no aparece el cuadro emergente.  
+7.  Si selecciona un registro no dinámico en la tabla y hace clic en el icono **Ver detalles** (o hace doble clic en el registro), DQS mostrará el cuadro emergente **Detalles de puntuación de coincidencia** , en el que aparecen el registro en el que ha hecho doble clic y su registro dinámico (y los valores de todos los campos), la puntuación existente entre ellos y detalles acerca de la contribución de cada campo a la puntuación de coincidencia. Cuando se hace doble clic en un registro dinámico, no aparece el cuadro emergente.  
   
 8.  Haga clic en el icono **Contraer todo** para contraer los registros de la tabla **Resultados de búsqueda de coincidencias** y mostrar solo el registro dinámico, no los registros duplicados. Haga clic en **Expandir todo** para expandir los registros de la tabla Resultados de búsqueda de coincidencias y mostrar todos los registros duplicados.  
   
 9. Para rechazar un registro de los resultados de búsqueda de coincidencias, haga clic en la casilla **Rechazado** del registro.  
   
-10. Para cambiar la puntuación que determina el nivel de coincidencia que debe tener un registro que se mostrará de coincidencia mínima, seleccione la **Min. Puntuación de coincidencia** situado sobre el lado derecho de la tabla y escriba un número mayor. De forma predeterminada, la puntuación de coincidencia mínima se establece en un 80%. Haga clic en **Actualizar** para cambiar el contenido de la tabla.  
+10. Para cambiar la puntuación de coincidencia mínima que determina el nivel de coincidencia que debe tener un registro para que se muestre, seleccione el icono **Puntuación de coincidencia mínima**, situado sobre el lado derecho de la tabla, y escriba un número mayor. De forma predeterminada, la puntuación de coincidencia mínima se establece en un 80%. Haga clic en **Actualizar** para cambiar el contenido de la tabla.  
   
 11. Una vez que se haya completado el análisis, el botón **Iniciar** se convertirá en el botón **Reiniciar** . Haga clic en **Reiniciar** para volver a ejecutar el proceso de análisis. Sin embargo, tenga en cuenta que los resultados del análisis anterior aún no se han guardado, por lo que, si hace clic en **Reiniciar** , los perderá. Para continuar, haga clic en **Sí** en el cuadro emergente. Mientras se ejecuta el análisis, no abandone la página o el proceso de análisis se terminará.  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 36
     > [!IMPORTANT]  
     >  La base de datos de destino debe encontrarse en la misma instancia de SQL Server que el servidor DQS. En caso contrario, no aparecerá en la lista desplegable.  
   
-3.  Active la casilla de verificación **resultados coincidentes** para exportar los resultados coincidentes (vea la explicación anterior) a la tabla designada de una base de datos de SQL Server o al archivo de Excel o archivo .csv designado. Active la casilla de verificación **resultados de permanencia** para exportar resultados de permanencia (vea la explicación anterior) a la tabla designada de una base de datos de SQL Server o al archivo de Excel o archivo .csv designado.  
+3.  Active la casilla **Resultados de búsqueda de coincidencias** si desea exportar los resultados de búsqueda de coincidencias (vea la explicación más arriba) a la tabla designada de una base de datos de SQL Server, o al archivo de Excel o archivo .csv designado. Active la casilla **Resultados de permanencia** si desea exportar los resultados de permanencia (vea la explicación más arriba) a la tabla designada de una base de datos de SQL Server, o al archivo de Excel o archivo .csv designado.  
   
      Si selecciona Resultados de búsqueda de coincidencias, se exportará lo siguiente:  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 36
   
 7.  Seleccione la regla de permanencia de la siguiente manera:  
   
-    -   Seleccione **dinámicos del registro** (predeterminado) para identificar el registro que permanece como el registro dinámico inicial elegido arbitrariamente por DQS.  
+    -   Seleccione **Registro dinámico** (valor predeterminado) para identificar el registro que permanece como el registro dinámico inicial elegido arbitrariamente por DQS.  
   
     -   Seleccione **Registro más completo y más largo** para identificar el registro que permanece como el registro con el mayor número de campos rellenos y con el mayor número de términos en cada campo. Se comprueban todos los campos de origen, incluidos los que no se asignaron a ningún dominio en la página **Asignación** .  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 36
 ##  <a name="Profiler"></a> Pestañas Generador de perfiles y Resultados  
  Las pestañas Generador de perfiles y Resultados contienen las estadísticas del proceso de búsqueda de coincidencias.  
   
-### Pestaña Generador de perfiles  
+### <a name="profiler-tab"></a>Pestaña Generador de perfiles  
  Haga clic en la pestaña **Generador de perfiles** para mostrar las estadísticas de la base de datos de origen y de cada campo de la regla de directiva. Las estadísticas se actualizarán mientras se ejecuta la regla de directiva. La función de generación de perfiles le ayudará a evaluar la eficacia del proceso de eliminación de datos duplicados, lo que le permitirá determinar en qué medida dicho proceso puede mejorar la calidad de los datos. La precisión en el proceso de generación de perfiles no es importante en un proyecto de búsqueda de coincidencias.  
   
  Las estadísticas de la base de datos de origen incluyen:  
@@ -196,7 +201,7 @@ caps.handback.revision: 36
   
 -   **Integridad**: el porcentaje de la regla que se ha ejecutado  
   
-### Notificaciones de directiva de coincidencia  
+### <a name="matching-policy-notifications"></a>Notificaciones de directiva de coincidencia  
  En la actividad de directiva de coincidencia, se producen notificaciones cuando se dan las condiciones siguientes:  
   
 -   El campo está vacío en todos los registros; se recomienda eliminarlo de la asignación.  
@@ -209,7 +214,7 @@ caps.handback.revision: 36
   
 -   Existe un alto grado de singularidad en el campo. El uso de este campo en la directiva de coincidencia puede disminuir los resultados de búsqueda de coincidencias.  
   
-### Pestaña Reglas de coincidencia  
+### <a name="matching-rules-tab"></a>Pestaña Reglas de coincidencia  
  Haga clic en esta pestaña para mostrar una lista de las reglas existentes en la directiva de coincidencia y las condiciones de una regla.  
   
  **Lista de reglas**  
@@ -218,7 +223,7 @@ caps.handback.revision: 36
  **Tabla Regla de coincidencia**  
  Muestra todas las condiciones de la regla seleccionada, incluidos el dominio, el valor de similitud, la ponderación y la selección de requisitos previos.  
   
-### Pestaña Resultados de búsqueda de coincidencias  
+### <a name="matching-results-tab"></a>Pestaña Resultados de búsqueda de coincidencias  
  Haga clic en la pestaña **Resultados de búsqueda de coincidencias** para mostrar las estadísticas del análisis del origen de datos usando el conocimiento seleccionado para el proyecto y la regla o reglas de coincidencia de la base de conocimiento. Las estadísticas incluyen:  
   
 -   El número total de registros existentes en la base de datos  

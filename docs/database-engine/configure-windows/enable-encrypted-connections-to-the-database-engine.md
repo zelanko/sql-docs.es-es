@@ -1,7 +1,7 @@
 ---
 title: Habilitar conexiones cifradas en el motor de base de datos | Microsoft Docs
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > Al crear conexiones cifradas para un indexador de Azure Search en SQL Server en una máquina virtual de Azure, consulte [Configuración de una conexión desde un indexador de Azure Search a SQL Server en una máquina virtual de Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> Para proporcionar (instalar) un certificado en el servidor  
+##  <a name="Provision"></a> Para proporcionar (instalar) un certificado en el servidor  
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**; en el cuadro **Abrir** , escriba **MMC** y haga clic en **Aceptar**.  
   
@@ -74,13 +72,13 @@ ms.lasthandoff: 08/02/2017
   
 10. Finalice el **Asistente para importación de certificados**para agregar un certificado al equipo y cierre la consola MMC. Para obtener más información acerca de cómo agregar un certificado a un equipo, vea la documentación de Windows.  
   
-###  <a name="Export"></a> Para exportar el certificado del servidor  
+##  <a name="Export"></a> Para exportar el certificado del servidor  
   
 1.  En el complemento **Certificados** , busque el certificado en la carpeta **Certificados** / **Personal** , haga clic con el botón derecho en **Certificado**, seleccione **Todas las tareas**y, luego, haga clic en **Exportar**.  
   
 2.  Complete el **Asistente para exportación de certificados**y guarde el archivo del certificado en una ubicación adecuada.  
   
-###  <a name="ConfigureServerConnections"></a> Para configurar el servidor de modo que acepte conexiones cifradas  
+##  <a name="ConfigureServerConnections"></a> Para configurar el servidor de modo que acepte conexiones cifradas  
   
 1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<instancia de servidor>* y, después, seleccione **Propiedades**.  
   
@@ -89,8 +87,13 @@ ms.lasthandoff: 08/02/2017
 3.  En la pestaña **Marcas** , en el cuadro **ForceEncryption** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 4.  Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+### <a name="wildcard-certificates"></a>Certificados comodín  
+A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admiten los certificados comodín. Es posible que otros clientes no admitan los certificados comodín. Para más información, vea la documentación del cliente. El certificado comodín no se puede seleccionar con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para usar un certificado comodín, debe editar la clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` y escribir la huella digital del certificado, sin espacios en blanco, en el valor **Certificado**.  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> Para configurar el cliente de modo que solicite conexiones cifradas  
+##  <a name="ConfigureClientConnections"></a> Para configurar el cliente de modo que solicite conexiones cifradas  
   
 1.  Copie el certificado original o el archivo del certificado exportado en el equipo cliente.  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  En la página **Marcas** , en el cuadro **Forzar cifrado de protocolo** , haga clic en **Sí**.  
   
-###  <a name="EncryptConnection"></a> Para cifrar una conexión desde SQL Server Management Studio  
+##  <a name="EncryptConnection"></a> Para cifrar una conexión desde SQL Server Management Studio  
   
 1.  En la barra de herramientas del Explorador de objetos, haga clic en **Conectar**y, a continuación, en **Motor de base de datos**.  
   

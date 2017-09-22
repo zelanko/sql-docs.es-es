@@ -1,22 +1,27 @@
 ---
-title: "Limpiar datos en un dominio compuesto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Limpiar datos en un dominio compuesto | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e3c99d8f8ee8621925f49e301a4ea95c8b00383
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Limpiar datos en un dominio compuesto
+# <a name="cleanse-data-in-a-composite-domain"></a>Limpiar datos en un dominio compuesto
   Este tema proporciona información sobre la limpieza de dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados. Todos los dominios que forman un dominio compuesto deben tener un área de conocimiento común. Para obtener información detallada acerca de los dominios compuestos, vea [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
 ##  <a name="Mapping"></a> Asignación de un dominio compuesto a los datos de origen  
@@ -30,10 +35,10 @@ caps.handback.revision: 14
   
 -   Los datos de origen están formados por varios campos (por ejemplo, Nombre, Segundo nombre y Apellidos), que están asignados a los dominios individuales de un dominio compuesto.  
   
- Para obtener un ejemplo de cómo asignar dominios compuestos a los datos de origen, consulte [adjuntar dominio o dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
+ Para ver un ejemplo de cómo asignar dominios compuestos a los datos de origen, vea [Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="CDCorrection"></a> Corrección de datos mediante reglas entre dominios definitivas  
- Las reglas entre dominios existentes en un dominio compuesto permiten crear reglas que indican la relación que hay entre los dominios que conforman dicho dominio compuesto. Las reglas entre dominios se tienen en cuenta cuando se ejecuta la actividad de limpieza en los datos de origen y resultan involucrados dominios compuestos. Además de permitirle conocer la validez de una regla entre dominios, el definitivo *a continuación,* regla entre dominios, **valor es igual a**, también corrige los datos durante la actividad de limpieza de datos.  
+ Las reglas entre dominios existentes en un dominio compuesto permiten crear reglas que indican la relación que hay entre los dominios que conforman dicho dominio compuesto. Las reglas entre dominios se tienen en cuenta cuando se ejecuta la actividad de limpieza en los datos de origen y resultan involucrados dominios compuestos. Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos.  
   
  Consideremos el siguiente ejemplo: existe un dominio compuesto, Product, con tres dominios individuales: ProductName, CompanyName y ProductVersion. Cree la siguiente regla entre dominios definitiva:  
   
@@ -53,16 +58,16 @@ caps.handback.revision: 14
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Cuando se prueba el definitivo *a continuación,* regla entre dominios, **valor es igual a**, la **probar la regla de dominio compuesto** cuadro de diálogo contiene una nueva columna, **corregir a**, que muestra los datos correctos. En un proyecto de calidad limpieza de datos, esta regla entre dominios definitiva cambia los datos con confianza del 100% y la **razón** columna muestra el siguiente mensaje: corregido por la regla '*\< nombre de la regla entre dominios >*'. Para obtener más información acerca de las reglas entre dominios, consulte [crear una regla entre dominios](../data-quality-services/create-a-cross-domain-rule.md).  
+ Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de limpieza de datos de calidad, esta regla entre dominios definitiva cambia los datos con una confianza plena, y en la columna **Motivo** se muestra el siguiente mensaje: corregido por la regla "*\<nombre de la regla entre dominios>*". Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regla entre dominios definitiva no funcionará en dominios compuestos que estén adjuntados al servicio de datos de referencia.  
   
 ##  <a name="DataProfiling"></a> Generación de perfiles de datos para dominios compuestos  
- Generación de perfiles de DQS proporciona dos dimensiones de calidad de datos: *integridad* (la medida en que los datos están presentes) y *precisión* (la medida en la que los datos se pueden utilizar para su uso previsto) durante la actividad de limpieza. La generación de perfiles no puede proporcionar estadísticas de integridad confiables para los dominios compuestos. Si necesita estadísticas de integridad, utilice dominios individuales en lugar de dominios compuestos. Si desea utilizar dominios compuestos, puede crear una base de conocimiento con dominios individuales para generar los perfiles y determinar la integridad, y crear otro dominio con un dominio compuesto para la actividad de limpieza. Por ejemplo, la generación de perfiles podría mostrar una integridad del 95% para los registros de direcciones utilizando un dominio compuesto, pero podría haber un nivel mucho más alto de falta de integridad en una de las columnas, por ejemplo, una columna de código postal (zip). En este ejemplo, podría medir la integridad de la columna de código postal con un dominio individual.  
+ El proceso de generación de perfiles de DQS proporciona dos dimensiones de calidad de datos: *integridad* (la medida en que los datos están presentes) y *precisión* (la medida en que los datos se pueden utilizar para su uso previsto) durante la actividad de limpieza. La generación de perfiles no puede proporcionar estadísticas de integridad confiables para los dominios compuestos. Si necesita estadísticas de integridad, utilice dominios individuales en lugar de dominios compuestos. Si desea utilizar dominios compuestos, puede crear una base de conocimiento con dominios individuales para generar los perfiles y determinar la integridad, y crear otro dominio con un dominio compuesto para la actividad de limpieza. Por ejemplo, la generación de perfiles podría mostrar una integridad del 95% para los registros de direcciones utilizando un dominio compuesto, pero podría haber un nivel mucho más alto de falta de integridad en una de las columnas, por ejemplo, una columna de código postal (zip). En este ejemplo, podría medir la integridad de la columna de código postal con un dominio individual.  
   
  La generación de perfiles probablemente proporcione estadísticas precisas y confiables para los dominios compuestos porque permite medir la precisión de varias columnas al mismo tiempo. El valor de estos datos está en la agregación compuesta, por lo que puede ser conveniente medir la precisión con un dominio compuesto.  
   
- Para obtener información detallada acerca de los datos de generación de perfiles durante la actividad de limpieza, vea [estadísticas del generador de perfiles](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) en [Limpiar datos usando DQS & #40; interno & #41; Conocimiento](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
+ Para obtener información detallada sobre la generación de perfiles de datos durante la actividad de limpieza, vea [Estadísticas del generador de perfiles](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) en [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
   

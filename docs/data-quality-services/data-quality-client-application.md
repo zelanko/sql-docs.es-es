@@ -1,36 +1,41 @@
 ---
-title: "Aplicaci&#243;n cliente de calidad de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aplicación Cliente de calidad de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f40568ff94ac2e2a026f2538fa2cb9e6fb9f7c3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Aplicaci&#243;n cliente de calidad de datos
+# <a name="data-quality-client-application"></a>Aplicación cliente de calidad de datos
   La aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite realizar operaciones de calidad de datos mediante una herramienta independiente. Con esta aplicación podrá crear bases de conocimiento, crear y ejecutar proyectos de calidad de datos y realizar tareas administrativas.  
   
  Los administradores de datos, los expertos en datos o los profesionales de TI que son responsables de administrar activos de datos y mantener los niveles más altos de calidad de datos pueden utilizar la aplicación cliente con tres roles distintos: un operador de KB de DQS que puede modificar y ejecutar proyectos de calidad de datos; un editor de KB de DQS que puede realizar funciones de proyecto y crear y modificar una base de conocimiento; y un administrador de DQS que puede realizar funciones de proyecto y de base de conocimiento y administrar el sistema. Para más información, consulte [DQS Security](../data-quality-services/dqs-security.md).  
   
-## Instalar la aplicación cliente de calidad de datos  
- La aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se instala con el programa de instalación de SQL Server. Puede instalar la aplicación cliente en el mismo equipo que [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]o bien, en un equipo remoto. Para obtener más información acerca de cómo instalar el [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aplicación, consulte [instalar Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md).  
+## <a name="installing-the-data-quality-client-application"></a>Instalar la aplicación cliente de calidad de datos  
+ La aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se instala con el programa de instalación de SQL Server. Puede instalar la aplicación cliente en el mismo equipo que [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]o bien, en un equipo remoto. Para más información sobre cómo instalar la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], vea [Instalar Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo usar la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Ejecutar la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md)|  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 |Descripción del contenido|Tema|  
 |-------------------------|-----------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 15
 |Describe cómo buscar coincidencias en DQS.|[Coincidencia de datos](../data-quality-services/data-matching.md)|  
 |Describe cómo administrar DQS.|[Administración de DQS](../data-quality-services/dqs-administration.md)|  
   
-## Vea también  
- [Página de inicio del cliente de calidad de datos](../data-quality-services/data-quality-client-home-screen.md)  
+## <a name="see-also"></a>Vea también  
+ [Pantalla de inicio de Data Quality Client](../data-quality-services/data-quality-client-home-screen.md)  
   
   

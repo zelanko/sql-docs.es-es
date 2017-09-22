@@ -1,27 +1,32 @@
 ---
-title: "Supervisar las actividades de DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.activitymonitoring.f1"
-helpviewer_keywords: 
-  - "actividad de supervisión"
-  - "supervisión de actividad"
+title: Supervisar las actividades de DQS | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.activitymonitoring.f1
+helpviewer_keywords:
+- monitoring activity
+- activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Supervisar las actividades de DQS
+# <a name="monitor-dqs-activities"></a>Supervisar las actividades de DQS
   En este tema se describe cómo supervisar de forma centralizada las actividades siguientes en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): detección de conocimiento, administración de dominios, directiva de coincidencia, limpieza de datos, coincidencia de datos y limpieza SSIS.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
@@ -39,7 +44,7 @@ caps.handback.revision: 16
   
 ##  <a name="View"></a> Ver las actividades de DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Supervisión de actividades**. Aparece la pantalla de supervisión de actividades.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 16
   
      **DQKB**: nombre de la base de conocimientos que se usa para la actividad.  
   
-     **Usuario**: el nombre del usuario que inició la actividad o el último usuario que trabajó en la actividad (en caso de que no son iguales).  
+     **Usuario**: el nombre del usuario que inició actividad, o el último usuario que trabajó en la actividad (en caso de que no coincidan).  
   
      **Hora de inicio de la actividad**: la fecha y hora en que se inició la actividad.  
   
@@ -102,13 +107,13 @@ caps.handback.revision: 16
      **Hora de finalización de la actividad**: la fecha y hora en que finalizó la actividad.  
   
 ##  <a name="Filter"></a> Filtrar la información de las actividades de DQS  
- Puede usar el panel de filtrado (**filtrar por**, **valor**, **desde la fecha**, y **hasta la fecha**) en la pantalla para filtrar y ver las actividades necesarias según determinados criterios de filtro de supervisión de la actividad. Para filtrar los registros de actividad:  
+ Puede utilizar el panel de filtrado (**Filtrar por**, **Valor**, **Desde la fecha**y **Hasta la fecha**) en la pantalla de supervisión de actividades para filtrar y ver las actividades requeridas basándose en un determinado criterio de filtrado. Para filtrar los registros de actividad:  
   
 1.  Seleccione el criterio de filtrado: si desea filtrar los registros de actividad basándose en el valor de una de las columnas de la cuadrícula de actividades (basado en valores) o basándose en un intervalo de fechas, o en ambos.  
   
-    1.  **Filtrado basado en el valor**: seleccione un criterio de filtro en el **filtrar por** lista y, a continuación, seleccione el valor apropiado para filtrar los datos en el **valor** lista. Al seleccionar una opción de la lista **Filtrar por** , la lista **Valor** se actualiza con los valores posibles. Puede filtrar por los campos siguientes de los registros de actividad: **Activa**, **Tipo**, **Subtipo**, **Estado actual**, **DQKB**y **Usuario**.  
+    1.  **Filtrado basado en valores**: seleccione un criterio de filtro en la lista **Filtrar por** y, a continuación, seleccione el valor adecuado por el que filtrar en la lista **Valor** . Al seleccionar una opción de la lista **Filtrar por** , la lista **Valor** se actualiza con los valores posibles. Puede filtrar por los campos siguientes de los registros de actividad: **Activa**, **Tipo**, **Subtipo**, **Estado actual**, **DQKB**y **Usuario**.  
   
-    2.  **Filtrado basado en intervalo de fecha**: seleccionar las fechas adecuadas en el **desde la fecha** y **hasta la fecha** controles de fecha. De forma predeterminada, la fecha mostrada en **Desde la fecha** es dos días antes de la fecha actual, y la fecha mostrada en **Hasta la fecha** es la fecha actual. El filtrado no se realiza basándose en las fechas *desde* y *hasta* propiamente dichas, sino en el intervalo. Esto significa que se mostrará cada actividad que se estaba ejecutando durante el intervalo de fechas seleccionado.  
+    2.  **Filtrado basado en intervalos de fecha**: seleccione las fechas apropiadas en los controles de fecha **Desde la fecha** y **Hasta la fecha** . De forma predeterminada, la fecha mostrada en **Desde la fecha** es dos días antes de la fecha actual, y la fecha mostrada en **Hasta la fecha** es la fecha actual. El filtrado no se realiza basándose en las fechas *desde* y *hasta* propiamente dichas, sino en el intervalo. Esto significa que se mostrará cada actividad que se estaba ejecutando durante el intervalo de fechas seleccionado.  
   
 2.  Haga clic en el icono **Actualizar la lista de actividades** para aplicar el filtrado y ver únicamente las actividades de DQS filtradas.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 16
   
 2.  El panel inferior muestra los detalles de actividad de la actividad seleccionada en las 2 pestañas siguientes:  
   
-    -   **Pasos de la actividad**: muestra una cuadrícula de los procesos de cálculo (pasos de la actividad) que están asociados a la actividad seleccionada. En esta pestaña pueden mostrarse varios pasos de actividad para una misma actividad. Esto puede suceder si el usuario ha ejecutado varias veces el mismo paso de actividad en la actividad. Por ejemplo, si el paso de actividad se ha detenido y se ha iniciado de nuevo. La cuadrícula de esta pestaña muestra la siguiente información para cada paso de actividad relacionado con la actividad: **Tipo**, **Estado actual**, **Hora de inicio**, **Tiempo transcurrido**y **Hora de finalización**.  
+    -   **Pasos de la actividad**: muestra una cuadrícula de los procesos de cálculo (pasos de la actividad) relacionados con la actividad seleccionada. En esta pestaña pueden mostrarse varios pasos de actividad para una misma actividad. Esto puede suceder si el usuario ha ejecutado varias veces el mismo paso de actividad en la actividad. Por ejemplo, si el paso de actividad se ha detenido y se ha iniciado de nuevo. La cuadrícula de esta pestaña muestra la siguiente información para cada paso de actividad relacionado con la actividad: **Tipo**, **Estado actual**, **Hora de inicio**, **Tiempo transcurrido**y **Hora de finalización**.  
   
     -   **Generador de perfiles**: muestra la información sobre los perfiles para las actividades actuales y las históricas. En el caso de las actividades actuales, contiene información parcial pero coherente. La información sobre los perfiles de una actividad también se exporta a un archivo de Excel cuando se exportan al mismo los detalles de actividad correspondientes. La información está disponible en las hojas **Generador de perfiles - origen** y **Generador de perfiles - campos** del archivo de Excel exportado.  
   
@@ -128,32 +133,32 @@ caps.handback.revision: 16
   
 1.  Seleccione una actividad en la cuadrícula de actividades (en el panel superior).  
   
-2.  Haga clic en el icono **Exportar la actividad seleccionada a Excel** . O bien, haga doble clic en cualquier actividad de la cuadrícula y, a continuación, haga clic en **Exportar actividad** en el menú contextual.  
+2.  Haga clic en el icono **Exportar la actividad seleccionada a Excel** . O bien, haga clic con el botón secundario en cualquier actividad de la cuadrícula de actividades y, a continuación, haga clic en **Exportar actividad** en el menú contextual.  
   
 3.  Se le pedirá que especifique un nombre y una ubicación para el archivo de Excel que se va a guardar. El archivo de Excel exportado contiene las hojas siguientes:  
   
     |Nombre de la hoja|Descripción|  
     |----------------|-----------------|  
     |Actividad|Contiene información (columnas) sobre la actividad, como en la cuadrícula de actividades.|  
-    |Procesos|Contiene información (columnas) sobre los procesos de la actividad, como en el **pasos de la actividad** ficha.|  
+    |Procesos|Contiene información (columnas) sobre los procesos de la actividad, como en la pestaña **Pasos de la actividad** .|  
     |Generador de perfiles - origen|Para el subtipo **Limpieza** , contiene la información siguiente acerca de la actividad: Registros, Registros correctos, Registros corregidos y Registros no válidos.<br /><br /> Para los subtipos **Detección de conocimiento**, **Administración de dominios**, **Directiva de coincidencia**y **Coincidencia** , contiene la información siguiente acerca de la actividad: Registros, Valores totales, Nuevos valores, Valores únicos y Nuevos valores únicos.|  
     |Generador de perfiles - campos|Para los subtipos **Limpieza** y **Limpieza SSIS** , contiene la información siguiente acerca de la actividad: Campo, Dominio, Valores corregidos, Valores sugeridos, Integridad y Precisión.<br /><br /> Para los subtipos **Detección de conocimiento**, **Administración de dominios**, **Directiva de coincidencia**y **Coincidencia** , contiene la información siguiente acerca de la actividad: Campo, Dominio, Nuevo, Único, Válido en el dominio e Integridad.|  
   
 ##  <a name="Terminate"></a> Terminar una actividad de DQS  
- Los administradores de DQS (rol dqs_administrator) pueden finalizar una actividad de ejecución (activas) que no es del tipo **limpieza SSIS**. Si da por terminada una actividad, detendrá todos los procesos en ejecución de dicha actividad y eliminará todo lo relacionado con la misma. No se puede deshacer esta operación. Terminar una actividad en la pantalla de supervisión de actividades equivale a cancelar la actividad respectiva haciendo clic en **Cancelar** mientras se ejecuta en el área de características de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Para terminar una actividad:  
+ Los administradores de DQS (rol dqs_administrator) pueden terminar las actividades en ejecución (activas) que no sean del tipo **Limpieza SSIS**. Si da por terminada una actividad, detendrá todos los procesos en ejecución de dicha actividad y eliminará todo lo relacionado con la misma. No se puede deshacer esta operación. Terminar una actividad en la pantalla de supervisión de actividades equivale a cancelar la actividad respectiva haciendo clic en **Cancelar** mientras se ejecuta en el área de características de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Para terminar una actividad:  
   
 1.  Seleccione una actividad en ejecución en la cuadrícula de actividades (en el panel superior).  
   
-2.  Haga clic en el icono **Terminar la actividad seleccionada** . O bien, haga doble clic en la actividad de la cuadrícula y, a continuación, haga clic en **Terminar actividad** en el menú contextual.  
+2.  Haga clic en el icono **Terminar la actividad seleccionada** . O bien, haga clic con el botón secundario en la actividad en la cuadrícula de actividades y, a continuación, haga clic en **Terminar actividad** en el menú contextual.  
   
 3.  Se muestra un mensaje para confirmar la acción. Haga clic en **Sí**.  
   
 ##  <a name="Stop"></a> Detener un proceso en una actividad de DQS  
- Los administradores de DQS (rol dqs_administrator) pueden detener un proceso en ejecución (activas) en una actividad que no es del tipo **limpieza SSIS**. Detener un proceso en la pantalla de supervisión de actividades equivale a detener el proceso dentro de la actividad respectiva en el área de características de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Por ejemplo, detener el proceso de limpieza asistido por PC dentro de una actividad de limpieza, o detener el proceso de búsqueda de coincidencias dentro de una actividad de búsqueda de coincidencias. Un proceso detenido no se puede reiniciar desde la pantalla de supervisión de actividades. Tendrá que reiniciarlo desde el área de características respectiva del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. En ese caso, se agrega una fila adicional a la cuadrícula de procesos de la pestaña **Pasos de la actividad** . El estado del proceso detenido sigue mostrándose como **Detenido**. Para detener un proceso:  
+ Los administradores de DQS (rol dqs_administrator) pueden detener un proceso en ejecución (activo) en las actividades que no sean del tipo **Limpieza SSIS**. Detener un proceso en la pantalla de supervisión de actividades equivale a detener el proceso dentro de la actividad respectiva en el área de características de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Por ejemplo, detener el proceso de limpieza asistido por PC dentro de una actividad de limpieza, o detener el proceso de búsqueda de coincidencias dentro de una actividad de búsqueda de coincidencias. Un proceso detenido no se puede reiniciar desde la pantalla de supervisión de actividades. Tendrá que reiniciarlo desde el área de características respectiva del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. En ese caso, se agrega una fila adicional a la cuadrícula de procesos de la pestaña **Pasos de la actividad** . El estado del proceso detenido sigue mostrándose como **Detenido**. Para detener un proceso:  
   
 1.  Seleccione un proceso en ejecución en la cuadrícula de detalles de la actividad (en el panel inferior).  
   
-2.  Haga clic en el icono **Detener el proceso seleccionado** . O bien, haga doble clic en el proceso en la cuadrícula de detalles de actividad y, a continuación, haga clic en **Detener proceso** en el menú contextual.  
+2.  Haga clic en el icono **Detener el proceso seleccionado** . O bien, haga clic con el botón secundario en la cuadrícula de detalles de la actividad y, a continuación, haga clic en **Detener proceso** en el menú contextual.  
   
 3.  Se muestra un mensaje para confirmar la acción. Haga clic en **Sí**.  
   

@@ -1,22 +1,27 @@
 ---
-title: "Generaci&#243;n de perfiles de datos y notificaciones de DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Generación de perfiles de datos y notificaciones de DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Generaci&#243;n de perfiles de datos y notificaciones de DQS
+# <a name="data-profiling-and-notifications-in-dqs"></a>Generación de perfiles de datos y notificaciones de DQS
   La generación de perfiles de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) es el proceso que consiste en analizar los datos de un origen de datos existente y mostrar estadísticas sobre ellos en actividades de DQS. Proporciona medidas automatizadas de la calidad de los datos. La generación de perfiles de DQS está integrada en los proyectos de calidad de datos y administración del conocimiento de DQS. Es dinámica y ajustable. La generación de perfiles tiene dos objetivos importantes: en primer lugar, guiarle a través de los procesos de calidad de datos y ayudarle a tomar decisiones, y en segundo lugar, evaluar la eficacia de los procesos. El proceso de generación de perfiles de DQS tiene las siguientes ventajas:  
   
 -   La generación de perfiles proporciona una visión general de la calidad de los datos de origen, y le ayuda a identificar problemas relacionados con la calidad de los datos.  
@@ -65,7 +70,7 @@ caps.handback.revision: 25
   
 -   [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpiar datos con DQS & #40; interno & #41; Conocimiento](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)  
   
@@ -81,19 +86,19 @@ caps.handback.revision: 25
   
  Las notificaciones se indican mediante una información sobre herramientas con un signo de exclamación en la pestaña **Generación de perfiles** . Las estadísticas asociadas con la notificación están coloreadas en rojo para indicar la justificación estadística para la notificación.  
   
- Puede habilitar (predeterminado) o deshabilitar las notificaciones en el **configuración General** ficha de la **administración** sección de la página de inicio del cliente de calidad de datos. Si se deshabilitan las notificaciones, la información sobre herramientas no se muestra y las estadísticas no se colorean en rojo. El hecho de deshabilitar de las notificaciones no conlleva ninguna mejora significativa del rendimiento. La generación de perfiles seguirá siendo operativa aunque se deshabiliten las notificaciones.  
+ Puede habilitar (el valor predeterminado) o deshabilitar las notificaciones en la pestaña **Configuración general** de la sección **Administración** de la página de inicio de Data Quality Client. Si se deshabilitan las notificaciones, la información sobre herramientas no se muestra y las estadísticas no se colorean en rojo. El hecho de deshabilitar de las notificaciones no conlleva ninguna mejora significativa del rendimiento. La generación de perfiles seguirá siendo operativa aunque se deshabiliten las notificaciones.  
   
  Para conocer las condiciones específicas asociadas con las notificaciones para una actividad, vea los temas siguientes:  
   
 -   [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpiar datos con DQS & #40; interno & #41; Conocimiento](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)  
   
 -   [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

@@ -1,32 +1,37 @@
 ---
-title: "Configurar DQS para utilizar datos de referencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.rdsconfiguration.f1"
-  - "sql13.dqs.administration.configuration.createDirectRDS.f1"
-  - "sql13.dqs.admin.config.rds.f1"
+title: Configurar DQS para usar datos de referencia | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.rdsconfiguration.f1
+- sql13.dqs.administration.configuration.createDirectRDS.f1
+- sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Configurar DQS para utilizar datos de referencia
+# <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para utilizar datos de referencia
   En este tema se describe cómo configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) con el fin de utilizar datos de referencia para limpiar los datos. Puede utilizar datos de referencia tanto de Windows Azure Marketplace como de proveedores directos de datos de referencia de terceros en línea.  
   
-## Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
- Para utilizar datos de referencia de Marketplace, es necesario tener una clave de cuenta de Marketplace válida. Para obtener información detallada acerca de cómo crear una clave de cuenta de Marketplace, consulte [crear su cuenta](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). También es posible crear una clave de cuenta de Marketplace desde [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; para ello, haga clic en **Configuración** en el área **Administración** de la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] y, a continuación, haga clic en **Crear un id. de cuenta de DataMarket** en la pestaña **Datos de referencia** .  
+ Para utilizar datos de referencia de Marketplace, es necesario tener una clave de cuenta de Marketplace válida. Para obtener información detallada acerca de cómo crear una clave de cuenta de Marketplace, vea [Crear su cuenta](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). También es posible crear una clave de cuenta de Marketplace desde [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; para ello, haga clic en **Configuración** en el área **Administración** de la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] y, a continuación, haga clic en **Crear un id. de cuenta de DataMarket** en la pestaña **Datos de referencia** .  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 15
   
 ##  <a name="Marketplace"></a> Configurar DQS para utilizar datos de referencia de Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , en **Administración**, haga clic en **Configuración**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
   
 ##  <a name="ThirdParty"></a> Configurar DQS para utilizar datos de referencia de proveedores directos de datos de referencia de terceros en línea  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , en **Administración**, haga clic en **Configuración**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 15
   
     1.  En el cuadro **Nombre** , escriba el nombre del nuevo proveedor de servicios directos de datos de referencia.  
   
-    2.  (Opcional) En el **descripción** cuadro, escriba una descripción del proveedor de servicios de datos de referencia directa nueva.  
+    2.  (Opcional) en el cuadro **Descripción** , escriba una descripción para el nuevo proveedor de servicios directos de datos de referencia.  
   
     3.  En el cuadro **Categoría** , escriba la categoría de los datos proporcionados por el nuevo proveedor de servicios directos de datos de referencia.  
   
@@ -76,6 +81,6 @@ caps.handback.revision: 15
  Ahora ya puede utilizar los servicios de datos de referencia del proveedor de servicios directos de datos de referencia de terceros en línea que se acaba de configurar en DQS.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de configurar DQS para utilizar datos de referencia  
- A continuación, debe asignar los dominios de la base de conocimiento necesarios a los datos de referencia disponibles en los proveedores de datos que acaba de configurar. Para ello, consulte [adjuntar dominio o dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
+ A continuación, debe asignar los dominios de la base de conocimiento necesarios a los datos de referencia disponibles en los proveedores de datos que acaba de configurar. Para ello, vea [Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   

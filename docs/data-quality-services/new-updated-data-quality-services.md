@@ -1,28 +1,28 @@
 ---
-title: Documentos actualizados sobre el motor de base de datos | Microsoft Docs
-description: "Muestra fragmentos de contenido actualizado de la documentación modificada recientemente relativa al motor de base de datos."
+title: "Actualización: Documentos de Data Quality Services para SQL Server | Microsoft Docs"
+description: "Muestra fragmentos de contenido actualizado de documentación modificada recientemente para Data Quality Services para Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: barbkess
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: data-quality-services
 ms.translationtype: HT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
 ms.contentlocale: es-es
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-database-engine-docs"></a>Documentos nuevos y actualizados recientemente sobre el motor de base de datos
+# <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Nuevo y actualizado recientemente: Data Quality Services para SQL Server
 
 
 
@@ -35,7 +35,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 - *Intervalo de fechas de las actualizaciones:* del &nbsp; **18-07-2017** &nbsp; al &nbsp; **11-09-2017**
-- *Área de asunto:* &nbsp; **motor de base de datos**.
+- *Área de asunto:* &nbsp; **Data Quality Services para SQL Server**.
 
 
 
@@ -47,11 +47,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [Instalación de SQL Server](install-windows/installation-for-sql-server.md)
-2. [Actualizaciones de ediciones y versiones admitidas de SQL Server 2017](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [Motor de base de datos de SQL Server](sql-server-database-engine-overview.md)
-4. [Novedades de Motor de base de datos de Microsoft SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [Novedades de Motor de base de datos de Microsoft SQL Server 2017](whats-new-in-sql-server-2017.md)
+***En este momento no hay ningún artículo nuevo en la lista.***
 
 
 
@@ -77,53 +73,13 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [Propagación automática de las réplicas secundarias](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1. &nbsp; [Propagación automática de las réplicas secundarias](availability-groups/windows/automatic-seeding-secondary-replicas.md)
-
-*Actualizado: 21-08-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
-
-
-
-En SQL Server 2016 y versiones anteriores, la carpeta donde se creará la base de datos mediante la propagación automática ya debe existir y ser la misma que la ruta de acceso de la réplica principal.
-
-En SQL Server 2017, Microsoft recomienda el uso de los mismos datos y la misma ruta del archivo de registro en todas las réplicas que participan en un grupo de disponibilidad, pero puede usar rutas diferentes si es necesario. Por ejemplo, en un grupo de disponibilidad multiplataforma, una instancia de SQL Server se ejecuta en Windows, mientras que la otra lo hace en Linux. Cada plataforma tiene una ruta predeterminada diferente. SQL Server 2017 admite réplicas de grupos de disponibilidad en instancias de SQL Server con rutas diferentes.
-
-En la tabla siguiente se presentan ejemplos de diseños de disco de datos admitidos que permiten la propagación automática:
-
-|Instancia principal</br>Ruta de datos predeterminada|Instancia secundaria</br>Ruta de datos predeterminada|Instancia principal</br>Ubicación del archivo de origen|Instancia secundaria</br> Ubicación del archivo de destino
-|:------|:------|:------|:------
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
-|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
-
-Los escenarios en los que la ubicación de la base de datos de la réplica principal y las réplicas secundarias no sea la ruta predeterminada de la instancia no se verán afectados. Los requisitos para que las rutas de archivo de las réplicas secundarias coincidan con la ruta de archivo de la réplica principal siguen siendo los mismos.
-
-|Instancia principal</br>Ruta de datos predeterminada|Instancia secundaria</br>Ruta de datos predeterminada|Instancia principal</br>Ubicación del archivo|Instancia secundaria</br> Ubicación del archivo
-|:------|:------|:------|:------
-|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
-
-Si mezcla rutas predeterminadas con rutas que no lo sean en la réplica principal y las réplicas secundarias, SQL Server 2017 no tendrá el mismo comportamiento que en versiones anteriores. En la tabla siguiente se muestra el comportamiento de SQL Server 2017.
-
+***En este momento no hay artículos de esta área temática actualizados recientemente.***
 
 
 

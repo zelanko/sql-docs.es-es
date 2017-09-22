@@ -1,28 +1,33 @@
 ---
-title: "Importar dominios desde un archivo de Excel a la detecci&#243;n del conocimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Importar dominios desde un archivo de Excel a la detección del conocimiento | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a33a9e7a45689a4585c4e091d909420f46d8b23
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Importar dominios desde un archivo de Excel a la detecci&#243;n del conocimiento
-  En este tema se describe cómo importar uno o varios dominios desde un archivo de Excel a la actividad de detección de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de importación simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a los usuarios que disponen de datos en un archivo de Excel o un archivo de texto crear una base de conocimiento con dichos datos. (Consulte [Importar valores desde un archivo de Excel en un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) para obtener más información sobre cómo importar valores en un dominio de una base de conocimiento existente.) No se admite la exportación a un archivo Excel.  
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importar dominios desde un archivo de Excel a la detección del conocimiento
+  En este tema se describe cómo importar uno o varios dominios desde un archivo de Excel a la actividad de detección de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de importación simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a los usuarios que disponen de datos en un archivo de Excel o un archivo de texto crear una base de conocimiento con dichos datos. (Vea [Importar valores desde un archivo de Excel a un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) para obtener más información sobre cómo importar valores a un dominio de una base de conocimiento existente). No se admite la exportación a un archivo Excel.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
- Para importar dominios desde un archivo de Excel, Excel debe instalarse en el equipo que el [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] está instalado; debe haber creado un archivo de Excel con valores de dominio (consulte [cómo funciona la importación](#How)); y debe haber creado y abierto una base de conocimiento para importar el dominio.  
+ Para importar dominios desde un archivo de Excel, es necesario tener instalado Excel en el equipo en el que está instalado [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; también se debe haber creado un archivo de Excel con valores de dominio (vea [How the import works](#How)), así como haber creado y abierto una base de conocimiento en la que importar el dominio.  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 24
   
 ##  <a name="Import"></a> Importar dominios desde un archivo de Excel a una base de conocimiento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , siga uno de estos procedimientos:  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 24
   
 5.  En el cuadro de diálogo **Seleccione un archivo de Excel** , desplácese a la carpeta que contiene el archivo de Excel desde el que desea realizar la importación, seleccione dicho archivo y, a continuación, haga clic en **Abrir**.  
   
-6.  Desde el **hoja de cálculo** lista desplegable, seleccione la hoja de cálculo en el archivo de Excel que desea importar.  
+6.  En la lista desplegable **Hoja de cálculo** , seleccione la hoja de cálculo del archivo de Excel desde la que desea realizar la importación.  
   
-7.  Seleccione **Usar la primera fila como encabezado** si desea que la primera fila se considere como un encabezado de datos, y si desea que los valores de la primera fila se utilicen como nombres de columna. Anule la selección de **Usar primera fila como encabezado** Si desea que la primera fila se considere un valor de datos, en cuyo caso DQS utilizará los nombres de encabezado de Excel (letras en orden alfabético) para la columna.  
+7.  Seleccione **Usar la primera fila como encabezado** si desea que la primera fila se considere como un encabezado de datos, y si desea que los valores de la primera fila se utilicen como nombres de columna. Anule la selección de **Usar la primera fila como encabezado** si desea que la primera fila se considere como un valor de datos, en cuyo caso DQS utilizará los nombres del encabezado de Excel (letras en orden alfabético) para las columnas.  
   
 8.  Seleccione una columna y asígnela un dominio existente, o bien cree un nuevo dominio haciendo clic en el icono **Crear un dominio** , utilice el cuadro de diálogo **Crear un dominio** para crearlo y, a continuación, asígnelo a la columna. El tipo de datos del dominio debe coincidir con el tipo de datos de la columna. Repita el proceso para todas las columnas de la hoja de cálculo.  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 24
 14. Compruebe que la base de conocimiento se ha publicado y haga clic en **Aceptar**.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de importar dominios desde un archivo de Excel  
- Después de importar dominios desde un archivo de Excel, puede agregar conocimiento a dichos dominios o utilizarlos en un proyecto de limpieza o de búsqueda de coincidencias, en función del contenido de los dominios. Para obtener más información, consulte [realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [administrar un dominio](../data-quality-services/managing-a-domain.md), [administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md), [crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md), [la limpieza de datos](../data-quality-services/data-cleansing.md), o [coincidencia de datos](../data-quality-services/data-matching.md).  
+ Después de importar dominios desde un archivo de Excel, puede agregar conocimiento a dichos dominios o utilizarlos en un proyecto de limpieza o de búsqueda de coincidencias, en función del contenido de los dominios. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md), [Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md), [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md), [Limpieza de datos](../data-quality-services/data-cleansing.md) o [Coincidencia de datos](../data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> Cómo funciona la importación  
+##  <a name="How"></a> How the import works  
  En la operación de importación, DQS interpreta un archivo de Excel de la manera siguiente:  
   
 -   Una columna representa un dominio  

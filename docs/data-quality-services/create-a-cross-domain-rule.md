@@ -1,32 +1,37 @@
 ---
-title: "Crear una regla entre dominios | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testcdrule.f1"
-  - "sql13.dqs.dm.cdrules.f1"
+title: Crear una regla entre dominios | Microsoft Docs
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testcdrule.f1
+- sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73b05f76f59141094279a8b4231b88e9d9ba6999
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Crear una regla entre dominios
+# <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
   En este tema se describe cómo crear una regla entre dominios para un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla entre dominios comprueba la relación entre los valores de los dominios individuales incluidos en un dominio compuesto. Una regla entre dominios debe cumplirse en todo el dominio compuesto para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas entre dominios se utilizan para validar, corregir y normalizar valores de dominio.  
   
  La cláusula If de una regla entre dominios se define para uno de los dominios individuales del dominio compuesto y la cláusula Then para otro distinto. Se debe definir cada una de las cláusulas para un dominio individual distinto. Una regla entre dominios debe estar relacionada con varios dominios individuales; no es posible definir una regla de dominio simple (solo para un dominio individual) para un dominio compuesto. Para ello, deberá definir una regla de dominio para un dominio individual. Cada una de las cláusulas If y Then puede contener una o varias condiciones.  
   
  Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que dispone de la siguiente regla entre dominios para un dominio compuesto: “For “City”, if El valor es igual a ‘Los Angeles’, then for ‘State’, El valor es igual a ‘CA’”. Si ‘Los Angeles’ y ‘LA’ son sinónimos, esta regla dará un resultado correcto para ‘Los Angeles CA’ y ‘LA CA’ y uno incorrecto para ‘Los Angeles WA’ y ‘LA WA’.  
   
- Además de permitirle conocer la validez de una regla entre dominios, el definitivo *a continuación,* cláusula en una regla entre dominios, **valor es igual a**, también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, vea [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
+ Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, vea [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  Las reglas entre dominios se tienen en consideración una vez aplicadas todas las reglas sencillas que afectan únicamente a un dominio individual. La regla entre dominios solo se aplica si un valor pasa las reglas de dominio individual (si estas existen). El dominio compuesto y los dominios individuales en los que se ejecuta una regla deben haberse definido con anterioridad a la ejecución de la regla.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
 ##  <a name="Create"></a> Crear reglas entre dominios  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 13
   
 5.  Haga clic en **Agregar una nueva regla de dominio**y escriba un nombre y una descripción para la regla.  
   
-6.  Seleccione **Active** para especificar que la regla se ejecutará (valor predeterminado) y anule la selección para impedir que se ejecute la regla.  
+6.  Active la casilla **Activa** para especificar que la regla se debe ejecutar (el valor predeterminado) o anule dicha selección para impedir su ejecución.  
   
 7.  Cree la cláusula If de la manera siguiente:  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 13
   
 1.  Pruebe la regla entre dominios de la manera siguiente:  
   
-    1.  Haga clic en el **ejecutar la regla de dominio seleccionado en los datos de prueba a** icono en la esquina superior derecha del panel de dominio compuesto.  
+    1.  Haga clic en el icono **Ejecutar la regla de dominio seleccionada en los datos de prueba** en la esquina superior derecha del panel de dominios compuestos.  
   
     2.  En el cuadro de diálogo **Probar regla de dominio** , haga clic en el icono **Agrega un nuevo término de prueba para la regla de dominio** .  
   
-    3.  Escriba los valores de prueba para los dominios individuales asociados con las cláusulas If y Then. Los valores de prueba especificados en If cláusula debe cumplir las condiciones de dicha cláusula o un signo de interrogación se escribirán en el **validez** columna indica que la regla entre dominios no se aplica a los datos de prueba.  
+    3.  Escriba los valores de prueba para los dominios individuales asociados con las cláusulas If y Then. Los valores de prueba escritos en la cláusula If deben cumplir las condiciones de dicha cláusula; en caso contrario, se incluirá un signo de interrogación en la columna **Validez** que indicará que la regla entre dominios no se aplica a los datos de prueba.  
   
     4.  Haga clic de nuevo en el icono **Agrega un nuevo término de prueba para la regla de dominio** para agregar otro conjunto de valores de prueba.  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 13
   
     6.  Una vez finalizada la prueba, haga clic en **Cerrar** en el cuadro de diálogo **Probar regla de dominio compuesto** .  
   
-2.  Cuando se hayan completado las reglas entre dominios, haga clic en **Finalizar** para completar la actividad de administración de dominios, como se describe en [Finalizar la actividad de administración de dominio](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+2.  Cuando haya terminado de definir las reglas entre dominios, haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear una regla entre dominios  
- Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para obtener más información, consulte [realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [administrar un dominio](../data-quality-services/managing-a-domain.md), o [crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
+ Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Exportar un dominio a un archivo .dqs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exportar un dominio a un archivo .dqs | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 197f51ab86d1ac46ab77d34dd64d98c1034317d6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Exportar un dominio a un archivo .dqs
-  En este tema se describe cómo exportar un dominio a un archivo .dqs en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Puede exportar un dominio o una base de conocimiento completa a un archivo de datos. Para obtener información acerca de cómo exportar una base de conocimiento, consulte [exportar una Base de conocimiento a un archivo .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
+# <a name="export-a-domain-to-a-dqs-file"></a>Exportar un dominio a un archivo .dqs
+  En este tema se describe cómo exportar un dominio a un archivo .dqs en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Puede exportar un dominio o una base de conocimiento completa a un archivo de datos. Para obtener información sobre cómo exportar una base de conocimiento, vea [Exportar una base de conocimiento a un archivo .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  Exportar un dominio de una base de conocimiento a un archivo de datos .dqs e importarlo a continuación en otra simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Le permite compartir con los demás un dominio y su conocimiento.  
   
@@ -35,18 +40,18 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder exportar un dominio a un archivo de datos .dqs.  
   
-##  <a name="Export"></a> Exportar un dominio a un archivo .dqs  
+##  <a name="Export"></a> Export a domain to a .dqs file  
  La exportación se puede realizar desde cualquier página de administración de dominios. El comando de exportación está disponible tanto en forma de control de la interfaz de usuario como en forma de comando del menú contextual del panel de la lista de dominios.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra una base de conocimiento en la actividad Administración de dominios.  
   
-3.  En la **página de administración de dominio** (con cualquier pestaña seleccionada), seleccione un dominio individual o un dominio compuesto en el **dominio** lista.  
+3.  En la página **Administración de dominios** (con cualquier pestaña seleccionada), seleccione un dominio individual o un dominio compuesto en la lista **Dominio** .  
   
-4.  Haga clic en el icono **Exportar datos de la base de conocimiento** situado sobre la lista de dominios y, a continuación, haga clic en **Exportar dominio**. Como alternativa, haga clic en el dominio en el **dominio** lista, seleccione **exportar**, y, a continuación, haga clic en **Exportar dominio**.  
+4.  Haga clic en el icono **Exportar datos de la base de conocimiento** situado sobre la lista de dominios y, a continuación, haga clic en **Exportar dominio**. O bien, puede hacer clic con el botón secundario en el dominio en la lista **Dominio** , seleccionar **Exportar**y, a continuación, hacer clic en **Exportar dominio**.  
   
-5.  En el **Exportar al archivo de datos** mantener el cuadro de diálogo, desplácese a la carpeta que desea guardar el archivo en nombre del archivo o mantenga el nombre predeterminado, **archivos de datos de DQS (\*.dqs)** como el **Guardar como tipo**, y, a continuación, haga clic en **Guardar**.  
+5.  En el cuadro de diálogo **Exportar a un archivo de datos**, desplácese a la carpeta en la que quiere guardar el archivo, asígnele un nombre o conserve el predeterminado, mantenga seleccionada la opción **Archivos de datos DQS (\*.dqs)** en la lista **Guardar como tipo** y, luego, haga clic en **Guardar**.  
   
 6.  En el cuadro de diálogo **Exportar dominio** , compruebe que la línea de estado de este indica que se ha completado la exportación. Haga clic en **Aceptar**.  
   

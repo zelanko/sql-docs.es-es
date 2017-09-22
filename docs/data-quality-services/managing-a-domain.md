@@ -1,29 +1,34 @@
 ---
-title: "Administrar un dominio | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Administrar un dominio | Microsoft Docs
+ms.custom: 
+ms.date: 07/31/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Administrar un dominio
+# <a name="managing-a-domain"></a>Administrar un dominio
   En este tema se describe el uso de los dominios en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio contiene una representación semántica de los datos de un campo determinado del origen de datos que se va a analizar. Un dominio forma parte de la base de conocimiento creada para un origen de datos, y todo el conocimiento obtenido mediante el análisis de un origen de datos de ejemplo o la importación de datos se agrega a los dominios definidos en ella. El conocimiento de dichos dominios se utiliza posteriormente para realizar las tareas de limpieza y de búsqueda de coincidencias en un proyecto de calidad de datos. Los dominios son el núcleo de todas las actividades de Data Quality Services.  
   
  Un dominio se asigna a un campo del origen de datos, y se rellena en las actividades de detección de conocimiento, administración de dominios y búsqueda de coincidencias. La forma en la que se cargan los datos desde el origen de datos y se muestran en un informe se define en las propiedades del dominio. Si se utiliza un proveedor de datos de referencia para limpiar los datos, se debe adjuntar un servicio de datos de referencia a un dominio único o a uno compuesto. Puede crear reglas, así como relaciones basadas en términos, que se aplicarán a los datos del dominio. Puede ver y corregir los datos del dominio.  
   
- También puede crear un dominio compuesto formado por dos o más dominios individuales que contengan conocimiento sobre datos comunes. Para obtener más información, consulte [administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md).  
+ También puede crear un dominio compuesto formado por dos o más dominios individuales que contengan conocimiento sobre datos comunes. Para más información, vea [Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md).  
   
-## Propiedades del dominio  
+## <a name="domain-properties"></a>Propiedades del dominio  
  Al crear un dominio, tendrá las opciones siguientes para rellenarlo a partir de los datos de origen y mostrar los valores del dominio. Para más información, consulte [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
 -   Seleccione el tipo de los datos con los que va a rellenar el dominio. Para obtener más información acerca de los tipos de datos admitidos para cada uno de los tipos de datos de dominio, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
@@ -38,24 +43,24 @@ caps.handback.revision: 13
   
 -   Si los datos son de tipo cadena, puede especificar que DQS no identifique los errores de sintaxis cuando sepa que no existen errores de este tipo en las cadenas.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  El uso de un dominio le permite hacer lo siguiente:  
   
 |||  
 |-|-|  
 |Crear una representación semántica de un campo de datos con un tipo de datos específico, especificar cómo se rellena el dominio y dar formato a los resultados del dominio|[Crear un dominio](../data-quality-services/create-a-domain.md)|  
-|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear dominio vinculado](../data-quality-services/create-a-linked-domain.md)|  
+|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear un dominio vinculado](../data-quality-services/create-a-linked-domain.md)|  
 |Adjuntar un servicio de datos de referencia a un dominio único o compuesto|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Cambiar o aumentar los valores de una base de conocimiento|[Cambiar valores de dominio](../data-quality-services/change-domain-values.md)|  
-|Utilizar reglas de validación y normalización|[Cree una regla de dominio](../data-quality-services/create-a-domain-rule.md)|  
+|Utilizar reglas de validación y normalización|[Crear una regla de dominio](../data-quality-services/create-a-domain-rule.md)|  
 |Utilizar relaciones para corregir un término que forma parte de un valor de un dominio|[Crear relaciones basadas en términos](../data-quality-services/create-term-based-relations.md)|  
-|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad Administración de dominios](../Topic/End%20the%20Domain%20Management%20Activity.md)|  
+|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad de administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
 |Importar conocimiento en una base de conocimiento o exportarlo desde esta.|[Importar y exportar conocimiento](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md)|  
   

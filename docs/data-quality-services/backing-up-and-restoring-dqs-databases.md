@@ -1,22 +1,27 @@
 ---
-title: "Realizar copias de seguridad de bases de datos de DQS y restaurarlas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Realizar copias de seguridad de bases de datos de DQS y restaurarlas | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Realizar copias de seguridad de bases de datos de DQS y restaurarlas
+# <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
   En este tema se describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  En el Explorador de objetos, expanda el nodo **Bases de datos** .  
   
-3.  Haga una copia de seguridad de la base de datos DQS_STAGING_DATA. Para obtener instrucciones paso a paso para la seguridad de una base de datos de SQL Server, vea [crear una copia de seguridad completa de base de datos & #40; SQL Server & #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+3.  Haga una copia de seguridad de la base de datos DQS_STAGING_DATA. Para obtener instrucciones paso a paso sobre cómo realizar una copia de seguridad de una base de datos de SQL Server, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Haga una copia de seguridad de la base de datos DQS_PROJECTS.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  Desconéctese de la instancia actual de SQL Server y conéctese a la instancia de SQL Server donde desea restaurar estas bases de datos.  
   
-7.  Restaure la base de datos DQS_MAIN. Para que obtener instrucciones paso a paso restaurar una base de datos de SQL Server, vea [restaurar un SSMS utilizando de copia de seguridad de base de datos](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Restaure la base de datos DQS_MAIN. Para obtener instrucciones paso a paso sobre cómo restaurar una base de datos de SQL Server, vea [Restaurar una copia de seguridad de base de datos con SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Restaure la base de datos DQS_PROJECTS.  
   
 9. Restaure la base de datos DQS_STAGING_DATA.  
   
-10. En el Explorador de objetos, haga clic en el servidor y, a continuación, haga clic en **nueva consulta**.  
+10. En el Explorador de objetos, haga clic con el botón secundario en el servidor y, a continuación, haga clic en **Nueva consulta**.  
   
-11. En la ventana del Editor de consultas, copie las siguientes instrucciones SQL y reemplace *\< contraseña>* con la contraseña que proporcionó durante la instalación de DQS para la clave maestra de base de datos:  
+11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace *\<CONTRASEÑA>* por la contraseña proporcionada durante la instalación de DQS para la clave maestra de base de datos:  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. Presione F5 para ejecutar las instrucciones. Vea el panel **Resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar bases de datos de DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

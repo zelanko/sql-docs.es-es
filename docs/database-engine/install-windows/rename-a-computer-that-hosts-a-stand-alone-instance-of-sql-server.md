@@ -1,8 +1,10 @@
 ---
 title: Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/08/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -24,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f5fc3acde45aa4dab6738f0d88ec9d8005864b6
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
-  Cuando se cambia el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre nuevo se reconoce durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No es necesario que vuelva a ejecutar el programa de instalación para restablecer el nombre del equipo. En su lugar, realice los siguientes pasos para actualizar los metadatos del sistema que están almacenados en sys.servers y que son notificados por la función de sistema @@SERVERNAME. Actualice los metadatos del sistema para reflejar los cambios de nombre de equipo de las conexiones remotas y las aplicaciones que usan @@SERVERNAME, o que consultan el nombre del servidor desde sys.servers.  
+Cuando se cambia el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre nuevo se reconoce durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No es necesario que vuelva a ejecutar el programa de instalación para restablecer el nombre del equipo. En su lugar, realice los siguientes pasos para actualizar los metadatos del sistema que están almacenados en sys.servers y que son notificados por la función de sistema @@SERVERNAME. Actualice los metadatos del sistema para reflejar los cambios de nombre de equipo de las conexiones remotas y las aplicaciones que usan @@SERVERNAME, o que consultan el nombre del servidor desde sys.servers.  
   
- Los siguientes pasos no se pueden utilizar para cambiar el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos pasos solo se pueden usar para cambiar la parte del nombre de la instancia que corresponde al nombre del equipo. Por ejemplo, puede cambiar el nombre de un equipo denominado MB1 que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada Instance1 por otro nombre, por ejemplo MB2. Sin embargo, la parte del nombre que corresponde a la instancia, Instance1, permanecerá intacta. En este ejemplo, \\\\*nombreDeEquipo*\\*nombreDeInstancia* cambiará de \\\MB1\Instance1 a \\\MB2\Instance1.  
+Los siguientes pasos no se pueden utilizar para cambiar el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos pasos solo se pueden usar para cambiar la parte del nombre de la instancia que corresponde al nombre del equipo. Por ejemplo, puede cambiar el nombre de un equipo denominado MB1 que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada Instance1 por otro nombre, por ejemplo MB2. Sin embargo, la parte del nombre que corresponde a la instancia, Instance1, permanecerá intacta. En este ejemplo, \\\\*nombreDeEquipo*\\*nombreDeInstancia* cambiará de \\\MB1\Instance1 a \\\MB2\Instance1.  
   
  **Antes de empezar**  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 08/02/2017
   
  Puede conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el nuevo nombre del equipo después de haber reiniciado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para asegurarse de que @@SERVERNAME devuelve el nombre actualizado de la instancia del servidor local, conviene ejecutar manualmente el procedimiento correspondiente a su situación de entre los siguientes. El procedimiento que use dependerá de si está actualizando un equipo que hospeda o una instancia predeterminada o con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Para cambiar el nombre de un equipo que hospeda una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   En un equipo con el nombre cambiado que hospeda una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute los procedimientos siguientes:  
   
-    ```  
+    ```sql
     sp_dropserver <old_name>;  
     GO  
     sp_addserver <new_name>, local;  
@@ -66,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   En un equipo con el nombre cambiado que hospeda una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute los procedimientos siguientes:  
   
-    ```  
+    ```sql
     sp_dropserver <old_name\instancename>;  
     GO  
     sp_addserver <new_name\instancename>, local;  
@@ -78,7 +80,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="after-the-renaming-operation"></a>Después de la operación de cambio de nombre  
  Después de cambiar el nombre del equipo, las conexiones que utilizaban el nombre anterior deben realizarse con el nombre nuevo.  
   
-#### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>Para comprobar que la operación de cambio de nombre se ha realizado correctamente  
+## <a name="verify-renaming-operation"></a>Comprobar la operación de cambio de nombre  
   
 -   Seleccione la información de @@SERVERNAME o de sys.servers. La función @@SERVERNAME devolverá el nombre nuevo y la tabla sys.servers lo mostrará. En el siguiente ejemplo se muestra el uso de @@SERVERNAME.  
   
@@ -93,18 +95,18 @@ ms.lasthandoff: 08/02/2017
   
  Para solucionar el error, debe quitar los inicios de sesión remotos de este servidor.  
   
-#### <a name="to-drop-remote-logins"></a>Para quitar inicios de sesión remotos  
+### <a name="drop-remote-logins"></a>Quitar inicios de sesión remotos  
   
 -   Para una instancia predeterminada, ejecute el siguiente procedimiento:  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   Para una instancia con nombre, ejecute el siguiente procedimiento:  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
@@ -114,6 +116,6 @@ ms.lasthandoff: 08/02/2017
  **Nombres de alias de cliente:** la operación de cambio de nombre de equipo afectará a los alias de cliente que usen canalizaciones con nombre. Por ejemplo, si se creó un alias "PROD_SRVR" para señalar a SRVR1 y usa el protocolo de canalizaciones con nombre, el nombre de la canalización será similar a `\\SRVR1\pipe\sql\query`. Una vez cambiado el nombre del equipo, la ruta de acceso de la canalización con nombre ya no será válida. Para obtener más información sobre las canalizaciones con nombre, vea el tema sobre cómo [crear una cadena de conexión válida con canalizaciones con nombre](http://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## <a name="see-also"></a>Vea también  
- [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [Instalar SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

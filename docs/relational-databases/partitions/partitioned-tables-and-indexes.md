@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>Tablas e índices con particiones
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   La clave de índice es única y no contiene la columna de partición de la tabla.  
   
 -   Desea que la tabla base participe en combinaciones por colocación con más tablas usando columnas de combinación diferentes.  
-  
- Eliminación de particiones  
- El proceso por el que el optimizador de consultas tiene acceso únicamente a las particiones pertinentes para cumplir los criterios de filtro de la consulta.  
+
+ Eliminación de la partición El proceso por el que el optimizador de consultas tiene acceso únicamente a las particiones pertinentes para cumplir los criterios de filtro de la consulta.  
   
 ## <a name="performance-guidelines"></a>Instrucciones de rendimiento  
  El nuevo, mayor límite de 15.000 particiones afecta a la memoria, operaciones con particiones de índice, comandos DBCC, y consultas. Esta sección describe las implicaciones para el rendimiento de aumentar el número de particiones en 1.000 y proporciona soluciones según sea necesario. Con el límite en el número máximo de particiones ampliado a 15.000, puede almacenar los datos durante más tiempo. Sin embargo, debe conservar datos solo mientras sea necesario y mantener un equilibrio entre el rendimiento y el número de particiones.  

@@ -1,22 +1,27 @@
 ---
-title: "Administrar una base de conocimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Administrar una base de conocimiento | Microsoft Docs
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Administrar una base de conocimiento
+# <a name="manage-a-knowledge-base"></a>Administrar una base de conocimiento
   En este tema se describe cómo realizar funciones de administración en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Puede eliminar una base de conocimiento, desbloquearla, descartar los cambios realizados en ella, cambiarle el nombre y mostrar sus propiedades.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
@@ -31,7 +36,7 @@ caps.handback.revision: 9
   
 ##  <a name="Manage"></a> Administrar una base de conocimiento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento**.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 9
   
     3.  **Descartar trabajo**: haga clic aquí si se está trabajando actualmente en la base de conocimiento, lo que se indica con una entrada en el campo Estado de la tabla. Este comando no está disponible si la base de conocimiento no se encuentra en un estado de una actividad, ni tampoco si está bloqueada. Para obtener más información, vea [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Cambie el nombre**: haga clic para editar el campo de la Base de conocimiento de la tabla de hecho en la base de conocimiento. Cambie el nombre y, a continuación, haga clic en esa base de conocimiento y haga clic de nuevo en el campo para aceptar el cambio de nombre.  
+    4.  **Cambiar nombre**: haga clic aquí para editar el campo Base de conocimiento de la tabla de la base de conocimiento en la que hizo clic con el botón secundario. Cambie el nombre y, a continuación, haga clic en esa base de conocimiento y haga clic de nuevo en el campo para aceptar el cambio de nombre.  
   
-    5.  **Eliminar**: haga clic para quitar la base de conocimiento de la base de datos DQS_MAIN de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+    5.  **Eliminar**: haga clic aquí para quitar la base de conocimiento de la base de datos DQS_MAIN de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-    6.  **Propiedades de**: haga clic para mostrar las propiedades de la base de datos en una presentación de solo lectura.  
+    6.  **Propiedades**: haga clic aquí para mostrar las propiedades de la base de datos en una presentación de solo lectura.  
   
         1.  **Base de conocimiento de origen**: la base de conocimiento en la que está basada esta base de datos. Esto es opcional.  
   

@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
@@ -83,6 +83,8 @@ Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ Estas cuentas principales no tienen contraseñas que los administradores puedan cambiar, ya que se basan en certificados emitidos a Microsoft.
   
 ## <a name="the-guest-user"></a>Usuario guest  
  Cada base de datos incluye un usuario `guest`. Los permisos concedidos al usuario `guest` se aplican a todos los usuarios que tienen acceso a la base de datos, pero no disponen de una cuenta en la base de datos. No se puede quitar el usuario `guest`, pero se puede deshabilitar si se revoca su permiso CONNECT. El permiso CONNECT se puede revocar si se ejecuta `REVOKE CONNECT FROM GUEST;` en cualquier base de datos que no sea `master` ni `tempdb`.  

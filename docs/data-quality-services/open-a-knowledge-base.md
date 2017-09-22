@@ -1,27 +1,32 @@
 ---
-title: "Abrir una base de conocimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.openkb.f1"
+title: Abrir una base de conocimiento | Microsoft Docs
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Abrir una base de conocimiento
+# <a name="open-a-knowledge-base"></a>Abrir una base de conocimiento
   En este tema se describe cómo abrir una base de conocimiento existente en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) y cómo prepararla para la administración de dominios, la detección de conocimiento o la adición de una directiva de coincidencia.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para abrir una base de conocimiento, previamente esta debe haberse creado y estar publicada (si la ha creado otra persona) o cerrada (si la ha creado usted).  
@@ -31,9 +36,9 @@ caps.handback.revision: 20
 ####  <a name="Permissions"></a> Permisos  
  Para abrir una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="Open"></a> Abrir una base de conocimiento  
+##  <a name="Open"></a> Open a knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación de cliente de calidad de datos](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento**.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 20
     > [!NOTE]  
     >  Si no puede abrir la base de conocimiento porque está bloqueada, vea la sección siguiente.  
   
-## Abrir una base de conocimiento reciente  
+## <a name="open-a-recent-knowledge-base"></a>Abrir una base de conocimiento reciente  
  En la lista **Base de conocimiento reciente** de la página de inicio de DQS se muestran las cinco últimas bases de conocimiento que se han abierto. Esto le da la posibilidad de abrir una base de conocimiento en la que ha trabajado recientemente sin necesidad de pasar por la página **Abrir base de conocimiento** .  
   
 -   Para abrir una base de conocimiento de la lista que no esté bloqueada, haga clic en la flecha derecha de la base de conocimiento y seleccione la actividad que desea abrir.  
@@ -68,23 +73,23 @@ caps.handback.revision: 20
 -   Para abrir una base de conocimiento de la lista que ha bloqueado otra persona, póngase en contacto con dicha persona y pídale que la desbloquee.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de abrir una base de conocimiento  
- Después de abrir una base de conocimiento, esta adquiere el estado indicado en la columna Estado de la tabla de bases de conocimiento. Para las actividades de detección de conocimiento y directiva de coincidencia, la base de conocimiento se abre en una página específica del asistente. Para la actividad de administración de dominios, la base de conocimiento se abre en la página Administración de dominios. Para obtener más información acerca de los Estados, consulte [realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [administrar un dominio](../data-quality-services/managing-a-domain.md), o [crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
+ Después de abrir una base de conocimiento, esta adquiere el estado indicado en la columna Estado de la tabla de bases de conocimiento. Para las actividades de detección de conocimiento y directiva de coincidencia, la base de conocimiento se abre en una página específica del asistente. Para la actividad de administración de dominios, la base de conocimiento se abre en la página Administración de dominios. Para más información sobre los estados, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Locked"></a> Si la base de conocimiento está bloqueada  
- El icono de candado en la primera columna indica si la base de conocimiento está bloqueada. Cuando una base de conocimiento está bloqueada, su nombre aparece en color rojo. Si un usuario específico está modificando una base de conocimiento a través de una actividad, la base de conocimiento se marca como bloqueada. En una base de conocimiento bloqueada no puede trabajar un segundo usuario. El usuario que está trabajando en la base de conocimiento puede desbloquearla haciendo clic en la base de conocimiento en la tabla en la página Abrir Base de conocimiento y haga clic en **Unlock**, o su publicación. Cuando el cursor se sitúa en una base de conocimiento bloqueada, DQS muestra una sugerencia que indica quién la bloqueó y cuándo lo hizo.  
+ El icono de candado en la primera columna indica si la base de conocimiento está bloqueada. Cuando una base de conocimiento está bloqueada, su nombre aparece en color rojo. Si un usuario específico está modificando una base de conocimiento a través de una actividad, la base de conocimiento se marca como bloqueada. En una base de conocimiento bloqueada no puede trabajar un segundo usuario. Si el usuario que está trabajando en la base de conocimiento desea desbloquearla, solo tiene que hacer clic en ella con el botón secundario dentro de la tabla de la página Abrir base de conocimiento y, a continuación, seleccionar **Desbloquear**, o bien, publicarla. Cuando el cursor se sitúa en una base de conocimiento bloqueada, DQS muestra una sugerencia que indica quién la bloqueó y cuándo lo hizo.  
   
 ##  <a name="State"></a> Estado de una base de conocimiento  
  El campo Estado indica en qué fase de una actividad se encuentra la base de conocimiento. Si abre la base de conocimiento, se abrirá en esa fase.  
   
--   **\< vacío>**: el campo estado aparece vacío para una base de conocimiento si ha publicado haciendo clic en la base de conocimiento **publicar** en la actividad de administración de dominios y haga clic en **Sí – publicar la base de conocimiento y salir**.  
+-   **\<Vacío>**: el campo Estado aparece vacío para una base de conocimiento que se ha publicado haciendo clic en **Publicar** en la actividad Administración de dominios y, después, en **Sí - Publicar la base de conocimiento y salir**.  
   
 -   **Trabajando**: el trabajo realizado en la base de conocimiento se ha guardado haciendo clic en **Publicar** en la actividad Administración de dominios y haciendo clic en **No – Guardar el trabajo en la base de conocimiento y salir**.  
   
 -   **Administración de dominios**: se han especificado datos para un dominio de la base de conocimiento, pero esta no se ha publicado y el trabajo permanece en la actividad Administración de dominios. La actividad Detección de conocimiento no está disponible. Esto sucede si se hace clic en **Cerrar** en la pantalla **Administración de dominios** .  
   
--   **Detección - asignación**: la base de conocimiento se cerró en la **administración de la Base de conocimiento: asignación** página. La base de conocimiento está bloqueada y las actividades de administración de dominios y búsqueda de coincidencias no están disponibles.  
+-   **Detección de conocimiento: asignar**: la base de conocimiento se cerró en la página **Administración de la base de conocimiento: Asignación** . La base de conocimiento está bloqueada y las actividades de administración de dominios y búsqueda de coincidencias no están disponibles.  
   
--   **Detección - detectar**: la base de conocimiento se cerró en la **administración de la Base de conocimiento: analizar** página. La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
+-   **Detección de conocimiento: detectar**: la base de conocimiento se cerró en la página **Administración de la base de conocimiento: Detectar** . La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
   
 -   **Detección de conocimiento: administrar valores del dominio**: la base de datos se cerró en la página **Administración de la base de conocimiento: Administrar valores del dominio** . La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
   

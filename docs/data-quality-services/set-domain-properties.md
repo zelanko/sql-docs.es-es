@@ -1,27 +1,32 @@
 ---
-title: "Establecer las propiedades de dominio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.domainproperties.f1"
+title: Establecer las propiedades del dominio | Microsoft Docs
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Establecer las propiedades de dominio
+# <a name="set-domain-properties"></a>Establecer las propiedades de dominio
   En este tema se describe cómo establecer las propiedades del dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para establecer las propiedades de un dominio, debe haber creado una base de conocimiento y un dominio.  
@@ -33,14 +38,14 @@ caps.handback.revision: 22
   
 ##  <a name="Set"></a> Establecer las propiedades de dominio  
   
-1.  Establecer propiedades en un dominio existente, abra una base de conocimiento en la actividad de administración de dominios (vea [Abrir una Base de conocimiento](../data-quality-services/open-a-knowledge-base.md)) y, a continuación, seleccione el dominio adecuado en el **dominio** lista. La página Propiedades del dominio se mostrará de forma predeterminada.  
+1.  Para establecer las propiedades de un dominio existente, abra una base de conocimiento en la actividad Administración de dominios (vea [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)) y seleccione el dominio adecuado en la lista **Dominio** . La página Propiedades del dominio se mostrará de forma predeterminada.  
   
 2.  Para establecer las propiedades de un dominio nuevo después de crearlo, use el procedimiento que se describe en [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de establecer las propiedades del dominio  
- Una vez establecidas las propiedades del dominio, puede realizar en él otras tareas de administración, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para obtener más información, consulte [realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [administrar un dominio](../data-quality-services/managing-a-domain.md), o [crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
+ Una vez establecidas las propiedades del dominio, puede realizar en él otras tareas de administración, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Properties"></a> Propiedades del dominio  
   
@@ -48,13 +53,13 @@ caps.handback.revision: 22
  Una vez creado un dominio, no se puede cambiar ni su nombre ni su descripción. El nombre del dominio debe ser único para la base de conocimiento. La descripción puede contener un máximo de 256 caracteres.  
   
 ###  <a name="Type"></a> Tipo de datos  
- Cuando se crea el dominio, seleccione uno de los siguientes tipos de datos para los valores del dominio: **cadena** (valor predeterminado), **fecha**, **entero**, o **Decimal**. Después de crear el dominio, podrá ver el tipo de datos, pero no cambiarlo. El tipo de datos seleccionado para un dominio define el tipo de datos de origen que se puede asignar al dominio. Para obtener más información acerca de los tipos de datos admitidos para cada uno de los tipos de datos de dominio en DQS, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Al crear el dominio, seleccione uno de los siguientes tipos de datos para los valores del dominio: **Cadena** (valor predeterminado), **Fecha**, **Entero**o **Decimal**. Después de crear el dominio, podrá ver el tipo de datos, pero no cambiarlo. El tipo de datos seleccionado para un dominio define el tipo de datos de origen que se puede asignar al dominio. Para obtener más información acerca de los tipos de datos admitidos para cada uno de los tipos de datos de dominio en DQS, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Usar valores iniciales  
  Seleccione esta casilla para especificar que se mostrará el valor inicial de un grupo de sinónimos en lugar de un valor que sea un sinónimo de aquel. Anule la selección **Usar valores iniciales** para especificar que cada valor de sinónimo se mostrará en su forma correcta o corregida, y que no será reemplazado por el valor inicial de su grupo.  
   
 ###  <a name="Normalize"></a> Normalizar cadena  
- Si el tipo de datos es **cadena**, haga clic para omitir los caracteres especiales en los datos de origen para el procesamiento de dqs de calidad de datos. DQS reemplaza internamente los caracteres especiales con un valor NULL o un espacio cuando se cargan los datos en el dominio. Los dos puntos, el guion, el punto, las comillas dobles y el punto y coma se reemplazan por un espacio. La comilla simple se reemplaza por un valor NULL. El uso de valores NULL provoca que las dos partes de la cadena se unan.  
+ Si el tipo de datos es **Cadena**, haga clic en los caracteres especiales en los datos de origen para el procesamiento de calidad de datos de DQS. DQS reemplaza internamente los caracteres especiales con un valor NULL o un espacio cuando se cargan los datos en el dominio. Los dos puntos, el guion, el punto, las comillas dobles y el punto y coma se reemplazan por un espacio. La comilla simple se reemplaza por un valor NULL. El uso de valores NULL provoca que las dos partes de la cadena se unan.  
   
  Si se omiten los caracteres especiales en un valor de cadena, se puede incrementar la precisión de las correspondencias. La puntuación de similitud entre dos cadenas se puede aumentar reemplazando los caracteres especiales por valores NULL o espacios. Es posible que los signos de puntuación y otros símbolos sean distintos en cadenas diferentes. Cuando se reemplazan los caracteres especiales internamente, la puntuación puede superar el umbral de coincidencia mínimo en DQS, lo que puede provocar que se consideren coincidentes dos cadenas que, en caso contrario, no se habrían considerado como tales. Sin embargo, la decisión de omitir los caracteres especiales puede depender del tipo de datos en los que esté realizando la búsqueda de coincidencias. Por ejemplo, cuando se trabaja con datos en el sistema anglosajón de unidades, la omisión de comillas dobles y comillas simples puede producir falsos positivos si una comilla doble representa una pulgada y una comilla simple representa un pie.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 22
  El idioma predeterminado es el inglés. Cuando se establece la propiedad **Idioma** en **Otros** , se deshabilita el corrector ortográfico para el dominio.  
   
 > [!TIP]  
->  Si el idioma no aparece en la **idioma** la lista desplegable, debe seleccionar **otros**. Esto garantiza que DQS limpia y elimina los duplicados para los datos de idioma no enumerados en función del conocimiento disponibles (reglas de dominio, valores de dominio, TBR, regla de coincidencia) en el dominio.  
+>  Si el idioma no aparece en la lista desplegable **Idioma** , debe seleccionar **Otro**. Esto garantiza que DQS limpia y elimina los duplicados para los datos de idioma no enumerados en función del conocimiento disponibles (reglas de dominio, valores de dominio, TBR, regla de coincidencia) en el dominio.  
   
 ###  <a name="Speller"></a> Habilitar corrector ortográfico  
  Si el tipo de datos es **Cadena**, haga clic aquí para habilitar el corrector ortográfico de DQS en el dominio. El corrector ortográfico solo funciona en dominios cuyo tipo de datos es de cadena. La casilla **Habilitar corrector ortográfico** habilita el corrector ortográfico solo en el dominio individual que está asociado a la casilla. La casilla no se aplica a un dominio compuesto.  

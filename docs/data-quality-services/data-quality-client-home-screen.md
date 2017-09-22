@@ -1,29 +1,34 @@
 ---
-title: "P&#225;gina de inicio del cliente de calidad de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+title: Pantalla de inicio de Data Quality Client | Microsoft Docs
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# P&#225;gina de inicio del cliente de calidad de datos
+# <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
   Utilice esta pantalla para obtener acceso a las interfaces de usuario de cada uno de los tres grupos principales de tareas de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): administración de bases de conocimiento, proyectos de calidad de datos y administración.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
   
-### Administración de bases de conocimiento  
+### <a name="knowledge-base-management"></a>Administración de bases de conocimiento  
  Una base de conocimiento de DQS es un repositorio de metadatos que DQS utiliza para mejorar la calidad de los datos. Estos metadatos los crean tanto la plataforma DQS en un proceso de detección de conocimiento asistido por PC como el administrador de datos en un proceso interactivo de administración de dominios.  
   
  **Nueva base de conocimiento**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  Puede abrir una base de conocimiento bloqueada y modificarla, únicamente si usted la bloqueó. Si es así, se abrirá la base de conocimiento en el estado en que se encontraba cuando se cerró, el cual se indica entre paréntesis. Si una base de conocimiento está bloqueada y no fue usted quien lo hizo, solo la podrá abrir en modo de solo lectura.  
   
-### Proyectos de calidad de datos  
+### <a name="data-quality-projects"></a>Proyectos de calidad de datos  
  Un proyecto de calidad de datos es el proceso en el que DQS realiza la limpieza de datos o búsqueda de coincidencia de datos, tanto mediante la corrección de datos asistida por PC como mediante la limpieza interactiva de los datos.  
   
  **Nuevo proyecto de calidad de datos**  
@@ -49,18 +54,18 @@ caps.handback.revision: 14
  **Proyecto de calidad de datos reciente**  
  En la lista de la pantalla, seleccione un proyecto que ya se haya creado. Puede abrir un proyecto bloqueado solo si fue usted quien lo bloqueó. Si es así, se abrirá el proyecto en el estado en que se encontraba cuando se cerró, el cual se indica entre paréntesis. Si el proyecto estaba terminado, se abrirá en el paso de exportación de actividad.  
   
-### Administración  
+### <a name="administration"></a>Administración  
  La administración de DQS permite supervisar, configurar y mantener DQS.  
   
  **Supervisión de actividades**  
- Muestra una vista con el estado de todas las actividades (actuales y pasadas) relacionadas con el servidor [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] que está conectado. Los tipos de actividades supervisadas incluyen la administración del conocimiento, un proyecto de calidad de datos y la corrección de datos basada en SSIS.  
+ Muestra una vista con el estado de todas las actividades (actuales y pasadas) relacionadas con el servidor [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]que está conectado. Los tipos de actividades supervisadas incluyen la administración del conocimiento, un proyecto de calidad de datos y la corrección de datos basada en SSIS.  
   
  **Configuración**  
  Muestre las propiedades de configuración de cuentas de servicio de datos de referencia (a través de Windows Azure Marketplace y directamente para los servicios de datos de referencia), las opciones generales de configuración (limpieza interactiva, coincidencias y generación de perfiles) y los valores de gravedad del registro.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Proyectos de calidad de datos & #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [Proyectos de calidad de datos &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Administración de DQS](../data-quality-services/dqs-administration.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "Coincidencia de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Coincidencia de datos | Microsoft Docs
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Coincidencia de datos
+# <a name="data-matching"></a>Coincidencia de datos
   El proceso de búsqueda de coincidencias de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite reducir la duplicación de datos y mejorar la precisión de estos en un origen de datos. Este proceso analiza el grado de duplicación de todos los registros de un único origen de datos, y devuelve las probabilidades ponderadas de una coincidencia entre cada conjunto de registros comparados. A continuación, puede decidir qué registros son coincidencias y tomar las medidas apropiadas en los datos de origen.  
   
  El proceso de búsqueda de coincidencias de DQS ofrece las ventajas siguientes:  
@@ -31,7 +36,7 @@ caps.handback.revision: 29
   
 -   Puede decidir si es necesario volver a indizar los datos copiados del origen en la tabla de ensayo, dependiendo del estado de la directiva de coincidencia y de los datos de origen. Si opta por no hacerlo, el rendimiento mejorará.  
   
- Puede realizar el proceso de búsqueda de coincidencias junto con otros procesos de limpieza de datos para mejorar la calidad global de los datos. También puede realizar la eliminación de datos duplicados mediante la funcionalidad DQS integrada en Master Data Services. Para obtener más información, consulte [Master Data Services Overview & #40; MDS & #41;](../master-data-services/master-data-services-overview-mds.md).  
+ Puede realizar el proceso de búsqueda de coincidencias junto con otros procesos de limpieza de datos para mejorar la calidad global de los datos. También puede realizar la eliminación de datos duplicados mediante la funcionalidad DQS integrada en Master Data Services. Para más información, vea [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
  La ilustración siguiente muestra cómo se realiza la búsqueda de coincidencias de datos en DQS:  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 29
   
  Puede exportar los resultados del proceso de búsqueda de coincidencias a una tabla de SQL Server o a un archivo .csv. Es posible exportar los resultados de búsqueda de coincidencias de dos formas: la primera consiste en exportar los registros coincidentes y los no coincidentes, y la segunda en exportar los registros de permanencia que incluyen solo el registro que permanece de un clúster y los resultados no coincidentes. En los registros de permanencia, si el mismo registro se identifica como el que permanece para varios clústeres, dicho registro solo se exportará una vez.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  En DQS puede realizar las tareas siguientes relacionadas con la búsqueda de coincidencias:  
   
 |||  

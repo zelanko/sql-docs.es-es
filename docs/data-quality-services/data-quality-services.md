@@ -1,30 +1,35 @@
 ---
-title: "Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Data Quality Services | Microsoft Docs
+ms.custom: 
+ms.date: 10/12/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b168499c8d7707dbd7798ef7aa8111aa0ff0a9a9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) es un producto de calidad de datos controlada por conocimiento. Con DQS, podrá generar una base de conocimiento y usarla para llevar a cabo diversas tareas fundamentales de calidad de datos, lo que incluye correcciones, enriquecimiento, estandarización y eliminación de datos duplicados. Con DQS, podrá realizar limpiezas de datos mediante servicios de datos de referencia basados en la nube que proporcionan proveedores de datos de referencia. Asimismo, DQS proporciona la generación de perfiles que se integra en las tareas de calidad de datos, de forma que podrá analizar la integridad de los datos.  
+# <a name="data-quality-services"></a>Data Quality Services
+  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) es un producto de calidad de datos controlado por conocimiento. Con DQS, podrá generar una base de conocimiento y usarla para llevar a cabo diversas tareas fundamentales de calidad de datos, lo que incluye correcciones, enriquecimiento, estandarización y eliminación de datos duplicados. Con DQS, podrá realizar limpiezas de datos mediante servicios de datos de referencia basados en la nube que proporcionan proveedores de datos de referencia. Asimismo, DQS proporciona la generación de perfiles que se integra en las tareas de calidad de datos, de forma que podrá analizar la integridad de los datos.  
   
- DQS consta de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], que se instalan ambos como parte de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] es una característica de instancia de SQL Server que consta de tres catálogos de SQL Server con funcionalidad de calidad de datos y almacenamiento. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] es una característica de SQL Server que los usuarios empresariales, los trabajadores de información y los profesionales de TI pueden usar para realizar análisis de calidad de datos asistida por PC y administrar la calidad de datos de forma interactiva. También puede realizar procesos de calidad de datos mediante la funcionalidad de calidad de datos de [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] y Master Data Services (MDS), que se basan ambos en DQS.  
+ DQS consta de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], que se instalan ambos como parte de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] es una característica de la instancia de SQL Server que consta de tres catálogos de SQL Server con funcionalidad de calidad de datos y almacenamiento. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] es una característica de SQL Server que pueden usar los usuarios empresariales, los trabajadores de la información y los profesionales de TI para realizar análisis de calidad de datos asistidos por PC y administrar la calidad de datos de forma interactiva. También puede realizar procesos de calidad de datos mediante la funcionalidad de calidad de datos de [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] y Master Data Services (MDS), que se basan ambos en DQS.  
   
- Para obtener información acerca de cómo instalar DQS, vea [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Si desea actualizar la versión existente de DQS a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [actualizar servicios de calidad de datos](../database-engine/install-windows/upgrade-data-quality-services.md).  
+ Para obtener información acerca de cómo instalar DQS, vea [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Si desea actualizar su versión existente de DQS a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vea [Upgrade Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
  **Examinar contenido por área**  
- ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") [Aplicación cliente de calidad de datos](../data-quality-services/data-quality-client-application.md)  
+ ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") [Aplicación Data Quality Client](../data-quality-services/data-quality-client-application.md)  
   
  ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 67
   
  ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") [Seguridad de DQS](../data-quality-services/dqs-security.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Introducción a Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Conceptos de Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
  [Recursos de DQS](http://technet.microsoft.com/sqlserver/hh780961)   

@@ -1,22 +1,27 @@
 ---
-title: "Bases de conocimiento y dominios de DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Bases de conocimiento y dominios de DQS | Microsoft Docs
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
-# Bases de conocimiento y dominios de DQS
+# <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
   En este tema se describe lo qué es una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para limpiar datos, debe tener conocimiento sobre los datos. Para preparar el conocimiento de un proyecto de calidad de datos, se crea y mantiene una base de conocimiento (BC) que DQS puede usar para identificar datos incorrectos o no válidos. Con DQS puede usar procesos asistidos por PC y procesos interactivos para crear, compilar y actualizar la base de conocimiento. El conocimiento de una base de conocimiento se mantiene en dominios, donde cada uno de ellos es específico para un campo de datos. La base de conocimiento es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad.  
   
  Las bases de conocimiento de DQS tienen las siguientes ventajas:  
@@ -35,7 +40,7 @@ caps.handback.revision: 32
   
  La ilustración siguiente muestra los diferentes componentes de una base de conocimiento y un dominio de DQS:  
   
- ![Bases de conocimiento y dominios en DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Bases de conocimiento y dominios en DQS")  
+ ![Base de conocimiento y dominios en DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Base de conocimiento y dominios en DQS")  
   
 ##  <a name="How"></a> Cómo crear y generar una base de conocimiento de DQS  
  Generar una base de conocimiento de DQS conlleva los siguientes procesos y componentes:  
@@ -61,10 +66,10 @@ caps.handback.revision: 32
   
  No es necesario realizar el proceso de detección del conocimiento en los mismos datos en que se realiza la corrección de datos. DQS proporciona la flexibilidad para crear conocimiento a partir de un conjunto de campos de la base de datos y aplicarlo a un segundo conjunto de datos relacionados que es necesario limpiar. El administrador de datos puede crear una nueva base de conocimiento desde cero o basarla en una base de conocimiento existente, o puede importar una base de conocimiento desde un archivo de datos. También puede volver a ejecutar la detección del conocimiento en una base de conocimiento existente. Puede mantener varias bases de conocimiento en un único servidor [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. También puede conectar varias instancias de una aplicación a la misma base de conocimiento. DQS evita conflictos de simultaneidad bloqueando la base de conocimiento al usuario que la abre en una sesión de administración del conocimiento.  
   
-### Sin distinción de mayúsculas y minúsculas en DQS  
+### <a name="case-insensitivity-in-dqs"></a>Sin distinción de mayúsculas y minúsculas en DQS  
  Los valores de DQS no distinguen entre mayúsculas y minúsculas. Esto significa que cuando DQS realiza la detección del conocimiento, la administración de dominios o la búsqueda de coincidencias, no distingue valores según las mayúsculas o minúsculas. Si agrega un valor en la administración de valores que sea distinto de otro valor solo porque lleve mayúsculas o minúsculas, se considerarán el mismo valor, pero no sinónimos. Si dos valores que solo se diferencien en el uso de mayúsculas y minúsculas se comparan en el proceso de búsqueda de coincidencias, se considerarán coincidencias exactas.  
   
- Puede, no obstante, controlar el uso de mayúsculas y minúsculas en los valores que exporta en los resultados de la limpieza. Para hacerlo, establezca el **formato de salida para** propiedad de dominio (vea [establecer propiedades del dominio](../data-quality-services/set-domain-properties.md)) y mediante el **estandarizar salida** casilla al exportar los resultados de limpieza (vea [Limpiar datos usando DQS & #40; interno & #41; Conocimiento](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
+ Puede, no obstante, controlar el uso de mayúsculas y minúsculas en los valores que exporta en los resultados de la limpieza. Para ello, establezca la propiedad de dominio **Dar formato a la salida para** (vea [Establecer las propiedades de dominio](../data-quality-services/set-domain-properties.md)) y active la casilla **Estandarizar salida** al exportar los resultados de la limpieza (vea [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
 ##  <a name="Domains"></a> Administración de dominios  
  La administración de dominios permite al administrador de datos cambiar y aumentar de forma interactiva los metadatos generados por la actividad de detección de conocimiento asistido por PC. Cada cambio que realice es para un dominio de la base de conocimiento. En la actividad de administración de dominios, puede hacer lo siguiente:  
@@ -89,18 +94,18 @@ caps.handback.revision: 32
   
  Cuando se completa la actividad de administración de dominios, puede publicar la base de conocimiento en un proyecto de datos.  
   
-### Establecer las propiedades de dominio  
+### <a name="setting-domain-properties"></a>Establecer las propiedades de dominio  
  Las propiedades de dominio definen y controlan el procesamiento que se va a aplicar a los valores asociados. Puede establecer el tipo de datos y el idioma de los valores, especificar que los datos de origen se limpiarán con el valor inicial (si se desactiva esta opción, los datos de origen se limpiarán con el término correcto pero no con el valor inicial), asegurar la normalización de datos configurando el formato que se aplicará cuando se generen los valores de datos del dominio, y definir los algoritmos (error de sintaxis, corrector ortográfico, y normalización de cadena) que se aplicarán.  
   
-### Reference Data Services  
+### <a name="reference-data-services"></a>Reference Data Services  
  En el proceso de administración de dominios, puede adjuntar datos de referencia en línea a un dominio. De esta forma compara los datos en el dominio con los datos que mantiene un proveedor de datos de referencia. Primero debe configurar el proveedor de datos de referencia mediante las funciones de configuración de DQS en la sección de **Administración** de aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Para obtener más información, consulte [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
-### Aplicar reglas de dominio  
+### <a name="applying-domain-rules"></a>Aplicar reglas de dominio  
  Puede crear reglas de dominio para la validación de datos. Las reglas de dominio garantizan la exactitud de los datos, e incluyen desde una restricción básica, como los posibles términos que puede ser un valor de cadena, hasta una expresión regular más compleja, como los formatos válidos para una dirección de correo electrónico.  
   
  Respecto a los dominios compuestos, puede crear una regla de CD que especifique una relación entre un valor en un solo dominio y un valor en otro dominio único, donde ambos forman parte de un dominio compuesto.  
   
-### Establecer valores de dominio  
+### <a name="setting-domain-values"></a>Establecer valores de dominio  
  Una vez haya generado una base de conocimiento, puede rellenar y mostrar valores de datos en cada dominio de la base de conocimiento. Después de haber realizado la detección del conocimiento, DQS mostrará el número de veces que aparece cada término, cuál es el estado de cada término y las revisiones que se proponen. Puede administrar este conocimiento como sigue:  
   
 -   Cambiar el estado de un valor, corregirlo, marcar un error o establecerlo como no válido  
@@ -115,10 +120,10 @@ caps.handback.revision: 32
   
  Puede establecer valores de dominio en la actividad de administración de dominios o en el paso de administración de valores del dominio al final de la actividad de detección de conocimiento. La funcionalidad establecer valores de dominio es la misma en ambas actividades.  
   
-### Establecer relaciones de términos  
+### <a name="setting-term-relations"></a>Establecer relaciones de términos  
  En la administración de dominios, puede especificar una relación basada en términos para un solo dominio; para ello, se especifica un cambio para un único valor.  
   
-### Dominios compuestos  
+### <a name="composite-domains"></a>Dominios compuestos  
  Un dominio compuesto es una estructura formada por dos dominios únicos o más que contienen cada uno de ellos conocimiento de datos comunes. Entre los ejemplos de datos que pueden tratar los dominios compuestos se encuentran los nombres y los apellidos en los campos de nombre, el número y la calle del inmueble, la ciudad, la provincial el código postal y el país en un campo de dirección. Cuando asigna un solo campo a un dominio compuesto, DQS analiza los datos de ese campo en los diversos dominios que componen el dominio compuesto.  
   
  En ocasiones, un único dominio no representa datos de campo en su totalidad. Si se agrupan dos o más dominios en un dominio compuesto, podrá representar los datos de forma eficaz. A continuación, se presentan algunas ventajas del uso de los dominios compuestos:  
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
 -   Los datos en dominios compuestos se pueden adjuntar a un origen de datos de referencia, en cuyo caso el dominio compuesto se enviará al proveedor de datos de referencia. Esto se suele hacer con datos de direcciones.  
   
- La forma en que se analizan los datos que representan un dominio compuesto está determinada por las propiedades compuestas de dominio. Los datos se pueden analizar un delimitador, el orden de los dominios, o según el conocimiento de los dominios conectados al dominio compuesto (seleccionando el **usar según el análisis conocimiento** propiedad en el dominio compuesto). Para obtener más información, consulte [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties).  
+ La forma en que se analizan los datos que representan un dominio compuesto está determinada por las propiedades compuestas de dominio. Los datos se pueden analizar por un delimitador, por el orden de los dominios o basarse en el conocimiento de los dominios conectados al dominio compuesto (seleccionando la propiedad **Usar el análisis de bases de conocimiento** en el dominio compuesto). Para obtener más información, consulte [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties).  
   
  Los dominios compuestos se administran de manera diferente a los dominios únicos. En los dominios compuestos, no se administran valores; sí se hace para los dominios únicos que componen el dominio compuesto. Sin embargo, en la lista de dominios de la actividad de administración de dominios, puede ver las relaciones entre los diferentes valores en un dominio compuesto, así como las estadísticas que se aplican. Por ejemplo, puede ver el número de instancias que pertenecen a una sola dirección que está compuesta por los mismos cinco valores de cadena. En el paso de detección de la actividad de detección de conocimiento, se realiza la creación de perfiles en los dominios únicos dentro de un dominio compuesto, no en el dominio compuesto. Sin embargo, en la limpieza interactiva, se limpian los datos en el dominio compuesto, no en los dominios únicos.  
   
@@ -140,15 +145,15 @@ caps.handback.revision: 32
   
  Para obtener más información acerca de la base de conocimiento y la búsqueda de coincidencias, vea [Coincidencia de datos](../data-quality-services/data-matching.md).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  Puede realizar las siguientes operaciones en una base de conocimiento y sus dominios:  
   
 |||  
 |-|-|  
-|Crear, abrir, agregar conocimiento y llevar a cabo la detección en una base de conocimiento|[Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
+|Crear, abrir, agregar conocimiento y llevar a cabo la detección en una base de conocimiento|[Compilar una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
 |Realizar operaciones de importación y exportación en dominios y bases de conocimiento|[Importar y exportar conocimiento](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un solo dominio, una regla de dominio, relaciones basadas en términos y cambiar valores de dominio|[Administrar un dominio](../data-quality-services/managing-a-domain.md)|  
 |Crear un dominio compuesto, crear reglas para varios dominios y usar relaciones de valor|[Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md)|  
-|Usar la base de conocimiento predeterminada de DQS integrada en DQS|[Utilizar la base de conocimiento predeterminada de DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
+|Usar la base de conocimiento predeterminada de DQS integrada en DQS|[Usar la base de conocimiento predeterminada de DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

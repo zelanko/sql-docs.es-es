@@ -1,7 +1,7 @@
 ---
 title: Novedades de Motor de base de datos de Microsoft SQL Server 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 09/05/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
 ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2017
@@ -36,6 +36,7 @@ En este tema, se describen las mejoras realizadas en el [!INCLUDE[ssdenoversion-
 - Recompilaciones de índices en línea reanudables. Las recompilaciones de índices en línea reanudables permiten reanudar una operación de recompilación de índices en línea desde donde se detuvo después de un error (como una conmutación por error en una réplica o espacio en disco insuficiente). Las operaciones de recompilación de índices en línea también se pueden pausar y reanudar más adelante. Por ejemplo, puede que necesite liberar recursos del sistema temporalmente para poder ejecutar una tarea de prioridad alta o completar la recompilación de índices en otro período de mantenimiento si los períodos de mantenimiento disponibles son demasiado breves para una tabla grande. Por último, la recompilación de índices en línea reanudable no precisa de un gran espacio de registro, lo que permite realizar el truncamiento del registro mientras la operación de recompilación reanudable se está ejecutando. Vea [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) y [Directrices para operaciones de índices en línea](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **Opción IDENTITY_CACHE para ALTER DATABASE SCOPED CONFIGURATION**. Se ha agregado una nueva opción, IDENTITY_CACHE, a la instrucción T-SQL `ALTER DATABASE SCOPED CONFIGURATION`. Cuando esta opción se establece en `OFF`, el Motor de base de datos puede evitar lagunas en los valores de columnas de identidad si un servidor se reinicia inesperadamente o realiza conmutación por error en un servidor secundario. Vea [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] ofrece ahora funciones de base de datos de gráficos para modelar las relaciones de varios a varios. Esto engloba la nueva sintaxis de [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para crear tablas de nodos y perimetrales y la palabra clave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Para obtener más información, vea [Procesamiento de gráficos con SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
+- Una nueva generación de mejoras de procesamiento de consultas que adapta las estrategias de optimización a las condiciones de tiempo de ejecución de la carga de trabajo de una aplicación. En esta primera versión de la familia de características de **procesamiento de consultas adaptable** se incluyen tres nuevas mejoras: **combinaciones adaptables del modo por lotes**, **comentarios de concesión de memoria del modo por lotes** y **ejecución intercalada** para funciones con valores de tabla de varias instrucciones.  Vea [Procesamiento de consultas adaptable en bases de datos SQL](../relational-databases/performance/adaptive-query-processing.md).
 - El ajuste automático es una característica de base de datos que proporciona información de los posibles problemas de rendimiento de las consultas, recomienda soluciones y corrige automáticamente los problemas identificados. El ajuste automático en [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] le avisa cada vez que se detecta un posible problema de rendimiento y le permite tomar medidas correctoras, o bien deja que [!INCLUDE[ssde-md](../includes/ssde-md.md)] arregle automáticamente los problemas de rendimiento. Para obtener más información, vea [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Ajuste automático).
 - MEJORA DEL RENDIMIENTO DE LA GENERACIÓN DE ÍNDICES NO AGRUPADOS EN TABLAS OPTIMIZADAS PARA MEMORIA. Se ha mejorado notablemente el rendimiento a la hora de generar los índices no agrupados de las tablas MEMORY_OPTIMIZED durante la recuperación de base de datos. Esta mejora reduce considerablemente el tiempo de recuperación de base de datos cuando se usan índices no agrupados.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) tiene tres columnas nuevas: socket_count, cores_per_socket y numa_node_count.

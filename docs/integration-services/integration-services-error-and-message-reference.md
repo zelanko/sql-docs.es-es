@@ -1,27 +1,32 @@
 ---
-title: "Referencia de errores y mensajes de Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "números de error [Integration Services]"
-  - "hresults [Integration Services]"
-  - "errores [Integration Services], enumerados"
+title: Integration Services Error and Message Reference | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: es-es
+ms.lasthandoff: 09/26/2017
+
 ---
-# Referencia de errores y mensajes de Integration Services
-  En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime>.  
+# <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
+  En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Esta lista puede resultarle útil si encuentra un código de error sin su descripción. En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 44
 |0xC0000033|-1073741773|DTS_E_EXPIRED|Ha expirado el período de evaluación de Integration Services.|  
 |0xC0000034|-1073741772|DTS_E_NEGATIVEVALUESNOTALLOWED|Esta propiedad no puede tener asignado un valor negativo. Este error se produce cuando se asigna un valor negativo a una propiedad que solo puede contener valores positivos, como la propiedad COUNT.|  
 |0xC0000035|-1073741771|DTS_E_NEGATIVEINDEXNOTALLOWED|Los índices no pueden ser negativos. Este error se produce si se utiliza un valor negativo como índice de una colección.|  
-|0xC00060AB|-1073717077|DTS_E_INVALIDSSISSERVERNAME|Nombre de servidor no válido %1". El servicio SSIS no admite el uso de múltiples instancias; utilice únicamente el nombre de servidor en lugar de "nombre\instancia del servidor". |  
+|0xC00060AB|-1073717077|DTS_E_INVALIDSSISSERVERNAME|Nombre de servidor no válido %1". El servicio SSIS no admite el uso de múltiples instancias; utilice únicamente el nombre de servidor en lugar de "nombre\instancia del servidor".|  
 |0xC0008445|-1073707963|DTS_E_SCRIPTMIGRATIONFAILED64BIT|No es posible realizar la migración de scripts VSA en plataformas de 64 bits debido a la falta de compatibilidad con el diseñador de Visual Tools for Applications. Ejecute la migración bajo WOW64 en plataformas de 64 bits.|  
 |0xC000931A|-1073704166|DTS_E_COMMANDDESTINATIONADAPTERSTATIC_ERRORSINCOMMAND|La ejecución del comando generó errores.|  
 |0xC000F427|-1073679321|DTS_E_SSISSTANDALONENOTINSTALLED|Para ejecutar un paquete SSIS fuera de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , debe instalar %1 de Integration Services o posterior.|  
@@ -65,7 +70,7 @@ caps.handback.revision: 44
 |0xC0010007|-1073676281|DTS_E_PACKAGEDESCRIPTIONTOOLONG|La descripción del paquete es demasiado larga. El límite es de 1024 caracteres. Acorte la descripción del paquete.|  
 |0xC0010008|-1073676280|DTS_E_VERCOMMENTSTOOLONG|La propiedad VersionComments es demasiado larga. El límite es de 1024 caracteres. Intente acortar VersionComments.|  
 |0xC0010009|-1073676279|DTS_E_ELEMENTNOTFOUND|No se encuentra el elemento en una colección. Este error se produce si, durante la ejecución del paquete, se intenta recuperar un elemento de una colección de un contenedor y no se encuentra.|  
-|0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|No se pudo cargar el paquete especificado de la base de datos de SQL Server. |  
+|0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|No se pudo cargar el paquete especificado de la base de datos de SQL Server.|  
 |0xC001000C|-1073676276|DTS_E_INVALIDVARIABLEVALUE|El valor asignado a la variable no es válido. Este error se produce si el cliente o una tarea asignan un objeto en tiempo de ejecución a un valor de la variable.|  
 |0xC001000D|-1073676275|DTS_E_RESERVEDNAMESPACE|Error al asignar un espacio de nombres a la variable. El espacio de nombres "System" está reservado para uso del sistema. Este error se produce si un componente o tarea intenta crear una variable con un espacio de nombres "System".|  
 |0xC001000E|-1073676274|DTS_E_CONNECTIONNOTFOUND|No se encuentra la conexión "%1". La colección Connections envía este error cuando no se encuentra el elemento de conexión específico.|  
@@ -107,11 +112,11 @@ caps.handback.revision: 44
 |0xC001100F|-1073672177|DTS_E_SAVEPACKAGEFILE|No se pudo guardar el archivo de paquete "%1" con el error 0x%2!8.8X! "%3".|  
 |0xC001200D|-1073668083|DTS_E_IDTSNAMENOTSUPPORTED|El objeto debe heredar de IDTSName100 y no es así.|  
 |0xC0012018|-1073668072|DTS_E_CONFIGFORMATINVALID_PACKAGEDELIMITER|La entrada de configuración "%1" tiene un formato incorrecto porque no comienza por un delimitador de paquete. No contenía un delimitador "\package".|  
-|0xC0012019|-1073668071|DTS_E_CONFIGFORMATINVALID|El formato de la entrada de configuración "%1" no es correcto. Es posible que falte un delimitador o que haya errores de formato, por ejemplo, un delimitador de matriz no válido. |  
+|0xC0012019|-1073668071|DTS_E_CONFIGFORMATINVALID|El formato de la entrada de configuración "%1" no es correcto. Es posible que falte un delimitador o que haya errores de formato, por ejemplo, un delimitador de matriz no válido.|  
 |0xC001201B|-1073668069|DTS_E_CONFIGFILEFAILEDEXPORT|Error al exportar el archivo de configuración.|  
 |0xC0012021|-1073668063|DTS_E_PROPERTIESCOLLECTIONREADONLY|No se puede modificar la colección Properties.|  
 |0xC0012022|-1073668062|DTS_E_DTRXMLSAVEFAILURE|No se puede guardar el archivo de configuración. El archivo puede ser de solo lectura.|  
-|0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propiedad FailPackageOnFailure no es aplicable al contenedor de paquetes. |  
+|0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propiedad FailPackageOnFailure no es aplicable al contenedor de paquetes.|  
 |0xC0012024|-1073668060|DTS_E_TASKPRODUCTLEVEL|No se puede ejecutar la tarea "%1" en la instalación %2 de Integration Services. Requiere %3 o una edición de nivel superior.|  
 |0xC0012029|-1073668055|DTS_E_UNABLETOSAVETOFILE|No se puede guardar el archivo xml en "%1". El archivo puede ser de solo lectura.|  
 |0xC0012037|-1073668041|DTS_E_CONFIGTYPECONVERSIONFAILED|Error al convertir un tipo en la configuración "%1" de la ruta de acceso del paquete "%2".  Esto sucede si no se puede convertir un valor de configuración de una cadena en el tipo de destino adecuado. Compruebe el valor de configuración para asegurarse de que puede convertirse al tipo de la propiedad o variable de destino.|  
@@ -124,7 +129,7 @@ caps.handback.revision: 44
 |0xC0014003|-1073659901|DTS_E_INVALIDTASKPOINTER|El puntero de la tarea de contenedor no es válido. El contenedor tiene un puntero no válido a una tarea.|  
 |0xC0014004|-1073659900|DTS_E_ALREADYADDED|Se ha agregado el ejecutable a la colección Executables de otro contenedor. Esto sucede si un cliente intenta agregar un ejecutable a más de una colección Executables. Es necesario quitar el ejecutable de la colección Executables actual antes de intentar agregarlo.|  
 |0xC0014005|-1073659899|DTS_E_UNKNOWNCONNECTIONMANAGERTYPE|El tipo de conexión "%1" especificada para el administrador de conexiones "%2" no se reconoce como un tipo de administrador de conexiones válido. Este error se devuelve cuando se intenta crear un administrador de conexiones para un tipo de conexión desconocido. Compruebe si el nombre del tipo de conexión está escrito correctamente.|  
-|0xC0014006|-1073659898|DTS_E_COLLECTIONCOULDNTADD|Se creó un objeto pero no se pudo agregar a una colección. Puede deberse a que no hay memoria suficiente. |  
+|0xC0014006|-1073659898|DTS_E_COLLECTIONCOULDNTADD|Se creó un objeto pero no se pudo agregar a una colección. Puede deberse a que no hay memoria suficiente.|  
 |0xC0014007|-1073659897|DTS_E_ODBCERRORENV|Error al crear un entorno de Conectividad abierta de bases de datos (ODBC).|  
 |0xC0014008|-1073659896|DTS_E_ODBCERRORDBC|Error al crear una conexión de base de datos de Conectividad abierta de bases de datos (ODBC).|  
 |0xC0014009|-1073659895|DTS_E_ODBCERRORCONNECT|Error al intentar establecer una conexión de Conectividad abierta de bases de datos (ODBC) con el servidor de bases de datos.|  
@@ -134,14 +139,14 @@ caps.handback.revision: 44
 |0xC001400D|-1073659891|DTS_E_CANNOTCLONECONNECTIONMANAGER|El administrador de conexiones "0x%1" no puede clonarse para ejecutarse fuera de proceso.|  
 |0xC001400E|-1073659890|DTS_E_NOSQLPROFILERDLL|El proveedor de registro de SQL Server Profiler no pudo cargar el archivo pfclnt.dll. Compruebe que SQL Server Profiler está instalado.|  
 |0xC001400F|-1073659889|DTS_E_LOGFAILED|Error en la infraestructura de registro de SSIS. Código de error: 0x%1!8.8X!. Este error indica que el error de registro no es atribuible a un proveedor de registro concreto.|  
-|0xC0014010|-1073659888|DTS_E_LOGPROVIDERFAILED|Error del proveedor de registro de SSIS. Código de error: 0x%2!8.8X! (%3).  Este código indica que el error de registro se atribuye al proveedor de registro especificado. |  
-|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|El método SaveToSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida. |  
-|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|El método LoadFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida. |  
+|0xC0014010|-1073659888|DTS_E_LOGPROVIDERFAILED|Error del proveedor de registro de SSIS. Código de error: 0x%2!8.8X! (%3).  Este código indica que el error de registro se atribuye al proveedor de registro especificado.|  
+|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|El método SaveToSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida.|  
+|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|El método LoadFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida.|  
 |0xC0014013|-1073659885|DTS_E_REMOVEFROMSQLSERVER_OLEDB|El método RemoveFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2) Error en la instrucción SQL emitida.|  
 |0xC0014014|-1073659884|DTS_E_EXISTSONSQLSERVER_OLEDB|El método ExistsOnSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2). Error en la instrucción SQL emitida.|  
 |0xC0014015|-1073659883|DTS_E_CONNECTIONSTRING|OLE DB no pudo establecer una conexión de base de datos con la cadena de conexión proporcionada.|  
-|0xC0014016|-1073659882|DTS_E_FROMEXECISNOTCHILD|Al agregar una restricción de precedencia, se especificó un ejecutable From que no es un elemento secundario de este contenedor. |  
-|0xC0014017|-1073659881|DTS_E_TOEXECISNOTCHILD|El ejecutable To especificado al agregar una restricción de precedencia no es un elemento secundario de este contenedor. |  
+|0xC0014016|-1073659882|DTS_E_FROMEXECISNOTCHILD|Al agregar una restricción de precedencia, se especificó un ejecutable From que no es un elemento secundario de este contenedor.|  
+|0xC0014017|-1073659881|DTS_E_TOEXECISNOTCHILD|El ejecutable To especificado al agregar una restricción de precedencia no es un elemento secundario de este contenedor.|  
 |0xC0014018|-1073659880|DTS_E_ODBCTRANSACTIONENLIST|Error al intentar dar de alta una conexión ODBC en una transacción. SQLSetConnectAttr no puedo establecer el atributo SQL_ATTR_ENLIST_IN_DTC.|  
 |0xC0014019|-1073659879|DTS_E_CONNECTIONOFFLINE|El administrador de conexiones "%1" no adquirirá una conexión porque la propiedad OfflineMode del paquete tiene el valor TRUE. Cuando OfflineMode es TRUE, no se pueden adquirir conexiones.|  
 |0xC001401A|-1073659878|DTS_E_BEGINTRANSACTION|El objeto de tiempo de ejecución de SSIS no pudo iniciar la transacción distribuida debido al error 0x%1!8.8X! "%2". No se pudo iniciar la transacción de DTC. Esto puede deberse a que el servicio MSDTC no se está ejecutando.|  
@@ -154,16 +159,16 @@ caps.handback.revision: 44
 |0xC0014021|-1073659871|DTS_E_PRECEDENCECONSTRAINT|Error en la restricción de precedencia entre "%1" y "%2".|  
 |0xC0014022|-1073659870|DTS_E_FAILEDPOPNATIVEFEE|Error al llenar la colección ForEachEnumeratorInfos con ForEachEnumerators nativos. Código de error: %1.|  
 |0xC0014023|-1073659869|DTS_E_GETENUMERATOR|Error del método GetEnumerator del enumerador Foreach: 0x%1!8.8X! "%2". Esto puede ocurrir si el enumerador ForEach no puede enumerar.|  
-|0xC0014024|-1073659868|DTS_E_CANTGETCERTDATA|No es posible obtener datos de certificados sin formato del objeto de certificado proporcionado (error: %1). Esto sucede si CPackage::put_CertificateObject no puede crear una instancia del objeto ManagedHelper, se produce un error en el objeto ManagedHelper o el objeto ManagedHelper devuelve una matriz incorrecta. |  
+|0xC0014024|-1073659868|DTS_E_CANTGETCERTDATA|No es posible obtener datos de certificados sin formato del objeto de certificado proporcionado (error: %1). Esto sucede si CPackage::put_CertificateObject no puede crear una instancia del objeto ManagedHelper, se produce un error en el objeto ManagedHelper o el objeto ManagedHelper devuelve una matriz incorrecta.|  
 |0xC0014025|-1073659867|DTS_E_CANTCREATECERTCONTEXT|Error al crear el contexto de certificado (error: %1). Esto sucede en CPackage::put_CertificateObject o CPackage::LoadFromXML cuando la función CryptoAPI correspondiente produce un error.|  
 |0xC0014026|-1073659866|DTS_E_CANTOPENCERTSTORE|Error al abrir el almacén de certificados MY: "%1". Esto sucede en CPackage::LoadUserCertificateByName y en CPackage::LoadUserCertificateByHash.|  
 |0xC0014027|-1073659865|DTS_E_CANTFINDCERTBYNAME|No se encuentra el certificado especificado por el nombre en el almacén MY (error: %1). Esto sucede en CPackage::LoadUserCertificateByName.|  
 |0xC0014028|-1073659864|DTS_E_CANTFINDCERTBYHASH|No se encuentra el certificado especificado mediante hash en el almacén "MY" (error: %1). Esto sucede en CPackage:: LoadUserCertificateByHash.|  
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|El valor hash no es una matriz de bytes unidimensional (error: %1). Esto sucede en CPackage:: LoadUserCertificateByHash.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|No se puede tener acceso a los datos de la matriz (error: %1). Este error puede producirse dondequiera que se llame a GetDataFromSafeArray.|  
-|0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|No se pudo crear el objeto de ayudante administrado por SSIS. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en CoCreateInstance CLSID_DTSManagedHelper. |  
+|0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|No se pudo crear el objeto de ayudante administrado por SSIS. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en CoCreateInstance CLSID_DTSManagedHelper.|  
 |0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|El objeto de tiempo de ejecución de SSIS no pudo dar de alta la conexión OLE DB en una transacción distribuida. Error: 0x%1!8.8X! "%2".|  
-|0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument. |  
+|0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|Error al comprobar la envolvente de la firma XML en el paquete. Error: 0x%1!8.8X! "%2". Esto sucede en CPackage::LoadFromXML.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|No se pudo obtener el origen XML del objeto DOM XML. Error: 0x%1!8.8X! "%2". Esto ocurre cuando se produce un error en IXMLDOMDocument::get_xml.|  
 |0xC0014030|-1073659856|DTS_E_PACKAGEVERIFICATIONFAILED|No se pudo comprobar la firma criptográfica del paquete. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en la operación de comprobación de firma.|  
@@ -192,7 +197,7 @@ caps.handback.revision: 44
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|La ruta de acceso del paquete especificada no contiene un nombre de paquete. Esto sucede si la ruta no contiene al menos una barra diagonal inversa o una barra diagonal.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|No se encuentra la carpeta "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Error de OLE DB al intentar buscar una carpeta en SQL. Código de error: 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro.  Código de error: 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro. Código de error: 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Error al obtener la colección ConnectionInfos: 0x%1!8.8X! "%2". Este error se produce cuando no se puede llamar a IDTSApplication100::get_ConnectionInfos.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Se detectó un interbloqueo al intentar bloquear las variables. Los bloqueos no pueden adquirirse después de 16 intentos. Se agotó el tiempo de espera de los bloqueos.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|No se ha devuelto la colección Variables de VariableDispenser. Se intentó realizar una operación que solo se permite en colecciones dispensadas.|  
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|El nombre de objeto "%1" no es válido. El nombre debe comenzar con un carácter alfabético.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|El nombre de objeto "%1" no es válido. El nombre debe comenzar por un carácter alfabético o un signo de subrayado "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|El nombre de objeto "%1" no es válido. El nombre solamente puede contener caracteres alfanuméricos o de subrayado "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|El nombre de objeto "%1" no es válido. El nombre no puede contener los caracteres siguientes: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|El nombre de objeto "%1" no es válido. El nombre no puede contener los caracteres siguientes: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|No se pudo cargar la propiedad de valor "%1" usando la persistencia predeterminada.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|El administrador de conexiones "%1" no es del tipo "%2"|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" está vacío|  
@@ -1093,7 +1098,7 @@ caps.handback.revision: 44
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|La función SQRT no puede ejecutarse con valores negativos y se ha pasado un valor negativo a la función SQRT.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|La función LN no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LN.|  
 |0xC00470E1|-1073450783|DTS_E_EXPREVALLOGINVALIDPARAM|La función LOG no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LOG.|  
-|0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Los parámetros pasados a la función POWER no pueden evaluarse y han producido un resultado indeterminado. |  
+|0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Los parámetros pasados a la función POWER no pueden evaluarse y han producido un resultado indeterminado.|  
 |0xC00470E3|-1073450781|DTS_E_NOCANCELEVENT|El objeto de tiempo de ejecución no puede proporcionar un evento de cancelación a causa del error 0x%1!8.8X!.|  
 |0xC00470E4|-1073450780|DTS_E_CANCELRECEIVED|La canalización recibió una solicitud de cancelación y se está cerrando.|  
 |0xC00470E5|-1073450779|DTS_E_EXPREVALUNARYOPOVERFLOW|El resultado de la operación de negación unaria "%1" supera el tamaño máximo del tipo de datos de resultados "%2". El tamaño del resultado de la operación desborda el tipo de resultado.|  
@@ -1162,18 +1167,18 @@ caps.handback.revision: 44
 |0xC0049035|-1073442763|DTS_E_EXPREVALSTATIC_BINARYTYPEMISMATCH|Se utilizaron tipos de datos no compatibles con un operador binario. No fue posible convertir implícitamente los tipos de operando en tipos compatibles con la operación. Para realizar esta operación, deben convertirse explícitamente uno o ambos operandos, mediante un operador de conversión.|  
 |0xC0049036|-1073442762|DTS_E_EXPREVALSTATIC_UNSUPPORTEDBINARYTYPE|Se utilizó un tipo de datos no compatible con un operador binario. El tipo de uno o de ambos operandos no es compatible con la operación. Para realizar esta operación, deben convertirse explícitamente uno o ambos operandos, mediante un operador de conversión.|  
 |0xC0049037|-1073442761|DTS_E_EXPREVALSTATIC_BINARYSIGNMISMATCH|El signo del operador binario bit a bit no coincide. Ambos operandos de este operador deben ser positivos o negativos.|  
-|0xC0049038|-1073442760|DTS_E_EXPREVALSTATIC_BINARYOPERATIONFAILED|Error en una operación binaria. Memoria insuficiente o error interno. |  
+|0xC0049038|-1073442760|DTS_E_EXPREVALSTATIC_BINARYOPERATIONFAILED|Error en una operación binaria. Memoria insuficiente o error interno.|  
 |0xC0049039|-1073442759|DTS_E_EXPREVALSTATIC_BINARYOPERATIONSETTYPEFAILED|Error al establecer el tipo de resultado de una operación binaria.|  
 |0xC004903A|-1073442758|DTS_E_EXPREVALSTATIC_STRINGCOMPARISONFAILED|No se pueden comparar dos cadenas.|  
 |0xC004903B|-1073442757|DTS_E_EXPREVALSTATIC_UNSUPPORTEDUNNARYTYPE|Se utiliza un tipo de datos no compatible con un operador unario. El tipo de operando no es compatible con la operación. Para realizar esta operación, debe convertirse explícitamente el operando mediante un operador de conversión.|  
-|0xC004903C|-1073442756|DTS_E_EXPREVALSTATIC_UNARYOPERATIONFAILED|Error en una operación unaria. Memoria insuficiente o error interno. |  
+|0xC004903C|-1073442756|DTS_E_EXPREVALSTATIC_UNARYOPERATIONFAILED|Error en una operación unaria. Memoria insuficiente o error interno.|  
 |0xC004903D|-1073442755|DTS_E_EXPREVALSTATIC_UNARYOPERATIONSETTYPEFAILED|Error al establecer el tipo de resultado de una operación binaria.|  
 |0xC004903E|-1073442754|DTS_E_EXPREVALSTATIC_PARAMTYPEMISMATCH|Una función tiene un parámetro con un tipo de datos no compatible. El tipo de parámetro no puede convertirse implícitamente en un tipo compatible con la función. Para realizar esta operación, debe convertirse explícitamente el operando mediante un operador de conversión.|  
 |0xC004903F|-1073442753|DTS_E_EXPREVALSTATIC_INVALIDFUNCTION|Nombre de función no válido en la expresión. Compruebe si el nombre de función existe y es correcto.|  
 |0xC0049040|-1073442752|DTS_E_EXPREVALSTATIC_FNSUBSTRINGINVALIDLENGTH|Parámetro de longitud no válido para la función SUBSTRING. El parámetro de longitud no puede ser negativo.|  
 |0xC0049041|-1073442751|DTS_E_EXPREVALSTATIC_FNSUBSTRINGINVALIDSTARTINDEX|Índice inicial no válido para la función SUBSTRING. El valor del índice inicial debe ser un entero mayor que cero. El índice inicial se basa en uno y no en cero.|  
 |0xC0049042|-1073442750|DTS_E_EXPREVALSTATIC_INVALIDNUMBEROFPARAMS|Se asignó a una función un número incorrecto de parámetros. Se reconoció el nombre de función pero el número de parámetros no era correcto.|  
-|0xC0049043|-1073442749|DTS_E_EXPREVALSTATIC_CHARMAPPINGFAILED|Error en una función de asignación de caracteres. |  
+|0xC0049043|-1073442749|DTS_E_EXPREVALSTATIC_CHARMAPPINGFAILED|Error en una función de asignación de caracteres.|  
 |0xC0049044|-1073442748|DTS_E_EXPREVALSTATIC_INVALIDDATEPART|Se especificó para una función de fecha un parámetro de parte de fecha desconocido.|  
 |0xC0049045|-1073442747|DTS_E_EXPREVALSTATIC_INVALIDNULLPARAM|Se asignó un parámetro no válido a la función NULL. Los parámetros de NULL deben ser estáticos y no pueden contener elementos dinámicos como columnas de entrada.|  
 |0xC0049046|-1073442746|DTS_E_EXPREVALSTATIC_INVALIDNULLPARAMTYPE|Se asignó un parámetro no válido a la función NULL. Un parámetro de NULL debe ser un entero o un tipo que pueda convertirse a un entero.|  
@@ -1498,7 +1503,7 @@ caps.handback.revision: 44
 |0xC0207011|-1071615983|DTS_E_FAILEDTOGETLOCALEIDFROMPACKAGE|%1 no pudo obtener el id. de configuración regional del paquete.|  
 |0xC0207012|-1071615982|DTS_E_INCORRECTPARAMETERMAPPINGFORMAT|La cadena de asignación de parámetros no tiene el formato correcto.|  
 |0xC0207013|-1071615981|DTS_E_NOTENOUGHPARAMETERSPROVIDED|El comando SQL requiere %1!d! parámetros pero la asignación de parámetros solo tiene %2!d! parámetros.|  
-|0xC0207014|-1071615980|DTS_E_PARAMETERNOTFOUNDINMAPPING|El comando SQL requiere un parámetro llamado "%1", que no se encuentra en la asignación de parámetros. |  
+|0xC0207014|-1071615980|DTS_E_PARAMETERNOTFOUNDINMAPPING|El comando SQL requiere un parámetro llamado "%1", que no se encuentra en la asignación de parámetros.|  
 |0xC0207015|-1071615979|DTS_E_DUPLICATEDATASOURCECOLUMNNAME|Hay más de una columna de origen de datos con el nombre "%1".  Los nombres de columnas de origen de datos deben ser únicos.|  
 |0xC0207016|-1071615978|DTS_E_DATASOURCECOLUMNWITHNONAMEFOUND|Una de las columnas de origen de datos no tiene nombre.  Todas las columnas de origen de datos deben tener un nombre.|  
 |0xC0208001|-1071611903|DTS_E_DISCONNECTEDCOMPONENT|Hay un componente desconectado del diseño.|  
@@ -1673,7 +1678,7 @@ caps.handback.revision: 44
 |0xC020828A|-1071611254|DTS_E_FUZZYGROUPINGINTERNALPIPELINEERROR|Error de canalización de la transformación Agrupación aproximada. Código de error: 0x%1!8.8X!: "%2"|  
 |0xC020828B|-1071611253|DTS_E_CODE_PAGE_NOT_SUPPORTED|La página de códigos %1!d! especificada en la columna "%2" (%3!d!) no se admite.  Primero debe convertir esta columna en DT_WSTR, lo que se puede hacer insertando una transformación de conversión de datos antes de ésta.|  
 |0xC0208294|-1071611244|DTS_E_SETEODFAILED|Se encontró un error al establecer el final de la marca de datos para la salida "%1" (%2!d!) que conduce al búfer.|  
-|0xC0208296|-1071611242|DTS_E_CANTCLONE|No se pudo clonar el búfer de entrada. Memoria insuficiente o error interno. |  
+|0xC0208296|-1071611242|DTS_E_CANTCLONE|No se pudo clonar el búfer de entrada. Memoria insuficiente o error interno.|  
 |0xC02082F9|-1071611143|DTS_E_TXCHARMAP_CANTKATAKANAHIRAGANA|La columna "%1" solicita la producción simultánea de caracteres Katakana y Hiragana.|  
 |0xC02082FA|-1071611142|DTS_E_TXCHARMAP_CANTSIMPLECOMPLEX|La columna "%1" solicita la producción simultánea de caracteres de chino simplificado y chino tradicional.|  
 |0xC02082FB|-1071611141|DTS_E_TXCHARMAP_CANTFULLHALF|La columna "%1" solicita que las operaciones generen caracteres de formato completo y formato medio.|  
@@ -1715,7 +1720,7 @@ caps.handback.revision: 44
 |0xC0208323|-1071611101|DTS_E_TXFUZZYLOOKUP_REF_CONTAINS_NON_INTEGER_IDENT_COLUMN|La tabla de referencia '%1' contiene una columna de identidad de tipo no entero que no es compatible. Utilice una vista de la tabla sin la columna '%2'.  Este error se produce porque, si se copia la tabla de referencia, se agrega una columna de identidad de tipo entero y solamente se permite una columna de identidad por tabla.|  
 |0xC0208324|-1071611100|DTS_E_TXFUZZY_MATCHCONTRIBUTION_AND_HIERARCHY_SPECIFIED|No pueden especificarse al mismo tiempo MatchContribution y la información de jerarquía. No se permite porque ambas propiedades son pesos de la puntuación.|  
 |0xC0208325|-1071611099|DTS_E_TXFUZZY_HIERARCHY_INCORRECT|Los niveles de la jerarquía deberían ser números únicos. El nivel válido en los valores de jerarquía son los enteros mayores o iguales que 1. Cuanto más pequeño es el número, más baja es la columna en la jerarquía. El valor predeterminado es 0, que indica que la columna no forma parte de una jerarquía. No se permiten superposiciones ni espacios.|  
-|0xC0208326|-1071611098|DTS_E_TXFUZZYGROUPING_INSUFFICIENT_FUZZY_JOIN_COLUMNS|No se definió ninguna columna con agrupación aproximada.  Debe existir al menos una columna de entrada definida con las propiedades de columna ToBeCleaned=true y ExactFuzzy=2. |  
+|0xC0208326|-1071611098|DTS_E_TXFUZZYGROUPING_INSUFFICIENT_FUZZY_JOIN_COLUMNS|No se definió ninguna columna con agrupación aproximada.  Debe existir al menos una columna de entrada definida con las propiedades de columna ToBeCleaned=true y ExactFuzzy=2.|  
 |0xC0208329|-1071611095|DTS_E_TXFUZZYLOOKUP_COLUMNINVALID|La columna con el id. "%1!d!" no era válido por un motivo indeterminado.|  
 |0xC020832A|-1071611094|DTS_E_TXFUZZYLOOKUP_UNSUPPORTEDDATATYPE|No se admite el tipo de datos de la columna '%1'.|  
 |0xC020832C|-1071611092|DTS_E_TXFUZZYLOOKUP_OUTPUTLENGTHMISMATCH|La longitud de la columna de salida '%1' es menor que la de la columna de origen '%2'.|  
@@ -1781,7 +1786,7 @@ caps.handback.revision: 44
 |0xC020836E|-1071611026|DTS_E_TERMLOOKUP_PROCESSDOCUMENT|Error al procesar un documento en la entrada. Se devolvió el código de error 0x%1!8.8X!.|  
 |0xC020836F|-1071611025|DTS_E_INVALIDBULKINSERTPROPERTYVALUE|El valor de la propiedad %1 es %2!d!, que no está permitido.  El valor debe ser mayor o igual que %3!d!.|  
 |0xC0208370|-1071611024|DTS_E_INVALIDBULKINSERTFIRSTROWLASTROWVALUES|El valor de la propiedad %1 es %2!d!, que debe ser menor o igual que el valor %3!d! de la propiedad %4.|  
-|0xC0208371|-1071611023|DTS_E_FUZZYLOOKUPUNABLETODELETEEXISTINGMATCHINDEX|Error al intentar eliminar el índice de coincidencia parcial existente con el nombre "%1". Es posible que esta tabla no fuera creada mediante búsqueda aproximada (o esta versión de búsqueda aproximada), que se haya dañado o que haya otro problema. Intente eliminar manualmente la tabla con el nombre "%2" o especifique un nombre distinto para la propiedad MatchIndexName. |  
+|0xC0208371|-1071611023|DTS_E_FUZZYLOOKUPUNABLETODELETEEXISTINGMATCHINDEX|Error al intentar eliminar el índice de coincidencia parcial existente con el nombre "%1". Es posible que esta tabla no fuera creada mediante búsqueda aproximada (o esta versión de búsqueda aproximada), que se haya dañado o que haya otro problema. Intente eliminar manualmente la tabla con el nombre "%2" o especifique un nombre distinto para la propiedad MatchIndexName.|  
 |0xC0208372|-1071611022|DTS_E_TERMEXTRACTION_INCORRECTSCORETYPE|El tipo de puntuación de la transformación solo puede ser Frequency o TFIDF.|  
 |0xC0208373|-1071611021|DTS_E_FUZZYLOOKUPREFTABLETOOBIG|La tabla de referencia especificada tiene demasiadas filas. La búsqueda aproximada solo funciona con tablas de referencia de menos de mil millones de filas. Considere la posibilidad de utilizar una vista más pequeña de la tabla de referencia.|  
 |0xC0208374|-1071611020|DTS_E_FUZZYLOOKUPUNABLETODETERMINEREFERENCETABLESIZE|No se puede determinar el tamaño de la tabla de referencia '%1'.  Es posible que este objeto sea una vista y no una tabla.  La búsqueda aproximada no admite vistas si CopyReferentaceTable=false.  Asegúrese de que la tabla existe y de que CopyReferenceTable=true.|  
@@ -2075,7 +2080,7 @@ caps.handback.revision: 44
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tarea no pudo ejecutar la operación "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|El archivo o proceso "%1" no se encuentra en la ruta de acceso.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|El asunto está vacío.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|La dirección de la línea "Para" es incorrecta. Falta el símbolo "@" o no es válida. |  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|La dirección de la línea "Para" es incorrecta. Falta el símbolo "@" o no es válida.|  
 |0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|La dirección de la línea "De" es incorrecta. Falta el símbolo "@" o no es válida.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Los dos documentos XML son diferentes.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validación DTD utilizará el archivo DTD definido en la línea DOCTYPE del documento XML. No utilizará lo asignado a la propiedad "%1".|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 no permite la inserción de columnas de metadatos externas.|  
   
   
+

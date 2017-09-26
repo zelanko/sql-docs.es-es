@@ -1,24 +1,29 @@
 ---
-title: "Crear y editar un servicio CDC de Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: Crear y editar un servicio CDC de Oracle | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
+ms.contentlocale: es-es
+ms.lasthandoff: 09/26/2017
+
 ---
-# Crear y editar un servicio CDC de Oracle
+# <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
   Para crear y editar un nuevo servicio de Windows CDC de Oracle se emplea la Consola de configuración del servicio CDC.  
   
  Para crear un nuevo servicio de Windows CDC de Oracle, seleccione **Servicios CDC locales** en el panel izquierdo y, a continuación, haga clic en **Nuevo servicio** en el panel **Acciones** . También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Nuevo servicio**. Se abrirá el cuadro de diálogo Nuevo servicio de Windows CDC de Oracle.  
@@ -29,12 +34,11 @@ caps.handback.revision: 8
   
  Especifique la siguiente información en los cuadros de diálogos Nuevo servicio de Windows CDC de Oracle o Propiedades del servicio CDC.  
   
- Nombre de servicio  
+** Nombre de servicio **  
  Escriba el nombre del nuevo servicio de Windows CDC de Oracle. Si es posible, no debe usar nombres largos. No se pueden usar los caracteres / y \ en el nombre del servicio.  
   
 > [!NOTE]  
-  
- Esta opción no está disponible al editar el servicio. No puede cambiar el nombre de un servicio de Windows que ya existe.  
+> Esta opción no está disponible al editar el servicio. No puede cambiar el nombre de un servicio de Windows que ya existe.  
   
  **Description**  
  Escriba una descripción del servicio para identificarlo.  
@@ -56,7 +60,7 @@ caps.handback.revision: 8
   
      Puede emplear una cuenta de Windows local o de dominio para la cuenta de servicio. En este caso, debe especificar la **Contraseña** para dicha cuenta. Esta cuenta puede ser para el host local o para una cuenta de dominio. Asegúrese de actualizar la contraseña cuando se cambie mediante Servicios locales en el Panel de control de Windows.  
   
- **Nombre del servidor**: seleccione la instancia de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que quiera conectarse (por ejemplo, **\\\\<nombre_equipo>\\<nombre_instancia**). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
+ **Nombre del servidor**: seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia para conectarse a (por ejemplo, ** \\ \\< nombre_equipo >\\< nombre_instancia >**). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
  Seleccione una de las opciones siguientes:  
@@ -87,7 +91,7 @@ caps.handback.revision: 8
   
  También se debe usar la misma contraseña maestra cuando otras instancias del mismo servicio estén configuradas en otros nodos de un clúster en una configuración de alta disponibilidad. Si pierde o modifica la contraseña maestra, será necesario volver a especificar todas las contraseñas de minería de registros almacenadas en bases de datos de la instancia CDC de Oracle desde la Consola del diseñador CDC.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo crear y editar un servicio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

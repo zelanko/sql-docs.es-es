@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7f1c64e11e1bec44a558cec10c3d1f90f4951dfd
 ms.contentlocale: es-es
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Nuevos y actualizados recientemente: documentos de SQL Server
@@ -77,7 +77,7 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 ## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
 
-Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
+En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
 1. [Novedades de SQL Server 2016](#TitleNum_1)
 
@@ -104,7 +104,7 @@ Esta lista compacta proporciona vínculos a todos los artículos actualizados qu
 
 
 - Descargue la edición **gratuita** [**SQL Server 2016 Developer**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Descargue la última versión de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+- Descargue la última versión de [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 - ¿Tiene una cuenta de Azure? Ponga en marcha una [máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 **Motor de base de datos de SQL Server 2016**
@@ -146,7 +146,7 @@ En esta sección se enumeran artículos muy similares a los artículos actualiza
 - [Nuevos + actualizados (1+8): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
 - [Nuevos + actualizados (12+1): documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
 - [Nuevos + actualizados (0+1): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + actualizados (7+1) : documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + actualizados (7+1): documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Nuevos + actualizados (1+1): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Nuevos + actualizados (0+2): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + actualizados (1+4): documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)

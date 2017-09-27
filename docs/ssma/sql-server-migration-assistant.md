@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Documentos de Microsoft
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>Asistente para migración de SQL Server
-Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y Sybase.  
+Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y SAP ASE.  
   
 ## <a name="migration-sources"></a>Orígenes de migración  
   
@@ -37,7 +37,7 @@ Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada par
   
 -   [SQL Server Migration Assistant para Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SQL Server Migration Assistant para Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [SQL Server Migration Assistant para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>Orígenes compatibles y las versiones de destino
 Para los orígenes admitidos, revise la información en el centro de descarga para la descarga SSMA.
@@ -49,19 +49,18 @@ Se admiten las siguientes versiones de destino de SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Base de datos SQL de Azure
 - SQL Server de 2017 en Windows y Linux (versión preliminar)
 - ** Almacenamiento de datos azure SQL
 
 ** Este destino solo es compatible con SSMA para Oracle.
  
-
 ## <a name="downloads"></a>Descargas
 - [SSMA para Access](http://aka.ms/ssmaforaccess)
 - [SSMA para DB2](http://aka.ms/ssmafordb2)
 - [SSMA para MySql](http://aka.ms/ssmaformysql)
 - [SSMA para Oracle](http://aka.ms/ssmafororacle)
-- [SSMA para Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA para SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Obtención de soporte técnico SSMA  
 **Ayuda y soporte técnico de Microsoft SQL Server Migration Assistant (SSMA):**  

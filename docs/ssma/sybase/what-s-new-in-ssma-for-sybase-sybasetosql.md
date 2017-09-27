@@ -1,7 +1,7 @@
 ---
-title: "¿Qué &#39; s de SSMA para Sybase (SybaseToSQL) | Documentos de Microsoft"
+title: "¿Qué &#39; s de SSMA para SAP ASE (SybaseToSQL) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 1054c9279039eda01320e1afd9745b6a53200b3f
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
 ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-sybase-sybasetosql"></a>¿Qué &#39; s de SSMA para Sybase (SybaseToSQL)
-Este tema enumeran SSMA para Sybase cambios en cada versión. 
+# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>¿Qué &#39; s de SSMA para SAP ASE (SybaseToSQL)
+Este tema enumeran SSMA para cambios de SAP ASE (anteriormente SSMA para Sybase) en cada versión. 
+
+## <a name="ssma-v75"></a>SSMA 7.5
+La versión 7.5 de SSMA para SAP ASE contiene los siguientes cambios:
+-   Mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
+-   Se actualizaron para proporcionar compatibilidad para crear o reemplazar la sintaxis.
+
+> [!IMPORTANT]
+> .NET 4.5.2 es un requisito previo para la instalación de SSMA 7.5. Además, a partir de v7.4, la versión de 32 bits de SSMA se está suspendida.  
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 La versión v7.4 de SSMA para Sybase contiene los siguientes cambios:

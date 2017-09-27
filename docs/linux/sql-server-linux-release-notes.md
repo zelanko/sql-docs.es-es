@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
@@ -73,7 +73,7 @@ En la tabla siguiente se muestran los detalles del paquete y ubicaciones de desc
 | [SQL Server Data Tools para Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Código de Visual Studio](https://code.visualstudio.com) con el [mssql extensión](https://aka.ms/mssql-marketplace) | más reciente |
 
-### <a name="unsupported-features-and-services"></a>Servicios y características no admitidas
+### <a name="Unsupported"></a>Servicios y características no admitidas
 
 Las siguientes características y servicios no están disponibles en Linux en este momento. La compatibilidad de estas características se habilitarán cada vez más durante la cadencia mensual de actualizaciones del programa de vista previa.
 
@@ -362,7 +362,7 @@ En RC1 el agente de recurso de clúster establece el nombre del servidor virtual
 1. Quite la restricción agregada por el traslado de recursos manual. Vea [manualmente de clúster de conmutación por error](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual).
 2. Si lo desea, producirá un error en el nodo principal original. 
 
-#### <a name="availability-group"></a>Grupo de disponibilidad
+#### <a name="availability-group"></a>grupo de disponibilidad
 
 En Linux, no se admite la actualización de CTP de SQL Server de 2017 2.1 gradual a RC1. Después de actualizar la réplica secundaria, se desconectará de la réplica principal hasta que se actualiza la réplica principal. Microsoft está planeando resolver este problema en una versión futura.
 
@@ -810,7 +810,7 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
 
 - Administrador de configuración de SQL Server no se puede conectar a SQL Server en Linux.
 
-- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\>**  método en su lugar por ahora. 
+- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\> ** método en su lugar por ahora. 
 
 #### <a name="databases"></a>Bases de datos
 - No se puede mover las bases de datos del sistema con la utilidad mssql-conf.
@@ -987,7 +987,7 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
 
 - Administrador de configuración de SQL Server no se puede conectar a SQL Server en Linux.
 
-- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\>**  método en su lugar por ahora. 
+- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\> ** método en su lugar por ahora. 
 
 #### <a name="databases"></a>Bases de datos
 - No se puede cambiar las ubicaciones de archivos de datos y de registro de TempDB.
@@ -1147,7 +1147,7 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
 
 - Administrador de configuración de SQL Server no se puede conectar a SQL Server en Linux.
 
-- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\>**  método en su lugar por ahora. 
+- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\> ** método en su lugar por ahora. 
 
 #### <a name="databases"></a>Bases de datos
 - No se puede cambiar las ubicaciones de archivos de datos y de registro de TempDB.
@@ -1292,7 +1292,7 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
 
 - Administrador de configuración de SQL Server no se puede conectar a SQL Server en Linux.
 
-- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\>**  método en su lugar por ahora. 
+- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\> ** método en su lugar por ahora. 
 
 #### <a name="databases"></a>Bases de datos
 - No se puede cambiar las ubicaciones de archivos de datos y de registro de TempDB.
@@ -1424,7 +1424,7 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
 
 - Administrador de configuración de SQL Server no se puede conectar a SQL Server en Linux.
 
-- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\>**  método en su lugar por ahora.
+- **CREATE ASSEMBLY** no funcionará cuando intenta usar un archivo. Use la **FROM \<bits\> ** método en su lugar por ahora.
 
 #### <a name="databases"></a>Bases de datos
 - No se puede cambiar las ubicaciones de archivos de datos y de registro de TempDB.

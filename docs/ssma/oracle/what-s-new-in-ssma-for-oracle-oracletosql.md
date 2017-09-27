@@ -2,7 +2,7 @@
 title: "¿Qué &#39; s de SSMA para Oracle (OracleToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,14 +15,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 690d34e4391bcdbcbf7adfe1d80ed8c503d80895
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-oracle-oracletosql"></a>¿Qué &#39; s de SSMA para Oracle (OracleToSQL)
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>¿Qué &#39; s de SSMA para Oracle (OracleToSQL)
 Este tema enumeran SSMA para cambios de Oracle en cada versión.  
+
+## <a name="ssma-v75"></a>SSMA 7.5
+La versión 7.5 de SSMA para Oracle contiene los siguientes cambios:
+- Mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
+- Actualizado para mejorar la métrica de calidad y la conversión con correcciones de destino, como la mejora del tratamiento de tipos de datos de fecha y float durante la migración de datos, en función de los comentarios de clientes.
+
+> [!IMPORTANT]
+> .NET 4.5.2 es un requisito previo para la instalación de SSMA 7.5. Además, a partir de v7.4, la versión de 32 bits de SSMA se está suspendida.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 La versión v7.4 de SSMA para Oracle contiene los siguientes cambios:
@@ -65,7 +73,7 @@ La versión v7.2 de SSMA para Oracle contiene los siguientes cambios:
 - Mejoras de telemetría para proporcionar una mejor puntos de datos para solucionar problemas de los clientes y mejorar las tasas de conversión de SSMA.
 
 ## <a name="ssma-v71"></a>SSMA v7.1
-La versión 7.1 de SSMA para Access contiene los siguientes cambios:
+La versión 7.1 de SSMA para Oracle contiene los siguientes cambios:
 - 2017 de SQL Server en Windows y Linux CTP1 ahora es una plataforma de destino admitida para la migración. Esta característica está en versión preliminar técnica y permite el movimiento de datos y el esquema para servidores SQL Server de destino.
 - SSMA ahora es compatible con las actualizaciones automáticas para descargar la versión más reciente de SSMA tan pronto como está disponible.
 - Archivos binarios de instalación de SSMA ahora se entregan a través de los archivos de paquete de Windows installer (.msi).

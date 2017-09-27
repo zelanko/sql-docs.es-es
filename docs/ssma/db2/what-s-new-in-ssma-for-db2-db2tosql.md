@@ -2,7 +2,7 @@
 title: "¿Qué &#39; s de SSMA para DB2 (DB2ToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 66c14c087752244985886ca539c8ea80504f8159
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 03a3de915ae5426f15f04b95c0148610ec917047
 ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>¿Qué &#39; s de SSMA para DB2 (DB2ToSQL)
 Este tema enumeran SSMA para cambios de DB2 en cada versión.  
+
+## <a name="ssma-v75"></a>SSMA 7.5
+La versión 7.5 de SSMA para DB2 se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
+
+> [!IMPORTANT]
+> .NET 4.5.2 es un requisito previo para la instalación de SSMA 7.5. Además, a partir de v7.4, la versión de 32 bits de SSMA se está suspendida.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 La versión v7.4 de SSMA para DB2 contiene los siguientes cambios:

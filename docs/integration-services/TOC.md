@@ -6,6 +6,28 @@
 ## [Artículos nuevos y recientemente actualizados](new-updated-integration-services.md)
 ## [Características de Integration Services compatibles con las ediciones de SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilidad con versiones anteriores de Integration Services](integration-services-backward-compatibility.md)
+
+# Tutoriales rápidos
+## Implementar
+### [Implementar con SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Implementar con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Implementar con Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Implementar desde el símbolo del sistema](./ssis-quickstart-deploy-cmdline.md)
+### [Implementar con PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Implementar con C#](./ssis-quickstart-deploy-dotnet.md) 
+## Ejecutar
+### [Ejecutar con SSMS](./ssis-quickstart-run-ssms.md)
+### [Ejecutar con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Ejecutar con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Ejecutar desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
+### [Ejecutar con PowerShell](ssis-quickstart-run-powershell.md)
+### [Ejecutar con C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Levantar y mover paquetes SSIS en Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial: implementar, ejecutar y supervisar un paquete en Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Conectar con el Catálogo de SSIS en Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Programar la ejecución de paquetes en Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Conectarse a orígenes de datos con la autenticación de Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [Instalar o actualizar](../integration-services/install-windows/install-integration-services.md)
 
 # [Herramientas de desarrollo y administración](integration-services-ssis-development-and-management-tools.md)

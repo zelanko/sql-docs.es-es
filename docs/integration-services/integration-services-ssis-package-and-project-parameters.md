@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paquete de Integration Services (SSIS) y los parámetros del proyecto
@@ -164,8 +164,8 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
   
     > **ADVERTENCIA.** Puede realizar modificaciones en contexto en la lista o utilizar la ventana **Propiedades** para modificar los valores de las propiedades de parámetro. Puede eliminar un parámetro con el botón de la barra de herramientas **Eliminar (x)** . Con el último botón de la barra de herramientas que es para abrir el cuadro de diálogo **Administrar valores de parámetro** , puede especificar un valor para un parámetro que se use solamente cuando se ejecuta el paquete en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
-## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-El **parametrizar** cuadro de diálogo permite asociar un parámetro nuevo o existente a una propiedad de una tarea. Abra el cuadro de diálogo haciendo clic en una tarea o en la ficha de flujo de Control [! INCLUIR[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).
+## <a name="parameterize-dialog-box"></a>Parametrizado, cuadro de diálogo
+El **parametrizar** cuadro de diálogo permite asociar un parámetro nuevo o existente a una propiedad de una tarea. Abra el cuadro de diálogo haciendo clic con el botón secundario en una tarea o en la pestaña Flujo de control en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y haciendo clic en **Parametrizar**. La siguiente lista describe los elementos de la interfaz de usuario en el cuadro de diálogo. Para más información sobre los parámetros, consulte [Parámetros de Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
 ### <a name="options"></a>Opciones  
  **Propiedad**  
@@ -186,7 +186,7 @@ El **parametrizar** cuadro de diálogo permite asociar un parámetro nuevo o exi
  **Description**  
  Especifique la descripción del parámetro.  
   
- **Valor**  
+ **Value**  
  Especifique el valor predeterminado del parámetro. Se conoce también como valor predeterminado de diseño, el cual se puede invalidar más adelante durante la fase de implementación.  
   
  **Ámbito**  
@@ -195,7 +195,7 @@ El **parametrizar** cuadro de diálogo permite asociar un parámetro nuevo o exi
  **Confidencial**  
  Especifique si es un parámetro con distinción activando o desactivando la casilla. Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.  
   
- **Obligatorio**  
+ **Necesario**  
  Especifique si el parámetro requiere que se especifique un valor, distinto del valor predeterminado de diseño, antes de que el paquete se ejecute.  
  
 ## <a name="set-parameter-values-after-the-project-is-deployed"></a>Establecer valores de parámetro después de implementar el proyecto

@@ -36,7 +36,7 @@ Para instalar el `mssql-server-is` el paquete en Ubuntu, siga estos pasos:
 1.  Importar las claves GPG repositorio público.
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 

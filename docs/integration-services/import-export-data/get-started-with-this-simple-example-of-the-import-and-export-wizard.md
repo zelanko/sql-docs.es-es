@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Empezar a trabajar con este ejemplo sencillo de la importación y el Asistente para exportación
 Obtenga información acerca de lo que puede esperar en la importación de SQL Server y el Asistente para exportación recorriendo un escenario común: importar datos desde una hoja de cálculo de Excel a una base de datos de SQL Server. Incluso si piensa utilizar un origen diferente y un destino diferente, este tema muestra la mayoría de lo que necesita saber sobre cómo ejecutar el asistente.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>¿Requisito previo: es el Asistente para instalar en el equipo?
-Si va a ejecutar el asistente, pero no tienes [! INCLUIR[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Estos son los datos de origen de Excel para este ejemplo
 Estos son los datos de origen que se van a copiar - una pequeña tabla de dos columnas en la hoja de cálculo WizardWalkthrough del libro de WizardWalkthrough.xlsx Excel.

@@ -21,10 +21,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 46bb863944694292395b50621acaf87259a3260b
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 09/21/2017
 ##  <a name="bkmk_upgrade_checklist"></a> Lista de comprobación previa a la actualización  
  Antes de actualizar a SQL Server Reporting Services, revise lo siguiente:  
   
--   Revise los requisitos para determinar si el hardware y el software pueden admitir [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Para obtener más información, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Revise los requisitos para determinar si el hardware y el software pueden admitir [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Para más información, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Utilice el Comprobador de configuración del sistema (SCC) para examinar el equipo de servidor de informes para las condiciones que podrían impedir una correcta instalación de SQL Server Reporting Services. Para obtener más información, vea [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 09/21/2017
   
     2.  Entre las has herramientas de configuración del servidor de informes y las utilidades que se actualizan a la nueva versión se incluyen la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo, utilidades de la línea de comandos como RS.exe y el Generador de informes.  
   
-    3.  Otras herramientas cliente como [! INCLUIR[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+    3.  Otras herramientas cliente como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] son una descarga independiente y se deben actualizar por separado. Para más información, consulte [Descargar SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es una descarga independiente. Para más información, consulte [SQL Server Data Tools en Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
@@ -252,4 +252,4 @@ ms.lasthandoff: 09/21/2017
 [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md)   
 [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -40,8 +40,6 @@ Devuelve el entero más pequeño mayor o igual que la expresión numérica espec
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   

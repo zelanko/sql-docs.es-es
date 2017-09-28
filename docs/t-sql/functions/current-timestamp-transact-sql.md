@@ -58,8 +58,6 @@ Para obtener información general de todos los [!INCLUDE[tsql](../../includes/ts
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CURRENT_TIMESTAMP  
 ```  
   

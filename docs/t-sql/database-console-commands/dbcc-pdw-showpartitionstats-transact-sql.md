@@ -33,8 +33,6 @@ Muestra el tamaño y el número de filas para cada partición de una tabla en un
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  

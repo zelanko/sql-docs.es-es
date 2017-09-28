@@ -32,8 +32,6 @@ Reduce el tamaño del registro de transacciones *en el dispositivo* actuales [!I
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   

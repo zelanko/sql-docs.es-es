@@ -39,8 +39,6 @@ Es una función matemática que devuelve el coseno trigonométrico del ángulo e
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COS ( float_expression )  
 ```  
   

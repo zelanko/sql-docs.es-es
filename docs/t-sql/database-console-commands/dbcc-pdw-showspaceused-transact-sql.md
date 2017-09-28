@@ -34,8 +34,6 @@ Muestra el número de filas, el espacio de disco reservado y el espacio en disco
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  

@@ -40,8 +40,6 @@ Devuelve una cadena binaria de pesos para cada carácter en una expresión de ca
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

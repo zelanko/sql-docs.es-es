@@ -42,8 +42,6 @@ Devuelve el nombre de la base de datos.
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DB_NAME ( [ database_id ] )  
 ```  
   

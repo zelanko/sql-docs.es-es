@@ -40,8 +40,6 @@ Devuelve la configuración actual de una opción o propiedad de base de datos es
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATABASEPROPERTYEX ( database , property )  
 ```  
   

@@ -38,8 +38,6 @@ Devuelve un **fecha** valor para el año, mes y día.
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEFROMPARTS ( year, month, day )  
 ```  
   

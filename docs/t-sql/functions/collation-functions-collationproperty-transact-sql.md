@@ -39,8 +39,6 @@ Devuelve la propiedad de una intercalación especificada en [!INCLUDE[ssCurrent]
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   

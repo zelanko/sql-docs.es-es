@@ -40,8 +40,6 @@ Devuelve el ángulo (en radianes) formado por el eje X positivo y la línea que 
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   

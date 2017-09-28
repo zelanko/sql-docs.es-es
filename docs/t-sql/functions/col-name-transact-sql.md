@@ -41,8 +41,6 @@ Devuelve el nombre de una columna a partir del número de identificación de tab
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COL_NAME ( table_id , column_id )  
 ```  
   

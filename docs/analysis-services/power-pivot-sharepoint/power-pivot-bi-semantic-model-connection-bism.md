@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> Bases de datos admitidas  
  Las conexiones del modelo semántico de BI apuntan a datos del modelo tabular. Hay tres orígenes para estos datos:  
   
--   Una base de datos de modelo tabular que se ejecuta en una instancia independiente de Analysis Services en el modo de servidor tabular. Una implementación de una instancia de Analysis Services independiente es externa a la granja. El acceso a orígenes de datos fuera de la granja requiere permisos adicionales, acerca de los cuales puede leer en este tema: [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Una base de datos de modelo tabular que se ejecuta en una instancia independiente de Analysis Services en el modo de servidor tabular. Una implementación de una instancia de Analysis Services independiente es externa a la granja. El acceso a orígenes de datos fuera de la granja requiere permisos adicionales, acerca de los cuales puede leer en este tema: [Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] guardados en SharePoint. Bases de datos incrustadas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en los libros de Excel son equivalentes a las bases de datos modelo tabulares que se ejecutan en un servidor de modo tabular independiente de Analysis Services. Si ya utiliza [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, puede definir una conexión de modelo semántico de BI que apunte a libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una biblioteca de SharePoint y compilar informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] mediante los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existentes.  Puede utilizar los libros creados en versiones de SQL Server 2008 R2 o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  [Crear una conexión de modelo semántico de BI a un libro PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Usar una conexión de modelo semántico de BI en Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

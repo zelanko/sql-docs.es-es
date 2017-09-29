@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
  ![Columna de origen en el panel de la partición](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "columna de origen en el panel de partición")  
   
- Si la partición se basa en una consulta, haga clic en el botón Examinar (**…**) para editar la consulta. Esto edita la propiedad **Origen** de la partición. Para más información, consulte [Change a partition source to use a different fact table](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
+ Si la partición se basa en una consulta, haga clic en el botón Examinar (**…**) para editar la consulta. Esto edita la propiedad **Origen** de la partición. Para más información, consulte [Cambiar el origen de una partición para usar una tabla de hechos diferente](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
   
  Puede especificar una tabla en la vista del origen de datos que tenga la misma estructura que la tabla de origen original (en el origen de datos externo del que se recuperan los datos). El origen puede encontrarse en cualquier origen de datos o vista del origen de datos de la base de datos de cubo.  
   

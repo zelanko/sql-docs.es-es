@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>Implementar con SQL Server Data Tools
   Utilice las tareas de este tema para implementar una solución de modelo tabular mediante el comando implementar en SSDT.  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> Configurar las propiedades Opciones de implementación y Servidor de implementación  
  Antes de implementar la solución de modelo tabular, primero debe especificar las propiedades Opciones de implementación y Servidor de implementación. Para obtener más información sobre propiedades de implementación y configuración, consulte [la implementación de soluciones de modelo Tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### <a name="to-configure-options-and-properties"></a>Para configurar las propiedades y opciones  

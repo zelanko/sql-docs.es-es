@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Varios proveedores de soluciones de almacenamiento han desarrollado proveedores RBS que se ajustan a estas API estándar y son compatibles con el almacenamiento de blobs en varias plataformas de almacenamiento.  
   
 ## <a name="rbs-requirements"></a>Requisitos de RBS  
- RBS requiere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise para el servidor de base de datos principal en el que se almacenan los metadatos de los blobs.  Sin embargo, si usa el proveedor FILESTREAM suministrado, puede almacenar los propios blobs en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requiere al menos la versión 11 del controlador de ODBC para [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] y la versión 13 del controlador ODBC para [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Los controladores están disponibles en [Descarga del controlador ODBC para SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).   
+ - RBS requiere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise para el servidor de base de datos principal en el que se almacenan los metadatos de los blobs.  Sin embargo, si usa el proveedor FILESTREAM suministrado, puede almacenar los propios blobs en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requiere al menos la versión 11 del controlador de ODBC para [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] y la versión 13 del controlador ODBC para [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Los controladores están disponibles en [Descarga del controlador ODBC para SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
   
  RBS incluye un proveedor FILESTREAM que permite usar RBS para almacenar los blobs en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si desea usar RBS para almacenar los blobs en una solución de almacenamiento diferente, tiene que usar un proveedor RBS de terceros desarrollado para dicha solución de almacenamiento o desarrollar un proveedor RBS personalizado con la API RBS. En [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)hay disponible como recurso de aprendizaje un ejemplo de proveedor que almacena los blobs en el sistema de archivos NTFS.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
  Si usa RBS, conviene rotar la clave simétrica del almacén de credenciales cada cierto tiempo. Se trata de un procedimiento de seguridad recomendado muy habitual para cumplir las directivas de seguridad de una organización.  Una manera de rotar la clave simétrica del almacén de credenciales de RBS consiste en usar [este script](#Key_rotation) en la base de datos de RBS.  Este script también sirve para migrar a propiedades de intensidad de cifrado más seguras, como la longitud de clave o algoritmo. Haga una copia de seguridad de la base de datos antes de realizar la rotación.  Cuando el script finalice, es necesario realizar algunos pasos de comprobación.  
 Si las directivas de seguridad requieren propiedades de clave (por ejemplo, longitud de clave o algoritmo) diferentes de las provistas, el script se puede usar como plantilla. Modifique las propiedades de clave en dos sitios: (1) en la creación de la clave temporal y (2) en la creación de la clave permanente.  
   
-##  <a name="rbsresources"></a> RBS resources  
+##  <a name="rbsresources"></a> Recursos de RBS  
   
  **Ejemplos de RBS**  
  Los ejemplos de RBS disponibles en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demuestran cómo desarrollar una aplicación de RBS y cómo desarrollar e instalar un proveedor de RBS personalizado.  
@@ -85,7 +85,7 @@ Si las directivas de seguridad requieren propiedades de clave (por ejemplo, long
  **Blog de RBS**  
  En el [blog de RBS](http://go.microsoft.com/fwlink/?LinkId=210315) se proporciona información adicional para ayudarle a entender, implementar y mantener RBS.  
   
-##  <a name="Key_rotation"></a> Key rotation script  
+##  <a name="Key_rotation"></a> Script de rotación de clave  
  En este ejemplo se crea un procedimiento almacenado denominado `sp_rotate_rbs_symmetric_credential_key` para reemplazar la clave simétrica de almacén de credenciales de RBS usada actualmente  
 por una de su elección.  Es posible que quiera hacerlo si hay una directiva de seguridad que exige   
 la rotación de claves periódica o si hay requisitos de algoritmo concretos.  

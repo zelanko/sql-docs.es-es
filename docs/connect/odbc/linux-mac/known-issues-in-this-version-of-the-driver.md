@@ -23,7 +23,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problemas conocidos en esta versión del controlador
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]Este tema contiene una lista de problemas conocidos de Microsoft ODBC Driver 13 for SQL Server en Linux y macOS.
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)] Este tema contiene una lista de problemas conocidos de Microsoft ODBC Driver 13 for SQL Server en Linux y macOS.
 
 Se publicarán más problemas en el [blog del equipo de Microsoft ODBC Driver](http://blogs.msdn.com/b/sqlnativeclient/).  
 

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   
  En este tema se describen los conceptos y los factores básicos a la hora de almacenar archivos de datos de SQL Server en el Servicio de almacenamiento de Microsoft Azure.  
   
- Para ver una experiencia práctica sobre cómo usar esta nueva característica, consulte [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466438.aspx)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
+ Para ver una experiencia práctica sobre cómo usar esta nueva característica, consulte [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>¿Por qué usar archivos de datos de SQL Server en Microsoft Azure? 
   
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>Compatibilidad con SQL Server Management Studio  
  SQL Server Management Studio le permite usar esta característica a través de varias ventanas de diálogo. Por ejemplo, puede escribir la ruta de acceso de dirección URL del contenedor de almacenamiento, como > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :
  
- como una **Ruta de acceso** en varias ventanas de diálogo, como **Nueva base de datos**, **Adjuntar base de datos**y **Restaurar base de datos**. Para obtener más información, consulte [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
+ como una **Ruta de acceso** en varias ventanas de diálogo, como **Nueva base de datos**, **Adjuntar base de datos**y **Restaurar base de datos**. Para obtener más información, consulte [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
 ### <a name="sql-server-management-objects-support"></a>Compatibilidad con Objetos de administración de SQL Server  
  Cuando se usa la característica Archivos de datos de SQL Server en Azure, se admiten todos los Objetos de administración de SQL Server (SMO). Si un objeto SMO requiere una ruta de acceso, use el formato de dirección URL BLOB en lugar de una ruta de acceso de archivos local, como `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Para obtener más información sobre Objetos de administración de SQL Server (SMO), vea [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)en los Libros en pantalla de SQL Server.  
@@ -155,10 +155,10 @@ ON
     Solución: puede ver este error si intenta quitar una credencial que todavía esté utilizando un archivo de base de datos activo en Azure Storage. Para quitar la credencial, en primer lugar, debe eliminar el blob asociado que tiene este archivo de base de datos. Para eliminar un blob que tiene una concesión activa, debe interrumpir primero la concesión.  
   
 -   *No se ha creado correctamente la firma de acceso compartido en el contenedor.*   
-     Solución: asegúrese de haber creado correctamente una firma de acceso compartido en el contenedor. Revise las instrucciones de la lección 2 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466435.aspx)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
+     Solución: asegúrese de haber creado correctamente una firma de acceso compartido en el contenedor. Revise las instrucciones de la lección 2 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
 -   *La credencial de SQL Server no se ha creado correctamente.*   
-    Solución: asegúrese de que ha usado "Firma de acceso compartido" para el campo **Identidad** y que ha creado un secreto correctamente. Revise las instrucciones de la lección 3 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466436.aspx)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
+    Solución: asegúrese de que ha usado "Firma de acceso compartido" para el campo **Identidad** y que ha creado un secreto correctamente. Revise las instrucciones de la lección 3 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-3-database-backup-to-url.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
  **Errores de concesión de blobs:**  
   
@@ -167,10 +167,10 @@ ON
  **Errores de base de datos:**  
   
 1.  *Errores al crear una base de datos*   
-    Solución: revise las instrucciones de la lección 4 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466431.aspx)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
+    Solución: revise las instrucciones de la lección 4 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-4-restore-database-to-virtual-machine-from-url.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
 2.  *Errores al ejecutar la instrucción Alter*   
-    Solución: asegúrese de ejecutar la instrucción ALTER DATABASE cuando la base de datos esté en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Revise las instrucciones de la lección 7 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
+    Solución: asegúrese de ejecutar la instrucción ALTER DATABASE cuando la base de datos esté en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Revise las instrucciones de la lección 7 de [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
 3.  *Código de error 5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*   
     Solución: actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*.  

@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
@@ -48,7 +48,7 @@ ms.lasthandoff: 07/31/2017
 
  Con cada uno de estos enfoques, la lógica para la migración o limpieza de datos del historial se basa en la columna que se corresponde con el final del período en la tabla actual. El final del valor del período para cada fila determina el momento en el que la versión de fila se "cierra", es decir, cuando llega a la tabla de historial. Por ejemplo, la condición `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que esos datos históricos anteriores a un mes tienen quitarse o extraerse de la tabla de historial.  
   
-> **NOTA:**  Los ejemplos de este tema usan este [ejemplo de tabla temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **NOTA:**  Los ejemplos de este tema usan este [ejemplo de tabla temporal](creating-a-system-versioned-temporal-table.md).  
   
 ## <a name="using-stretch-database-approach"></a>Uso del enfoque de Stretch Database  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 07/31/2017
   
 -   **Ajuste de una parte de la tabla de historial:** configure Stretch Database para una sola parte de la tabla de historial para mejorar el rendimiento si su escenario principal implica principalmente consultar datos históricos recientes, pero desea conservar la opción para consultar los datos históricos anteriores cuando sea necesario mientras se almacenan esos datos de forma remota a un menor costo. Con Transact-SQL, puede hacerlo si especifica una función de predicado para seleccionar las filas que se va a migrar de la tabla de historial en lugar de migrar todas las filas.  Cuando se trabaja con las tablas temporales, normalmente tiene sentido mover los datos en función de la condición de tiempo (es decir, según la edad de la versión de fila en la tabla de historial).    
     Utilice una función de predicado determinista para mantener una parte del historial en la misma base de datos con los datos actuales, mientras el resto se migra a Azure.    
-    Para ver ejemplos y limitaciones, consulte [Selección de las filas que se van a migrar mediante una función de filtro (Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx). Puesto que las funciones no determinista no son válidas, si desea transferir datos de historial al estilo de ventana deslizante, necesitaría alterar regularmente la definición de las funciones de predicado en línea de manera que la ventana de filas que mantenga localmente sea constante en términos de edad. La ventana deslizante le permite mover constantemente datos históricos con una antigüedad superior a un mes a Azure. A continuación, aparece un ejemplo de este enfoque.  
+    Para ver ejemplos y limitaciones, consulte [Selección de las filas que se van a migrar mediante una función de filtro (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Puesto que las funciones no determinista no son válidas, si desea transferir datos de historial al estilo de ventana deslizante, necesitaría alterar regularmente la definición de las funciones de predicado en línea de manera que la ventana de filas que mantenga localmente sea constante en términos de edad. La ventana deslizante le permite mover constantemente datos históricos con una antigüedad superior a un mes a Azure. A continuación, aparece un ejemplo de este enfoque.  
   
 > **NOTA:** Stretch Database migra los datos a Azure. Por lo tanto, necesita una cuenta de Azure y una suscripción para la facturación. Para obtener una cuenta de Azure de evaluación gratuita, haga clic en [Evaluación gratuita de un mes](https://azure.microsoft.com/pricing/free-trial/).  
   
@@ -111,7 +111,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Uso de Transact-SQL para ajustar una parte de la tabla de historial  
- Para ajustar solo una parte de la tabla de historial primero debe crear una [función de predicado en línea](https://msdn.microsoft.com/library/mt613432.aspx). En este ejemplo, supongamos que ha configurado la función de predicado en línea por primera vez el 1 de diciembre de 2015 y quiere ajustar a Azure todas las fechas de historial anteriores al 1 de noviembre de 2015. Para lograr esto, empiece por crear la siguiente función:  
+ Para ajustar solo una parte de la tabla de historial primero debe crear una [función de predicado en línea](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). En este ejemplo, supongamos que ha configurado la función de predicado en línea por primera vez el 1 de diciembre de 2015 y quiere ajustar a Azure todas las fechas de historial anteriores al 1 de noviembre de 2015. Para lograr esto, empiece por crear la siguiente función:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -165,9 +165,9 @@ COMMIT ;
  utilice el Agente SQL Server o algún otro mecanismo de programación para asegurarse de que la definición de la función de predicado es válida todo el tiempo.  
   
 ## <a name="using-table-partitioning-approach"></a>Uso del enfoque de la partición de tabla  
- La[partición de tabla](https://msdn.microsoft.com/library/ms188730.aspx) puede hacer que las tablas grandes sean más escalables y fáciles de administrar. Con el enfoque de partición de tabla, puede usar particiones de tabla de historial para implementar la limpieza de datos personalizada o el archivado sin conexión según una condición de tiempo. La partición de tabla también le proporcionará ventajas de rendimiento cuando se realicen consultas de tablas temporales en un subconjunto de historial de datos mediante la eliminación de una partición.  
+ La[partición de tabla](../partitions/create-partitioned-tables-and-indexes.md) puede hacer que las tablas grandes sean más escalables y fáciles de administrar. Con el enfoque de partición de tabla, puede usar particiones de tabla de historial para implementar la limpieza de datos personalizada o el archivado sin conexión según una condición de tiempo. La partición de tabla también le proporcionará ventajas de rendimiento cuando se realicen consultas de tablas temporales en un subconjunto de historial de datos mediante la eliminación de una partición.  
   
- Con la partición de tabla, puede implementar un enfoque de ventana deslizante para extraer la parte más antigua de los datos históricos de la tabla de historial y mantener el tamaño de la parte retenida constante en términos de edad: manteniendo los datos en la tabla de historial igual que en el período de retención requerido. Se admite la operación de conmutación de datos fuera de la tabla de historial cuando SYSTEM_VERSIONING está activado, lo que significa que puede limpiar una parte de los datos del historial sin introducir un período de mantenimiento o bloquear las cargas de trabajo normales.  
+ Con la partición de tabla, puede implementar un enfoque de ventana deslizante para extraer la parte más antigua de los datos históricos de la tabla de historial y mantener el tamaño de la parte retenida constante en términos de edad: manteniendo los datos en la tabla de historial igual que en el período de retención requerido. Se admite la operación de conmutación de datos fuera de la tabla de historial cuando SYSTEM_VERSIONING está activado, lo que significa que puede limpiar una parte de los datos del historial sin introducir una ventana de mantenimiento o bloquear las cargas de trabajo normales.  
   
 > **NOTA:** Para realizar la conmutación de particiones, el índice agrupado en la tabla de historial debe alinearse con el esquema de partición (debe contener SysEndTime). La tabla de historial predeterminada creada por el sistema contiene un índice agrupado que incluye las columnas SysEndTime y SysStartTime, que es óptimo para la creación de particiones, la inserción de nuevos datos de historial y la típica consulta temporal. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
@@ -351,7 +351,7 @@ COMMIT TRANSACTION
  Conclusión: utilizando la opción RANGE LEFT en la partición deslizante es mucho más simple para la administración de la partición y evita el movimiento de datos. Sin embargo, la definición de los límites de partición con la opción RANGE RIGHT es un poco más simple, ya que no tiene que tratar con problemas de marca de tiempo de fecha y hora.  
   
 ## <a name="using-custom-cleanup-script-approach"></a>Uso del enfoque de script de limpieza personalizado  
- En los casos en los que el enfoque de particiones de tabla y Stretch Database no sean opciones viables, el tercer enfoque consiste en eliminar los datos de la tabla de historial con el script de limpieza personalizado. La eliminación de los datos de la tabla de historial es posible solo cuando aplica **SYSTEM_VERSIONING = OFF**. Para evitar la incoherencia de datos, realice la limpieza durante el período de mantenimiento (cuando las cargas de trabajo que modifican datos no están activas) o dentro de una transacción (bloqueando de forma efectiva otras cargas de trabajo).  Esta operación requiere el permiso de **CONTROL** sobre tablas de historial y actuales.  
+ En los casos en los que el enfoque de particiones de tabla y Stretch Database no sean opciones viables, el tercer enfoque consiste en eliminar los datos de la tabla de historial con el script de limpieza personalizado. La eliminación de los datos de la tabla de historial es posible solo cuando aplica **SYSTEM_VERSIONING = OFF**. Para evitar la incoherencia de datos, realice la limpieza durante la ventana de mantenimiento (cuando las cargas de trabajo que modifican datos no están activas) o dentro de una transacción (bloqueando de forma efectiva otras cargas de trabajo).  Esta operación requiere el permiso de **CONTROL** sobre tablas de historial y actuales.  
   
  Para bloquear mínimamente las aplicaciones normales y las consultas de usuario, elimine los datos en fragmentos más pequeños con un retraso al realizar el script de limpieza dentro de una transacción. Aunque no hay ningún tamaño óptimo para la eliminación de cada fragmento de datos en todos los escenarios, la eliminación de más de 10.000 filas en una sola transacción puede suponer un impacto significativo.  
   
@@ -369,7 +369,7 @@ COMMIT TRANSACTION
   
 -   Calcule el número de filas que debe eliminar para una tabla temporal individual cada vez que se invoca el proceso. Según esto y el número de iteraciones que desee tener, determine dinámicamente los puntos de división para cada invocación del procedimiento.  
   
--   Planee un período de retraso entre las iteraciones para una tabla única para reducir el impacto en las aplicaciones que dispongan de acceso a la tabla temporal.  
+-   Planifique un período de retraso entre las iteraciones para una tabla única para reducir el impacto en las aplicaciones que dispongan de acceso a la tabla temporal.  
   
  Un procedimiento almacenado que permita eliminar los datos de una tabla temporal única podría ser similar al fragmento de código siguiente (revise este código con cuidado y ajústelo antes de aplicarlo a su entorno):  
   

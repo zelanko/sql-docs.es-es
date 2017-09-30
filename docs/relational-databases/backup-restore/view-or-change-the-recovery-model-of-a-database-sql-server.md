@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   Un *modelo de recuperación* es una propiedad de base de datos que controla la forma en que se registran las transacciones, si el registro de transacciones requiere que se realice la copia de seguridad y si lo permite, y qué tipos de operaciones de restauración hay disponibles. Existen tres modelos de recuperación: simple, completa y por medio de registros de operaciones masivas. Normalmente, en las bases de datos se usa el modelo de recuperación completa o el modelo de recuperación simple. El modelo de recuperación de las bases de datos se puede cambiar en cualquier momento. La base de datos **modelo** establece el modelo de recuperación predeterminado de nuevas bases de datos.  
   
-  Para obtener una explicación más amplia sobre [modelos de recuperación](https://msdn.microsoft.com/library/ms189275.aspx), vea [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) (Modelos de recuperación de SQL Server) proporcionado por los compañeros de [MSSQLTips](https://www.mssqltips.com/).
+  Para obtener una explicación más amplia sobre [modelos de recuperación](recovery-models-sql-server.md), vea [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) (Modelos de recuperación de SQL Server) proporcionado por los compañeros de [MSSQLTips](https://www.mssqltips.com/).
   
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [Haga una copia de seguridad del registro de transacciones](back-up-a-transaction-log-sql-server.md) **antes de** cambiar del [modelo de recuperación completa o del modelo de recuperación optimizado para cargas masivas de registros](recovery-models-sql-server.md).  
   
 -   La recuperación a un momento dado no es posible con el modelo optimizado para cargas masivas de registros. Si ejecuta transacciones bajo el modelo de recuperación optimizado para cargas masivas de registros que requieran una restauración del registro de transacciones, dichas transacciones podrían quedar expuestas a la pérdida de datos. Para aumentar la capacidad de recuperación de datos en un escenario de recuperación ante desastres, cambie al modelo de recuperación optimizado para cargas masivas de registros solo en las siguientes condiciones:  
   

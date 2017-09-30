@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
@@ -63,8 +63,8 @@ Los escenarios de carga de trabajo comunes son: comercialización de instrumento
 Use las tablas con optimización para memoria para sus tablas de transacciones principales, es decir, las tablas con las transacciones con rendimiento más crítico. Use los procedimientos almacenados compilados de manera nativa para optimizar la ejecución de la lógica asociada con la transacción comercial. Mientras más lógica pueda insertar en los procedimientos almacenados de la base de datos, más ventajas verá gracias a OLTP en memoria.
 
 Para empezar a trabajar en una aplicación existente:
-1. Use el [informe de análisis de rendimiento de transacciones](https://msdn.microsoft.com/library/dn205133.aspx) para identificar los objetos que desea migrar. 
-2. Use los asesores de [optimización para memoria](https://msdn.microsoft.com/library/dn284308.aspx) y [compilación nativa](https://msdn.microsoft.com/library/dn358355.aspx) para ayudar en la migración.
+1. Use el [informe de análisis de rendimiento de transacciones](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para identificar los objetos que desea migrar. 
+2. Use los asesores de [optimización para memoria](memory-optimization-advisor.md) y [compilación nativa](native-compilation-advisor.md) para ayudar en la migración.
 
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
 
@@ -82,8 +82,8 @@ Los patrones de aplicaciones comunes son: la ingestión de eventos y lecturas de
 
 Use una tabla con optimización para memoria para la ingesta de datos. Si la ingesta consta principalmente de inserciones (en lugar de actualizaciones) y el espacio que ocupa el almacenamiento de OLTP en memoria de los datos es una preocupación, puede hacer una de las acciones siguientes:
 
-- Use un trabajo para descargar por lote de manera regular los datos en una tabla basada en discos con un [índice de almacén de columnas en clúster](https://msdn.microsoft.com/library/gg492088.aspx), a través de un trabajo que hace `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; o bien,
-- Use una [tabla temporal con optimización para memoria](https://msdn.microsoft.com/library/mt590207.aspx) para administrar los datos históricos; en este modo, los datos históricos residen en el disco y es el sistema el que administra el movimiento de los datos.
+- Use un trabajo para descargar por lote de manera regular los datos en una tabla basada en discos con un [índice de almacén de columnas en clúster](../indexes/columnstore-indexes-overview.md), a través de un trabajo que hace `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; o bien,
+- Use una [tabla temporal con optimización para memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) para administrar los datos históricos; en este modo, los datos históricos residen en el disco y es el sistema el que administra el movimiento de los datos.
 
 El repositorio de ejemplos de SQL Server contiene una aplicación de cuadrícula inteligente que usa una tabla temporal con optimización para memoria, un tipo de tabla con optimización para memoria y un procedimiento almacenado compilado de manera nativa para acelerar la ingesta de datos, mientras que se administra el espacio de almacenamiento de OLTP en memoria de los datos del sensor: 
 
@@ -228,10 +228,10 @@ El script siguiente ilustra los objetos de OLTP en memoria que puede crear en la
 - Puede encontrar una demostración de rendimiento con OLTP en memoria en: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [Vídeo de 17 minutos que explica OLTP en memoria y exhibe una demostración](https://www.youtube.com/watch?v=l5l5eophmK4) (la demostración está en el minuto 8:25)
 - [Script para habilitar OLTP en memoria y establecer las opciones recomendadas](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Documentación principal de OLTP en memoria](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Documentación principal de OLTP en memoria](in-memory-oltp-in-memory-optimization.md)
 - [Beneficios del uso de los recursos y el rendimiento de OLTP en memoria en Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Mejora del rendimiento de la tabla temporal y de variable de tabla mediante optimización de memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Optimizar el rendimiento con las tecnologías en memoria en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](https://msdn.microsoft.com/library/mt590207.aspx)
+- [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](http://msdn.microsoft.com/library/dn673538.aspx). 
 

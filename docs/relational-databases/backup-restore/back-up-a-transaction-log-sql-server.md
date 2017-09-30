@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Realizar copia de seguridad de un registro de transacciones (SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   La instrucción BACKUP no se permite en una transacción explícita o [implícita](https://msdn.microsoft.com/library/ms187807.aspx) .  Una transacción explícita es aquella en que se define explícitamente el inicio y el final de la transacción.
+-   La instrucción BACKUP no se permite en una transacción explícita o [implícita](../../t-sql/statements/set-implicit-transactions-transact-sql.md) .  Una transacción explícita es aquella en que se define explícitamente el inicio y el final de la transacción.
   
 ##  <a name="Recommendations"></a> Recomendaciones  
   
--   Si una base de datos usa el [modelo de recuperación](https://msdn.microsoft.com/library/ms189275.aspx) optimizado para cargas masivas de registros o completo, debe hacer una copia de seguridad del registro de transacciones con suficiente regularidad para proteger los datos e impedir que el [registro de transacciones se llene](https://msdn.microsoft.com/library/ms175495.aspx). De este modo se trunca el registro y se admite la restauración de la base de datos a un momento concreto. 
+-   Si una base de datos usa el [modelo de recuperación](recovery-models-sql-server.md) optimizado para cargas masivas de registros o completo, debe hacer una copia de seguridad del registro de transacciones con suficiente regularidad para proteger los datos e impedir que el [registro de transacciones se llene](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). De este modo se trunca el registro y se admite la restauración de la base de datos a un momento concreto. 
   
 -   De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si se hace una copia de seguridad del registro con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, lo que da lugar a registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro usando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

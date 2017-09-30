@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  Especifique el modelo de estimación de la cardinalidad del optimizador de consultas para elementos secundarios, si procede, independiente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 9481](https://support.microsoft.com/en-us/kb/2801413).  
   
  **Max DOP**  
- Especifique el valor predeterminado [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) del elemento principal que hay que usar para las instrucciones.  
+ Especifique el valor predeterminado [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) del elemento principal que hay que usar para las instrucciones.  
   
  **Max DOP para secundaria**  
- Especifique el valor predeterminado [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) de los elementos secundarios, si procede, que hay que usar para las instrucciones.  
+ Especifique el valor predeterminado [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) de los elementos secundarios, si procede, que hay que usar para las instrucciones.  
   
  **Examen de parámetros**  
  Habilita o deshabilita el examen de parámetros en el elemento principal. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/en-us/kb/980653).  

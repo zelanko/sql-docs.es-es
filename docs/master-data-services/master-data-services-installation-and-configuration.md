@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
@@ -116,7 +116,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
  Para obtener una descripción breve con vínculos a información adicional sobre las tareas previas a la instalación, consulte [Instalar Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
 ##  <a name="SetUpWeb"></a> Configurar la base de datos y el sitio web  
- **Configurar la base de datos y el sitio web mediante el**  de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]  
+ **Configurar la base de datos y el sitio web mediante el ** de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]  
 
  
 > [!WARNING]  
@@ -140,7 +140,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     Para obtener más información sobre la intercalación de Windows, consulte [Nombre de intercalación de Windows (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx).  
+     Para obtener más información sobre la intercalación de Windows, consulte [Nombre de intercalación de Windows (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
   
 5.  En el campo **Nombre de usuario** , especifique la cuenta de Windows del usuario que será el superusuario predeterminado de Master Data Services. Un superusuario tiene acceso a todas las áreas funcionales y puede agregar, eliminar y actualizar todos los modelos.  
 

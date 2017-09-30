@@ -1,7 +1,7 @@
 ---
 title: Grupos de disponibilidad independientes del dominio (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ En la siguiente imagen se muestra un ejemplo de un grupo de disponibilidad indep
 
 ![Clúster de grupo de trabajo con dos nodos que están unidos a un dominio][2]
 
-Un grupo de disponibilidad independiente del dominio no es válido exclusivamente en escenarios de recuperación ante desastres o de varios sitios. Se puede implementar en un solo centro de datos e, incluso, usarse con un [grupo de disponibilidad básico](https://msdn.microsoft.com/library/mt614935.aspx) (también conocido como grupo de disponibilidad de Standard Edition) para proporcionar una arquitectura similar a lo que solía lograrse con la creación de reflejo de base de datos con certificados, como se muestra aquí.
+Un grupo de disponibilidad independiente del dominio no es válido exclusivamente en escenarios de recuperación ante desastres o de varios sitios. Se puede implementar en un solo centro de datos e, incluso, usarse con un [grupo de disponibilidad básico](basic-availability-groups-always-on-availability-groups.md) (también conocido como grupo de disponibilidad de Standard Edition) para proporcionar una arquitectura similar a lo que solía lograrse con la creación de reflejo de base de datos con certificados, como se muestra aquí.
 
 
 ![Vista de alto nivel de un grupo de disponibilidad en Standard Edition][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. Cree el punto de conexión que usará el grupo de disponibilidad en cada instancia que va a ser una réplica. En los grupos de disponibilidad, el punto de conexión debe ser del tipo DATABASE_MIRRORING. El punto de conexión emplea el certificado creado en el paso 4 para esa instancia para la autenticación. La siguiente sintaxis de ejemplo muestra cómo crear un punto de conexión con un certificado. Recurra al método de cifrado pertinente y a otras opciones relevantes en su entorno. Para más información sobre las opciones disponibles, vea [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx).
+12. Cree el punto de conexión que usará el grupo de disponibilidad en cada instancia que va a ser una réplica. En los grupos de disponibilidad, el punto de conexión debe ser del tipo DATABASE_MIRRORING. El punto de conexión emplea el certificado creado en el paso 4 para esa instancia para la autenticación. La siguiente sintaxis de ejemplo muestra cómo crear un punto de conexión con un certificado. Recurra al método de cifrado pertinente y a otras opciones relevantes en su entorno. Para más información sobre las opciones disponibles, vea [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. Cuando haya configurado los certificados subyacentes y la seguridad del punto de conexión, cree el grupo de disponibilidad con el método de su elección. Se recomienda hacer manualmente una copia de seguridad y hacer una copia y restauración de la copia de seguridad usada para inicializar la base de datos secundaria, o bien usar [la propagación automática](https://msdn.microsoft.com/library/mt735149.aspx). Si se usa el asistente para inicializar las réplicas secundarias, ello conllevará el uso de archivos de bloque de mensajes del servidor (SMB), que pueden no funcionar si se usa un clúster de grupo de trabajo no unido a un dominio.
+14. Cuando haya configurado los certificados subyacentes y la seguridad del punto de conexión, cree el grupo de disponibilidad con el método de su elección. Se recomienda hacer manualmente una copia de seguridad y hacer una copia y restauración de la copia de seguridad usada para inicializar la base de datos secundaria, o bien usar [la propagación automática](automatically-initialize-always-on-availability-group.md). Si se usa el asistente para inicializar las réplicas secundarias, ello conllevará el uso de archivos de bloque de mensajes del servidor (SMB), que pueden no funcionar si se usa un clúster de grupo de trabajo no unido a un dominio.
 15. Si crea un agente de escucha, asegúrese de que su nombre y dirección IP están registrados en DNS.
 
 ### <a name="next-steps"></a>Pasos siguientes 
@@ -151,8 +151,6 @@ GO
 - [Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Crear un grupo de disponibilidad (Transact-SQL)](create-an-availability-group-transact-sql.md)
-
->Contenido escrito por [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), profesional más valioso (MVP) de Microsoft.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

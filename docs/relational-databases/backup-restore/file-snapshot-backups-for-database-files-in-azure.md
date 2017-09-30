@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  Tras la primera copia de seguridad completa que se requiere para establecer la cadena de copia de seguridad del registro de transacciones (que puede ser una copia de seguridad de instantánea de archivos), solo será necesario realizar copias de seguridad del registro de transacciones. Esto se debe a que cada conjunto de copia de seguridad de instantánea de archivos del registro de transacciones contiene instantáneas de todos los archivos de base de datos y se puede usar para realizar una restauración de base de datos o una restauración del registro. Después de la primera copia de seguridad de base de datos completa, no será necesario realizar más copias de seguridad completas o diferenciales porque el servicio de almacenamiento de blobs de Azure se encarga de controlar las diferencias entre las instantáneas de archivos y el estado actual del blob de base para cada archivo de base de datos.  
   
 > [!NOTE]  
->  Para obtener un tutorial sobre el uso de SQL Server 2016 con el servicio de almacenamiento de blobs de Microsoft Azure, vea [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)(Tutorial: Uso del servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016).  
+>  Para obtener un tutorial sobre el uso de SQL Server 2016 con el servicio de almacenamiento de blobs de Microsoft Azure, vea [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Uso del servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016).  
   
 ### <a name="restore-using-file-snapshot-backups"></a>Restauración con copias de seguridad de instantánea de archivos  
  Dado que cada conjunto de copia de seguridad de instantánea de archivos contiene una instantánea de cada archivo de base de datos, el proceso de restauración requiere a lo sumo dos conjuntos adyacentes de copias de seguridad de instantánea de archivos. Esto es cierto independientemente de si el conjunto de copia de seguridad corresponde a una copia de seguridad de la base de datos completa o a una copia de seguridad del registro. Esto es muy diferente al proceso de restauración en el que se usan archivos de copia de seguridad de secuencias tradicional. Con la copia de seguridad de secuencias tradicional, el proceso de restauración exige usar una cadena completa de conjuntos de copia de seguridad: la copia de seguridad completa, una copia de seguridad diferencial y una o varias copias del registro de transacciones. La parte de la recuperación del proceso de restauración sigue siendo la misma con independencia de si la restauración usa una copia de seguridad de instantánea de archivos o un conjunto de copia de seguridad de secuencias.  
@@ -184,7 +184,7 @@ GO
  ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

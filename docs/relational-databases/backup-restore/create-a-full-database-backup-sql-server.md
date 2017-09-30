@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. En la sección **Cifrado** , use la casilla **Cifrar copia de seguridad** para decidir si usar el cifrado en la copia de seguridad. Use la lista desplegable **Algoritmo** para seleccionar un algoritmo de cifrado.  Use la lista desplegable **Certificado o clave asimétrica** para seleccionar un certificado o una clase asimétrica existente. El cifrado se admite en SQL Server 2014 o posterior. Para obtener más detalles sobre las opciones de cifrado, vea [Copia de seguridad de la base de datos &#40;página Opciones de copia de seguridad&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-Puede usar el [Asistente para planes de mantenimiento](https://msdn.microsoft.com/library/ms191002.aspx) para crear copias de seguridad de base de datos. 
+Puede usar el [Asistente para planes de mantenimiento](../maintenance-plans/use-the-maintenance-plan-wizard.md) para crear copias de seguridad de base de datos. 
 
 ### <a name="examples"></a>Ejemplos  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Crear copia de seguridad completa en disco en una ubicación predeterminada**

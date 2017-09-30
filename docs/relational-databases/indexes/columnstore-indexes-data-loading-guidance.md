@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Guía de carga de datos de los índices de almacén de columnas
@@ -32,7 +32,7 @@ En este artículo se describen las opciones y las recomendaciones para cargar da
 
 ## <a name="what-is-bulk-loading"></a>¿Qué es la carga masiva?
 Con "*carga masiva*" nos referimos a la forma en que se agregan grandes cantidades de filas a un almacén de datos. Se trata de la forma más eficaz para mover datos a un índice de almacén de columnas, ya que funciona en lotes de filas. La carga masiva llena los grupos de filas hasta su capacidad máxima y los comprime directamente en el almacén de columnas. Solo las filas al final de una carga que no cumplan los requisitos mínimos de 102 400 filas por grupo de filas pasan al almacén delta.  
-Para realizar una carga masiva, puede usar la n[utilidad bcp](https://msdn.microsoft.com/library/ms162802.aspx), [Integration Services](https://msdn.microsoft.com/library/ms141026.aspx) o seleccionar las filas de una tabla de almacenamiento provisional.
+Para realizar una carga masiva, puede usar la n[utilidad bcp](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md) o seleccionar las filas de una tabla de almacenamiento provisional.
 
 ![Carga en un índice agrupado de almacén de columnas](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice agrupado de almacén de columnas")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>¿Qué es la inserción gradual?
 
-Con "*inserción gradual*" nos referimos a la forma de mover filas individuales al índice de almacén de columnas. Esta característica usa la instrucción [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx). Gracias a la inserción gradual, todas las filas pasan al almacén delta. Es útil para un número reducido de filas, pero no es práctico para cargas de gran tamaño.
+Con "*inserción gradual*" nos referimos a la forma de mover filas individuales al índice de almacén de columnas. Esta característica usa la instrucción [INSERT INTO](../../t-sql/statements/insert-transact-sql.md). Gracias a la inserción gradual, todas las filas pasan al almacén delta. Es útil para un número reducido de filas, pero no es práctico para cargas de gran tamaño.
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
@@ -45,7 +45,7 @@ En la siguiente tabla se muestran los tipos de página utilizados en los archivo
 |-------|-------|
 |Data |Filas de datos con todos los datos, excepto los datos de text, ntext, image, nvarchar(max), varchar(max), varbinary(max) y xml, cuando el texto de la fila está configurado en ON. |
 |Índice |Entradas de índice. |
-|Prueba/imagen |Tipos de datos de objetos grandes: (datos de text, ntext, image, nvarchar(max), varchar(max), varbinary(max) y xml) <br> Columnas de longitud variable cuando la fila de datos supera los 8 KB: (varchar, nvarchar, varbinary y sql_variant) |
+|Texto o imagen |Tipos de datos de objetos grandes: (datos de text, ntext, image, nvarchar(max), varchar(max), varbinary(max) y xml) <br> Columnas de longitud variable cuando la fila de datos supera los 8 KB: (varchar, nvarchar, varbinary y sql_variant) |
 |Mapa de asignación global, Mapa de asignación global compartido |Información acerca de si se han asignado las extensiones. |
 |Espacio disponible en páginas (PFS) |Información acerca de la asignación de páginas y el espacio disponible disponible en las páginas. |
 |Mapa de asignación de índices |Información acerca de las extensiones utilizadas por una tabla o un índice por unidad de asignación. |

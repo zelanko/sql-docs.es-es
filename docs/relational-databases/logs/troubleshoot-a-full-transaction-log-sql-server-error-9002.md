@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  Para descubrir qué impide el truncamiento del registro en un caso determinado, use las columnas **log_reuse_wait** y **log_reuse_wait_desc** de la vista de catálogo **sys.database**. Para obtener más información, vea [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Para obtener la descripción de los factores que pueden retrasar el truncamiento del registro, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **IMPORTANTE:**  
->  Si la base de datos estaba en recuperación cuando se produjo el error 9002, una vez resuelto el problema, recupere la base de datos mediante [ALTER DATABASE *nombre_de_base_de_datos* SET ONLINE](https://msdn.microsoft.com/library/bb522682.aspx).  
+>  Si la base de datos estaba en recuperación cuando se produjo el error 9002, una vez resuelto el problema, recupere la base de datos mediante [ALTER DATABASE *nombre_de_base_de_datos* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Las alternativas de respuesta ante un registro de transacciones lleno incluyen:  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>Completar o terminar una transacción de larga ejecución
 ### <a name="discovering-long-running-transactions"></a>Descubrir transacciones de ejecución prolongada
 Una transacción de ejecución muy prolongada puede hacer que el registro de transacciones se llene. Para buscar las transacciones de ejecución prolongada, use una de las opciones siguientes:
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-Esta vista de administración dinámica devuelve información sobre las transacciones en la base de datos. En una transacción de ejecución prolongada, las columnas de especial interés incluyen la hora de la primera entrada del registro [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), el estado actual de la transacción [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)y el [número de flujo de registro (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) del registro inicial del registro de transacciones [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+Esta vista de administración dinámica devuelve información sobre las transacciones en la base de datos. En una transacción de ejecución prolongada, las columnas de especial interés incluyen la hora de la primera entrada del registro [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), el estado actual de la transacción [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)y el [número de flujo de registro (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) del registro inicial del registro de transacciones [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 Esta instrucción permite identificar el Id. de usuario del propietario de la transacción, por lo que se puede realizar un seguimiento del origen de la misma para terminarla de forma más ordenada (confirmándola en lugar de revirtiéndola).
 
 ### <a name="kill-a-transaction"></a>Terminar una transacción
-Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
+Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>Vea también  
 [Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

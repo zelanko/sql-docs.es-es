@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Introducción a la recopilación de datos del almacén de consultas
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|El almacén de consultas divide el tiempo en periodos (intervalos) generados de forma automática y almacena estadísticas agregadas en ese intervalo para cada plan ejecutado. El tamaño del intervalo se controla mediante la opción de configuración Intervalo de recopilación de estadísticas (en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` con [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Estadísticas agregadas del runtime para los planes ejecutados. Todas las métricas capturadas se expresan como cuatro funciones estadísticas: Promedio, Mínimo, Máximo y Desviación estándar.|  
   
- Para obtener más detalles sobre las vistas del almacén de consultas, consulte la sección **Related Views, Functions, and Procedures** (Vistas relacionadas, funciones y procedimientos) de [Monitoring Performance By Using the Query Store](https://msdn.microsoft.com/library/dn817826.aspx)(Supervisión del rendimiento mediante el almacén de consultas).  
+ Para obtener más detalles sobre las vistas del almacén de consultas, consulte la sección **Related Views, Functions, and Procedures** (Vistas relacionadas, funciones y procedimientos) de [Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)(Supervisión del rendimiento mediante el almacén de consultas).  
   
 ## <a name="query-processing"></a>Procesamiento de consultas  
  El almacén de consultas interactúa con la canalización de procesamiento de consultas en los siguientes puntos clave:  

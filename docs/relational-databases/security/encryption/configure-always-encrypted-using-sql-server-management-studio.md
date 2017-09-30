@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-En este artículo se describen las tareas para configurar Always Encrypted y administrar las bases de datos que usan Always Encrypted con [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+En este artículo se describen las tareas para configurar Always Encrypted y administrar las bases de datos que usan Always Encrypted con [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 Cuando se usa SSMS para configurar Always Encrypted, SSMS controla las claves y la información confidencial de Always Encrypted, por lo que dichas claves e información aparecen como texto no cifrado en el proceso de SSMS. Por esta razón, es importante que ejecute SSMS en un equipo seguro. Si la base de datos está hospedada en SQL Server, asegúrese de que SSMS se ejecuta en un equipo diferente del que hospeda la instancia de SQL Server. Dado que el objetivo principal de Always Encrypted es garantizar la seguridad de la información confidencial cifrada, incluso si el sistema de base de datos está en peligro, la ejecución de un script de PowerShell que procese las claves o la información confidencial en el equipo de SQL Server puede reducir o anular las ventajas de la característica. Para obtener más recomendaciones, vea [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Consideraciones de seguridad para la administración de claves).
 
@@ -89,7 +89,7 @@ Suponiendo que `SSN` es una columna `char(11)` cifrada de la tabla `Patients` , 
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> Habilitación y deshabilitación de Always Encrypted para una conexión de base de datos   
 
 Habilitar Always Encrypted para una conexión de base de datos indica al proveedor de datos .NET Framework para SQL Server, que SQL Server Management Studio usa, que intente realizar lo siguiente de manera transparente:   
 -   Descifrar los valores que se recuperan de las columnas cifradas y se devuelven en los resultados de la consulta.   
@@ -105,7 +105,7 @@ Para deshabilitar Always Encrypted para una conexión de base de datos, especifi
 >  4.   Seleccione la pestaña **Propiedades adicionales** y escriba `Column Encryption Setting=Enabled` (para habilitar el comportamiento de Always Encrypted) o quite el valor (para deshabilitar el comportamiento de Always Encrypted).   
 >  5.   Haga clic en **Conectar**.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Parametrización de Always Encrypted   
  
 Parametrización de Always Encrypted es una característica de SQL Server Management Studio que convierte automáticamente las variables Transact-SQL en parámetros de consulta (instancias de [SqlParameter Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Requiere al menos la versión 17.0 de SSMS) Esto permite que el proveedor de datos .NET Framework para SQL Server subyacente detecte datos con columnas cifradas como destino y cifre dichos datos antes de enviarlos a la base de datos. 
   

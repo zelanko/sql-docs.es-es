@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
@@ -78,7 +78,7 @@ Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../..
 -  El registro de transacciones se puede implementar en varios archivos. Si se establece el valor FILEGROWTH del registro, se puede definir que los archivos se expandan automáticamente. Esto reduce las posibilidades de quedarse sin espacio en el registro de transacciones, al mismo tiempo que se reduce el trabajo administrativo. Para obtener más información, consulte [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
 -  El mecanismo para volver a utilizar el espacio de los archivos de registro es rápido y tiene un efecto mínimo en el rendimiento de las transacciones.
 
-##  <a name="Truncation"></a> Transaction log truncation  
+##  <a name="Truncation"></a> Truncamiento del registro de transacciones  
  El truncamiento del registro libera el espacio en el archivo de registro para que lo pueda reutilizar el registro de transacciones. Debe truncar el registro de transacciones periódicamente para evitar que se llene el espacio asignado (y lo hará). Varios factores pueden retrasar el truncamiento del registro, por lo que es importante supervisar su tamaño. Algunas operaciones se pueden registrar mínimamente para reducir su impacto sobre el tamaño del registro de transacciones.  
  
   El truncamiento del registro elimina los archivos de registro virtuales inactivos del registro de transacciones lógico de una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , liberando espacio en el registro lógico para que lo reutilice el registro de transacciones físico. Si un registro de transacciones no se trunca nunca, acabará ocupando todo el espacio de disco asignado a los archivos de registro físicos.  
@@ -118,12 +118,12 @@ Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../..
 |13|OLDEST_PAGE|Si una base de datos está configurada para usar puntos de comprobación indirectos, la página más antigua de la base de datos podría ser anterior al LSN del punto de comprobación. En este caso, la página más antigua puede retrasar el truncamiento del registro. (Todos los modelos de recuperación)<br /><br /> Para obtener más información sobre los puntos de comprobación indirectos, vea [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|No se utiliza este valor actualmente.|  
   
-##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el [modelo de recuperación](https://msdn.microsoft.com/library/ms189275.aspx) optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
+##  <a name="MinimallyLogged"></a> Operaciones que se pueden registrar mínimamente  
+ El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md) optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
   
 > **NOTA** Las tablas con optimización para memoria no admiten el registro mínimo.  
   
-> **OTRA NOTA** Con el [modelo de recuperación](https://msdn.microsoft.com/library/ms189275.aspx)completa, todas las operaciones masivas se registran completamente. Sin embargo, puede usar el registro mínimo en un conjunto de operaciones masivas cambiando la base de datos temporalmente al modelo de recuperación optimizado para cargas masivas de registros para este tipo de operaciones. El registro mínimo resulta más eficaz que el registro completo y reduce la posibilidad de que una operación masiva a gran escala termine por ocupar todo el espacio del registro de transacciones durante una transacción masiva. Sin embargo, si la base de datos se daña o se pierde cuando el registro mínimo está activo, no se podrá recuperar la base de datos hasta el momento del error.  
+> **OTRA NOTA** Con el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md)completa, todas las operaciones masivas se registran completamente. Sin embargo, puede usar el registro mínimo en un conjunto de operaciones masivas cambiando la base de datos temporalmente al modelo de recuperación optimizado para cargas masivas de registros para este tipo de operaciones. El registro mínimo resulta más eficaz que el registro completo y reduce la posibilidad de que una operación masiva a gran escala termine por ocupar todo el espacio del registro de transacciones durante una transacción masiva. Sin embargo, si la base de datos se daña o se pierde cuando el registro mínimo está activo, no se podrá recuperar la base de datos hasta el momento del error.  
   
  Las operaciones siguientes, que se registran completamente en el modelo de recuperación completa, se registran mínimamente en el modelo de recuperación simple y en el optimizado para cargas masivas de registros:  
   
@@ -151,7 +151,7 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
   
     -   Regeneración del nuevo montón DROP INDEX (si procede). (La desasignación de páginas de índice durante una operación [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) **siempre** se registra completamente).
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Administrar el registro de transacciones**  
   
 -   [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importar y exportar datos de forma masiva (SQL Server)
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |[bcp, utilidad](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilidad de línea de comandos (Bcp.exe) que importa y exporta datos masivamente y genera archivos de formato.|Sí|Sí|  
 |[BULK INSERT, instrucción](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa datos directamente de un archivo de datos en una tabla o vista sin particionar de una base de datos.|Sí|No|  
 |[Instrucción INSERT ... Instrucción SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa el proveedor de conjuntos de filas BULK OPENROWSET para importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando la función OPENROWSET(BULK…) para seleccionar datos en una instrucción INSERT.|Sí|No| 
-|[Asistente para importación y exportación de SQL Server](https://msdn.microsoft.com/library/ms141209.aspx)|El asistente crea paquetes simples que importan y exportan datos entre muchos formatos de datos conocidos, incluidas bases de datos, hojas de cálculo y archivos de texto.|Sí|Sí|  
+|[Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|El asistente crea paquetes simples que importan y exportan datos entre muchos formatos de datos conocidos, incluidas bases de datos, hojas de cálculo y archivos de texto.|Sí|Sí|  
   
 > [!IMPORTANT]
 > Las operaciones de importación masiva de SQL Server no admiten los archivos de valores separados por comas (CSV). Sin embargo, en algunos casos puede usar un archivo CSV como archivo de datos para una importación masiva de datos en SQL Server. Tenga en cuenta que el terminador de campo de un archivo CSV no tiene que ser una coma. Para más información, consulte [Preparar los datos para exportar o importar de forma masiva (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).

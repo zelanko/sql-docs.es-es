@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd12e9e9a611a850b739522be29e79ff850ce3a2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bf3445a7f28bc53b844946f66bc86712931d82e2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC de clúster para grupos de disponibilidad de SQL Server 2016
@@ -59,9 +59,9 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 
 [Más información sobre la prueba de DTC en grupos de disponibilidad:](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
 
-[Supervisar grupos de disponibilidad (Transact-SQL)](https://msdn.microsoft.com/library/ff878305.aspx)
+[Supervisar grupos de disponibilidad (Transact-SQL)](monitor-availability-groups-transact-sql.md)
 
-[Crear un grupo de disponibilidad (Transact-SQL)](https://msdn.microsoft.com/library/ff878307.aspx)
+[Crear un grupo de disponibilidad (Transact-SQL)](create-an-availability-group-transact-sql.md)
 
 
 [SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 

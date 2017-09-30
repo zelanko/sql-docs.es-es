@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
@@ -438,7 +438,7 @@ La propagación directa permite propagar automáticamente una réplica secundari
 ###  <a name="Tools"></a> Mejoras de las herramientas
 
 ####  <a name="SSMS"></a> Management Studio
-Descargar la versión más reciente de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+Descargar la versión más reciente de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] admite la Biblioteca de autenticación de Active Directory (ADAL) que se encuentra en desarrollo para conectarse a Microsoft Azure. Esto reemplaza la autenticación basada en certificados que se usa en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es tener instalado .NET 4.6. .NET 4.6 se instalará automáticamente a través de la configuración cuando se instale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .

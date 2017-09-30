@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
@@ -45,7 +45,7 @@ En la [secci처n ring_buffer](#h2_target_ring_buffer) se incluye un ejemplo de c�
 
 
 - Tener instalada una versi처n reciente de la utilidad SQL Server Management Studio (SSMS.exe) actualizada con frecuencia. Para obtener detalles, vea:
-    - [Descarga de SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [Descarga de SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - En SSMS.exe, aprenda a usar el **Explorador de objetos** y haga clic con el bot처n derecho en el nodo de destino en la sesi처n de eventos, a fin de [facilitar la visualizaci처n de los datos de salida](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).

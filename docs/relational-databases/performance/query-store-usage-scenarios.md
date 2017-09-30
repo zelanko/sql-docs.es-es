@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
@@ -136,7 +136,7 @@ ms.lasthandoff: 09/01/2017
 5.  Use el Almacén de consultas para realizar correcciones de regresión y análisis, si bien la mayoría de las veces los nuevos cambios del optimizador de consultas deberían generar mejores planes. Con todo, el Almacén de consultas proporcionará una forma fácil de identificar las regresiones de elección del plan y de corregirlas mediante el mecanismo de forzado de plan.  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar y mejorar las cargas de trabajo ad hoc  
- Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar para mejorar el rendimiento general de la aplicación. Estas cargas de trabajo se suelen caracterizar por un número relativamente grande de consultas diferentes, y todas ellas consumen parte de los recursos del sistema. Al ser únicas, estas consultas se ejecutan con poca frecuencia (normalmente una sola vez, de ahí la nomenclatura “ad hoc”), por lo que su consumo de tiempo de ejecución no es crítico. Por otro lado, dado que la aplicación genera nuevas consultas netas todo el tiempo, se dedica una parte significativa de los recursos del sistema a compilar consultas de una forma que no es óptima. Esta situación tampoco es ideal para el Almacén de consultas, dado que el elevado número de consultas y planes acapara el espacio que tiene reservado, lo que significa que el Almacén de consultas probablemente acabe en modo de solo lectura muy rápidamente. Si activó la **directiva de limpieza según el tamaño** ([muy recomendable](https://msdn.microsoft.com/library/mt604821.aspx) para mantener el almacén de consultas siempre en funcionamiento), el proceso en segundo plano limpiará las estructuras del almacén de consultas prácticamente todo el tiempo, lo que también consume muchos recursos del sistema.  
+ Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar para mejorar el rendimiento general de la aplicación. Estas cargas de trabajo se suelen caracterizar por un número relativamente grande de consultas diferentes, y todas ellas consumen parte de los recursos del sistema. Al ser únicas, estas consultas se ejecutan con poca frecuencia (normalmente una sola vez, de ahí la nomenclatura “ad hoc”), por lo que su consumo de tiempo de ejecución no es crítico. Por otro lado, dado que la aplicación genera nuevas consultas netas todo el tiempo, se dedica una parte significativa de los recursos del sistema a compilar consultas de una forma que no es óptima. Esta situación tampoco es ideal para el Almacén de consultas, dado que el elevado número de consultas y planes acapara el espacio que tiene reservado, lo que significa que el Almacén de consultas probablemente acabe en modo de solo lectura muy rápidamente. Si activó la **directiva de limpieza según el tamaño** ([muy recomendable](best-practice-with-the-query-store.md) para mantener el almacén de consultas siempre en funcionamiento), el proceso en segundo plano limpiará las estructuras del almacén de consultas prácticamente todo el tiempo, lo que también consume muchos recursos del sistema.  
   
  La vista**Consultas que más recursos consumen** proporcionará un primer indicio de la naturaleza ad hoc de la carga de trabajo:  
   

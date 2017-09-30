@@ -161,7 +161,7 @@ ms.lasthandoff: 09/01/2017
  **Puerto**  
  Propiedad de entero que define el número de puerto en el que el servidor escuchará las conexiones de los clientes. Si no está establecida, el servidor encontrará de forma dinámica el primer puerto no usado.  
   
- El valor predeterminado para esta propiedad es cero (0), que a su vez establece el valor predeterminado en el puerto 2383. Para obtener más información acerca de la configuración de puertos, vea [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ El valor predeterminado para esta propiedad es cero (0), que a su vez establece el valor predeterminado en el puerto 2383. Para obtener más información acerca de la configuración de puertos, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
  Entero que define el tiempo de espera, en segundos, para las consultas. El valor predeterminado es de 3600 segundos (o 60 minutos). El valor cero (0) especifica que no se agotará el tiempo de espera de las consultas.  

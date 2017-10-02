@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
 ms.contentlocale: es-es
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
@@ -57,9 +57,9 @@ Disponible con carácter general | Número de compilación: 14.0.17177.0
   - Cuando el valor *Coincidir configuración del script con origen* se establece en *False*, se habilitarán las opciones de destino de scripting normales y funcionarán como lo hacían anteriormente.
     - Además, todas las opciones de scripting se han movido a su propia sección: *Opciones de versión*. Ya no están en *Opciones generales de scripting*.
 
-- Se ha agregado compatibilidad con nubes nacionales en "Restore from URL"
+- Se ha agregado compatibilidad con nubes nacionales en "Restore from URL".
 - Los informes de QueryStoreUI ahora son compatibles con otras métricas (RowCount, DOP, tiempo de CLR, etc.) de sys.query_store_runtime_stats.
-- IntelliSense ahora es compatible con Azure SQL Database
+- IntelliSense ahora es compatible con Azure SQL Database.
     - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
 - El cuadro de diálogo Seguridad: conexión tendrá como valor predeterminado no confiar en certificados de servidor y solicitará cifrado para las conexiones de Azure SQL DB.
 - Mejoras generales sobre la compatibilidad de SQL Server con Linux:
@@ -109,7 +109,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Se ha corregido un problema al intentar imprimir los resultados de una consulta (como texto).  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - Se ha corregido un problema que hacía que SSMS colocara incorrectamente tablas y otros objetos al incluir en script la eliminación de esos objetos en una base de datos de Azure SQL.
 - Se ha corregido un problema que hacía que, en ocasiones, SSMS se negara a iniciar con un error como "No se encuentran uno o más componentes. Reinstale la aplicación".
-- Se ha corregido un problema que hacía que el SPID en la interfaz de usuario de SSMS pudiera quedar obsoleto y desactualizado. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- Se ha corregido un problema en el que el SPID en la IU de SSMS podría quedar obsoleto y no sincronizarse. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - Se ha corregido un problema en el programa de instalación (silenciosa) de SSMS que hacía que el argumento /passive se tratara como /quiet.
 - Se ha corregido un problema que hacía que SSMS produjera ocasionalmente un error de "Referencia de objeto no establecida en una instancia de un objeto" durante el inicio. http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - Se ha corregido un problema en el "Asistente para compresión de datos" que causaba que SSMS se bloqueara al pulsar "Calcular" en la tabla de Graph
@@ -355,7 +355,7 @@ Se han corregido los problemas siguientes en esta versión:
 
 * Se ha corregido un problema detectado en SSMS 16.5.2 que provocaba la expansión del nodo "Tabla" cuando la tabla tenía más de una columna dispersa.
 
-* Los usuarios pueden implementar paquetes SSIS que contienen el Administrador de conexiones OData que se conectan a un recurso de Microsoft Dynamics AX/CRM Online en el catálogo de SSIS. Para obtener más información, vea [Administrador de conexiones OData](https://msdn.microsoft.com/library/dn584133.aspx).
+* Los usuarios pueden implementar paquetes SSIS que contienen el Administrador de conexiones OData que se conectan a un recurso de Microsoft Dynamics AX/CRM Online en el catálogo de SSIS. Para obtener más información, vea [Administrador de conexiones OData](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
 
 * La configuración de Always Encrypted en una tabla existente produce errores en los objetos relacionados. [Id. de Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ Disponible con carácter general | Número de versión: 13.0.15700.28
 
 * [Nueva opción de autenticación **'Autenticación universal de Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Se trata de un mecanismo de autenticación basado en token impulsado por Azure Active Directory que es compatible con mecanismos de autenticación integrados, contraseñas y multifactor.
 
-* Nuevas plantillas de eventos extendidos que coinciden con la funcionalidad de las plantillas de SQL Server Profiler [(Microsoft Connect, n.º 2543925).](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Obtenga más información acerca de las [plantillas de SQL Server Profiler](https://msdn.microsoft.com/library/ms190176.aspx).
+* Nuevas plantillas de eventos extendidos que coinciden con la funcionalidad de las plantillas de SQL Server Profiler [(Microsoft Connect, n.º 2543925).](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
 
 * Nuevos cuadros de diálogo Crear base de datos y propiedades de bases de datos para Bases de datos SQL de Azure.
 

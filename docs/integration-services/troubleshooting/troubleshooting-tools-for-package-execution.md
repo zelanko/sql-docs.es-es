@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Ayudar a garantizar la integridad de los datos mediante el uso de transacciones**. Para más información, vea [Transacciones de Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Detectar y controlar errores de paquetes mediante controladores de eventos  
  Se puede responder a los diversos eventos que generan el paquete y los objetos del paquete utilizando controladores de eventos.  

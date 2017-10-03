@@ -53,8 +53,8 @@ Para cambiar desde el repositorio de vista previa en un repositorio de origen (C
    |-----|-----|-----|
    | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES GRANDE | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
-   | SLES GRANDE | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | SLES GRANDE | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+   | SLES GRANDE | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
    | Ubuntu | CU | ' sudo curl https://packages.microsoft.com/keys/microsoft.asc \| Agregar clave apt SUDO - & & sudo agregar apt-repositorios "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" ' |
    | Ubuntu | GDR | ' sudo curl https://packages.microsoft.com/keys/microsoft.asc \| Agregar clave apt SUDO - & & sudo agregar apt-repositorios "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" ' |
 

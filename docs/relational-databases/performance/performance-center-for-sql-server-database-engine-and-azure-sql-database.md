@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 179a23bbe2d53febcf01d02d5129ca94e18243b1
-ms.openlocfilehash: ebb2cf6bdd6d776fc8f960f7d763f62e82fb15d5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6490c2356c0753f68e7ef5261ede3d699a08b863
 ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro de rendimiento para el motor de base de datos de SQL Server y Base de datos SQL de Azure
@@ -63,8 +63,8 @@ ms.lasthandoff: 08/12/2017
 |-|-|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Índices](../../relational-databases/indexes/indexes.md)**|-   [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />-   [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />-   [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />-   [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />-   [Mejorar el rendimiento de los índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|-   [Ventajas de la creación de particiones](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Procedimientos almacenados](../../relational-databases/native-client/ole-db/stored-procedures.md)**|-   [Ventajas de los procedimientos almacenados](https://msdn.microsoft.com/en-us/library/ms190782.aspx)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)**|-   [Ventajas de las funciones definidas por el usuario](https://msdn.microsoft.com/en-us/library/ms191007.aspx)|  
+|![security-center-both](../stored-procedures/stored-procedures-database-engine.md)|  
+|![security-center-both](../user-defined-functions/user-defined-functions.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimización del paralelismo**|-   [Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />-   [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimización del optimizador de consultas**|-   [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Estadísticas](../../relational-databases/statistics/statistics.md)**|-   [Cuándo actualizar las estadísticas](https://msdn.microsoft.com/library/ms190397.aspx#Anchor_3)<br />-   [Actualizar estadísticas](../../relational-databases/statistics/update-statistics.md)|  

@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
@@ -74,11 +74,9 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
      Cuando las directivas automatizadas no estén habilitadas, la administración basada en directivas no afectará al rendimiento del sistema.  
   
 ## <a name="terms"></a>Términos  
- **Destino administrado por la administración basada en directivas** 
-Entidades que se administran con la administración basada en directivas, como una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], una base de datos, una tabla o un índice. Todos los destinos de una instancia de servidor forman una jerarquía de destino. Un conjunto de destinos es el resultado de aplicar un conjunto de filtros de destino a la jerarquía de destino, por ejemplo, todas las tablas de la base de datos que es propiedad del esquema HumanResources.  
+ **Destino administrado por la administración basada en directivas** Entidades que se administran con la administración basada en directivas, como una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], una base de datos, una tabla o un índice. Todos los destinos de una instancia de servidor forman una jerarquía de destino. Un conjunto de destinos es el resultado de aplicar un conjunto de filtros de destino a la jerarquía de destino, por ejemplo, todas las tablas de la base de datos que es propiedad del esquema HumanResources.  
   
- **Faceta de administración basada en directivas**
-Conjunto de propiedades lógicas que modelan el comportamiento o las características de ciertos tipos de destinos administrados. El número y las características de las propiedades están integrados en la faceta y solo el fabricante de la faceta las puede agregar o quitar. Un tipo de destino puede implementar una o varias facetas de administración, y uno o varios tipos de destino pueden implementar una faceta de administración. Algunas propiedades de una faceta solo se pueden aplicar a una versión concreta.  
+ **Faceta de administración basada en directivas** Conjunto de propiedades lógicas que modelan el comportamiento o las características de ciertos tipos de destinos administrados. El número y las características de las propiedades están integrados en la faceta y solo el fabricante de la faceta las puede agregar o quitar. Un tipo de destino puede implementar una o varias facetas de administración, y uno o varios tipos de destino pueden implementar una faceta de administración. Algunas propiedades de una faceta solo se pueden aplicar a una versión concreta.  
   
  **Condición de la administración basada en directivas**  
  Una expresión booleana que especifica un conjunto de estados permitidos de un destino administrado mediante la administración basada en directivas con respecto a una faceta de administración. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta observar las intercalaciones al evaluar una condición. Cuando las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no coinciden exactamente con las intercalaciones de Windows, compruebe su condición para determinar el modo en que el algoritmo resuelve los conflictos.  
@@ -108,7 +106,7 @@ Conjunto de propiedades lógicas que modelan el comportamiento o las caracterís
   
 ## <a name="links-to-specific-tasks"></a>Vínculos a tareas específicas 
 
- - [Almacenar directivas de administración basada en directivas.](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [Almacenar directivas de administración basada en directivas.](policy-based-management-storage.md)|  
  - [Configurar alertas para notificar los errores de directiva a los administradores de directivas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Crear una nueva condición de administración basada en directivas.](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Eliminar una condición de administración basada en directivas](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ Conjunto de propiedades lógicas que modelan el comportamiento o las caracterís
 
   
  ## <a name="examples"></a>Ejemplos
- - [Crear la directiva Desactivado de forma predeterminada](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [Crear la directiva Desactivado de forma predeterminada](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>Vea también  
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

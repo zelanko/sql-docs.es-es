@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  Los planes de ejecución hacen referencia a objetos que usan nombres de tres partes `database.schema.object`.   
 
 Si cambia el nombre de una base de datos, al forzar el plan se producirá un error que provocará la recompilación en todas las ejecuciones de consulta subsiguientes.  
+
+##  <a name="Recovery"></a> Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres
+ 
+  Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar el rendimiento del almacén de datos de consultas en situaciones de recuperación ante desastres y alta disponibilidad.
   
+  La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que el almacén de consultas escribe datos en el disco antes de que SQL Server pueda apagarse.
+  
+  La marca de seguimiento 7752 permite que SQL Server ejecute consultas antes de que el almacén de datos de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
+
 ## <a name="see-also"></a>Vea también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

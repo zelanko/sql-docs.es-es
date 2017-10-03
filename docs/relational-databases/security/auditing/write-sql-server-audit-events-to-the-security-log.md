@@ -1,7 +1,7 @@
 ---
 title: "Escribir eventos de auditoría de SQL Server en el registro de seguridad | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,47 +19,34 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad
-  En un entorno de alta seguridad, el registro de seguridad de Windows es la ubicación adecuada para escribir los eventos que registran el acceso a los objetos. Se admiten otras ubicaciones de auditoría pero están más expuestas a alteraciones.  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+En un entorno de alta seguridad, el registro de seguridad de Windows es la ubicación adecuada para escribir los eventos que registran el acceso a los objetos. Se admiten otras ubicaciones de auditoría pero están más expuestas a alteraciones.  
   
  Hay dos requisitos clave para escribir las auditorías del servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el registro de seguridad de Windows:  
   
 -   El valor Auditar el acceso a objetos se debe configurar para capturar los eventos. La herramienta de directiva de auditoría (`auditpol.exe`) expone diversos valores de subdirectivas en la categoría **Auditar el acceso a objetos** . Para permitir que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audite el acceso a los objetos, configure el valor **Aplicación generada** .  
-  
 -   La cuenta en la que el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se esté ejecutando debe tener el permiso **Generar auditorías de seguridad** para escribir en el registro de seguridad de Windows. De forma predeterminada, las cuentas LOCAL SERVICE y NETWORK SERVICE tienen este permiso. No se requiere este paso si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en alguna de esas cuentas.  
+-   Proporcione permisos completos para la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el subárbol del registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si se configura para escribir en el registro de seguridad de Windows, con la posibilidad de perder eventos si la directiva de auditoría se configura incorrectamente. Por lo general, el registro de seguridad de Windows se establece para sobrescribir los eventos más antiguos. De esta forma se conservan los eventos más recientes. Sin embargo, si el registro de seguridad de Windows no se establece para sobrescribir los eventos más antiguos, entonces, si el registro de seguridad se llena, el sistema emitirá el evento 1104 de Windows (el registro está lleno). En ese punto:  
-  
+La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si se configura para escribir en el registro de seguridad de Windows, con la posibilidad de perder eventos si la directiva de auditoría se configura incorrectamente. Por lo general, el registro de seguridad de Windows se establece para sobrescribir los eventos más antiguos. De esta forma se conservan los eventos más recientes. Sin embargo, si el registro de seguridad de Windows no se establece para sobrescribir los eventos más antiguos, entonces, si el registro de seguridad se llena, el sistema emitirá el evento 1104 de Windows (el registro está lleno). En ese punto:  
 -   No se registrará ningún evento de seguridad más  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no podrá detectar que el sistema no puede grabar eventos en el registro de seguridad, lo que provoca la posible pérdida de eventos de auditoría  
-  
 -   Después de que el administrador corrija el registro de seguridad, el comportamiento de registro volverá a la normalidad.  
   
- **En este tema**  
-  
--   **Antes de empezar:**  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Seguridad](#Security)  
-  
--   **Para escribir eventos de auditoría de SQL Server en el registro de seguridad:**  
-  
-     [Configurar el valor Auditar el acceso a objetos en Windows utilizando auditpol](#auditpolAccess)  
-  
-     [Configurar el valor Auditar el acceso a objetos en Windows utilizando secpol](#secpolAccess)  
-  
-     [Conceder el permiso Generar auditorías de seguridad a una cuenta utilizando secpol](#secpolPermission)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los administradores del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deberían saber que una directiva de dominio puede sobrescribir la configuración regional del registro de seguridad. En este caso, la directiva de dominio puede sobrescribir el valor de subcategoría (**auditpol /get /subcategory:"aplicación generada"**). Esto puede afectar a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar los eventos sin que haya ninguna manera de detectar que los eventos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está intentando auditar no van a ser grabados.  
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

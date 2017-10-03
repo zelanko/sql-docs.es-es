@@ -4,16 +4,16 @@ description: "En este tema se describe cómo instalar la búsqueda de texto comp
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar la búsqueda de texto completo SQL Server en Linux
@@ -86,7 +86,7 @@ Si tiene una instalación sin conexión, busque la descarga del paquete de búsq
 
 ## <a name="supported-languages"></a>Idiomas compatibles
 
-Búsqueda de texto completo utiliza [separadores de palabras](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) que determinan cómo identificar palabras individuales basándose en el idioma. Puede obtener una lista de separadores de palabras registrados consultando la **sys.fulltext_languages** vista de catálogo. Separadores de palabras para los siguientes idiomas se instalan con SQL Server de 2017 RC2:
+Búsqueda de texto completo utiliza [separadores de palabras](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) que determinan cómo identificar palabras individuales basándose en el idioma. Puede obtener una lista de separadores de palabras registrados consultando la **sys.fulltext_languages** vista de catálogo. Separadores de palabras para los siguientes idiomas se instalan con SQL Server 2017:
 
 | Lenguaje | Id. de idioma |
 |---|---|
@@ -146,9 +146,9 @@ Búsqueda de texto completo utiliza [separadores de palabras](/sql-docs/docs/rel
 
 ## <a id="filters"></a>Filtros
 
-Búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Pero en este caso, es necesario un filtro instalado para procesar el archivo. Para obtener más información acerca de los filtros, vea [configurar y administrar filtros para búsquedas](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
+Búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Pero en este caso, es necesario un filtro instalado para procesar el archivo. Para obtener más información acerca de los filtros, vea [configurar y administrar filtros para búsquedas](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Puede ver una lista de filtros instalados mediante una llamada a **sp_help_fulltext_system_components 'filter'**. Para SQL Server de 2017 RC2, se instalan los siguientes filtros:
+Puede ver una lista de filtros instalados mediante una llamada a **sp_help_fulltext_system_components 'filter'**. Para SQL Server 2017, se instalan los siguientes filtros:
 
 | Nombre de componente | Id. de clase | Versión |
 |---|---|---|
@@ -258,37 +258,28 @@ Puede ver una lista de filtros instalados mediante una llamada a **sp_help_fullt
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Búsqueda semántica
-[La búsqueda semántica](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) se basa en la característica de búsqueda de texto completo para extraer e indizar relevantes estadísticamente *frases clave*. Esto le permite consultar el significado dentro de los documentos en la base de datos. También ayuda a identificar los documentos que son similares.
+[La búsqueda semántica](../relational-databases/search/semantic-search-sql-server.md) se basa en la característica de búsqueda de texto completo para extraer e indizar relevantes estadísticamente *frases clave*. Esto le permite consultar el significado dentro de los documentos en la base de datos. También ayuda a identificar los documentos que son similares.
 
-Para poder usar la búsqueda semántica, primero debe descargar y adjuntar la [base de datos de estadísticas semánticas de lenguaje](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
+Para poder usar la búsqueda semántica, primero debe restaurar la base de datos de estadísticas semánticas de lenguaje en el equipo.
 
-1. En un equipo Windows, [descargar la. Archivo MSI de la base de datos de estadísticas semánticas de lenguaje](https://www.microsoft.com/download/details.aspx?id=54277).
+1. Usar una herramienta como [sqlcmd](sql-server-linux-setup-tools.md)para ejecutar el siguiente comando de Transact-SQL en la instancia de SQL Server de Linux. Este comando restaura la base de datos de estadísticas de lenguaje.
 
-    > [!NOTE]
-    > En este tiempo la descarga de la base de datos es un. Archivo MSI, por lo que una máquina de Windows es necesaria para este paso.
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. Ejecute el. Archivo MSI para extraer la base de datos y archivos de registro.
+   > [!NOTE]
+   > Si es necesario, actualice las rutas de acceso en el comando de restauración anterior para ajustarse a la configuración.
 
-3. Mueva los archivos de base de datos y de registro en el equipo Linux SQL Server.
+1. Ejecute el siguiente comando de Transact-SQL para registrar la base de datos de estadísticas semánticas de lenguaje.
 
-    > [!TIP]
-    > Para obtener instrucciones sobre cómo mover archivos de Windows para Linux, consulte [transferir un archivo a Linux](sql-server-linux-migrate-restore-database.md#scp).
-
-4. Ejecute el siguiente comando de Transact-SQL en la instancia de SQL Server de Linux para adjuntar la base de datos de estadísticas de lenguaje.
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. Ejecute el siguiente comando de Transact-SQL para registrar la base de datos de estadísticas semánticas de lenguaje.
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## <a name="next-steps"></a>Pasos siguientes

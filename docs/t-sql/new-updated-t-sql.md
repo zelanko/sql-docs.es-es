@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: t-sql
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: fa2ad3f4bc6071c54b9996a893ee584ba215100f
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 4d48c7df783ebe50f7b5d7fe3e72bef91559006e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>Las nuevas y recientemente actualizado: los documentos de Transact-SQL
@@ -34,7 +34,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **2017-07-18** &nbsp; - a - &nbsp; **2017-09-11**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; **2017-09-11** &nbsp; - a - &nbsp; **2017-09-27**
 - *Área de asunto:* &nbsp; **T-SQL**.
 
 
@@ -47,10 +47,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [PREDECIR (Transact-SQL)](queries/predict-transact-sql.md)
-2. [BIBLIOTECA externa ALTER (Transact-SQL)](statements/alter-external-library-transact-sql.md)
-3. [Crear biblioteca externa (Transact-SQL)](statements/create-external-library-transact-sql.md)
-4. [QUITAR biblioteca externa (Transact-SQL)](statements/drop-external-library-transact-sql.md)
+***En este momento no hay ningún artículo nuevo en la lista.***
 
 
 
@@ -58,7 +55,7 @@ Los siguientes vínculos llevan a nuevos artículos que se han agregado reciente
 
 ## <a name="updated-articles-with-excerpts"></a>Artículos actualizados con extractos
 
-Esta sección muestra los extractos de las actualizaciones que se recopilan de los artículos que se han producido recientemente una actualización a gran escala.
+En esta sección se muestran extractos de actualizaciones recopiladas de artículos que han sufrido una actualización importante recientemente.
 
 Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que lo rodea en el artículo real. Por tanto, estos extractos solo sirven de guía general. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
 
@@ -72,11 +69,11 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
+### <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
 
-Esta lista compact proporciona vínculos a todos los artículos actualizados que se enumeran en la sección de citas.
+En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [CAST y CONVERT (Transact-SQL)](#TitleNum_1)
+1. [sql_variant (Transact-SQL)](#TitleNum_1)
 
 
 
@@ -87,76 +84,58 @@ Esta lista compact proporciona vínculos a todos los artículos actualizados que
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-cast-and-convert-transact-sqlfunctionscast-and-convert-transact-sqlmd"></a>1. &nbsp;[CAST y CONVERT (Transact-SQL)](functions/cast-and-convert-transact-sql.md)
+### <a name="1-nbsp-sqlvariant-transact-sqldata-typessql-variant-transact-sqlmd"></a>1. &nbsp; [sql_variant (Transact-SQL)](data-types/sql-variant-transact-sql.md)
 
-*Actualizado: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+*Actualizado: 2017-09-13* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
 
-<!-- Source markdown line 647.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 111.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b805ecddecda72ffc026c3866b5284a79b69fb3f f2906eaf87c7cdf1409922d4efba8cd1c5635674  (PR=0  ,  Filename=cast-and-convert-transact-sql.md  ,  Dirpath=docs\t-sql\functions\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
+<!-- git diff --ignore-all-space --unified=0 659578de7de33d8672ceb9542093862107d13526 c80026de2b0deedab3722a874e9124c2cfefa049  (PR=0  ,  Filename=sql-variant-transact-sql.md  ,  Dirpath=docs\t-sql\data-types\  ,  MergeCommitSha40=5cd78481b3fac55ec34b59e7b1ad25e0e14d2a00) -->
 
 
 
-**K. Utilizar CAST con operadores aritméticos**
+**Ejemplos**
 
-En el ejemplo siguiente se calcula un cálculo de columna única dividiendo el precio unitario del producto (`UnitPrice`) por el porcentaje de descuento (`UnitPriceDiscountPct`). El resultado se convierte en un tipo de datos `int` después de redondearlo al número entero más próximo. Usa AdventureWorksDW.
 
-```
-SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,
-       CAST(ROUND (UnitPrice*UnitPriceDiscountPct,0) AS int) AS DiscountPrice
-FROM dbo.FactResellerSales
-WHERE SalesOrderNumber = 'SO47355'
-      AND UnitPriceDiscountPct > .02;
-```
+**A. Usar un sql_variant en una tabla**
 
-..! CLUIR-NotShown--ssResult--... /.. /includes/ssresult-MD.MD)]
+ El ejemplo siguiente, se crea una tabla con un tipo de datos sql_variant. A continuación, en el ejemplo se recupera `SQL_VARIANT_PROPERTY` obtener información sobre la `colA` valor `46279.1` donde `colB`  = `1689`, dado que `tableA` tiene `colA` que es de tipo `sql_variant` y `colB`.
 
 ```
-ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
-----------  ---------  --------------------  -------------
-323         430.6445   0.05                  22
-213         18.5043    0.05                  1
-456         37.4950    0.10                  4
-456         37.4950    0.10                  4
-216         18.5043    0.05                  1
+CREATE   TABLE tableA(colA sql_variant, colB int)
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'
+FROM      tableA
+WHERE      colB = 1689
 ```
 
-**L. Utilizar CAST para concatenar**
-
-En el ejemplo siguiente se concatenan expresiones que no son caracteres con conversión. Usa AdventureWorksDW.
+ ..! CLUIR-NotShown--ssResult--... /.. /includes/ssresult-MD.MD]) tenga en cuenta que cada uno de estos tres valores es un **sql_variant**.
 
 ```
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice
-FROM dbo.DimProduct
-WHERE ListPrice BETWEEN 350.00 AND 400.00;
+Base Type    Precision    Scale
+---------    ---------    -----
+decimal      8           2
+
+(1 row(s) affected)
 ```
 
-..! CLUIR-NotShown--ssResult--... /.. /includes/ssresult-MD.MD)]
+**B. Usar un sql_variant como una variable**
+
+ El ejemplo siguiente, se crea una variable utilizando el tipo de datos sql_variant y, a continuación, recupera `SQL_VARIANT_PROPERTY` información sobre una variable denominada @v1.
 
 ```
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
+DECLARE @v1 sql_variant;
+SET @v1 = 'ABC';
+SELECT @v1;
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```
 
-**M. Utilizar CAST para obtener texto más legible**
-
-En el ejemplo siguiente se utiliza CAST en la lista de selección para convertir el `Name` columna a una **char (10)** columna. Usa AdventureWorksDW.
-
-```
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice
-FROM dbo.DimProduct
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
-```
-
-..! CLUIR-NotShown--ssResult--... /.. /includes/ssresult-MD.MD)]
 
 
 
@@ -171,35 +150,35 @@ WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
     Then run Run-533-*.BAT
 -->
 
-En esta sección se enumera los artículos muy similar para los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas temáticas con artículos nuevos o actualizados recientemente
 
-- [Nuevos y actualizados (3 + 12): **Advanced Analytics para SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos y actualizados (5 + 0): **conectar con SQL Server** documentos](../connect/new-updated-connect.md)
-- [Nuevos y actualizados (5 + 1): **motor de base de datos de SQL** documentos](../database-engine/new-updated-database-engine.md)
-- [Nuevos y actualizados (19 + 82): **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
-- [Nuevos y actualizados (1 + 8): **Linux para SQL** documentos](../linux/new-updated-linux.md)
-- [Nuevos y actualizados (12 + 1): **bases de datos relacionales de SQL** documentos](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos y actualizados (0 + 1): **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos y actualizados (7 + 1): **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
-- [Nuevos y actualizados (1 + 1): **SQL Server Data Tools (SSDT)** documentos](../ssdt/new-updated-ssdt.md)
-- [Nuevos y actualizados (0 + 2): **SQL Server Migration Assistant (SSMA)** documentos](../ssma/new-updated-ssma.md)
-- [Nuevos y actualizados (1 + 4): **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
-- [Nuevos y actualizados (4 + 1): **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
-- [Nuevos y actualizados (0 + 1): **Tools para SQL** documentos](../tools/new-updated-tools.md)
+- [Nuevos y actualizados (0 + 1): **Advanced Analytics para SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos y actualizados (0 + 1): **Analysis Services para SQL** documentos](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos y actualizados (4 + 1): **motor de base de datos de SQL** documentos](../database-engine/new-updated-database-engine.md)
+- [Nuevos y actualizados (17 + 0): **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
+- [Nuevos y actualizados (3 + 0): **Linux para SQL** documentos](../linux/new-updated-linux.md)
+- [Nuevos y actualizados (1 + 1): **bases de datos relacionales de SQL** documentos](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos y actualizados (2 + 0): **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos y actualizados (0 + 1): **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
+- [Nuevos y actualizados (0 + 1): **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas temáticas sin artículos nuevos ni actualizados recientemente
 
 - [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
-- [Nuevos y actualizados (0 + 0): **Analysis Services para SQL** documentos](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos y actualizados (0 + 0): **conectar con SQL Server** documentos](../connect/new-updated-connect.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)
-- [Nuevos y actualizados (0 + 0): **Master Data Services (MDS) para SQL** documentos](../master-data-services/new-updated-master-data-services.md)
+- [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Expresiones multidimensionales (MDX) para SQL**](../mdx/new-updated-mdx.md)
 - [Nuevos + Actualizados (0+0): documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
 - [Nuevos + Actualizados (0+0): documentos de **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Nuevos + Actualizados (0+0): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
+- [Nuevos y actualizados (0 + 0): **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
+- [Nuevos + Actualizados (0+0): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
+- [Nuevos y actualizados (0 + 0): **Tools para SQL** documentos](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
 

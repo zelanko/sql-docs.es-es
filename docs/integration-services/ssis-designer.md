@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>Pestaña Parámetros  
  Los parámetros de Integration Services (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear parámetros de proyecto en el nivel de proyecto y parámetros de paquete en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo. Esta pestaña permite administrar parámetros del paquete.  
   
- Para más información sobre los parámetros, consulte [Parámetros de Integration Services (SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).  
+ Para más información sobre los parámetros, consulte [Parámetros de Integration Services (SSIS)](integration-services-ssis-package-and-project-parameters.md).  
   
 > **IMPORTANTE:**  Los parámetros solo están disponibles en los proyectos desarrollados para el modelo de implementación del proyecto. Por consiguiente, verá la pestaña Parámetros solo en los paquetes que formen parte de un proyecto configurado para utilizar el modelo de implementación del proyecto.  
   

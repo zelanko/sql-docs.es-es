@@ -11,19 +11,19 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: dabdf1d6f179ad240b304e39fc355c14477841ad
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: f8dd1654dc05a89147ecf9d658d492adeb3d0ceb
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar SQL Server Management Studio en Windows para administrar SQL Server en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este tema se presentan [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms) y le guía a través de un par de tareas comunes. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
+Este tema se presentan [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) y le guía a través de un par de tareas comunes. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
 
-[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms) forma parte de un conjunto de herramientas SQL que Microsoft ofrece gratuitamente para sus necesidades de desarrollo y administración. SSMS es un entorno integrado para tener acceso, configurar, administrar, administrar y desarrollar todos los componentes de SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker en macOS y base de datos de SQL Azure y almacenamiento de datos de SQL Azure. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos para proporcionar acceso a SQL Server a desarrolladores y administradores de todos los niveles.
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) forma parte de un conjunto de herramientas SQL que Microsoft ofrece gratuitamente para sus necesidades de desarrollo y administración. SSMS es un entorno integrado para tener acceso, configurar, administrar, administrar y desarrollar todos los componentes de SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker en macOS y base de datos de SQL Azure y almacenamiento de datos de SQL Azure. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos para proporcionar acceso a SQL Server a desarrolladores y administradores de todos los niveles.
 
 SSMS ofrece un amplio conjunto de capacidades de administración y desarrollo para SQL Server, incluidas herramientas para:
 
@@ -39,28 +39,28 @@ Vea [Use SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>Instale la versión más reciente de SQL Server Management Studio (SSMS)
 
-Al trabajar con SQL Server, debe utilizar siempre la versión más reciente de SQL Server Management Studio (SSMS). La versión más reciente de SSMS se actualiza continuamente y optimizado y funciona con SQL Server actualmente Linux de 2017. Para descargar e instalar la versión más reciente, consulte [descargar SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para mantenerse al día, la versión más reciente de SSMS le avisa cuando hay una nueva versión disponible para su descarga. 
+Al trabajar con SQL Server, debe utilizar siempre la versión más reciente de SQL Server Management Studio (SSMS). La versión más reciente de SSMS se actualiza continuamente y optimizado y funciona con SQL Server actualmente Linux de 2017. Para descargar e instalar la versión más reciente, consulte [descargar SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para mantenerse al día, la versión más reciente de SSMS le avisa cuando hay una nueva versión disponible para su descarga. 
 
 ## <a name="before-you-begin"></a>Antes de empezar
 - Vea [SSMS de uso en Windows para conectarse a SQL Server en Linux](sql-server-linux-develop-use-ssms.md) para saber cómo conectarse y consultar mediante SSMS
-- Leer la [problemas conocidos](sql-server-linux-release-notes.md) para SQL Server de 2017 RC2 en Linux
+- Leer la [problemas conocidos](sql-server-linux-release-notes.md) para SQL Server de 2017 en Linux
 
 ## <a name="create-and-manage-databases"></a>Crear y administrar las bases de datos
-Mientras está conectado a la *maestro* base de datos, puede crear bases de datos en el servidor y modificar o quitar bases de datos existentes. Los pasos siguientes describen cómo llevar a cabo varias tareas de administración de base de datos común a través de Management Studio. Para llevar a cabo estas tareas, asegúrese de que está conectado a la *maestro* base de datos con el inicio de sesión de la entidad de seguridad de nivel de servidor que creó al configurar SQL Server de 2017 RC2 en Linux.
+Mientras está conectado a la *maestro* base de datos, puede crear bases de datos en el servidor y modificar o quitar bases de datos existentes. Los pasos siguientes describen cómo llevar a cabo varias tareas de administración de base de datos común a través de Management Studio. Para llevar a cabo estas tareas, asegúrese de que está conectado a la *maestro* base de datos con el inicio de sesión de la entidad de seguridad de nivel de servidor que creó al configurar SQL Server 2017 en Linux.
 
 ### <a name="create-a-new-database"></a>Creación de una base de datos
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server de 2017 RC2 en Linux
+1. Inicie SSMS y conéctese a su servidor en SQL Server 2017 en Linux
 
 2. En el Explorador de objetos, haga doble clic en el *bases de datos* carpeta y, a continuación, haga clic en * nueva base de datos... "
 
 3. En el *nueva base de datos* cuadro de diálogo, escriba un nombre para la nueva base de datos y, a continuación, haga clic en *Aceptar*
 
-La nueva base de datos se creó correctamente en el servidor. Si desea crear una nueva base de datos mediante T-SQL, vea [CREATE DATABASE (SQL Server Transact-SQL)](/sql-docs/docs/t-sql/statements/create-database-sql-server-transact-sql).
+La nueva base de datos se creó correctamente en el servidor. Si desea crear una nueva base de datos mediante T-SQL, vea [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
 
 ### <a name="drop-a-database"></a>Quitar una base de datos
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server de 2017 RC2 en Linux
+1. Inicie SSMS y conéctese a su servidor en SQL Server 2017 en Linux
 
 2. En el Explorador de objetos, expanda el *bases de datos* carpeta para ver una lista de la base de datos en el servidor.
 
@@ -68,13 +68,13 @@ La nueva base de datos se creó correctamente en el servidor. Si desea crear una
 
 4. En el *Eliminar objeto* cuadro de diálogo, verificación *cerrar conexiones existentes* y, a continuación, haga clic en *Aceptar*
 
-La base de datos se quita correctamente desde el servidor. Si desea quitar una base de datos mediante T-SQL, vea [DROP DATABASE (SQL Server Transact-SQL)](/sql-docs/docs/t-sql/statements/drop-database-transact-sql).
+La base de datos se quita correctamente desde el servidor. Si desea quitar una base de datos mediante T-SQL, vea [DROP DATABASE (SQL Server Transact-SQL)](../t-sql/statements/drop-database-transact-sql.md).
 
 ## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>Utilice el Monitor de actividad para ver información acerca de la actividad de SQL Server
 
-El [Monitor de actividad](/sql-docs/docs/relational-databases/performance-monitor/activity-monitor) herramienta está integrada en SQL Server Management Studio (SSMS) y muestra información acerca de los procesos de SQL Server y cómo estos procesos afectan a la instancia actual de SQL Server.
+El [Monitor de actividad](../relational-databases/performance-monitor/activity-monitor.md) herramienta está integrada en SQL Server Management Studio (SSMS) y muestra información acerca de los procesos de SQL Server y cómo estos procesos afectan a la instancia actual de SQL Server.
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server de 2017 RC2 en Linux
+1. Inicie SSMS y conéctese a su servidor en SQL Server 2017 en Linux
 
 2. En el Explorador de objetos, haga clic en el *server* nodo y, a continuación, haga clic en *Monitor de actividad*
 
@@ -92,6 +92,6 @@ Cuando se expande un panel, Monitor de actividad consulta la instancia para obte
 - [Usar SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
 - [Exportar e importar una base de datos con SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
-- [Tutorial: Escribir instrucciones Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)
-- [Supervisión de la actividad y el rendimiento del servidor](/sql-docs/docs/relational-databases/performance/server-performance-and-activity-monitoring)
+- [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [Supervisión de la actividad y el rendimiento del servidor](../relational-databases/performance/server-performance-and-activity-monitoring.md)
 

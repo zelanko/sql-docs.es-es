@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Copia de seguridad y restauración de bases de datos SQL en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Puede realizar copias de seguridad de bases de datos de SQL Server de 2017 RC2 en Linux con las mismas herramientas como otras plataformas. En un servidor Linux, puede usar `sqlcmd` para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es el mismo en las distintas plataformas. Por ejemplo, puede hacer una copia las bases de datos localmente, en unidades remotas o a [servicio de almacenamiento de blobs de Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
+Puede realizar copias de seguridad de bases de datos desde SQL Server 2017 en Linux con las mismas herramientas como otras plataformas. En un servidor Linux, puede usar `sqlcmd` para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es el mismo en las distintas plataformas. Por ejemplo, puede hacer una copia las bases de datos localmente, en unidades remotas o a [servicio de almacenamiento de blobs de Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Copia de seguridad con sqlcmd
 
@@ -75,7 +75,7 @@ Puede usar SSMS desde un equipo de Windows para conectarse a una base de datos d
 
 Los pasos siguientes guían a través de una copia de seguridad con SSMS. 
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server de 2017 RC2 en Linux.
+1. Inicie SSMS y conéctese a su servidor en SQL Server 2017 en Linux.
 
 1. En el Explorador de objetos, haga doble clic en la base de datos, haga clic en **tareas**y, a continuación, haga clic en **realizar copias de seguridad...** .
 

@@ -1,7 +1,7 @@
 ---
 title: "Publicar y consumir código Python | Documentos de Microsoft"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>Publicar y consumir servicios web de Python
 
-**Se aplica a: 2017 CTP 2.0 (vista previa pública) de SQL Server**
+Puede implementar una solución de Python y en funcionamiento en un servicio web mediante la característica de puesta en marcha en el servidor de aprendizaje de máquina de Microsoft. En este tema se describe los pasos para publicar correctamente y, a continuación, ejecutar la solución.
 
-Puede implementar una solución de Python y en funcionamiento en un servicio web mediante la característica de puesta en marcha en el servidor de aprendizaje de máquina de Microsoft.
-
-Este tema describe los pasos a seguir, para publicar correctamente y, a continuación, ejecute la solución.
+> [!IMPORTANT]
+>
+> Este ejemplo se desarrolló para la versión de Python que se incluye con el servidor de aprendizaje de máquina (independiente) y utiliza las características de servidor de aprendizaje de máquina versión 9.1.0.
+ > 
+ > Para ver un ejemplo similar que aprovecha las características en la versión más reciente del servidor de aprendizaje de máquina de Microsoft, versión 9.2.0, consulte este artículo en el sitio del servidor de aprendizaje de máquina: [implementar y administrar servicios web de Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
 
 La audiencia de destino para este artículo es científicos de datos que desean obtener información sobre cómo publicar código Python o modelos como servicios web hospedados en el servidor de aprendizaje de máquina de Microsoft. El artículo también explica cómo las aplicaciones pueden consumir el el código o los modelos. Este artículo se supone que son expertos en Python.
 
-> [!IMPORTANT]
-> Servicios web de Python solo están disponibles en instalaciones basadas en Python de 2017 CTP 2.0 (vista previa pública) de SQL Server. Disponibilidad de esta característica se expandirá en futuras versiones.
+**Se aplica a: Server (independiente) de aprendizaje automático de SQL Server de 2017**
 
 ## <a name="overview-of-workflow"></a>Información general del flujo de trabajo
 

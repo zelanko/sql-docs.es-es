@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21b7d94bcf15e1ae2d99dd44f4b0030929b92111
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas de SQL Server en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este documento describe cómo solucionar problemas de Microsoft SQL Server que se ejecutan en Linux o en un contenedor de Docker. Cuando solucione problemas de SQL Server en Linux, asegúrese de recordar las limitaciones de esta versión de vista previa privada. Puede encontrar una lista de estas opciones en el [notas de la versión](sql-server-linux-release-notes.md).
+Este documento describe cómo solucionar problemas de Microsoft SQL Server que se ejecutan en Linux o en un contenedor de Docker. Cuando solucione problemas de SQL Server en Linux, recuerde que debe revisar las características compatibles y las limitaciones conocidas en el [SQL Server en las notas de la versión de Linux](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Solucionar problemas de errores de conexión
 Si tiene dificultades para conectarse a SQL Server de Linux, hay algunas cosas para comprobar. 
@@ -38,11 +38,11 @@ Si tiene dificultades para conectarse a SQL Server de Linux, hay algunas cosas p
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Una excepción a esta técnica se relaciona con máquinas virtuales de Azure. Para las máquinas virtuales de Azure, [buscar la dirección IP pública para la máquina virtual en el portal de Azure](sql-server-linux-azure-virtual-machine.md#connect).
+   > Una excepción a esta técnica se relaciona con máquinas virtuales de Azure. Para las máquinas virtuales de Azure, [buscar la dirección IP pública para la máquina virtual en el portal de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Si es aplicable, compruebe que ha abierto el puerto de SQL Server (predeterminado: 1433) en el firewall.
 
-- Para las máquinas virtuales de Azure, compruebe que tiene un [regla de grupo de seguridad de red para el puerto de SQL Server predeterminado](sql-server-linux-azure-virtual-machine.md#remote).
+- Para las máquinas virtuales de Azure, compruebe que tiene un [regla de grupo de seguridad de red para el puerto de SQL Server predeterminado](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Compruebe que el nombre de usuario y la contraseña no contienen los errores tipográficos o espacios en blanco adicionales o incorrecta entre mayúsculas y minúsculas.
 

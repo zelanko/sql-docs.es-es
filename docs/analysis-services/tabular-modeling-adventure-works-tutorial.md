@@ -22,10 +22,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 677198cbaa71a795d9e08d328b55d5d611901112
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 811b5df37a88fa7a03eec2b9bc05acb87ec67bcc
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
@@ -68,7 +68,7 @@ Este tutorial no proporciona lecciones ni información sobre cómo administrar u
 ## <a name="prerequisites"></a>Requisitos previos  
 Para completar este tutorial, necesitará los siguientes requisitos previos:  
   
--   La versión más reciente de [! INCLUIR[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+-   La versión más reciente de [! INCLUIR[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   La versión más reciente de SQL Server Management Studio. [Obtener la última versión](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   

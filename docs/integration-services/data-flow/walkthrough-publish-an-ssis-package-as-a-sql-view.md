@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o posterior con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Paso 1: Compilar e implementar un proyecto de SSIS en el catálogo de SSIS  
  En este paso, creará un paquete SSIS que extrae datos de un origen de datos compatible con SSIS (en este ejemplo, usaremos una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) y genera datos de salida con un componente de Destino de streaming de datos. Luego, compilará e implementará el proyecto de SSIS en el catálogo de SSIS.  
@@ -127,7 +127,7 @@ ms.lasthandoff: 09/21/2017
   
     4.  Haga clic en el botón **Avanzadas** . Debería abrirse el cuadro de diálogo **Configuración avanzada** .  
   
-    5.  Haga lo siguiente en ** ** este cuadro de diálogo:  
+    5.  Haga lo siguiente en ****  este cuadro de diálogo:  
   
         1.  Especifique el esquema de base de datos en el que quiere crear la vista (campo Esquema).  
   

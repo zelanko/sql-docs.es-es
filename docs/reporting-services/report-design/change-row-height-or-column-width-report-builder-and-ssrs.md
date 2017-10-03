@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Cambiar el alto de fila o el ancho de columna (Generador de informes y SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 09/21/2017
 3.  Haga clic para arrastrar el borde de la columna y muévalo hacia la derecha o hacia la izquierda para ajustar el ancho de columna.  
   
 ## <a name="see-also"></a>Vea también  
- [Región de datos Tablix (generador de informes y SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
- [Celdas de la región de datos Tablix, filas y columnas (generador de informes) y SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
+ [Región de datos Tablix (generador de informes y SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Celdas de la región de datos Tablix, filas y columnas (generador de informes) y SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tablas (generador de informes y SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices (generador de informes y SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
- [Listas (generador de informes y SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
+ [Matrices (generador de informes y SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Listas (generador de informes y SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tablas, Matrices y listas (generador de informes y SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

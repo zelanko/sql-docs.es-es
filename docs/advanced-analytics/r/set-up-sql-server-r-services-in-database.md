@@ -1,7 +1,7 @@
 ---
 title: "Configurar servicios de aprendizaje de máquina de SQL Server (In-Database) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurar servicios de aprendizaje de máquina de SQL Server (In-Database)
@@ -97,15 +97,15 @@ Para usar el aprendizaje automático, debe instalar a SQL Server 2016 o posterio
 
 6. En el **preparado para instalar** , comprueba que se incluyen los siguientes elementos y, a continuación, seleccionan **instalar**.
 
-   **SQL Server 2016**
-   - Servicios de Motor de base de datos
-   - R Services (en bases de datos)
-
    **SQL Server 2017**
    - Servicios de Motor de base de datos
    - Machine Learning Services (en base de datos)
    - R, Python o ambos
-    
+
+   **SQL Server 2016**
+   - Servicios de Motor de base de datos
+   - R Services (en bases de datos)
+
 7. Una vez completada la instalación, reinicie el equipo.
 
 ##  <a name="bkmk_enableFeature"></a>Paso 2: Habilitar los servicios de script externo
@@ -189,12 +189,15 @@ Sin embargo, si necesita ejecutar scripts de R desde un cliente de ciencia de da
 
 1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y seleccione **Nuevo inicio de sesión**.
 2. En el **inicio de sesión - nuevo** cuadro de diálogo, seleccione **búsqueda**.
-3. Seleccione el **tipos de objeto** y **grupos** casillas de verificación y desactive todas las demás casillas. 
-4. En **escriba el nombre de objeto a seleccionar**, tipo **SQLRUserGroup**y, a continuación, seleccione **comprobar nombres**.  
-    Debe resolver el nombre del grupo local que esté asociada con el servicio de la instancia Launchpad en algo similar a *instancename\SQLRUserGroup*. 
-5. Seleccione **Aceptar**.
-6. De forma predeterminada, el inicio de sesión se asigna al rol **público** y tiene permiso para conectarse al motor de base de datos.
-7. Seleccione **Aceptar**.
+3. Seleccione el **tipos de objeto** y **grupos** casillas de verificación y desactive todas las demás casillas.
+4. Haga clic en **avanzadas**, compruebe que la ubicación de búsqueda es el equipo actual y, a continuación, haga clic en **Buscar ahora**.
+5. Desplácese por la lista de cuentas de grupo en el servidor hasta que encuentre una que comience con `SQLRUserGroup`.
+    
+    + El nombre del grupo que esté asociada con el servicio Launchpad para la _instancia predeterminada_ es siempre **SQLRUserGroup**. Seleccione esta cuenta solo para la instancia predeterminada.
+    + Si usas un _con el nombre de instancia_, el nombre de instancia se anexa al nombre predeterminado, `SQLRUserGroup`. Por lo tanto, si la instancia se denomina "MLTEST", el nombre del grupo de usuario predeterminada para esta instancia sería **SQLRUserGroupMLTest**.
+5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo de búsqueda avanzada y compruebe que ha seleccionado la cuenta correcta para la instancia. Cada instancia puede usar solo su propio servicio de Launchpad y el grupo creado para ese servicio.
+6. Haga clic en **Aceptar** otra vez para cerrar el **Seleccionar usuario o grupo** cuadro de diálogo.
+7. En el **inicio de sesión - nuevo** cuadro de diálogo, haga clic en **Aceptar**. De forma predeterminada, el inicio de sesión se asigna al rol **público** y tiene permiso para conectarse al motor de base de datos.
 
 ### <a name="bkmk_AllowLogon"></a>Proporcionar a los usuarios permiso para ejecutar scripts externos
 

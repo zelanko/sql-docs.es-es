@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="installation-and-configuration"></a>Instalación y configuración
@@ -28,7 +28,7 @@ Instrucciones de instalación y configuración de base de datos OLTP de Wide Wor
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (o superior) o [base de datos de SQL Azure](https://azure.microsoft.com/services/sql-database/). Para obtener la versión completa del ejemplo, use SQL Server Evaluation, Developer o Enterprise Edition.
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
 
 ## <a name="download"></a>Descargar
 

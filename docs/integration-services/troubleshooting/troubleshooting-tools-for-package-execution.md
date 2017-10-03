@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Ayudar a garantizar la integridad de los datos mediante el uso de transacciones**. Para más información, vea [Transacciones de Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Detectar y controlar errores de paquetes mediante controladores de eventos  
  Se puede responder a los diversos eventos que generan el paquete y los objetos del paquete utilizando controladores de eventos.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solución de problemas de la ejecución de paquetes mediante el registro  
  Al habilitar el registro, se puede hacer un seguimiento de gran parte de lo que sucede en los paquetes en ejecución. Los proveedores de registro capturan información sobre los eventos especificados para su análisis posterior y guardan la información en una tabla de base de datos, un archivo plano, un archivo XML u otro formato de salida compatible.  
   
--   **Habilitar el registro**. Se puede precisar la salida del registro seleccionando solamente los eventos y solamente los datos que desea capturar. Para más información, consulte [Registro de Integration Services (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
+-   **Habilitar el registro**. Se puede precisar la salida del registro seleccionando solamente los eventos y solamente los datos que desea capturar. Para más información, consulte [Registro de Integration Services (SSIS)](../performance/integration-services-ssis-logging.md).  
   
--   **Seleccione el evento Diagnostic del paquete para solucionar problemas relativos al proveedor.** Existen una serie de mensajes de registro que pueden ayudarle a solucionar problemas relacionados con la interacción de un paquete con orígenes de datos externos. Para obtener más información, consulte [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
+-   **Seleccione el evento Diagnostic del paquete para solucionar problemas relativos al proveedor.** Existen una serie de mensajes de registro que pueden ayudarle a solucionar problemas relacionados con la interacción de un paquete con orígenes de datos externos. Para obtener más información, consulte [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Mejorar la salida predeterminada del registro**. Normalmente, el registro anexa filas al destino de registro cada vez que se ejecuta un paquete. Si bien cada fila de la salida del registro identifica el paquete por su nombre e identificador único, y también identifica la ejecución del paquete mediante un ExecutionID único, la gran cantidad de datos de salida del registro incluidos en una sola lista puede ser difícil de analizar.  
   

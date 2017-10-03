@@ -4,22 +4,22 @@ description: "Ejemplo de secuencia de comandos SQL Server - instalación desaten
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: de58e55b803eca22d3305f6e0a89f9e13883c627
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Ejemplo: Script de instalación desatendida de SQL Server para SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Esta secuencia de comandos de ejemplo Bash instala SQL Server 2017 RC2 en SUSE Linux Enterprise Server (SLES) v12 SP2 sin entrada interactiva. Proporciona ejemplos de cómo instalar el motor de base de datos, las herramientas de línea de comandos de SQL Server, Agente SQL Server y sigue los pasos posteriores a la instalación. Opcionalmente, puede instalar la búsqueda de texto completo y crear un usuario administrativo.
+Esta secuencia de comandos de ejemplo Bash instala 2017 de SQL Server en SUSE Linux Enterprise Server (SLES) v12 SP2 sin entrada interactiva. Proporciona ejemplos de cómo instalar el motor de base de datos, las herramientas de línea de comandos de SQL Server, Agente SQL Server y sigue los pasos posteriores a la instalación. Opcionalmente, puede instalar la búsqueda de texto completo y crear un usuario administrativo.
 
 > [!TIP]
 > Si no necesita una secuencia de comandos de instalación desatendida, la manera más rápida para instalar SQL Server es seguir el [tutorial de inicio rápido para SLES](quickstart-install-connect-suse.md). Para otros datos de configuración, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
@@ -31,7 +31,7 @@ Esta secuencia de comandos de ejemplo Bash instala SQL Server 2017 RC2 en SUSE L
 - Para otros requisitos del sistema, consulte [requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> SQL Server de 2017 RC2 requiere libsss_nss_idmap0, que no sean suministradas por los repositorios SLES predeterminado. Se puede instalar desde el SDK de Service Pack 2 SLES v12.
+> SQL Server 2017 requiere libsss_nss_idmap0, que no sean suministradas por los repositorios SLES predeterminado. Se puede instalar desde el SDK de Service Pack 2 SLES v12.
 
 ## <a name="sample-script"></a>Script de ejemplo
 

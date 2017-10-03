@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>Catálogo de base de datos
@@ -181,7 +181,7 @@ Se trata de los procedimientos empleados en una aplicación de cliente, como un 
 
 ### <a name="integration-schema"></a>Esquema de integración
 
-Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo necesario para la [paquete ETL](/sql-docs/docs/sample/world-wide-importers/etl-workflow).
+Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo necesario para la [paquete ETL](etl-workflow.md).
 
 ### <a name="dataloadsimulation-schema"></a>Esquema de DataLoadSimulation
 

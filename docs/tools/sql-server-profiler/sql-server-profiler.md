@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>¿Dónde está Profiler?
  
- Puede iniciar Profiler de diferentes maneras desde SSMS. [Este es un tema que se enumeran las formas de iniciar el generador de perfiles.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ Puede iniciar Profiler de diferentes maneras desde SSMS. [Este es un tema que se enumeran las formas de iniciar el generador de perfiles.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Captura y reproducción de datos de seguimiento 
 En la siguiente tabla se muestran las características que se recomienda usar en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para capturar y reproducir los datos de seguimiento.
@@ -57,8 +57,8 @@ En la siguiente tabla se muestran las características que se recomienda usar en
 ||||  
 |-|-|-|  
 |**Característica\carga de trabajo**|**Motor relacional**|**Analysis Services**|  
-|**Captura de seguimiento**|Interfaz gráfica de usuario de[eventos extendidos](/sql-docs/docs/relational-databases/extended-events/extended-events) en SQL Server Management Studio|SQL Server Profiler|  
-|**Reproducción de seguimiento**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
+|**Captura de seguimiento**|Interfaz gráfica de usuario de[eventos extendidos](../../relational-databases/extended-events/extended-events.md) en SQL Server Management Studio|SQL Server Profiler|  
+|**Reproducción de seguimiento**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una interfaz gráfica de usuario de Seguimiento de SQL que se usa para supervisar una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de Analysis Services. Puede capturar y guardar datos acerca de cada evento en un archivo o en una tabla para analizarlos posteriormente. Por ejemplo, puede supervisar un entorno de producción para ver qué procedimientos almacenados afectan negativamente al rendimiento al ejecutarse demasiado lentamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]se usa para actividades como:  

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Describe los tipos de regiones de datos que se pueden agregar al diseño de un informe. Las regiones de datos determinan la apariencia de un informe: en forma de tabla, matriz, lista o gráfico.  
   
- [Concepto de parámetros de informe (generador de informes y SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [Concepto de parámetros de informe (generador de informes y SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Describe los modos de definir y usar los parámetros de informe, y el modo en que se administran independientemente de la definición de informe en el servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  

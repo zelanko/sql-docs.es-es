@@ -1,6 +1,6 @@
 ---
 title: Migrar una base de datos de SQL Server de Windows a Linux | Documentos de Microsoft
-description: "En este tema se muestra cómo realizar la copia de seguridad de una base de datos de SQL Server en Windows y restaurarlo a una máquina de Linux que se ejecuta SQL Server 2017 RC2."
+description: "Este tutorial muestra cómo realizar la copia de seguridad de una base de datos de SQL Server en Windows y restaurarlo a una máquina de Linux que se ejecuta SQL Server 2017."
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar una base de datos de SQL Server de Windows para Linux con backup y restore
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Copia de seguridad de SQL Server y la característica de restauración es la manera recomendada para migrar una base de datos de SQL Server en Windows a SQL Server de 2017 RC2 en Linux. En este tutorial le guiará a través de los pasos necesarios para mover una base de datos de Linux con copia de seguridad y restauración técnicas.
+Copia de seguridad de SQL Server y la característica de restauración es la manera recomendada para migrar una base de datos de SQL Server en Windows a SQL Server 2017 en Linux. En este tutorial le guiará a través de los pasos necesarios para mover una base de datos de Linux con copia de seguridad y restauración técnicas.
 
 > [!div class="checklist"]
 > * Crear un archivo de copia de seguridad en Windows con SSMS
@@ -39,8 +39,7 @@ Los siguientes requisitos previos son necesarios para completar este tutorial:
   * Base de datos de destino para migrar.
 
 * Máquina Linux con instalado lo siguiente:
-  * SQL Server de 2017 RC2. Vea los tutoriales de instalación para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), o [Ubuntu](quickstart-install-connect-ubuntu.md).
-  * SQL Server de 2017 RC2 [herramientas de línea de comandos](sql-server-linux-setup-tools.md).
+  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), o [Ubuntu](quickstart-install-connect-ubuntu.md)) con las herramientas de línea de comandos.
 
 ## <a name="create-a-backup-on-windows"></a>Cree una copia de seguridad en Windows
 
@@ -182,7 +181,7 @@ Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE D
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, aprendió a realizar la copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que se ejecuta SQL Server 2017 RC2. También habrá aprendido cómo para:
+En este tutorial, aprendió a realizar la copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que se ejecuta SQL Server 2017. También habrá aprendido cómo para:
 > [!div class="checklist"]
 > * Usar SSMS y Transact-SQL para crear un archivo de copia de seguridad en Windows
 > * Instalar un shell de Bash en Windows

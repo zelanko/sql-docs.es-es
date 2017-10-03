@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c41e28d5083de71906106a09cf4b129d3e1907c5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a9684685e218cb0f2dd1fe01c11606ce750c66a2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Elegir herramientas de Microsoft Business Intelligence (BI) para análisis e informes
@@ -38,17 +38,17 @@ En la tabla siguiente se asignan las cargas de trabajo para el análisis de dato
 |Realizar análisis predictivos de autoservicio||||||[Complementos de minería de datos para Excel](http://msdn.microsoft.com/library/dn282385.aspx) (compatibles con Excel 2016)|  
 |Visualizar y explorar datos||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Mapas 3D](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Formular preguntas mediante consultas en lenguaje natural|||||[PREGUNTAS Y RESPUESTAS](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Acceder a informes mediante dispositivos móviles||||[HTML 5 (admite ver < archivos de 10MB)](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)<br/>(uso de las aplicaciones de Power BI para dispositivos móviles)|  
+|Acceder a informes mediante dispositivos móviles||||[HTML 5 (admite ver < archivos de 10MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(uso de las aplicaciones de Power BI para dispositivos móviles)|  
 |Colaborar y compartir|||[Sitios de SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Sitios de grupo de SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**BI corporativo**|Profesional de TI||||||  
-|Crear modelos corporativos multidimensionales/tabulares||||||[Analysis Services](/sql-docs/docs/analysis-services/analysis-services)|  
+|Crear modelos corporativos multidimensionales/tabulares||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Crear visualizaciones de datos ad-hoc|||[Power View para SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Crear paneles|||[Paneles de SharePoint](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Paneles en Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
-|Crear informes operativos||||||*[Reporting Services](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
-|Crear informes personalizados e incrustados|||||[Power BI incrustado](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
+|Crear informes operativos||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|Crear informes personalizados e incrustados|||||[Power BI incrustado](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Análisis avanzado**|Científico de datos||||||  
 |Realizar análisis predictivos de autoservicio||||||[Complementos de minería de datos para Excel](http://msdn.microsoft.com/library/dn282385.aspx) (compatibles con Excel 2016)|  
-|Usar algoritmos de minería de datos||||||[Minería de datos en Analysis Services](/sql-docs/docs/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Usar algoritmos de minería de datos||||||[Minería de datos en Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
  * Reporting Services tiene varias características que admiten la creación de informes paginados modernos.  
   

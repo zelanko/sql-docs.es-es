@@ -1,7 +1,7 @@
 ---
 title: Transacciones (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8660d0ac8d6205a94fdab24f41e41bac40a8671e
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: c09104746dff6c34d94192217b8f2635cb0adc67
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="transactions-transact-sql"></a>Transacciones (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Una transacción es una unidad única de trabajo. Si una transacción tiene éxito, todas las modificaciones de los datos realizadas durante la transacción se confirman y se convierten en una parte permanente de la base de datos. Si una transacción encuentra errores y debe cancelarse o revertirse, se borran todas las modificaciones de los datos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciona en los siguientes tres modos de transacción.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]opera en los siguientes modos de transacción:  
   
  Transacciones de confirmación automática  
  Cada instrucción individual es una transacción.  
@@ -49,19 +49,23 @@ ms.lasthandoff: 09/01/2017
   
  Transacciones de ámbito de lote  
  Una transacción implícita o explícita de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se inicia en una sesión de MARS (conjuntos de resultados activos múltiples), que solo es aplicable a MARS, se convierte en una transacción de ámbito de lote. Si no se confirma o revierte una transacción de ámbito de lote cuando se completa el lote, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la revierte automáticamente.  
-  
+
+> [!NOTE] 
+> Para conocer consideraciones especiales relacionadas con los productos de almacenamiento de datos, vea [transacciones (almacenamiento de datos de SQL)](transactions-sql-data-warehouse.md).   
+
 ## <a name="in-this-section"></a>En esta sección  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona las siguientes instrucciones de transacción.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona las siguientes instrucciones de transacción:  
   
 |||  
 |-|-|  
 |[BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
-|[COMENZAR LA TRANSACCIÓN](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
-|[CONFIRMAR TRANSACCIÓN](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[GUARDE LA TRANSACCIÓN](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
-|[CONFIRMAR EL TRABAJO](../../t-sql/language-elements/commit-work-transact-sql.md)||  
+|[BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
+|[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
+|[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vea también  
  [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
+

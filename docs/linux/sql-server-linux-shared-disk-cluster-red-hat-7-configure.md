@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
@@ -90,7 +90,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
    sudo ip addr show
    ```
 
-   Establecer el nombre del equipo en cada nodo. Asigne a cada nodo un nombre único que es de 15 caracteres o menos. Establece el nombre del equipo mediante la adición a `/etc/hosts`. La siguiente secuencia de comandos le permite editar `/etc/hosts` con `vi`. 
+   Establecer el nombre del equipo en cada nodo. Asigne a cada nodo un nombre único que es de 15 caracteres o menos. Establece el nombre del equipo mediante la adición a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
 
    ```bash
    sudo vi /etc/hosts
@@ -315,7 +315,7 @@ En este momento, ambas instancias de SQL Server se configuran para ejecutarse co
    sudo pcs cluster start --all
    ```
 
-   > Alta disponibilidad de RHEL complemento tiene agentes de barrera para KVM y VMWare. Barrera debe deshabilitarse en todos los demás hipervisores. No se recomienda deshabilitar agentes de barrera en entornos de producción. A partir de período de tiempo de RC2, no hay ningún agente de barrera para entornos de Hyper-v o en la nube. Si está ejecutando una de estas configuraciones, debe deshabilitar la barrera. \**NO se recomienda en un sistema de producción.**
+   > Alta disponibilidad de RHEL complemento tiene agentes de barrera para KVM y VMWare. Barrera debe deshabilitarse en todos los demás hipervisores. No se recomienda deshabilitar agentes de barrera en entornos de producción. A partir de período de tiempo, no hay ningún agente de barrera para entornos de Hyper-v o en la nube. Si está ejecutando una de estas configuraciones, debe deshabilitar la barrera. \**NO se recomienda en un sistema de producción.**
 
    El siguiente comando deshabilita a los agentes de barrera.
 

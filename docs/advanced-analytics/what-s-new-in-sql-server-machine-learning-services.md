@@ -2,7 +2,7 @@
 title: "¿Qué &#39; s nuevo en servicios de aprendizaje de máquina | Documentos de Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: es-es
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novedades en servicios de aprendizaje de máquina en SQL Server
@@ -30,16 +30,13 @@ En SQL Server 2017, aprendizaje automático pasa a ser más eficaz, con la adici
 
 ¡Detectar el último anuncio! [Python en SQL Server 2017: mejorada de aprendizaje automático en bases de datos](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Ahora puede ejecutar R en bases de datos de SQL Azure. Para obtener más información, consulte [este artículo](r/using-r-in-azure-sql-database.md), o este blog del equipo de desarrollo de SQL Server: [vista previa de anuncio de servicios de aprendizaje de máquina con el soporte técnico de R en la base de datos de SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 
 Servidor de aprendizaje de máquina de Microsoft en SQL Server proporciona ahora compatibilidad completa para crear e implementar soluciones de aprendizaje de máquina en R o Python. Estos son los aspectos destacados de esta versión:
 
-> [!IMPORTANT]
-> 
-> Servicios de aprendizaje de máquina, incluido el uso de R o Python, no se admiten cuando se ejecuta SQL Server en Linux o en la base de datos SQL de Azure. Buscar cambios en una versión posterior.
-> 
-> Puntuación nativo mediante la función de PREDICCIÓN se admite actualmente en la edición de Linux.
- 
 ### <a name="in-database-python-integration"></a>Integración de Python en bases de datos
 
 Puede ejecutar Python en procedimientos almacenados, o ejecutar de forma remota con el equipo de SQL Server como el contexto de ejecución de Python. Esta integración abre nuevas vías para la amplia comunidad de desarrolladores de Python y científicos de datos para aprovechar la eficacia de SQL Server. 
@@ -60,9 +57,13 @@ Ejecución de Python en bases de datos no está casi de aprendizaje automático,
 
 + Compatibilidad con Python en aprendizaje de máquina de Microsoft Server (independiente)
 
-    SQL Server 2017 incluye la opción para instalar una versión independiente de la plataforma de aprendizaje de automático de Microsoft. Mediante el uso de servidor de aprendizaje de máquina, puede distribuir y escalar código R o Python sin usar SQL Server.
+    SQL Server 2017 incluye la opción para instalar una versión independiente del servidor de aprendizaje de máquina de Microsoft. Mediante el uso de servidor de aprendizaje de máquina, puede distribuir y escalar código R o Python sin usar SQL Server.
 
-    Para obtener un ejemplo de Python que se ejecuta en el servidor de aprendizaje de máquina de Microsoft, consulte [publicar y consumir código Python](python/publish-consume-python-code.md).
+### <a name="linux-support"></a>Compatibilidad con Linux
+
+Aprendizaje automático que usan R o Python en bases de datos no se admite actualmente en SQL Server en Linux. Busque anuncios en una versión posterior.
+
+Sin embargo, en Linux puede realizar [puntuación nativo](sql-native-scoring.md) mediante la función de PREDICCIÓN de T-SQL. Puntuación nativo permite puntuar desde un modelo previamente entrenado muy rápido, sin llamar a, o incluso un tiempo de ejecución de R. Esto significa que puede usar SQL Server en Linux para generar predicciones muy rápidas, para atender a las aplicaciones cliente.
 
 ### <a name="new-algorithms"></a>Nuevos algoritmos
 

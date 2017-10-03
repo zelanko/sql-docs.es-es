@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a93a7d4c341cd035faba52e5626608ef362359cd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ae1fc34c07fe85e8ecea70f9cc582d2d7908676e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Paso 3: Prueba de concepto que se conecta a SQL con pyodbc
@@ -63,7 +63,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>Paso 3: Insertar una fila  
   
-En este ejemplo se muestra cómo ejecutar un [insertar](/sql-docs/docs/t-sql/statements/insert-transact-sql) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valor.    
+En este ejemplo se muestra cómo ejecutar un [insertar](../../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```python

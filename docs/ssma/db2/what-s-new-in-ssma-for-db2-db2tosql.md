@@ -2,7 +2,7 @@
 title: "¿Qué &#39; s de SSMA para DB2 (DB2ToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 03a3de915ae5426f15f04b95c0148610ec917047
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 8246a40f5fd59ae4d8a28f1e0315ea1a015e8e7d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>¿Qué &#39; s de SSMA para DB2 (DB2ToSQL)
 Este tema enumeran SSMA para cambios de DB2 en cada versión.  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+Se ha mejorado la versión v7.6 de SSMA para DB2 con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
 
 ## <a name="ssma-v75"></a>SSMA 7.5
 La versión 7.5 de SSMA para DB2 se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.

@@ -25,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0dd4e2e79166b803cc70220bcad12dc422eed337
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>Implementar paquetes con SSIS
@@ -57,14 +57,14 @@ Este tutorial está concebido para los usuarios familiarizados con las operacion
 - Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Bases de datos de ejemplo de Adventure Works 2014).     
 > **Nota** asegúrese de que tiene permiso para crear y quitar tablas en AdventureWorks u otros datos que use.         
     
--   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
 **Equipo de destino.** El equipo en el que implementará los paquetes **debe tener instalados los siguientes componentes:**    
     
 - SQL Server
 - Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Bases de datos de ejemplo de Adventure Works 2014). 
     
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

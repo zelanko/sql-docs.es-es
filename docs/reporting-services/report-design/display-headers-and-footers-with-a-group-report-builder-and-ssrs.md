@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Mostrar encabezados y pies de página con un grupo (Generador de informes y SSRS)
   Puede ayudar a controlar si una fila estática, como un encabezado o un pie de grupo, se representa en filas dinámicas asociadas a un grupo en una región de datos Tablix.  
   
- Para repetir todos los encabezados de columna o de fila en varias páginas, puede establecer propiedades para la región de datos Tablix. Para obtener más información, consulte [mostrar encabezados de fila y columna en varias páginas (generador de informes y SSRS)](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs).  
+ Para repetir todos los encabezados de columna o de fila en varias páginas, puede establecer propiedades para la región de datos Tablix. Para obtener más información, consulte [mostrar encabezados de fila y columna en varias páginas (generador de informes y SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
  Para controlar el comportamiento de representación para filas y columnas dinámicas asociadas a grupos anidados, o para filas y columnas estáticas asociadas a etiquetas o subtotales, debe establecer propiedades para el miembro de Tablix. Un miembro de Tablix representa una fila o una columna estática o dinámica. Un miembro estático se repite una vez. Por ejemplo, una fila de total general es una fila estática. Un miembro dinámico se repite una vez para cada instancia de grupo. Por ejemplo, una fila asociada a un grupo con la expresión de grupo [Territory] se repite una vez para cada valor único de territorio. Para obtener más información acerca de los miembros de tablix, vea [celdas de región de datos Tablix, filas y columnas &#40; El generador de informes &#41; y SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/21/2017
 5.  (Opcional) Obtenga una vista previa del informe. Donde sea posible, el representador de informes mantendrá este miembro con los miembros de grupo de columnas especificados.  
   
 ## <a name="see-also"></a>Vea también  
- [Celdas de la región de datos Tablix, filas y columnas (generador de informes) y SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Celdas de la región de datos Tablix, filas y columnas (generador de informes) y SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

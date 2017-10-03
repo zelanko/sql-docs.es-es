@@ -1,6 +1,6 @@
 ---
 title: Levantar y mover las cargas de trabajo de SQL Server Integration Services a la nube | Documentos de Microsoft
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Levantar y mover las cargas de trabajo de SQL Server Integration Services a la nube
@@ -48,14 +48,20 @@ Solamente debe aprovisionar los infrarrojos SSIS una vez. Después de eso, puede
 
 Factoría de datos también admite otros tipos de tiempos de ejecución de integración. Para obtener más información sobre el control remoto de SSIS y los otros tipos de tiempos de ejecución de integración, vea [en tiempo de ejecución de integración de Data Factory de Azure](/azure/data-factory/concepts-integration-runtime.md).
 
-## <a name="package-features-on-azure"></a>Características del paquete en Azure
+## <a name="prerequisites"></a>Requisitos previos
+Las capacidades descritas en este tema requieren la versión 17.2 o una versión posterior de SQL Server Data Tools (SSDT), pero no requieren 2017 de SQL Server o SQL Server 2016. Al implementar paquetes en Azure, el Asistente para la implementación de paquetes siempre actualiza los paquetes al formato de paquete más reciente.
+
+Para obtener más información sobre los requisitos previos de Azure, consulte [elevar y cambiar paquetes de SQL Server Integration Services (SSIS) en Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+
+## <a name="ssis-features-on-azure"></a>Características SSIS en Azure
+
 Al aprovisionar una instancia de base de datos de SQL para hospedar SSISDB, se instalan el Feature Pack de Azure para SSIS y el paquete redistribuible de acceso. Estos componentes proporcionan conectividad a los archivos de Excel y Access y a diversos orígenes de datos de Azure. No se puede instalar componentes de terceros para SSIS en este momento.
 
-Continuar a diseñar y compilar paquetes locales en SSDT, o en Visual Studio con SSDT instalado.
+El nombre de la base de datos de SQL que hospeda SSISDB se convierte en la primera parte del nombre de cuatro partes que se utilizará al implementar y administrar los paquetes de SSDT y SSMS - `<sql_database_name>.database.windows.net`.
 
 Tendrá que usar el modelo de implementación del proyecto, no el modelo de implementación de paquete, para los proyectos que se implementa en SSISDB en la base de datos de SQL Azure.
 
-El nombre de la base de datos de SQL que hospeda SSISDB se convierte en la primera parte del nombre de cuatro partes que se utilizará al implementar y administrar los paquetes de SSDT y SSMS - `<sql_database_name>.database.windows.net`.
+Continuar a diseñar y compilar paquetes locales en SSDT, o en Visual Studio con SSDT instalado.
 
 Para obtener información sobre cómo conectarse a orígenes de datos locales de la nube con la autenticación de Windows, vea [conectar a orígenes de datos locales con autenticación de Windows](ssis-azure-connect-with-windows-auth.md).
 

@@ -4,23 +4,23 @@ description: "Este tutorial de inicio rápido muestra cómo instalar SQL Server 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f530c1fb9f1d21054631598a2d2ff06d6e2c5f46
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
 ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Instalar a SQL Server y crear una base de datos en Ubuntu
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tutorial de inicio rápido, en primer lugar instale SQL Server 2017 RC2 en Ubuntu 16.04. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
+En este tutorial de inicio rápido, primero instalar SQL Server 2017 en Ubuntu 16.04. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
 > [!TIP]
 > Este tutorial requiere la intervención del usuario y una conexión a internet. Si está interesado en el [desatendida](sql-server-linux-setup.md#unattended) o [sin conexión](sql-server-linux-setup.md#offline) procedimientos de instalación, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
@@ -37,6 +37,9 @@ Para otros requisitos del sistema, consulte [requisitos del sistema para SQL Ser
 
 Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un terminal para instalar el **mssql server** paquete.
 
+> [!IMPORTANT]
+> Si anteriormente ha instalado una versión de CTP o versión RC de 2017 de SQL Server, primero debe quitar el antiguo repositorio antes de registrar uno de los repositorios de GA. Para obtener más información, vea [cambiar repositorios desde el repositorio de vista previa en el repositorio de GA](sql-server-linux-change-repo.md)
+
 1. Importar las claves GPG repositorio público:
 
    ```bash
@@ -46,8 +49,11 @@ Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un term
 1. Registre el repositorio de Microsoft SQL Server Ubuntu:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
+
+   > [!NOTE]
+   > Esto es el repositorio de actualización acumulativa (CU). Para obtener más información acerca de las opciones de repositorio y sus diferencias, vea [cambiar repositorios de origen](sql-server-linux-setup.md#repositories).
 
 1. Ejecute los comandos siguientes para instalar a SQL Server:
 
@@ -63,14 +69,10 @@ Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un term
    ```
 
    > [!TIP]
-   > Asegúrese de especificar una contraseña segura para la cuenta SA (mínimo 8 caracteres, incluidas letras mayúsculas y minúsculas, dígitos de base 10 o símbolos que no sean alfanuméricos).
+   > Si está tratando de 2017 de SQL Server en este tutorial, libremente tienen licencia las siguientes ediciones: Evaluation, Developer y Express.
 
-   > [!TIP]
-   > Al instalar RC2, no hay licencias adquiridas tienen que lleve a cabo cualquiera de las ediciones. Dado que es un candidato de versión comercial, independientemente de la edición que seleccione aparece el siguiente mensaje:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Este mensaje no refleja la edición que seleccionó. Se relaciona con el período de vista previa para RC2.
+   > [!NOTE]
+   > Asegúrese de especificar una contraseña segura para la cuenta SA (mínimo 8 caracteres, incluidas letras mayúsculas y minúsculas, dígitos de base 10 o símbolos que no sean alfanuméricos).
 
 1. Una vez que se realiza la configuración, compruebe que el servicio se está ejecutando:
 

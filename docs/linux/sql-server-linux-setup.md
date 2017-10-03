@@ -4,23 +4,23 @@ description: "Instalar, actualizar y desinstalar SQL Server en Linux. En este te
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
 ms.contentlocale: es-es
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tema se explica cómo instalar, actualizar y desinstalar SQL Server 2017 en Linux. SQL Server de 2017 RC2 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También está disponible como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
+En este tema se explica cómo instalar, actualizar y desinstalar SQL Server 2017 en Linux. SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También está disponible como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
 
 > [!TIP]
 > Para empezar a trabajar rápidamente, saltar a uno de los tutoriales de inicio rápido para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
@@ -51,6 +51,12 @@ SQL Server 2017 tiene los siguientes requisitos de sistema para Linux:
 
 > [!NOTE]
 > Motor de SQL Server ha sido probado hasta 1 TB de memoria en este momento.
+
+Si usa **Network File System (NFS)** recursos compartidos remotos en producción, tenga en cuenta los siguientes requisitos de soporte técnico:
+
+- Utilice la versión NFS **4.2 o posterior**. Las versiones anteriores de NFS son compatibles con las características necesarias, como fallocate y la creación de archivos dispersos, comunes a sistemas de archivos modernos.
+- Busque sólo el **/var/opt/mssql** directorios en el montaje NFS. No se admiten otros archivos, como los archivos binarios del sistema de SQL Server.
+- Asegúrese de que los clientes NFS usan la opción 'nolock' al montar el recurso compartido remoto.
 
 ## <a id="platforms"></a> Instalar SQL Server
 
@@ -91,7 +97,55 @@ Para revertir o degradación de SQL Server a una versión anterior, siga estos p
 > Solo se admite para degradar a una versión dentro de la misma versión principal, como SQL Server 2017.
 
 > [!IMPORTANT]
-> Degradación solo se admite entre RC2 y RC1 en este momento.
+> Degradación solo se admite entre RC1, RC2 y RTM en este momento.
+
+## <a id="repositories"></a>Cambiar los repositorios de origen
+
+Al instalar o actualizar SQL Server, obtendrá la versión más reciente de SQL Server desde el repositorio de Microsoft configurado. Es importante tener en cuenta que hay dos tipos principales de repositorios para cada distribución:
+
+- **Las actualizaciones acumulativas (CU)**: repositorio de actualización acumulativa The (CU) contiene los paquetes para la versión de SQL Server base y cualquier correcciones o mejoras desde esa versión. Las actualizaciones acumulativas son específicas de una versión de lanzamiento, por ejemplo, SQL Server 2017. Se publican a un ritmo regular.
+
+- **GDR**: repositorio el GDR contiene paquetes para la versión de SQL Server base y solo correcciones críticas y actualizaciones de seguridad desde esa versión. Estas actualizaciones también se agregan a la próxima versión CU.
+
+Cada versión CU y GDR contiene el paquete completo de SQL Server y todas las actualizaciones anteriores para ese repositorio. Se admite la actualización desde una versión GDR a una versión CU cambiando su repositorio configurado para SQL Server. También puede [degradar](#rollback) a cualquier versión dentro de la versión principal (por ejemplo: 2017).
+
+> [!NOTE]
+> Actualizar desde una CU no se admite la versión a una versión GDR.
+
+Para cambiar desde el repositorio GDR en el repositorio CU siga estos pasos:
+
+1. Eliminar el repositorio de vista previa configurada previamente.
+
+   | Plataforma | Comando de eliminación de repositorio |
+   |-----|-----|
+   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES GRANDE | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+
+1. Configure el nuevo repositorio.
+
+   | Plataforma | Repositorio | Command |
+   |-----|-----|-----|
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES GRANDE | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
+   | SLES GRANDE | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+
+1. Actualizar el sistema.
+
+   | Plataforma | Update (comando) |
+   |-----|-----|
+   | RHEL | `sudo yum update` |
+   | SLES GRANDE | `sudo zypper --gpg-auto-import-keys refresh` |
+   | Ubuntu | `sudo apt-get update` |
+
+
+1. [Instalar](#platforms) o [actualizar](#upgrade) SQL Server desde el repositorio de nuevo.
+
+   > [!IMPORTANT]
+   > En este punto, si decide realizar una instalación completa con la [tutoriales](#platforms), recuerde que acaba de configurar el repositorio de destino. No repita este paso en los tutoriales. Esto es especialmente cierto si configura el repositorio GDR, ya que los tutoriales usan el repositorio de CU.
 
 ## <a id="uninstall"></a>Desinstalar SQL Server
 

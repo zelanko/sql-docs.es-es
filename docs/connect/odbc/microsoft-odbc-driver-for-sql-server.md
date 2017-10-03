@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bbb36ba4a739f0c7871261b61d298428ec3b2191
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Controlador ODBC de Microsoft para SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ODBC es la API de acceso de datos nativo principal para aplicaciones escritas en C y C++ para SQL Server. No hay un controlador ODBC para la mayoría de los orígenes de datos. Otros lenguajes que pueden usar ODBC incluyen COBOL, Perl, PHP y Python. ODBC se usa ampliamente en escenarios de integración de datos.
 
-El controlador ODBC incluye herramientas como [ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) y [ **bcp**](/sql-docs/docs/tools/bcp-utility). El **sqlcmd** utilidad le permite ejecutar instrucciones Transact-SQL, procedimientos del sistema y secuencias de comandos SQL. El **bcp** forma masiva copia los datos entre una instancia de Microsoft SQL Server y un archivo de datos en un formato que elija. Puede usar **bcp** para importar muchas filas nuevas en tablas de SQL Server o para exportar datos de tablas a archivos de datos.  
+El controlador ODBC incluye herramientas como [ **sqlcmd** ](../../tools/sqlcmd-utility.md) y [ **bcp**](../../tools/bcp-utility.md). El **sqlcmd** utilidad le permite ejecutar instrucciones Transact-SQL, procedimientos del sistema y secuencias de comandos SQL. El **bcp** forma masiva copia los datos entre una instancia de Microsoft SQL Server y un archivo de datos en un formato que elija. Puede usar **bcp** para importar muchas filas nuevas en tablas de SQL Server o para exportar datos de tablas a archivos de datos.  
 
 ## <a name="code-example-in-c"></a>Ejemplo de código de C++
 

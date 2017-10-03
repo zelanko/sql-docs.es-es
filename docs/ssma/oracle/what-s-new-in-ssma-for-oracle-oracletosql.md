@@ -15,14 +15,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>¿Qué &#39; s de SSMA para Oracle (OracleToSQL)
 Este tema enumeran SSMA para cambios de Oracle en cada versión.  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+La versión v7.6 de SSMA para Oracle se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
 
 ## <a name="ssma-v75"></a>SSMA 7.5
 La versión 7.5 de SSMA para Oracle contiene los siguientes cambios:

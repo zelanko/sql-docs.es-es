@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3e2139cf2c56b1f716aac32aa6b3f71cb49a2d61
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/21/2017
 > [!NOTE]
 > Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que la base de datos **SSISDB** se adjuntada se detiene o no responde, el proceso de ISServerExec.exe finaliza. Se escribe un mensaje en un registro de eventos de Windows.  
 >   
->  Si los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmutan por error como parte de una conmutación por error de clúster, los paquetes en ejecución no se reinician. Puede usar los puntos de comprobación para reiniciar los paquetes. Para obtener más información, vea [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+>  Si los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmutan por error como parte de una conmutación por error de clúster, los paquetes en ejecución no se reinician. Puede usar los puntos de comprobación para reiniciar los paquetes. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="features-and-capabilities"></a>Características y capacidades  
   
@@ -563,7 +563,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
      ![Revisar los resultados en el Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "revisa los resultados en el Asistente para actualización de SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>AlwaysOn para el catálogo SSIS (SSISDB)
-  La característica Grupos de disponibilidad AlwaysOn es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Un grupo de disponibilidad admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como “bases de datos de disponibilidad”, que realizan la conmutación por error conjuntamente. Para obtener más información, vea [Grupos de disponibilidad AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
+  La característica Grupos de disponibilidad AlwaysOn es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Un grupo de disponibilidad admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como “bases de datos de disponibilidad”, que realizan la conmutación por error conjuntamente. Para obtener más información, vea [Grupos de disponibilidad AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  Con el objetivo de ofrecer alta disponibilidad al catálogo de SSIS (SSISDB) y su contenido (proyectos, paquetes, registros de ejecución, etc.), puede agregar la base de datos SSISDB (al igual que cualquier otra base de datos de usuario) a un grupo de disponibilidad AlwaysOn. Cuando se produce una conmutación por error, uno de los nodos secundarios se convierte automáticamente en el nuevo nodo principal.  
  
@@ -585,7 +585,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 2.  Instale SQL Server 2016 con la característica Integration Services (SSIS) en cada nodo del clúster.  
   
-3.  Habilitar a grupos de disponibilidad AlwaysOn para cada instancia de SQL Server. Consulte [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) para obtener más información.  
+3.  Habilitar a grupos de disponibilidad AlwaysOn para cada instancia de SQL Server. Consulte [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) para obtener más información.  
   
 ###  <a name="Firsttime"></a> Configuración de la compatibilidad con SSIS para AlwaysOn  
   
@@ -607,12 +607,12 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 3.  Haga clic en **Habilitar integración con CLR**. El catálogo usar los procedimientos almacenados de CLR.  
   
-4.  Haga clic en **Habilitar la ejecución automática del procedimiento almacenado de Integration Services al iniciar SQL Server** para permitir que el procedimiento almacenado [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) se ejecute cada vez que se reinicie la instancia del servidor de SSIS. El procedimiento almacenado realiza el mantenimiento del estado de las operaciones del catálogo de SSISDB. Corrige el estado de los paquetes que estaban en ejecución si y cuando la instancia del servidor de SSIS se bloquea.  
+4.  Haga clic en **Habilitar la ejecución automática del procedimiento almacenado de Integration Services al iniciar SQL Server** para permitir que el procedimiento almacenado [catalog.startup](../system-stored-procedures/catalog-startup.md) se ejecute cada vez que se reinicie la instancia del servidor de SSIS. El procedimiento almacenado realiza el mantenimiento del estado de las operaciones del catálogo de SSISDB. Corrige el estado de los paquetes que estaban en ejecución si y cuando la instancia del servidor de SSIS se bloquea.  
   
-5.  Escriba una **contraseña**y haga clic en **Aceptar**. La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para más información, consulte [Back Up a Database Master Key](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key).  
+5.  Escriba una **contraseña**y haga clic en **Aceptar**. La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para más información, consulte [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="Step2"></a> Paso 2: adición de SSISDB a un grupo de disponibilidad AlwaysOn  
- Puede agregar la base de datos SSISDB a un grupo de disponibilidad AlwaysOn prácticamente con el mismo procedimiento que emplearía para agregar cualquier otra base de datos de usuario a un grupo de disponibilidad. Consulte [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio).  
+ Puede agregar la base de datos SSISDB a un grupo de disponibilidad AlwaysOn prácticamente con el mismo procedimiento que emplearía para agregar cualquier otra base de datos de usuario a un grupo de disponibilidad. Consulte [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
  Debe escribir la contraseña que especificó al crear el catálogo de SSIS en la página **Seleccionar bases de datos** del **Asistente para nuevo grupo de disponibilidad** .  
   

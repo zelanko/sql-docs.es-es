@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>Modificar configuración de ámbito de base de datos (Transact-SQL)
@@ -80,7 +80,7 @@ PARA LA BASE DE DATOS SECUNDARIA
  
 Especifica la configuración de bases de datos secundarias (todas las bases de datos secundarias deben tener los valores idénticos).  
   
-MAXDOP ** = ** {\<valor > | PRINCIPAL}  
+MAXDOP  **=**  {\<valor > | PRINCIPAL}  
 **\<valor >**  
   
 Especifica el valor predeterminado MAXDOP configuración que debe utilizarse para las instrucciones. 0 es el valor predeterminado y se indica que se utilizará en su lugar la configuración del servidor. Reemplaza a la MAXDOP en el ámbito de la base de datos (a menos que se establece en 0) la **grado máximo de paralelismo** establece en el nivel de servidor mediante sp_configure. Sugerencias de consulta aún pueden reemplazar a la base de datos con ámbito de MAXDOP con el fin de optimizar las consultas específicas que requieran configuración diferente. Todas estas configuraciones están limitadas por el MAXDOP establecidos para el grupo de cargas de trabajo.   
@@ -96,7 +96,7 @@ PRIMARY
   
 Solo puede establecerse para los elementos secundarios, mientras la base de datos en el servidor principal e indica que la configuración se realizará la definida para la réplica principal. Si va a cambiar la configuración de los cambios principales, el valor en los servidores secundarios en consecuencia sin necesidad de establecer los servidores secundarios valor explícitamente. **PRINCIPAL** es la configuración predeterminada para los servidores secundarios.  
   
-LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | PRINCIPAL}  
+LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRINCIPAL}  
 
 Permite establecer el modelo de estimación de cardinalidad del optimizador de consultas para el SQL Server 2012 y la versión anterior independiente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que establece el modelo de estimación de cardinalidad del optimizador de consultas basado en el nivel de compatibilidad de la base de datos. Si se establece en **ON** es equivalente a habilitar [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
@@ -107,7 +107,7 @@ PRIMARY
   
 Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que la configuración de modelo de estimación de consulta optimizador cardinalidad en todas las secundarias será el valor establecido para el servidor principal. Si cambia la configuración en el servidor principal para el modelo de estimación de cardinalidad del optimizador de consultas, el valor en los servidores secundarios cambiará en consecuencia. **PRINCIPAL** es la configuración predeterminada para los servidores secundarios.  
   
-PARAMETER_SNIFFING ** = ** { **ON** | DESACTIVAR | PRINCIPAL}  
+PARAMETER_SNIFFING  **=**  { **ON** | DESACTIVAR | PRINCIPAL}  
 
 Habilita o deshabilita [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. Es equivalente a la [Marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -118,7 +118,7 @@ PRIMARY
   
 Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que el valor de esta configuración en todas las secundarias será el valor establecido para el servidor principal. Si la configuración en el servidor principal para el uso de [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) cambios, el valor en los servidores secundarios cambiará en consecuencia, sin necesidad de establecer los servidores secundarios valor explícitamente. Se trata de la configuración predeterminada para los servidores secundarios.  
   
-QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | PRINCIPAL}  
+QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRINCIPAL}  
 
 Habilita o deshabilita las revisiones de optimización de consulta, independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**. Esto es equivalente a habilitar [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -282,7 +282,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Recomendaciones y directrices para la opción de configuración "max degree of parallelism" en SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>Recursos LEGACY_CARDINALITY_ESTIMATION    
-* [Estimación de cardinalidad (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Estimación de cardinalidad (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>Recursos PARAMETER_SNIFFING    

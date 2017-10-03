@@ -4,23 +4,23 @@ description: "Este tutorial de inicio rápido muestra cómo instalar SQL Server 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Instalar a SQL Server y crear una base de datos en SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tutorial de inicio rápido, en primer lugar instale SQL Server 2017 RC2 en SUSE Linux Enterprise Server (SLES) v12 SP2. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
+En este tutorial de inicio rápido, en primer lugar instale 2017 de SQL Server en SUSE Linux Enterprise Server (SLES) v12 SP2. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
 > [!TIP]
 > Este tutorial requiere la intervención del usuario y una conexión a internet. Si está interesado en el [desatendida](sql-server-linux-setup.md#unattended) o [sin conexión](sql-server-linux-setup.md#offline) procedimientos de instalación, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
@@ -37,12 +37,18 @@ Para otros requisitos del sistema, consulte [requisitos del sistema para SQL Ser
 
 Para configurar SQL Server en SLES, ejecute los siguientes comandos en un terminal para instalar el **mssql server** paquete:
 
+> [!IMPORTANT]
+> Si anteriormente ha instalado una versión de CTP o versión RC de 2017 de SQL Server, primero debe quitar el antiguo repositorio antes de registrar uno de los repositorios de GA. Para obtener más información, vea [cambiar repositorios desde el repositorio de vista previa en el repositorio de GA](sql-server-linux-change-repo.md)
+
 1. Descargue el archivo de configuración del repositorio de Microsoft SQL Server SLES:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > Esto es el repositorio de actualización acumulativa (CU). Para obtener más información acerca de las opciones de repositorio y sus diferencias, vea [cambiar repositorios de origen](sql-server-linux-setup.md#repositories).
 
 1. Ejecute los comandos siguientes para instalar a SQL Server:
 
@@ -57,14 +63,10 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termin
    ```
 
    > [!TIP]
-   > Asegúrese de especificar una contraseña segura para la cuenta SA (mínimo 8 caracteres, incluidas letras mayúsculas y minúsculas, dígitos de base 10 o símbolos que no sean alfanuméricos).
+   > Si está tratando de 2017 de SQL Server en este tutorial, libremente tienen licencia las siguientes ediciones: Evaluation, Developer y Express.
 
-   > [!TIP]
-   > Al instalar RC2, no hay licencias adquiridas tienen que lleve a cabo cualquiera de las ediciones. Dado que es un candidato de versión comercial, independientemente de la edición que seleccione aparece el siguiente mensaje:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Este mensaje no refleja la edición que seleccionó. Se relaciona con el período de vista previa para RC2.
+   > [!NOTE]
+   > Asegúrese de especificar una contraseña segura para la cuenta SA (mínimo 8 caracteres, incluidas letras mayúsculas y minúsculas, dígitos de base 10 o símbolos que no sean alfanuméricos).
 
 1. Una vez que se realiza la configuración, compruebe que el servicio se está ejecutando:
 

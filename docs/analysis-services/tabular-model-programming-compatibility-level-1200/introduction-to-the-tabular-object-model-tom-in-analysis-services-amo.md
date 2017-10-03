@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introducción al modelo de objetos Tabular (TOM) en Analysis Services AMO
@@ -51,17 +51,17 @@ TOM se basa en la infraestructura AMO, que incorpora también Multidimensional y
 Esto tiene algunas implicaciones resulta muy prácticos.
 Primer lugar, cuando se administran los objetos que no se especifican en los metadatos tabulares (como un **Server** o **base de datos**), debe aprovechar partes de la pila AMO existente que describen esos objetos. Junto con la API heredada es el concepto de objetos principales y secundarios que proporcionan descripciones granular de estado del objeto como detectado desde el servidor, o cuando se guarda en el servidor. La clase de elemento MajorObject en el espacio de nombres de Microsoft.AnalysisServices expone métodos para **actualizar** y **actualización**. Los objetos secundarios son única actualización o guardar a través del objeto principal que los contiene.
 
-En cambio, cuando se administran los objetos que forman parte de los metadatos tabulares (como **modelo** o **tabla**), que aproveche una pila Tabular completamente nueva. En esta pila, las actualizaciones son específicas, lo que significa cada objeto de metadatos (derivado de la **MetadataObject** clase en el espacio de nombres Microsoft.AnalysisServices.Tabular) pueden guardarse por separado en el servidor. Por lo general, debería detectar toda la **modelo**, a continuación, realizar cambios en objetos de metadatos individuales en él (como **tabla** o **columna**), a continuación, llamar a ** Model.SaveChanges()** método (que entiende los cambios realizados por el usuario en un nivel específico), enviar comandos al servidor para actualizar solo los objetos que ha cambiado.
+En cambio, cuando se administran los objetos que forman parte de los metadatos tabulares (como **modelo** o **tabla**), que aproveche una pila Tabular completamente nueva. En esta pila, las actualizaciones son específicas, lo que significa cada objeto de metadatos (derivado de la **MetadataObject** clase en el espacio de nombres Microsoft.AnalysisServices.Tabular) pueden guardarse por separado en el servidor. Por lo general, debería detectar toda la **modelo**, a continuación, realizar cambios en objetos de metadatos individuales en él (como **tabla** o **columna**), a continuación, llamar a  **Model.SaveChanges()** método (que entiende los cambios realizados por el usuario en un nivel específico), enviar comandos al servidor para actualizar solo los objetos que ha cambiado.
 
 ### <a name="tom-and-xmla"></a>TOM y XMLA
 
-En la conexión, TOM usa el protocolo XMLA para comunicarse con el servidor de Analysis Services y para administrar los objetos. Al administrar los objetos no tabulares, TOM usa [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla), la extensión de Analysis Services Scripting Language de XMLA. Al administrar los objetos tabulares, TOM usa el protocolo tabular de SSAS, también una extensión de XMLA. Vea [documentación del protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obtener más información.
+En la conexión, TOM usa el protocolo XMLA para comunicarse con el servidor de Analysis Services y para administrar los objetos. Al administrar los objetos no tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), la extensión de Analysis Services Scripting Language de XMLA. Al administrar los objetos tabulares, TOM usa el protocolo tabular de SSAS, también una extensión de XMLA. Vea [documentación del protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obtener más información.
 
 ### <a name="tom-and-json"></a>TOM y JSON
 
-Los metadatos tabulares, que se estructuran como documentos JSON, tiene una sintaxis nueva de definición modelo comando y el objeto a través de Tabular Model Scripting Language [TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference). El lenguaje de scripting utiliza JSON para el cuerpo de solicitudes y respuestas.
+Los metadatos tabulares, que se estructuran como documentos JSON, tiene una sintaxis nueva de definición modelo comando y el objeto a través de Tabular Model Scripting Language [TMSL](../tabular-model-scripting-language-tmsl-reference.md). El lenguaje de scripting utiliza JSON para el cuerpo de solicitudes y respuestas.
 
-Aunque TMSL y TOM exponen los mismos objetos (**tabla**, **columna**, etc.) y las mismas operaciones (**crear**, **eliminar**, ** Actualizar**), TOM no usa TMSL en la conexión (usa el protocolo MS-SSAS tabular en su lugar, como se indicó anteriormente).
+Aunque TMSL y TOM exponen los mismos objetos (**tabla**, **columna**, etc.) y las mismas operaciones (**crear**, **eliminar**,  **Actualizar**), TOM no usa TMSL en la conexión (usa el protocolo MS-SSAS tabular en su lugar, como se indicó anteriormente).
 
 Como un usuario, puede elegir si desea administrar las bases de datos tabulares a través de la biblioteca de TOM desde su programa de C# o un script de PowerShell o mediante un script de TMSL ejecutadas a través de PowerShell, SQL Server Management Studio (SSMS) o un trabajo del Agente SQL Server.
 

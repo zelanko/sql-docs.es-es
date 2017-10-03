@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  Un gráfico de rectángulos divide el área del gráfico en los rectángulos que representan los diferentes niveles y tamaños relativos de la jerarquía de datos. La distribución se asemeja a las ramas de un árbol, que parten de un tronco y se dividen en ramas cada vez más pequeñas. Cada rectángulo se divide en rectángulos más pequeños que representan el siguiente nivel en la jerarquía. Los rectángulos de nivel superior del gráfico se ordenan de forma que el rectángulo más grande quede en la esquina superior izquierda y el más pequeño, en la inferior derecha.  Dentro de cada rectángulo, el siguiente nivel del más alto también se organiza con rectángulos en la misma distribución, de la esquina superior izquierda a la inferior derecha.  
   
- Por ejemplo, en la siguiente imagen del gráfico de rectángulos de ejemplo, el territorio del suroeste de EE. UU. es el más grande y Alemania es el más pequeño. En el suroeste de EE. UU., las bicicletas de carretera se han vendido más que las de montaña.  
+ Por ejemplo, en la siguiente imagen de los rectángulos de ejemplo, el territorio del suroeste es la más grande y Alemania es el más pequeño. En el suroeste de EE. UU., las bicicletas de carretera se han vendido más que las de montaña.  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Para insertar un gráfico de rectángulos y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
- **Nota:** Antes de agregar un gráfico al informe, crear un origen y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
+   
+[!NOTE] Antes de agregar un gráfico a un informe, cree un origen de datos y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
   
 1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar**y, después, **Gráfico** .  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Para insertar un gráfico de proyección solar y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
- **Nota:** Antes de agregar un gráfico al informe, crear un origen y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
+ [!NOTE] Antes de agregar un gráfico a un informe, cree un origen de datos y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
   
 1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar**y, después, **Gráfico** .  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  Cambie el título predeterminado del gráfico a "Ventas categorizadas por territorio, con motivo de venta".  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para agregar los valores de los grupos de categorías al gráfico de proyección solar como etiquetas, establezca la propiedad de etiqueta **Visible** en True y **UseValueAsLabel**en False.<br /><br /> Los valores de etiqueta que se muestran vienen determinados por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 8 pt en lugar del valor predeterminado de 10 pt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para agregar los valores de los grupos de categorías al gráfico de proyección solar como etiquetas, establezca la propiedad de etiqueta **Visible** en True y **UseValueAsLabel**en False.<br /><br /> Los valores de etiqueta que se muestran vienen determinados por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 8 pt en lugar del valor predeterminado de 10 pt.|
   
 7.  Si desea utilizar una gama de colores distinta, cambie la propiedad **Paleta** del gráfico.  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   

@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acceso personalizado a datos de dimensión (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/21/2017
  La seguridad básica de las dimensiones es más sencilla; basta con seleccionar los atributos de dimensión y las jerarquías de atributo que quiera incluir o excluir del rol. La seguridad avanzada resulta más compleja y requiere conocimientos expertos en la generación de scripts MDX. Ambos enfoques se describen a continuación.  
 
 > [!NOTE]  
->  Las siguientes instrucciones presuponen que existe una conexión de cliente que emite consultas en MDX. Si el cliente usa DAX, como Power View en Power BI, la seguridad de dimensión no es evidente en los resultados de la consulta. Vea [Descripción de Power View para modelos multidimensionales](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models) para obtener más información.
+>  Las siguientes instrucciones presuponen que existe una conexión de cliente que emite consultas en MDX. Si el cliente usa DAX, como Power View en Power BI, la seguridad de dimensión no es evidente en los resultados de la consulta. Vea [Descripción de Power View para modelos multidimensionales](understanding-power-view-for-multidimensional-models.md) para obtener más información.
       
 ## <a name="prerequisites"></a>Requisitos previos  
  No todas las medidas o miembros de dimensión se pueden usar en escenarios de acceso personalizados. Si hay un rol que restringe el acceso a una medida o miembro predeterminado o a medidas que forman parte de expresiones de medida, se producirá un error en la conexión.  

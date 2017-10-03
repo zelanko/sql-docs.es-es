@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
@@ -355,7 +355,7 @@ Se han corregido los problemas siguientes en esta versión:
 
 * Se ha corregido un problema detectado en SSMS 16.5.2 que provocaba la expansión del nodo "Tabla" cuando la tabla tenía más de una columna dispersa.
 
-* Los usuarios pueden implementar paquetes SSIS que contienen el Administrador de conexiones OData que se conectan a un recurso de Microsoft Dynamics AX/CRM Online en el catálogo de SSIS. Para obtener más información, vea [Administrador de conexiones OData](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
+* Los usuarios pueden implementar paquetes SSIS que contienen el Administrador de conexiones OData que se conectan a un recurso de Microsoft Dynamics AX/CRM Online en el catálogo de SSIS. Para obtener más información, vea [Administrador de conexiones OData](../integration-services/connection-manager/odata-connection-manager.md).
 
 * La configuración de Always Encrypted en una tabla existente produce errores en los objetos relacionados. [Id. de Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ Disponible con carácter general | Número de versión: 13.0.15700.28
 
 * [Nueva opción de autenticación **'Autenticación universal de Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Se trata de un mecanismo de autenticación basado en token impulsado por Azure Active Directory que es compatible con mecanismos de autenticación integrados, contraseñas y multifactor.
 
-* Nuevas plantillas de eventos extendidos que coinciden con la funcionalidad de las plantillas de SQL Server Profiler [(Microsoft Connect, n.º 2543925).](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
+* Nuevas plantillas de eventos extendidos que coinciden con la funcionalidad de las plantillas de SQL Server Profiler [(Microsoft Connect, n.º 2543925).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * Nuevos cuadros de diálogo Crear base de datos y propiedades de bases de datos para Bases de datos SQL de Azure.
 

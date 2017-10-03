@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
-Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
 
@@ -368,7 +368,7 @@ Número de compilación: 14.0.60812.0
 
 - **Numeración y control de versiones de lanzamientos:** las versiones ahora se etiquetan numéricamente en lugar de por mes. Esto es coherente con la nueva directiva SSMS y simplifica los casos en los que existen numerosas versiones o revisiones en un mes. Esta versión es 16.3, lo que significa que es la tercera actualización tras el lanzamiento de RTM. Las revisiones se identificarían como 16.3.1 y así sucesivamente. Nuestra próxima actualización será la 16.4 (prevista para el próximo mes).
 - **Analysis Services: Explorador de modelos tabulares:** el Explorador de modelos tabulares le permite navegar fácilmente a través de los distintos objetos de metadatos en un modelo, como orígenes de datos, tablas, medidas y relaciones. Se implementa como una ventana de herramientas independiente que puede mostrar abriendo el menú Ver en Visual Studio, apuntando a Otras ventanas y haciendo clic luego en Explorador de modelos tabulares. El Explorador de modelos tabulares aparece de forma predeterminada en el área del Explorador de soluciones, en una pestaña independiente. El Explorador de modelos tabulares organiza los objetos de metadatos en una estructura de árbol muy similar al esquema de un modelo tabular 1200 y con muchas más características nuevas.
-- **Herramientas para bases de datos: Always Encrypted:** esta versión proporciona nuevos cuadros de diálogo de [administración de claves de Always Encrypted](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted) para agregar fácilmente claves maestras de columna o claves de cifrado de columna al proyecto de base de datos o una base de datos activa en el Explorador de objetos de SQL Server. Esta versión admite certificados en el almacén de certificados de Windows. En las próximas versiones, se admitirán Azure Key Vault y proveedores CNG.
+- **Herramientas para bases de datos: Always Encrypted:** esta versión proporciona nuevos cuadros de diálogo de [administración de claves de Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) para agregar fácilmente claves maestras de columna o claves de cifrado de columna al proyecto de base de datos o una base de datos activa en el Explorador de objetos de SQL Server. Esta versión admite certificados en el almacén de certificados de Windows. En las próximas versiones, se admitirán Azure Key Vault y proveedores CNG.
     - Al crear la clave maestra de columna o la clave de cifrado de columna, es posible que experimente que los cambios no se reflejan en el Explorador de objetos de SQL Server inmediatamente después de hacer clic en Actualizar base de datos. Para solucionar este problema, actualice el nodo de base de datos en el Explorador de objetos de SQL Server.
     - Si intenta cifrar una columna en una tabla con datos del Explorador de objetos de SQL Server, puede experimentar un error. Actualmente, esta característica se admite únicamente en proyectos de base de datos de SSDT y SSMS. La compatibilidad con el Explorador de objetos de SQL Server se habilitará en una versión posterior.
 
@@ -456,7 +456,7 @@ Ya se ha publicado Disponibilidad general (GA) de SSDT. La actualización de SSD
 [Descargar SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) (Versiones anteriores de SQL Server Data Tools [SSDT y SSDT-BI])  
 [Novedades de SQL Server 2016 (motor de base de datos)](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Novedades de Analysis Services](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
-[Novedades de Integration Services en SQL Server 2016](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
+[Novedades de Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
 

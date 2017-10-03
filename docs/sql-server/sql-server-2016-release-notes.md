@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: d9c156a1305606948daf277d7b4436372c291e53
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de la versión de SQL Server 2016
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
     
 [![Azure Virtual Machine pequeña](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** para poner en marcha una máquina virtual con SQL Server 2016 SP1 ya instalado.
     
-[![Descargar SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS:** Para obtener la versión más reciente de SQL Server Management Studio, consulte **[Descarga de SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**.   
+[![Descargar SSMS](../ssms/download-sql-server-management-studio-ssms.md) **SSMS:** Para obtener la versión más reciente de SQL Server Management Studio, consulte **[Descarga de SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.   
     
  Para obtener más información sobre las novedades, vea el artículo de [novedades de SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -115,11 +115,11 @@ Considere también las opciones de limpieza manual para impedir que el almacén 
 
 De igual modo, ejecute regularmente los siguientes procedimientos almacenados de almacén de consultas para limpiar las estadísticas de tiempo de ejecución o consultas o planes específicos:
 
--    ```sp_query_store_reset_exec_stats```
+- `sp_query_store_reset_exec_stats`
 
--    ```sp_query_store_remove_plan```
+- `sp_query_store_remove_plan`
 
--    ```sp_query_store_remove_query```
+- `sp_query_store_remove_query`
 
 
 ###  <a name="bkmk_ga_docs"></a> Documentación del producto (disponibilidad general) 

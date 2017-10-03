@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
@@ -38,7 +38,7 @@ En esta página se proporciona información de resumen y vínculos a informació
 
  **Pruebe SQL Server hoy** 
 - Descargue la edición **gratuita** [**SQL Server 2016 Developer**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Descargue la última versión de [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). 
+- Descargue la última versión de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
 - ¿Tiene una cuenta de Azure? Ponga en marcha una [máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 ## <a name="sql-server-2016-database-engine"></a>Motor de base de datos de SQL Server 2016
@@ -99,7 +99,7 @@ Microsoft ha renovado por completo Reporting Services en esta versión.
 - **Motor de representación del informe rediseñado** que es compatible con HTML5 
 - Nuevos **tipos de gráficos** de rectángulos y de proyección solar 
 
-Vea [Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).
+Vea [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Pasos siguientes   
 - [Programa de instalación de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   

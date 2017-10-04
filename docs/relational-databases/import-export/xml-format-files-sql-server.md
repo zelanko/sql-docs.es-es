@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a> Atributos del elemento \<FIELD>  
  En esta sección se describen los atributos del elemento \<FIELD>, que se resumen en la sintaxis de esquema siguiente:  
   
- \<FIELD  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a> Atributos del elemento \<COLUMN>  
  En esta sección se describen los atributos del elemento \<COLUMN>, que se resumen en la sintaxis de esquema siguiente:  
   
- \<COLUMN  
+ <COLUMN   
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> Colocar el valor xsi:type en un conjunto de datos  
  Si un documento XML se valida con el lenguaje de definición de esquema XML (XSD), el valor xsi:type no se coloca en el conjunto de datos. No obstante, puede colocar la información de xsi:type en el conjunto de datos si carga el archivo de formato XML en un documento XML (por ejemplo, `myDoc`), tal como ilustra el siguiente fragmento de código:  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  Los campos de datos se corresponden uno a uno con las columnas de la tabla. En el elemento `<ROW>` , el archivo de formato asigna la columna `Age` al primer campo, la columna `FirstName` al segundo campo y la columna `LastName` al tercer campo.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  En el elemento `<ROW>` , el archivo de formato asigna la columna `Age` al primer campo, la columna `FirstName` al tercer campo y la columna `LastName` al segundo campo.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  En el elemento `<ROW>` , el archivo de formato asigna la columna `Age` al primer campo, la columna `FirstName` al tercer campo y la columna `LastName` al cuarto campo.  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. Asignar el xsi:type \<FIELD> al xsi:type \<COLUMN>  
  En el ejemplo siguiente se muestran tipos de campos diferentes y sus asignaciones a columnas.  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. Asignar datos XML a una tabla  
  En el ejemplo siguiente se crea una tabla vacía de dos columnas (`t_xml`), en la que la primera columna se asigna al tipo de datos `int` y la segunda columna se asigna al tipo de datos `xml` .  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  El siguiente archivo de formato XML carga un archivo de datos en una tabla `t_xml`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. Importar campos de longitud fija o de ancho fijo  
  En el siguiente ejemplo se describen campos fijos de `10` o `6` caracteres cada uno. El archivo de formato representa estas longitudes y anchos de campo como `LENGTH="10"` y `LENGTH="6"`, respectivamente. Cada una de las filas de los archivos de datos termina con una combinación de retorno de carro y avance de línea, {CR}{LF}, que el archivo de formato representa como `TERMINATOR="\r\n"`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  

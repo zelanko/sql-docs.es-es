@@ -160,7 +160,7 @@ En este momento, ambas instancias de SQL Server se configuran para ejecutarse co
 4. **Instale el agente de recursos de FCI para SQL Server**. Ejecute los siguientes comandos en ambos nodos:
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```

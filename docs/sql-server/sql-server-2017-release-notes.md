@@ -1,7 +1,7 @@
 ---
 title: "Notas de la versión de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
-En este tema se describen las limitaciones y los problemas de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Para obtener información relacionada, consulte estos artículos:
-- [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-- [Notas de la versión de SQL Server 2017 en Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+En este tema se describen las limitaciones y los problemas de SQL Server 2017. Para obtener información relacionada, consulte estos artículos:
+- [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Notas de la versión de SQL Server en Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Pruébelo:** [descargue la versión más reciente de SQL Server 2017: RC2, agosto de 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+**Probar SQL Server**
+- [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Descargar SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Creación de una máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Poner en marcha una máquina virtual con SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server de 2017: versión de disponibilidad general (octubre de 2017)
+### <a name="database-engine"></a>Motor de base de datos
+
+- **Problema e impacto en el cliente:** después de la actualización, el recurso compartido de red FILESTREAM puede dejar de estar disponible.
+
+- **Solución alternativa:** en primer lugar, reinicie el equipo y compruebe si el recurso compartido de red FILESTREAM está disponible. Si el recurso compartido aún no está disponible, haga lo siguiente:
+
+    1. En el Administrador de configuración de SQL Server, haga clic con el botón derecho en la instancia de SQL Server y haga clic en **Propiedades**. 
+    2. En la pestaña **FILESTREAM**, borre **Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos** y después haga clic en **Aplicar**.
+    3. Seleccione **Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos** de nuevo con el nombre del recurso compartido original y haga clic en **Aplicar**.
+
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- **Problema e impacto en el cliente:** en la página de permisos de usuario, al conceder permisos al nivel de raíz en la vista de árbol de entidades, verá el siguiente error: `"The model permission cannot be saved. The object guid is not valid"`.
+
+- **Soluciones alternativas:** 
+  - Conceda permisos a los subnodos en la vista de árbol en lugar de a nivel de raíz.
+  - o bien
+  - Ejecute el script descrito en el blog del equipo de MDS sobre el [error al aplicar los permisos en el nivel de entidad](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
+
+### <a name="analysis-services"></a>Analysis Services
+- **Problema e impacto en el cliente:** para los modelos tabulares en el nivel de compatibilidad 1400, al usar Get Data, los conectores de datos de algunos orígenes de datos, como Amazon Redshift, IBM Netezza e Impala, todavía no están disponibles.
+- **Solución alternativa** : ninguna.   
+
+- **Problema e impacto en el cliente:** los modelos de DirectQuery con el nivel de compatibilidad 1400 con perspectivas pueden generar errores al consultar o detectar metadatos.
+- **Solución alternativa:** elimine las perspectivas y vuelva a realizar la implementación.
+
+### <a name="tools"></a>Herramientas
+- **Problema e impacto en el cliente:** la ejecución de *DReplay* genera un error con el siguiente mensaje: "Error DReplay Unexpected error occurred!" (Error inesperado de DReplay).
+- **Solución alternativa** : ninguna.
+
+
+![barra_horizontal](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2: agosto de 2017)
 Para esta versión no hay notas de la versión de SQL Server en Windows. Consulte [Notas de la versión de SQL Server 2017 en Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+
 
 ![barra_horizontal](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 Release Candidate (RC1, julio de 2017)

@@ -105,45 +105,25 @@ Si *startdate* y *enddate* son de tipos de datos de fecha diferentes y uno tiene
 ## <a name="datepart-boundaries"></a>Límites de datepart  
 Las instrucciones siguientes tienen el mismo *startdate* y el mismo *endate*. Esas fechas son adyacentes y difieren y tienen una diferencia horaria de 0,0000001 segundos. La diferencia entre el *startdate* y *endate* en cada instrucción cruza un límite de calendario u hora de su *datepart*. Cada instrucción devuelve 1. Si se utilizan años diferentes en este ejemplo y si tanto *startdate* y *endate* están en la misma semana del calendario, el valor devuelto para **semana** será 0.
   
-`SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999'`
+`SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`, '2006-01-01 00:00:00.0000000');`
+`SELECT DATEDIFF(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`SELECT DATEDIFF(quarter, '2005-12-31 23:59:59.9999999'`
+`SELECT DATEDIFF(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`, '2006-01-01 00:00:00.0000000');`
+`SELECT DATEDIFF(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`SELECT DATEDIFF(month, '2005-12-31 23:59:59.9999999'`
+`SELECT DATEDIFF(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`, '2006-01-01 00:00:00.0000000');`
+`SELECT DATEDIFF(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`SELECT DATEDIFF(dayofyear, '2005-12-31 23:59:59.9999999'`
+`SELECT DATEDIFF(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`, '2006-01-01 00:00:00.0000000');`
+`SELECT DATEDIFF(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`SELECT DATEDIFF(day, '2005-12-31 23:59:59.9999999'`
+`SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(week, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(hour, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(minute, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
+`SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
   
 ## <a name="remarks"></a>Comentarios  
 DATEDIFF se puede usar en la lista de selección y en las cláusulas WHERE, HAVING, GROUP BY y ORDER BY.

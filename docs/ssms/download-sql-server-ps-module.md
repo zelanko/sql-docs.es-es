@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>Descarga del módulo de PowerShell de SQL Server
@@ -30,9 +30,35 @@ Puede encontrar toda la información sobre cómo instalar la versión más recie
 
 El comando de PowerShell para instalar el módulo de SQL Server es:
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+Este comando instala el módulo para todos los usuarios del equipo. Debe ejecutar el proceso de PowerShell como administrador.
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+Este comando instala el módulo para el usuario que ejecuta el proceso actual de PowerShell. No es necesario ejecutar el proceso de PowerShell con derechos de administrador.
 
 Si hay versiones anteriores de los módulos de PowerShell de SQL Server en el equipo, es posible que haya que proporcionar el parámetro "-AllowClobber".  
 
-Las versiones del módulo de PowerShell de SQL Server incluidas en la Galería de PowerShell admiten el control de versiones y requieren la versión 5.0 de PowerShell o una versión posterior.
+Si la ejecución se realiza como administrador y el módulo se instala para todos los usuarios del equipo:
+
+> Install-Module -Name SqlServer -AllowClobber
+
+Si la ejecución no se puede realizar como administrador o la instalación se realiza solo para el usuario actual:
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+Si hay versiones actualizadas disponibles del módulo SqlServer, puede actualizar la versión con el comando Update-Module:
+
+> Update-Module -Name SqlServer
+
+Para ver las versiones del módulo instalado en el equipo, puede usar:
+
+> Get-Module SqlServer -ListAvailable
+
+Para usar una versión específica del módulo en los scripts, puede importarla con:
+
+> Import-Module SqlServer -Version 21.0.17178
+
+Las versiones del módulo de PowerShell de SQL Server incluidas en la Galería de PowerShell admiten el control de versiones y requieren la versión 5.0 de PowerShell o una versión posterior. Puede encontrar el módulo SqlServer en la [Galería de PowerShell](https://www.powershellgallery.com/packages/Sqlserver/). 
 

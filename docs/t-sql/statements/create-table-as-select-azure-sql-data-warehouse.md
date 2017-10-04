@@ -46,8 +46,6 @@ Crear tabla AS seleccione (CTAS) es una de las características más importantes
 ## <a name="syntax"></a>Sintaxis   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 

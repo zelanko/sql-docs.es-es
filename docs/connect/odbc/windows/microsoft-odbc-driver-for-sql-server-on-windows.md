@@ -48,7 +48,7 @@ Estos son los temas que trata esta documentación sobre Microsoft ODBC Driver fo
 -   [Uso de Always Encrypted con el controlador ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [Con Azure Active Directory con el controlador ODBC](../../../connect/odbc/using-azure-active-directory.md) 
 -   [Utilizando la resolución de IP de red transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>Comunidad  
 - [Blog del equipo de Microsoft ODBC Driver for SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [Foro para el acceso a los datos de SQL Server](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

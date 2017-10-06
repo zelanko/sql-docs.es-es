@@ -13,7 +13,7 @@
 #### [Supervisión](partner-monitor-sql-server.md)
 #### [Alta disponibilidad y recuperación ante desastres](partner-hadr-sql-server.md)
 #### [Administración](partner-management-sql-server.md)
-#### [Desarrollo.](partner-dev-sql-server.md)
+#### [Desarrollo](partner-dev-sql-server.md)
 
 # [Artículos nuevos y recientemente actualizados](sql-server-new-updated-sql-docs-pr.md)
 
@@ -23,6 +23,7 @@
 ## [Notas de la versión de SQL Server 2016](sql-server-2016-release-notes.md)
 ## [Notas de la versión de SQL Server 2017](sql-server-2017-release-notes.md)
 ## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [Notas de la versión de SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
 ## [Notas de la versión de SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)

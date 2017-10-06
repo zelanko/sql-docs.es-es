@@ -198,13 +198,13 @@ SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstUse`  
+ ```
+FirstUse  
+1  
   
- `1`  
-  
- `SecondUse`  
-  
- `2`  
+SecondUse  
+2
+```  
   
 ### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>B. Establecer una variable en el siguiente valor de la secuencia  
  En el ejemplo siguiente se muestran tres maneras de establecer una variable en el siguiente valor de un número de secuencia.  

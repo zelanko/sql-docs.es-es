@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `158146830494.18   157788848582.94`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+158146830494.18   157788848582.94
+```  
   
 ### <a name="c-using-varp-with-over"></a>C. Utilice VARP con OVER  
  El ejemplo siguiente devuelve el `VARP` de los valores de cuota de ventas para cada trimestre de un año natural. Observe que la cláusula ORDER BY en la cláusula OVER ordena la varianza estadística y la cláusula ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             600250000.00`  
-  
- `2002  3         70000.0000             860222222.22`  
-  
- `2002  4        154000.0000             1185187500.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             0.00
+2002  2        140000.0000             600250000.00
+2002  3         70000.0000             860222222.22
+2002  4        154000.0000             1185187500.00
+```  
   
 ## <a name="see-also"></a>Vea también  
  [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

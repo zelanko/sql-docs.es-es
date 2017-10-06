@@ -69,19 +69,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName      Reverse`  
-  
- `-------------- --------------`  
-  
- `Ken            neK`  
-  
- `Rob            boR`  
-  
- `Roberto        otreboR`  
-  
- `Terri          irreT`  
-  
- `(4 row(s) affected)`  
+ ```
+FirstName      Reverse
+-------------- --------------
+Ken            neK
+Rob            boR
+Roberto        otreboR
+Terri          irreT
+
+(4 row(s) affected)
+```  
   
  En el ejemplo siguiente se invierten los caracteres de una variable.  
   

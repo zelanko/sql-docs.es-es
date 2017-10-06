@@ -105,13 +105,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. Usar SUBSTRING con datos de tipo text, ntext e image  
   
@@ -130,13 +130,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  En el ejemplo siguiente se muestra el efecto de SUBSTRING en ambos **texto** y **ntext** datos. En primer lugar, este ejemplo crea una nueva tabla en la base de datos `pubs` denominada `npub_info`. En segundo lugar, crea la columna `pr_info` en la tabla `npub_info` a partir de los primeros 80 caracteres de la columna `pub_info.pr_info` y agrega una `ü` como primer carácter. Por último, un `INNER JOIN` recupera todos los números de identificación de publicador y el `SUBSTRING` de ambos el **texto** y **ntext** columnas de información de publicador.  
   
@@ -196,15 +196,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  En el ejemplo siguiente se muestra cómo devolver el segundo, tercer y cuarto caracteres de la constante de cadena `abcdef`.  
   
@@ -216,11 +214,11 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

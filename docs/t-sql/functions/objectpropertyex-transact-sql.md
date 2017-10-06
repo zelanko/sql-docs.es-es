@@ -207,11 +207,11 @@ GO
   
  El conjunto de resultados muestra que el tipo base del objeto subyacente, la tabla `Employee`, es una tabla de usuario.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. Devolver un valor de propiedad  
  En el siguiente ejemplo se devuelve el número de desencadenadores UPDATE de la tabla especificada.  

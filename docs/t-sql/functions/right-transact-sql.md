@@ -100,17 +100,14 @@ ORDER BY EmployeeKey;
   
  A continuación se muestra un conjunto parcial de resultados.  
   
- `Name`  
-  
- `-----`  
-  
- `lbert`  
-  
- `Brown`  
-  
- `rello`  
-  
- `lters`  
+ ```
+Name
+-----
+lbert
+Brown
+rello
+lters
+ ```  
   
 ### <a name="c-using-right-with-a-character-string"></a>C. Utilizar RIGHT con una cadena de caracteres  
  En el ejemplo siguiente se utiliza `RIGHT` para devolver los dos caracteres más a la derecha de la cadena de caracteres `abcdefg`.  
@@ -123,9 +120,10 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------`  
-  
- `fg`  
+```
+-------  
+fg
+```  
   
 ## <a name="see-also"></a>Vea también  
  [CAST y CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

@@ -75,11 +75,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------------------------------------------------`  
-  
- `The current system user is: WillisJo`  
-  
- `(1 row(s) affected)`  
+ ```
+----------------------------------------------------------
+The current system user is: WillisJo
+
+(1 row(s) affected)
+ ```  
   
 ### <a name="b-using-systemuser-with-default-constraints"></a>B. Usar SYSTEM_USER con restricciones DEFAULT  
  En el siguiente ejemplo se crea una tabla con `SYSTEM_USER` como una restricción `DEFAULT` para la columna `SRep_tracking_user`.  
@@ -117,21 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Territory_id Rep_id Last_sale            SRep_tracking_user`  
+ ```
+Territory_id Rep_id Last_sale            SRep_tracking_user
+-----------  ------ -------------------- ------------------
+2000         151    Mar 4 1998 10:36AM   ArvinDak
+2001         293    May 15 1998 12:00AM  ArvinDak
+2003         21392  Mar 4 1998 10:36AM   ArvinDak
+2004         24283  Nov 3 1998 12:00AM   ArvinDak
+2002         27882  Jun 20 1998 12:00AM  ArvinDak
   
- `-----------  ------ -------------------- ------------------`  
-  
- `2000         151    Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2001         293    May 15 1998 12:00AM  ArvinDak`  
-  
- `2003         21392  Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2004         24283  Nov 3 1998 12:00AM   ArvinDak`  
-  
- `2002         27882  Jun 20 1998 12:00AM  ArvinDak`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

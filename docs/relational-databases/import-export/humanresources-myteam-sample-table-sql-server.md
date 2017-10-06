@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Title**|**nvarchar(50)**|Admisión de valores NULL|Cargo que tiene el empleado en mi equipo.|  
 |**Información previa**|**nvarchar(50)**|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
   
- **Para crear HumanResources.myTeam**  
+**Para crear HumanResources.myTeam**  
   
 -   Utilice las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **Para rellenar HumanResources.myTeam**  
+**Para rellenar HumanResources.myTeam**  
   
 -   Ejecute las siguientes instrucciones `INSERT` para rellenar la tabla con dos filas:  
   

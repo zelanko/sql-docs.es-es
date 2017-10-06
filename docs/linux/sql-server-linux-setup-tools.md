@@ -60,14 +60,12 @@ Siga estos pasos para instalar el **mssql herramientas** en Red Hat Enterprise L
 1. Si tiene una versión anterior de **mssql herramientas** instalado, quite los paquetes de unixODBC anteriores.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Ejecute los comandos siguientes para instalar **mssql herramientas** con el paquete de desarrollador de unixODBC.
 
    ```bash
-   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 

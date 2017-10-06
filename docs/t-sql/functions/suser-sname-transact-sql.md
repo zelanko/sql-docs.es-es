@@ -124,11 +124,11 @@ GO
   
  Éste es el resultado.  
   
- `sa`  
-  
- `WanidaBenShoof`  
-  
- `sa`  
+ ```
+sa  
+WanidaBenShoof  
+sa
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

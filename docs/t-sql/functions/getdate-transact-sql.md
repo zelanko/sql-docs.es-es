@@ -117,17 +117,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()          2007-05-03`  
-  
- `SYSDATETIMEOFFSET()    2007-05-03`  
-  
- `SYSUTCDATETIME()       2007-05-04`  
-  
- `CURRENT_TIMESTAMP      2007-05-03`  
-  
- `GETDATE()              2007-05-03`  
-  
- `GETUTCDATE()           2007-05-04`  
+```
+SYSDATETIME()          2007-05-03  
+SYSDATETIMEOFFSET()    2007-05-03  
+SYSUTCDATETIME()       2007-05-04  
+CURRENT_TIMESTAMP      2007-05-03  
+GETDATE()              2007-05-03  
+GETUTCDATE()           2007-05-04
+``` 
   
 ### <a name="c-getting-the-current-system-time"></a>C. Obtener la hora actual del sistema  
   
@@ -143,17 +140,14 @@ SELECT CONVERT (time, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+```
+SYSDATETIME()      13:18:45.3490361  
+SYSDATETIMEOFFSET()13:18:45.3490361  
+SYSUTCDATETIME()   20:18:45.3490361  
+CURRENT_TIMESTAMP  13:18:45.3470000  
+GETDATE()          13:18:45.3470000  
+GETUTCDATE()       20:18:45.3470000  
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Los ejemplos siguientes usan las tres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciones del sistema que devolución la fecha actual y la hora para devolver la fecha, hora o ambas. Los valores se devuelven en serie; por consiguiente, sus fracciones de segundo podrían ser diferentes.  

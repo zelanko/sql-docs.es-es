@@ -118,17 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+ ```
+----------
+123.4500
+
+(1 row(s) affected)
+
+--------
+100.00
+
+(1 row(s) affected)
+```
   
 ### <a name="c-using-round-to-truncate"></a>C. Usar ROUND para truncar  
  En el ejemplo siguiente se utilizan dos instrucciones `SELECT` para demostrar la diferencia entre redondear y truncar. La primera instrucción redondea el resultado. La segunda instrucción lo trunca.  
@@ -164,10 +164,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
+
+ ```
+--------  ---------
+123.995000    123.995444
+```
   
 ### <a name="e-using-round-and-rounding-approximations"></a>E. Usar ROUND y aproximaciones de redondeo  
  En el ejemplo siguiente se muestran redondeos y aproximaciones.  
@@ -177,10 +178,11 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ## <a name="see-also"></a>Vea también  
  [CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   

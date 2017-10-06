@@ -72,11 +72,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-user-with-default-constraints"></a>B. Utilizar USER con restricciones DEFAULT  
  En el siguiente ejemplo se crea una tabla que usa `USER` como una restricción `DEFAULT` para el vendedor de una fila de ventas.  
@@ -113,21 +114,17 @@ GO
   
  Este es el conjunto de resultados (observe el valor de `entry-person`):  
   
- `part_id     description                    entry_person`  
+ ```
+part_id     description                    entry_person
+----------- ------------------------------ -------------------------
+100         Red pencil                     dbo
+101         Blue pencil                    dbo
+102         Green pencil                   dbo
+103         Black pencil                   dbo
+104         Yellow pencil                  dbo
   
- `----------- ------------------------------ -------------------------`  
-  
- `100         Red pencil                     dbo`  
-  
- `101         Blue pencil                    dbo`  
-  
- `102         Green pencil                   dbo`  
-  
- `103         Black pencil                   dbo`  
-  
- `104         Yellow pencil                  dbo`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+```  
   
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. Utilizar USER en combinación con EXECUTE AS  
  En el siguiente ejemplo se muestra el comportamiento de `USER` cuando se llama en una sesión representada.  
@@ -147,11 +144,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Mario`  
-  
- `DBO`  
+ ```
+DBO
+Mario
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -167,11 +164,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## <a name="see-also"></a>Vea también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

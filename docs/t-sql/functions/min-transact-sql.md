@@ -158,9 +158,10 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------`  
-  
- `5.1865`  
+ ```
+ ------  
+ 5.1865
+ ```  
   
 ### <a name="d-using-min-with-over"></a>D. Usar MIN con OVER  
  Los ejemplos siguientes usan la función MIN OVER() analítica para devolver el precio del producto menos costoso en cada pedido de ventas. El conjunto de resultados se crean particiones por la `SalesOrderID` columna.  
@@ -177,15 +178,13 @@ ORDER BY SalesOrderNumber;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LeastExpensiveProduct SalesOrderID`  
-  
- `--------------------- ----------`  
-  
- `5.1865                SO43659`  
-  
- `419.4589              SO43660`  
-  
- `28.8404               SO43664`  
+ ```
+LeastExpensiveProduct SalesOrderID  
+--------------------- ----------  
+5.1865                SO43659  
+419.4589              SO43660  
+28.8404               SO43664
+```  
   
 ## <a name="see-also"></a>Vea también  
  [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

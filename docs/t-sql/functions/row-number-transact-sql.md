@@ -241,16 +241,17 @@ GROUP BY LastName, FirstName;
 ```  
   
  A continuación se muestra un conjunto parcial de resultados.  
-  
- ```
-RowNumber  FirstName  LastName            SalesQuota
----------  ---------  ------------------  -------------
-1          Jillian    Carson              12,198,000.00
-2          Linda      Mitchell            11,786,000.00
-3          Michael    Blythe              11,162,000.00
-4          Jae        Pak                 10,514,000.00
- ```  
-  
+
+```  
+
+RowNumber  FirstName  LastName            SalesQuota  
+---------  ---------  ------------------  -------------  
+1          Jillian    Carson              12,198,000.00  
+2          Linda      Mitchell            11,786,000.00  
+3          Michael    Blythe              11,162,000.00  
+4          Jae        Pak                 10,514,000.00  
+```
+
 ### <a name="f-using-rownumber-with-partition"></a>F. Usar ROW_NUMBER() con PARTITION  
  El ejemplo siguiente muestra cómo utilizar la función `ROW_NUMBER` con el argumento `PARTITION BY`. Esto hace que el `ROW_NUMBER` función para numerar las filas de cada partición.  
   
@@ -269,18 +270,19 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
 ```  
   
  A continuación se muestra un conjunto parcial de resultados.  
-  
- ```
-RowNumber  LastName            Territory  SalesQuota
----------  ------------------  ---------  -------------
-1          Campbell            1           4,025,000.00
-2          Ansman-Wolfe        1           3,551,000.00
-3          Mensa-Annan         1           2,275,000.00
-1          Blythe              2          11,162,000.00
-1          Carson              3          12,198,000.00
-1          Mitchell            4          11,786,000.00
-2          Ito                 4           7,804,000.00
- ```  
+ 
+```  
+ 
+RowNumber  LastName            Territory  SalesQuota  
+---------  ------------------  ---------  -------------  
+1          Campbell            1           4,025,000.00  
+2          Ansman-Wolfe        1           3,551,000.00  
+3          Mensa-Annan         1           2,275,000.00  
+1          Blythe              2          11,162,000.00  
+1          Carson              3          12,198,000.00  
+1          Mitchell            4          11,786,000.00  
+2          Ito                 4           7,804,000.00  
+```
   
 ## <a name="see-also"></a>Vea también  
  [RANGO &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   

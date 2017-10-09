@@ -16,16 +16,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento, en vez de únicamente los datos que son correctos en la actualidad. La característica temporal de las bases de datos surgió con ANSI SQL 2011 y ahora es compatible con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento, en vez de únicamente los datos que son correctos en la actualidad. La característica temporal de las bases de datos surgió con ANSI SQL 2011.  
   
  **Inicio rápido**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 07/31/2017
 -   **Vídeo:** si le interesa ver un análisis de 20 minutos sobre las tablas temporales, vea [Temporal in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)(Temporal en SQL Server 2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>¿Qué es una tabla temporal con versión del sistema?  
- Una tabla temporal con versión del sistema es un nuevo tipo de tabla de usuario de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]pensada para conservar un historial completo de los cambios de datos y para facilitar los análisis en un momento específico. Este tipo de tabla temporal se conoce como tabla temporal con versión del sistema, porque el período de validez de cada fila se administra por medio del sistema (es decir, del motor de base de datos).  
+ Una tabla temporal con versión del sistema es un tipo de tabla de usuario pensada para conservar un historial completo de los cambios de datos y para facilitar los análisis en un momento específico. Este tipo de tabla temporal se conoce como tabla temporal con versión del sistema, porque el período de validez de cada fila se administra por medio del sistema (es decir, del motor de base de datos).  
   
  Cada tabla temporal tiene dos columnas definidas explícitamente, cada una con un tipo de datos **datetime2** . Estas columnas se conocen como columnas de periodo. Estas columnas de periodo son de uso exclusivo por parte del sistema para registrar el período de validez de cada fila cada vez que una fila se modifica.  
   

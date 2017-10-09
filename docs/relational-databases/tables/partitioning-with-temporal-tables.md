@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>Creación de particiones con tablas temporales
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   Puede usar la creación de particiones en la tabla actual y en la tabla de historial de forma independiente. Sin embargo, la creación de particiones no puede utilizarse para cambiar el contenido de los datos sin el control de versiones del sistema.  
   
 > [!NOTE]  
->  La creación de particiones es una característica de Enterprise Edition.  
+>  La creación de particiones es una característica de SQL Server 2016 Enterprise Edition anterior a Service Pack 1 y versiones anteriores. Esta característica se admite en todas las ediciones de SQL Server 2016 Service Pack 1 y en versiones posteriores.
   
 -   **Tabla actual:**  
   

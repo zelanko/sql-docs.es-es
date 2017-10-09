@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
@@ -73,7 +73,7 @@ ms.lasthandoff: 07/31/2017
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -103,7 +103,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Para obtener más información sobre cómo usar datos de caracteres Unicode, vea [Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Usar un archivo de formato con la opción de página de códigos  
- Si crea un archivo de formato con el comando bcp (es decir, por medio de “`bcp forma`t …” ), la información sobre la intercalación o página de códigos se escribirá en el archivo de formato.   
+ Si crea un archivo de formato con el comando bcp (es decir, mediante "`bcp forma`t …" ), la información sobre la intercalación o página de códigos se escribirá en el archivo de formato.   
 El siguiente archivo de formato de ejemplo para una tabla con 5 columnas incluye la intercalación.  
   
 ```  
@@ -203,13 +203,13 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  El archivo de formato generado, `Department-c.xml`, contiene los elementos XML siguientes:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -242,13 +242,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  El archivo de formato generado, `Department-n.xml`, contiene los elementos XML siguientes:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

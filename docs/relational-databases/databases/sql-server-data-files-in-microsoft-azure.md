@@ -1,8 +1,10 @@
 ---
 title: Archivos de datos de SQL Server en Microsoft Azure | Microsoft Docs
 ms.custom: 
-ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.date: 10/02/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59dd3517d0b0e4cfdafb470132e620576f1ffbc7
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
@@ -26,7 +28,9 @@ ms.lasthandoff: 09/27/2017
   
  Archivos de datos de SQL Server en Microsoft Azure habilita la compatibilidad nativa para los archivos de base de datos de SQL Server almacenados como blobs de Microsoft Azure. Permite crear una base de datos de SQL Server que se ejecuta en el entorno local o en una máquina virtual de Microsoft Azure con una ubicación de almacenamiento dedicada para los datos de almacenamiento de blobs de Microsoft Azure. Esta mejora simplifica especialmente el traslado de bases de datos entre equipos mediante operaciones de separar y adjuntar. Además, proporciona una ubicación de almacenamiento alternativa para los archivos de copia de seguridad de la base de datos, lo que permite realizar la restauración desde o hasta Almacenamiento de Microsoft Azure. Por tanto, habilita diversas soluciones híbridas al aportar varias ventajas en cuanto a virtualización de datos, movimiento de datos, seguridad y disponibilidad, así como costos y mantenimiento reducidos para lograr escalado flexible y alta disponibilidad.
  
-> [AZURE.IMPORTANT]Almacenar bases de datos del sistema en Blob Storage de Azure no es recomendable y no se admite. 
+> [!IMPORTANT]  
+>  Almacenar bases de datos del sistema en Blob Storage de Azure no es recomendable y no se admite. 
+
   
  En este tema se describen los conceptos y los factores básicos a la hora de almacenar archivos de datos de SQL Server en el Servicio de almacenamiento de Microsoft Azure.  
   
@@ -49,10 +53,10 @@ ms.lasthandoff: 09/27/2017
 ### <a name="azure-storage-concepts"></a>Conceptos de Azure Storage  
  Cuando use la característica Archivos de datos de SQL Server en Windows Azure, debe crear una cuenta de almacenamiento y un contenedor en Windows Azure. A continuación, debe crear una credencial de SQL Server, que incluye información sobre la directiva del contenedor así como una firma de acceso compartido, la cual resulta necesaria para tener acceso al contenedor.  
   
- En [Microsoft Azure](https://azure.microsoft.com), una cuenta de [Azure Storage](https://azure.microsoft.com/services/storage/) representa el nivel superior del espacio de nombres para tener acceso a los blobs. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, siempre que su tamaño total sea inferior a 500 TB. Para obtener la información más reciente acerca de los límites de almacenamiento, vea [Azure Subscription and Service Limits, Quotas, and Constraints](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Un contenedor proporciona una agrupación de un conjunto de [blobs](https://azure.microsoft.com/documentation/articles/storage-introduction/#blob-storage). Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores. De forma similar, un contenedor puede almacenar un número ilimitado de blobs igualmente. Se pueden almacenar dos tipos de blobs en Azure Storage: blobs en bloques y blobs en páginas. Esta nueva característica utiliza blobs en páginas, que pueden tener un tamaño de hasta 1 TB y son más eficaces cuando los intervalos de bytes en el archivo se modifican con frecuencia. Puede obtener acceso a blobs mediante el siguiente formato de dirección URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ En [Microsoft Azure](https://azure.microsoft.com), una cuenta de [Azure Storage](https://azure.microsoft.com/services/storage/) representa el nivel superior del espacio de nombres para tener acceso a los blobs. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, siempre que su tamaño total sea inferior a los límites de almacenamiento. Para obtener la información más reciente acerca de los límites de almacenamiento, vea [Azure Subscription and Service Limits, Quotas, and Constraints](http://docs.microsoft.com/azure/azure-subscription-service-limits). Un contenedor proporciona una agrupación de un conjunto de [blobs](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores. De forma similar, un contenedor puede almacenar un número ilimitado de blobs igualmente. Se pueden almacenar dos tipos de blobs en Azure Storage: blobs en bloques y blobs en páginas. Esta nueva característica utiliza blobs en páginas, que son más eficaces cuando los intervalos de bytes en el archivo se modifican con frecuencia. Puede obtener acceso a blobs mediante el siguiente formato de dirección URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="azure-billing-considerations"></a>Consideraciones sobre la facturación de Azure  
- Estimar el costo de usar los servicios de Azure es una cuestión importante a la hora de tomar decisiones y en el proceso de planeamiento. Al almacenar archivos de datos de SQL Server en Azure Storage, deberá correr con los gastos asociados al almacenamiento y las transacciones. Además, la implementación de la característica Archivos de datos de SQL Server en Azure Storage requiere una renovación de la concesión de blobs cada 45-60 segundos de forma implícita. Esto también ocasiona costos de transacción por archivo de base de datos, como .mdf y .ldf. Según nuestras estimaciones, el costo por renovar las concesiones para dos archivos de base de datos (.mdf y .ldf) sería de unos 2 centavos al mes según el modelo actual de precios. Recomendamos usar la información de la página [Precios de Azure](http://azure.microsoft.com/pricing/) como ayuda para estimar los costos mensuales asociados al uso de Azure Storage y Máquinas virtuales de Azure.  
+ Estimar el costo de usar los servicios de Azure es una cuestión importante a la hora de tomar decisiones y en el proceso de planeamiento. Al almacenar archivos de datos de SQL Server en Azure Storage, deberá correr con los gastos asociados al almacenamiento y las transacciones. Además, la implementación de la característica Archivos de datos de SQL Server en Azure Storage requiere una renovación de la concesión de blobs cada 45-60 segundos de forma implícita. Esto también ocasiona costos de transacción por archivo de base de datos, como .mdf y .ldf. Use la información de la página [Precios de Azure](http://azure.microsoft.com/pricing/) como ayuda para estimar los costos mensuales asociados al uso de Azure Storage y Azure Virtual Machines.  
   
 ### <a name="sql-server-concepts"></a>Conceptos de SQL Server  
  Cuando use esta nueva mejora, deberá hacer lo siguiente:  
@@ -63,16 +67,13 @@ ms.lasthandoff: 09/27/2017
   
 -   Debe almacenar la información sobre el contenedor de Azure Storage, su nombre de directiva asociado y la clave SAS en el almacén de credenciales de SQL Server.  
   
- En el ejemplo siguiente se da por supuesto que se ha creado un contenedor de almacenamiento de Azure, así como una directiva con derechos de lectura, escritura y lista. Cuando se crea una directiva en un contenedor, se genera una clave SAS que podrá guardar en la memoria de forma segura sin cifrar y que necesita SQL Server para acceder a los archivos de blob en el contenedor. En el siguiente fragmento de código, reemplace `'your SAS key'` por una entrada similar a la siguiente: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Para obtener más información, consulte [Manage anonymous read access to containers and blobs (Administración del acceso de lectura anónimo a contenedores y blobs)](http://azure.microsoft.com/en-us/documentation/articles/storage-manage-access-to-resources/).  
+ En el ejemplo siguiente se da por supuesto que se ha creado un contenedor de almacenamiento de Azure, así como una directiva con derechos de lectura, escritura y lista. Cuando se crea una directiva en un contenedor, se genera una clave SAS que podrá guardar en la memoria de forma segura sin cifrar y que necesita SQL Server para acceder a los archivos de blob en el contenedor. En el siguiente fragmento de código, reemplace `'<your SAS key>'` por una entrada similar a la siguiente: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Para obtener más información, consulte [Manage anonymous read access to containers and blobs (Administración del acceso de lectura anónimo a contenedores y blobs)](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
   
-```  
-  
--- Create a credential  
+```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
-SECRET = 'your SAS key'  
+SECRET = '<your SAS key>'  
   
--- Create database with data and log files in Windows Azure container.  
 CREATE DATABASE testdb   
 ON  
 ( NAME = testdb_dat,  
@@ -80,7 +81,6 @@ ON
  LOG ON  
 ( NAME = testdb_log,  
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
 ```  
   
  **Nota importante:** si hay referencias activas a archivos de datos de un contenedor, cualquier intento de eliminar la credencial correspondiente de SQL Server generará un error.  
@@ -97,9 +97,9 @@ ON
 ### <a name="installation-prerequisites"></a>Requisitos previos de la instalación  
  A continuación se describen los requisitos previos de instalación cuando se almacenan archivos de datos de SQL Server en Azure.  
   
--   **SQL Server local:** la versión SQL Server 2016 incluye esta característica. Para obtener información sobre cómo descargar SQL Server 2016, consulte [SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server).  
+-   **SQL Server local:** SQL Server 2016 y las versiones posteriores incluyen esta característica. Para obtener información sobre cómo descargar la última versión de SQL Server, vea [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads).  
   
--   SQL Server que se ejecuta en una máquina virtual de Azure: si va a instalar [SQL Server en una máquina virtual de Azure](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm), instale SQL Server 2016 o actualice la instancia existente. Del mismo modo, también puede crear una nueva máquina virtual de Azure mediante una imagen de plataforma de SQL Server 2016.
+-   SQL Server que se ejecuta en una máquina virtual de Azure: si va a instalar [SQL Server en una máquina virtual de Azure](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), instale SQL Server 2016 o actualice la instancia existente. Del mismo modo, también puede crear una nueva máquina virtual de Azure mediante una imagen de plataforma de SQL Server 2016.
 
   
 ###  <a name="bkmk_Limitations"></a> Limitaciones  
@@ -112,13 +112,13 @@ ON
   
 -   Cuando se utiliza la característica Archivos de datos de SQL Server en Azure, no se admite la replicación geográfica para la cuenta de almacenamiento. Si se realiza la replicación geográfica en la cuenta de almacenamiento y se produce una conmutación por error geográfica, se dañará la base de datos.  
   
--   Cada blob puede tener un tamaño máximo de 1 TB. Esto crea un límite superior en cuanto a los archivos de datos y de registro de base de datos individuales que se pueden almacenar en Azure Storage.  
+-   Para conocer las limitaciones de capacidad, vea [Introducción a Blob Storage](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
   
 -   No es posible almacenar datos de OLTP en memoria en el Blob de Azure con la característica Archivos de datos de SQL Server en Azure Storage. Esto se debe a que OLTP en memoria tiene una dependencia de **FileStream** y, en la versión actual de esta característica, no se admite almacenar datos **FileStream** en Azure Storage.  
   
 -   Cuando se utiliza la característica Archivos de datos de SQL Server en Azure, SQL Server realiza todas las comparaciones de direcciones URL o de rutas de acceso de archivo mediante la Intercalación establecida en la base de datos **master** .  
   
--   Se admiten**grupos de disponibilidad AlwaysOn** siempre y cuando no agregue nuevos archivos de base de datos a la base de datos principal. Si una operación de base de datos requiere que se cree un nuevo archivo en la base de datos principal, en primer lugar, deshabilite los grupos de disponibilidad AlwaysOn en el nodo secundario. Posteriormente, realice la operación de base de datos en la base de datos principal y haga una copia de seguridad de la base de datos en el nodo principal. Después, restaure la base de datos al nodo secundario y habilite los grupos de disponibilidad AlwaysOn en el nodo secundario. Tenga en cuenta que las instancias de clúster de conmutación por error de AlwaysOn no se admiten cuando se usa la característica Archivos de datos de SQL Server en Azure.  
+-   Se admiten**Grupos de disponibilidad AlwaysOn** siempre y cuando no agregue nuevos archivos de base de datos a la base de datos principal. Si una operación de base de datos requiere que se cree un nuevo archivo en la base de datos principal, en primer lugar, deshabilite los Grupos de disponibilidad AlwaysOn en el nodo secundario. Posteriormente, realice la operación de base de datos en la base de datos principal y haga una copia de seguridad de la base de datos en el nodo principal. Después, restaure la base de datos al nodo secundario y habilite los Grupos de disponibilidad AlwaysOn en el nodo secundario. Tenga en cuenta que las instancias de clúster de conmutación por error de AlwaysOn no se admiten cuando se usa la característica Archivos de datos de SQL Server en Azure.  
   
 -   Durante el funcionamiento normal, SQL Server utiliza concesiones temporales con el fin de reservar y almacenar blobs con una renovación de cada concesión de blob cada 45-60 segundos. Si se bloquea un servidor y se inicia otra instancia de SQL Server configurada para usar los mismos blobs, la instancia nueva esperará hasta 60 segundos para que expire la concesión existente del blob. Si desea adjuntar la base de datos a otra instancia y no puede esperar 60 segundos a que expire la concesión, puede detener explícitamente la concesión en el blob para evitar errores en las operaciones de adjuntar.  
   
@@ -136,7 +136,7 @@ ON
  
  como una **Ruta de acceso** en varias ventanas de diálogo, como **Nueva base de datos**, **Adjuntar base de datos**y **Restaurar base de datos**. Para obtener más información, consulte [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   
-### <a name="sql-server-management-objects-support"></a>Compatibilidad con Objetos de administración de SQL Server  
+### <a name="sql-server-management-objects-smo-support"></a>Compatibilidad con Objetos de administración de SQL Server (SMO)  
  Cuando se usa la característica Archivos de datos de SQL Server en Azure, se admiten todos los Objetos de administración de SQL Server (SMO). Si un objeto SMO requiere una ruta de acceso, use el formato de dirección URL BLOB en lugar de una ruta de acceso de archivos local, como `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Para obtener más información sobre Objetos de administración de SQL Server (SMO), vea [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)en los Libros en pantalla de SQL Server.  
   
 ### <a name="transact-sql-support"></a>Compatibilidad con Transact-SQL  
@@ -185,6 +185,6 @@ ON
   
     4.  Ponga la base de datos en línea.  
 
+## <a name="next-steps"></a>Pasos siguientes  
   
-  
-
+[Crear una base de datos](create-a-database.md)

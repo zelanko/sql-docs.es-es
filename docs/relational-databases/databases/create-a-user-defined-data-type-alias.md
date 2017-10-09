@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Crear un alias de tipo de datos definido por el usuario
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **Tipo de datos**  
      Seleccione el tipo de datos base en el cuadro de lista. En el cuadro de lista se muestran todos los tipos de datos, excepto **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** y **xml** . El tipo de un tipo de datos existente definido por el usuario no puede modificarse.  
   
-     **Valor de DB-Library**  
-     Opcionalmente, seleccione una regla o un valor predeterminado para enlazarlo al alias de tipo de datos definido por el usuario.  
+     **Default**  
+     Opcionalmente, seleccione un valor predeterminado para enlazarlo al alias de tipo de datos definido por el usuario.  
   
      **Longitud/Precisión**  
      Muestra la longitud o la precisión del tipo de datos, según proceda. **Longitud** se aplica a los tipos de datos definidos por el usuario basados en personajes; **Precisión** solo se aplica a los tipos de datos numéricos definidos por el usuario. La etiqueta cambia en función del tipo de datos seleccionado con anterioridad. Este cuadro no puede modificarse si el tipo de datos seleccionado tiene una longitud o precisión fija.  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

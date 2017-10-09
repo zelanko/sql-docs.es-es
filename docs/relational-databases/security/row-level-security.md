@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  El acceso a los datos de nivel de fila de una tabla está restringido por un predicado de seguridad que se define como una función con valores de tabla insertada. Luego, la función se invoca y una directiva de seguridad la aplica. En el caso de los predicados de filtro, no hay ninguna indicación para la aplicación de que se han filtrado filas del conjunto de resultados; si se filtran todas las filas, se devolverá un conjunto nulo. En el caso de los predicados de bloqueo, las operaciones que infrinjan el predicado generarán un error.  
   
- Los predicados de filtro se aplican al leer los datos desde la tabla base y afecta a todas las operaciones Get: **SELECT**, **DELETE** (es decir, los usuarios no pueden eliminar las filas filtradas) y **UPDATE** (es decir, los usuarios no pueden actualizar las filas filtradas aunque es posible actualizar las filas de modo que se filtren posteriormente). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
+ Los predicados de filtro se aplican al leer los datos de la tabla base y afectan a todas las operaciones get: **SELECT**, **DELETE** (por ejemplo, el usuario no puede eliminar las filas filtradas) y **UPDATE** (por ejemplo, el usuario no puede actualizar las filas filtradas, aunque es posible actualizar las filas de modo que se filtren posteriormente). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
   
 -   Los predicados AFTER INSERT y AFTER UPDATE pueden impedir que los usuarios actualicen las filas con valores que infrinjan el predicado.  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  Los predicados de filtro y de bloqueo y las directivas de seguridad tienen el siguiente comportamiento:  
   
--   Puede definir una función de predicado que se combine con otra tabla o invoque una función. Si la directiva de seguridad se crea con `SCHEMABINDING = ON`, entonces se puede acceder a la función o combinación desde la consulta y funciona como se espera sin comprobaciones de permisos adicionales. Si la directiva de seguridad se crea con `SCHEMABINDING = OFF`, entonces los usuarios necesitarán los permisos **SELECT** o **EXECUTE** en estas funciones y tablas adicionales para consultar la tabla de destino.  
-  
-     Puede definir una función de predicado que se combine con otra tabla o invoque una función. Se puede acceder a la función o combinación desde la consulta y funciona como se espera sin comprobaciones de permisos adicionales.  
+-   Puede definir una función de predicado que se combine con otra tabla o invoque una función. Si la directiva de seguridad se crea con `SCHEMABINDING = ON`, entonces se puede acceder a la función o combinación desde la consulta y funciona como se espera sin comprobaciones de permisos adicionales. Si la directiva de seguridad se crea con `SCHEMABINDING = OFF`, entonces los usuarios necesitarán los permisos **SELECT** o **EXECUTE** en estas funciones y tablas adicionales para consultar la tabla de destino.
   
 -   Puede emitir una consulta a una tabla que tenga un predicado de seguridad definido pero deshabilitado. Todas las filas que se habrían filtrado o bloqueado no se ven afectadas.  
   

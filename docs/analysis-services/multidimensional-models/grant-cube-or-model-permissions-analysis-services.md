@@ -89,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Cuando se abra Excel, use la pestaña Datos para conectarse a Analysis Services. Dado que está ejecutando Excel como un usuario diferente de Windows, la opción **Utilizar autenticación de Windows** es el tipo de credencial correcto que se debe usar cuando se hacen pruebas a los roles. Vea [Conectarse desde aplicaciones cliente &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md) si necesita ayuda con este paso.  
   
-     Si se producen errores en la conexión, compruebe la configuración del puerto para Analysis Services y compruebe que el servidor acepta las conexiones remotas. Para obtener información acerca de la configuración del puerto, vea [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+     Si se producen errores en la conexión, compruebe la configuración del puerto para Analysis Services y compruebe que el servidor acepta las conexiones remotas. Para obtener información acerca de la configuración del puerto, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 #### <a name="step-5-script-role-definition-and-assignments"></a>Paso 5: Definición y asignaciones del rol con el script  
   

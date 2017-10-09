@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  De forma predeterminada, trabajos se ejecutan con la cuenta de servicio. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la cuenta predeterminada para el agente de SQL Server es NT Service\SQLAgent$\<instancename >. Para realizar una tarea de copia de seguridad o de procesamiento, esta cuenta debe ser administrador del sistema en la instancia de Analysis Services. Para obtener más información, vea [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- También debe tener una base de datos de prueba para trabajar con ella. Puede implementar la base de datos de ejemplo multidimensional AdventureWorks o un proyecto del tutorial multidimensional de Analysis Services para usarlo en este tutorial. Para más información, consulte [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md).  
+ También debe tener una base de datos de prueba para trabajar con ella. Puede implementar la base de datos de ejemplo multidimensional AdventureWorks o un proyecto del tutorial multidimensional de Analysis Services para usarlo en este tutorial. Para más información, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Ejemplo 1: procesar una dimensión en una tarea programada  
  Este ejemplo muestra cómo crear y programar un trabajo que procesa una dimensión.  

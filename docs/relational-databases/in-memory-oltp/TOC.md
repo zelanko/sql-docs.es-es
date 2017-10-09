@@ -1,5 +1,5 @@
 # [Información general](in-memory-oltp-in-memory-optimization.md)  
-# [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](survey-of-initial-areas-in-in-memory-oltp.md)  
+# [Inventario de tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [Información general y escenarios de uso](overview-and-usage-scenarios.md)
 # [Notas del producto sobre el funcionamiento interno de SQL Server 2016](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [Planear la adopción de características de OLTP en memoria en SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  

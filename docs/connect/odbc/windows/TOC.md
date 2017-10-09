@@ -9,3 +9,10 @@
 # [Agrupación de conexiones dependientes del controlador ODBC para SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 
 # [Ejemplo de ejecución asincrónica (método de notificación)](asynchronous-execution-notification-method-sample.md)
+
+# Temas de ayuda
+## [Pantalla del Asistente para orígenes de datos 1](dsn-wizard-1.md)
+## [Pantalla del Asistente para orígenes de datos 2](dsn-wizard-2.md)
+## [Pantalla del Asistente para orígenes de datos 3](dsn-wizard-3.md)
+## [Pantalla del Asistente para orígenes de datos 4](dsn-wizard-4.md)
+## [Cuadro de diálogo de inicio de sesión de SQL Server](sql-server-login-dialog.md)

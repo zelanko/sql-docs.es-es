@@ -13,7 +13,7 @@
 ### [Informes en modo local frente al modo conectado en el Visor de informes](local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
 ### [Carga de documentos en una biblioteca de SharePoint](upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
 ### [Definición de opciones de procesamiento](set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
-## [Elemento web Visor de informes en un sitio de SharePoint](report-viewer-web-part-on-a-sharepoint-site.md)  
+## [Elemento web Visor de informes en un sitio de SharePoint](report-viewer-web-part-sharepoint-site.md)  
 ### [Implementación del elemento web Visor de informes](deploy-report-viewer-web-part.md)
 ### [Incorporación del elemento web Visor de informes a una página web](add-report-viewer-web-part-to-page.md)
 ### [Conexión de un elemento web Filtro o Documentos](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  

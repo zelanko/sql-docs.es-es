@@ -54,31 +54,34 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Usar STConvexHull() en una instancia de geography no inicializada  
  En el ejemplo siguiente se utiliza `STConvexHull()` en una variable **geography** instancia.  
   
- `DECLARE @g geography;`  
-  
- `SELECT @g.STConvexHull();`  
+```
+ DECLARE @g geography;  
+ SELECT @g.STConvexHull();
+ ```  
   
 ### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>B. Usar STConvexHull en una instancia vacía de geography  
  En el ejemplo siguiente se usa `STConvexHull()` en una instancia vacía de `Polygon`.  
   
- `DECLARE @g geography = 'POLYGON EMPTY';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON EMPTY';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
 ### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>C. Buscar la forma convexa de una instancia de Polygon no convexa  
  En el siguiente ejemplo se usa `STConvexHull()` para buscar la forma convexa de una instancia no convexa de `Polygon`.  
   
 ```  
-DECLARE @g geography;  
-SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
-SELECT @g.STConvexHull().ToString();  
+ DECLARE @g geography;  
+ SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
+ SELECT @g.STConvexHull().ToString();  
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. Buscar la forma convexa de una instancia de geography con un ángulo envolvente mayor de 90 grados  
  En el ejemplo siguiente se utiliza `STConvexHull()` en un **geography** instancia con un ángulo envolvente mayor de 90 grados.  
   
- `DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
   

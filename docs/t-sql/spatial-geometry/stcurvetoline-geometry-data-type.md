@@ -60,50 +60,44 @@ Devuelve una aproximación poligonal de un **geometry** instancia que contiene l
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Usar una variable geometry sin inicializar y una instancia vacía  
  En el ejemplo siguiente, la primera **seleccione** instrucción utiliza una sin inicializar **geometry** instancia para llamar a la `STCurveToLine` método y el segundo **seleccione** instrucción utiliza vacío **geometry** instancia. Por lo tanto, el método devuelve **NULL** a la primera instrucción y un **GeometryCollection** colección a la segunda instrucción.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
-  
- `SET @g = geometry::Parse('LINESTRING EMPTY');`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType(); 
+ SET @g = geometry::Parse('LINESTRING EMPTY'); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Utilizar una instancia de LineString  
  El **seleccione** instrucción en el ejemplo siguiente utiliza un **LineString** instancia para llamar al método STCurveToLine. Por lo tanto, el método devuelve un **LineString** instancia.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Utilizar una instancia de CircularString  
  La primera **seleccione** instrucción en el ejemplo siguiente utiliza un **CircularString** instancia para llamar al método STCurveToLine. Por lo tanto, el método devuelve un **LineString** instancia. Esto **seleccione** instrucción también compara las longitudes de las dos instancias, que son aproximadamente iguales.  Por último, el segundo **seleccione** instrucción devuelve el número de puntos para cada instancia.  Devuelve solo los 5 puntos para la **CircularString** instancia pero 65 puntos para la **LineString**instancia.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def];`  
-  
- `SELECT @g1.STNumPoints(), @g2.STNumPoints();`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def]; 
+ SELECT @g1.STNumPoints(), @g2.STNumPoints();
+ ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Utilizar una instancia de CurvePolygon  
  El **seleccione** instrucción en el ejemplo siguiente utiliza un **CurvePolygon** instancia para llamar al método STCurveToLine. Por lo tanto, el método devuelve un **polígono** instancia.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
+ ```  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)   

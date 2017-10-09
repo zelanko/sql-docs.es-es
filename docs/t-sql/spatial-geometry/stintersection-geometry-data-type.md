@@ -68,11 +68,11 @@ SELECT @g.STIntersection(@h).ToString();
 ### <a name="b-using-stintersection-with-curvepolygon-instance"></a>B. Usar STIntersection() con una instancia de CurvePolygon  
  En el siguiente ejemplo se devuelve una instancia que contiene un segmento de arco circular.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `SELECT @h.STIntersection(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ SELECT @h.STIntersection(@g).ToString();
+ ```  
   
 ## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

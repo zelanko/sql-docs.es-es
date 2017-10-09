@@ -57,13 +57,12 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelve una instancia `LineString` que es una aproximación poligonal de una instancia `CircularString`:  
   
- `DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `DECLARE @g2 geography;`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;`  
+```
+ DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ DECLARE @g2 geography;  
+ SET @g2 = @g1.STCurveToLine();  
+ SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
+ ```  
   
 ## <a name="see-also"></a>Vea también  
  [STLength &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   

@@ -78,45 +78,46 @@ Devuelve una aproximación poligonal de un **geometry** instancia que contiene l
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizar valores de tolerancia diferentes en una instancia de CircularString  
  En el ejemplo siguiente se muestra cómo establecer la tolerancia afecta a la `LineString`instancia devuelta desde un `CircularString` instancia:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+ ```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. Utilizar el método en una instancia de MultiLineString que contiene un LineString  
  En el siguiente ejemplo se muestra lo que se devuelve de una instancia de `MultiLineString` que solo contiene una instancia de `LineString`:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. Utilizar el método en una instancia de MultiLineString que contiene varios LineString  
  En el siguiente ejemplo se muestra lo que se devuelve de una instancia de `MultiLineString` que contiene más de una instancia de `LineString`:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Establecer relative en true para invocar una instancia de CurvePolygon  
  En el ejemplo siguiente se usa un `CurvePolygon` instancia para llamar a `CurveToLineWithTolerance()` con *relativa* establecido en true:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.CurveToLineWithTolerance(.5,1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+ ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. Usar el método en una instancia de GeometryCollection  
  En el ejemplo siguiente se llama a `CurveToLineWithTolerance()` en un elemento `GeometryCollection` que contiene una instancia de `CurvePolygon` bidimensional y una instancia de `CircularString` unidimensional. `CurveToLineWithTolerance()` convierte los dos tipos de segmento de arco circular en tipos de segmento de línea y los devuelve en un tipo `GeometryCollection`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
+ ```  
   
 ## <a name="see-also"></a>Vea también  
  [CurveToLineWithTolerance &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   

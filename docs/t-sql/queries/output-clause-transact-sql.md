@@ -548,11 +548,11 @@ GO
   
  Éste es el conjunto de resultados generado el 12 de abril de 2004 ('`2004-04-12'`). Tenga en cuenta que las columnas `ScrapReasonIDActual` y `ModifiedDate` reflejan los valores generados en la operación del desencadenador en lugar de los valores suministrados en la instrucción `INSERT`.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. Usar OUTPUT INTO con columnas de identidad y calculadas  
  En el ejemplo siguiente se crea la tabla `EmployeeSales` y, después, se insertan en ella varias filas utilizando una instrucción `INSERT` con una instrucción `SELECT` para recuperar los datos de las tablas de origen. La tabla `EmployeeSales` contiene una columna de identidad (`EmployeeID`) y una columna calculada (`ProjectedSales`).  

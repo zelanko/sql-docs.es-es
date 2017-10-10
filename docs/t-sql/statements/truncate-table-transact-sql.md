@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  En el caso de las tablas con una o más de estas características, utilice la instrucción DELETE.  
   
- TRUNCATE TABLE no puede activar un desencadenador porque la operación no registra eliminaciones de filas individuales. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ TRUNCATE TABLE no puede activar un desencadenador porque la operación no registra eliminaciones de filas individuales. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md). 
+ 
+ En [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- TRUNCATE TABLE no se permite en la instrucción de explicación.
+
+- TRUNCATE TABLE no se debe ejecutar dentro de una transacción.
   
 ## <a name="truncating-large-tables"></a>Truncar tablas de gran tamaño  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene la capacidad de quitar o truncar las tablas que tienen más de 128 extensiones sin mantener bloqueos simultáneos en todas las extensiones necesarias para la eliminación.  
@@ -162,7 +168,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Eliminar tabla & #40; Transact-SQL & #41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [Eliminar tabla &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

@@ -29,6 +29,7 @@
 ### [Usar un archivo de formato para omitir una columna de tabla](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ### [Usar un archivo de formato para omitir un campo de datos](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Import Flat File with the Import Flat File Wizard (Importación de archivo plano con el Asistente para la importación de archivos planos)](import-flat-file-wizard.md)
 # [Importar y exportar con el Asistente para importación y exportación](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Importar desde Excel](import-data-from-excel-to-sql.md) 
 # [Importar documentos JSON](../json/import-json-documents-into-sql-server.md)

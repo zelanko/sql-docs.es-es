@@ -8,6 +8,7 @@
 # [Motor de eventos extendidos](sql-server-extended-events-engine.md)  
 # [Sesiones de eventos extendidos](sql-server-extended-events-sessions.md)  
 # [Herramientas de eventos extendidos](extended-events-tools.md)  
+## [Use the SSMS XEvent Profiler (Uso del generador de perfiles XEvent de SSMS)](use-the-ssms-xe-profiler.md)
 ## [Usar la sesión system_health](use-the-system-health-session.md)  
 ## [Usar el proveedor de PowerShell para eventos extendidos](use-the-powershell-provider-for-extended-events.md)  
 # [Modificar una sesión de eventos extendidos](alter-an-extended-events-session.md)  

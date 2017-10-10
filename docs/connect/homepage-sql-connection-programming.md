@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: es-es
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de programación para Microsoft SQL Server del cliente
@@ -52,9 +52,9 @@ En la siguiente tabla, cada imagen de lenguaje es un vínculo a los detalles sob
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[! [Logotipo de C#] [imagen ref-320 csharp]](#an-110-ado-net-docu) | &nbsp;[! [ORM Entity Framework, de .NET Framework] [imagen ref-333 ef]](#an-116-csharp-ef-orm) | &nbsp;[! [Logotipo de Java] [imagen ref-330 java]](#an-130-jdbc-docu) |
-| &nbsp;[! [Logotipo Node.js] [imagen-ref-340-nodo]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[! [Logotipo PHP] [imagen-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[! [Logotipo de Python] [imagen ref-370 python]](#an-180-python-docu) | &nbsp;[! [Logotipo ruby] [imagen ref-380 ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![Logotipo de C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework de .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js logotipo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Logotipo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby logotipo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF tiene relaciones directas o indirectas con las siguientes tecnologías:
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), o [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Mejoras de sintaxis del lenguaje, como el ** => ** operador de C#.
+- Mejoras de sintaxis del lenguaje, como el  **=>**  operador de C#.
 - Programas útiles que generan código fuente de las clases que se asignan a las tablas de la base de datos SQL. Por ejemplo, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
@@ -152,7 +152,7 @@ La documentación de JDBC incluye las siguientes áreas principales:
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Raíz de la documentación de JDBC. |
 | [Referencia](./jdbc/reference/index.md) | Interfaces, clases y miembros. |
-| [Guía para el controlador JDBC para SQL de programación](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Información de configuración, junto con ejemplos de código. |
+| [Guía de programación del controlador JDBC para SQL](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Información de configuración, junto con ejemplos de código. |
 | &nbsp; | <br /> |
 
 

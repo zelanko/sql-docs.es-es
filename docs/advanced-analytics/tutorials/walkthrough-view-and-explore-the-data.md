@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Ver y explorar los datos mediante SQL (tutorial)
@@ -53,7 +53,7 @@ En primer lugar, tómese un minuto para asegurarse de que los datos se han carga
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    Si no ve datos en la tabla, consulte la sección [Solucionar problemas](/walkthrough-prepare-the-data.md) del tema anterior.
+    Si no ve datos en la tabla, consulte la sección [Solucionar problemas](walkthrough-prepare-the-data.md) del tema anterior.
 
 4. Esta tabla de datos se ha optimizado para cálculos basados en conjunto al agregarle un [índice de almacén](../../relational-databases/indexes/columnstore-indexes-overview.md). Ejecute esta instrucción para generar un resumen rápido en la tabla.
 
@@ -69,9 +69,9 @@ En primer lugar, tómese un minuto para asegurarse de que los datos se han carga
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Resumir datos mediante R](/walkthrough-view-and-summarize-data-using-r.md)
+[Resumir datos mediante R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Preparar los datos de uso de PowerShell](/walkthrough-prepare-the-data.md)
+[Preparar los datos de uso de PowerShell](walkthrough-prepare-the-data.md)
 

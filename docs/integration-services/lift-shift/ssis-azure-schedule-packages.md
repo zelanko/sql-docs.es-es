@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Programar la ejecución de un paquete SSIS en Azure
@@ -58,13 +58,13 @@ Para programar un paquete con el Agente SQL Server de forma local, cree un traba
 
 ## <a name="elastic"></a>Programar un paquete con trabajos elástico de base de datos de SQL
 
-Para obtener más información acerca de los trabajos elásticos de base de datos de SQL, consulte [bases de datos de escala horizontal en la nube de administración](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Para obtener más información acerca de los trabajos elásticos de base de datos de SQL, consulte [bases de datos de escala horizontal en la nube de administración](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Requisitos previos
 
 Para poder usar trabajos elásticos para programar paquetes SSIS que se almacena en la base de datos de catálogo de SSISDB en un servidor de base de datos de SQL Azure, deberá hacer lo siguiente:
 
-1.  Instalar y configurar los componentes de trabajos de la base de datos elástica. Para obtener más información, consulte [información general de los trabajos de instalación de base de datos elástica](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
+1.  Instalar y configurar los componentes de trabajos de la base de datos elástica. Para obtener más información, consulte [información general de los trabajos de instalación de base de datos elástica](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Crear credenciales de ámbito de base de datos que los trabajos pueden usar para enviar comandos a la base de datos de catálogo de SSIS. Para obtener más información, consulte [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -110,7 +110,7 @@ Para programar un paquete con la actividad de Azure datos generador SQL Server S
 3.  Crear un conjunto de datos de salida que controla la programación.
 4.  Crear una canalización de factoría de datos que utiliza la actividad de procedimiento almacenado de SQL Server para ejecutar el paquete SSIS.
 
-Esta sección proporciona información general de estos pasos. Un tutorial completo de la factoría de datos queda fuera del ámbito de este artículo. Para obtener más información, consulte [la actividad de procedimiento almacenado de SQL Server](/azure/data-factory/data-factory-stored-proc-activity.md).
+Esta sección proporciona información general de estos pasos. Un tutorial completo de la factoría de datos queda fuera del ámbito de este artículo. Para obtener más información, consulte [la actividad de procedimiento almacenado de SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Crea un servicio vinculado de la base de datos de SQL que hospeda SSISDB
 El servicio vinculado permite factoría de datos conectarse a SSISDB.
@@ -221,4 +221,4 @@ Para obtener más información sobre el código de esta secuencia de comandos, c
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información acerca del agente de SQL Server, vea [trabajos del Agente SQL Server para los paquetes](../packages/sql-server-agent-jobs-for-packages.md).
 
-Para obtener más información acerca de los trabajos elásticos de base de datos de SQL, consulte [bases de datos de escala horizontal en la nube de administración](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Para obtener más información acerca de los trabajos elásticos de base de datos de SQL, consulte [bases de datos de escala horizontal en la nube de administración](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

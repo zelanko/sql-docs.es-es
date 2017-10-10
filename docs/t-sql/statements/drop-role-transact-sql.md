@@ -28,10 +28,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8262eae6ed14104da08cf182326f49c3221876a
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 86266835ec5d54ce08bdf7fe18d93dd9d4de1737
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
@@ -79,7 +79,7 @@ DROP ROLE role_name
  Para quitar un rol de servidor, use [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
- Requiere **ALTER ANY ROLE** permiso en la base de datos o **control** permiso en el rol o la pertenencia a la **db_securityadmin**.  
+ Requiere **ALTER ANY ROLE** permiso en la base de datos o **CONTROL** permiso en el rol o la pertenencia a la **db_securityadmin**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el rol de base de datos `purchasing` desde el `AdventureWorks2012` base de datos.  

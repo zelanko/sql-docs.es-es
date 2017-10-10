@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/08/2017
   
 -   **Delimiters** De forma predeterminada, la lista de delimitadores contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
--   **Símbolos** de forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Por ejemplo, si los símbolos son "`()-`", el valor"(425) 123-4567" se convierte en ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Símbolos** de forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%` , así como la marca de graduación. Por ejemplo, si los símbolos son "`()-`", el valor"(425) 123-4567" se convierte en ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un carácter no puede ser delimitador y símbolo a la vez.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/08/2017
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
  **Symbols**  
- Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista **Symbols** contiene los caracteres siguientes: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   

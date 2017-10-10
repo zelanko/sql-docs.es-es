@@ -1,5 +1,5 @@
 ---
-title: Combinaciones admitidas de SQL Server Reporting Services y SharePoint | Documentos de Microsoft
+title: Combinaciones admitidas de servidor de SharePoint y Reporting Services | Documentos de Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaciones admitidas de SharePoint y el servidor de Reporting Services
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaciones admitidas del servidor de SharePoint y Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -38,7 +38,7 @@ Un servidor de informes de SQL Server Reporting Services instalado en modo de Sh
 > [!NOTE]
 > Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinaciones admitidas de los componentes de Reporting Services y SharePoint
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinaciones admitidas de componentes de SharePoint y Reporting Services
 
  En la tabla siguiente se resumen las combinaciones admitidas de servidor de informes, complemento de Reporting Services para productos de SharePoint y productos de SharePoint. Las combinaciones que no se muestran en la tabla siguiente no se admiten
 
@@ -66,7 +66,7 @@ Un servidor de informes de SQL Server Reporting Services instalado en modo de Sh
 
  Para obtener vínculos a las páginas de descarga del complemento, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
- **Notas adicionales:**
+ **Consideraciones adicionales:**
 
 - Asegúrese de actualizar todos los servidores de SharePoint dentro de la granja de servidores. Esto incluye los servidores de front-end web y de aplicación.
 
@@ -86,4 +86,4 @@ Un servidor de informes de SQL Server Reporting Services instalado en modo de Sh
  [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

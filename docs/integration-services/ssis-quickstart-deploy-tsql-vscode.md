@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implementar un proyecto de SSIS de código de Visual Studio con Transact-SQL
@@ -21,7 +21,7 @@ Este tutorial muestra cómo utilizar código de Visual Studio para conectarse a 
 > [!NOTE]
 > El método descrito en este artículo no está disponible cuando se conecta a un servidor de base de datos de SQL Azure con el código de VS. El `catalog.deploy_project` procedimiento almacenado espera que la ruta de acceso a la `.ispac` archivo en el sistema de archivos local (local).
 
-Código de Visual Studio es un editor de código para Windows, Mac OS y Linux que admita extensiones, incluida la `mssql` extensión para conectarse a Microsoft SQL Server, base de datos de SQL Azure o almacenamiento de datos de SQL Azure. Para obtener más información sobre el código de VS, consulte [Cod de Visual Studio](https://code.visualstudio.com/).
+Código de Visual Studio es un editor de código para Windows, Mac OS y Linux que admita extensiones, incluida la `mssql` extensión para conectarse a Microsoft SQL Server, base de datos de SQL Azure o almacenamiento de datos de SQL Azure. Para obtener más información sobre el código de VS, consulte [código de Visual Studio](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -31,7 +31,7 @@ Antes de empezar, asegúrese de que ha instalado la versión más reciente de Vi
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Establecer el modo de lenguaje a SQL en el código de VS
 
-Para habilitar `mssql` comandos y T-SQL IntelliSense, ajuste el modo de idioma está establecido en **SQL** en código de Visual Studio.
+Para habilitar `mssql` comandos e IntelliSense de T-SQL, establezca el modo de lenguaje en **SQL** en código de Visual Studio.
 
 1. Abra el código de Visual Studio y, a continuación, abra una ventana nueva. 
 

@@ -2,7 +2,7 @@
 title: "¿Qué &#39; s nuevo en servicios de aprendizaje de máquina | Documentos de Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: es-es
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novedades en servicios de aprendizaje de máquina en SQL Server
@@ -37,6 +37,16 @@ En SQL Server 2017, aprendizaje automático pasa a ser más eficaz, con la adici
 
 Servidor de aprendizaje de máquina de Microsoft en SQL Server proporciona ahora compatibilidad completa para crear e implementar soluciones de aprendizaje de máquina en R o Python. Estos son los aspectos destacados de esta versión:
 
+> [!IMPORTANT]
+> 
+> Servicios de aprendizaje de máquina, incluido el uso de R o Python, no se admiten cuando se ejecuta SQL Server en Linux o en la base de datos SQL de Azure. Buscar cambios en una versión posterior.
+> 
+> Puntuación nativo mediante la función de PREDICCIÓN se admite actualmente en la edición de Linux.
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Novedades de la actualización acumulativa 1 para SQL Server 2017
+
+Ahora puede actualizar los componentes de Python y R al servidor de aprendizaje de máquina 9.2.1. Esta versión presenta muchas mejoras a **revoscalepy** y **RevoScaleR**, incluidas las mejoras de rendimiento.
+ 
 ### <a name="in-database-python-integration"></a>Integración de Python en bases de datos
 
 Puede ejecutar Python en procedimientos almacenados, o ejecutar de forma remota con el equipo de SQL Server como el contexto de ejecución de Python. Esta integración abre nuevas vías para la amplia comunidad de desarrolladores de Python y científicos de datos para aprovechar la eficacia de SQL Server. 

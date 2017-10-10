@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
 Este tutorial de inicio rápido muestra cómo implementar un proyecto de SSIS desde el símbolo del sistema ejecutando el Asistente para la implementación de Integration Services, `ISDeploymentWizard.exe`.
 
-Para obtener más información sobre el Asistente para la implementación de servicios de integración, vea [Integration Services Deployment Wizard](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Para obtener más información sobre el Asistente para la implementación de servicios de integración, vea [Integration Services Deployment Wizard](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar al Asistente para la implementación de Integration Services
 1. Abra una ventana de símbolo del sistema.
@@ -46,7 +46,7 @@ Para obtener más información sobre el Asistente para la implementación de ser
   
 5.  Una vez completado, el proceso de implementación del **resultados** se abre la página. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si se produjo un error, haga clic en **error** en el **resultado** columna para que aparezca una explicación del error.
-    -   Si lo desea, haga clic en **Guardar informe... ** para guardar los resultados en un archivo XML.
+    -   Si lo desea, haga clic en **Guardar informe...**  para guardar los resultados en un archivo XML.
     -   Haga clic en **cerrar** para salir del asistente.
 
 ## <a name="next-steps"></a>Pasos siguientes

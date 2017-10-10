@@ -1,37 +1,34 @@
 ---
-title: "¿Qué &#39; s nuevo en Analysis Services de SQL Server de 2017 | Documentos de Microsoft"
-ms.custom: 
-ms.date: 09/21/2017
+title: Novedades de Analysis Services de SQL Server de 2017 | Documentos de Microsoft
+ms.date: 10/03/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
-caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c75d1ec210f3511408e2c976df28f9db22d7272f
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
 ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 
-# <a name="what39s-new-in-sql-server-2017-analysis-services"></a>¿Qué &#39; s nuevo en Analysis Services de SQL Server de 2017
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>Novedades de Analysis Services de SQL Server de 2017
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-2017 Analysis Services de SQL Server puede ver algunas de las mejoras más importantes desde SQL Server 2012. Compilar el correcto funcionamiento de modo Tabular (que inicialmente se introdujo en SQL Server 2012 Analysis Services), esta versión hace que los modelos tabulares más eficaces que nunca.
+Analysis Services de SQL Server de 2017 vea algunas de las mejoras más importantes desde SQL Server 2012. Compilar el correcto funcionamiento de modo Tabular (que inicialmente se introdujo en SQL Server 2012 Analysis Services), esta versión hace que los modelos tabulares más eficaces que nunca.
 
 Modo multidimensional y Power Pivot para el modo de SharePoint son una grapa para muchas de las implementaciones de Analysis Services. En el ciclo de vida del producto de Analysis Services, estos modos son consolidados. No hay ninguna característica nueva para cada uno de estos modos en esta versión. Sin embargo, se incluyen correcciones de errores y mejoras de rendimiento.
 
-Las características descritas aquí se incluyen en Analysis Services de SQL Server de 2017. Pero para sacar provecho de ellas, también debe usar las versiones más recientes de [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) y [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). SSDT y SSMS se actualizan mensualmente con nuevas y mejoradas características que normalmente conincide con nueva funcionalidad en SQL Server.  
+Las características descritas aquí se incluyen en Analysis Services de SQL Server de 2017. Pero para sacar provecho de ellas, también debe usar las versiones más recientes de [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) y [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). SSDT y SSMS se actualiza mensualmente con características nuevas y mejoradas que normalmente coincidan con la nueva funcionalidad en SQL Server.  
 
-Aunque es divertido tomar los contenedores de todas las características nuevas, también es importante saber lo que se está en desuso y ya no disponible en esta versión y las versiones futuras. No olvide desproteger [compatibilidad con versiones anteriores (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md).
+Aunque es importante obtener información sobre las nuevas características, también es importante saber lo que se está en desuso y ya no disponible en esta versión y las versiones futuras. No olvide desproteger [compatibilidad con versiones anteriores (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md).
 
 ¡Eche un vistazo a algunas de las nuevas características claves de esta versión.
 
@@ -43,7 +40,7 @@ En SSDT, puede seleccionar el nuevo nivel de compatibilidad 1400 al crear proyec
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-Para actualizar un modelo tabular existente en SSDT, en el Explorador de soluciones, haga clic en **Model.bim**y, a continuación, en **propiedades**, establezca el **nivel de compatibilidad** propiedad ** SQL Server de 2017 (1400)**. 
+Para actualizar un modelo tabular existente en SSDT, en el Explorador de soluciones, haga clic en **Model.bim**y, a continuación, en **propiedades**, establezca el **nivel de compatibilidad** propiedad  **SQL Server de 2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -56,12 +53,12 @@ Obtener datos moderna experiencia ofrecían compatibilidad para una amplia gama 
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- Una interfaz de usuario intuitiva y eficaz que seleccionar los datos y las capacidades de transformación/mashup de datos más fácil que nunca.
+ Una interfaz de usuario intuitiva y eficaz facilita la selección de los datos y las capacidades de transformación/mashup de datos más fácil que nunca.
 
 ![Mashup avanzado](../analysis-services/media/as-get-data-advanced.png)
 
 
-Obtener datos moderna experiencia y capacidades de mashup de M no se aplican a ugraded de los modelos tabulares existente desde el nivel de compatibilidad de 1200 1400. La nueva experiencia solo se aplica a los modelos nuevos que se crean en el nivel de compatibilidad de 1400.
+Obtener datos moderna experiencia y capacidades de mashup de M no se aplican a upraded de los modelos tabulares existente desde el nivel de compatibilidad de 1200 1400. La nueva experiencia solo se aplica a los modelos nuevos que se crean en el nivel de compatibilidad de 1400.
 
 ## <a name="encoding-hints"></a>Sugerencias de codificación
 Esta versión presenta sugerencias de codificación, una característica avanzada que se utiliza para optimizar el procesamiento (actualización de datos) de los modelos tabulares de gran tamaño en memoria. Para entender mejor la codificación, vea [rendimiento para la optimización de los modelos tabulares en SQL Server 2012 Analysis Services](https://msdn.microsoft.com/library/dn393915.aspx) notas del producto para comprender mejor la codificación.
@@ -70,9 +67,9 @@ Esta versión presenta sugerencias de codificación, una característica avanzad
 
 * Codificación de hash es preferible columnas group by (a menudo valores de tabla de dimensiones) y claves externas. Las columnas de cadena siempre son hash codificado.
 
-Las columnas numéricas pueden utilizar cualquiera de estos métodos de codificación. Cuando Analysis Services inicia el procesamiento de una tabla, si bien la tabla está vacía (con o sin particiones) o se realiza una operación de procesamiento de la tabla completa, se toman los valores de ejemplos para que cada columna determinar si se debe aplicar la codificación de hash o valor numérico . De forma predeterminada, la codificación del valor se elige cuando el ejemplo de valores distintos en la columna es lo suficientemente grande; en caso contrario, la codificación de hash suelen proporcionar una mejor compresión. Es posible que Analysis Services cambiar el método de codificación después de la columna se ha procesado parcialmente basándose en obtener más información sobre la distribución de datos y reinicie el proceso de codificación. Por supuesto, esto aumenta el tiempo de procesamiento y es ineficaz. Las notas del producto ajuste del rendimiento describen recodificación con más detalle y cómo detectar mediante SQL Server Profiler.
+Las columnas numéricas pueden utilizar cualquiera de estos métodos de codificación. Cuando Analysis Services inicia el procesamiento de una tabla, si bien la tabla está vacía (con o sin particiones) o se realiza una operación de procesamiento de la tabla completa, se toman los valores de ejemplos para que cada columna determinar si se debe aplicar la codificación de hash o valor numérico . De forma predeterminada, la codificación del valor se elige cuando el ejemplo de valores distintos en la columna es lo suficientemente grande: en caso contrario, la codificación de hash normalmente proporciona una mejor compresión. Es posible que Analysis Services cambiar el método de codificación después de la columna se ha procesado parcialmente basándose en obtener más información sobre la distribución de datos y reinicie el proceso de codificación; Sin embargo, esto aumenta el tiempo de procesamiento y es ineficaz. Las notas del producto ajuste del rendimiento describen recodificación con más detalle y cómo detectar mediante SQL Server Profiler.
 
-Sugerencias de codificación permiten el Modelador especificar una preferencia para el método de codificación tiene conocimiento previo de generación de perfiles de datos o en respuesta a volver a codificar los eventos de seguimiento. Puesto que la agregación de las columnas con codificación hash es más lenta de sobre columnas valor codificado, codificación de valor se puede especificar como una sugerencia para estas columnas. No se garantiza que se aplicará la preferencia; por lo tanto, es una sugerencia en lugar de una configuración. Para especificar una sugerencia de codificación, establezca la propiedad EncodingHint en la columna. Los valores posibles son "Default", "Valor" y "Hash". El siguiente fragmento de JSON en función de metadatos desde el archivo Model.bim especifica el valor de codificación para la columna de importe de ventas.
+Sugerencias de codificación permiten el Modelador especificar una preferencia para el método de codificación tiene conocimiento previo de generación de perfiles de datos o en respuesta a volver a codificar los eventos de seguimiento. Puesto que la agregación de las columnas con codificación hash es más lenta de sobre columnas valor codificado, codificación de valor se puede especificar como una sugerencia para estas columnas. No se garantiza que se aplica la preferencia. Es una sugerencia en lugar de una configuración. Para especificar una sugerencia de codificación, establezca la propiedad EncodingHint en la columna. Los valores posibles son "Default", "Valor" y "Hash". El siguiente fragmento de JSON en función de metadatos desde el archivo Model.bim especifica el valor de codificación para la columna de importe de ventas.
 
 ```
 {
@@ -116,7 +113,7 @@ La propiedad **Expresión de filas de detalles** para las medidas permite a los 
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-La función DAX [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) se usará normalmente en una expresión de filas de detalles. En el ejemplo siguiente se definen las columnas que se devuelven para las filas de la tabla de ventas por Internet del modelo tabular de ejemplo de Adventure Works:
+El [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) función DAX se usa normalmente en una expresión de filas de detalle. En el ejemplo siguiente se definen las columnas que se devuelven para las filas de la tabla de ventas por Internet del modelo tabular de ejemplo de Adventure Works:
 
 ```
 SELECTCOLUMNS(
@@ -133,7 +130,7 @@ Una vez que se ha definido la propiedad y se ha implementado el modelo, se devue
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>Propiedad Expresión de filas de detalles predeterminada para tablas
-Además de las medidas, las tablas también tienen una propiedad para definir una expresión de filas de detalles. La propiedad **Expresión de filas de detalles predeterminada** actúa como valor predeterminado para todas las medidas de la tabla. Las medidas que no tienen su propia expresión definida heredan la expresión la tabla y muestran el conjunto de filas definido para la tabla. Esto permite reutilizar las expresiones, y las medidas nuevas que se agreguen a la tabla más adelante heredarán automáticamente la expresión.
+Además de las medidas, las tablas también tienen una propiedad para definir una expresión de filas de detalles. La propiedad **Expresión de filas de detalles predeterminada** actúa como valor predeterminado para todas las medidas de la tabla. Las medidas que no tiene su propia expresión definida hereda la expresión de la tabla y mostrar el conjunto definido para la tabla de filas. Esto permite reutilizar expresiones y nuevas medidas que se agrega a la tabla automáticamente más tarde hereda la expresión.
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -244,7 +241,7 @@ Además de todas las características nuevas, Analysis Services, SSDT y SSMS tam
 * Reutilización de la jerarquía y la columna aparece en ubicaciones más relevantes en la lista de campos de Power BI.
 * Relaciones de fecha para crear fácilmente las relaciones a las dimensiones de fecha en función de los campos de fecha.
 * Opción de instalación predeterminada para Analysis Services ahora es para el modo tabular.
-* Nuevos orígenes de datos de obtener datos (Power Qery).
+* Nuevos orígenes de datos de obtener datos (Power Query).
 * Editor DAX para SSDT.
 * Orígenes de datos de DirectQuery existentes se admiten para M de consultas.
 * Mejoras de SSMS, por ejemplo, ver, modificar y compatibilidad con scripting para orígenes de datos estructurados.

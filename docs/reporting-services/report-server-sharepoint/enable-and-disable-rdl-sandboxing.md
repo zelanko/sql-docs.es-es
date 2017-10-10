@@ -1,7 +1,7 @@
 ---
-title: Habilitar y deshabilitar el espacio aislado de RDL | Documentos de Microsoft
+title: Habilitar y deshabilitar el espacio aislado de RDL de Reporting Services en modo integrado de SharePoint | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,27 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
-  La característica de espacio aislado del lenguaje RDL (Report Definition Language) permite detectar y restringir el uso de tipos específicos de uso de recursos por parte de inquilinos individuales en un entorno donde varios inquilinos usan una única granja web de servidores de informes. Un ejemplo de esto es un escenario de servicios de hospedaje en el que podría mantener una única granja web de servidores de informes que utilicen varios inquilinos, y quizás compañías diferentes. Como administrador del servidor de informes, puede habilitar esta característica para alcanzar los siguientes objetivos:  
+# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar y deshabilitar el espacio aislado de RDL de Reporting Services en modo integrado de SharePoint
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+La característica de espacio aislado RDL (Report Definition Language) permite detectar y restringir el uso de tipos específicos de recursos por parte de inquilinos individuales en un entorno de varios inquilinos que usan una única granja web de servidores de informes. Un ejemplo de esto es un escenario de servicios de hospedaje en el que podría mantener una única granja web de servidores de informes que utilicen varios inquilinos, y quizás compañías diferentes. Como administrador del servidor de informes, puede habilitar esta característica para alcanzar los siguientes objetivos:  
   
 -   Restringir los tamaños de recursos externos. Entre los recursos externos se incluyen imágenes, archivos .xslt y datos de mapas.  
   
 -   En el tiempo de publicación del informe, limitar los tipos y los miembros que se usan en el texto de expresión.  
   
--   En el tiempo de procesamiento del informe, limitar la longitud del texto y el texto del valor de devolución de las expresiones.  
-  
+-   En el tiempo de procesamiento del informe, limitar la longitud del texto y el texto del valor de devolución de las expresiones.
+
+> [!NOTE]
+> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+
  Cuando se habilita el espacio aislado de RDL, se deshabilitan las siguientes características:  
   
 -   Código personalizado en el  **\<código >** elemento de una definición de informe.  
@@ -41,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
  En este tema se describe cada elemento en el \< **RDLSandboxing**> elemento en el archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="example-configuration"></a>Ejemplo de configuración  
+## <a name="example-configuration"></a>Ejemplo de configuración
  En el ejemplo siguiente se muestra la configuración y los valores de ejemplo para la \< **RDLSandboxing**> elemento en el archivo RSReportServer.Config.  
   
 ```  
@@ -59,9 +65,10 @@ ms.lasthandoff: 08/09/2017
       <Deny>StrDup</Deny>  
    </Members>  
 </RDLSandboxing>  
-```  
-  
-## <a name="configuration-settings"></a>Parámetros de configuración  
+```
+
+## <a name="configuration-settings"></a>Opciones de configuración
+
  La siguiente tabla proporciona información acerca de los parámetros de configuración. Los parámetros se presentan en el orden en que aparecen en el archivo de configuración.  
   
 |Configuración|Description|  
@@ -73,13 +80,14 @@ ms.lasthandoff: 08/09/2017
 |**Tipos**|Lista de los miembros que se permitirán en las expresiones RDL.|  
 |**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
-|**AllowNew**|Atributo booleano de **permitir** que controla si se permiten nuevas instancias del tipo para crearse en expresiones RDL o en un archivo RDL  **\<clase >** elemento.<br /><br /> Nota: Cuando se habilita **RDLSandboxing** , no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración de **AllowNew**.|  
-|**Value**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
+|**AllowNew**|Atributo booleano de **permitir** que controla si se permiten nuevas instancias del tipo para crearse en expresiones RDL o en un archivo RDL  **\<clase >** elemento.<br /><br /> Cuando **RDLSandboxing** está habilitada, no se puede crear nuevas matrices en expresiones RDL, independientemente de la configuración de **AllowNew**.|  
+|**Valor**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |**Miembros**|Para obtener la lista de tipos que se incluyen en el  **\<tipos >** elemento, la lista de nombres de miembro que no se permiten en expresiones RDL.|  
-|**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Nota: Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
+|**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Cuando **Deny** se especifica para un miembro, no se permiten todos los miembros con este nombre para todos los tipos.|  
   
-## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabajar con expresiones cuando se habilita el espacio aislado de RDL  
- Puede modificar la característica de espacio aislado de RDL para administrar los recursos que usa una explorador de las siguientes formas:  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabajar con expresiones cuando se habilita el espacio aislado RDL
+
+Puede modificar la característica de espacio aislado de RDL para administrar los recursos que usa una explorador de las siguientes formas:  
   
 -   Restringir el número de caracteres que se usa para una expresión.  
   
@@ -96,7 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  Los resultados de la expresión RDL se comprueban en tiempo de ejecución. Las expresiones RDL se comprueban en la definición de informe cuando se publica el informe. Supervise el registro de seguimiento del servidor de informes por si se han producido infracciones. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-### <a name="working-with-types"></a>Trabajar con tipos  
+### <a name="working-with-types"></a>Trabajar con tipos
+
  Al agregar un tipo a la lista de permitidos, se controlan los siguientes puntos de entrada para obtener acceso a las expresiones RDL:  
   
 -   Miembros estáticos de un tipo.  
@@ -139,7 +148,8 @@ ms.lasthandoff: 08/09/2017
   
  Al agregar un tipo de un ensamblado personalizado a la lista de permitidos no se concede permiso de ejecución de forma explícita en el ensamblado. Debe modificar de forma específica el archivo de seguridad de acceso del código y proporcionar el permiso de ejecución en el ensamblado. Para más información, consulte [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Mantener la \<denegar > lista de miembros  
+#### <a name="maintaining-the-deny-list-of-members"></a>Mantener la \<Deny > lista de miembros
+
  Al agregar un nuevo tipo a la lista de permitidos, use la siguiente lista para determinar cuándo tendrá que actualizar la lista de miembros bloqueados:  
   
 -   Al actualizar un ensamblado personalizado con una versión que introduce nuevos tipos.  
@@ -152,7 +162,8 @@ ms.lasthandoff: 08/09/2017
   
 -   Al actualizar un servidor de informes para administrar un esquema RDL posterior, porque se pueden haber agregado nuevos miembros a los tipos RDL.  
   
-### <a name="working-with-operators-and-new"></a>Trabajar con operadores y New  
+### <a name="working-with-operators-and-new"></a>Trabajar con operadores y new
+
  De forma predeterminada, los operadores de lenguaje de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para **New**. El **New** operador se controla mediante la **AllowNew** del atributo en el  **\<permitir >** elemento. Otros operadores de lenguaje, como el operador de descriptor de acceso de colección predeterminado **!** y macros de conversión de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, como **CInt**, siempre se permiten.  
   
  No se admite la adición de operadores a la lista de bloqueados, incluidos los operadores personalizados. Para excluir los operadores de un tipo, debe realizar las siguientes operaciones:  
@@ -169,8 +180,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Agregar la clase a la lista de permitidos.  
   
-## <a name="see-also"></a>Vea también  
- [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Registro de seguimiento de servicio de servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
-  
+## <a name="see-also"></a>Vea también
+
+ [Archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Registro de seguimiento de servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)  
+
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 437ec62abb0107e8a70926fd60d0c54cc6064122
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Generar un modelo de R y guardar en SQL Server
@@ -146,8 +146,9 @@ En esta sección, podrá experimentar con ambas técnicas.
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
-3. Generate a local plot, based on the values stored in the output variable `pred`.
+3. Generar un gráfico local, en función de los valores almacenados en la variable de salida `pred`.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -232,10 +233,10 @@ En la segunda y última lección, aprenderá a realizar puntuar en el modelo gua
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Implementar el modelo de R y usar en SQL](/walkthrough-deploy-and-use-the-model.md)
+[Implementar el modelo de R y usar en SQL](walkthrough-deploy-and-use-the-model.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Crear características de datos mediante R y SQL](/walkthrough-create-data-features.md)
+[Crear características de datos mediante R y SQL](walkthrough-create-data-features.md)
 
 

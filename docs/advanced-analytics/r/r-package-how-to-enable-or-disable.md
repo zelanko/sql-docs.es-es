@@ -1,7 +1,7 @@
 ---
-title: "Cómo habilitar o deshabilitar la administración de paquetes de R | Microsoft Docs"
+title: "Habilitar o deshabilitar la administración de paquetes de R para SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 12/21/2016
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,63 +15,89 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aac055d9a2337f1278d648fbcd17435afe1bd3b3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 88337da76b3a44b9dc797fd1d9f187bfda7396c8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="r-package---how-to-enable-or-disable"></a>Paquete de R - Cómo habilitarlo y deshabilitarlo
+# <a name="enable-or-disable-r-package-management-for-sql-server"></a>Habilitar o deshabilitar la administración de paquetes de R para SQL Server
 
-De forma predeterminada, la administración de paquetes está deshabilitada en una instancia de SQL Server, aunque R Services esté instalado. La habilitación de esta característica es un proceso de dos pasos que debe realizar un administrador de base de datos: 
+En este artículo se describe el proceso de habilitar o deshabilitar la nueva característica de administración de paquetes en SQL Server 2017. Esta característica permite al administrador de base de datos controlar la instalación del paquete en la instancia. La característica se basa en los nuevos roles de base de datos para conceder a los usuarios la capacidad para instalar los paquetes de R necesitan o compartir paquetes con otros usuarios.
 
-1. Habilitar la administración de paquetes en la instancia de SQL Server (una vez por instancia de SQL Server) 
-2. Habilitar la administración de paquetes en la base de datos SQL (una vez por base de datos SQL Server) 
+De forma predeterminada, está deshabilitada la característica de administración de paquetes externos para SQL Server, incluso si se instalaron características de aprendizaje de la máquina.
 
+Para [habilitar](#bkmk_enable) esta característica es un proceso de dos pasos y requiere cierta ayuda de un administrador de base de datos:
 
-Al deshabilitar la característica de administración de paquetes, invierta el proceso de quitar los permisos y los paquetes de nivel de base de datos y, luego, quite los roles del servidor:
- 
-1. Deshabilitar la administración de paquetes en cada base de datos (una vez por base de datos) 
-2. Deshabilitar la administración de paquetes en la instancia de SQL Server (una vez por instancia) 
+1.  Habilitar la administración de paquetes en la instancia de SQL Server (una vez por instancia de SQL Server)
 
-> [!IMPORTANT]
-> Esta característica está en desarrollo. Tenga en cuenta que la sintaxis o la funcionalidad pueden cambiar en versiones posteriores. 
+2.  Habilitar la administración de paquetes en la base de datos SQL (una vez por base de datos SQL Server)
 
-### <a name="to-enable-package-management"></a>Para habilitar la administración de paquetes
+Para [deshabilitar](#bkmk_disable) la característica de administración de paquetes, invertir el proceso para quitar paquetes de nivel de base de datos y los permisos y, a continuación, quite los roles del servidor:
 
-La habilitación o deshabilitación de la administración de paquetes exige la utilidad de línea de comandos **RegisterRExt.exe**, incluida en el paquete **RevoScaleR** que se instala con SQL Server R Services. la ubicación predeterminada es:
+1.  Deshabilitar la administración de paquetes en cada base de datos (una vez por base de datos)
 
-`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe` 
-    
-1. Abra un símbolo del sistema con privilegios elevados y use el siguiente comando:
+2.  Deshabilitar la administración de paquetes en la instancia de SQL Server (una vez por instancia)
+
+## <a name="bkmk_enable"></a>Habilitar la administración de paquetes
+
+Para habilitar o deshabilitar la administración del paquete requiere que la utilidad de línea de comandos **RegisterRExt.exe**, que se incluye con la **RevoScaleR** paquete.
+
+1. Abra un símbolo del sistema con privilegios elevados y vaya a la carpeta que contiene la utilidad, RegisterRExt.exe. La ubicación predeterminada es `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+
+2. Ejecute el siguiente comando, proporcionar argumentos adecuado para su entorno:
 
     `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Este comando crea artefactos de nivel de instancia en el equipo de SQL Server que son necesarios para la administración de paquetes. 
+    Este comando crea objetos de nivel de instancia en el equipo de SQL Server que son necesarios para la administración de paquetes. También se reinicia el Launchpad de la instancia.
 
-2. Para agregar administración de paquetes en el nivel de base de datos, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados para cada base de datos en la que haya que instalar paquetes: 
+    Si no especifica una instancia, se utiliza la instancia predeterminada.
 
-    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]` 
+    Si no especifica un usuario, se utiliza el contexto de seguridad actual.
 
-    Este comando crea algunos artefactos de base de datos, incluidos los siguientes roles de base de datos que son necesarios para controlar los permisos de usuario: **rpkgs-users**, **rpkgs-private**y **rpkgs-shared** 
+2.  Para agregar administración de paquetes en el nivel de base de datos, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados:
 
-### <a name="to-disable-package-management"></a>Para deshabilitar la administración de paquetes 
+    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+   
+    Este comando crea algunos artefactos de base de datos, incluidos los siguientes roles de base de datos que se usan para controlar los permisos de usuario: `rpkgs-users`, `rpkgs-private`, y `rpkgs-shared`.
 
-1. Desde un símbolo del sistema con privilegios elevados, ejecute el siguiente comando para deshabilitar la administración de paquetes en el nivel de base de datos:
+    Si no especifica un usuario, se utiliza el contexto de seguridad actual.
 
-   `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]` 
+3. Repita el comando para cada base de datos donde deben instalarse los paquetes.
 
-    Este comando quitará los artefactos de base de datos relacionados con la administración de paquetes de la base de datos especificada.  El comando también quitará todos los paquetes que se instalaron por base de datos desde la ubicación del sistema de archivos protegido en el equipo de SQL Server.
-    
-    El comando debe ejecutarse una vez por cada base de datos en la que se usara la administración de paquetes.
- 
-2. (Opcional) Para quitar completamente la característica de administración de paquetes de la instancia, después de quitar los paquetes de todas las bases de datos mediante el paso anterior, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados:
+4.  Para comprobar que se han creado correctamente los nuevos roles, en SQL Server Management Studio, haga clic en la base de datos, expanda **seguridad**y expanda **Roles de base de datos**.
+
+    También puede ejecutar una consulta en sys.database_principals como el siguiente:
+
+    ```SQL
+    SELECT pr.principal_id, pr.name, pr.type_desc,   
+        pr.authentication_type_desc, pe.state_desc,   
+        pe.permission_name, s.name + '.' + o.name AS ObjectName  
+    FROM sys.database_principals AS pr  
+    JOIN sys.database_permissions AS pe  
+        ON pe.grantee_principal_id = pr.principal_id  
+    JOIN sys.objects AS o  
+        ON pe.major_id = o.object_id  
+    JOIN sys.schemas AS s  
+        ON o.schema_id = s.schema_id;
+    ```
+
+4.  Después de que se ha habilitado la característica, cualquier usuario con los permisos adecuados puede utilizar el [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrucción T-SQL para agregar paquetes. Para obtener un ejemplo de cómo funciona esto, consulte [instalar paquetes adicionales en SQL Server](install-additional-r-packages-on-sql-server.md).
+
+## <a name="bkmk_disable"></a>Deshabilitar la administración de paquetes
+
+1.  Desde un símbolo del sistema con privilegios elevados, ejecute el siguiente comando para deshabilitar la administración de paquetes en el nivel de base de datos:
+
+    `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+
+    Ejecute este comando una vez para cada base de datos donde se utiliza la administración de paquetes. Este comando quitará los objetos de base de datos relacionados con administración de paquetes de la base de datos especificada. También se quitarán todos los paquetes que se instalaron desde la ubicación de sistema de archivos protegidos en el equipo de SQL Server.
+
+2.  (Opcional) Después de que se han borrado todas las bases de datos de paquetes mediante el paso anterior, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados:
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Este comando quita los artefactos de nivel de instancia usados por la administración de paquetes de la instancia de SQL Server. 
-
+    Este comando quita la característica de administración de paquetes de la instancia.
 
 ## <a name="see-also"></a>Vea también
-[R Package Management for SQL Server R Services (Administración de paquetes de R para SQL Server R Services)](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)
 
+[Administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md)

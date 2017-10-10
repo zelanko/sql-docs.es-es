@@ -1,7 +1,7 @@
 ---
 title: "Solucionar problemas de una instalación de Reporting Services | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,23 +14,23 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar problemas en una instalación de Reporting Services
+# <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar problemas de una instalación de Reporting Services
 
   Si no puede instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debido a los errores que se producen durante la instalación, siga las instrucciones que se explican en este tema para abordar las condiciones que probablemente ocasionen esos errores.  
   
  Para obtener información sobre otros errores y problemas relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vea [SSRS: Solucionar problemas y errores.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Examine las [Notas de la versión en línea](http://go.microsoft.com/fwlink/?linkid=236893) en caso de que el problema que tiene se describa en las notas de la versión.  
+ Revise el [notas de la versión en línea](http://go.microsoft.com/fwlink/?linkid=236893) en caso de que el problema que tiene se describe en las notas.  
   
-##  <a name="bkmk_setuplogs"></a> Examinar los registros de instalación  
+##  <a name="bkmk_setuplogs"></a>Compruebe los registros de instalación  
  Los errores de configuración se registran en los archivos de registro de la carpeta **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** . Se crea una subcarpeta cada vez que se ejecuta el programa de instalación. El nombre de la subcarpeta indica la hora y la fecha en que se ejecutó el programa de instalación. Para obtener instrucciones sobre cómo ver los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 -   Los archivos de registro incluyen una recopilación de archivos.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Abra el archivo *_RS\_\*_ComponentUpdateSetup.log para ver información sobre la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-##  <a name="bkmk_prereq"></a> Comprobar los requisitos previos  
+##  <a name="bkmk_prereq"></a>Comprobación de requisitos previos  
  El programa de instalación comprueba si se cumplen los requisitos previos automáticamente. Sin embargo, al solucionar problemas de instalación, es útil saber qué requisitos comprueba dicho programa.  
   
 -   Los requisitos relacionados con las cuentas que se necesitan para ejecutar el programa de instalación incluyen la pertenencia al grupo local de administradores. El programa de instalación debe tener permiso para agregar archivos y valores del Registro, crear grupos de seguridad locales y establecer permisos fijos. Si está instalando una configuración predeterminada, el programa de instalación debe tener permiso para crear una base de datos del servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que esté efectuando la instalación.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  El programa de instalación ya no comprueba Internet Information Services (IIS) ni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere MDAC 2.0 y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0; el programa de instalación los instalará si no están en el equipo.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Solucionar los problemas de las instalaciones en modo de SharePoint  
+##  <a name="bkmk_tshoot_sharepoint"></a>Solucionar problemas de oroblems con las instalaciones en modo SharePoint  
   
 -   [El Administrador de configuración de Reporting Services no se inicia](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Ve un mensaje de error que indica que RS_SHP no se admite con PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> El Administrador de configuración de Reporting Services no se inicia
+### <a name="bkmk_configmanager_notstart"></a>Reporting Services Configuration Manager no se inicia
 
  **Descripción:** este problema es así por diseño en SQL Server 2012 y versiones posteriores. Reporting Services está diseñado para la arquitectura de servicio de SharePoint. El Administrador de configuración ya no es necesario para configurar y administrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Instale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint desde los medios de instalación de SQL Server.  
   
- **Nota:** Si el **Shell de administración de SharePoint 2013/2016** está abierto cuando completa una de las soluciones alternativas, cierre y vuelva a abrir el shell de administración.  
+ Si el **Shell de administración de SharePoint 2013/2016** está abierto cuando se complete una de las soluciones alternativas, cierre y vuelva a abrir el shell de administración.  
   
  Para obtener más información, vea:  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [solucionar problemas con las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> Solucionar problemas con las instalaciones en modo nativo  
+##  <a name="bkmk_tshoot_native"></a>Solucionar problemas relacionados con las instalaciones en modo nativo  
   
 ###  <a name="PerfCounters"></a> Los contadores de rendimiento no son visibles después de actualizar a Windows Vista o Windows Server 2008  
  Si actualiza el sistema operativo a [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] o [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] en un equipo que ejecuta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los contadores de rendimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se establecerán después de la actualización.  

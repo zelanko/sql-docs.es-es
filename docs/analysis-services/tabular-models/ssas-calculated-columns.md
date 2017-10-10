@@ -1,7 +1,7 @@
 ---
 title: Calcula las columnas (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>Columnas calculadas
   Las columnas calculadas, en los modelos tabulares, permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
-  
-> [!NOTE]  
->  Las columnas calculadas no se admiten en los modelos tabulares en el modo DirectQuery. Para obtener más información, consulte [Directquerymode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> Ventajas  
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

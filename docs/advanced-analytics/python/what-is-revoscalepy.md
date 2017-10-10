@@ -1,7 +1,7 @@
 ---
 title: "Introducción a revoscalepy | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 661e4e24baeb6eba805c9fba6a9a60875c172c9b
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="introducing-revoscalepy"></a>Introducción a revoscalepy
@@ -32,16 +32,17 @@ Se basa en el **RevoScaleR** paquete de R, que se proporcionó en Microsoft R Se
 
 También se proporcionan MicrosoftML paquetes de R y Python. Para obtener más información, vea [utilizando MicrosoftML en SQL Server](../using-the-microsoftml-package.md)
 
-> [!WARNING]
-> 
-> Compatibilidad con Python es una característica nueva de SQL Server 2017 y es compatible actualmente solo con fines de vista previa.
-
 ## <a name="versions-and-supported-platforms"></a>Las versiones y plataformas compatibles
 
 El **revoscalepy** módulo está disponible cuando se instala uno de los siguientes productos de Microsoft:
 
-+ Servicios de aprendizaje de máquina, en SQL Server de 2017 CTP 2.0 o posterior
-+ Aprendizaje automático de Microsoft Server 9.1.0. Requiere la instalación mediante el programa de instalación para SQL Server de 2017 CTP 2.0 o posterior
++ Servicios de SQL Server de 2017 de aprendizaje automático
++ Aprendizaje de máquina de Microsoft Server 9.2.0 o posterior
+
+Para obtener la versión más reciente de revoscalepy, instale la actualización acumulativa 1 para SQL Server 2017. Incluye muchas mejoras en Python, incluidos:
+
++ Una nueva función de Python, `rx_create_col_info`, que obtiene información del esquema de un origen de datos de SQL Server, como [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) para 
++ Mejoras en [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) para admitir escenarios paralelos usando el `RxLocalParallel` contexto de proceso. 
 
 ## <a name="supported-functions-and-data-types"></a>Tipos admitidos de funciones y datos
 

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e1eeda5d365f5c625e68c498c741754bf59c9d7
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREAR CREDENCIAL en el ámbito de base de datos (Transact-SQL)
@@ -103,7 +103,7 @@ GO
 ```  
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Crear una base de datos con ámbito de credencial para la firma de acceso compartido.   
-En el ejemplo siguiente se crea una credencial de ámbito de la base de datos que puede usarse para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que puede realizar las operaciones masivas, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+En el ejemplo siguiente se crea una credencial de ámbito de la base de datos que puede usarse para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que puede realizar las operaciones masivas, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). No se puede usar firmas de acceso compartido con PolyBase en SQL Server, puntos de acceso o almacenamiento de datos de SQL.
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

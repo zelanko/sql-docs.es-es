@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>Modificar configuración de ámbito de base de datos (Transact-SQL)
@@ -55,13 +55,12 @@ ms.lasthandoff: 09/27/2017
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -69,9 +68,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -131,13 +130,13 @@ Este valor solo es válido en los elementos secundarios mientras la base de dato
   
 DESACTIVE PROCEDURE_CACHE  
 
-Borra la caché de procedimientos para la base de datos. Esto se puede ejecutar tanto en el servidor principal y los servidores secundarios.  
+Borra la caché de procedimientos (plan) para la base de datos. Esto se puede ejecutar tanto en el servidor principal y los servidores secundarios.  
 
-IDENTITY_CACHE = { **ON** | {OFF}  
+IDENTITY_CACHE  **=**  { **ON** | {OFF}  
 
-**Se aplica a**: SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública) 
+**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (característica está en versión preliminar pública) 
 
-Habilita o deshabilita la memoria caché de identidad en el nivel de base de datos. El valor predeterminado es **ON**. Almacenamiento en caché de identidad se utiliza para mejorar el rendimiento de INSERT en tablas con columnas de identidad. Para evitar los huecos en los valores de la columna de identidad en los casos en que el servidor se reinicia inesperadamente o conmuta por error a un servidor secundario, deshabilite la opción IDENTITY_CACHE. Esta opción es similar a la 272 de marca de existente SQL Server seguimiento, excepto en que se puede establecer en el nivel de base de datos, en lugar de hacerlo en el nivel de servidor.   
+Habilita o deshabilita la memoria caché de identidad en el nivel de base de datos. El valor predeterminado es **ON**. Almacenamiento en caché de identidad se utiliza para mejorar el rendimiento de INSERT en tablas con columnas de identidad. Para evitar los huecos en los valores de una columna de identidad en los casos en que el servidor se reinicia inesperadamente o conmuta por error a un servidor secundario, deshabilite la opción IDENTITY_CACHE. Esta opción es similar a la existente [272 de marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), excepto en que se puede establecer en el nivel de base de datos, en lugar de hacerlo en el nivel de servidor.   
 
 > [!NOTE] 
 > Esta opción solo puede establecerse para la réplica principal. Para obtener más información, consulte [las columnas de identidad](create-table-transact-sql-identity-property.md).  
@@ -145,7 +144,7 @@ Habilita o deshabilita la memoria caché de identidad en el nivel de base de dat
 
 ##  <a name="Permissions"></a> Permisos  
  Requiere modificar cualquier configuración de ámbito de base de datos   
-en la base de datos. Este permiso se puede conceder a un usuario con permiso CONTROL en una base de datos  
+en la base de datos. Este permiso se puede conceder a un usuario con permiso CONTROL en una base de datos.  
   
 ## <a name="general-remarks"></a>Notas generales  
  Aunque puede configurar bases de datos secundarias para tener valores de configuración de ámbito diferente desde su servidor principal, todas las bases de datos secundarias usará la misma configuración. No se puede configurar diferentes valores de los elementos secundarios individuales.  
@@ -268,7 +267,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### <a name="g-set-identitycache"></a>G. Establecer IDENTITY_CACHE
 
-**Se aplica a**: SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública) 
+**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (característica está en versión preliminar pública) 
 
 Este ejemplo deshabilita la caché de identidad.
 
@@ -279,6 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## <a name="additional-resources"></a>Recursos adicionales
 
 ### <a name="maxdop-resources"></a>Recursos MAXDOP 
+* [Grado de paralelismo](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [Recomendaciones y directrices para la opción de configuración "max degree of parallelism" en SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>Recursos LEGACY_CARDINALITY_ESTIMATION    
@@ -286,18 +286,18 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>Recursos PARAMETER_SNIFFING    
+* [Examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * ["Tomarse un parámetro"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Recursos QUERY_OPTIMIZER_HOTFIXES    
+* [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server modelo optimizador de consultas revisión seguimiento marca 4199 mantenimiento](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Más información  
  [Sys.database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Marcas de seguimiento &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [Sys.Configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [Opciones de configuración de servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

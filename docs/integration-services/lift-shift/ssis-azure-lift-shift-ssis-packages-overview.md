@@ -1,6 +1,6 @@
 ---
 title: Levantar y mover las cargas de trabajo de SQL Server Integration Services a la nube | Documentos de Microsoft
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: es-es
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Levantar y mover las cargas de trabajo de SQL Server Integration Services a la nube
@@ -46,12 +46,15 @@ Al aprovisionar el control remoto de SSIS, puede escalar verticalmente y escalar
 
 Solamente debe aprovisionar los infrarrojos SSIS una vez. Después de eso, puede usar herramientas conocidas, como SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) para implementar, configurar, ejecutar, supervisar, programar y administrar paquetes.
 
-Factoría de datos también admite otros tipos de tiempos de ejecución de integración. Para obtener más información sobre el control remoto de SSIS y los otros tipos de tiempos de ejecución de integración, vea [en tiempo de ejecución de integración de Data Factory de Azure](/azure/data-factory/concepts-integration-runtime.md).
+> [!NOTE]
+> Durante esta versión preliminar pública, el tiempo de ejecución de integración de SSIS de Azure solo está disponible en las regiones de Estados Unidos Asia y Europa del Norte.
+
+Factoría de datos también admite otros tipos de tiempos de ejecución de integración. Para obtener más información sobre el control remoto de SSIS y los otros tipos de tiempos de ejecución de integración, vea [en tiempo de ejecución de integración de Data Factory de Azure](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime).
 
 ## <a name="prerequisites"></a>Requisitos previos
 Las capacidades descritas en este tema requieren la versión 17.2 o una versión posterior de SQL Server Data Tools (SSDT), pero no requieren 2017 de SQL Server o SQL Server 2016. Al implementar paquetes en Azure, el Asistente para la implementación de paquetes siempre actualiza los paquetes al formato de paquete más reciente.
 
-Para obtener más información sobre los requisitos previos de Azure, consulte [elevar y cambiar paquetes de SQL Server Integration Services (SSIS) en Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Para obtener más información sobre los requisitos previos de Azure, consulte [elevar y cambiar paquetes de SQL Server Integration Services (SSIS) en Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="ssis-features-on-azure"></a>Características SSIS en Azure
 
@@ -68,7 +71,7 @@ Para obtener información sobre cómo conectarse a orígenes de datos locales de
 ## <a name="common-tasks"></a>Tareas comunes
 
 ### <a name="provision"></a>Aprovisionamiento
-Antes de que puede implementar y ejecutar paquetes SSIS en Azure, tendrá que aprovisionar la base de datos de catálogo de SSISDB y el tiempo de ejecución de integración de SSIS de Azure. Siga el aprovisionamiento de los pasos de este artículo: [elevar y cambiar paquetes de SQL Server Integration Services (SSIS) en Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Antes de que puede implementar y ejecutar paquetes SSIS en Azure, tendrá que aprovisionar la base de datos de catálogo de SSISDB y el tiempo de ejecución de integración de SSIS de Azure. Siga el aprovisionamiento de los pasos de este artículo: [elevar y cambiar paquetes de SQL Server Integration Services (SSIS) en Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ### <a name="deploy-and-run-packages"></a>Implementar y ejecutar paquetes
 Para implementar proyectos y ejecutar paquetes en la base de datos SQL, puede usar una de varias herramientas conocidas y opciones de scripting:
@@ -92,6 +95,6 @@ Para obtener más información, consulte [ejecución en Azure del paquete SSIS d
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para empezar a trabajar con las cargas de trabajo SSIS en Azure, vea los siguientes artículos:
--   [Levantar y mover paquetes de SQL Server Integration Services (SSIS) en Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [Levantar y mover paquetes de SQL Server Integration Services (SSIS) en Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [Implementar, ejecutar y supervisar un paquete SSIS en Azure](ssis-azure-deploy-run-monitor-tutorial.md)
 

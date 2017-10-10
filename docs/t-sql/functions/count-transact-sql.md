@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6750b73e1b6833c9cb80c69d758351d961990f7a
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: e2d11d2cc57d275e952ff371ddf99c34dcae323d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -106,11 +106,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67  
   
- `67`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-count"></a>B. Usar COUNT(*)  
 En el ejemplo siguiente se muestra el número total de empleados que trabajan en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
@@ -123,11 +124,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+290  
   
- `290`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="c-using-count-with-other-aggregates"></a>C. Usar COUNT(*) con otros agregados  
 En el ejemplo siguiente se muestra que `COUNT(*)` se puede combinar con otras funciones de agregado de la lista de selección. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
@@ -141,13 +143,14 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`----------- ---------------------`
+```
+----------- ---------------------
+14            3472.1428
   
-`14            3472.1428`
+(1 row(s) affected)
+```
   
-`(1 row(s) affected)`
-  
-### <a name="c-using-the-over-clause"></a>C. Usar la cláusula OVER  
+### <a name="d-using-the-over-clause"></a>D. Usar la cláusula OVER  
 En el ejemplo siguiente se usan las funciones MIN, MAX, AVG y COUNT con la cláusula OVER para proporcionar los valores agregados de cada departamento de la tabla `HumanResources.Department` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
@@ -192,7 +195,7 @@ Tool Design                   8.62                  29.8462               23.505
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-count-and-distinct"></a>D. Usar COUNT y DISTINCT  
+### <a name="e-using-count-and-distinct"></a>E. Usar COUNT y DISTINCT  
 En el ejemplo siguiente se muestra el número de cargos diferentes que puede contener un empleado que trabaja en una empresa específica.
   
 ```sql
@@ -204,11 +207,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67
+```  
   
- `67`  
-  
-### <a name="e-using-count"></a>E. Usar COUNT(*)  
+### <a name="f-using-count"></a>F. Usar COUNT(*)  
 En el ejemplo siguiente se devuelve el número total de filas de la `dbo.DimEmployee` tabla.
   
 ```sql
@@ -220,11 +224,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-------------`
+```
+-------------
+296
+```  
   
- `296`  
-  
-### <a name="f-using-count-with-other-aggregates"></a>F. Usar COUNT(*) con otros agregados  
+### <a name="g-using-count-with-other-aggregates"></a>G. Usar COUNT(*) con otros agregados  
 En el ejemplo siguiente se combinan `COUNT(*)` con otras funciones de agregado en la lista de selección. La consulta devuelve el número de los representantes de ventas con una cuota de ventas anual mayor de 500.000 dólares y la cuota de ventas promedio.
   
 ```sql
@@ -238,13 +243,13 @@ WHERE SalesAmountQuota > 500000 AND CalendarYear = 2001;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`TotalCount  Average Sales Quota`
+```
+TotalCount  Average Sales Quota
+----------  -------------------
+10          683800.0000
+```
   
-`----------  -------------------`
-  
-`10          683800.0000`
-  
-### <a name="g-using-count-with-having"></a>G. Uso de recuento con HAVING  
+### <a name="h-using-count-with-having"></a>H. Uso de recuento con HAVING  
 En el ejemplo siguiente se utiliza COUNT con la cláusula HAVING para devolver los departamentos de una empresa que tenga más de 15 de los empleados.
   
 ```sql
@@ -259,15 +264,14 @@ HAVING COUNT(EmployeeKey) > 15;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`DepartmentName  EmployeesInDept`
+```
+DepartmentName  EmployeesInDept
+--------------  ---------------
+Sales           18
+Production      179
+```
   
-`--------------  ---------------`
-  
-`Sales           18`
-  
-`Production      179`
-  
-### <a name="h-using-count-with-over"></a>H. Uso de recuento con OVER  
+### <a name="i-using-count-with-over"></a>I. Uso de recuento con OVER  
 En el ejemplo siguiente se utiliza COUNT con la cláusula OVER para devolver el número de productos que se encuentran en cada uno de los pedidos de ventas especificados.
   
 ```sql
@@ -281,13 +285,12 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`ProductCount   SalesOrderID`
-  
-`------------   -----------------`
-  
-`3              SO53115`
-  
-`1              SO55981`
+```
+ProductCount   SalesOrderID`
+------------   -----------------
+3              SO53115
+1              SO55981
+```
   
 ## <a name="see-also"></a>Vea también
 [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Instalar Reporting Services el modo de SharePoint | Documentos de Microsoft
+title: Instalar el modo de SharePoint de Reporting Services | Documentos de Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/01/2016
@@ -19,11 +19,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 17effa28932798a3cd35427a0a7104d4aa355b56
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-sharepoint-mode"></a>Instalar el modo de SharePoint de Reporting Services
@@ -44,7 +44,8 @@ Hay dos componentes principales de [!INCLUDE[ssRSnoversion](../../includes/ssrsn
 |**Servidor de informes:** el servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado en modo de SharePoint|El servidor de informes administra el procesamiento y la representación de datos e informes así como la suscripción y el procesamiento de alertas de datos. El servidor de informes en modo de SharePoint se diseña e instala como un servicio compartido de SharePoint.<br /><br /> **Cómo:** utilice el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instalar el servidor de informes.|  
 |**Complemento:** el servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint, **rssharepoint.msi**.|El complemento instala las características y las páginas de la interfaz de usuario (IU) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un servidor front-end web de SharePoint. Entre las características de la interfaz de usuario se encuentran [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], páginas de administración en Administración central de SharePoint, páginas de características utilizadas en las bibliotecas de documentos de SharePoint y páginas de alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> **Cómo:**  el complemento se puede instalar desde una descarga web o desde un disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>En esta sección
+
  [Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
  [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
@@ -68,4 +69,4 @@ Hay dos componentes principales de [!INCLUDE[ssRSnoversion](../../includes/ssrsn
  [Arquitectura y flujo de trabajo de alertas de datos](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Administrador de alertas de datos para administradores de alertas](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

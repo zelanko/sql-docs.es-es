@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 143e9ac0dbe042ebbb034dff847cfc01ea5a5411
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ac2814f7c0b0d1bf6de60d52ea65e54caab0f72d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="drop-external-library-transact-sql"></a>QUITAR biblioteca externa (Transact-SQL)  
@@ -32,6 +32,7 @@ ms.lasthandoff: 09/01/2017
 Elimina una biblioteca de paquete existente.
 
 ## <a name="syntax"></a>Sintaxis  
+
 ```
 DROP EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ];  
@@ -61,17 +62,17 @@ A diferencia de otras `DROP` las instrucciones en SQL Server, esta instrucción 
 
 ## <a name="examples"></a>Ejemplos
 
-Agregar ggplot2 a una base de datos:
+Agregar un paquete de R personalizado, denominado `customPackage`, una base de datos:
 
 ```sql
-CREATE EXTERNAL LIBRARY ggplot2 
-FROM 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\ggplot2.zip';
+CREATE EXTERNAL LIBRARY customPackage 
+FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Eliminar la biblioteca ggplot2.
+Eliminar el `customPackage` biblioteca.
 
 ```sql
-DROP EXTERNAL LIBRARY ggplot2 <user_name>;
+DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>Vea también  

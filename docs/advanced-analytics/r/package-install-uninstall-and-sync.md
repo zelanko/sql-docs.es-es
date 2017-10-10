@@ -1,7 +1,7 @@
 ---
-title: "Paquete de instalación, desinstalación y sincronizar | Documentos de Microsoft"
+title: "Sincronización de paquetes de R para SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,127 +13,106 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 959282395d178a090a3d447769ced4dca8882f89
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ed7dbf99b0f492b5ca8879bb67a7256fdfae3306
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronización de paquetes de R para SQL Server
 
-SQL Server de 2017 CTP 2.0 incluye una nueva función para la sincronización de los paquetes de R, para admitir la copia de seguridad y restauración de las recopilaciones de paquetes de R asociadas con las bases de datos de SQL Server. Esta característica ayuda a garantizar que los conjuntos complejos de los paquetes de R creados por los usuarios no se pierden y se pueden restaurar fácilmente.  
+SQL Server 2017 incluye la capacidad de sincronizar colecciones de paquetes de R entre el sistema de archivos y la instancia y base de datos que se empleen los paquetes.
+Esta característica se proporciona para que resulten más fáciles de realizar copias de seguridad de las colecciones de paquete de R asociadas con las bases de datos de SQL Server. Con esta característica, un administrador puede restaurar no solo la base de datos, pero los paquetes de R que se usaron los científicos de datos trabaja en esa base de datos.
 
-Este tema describe lo que hace la característica de sincronización de paquete y cómo usar el `rxSyncPackages()` función para realizar las tareas siguientes:
+Este tema describe la característica de sincronización de paquete y cómo usar el [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages) función para realizar las tareas siguientes:
 
-+  Sincronizar una lista de paquetes para una base de datos completa de SQL Server
-+  Paquetes de sincronizar utilizados por un usuario individual o un grupo de usuarios
++ Sincronizar una lista de paquetes para una base de datos completa de SQL Server
+
++ Sincronizar los paquetes utilizados por un usuario individual o un grupo de usuarios
+
++ Si un usuario se mueve a otro SQL Server, puede realizar una copia de seguridad de base de datos de trabajo del usuario y restaurarla en el nuevo servidor, y los paquetes para el usuario se instalarán en el sistema de archivos en el nuevo servidor, según sea necesario mediante R.
+
+Por ejemplo, podría utilizar la sincronización de paquete en estos escenarios:
+
++ El DBA ha restaurado una instancia de SQL Server a un nuevo equipo y pedir a los usuarios para conectarse desde sus clientes de R y ejecute `rxSyncPackages` para actualizar y restaurar sus paquetes.
+
++ Cree un paquete de R en el sistema de archivos está dañado para ejecutar `rxSyncPackages` en SQL Server.
+
+## <a name="requirements"></a>Requisitos
+
+Antes de que se puede utilizar la sincronización de paquete, se debe tener la versión adecuada de Microsoft R y tener habilitada la característica de base de datos relacionada.
+
+### <a name="determine-whether-your-server-supports-package-management"></a>Determinar si el servidor es compatible con la administración de paquetes
+
+Esta característica está disponible en SQL Server de 2017 CTP 2 o posterior.
+
+Dado que esta característica utiliza funciones de R en Microsoft R versión 9.1.0, esta característica se puede agregar a una instancia de SQL Server 2016 mediante la actualización de la instancia para que utilice la versión más reciente de Microsoft R. Para obtener más información, consulte [SqlBindR.exe Use para actualizar SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+### <a name="enable-the-package-management-feature"></a>Habilitar la característica de administración de paquetes
+
+Para utilizar la sincronización del paquete requiere que las nuevas características de administración del paquete esté habilitado en la instancia de SQL Server y en bases de datos individuales que utiliza para ejecutar tareas de R.
+
+1. El administrador del servidor, habilita la característica de la instancia de SQL Server.
+2. Para cada base de datos, el administrador concede a los usuarios la posibilidad de instalar o compartir paquetes de R.
+
+Cuando esto sucede, se almacena información sobre los usuarios y los paquetes que han instalado en la instancia de SQL Server. A continuación, se puede aplicar esta información para actualizar los paquetes de R en el sistema de archivos.
+
+Cada vez que agregue un nuevo paquete mediante las funciones de administración del paquete, se actualizan los registros de ambos en SQL Server y el sistema de archivos.
 
 > [!NOTE]
-> Esta función se proporciona como parte del software de versión preliminar y está sujeta a cambios antes de la versión final.
+> No se puede utilizar la sincronización de paquete si ha sido instalando paquetes de R la forma tradicional, con herramientas de R para instalar paquetes directamente en el sistema de archivos.
+### <a name="permissions"></a>Permissions
 
-## <a name="what-is-package-synchronization"></a>¿Qué es la sincronización de paquetes 
++ La persona que ejecuta la función de sincronización de paquete debe ser una entidad en la instancia de SQL Server y la base de datos con los paquetes de seguridad.
 
-Sincronización de paquetes es una nueva característica que funciona en particular con SQL Server contextos de proceso. Está diseñado para obtener una lista de paquetes de R que se instalan en una base de datos determinado, para un usuario o grupo concreto, y asegúrese de que los paquetes aparecen en la coincidencia de sistema de archivo los de la base de datos. 
++ El llamador de la función debe ser un miembro de uno de estos roles de administración del paquete: **compartido rpkgs** o **rpkgs privada**.
 
-Esto es útil si necesita mover una base de datos de usuario y mover los paquetes junto con la base de datos. También puede utilizar la sincronización de paquete cuando se copia de seguridad y restaurar una base de datos de SQL Server que se utiliza para los trabajos de R.
++ Para sincronizar los paquetes marcados como **compartido**, la persona que ejecuta la función debe ser miembro de la **rpkgs compartidos** rol y los paquetes que se están moviendo deben haberse instalado para un compartido biblioteca de ámbito.
 
-Sincronización de paquetes usa una función nueva, `rxSyncPackages()`. Para sincronizar la lista de paquetes, abra un símbolo del sistema de R, pase el contexto de proceso que define la instancia y la base de datos que desea trabajar con y, a continuación, proporcionar un ámbito de paquete o un nombre de usuario o propietario. 
++ Para sincronizar los paquetes marcados como **privada**, ya sea el propietario del paquete o el administrador debe ejecutar la función y los paquetes deben ser privados.
 
-### <a name="how-packages-are-managed-in-r-and-sql-server"></a>¿Cómo se administran los paquetes de R y SQL Server
-
-Normalmente, cuando se ejecutan scripts de R con herramientas estándares de R, paquetes de R se instalan en el sistema de archivos. Si varias personas utilizan R en el mismo equipo, puede haber varias copias de los mismos paquetes, en carpetas diferentes o en bibliotecas de usuario diferente.
-
-Sin embargo, para usar un paquete de R desde SQL Server, el paquete debe instalarse en la biblioteca de R predeterminado que está asociada a la instancia. Un equipo de servidor puede hospedar varias instancias de SQL Server con R habilitado y, en este caso, cada instancia puede tener un conjunto independiente de paquetes de R. 
-
-El Administrador de base de datos es responsable de instalar paquetes en la instancia. Sin embargo, con las bibliotecas de administración del paquete, el administrador puede delegar esta responsabilidad a los usuarios. 
-
-+ Para cada base de datos, el administrador puede proporcionar a los usuarios la capacidad de libremente instalar los paquetes de R que necesitan. Este mecanismo garantiza que varios usuarios pueden instalar diferentes versiones de paquetes de R sin causar conflictos para otros usuarios del equipo de SQL Server. Los usuarios individuales pueden instalar paquetes de para su propio uso, con una ubicación de sistema de archivos marcada como **privada**, si pertenecen a la función de base de datos **rpkgs privada**.
-
-+ El administrador puede configurar un grupo de usuarios de paquete en una base de datos e instalar los paquetes que se comparten entre todos los usuarios del grupo. Los paquetes se pueden compartir entre los miembros del rol de base de datos **rpkgs compartidos**. Estos usuarios también pueden instalar paquetes a ubicaciones de ámbito privado. 
-
-### <a name="goal-of-package-synchronization"></a>Objetivo de la sincronización de paquetes
-
-Si una base de datos en un servidor se pierde o se debe mover, mediante la sincronización de paquete, puede restaurar conjuntos de paquetes específicos a una base de datos, el usuario o el grupo. 
-
-La información sobre los usuarios y los paquetes que han instalado se almacena en la instancia de SQL Server y se utiliza para actualizar los paquetes en el sistema de archivos. Cada vez que agregue un nuevo paquete mediante las funciones de administración del paquete, se actualizan los registros de ambos en SQL Server y el sistema de archivos. Por lo tanto, si un usuario se mueve a otro SQL Server, puede realizar una copia de seguridad de base de datos de trabajo del usuario y restaurarla en el nuevo servidor y los paquetes para el usuario se instalarán en el sistema de archivos en el nuevo servidor, según sea necesario mediante R.
-
-
-### <a name="supported-versions"></a>Versiones admitidas
-
-Esta función se incluye en SQL Server de 2017 CTP 2.0.
-
-Dado que esta función es parte de Microsoft R versión 9.1.0, esta característica se puede agregar a una instancia de SQL Server 2016 mediante la actualización de la instancia para que utilice la versión más reciente de Microsoft R. Para obtener más información, consulte [SqlBindR.exe Use para actualizar SQL Server R Services](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-
-## <a name="to-synchronize-packages"></a>Para sincronizar los paquetes
-
-Se llama a `rxSyncPackages` después de restaurar una instancia de SQL Server a un nuevo equipo, o si un R el paquete en el sistema de archivos; se parece estar dañada.
-
-Si el comando se ejecuta correctamente, los paquetes existentes en el sistema de archivos se agregan a la base de datos, el ámbito y el propietario de acuerdo con lo especificado. Si el sistema de archivos está dañado, los paquetes son restred basándose en la lista que se mantiene en la base de datos.
-
-### <a name="syntax"></a>Sintaxis
-`rxSyncPackages(computeContext = rxGetOption("computeContext"),  scope = c("shared", "private"), owner = c(), verbose = getOption("verbose"))`
-
-+ Contexto de proceso
-
-    Definir un contexto de proceso de SQL Server, que consta de una instancia y base de datos y los paquetes que se va a sincronizar. Crear el contexto de servidor SQ mediante el `RxInSqlServer` función. Si no se especifica un contexto de proceso, se utiliza el contexto del proceso actual. 
-
-+ Ámbito
-
-  Indicar si va a instalar los paquetes de un solo usuario o para un grupo de usuarios: 
-
-    + **privada** la operación incluirá solo los paquetes que se han instalado para su uso por un propietario especificado.
-    + **compartido** el oepration incluirá todos los paquetes instalados para un grupo de usuarios. 
-
-  Si ejecuta la función sin especificar ámbito privado o compartido, se aplican ambos ámbitos. Como resultado, se copiará todo el conjunto de paquetes disponibles para todos los ámbitos y los usuarios.
-
-+ Propietario 
-
-    Especifique el propietario de los paquetes que se va a sincronizar. El nombre del propietario debe ser un usuario de base de datos SQL válido. Si se deja vacío, se utiliza el nombre de usuario de inicio de sesión SQL especificada en la conexión.
-
-
-### <a name="requirements"></a>Requisitos
-
-+ La persona que ejecuta la función debe ser una entidad de seguridad en la instancia de SQL Server y la base de datos que tiene los paquetes y debe ser un miembro de un rol de administración del paquete: **compartido rpkgs** o **rpkgs privado** 
-  + Para sincronizar los paquetes marcados como **compartido**, la persona que ejecuta la función debe ser miembro de la **rpkgs compartidos** rol y los paquetes que se están moviendo deben haberse instalado para un compartido biblioteca de ámbito.
-  + Para sincronizar los paquetes marcados como **privada**, ya sea el propietario del paquete o el administrador debe ejecutar la función y los paquetes deben ser privados.
-+ **usuarios rpkgs** -miembros de este rol pueden ejecutar código que usa paquetes instalados en la instancia de SQL Server, pero no se puede instalar o paquetes de sincronización.
 + Para sincronizar los paquetes en nombre de otros usuarios, el propietario debe ser un miembro de la **db_owner** rol de base de datos.
 
-## <a name="examples"></a>Ejemplos
+## <a name="how-package-synchronization-works"></a>Cómo funciona la sincronización de paquete
 
-Los ejemplos siguientes crear una conexión a una instancia específica de SQL Server, especifican una base de datos y, a continuación, especifican un conjunto de paquetes que se va a sincronizar. 
+Para utilizar la sincronización de paquete, llame a [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), que es una función nueva en [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler). Puede llamar a esta función desde SQL Server mediante sp_execute_external_script, o puede ejecutarlo desde un cliente remoto de R y especificar el contexto de proceso de SQL Server. 
 
-Cuando la llamada a `rxSyncPackages` se realiza, el paquete de las listas están sincronizadas entre el sistema de archivos y la base de datos. 
+Puesto que los paquetes se administran en el nivel de base de datos, para cada llamada a `rxSyncPackages`, debe especificar una instancia de SQL Server y base de datos y, a continuación, enumerar los paquetes, o especifique el ámbito del paquete.
 
-### <a name="synchronize-all-by-database"></a>Sincronizar todas las bases de datos
+1. Crear el contexto de proceso de SQL Server mediante el `RxInSqlServer` función. Si no se especifica un contexto de proceso, se utiliza el contexto del proceso actual.
+
+2. Proporcione el nombre de una base de datos en la instancia en el contexto de proceso especificado. Los paquetes se administran por base de datos.
+
+3. Enumerar los paquetes que se va a sincronizar.
+
+4.  También puede utilizar el *ámbito* argumento para indicar si va a sincronizar los paquetes de un solo usuario o para un grupo de usuarios. Si ejecuta la función sin especificar **privada** o **compartido** establecer el ámbito, todo el conjunto de paquetes disponibles para todos los ámbitos y los usuarios que se va a copiar.
+
+Si el comando se ejecuta correctamente, los paquetes existentes en el sistema de archivos se agregan a la base de datos, con el ámbito especificado y el propietario. Si el sistema de archivos está dañado, se restauran los paquetes en función de la lista mantenida en la base de datos.
+
+### <a name="example-1-synchronize-all-package-by-database"></a>Ejemplo 1. Sincronizar todos los paquetes mediante la base de datos
 
 Este ejemplo obtiene todos los paquetes instalados en la base de datos [TestDB]. Dado que no es específico de ningún propietario, la lista incluye todos los paquetes que se han instalado para ámbitos privados como compartidos.
 
 ```R
 connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
 computeContext <- RxInSqlServer(connectionString = connectionString )
-
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-scope"></a>Restringir paquetes sincronizados por ámbito 
+### <a name="example-2-restrict-synchronized-packages-by-scope"></a>Ejemplo 2. Restringir paquetes sincronizados por ámbito
 
-El siguiente sincronizar ejemplos solo los paquetes en el ámbito compartido o ámbito privado.
-
-**Ámbito compartido**
+Los ejemplos siguientes sincronizan solo los paquetes en el ámbito especificado.
 
 ```R
+#Shared scope
 rxSyncPackages(computeContext=computeContext, scope="shared", verbose=TRUE)
-```
 
-**Ámbito privado**
-
-```R
+#Private scope
 rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-owner"></a>Restringir paquetes sincronizados por propietario 
+### <a name="example-3-restrict-synchronized-packages-by-owner"></a>Ejemplo 3. Restringir paquetes sincronizados por propietario
 
 En el ejemplo siguiente se muestra cómo obtener solo los paquetes que se han instalado para un usuario específico. En este ejemplo, el usuario se identifica mediante el nombre de inicio de sesión SQL, *user1*.
 
@@ -141,6 +120,20 @@ En el ejemplo siguiente se muestra cómo obtener solo los paquetes que se han in
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))
 ```
 
-## <a name="see-also"></a>Vea también
+### <a name="example-4-restrict-synchronized-packages-by-owner"></a>Ejemplo 4. Restringir paquetes sincronizados por propietario
 
-[Administración de paquetes de R para SQL Server](../r/r-package-management-for-sql-server-r-services.md)
+En el ejemplo siguiente se sincroniza los paquetes instalados en el sistema de archivos con la lista de paquetes que se administran en la base de datos. Si los paquetes no está presente, se instala en el sistema de archivos.
+
+```R
+# Instantiate the compute context
+connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
+computeContext <- RxInSqlServer(connectionString = connectionString )
+
+# Synchronize the packages in the file system for all scopes and users
+rxSyncPackages(computeContext=computeContext, verbose=TRUE)
+```
+
+## <a name="related-resources"></a>Recursos relacionados
+
+[Administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md)
+

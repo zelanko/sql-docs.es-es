@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |Propiedad|Valor|  
 |--------------|-----------|  
-|Sintaxis|**tiempo** [(*precisión de fracciones de segundo*)]|  
+|Sintaxis|**tiempo** [(*escala fracciones de segundo*)]|  
 |Uso|DECLARAR @MyTime **Time (7)**<br /><br /> Crear tabla Table1 (Column1 **Time (7)** )|  
-|*precisión de fracciones de segundo*|Especifica el número de dígitos de la parte fraccionaria de los segundos.<br /><br /> Este valor puede ser un entero de 0 a 7. Para Informatica, esto puede ser un entero de 0 a 3.<br /><br /> La precisión predeterminada de las fracciones es 7 (100 ns).|  
+|*escala de fracciones de segundo*|Especifica el número de dígitos de la parte fraccionaria de los segundos.<br /><br /> Este valor puede ser un entero de 0 a 7. Para Informatica, esto puede ser un entero de 0 a 3.<br /><br /> La escala de fracciones predeterminada es 7 (100 NS).|  
 |Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh [.nnnnnnn] (hh [.nnn] para Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
 |Intervalo|00:00:00.0000000 a través de 23:59:59.9999999 (00:00:00.000 a través de 23:59:59.999 de Informatica)|  
-|Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. Para Informatica, n\* es de cero a tres dígitos, comprendida entre 0 y 999.|  
+|Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n\*es de cero a siete dígitos, comprendida entre 0 y 9999999 que representa las fracciones de segundo. Para Informatica, n\* es de cero a tres dígitos, comprendida entre 0 y 999.|  
 |Longitud en caracteres|de 8 posiciones como mínimo (HH) a 16 como máximo (. nnnnnnn). Para Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
 |Precisión, escala<br /><br /> (el usuario especifica solo la escala)|Vea la siguiente tabla.|  
 |Tamaño de almacenamiento|5 bytes (fijo) es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo. En informática, el valor predeterminado es 4 bytes, fijo, con el valor predeterminado de 1 ms fracciones precisión de segundos.|  

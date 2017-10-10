@@ -1,7 +1,7 @@
 ---
-title: "Determinación de los paquetes instalados en SQL Server | Microsoft Docs"
+title: "Determinar qué paquetes de R están instalados en SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/31/2016
+ms.date: 10/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,45 +15,24 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 90e7146bde123ca8ac8a8e6ff3e11d212fd4a35a
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 138368a3ca212cb4c176df57d78d02b6f41c4344
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="determine-which-packages-are-installed-on-sql-server"></a>Determinación de los paquetes instalados en SQL Server
-  En este tema se describe cómo determinar qué paquetes de R están instalados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-De forma predeterminada, la instalación de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] crea una biblioteca de paquetes de R asociada a cada instancia. Por tanto, para saber qué paquetes están instalados en un equipo, debe ejecutar esta consulta en cada instancia independiente donde esté instalado R Services. Tenga en cuenta que las bibliotecas de paquete **no** se comparten entre las instancias, por lo que es posible instalar paquetes diferentes en distintas instancias.
+# <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Determinar qué paquetes de R están instalados en SQL Server
 
-Para obtener información sobre cómo determinar la ubicación de la biblioteca predeterminada para una instancia, vea [Instalación y administración de paquetes de R](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)   
-   
- 
-## <a name="get-a-list-of-installed-packages-using-r"></a>Obtener una lista de paquetes instalados con R  
- Hay varias maneras de obtener una lista de paquetes instalados o cargados mediante herramientas y funciones de R.  
-  
-+   Muchas herramientas de desarrollo de R proporcionan un examinador de objetos o una lista de paquetes que están instalados o cargados en el área de trabajo actual de R.  
+Cuando instala el aprendizaje automático en SQL Server con la opción de lenguaje R, el programa de instalación crea una biblioteca de paquetes de R asociada a la instancia. Cada instancia tiene una biblioteca de paquete independiente. Las bibliotecas de paquete son **no** se comparte entre las instancias, por lo que es posible que paquetes diferentes para instalarse en instancias diferentes.
 
-+ Recomendamos las siguientes funciones del paquete RevoScaleR que se proporcionan específicamente para la administración de paquetes en contextos de cálculo:
-  - [rxFindPackage](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxfindpackage)
-  - [rxInstalledPackages](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinstalledpackages)   
-  
-+   Puede usar una función de R, como `installed.packages()`, que se incluye en el paquete `utils` instalado. La función analiza los archivos de DESCRIPCIÓN de cada paquete que se encontró en la biblioteca especificada y devuelve una matriz de nombres de paquete, rutas de acceso de biblioteca y números de versión.  
- 
-### <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se usa la función `rxInstalledPackages` para obtener una lista de los paquetes disponibles en el contexto de cálculo de SQL Server proporcionado.
+Este artículo describe cómo se puede determinar qué paquetes de R se instalan para una instancia específica.
 
-~~~~
-sqlServerCompute <- RxInSqlServer(connectionString = 
-"Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;")
-     sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
-     sqlPackages
-~~~~
+## <a name="generate-r-package-list-using-a-stored-procedure"></a>Generar la lista de paquetes de R mediante un procedimiento almacenado
 
- En el ejemplo siguiente se usa la función base de R `installed.packages()` en un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] para obtener una matriz de los paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Para evitar el análisis de los campos del archivo de DESCRIPCIÓN, se devuelve solo el nombre.  
-  
-```  
-EXECUTE sp_execute_external_script  
+En el ejemplo siguiente se utiliza la función de R `installed.packages()` en un [!INCLUDE [tsql](..\..\includes\tsql-md.md)] procedimiento almacenado para obtener una matriz de los paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Para evitar el análisis de los campos del archivo de DESCRIPCIÓN, se devuelve solo el nombre.
+
+```SQL
+EXECUTE sp_execute_external_script
 @language=N'R'  
 ,@script = N'str(OutputDataSet);  
 packagematrix <- installed.packages();  
@@ -61,12 +40,46 @@ NameOnly <- packagematrix[,1];
 OutputDataSet <- as.data.frame(NameOnly);'  
 ,@input_data_1 = N'SELECT 1 as col'  
 WITH RESULT SETS ((PackageName nvarchar(250) ))  
-```  
-  
- Para más información, vea la descripción de los campos opcionales y predeterminados para el archivo de DESCRIPCIÓN del paquete de R, en [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).  
-  
-## <a name="see-also"></a>Vea también  
- [Instalación de paquetes de R adicionales en SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md)  
-  
-  
+```
+
+Para obtener más información sobre la parte opcional y los campos predeterminados para el archivo de descripción del paquete de R, consulte [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
+
+## <a name="verify-whether-a-package-is-installed-with-an-instance"></a>Compruebe si se instala un paquete con una instancia
+
+Si ha instalado un paquete y para asegurarse de que está disponible para una determinada instancia de SQL Server, puede ejecutar la siguiente llamada de procedimiento almacenado para cargar el paquete y devolver solo los mensajes.
+
+```SQL
+EXEC sp_execute_external_script  @language =N'R',
+@script=N'library("RevoScaleR")'
+GO
+```
+
+Este ejemplo busca y carga la biblioteca de RevoScaleR.
+
++ Si se encuentra el paquete, el mensaje devuelto debe ser algo parecido a "Comandos completados correctamente."
+
++ Si el paquete no se encuentra o cargado, obtendrá un error similar al siguiente: "se produjo un error de script externo: Error en library("RevoScaleR"): no hay ningún paquete denominado RevoScaleR"
+
+## <a name="get-a-list-of-installed-packages-using-r"></a>Obtener una lista de paquetes instalados con R
+
+Hay varias maneras de obtener una lista de paquetes instalados o cargados mediante herramientas y funciones de R. Muchas herramientas de desarrollo de R proporcionan un examinador de objetos o una lista de paquetes que están instalados o cargados en el área de trabajo actual de R.
+
++ Desde una utilidad de R local, use una función de R base, como `installed.packages()`, que se incluye en el `utils` paquete. Para obtener una lista que es precisa para una instancia, debe especificar explícitamente la ruta de biblioteca o utilizar las herramientas de R asociadas a la biblioteca de la instancia.
+
++ Para comprobar si un paquete en un contexto de proceso específico, puede utilizar las siguientes funciones del paquete RevoScaleR. Estas funciones ayudan a identificar los paquetes en contextos de proceso especificado:
+
++ [rxFindPackage](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxfindpackage)
+
++ [rxInstalledPackages](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinstalledpackages)
+
+Por ejemplo, ejecute el siguiente código de R para obtener una lista de los paquetes disponibles en el contexto de proceso de SQL Server especificado.
+
+```r
+sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;")
+sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
+sqlPackages
+```
+## <a name="see-also"></a>Vea también
+
+[Instalar paquetes de R adicionales en SQL Server](install-additional-r-packages-on-sql-server.md)
 

@@ -1,7 +1,7 @@
 ---
-title: "Configuración y administración de un servidor de informes | Documentos de Microsoft"
+title: "Configuración y administración de un servidor de informes de SQL Server Reporting Services | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,25 +10,28 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d6afebe39f0d7c25df5d88ecd021c1d6dbc84d
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>Configuración y administración de un servidor de informes de SQL Server Reporting Services
 
-# <a name="configuration-and-administration-of-a-report-server"></a>Configuración y administración de un servidor de informes
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services es una plataforma de informes basada en servidor que proporciona una amplia gama de herramientas y servicios para ayudarle a crear, implementar y administrar informes para su organización, así como las características de programación que permiten ampliar y personalizar la funcionalidad de informes listos para usar. Puede integrar su entorno de informes con un producto o tecnología de SharePoint para experimentar las ventajas de usar el entorno colaborativo proporcionado por los sitios de SharePoint.  
-  
-## <a name="in-this-section"></a>En esta sección  
- Use las siguientes secciones como ayuda para entender los conceptos, los escenarios de implementación, los procedimientos y otras cuestiones para integrar el entorno de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con un producto o tecnología de SharePoint.  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services es una plataforma de generación de informes basada en servidor que proporciona una gama completa de herramientas y servicios listos para usar que le ayudarán a crear, implementar y administrar informes para la organización, además de características de programación que le permitirán ampliar y personalizar la funcionalidad de los informes. Puede integrar su entorno de informes con un producto o tecnología de SharePoint para experimentar las ventajas de usar el entorno colaborativo proporcionado por los sitios de SharePoint.
+
+> [!NOTE]
+> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+
+Utilice las secciones siguientes para ayudarle a entender los conceptos, escenarios de implementación, procedimientos y otras cuestiones para integrar el entorno de Reporting Services con una tecnología o producto de SharePoint:  
   
 -   Opciones de menú en una biblioteca de documentos de SharePoint  
   
@@ -56,12 +59,12 @@ SQL Server Reporting Services es una plataforma de informes basada en servidor q
   
 -   [Agregue los tipos de contenido de Reporting Services a la biblioteca de SharePoint.](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [Vs de modo locales. modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
 -   [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Para obtener más información acerca de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../../sql-server/sql-server-technical-documentation.md).  
+ Para obtener más información acerca de Reporting Services, consulte [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../../sql-server/sql-server-technical-documentation.md).  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

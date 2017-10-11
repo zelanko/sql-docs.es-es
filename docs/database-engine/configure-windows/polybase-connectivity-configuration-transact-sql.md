@@ -24,7 +24,7 @@ ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-pdw-md.md)]
 
   Muestra o cambia la configuración global de PolyBase Hadoop y la conectividad de almacenamiento de blobs de Azure.  
   

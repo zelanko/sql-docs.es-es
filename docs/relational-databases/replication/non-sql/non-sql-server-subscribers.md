@@ -81,7 +81,7 @@ Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2
   
     -   En Oracle, un servidor tiene como máximo una base de datos, por lo que no es necesario especificarla.  
   
-    -   En IBM DB2, la base de datos se especifica en la cadena de conexión DB2. Para más información, consulte [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   En IBM DB2, la base de datos se especifica en la cadena de conexión DB2. Para más información, consulte [Crear una suscripción para un suscriptor que no sea de SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Si el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta en una plataforma de 64 bits, debe usar la versión de 64 bits del proveedor OLE DB apropiado.  
   

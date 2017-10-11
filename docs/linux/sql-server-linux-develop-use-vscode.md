@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usar código de Visual Studio para crear y ejecutar secuencias de comandos de Transact-SQL para SQL Server
@@ -23,10 +23,10 @@ ms.lasthandoff: 08/28/2017
 
 Este tema muestra cómo utilizar el **mssql** extensión para Visual Studio Code (código de VS) para desarrollar bases de datos de SQL Server.
 
-Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [**mssql** extensión para el código de VS] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
+Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [ **mssql** extensión de VS Code] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
 
 ## <a name="install-vs-code"></a>Instalar el código de VS
-1. Si todavía no ha instalado VS Code, [Descargar e instalar el código de VS] en su equipo.
+1. Si todavía no ha instalado VS Code, [descargar e instalar VS Code] en su equipo.
 
 2. Iniciar frente a código.
 
@@ -141,7 +141,7 @@ Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS
    > [!TIP]
    > Puede personalizar los enlaces de teclado de método abreviado para los comandos de extensión mssql. Vea [personalizar métodos abreviados de].
 
-## <a name="create-a-table"></a>Crear una tabla
+## <a name="create-a-table"></a>Creación de una tabla
 
 1. Quitar el contenido de la ventana del editor.
 
@@ -256,8 +256,8 @@ Para obtener más información sobre el uso o que han contribuido a la extensió
 
 Para obtener más información sobre el uso de código de VS, consulte el [documentación de código de Visual Studio](https://code.visualstudio.com/docs).
 
-[**mssql** extensión para el código de VS]:https://aka.ms/mssql-marketplace
-[Descargar e instalar el código de VS]:https://code.visualstudio.com/Download
+[** mssql ** extensión para el código de VS]:https://aka.ms/mssql-marketplace
+[descargar e instalar VS Code]:https://code.visualstudio.com/Download
 [.Net Core instrucciones]:https://www.microsoft.com/net/core
 [administrar perfiles de conexión]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [recomendaciones para solucionar problemas de conexión]:./sql-server-linux-troubleshooting-guide.md#connection

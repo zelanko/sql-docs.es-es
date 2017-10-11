@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
-  
- **Nota:** Para obtener más información, vea: 
-  - [Importar y exportar datos de forma masiva con la utilidad bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [Importación en bloque de datos mediante las instrucciones BULK INSERT o OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [Importar XML en SQL Server con el componente de carga masiva XML](https://support.microsoft.com/en-us/kb/316005)
-     - [Colecciones de esquemas XML (SQL Server)](../xml/xml-schema-collections-sql-server.md)
+
+Para obtener más información, vea los siguientes temas.
+- [Importar y exportar datos de forma masiva con la utilidad bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [Importación en bloque de datos mediante las instrucciones BULK INSERT o OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [Importar XML en SQL Server con el componente de carga masiva XML](https://support.microsoft.com/en-us/kb/316005)
+- [Colecciones de esquemas XML (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos son los siguientes:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>Tabla de ejemplo  
  Para probar el ejemplo A de aquí, debe crear una tabla de ejemplo `T`.  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
  Para poder ejecutar el ejemplo A, debe crear un archivo codificado con UTF-8 (`C:\SampleFolder\SampleData3.txt`) que contenga el ejemplo de instancia siguiente que especifica el esquema de codificación `UTF-8` .  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>Ejemplo A  
  Este ejemplo utiliza la opción `SINGLE_BLOB` en una instrucción `INSERT ... SELECT * FROM OPENROWSET(BULK...)` para importar datos de un archivo llamado `SampleData3.txt` e insertar una instancia XML en la tabla de ejemplo de una sola columna `T`.  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
  El ejemplo B utiliza una versión modificada del archivo de datos de ejemplo `SampleData3.txt` del ejemplo anterior. Para ejecutar este ejemplo, modifique el contenido de este archivo de la siguiente manera:  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>Ejemplo B  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
  Para probar este ejemplo de importación en bloque, cree un archivo (`C:\temp\Dtdfile.xml`) que contenga la siguiente instancia de ejemplo:  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>Tabla de ejemplo  
  El ejemplo C utiliza la tabla de ejemplo `T1` que crea la instrucción `CREATE TABLE` siguiente:  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>Ejemplo C  
  Este ejemplo utiliza `OPENROWSET(BULK...)` y especifica la opción `CONVERT` en la cláusula `SELECT` para importar los datos XML desde `Dtdfile.xml` al ejemplo de tabla `T1`.  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  Este ejemplo muestra cómo utilizar el terminador de campo para la tabla de ejemplo `xTable` . Para crear esta vista de ejemplo, utilice la siguiente instrucción `CREATE TABLE` :  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>Ejemplo D  
  Este ejemplo utiliza el archivo de formato `Xmltable.fmt` en una instrucción `BULK INSERT` para importar el contenido de un archivo de datos XML denominado `Xmltable.dat`.  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> Exportar de forma masiva datos XML  
  En el ejemplo siguiente se utiliza `bcp` para realizar la exportación masiva de datos XML a partir de la tabla creada en el ejemplo anterior con el mismo archivo de formato XML. En el siguiente comando `bcp` , `<server_name>` y `<instance_name>` representan los marcadores de posición que deben ser reemplazados con los valores adecuados:  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   

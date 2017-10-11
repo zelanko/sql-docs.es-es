@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bb0a9abeba4730bd2d5d4e57cd7b02b2b93b55c
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # Habilitar o deshabilitar un protocolo de red de servidor
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 >  Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se agrega un inicio de sesión para el grupo BUILTIN\Users. Esto permite que todos los usuarios autenticados del equipo tengan acceso a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como un miembro del rol public. El inicio de sesión BUILTIN\Users se pueden quitar de manera segura para restringir el acceso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] a los usuarios de equipos que tienen inicios de sesión individuales o son miembros de otros grupos de Windows con inicios de sesión.  
   
 > [!WARNING]  
->  Los proveedores de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
+>  Los proveedores de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hasta [!INCLUDE[sssql14](../../includes/sssql14-md.md)], solo admiten TLS 1.0 y SSL 3.0 de forma predeterminada. Si aplica otro protocolo, como TLS 1.1 o TLS 1.2, al efectuar cambios en la capa SChannel del sistema operativo, es posible que las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provoquen errores. Esto puede evitarse instalando la actualización adecuada para admitir TLS 1.1 y 1.2 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), que encontrará <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">aquí</a>. A partir de [!INCLUDE[sssql15](../../includes/sssql15-md.md)], todas las versiones de SQL Server admiten TLS 1.2, sin necesidad de tener que aplicar ninguna otra actualización.
   
  **En este tema**  
   
@@ -133,3 +133,4 @@ ms.lasthandoff: 08/02/2017
     ```  
   
   
+

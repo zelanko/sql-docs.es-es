@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
@@ -66,8 +66,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> Arquitectura física del registro de transacciones  
  El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] segmenta cada archivo de registro físico internamente en una serie de archivos de registro virtuales. Los archivos de registro virtuales no tienen un tamaño fijo y no hay un número fijo de archivos de registro virtuales para un archivo de registro físico. [!INCLUDE[ssDE](../includes/ssde-md.md)] elige dinámicamente el tamaño de los archivos de registro virtuales al crear o ampliar los archivos de registro. [!INCLUDE[ssDE](../includes/ssde-md.md)] intenta mantener un número reducido de archivos virtuales. El tamaño de los archivos virtuales después de ampliar un archivo de registro equivale a la suma del tamaño del registro existente y el tamaño del nuevo incremento del archivo. El tamaño o número de archivos de registro virtuales no lo pueden configurar ni establecer los administradores.  
-  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] segmenta cada archivo de registro físico internamente en una serie de archivos de registro virtuales (VLF). Los archivos de registro virtuales no tienen un tamaño fijo y no hay un número fijo de archivos de registro virtuales para un archivo de registro físico. [!INCLUDE[ssDE](../includes/ssde-md.md)] elige dinámicamente el tamaño de los archivos de registro virtuales al crear o ampliar los archivos de registro. [!INCLUDE[ssDE](../includes/ssde-md.md)] intenta mantener un número reducido de archivos virtuales. El tamaño de los archivos virtuales después de ampliar un archivo de registro equivale a la suma del tamaño del registro existente y el tamaño del nuevo incremento del archivo. El tamaño o número de archivos de registro virtuales no lo pueden configurar ni establecer los administradores.  
+
+> [!NOTE]
+> El proceso para crear VLF es el siguiente:
+> - Si el siguiente crecimiento es inferior a 1/8 del tamaño físico actual del registro, cree 1 VLF que cubra el tamaño del crecimiento (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
+> - Si el crecimiento es inferior a 64 MB, cree 4 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 1 MB, cree 4 VLF de 256 KB).
+> - Si el crecimiento oscila entre 64 MB y 1 GB, cree 8 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 512 MB, cree 8 VLF de 64 MB).
+> - Si el crecimiento es superior a 1 GB, cree 16 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 8 GB, cree 16 VLF de 512 MB).
+
  Los archivos de registro virtuales solo afectan al rendimiento del sistema si se definen archivos de registros físicos mediante valores pequeños para *size* y *growth_increment* . El valor *size* es el tamaño inicial del archivo de registro y el valor de *growth_increment* es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro. Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Para obtener más información sobre estos parámetros, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro archivos de registros virtuales. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Si el registro tiene habilitada la opción FILEGROWTH y hay espacio disponible en el disco, el archivo se amplía en la cantidad especificada en el parámetro *growth_increment* y las nuevas entradas del registro se escriben en la extensión. Para obtener más información sobre la opción FILEGROWTH, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   Si la opción FILEGROWTH no está habilitada o el disco que almacena el archivo de registro tiene menos espacio disponible que la cantidad especificada en *growth_increment*, se genera el error 9002.  
+-   Si la opción FILEGROWTH no está habilitada o el disco que almacena el archivo de registro tiene menos espacio disponible que la cantidad especificada en *growth_increment*, se genera el error 9002. Para obtener más información, consulte [Solucionar problemas de un registro de transacciones lleno](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Si el registro contiene varios archivos de registro físicos, el registro lógico pasará por todos los archivos de registro físicos antes de volver a empezar por el principio del primer archivo de registro físico.  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  El truncamiento del registro se puede retrasar por diferentes factores. En caso de un retraso largo en el truncamiento del registro, el registro de transacciones se puede llenar. Para obtener información, consulte [Factores que pueden ralentizar el truncamiento del registro](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) y [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Registro de transacciones de escritura anticipada  
- En esta sección se describe el rol que desempeña el registro de transacciones de escritura anticipada en la grabación de modificaciones de datos en disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un registro de escritura anticipada (WAL) que garantiza que ninguna modificación de datos se escribe en el disco antes que la entrada de registro asociada. Así se mantienen las propiedades ACID para una transacción.  
+ En esta sección se describe el rol que desempeña el registro de transacciones de escritura anticipada en la grabación de modificaciones de datos en disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un algoritmo de registro de escritura previa (WAL), lo cual garantiza que no se escriba ninguna modificación de datos en el disco antes de escribir en él la entrada de registro asociada. Así se mantienen las propiedades ACID para una transacción.  
   
  Para entender cómo funciona el registro de escritura anticipada, es importante saber cómo se escriben los datos modificados en el disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantiene una caché del búfer que lee las páginas de datos cuando estos deben recuperarse. Cuando se modifica una página en la caché del búfer, no se vuelve a escribir inmediatamente en el disco; en su lugar, la página se marca como *desfasada*. Una página de datos puede tener más de una escritura lógica antes de que se escriba físicamente en el disco. Para cada escritura lógica, se inserta una entrada del registro de transacciones en la caché del registro que registra la modificación. Las entradas del registro se tienen que escribir en el disco antes de que la página desfasada asociada se quite de la caché del búfer y se escriba en el disco. El proceso de punto de comprobación examina periódicamente la caché del búfer en busca de búferes con páginas de una base de datos especificada y escribe todas las páginas desfasadas en el disco. Los puntos de comprobación permiten ahorrar tiempo en una recuperación posterior al crear un punto en el que se garantiza que todas las páginas desfasadas se hayan escrito en el disco.  
   
@@ -217,8 +224,11 @@ El Agente de registro del LOG supervisa el registro de transacciones de cada bas
 ## <a name="additional-reading"></a>Lecturas adicionales  
  Se recomiendan los artículos y libros siguientes para obtener información adicional sobre el registro de transacciones.  
   
- [Descripción del registro y la recuperación en SQL Server por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [Administrar el tamaño del archivo de registro de transacciones](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [Descripción del registro y la recuperación en SQL Server por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

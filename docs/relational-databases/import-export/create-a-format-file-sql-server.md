@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: es-es
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Para obtener más información sobre cómo usar datos de caracteres Unicode, vea [Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Usar un archivo de formato con la opción de página de códigos  
- Si crea un archivo de formato con el comando bcp (es decir, mediante "`bcp forma`t …" ), la información sobre la intercalación o página de códigos se escribirá en el archivo de formato.   
+Si crea un archivo de formato con el comando bcp, es decir, con `bcp format`, la información sobre la intercalación o la página de código se escribirá en dicho archivo de formato.   
 El siguiente archivo de formato de ejemplo para una tabla con 5 columnas incluye la intercalación.  
   
 ```  

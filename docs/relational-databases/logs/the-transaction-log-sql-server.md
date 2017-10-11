@@ -1,7 +1,7 @@
 ---
 title: El registro de transacciones (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 02/01/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,19 +19,22 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
   Todas las bases de datos de SQL Server tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos.
   
-El registro de transacciones es un componente esencial de la base de datos. Si hay un error del sistema, ese registro será necesario para devolver la base de datos a un estado coherente. No elimine ni mueva este registro nunca, a menos que tenga pleno conocimiento de las consecuencias de hacerlo. 
+El registro de transacciones es un componente esencial de la base de datos. Si hay un error del sistema, ese registro será necesario para devolver la base de datos a un estado coherente. 
 
-  
- > **¡Dato curioso!** Los puntos de comprobación crean puntos buenos conocidos a partir de los cuales se empiezan a aplicar los registros de transacciones durante la recuperación de base de datos. Para obtener más información, consulte [Puntos de comprobación de base de datos (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+> [!IMPORTANT] 
+> No elimine ni mueva este registro nunca, a menos que tenga pleno conocimiento de las consecuencias de hacerlo. 
+
+> [!TIP]
+> Los puntos de comprobación crean puntos buenos conocidos a partir de los cuales se empiezan a aplicar los registros de transacciones durante la recuperación de base de datos. Para obtener más información, consulte [Puntos de comprobación de base de datos (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ## <a name="operations-supported-by-the-transaction-log"></a>Operaciones compatibles con el registro de transacciones  
  El registro de transacciones permite las siguientes operaciones:  
@@ -73,9 +76,9 @@ En un escenario de creación de reflejo de la base de datos, las actualizaciones
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
--  El registro de transacciones se implementa como un archivo o un grupo de archivos separado en la base de datos. La caché del registro se administra por separado respecto a la caché del búfer para las páginas de datos, lo cual da lugar a un código sencillo, rápido y sólido en el motor de base de datos.
+-  El registro de transacciones se implementa como un archivo o un grupo de archivos separado en la base de datos. La caché del registro se administra por separado respecto a la caché del búfer para las páginas de datos, lo cual da lugar a un código sencillo, rápido y sólido en el motor de base de datos. Para obtener más información, consulte [Arquitectura física del registro de transacciones](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 -  El formato de los registros y las páginas no tiene las restricciones de formato de las páginas de datos.
--  El registro de transacciones se puede implementar en varios archivos. Si se establece el valor FILEGROWTH del registro, se puede definir que los archivos se expandan automáticamente. Esto reduce las posibilidades de quedarse sin espacio en el registro de transacciones, al mismo tiempo que se reduce el trabajo administrativo. Para obtener más información, consulte [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
+-  El registro de transacciones se puede implementar en varios archivos. Si se establece el valor FILEGROWTH del registro, se puede definir que los archivos se expandan automáticamente. Esto reduce las posibilidades de quedarse sin espacio en el registro de transacciones, al mismo tiempo que se reduce el trabajo administrativo. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
 -  El mecanismo para volver a utilizar el espacio de los archivos de registro es rápido y tiene un efecto mínimo en el rendimiento de las transacciones.
 
 ##  <a name="Truncation"></a> Truncamiento del registro de transacciones  
@@ -91,12 +94,13 @@ Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../..
   
  Para obtener más información, vea [Factores que pueden ralentizar el truncamiento del registro](#FactorsThatDelayTruncation), más adelante en este tema.  
   
-> **NOTA** El truncamiento del registro no reduce el tamaño del archivo de registro físico. Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Para obtener información sobre cómo reducir el tamaño de un archivo de registro físico, vea [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> [!NOTE]
+> El truncamiento del registro no reduce el tamaño del archivo de registro físico. Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Para obtener información sobre cómo reducir el tamaño de un archivo de registro físico, vea [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Cuando las entradas de registro permanecen activas durante una transacción de larga duración, se retrasa el truncamiento del registro y es posible que se llene el registro de transacciones, como ya hemos mencionado anteriormente en este tema largo.  
   
-> **IMPORTANTE:** Para obtener más información sobre cómo actuar ante un registro de transacciones lleno, vea [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+> [IMPORTANTE] Para obtener más información sobre cómo actuar ante un registro de transacciones lleno, consulte [Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  En realidad, el truncamiento del registro se puede retrasar por diversos motivos. Para saber qué es lo que impide el truncamiento del registro, si hay alguna causa, consulte las columnas **log_reuse_wait** y **log_reuse_wait_desc** de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). En la tabla siguiente se describen los valores de estas columnas.  
   
@@ -121,9 +125,11 @@ Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../..
 ##  <a name="MinimallyLogged"></a> Operaciones que se pueden registrar mínimamente  
  El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md) optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
   
-> **NOTA** Las tablas con optimización para memoria no admiten el registro mínimo.  
+> [!NOTE]
+> Las tablas optimizadas para memoria no admiten el registro mínimo.  
   
-> **OTRA NOTA** Con el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md)completa, todas las operaciones masivas se registran completamente. Sin embargo, puede usar el registro mínimo en un conjunto de operaciones masivas cambiando la base de datos temporalmente al modelo de recuperación optimizado para cargas masivas de registros para este tipo de operaciones. El registro mínimo resulta más eficaz que el registro completo y reduce la posibilidad de que una operación masiva a gran escala termine por ocupar todo el espacio del registro de transacciones durante una transacción masiva. Sin embargo, si la base de datos se daña o se pierde cuando el registro mínimo está activo, no se podrá recuperar la base de datos hasta el momento del error.  
+> [!NOTE]
+> Con el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md)completa, todas las operaciones masivas se registran completamente. Sin embargo, puede usar el registro mínimo en un conjunto de operaciones masivas cambiando la base de datos temporalmente al modelo de recuperación optimizado para cargas masivas de registros para este tipo de operaciones. El registro mínimo resulta más eficaz que el registro completo y reduce la posibilidad de que una operación masiva a gran escala termine por ocupar todo el espacio del registro de transacciones durante una transacción masiva. Sin embargo, si la base de datos se daña o se pierde cuando el registro mínimo está activo, no se podrá recuperar la base de datos hasta el momento del error.  
   
  Las operaciones siguientes, que se registran completamente en el modelo de recuperación completa, se registran mínimamente en el modelo de recuperación simple y en el optimizado para cargas masivas de registros:  
   
@@ -139,7 +145,8 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
   
 -   Las instrucciones[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) y [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) al insertar o anexar datos nuevos en las columnas de tipos de datos **text**, **ntext**, y **image** . Tenga en cuenta que el registro mínimo no se utiliza cuando se actualizan valores existentes.  
   
-    >  Las instrucciones WRITETEXT y UPDATETEXT han quedado **en desuso**, por lo que debería evitar usarlas en las aplicaciones nuevas.  
+    > [!IMPORTANT]
+    > Las instrucciones WRITETEXT y UPDATETEXT han quedado **en desuso**, por lo que debería evitar usarlas en las aplicaciones nuevas.  
   
 -   Si la base de datos está establecida en el modelo de recuperación optimizado para cargas masivas de registros o simple, algunas operaciones DDL de índices se registran mínimamente con independencia de si la operación se ejecuta sin conexión o con conexión. Las operaciones de índice con registro mínimo son:  
   
@@ -147,7 +154,8 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
   
     -   Operaciones[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD o DBCC DBREINDEX.  
   
-        > La **instrucción DBCC DBREINDEX** ha quedado **en desuso**, por lo que debería evitar usarla en las aplicaciones nuevas.  
+        > [!IMPORTANT]
+        > La **instrucción DBCC DBREINDEX** ha quedado **en desuso**, de modo que no conviene usarla en las aplicaciones nuevas.  
   
     -   Regeneración del nuevo montón DROP INDEX (si procede). (La desasignación de páginas de índice durante una operación [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) **siempre** se registra completamente).
   

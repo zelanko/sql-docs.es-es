@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
 ms.contentlocale: es-es
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Solución de problemas de PolyBase
@@ -229,6 +229,8 @@ ms.lasthandoff: 09/13/2017
  - Al exportar datos en un formato de archivo ORC desde SQL Server o Azure SQL Data Warehouse, las columnas pesadas de texto pueden limitarse a tan solo 50 columnas debido a errores de memoria insuficiente de Java. Para solucionar este problema, exporte solo un subconjunto de las columnas.
  - No se pueden leer o escribir datos cifrados en reposo en Hadoop. Se incluyen las zonas cifradas de HDFS y el cifrado transparente.
  - PolyBase no se puede conectar a una instancia de Hortonworks si KNOX está habilitado. 
+ - Si usa tablas de Hive con el valor "transactional = true", PolyBase no podrá acceder a los datos del directorio de la tabla de Hive. 
+
 
 [PolyBase no se instala cuando se agrega un nodo a un clúster de conmutación por error de SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

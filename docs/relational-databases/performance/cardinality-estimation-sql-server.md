@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- En el caso de una base de datos de SQL Server con el nivel de compatibilidad 120 o superior, la activación de la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 obliga al sistema a usar la versión 70 de la estimación de cardinalidad.  
+ En el caso de una base de datos SQL Server con un nivel de compatibilidad 120 o superior, la activación de la [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) obliga al sistema a usar la versión 70 de la estimación de cardinalidad.  
   
  **Estimación de cardinalidad heredada:** en el caso de una base de datos de SQL Server con el nivel de compatibilidad 120 y superior, la versión 70 de la estimación de cardinalidad se puede activar con la instrucción [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Almacén de consultas:**desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, el almacén de consultas es una herramienta muy práctica para examinar el rendimiento de las consultas.  En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo **Almacén de consultas** si el almacén de consultas está activado.  
+ **Almacén de consultas**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el almacén de consultas resulta una herramienta muy útil para examinar el rendimiento de las consultas. En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo del **Almacén de consultas**, si este está habilitado.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > Se recomienda instalar cada mes la versión más reciente de [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
+ > Se recomienda instalar la última versión de [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) y actualizarlo con frecuencia.  
   
- Otra opción para llevar un seguimiento del proceso de estimación de cardinalidad consiste en usar el evento extendido denominado **query_optimizer_estimate_cardinality**.  El siguiente código de ejemplo de T-SQL se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escribe un archivo .xel en C:\Temp\ (aunque la ruta de acceso se puede cambiar). Cuando abra el archivo .xel en SSMS, verá información detallada de forma muy sencilla.  
+ Otra opción para llevar un seguimiento del proceso de estimación de cardinalidad consiste en usar el evento extendido denominado **query_optimizer_estimate_cardinality**. El siguiente código de ejemplo de T-SQL se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escribe un archivo .xel en C:\Temp\ (aunque la ruta de acceso se puede cambiar). Cuando abra el archivo .xel en [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], podrá consultar la información detallada de forma muy sencilla.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Para obtener más información sobre los eventos extendidos adaptados para Base de datos SQL de Azure, vea [Eventos extendidos en Base de datos SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+ Para obtener más información sobre los eventos extendidos adaptados para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Eventos extendidos en SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>Pasos para evaluar la versión de estimación de cardinalidad  

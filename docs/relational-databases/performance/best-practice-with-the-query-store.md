@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
@@ -323,11 +323,11 @@ Si cambia el nombre de una base de datos, al forzar el plan se producirá un err
 
 ##  <a name="Recovery"></a> Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres
  
-  Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar el rendimiento del almacén de datos de consultas en situaciones de recuperación ante desastres y alta disponibilidad.
+  Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar el rendimiento del almacén de datos de consultas en situaciones de recuperación ante desastres y alta disponibilidad. Para obtener más información, consulte [Marcas de seguimiento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
   La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que el almacén de consultas escribe datos en el disco antes de que SQL Server pueda apagarse.
   
-  La marca de seguimiento 7752 permite que SQL Server ejecute consultas antes de que el almacén de datos de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
+  La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de consultas y también permite que SQL Server ejecute consultas antes de que el Almacén de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
 
 ## <a name="see-also"></a>Vea también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

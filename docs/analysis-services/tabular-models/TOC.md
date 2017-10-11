@@ -20,6 +20,7 @@
 ### [Orígenes de datos compatibles](data-sources-supported-ssas-tabular.md)  
 ### [Tipos de datos compatibles](data-types-supported-ssas-tabular.md)  
 ### [Suplantación](impersonation-ssas-tabular.md)  
+### [Importar datos usando una consulta nativa](ssas-import-query.md)
 ### [Importar datos: Origen de datos relacionales](ssas-import-data-relational-data-source.md)  
 ### [Importar datos: Origen de datos multidimensionales](ssas-import-data-multidimensional-data-source.md)  
 ### [Importar datos: Fuente de distribución de datos](ssas-import-data-data-feed.md)  

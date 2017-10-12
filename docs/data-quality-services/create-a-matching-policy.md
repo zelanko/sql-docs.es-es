@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  En **Asignaciones**, seleccione un campo del origen de datos para **Columna de origen**y, continuación, seleccione el dominio correspondiente. Repita este procedimiento con todos los dominios que utilice en el proceso de búsqueda de coincidencias. Cree los dominios necesarios haciendo clic en **Crear un dominio** o en **Crear un dominio compuesto**.  
   
     > [!NOTE]  
-    >  Solo puede asignar los datos de origen para un dominio DQS mientras crea una directiva de coincidencia si el tipo de datos de origen se admite en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Solo puede asignar los datos de origen para un dominio DQS mientras crea una directiva de coincidencia si el tipo de datos de origen se admite en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 5.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (–)** para eliminarla.  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. Haga clic en **Cancelar** para finalizar la actividad Directiva de coincidencia, perdiendo los cambios realizados, y volver a la página de inicio de DQS.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear una directiva de coincidencia  
- Después de crear una directiva de coincidencia, puede ejecutar un proyecto de búsqueda de coincidencias basándose en la base de conocimiento que contiene la directiva de coincidencia. Para obtener más información, consulte [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
+ Después de crear una directiva de coincidencia, puede ejecutar un proyecto de búsqueda de coincidencias basándose en la base de conocimiento que contiene la directiva de coincidencia. Para obtener más información, consulte [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Pestañas Generador de perfiles y Resultados  
  Las pestañas Generador de perfiles y Resultados contienen estadísticas para las páginas Directiva de coincidencia y Resultados de búsqueda de coincidencias.  

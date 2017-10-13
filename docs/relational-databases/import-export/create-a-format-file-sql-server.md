@@ -123,7 +123,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. Crear un archivo de formato no XML para datos nativos Unicode  
  Para crear un archivo de formato no XML para datos nativos Unicode para la tabla `HumanResources.Department`, utilice el comando siguiente:   
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -132,7 +132,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. Crear un archivo de formato no XML para datos de caracteres Unicode  
  Para crear un archivo de formato no XML para datos de caracteres Unicode para la tabla `HumanResources.Department` que usa terminadores predeterminados, use el comando siguiente:   
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   

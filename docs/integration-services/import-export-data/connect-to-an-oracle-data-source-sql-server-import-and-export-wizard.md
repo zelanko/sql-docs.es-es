@@ -71,7 +71,9 @@ El Id. de usuario y la contraseña para conectarse.
 ### <a name="connection-string-format"></a>Formato de cadena de conexión
 Este es el formato de cadena de conexión típica.
 
+    ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+    ```
 
 ### <a name="enter-the-connection-string"></a>Escriba la cadena de conexión
 Escriba la cadena de conexión en el **ConnectionString** campo o escriba el nombre DSN en el **Dsn** campo, en la **elegir un origen de datos** o **elegir un destino** página. Después de escribir la cadena de conexión, el asistente analiza la cadena y muestra las propiedades individuales y sus valores en la lista.

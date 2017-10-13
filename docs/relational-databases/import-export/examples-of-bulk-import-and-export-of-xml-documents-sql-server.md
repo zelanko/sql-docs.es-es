@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  Para importar datos de forma masiva de un archivo de datos a una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede utilizar lo siguiente:  
   
 -   Utilidad**bcp**   
- También puede usar la utilidad **bcp** para exportar datos de cualquier ubicación a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que funcione una instrucción SELECT, incluidas las vistas con particiones.  
+    También puede usar la utilidad **bcp** para exportar datos de cualquier ubicación a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que funcione una instrucción SELECT, incluidas las vistas con particiones.  
   
 -   BULK INSERT  
   

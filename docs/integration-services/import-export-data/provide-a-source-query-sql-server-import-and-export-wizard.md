@@ -65,19 +65,19 @@ Si el origen de datos es Excel, consulte [Proporcionar una consulta de origen pa
 Hay tres tipos de objetos de Excel que puede consultar.
 -   **Hoja de cálculo.** Para consultar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]**).
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **Rango con nombre.** Para consultar un rango con nombre, use simplemente el nombre del rango (por ejemplo, **MiRangoDeDatos**).
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]**).
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

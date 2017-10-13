@@ -93,7 +93,9 @@ Si desea proporcionar su información de conexión con una cadena de conexión, 
 
 En este ejemplo se va a usar la siguiente cadena de conexión, que se conecta a Microsoft SQL Server.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Escriba la cadena de conexión en el **ConnectionString** campo el **elegir un origen de datos** o **elegir un destino** página. Después de escribir la cadena de conexión, el asistente analiza la cadena y muestra las propiedades individuales y sus valores en la lista.
 
@@ -138,20 +140,24 @@ Para compilar y probar la cadena de conexión para el controlador ODBC en su pro
 
 10. Abra el archivo guardado con el Bloc de notas u otro editor de texto. Este es el contenido de nuestro ejemplo de SQL Server.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Copie y pegue los valores necesarios en una cadena de conexión en el que los pares de nombre y valor están separados por punto y coma.
 
     Después de ensamblar los valores necesarios en el DSN de archivo de ejemplo, tiene la siguiente cadena de conexión.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     Normalmente no necesita todas las configuraciones de un DSN creado por el Administrador de orígenes de datos de ODBC para crear una cadena de conexión que funcione.  
     -   Siempre tendrá que especificar el controlador ODBC.

@@ -1,5 +1,5 @@
 ---
-title: "El Diseñador SSIS | Documentos de Microsoft"
+title: "Diseñador SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  El siguiente diagrama muestra el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] y la ventana del **cuadro de herramientas** .  
   
- ![Captura de pantalla de SSIS diseñador y cuadro de herramientas](../integration-services/media/denali-designerandtoolbox.gif "captura de pantalla de SSIS diseñador y cuadro de herramientas")  
+ ![Captura del Diseñador y el cuadro de herramientas de SSIS](../integration-services/media/denali-designerandtoolbox.gif "Captura del Diseñador y el cuadro de herramientas de SSIS")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye cuadros de diálogo y ventanas adicionales para agregar funcionalidad a los paquetes, y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] proporciona ventanas y cuadros de diálogo para configurar el entorno de desarrollo y trabajar con paquetes. Para obtener más información, vea [Interfaz de usuario de Integration Services](../integration-services/integration-services-user-interface.md).  
   
@@ -158,7 +158,7 @@ Utilice la pestaña **Flujo de datos** del Diseñador [!INCLUDE[ssIS](../include
  **Eliminar**  
  Seleccione un controlador de eventos y elimínelo del paquete haciendo clic en **Eliminar**.  
   
- **Haga clic aquí para crear un \<nombre del controlador de eventos\> para el ejecutable \<nombre del archivo ejecutable\>**  
+ **Haga clic aquí para crear un \<nombre de controlador de eventos\> para el ejecutable \<nombre del archivo ejecutable\>**  
  Haga clic aquí para crear el controlador de eventos.  
   
  Cree el flujo de control arrastrando objetos gráficos que representan contenedores y tareas de [!INCLUDE[ssIS](../includes/ssis-md.md)] desde el **Cuadro de herramientas** a la superficie de diseño de la pestaña **Controladores de eventos** y, a continuación, conecte los objetos utilizando las restricciones de precedencia para definir la secuencia en que se ejecutan.  

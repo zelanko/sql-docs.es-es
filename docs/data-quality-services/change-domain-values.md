@@ -59,14 +59,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/create-a-knowledge-base.md) o [Abrir una base de conocimiento](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  La administración de dominios se realiza en una página del cliente de Data Quality Services que contiene cinco pestañas para distintas operaciones de administración de dominios. No se trata de un proceso controlado mediante asistentes; cada una de las operaciones de administración se puede realizar por separado.  
   
-3.  En la **Lista de dominios** de la página **Administración de dominios** , seleccione el dominio cuyos valores desea cambiar o cree un nuevo dominio. Si necesita crear un nuevo dominio, vea [Create a Domain](../data-quality-services/create-a-domain.md). Haga clic en la pestaña **Valores del dominio** .  
+3.  En la **Lista de dominios** de la página **Administración de dominios** , seleccione el dominio cuyos valores desea cambiar o cree un nuevo dominio. Si necesita crear un nuevo dominio, vea [Crear un dominio](../data-quality-services/create-a-domain.md). Haga clic en la pestaña **Valores del dominio** .  
   
-4.  Muestre los valores que necesita modificar en la tabla **Valor** . Para obtener más información, vea [How to Display the Appropriate Values](#Display) a continuación.  
+4.  Muestre los valores que necesita modificar en la tabla **Valor** . Para obtener más información, vea [Cómo mostrar los valores adecuados](#Display) a continuación.  
   
 5.  Para cambiar el estado de un valor, haga lo siguiente:  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/09/2017
   
  Cuando se realiza la limpieza de datos interactiva en la página **Administrar y ver resultados** de la actividad **Limpieza** , tanto los valores no válidos como los erróneos se incluyen en la pestaña **No válido** de la página **Administrar y ver resultados** .  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> Cómo mostrar los valores adecuados  
  Puede modificar la presentación de la manera siguiente:  
   
 -   **Filtre** los resultados que desea en la tabla, en función de su estado, seleccionando este en la lista desplegable **Filtro** .  

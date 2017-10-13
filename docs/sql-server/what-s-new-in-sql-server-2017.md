@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
@@ -53,7 +53,7 @@ SQL Server 2017 incluye muchas mejoras de rendimiento, perfeccionamiento y carac
 - Las **mejoras en memoria** incluyen compatibilidad con columnas calculadas en tablas optimizadas para memoria, compatibilidad total con funciones JSON en módulos de compilación nativa y el operador CROSS APPLY en módulos de compilación nativa. (CTP 1.1)
 - Las nuevas **funciones de cadena** son CONCAT_WS, TRANSLATE y TRIM, y WITHIN GROUP ahora es compatible con la función STRING_AGG. (CTP 1.1)
 - Hay nuevas **opciones de acceso masivo** (BULK INSERT y OPENROWSET(BULK...) ) para archivos CSV y de Azure Blob. (CTP 1.1)
-- Las **mejoras de objetos con optimización para memoria** incluyen sp_spaceused y la eliminación de la limitación de ocho índices en las tablas optimizadas para memoria, sp_rename para tablas optimizadas para memoria y módulos T-SQL de compilación nativa y CASE y TOP (N) WITH TIES para módulos T-SQL de compilación nativa. Los archivos de grupos de archivos con optimización para memoria ahora se pueden almacenar, se puede crear una copia de seguridad de ellos y se pueden restaurar en Azure Storage. (CTP 1.0)
+- Las **mejoras de objetos optimizados para memoria** incluyen sp_spaceused y la eliminación de la limitación de ocho índices en las tablas optimizadas para memoria, sp_rename para tablas optimizadas para memoria y módulos T-SQL de compilación nativa y CASE y TOP (N) WITH TIES para módulos T-SQL de compilación nativa. Los archivos de grupos de archivos con optimización para memoria ahora se pueden almacenar, se puede crear una copia de seguridad de ellos y se pueden restaurar en Azure Storage. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** es una nueva clase de protegible, que admite los permisos CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP y VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS ahora es visible en sys.fn_builtin_permissions. (CTP 1.0)
 - Se agregó **COMPATIBILITY_LEVEL 140** de base de datos. (CTP 1.0)  
 
@@ -111,7 +111,7 @@ Ahora, los desarrolladores de SQL Server tienen acceso a las bibliotecas ampliad
 - **microsoftml**: este paquete innovador de transformaciones y algoritmos de aprendizaje automático con enlaces de Python incluye redes neuronales profundas, árboles de decisiones rápidos y bosques de decisiones, y algoritmos optimizados para regresiones lineales y logísticas. También obtendrá modelos con aprendizaje incluido basados en modelos de ResNet que puede usar para extraer imágenes o analizar sentimientos.
 - **Operacionalización de Python con T-SQL**: implemente fácilmente código de Python con el procedimiento almacenado `sp_execute_external_script`. Obtenga un gran rendimiento transmitiendo datos de SQL a procesos de Python y con paralelización de anillos de MPI.
 - **Contextos de cálculo de Python en SQL Server**: los desarrolladores y los científicos que trabajan con datos pueden ejecutar código de Python de forma remota desde sus entornos de desarrollo para explorar datos y desarrollar modelos sin mover datos.
-- **Puntuación nativa**: la función PREDICT de Transact-SQL puede utilizarse para realizar la puntuación en cualquier instancia de SQL Server 2017, incluso si no está instalado R. Tan solo hay que entrenar el modelo con uno de los algoritmos que admiten RevoScaleR y revoscalepy, y guardarlo en un nuevo formato binario compacto.
+- **Puntuación nativa**: la función PREDICT de Transact-SQL puede utilizarse para realizar la puntuación en cualquier instancia de SQL Server 2017, incluso si no está instalado R. Tan solo hay que entrenar el modelo con uno de los algoritmos RevoScaleR y revoscalepy admitidos y guardarlo en un nuevo formato binario compacto.
 - **Administración de paquetes**: T-SQL ahora es compatible con la instrucción CREATE EXTERNAL LIBRARY para poder proporcionar a los administradores de bases de datos mayor capacidad de administración en los paquetes de R. Utilice los roles para controlar el acceso privado o compartido a los paquetes de R en la base de datos, y comparta dichos roles entre los usuarios.
 - **Mejoras de rendimiento**: el procedimiento almacenado `sp_execute_external_script` se ha optimizado para admitir la ejecución en modo por lotes en los datos de almacén de columnas.
 

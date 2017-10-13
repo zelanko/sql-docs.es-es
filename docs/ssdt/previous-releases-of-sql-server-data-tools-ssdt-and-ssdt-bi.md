@@ -1,7 +1,7 @@
 ---
 title: Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI) | Microsoft Docs
 ms.custom: 
-ms.date: 07/28/2017
+ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: dcc05f9e7bb009bb164f3577b7a82ba7b1c9b215
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)
@@ -34,10 +34,11 @@ SSDT es compatible con versiones anteriores, por lo que siempre puede usar la [v
 
 ## <a name="recent-downloads"></a>Descargas más recientes
 
-Las tres últimas descargas recientes se proporcionan para el caso improbable de que experimente problemas con el [versión más reciente](download-sql-server-data-tools-ssdt.md). 
+Las últimas descargas se proporcionan para el caso improbable de que experimente problemas con la [versión más reciente](download-sql-server-data-tools-ssdt.md). 
 
 |Versión| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.2|[SSDT para VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* n/d|
 |17.1|[SSDT para VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* n/d|
 |17.0|[SSDT para VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/d|
 |16.5|[SSDT para VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT para VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|

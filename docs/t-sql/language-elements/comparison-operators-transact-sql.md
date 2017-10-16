@@ -44,9 +44,9 @@ ms.lasthandoff: 09/01/2017
 |[>= (Mayor o igual a)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Mayor o igual que|  
 |[<= (Menor o igual a)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Menor o igual que|  
 |[<> (No es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|No es igual a|  
-|[!= (No es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|No es igual a (no es del estándar ISO)|  
-|[!< (No menor que)](../../t-sql/language-elements/not-less-than-transact-sql.md)|No es menor que (no es del estándar ISO)|  
-|[!> (No mayor que)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|No es mayor que (no es del estándar ISO)|  
+|[\!= (No es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|No es igual a (no es del estándar ISO)|  
+|[\!< (No menor que)](../../t-sql/language-elements/not-less-than-transact-sql.md)|No es menor que (no es del estándar ISO)|  
+|[\!> (No mayor que)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|No es mayor que (no es del estándar ISO)|  
   
 ## <a name="boolean-data-type"></a>Tipo de datos Boolean  
  El resultado de un operador de comparación tiene la **booleano** tipo de datos. Tiene tres valores: TRUE, FALSE y UNKNOWN. Las expresiones que devuelven un **booleano** tipo de datos se conocen como expresiones booleanas.  

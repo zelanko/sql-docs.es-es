@@ -18,11 +18,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Puede crear un archivo de formato para un tipo de datos determinado, como los datos de caracteres o los datos nativos.  
   
-     Puede crear un archivo de formato no XML que contenga atributos especificados de modo interactivo para cada campo de datos. Para obtener más información, vea [Especificar formatos de datos por razones de compatibilidad mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Puede crear un archivo de formato no XML que contenga atributos especificados de modo interactivo para cada campo de datos. Para obtener más información, vea [Especificar formatos de datos por razones de compatibilidad mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  Los archivos de formato XML ofrecen varias ventajas sobre los archivos con otro formato. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  En la ilustración siguiente se muestran los campos de archivo de formato de un archivo de formato no XML de ejemplo.  
   
- ![Identifica los campos de un archivo de formato no XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifica los campos de un archivo de formato no XML")  
+ ![Identifica los campos de un archivo de formato no XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  Los campos **Versión** y **Número de columnas** solo aparecen una vez. Los significados se describen en la siguiente tabla.  
   

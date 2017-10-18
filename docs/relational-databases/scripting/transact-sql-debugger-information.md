@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transact-sql-expressions"></a>Expresiones de Transact-SQL  
  Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**e **Inspección4**.  
   
- La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en esta ventana cambia a medida que el depurador se ejecuta en las distintas partes del código. ****  
+ La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en la **Locales** ventana cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   
  Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Los ejemplos incluyen:  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede usar la ventana **Inspección rápida** para ver el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] y, a continuación, guardarla en una ventana **Inspección** . Para seleccionar una expresión en **Inspección rápida**, seleccione o escriba el nombre de la expresión en el cuadro **Expresión** .  
   
- Las cuatro ventanas **Inspección** muestran información sobre las variables y las expresiones que haya seleccionado. El conjunto de expresiones que se muestran en estas ventanas no cambian hasta que agregue o elimine expresiones desde la lista. ****  
+ Las cuatro ventanas **Inspección** muestran información sobre las variables y las expresiones que haya seleccionado. El conjunto de expresiones que se muestran en la **Inspección** ventanas no cambian hasta que agregue o elimine expresiones desde la lista.  
   
  Para agregar una expresión a una ventana **Inspección** , puede seleccionar la opción **Agregar inspección** del cuadro de diálogo **Inspección rápida** o escribir el nombre de la expresión en la columna **Nombre** de una fila vacía en una ventana **Inspección** .  
   

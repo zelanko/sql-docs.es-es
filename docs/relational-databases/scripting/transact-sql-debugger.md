@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Establecer puntos de interrupción en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] individuales.  
   
-     Un punto de interrupción especifica un punto en el que desea que la ejecución se pause para poder examinar los datos. Cuando inicie el depurador, se detiene en la primera línea de código de la ventana del Editor de consultas. Para ejecutar el primer punto de interrupción que haya establecido, puede usar la característica **Continuar** . Asimismo puede usar esta característica para ejecutar el siguiente punto de interrupción desde cualquier ubicación en la que esté detenida la ventana. **** Puede modificar los puntos de interrupción para especificar acciones como las condiciones en las que el punto de interrupción debe pausar la ejecución, la información que se va a imprimir en la ventana de **resultados** y para cambiar la ubicación del punto de interrupción.  
+     Un punto de interrupción especifica un punto en el que desea que la ejecución se pause para poder examinar los datos. Cuando inicie el depurador, se detiene en la primera línea de código de la ventana del Editor de consultas. Para ejecutar el primer punto de interrupción que haya establecido, puede usar la característica **Continuar** . Asimismo puede usar el **Continuar** característica para ejecutar el siguiente punto de interrupción desde cualquier ubicación en la que esté detenida la ventana. Puede modificar los puntos de interrupción para especificar acciones como las condiciones en las que el punto de interrupción debe pausar la ejecución, la información que se va a imprimir en la ventana de **resultados** y para cambiar la ubicación del punto de interrupción.  
   
 -   Ir a la siguiente instrucción.  
   

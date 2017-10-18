@@ -102,10 +102,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  Si una tabla de origen de SQL Server o Sybase incluye una columna de identidad, debe utilizar las tareas ejecutar SQL para habilitar IDENTITY_INSERT antes el destino ADO NET y deshabilitarla de nuevo posteriormente. (La propiedad de columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite valores explícitos de la tabla de origen se inserta en la columna de identidad en la tabla de destino.)  
 >   
->   Para ejecutar las instrucciones SET IDENTITY_INSERT y los datos que se carga correctamente, se debe hacer lo siguiente.
->       1. Usar el mismo administrador de conexiones de ADO.NET para las tareas ejecutar SQL y para el destino de ADO.NET.
->       2. En el Administrador de conexiones, establezca el **RetainSameConnection** propiedad y el **MultipleActiveResultSets** propiedad en True.
->       3. En el destino de ADO.NET, establezca el **UseBulkInsertWhenPossible** propiedad en False.
+>   Para ejecutar las instrucciones SET IDENTITY_INSERT y los datos que se carga correctamente, se debe hacer lo siguiente. 
+>       1. Usar el mismo administrador de conexiones de ADO.NET para las tareas ejecutar SQL y para el destino de ADO.NET. 
+>       2. En el Administrador de conexiones, establezca el **RetainSameConnection** propiedad y el **MultipleActiveResultSets** propiedad en True. 
+>       3. En el destino de ADO.NET, establezca el **UseBulkInsertWhenPossible** propiedad en False. 
 >
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -172,3 +172,4 @@ ms.lasthandoff: 08/17/2017
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
   
+

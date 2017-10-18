@@ -132,7 +132,7 @@ ms.lasthandoff: 10/05/2017
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
  **Symbols**  
- Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico.  De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   

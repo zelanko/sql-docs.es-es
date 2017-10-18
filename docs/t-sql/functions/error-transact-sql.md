@@ -30,7 +30,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40; & #x 40; ERROR (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el número de error de la última instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutada.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
  Dado que @@ERROR se borra y restablece con cada instrucción ejecutada, comprobarlo inmediatamente después de la instrucción que se está comprueba o guardarlo en una variable local que se pueden comprobar más adelante.  
   
- Use la construcción TRY...CATCH para controlar errores. El bloque TRY... CATCH también crear funciones de sistema adicionales admite (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY y ERROR_STATE) que devuelven más información de error que @@ERROR. TRY...CATCH también admite una función ERROR_NUMBER que no se limita a devolver el número de error en la instrucción inmediatamente después de la instrucción que generó el error. Para obtener más información, vea [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Use la construcción TRY...CATCH para controlar errores. El bloque TRY... CATCH también crear funciones de sistema adicionales admite (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY y ERROR_STATE) que devuelven más información de error que @@ERROR . TRY...CATCH también admite una función ERROR_NUMBER que no se limita a devolver el número de error en la instrucción inmediatamente después de la instrucción que generó el error. Para obtener más información, vea [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. Usar@ERROR con @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. Usar@ERROR con @@ROWCOUNT   
  En el ejemplo siguiente se utiliza `@@ERROR` con `@@ROWCOUNT` para validar la operación de una instrucción `UPDATE`. Se comprueba el valor de `@@ERROR` para ver si hay un error y se utiliza `@@ROWCOUNT` para asegurarse de que la actualización se aplica correctamente a una fila de la tabla.  
   
 ```  

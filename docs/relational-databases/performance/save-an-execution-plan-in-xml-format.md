@@ -70,7 +70,7 @@ ms.lasthandoff: 08/22/2017
   
 4.  En el panel **Resultados** , haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
   
-5.  En el cuadro de diálogo **Guardar** resultados \<de la cuadrícula o texto>****, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
+5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
   
 6.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre**>.sqlplan** y haga clic en **Guardar**.  
   

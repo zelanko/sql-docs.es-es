@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
 ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Solución de problemas de PolyBase
@@ -224,7 +224,7 @@ ms.lasthandoff: 10/06/2017
  ## <a name="known-limitations"></a>Restricciones conocidas
  
  PolyBase presenta las siguientes limitaciones: 
- - El tamaño máximo posible de fila, incluida la longitud total de las columnas de longitud variable, no puede superar 1 MB. 
+ - El tamaño máximo posible de fila, incluida la longitud total de las columnas de longitud variable, no puede superar los 32 KB en SQL Server o 1 MB en Azure SQL Data Warehouse. 
  - PolyBase no admite los tipos de datos de Hive 0.12+ (es decir, Char(), VarChar())   
  - Al exportar datos en un formato de archivo ORC desde SQL Server o Azure SQL Data Warehouse, las columnas pesadas de texto pueden limitarse a tan solo 50 columnas debido a errores de memoria insuficiente de Java. Para solucionar este problema, exporte solo un subconjunto de las columnas.
  - No se pueden leer o escribir datos cifrados en reposo en Hadoop. Se incluyen las zonas cifradas de HDFS y el cifrado transparente.

@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.translationtype: HT
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: 6edc4a6d0a4a72e8cec739b78419ce8ce3b4f6cc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="database-properties-changetracking-page"></a>Propiedades de la base de datos (página ChangeTracking)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  También puede configurar el seguimiento de cambios utilizando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Período de retención**  
- Especifica el período mínimo para mantener la información de seguimiento de cambios en la base de datos. Los datos se quitarán solo si el valor **Limpieza automática**es **True**.  
+ Especifica el período mínimo para mantener la información de seguimiento de cambios en la base de datos. Los datos se quitarán solo si el valor **Auto Clean-Up** es **True**.  
   
  El valor predeterminado es 2.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Guía de arquitectura de procesamiento de consultas | Microsoft Docs"
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
@@ -33,7 +33,7 @@ El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas 
 
 El procesamiento de una única instrucción SQL es el método más básico de ejecución de instrucciones SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
 
-#### <a name="optimizing-select-statements"></a>Optimizar las instrucciones SELECT
+#### <a name="optimizing-select-statements"></a>Optimización de las instrucciones SELECT
 
 Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan. El contenido de un plan de consulta se describe con más detalle posteriormente en este tema.
 
@@ -64,7 +64,7 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] elige, además del plan de ejecución con el costo de recursos mínimo, el plan que devuelve resultados al usuario con un costo razonable de recursos y con la mayor brevedad posible. Por ejemplo, el procesamiento de una consulta en paralelo suele utilizar más recursos que el procesamiento en serie, pero completa la consulta más rápidamente. El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará un plan de ejecución en paralelo para devolver resultados si esto no afecta negativamente a la carga del servidor.
 
-El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] confía en las estadísticas de distribución cuando calcula los costos de recursos de métodos diferentes para extraer información de una tabla o un índice. Las estadísticas de distribución se mantienen para las columnas y los índices. Indican la posibilidad de seleccionar los valores de un índice o de una columna determinados. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante. Si las estadísticas de los índices no están actualizadas, puede que el optimizador de consultas no realice la mejor elección para el estado actual de la tabla. Para más información sobre cómo mantener actualizadas las estadísticas de índice, consulte Uso de estadísticas para mejorar el rendimiento de consultas. 
+El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] confía en las estadísticas de distribución cuando calcula los costos de recursos de métodos diferentes para extraer información de una tabla o un índice. Las estadísticas de distribución se mantienen para las columnas y los índices. Indican la posibilidad de seleccionar los valores de un índice o de una columna determinados. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante. Si las estadísticas de los índices no están actualizadas, puede que el optimizador de consultas no realice la mejor elección para el estado actual de la tabla. Para obtener más información sobre cómo mantener actualizadas las estadísticas de los índices, vea [Estadísticas](../relational-databases/statistics/statistics.md). 
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es importante porque permite que el servidor de la base de datos se ajuste dinámicamente a las condiciones cambiantes de la base de datos, sin necesitar la entrada de un programador o de un administrador de base de datos. Esto permite a los programadores centrarse en la descripción del resultado final de la consulta. Pueden estar seguros de que el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creará un plan de ejecución eficaz para el estado de la base de datos cada vez que se ejecuta la instrucción.
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [Eventos extendidos](../relational-databases/extended-events/extended-events.md)  
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Procesamiento de consultas adaptable](../relational-databases/performance/adaptive-query-processing.md)
 

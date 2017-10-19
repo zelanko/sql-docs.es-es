@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
@@ -349,7 +349,8 @@ Varias mejoras permiten admitir las características descritas en las demás sec
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) ahora permite realizar numerosas acciones de alteración de columna mientras la tabla sigue estando disponible.
 - El índice de texto completo DMV [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) devuelve la ubicación de las palabras clave en los documentos. Este DMV también se agregó en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 y [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1.
 - Una sugerencia de consulta nueva **NO_PERFORMANCE_SPOOL** puede evitar que se agregue un operador de cola de impresión a los planes de consulta. Esto puede mejorar el rendimiento cuando se ejecutan muchas consultas concurrentes con operaciones de cola de impresión. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- La instrucción [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) se mejora para aceptar un argumento msg_string. El tamaño máximo de clave de índice para los índices NONCLUSTERED se ha aumentado a 1700 bytes.
+- La instrucción [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) está mejorada para aceptar argumentos msg_string.
+- El tamaño de clave de índice máximo para los índices NONCLUSTERED se ha aumentado a 1700 bytes.
 - Se agrega la nueva sintaxis DROP IF para las instrucciones DROP relacionadas con AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER y VIEW. Vea los temas de sintaxis individual para conocer la sintaxis.
 - Se ha agregado una opción MAXDOP a [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) y [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) para especificar el grado de paralelismo.
 - Ahora se puede establecer SESSION_CONTEXT. Incluye la función [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md), la función [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) y el procedimiento [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).

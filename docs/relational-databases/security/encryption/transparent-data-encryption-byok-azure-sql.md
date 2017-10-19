@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ Para más información sobre la recuperación de copia de seguridad para SQL Dat
 
 Para garantizar una recuperación rápida de las claves y el acceso a los datos fuera de Azure, recomendamos el siguiente proceso:
 - Cree localmente la clave de cifrado en un dispositivo HSM local. (Asegúrese de que se trata de una clave RSA 2048 asimétrica, para que así se pueda almacenar en Azure Key Vault).
-- Importe el archivo de clave de cifrado (.pfx, .byok o .backup) a Azure Key Vault. 
+- Importe el archivo de clave de cifrado (.pfx, .byok o .backup) a Azure Key Vault. Le recomendamos que use un almacén de claves con [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitado para la protección de la recuperación ante la eliminación accidental de claves.
 - Antes de usar la clave por primera vez en Azure Key Vault, cree una copia de seguridad clave de Azure Key Vault. Obtenga más información sobre el comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
 - Cada vez que se haga algún cambio en la clave (por ejemplo, que se agregue ACL, etiquetas o atributos clave), asegúrese de crear otra copia de seguridad de la clave de Azure Key Vault.
 - Durante una sustitución de claves, **mantenga versiones anteriores de la clave** en el almacén de claves para que se puedan restaurar copias de seguridad de base de datos anteriores. 

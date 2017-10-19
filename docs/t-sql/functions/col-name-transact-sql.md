@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3028e409a8218b35bbf7cd4773e80ca27e8db8be
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
@@ -62,32 +62,9 @@ Un usuario solo puede ver los metadatos de elementos protegibles que posea o par
 ## <a name="remarks"></a>Comentarios  
 El *table_id* y *column_id* parámetros juntos generan una cadena de nombre de columna.
   
-Para obtener más información acerca de cómo obtener los números de identificación de tablas y columnas, vea [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
+Para obtener más información acerca de cómo obtener los números de identificación de tablas y columnas, vea [OBJECT_ID & #40; Transact-SQL & #41; ](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se devuelve el nombre de la primera columna de la tabla `Employee` de la base de datos `AdventureWorks2012`.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SET NOCOUNT OFF;  
-GO  
-SELECT COL_NAME(OBJECT_ID('HumanResources.Employee'), 1) AS 'Column Name';  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-Column Name
-------------------
-BusinessEntityID
-```
-  
-## <a name="examples"></a>Ejemplos
-
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
 En el ejemplo siguiente se devuelve el nombre de la primera columna de un ejemplo `Employee` tabla.
   
 ```sql
@@ -107,9 +84,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>Vea también
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Funciones de metadatos & #40; Transact-SQL & #41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH & #40; Transact-SQL & #41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

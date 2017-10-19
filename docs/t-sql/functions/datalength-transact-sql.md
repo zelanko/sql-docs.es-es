@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49889c4b29de0d86859c1363ce13b9656645848d
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d8887c50cb482e27bce63e08aa18b8ca54616faa
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -61,18 +61,6 @@ DATALENGTH de NULL es NULL.
 >  Los niveles de compatibilidad pueden afectar a los valores devueltos. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se busca la longitud de la columna `Name` de la tabla `Product`.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SELECT length = DATALENGTH(Name), Name  
-FROM Production.Product  
-ORDER BY Name;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 En el siguiente ejemplo se busca la longitud de la columna `Name` de la tabla `Product`.
   
 ```sql

@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ea034f7217d031c21cf22f6b5aaff9bf16355a9
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 1868f902cf41eba9637138d7333ac908c72cb76e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
@@ -81,35 +81,9 @@ B432  G650  0
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En la primera parte del ejemplo siguiente, se comparan los valores de `SOUNDEX` de dos cadenas muy similares. Para una intercalación Latin1_General `DIFFERENCE` devuelve un valor de `4`. En la segunda parte del ejemplo siguiente, la `SOUNDEX` valores para que se comparan dos cadenas muy diferentes y una intercalación Latin1_General `DIFFERENCE` devuelve un valor de `0`.  
-  
-```  
--- Returns a DIFFERENCE value of 4, the least possible difference.  
-SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
-GO  
--- Returns a DIFFERENCE value of 0, the highest possible difference.  
-SELECT SOUNDEX('Blotchet-Halls'), SOUNDEX('Greene'), DIFFERENCE('Blotchet-Halls', 'Greene');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------ ----- -----------   
-G650  G650  4             
-  
-(1 row(s) affected)  
-  
------ ----- -----------   
-B432  G650  0             
-  
-(1 row(s) affected)  
-```  
-  
 ## <a name="see-also"></a>Vea también  
- [SOUNDEX &#40; Transact-SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [SOUNDEX & #40; Transact-SQL & #41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [Funciones de cadena & #40; Transact-SQL & #41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

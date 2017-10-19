@@ -18,10 +18,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5acf2de3fccc2f5180358f87bd02591811c59c72
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
 ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Administrador de conexiones de Azure Data Lake Store
@@ -60,7 +60,8 @@ El Administrador de conexiones de almacén de Azure Data Lake es un componente d
         4. Para probar la conexión, seleccione **Probar conexión**.  
   
 6.  Seleccione **Aceptar** para cerrar el **Azure datos Lake almacén Connection Manager Editor** cuadro de diálogo.  
-  
+
+## <a name="view-the-properties-of-the-connection-manager"></a>Ver las propiedades del Administrador de conexiones
 Puede ver las propiedades del Administrador de conexiones que creó en la ventana **Propiedades** .  
   
   

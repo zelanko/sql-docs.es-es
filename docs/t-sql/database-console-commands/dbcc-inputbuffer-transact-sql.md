@@ -1,7 +1,7 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -49,22 +49,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *session_id*  
- Es el Id. de sesión asociado a cada conexión principal activa.  
+*session_id*  
+Es el Id. de sesión asociado a cada conexión principal activa.  
   
- *request_id*  
- Solicitud exacta (en lote) que se buscará en la sesión actual.  
- La siguiente consulta devuelve *request_id*:  
+*request_id*  
+Solicitud exacta (en lote) que se buscará en la sesión actual.  
+
+La siguiente consulta devuelve *request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- por  
- Habilita la especificación de opciones.  
+por  
+Habilita la especificación de opciones.  
   
- NO_INFOMSGS  
- Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
+NO_INFOMSGS  
+Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC INPUTBUFFER devuelve un conjunto de filas con las siguientes columnas.
@@ -72,12 +73,12 @@ DBCC INPUTBUFFER devuelve un conjunto de filas con las siguientes columnas.
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar (30)**|Tipo de evento. Esto podría ser **RPC Event** o **eventos de lenguaje**. El resultado será **No Event** cuando no se detectó ningún último evento.|  
-|**Parámetros**|**smallint**|0 = Texto<br /><br /> 1 -  *n*  = parámetros|  
+|**Parámetros**|**smallint**|0 = Texto<br /><br /> 1 - * n * = parámetros|  
 |**EventInfo**|**nvarchar(4000)**|Para una **EventType** de RPC, **EventInfo** contiene solo el nombre del procedimiento. Para una **EventType** del lenguaje, se muestran solo los primeros 4.000 caracteres del evento.|  
   
 Por ejemplo, DBCC INPUTBUFFER devuelve el siguiente conjunto de resultados cuando el último evento del búfer es DBCC INPUTBUFFER(11).
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +87,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) para devolver información sobre las instrucciones enviadas a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere uno de los siguientes:
 -   Usuario debe ser un miembro de la **sysadmin** rol fijo de servidor.  
@@ -120,7 +124,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>Vea también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[Sys.dm_exec_input_buffer & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

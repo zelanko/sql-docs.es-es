@@ -1,7 +1,7 @@
 ---
 title: "Actualizar los componentes de aprendizaje de máquina en una instancia de SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,102 +17,132 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2d9d7ddd95bdbcf6efca98ed94bc305924902b98
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Actualizar los componentes de aprendizaje de máquina en una instancia de SQL Server
 
-Servidor de aprendizaje de máquina Microsoft para Windows incluye una herramienta que puede usar para actualizar los componentes de R asociados con una instancia de SQL Server. Hay dos versiones de la herramienta: un asistente y una utilidad de línea de comandos.
+Este artículo explica el proceso de _enlace_, que puede usar para actualizar los componentes que se usan en SQL Server de aprendizaje automático. El proceso de enlace, bloquea el servidor a un ritmo de actualización basado en versiones de servidor de aprendizaje de máquina en lugar de SQL Server.
 
-Este artículo describe cómo usar estas herramientas para actualizar una instancia compatible de SQL Server y cómo revertir una instancia que ya se había actualizada.
+> [!IMPORTANT]
+> No es necesario utilizar el proceso de actualización si desea obtener las actualizaciones como parte de las actualizaciones de SQL Server. Siempre que se instala un nuevo service pack o una versión de servicio, componentes de aprendizaje de máquina se actualizan automáticamente siempre a la versión más reciente. Utilice este proceso si desea actualizar los componentes a un ritmo más rápido que concedidos por las versiones de servicio de SQL Server.
 
-No es necesario utilizar el proceso de actualización si desea obtener las actualizaciones como parte de las actualizaciones de SQL Server. Siempre que se instala un nuevo service pack o una versión de servicio, componentes de aprendizaje de máquina se actualizan automáticamente siempre a la versión más reciente. Solo puede usar a este proess si desea actualizar los componentes a un ritmo más rápido que es affored por las versiones de servicio de SQL Server.
+Si en cualquier momento en que desea detener la actualización en la programación del servidor de aprendizaje de máquina, debe _desenlace_ la instancia como se describe en [en esta sección](#bkmk_Unbind)y desinstalar el servidor de aprendizaje de máquina.
 
 **Se aplica a:** servicios de aprendizaje de automático de SQL Server 2016 R Services, SQL Server de 2017
 
+## <a name="binding-vs-upgrading"></a>Enlace frente a actualizar
+
+El proceso de actualización de los componentes de aprendizaje automático se conoce como **enlace**, debido a que cambia el modelo de soporte técnico para componentes de aprendizaje de máquina de SQL Server usar la nueva directiva de ciclo de vida de Software modernas. 
+
+En general, al cambiar al nuevo modelo de licencias se garantiza que los científicos de datos pueden usar siempre la versión más reciente de R o Python. Para obtener más información acerca de los términos de la directiva de ciclo de vida moderno, consulte [escala de tiempo del soporte técnico de Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+
 > [!NOTE]
-> En el momento de redactar este artículo, las actualizaciones se aplican únicamente a las instancias de SQL Server 2016 compatibles.  Aunque se admite la actualización de SQL Server 2017, no se ha publicado una nueva versión del servidor de aprendizaje de máquina de Microsoft que se usará para las actualizaciones.
+> La actualización no cambia el modelo de compatibilidad para la base de datos de SQL Server y no cambia la versión de SQL Server.
 
-## <a name="upgrade-an-instance"></a>Actualizar una instancia
-
-El proceso de actualización se conoce como **enlace**, debido a que cambia el modelo de soporte técnico para los componentes de aprendizaje de máquina de SQL Server usar la nueva directiva de ciclo de vida moderna. Sin embargo, la actualización no cambia el modelo de compatibilidad para la base de datos de SQL Server.
-
-En general, este sistema de licencias garantiza que los científicos de datos siempre usen la versión más reciente de R. Para más información sobre los términos y las ventajas de la directiva de ciclo de vida moderno, vea [Support Timeline for Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support) (Escala de tiempo de compatibilidad de Microsoft R Server).
-
-Al enlazar una instancia, ocurren varias cosas:
+Al enlazar una instancia, pueden ocurrir varias cosas, que puede incluir una actualización a los componentes de aprendizaje automático:
 
 + Se cambia el modelo de soporte técnico. En lugar de confiar en las versiones de servicio de SQL Server, soporte técnico se basa en la nueva directiva de ciclo de vida moderna.
-+ Los componentes asociados con la instancia de aprendizaje automático se actualizará automáticamente con cada versión, en el paso de bloqueo con la versión actual en la nueva directiva de ciclo de vida moderna. 
++ Los componentes de aprendizaje de máquina asociados a la instancia se actualizan automáticamente con cada versión, en el paso de bloqueo con la versión actual en la nueva directiva de ciclo de vida moderna. 
 + Pueden agregar nuevos paquetes de R o Python. Por ejemplo, las actualizaciones anteriores de Microsoft R Server agregan nuevos paquetes de R, como [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), y [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + La instancia ya no se puede actualizar manualmente, excepto para agregar paquetes nuevos.
-+ Tiene la opción para agregar modelos previamente entrenados.
++ Obtiene la opción para agregar modelos previamente entrenados proporcionados por Microsoft.
 
-Si más adelante decide que desea detener la actualización de la instancia en cada versión, debe **desenlace** la instancia como se describe en [en esta sección](#bkmk_Unbind)y, a continuación, desinstale el equipo las actualizaciones de aprendizaje, tal como se describe en este artículo: [ejecutar Microsoft R Server para Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows). Una vez completado el proceso, máquina futuras actualizaciones en función de servidor de aprendizaje de máquina de aprendizaje ya no se aplicarán a la instancia.
+## <a name="bkmk_prereqs"></a>Prerequisites
 
-### <a name="bkmk_prereqs"></a>Requisitos previos para la actualización
+Comience por identificar instancias que son candidatos para realizar una actualización. Si ejecuta el programa de instalación y seleccione la opción de enlace, devuelve una lista de instancias que son compatibles con la actualización. 
 
-1. Identificar las instancias que son candidatas para la actualización.
-    + SQL Server 2016 con R Services instalado
-    + CU3 además de al menos a Service Pack 1
+Consulte la tabla siguiente para obtener una lista de actualizaciones admitidas y requisitos.
 
-2. Obtener **Microsoft R Server**, al descargar el instalador independiente de Windows.
+| Versión de SQL Server| Actualización compatible| Notas|
+|-----|-----|------|
+| SQL Server 2016| Servidor 9.2.1 de aprendizaje automático| Requiere al menos Service Pack 1 más CU3. R Services debe estar instalada y habilitada.|
+| SQL Server 2017| Servidor 9.2.1 de aprendizaje automático| Servicios de aprendizaje de máquina (In-Database) debe estar instalados y habilitados. |
 
-    [Cómo instalar R Server 9.0.1 en Windows mediante el instalador independiente de Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows#howtoinstall)
+## <a name="bind-or-upgrade-an-instance"></a>Enlazar o actualizar una instancia
 
-> [!TIP]
-> 
-> ¿No se puede encontrar SqlBindR.exe? Probablemente no ha descargado R Server todavía. Esta utilidad está disponible solo con el instalador de Windows para Microsoft R Server.
+Microsoft máquina de aprendizaje para Windows del servidor incluye una herramienta que puede usar para actualizar los lenguajes y herramientas asociados a una instancia de SQL Server de aprendizaje automático. Hay dos versiones de la herramienta: un asistente y una utilidad de línea de comandos.
+
+Antes de poder ejecutar el asistente o la herramienta de línea de comandos, debe descargar la versión más reciente del instalador independiente para componentes de aprendizaje automático.
+
++ [Instalar para Windows Server 9.2.1 de aprendizaje automático](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+
++ [Descargar los componentes necesarios para la instalación sin conexión](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
 ### <a name="bkmk_BindWizard"></a>Actualizar mediante el Asistente para instalación nueva
 
-1. Inicie al instalador de nuevo para el servidor de R en el equipo que tiene la instancia que desea actualizar.
-  ![Asistente para la instalación de Microsoft R Server](media/r-server-installer-01.PNG)
-2. Acepte el contrato de licencia para Microsoft R Server 9.1.0 y haga clic en **siguiente**.
-3. Acepte las condiciones de licencias para los componentes de código abierto de R y haga clic en **siguiente**.
-4. En **seleccionar la carpeta de instalación**, acepte los valores predeterminados o especificar una ubicación diferente donde se instalará bibliotecas de R. 
-5. El instalador identificará todas las instancias locales que son candidatos para el enlace. Si no aparece ninguna instancia, significa que no se encuentra ninguna instancia válida. Deberá aplicar la revisión del servidor, o bien compruebe si se instaló R Services.
-6. Active la casilla situada junto a cualquier instancia que se va a actualizar y haga clic en **siguiente**.
-7. El proceso puede tardar unos instantes.
+1. Inicie al instalador de nuevo para el servidor de aprendizaje de máquina. Asegúrese de ejecutar el programa de instalación en el equipo que tiene la instancia que desea actualizar.
+
+    ![Asistente para la instalación de servidor de aprendizaje de máquina de Microsoft](media/mls-921-installer-start.PNG)
+
+2. En la página, **configurar la instalación**, confirme los componentes que desea actualizar y revisar la lista de instancias compatibles. Si no se muestra ninguna instancia, compruebe el [requisitos previos](#bkmk_prereqs).
+
+    Para actualizar una instancia, seleccione la casilla de verificación situada junto al nombre de instancia. Si no selecciona una instancia, se crea una instalación independiente del servidor de aprendizaje de máquina y las bibliotecas de SQL Server son iguales.
+
+    ![Asistente para la instalación de servidor de aprendizaje de máquina de Microsoft](media/configure-the-installation.PNG)
+
+3. En el **del acuerdo de licencia** página, seleccione **acepto estos términos** para aceptar los términos de licencia para el servidor de aprendizaje de máquina. 
+
+4. En las páginas sucesivas, dar su consentimiento a las condiciones de licencias adicionales para ningún componente de código abierto que ha seleccionado, como Microsoft R Open o la distribución de Anaconda de Python.
+
+5. En el **casi** página, tome nota de la carpeta de instalación. La carpeta predeterminada es `~\Program Files\Microsoft\ML Server`. 
+
+    Si desea cambiar la carpeta de instalación, haga clic en **avanzadas** para volver a la primera página del asistente. Sin embargo, debe repetir todas las selecciones anteriores. 
+
+6. Si va a instalar los componentes sin conexión, puede se le pedirán la ubicación de los componentes de aprendizaje necesaria del equipo, como Microsoft R Open, servidor de Python y Python abierta.
     
-    Durante la instalación, SQL Server R Services utilizadas las bibliotecas de R se reemplazan con las bibliotecas de Microsoft R Server 9.1.0.
-    
-    LaunchPad no se ve afectado por el proceso, pero se quitarán las bibliotecas en la carpeta R_SERVICES y no se cambiarán las propiedades para el servicio, para usar las bibliotecas en `C:\Program Files\Microsoft\R Server\R_SERVER`.
+Durante la instalación, se reemplazan las bibliotecas de R o Python utilizadas por SQL Server y Launchpad se actualiza para usar los componentes más recientes. Es decir, si la instancia había utilizado previamente bibliotecas en la carpeta R_SERVICES de manera predeterminada, después de la actualización se quitan estas bibliotecas y se cambian las propiedades para el servicio Launchpad, para usar las bibliotecas en la ubicación especificada.
 
 ### <a name="bkmk_BindCmd"></a>Actualizar mediante la línea de comandos
 
-Después de haber instalado Microsoft R Server, puede ejecutar la herramienta de SqlBindR.exe desde la línea de comandos.
+Si no desea utilizar el asistente, puede instalar el servidor de aprendizaje de máquina y, a continuación, ejecutar la herramienta de SqlBindR.exe desde la línea de comandos para actualizar la instancia.
 
-1. Abra un símbolo del sistema como administrador y vaya hasta la carpeta que contiene sqlbindr.exe. La ubicación predeterminada es`C:\Program Files\Microsoft\R Server\Setup`
+> [!TIP]
+> 
+> ¿No se puede encontrar SqlBindR.exe? Probablemente ha descargado los componentes enumerados anteriormente. Esta utilidad está disponible solo con el instalador de Windows para el servidor de aprendizaje de máquina.
+
+1. Abra un símbolo del sistema como administrador y vaya hasta la carpeta que contiene sqlbindr.exe. La ubicación predeterminada es`C:\Program Files\Microsoft\MLServer\Setup`
+
 2. Escriba el comando siguiente para ver una lista de instancias disponibles: `SqlBindR.exe /list`
   
-   Anote el nombre completo de la instancia como se muestra. Por ejemplo, podría ser el nombre de instancia `MSSQL13.MSSQLSERVER` para la instancia predeterminada, o algo parecido a `SERVERNAME.MYNAMEDINSTANCE`.
-3. Ejecute el comando **SqlBindR.exe** con el argumento */bind* y especifique el nombre de la instancia que se va a actualizar, como se devolvió en el paso anterior.
+   Anote el nombre completo de la instancia como se muestra. Por ejemplo, podría ser el nombre de instancia `MSSQL14.MSSQLSERVER` para una instancia predeterminada, o algo parecido a `SERVERNAME.MYNAMEDINSTANCE`.
 
-   Por ejemplo, para actualizar la instancia predeterminada, escriba:`SqlBindR.exe /bind MSSQL13.MSSQLSERVER`
-4. Cuando finalice la actualización, reinicie el servicio Launchpad asociado a cualquier instancia que se haya modificado.
+3. Ejecute el **SqlBindR.exe** comando con el */enlazar* argumento y especifique el nombre de la instancia a actualizar, utilizando el nombre de instancia que se devuelve en el paso anterior.
 
+   Por ejemplo, para actualizar la instancia predeterminada, escriba:`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+
+4. Una vez finalizada la actualización, reinicie el servicio de Launchpad asociado a cualquier instancia que se ha modificado.
 
 ## <a name="bkmk_Unbind"></a>Revertir o desenlazar una instancia
 
-Para restaurar una instancia de SQL Server para usar las bibliotecas originales instaladas por SQL Server, debe realizar una **desenlace** operación. Para ello, volviendo a ejecutar el Asistente para la instalación de Microsoft R Server, o si se ejecuta la utilidad SqlBindR desde la línea de comandos.
+Si decide que ya no desea actualizar los componentes mediante el servidor de aprendizaje de máquina de aprendizaje automático, primero debe _desenlace_ la instancia y, a continuación, desinstalar el servidor de aprendizaje de máquina.
 
-Cuando se desenlaza complete, se quitan las bibliotecas de Microsoft R Server 9.1.0 y se restauran las bibliotecas de R originales utilizadas por SQL Server R Services.
++ Desenlace la instancia
 
-Se editan las propiedades de SQL Server Launchpad para usar las bibliotecas de R en la carpeta predeterminada para R_SERVICES, en `C:\Program Files\Microsoft\R Server\R_SERVER`.
+    Puede deshacer el enlace de la instancia y revertir a las bibliotecas originales instaladas por SQL Server, mediante cualquiera de estos dos métodos:
 
-### <a name="unbind-using-the-wizard"></a>Deshacer el enlace con el Asistente para
+    + [Usar el Asistente para instalación](#bkmk_wizunbind) para servidor de aprendizaje de máquina y anule la selección de todas las características en la instancia
+    + [Use la utilidad SqlBindR](#bkmk_cmdunbind) con el `/unbind` argumento, seguido del nombre de instancia.
 
-1. Descargar al nuevo instalador de Microsoft R Server 9.1.0.
-2. Ejecute al instalador en el equipo que tiene la instancia que desee separar.
-2. El instalador identificará instancias locales que son candidatos para deshacer el enlace.
-3. Anule la selección de la casilla de verificación situada junto a la instancia que desea revertir a la configuración original de SQL Server R Services.
-4. Acepte el contrato de licencia para Microsoft R Server 9.1.0. Debe aceptar el contrato de licencia, incluso si se elimina el servidor de R.
+    Una vez completado el proceso de separación, máquina futuras actualizaciones en función de servidor de aprendizaje de máquina de aprendizaje ya no se aplicarán a la instancia.
+
++ Desinstalar el servidor de aprendizaje automático
+
+    Para obtener instrucciones, consulte [desinstalar máquina aprendizaje para Windows del servidor](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall). 
+
+### <a name="bkmk_wizunbind"></a>Deshacer el enlace con el Asistente para
+
+1. Busque el programa de instalación de servidor de aprendizaje de máquina. Si ha quitado el programa de instalación, tendrá que descargarlo de nuevo, o copiarlo desde otro equipo.
+2. Asegúrese de ejecutar el programa de instalación en el equipo que tiene la instancia que desee separar.
+2. El programa de instalación identifica las instancias locales que son candidatos para deshacer el enlace.
+3. Anule la selección de la casilla de verificación situada junto a la instancia que se va a volver a la configuración original.
+4. Acepte el contrato de licencia. Debe indicar su aceptación de términos de licencia incluso cuando se instala.
 5. Haga clic en **Finalizar**. El proceso tarda algún tiempo.
 
-### <a name="unbind-using-the-command-line"></a>Deshacer el enlace mediante la línea de comandos
+### <a name="bkmk_cmdunbind"></a>Deshacer el enlace mediante la línea de comandos
 
 1. Abra un símbolo del sistema y vaya a la carpeta que contiene **sqlbindr.exe**, como se describe en la sección anterior.
 
@@ -120,23 +150,23 @@ Se editan las propiedades de SQL Server Launchpad para usar las bibliotecas de R
 
    Por ejemplo, el comando siguiente restablece la instancia predeterminada:
    
-    `SqlBindR.exe /unbind MSSQL13.MSSQLSERVER`
+    `SqlBindR.exe /unbind MSSQL14.MSSQLSERVER`
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Esta sección enumeran los problemas conocidos específicos para usar de la utilidad SqlBindR.exe o a las actualizaciones mediante la utilidad de instalación de Microsoft R Server que afecta a las instancias de SQL Server.
+Esta sección enumeran problemas conocidos específicos para usar de la utilidad SqlBindR.exe o a las actualizaciones del servidor de aprendizaje de máquina que podrían afectar a instancias de SQL Server.
 
 ### <a name="restoring-packages-that-were-previously-installed"></a>Restaurando los paquetes que estaban previamente instalados
 
 En la utilidad de actualización que se incluye con Microsoft R Server 9.0.1, la utilidad no restauró los paquetes originales o componentes de R completo, que requieren que el usuario ejecute la reparación en la instancia, aplican todas las versiones de servicio y, a continuación, reinicie la instancia.
 
-Sin embargo, la versión más reciente de la utilidad de actualización para Microsoft R Server 9.1.0, restaurará automáticamente las características de R originales. Por lo tanto, no es necesario volver a instalar los componentes de R o volver a aplicar la revisión del servidor. Sin embargo, todavía debe instalar los paquetes de R que pueden haber agregado tras la instalación inicial.
+Sin embargo, la versión más reciente de la utilidad actualización restaura automáticamente las características de R originales. Por lo tanto, no es necesario volver a instalar los componentes de R o volver a aplicar la revisión del servidor. Sin embargo, debe instalar los paquetes de R que pueden haber agregado tras la instalación inicial.
 
-Si ha usado las funciones de administración de paquetes para instalar y compartir el paquete, esta tarea es mucho más fácil: puede usar comandos de R para sincronizar los paquetes instalados en el sistema de archivos con registros de la base de datos y viceversa. Para obtener más información, vea [instalar y administrar paquetes de R](installing-and-managing-r-packages.md)
+Si ha usado las funciones de administración de paquetes para instalar y compartir el paquete, esta tarea es mucho más fácil: puede usar comandos de R para sincronizar los paquetes instalados en el sistema de archivos con registros de la base de datos y viceversa. Para obtener más información, consulte [administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md).
 
-### <a name="cannot-perform-upgrade-from-901"></a>No se puede realizar la actualización desde 9.0.1
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problemas con varias actualizaciones de SQL Server
 
-Si previamente ha actualizado una instancia de SQL Server 2016 R Services a 9.0.1, al ejecutar el nuevo instalador de Microsoft R Server 9.1.0, mostrar una lista de todas las instancias válidas y, a continuación, de forma predeterminada, seleccione instancias enlazadas previamente. Si continúa, las instancias enlazadas previamente son independientes. Como resultado, el 9.0.1 anteriores se quita la instalación, los incluidos relacionados con los paquetes, pero no se instala la nueva versión de Microsoft R Server (9.1.0).
+Si previamente ha actualizado una instancia de SQL Server 2016 R Services a 9.0.1, al ejecutar el nuevo instalador de Microsoft R Server 9.1.0, muestra una lista de todas las instancias válidas y, a continuación, de forma predeterminada, selecciona instancias enlazadas previamente. Si continúa, las instancias enlazadas previamente son independientes. Como resultado, el 9.0.1 anteriores se quita la instalación, los incluidos relacionados con los paquetes, pero no se instala la nueva versión de Microsoft R Server (9.1.0).
 
 Como alternativa, puede modificar la instalación del servidor de R existente como se indica a continuación:
 1. En el Panel de Control, abra **agregar o quitar programas**.
@@ -149,7 +179,7 @@ A veces, el enlace y operaciones Desenlazando producirá un error limpiar las ca
 Si encuentra carpetas con un nombre parecido a esto, puede quitarlo una vez completada la instalación:`R_SERVICES_<guid>`
 
 > [!NOTE]
-> Asegúrese de esperar hasta que finalice la instalación. Puede tardar mucho tiempo para quitar las bibliotecas de R asociadas con una versión y, a continuación, agregar las nuevas bibliotecas de R. Cuando se complete la operación, se quitarán las carpetas temporales.
+> Asegúrese de esperar hasta que finalice la instalación. Puede tardar mucho tiempo para quitar las bibliotecas de R asociadas con una versión y, a continuación, agregar las nuevas bibliotecas de R. Cuando se complete la operación, se quitan las carpetas temporales.
 
 ## <a name="sqlbindrexe-command-syntax"></a>Sintaxis de comandos de sqlbindr.exe
 
@@ -183,7 +213,8 @@ La herramienta devuelve los siguientes mensajes de error:
 
 Para obtener más información, vea las notas de la versión para Microsoft R Server:
 
-+ [Novedades de R Server](https://docs.microsoft.com/r-server/whats-new-in-r-server)
++ [Problemas conocidos en el servidor de aprendizaje de máquina](https://docs.microsoft.com/machine-learning-server/resources-known-issues)
 
-+ [R Server problemas conocidos](https://docs.microsoft.com/r-server/resources-known-issues)
++ [Anuncios de características de la versión anterior del servidor de R](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
++ [Características desusadas, discontinuos o modificadas](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)

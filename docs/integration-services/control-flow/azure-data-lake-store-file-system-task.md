@@ -16,10 +16,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 4cb0585acf73e734662847401c60686b54ae6410
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
 ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarea de sistema de archivos de almacén de Azure Data Lake
@@ -37,6 +37,7 @@ El **operación** propiedad especifica la operación del sistema de archivos par
 - **CopyToADLS:** cargar archivos a ADLS.
 - **CopyFromADLS:** descargar archivos de ADLS.
 
+## <a name="configure-the-properties-for-the-operation"></a>Configurar las propiedades de la operación
 Para cualquier operación, tendrá que especificar un administrador de conexiones de Azure Data Lake.
 
 Estas son las propiedades específicas de cada operación:

@@ -1,7 +1,7 @@
 ---
 title: "Cómo realizar la puntuación en tiempo real o puntuación nativo de SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Cómo realizar la puntuación en tiempo real o puntuación nativo de SQL Server
 
-Este tema proporciona instrucciones y código de ejemplo de cómo ejecutar el en tiempo real de la puntuación y las características nativas de puntuación en SQL Server 2016 y 2017 de SQL Server. El objetivo de puntuación en tiempo real y de puntuación nativo es mejorar el rendimiento de las operaciones de puntuación de lotes pequeños.
+Este tema proporciona instrucciones y código de ejemplo de cómo ejecutar el en tiempo real de la puntuación y las características nativas de puntuación de 2017 de SQL Server y SQL Server 2016. El objetivo de puntuación en tiempo real y de puntuación nativo es mejorar el rendimiento de las operaciones de puntuación de lotes pequeños.
 
 Tanto en tiempo real de puntuación y de puntuación nativo están diseñados para permitir el uso de un modelo de aprendizaje sin tener que instalar R. automático Todo lo que necesita hacer es obtener un modelo previamente entrenado en un formato compatible y lo guarda en una base de datos de SQL Server.
 
@@ -30,11 +30,11 @@ Tanto en tiempo real de puntuación y de puntuación nativo están diseñados pa
 Se admiten las siguientes opciones para la predicción por lotes rápidamente:
 
 + **Puntuación nativo**: función PREDECIR de T-SQL en SQL Server 2017
-+ **En tiempo real de puntuación**: utilizando el sp_rxPredict procedimiento almacenado en SQL Server 2016 o 2017 de SQL Server.
++ **En tiempo real de puntuación**: con sp\_rxPredict el procedimiento almacenado en SQL Server 2016 o 2017 de SQL Server.
 
 > [!NOTE]
 > Se recomienda el uso de la función de PREDICCIÓN en SQL Server 2017.
-> Para usar sp_rxPredict requiere que habilite la integración de SQLCLR. Antes de habilitar esta opción, tenga en cuenta las implicaciones de seguridad.
+> Usar sp\_rxPredict requiere que habilite la integración de SQLCLR. Antes de habilitar esta opción, tenga en cuenta las implicaciones de seguridad.
 
 El proceso general de preparar el modelo y, a continuación, generar puntuaciones es muy similar:
 
@@ -49,7 +49,7 @@ El proceso general de preparar el modelo y, a continuación, generar puntuacione
 
 + Si usa sp\_rxPredict, son necesarios algunos pasos adicionales. Vea [habilitar en tiempo real de puntuación](#bkmk_enableRtScoring).
 
-+ En el momento de redactar este artículo, sólo RevoScaleR y MicrosoftML pueden crear modelos compatibles. Tipos de modelo adicionales están disponibles en el futuro. Para obtener la lista de algoritmos actualmente compatibles, consulte [en tiempo real de puntuación](../real-time-scoring.md).
++ En este momento, solo RevoScaleR y MicrosoftML pueden crear modelos compatibles. Tipos de modelo adicionales están disponibles en el futuro. Para obtener la lista de algoritmos actualmente compatibles, consulte [en tiempo real de puntuación](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Serialización y almacenamiento
 
@@ -80,7 +80,7 @@ Desde el código de R, hay dos maneras de guardar el modelo en una tabla:
 
 ## <a name="native-scoring-with-predict"></a>Nativo de puntuación con PREDICT
 
-En este ejemplo, creará un modelo y, a continuación, llame a la función de predicción en tiempo real de T-SQL.
+En este ejemplo, se crea un modelo y, a continuación, llame a la función de predicción en tiempo real de T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Paso 1. Preparar y guardar el modelo
 
@@ -159,7 +159,7 @@ La siguiente instrucción de PREDICCIÓN simple Obtiene una clasificación desde
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ Esta sección describen los pasos necesarios para configurar **en tiempo real** 
 Debe habilitar esta característica para cada base de datos que desea usar para puntuar. El administrador del servidor debe ejecutar la utilidad de línea de comandos, RegisterRExt.exe, que se incluye con el paquete RevoScaleR.
 
 > [!NOTE]
-> En tiempo real de puntuación para trabajar, funcionalidad de CLR de SQL debe estar habilitado en la instancia y la base de datos debe estar marcado como de confianza. Cuando se ejecuta la secuencia de comandos, estas acciones se realizan automáticamente. Sin embargo, debe tener en cuenta las implicaciones de seguridad adicionales de hacerlo.
+> En tiempo real de puntuación para trabajar, funcionalidad de CLR de SQL debe estar habilitado en la instancia y la base de datos debe estar marcado como de confianza. Cuando se ejecuta la secuencia de comandos, estas acciones se realizan automáticamente. Sin embargo, debe tener en cuenta las implicaciones de seguridad adicional.
 
 1. Abra un símbolo del sistema con privilegios elevados y vaya a la carpeta donde se encuentra RegisterRExt.exe. La ruta de acceso siguiente puede utilizarse en una instalación predeterminada:
     
@@ -209,12 +209,9 @@ Debe habilitar esta característica para cada base de datos que desea usar para 
 > 
 > En SQL Server de 2017 medidas de seguridad adicionales son para evitar problemas con la integración CLR. Estas medidas imponen restricciones adicionales sobre el uso de este procedimiento almacenado también.
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>Paso 2. Preparar y guardar el modelo
 
-El formato binario requerido por sp\_rxPredict es el mismo que para la PREDICCIÓN.
-
-Por lo tanto, en el código de R, incluya una llamada a [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)y no olvide especificar _realtimeScoringOnly_ = TRUE, como en este ejemplo:
+El formato binario requerido por sp\_rxPredict es el mismo que para la PREDICCIÓN. Por lo tanto, en el código de R, incluya una llamada a [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)y no olvide especificar _realtimeScoringOnly_ = TRUE, como en este ejemplo:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Paso 3. Llamar a sp_rxPredict
 
-Se llama a sp_rxPredict como lo haría con cualquier otro procedimiento almacenado. En la versión actual, el procedimiento almacenado toma dos parámetros:  _@model_  para el modelo en formato binario, y  _@inputData_  para que los datos que se va a usar para determinar la puntuación, definen como una consulta SQL válida .
+Se llama a sp\_rxPredict como haría con cualquier otro procedimiento almacenado. En la versión actual, el procedimiento almacenado toma dos parámetros:  _@model_  para el modelo en formato binario, y  _@inputData_  para que los datos que se va a usar para determinar la puntuación, definen como una consulta SQL válida .
 
 Dado que el formato binario es el mismo que se utiliza la función de PREDICCIÓN, puede usar la tabla de datos y modelos del ejemplo anterior.
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> La llamada a `sp_rxPredict` se produce un error si los datos de entrada para puntuar no incluyen columnas que coinciden con los requisitos del modelo. Actualmente, se admiten sólo los siguientes tipos de datos. NET: double, float, short, ushort, long, ulong y cadena.
+> La llamada a sp\_rxPredict se produce un error si los datos de entrada para puntuar no incluyen columnas que coinciden con los requisitos del modelo. Actualmente, se admiten sólo los siguientes tipos de datos. NET: double, float, short, ushort, long, ulong y cadena.
 > 
 > Por lo tanto, deberá filtrar los tipos no compatibles en los datos de entrada antes de usarlo para puntuar en tiempo real.
 > 
 > Para obtener información acerca de los tipos correspondientes de SQL, consulte [asignación de tipo de CLR de SQL](https://msdn.microsoft.com/library/bb386947.aspx) o [asignación de datos de parámetro de CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### <a name="disable-realtime-scoring"></a>Deshabilitar la puntuación en tiempo real
+## <a name="disable-realtime-scoring"></a>Deshabilitar la puntuación en tiempo real
 
 Para deshabilitar la funcionalidad de puntuación en tiempo real, abra un símbolo del sistema con privilegios elevados y ejecute el siguiente comando:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>En tiempo real de puntuación en Microsoft R Server
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>En tiempo real de puntuación en Microsoft R Server o servidor de aprendizaje de máquina
 
-Para obtener información sobre en tiempo real de puntuación en un entorno distribuido que se basa en Microsoft R Server, consulte el [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) función disponible en la [mrsDeploy paquete](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), que es compatible con publicación de modelos en tiempo real un servicio web que se ejecuta en el servidor de R de puntuación como una nueva.
+Servidor de aprendizaje de máquina admite distribuida en tiempo real de puntuación de modelos publicados como un servicio web. Para más información, vea estos artículos:
 
++ [¿Cuáles son los servicios web en el servidor de aprendizaje de máquina?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [¿Qué es la puesta en marcha?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Implementar un modelo de Python como un servicio web con el aprendizaje automático de Azure-modelo-sdk de administración](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Publicar un modelo en tiempo real o un bloque de código de R como un servicio web nuevo](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [paquete de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

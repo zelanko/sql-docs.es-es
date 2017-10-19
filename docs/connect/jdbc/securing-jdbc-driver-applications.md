@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>Proteger las aplicaciones del controlador JDBC
@@ -33,12 +33,13 @@ ms.lasthandoff: 09/09/2017
 |Tema|Description|  
 |-----------|-----------------|  
 |[Proteger las cadenas de conexión](../../connect/jdbc/securing-connection-strings.md)|Describe técnicas para ayudar a proteger la información que se usa para conectarse a un origen de datos.|  
-|[Validar la entrada del usuario](../../connect/jdbc/validating-user-input.md)|Describe técnicas para validar los datos proporcionados por el usuario.|  
-|[Seguridad de la aplicación](../../connect/jdbc/application-security.md)|Describe cómo utilizar los permisos de las directivas de Java para ayudar a proteger una aplicación del controlador JDBC.|  
-|[Está utilizando cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)|Describe cómo establecer un canal de comunicaciones seguro con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante capa de Sockets seguros (SSL) de la base de datos.|  
-|[Modo FIPS](../../connect/jdbc/fips-mode.md)|Describe cómo usar el controlador JDBC en el modo FIPS denunciante.| 
+|[Validación de los datos proporcionados por el usuario](../../connect/jdbc/validating-user-input.md)|Describe técnicas para validar los datos proporcionados por el usuario.|  
+|[Seguridad de aplicaciones](../../connect/jdbc/application-security.md)|Describe cómo utilizar los permisos de las directivas de Java para ayudar a proteger una aplicación del controlador JDBC.|  
+|[Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)|Describe cómo establecer un canal de comunicaciones seguro con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante capa de Sockets seguros (SSL) de la base de datos.|  
+|[Modo FIPS](../../connect/jdbc/fips-mode.md)|Describe cómo usar el controlador JDBC en el modo compatible con FIPS.| 
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

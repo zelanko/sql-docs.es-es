@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ae67e110eedb3be6d30ad3b27812eb4d37eb0f4b
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a4356c6472b5757374909ae0350d597a91e4252d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -95,76 +95,6 @@ Result
 ```  
   
 ### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH con y sin el parámetro month_to_add  
-  
-```tsql  
-DECLARE @date DATETIME = GETDATE();  
-SELECT EOMONTH ( @date ) AS 'This Month';  
-SELECT EOMONTH ( @date, 1 ) AS 'Next Month';  
-SELECT EOMONTH ( @date, -1 ) AS 'Last Month';  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-This Month  
------------------------  
-2011-12-31  
-  
-(1 row(s) affected)  
-  
-Next Month  
------------------------  
-2012-01-31  
-  
-(1 row(s) affected)  
-  
-Last Month  
------------------------  
-2011-11-30  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-eomonth-with-explicit-datetime-type"></a>D. EOMONTH con un tipo datetime explícito  
-  
-```  
-DECLARE @date DATETIME = '12/1/2011';  
-SELECT EOMONTH ( @date ) AS Result;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
-------------  
-2011-12-31  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="e-eomonth-with-string-parameter-and-implicit-conversion"></a>E. EOMONTH con parámetro de cadena y conversión implícita  
-  
-```  
-DECLARE @date VARCHAR(255) = '12/1/2011';  
-SELECT EOMONTH ( @date ) AS Result;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
-------------  
-2011-12-31  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="f-eomonth-with-and-without-the-monthtoadd-parameter"></a>F. EOMONTH con y sin el parámetro month_to_add  
   
 ```tsql  
 DECLARE @date DATETIME = GETDATE();  

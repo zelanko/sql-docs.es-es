@@ -28,7 +28,7 @@ Actualización de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md
 ## <a name="syntax"></a>Sintaxis
 
 ```sql
-update_master_address [@MasterAddress = ] masterAddress
+catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>Argumentos

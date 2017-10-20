@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Use Transact-SQL para pausar la migración de datos  
  Ejecute el siguiente comando.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>  
@@ -63,7 +63,7 @@ GO
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Use Transact-SQL para reanudar la migración de datos  
  Ejecute el siguiente comando.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>   

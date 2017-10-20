@@ -69,7 +69,7 @@ ms.lasthandoff: 07/29/2017
 
     Este comando no se puede cancelar.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -82,7 +82,7 @@ ms.lasthandoff: 07/29/2017
   
 -   Para deshabilitar Stretch para una tabla y abandonar los datos remotos, ejecute el siguiente comando.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 07/29/2017
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Usar Transact-SQL para deshabilitar Stretch Database para una base de datos  
  Ejecute el siguiente comando.  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 

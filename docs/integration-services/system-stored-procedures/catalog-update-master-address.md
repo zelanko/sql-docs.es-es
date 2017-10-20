@@ -27,7 +27,7 @@ Actualización de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md
 
 ## <a name="syntax"></a>Sintaxis
 
-```tsql
+```sql
 update_master_address [@MasterAddress = ] masterAddress
 ```
 

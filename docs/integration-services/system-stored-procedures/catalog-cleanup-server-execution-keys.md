@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama al procedimiento almacenado de cleanup_server_execution_keys.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

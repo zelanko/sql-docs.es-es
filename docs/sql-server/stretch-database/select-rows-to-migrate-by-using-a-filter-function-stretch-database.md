@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="basic-requirements-for-the-filter-function"></a>Requisitos básicos para la función de filtro  
  La función insertada con valores de tabla necesaria para un predicado de Stretch Database es parecida al ejemplo siguiente.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -94,7 +94,7 @@ RETURN  SELECT 1 AS is_eligible
   
      En este ejemplo se comprueba si el valor de una columna *fecha* es &lt; 1/1/2016.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -116,7 +116,7 @@ RETURN  SELECT 1 AS is_eligible
   
      En este ejemplo se comprueba si el valor de una columna *estado_envío*  es `IN (N'Completed', N'Returned', N'Cancelled')`.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -160,7 +160,7 @@ RETURN  SELECT 1 AS is_eligible
 ## <a name="add-a-filter-function-to-a-table"></a>Agregar una función de filtro a una tabla  
  Agregue una función de filtro a una tabla ejecutando la instrucción **ALTER TABLE** y especificando una función insertada con valores de tabla existente como valor del parámetro **FILTER_PREDICATE** . Por ejemplo:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -185,7 +185,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 
 Por ejemplo, si especifica un nombre de columna con tres partes, como se muestra en el ejemplo siguiente, la instrucción se ejecutará correctamente, pero se producirá un error en las consultas posteriores en la tabla.
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(dbo.SensorTelemetry.ScanDate),
@@ -195,7 +195,7 @@ ALTER TABLE SensorTelemetry
 
 En su lugar, debe especificar la función de filtro con un nombre de columna compuesto por una sola parte, tal como se muestra en el ejemplo siguiente.
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON  (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(ScanDate),
@@ -209,7 +209,7 @@ Si quiere usar una función que no se puede crear en el Asistente para **habilit
   
 1. Invierta la dirección de la migración y devuelva los datos ya migrados. Una vez que se haya iniciado esta operación, no se puede cancelar. Además, incurrirá en costos en Azure para realizar las transferencias de datos de salida. Para obtener más información, vea los detalles [de los precios de Azure](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
@@ -220,7 +220,7 @@ Si quiere usar una función que no se puede crear en el Asistente para **habilit
   
 4. Agregue la función a la tabla y reinicie la migración de datos a Azure.  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE  
             (           
@@ -233,7 +233,7 @@ Si quiere usar una función que no se puede crear en el Asistente para **habilit
 ## <a name="filter-rows-by-date"></a>Filtrar filas por fecha  
  En el ejemplo siguiente se migran filas en las que la columna **fecha** contiene un valor anterior al 1 de enero de 2016.  
   
-```tsql  
+```sql  
 -- Filter by date  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_date(@date datetime2)  
@@ -248,7 +248,7 @@ GO
 ## <a name="filter-rows-by-the-value-in-a-status-column"></a>Filtrar filas por el valor de la columna de estado  
  En el ejemplo siguiente se migran filas en las que la columna **estado** contiene uno de los valores especificados.  
   
-```tsql  
+```sql  
 -- Filter by status column  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_status(@status nvarchar(128))  
@@ -269,7 +269,7 @@ GO
   
  Empiece con una función de filtro parecida al ejemplo siguiente, que migra las filas en las que la columna **systemEndTime** contiene un valor anterior al 1 de enero de 2016.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20160101(@systemEndTime datetime2)   
 RETURNS TABLE   
 WITH SCHEMABINDING    
@@ -281,7 +281,7 @@ RETURN SELECT 1 AS is_eligible
   
  Aplique la función de filtro a la tabla.  
   
-```tsql  
+```sql  
 ALTER TABLE <table name>   
 SET (   
         REMOTE_DATA_ARCHIVE = ON   
@@ -302,7 +302,7 @@ SET (
   
 3.  Opcionalmente, puede eliminar la función de filtro anterior que ya no utiliza llamando a **DROP FUNCTION**. (Este paso no se muestra en el ejemplo).  
   
-```tsql  
+```sql  
 BEGIN TRAN  
 GO  
         /*(1) Create new predicate function definition */  
@@ -332,7 +332,7 @@ COMMIT ;
   
 -   En el ejemplo siguiente se combinan dos condiciones primitivas con el operador lógico AND.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate((@column1 datetime, @column2 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -350,7 +350,7 @@ COMMIT ;
   
 -   En el ejemplo siguiente se utilizan varias condiciones y una conversión determinista con CONVERT.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example1(@column1 datetime, @column2 int, @column3 nvarchar)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -363,7 +363,7 @@ COMMIT ;
   
 -   En el ejemplo siguiente se utilizan funciones y operadores matemáticos.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example2(@column1 float)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -376,7 +376,7 @@ COMMIT ;
   
 -   En el ejemplo siguiente se utilizan los operadores BETWEEN y NOT BETWEEN. Este uso es válido porque la función resultante cumple las reglas descritas aquí después de reemplazar los operadores BETWEEN y NOT BETWEEN por las expresiones AND y OR equivalentes.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -390,7 +390,7 @@ COMMIT ;
   
      La función anterior es equivalente a la función siguiente después de reemplazar los operadores BETWEEN y NOT BETWEEN por las expresiones AND y OR equivalentes.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -405,7 +405,7 @@ COMMIT ;
   
 -   La función siguiente no es válida porque contiene una conversión no determinista.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example5(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -418,7 +418,7 @@ COMMIT ;
   
 -   La función siguiente no es válida porque contiene una llamada de función no determinista.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example6(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -431,7 +431,7 @@ COMMIT ;
   
 -   La función siguiente no es válida porque contiene una subconsulta.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example7(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -444,7 +444,7 @@ COMMIT ;
   
 -   Las funciones siguientes no son válidas porque las expresiones que utilizan operadores algebraicos o funciones integradas se deben evaluar como constante cuando se define la función. No se pueden incluir referencias de columna en las expresiones algebraicas o llamadas de función.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -465,7 +465,7 @@ COMMIT ;
   
 -   La función siguiente no es válida porque infringe las reglas descritas aquí después de reemplazar el operador BETWEEN por la expresión AND equivalente.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING  
@@ -478,7 +478,7 @@ COMMIT ;
   
      La función anterior es equivalente a la función siguiente después de reemplazar el operador BETWEEN por la expresión AND equivalente. Esta función no es válida porque las condiciones primitivas solo pueden utilizar el operador lógico OR.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -492,7 +492,7 @@ COMMIT ;
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Cómo aplica Stretch Database la función de filtro  
  Stretch Database aplica la función de filtro a la tabla y determina las filas aptas mediante el operador CROSS APPLY. Por ejemplo:  
   
-```tsql  
+```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
 ```  
   
@@ -501,7 +501,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
 ## <a name="replacePredicate"></a>Reemplazar una función de filtro existente  
  Para reemplazar una función de filtro especificada anteriormente, vuelva a ejecutar la instrucción **ALTER TABLE** y especifique un nuevo valor para el parámetro **FILTER_PREDICATE** . Por ejemplo:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -523,7 +523,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 ### <a name="example-of-a-valid-replacement"></a>Ejemplo de un reemplazo válido  
  Suponga que la función siguiente es la función de filtro actual.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_old(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -537,7 +537,7 @@ GO
   
  La función siguiente es un reemplazo válido porque la nueva constante de fecha (que especifica una fecha límite posterior) hace que la función sea menos restrictiva.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_new(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -552,7 +552,7 @@ GO
 ### <a name="examples-of-replacements-that-arent-valid"></a>Ejemplos de reemplazos no válidos  
  La función siguiente no es un reemplazo válido porque la nueva constante de fecha (que especifica una fecha límite anterior) no hace que la función sea menos restrictiva.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_1(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -566,7 +566,7 @@ GO
   
  La función siguiente no es un reemplazo válido porque se ha eliminado uno de los operadores de comparación.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_2(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -580,7 +580,7 @@ GO
   
  La función siguiente no es un reemplazo válido porque se ha agregado una nueva condición con el operador lógico AND.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_3(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -596,7 +596,7 @@ GO
 ## <a name="remove-a-filter-function-from-a-table"></a>Quitar una función de filtro de una tabla  
  Para migrar toda la tabla en lugar de solo las filas seleccionadas, debe quitar la función existente. Para ello, establezca el parámetro **FILTER_PREDICATE**  como NULL. Por ejemplo:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = NULL,  
     MIGRATION_STATE = <desired_migration_state>  

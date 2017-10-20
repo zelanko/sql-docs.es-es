@@ -73,7 +73,7 @@ Haga lo siguiente para restaurar una base de datos de Azure eliminada al momento
   
     -   Especifique si quiere hacer una copia de los datos remotos y conectarse a la copia (recomendado).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

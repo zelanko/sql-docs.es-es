@@ -34,7 +34,7 @@ Para obtener instrucciones de unirse a un rol de base de datos, vea [combinar un
 Llame al procedimiento almacenado [catalog]. [update_logdb_info] con la cadena de conexión y nombre de Sql Server como parámetros.
 
 #### <a name="example"></a>Ejemplo
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervalo de recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 1 hora). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use SSMS o Transact-SQL para establecer otro valor para Statistics Collection Interval (Intervalo de recopilación de estadísticas):  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Umbral de consulta obsoleta (días):** directiva de limpieza basada en el tiempo que controla el período de retención de las estadísticas en tiempo de ejecución persistentes y las consultas inactivas.  
@@ -86,7 +86,7 @@ De forma predeterminada, el Almacén de consultas se configura para conservar lo
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Modo de limpieza basado en el tamaño:** Especifica si la limpieza automática de los datos se llevará a cabo cuando el tamaño de datos del Almacén de consultas se aproxime al límite.  

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ Las operaciones de una base de datos relacional actúan en un conjunto completo 
   
 ## <a name="scrollability"></a>Desplazamiento  
  El tipo de cursor que usa la aplicación también afecta a la capacidad para desplazarse hacia delante y hacia atrás por las filas de un conjunto de resultados; Esto se conoce a veces como posibilidades de desplazamiento. La capacidad de avanzar *y* con versiones anteriores a través de un resultado conjunto aumenta la complejidad del cursor y, por tanto, es más costoso de implementar. Por este motivo, deberá solicitar un cursor con esta funcionalidad solo cuando sea necesario.
+

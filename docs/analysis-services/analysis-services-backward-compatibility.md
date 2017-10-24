@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
@@ -128,3 +129,4 @@ Aquí se enumeran los comportamientos de características que han cambiado en es
 
 ## <a name="see-also"></a>Vea también
 [Compatibilidad con versiones anteriores de Analysis Services (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)
+

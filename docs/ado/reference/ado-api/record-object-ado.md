@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26840ff89f61bc3c37cee2fd88c1f53e393528bf
@@ -90,3 +91,4 @@ Representa una fila de un [Recordset](../../../ado/reference/ado-api/recordset-o
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Registros y secuencias](../../../ado/guide/data/records-and-streams.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d296aaafd3e610a244aa4e0831b9bed5ff5855
@@ -47,3 +48,4 @@ Con un **comando** de objeto, puede hacer lo siguiente:
 -   Pasar un **comando** el objeto a la **origen** propiedad de un **Recordset** con el fin de obtener los datos.  
   
 -   Pasar un **flujo** objeto que contiene un comando (por ejemplo, un comando XML) a un proveedor que admita esa situación.
+

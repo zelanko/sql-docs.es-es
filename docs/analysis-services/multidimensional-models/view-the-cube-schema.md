@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
 |Editar el esquema de la vista del origen de datos|En el menú **Vista del origen de datos** , haga clic en **Editar vista del origen de datos**.<br /><br /> O bien<br /><br /> Haga clic con el botón derecho en el fondo del panel **Vista del origen de datos** y, después, haga clic en **Editar vista del origen de datos**.|  
   
   
+

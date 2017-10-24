@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d563e9359853c109605c2f87438e2e7b2c795c4
@@ -51,3 +52,4 @@ Representa una posición o eje del filtro de un conjunto de celdas que contiene 
  [Colección Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Colección de posiciones (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

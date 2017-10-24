@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  El [admite](../../../ado/reference/ado-api/supports-method.md) método se trata con más detalle más adelante.  
   
  Excepto en el caso de clonado **conjuntos de registros**, los marcadores son únicos para la **Recordset** en que se crearon, incluso si se utiliza el mismo comando. Esto significa que no se puede utilizar un **marcador** obtenido de una **Recordset** para mover con el mismo registro en un segundo **Recordset** abierto con el mismo comando.
+

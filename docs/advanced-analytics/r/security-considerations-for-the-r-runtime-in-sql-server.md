@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d9b5fba856cc40c11f218faf0a61f66ee5451aa4
@@ -68,3 +69,4 @@ Para obtener una descripción de la arquitectura de seguridad, vea:
 
 + [Introducción a la seguridad para R](security-overview-sql-server-r.md)
 + [Introducción a la seguridad para Python](../python/security-overview-sql-server-python-services.md)
+

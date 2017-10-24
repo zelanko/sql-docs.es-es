@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f876e76b29dbc2436d6d1dba317c5035ebbc9ca1
@@ -60,3 +61,4 @@ Representa una columna de datos con un tipo de datos común.
  [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

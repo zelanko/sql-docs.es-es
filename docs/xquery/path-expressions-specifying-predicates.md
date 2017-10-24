@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
@@ -229,3 +230,4 @@ WHERE CatalogDescription.exist('
  Los predicados también pueden afectar al tipo de una expresión deducido de forma estática. Valores literales enteros y la **last()** función reducen la cardinalidad de la expresión de paso filtrado para al menos uno.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a8335dcc0f713859f72971a699438b2535550ac
@@ -36,3 +37,4 @@ Especifica la configuración para la [tipo](../../../ado/reference/ado-md-api/ty
 |**adMemberMeasure**|2|Indica que la **miembro** objeto pertenece a la dimensión Measures y que representa un atributo cuantitativo.|  
 |**adMemberRegular**|1|Predeterminado: Indica que la **miembro** objeto representa una instancia de una entidad de negocio.|  
 |**adMemberUnknown**|0|No se puede determinar el tipo del miembro.|
+

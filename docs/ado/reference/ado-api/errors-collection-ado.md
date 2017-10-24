@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 27ca46528314f34b769d505269ade0c73fb1b051
@@ -52,3 +53,4 @@ Contiene todos los [Error](../../../ado/reference/ado-api/error-object.md) objet
 ## <a name="see-also"></a>Vea también  
  [Objeto de error](../../../ado/reference/ado-api/error-object.md)   
  [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+

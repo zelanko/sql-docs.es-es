@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce4deae8dc07c546fc777a6fa86d159b404c60f9
@@ -33,3 +34,4 @@ Cuando se selecciona un cursor de cliente, o establecer la **CursorLocation** pr
   
 ## <a name="see-also"></a>Vea también  
  [Servicio de cursores de Microsoft para OLE DB (componente de servicio de ADO)](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)
+

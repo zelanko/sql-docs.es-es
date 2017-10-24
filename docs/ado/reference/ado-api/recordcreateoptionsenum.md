@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2f108d977c278d9f86ca47853e07c7960ee574b8
@@ -43,3 +44,4 @@ Especifica si una existente **registro** debe estar abierto o un nuevo **registr
   
 ## <a name="applies-to"></a>Se aplica a  
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+

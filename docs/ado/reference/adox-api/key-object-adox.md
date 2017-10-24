@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d05a52614694bc9464c609ab4f4ed0965f3b81e
@@ -56,3 +57,4 @@ Dim obj As New Key
  [Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y ejemplo de las propiedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Colección de claves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
+

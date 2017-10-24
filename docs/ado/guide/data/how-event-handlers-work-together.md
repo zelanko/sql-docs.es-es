@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2e603819e2d4c44bf612d62f86f448c560e0828
@@ -62,3 +63,4 @@ A menos que está programando en Visual Basic, todos los controladores de evento
  [Creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Parámetros de eventos](../../../ado/guide/data/event-parameters.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
+

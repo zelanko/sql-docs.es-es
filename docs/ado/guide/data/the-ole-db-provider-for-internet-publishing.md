@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ La propiedad ADO [registro](../../../ado/reference/ado-api/record-object-ado.md)
 >  Si se especifica explícitamente Msdaipp.dso como valor del proveedor, ya sea con la *proveedor* palabra clave de cadena de conexión o la **proveedor** propiedad, no se puede utilizar "URL =" en la cadena de conexión. Si lo hace, se producirá un error. En su lugar, simplemente especifique la dirección URL como se muestra anteriormente.  
   
  Para obtener información más específica acerca del proveedor de publicación en Internet, consulte [proveedor Microsoft OLE DB para Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentación del proveedor proporcionada con la aplicación de origen con el que el proveedor OLE DB para Publicación en Internet se instaló: Windows 2000, Office 2000 o Internet Explorer 5.0.
+

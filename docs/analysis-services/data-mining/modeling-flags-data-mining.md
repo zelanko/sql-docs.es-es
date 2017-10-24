@@ -27,6 +27,7 @@ caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
@@ -119,3 +120,4 @@ WHERE MODEL_NAME = '<model name>'
 |Obtener información sobre cómo administrar los modelos y las estructuras y establecer las propiedades de uso|[Mover objetos de minería de datos](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
+

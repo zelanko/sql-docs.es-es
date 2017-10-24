@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b6719d8cdd2c86482c3c125ceec52fafdf3e397
@@ -52,3 +53,4 @@ RELATE customerID TO customerID)
  En esta sección continúa con el siguiente tema.  
   
 -   [Ejemplo de Visual Basic de forma de datos](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+

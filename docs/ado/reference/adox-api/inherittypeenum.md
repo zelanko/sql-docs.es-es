@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 36570c508955b82ccd403e9af10895edc1584d9f
@@ -39,3 +40,4 @@ Especifica cómo heredan permisos establecidos con los objetos [SetPermissions](
   
 ## <a name="applies-to"></a>Se aplica a  
  [SetPermissions (método, ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+

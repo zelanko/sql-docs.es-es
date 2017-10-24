@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ Prevención de errores es al menos tan importante como el control de errores. En
  Asegúrese de que **Recordset** objetos no son más allá de los límites de la **Recordset** antes de intentar mover el puntero del registro. Si intenta **MoveNext** cuando **EOF** es True o **MovePrev** cuando **BOF** es True, se producirá un error. Si lleva a cabo cualquiera de los **mover** métodos cuando ambos **EOF** y **BOF** son True, se generará un error.  
   
  También se producirán errores si intenta realizar operaciones como **Seek** y **buscar** en vacío **conjunto de registros**.
+

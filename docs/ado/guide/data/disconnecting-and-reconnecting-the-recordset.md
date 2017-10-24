@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a6ddbc392ae0bd0c378a4d08cd2c76f3119d8332
@@ -32,3 +33,4 @@ Una de las características más eficaces de ADO es la capacidad de abrir un con
   
 ## <a name="see-also"></a>Vea también  
  [Modo por lotes](../../../ado/guide/data/batch-mode.md)
+

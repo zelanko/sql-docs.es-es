@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
@@ -44,3 +45,4 @@ Es importante comprender cómo funcionan los cursores para que pueda seleccionar
 -   [Utilizar CacheSize](../../../ado/guide/data/using-cachesize.md)  
   
 -   [Cursor y las características de bloqueo](../../../ado/guide/data/cursor-and-lock-characteristics.md)
+

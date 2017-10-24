@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2c96b18bb421d264c99a683af04a51d6e60597d3
@@ -90,3 +91,4 @@ C:\PS>get-PowerPivotServiceApplication -Identity 1234567-890a-bcde-fghijklm
  Este ejemplo devuelve una única aplicación de servicio y muestra el nombre para mostrar, el tipo de aplicación y el GUID de la aplicación. Si el nombre para mostrar es largo, se truncará. Use la opción format-list para ver el nombre completo.  
   
   
+

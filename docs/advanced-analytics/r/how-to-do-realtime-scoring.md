@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
 ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
@@ -254,3 +255,4 @@ Servidor de aprendizaje de máquina admite distribuida en tiempo real de puntuac
 + [Implementar un modelo de Python como un servicio web con el aprendizaje automático de Azure-modelo-sdk de administración](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publicar un modelo en tiempo real o un bloque de código de R como un servicio web nuevo](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [paquete de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+

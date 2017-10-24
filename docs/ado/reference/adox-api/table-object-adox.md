@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 198b59d624b2daa2e2451b8dbb61ae5868f7eb7d
@@ -74,3 +75,4 @@ Dim obj As New Table
  [Colección de claves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aee0d64d0fe1e310f42d79de36f5cf36c3813bf3
@@ -35,3 +36,4 @@ Use la **AbsolutePosition** propiedad que se va a mover a un registro, en funci�
   
 > [!NOTE]
 >  No debe utilizar el **AbsolutePosition** propiedad como un número de registro suplente. La posición de un registro determinado cambia cuando se elimina un registro anterior. También no hay ninguna garantía de que un registro determinado tenga el mismo **AbsolutePosition** si la **Recordset** objeto se realiza una nueva consulta o se vuelve a abrir. Los marcadores son el método recomendado para retener y volver a una posición determinada y son la única manera de ubicarse a través de todos los tipos de **Recordset** objetos.
+

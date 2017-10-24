@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  En la página **Finalización del asistente** , puede ver los grupos de medida, las medidas y las dimensiones del nuevo cubo. En el cuadro **Nombre del cubo** , escriba un nombre para el cubo. A continuación, si está satisfecho con el cubo, haga clic en **Finalizar**. Haga clic en **Atrás** si desea volver a cualquier página anterior del asistente y realizar cambios.  
   
   
+

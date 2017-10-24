@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 53a2a1be1099b2224b14f8c8d856b7ae07d42ac6
@@ -87,3 +88,4 @@ Operan sobre un valor y después devuelven otro valor. Las funciones escalares s
  [Mediante los procedimientos almacenados &#40; MDX &#41;](../../mdx/using-stored-procedures-mdx.md)  
   
   
+

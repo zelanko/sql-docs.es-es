@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ El siguiente ejemplo se muestra la **mínimo** requiere características para es
 3.  Reinicie el servicio de SQL Server para la instancia ha vuelto a configurar. Si lo hace, se reiniciará automáticamente relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] también el servicio.
 
 3. Es posible que se requieran pasos adicionales si tiene una configuración de seguridad personalizada o si va a usar SQL Server para admitir contextos de cálculo remotos. Para obtener más información, consulte [solucionar problemas de instalación de aprendizaje de máquina](../machine-learning-troubleshooting-faq.md).
+

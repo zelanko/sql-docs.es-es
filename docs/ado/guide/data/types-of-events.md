@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 502c77b55eb0e3a60497fa10bf9fe8c8a412dc4d
@@ -46,3 +47,4 @@ Hay dos tipos básicos de eventos. "Eventos will", que se llama antes de que com
  [Creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Parámetros de eventos](../../../ado/guide/data/event-parameters.md)   
  [Cómo funcionan conjuntamente los controladores de eventos](../../../ado/guide/data/how-event-handlers-work-together.md)
+

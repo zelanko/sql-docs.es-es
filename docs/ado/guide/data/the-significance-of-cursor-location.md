@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ Cada cursor utiliza recursos temporales para almacenar sus datos. Estos recursos
  Sin embargo, es importante señalar que es un cursor de servidor, por lo menos temporalmente: consumir valiosos recursos del servidor para cada cliente activo. Debe planear en consecuencia para asegurarse de que el hardware del servidor es capaz de administrar todos los cursores de servidor solicitados por clientes activos. Además, un cursor de servidor puede ser lento porque proporciona solo acceso a una fila, no hay ningún cursor lote disponible.  
   
  Cursores de servidor son útiles al insertar, actualizar o eliminar registros. Con cursores de servidor, puede tener varias instrucciones activas en la misma conexión.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
@@ -78,3 +79,4 @@ La aplicación HelloData recorre paso a paso las operaciones básicas de una apl
   
 ## <a name="formunload"></a>Form_Unload  
  El **Form_Unload** subrutina es importante por varias razones. En primer lugar, porque se trata de una aplicación de ejemplo, Form_Unload limpia los cambios realizados en la base de datos antes de salir de la aplicación. En segundo lugar, el código muestra cómo se puede ejecutar un comando directamente desde un formato de archivo **conexión** objeto mediante el uso de la **Execute** método. Por último, se muestra un ejemplo de ejecutar una consulta no devuelve filas (una consulta UPDATE) en el origen de datos.
+

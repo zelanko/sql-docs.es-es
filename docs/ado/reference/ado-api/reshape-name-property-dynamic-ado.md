@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b14593e427db76994976091e5916ffe49aefe82
@@ -48,3 +49,4 @@ Especifica un nombre para el [Recordset](../../../ado/reference/ado-api/recordse
  [Datos de Microsoft para dar forma al servicio para OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

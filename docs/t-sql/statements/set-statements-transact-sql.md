@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      Si alguna de estas opciones no tiene los valores exigidos, se producirá un error en las acciones INSERT, UPDATE, DELETE, DBCC CHECKDB y DBCC CHECKTABLE en las tablas o vistas indizadas con índices en las columnas calculadas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error indicando las opciones que no se han establecido correctamente. Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesará las instrucciones SELECT en estas tablas o vistas indizadas como si no existieran los índices en las columnas calculadas ni en las vistas.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
@@ -48,3 +49,4 @@ Comandos son instrucciones emitidas a un proveedor para realizar algunas operaci
 -   [Comandos con nombre](../../../ado/guide/data/named-commands.md)  
   
 -   [Pasar parámetros a un comando con nombre](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
+

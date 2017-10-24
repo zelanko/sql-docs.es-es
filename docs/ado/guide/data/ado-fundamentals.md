@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
@@ -67,3 +68,4 @@ ADO ofrece a los desarrolladores un modelo de objetos eficaces y lógica para el
 -   [Proveedores OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [Errores](../../../ado/guide/data/errors-ado.md)
+

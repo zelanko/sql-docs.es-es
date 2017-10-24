@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baa2fd086747707b67458914513d482f794cfdc6
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  Para configurar las propiedades de los protocolos usados por los clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en este equipo, en el panel de la consola haga clic en **Protocolos de cliente**, en el panel de detalles haga clic con el botón derecho en el protocolo deseado y, después, haga clic en **Propiedades**.  
   
   
+

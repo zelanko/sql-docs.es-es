@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c2dc7048ea3442a77f6aadf7d7b1868c2ac9d833
@@ -45,3 +46,4 @@ cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"
  [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+

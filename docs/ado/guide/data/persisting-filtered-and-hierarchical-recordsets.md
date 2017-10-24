@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8de12620e57fe9cf7235c2a1f5a1442b429197d0
@@ -32,3 +33,4 @@ Si el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad est�
   
 > [!NOTE]
 >  Existen algunas limitaciones cuando se guarda jerárquica **conjuntos de registros** (formas de datos) en formato XML. Para obtener más información, consulte [almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).
+

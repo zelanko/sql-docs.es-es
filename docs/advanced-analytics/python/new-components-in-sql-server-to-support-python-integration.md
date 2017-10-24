@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ En el diagrama siguiente se resume el flujo de trabajo global cuando las secuenc
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Introducción a la arquitectura de Python en SQL Server](architecture-overview-sql-server-python.md)
+

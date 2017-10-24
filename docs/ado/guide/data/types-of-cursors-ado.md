@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
@@ -53,3 +54,4 @@ Como norma general, la aplicación debe utilizar el cursor más sencillo que pro
  [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
  [Cursores KEYSET](../../../ado/guide/data/keyset-cursors.md)   
  [Cursores dinámicos](../../../ado/guide/data/dynamic-cursors.md)
+

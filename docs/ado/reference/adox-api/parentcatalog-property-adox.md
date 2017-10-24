@@ -44,6 +44,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f5229c37299494ca2b3b31e3ca3e0d091c93d96a
@@ -71,3 +72,4 @@ Especifica el catálogo del elemento primario de un objeto de tabla, el usuario 
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de propiedad ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+

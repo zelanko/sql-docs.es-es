@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  El formato del informe de validación cruzada es el mismo para todos los tipos de modelo y no se puede configurar. Sin embargo, el contenido del informe difiere según sea el tipo de modelo que se esté analizando y el tipo de datos del atributo de predicción. También puede copiar los resultados del informe en el Portapapeles y trabajar con ellos en Excel.  
   
   
+

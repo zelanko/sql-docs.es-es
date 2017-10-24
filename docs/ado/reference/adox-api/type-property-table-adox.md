@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 926de41ebc897235f336eb00cf5754fb0a54e94b
@@ -46,3 +47,4 @@ Indica el tipo de una tabla.
  [Tipo de propiedad (columna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Propiedad tipo (clave) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Objeto de tabla (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+

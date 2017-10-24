@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
@@ -105,3 +106,4 @@ ms.lasthandoff: 09/01/2017
 11. En el sistema de archivos del equipo, compruebe la siguiente carpeta para determinar si hay archivos almacenados en la memoria caché del disco. La presencia de archivos almacenados en caché es una prueba más de que la implementación está operativa. Para ver la memoria caché del archivo, vaya a la carpeta de la aplicación de servicio [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Cada base de datos de la memoria caché está almacenada en su propia carpeta, con una convención de nomenclatura basada en GUID para asegurarse de que tiene un nombre único.  
   
   
+

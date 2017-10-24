@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  El **conexión** objeto se declara en el **formulario** nivel mediante el **WithEvents** palabra clave que se va a habilitar el control de eventos. El controlador de eventos Form_Load crea el objeto asignando un nuevo **conexión** el objeto a *connEvent* y, a continuación, abre la conexión. Por supuesto, una aplicación real realizará más procesamiento en el controlador de eventos Form_Load que se muestra aquí.
+

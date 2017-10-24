@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f24280f155fd5ec6bd86b8486b0f8f77338d8eb6
@@ -80,3 +81,4 @@ La forma de datos admite las funciones siguientes: Es el nombre asignado al cap√
  [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
  [Gram√°tica formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+

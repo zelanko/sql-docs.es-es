@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  El **Error** objeto también se utiliza cuando se producen errores relacionados con eventos. Puede determinar si se produjo un error en el proceso que desencadenó un evento de ADO activando el **Error** objeto pasado como un parámetro de evento.  
   
  Si la operación que provoca un evento concluye correctamente, el *adStatus* parámetro del controlador de eventos se establecerá en *adStatusOK*. Por otro lado, si la operación que provocó el evento se realizó correctamente, el *adStatus* parámetro está establecido en *adStatusErrorsOccurred*. En ese caso, el *pError* parámetro contendrá un **Error** objeto que describe el error.
+

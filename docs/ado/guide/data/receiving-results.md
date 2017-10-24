@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
@@ -44,3 +45,4 @@ En ADO casi todos los comandos producir cierta información que se devuelve al l
  Para recibir más de uno de los conjuntos de resultados significa que se necesita para realizar varios de ida y vuelta por la red, uno para cada conjunto de datos encapsulada en un **Recordset** objeto. Redes lentas o está congestionadas, lo que reduce el número de viajes de ida y puede ayudar a mejorar el rendimiento de la aplicación. Por lo tanto, algunos proveedores ofrecen soporte técnico para recibir varios **Recordset**s en un viaje de ida y. Esto se explica en el tema siguiente:  
   
 -   [Recibir varios conjuntos de registros](../../../ado/guide/data/receiving-multiple-recordsets.md)
+

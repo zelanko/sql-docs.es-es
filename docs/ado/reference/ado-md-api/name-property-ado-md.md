@@ -26,6 +26,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d898b2e478b9a5dfccb431d0d29088c9e8d9286
@@ -55,3 +56,4 @@ Indica el nombre de un objeto.
  [Propiedad Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description (propiedad) (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName (propiedad, ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
+

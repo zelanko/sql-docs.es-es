@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ Cada **campo** objeto suele corresponder a una columna de una tabla de base de d
  Si no hay ningún registro actual cuando se usa el **GetChunk** o **AppendChunk** método en un **campo** del objeto, se produce el error 3021 (no hay registro actual).  
   
  Para obtener un ejemplo del uso de estos métodos para manipular datos binarios, consulte el [método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [método GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) en los ejemplos de la *referencia del programador de ADO*.
+

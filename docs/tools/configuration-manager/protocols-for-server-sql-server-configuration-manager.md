@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a40f679e60f3779acdf2a91b987c1f699420acd9
@@ -25,3 +26,4 @@ ms.lasthandoff: 08/02/2017
   Para configurar los protocolos empleados por el [!INCLUDE[ssDE](../../includes/ssde-md.md)], seleccione **Protocolos** para la instancia de servidor que quiera en el panel de la consola, haga clic con el botón derecho en el protocolo adecuado en el panel de detalles y, luego, haga clic en **Propiedades**.  
   
   
+

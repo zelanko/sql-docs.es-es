@@ -22,6 +22,7 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
@@ -229,3 +230,4 @@ tablediff
  [Comparar tablas replicadas para buscar diferencias &#40;programación de la replicación&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   
+

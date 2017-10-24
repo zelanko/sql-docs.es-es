@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   Abra la dimensión a la que desea agregar Business Intelligence y, en la barra de herramientas, haga clic en el botón **Agregar Business Intelligence** . Como alternativa, puede hacer clic con el botón derecho en la dimensión en el Explorador de objetos o en el Explorador de soluciones y, después, hacer clic en **Agregar Business Intelligence**.  
   
   
+

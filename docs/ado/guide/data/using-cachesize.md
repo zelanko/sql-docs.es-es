@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ Use la **CacheSize** propiedad para controlar cuántos registros para recuperar 
  Los registros recuperados de la memoria caché no reflejan los cambios simultáneos realizados por otros usuarios al origen de datos. Para forzar una actualización de todos los datos almacenados en memoria caché, use la [Resync](../../../ado/reference/ado-api/resync-method.md) método.  
   
  Si **CacheSize** se establece en un valor mayor que 1, los métodos de navegación ([mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) puede provocar la navegación a un eliminada registro, si se produce una eliminación después de haber recuperaron los registros. Después de la operación de captura inicial, las eliminaciones posteriores no se reflejarán en la memoria caché de datos hasta que se intente tener acceso a un valor de datos de una fila eliminada. Sin embargo, establecer **CacheSize** en 1, se elimina este problema porque no se pueden recuperar filas eliminadas.
+

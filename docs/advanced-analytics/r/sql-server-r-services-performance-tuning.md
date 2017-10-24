@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ Configuración y optimización del rendimiento requiere la creación de una base
 + [Ajuste del rendimiento de R en SQL Server: métodos y resultados](..\r\performance-case-study-r-services.md)
 
     Resume los datos que se usó los dos casos prácticos, cómo se prueba el rendimiento y cómo afectan las optimizaciones de los resultados.
+

@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f040cded9fb01fbe140a2a7215fd7ba333f4104a
@@ -44,3 +45,4 @@ Indica si los registros que tienen valores null en sus campos de índice tienen 
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de propiedad IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+

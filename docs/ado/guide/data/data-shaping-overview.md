@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Además, la forma en ADO de datos permiten crear nuevos **Recordset** objetos sin un origen de datos subyacente mediante el uso de la **NEW** palabra clave para describir los campos de los elementos primarios y secundarios ** Conjuntos de registros**. El nuevo **Recordset** objeto puede, a continuación, se rellena con datos y almacenar de manera permanente. Los desarrolladores también pueden realizar diversos cálculos o agregaciones (por ejemplo, **suma**, **AVG**, y **MAX**) en los campos secundarios. Dar forma a datos también puede crear un elemento primario **Recordset** de un elemento secundario **Recordset** agrupando los registros en el objeto secundario y colocando una fila en el elemento primario de cada grupo en el elemento secundario.  
   
  Regular SQL le permite recuperar datos mediante **UNIR** sintaxis, pero esto puede ser ineficaz y difícil de manejar porque los datos primarios redundantes se repiten en cada registro devuelto para una relación determinada de elementos primarios y secundarios. Forma de datos puede relacionar un registro primario único en el elemento primario **Recordset** con varios registros secundarios en el elemento secundario **Recordset**, evitando la redundancia de un **UNIR**. La mayoría de la gente considera los elementos primarios y secundarios varios **Recordset** modelo de programación más natural y más fácil trabajar con que el único **UNIR de conjunto de registros** modelo.
+

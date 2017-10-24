@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 45a52a32cdc859c50c45f1803d2685bdb3cfc8bc
@@ -43,3 +44,4 @@ Indica el tipo de [registro](../../../ado/reference/ado-api/record-object-ado.md
 ## <a name="see-also"></a>Vea también  
  [Tipo (propiedad, ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
  [Propiedad Type (objeto Stream de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+

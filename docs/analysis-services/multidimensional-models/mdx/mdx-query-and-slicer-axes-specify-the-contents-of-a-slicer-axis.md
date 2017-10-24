@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
@@ -88,3 +89,4 @@ WHERE(
  Como se mencionó anteriormente, con un conjunto en la cláusula WHERE agregará implícitamente los valores de todos los miembros del conjunto. En este caso, la consulta muestra los valores agregados para Estados Unidos y Reino Unido en cada celda.  
   
   
+

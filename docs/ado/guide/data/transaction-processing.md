@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
@@ -49,3 +50,4 @@ A *transacciones* delimita el principio y al final de una serie de operaciones d
   
 ## <a name="nested-transactions"></a>Transacciones anidadas  
  Para los proveedores que admiten transacciones anidadas, al llamar a la **BeginTrans** método dentro de una transacción abierta inicia una nueva transacción anidada. El valor devuelto indica el nivel de anidamiento: un valor devuelto de "1" indica que ha abierto una transacción de nivel superior (es decir, la transacción no está anidada dentro de otra transacción), "2" indica que ha abierto una transacción de segundo nivel (una transacción anidada dentro de una transacción de nivel superior), y así sucesivamente. Al llamar a **CommitTrans** o **RollbackTrans** afecta a solo más abierto recientemente la transacción; debe cerrar o revertir la transacción actual antes de que puede resolver las transacciones de nivel superiores.
+

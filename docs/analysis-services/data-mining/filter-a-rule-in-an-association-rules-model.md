@@ -19,6 +19,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/01/2017
  [Lección 3: Generar un escenario de cesta &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   
+

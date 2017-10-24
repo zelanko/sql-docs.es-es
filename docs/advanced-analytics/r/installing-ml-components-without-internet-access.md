@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
@@ -254,3 +255,4 @@ Al realizar una instalación desatendida, debe proporcionar los siguientes argum
 [Instalar Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 En este artículo, el equipo de soporte técnico de servicios de R muestra cómo realizar una instalación desatendida o la actualización de servicios de R en SQL Server 2016: [implementar R Services en equipos sin acceso a Internet](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
+

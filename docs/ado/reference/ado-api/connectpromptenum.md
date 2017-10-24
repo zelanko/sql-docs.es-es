@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ae0c2179e321e521a86fdc76e5f8978ab4ab747
@@ -48,3 +49,4 @@ Especifica si se debe mostrar un cuadro de diálogo para pedir parámetros que f
   
 ## <a name="applies-to"></a>Se aplica a  
  [Propiedad-dinámica Prompt (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+

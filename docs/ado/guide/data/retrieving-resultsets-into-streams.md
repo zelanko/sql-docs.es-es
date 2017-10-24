@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>Comentarios  
  En este momento, se han transmitido por secuencias XML en el explorador del cliente y está listo para mostrarse. Esto se realiza mediante VBScript del lado cliente para enlazar el documento XML a una instancia de DOM y crear bucles en cada nodo secundario para generar una lista de productos en HTML.
+

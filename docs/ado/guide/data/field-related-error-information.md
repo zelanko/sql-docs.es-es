@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
@@ -36,3 +37,4 @@ Si un error está directamente relacionado con un campo, por ejemplo, si los dat
 |**adFieldIntegrityViolation**|10|Indica que el campo no se puede modificar porque es una entidad calculada o derivada.|  
 |**adFieldIsNull**|3|Indica que el proveedor devolvió un valor null.|  
 |**adFieldOutOfSpace**|22|Indica que el proveedor no se puede obtener suficiente espacio de almacenamiento para completar una operación de traslado o la operación de copia.|
+

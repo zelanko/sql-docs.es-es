@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: 88337da76b3a44b9dc797fd1d9f187bfda7396c8
@@ -101,3 +102,4 @@ Para habilitar o deshabilitar la administración del paquete requiere que la uti
 ## <a name="see-also"></a>Vea también
 
 [Administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md)
+

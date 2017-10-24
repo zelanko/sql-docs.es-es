@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
@@ -39,3 +40,4 @@ Modo inmediato está en vigor cuando el **LockType** propiedad está establecida
  Si va a agregar una nueva fila cuando se llama a la **CancelUpdate** método, la fila actual se convierte en la fila que era el actual antes de la **AddNew** llamar.  
   
  Si no ha cambiado la fila actual o agregar una nueva fila, una llamada a la **CancelUpdate** método genera un error.
+

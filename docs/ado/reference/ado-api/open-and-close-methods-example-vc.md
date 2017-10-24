@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c77eaed9a158270a9fa2067ec3e5b423f1514921
@@ -215,3 +216,4 @@ void PrintComError(_com_error &e) {
  [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

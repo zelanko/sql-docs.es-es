@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
@@ -74,3 +75,4 @@ else
  Este esquema funciona con todos los tipos de cursor y es independiente de los proveedores subyacentes. Si intenta determinar la está vacía de un **Recordset** objeto comprobando si su **RecordCount** valor de la propiedad es cero (0) o no, debe tomar precauciones para usar un cursor adecuado y un proveedor que compatible con la devolución del número de registros en el resultado.  
   
  Si elimina el último registro que queda en el **Recordset** de objeto, el cursor se deja en un estado indeterminado. El **BOF** y **EOF** propiedades pueden permanecer **False** hasta que se intente volver a colocar el registro actual, dependiendo del proveedor. Para obtener más información, consulte [registros de eliminación mediante el método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+

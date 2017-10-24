@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0785bede442b0f89a9a8a1efacaac03c1aedf2d3
@@ -29,3 +30,4 @@ La columna de capítulo creada en una cláusula de un comando shape puede recibi
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)
+

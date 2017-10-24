@@ -22,6 +22,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
@@ -578,3 +579,4 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [Instalar datos de ejemplo y proyectos para el Tutorial de modelado Multidimensional de Analysis Services](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
+

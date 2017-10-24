@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8b935c1d355817af0401c1088d366db4af29561f
@@ -64,3 +65,4 @@ Utilice los siguientes ejemplos de código para obtener información sobre cómo
  [VBScript de ejemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Ejemplos de código ADO en Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Apéndice D: ejemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+

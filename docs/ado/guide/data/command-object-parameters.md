@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  No todos los proveedores admiten comandos preparados. Si el proveedor no admite la preparación de comandos, podría devolver un error en cuanto esta propiedad se establece en **True**. Si no se devuelve un error, omite la solicitud para preparar el comando y establece la **Prepared** propiedad **false**.
+

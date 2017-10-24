@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9bf2413bed1bbdf96b83b7e805aac90529a721c9
@@ -78,3 +79,4 @@ Especifica la [estado](../../../ado/reference/ado-api/status-property-ado-record
   
 ## <a name="applies-to"></a>Se aplica a  
  [Propiedad Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+

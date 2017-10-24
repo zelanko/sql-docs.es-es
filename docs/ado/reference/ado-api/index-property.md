@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9091e9a65b178806c8695faffa50f11946c6b2ca
@@ -60,3 +61,4 @@ Indica el nombre del índice actualmente en vigor para un [Recordset](../../../a
  [Método Seek y ejemplo de la propiedad de índice (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [El método de búsqueda](../../../ado/reference/ado-api/seek-method.md)
+

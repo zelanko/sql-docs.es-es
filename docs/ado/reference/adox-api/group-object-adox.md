@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16aad2cd94a457d3d6efe97326fdbe7e6c06e53d
@@ -49,3 +50,4 @@ Representa una cuenta de grupo que tenga permisos de acceso dentro de una base d
 ## <a name="see-also"></a>Vea también  
  [Colección de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Colección Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+

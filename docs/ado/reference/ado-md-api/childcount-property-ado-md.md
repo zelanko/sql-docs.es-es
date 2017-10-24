@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
@@ -47,3 +48,4 @@ Indica el número de miembros para los que el actual [miembro](../../../ado/refe
  [Los elementos secundarios (propiedad, ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count (propiedad, ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Colección Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
+

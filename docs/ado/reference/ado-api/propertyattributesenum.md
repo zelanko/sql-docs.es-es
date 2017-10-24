@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6614f74546fab23a1e1ce453ac12c10082011a25
@@ -50,3 +51,4 @@ Especifica los atributos de un [propiedad](../../../ado/reference/ado-api/proper
   
 ## <a name="applies-to"></a>Se aplica a  
  [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49399204f536d32321d46f1a8acba0ae435583c5
@@ -41,3 +42,4 @@ End With
   
 > [!NOTE]
 >  En ADO no deben usar una contraseña que contenga el punto y coma (";") a menos que la contraseña se encierra entre comillas simples.
+

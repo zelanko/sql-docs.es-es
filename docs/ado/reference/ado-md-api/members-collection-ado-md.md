@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d72b7b87507e13ae4aa103a6333e7e2caaf581ae
@@ -55,3 +56,4 @@ Contiene el [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md)
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de Members (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+

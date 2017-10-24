@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  Cierre el original **Recordset** no se cierran sus copias, ni tampoco cerrar cerrar una copia del original o cualquiera de las demás copias.  
   
  Puede clonar un **Recordset** objeto sólo si admite marcadores. Los valores de marcador son intercambiables; es decir, una referencia de marcador de un **Recordset** objeto hace referencia al mismo registro en cualquiera de sus clones.
+

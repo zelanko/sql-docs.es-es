@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  Otro ejemplo, si se colocan en una fila determinada en el medio de un **Recordset** y se llama a **eliminar** y, a continuación, llame a **MoveNext**, se encuentra ahora en el registro inmediatamente después del registro eliminado. Pero la llamada a **MovePrevious** hace que el registro anterior al eliminar el registro actual, dado que el registro eliminado ya no se enumeran en la pertenencia de active el **conjunto de registros**.  
   
  Es especialmente difícil definir la semántica de movimiento coherente entre todos los proveedores para los métodos que se mueven en relación con el registro actual: **MovePrevious**, **MoveNext**, y **mover** : frente a cambiar datos en el registro actual. Por ejemplo, si está trabajando con un ordenado, filtrar **Recordset**y cambiar los datos en el registro actual para que preceda a todos los demás registros, pero también, los datos modificados ya no coincide con el filtro, no está claro dónde una **MoveNext** operación debería tardar. La conclusión más segura es ese movimiento relativo dentro de un **Recordset** es más arriesgado que el movimiento absoluto (como el uso de **MoveFirst** o **MoveLast**) cuando los datos son cambiar mientras se editan registros, agrega o elimina. Para ordenar y filtrar deben basarse en una clave principal o un identificador, porque este tipo de valor no debería cambiar.
+

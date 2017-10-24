@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fca9f032f5a72df58b18206c8441365ce3c8a746
@@ -50,3 +51,4 @@ Propiedades dinámicas se pueden agregar a la [propiedades](../../../ado/referen
  [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Interfaces y los objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propiedades de ADO](../../../ado/reference/ado-api/ado-properties.md)
+

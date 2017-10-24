@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  En **Columna de origen**, debe seleccionar la columna de cadenas que contiene los operadores unarios. (Esta selección establece la propiedad **UnaryOperatorColumn** en el atributo primario). La tabla de dimensión también debe presentar una columna de cadenas que especifique el operador unario de resumen. Los valores de cadenas de esta columna deben contener operadores de agregación válidos. Si una fila está vacía, el miembro correspondiente se calcula de la forma habitual. Si la fórmula de una columna no es válida, se producirá un error en tiempo de ejecución al recuperar un valor de celda que utiliza el miembro. Para obtener más información, vea [Operadores unarios en dimensiones de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md).  
   
   
+

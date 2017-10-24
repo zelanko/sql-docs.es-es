@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 73258b69ee6a341098365443f388c6944eb2dd51
@@ -72,3 +73,4 @@ Contiene un conjunto de miembros, cada uno de los cuales tiene el mismo rango de
  [Colección de niveles (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Colección Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

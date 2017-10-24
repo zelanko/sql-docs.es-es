@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6b4b037edbf6f5acc663e688c2a7cd3a0f7a9561
@@ -44,3 +45,4 @@ Indica la acción realizada cuando un elemento principal [clave](../../../ado/re
   
 ## <a name="see-also"></a>Vea también  
  [Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y ejemplo de las propiedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60d5d800137febfa9b0ba01994e3b32cd159ec31
@@ -35,3 +36,4 @@ Especifica el tipo de acción que se realizará cuando [SetPermissions](../../..
 |**adAccessGrant**|1|El usuario o grupo tendrá al menos los permisos solicitados.|  
 |**adAccessRevoke**|4|Se revocará derechos de acceso explícita del grupo o usuario.|  
 |**adAccessSet**|2|El usuario o grupo tendrá exactamente los permisos solicitados.|
+

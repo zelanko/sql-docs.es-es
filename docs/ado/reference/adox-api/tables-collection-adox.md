@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1489bb1716cb29116e385158e6f05dcc3d028431
@@ -58,3 +59,4 @@ Todos los contiene [tabla](../../../ado/reference/adox-api/table-object-adox.md)
  [Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y ejemplo de las propiedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto de tabla (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+

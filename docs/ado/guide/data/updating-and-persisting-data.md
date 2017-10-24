@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c08f7bfbb813bb3e2041f350a2e4397d9aff6ffd
@@ -41,3 +42,4 @@ Los capítulos anteriores han explicado cómo utilizar ADO para obtener datos de
 -   [Actualización de datos](../../../ado/guide/data/updating-data.md)  
   
 -   [Conservar los datos](../../../ado/guide/data/persisting-data.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  En la página **Finalización del asistente** , revise la estructura del nuevo cubo y, en el cuadro **Nombre del cubo** , escriba un nombre para el cubo. Opcionalmente, active la casilla **Generar el esquema ahora** para iniciar el Asistente para generar esquemas. En la mayoría de los casos, no se debe activar esta casilla si piensa crear objetos adicionales. También puede usar el Diseñador de cubos para generar el esquema más adelante.  
   
   
+

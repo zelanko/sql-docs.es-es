@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b329e0883ef165a01577cd536a8030640c99d2e7
@@ -216,3 +217,4 @@ NATURAL PREDICTION JOIN
  [Lección 5: Generar neuronal red y los modelos de regresión logística &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
+

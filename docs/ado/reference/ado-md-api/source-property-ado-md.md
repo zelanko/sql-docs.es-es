@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07302d24cb85875dc9b4c0201da9f8b799b64827
@@ -40,3 +41,4 @@ Indica el origen de datos en el [cellset](../../../ado/reference/ado-md-api/cell
  [Ejemplo de conjunto de celdas (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ActiveConnection (propiedad, ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Open (método) (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+

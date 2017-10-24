@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
@@ -37,3 +38,4 @@ ADO mantiene un búfer de edición asociado al registro actual. El **EditMode** 
 |**adEditDelete**|Indica que se ha eliminado el registro actual.|  
   
  **EditMode** puede devolver un valor válido únicamente si hay un registro actual. **EditMode** devolverá un error si **BOF** o **EOF** es **True** o si se ha eliminado el registro actual.
+

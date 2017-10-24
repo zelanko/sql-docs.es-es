@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
@@ -52,3 +53,4 @@ Set oRs = Nothing
 ```  
   
  Tenga en cuenta que **oRs.Open** toma una cadena de conexión (*sConn*), en lugar de un **conexión** objeto (*oConn*), como el valor de su ** ActiveConnection** parámetro. También se aplica el tipo de cursor de cliente estableciendo el **CursorLocation** propiedad en el **Recordset** objeto. De nuevo, Compare esto con el **HelloData** ejemplo.
+

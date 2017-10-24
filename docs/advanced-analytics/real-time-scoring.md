@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
@@ -121,3 +122,4 @@ No se admiten los siguientes tipos de modelo:
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Cómo llevar a cabo en tiempo real de puntuación](r/how-to-do-realtime-scoring.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
     -   En la lista desplegable **El título es MDX** , especifique si el título es MDX. Este campo indica al servidor si debe evaluar el contenido de **Título** como una expresión MDX.  
   
   
+

@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a8b090a9d5a9ed0a9f63b8f666fa9985089305ed
@@ -94,3 +95,4 @@ Sin embargo, si necesita instalarlas juntas, siga estos pasos adicionales para c
 5. Continuar configurando la **mrsdeploy** servicio tal y como se describe aquí: [configuración para administradores](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 
 6. Para obtener más información, consulte [mrsdeploy funciones](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package).
+

@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
@@ -37,3 +38,4 @@ Use la **PageCount** propiedad para determinar cuántas páginas de datos están
  Use la **AbsolutePage** propiedad para identificar el número de página en el que se encuentra el registro actual. Una vez más, el proveedor debe admitir la funcionalidad adecuada para que esta propiedad esté disponible.  
   
  **AbsolutePage** está basado en 1 y es igual a 1 cuando el registro actual es el primer registro de la **conjunto de registros**. Establezca esta propiedad para desplazarse al primer registro de una página determinada. Obtener el número total de páginas de la **PageCount** propiedad.
+

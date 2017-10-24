@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET no está instalado en un WFE independiente que esté configurado para la administración central.|No|No|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET es una biblioteca de cliente de Analysis Services que admite las conexiones a una base de datos de Analysis Services. En una implementación de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint, ADOMD.NET proporciona acceso a los informes integrados en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en Administración central. Los informes integrados son realmente libros [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que contienen datos incrustados de Analysis Services. El panel de administración utiliza ADOMD.NET para enviar una solicitud de conexión al servidor que carga los datos incluidos en el libro.<br /><br /> En las topologías que incluyen la Administración central ejecutándose en un servidor front-end web independiente, debe instalar ADOMD.NET de forma manual si desea ver estos informes en el panel de administración. Para obtener más información, vea [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
+

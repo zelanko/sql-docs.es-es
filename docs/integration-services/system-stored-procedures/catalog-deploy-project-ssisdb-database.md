@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (base de datos de SSISDB)
@@ -28,35 +28,35 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Sintaxis  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nombreDeCarpeta*  
- Nombre de la carpeta donde se implementará el proyecto. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [@folder_name =] *nombreDeCarpeta*  
+ El nombre de la carpeta donde se implementa el proyecto. El *nombre_de_carpeta* es **nvarchar (128)**.  
   
- [ @project_name =] *Nombre_proyecto*  
+ [@project_name =] *Nombre_proyecto*  
  Nombre del proyecto nuevo o actualizado en la carpeta. El *Nombre_proyecto* es **nvarchar (128)**.  
   
- [ @projectstream =] *projectstream*  
+ [@projectstream =] *projectstream*  
  Contenido binario de un archivo de implementación de proyecto (extensión .ispac) de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Puede usar una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas BULK para recuperar el contenido binario del archivo. Para obtener un ejemplo, vea [implementar Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Para obtener más información acerca de OPENROWSET, vea [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
   
  El *projectstream* es **varbinary (max)**  
   
- [ @operation_id =] *operation_id*  
+ [@operation_id =] *operation_id*  
  Devuelve el identificador único para la operación de implementación. El *operation_id* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  

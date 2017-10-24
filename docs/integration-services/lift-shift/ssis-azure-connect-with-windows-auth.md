@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 25113093ccd068a9afe661e160ae3319025b7534
+ms.sourcegitcommit: 1e3d9736612211038991489a4bd858d1ff89d333
+ms.openlocfilehash: 1b60d877c6c75a77dd16fa8cb1704e10baf36bdb
 ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="connect-to-on-premises-data-sources-with-windows-authentication"></a>Conectarse a orígenes de datos locales con autenticación de Windows
@@ -21,17 +21,34 @@ Este artículo describe cómo configurar el catálogo de SSIS en la base de dato
 Las credenciales de dominio que proporcione al seguir los pasos descritos en este artículo se aplican a todas las ejecuciones de paquetes en la instancia de base de datos SQL hasta que cambie o quite las credenciales.
 
 ## <a name="prerequisite"></a>Requisito previo
-Antes de configurar las credenciales de dominio para la autenticación de Windows, compruebe si un equipo no unido a un dominio puede conectarse a los orígenes de datos locales en `runas` modo. Por ejemplo, para comprobar si puede conectarse a un servidor local de SQL, haga lo siguiente:
+Antes de configurar las credenciales de dominio para la autenticación de Windows, compruebe si un equipo no unido a un dominio se puedan conectar al origen de datos local en `runas` modo.
 
-1.  Para ejecutar esta prueba, fFind en un equipo no unido al dominio.
+### <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
+Para comprobar si puede conectarse a un servidor local de SQL, haga lo siguiente:
+
+1.  Para ejecutar esta prueba, busque un equipo no unido al dominio.
 
 2.  En el equipo no unido a un dominio, ejecute el siguiente comando para iniciar SQL Server Management Studio (SSMS) con las credenciales de dominio que desea usar:
 
-   ```cmd
-   runas.exe /netonly /user:<domain>\<username> SSMS.exe
-   ```
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> SSMS.exe
+    ```
 
 3.  Desde SSMS, compruebe si puede conectarse al servidor SQL local que desea usar.
+
+### <a name="connecting-to-a-file-share"></a>Conectarse a un recurso compartido de archivos
+Para comprobar si puede conectarse a un recurso compartido de archivos de local, realice lo siguiente:
+
+1.  Para ejecutar esta prueba, busque un equipo no unido al dominio.
+
+2.  En el equipo no unido a un dominio, ejecute el siguiente comando. Este comando abre un prommpt de comando con las credenciales de dominio que desea utilizar y, a continuación, prueba la conectividad con el recurso compartido de archivos por obtener un listado de directorios.
+
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> cmd.exe
+    dir \\fileshare
+    ```
+
+3.  Compruebe si se devuelve la lista de directorios para local archivos de recurso compartido que desea utilizar.
 
 ## <a name="provide-domain-credentials"></a>Proporcione las credenciales de dominio
 Para proporcionar las credenciales de dominio que permiten paquetes usar autenticación de Windows para conectarse a orígenes de datos locales, realice lo siguiente:
@@ -73,6 +90,21 @@ Para borrar y eliminar las credenciales que proporcionó como se describe en est
 
     ```sql
     catalog.set_execution_credential @user='', @domain='', @password=''
+    ```
+
+## <a name="connect-to-file-shares"></a>Conectarse a recursos compartidos de archivos
+Puede usar la autenticación de Windows para conectarse a recursos compartidos de archivos en la misma red virtual que el Runtime de integración de SSIS de Azure de forma local y en máquinas virtuales de Azure.
+
+Para conectarse a un recurso compartido de archivos en una máquina virtual de Azure, haga lo siguiente:
+
+1.  Con SQL Server Management Studio (SSMS) u otra herramienta, conéctese a la base de datos de SQL que hospede la base de datos de catálogo de SSIS (SSISDB).
+
+2.  Con SSISDB como la base de datos actual, abra una ventana de consulta.
+
+3.  Ejecute el siguiente procedimiento almacenado:
+
+    ```sql
+    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
     ```
 
 ## <a name="next-steps"></a>Pasos siguientes

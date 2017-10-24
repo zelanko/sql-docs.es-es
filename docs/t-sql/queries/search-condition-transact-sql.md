@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>Condiciones de búsqueda (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Usar WHERE con la sintaxis de LIKE y ESCAPE  
- En el siguiente ejemplo se buscan filas en las que la columna `LargePhotoFileName` tenga los caracteres `green_` y se utiliza la opción `ESCAPE` porque `_` es un carácter comodín. Sin especificar la opción `ESCAPE`, la consulta buscaría los valores de descripción que contuvieran la palabra `green` seguida de cualquier carácter distinto del carácter `_`.  
+ En el ejemplo siguiente se busca filas en las que el `LargePhotoFileName` columna tiene los caracteres `green_`y utiliza el `ESCAPE` opción porque _ es un carácter comodín. Sin especificar la `ESCAPE` opción, la consulta buscaría los valores de descripción que contengan la palabra `green` seguido de cualquier carácter individual diferente del carácter _.  
   
 ```  
 USE AdventureWorks2012 ;  

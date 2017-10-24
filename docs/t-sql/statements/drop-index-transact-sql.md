@@ -36,11 +36,12 @@ caps.latest.revision: 99
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8755a7463eca39c7002075d12f91b8626b76c2b4
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 59f78a8c62e8257eb09327d4b629ad678d9c0e69
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -146,7 +147,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  MAXDOP = *max_degree_of_parallelism*  
  **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (niveles de rendimiento P2 y P3 solo).  
   
- Invalida el **grado máximo de paralelismo** opción de configuración para la duración de la operación de índice. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
+ Invalida el **grado máximo de paralelismo** opción de configuración para la duración de la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
 > [!IMPORTANT]  
 >  MAXDOP no se admite en índices espaciales o índices XML.  
@@ -279,7 +280,7 @@ Cuando se quita un índice clúster OFFLINE, solo se quitan los niveles superior
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-dropping-an-index"></a>A. Quitar un índice  
- En el ejemplo siguiente se elimina el índice `IX_ProductVendor`_`VendorID` de la tabla `ProductVendor` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ En el ejemplo siguiente se elimina el índice `IX_ProductVendor_VendorID` en el `ProductVendor` tabla el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   

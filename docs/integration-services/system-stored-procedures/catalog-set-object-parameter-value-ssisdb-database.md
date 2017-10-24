@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Establece el valor de un parámetro del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Asocia el valor a una variable de entorno o asigna un valor literal que se va a usar como valor predeterminado si no se asignan otros valores.  
+  Establece el valor de un parámetro del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Asocia el valor a una variable de entorno o asigna un valor literal que se usa de forma predeterminada cuando no se asignen a ningún otro valor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  El tipo del parámetro. Use el valor `20` para indicar un parámetro de proyecto o el valor `30` para indicar un parámetro de paquete. El *object_type* es **smallInt**.  
   
- [ @folder_name =] *nombreDeCarpeta*  
+ [@folder_name =] *nombreDeCarpeta*  
  Nombre de la carpeta que contiene el parámetro. El *nombre_de_carpeta* es **nvarchar (128)**.  
   
- [ @project_name =] *Nombre_proyecto*  
+ [@project_name =] *Nombre_proyecto*  
  Nombre del proyecto que contiene el parámetro. El *Nombre_proyecto* es **nvarchar (128)**.  
   
- [ @parameter_name =] *parameter_name*  
+ [@parameter_name =] *parameter_name*  
  Nombre del parámetro. El *parameter_name* es **nvarchar (128)**.  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  El valor del parámetro. El *parameter_value* es **sql_variant**.  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  Nombre del paquete. Este argumento es necesario cuando el parámetro es un parámetro de paquete. El *object_name* es **nvarchar (260)**.  
   
- [ @value_type =] *value_type*  
- Tipo de valor del parámetro. Use el carácter `V` para indicar que *parameter_value* es un valor literal que se usará de forma predeterminada no hay otros valores se asignan antes de la ejecución. Use el carácter `R` para indicar que *parameter_value* es un valor que se hace referencia y se ha establecido en el nombre de una variable de entorno. Este argumento es opcional; de forma predeterminada, se usa el carácter `V`. El *value_type* es **char (1)**.  
+ [@value_type =] *value_type*  
+ Tipo de valor del parámetro. Use el carácter `V` para indicar que *parameter_value* es un valor literal que se utiliza de forma predeterminada cuando no se asigna ningún otro valor antes de la ejecución. Use el carácter `R` para indicar que *parameter_value* es un valor que se hace referencia y se ha establecido en el nombre de una variable de entorno. Este argumento es opcional; de forma predeterminada, se usa el carácter `V`. El *value_type* es **char (1)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

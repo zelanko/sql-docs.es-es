@@ -23,11 +23,12 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 71f9af15e8cfeaccabc87be787172fed44246967
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizar interbloqueos con SQL Server Profiler
@@ -72,3 +73,4 @@ ms.lasthandoff: 08/02/2017
  En un interbloqueo, dos procesos están esperando un recurso retenido por el otro recurso. En un gráfico de interbloqueo, los recursos se muestran como nodos de recursos.  
   
   
+

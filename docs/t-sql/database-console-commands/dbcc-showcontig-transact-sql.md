@@ -28,11 +28,12 @@ caps.latest.revision: 78
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 770b21498e0159c1ac30eb4ea8a192b6597b4ebe
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -204,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Usar OBJECT_ID para obtener el Id. de la tabla y sys.indexes para obtener el Id. del índice  
-En el ejemplo siguiente se utiliza `OBJECT`_`ID` y `sys.indexes` para obtener el identificador de tabla e índice Id. de la vista de catálogo el `AK_Product_Name` índice de la `Production.Product` tabla el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.
+En el ejemplo siguiente se utiliza `OBJECT_ID` y `sys.indexes` para obtener el identificador de tabla e índice Id. de la vista de catálogo el `AK_Product_Name` índice de la `Production.Product` tabla el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.
   
 ```sql  
 USE AdventureWorks2012;  

@@ -18,11 +18,12 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f23e4034bdfe2cb41161313ae577342ba3f3eda9
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lección 1-2 - ver recomendaciones de optimización
@@ -32,9 +33,9 @@ En esta tarea, se utiliza la sesión de optimización que creó en [Tuning a Wor
   
 1.  Inicie el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Consulte [Iniciar el Asistente para la optimización de motor de base de datos](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Asegúrese de conectarse a la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha usado en la práctica [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
-2.  Haga doble clic en **MySession** en el panel **Monitor de sesión** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Asistente para la optimización carga la información de sesión de la sesión de optimización anterior y muestra el **recomendaciones** ficha. Observe que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no ha propuesto **Recomendaciones de partición** porque se han aceptado todos los valores predeterminados de las opciones de optimización y la opción **No crear particiones** se ha seleccionado en la pestaña **Opciones de optimización** .  
+2.  Haga doble clic en **MySession** en el panel **Monitor de sesión** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] carga la información de sesión a partir de la sesión de optimización anterior y muestra la pestaña **Recomendaciones** . Observe que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no ha propuesto **Recomendaciones de partición** porque se han aceptado todos los valores predeterminados de las opciones de optimización y la opción **No crear particiones** se ha seleccionado en la pestaña **Opciones de optimización** .  
   
-3.  En la pestaña **Recomendaciones** , utilice la barra de desplazamiento situada en la parte inferior de la página con pestañas para ver todas las columnas de **Recomendaciones de índices** . Cada fila representa un objeto de base de datos (índices o vistas indizadas) que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomienda quitar o crear. Desplácese hasta la columna situada más a la derecha y haga clic en **Definición**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Asistente para la optimización muestra un **vista previa de Script SQL** ventana donde puede ver el [!INCLUDE[tsql](../../includes/tsql-md.md)] secuencia de comandos que crea o quita el objeto de base de datos en esa fila. Haga clic en **Cerrar** para cerrar la ventana de vista previa.  
+3.  En la pestaña **Recomendaciones** , utilice la barra de desplazamiento situada en la parte inferior de la página con pestañas para ver todas las columnas de **Recomendaciones de índices** . Cada fila representa un objeto de base de datos (índices o vistas indizadas) que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomienda quitar o crear. Desplácese hasta la columna situada más a la derecha y haga clic en **Definición**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra la ventana **Vista previa de script SQL** , donde se puede ver el script [!INCLUDE[tsql](../../includes/tsql-md.md)] que creará o quitará el objeto de base de datos de esa fila. Haga clic en **Cerrar** para cerrar la ventana de vista previa.  
   
     Si le resulta difícil encontrar una **Definición** que contenga un vínculo, haga clic para desactivar la casilla **Mostrar objetos existentes** al final de la página con pestañas. Esto hará que el número de filas mostradas disminuya. Cuando desactive esta casilla, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] solamente mostrará los objetos para los que haya generado una recomendación. Active la casilla **Mostrar objetos existentes** para ver todos los objetos de base de datos que existen actualmente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Utilice la barra de desplazamiento situada en la parte derecha de la página con pestañas para ver todos los objetos.  
   

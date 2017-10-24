@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>osql (utilidad)
@@ -122,7 +123,7 @@ C:\>osql
  Permite al usuario ajustar el ancho de la pantalla para la salida. El valor predeterminado es 80 caracteres. Cuando una línea de salida ha alcanzado el ancho máximo de pantalla, se divide en varias líneas.  
   
  **-a** *packet_size*  
- Permite solicitar un paquete de diferente tamaño. Los valores válidos de *packet_size* son de 512 a 65 535. El valor predeterminado de **osql** es el servidor predeterminado. Si se aumenta el tamaño del paquete, se puede mejorar el rendimiento durante la ejecución de scripts grandes en las que hay muchas instrucciones SQL entre comandos GO. Las pruebas de [!INCLUDE[msCoName](../includes/msconame-md.md)] indican que 8192 suele ser la configuración más rápida para operaciones de copia masiva. Se puede solicitar un tamaño mayor para los paquetes, pero **osql** adopta el valor predeterminado para el servidor si no puede cumplirse la solicitud.  
+ Permite solicitar un paquete de diferente tamaño. Los valores válidos de *packet_size* son de 512 a 65 535. El valor predeterminado de **osql** es el servidor predeterminado. Si se aumenta el tamaño del paquete, se puede mejorar el rendimiento durante la ejecución de scripts grandes en las que hay muchas instrucciones SQL entre comandos GO. [!INCLUDE[msCoName](../includes/msconame-md.md)] indican que 8192 suele ser la configuración más rápida para operaciones de copia masiva. Se puede solicitar un tamaño mayor para los paquetes, pero **osql** adopta el valor predeterminado para el servidor si no puede cumplirse la solicitud.  
   
  **-e**  
  Muestra lo escrito.  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  Imprime las estadísticas de rendimiento.  
   
  **-b**  
- Especifica que **osql** se cierre y devuelva un valor de DOS ERRORLEVEL cuando se produce un error. El valor que se devuelve a la variable DOS ERRORLEVEL es 1 cuando el mensaje de error de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una gravedad superior a 11; de lo contrario, el valor devuelto es 0. [!INCLUDE[msCoName](../includes/msconame-md.md)]Archivos por lotes de MS-DOS pueden probar el valor de DOS ERRORLEVEL y tratar el error apropiadamente.  
+ Especifica que **osql** se cierre y devuelva un valor de DOS ERRORLEVEL cuando se produce un error. El valor que se devuelve a la variable DOS ERRORLEVEL es 1 cuando el mensaje de error de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una gravedad superior a 11; de lo contrario, el valor devuelto es 0. [!INCLUDE[msCoName](../includes/msconame-md.md)] Los archivos por lotes de MS-DOS pueden probar el valor de DOS ERRORLEVEL y tratar el error apropiadamente.  
   
  **-u**  
  Especifica que el archivo *output_file* se almacene en formato Unicode, independientemente del formato del archivo *input_file*.  
@@ -193,7 +194,7 @@ osql -E -q "select name, object_id from %table%"
  También establece -1 como valor predeterminado de ERRORLEVEL de DOS.  
   
 > [!NOTE]  
->  El  **-n** , **- O** y **-D** opciones ya no son compatibles con **osql**.  
+>  La utilidad **-n**, **-O** y **-D** han dejado de admitirse en **osql**.  
   
 ## <a name="remarks"></a>Comentarios  
  La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql**acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
@@ -339,7 +340,7 @@ GO
  Esta instrucción da como resultado `10.3496`, que indica que el valor se almacena con todos los decimales intactos.  
   
 ## <a name="see-also"></a>Vea también  
- [Comentario &#40; MDX &#41;](../mdx/comment-mdx.md)   
+ [Comentario &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [--&#40; Comentario &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST y CONVERT &#40; Transact-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40; Transact-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  

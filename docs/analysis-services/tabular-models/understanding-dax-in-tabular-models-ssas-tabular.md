@@ -1,7 +1,7 @@
 ---
 title: DAX en modelos tabulares (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX en modelos tabulares (SSAS Tabular)
@@ -202,6 +202,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Funciones matemáticas y trigonométricas  
  Las funciones matemáticas en DAX son muy parecidas a las funciones matemáticas y trigonométricas de Excel. Existen pequeñas diferencias en los tipos de datos numéricos usados por funciones de DAX. Para más información, vea [Funciones matemáticas y trigonométricas (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f).  
+ 
+### <a name="other-functions"></a>Otras funciones  
+ Estas funciones realizan acciones únicas que no se pueden definir por cualquiera de las categorías en la a que mayoría de las otra funciones pertenece. Para obtener más información, consulte [otras funciones (DAX)](https://msdn.microsoft.com/mt150101).
   
 ### <a name="statistical-functions"></a>Funciones estadísticas  
  DAX proporciona funciones estadísticas que realizan agregaciones. Además de crear sumas y medias, o buscar valores máximos y mínimos, en DAX también puede filtrar una columna antes de agregar o crear agregaciones basadas en tablas relacionadas. Para más información, vea [Funciones estadísticas (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559).  
@@ -397,6 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Columnas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Orígenes de datos admitidos](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Orígenes de datos compatibles](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

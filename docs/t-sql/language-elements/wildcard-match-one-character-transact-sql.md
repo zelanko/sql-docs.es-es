@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (comodín, coincidir un carácter) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Utilice el carácter de subrayado `_` para que coincida con cualquier carácter individual en una operación de comparación de cadenas que implica la coincidencia de patrones, como `LIKE` y `PATINDEX`.  
+Utilice el carácter de subrayado _ para hacer coincidir cualquier carácter individual en una operación de comparación de cadenas que implica la coincidencia de patrones, como `LIKE` y `PATINDEX`.  
   
 ## <a name="examples"></a>Ejemplos  
 
@@ -62,10 +63,10 @@ Puede tener bases de datos adicionales que cumplan este criterio.
 Puede usar varios caracteres de subrayado para representar varios caracteres. Cambiar el `LIKE` criterios para incluir dos caracteres de subrayado `'m__%` incluye la base de datos maestra en el resultado.
 
 ### <a name="b-more-complex-example"></a>B: ejemplo más complejo
- En el siguiente ejemplo se utiliza el operador `_` para buscar todas las personas de la tabla `Person` con un nombre de tres letras que termina en `an`.  
+ En el ejemplo siguiente se usa el operador de _ para buscar todas las personas en la `Person` tabla, que tienen un apellido de tres letras que termina en `an`.  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [% (Caracteres comodín para coincidir)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Comodín - caracteres para coincidir)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (Comodín - caracteres no coincidentes)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

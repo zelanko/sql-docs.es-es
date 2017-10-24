@@ -26,11 +26,12 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb83f32e2187025c916ee7291e5b52725db5af2c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: da51e41cc5adf4fa9f4f57cfe094fe5a72119c70
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
@@ -140,17 +141,6 @@ GO
 ```  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="e-importing-a-private-key-for-a-certificate-that-is-already-present-in-the-database"></a>E. Importar una clave privada para un certificado que ya existe en la base de datos  
-  
-```  
-ALTER CERTIFICATE Shipping13   
-    WITH PRIVATE KEY (FILE = '\\ServerA7\importedkeys\Shipping13',  
-    DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
 GO  
 ```  
   

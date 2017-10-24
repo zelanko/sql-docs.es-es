@@ -26,11 +26,12 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee3f419d092f6e8b327dd5e4ac498afa4036ebbb
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 80a38599ae04209d0f8e479b8cbad16d39bef31a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
@@ -61,10 +62,10 @@ YEAR ( date )
  Si *fecha* contiene solo una parte horaria, el valor devuelto es 1900, el año de base.  
   
 ## <a name="examples"></a>Ejemplos  
- La siguiente instrucción devuelve `2007`. Este número corresponde al año.  
+ La siguiente instrucción devuelve `2010`. Este número corresponde al año.  
   
 ```  
-SELECT YEAR('2007-04-30T01:01:01.1234567-07:00');  
+SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
  La siguiente instrucción devuelve `1900, 1, 1`. El argumento para *fecha* es el número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como 1 de enero de 1900.  
@@ -74,12 +75,6 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- La siguiente instrucción devuelve `2010`. Este número corresponde al año.  
-  
-```  
-SELECT YEAR('2010-07-20T01:01:01.1234');  
-```  
-  
  La siguiente instrucción devuelve `1900, 1, 1`. El argumento para *fecha* es el número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como 1 de enero de 1900.  
   
 ```  

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 70359d539bc7b4fc6dd70de8bbb7e16be5d71208
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
 ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (base de datos de SSISDB)
@@ -28,19 +28,19 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Sintaxis  
   
-```tsql  
-start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_count]  
+```sql  
+catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  Identificador único de la instancia de ejecución. El *execution_id* es **bigint**.
  
- [ @retry_count =] *número_reintentos*  
- El número de reintentos si se produce un error en la ejecución. Entrará en vigor solo si la ejecución en horizontalmente. Este parámetro es opcional. Se establece en 0, si no especificado. El *cuenta_reintentos* es **int**.
+ [@retry_count =] *número_reintentos*  
+ El número de reintentos si se produce un error en la ejecución. Entrará en vigor solo si la ejecución en horizontalmente. Este parámetro es opcional. Si no se especifica, su valor se establece en 0. El *cuenta_reintentos* es **int**.
   
 ## <a name="remarks"></a>Comentarios  
- Una ejecución se utiliza para especificar los valores de parámetro que se usará en un paquete durante una única instancia de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hará referencia a un proyecto obsoleto. Esto impedirá que el procedimiento almacenado se ejecute correctamente.  
+ Una ejecución se utiliza para especificar los valores de parámetro que es utilizado por un paquete durante una única instancia de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hace referencia a un proyecto que no está actualizado. Esta referencia no válida hace que el procedimiento almacenado genere un error.  
   
 > [!NOTE]  
 >  Las ejecuciones solo pueden iniciarse una vez. Para iniciar una instancia de ejecución, debe estar en estado creado (un valor de `1` en el **estado** columna de la [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) vista).  
@@ -48,7 +48,7 @@ start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_coun
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama a catalog.create_execution para crear una instancia de ejecución para el paquete Child1.dtsx. Project1 de Integration Services contiene el paquete. En el ejemplo se llama a catalog.set_execution_parameter_value para establecer valores para los parámetros Parameter1, Parameter2 y LOGGING_LEVEL. En el ejemplo se llama a catalog.start_execution para iniciar una instancia de ejecución.  
   
-```  
+```sql
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -60,7 +60,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  

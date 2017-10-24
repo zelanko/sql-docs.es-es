@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Características de Integration Services compatibles con las ediciones de SQL Server
@@ -29,9 +29,9 @@ Para características compatibles con las ediciones Evaluation y Developer, vea 
 Para obtener las notas de la versión más recientes y ¿qué es información nueva, vea los siguientes artículos:
 -   [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 -   [Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [Novedades de Integration Services en SQL Server de 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [Novedades de Integration Services en SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
-**Probar SQL Server 2016**    
+**Pruebe SQL Server 2016.**    
 
 La edición de evaluación de SQL Server está disponible durante un período de prueba de 180 días.  
     
@@ -70,8 +70,8 @@ La edición de evaluación de SQL Server está disponible durante un período de
   
 |Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Destino de Oracle de alto rendimiento de Attunity|Sí|||||  
-|Destino de alto rendimiento Teradata de Attunity|Sí|||||  
+|Origen de Oracle de alto rendimiento y de destino de Attunity|Sí|||||  
+|Origen de Teradata de alto rendimiento y de destino de Attunity|Sí|||||  
 |Origen y destino de SAP BW|Sí|||||  
 |Destino de entrenamiento del modelo de minería de datos|Sí|||||  
 |Destino de procesamiento de dimensiones|Sí|||||  
@@ -81,7 +81,6 @@ La edición de evaluación de SQL Server está disponible durante un período de
   
 |Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Búsquedas de persistentes (alto rendimiento)|Sí|||||  
 |Cambiar los componentes de la captura de datos de Attunity <sup>1</sup>|Sí|||||  
 |Transformación de consulta de minería de datos|Sí|||||  
 |Transformaciones de búsqueda aproximada y agrupación aproximada|Sí|||||  

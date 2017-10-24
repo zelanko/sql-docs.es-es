@@ -26,11 +26,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5230769c1e41d5831d77c3711c9b5c4a215414cb
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 7d5930eba1d286510db59931c9cffccc9dc79cab
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
@@ -148,27 +149,6 @@ GO
 DBO
 Mario
 DBO
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-user-to-return-the-database-user-name"></a>D. Utilizar USER para devolver el nombre de usuario de la base de datos  
- En el siguiente ejemplo se declara una variable como `char`, se le asigna el valor actual de USER y, a continuación, se imprime la variable con una descripción de texto.  
-  
-```  
-DECLARE @usr char(30)  
-SET @usr = user  
-SELECT 'The current user''s database username is: '+ @usr  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
------------------------------------------------------------------------  
-The current user's database username is: dbo  
-  
-(1 row(s) affected)
 ```  
   
 ## <a name="see-also"></a>Vea también  

@@ -21,11 +21,12 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57a5780558bd5e07c24352130fd07ff090972c9b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 81a9272284e662eb7f5f47e464e85e324b92a39d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>Recuperar metadatos: trabajar con el modelo de objetos ADOMD.NET
@@ -65,6 +66,7 @@ ms.lasthandoff: 09/01/2017
 -   El tipo de datos de la columna (<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelColumn.Type%2A>).  
   
 ## <a name="see-also"></a>Vea también  
- [Al recuperar los metadatos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
+ [Recuperación de metadatos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
+

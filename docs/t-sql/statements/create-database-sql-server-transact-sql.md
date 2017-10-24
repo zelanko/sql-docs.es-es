@@ -39,11 +39,12 @@ caps.latest.revision: 212
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e80db92abd988b86b1224f07c92ecb2b20bb883
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL de SQL Server)
@@ -535,9 +536,9 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Crear una base de datos que especifica los archivos de datos y de registro de transacciones  
- En el ejemplo siguiente se crea la base de datos `Sales`. Debido a que no se usa la palabra clave PRIMARY, el primer archivo (`Sales`_`dat`) se convierte en el archivo principal. Como no se especifica MB ni KB en el parámetro SIZE del archivo `Sales`\_`dat` , se utiliza MB y el tamaño se asigna en megabytes. Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la base de datos `Sales`\_`log` se asigna en megabytes porque el sufijo `MB` se ha indicado explícitamente en el parámetro `SIZE` .  
+ En el ejemplo siguiente se crea la base de datos `Sales`. Dado que la palabra clave principal no es usa, el primer archivo (`Sales_dat`) se convierte en el archivo principal. Como no se especifica MB ni KB en el parámetro SIZE del archivo `Sales_dat` , se utiliza MB y el tamaño se asigna en megabytes. Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la base de datos `Sales_log` se asigna en megabytes porque el sufijo `MB` se ha indicado explícitamente en el parámetro `SIZE` .  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -559,7 +560,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Crear una base de datos especificando múltiples archivos de datos y de registro de transacciones  
  En el ejemplo siguiente se crea la base de datos `Archive`, que tiene tres archivos de datos de `100-MB` y dos archivos de registro de transacciones de `100-MB`. El archivo principal es el primer archivo de la lista y se especifica explícitamente con la palabra clave `PRIMARY`. Los archivos de registro de transacciones se especifican a continuación de las palabras clave `LOG ON`. Tenga en cuenta las extensiones usadas para los archivos en la opción `FILENAME`: `.mdf` se usa para archivos de datos principales, `.ndf` para archivos de datos secundarios y `.ldf` para archivos de registro de transacciones. En este ejemplo se coloca la base de datos en la unidad `D:`, en lugar de con la base de datos `master`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -597,7 +598,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. Crear una base de datos que tenga grupos de archivos  
  En el ejemplo siguiente se crea la base de datos `Sales`, que tiene los siguientes grupos de archivos:  
   
--   El grupo de archivos principal con los archivos `Spri1`_`dat` y `Spri2` \_ `dat`. El incremento de FILEGROWTH para estos archivos se especifica como `15%`.  
+-   El grupo de archivos principal con los archivos `Spri1_dat` y `Spri2_dat`. El incremento de FILEGROWTH para estos archivos se especifica como `15%`.  
   
 -   Un grupo de archivos denominado `SalesGroup1`, con los archivos `SGrp1Fi1` y `SGrp1Fi2`.  
   
@@ -605,7 +606,7 @@ GO
   
  En este ejemplo se colocan los archivos de datos y de registro en discos diferentes para mejorar el rendimiento.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -654,7 +655,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. Adjuntar una base de datos  
  En el ejemplo siguiente se separa la base de datos `Archive` creada en el ejemplo D y, a continuación, se adjunta mediante la cláusula `FOR ATTACH`. `Archive` se ha definido para contener varios archivos de datos y de registro. Sin embargo, dado que la ubicación de los archivos no ha cambiado desde que se crearon, solo es necesario especificar el archivo principal en la cláusula `FOR ATTACH`. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], los archivos de texto completo que formen parte de la base de datos que se va a adjuntar se adjuntarán con la base de datos.  
   
-```  
+```tsql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -666,11 +667,11 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. Crear una instantánea de base de datos  
- En el ejemplo siguiente se crea la instantánea de base de datos `sales`_`snapshot0600`. Debido a que la instantánea de base de datos es de solo lectura, no se puede especificar un archivo de registro. De acuerdo con la sintaxis, se especifican todos los archivos de la base de datos de origen, pero los grupos de archivos no se especifican.  
+ En el ejemplo siguiente se crea la instantánea de base de datos `sales_snapshot0600`. Debido a que la instantánea de base de datos es de solo lectura, no se puede especificar un archivo de registro. De acuerdo con la sintaxis, se especifican todos los archivos de la base de datos de origen, pero los grupos de archivos no se especifican.  
   
  La base de datos de origen en este ejemplo es la base de datos `Sales` creada en el ejemplo D.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -687,7 +688,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Crear una base de datos y especificar un nombre de intercalación y sus opciones  
  En el ejemplo siguiente se crea la base de datos `MyOptionsTest`. Se especifica un nombre de intercalación y las opciones `TRUSTYWORTHY` y `DB_CHAINING` se establecen en `ON`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -708,7 +709,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Adjuntar un catálogo de texto completo que se ha movido  
  En el ejemplo siguiente se adjunta el catálogo de texto completo `AdvWksFtCat` junto con los archivos de datos y de registro de `AdventureWorks2012`. En el ejemplo, el catálogo de texto completo se mueve desde su ubicación predeterminada hasta una nueva ubicación `c:\myFTCatalogs`. Los archivos de datos y de registro permanecen en sus ubicaciones predeterminadas.  
   
-```  
+```tsql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -733,7 +734,7 @@ GO
   
 -   `FileStreamResumes` contiene los datos FILESTREAM. Contiene un contenedor de datos FILESTREAM, `FSResumes`, que se encuentra en `C:\MyFSfolder\Resumes`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  

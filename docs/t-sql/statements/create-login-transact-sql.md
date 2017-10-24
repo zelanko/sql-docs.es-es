@@ -30,11 +30,12 @@ caps.latest.revision: 101
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f64c2f34c7e0c2d8c768b5a846465a65ed51082d
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e0b84743a9c3c578954560613c69f2863af8aa01
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
@@ -318,7 +319,7 @@ CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;
 ```  
   
 ### <a name="h-using-options"></a>H. Uso de opciones  
- En el ejemplo siguiente se crea el inicio de sesión `Mary8` con contraseña algunos de los argumentos opcionales.  
+ En el ejemplo siguiente se crea el inicio de sesión `Mary8` con contraseña y algunos de los argumentos opcionales.  
   
 ```  
 CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  

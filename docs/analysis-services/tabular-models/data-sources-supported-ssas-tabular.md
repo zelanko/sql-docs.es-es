@@ -1,7 +1,7 @@
 ---
-title: "Orígenes de datos compatibles (SSAS Tabular) | Documentos de Microsoft"
+title: "Orígenes de datos admitidos en los modelos tabulares de SQL Server Analysis Services | Documentos de Microsoft"
 ms.custom: 
-ms.date: 07/25/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,23 +17,27 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5457f0c2abf5f1b7cdae5ff2ae57b5298a72d82
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 2d716dc332ec8271a11498b6385d4801b64b808a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="data-sources-supported-ssas-tabular"></a>Orígenes de datos compatibles (SSAS tabular)
+# <a name="data-sources-supported-in-tabular-models"></a>Orígenes de datos admitidos en los modelos tabulares
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]   
+Para los servicios de análisis de Azure, consulte [orígenes de datos admitidos en Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-datasource).
+
   En este tema se describen los tipos de orígenes de datos que se pueden usar con los modelos tabulares.  
   
-##  <a name="bkmk_supported_ds"></a> Orígenes de datos admitidos para los modelos en memoria  
- Puede importar datos de los siguientes orígenes de datos en la tabla siguiente. Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el programa de instalación no instala los proveedores enumerados para cada origen de datos. Algunos proveedores ya podrían estar instalados con otras aplicaciones en el equipo; en otros casos tendrá que descargar e instalar el proveedor.  
+##  <a name="bkmk_supported_ds"></a>Orígenes de datos admitidos para los modelos tabulares en memoria  
+Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el programa de instalación no instala los proveedores enumerados para cada origen de datos. Algunos proveedores podrían estar instalados con otras aplicaciones en el equipo. En otros casos, debe descargar e instalar al proveedor.  
   
 |||||  
 |-|-|-|-|  
 |Source|Versiones|Tipo de archivo|Proveedores|  
 |Bases de datos de Access|Microsoft Access 2010 y versiones posteriores.|.accdb o .mdb|Proveedor OLE DB de ACE 14|  
-|Bases de datos relacionales de SQL Server|SQL Server 2008 y versiones posterior, almacenamiento de datos de SQL Server 2008 y versiones posterior, Azure base de datos SQL, almacenamiento de datos de SQL Azure, Analytics Platform System (APS)<br /><br /> <br /><br /> Tenga en cuenta que Analytics Platform System (APS) anteriormente era Almacenamiento de datos paralelos de SQL Server (PDW). Originalmente, conectar con PDW desde Analysis Services requería un proveedor de datos especial. Este proveedor se ha sustituido en SQL Server 2012. A partir de SQL Server 2012, el cliente nativo de SQL Server se utiliza para conexiones con PDW y APS. |(no aplicable)|Proveedor OLE DB para SQL Server<br /><br /> Proveedor OLE DB de SQL Server Native Client<br /><br /> Proveedor OLE DB de SQL Server Native Client 10.0<br /><br /> Proveedor de datos de .NET Framework para SQL Client|  
+|Bases de datos relacionales de SQL Server|SQL Server 2008 y versiones posterior, almacenamiento de datos de SQL Server 2008 y versiones posterior, Azure base de datos SQL, almacenamiento de datos de SQL Azure, Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) anteriormente se conocía como almacén de datos paralelos de SQL Server (PDW). Originalmente, conectar con PDW desde Analysis Services requería un proveedor de datos especial. Este proveedor se ha sustituido en SQL Server 2012. A partir de SQL Server 2012, el cliente nativo de SQL Server se utiliza para conexiones con PDW y APS. |(no aplicable)|Proveedor OLE DB para SQL Server<br /><br /> Proveedor OLE DB de SQL Server Native Client<br /><br /> Proveedor OLE DB de SQL Server Native Client 10.0<br /><br /> Proveedor de datos de .NET Framework para SQL Client|  
 |Bases de datos relacionales de Oracle|Oracle 9i y versiones posteriores.|(no aplicable)|Proveedor OLE DB de Oracle<br /><br /> Proveedor de datos de .NET Framework para cliente de Oracle<br /><br /> Proveedor de datos de .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de datos relacionales de Teradata|Teradata V2R6 y versiones posteriores|(no aplicable)|Proveedor OLE DB TDOLEDB<br /><br /> Proveedor de datos .NET para Teradata|  
 |Bases de datos relacionales de Informix||(no aplicable)|Proveedor OLE DB de Informix|  
@@ -44,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 |Archivos de Microsoft Excel|Excel 2010 y versiones posteriores|.xlsx, xlsm, .xlsb, .xltx, .xltm|Proveedor OLE DB de ACE 14|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro|Microsoft SQL Server 2008 y versiones posteriores de Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (solo se usa con libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se publican en granjas de servidores de SharePoint que tienen instalado [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] )|  
 |Cubo de Analysis Services|Microsoft SQL Server 2008 y versiones posteriores de Analysis Services|(no aplicable)|ASOLEDB 10|  
-|Fuentes de distribución de datos<br /><br /> (se usa para importar datos de informes de Reporting Services, documentos de servicio de Atom, Microsoft Azure Marketplace DataMarket y fuentes de distribución de datos únicas)|Formato Atom 1.0<br /><br /> Cualquier base de datos o documento que se exponen como servicio de datos de Windows Communication Foundation (WCF) (antes ADO.NET Data Services).|.atomsvc para un documento de servicio que define una o más fuentes<br /><br /> .atom para un documento de fuente web de Atom|Proveedor de fuentes de distribución de datos de Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Proveedor de datos de fuentes de distribución de datos de .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Fuentes de distribución de datos<br /><br /> (se usa para importar datos de informes de Reporting Services, documentos de servicio de Atom, Microsoft Azure Marketplace DataMarket y fuentes de distribución de datos únicas)|Formato Atom 1.0<br /><br /> Cualquier base de datos o documento que se exponen como servicio de datos de Windows Communication Foundation (WCF) (antes ADO.NET Data Services).|`.atomsvc`para un documento de servicio que define una o más fuentes<br /><br /> .atom para un documento de fuente web de Atom|Proveedor de fuentes de distribución de datos de Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Proveedor de datos de fuentes de distribución de datos de .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Archivos de Office Database Connection||.odc||  
   
   
@@ -69,11 +73,5 @@ La importación de varias tablas y la eliminación posterior de las que no neces
   
 Las columnas que contienen datos similares en orígenes de datos diferentes son la base de la creación de relaciones dentro del Diseñador de modelos. Cuando use orígenes de datos heterogéneos, elija tablas con columnas que se puedan asignar a tablas de otros orígenes de datos que contengan datos idénticos o similares.  
   
-En ocasiones, los proveedores OLE DB pueden proporcionar un rendimiento más rápido para datos de mayor escala. Cuando deba elegir entre diferentes proveedores para el mismo origen de datos, pruebe en primer lugar el proveedor OLE DB.  
-  
-## <a name="see-also"></a>Vea también  
- [Orígenes de datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Importar datos &#40;SSAS tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
-  
-  
+Proveedores OLE DB en ocasiones, pueden proporcionar un rendimiento más rápido para los datos a gran escala. Cuando deba elegir entre diferentes proveedores para el mismo origen de datos, pruebe en primer lugar el proveedor OLE DB.  
 

@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. Usar una cláusula FROM sencilla  
- En el ejemplo siguiente se recupera la `SalesTerritoryID` y `SalesTerritoryRegion` columnas de la `DimSalesTerritory` tabla.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. Usar la sintaxis INNER JOIN  
+### <a name="n-using-the-inner-join-syntax"></a>N. Usar la sintaxis INNER JOIN  
  El ejemplo siguiente devuelve el `SalesOrderNumber`, `ProductKey`, y `EnglishProductName` columnas de la `FactInternetSales` y `DimProduct` tablas donde la clave de combinación, `ProductKey`, coincide con en ambas tablas. El `SalesOrderNumber` y `EnglishProductName` columnas cada existen en una de las tablas, por lo que no es necesario especificar el alias de tabla con estas columnas, como se muestra; estos alias se incluyen para mejorar la legibilidad. La palabra **AS** antes de un alias de nombre no es necesario, pero se recomienda para mejorar la legibilidad y se ajusta al estándar ANSI.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. Mediante la sintaxis LEFT OUTER JOIN y RIGHT OUTER JOIN  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Mediante la sintaxis LEFT OUTER JOIN y RIGHT OUTER JOIN  
  El ejemplo siguiente se combina el `FactInternetSales` y `DimProduct` tablas en el `ProductKey` columnas. La sintaxis de combinación externa izquierda mantiene las filas no coincidentes de la izquierda (`FactInternetSales`) tabla. Puesto que la `FactInternetSales` tabla no contiene ninguno `ProductKey` valores que no coinciden con la `DimProduct` tabla, esta consulta devuelve las mismas filas que el primer ejemplo de combinación interna anterior.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. Mediante la sintaxis FULL OUTER JOIN  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. Mediante la sintaxis FULL OUTER JOIN  
  En el ejemplo siguiente se muestra una combinación externa completa, que devuelve todas las filas de ambas tablas combinadas, pero devuelve NULL para los valores que no coinciden de la otra tabla.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. Usar la sintaxis CROSS JOIN  
+### <a name="q-using-the-cross-join-syntax"></a>Q. Usar la sintaxis CROSS JOIN  
  El ejemplo siguiente devuelve el producto cruzado de la `FactInternetSales` y `DimSalesTerritory` tablas. Una lista de todas las combinaciones posibles de `SalesOrderNumber` y `SalesTerritoryKey` se devuelven. Tenga en cuenta la ausencia de la `ON` cláusula de la consulta de combinación cruzada.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. Usar una tabla derivada  
+### <a name="r-using-a-derived-table"></a>R. Usar una tabla derivada  
  En el ejemplo siguiente se usa una tabla derivada (un `SELECT` instrucción después de la `FROM` cláusula) para devolver el `CustomerKey` y `LastName` columnas de todos los clientes en la `DimCustomer` tabla con `BirthDate` valores a más tardar el 1 de enero, 1970 y el apellido "Smith".  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. REDUCIR el ejemplo de sugerencia de combinación  
+### <a name="s-reduce-join-hint-example"></a>S. REDUCIR el ejemplo de sugerencia de combinación  
  En el ejemplo siguiente se usa el `REDUCE` sugerencia de combinación para modificar el procesamiento de la tabla derivada en la consulta. Cuando se usa el `REDUCE` sugerencia de combinación en esta consulta, el `fis.ProductKey` se proyectan, replica y realizan distintas y se unen a `DimProduct` durante el orden aleatorio de `DimProduct` en `ProductKey`. La tabla derivada resultante se distribuye en `fis.ProductKey`.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. Ejemplo de sugerencia de combinación REPLICAR  
+### <a name="t-replicate-join-hint-example"></a>T. Ejemplo de sugerencia de combinación REPLICAR  
  En el ejemplo siguiente se muestra la misma consulta que el ejemplo anterior, salvo que un `REPLICATE` se utiliza la sugerencia de combinación en lugar de la `REDUCE` sugerencia de combinación. El uso de la `REPLICATE` sugerencia hace que los valores de la `ProductKey` columna (unión) de la `FactInternetSales` tabla para replicarse en todos los nodos. El `DimProduct` tabla se combina con la versión replicada de esos valores.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. Usar la sugerencia de redistribuir para garantizar un movimiento de forma aleatoria una combinación incompatible de distribución  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Usar la sugerencia de redistribuir para garantizar un movimiento de forma aleatoria una combinación incompatible de distribución  
  La siguiente consulta utiliza la sugerencia de consulta REDISTRIBUIRÁN en una combinación incompatible de distribución. Esto garantiza que el optimizador de consultas usará un movimiento de forma aleatoria en el plan de consulta. Esto también garantiza que el plan de consulta no utilizará un movimiento de difusión que se mueve una tabla distribuida en una tabla replicada.  
   
  En el ejemplo siguiente, la sugerencia de redistribuir fuerza un movimiento de orden aleatorio en la tabla FactInternetSales porque ProductKey es la columna de distribución de DimProduct y no es la columna de distribución de FactInternetSales.  

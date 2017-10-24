@@ -16,11 +16,12 @@ caps.latest.revision: 14
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e846395e6bbc5485eecacd70f78b27fc00b005e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6657a09ca9f3e1e700e078d707c92c495e444d42
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-external-data-source-transact-sql"></a>Coloque el origen de datos externo (Transact-SQL)
@@ -61,14 +62,6 @@ SELECT * FROM sys.external_data_sources;
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-basic-syntax"></a>A. Con la sintaxis básica  
-  
-```  
-DROP EXTERNAL DATA SOURCE mydatasource;  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="b-using-basic-syntax"></a>B. Con la sintaxis básica  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  

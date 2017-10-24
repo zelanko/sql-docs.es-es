@@ -18,11 +18,12 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f64ca747368ed22ea4d9f19027b446a98e19e87c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 287b45c3cf54cb043e111fd62e1d6fa286f9c9a0
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Lección 1-1-optimizar una carga de trabajo
@@ -44,7 +45,7 @@ En esta tarea se usa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../
   
 6.  Haga clic en la pestaña **Opciones de optimización** . En esta práctica, no configurará ninguna opción de optimización, pero tómese unos minutos para revisar las opciones predeterminadas. Presione F1 para ver la Ayuda para esta página con pestañas. Haga clic en **Opciones avanzadas** para ver opciones de optimización adicionales. Haga clic en **Ayuda** , en el cuadro de diálogo **Opciones avanzadas de optimización** , para obtener información sobre las opciones que aparecen. Haga clic en **Cancelar** para cerrar el cuadro de diálogo **Opciones avanzadas de optimización** , y deje seleccionadas las opciones predeterminadas.  
   
-7.  Haga clic en el botón **Iniciar análisis** de la barra de herramientas. Mientras el Asistente para la optimización de motor de base de datos analiza la carga de trabajo, puede supervisar el estado en la pestaña **Progreso** . Una vez se haya completado la optimización, aparecerá la pestaña **Recomendaciones** .  
+7.  Haga clic en el botón **Iniciar análisis** de la barra de herramientas. Mientras el Asistente para la optimización de motor de base de datos analiza la carga de trabajo, puede supervisar el estado en la pestaña **Progreso** . Una vez se haya completado la optimización, aparecerá la pestaña **Recomendaciones**.  
   
     Si recibe un error acerca de la fecha y la hora de detención de la optimización, compruebe el valor de **Detener el** en la pestaña principal de **Opciones de optimización** . Asegúrese de que la fecha y la hora de **Detener el** son posteriores a la fecha y la hora actuales, y cámbielas si resulta necesario.  
   

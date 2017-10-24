@@ -27,11 +27,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5179a5d031dbc654f1624f4d64c3e94bf28efe40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -128,14 +129,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username"></a>E. Usar USER_NAME  
- En el siguiente ejemplo se devuelve el nombre de usuario del Id. de usuario `13`.  
-  
-```  
-SELECT USER_NAME(13);  
-```  
-  
-### <a name="f-using-username-without-an-id"></a>F. Usar USER_NAME sin un identificador  
+### <a name="e-using-username-without-an-id"></a>E. Usar USER_NAME sin un identificador  
  En el siguiente ejemplo se busca el nombre del usuario actual sin especificar un identificador.  
   
 ```  
@@ -144,14 +138,12 @@ SELECT USER_NAME();
   
  Este es el conjunto de resultados para un usuario ha iniciado sesión actualmente.  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
 ```  
 ------------------------------   
 User7                              
 ```  
   
-### <a name="g-using-username-in-the-where-clause"></a>G. Usar USER_NAME en la cláusula WHERE  
+### <a name="f-using-username-in-the-where-clause"></a>F. Usar USER_NAME en la cláusula WHERE  
  En el siguiente ejemplo se busca la fila en `sysusers` en la que el nombre sea igual al resultado de aplicar la función del sistema `USER_NAME` al número de identificador de usuario `1`.  
   
 ```  

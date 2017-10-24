@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de archivo sin formato (SQL Server importar y exportar)
-Este tema muestra cómo conectarse a un **archivos planos** del origen de datos (archivo de texto) desde el **elegir un origen de datos** o **elegir un destino** página del SQL Server Import y Export Asistente. Para archivos sin formato, estas dos páginas del Asistente para presentan diferentes conjuntos de opciones, por lo que este tema describe el origen de archivo plano y el destino por separado.
+Este tema muestra cómo conectarse a un **archivos planos** del origen de datos (archivo de texto) desde el **elegir un origen de datos** o **elegir un destino** página del SQL Server Import y Export Asistente. Para archivos sin formato, estas dos páginas del Asistente para presentan diferentes conjuntos de opciones, por lo que este tema describe el origen de archivo sin formato y el destino de archivo sin formato por separado.
+
+## <a name="an-alternative-for-simple-text-import"></a>Una alternativa para la importación de texto simple
+Si tiene que importar un archivo de texto a SQL Server y no necesita todas las opciones de configuración disponibles en la importación y el Asistente para exportación, considere la posibilidad de usar el **Importar Asistente de archivo sin formato** en SQL Server Management Studio (SSMS). Para obtener más información, vea los artículos siguientes:
+- [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novedades en SQL Server Management Studio 17.3)
+- [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introducción al nuevo Asistente para importación de archivos planos en SSMS 17.3)
 
 ## <a name="connect-to-a-flat-file-source"></a>Conectarse a un origen de archivo sin formato
  
@@ -202,10 +207,10 @@ En la captura de pantalla, tenga en cuenta que la **identificador** columna, que
   
 |Propiedad|Description|  
 |--------------|-----------------|  
-|**Nombre**|Proporcione un nombre de columna descriptivo. Si no se escribe un nombre, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea uno automáticamente con el formato Columna 0, Columna 1, etc.|
+|**Nombre**|Proporcione un nombre de columna descriptivo. Si no especifica un nombre, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea automáticamente un nombre en el formato columna 0, columna 1 y así sucesivamente.|
 |**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**. Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**. Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**. Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}**. Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}**. Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**. Las columnas se delimitan mediante una barra vertical.|
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.|  
-|**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|
+|**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, este valor es un recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|
 |**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos.|
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales.|
 |**DataType**|Seleccione los tipos de datos disponibles en la lista.<br/>Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
@@ -229,7 +234,7 @@ En la captura de pantalla, tenga en cuenta que la **identificador** columna, que
  
 Haga clic en **Sugerir tipos** para mostrar el cuadro de diálogo **Sugerir tipos de columna**. 
 
-![Sugerencia de conexiones de archivos planos](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![Conexiones de archivos planos sugerir el cuadro de diálogo de tipos](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 Después de elegir las opciones en el **Sugerir tipos de columna** cuadro de diálogo y haga clic en **Aceptar**, el asistente puede cambiar los tipos de datos de algunas de las columnas.
 
@@ -293,7 +298,7 @@ Para un destino de archivo plano, hay sólo una sola página de opciones, como s
  Especifique el calificador de texto, si existe, se utiliza el archivo. Por ejemplo, puede indicar que los archivos de texto se delimitan con comillas. (Esta propiedad solo se aplica a archivos delimitados por). 
   
 > [!NOTE] 
-> Después de seleccionar un calificador de texto, no puede volver a seleccionar el **ninguno** opción. Escriba **Ninguno** para anular la selección del calificador de texto.  
+> Después de seleccionar un calificador de texto, no se vuelve a activar el **ninguno** opción. Escriba **Ninguno** para anular la selección del calificador de texto.  
 
 ## <a name="see-also"></a>Vea también
 [Elija un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (base de datos de SSISDB)
@@ -28,22 +28,22 @@ Establece la propiedad de un [!INCLUDE[ssISnoversion](../../includes/ssisnoversi
 
 ## <a name="syntax"></a>Sintaxis
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>Argumentos
-[ @WorkerAgentId =] *WorkerAgentId*  
-Id. de agente de trabajo del trabajador Out en escala. El *WorkerAgentId* es **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*  
+El agente de trabajo Id. de escala Out trabajo. El *WorkerAgentId* es **uniqueidentifier**.
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 El nombre de la propiedad. El *PropertyName* es **nvarchar (256)**.
 
-[ @PropertyValue =] *PropertyValue*  
-El valor de la propiedad. El *PropertyValue* es **nvarchar (max)**.
+[@PropertyValue =] *PropertyValue*  
+Valor de la propiedad. El *PropertyValue* es **nvarchar (max)**.
 
 ## <a name="remarks"></a>Comentarios
-Los nombres de propiedades válidos son **DisplayName**, **descripción**, **etiquetas**.
+Los nombres de propiedad válidos son **DisplayName**, **descripción**, **etiquetas**.
 
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -58,7 +58,7 @@ Los nombres de propiedades válidos son **DisplayName**, **descripción**, **eti
   
 -   La pertenencia a la **sysadmin** rol de servidor
 
-## <a name="erros-and-warnings"></a>Errores y advertencias
+## <a name="errors-and-warnings"></a>Errores y advertencias
   En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
   
 -   El usuario no tiene los permisos adecuados 
@@ -67,4 +67,4 @@ Los nombres de propiedades válidos son **DisplayName**, **descripción**, **eti
 
 -   El nombre de propiedad no es válido.
 
--   El valor de propiedad no es vilid.  
+-   El valor de propiedad no es válido.  

@@ -34,11 +34,12 @@ caps.latest.revision: 104
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee6b205e9e33a8aa5879eddf56ecc60104798a1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>EJECUTAR-Transact-SQL
@@ -526,7 +527,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>H. Usar EXECUTE WITH RECOMPILE  
- En el ejemplo siguiente se ejecuta el `Proc`_`Test` \_ `Defaults` procedimiento almacenado y se exige un nuevo plan de consulta que va a compilar, use y se descarte después de ejecutar el módulo.  
+ En el ejemplo siguiente se ejecuta el `Proc_Test_Defaults` procedimiento almacenado y se exige un nuevo plan de consulta que va a compilar, use y se descarte después de ejecutar el módulo.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  

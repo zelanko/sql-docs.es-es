@@ -26,11 +26,12 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7572e82178b211fba9967a88cb16c20d059c7b52
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c46fb930d1bba04b4a30725cc3c40e196b3f9a8b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
@@ -56,16 +57,6 @@ UPPER ( character_expression )
  **varchar** o **nvarchar**  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utilizan las funciones `UPPER` y `RTRIM` para devolver el apellido de las personas de la tabla `Person` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de manera que aparezca en mayúsculas, recortado y concatenado con el nombre.  
-  
-```  
-SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  
-FROM Person.Person  
-ORDER BY LastName;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se usa el `UPPER` y `RTRIM` funciones para devolver el apellido de las personas de la `dbo.DimEmployee` para que esté en mayúsculas, recortado y concatenado con el nombre de tabla.  
   
 ```  

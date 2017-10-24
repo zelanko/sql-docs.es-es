@@ -1,7 +1,7 @@
 ---
-title: Tipos de datos compatibles (SSAS Tabular) | Documentos de Microsoft
+title: Tipos de datos admitidos en los modelos tabulares de Analysis Services | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,25 +17,21 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a60cc3c2782abed53a8064f80bcdbe01921826cc
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="data-types-supported-ssas-tabular"></a>Tipos de datos compatibles (SSAS tabular)
+# <a name="data-types-supported-in-tabular-models"></a>Tipos de datos admitidos en los modelos tabulares
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   En este artículo se describen los tipos de datos que se pueden usar en los modelos tabulares, así como la conversión implícita de los tipos de datos cuando los datos se calculan o se usan en una fórmula DAX (Expresiones de análisis de datos).  
+
   
- Este artículo contiene las secciones siguientes:  
-  
--   [Tipos de datos usados en los modelos tabulares](#bkmk_data_types)  
-  
--   [Conversiones implícitas y explícitas de tipos de datos en fórmulas de DAX](#bkmk_implicit)  
-  
--   [Controlar valores en blanco, cadenas vacías y valores cero](#bkmk_hand_blanks)  
-  
-##  <a name="bkmk_data_types"></a> Tipos de datos usados en los modelos tabulares  
- Se admiten los tipos de datos siguientes. Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen de datos contiene un tipo de datos distinto, los datos se convierten a uno de los siguientes tipos de datos. Los datos que se producen como resultado de las fórmulas también usan estos tipos de datos.  
+##  <a name="bkmk_data_types"></a>Tipos de datos usados en los modelos tabulares  
+Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen de datos contiene un tipo de datos distinto, los datos se convierten a uno de los siguientes tipos de datos. Los datos que se producen como resultado de las fórmulas también usan estos tipos de datos.  
   
  En general, estos tipos de datos se implementan para permitir cálculos precisos en columnas calculadas y, para mantener la coherencia, se aplican las mismas restricciones al resto de los datos de los modelos.  
   
@@ -52,9 +48,9 @@ ms.lasthandoff: 09/01/2017
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
- \* Si intenta importar datos con valores numéricos muy elevados, es posible que la importación no se realice correctamente con el error siguiente:  
+ \*Si intenta importar datos con valores numéricos grandes, importación puede producir el error siguiente:  
   
- Error de base de datos en memoria: el '\<nombre de columna >' columna de la '\<nombre de tabla >' tabla contiene un valor, ' 1. 7976931348623157E + 308' que no es compatible. La operación se ha cancelado.  
+ Error de base de datos en memoria: el '\<nombre de columna >' columna de la '\<nombre de tabla >' tabla contiene un valor, ' 1. 7976931348623157E + 308' que no es compatible. Se ha cancelado la operación.  
   
  Este error se produce porque el diseñador de modelos utiliza ese valor para representar los valores NULL. Los valores de la siguiente lista son sinónimos del valor NULL mencionado anteriormente:  
   
@@ -66,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 |1.7976931348623158e+308|  
 |2.2250738585072014e-308|  
   
- Debería quitar de nuevo el valor de los datos e intentar volver a importarlo.  
+ Quitar el valor de los datos e inténtelo de nuevo la importación.  
   
 > [!NOTE]  
 >  No puede importar de una columna **varchar(max)** que contenga una longitud de cadena superior a 131 072 caracteres.  
@@ -74,27 +70,27 @@ ms.lasthandoff: 09/01/2017
 ### <a name="table-data-type"></a>Tipo de datos de tabla  
  Además, DAX usa un tipo de datos de *tabla* . DAX usa este tipo de datos en muchas funciones, como agregaciones y cálculos de inteligencia de tiempo. Algunas funciones requieren una referencia a una tabla y otras devuelven una tabla que se puede usar como entrada para otras funciones. En algunas funciones que requieren una tabla como entrada, puede especificar una expresión que se evalúa como una tabla; para otras funciones, se requiere una referencia a una tabla base. Para obtener información sobre los requisitos de funciones concretas, vea [Referencia de funciones DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
-##  <a name="bkmk_implicit"></a> Conversiones implícitas y explícitas de tipos de datos en fórmulas de DAX
+##  <a name="bkmk_implicit"></a>Conversión de tipos de datos implícitas y explícitas en las fórmulas de DAX
   
  Cada función DAX tiene requisitos concretos acerca de los tipos de datos que se usan como entradas y salidas. Por ejemplo, algunas funciones requieren enteros para algunos argumentos y fechas para otros; otras funciones requieren texto o tablas.  
   
- Si los datos de la columna que especifique como argumento son incompatibles con el tipo de datos requerido por la función, en muchos casos DAX devolverá un error. No obstante, siempre que sea posible DAX intentará convertir implícitamente los datos al tipo requerido. Por ejemplo:  
+ Si los datos de la columna especificada como un argumento no sean compatibles con el tipo de datos requerido por la función, en muchos casos DAX devolverá un error. No obstante, donde sea posible DAX intentará convertir implícitamente los datos en el tipo de datos necesarios. Por ejemplo:  
   
--   Puede escribir un número, por ejemplo, “123”, como una cadena. DAX analizará la cadena e intentará especificarla como tipo de datos numérico.  
+-   Puede escribir un número, por ejemplo, “123”, como una cadena. DAX se analiza la cadena y se intentará especificarla como tipo de datos numérico.  
   
 -   Se pueden sumar TRUE + 1 y obtener el resultado 2, ya que TRUE se convierte implícitamente al número 1 y se realiza la operación 1+1.  
   
 -   Si suma los valores de dos columnas y uno está representado como texto ("12") y el otro como número (12), DAX convierte implícitamente la cadena a un número y, a continuación, realiza la suma para obtener un resultado numérico. La expresión siguiente devuelve 44: = "22" + 22  
   
--   Si intenta concatenar dos números, el complemento de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] los presentará como cadenas y, después, los concatenará. La expresión siguiente devuelve  "1234": = 12 & 34  
+-   Si intenta concatenar dos números, se presentan como cadenas y, a continuación, concatenar. La expresión siguiente devuelve  "1234": = 12 & 34  
   
  En la tabla siguiente se resumen las conversiones implícitas de tipo de datos que se realizan en las fórmulas. En general, el diseñador de modelos semánticos se comporta como Microsoft Excel y, siempre que sea posible, realiza conversiones implícitas cuando lo requiere la operación especificada.  
   
-### <a name="table-of-implicit-data-conversions"></a>Tabla de conversiones de datos implícitas  
+### <a name="table-of-implicit-data-conversions"></a>Tabla de conversiones implícitas de datos  
  El tipo de conversión que se realiza está determinada por el operador, que convierte los valores que requiere antes de realizar la operación solicitada. En estas tablas se enumeran los operadores y se indica la conversión que se lleva a cabo en cada tipo de datos de la columna cuando se empareja con el tipo de datos de la fila de intersección.  
   
 > [!NOTE]  
->  Los tipos de datos de texto no se incluyen en estas tablas. Cuando un número se representa en formato de texto, en algunos casos, el diseñador de modelos intentará determinar el tipo de número y representarlo como un número.  
+>  Los tipos de datos de texto no se incluyen en estas tablas. Cuando un número se representa en formato de texto, en algunos casos, el Diseñador de modelos intenta determinar el tipo de número y representarlo como un número.  
   
 #### <a name="addition-"></a>Suma (+)  
   
@@ -109,7 +105,7 @@ ms.lasthandoff: 09/01/2017
  Por ejemplo, si se usa un número real en una operación de suma en combinación con datos de moneda, ambos valores se convierten en REAL y el resultado se devuelve como REAL.  
   
 #### <a name="subtraction--"></a>Resta (-)  
- En la siguiente tabla el encabezado de fila es el minuendo (el lado de la izquierda) y el encabezado de columna es el substraendo (el lado de la derecha).  
+ En la siguiente tabla, el encabezado de fila es el minuendo (izquierda) y el encabezado de columna es el substraendo (derecha):  
   
 ||||||  
 |-|-|-|-|-|  
@@ -151,8 +147,8 @@ ms.lasthandoff: 09/01/2017
 #### <a name="comparison-operators"></a>Operadores de comparación  
 Se admite solo un conjunto limitado de combinaciones de mixto de tipo de datos para las operaciones de comparación. Para más información, vea [Referencia de operadores de DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
   
-## <a name="bkmk_hand_blanks"></a> Controlar valores en blanco, cadenas vacías y valores cero  
- En la tabla siguiente se resumen las diferencias entre DAX y Microsoft Excel con respecto al modo en que se tratan los valores en blanco.  
+## <a name="bkmk_hand_blanks"></a>Control de espacios en blanco, cadenas vacías y valores cero  
+ En la tabla siguiente se resume las diferencias entre DAX y Microsoft Excel, en el tratamiento de los espacios en blanco:  
   
 ||||  
 |-|-|-|  
@@ -171,9 +167,4 @@ Se admite solo un conjunto limitado de combinaciones de mixto de tipo de datos p
 |BLANK AND BLANK|En blanco|Error|  
   
  Para obtener información detallada sobre cómo una determinada función u operador trata los valores en blanco, vea los temas de cada función DAX en la sección [Referencia de funciones DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
-  
-## <a name="see-also"></a>Vea también  
- [Orígenes de datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Importar datos &#40;SSAS tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
-  
   

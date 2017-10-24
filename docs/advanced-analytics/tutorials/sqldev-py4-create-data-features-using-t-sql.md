@@ -1,7 +1,7 @@
 ---
 title: "Paso 4: Crear características de datos mediante T-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Paso 4: Crear características de datos mediante T-SQL
 
 Después de la exploración de datos, ha recopilado la información de los datos y está listo para mover en *característica ingeniería*. Este proceso de creación de características de los datos sin formato puede ser un paso crítico en análisis avanzados de modelado.
+
+Este artículo forma parte de un tutorial, [análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 En este paso, aprenderá a crear características desde datos sin procesar mediante una función de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
@@ -121,14 +123,11 @@ En el paso siguiente, aprenderá cómo utilizar estas características de datos 
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Paso 5: Entrenar y guardar un modelo con T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Paso 5: Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Paso anterior
 
 [Paso 3: Explorar y visualizar los datos](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>Vea también
-
-[Los servicios con Python de aprendizaje automático](../python/sql-server-python-services.md)
 
 

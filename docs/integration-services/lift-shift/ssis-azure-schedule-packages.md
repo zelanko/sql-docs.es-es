@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
 ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Programar la ejecución de un paquete SSIS en Azure
@@ -47,7 +47,7 @@ Para programar un paquete con el Agente SQL Server de forma local, cree un traba
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
     @folder_name=N'folderName', @project_name=N'projectName', 
     @package_name=N'packageName', @use32bitruntime=0, 
-    @runincluster=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
+    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
  
     EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
 
@@ -91,7 +91,7 @@ EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob',
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runincluster=1, @useanyworker=1, 
+            @runinscaleout=1, @useanyworker=1, 
             @execution_id=@exe_id OUTPUT         
         EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
     @credential_name='YourDBScopedCredentials', 
@@ -104,10 +104,17 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a>Programar un paquete con la actividad de Azure datos generador SQL Server Stored Procedure
 
+> [!IMPORTANT]
+> Usar los scripts JSON en el ejemplo siguiente con la factoría de datos de Azure versión 1 actividad de procedimiento almacenado.
+
 Para programar un paquete con la actividad de Azure datos generador SQL Server Stored Procedure, haga lo siguiente:
+
 1.  Crear un generador de datos.
+
 2.  Crea un servicio vinculado de la base de datos de SQL que hospeda SSISDB.
+
 3.  Crear un conjunto de datos de salida que controla la programación.
+
 4.  Crear una canalización de factoría de datos que utiliza la actividad de procedimiento almacenado de SQL Server para ejecutar el paquete SSIS.
 
 Esta sección proporciona información general de estos pasos. Un tutorial completo de la factoría de datos queda fuera del ámbito de este artículo. Para obtener más información, consulte [la actividad de procedimiento almacenado de SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
@@ -122,7 +129,7 @@ El servicio vinculado permite factoría de datos conectarse a SSISDB.
         "description": "",
         "type": "AzureSqlDatabase",
         "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30 "
+            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
         }
     }
 }
@@ -178,16 +185,23 @@ La canalización usa la actividad de procedimiento almacenado de SQL Server para
 }
 ```
 
-No tienes que crear un nuevo procedimiento almacenado para encapsular los comandos de Transact-SQL necesarios para crear e iniciar la ejecución de paquetes SSIS. Puede proporcionar el script como el valor de la `stmt` parámetro en el anterior ejemplo JSON. Este es un script de ejemplo:
+No tienes que crear un nuevo procedimiento almacenado para encapsular los comandos de Transact-SQL necesarios para crear e iniciar la ejecución de paquetes SSIS. Puede proporcionar el script completo como el valor de la `stmt` parámetro en el anterior ejemplo JSON. Este es un script de ejemplo:
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
 DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
 
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runincluster=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-                                                         
+-- Create the exectuion
+EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
+
+-- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
+EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+-- Start the execution                                                         
 EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
--- To synchronize SSIS package execution, poll package execution status
+                                          
+-- Raise an error for unsuccessful package execution
+-- Execution status values include the following:
 -- created (1)
 -- running (2)
 -- canceled (3)
@@ -197,20 +211,11 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
 -- succeeded (7)
 -- stopping (8)
 -- completed (9) 
-                                          
-WHILE(SELECT [status]
-      FROM [SSISDB].[catalog].[executions]
-      WHERE execution_id=@exe_id) NOT IN(3,4,6,7,9)
-BEGIN
-    WAITFOR DELAY '00:00:01';
-END
-
--- Raise an error for unsuccessful package execution
 IF(SELECT [status]
    FROM [SSISDB].[catalog].[executions]
    WHERE execution_id=@exe_id)<>7
 BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: '+CAST(@exe_id AS NVARCHAR(20))
+    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
     RAISERROR(@err_msg,15,1)
 END
 GO

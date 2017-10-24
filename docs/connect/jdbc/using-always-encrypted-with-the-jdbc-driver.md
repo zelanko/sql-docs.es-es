@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usar Always Encrypted con el controlador JDBC
@@ -268,34 +268,12 @@ Todos estos proveedores de almacén de claves se describen con más detalle a co
 ### <a name="using-azure-key-vault-provider"></a>Usar el proveedor del Almacén de claves de Azure
 El Almacén de claves de Azure es una opción adecuada para almacenar y administrar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). El controlador JDBC de Microsoft para SQL Server incluye un proveedor integrado, SQLServerColumnEncryptionAzureKeyVaultProvider, para las aplicaciones que tienen claves almacenadas en el almacén de claves de Azure. El nombre de este proveedor es AZURE_KEY_VAULT. Para poder usar el proveedor de almacenamiento de almacén de claves de Azure, un desarrollador de aplicaciones debe crear el almacén y las claves de Azure y configurar la aplicación para tener acceso a las claves. Para obtener más información acerca de cómo configurar el almacén de claves y crear la clave maestra de columna hacen referencia a [almacén de claves de Azure: paso a paso para obtener más información sobre cómo configurar el almacén de claves](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) y [crear claves maestras de columna en el almacén de claves de Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Para usar el almacén de claves de Azure, las aplicaciones cliente se necesitan crear una instancia de la SQLServerColumnEncryptionAzureKeyVaultProvider y registrarlo con el controlador. La autenticación de los delegados de controladores JDBC a la aplicación a través de una interfaz denominada SQLServerKeyVaultAuthenticationCallback que tiene un método para recuperar un token de acceso desde el almacén de claves. Para crear una instancia del proveedor de almacenamiento de almacén de claves de Azure, debe proporcionar una implementación para el único método que llama el programador de aplicaciones **getAccessToken** que recupera el token de acceso de la clave almacenada en el almacén de claves de Azure.  
-  
-Este es un ejemplo de inicialización de SQLServerKeyVaultAuthenticationCallback y SQLServerColumnEncryptionAzureKeyVaultProvider:  
+Para usar el almacén de claves de Azure, las aplicaciones cliente se necesitan crear una instancia de la SQLServerColumnEncryptionAzureKeyVaultProvider y registrarlo con el controlador.
+
+Este es un ejemplo de inicialización de SQLServerColumnEncryptionAzureKeyVaultProvider:  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 Después de que la aplicación crea una instancia de SQLServerColumnEncryptionAzureKeyVaultProvider, la aplicación debe registrar la instancia en el controlador JDBC de Microsoft para SQL Server mediante el Método Sqlserverconnection.registercolumnencryptionkeystoreproviders (). Se recomienda encarecidamente, la instancia está registrada con el nombre de búsqueda predeterminado, AZURE_KEY_VAULT, que se puede obtener mediante una llamada a la API SQLServerColumnEncryptionAzureKeyVaultProvider.getName(). El nombre predeterminado, le permitirá usar herramientas como SQL Server Management Studio o PowerShell, para aprovisionar y administrar claves de Always Encrypted (las herramientas usan el nombre predeterminado para generar el objeto de metadatos para la clave maestra de columna). El ejemplo siguiente se muestra el registro del proveedor de almacén de claves de Azure. Para obtener más detalles sobre el método Sqlserverconnection.registercolumnencryptionkeystoreproviders (), consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -653,3 +631,4 @@ Nota: Tenga cuidado al especificar AllowEncryptedValueModifications ya que puede
  [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

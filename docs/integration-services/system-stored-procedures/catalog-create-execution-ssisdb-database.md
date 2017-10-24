@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (base de datos de SSISDB)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Sintaxis  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nombreDeCarpeta*  
+ [@folder_name =] *nombreDeCarpeta*  
  El nombre de la carpeta que contiene el paquete que se va a ejecutar. El *nombre_de_carpeta* es **nvarchar (128)**.  
   
- [ @project_name =] *Nombre_proyecto*  
+ [@project_name =] *Nombre_proyecto*  
  El nombre del proyecto que contiene el paquete que se va a ejecutar. El *Nombre_proyecto* es **nvarchar (128)**.  
   
- [ @package_name =] *nombreDePaquete*  
+ [@package_name =] *nombreDePaquete*  
  El nombre del paquete que se va a ejecutar. El *nombreDePaquete* es **nvarchar (260)**.  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  Un identificador único para una referencia de entorno. Este parámetro es opcional. El *reference_id* es **bigint**.  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Indica si el motor en tiempo de ejecución de 32 bits se debe usar para ejecutar el paquete en un sistema operativo de 64 bits. Utilice el valor de 1 para ejecutar el paquete con el tiempo de ejecución de 32 bits cuando se ejecute en un sistema operativo de 64 bits. Use el valor 0 para ejecutar el paquete con el motor de tiempo de ejecución de 64 bits cuando se ejecute en un sistema operativo de 64 bits. Este parámetro es opcional. El *Use32bitruntime* es **bits**.  
  
- [ @runinscaleout =] *runinscaleout*  
- Indicar si la ejecución es en horizontalmente. Utilice el valor de 1 para ejecutar el paquete en horizontalmente. Utilice el valor de 0 para ejecutar el paquete sin horizontalmente. Este parámetro es opcional. Se establece en DEFAULT_EXECUTION_MODE en [SSISDB]. [catalog]. [catalog_properties], si no se especifica. El *runinscaleout* es **bits**. 
+ [@runinscaleout =] *runinscaleout*  
+ Indicar si la ejecución es en horizontalmente. Utilice el valor de 1 para ejecutar el paquete en horizontalmente. Utilice el valor de 0 para ejecutar el paquete sin horizontalmente. Este parámetro es opcional. Si no se especifica, su valor se establece en DEFAULT_EXECUTION_MODE en [SSISDB]. [catalog]. [catalog_properties]. El *runinscaleout* es **bits**. 
  
- [ @useanyworker =] *useanyworker*  
-  Indique si se permite cualquier escala Out trabajo para realizar la ejecución. Utilice el valor de 1 para ejecutar el paquete con cualquier trabajo de fuera de escala. Use el valor de 0 para indicar que no todos los trabajadores que espera escala tendrán permiso para ejecutar el paquete. Este parámetro es opcional. Se establece en 1, si no especificado. El *useanyworker* es **bits**. 
+ [@useanyworker =] *useanyworker*  
+  Indique si se permite cualquier escala Out trabajo para realizar la ejecución. Utilice el valor de 1 para ejecutar el paquete con cualquier trabajo de fuera de escala. Use el valor de 0 para indicar que no todos los trabajadores que espera escala tendrán permiso para ejecutar el paquete. Este parámetro es opcional. Si no se especifica, su valor se establece en 1. El *useanyworker* es **bits**. 
   
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  Devuelve el identificador único de una instancia de ejecución. El *execution_id* es **bigint**.  
 
   
@@ -77,7 +77,7 @@ create_execution [ @folder_name = folder_name
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama a catalog.create_execution para crear una instancia de ejecución para el paquete Child1.dtsx, que no está en horizontalmente. Project1 de Integration Services contiene el paquete. En el ejemplo se llama a catalog.set_execution_parameter_value para establecer valores para los parámetros Parameter1, Parameter2 y LOGGING_LEVEL. En el ejemplo se llama a catalog.start_execution para iniciar una instancia de ejecución.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,14 +89,13 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  

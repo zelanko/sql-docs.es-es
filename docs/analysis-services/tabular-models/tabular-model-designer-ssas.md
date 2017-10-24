@@ -1,6 +1,6 @@
 ---
-title: "Diseñador de modelos tabulares (SSAS) | Documentos de Microsoft"
-ms.date: 03/14/2017
+title: "Diseñador de modelos tabulares | Documentos de Microsoft"
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Diseñador de modelos tabulares (SSAS)
@@ -32,13 +32,11 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
   
  Además de las nuevas plantillas y herramientas para crear soluciones de modelos tabulares y multidimensionales profesionales, el entorno de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proporciona funciones para la depuración y el ciclo de vida de los proyectos que le permiten asegurarse de que crea las soluciones BI más eficaces para su organización. Para obtener más información sobre [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea [Introducción a Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Plantillas de proyectos  
+##  <a name="bkmk_proj_temp"></a>Plantillas de proyecto  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se agregan las siguientes plantillas de proyectos de modelos tabulares a los tipos de proyecto de Business Intelligence:  
   
  **Proyecto tabular de Analysis Services**  
- Esta plantilla se puede usar para crear un proyecto de modelo tabular en blanco. Los niveles de compatibilidad se especifican al crear el proyecto. Elija el valor predeterminado, **SQL Server 2016 RTM (1200)**, para usar todas las características integradas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ Esta plantilla se puede usar para crear un proyecto de modelo tabular en blanco. Los niveles de compatibilidad se especifican al crear el proyecto.
   
  **Importar del servidor (tabular)**  
  Esta plantilla se puede usar para crear un proyecto de modelo tabular extrayendo los metadatos de uno ya existente en Analysis Services.  
@@ -62,7 +60,7 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
   
  La mayoría de las tareas de creación de modelos se pueden realizar en cualquiera de las dos vistas.  
   
-### <a name="view-code-window"></a>Ventana de vista de código  
+### <a name="view-code-window"></a>Ver la ventana de código  
  Puede ver el código subyacente de un archivo Model.bim si hace clic con el botón derecho y selecciona **Ver código** en el archivo en el Explorador de soluciones. Para los modelos tabulares en el nivel de compatibilidad 1200 y versiones posterior, la definición del modelo se expresa en JSON.  
   
  Tenga en cuenta que necesitará una versión completa de Visual Studio que proporcione el editor de JSON. Puede descargar e instalar la [edición gratuita de Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) si no necesita las características adicionales de las ediciones comerciales.  
@@ -120,7 +118,7 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
 ### <a name="output"></a>Salida  
  En la ventana de **Salida** se muestra información sobre la generación e implementación (además del diálogo de progreso modal). Para ver la ventana **Salida** , haga clic en el menú **Ver** y, a continuación, haga clic en Salida.  
   
-### <a name="menu-items"></a>Elementos del menú  
+### <a name="menu-items"></a>Elementos de menú  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se agregan a la barra de menús de Visual Studio elementos de menú adicionales específicos para la creación de modelos tabulares. El menú **Modelo** se puede utilizar para iniciar el Asistente para la importación de datos, ver las conexiones existentes, procesar los datos del área de trabajo y examinar el área de trabajo del modelo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. El menú **Tabla** se utiliza para crear y administrar las relaciones entre las tablas, crear y administrar medidas, especificar valores de tablas de datos, así como para especificar opciones de cálculo y otras propiedades de las tablas. En el menú **Columna** , puede agregar y eliminar columnas de una tabla, ocultar y mostrar columnas, y especificar otras propiedades de las columnas, como tipos de datos y filtros. En el menú **Compilar** , puede compilar e implementar soluciones de modelos tabulares. Las funciones de copiar y pegar se incluyen en el menú **Edición** .  
   
  Además de estos elementos de menú, se han agregado valores adicionales a las opciones de Analysis Services en los elementos del menú Herramientas.  
@@ -128,7 +126,7 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
 ### <a name="toolbar"></a>Barra de herramientas  
  La barra de herramientas de Analysis Services proporciona un acceso rápido y fácil a los comandos de creación de modelos usados con más frecuencia.  
   
-##  <a name="bkmk_vsint"></a> Integración de Visual Studio  
+##  <a name="bkmk_vsint"></a>Integración de Visual Studio  
  **Control de código fuente**  
  Los proyectos de Analysis Services se integran con el complemento de control de código fuente seleccionado. Si ha configurado Visual Studio para usar el control de código fuente, puede usar las funciones de protección/desprotección desde el Explorador de soluciones. Para configurar el uso de Team Foundation Server, vea [Configurar Visual Studio con el control de versiones de Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). También se admiten muchos complementos de control de código fuente de terceros.  
   
@@ -143,3 +141,4 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
  [Propiedades &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

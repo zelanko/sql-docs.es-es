@@ -71,6 +71,8 @@
 
 
 # Desarrollador
+## [API de REST](developer/rest-api.md)
+## [Ejemplos de API de REST](https://github.com/Microsoft/Reporting-Services)
 ## [Integración de aplicaciones](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [Servicio web del servidor de informes](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensiones](../reporting-services/extensions/reporting-services-extension-library.md)
@@ -85,7 +87,7 @@
 ### [Configuración de la información del dispositivo CSV](csv-device-information-settings.md)  
 ### [Configuración de la información del dispositivo Excel](excel-device-information-settings.md)  
 ### [Configuración de la información del dispositivo HTML](html-device-information-settings.md)  
-### [Configuración de la información de dispositivo de imagen](image-device-information-settings.md) ### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
+### [Configuración de la información de dispositivo de imagen](image-device-information-settings.md)  ### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
 ### [Configuración de la información del dispositivo PDF](pdf-device-information-settings.md)  
 ### [Configuración de la información del dispositivo PPTX](pptx-device-information-settings.md)  
 ### [Configuración de la información del dispositivo XML](xml-device-information-settings.md)  

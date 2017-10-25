@@ -43,9 +43,9 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  **ACTUALIZACIÓN** *nombre de la tabla*  
   
- **ESTABLECER** *identificador de la columna* ** = ** {*expresión* &#124; **NULL**}  
+ **ESTABLECER** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}  
   
- [**,** *identificador de la columna* ** = ** {*expresión* &#124; **NULL**}]...  
+ [**,** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nombre del cursor*  
   

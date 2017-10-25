@@ -68,7 +68,7 @@ SQLRETURN SQLDrivers(
  [Entrada] Longitud de la **DriverDescription* búfer en caracteres.  
   
  *DescriptionLengthPtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *DriverDescription*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength1*, la descripción del controlador en \* *DriverDescription* se trunca a * BufferLength1* menos la longitud de un carácter de terminación null.  
+ [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *DriverDescription*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength1*, la descripción del controlador en \* *DriverDescription* se trunca a  *BufferLength1* menos la longitud de un carácter de terminación null.  
   
  *DriverAttributes*  
  [Salida] Puntero a un búfer en el que se va a devolver la lista de pares de valor de atributo de controlador (vea "Comentarios").  
@@ -76,10 +76,10 @@ SQLRETURN SQLDrivers(
  Si *DriverAttributes* es NULL, *AttributesLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer que señala *DriverAttributes*.  
   
  *BufferLength2*  
- [Entrada] Longitud de la \* *DriverAttributes* búfer en caracteres. Si el * \*DriverDescription* valor es una cadena Unicode (cuando se llama a **SQLDriversW**), el *BufferLength* el argumento debe ser un número par.  
+ [Entrada] Longitud de la \* *DriverAttributes* búfer en caracteres. Si el  *\*DriverDescription* valor es una cadena Unicode (cuando se llama a **SQLDriversW**), el *BufferLength* el argumento debe ser un número par.  
   
  *AttributesLengthPtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número total de bytes (excepto el byte de finalización en null) disponible para devolver en \* *DriverAttributes*. Si el número de bytes disponible para devolver es mayor o igual que *BufferLength2*, la lista de pares de valor de atributo de \* *DriverAttributes* se trunca a * BufferLength2* menos la longitud del carácter de terminación null.  
+ [Salida] Puntero a un búfer en el que se va a devolver el número total de bytes (excepto el byte de finalización en null) disponible para devolver en \* *DriverAttributes*. Si el número de bytes disponible para devolver es mayor o igual que *BufferLength2*, la lista de pares de valor de atributo de \* *DriverAttributes* se trunca a  *BufferLength2* menos la longitud del carácter de terminación null.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|(DM) mensaje informativo del Administrador de controladores específicos. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, delimitado truncados|(DM) el búfer \* *DriverDescription* no era lo suficientemente grande como para devolver la descripción completa del controlador. Por lo tanto, la descripción se ha truncado. Se devuelve la longitud de la descripción completa de controlador en \* *DescriptionLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) el búfer \* *DriverAttributes* no era lo suficientemente grande como para devolver una lista completa de pares de valor de atributo. Por lo tanto, la lista se trunca. Se devuelve la longitud de la lista de pares de valor de atributo untruncated en **AttributesLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El Administrador de controladores (DM) no pudo asignar memoria que es necesario para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llamó para el *StatementHandle* devolvió SQL_PARAM_DATA_ ESTÁ DISPONIBLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  

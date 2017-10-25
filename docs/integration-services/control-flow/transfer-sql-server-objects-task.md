@@ -148,13 +148,13 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Opciones estáticas  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
   
  **SourceDatabase**  
  Seleccione una base de datos en el servidor de origen desde donde se copiarán los objetos.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
   
  **DestinationDatabase**  
  Seleccione una base de datos en el servidor de destino al que se copiarán los objetos.  
@@ -330,7 +330,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor de la tarea de objetos de transferencia SQL Server & #40; Página general & #41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Editor de la tarea de objetos de transferencia SQL Server &#40; Página general &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [Página expresiones](../../integration-services/expressions/expressions-page.md)   
  [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

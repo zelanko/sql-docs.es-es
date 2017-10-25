@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40253151a07fe393046c7a1b0e20d4e5e7ce1212
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 9160058a5e38ccc9e8e21e56c764b01eac610d2f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
@@ -84,9 +84,6 @@ ms.lasthandoff: 08/02/2017
   
  base de datos reflejada  
  Copia de la base de datos que normalmente se sincroniza de forma completa con la base de datos principal.  
-  
- servidor reflejado  
- En una configuración de creación de reflejo de la base de datos, instancia del servidor donde reside la base de datos reflejada.  
   
  servidor reflejado  
  En una configuración de creación de reflejo de la base de datos, instancia del servidor donde reside la base de datos reflejada.  

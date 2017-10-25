@@ -73,7 +73,7 @@ Usar SQL Server Management Studio para establecer una conexión con el catálogo
   
 5.  Una vez completado, el proceso de implementación del **resultados** se abre la página. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si se produjo un error, haga clic en **error** en el **resultado** columna para que aparezca una explicación del error.
-    -   Si lo desea, haga clic en **Guardar informe... ** para guardar los resultados en un archivo XML.
+    -   Si lo desea, haga clic en **Guardar informe...**  para guardar los resultados en un archivo XML.
     -   Haga clic en **cerrar** para salir del asistente.
 
 ## <a name="next-steps"></a>Pasos siguientes

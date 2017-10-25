@@ -93,7 +93,7 @@ ms.lasthandoff: 09/26/2017
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelFile** variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelFile** variable.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 09/26/2017
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelFileExists** variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelFileExists** variable.  
   
 4.  Haga clic en **editar Script** para abrir el editor de secuencia de comandos.  
   
@@ -163,7 +163,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelTable** y **ExcelFile** variables.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelTable** y **ExcelFile** variables.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
@@ -171,7 +171,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelTableExists** variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la **ExcelTableExists** variable.  
   
 4.  Haga clic en **editar Script** para abrir el editor de secuencia de comandos.  
   
@@ -270,7 +270,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la variable ExcelFolder.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la variable ExcelFolder.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
@@ -278,7 +278,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la variable ExcelFiles.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la variable ExcelFiles.  
   
 4.  Haga clic en **editar Script** para abrir el editor de secuencia de comandos.  
   
@@ -345,7 +345,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la variable ExcelFile.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la variable ExcelFile.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
@@ -353,7 +353,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la ExcelTablesvariable.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione la ExcelTablesvariable.  
   
 4.  Haga clic en **editar Script** para abrir el editor de secuencia de comandos.  
   
@@ -458,7 +458,7 @@ public class ScriptMain
   
          -O bien-  
   
-    -   Haga clic en el botón de puntos suspensivos (**... **) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione las variables.  
+    -   Haga clic en el botón de puntos suspensivos (**...** ) aparece al lado del campo de propiedad y, en la **seleccionar variables** cuadro de diálogo, seleccione las variables.  
   
 5.  Haga clic en **editar Script** para abrir el editor de secuencia de comandos.  
   

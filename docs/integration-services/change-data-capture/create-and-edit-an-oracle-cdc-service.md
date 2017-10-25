@@ -60,7 +60,7 @@ ms.lasthandoff: 09/26/2017
   
      Puede emplear una cuenta de Windows local o de dominio para la cuenta de servicio. En este caso, debe especificar la **Contraseña** para dicha cuenta. Esta cuenta puede ser para el host local o para una cuenta de dominio. Asegúrese de actualizar la contraseña cuando se cambie mediante Servicios locales en el Panel de control de Windows.  
   
- **Nombre del servidor**: seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia para conectarse a (por ejemplo, ** \\ \\< nombre_equipo >\\< nombre_instancia >**). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
+ **Nombre del servidor**: seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia para conectarse a (por ejemplo,  **\\ \\< nombre_equipo >\\< nombre_instancia >**). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
  Seleccione una de las opciones siguientes:  

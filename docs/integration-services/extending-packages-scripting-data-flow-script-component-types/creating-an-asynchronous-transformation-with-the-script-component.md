@@ -74,9 +74,9 @@ ms.lasthandoff: 09/26/2017
  Para obtener más información sobre la **entradas y salidas** página de la **Editor de transformación Script**, consulte [Editor de transformación Script &#40; entradas y salidas de página &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Agregar variables  
- Si hay cualquier variables existentes cuyos valores desea utilizar en la secuencia de comandos, puede agregarlos en los campos de propiedades ReadOnlyVariables y ReadWriteVariables en el **Script** página de la **Editor de transformación de secuencia de comandos **.  
+ Si hay cualquier variables existentes cuyos valores desea utilizar en la secuencia de comandos, puede agregarlos en los campos de propiedades ReadOnlyVariables y ReadWriteVariables en el **Script** página de la **Editor de transformación de secuencia de comandos** .  
   
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos (**... **) situado junto a la **ReadOnlyVariables** y **ReadWriteVariables** campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos (**...** ) situado junto a la **ReadOnlyVariables** y **ReadWriteVariables** campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
   
  Para obtener información general acerca de cómo usar variables con el componente de Script, consulte [usar Variables en el componente de Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 09/26/2017
  En este ejemplo se muestra el código personalizado que se requiere en la clase ScriptMain para crear un componente de transformación asincrónica.  
   
 > [!NOTE]  
->  Estos ejemplos utilizan la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo y pasar sus columnas primeros y cuarto, la **intAddressID** y ** nvarchar (30) Ciudad** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  Estos ejemplos utilizan la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo y pasar sus columnas primeros y cuarto, la **intAddressID** y  **nvarchar (30) Ciudad** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
  En este ejemplo se muestra un componente de transformación asincrónica con dos salidas. Esta transformación pasa a través de la **AddressID** y **City** columnas a una salida, mientras que cuenta el número de direcciones situadas en una ciudad concreta (Redmond, Washington, Estados Unidos) y, a continuación, las salidas del valor resultante en una segunda salida.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación.  
   
-2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador. Esta salida debe proporcionar datos de la **Person.Address** tabla de la **AdventureWorks** base de datos de ejemplo que contiene al menos el **AddressID** y ** Ciudad** columnas.  
+2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador. Esta salida debe proporcionar datos de la **Person.Address** tabla de la **AdventureWorks** base de datos de ejemplo que contiene al menos el **AddressID** y  **Ciudad** columnas.  
   
 3.  Abra la **Editor de transformación Script**. En el **columnas de entrada** página, seleccione la **AddressID** y **City** columnas.  
   

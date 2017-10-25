@@ -39,11 +39,11 @@ En este tema se proporcionan los pasos para agregar un nuevo destino mediante el
   
 3.  Seleccione el tipo de destino en la lista **Tipos** .  
   
-4.  Seleccione un administrador de conexiones existente en el **administradores de conexión** lista o seleccione ** \<nuevo >** para crear una nueva conexión de administrador.  
+4.  Seleccione un administrador de conexiones existente en el **administradores de conexión** lista o seleccione  **\<nuevo >** para crear una nueva conexión de administrador.  
   
 5.  Si selecciona un administrador de conexiones existente, haga clic **Aceptar** para cerrar el cuadro de diálogo **Agregar nuevo destino** . Debería ver el destino y los administradores de conexiones agregados al flujo de datos.  
   
-6.  Si hace clic en ** \<nuevo >** para crear una nueva conexión de administrador, debería ver un **Connection Manager** cuadro de diálogo que le permite especificar parámetros para la conexión. Después de que finalice la creación del nuevo administrador de conexiones, verá el destino y el administrador de conexiones en el Diseñador SSIS. 
+6.  Si hace clic en  **\<nuevo >** para crear una nueva conexión de administrador, debería ver un **Connection Manager** cuadro de diálogo que le permite especificar parámetros para la conexión. Después de que finalice la creación del nuevo administrador de conexiones, verá el destino y el administrador de conexiones en el Diseñador SSIS. 
   
 ## <a name="add-new-destination-dialog-box"></a>Agregar cuadro de diálogo nuevo destino
 En la tabla siguiente se enumera las opciones disponibles en la **Agregar nuevo destino** cuadro de diálogo.  
@@ -51,7 +51,7 @@ En la tabla siguiente se enumera las opciones disponibles en la **Agregar nuevo 
 |Opción|Description|  
 |------------|-----------------|  
 |Tipos|Seleccione el tipo de destino al que desea conectarse.|  
-|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en ** \<nuevo >** para crear una nueva conexión de administrador.|  
+|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en  **\<nuevo >** para crear una nueva conexión de administrador.|  
 |Mostrar solo elementos instalados|Especifique si desea ver solo los destinos instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.|  
 

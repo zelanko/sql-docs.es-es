@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   El **con OdbcCommand** espera parámetros posicionales. Los signos de interrogación (?) en el texto del comando indican las posiciones de los parámetros. (En cambio, un **SqlCommand** espera parámetros con nombre.)  
   
- Este ejemplo se utiliza la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo. En el ejemplo se pasa la primera y cuarta columna, la * *int*AddressID*** y **nvarchar (30) Ciudad** columnas de esta tabla a través del flujo de datos. Estos mismos datos se utilizan en el origen, transformación y ejemplos de destino en el tema [desarrollar específico Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Este ejemplo se utiliza la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo. En el ejemplo se pasa la primera y cuarta columna, la  **int*AddressID*** y **nvarchar (30) Ciudad** columnas de esta tabla a través del flujo de datos. Estos mismos datos se utilizan en el origen, transformación y ejemplos de destino en el tema [desarrollar específico Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   

@@ -26,8 +26,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> ¿Cómo asigna el asistente tipos de datos entre el origen y el destino?
 El asistente usa archivos de asignación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala para asignar tipos de datos de un sistema o versión de base de datos a otro. Por ejemplo, puede asignar de tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipos de datos de Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en las siguientes carpetas.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (para 64 bits)
--   **C:\Program archivos (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (para 32 bits).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (para 64 bits)
+-   **C:\Program archivos (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (para 32 bits).  
   
  Si modifica un archivo de asignación existente o agrega un nuevo archivo de asignación a la carpeta, debe cerrar y volver a abrir el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para cargar el archivo de asignación nuevo o modificado.  
  

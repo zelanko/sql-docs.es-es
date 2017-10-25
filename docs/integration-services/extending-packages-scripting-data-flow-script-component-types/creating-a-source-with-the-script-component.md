@@ -77,7 +77,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Agregar variables  
  Si hay cualquier variables existentes cuyos valores desea utilizar en la secuencia de comandos, puede agregarlos en el **ReadOnlyVariables** y **ReadWriteVariables** campos de propiedades el **Script** página de la **Editor de transformación Script**.  
   
- Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. También puede especificar varias variables haciendo clic en los puntos suspensivos (**... **) situado junto a la **ReadOnlyVariables** y **ReadWriteVariables** campos de propiedades y seleccione las variables de la **seleccionar variables** cuadro de diálogo .  
+ Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. También puede especificar varias variables haciendo clic en los puntos suspensivos (**...** ) situado junto a la **ReadOnlyVariables** y **ReadWriteVariables** campos de propiedades y seleccione las variables de la **seleccionar variables** cuadro de diálogo .  
   
  Para obtener información general acerca de cómo usar variables con el componente de Script, consulte [usar Variables en el componente de Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
  Los ejemplos siguientes muestran el código personalizado que se requiere en el **ScriptMain** clase para crear un componente de origen.  
   
 > [!NOTE]  
->  Estos ejemplos utilizan la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo y pasar sus columnas primeros y cuarto, la **intAddressID** y ** nvarchar (30) Ciudad** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  Estos ejemplos utilizan la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo y pasar sus columnas primeros y cuarto, la **intAddressID** y  **nvarchar (30) Ciudad** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
 ### <a name="adonet-source-example"></a>Ejemplo de origen de ADO.NET  
  En este ejemplo se muestra un componente de origen que utiliza un archivo [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Administrador de conexiones para cargar datos desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla en el flujo de datos.  
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  En el **Script** página, haga clic en **editar Script** y escriba el script siguiente. A continuación, cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
-6.  Crear y configurar un componente de destino, como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino o el componente de destino de ejemplo que muestra en [crear un destino con el componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera la ** AddressID** y **City** columnas. A continuación, conecte el componente de origen al destino. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Puede crear una tabla de destino ejecutando el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] comando en el **AdventureWorks** base de datos:  
+6.  Crear y configurar un componente de destino, como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino o el componente de destino de ejemplo que muestra en [crear un destino con el componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera la  **AddressID** y **City** columnas. A continuación, conecte el componente de origen al destino. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Puede crear una tabla de destino ejecutando el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] comando en el **AdventureWorks** base de datos:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

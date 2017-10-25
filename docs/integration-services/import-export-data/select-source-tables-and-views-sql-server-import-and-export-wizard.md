@@ -30,7 +30,7 @@ ms.lasthandoff: 09/26/2017
 > Si tiene que copiar más de una base de datos de SQL Server u objetos de base de datos de SQL Server que no sean tablas y vistas, use el Asistente para la base de datos de copia en lugar de la importación y el Asistente para exportación. Para más información, vea [Usar el Asistente para copiar bases de datos](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>Captura de pantalla: si va a copiar tablas  
- La captura de pantalla siguiente muestra un ejemplo de la **seleccionar tablas de origen y vistas** página del asistente si seleccionó previamente la **copiar los datos de una o más tablas o vistas** opción el ** Especificar copia de tabla o consulta** página. En la lista, se ven todas las tablas y vistas disponibles del origen de datos.
+ La captura de pantalla siguiente muestra un ejemplo de la **seleccionar tablas de origen y vistas** página del asistente si seleccionó previamente la **copiar los datos de una o más tablas o vistas** opción el  **Especificar copia de tabla o consulta** página. En la lista, se ven todas las tablas y vistas disponibles del origen de datos.
  
 En este ejemplo, el **origen** lista contiene todas las tablas de la base de datos de ejemplo AdventureWorks. La fila seleccionada se muestra que el usuario desea copiar el **Sales.Customer** tabla desde el origen a la nueva **Sales.CustomerNew** tabla en el destino. 
    

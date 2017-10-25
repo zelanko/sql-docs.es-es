@@ -56,9 +56,9 @@ Haga clic en **Editar SQL** para abrir el cuadro de diálogo **Instrucción Crea
 ### <a name="sometimes-these-options-are-disabled"></a>A veces, estas opciones están deshabilitadas
 El **crear tabla de destino** opción y la **Editar SQL** botón se habilita automáticamente o deshabilita automáticamente.
 
--   **Habilitado.** Si ha especificado un **nueva** tabla de destino en la **seleccionar tablas de origen y vistas** página, el **crear tabla de destino** opción se selecciona automáticamente y la ** Editar SQL** botón está habilitado.
+-   **Habilitado.** Si ha especificado un **nueva** tabla de destino en la **seleccionar tablas de origen y vistas** página, el **crear tabla de destino** opción se selecciona automáticamente y la  **Editar SQL** botón está habilitado.
 
--   **Deshabilitado.** Si ha seleccionado un **existente** tabla de destino en la **seleccionar tablas de origen y vistas** página, el **crear tabla de destino** opción y la **Editar SQL ** botón se deshabilita. Si desea crear una nueva tabla de destino, vuelva a la **seleccionar tablas de origen y vistas** página y escriba el nombre de un **nueva** tabla el **destino** columna.  
+-   **Deshabilitado.** Si ha seleccionado un **existente** tabla de destino en la **seleccionar tablas de origen y vistas** página, el **crear tabla de destino** opción y la **Editar SQL**  botón se deshabilita. Si desea crear una nueva tabla de destino, vuelva a la **seleccionar tablas de origen y vistas** página y escriba el nombre de un **nueva** tabla el **destino** columna.  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>¿Qué ocurre con los datos existentes en el destino?
 ![Página de asignaciones de columna, sección de opciones](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)

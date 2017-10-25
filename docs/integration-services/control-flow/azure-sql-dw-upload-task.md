@@ -48,7 +48,7 @@ RetainFiles|Especifica si se deben conservar los archivos cargados en Azure Stor
 CompressionType|Especifica el formato de compresión que se usará al cargar archivos en Azure Storage. El origen local no se verá afectado.
 CompressionLevel|Especifica el nivel de compresión que se usará para el formato de compresión.
 AzureDwConnection|Especifica un administrador de conexión de ADO.NET para Azure SQL DW.
-TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree uno nuevo eligiendo ** \<nueva tabla... >**.
+TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree uno nuevo eligiendo  **\<nueva tabla... >**.
 TableDistribution|Especifica el método de distribución para la tabla nueva. Se aplica si se especifica un nuevo nombre de tabla para **TableName**.
 HashColumnName|Especifica la columna usada para la distribución de la tabla hash. Se aplica si **HASH** se ha especificado para **TableDistribution**.
 

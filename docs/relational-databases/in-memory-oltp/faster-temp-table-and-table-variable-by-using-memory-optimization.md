@@ -1,7 +1,7 @@
 ---
 title: "Tabla temporal y variable de tabla más rápidas con optimización para memoria | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,18 +14,19 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
-Si usa tablas temporales, variables de tabla o parámetros con valores de tabla, tenga en cuenta sus conversiones para aprovechar las tablas con optimización para memoria y las variables de tabla para mejorar el rendimiento. Los cambios de código normalmente son mínimos.  
+Si usa tablas temporales, variables de tabla o parámetros con valores de tabla, tenga en cuenta sus conversiones para aprovechar las tablas optimizadas para memoria y las variables de tabla para mejorar el rendimiento. Los cambios de código normalmente son mínimos.  
   
 En este artículo se explica:  
   
@@ -35,12 +36,12 @@ En este artículo se explica:
 - Un ejemplo de código que resalta las ventajas de rendimiento de la optimización de memoria.
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Aspectos básicos de las variables de tabla con optimización para memoria  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Aspectos básicos de las variables de tabla optimizada para memoria  
   
-Una variable de tabla con optimización para memoria ofrece una gran eficacia al usar la mismas estructuras de algoritmos y datos con optimización para memoria que emplean las tablas con optimización para memoria. La eficacia se maximiza si se accede a la variable de tabla desde un módulo compilado de forma nativa.  
+Una variable de tabla optimizada para memoria ofrece una gran eficacia al usar la mismas estructuras de algoritmos y datos optimizados para memoria que emplean las tablas optimizadas para memoria. La eficacia se maximiza si se accede a la variable de tabla desde un módulo compilado de forma nativa.  
   
   
-Una variable de tabla con optimización para memoria:  
+Una variable de tabla optimizada para memoria:  
   
 - Solo se almacena en memoria y no tiene ningún componente en el disco.  
 - No implica ninguna actividad de E/S.  
@@ -65,6 +66,8 @@ OLTP en memoria proporciona los siguientes objetos que se pueden usar para la op
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Escenario: Reemplazar la tabla temporal global &#x23;&#x23;  
   
+Reemplazar una tabla temporal global por una tabla optimizada para memoria SCHEMA_ONLY es bastante sencillo. El cambio más importante es que hay que crear la tabla durante la implementación, y no durante la ejecución. La creación de tablas optimizadas para memoria requiere más tiempo que la de las tablas convencionales debido a las optimizaciones del tiempo de compilación. Si creáramos y colocáramos tablas optimizadas para memoria como parte de una carga de trabajo en línea, el impacto sobre el rendimiento de la carga de trabajo sería significativo, como también lo sería en el caso del rendimiento de la puesta al día de bases de datos secundarias de AlwaysOn y la recuperación de bases de datos.
+
 Imagine que tiene la siguiente tabla temporal global.  
   
   
@@ -79,7 +82,7 @@ Imagine que tiene la siguiente tabla temporal global.
   
   
   
-Considere reemplazar la tabla temporal global por la siguiente tabla con optimización para memoria que tiene DURABILITY = SCHEMA_ONLY.  
+Considere reemplazar la tabla temporal global por la siguiente tabla optimizada para memoria que tiene DURABILITY = SCHEMA_ONLY.  
   
   
   
@@ -102,13 +105,15 @@ La conversión de temporal global en SCHEMA_ONLY tiene los siguientes pasos:
   
   
 1. Cree la tabla **dbo.soGlobalB** una vez, como haría con cualquier tabla en disco tradicional.  
-2. En Transact-SQL, quite la instrucción CREATE de la tabla **&#x23;&#x23;tempGlobalB**.  
+2. En Transact-SQL, quite la instrucción CREATE de la tabla **&#x23;&#x23;tempGlobalB**.  Es importante crear la tabla optimizada para memoria durante la implementación, y no durante la ejecución, para evitar la sobrecarga de la compilación que implica la creación de tablas.
 3. En T-SQL, reemplace todas las menciones a **&#x23;&#x23;tempGlobalB** por **dbo.soGlobalB**.  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Escenario: Reemplazar la tabla temporal de sesión &#x23;  
   
 Los preparativos para reemplazar una tabla temporal de sesión implican más T-SQL que para el escenario anterior de tabla temporal global. Afortunadamente, el T-SQL adicional no significa ningún otro esfuerzo adicional para realizar la conversión.  
+
+Como en el caso de la tabla temporal global, el cambio más importante es que hay que crear la tabla durante la implementación, y no durante la ejecución, para evitar la sobrecarga de la compilación.
   
 Imagine que tiene la siguiente tabla temporal de sesión.  
   
@@ -143,7 +148,7 @@ En primer lugar, cree la siguiente función con valores de tabla para filtrar en
 En segundo lugar, cree la tabla SCHEMA_ONLY, además de una directiva de seguridad en la tabla.  
   
   
-Observe que cada tabla con optimización para memoria debe tener al menos un índice.  
+Observe que cada tabla optimizada para memoria debe tener al menos un índice.  
   
 - Para dbo.soSessionC, podría ser mejor un índice de HASH, si se calcula el valor BUCKET_COUNT adecuado. Pero en este ejemplo se simplifica con un índice NONCLUSTERED.  
   
@@ -181,10 +186,10 @@ Observe que cada tabla con optimización para memoria debe tener al menos un ín
   
 En tercer lugar, en el código T-SQL general:  
   
-1. Cambie todas las referencias a la tabla temporal en las instrucciones de Transact-SQL a la nueva tabla con optimización para memoria:
+1. Cambie todas las referencias a la tabla temporal en las instrucciones de Transact-SQL a la nueva tabla optimizada para memoria:
     - _Antiguo:_ &#x23;tempSessionC  
     - _Nuevo:_ dbo.soSessionC  
-2. Reemplace las instrucciones `CREATE TABLE #tempSessionC` en el código por `DELETE FROM dbo.soSessionC` para asegurarse de que una sesión no se expone al contenido de la tabla insertada por una sesión anterior con el mismo identificador de sesión.
+2. Reemplace las instrucciones `CREATE TABLE #tempSessionC` en el código por `DELETE FROM dbo.soSessionC` para garantizar que la sesión no se vea expuesta al contenido de la tabla insertada mediante una sesión anterior con el mismo identificador de sesión. Es importante crear la tabla optimizada para memoria durante la implementación, y no durante la ejecución, para evitar la sobrecarga de la compilación que implica la creación de tablas.
 3. Quite las instrucciones `DROP TABLE #tempSessionC` del código (opcionalmente, puede insertar una instrucción `DELETE FROM dbo.soSessionC`, por si el tamaño de la memoria es un posible problema).
   
   
@@ -237,11 +242,11 @@ Se dice que la sintaxis anterior crea la variable de tabla *en línea*. La sinta
   
 #### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 Convertir explícito en disco en optimización para memoria  
   
-Una variable de tabla con optimización para memoria no reside en tempdb. La optimización de memoria produce aumentos de velocidad que suelen ser 10 veces más rápidos o más.  
+Una variable de tabla optimizada para memoria no reside en tempdb. La optimización de memoria produce aumentos de velocidad que suelen ser 10 veces más rápidos o más.  
   
-La conversión a optimización para memoria se consigue en un solo paso. Mejore la creación de TYPE explícita para que sea la siguiente, que agrega:  
+La conversión a una tabla optimizada para memoria se consigue en un solo paso. Mejore la creación de TYPE explícita para que sea la siguiente, que agrega:  
   
-- Un índice. De nuevo, cada tabla con optimización para memoria debe tener al menos un índice.  
+- Un índice. De nuevo, cada tabla optimizada para memoria debe tener al menos un índice.  
 - MEMORY_OPTIMIZED = ON.  
   
   
@@ -308,7 +313,7 @@ Para obtener más información sobre `ALTER DATABASE ... ADD` para FILE y FILEGR
 ## <a name="f-quick-test-to-prove-speed-improvement"></a>F. Prueba rápida para demostrar la mejora de velocidad  
   
   
-En esta sección se proporciona código Transact-SQL que se puede ejecutar para probar y comparar el aumento de velocidad de INSERT-DELETE con el uso de una variable de tabla con optimización para memoria. El código se compone de dos mitades que son casi iguales, salvo que en la primera mitad, el tipo de la tabla es con optimización para memoria.  
+En esta sección se proporciona código Transact-SQL que se puede ejecutar para probar y comparar el aumento de velocidad de INSERT-DELETE con el uso de una variable de tabla optimizada para memoria. El código se compone de dos mitades que son casi iguales, salvo que en la primera mitad el tipo de la tabla sea optimizada para memoria.  
   
 La comparación dura unos 7 segundos. Para ejecutar el ejemplo:  
   
@@ -416,14 +421,14 @@ Al ejecutar el script en una base de datos SQL de Azure, asegúrese de ejecutar 
   
 ## <a name="g-predict-active-memory-consumption"></a>G. Predecir el consumo de memoria activa  
   
-Puede aprender a predecir las necesidades de memoria activa de las tablas con optimización para memoria con los siguientes recursos:  
+Puede aprender a predecir las necesidades de memoria activa de las tablas optimizadas para memoria con los siguientes recursos:  
   
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tamaño de tabla y fila de las tablas con optimización para memoria: cálculo de ejemplo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-En variables de tabla más grandes, los índices no agrupados usan más memoria que con las *tablas*con optimización para memoria. Cuanto mayor sea el recuento de filas y la clave de índice, más aumentará la diferencia.  
+En variables de tabla más grandes, los índices no agrupados usan más memoria que con las *tablas* optimizadas para memoria. Cuanto mayor sea el recuento de filas y la clave de índice, más aumentará la diferencia.  
   
-Si se accede a la variable de tabla con optimización para memoria solo con un valor de clave exacto por acceso, un índice de hash puede ser una opción mejor que un índice no agrupado. Pero si no puede calcular el valor BUCKET_COUNT adecuado, un índice NONCLUSTERED es una buena segunda opción.  
+Si se accede a la variable de tabla optimizada para memoria solo con un valor de clave exacto por acceso, un índice de hash puede ser una opción mejor que un índice no agrupado. Pero si no puede calcular el valor BUCKET_COUNT adecuado, un índice NONCLUSTERED es una buena segunda opción.  
   
 ## <a name="h-see-also"></a>H. Vea también  
   

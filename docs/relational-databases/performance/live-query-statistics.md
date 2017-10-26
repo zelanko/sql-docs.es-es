@@ -20,19 +20,18 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7dbc7ae9097c4bd8e6083a9d392b6ae8fc562f4b
+ms.workload: On Demand
+ms.translationtype: HT
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 32ce19a31e38ce457ae8b3ea37fa863a74a8902b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="live-query-statistics"></a>Estadísticas de consulta activa
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece la posibilidad de ver el plan de ejecución de una consulta activa. Este plan de consulta activa ofrece conocimientos en tiempo real sobre el proceso de ejecución de consulta a medida que los controles fluyen desde un operador de plan de consulta a otro. El plan de consulta activa muestra el progreso general de las consultas, así como estadísticas de tiempo de ejecución de nivel de operador como el número de filas, las filas generadas, el tiempo transcurrido, el progreso del operador, etc. Estos datos están disponibles en tiempo real sin necesidad de esperar a que la consulta se complete, de modo que estas estadísticas de ejecución son extremadamente útiles para depurar problemas de rendimiento de consultas. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], pero puede funcionar con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 > [!WARNING]  
 >  Esta característica sirve principalmente para solucionar problemas. Al usarla, el rendimiento general de las consultas podría bajar de forma moderada. Esta característica se puede usar con el [depurador de Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
@@ -68,9 +67,9 @@ Hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], existen otras dos forma
 
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una versión ligera de la infraestructura de perfil de estadísticas. Existen otras dos formas de habilitar la infraestructura de estadísticas ligeras que permite ver las estadísticas de consultas dinámicas de otras sesiones (como las del Monitor de actividad):
 
--   Usar la marca de seguimiento global 7412.  
+-   Use la marca de seguimiento global 7412.  
   
- o  
+ o bien  
   
 -   Habilitar el evento extendido **query_thread_profile** . que es una configuración de todo el servidor que habilita las estadísticas de consulta activa en todas las sesiones. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
   

@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="specify-parameters"></a>Especificar parámetros
@@ -137,7 +137,7 @@ GO
   
  Para especificar un parámetro de salida, se debe indicar la palabra clave OUTPUT en la definición del parámetro en la instrucción CREATE PROCEDURE. El procedimiento devuelve el valor actual del parámetro de salida al programa de llamada cuando se abandona el procedimiento. El programa de llamada también debe usar la palabra clave OUTPUT al ejecutar el procedimiento, a fin de guardar el valor del parámetro en una variable que se pueda usar en el programa de llamada.  
   
- El siguiente ejemplo crea el procedimiento `Production.usp`_`GetList` , que devuelve una lista de productos con precios que no superan un importe especificado. El ejemplo muestra la utilización de varias instrucciones SELECT y varios parámetros OUTPUT. Los parámetros OUTPUT permiten a un procedimiento externo, un proceso por lotes o más de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] tener acceso a un conjunto de valores durante la ejecución del procedimiento.  
+ En el siguiente ejemplo se crea el procedimiento `Production.usp_GetList`, que devuelve una lista de productos con precios que no superan un importe especificado. El ejemplo muestra la utilización de varias instrucciones SELECT y varios parámetros OUTPUT. Los parámetros OUTPUT permiten a un procedimiento externo, un proceso por lotes o más de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] tener acceso a un conjunto de valores durante la ejecución del procedimiento.  
   
 ```  
 USE AdventureWorks2012;  

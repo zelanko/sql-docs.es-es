@@ -1,7 +1,7 @@
 ---
 title: Grupo de recursos del regulador de recursos | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2016
+ms.date: 10/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.translationtype: HT
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
@@ -53,11 +53,19 @@ ms.lasthandoff: 06/22/2017
   
      Estos valores representan el número mínimo y máximo de operaciones de E/S físicas por segundo (IOPS) por cada volumen de disco para un grupo de recursos de servidor. Puede utilizar estos valores para controlar las E/S físicas emitidas para los subprocesos de usuario para un grupo de recursos de servidor determinado. Por ejemplo, el departamento de ventas genera varios informes de fin de mes en lotes grandes. Las consultas de estos lotes pueden generar operaciones de E/S que podrían saturar el volumen de disco y afectar al rendimiento de otras cargas de trabajo de mayor prioridad en la base de datos. Para aislar esta carga de trabajo, MIN_IOPS_PER_VOLUME se establece en 20 y MAX_IOPS_PER_VOLUME se establece en 100 para el grupo de recursos de servidor del departamento de ventas, lo que controla el nivel de operaciones de E/S que se pueden emitir para la carga de trabajo.  
   
- Cuando se configura la CPU o la memoria, la suma de los valores MIN de todos los grupos no puede superar el 100 por cien de los recursos del servidor. Además, al configurar la CPU o la memoria, los valores MAX y CAP se pueden establecer en cualquier punto del intervalo entre el valor MIN y el 100 por cien inclusive.  
+Cuando se configura la CPU o la memoria, la suma de los valores MIN de todos los grupos no puede superar el 100 por cien de los recursos del servidor. Además, al configurar la CPU o la memoria, los valores MAX y CAP se pueden establecer en cualquier punto del intervalo entre el valor MIN y el 100 por cien inclusive.  
   
- Si un grupo tiene definido un valor MIN distinto de cero, el valor MAX efectivo de otros grupos se reajustará. El mínimo del valor MAX configurado de un grupo y la suma de los valores MIN de otros grupos se resta del 100 %.  
+Si un grupo tiene definido un valor MIN distinto de cero, el valor MAX efectivo de otros grupos se reajustará. El mínimo del valor MAX configurado de un grupo y la suma de los valores MIN de otros grupos se resta del 100 %.  
   
- En la tabla siguiente se muestran algunos de los conceptos anteriores. La tabla muestra los valores para el grupo interno, el grupo predeterminado y para dos grupos definidos por el usuario. Se utilizan las fórmulas siguientes para calcular el % de MAX efectivo y el % compartido.  
+En la tabla siguiente se muestran algunos de los conceptos anteriores. La tabla muestra los valores para el grupo interno, el grupo predeterminado y para dos grupos definidos por el usuario. 
+  
+|Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|interno|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
+|predeterminados|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
+|Grupo 1|20|100|50|30|El valor MAX efectivo se calcula como: min(100,100-50) = 50. El % compartido calculado es el MAX efectivo - MIN = 30.|  
+|Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-20) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
+Las fórmulas siguientes se usan para calcular el porcentaje máximo efectivo y el porcentaje compartido en la tabla anterior:  
   
 -   Min(X,Y) se refiere al valor mínimo de X e Y.  
   
@@ -68,15 +76,8 @@ ms.lasthandoff: 06/22/2017
 -   % MAX efectivo = min(X,Y).  
   
 -   % compartido = % MAX efectivo - % MIN.  
-  
-|Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interno|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
-|predeterminados|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
-|Grupo 1|20|100|50|30|El valor MAX efectivo se calcula como: min(100,100-50) = 50. El % compartido calculado es el MAX efectivo - MIN = 30.|  
-|Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-20) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
-  
- Utilizando la tabla anterior como ejemplo podemos mostrar más detalladamente los ajustes que tienen lugar cuando se crea otro grupo. Este grupo es el Grupo 3 y tiene un valor de % MIN de 5.  
+
+Si tomamos la tabla anterior como ejemplo, podemos mostrar más detalladamente los ajustes que tienen lugar cuando se crea otro grupo. Este grupo es el Grupo 3 y tiene un valor de % MIN de 5.  
   
 |Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
@@ -94,29 +95,29 @@ ms.lasthandoff: 06/22/2017
   
 -   Todos los grupos tienen mínimos cero. Todos los grupos compiten por los recursos disponibles y sus tamaños finales están basados en el consumo de cada grupo. Otros factores, como pueden ser las directivas, desempeñan un rol importante a la hora de determinar el tamaño final del grupo.  
   
- El regulador de recursos predefine dos grupos de recursos de servidor, el grupo interno y el grupo predeterminado. Puede agregar grupos adicionales.  
+El regulador de recursos predefine dos grupos de recursos de servidor, el grupo interno y el grupo predeterminado. Puede agregar grupos adicionales.  
   
- **Grupo interno**  
+**Grupo interno**  
   
- El grupo interno representa los recursos utilizados por el propio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este grupo siempre contiene el grupo interno únicamente y el grupo no se puede alterar de ninguna forma. El consumo de recursos por parte del grupo interno no está restringido. Cualquier carga de trabajo del grupo se considera crítica para la función del servidor y el regulador de recursos permite al grupo interno presionar a otros grupos, incluso aunque esto signifique infringir los límites establecidos para los demás grupos.  
+El grupo interno representa los recursos utilizados por el propio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este grupo siempre contiene el grupo interno únicamente y el grupo no se puede alterar de ninguna forma. El consumo de recursos por parte del grupo interno no está restringido. Cualquier carga de trabajo del grupo se considera crítica para la función del servidor y el regulador de recursos permite al grupo interno presionar a otros grupos, incluso aunque esto signifique infringir los límites establecidos para los demás grupos.  
   
 > [!NOTE]  
 >  El grupo interno y el uso de recursos del grupo interno no se restan del uso de recursos totales. Los porcentajes se calculan a partir de los recursos totales disponibles.  
   
- **Grupo predeterminado**  
+**Grupo predeterminado**  
   
- El grupo predeterminado es el primer grupo de usuario predefinido. Antes de realizar cualquier configuración, el grupo de recursos de servidor predeterminado solo contiene el grupo predeterminado. El grupo de recursos de servidor predeterminado no se puede crear o quitar, pero se puede modificar. El grupo de recursos de servidor predeterminado puede contener grupos definidos por el usuario además del grupo predeterminado. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hay un grupo de recursos predeterminado para las operaciones rutinarias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un grupo de recursos externo predeterminado para los procesos externos, como la ejecución de scripts de R.  
+El grupo predeterminado es el primer grupo de usuario predefinido. Antes de realizar cualquier configuración, el grupo de recursos de servidor predeterminado solo contiene el grupo predeterminado. El grupo de recursos de servidor predeterminado no se puede crear o quitar, pero se puede modificar. El grupo de recursos de servidor predeterminado puede contener grupos definidos por el usuario además del grupo predeterminado. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hay un grupo de recursos predeterminado para las operaciones rutinarias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un grupo de recursos externo predeterminado para los procesos externos, como la ejecución de scripts de R.  
   
 > [!NOTE]  
 >  El grupo predeterminado se puede modificar, pero no puede moverse fuera del grupo de recursos de servidor predeterminado.  
   
- **Grupo externo**  
+**Grupo externo**  
   
- Los usuarios pueden definir un grupo externo para definir los recursos para los procesos externos. Para los servicios de R, esto rige en concreto `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.  
+Los usuarios pueden definir un grupo externo para definir los recursos para los procesos externos. Para los servicios de R, esto rige en concreto `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.  
   
- **Grupos de recursos de servidor definidos por el usuario**  
+**Grupos de recursos de servidor definidos por el usuario**  
   
- Los grupos de recursos de servidor definidos por el usuario son los que se crean para las cargas de trabajo concretas de un entorno. El regulador de recursos proporciona instrucciones DDL para crear, modificar y quitar grupos de recursos de servidor.  
+Los grupos de recursos de servidor definidos por el usuario son los que se crean para las cargas de trabajo concretas de un entorno. El regulador de recursos proporciona instrucciones DDL para crear, modificar y quitar grupos de recursos de servidor.  
   
 ## <a name="resource-pool-tasks"></a>Tareas de los grupos de recursos de servidor  
   

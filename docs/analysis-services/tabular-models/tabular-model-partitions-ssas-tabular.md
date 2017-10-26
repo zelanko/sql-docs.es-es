@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
@@ -98,3 +99,4 @@ Analysis Services incluye el procesamiento en paralelo para tablas con dos o má
 |[Procesar particiones de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Describe cómo procesar particiones en un modelo tabular implementado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   
+

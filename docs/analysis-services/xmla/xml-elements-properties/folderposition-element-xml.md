@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 35467656ca049a2d81e0322dd4f938f09ccea943
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Para **RelationshipEndVisualizationProperties** elementos, el **FolderPosition** elemento contiene la posición del elemento de carpeta predeterminado de una colección de carpetas. El valor predeterminado de **false** indica que no hay ninguna carpeta predeterminada que se usará.  
   
   
+

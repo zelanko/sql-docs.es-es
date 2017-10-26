@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
@@ -96,3 +97,4 @@ catch (Exception createDBxc)
  Para tener un conocimiento práctico sobre cómo usar AMO para crear y manipular representaciones de la base de datos, vea el código fuente del ejemplo AMO 2012 Tabular; concreto, revise el siguiente archivo fuente: Database.cs. El ejemplo está disponible en Codeplex. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
   
   
+

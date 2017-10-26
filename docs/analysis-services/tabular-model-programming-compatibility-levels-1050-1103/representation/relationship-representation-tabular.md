@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c11ae09c8c6bef956333c8a9cbee62f43992f91b
@@ -232,3 +233,4 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
  Sin embargo, para saber cómo usar AMO para crear y manipular representaciones de relación vea el código fuente del ejemplo AMO a tabular. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[Configurar las propiedades de comportamiento de las tablas para informes de Power View &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Describe cómo configurar las propiedades de comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades de comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación en diseños de mosaicos, tarjetas y gráficos.|  
   
   
+

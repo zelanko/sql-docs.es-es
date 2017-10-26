@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8a0509c571af328e4f5a459dbcbc68e1672d00f4
@@ -102,3 +103,4 @@ private void AddPartition(
  Sin embargo, para saber cómo usar AMO para crear y manipular representaciones de partición vea el código fuente del ejemplo AMO a tabular. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
   
   
+

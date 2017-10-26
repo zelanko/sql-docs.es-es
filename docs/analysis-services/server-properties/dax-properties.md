@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: HeidiSteen
 ms.author: heidist
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
@@ -52,3 +53,4 @@ MaxIntermediateRowsetSize | 1000000 | Número máximo de filas devueltas en una 
 PredicateCheckSpoolCardinalityThreshold| 5000 | Propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de Microsoft.
 
 Para más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md). 
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/27/2017
 |Ahora los métodos PreparedStatement.setObject() y PreparedStatement.setNull() admiten nuevas asignaciones de tipos de datos.|1. Nueva asignación de tipo de Java a JDBC<br /><br /> (a) java.math.BigInteger a JDBC BIGINT<br /><br /> (b) java.util.Date y java.util.Calendar a JDBC TIMESTAMP<br /><br /> 2. Nuevas conversiones de tipos de datos:<br /><br /> (a) java.math.BigInteger a CHAR, VARCHAR y LONGVARCHAR a BIGINT<br /><br /> (b) java.util.Date y java.util.Calendar a CHAR, VARCHAR, LONGVARCHAR, DATE, TIME y TIMESTAMP<br /><br /> Para obtener más información, vea la especificación de JDBC 4.1.|  
   
   
+

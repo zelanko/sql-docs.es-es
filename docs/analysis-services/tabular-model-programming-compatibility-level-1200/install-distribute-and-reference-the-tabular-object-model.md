@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ Referencia de espacio de nombres principal en el código no es necesario; las cl
 La redistribución de AMO y TOM es a través de la **sql_as_amo.msi** paquete de instalación. Si está generando un programa de instalación para una aplicación cliente que llama en AMO o TOM, agregue **sql_as_amo.msi** a su archivo ejecutable. Este es el único mecanismo compatible para redistribuir las bibliotecas de cliente AMO y TOM.  
   
 El paquete es independiente entre sí y proporciona todos los ensamblados necesarios para llamar a AMO y TOM en el código. Otros paquetes, como SQL_AS_OLEDB.msi o SQL_AS_ADOMD.msi, no son necesarios específicamente para escenarios de programación de TOM.
+

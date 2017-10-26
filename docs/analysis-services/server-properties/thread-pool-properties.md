@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b85d1c7727b699037711eb49f1be360c755f8dc3
@@ -291,3 +292,4 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
  [Guía de operaciones de SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   
+

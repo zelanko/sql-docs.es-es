@@ -90,7 +90,7 @@ ms.lasthandoff: 08/19/2017
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea ***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   

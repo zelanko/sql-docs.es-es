@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b69a5fd295ac6107f5469966cb0b4d7329018eee
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/01/2017
  La enumeración que corresponde a los valores permitidos para **rol** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Multiplicity>.  
   
   
+

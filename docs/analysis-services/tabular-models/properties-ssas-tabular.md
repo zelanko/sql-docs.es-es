@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración de las propiedades predeterminadas de implementación y de modelado de datos. Las propiedades predeterminadas se aplican a los proyectos de modelos tabulares nuevos. Después de crear un proyecto, estas propiedades se pueden cambiar para un proyecto de modelos determinado en función de sus necesidades.|  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e255a63d0b7df63a19c9d54d4d78ab43340c9304
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   Para obtener información acerca de los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [miembros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   
   
+

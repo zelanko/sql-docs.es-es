@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6811fe90d64374769e858787a879231140a4e925
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 * Identificar qué versión del controlador JDBC utilizará, en función del entorno, como se indica aquí: [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
 * Descargar e instalar controladores JDBC aplicables aquí: [descargar Microsoft JDBC Driver para SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
 * Ruta de clase del conjunto según la versión del controlador, como se indica a continuación: [utilizando el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md)
+

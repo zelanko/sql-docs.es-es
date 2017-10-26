@@ -19,6 +19,7 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
@@ -120,3 +121,4 @@ Puede establecer la mayoría de las propiedades de tareas y contenedores utiliza
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
+

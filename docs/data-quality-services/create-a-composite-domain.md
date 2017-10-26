@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  Si, cuando se utiliza el análisis basado en conocimiento, los datos de origen contienen un número de valores inferior al número de dominios que hay en el dominio compuesto, DQS colocará un valor NULL en el dominio que falta. Cuando los datos de origen contienen un número de valores superior al número de dominios que hay en el dominio compuesto, DQS agregará los datos adicionales a una de las columnas. Si dos o más dominios incluyen los mismos valores, el origen de datos se analizará para el primer dominio coincidente.  
   
   
+

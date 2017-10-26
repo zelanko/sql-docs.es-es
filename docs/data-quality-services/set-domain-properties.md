@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  Si el tipo de datos es **Cadena**, seleccione esta opción para que DQS no identifique los errores de sintaxis en el dominio durante el proceso de limpieza. Active esta casilla si la identificación de los errores de sintaxis en el dominio es irrelevante. Por ejemplo, la identificación de los errores de sintaxis puede no afectar a un número de serie. Este control solo está disponible para el tipo de datos de cadena. DQS no comprobará los errores de sintaxis en los tipos de datos que no son de cadena.  
   
   
+

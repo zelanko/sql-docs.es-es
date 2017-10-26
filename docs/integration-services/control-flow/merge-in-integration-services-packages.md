@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  La base de datos Inventory incluye una tabla ProductsInventory con las columnas ProductID y StockOnHand. La tabla Shipments, que contiene las columnas ProductID, CustomerID y Quantity, realiza un seguimiento de los envíos de los productos a los clientes. La tabla ProductInventory debe actualizarse diariamente basándose en la información de la tabla Shipments. Una única instrucción MERGE puede reducir el inventario en la tabla ProductInventory sobre la base de los envíos realizados. Si el inventario de un producto se ha reducido a 0, dicha instrucción MERGE también puede eliminar la fila del producto de la tabla ProductInventory.  
   
   
+

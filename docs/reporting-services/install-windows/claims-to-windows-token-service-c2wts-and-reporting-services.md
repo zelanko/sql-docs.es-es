@@ -70,7 +70,7 @@ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePo
 
     * Seleccione **Agregar** para agregar un servicio en el que delegar.
 
-    * Seleccione **usuarios o equipos... *** y escriba la cuenta que hospeda el servicio. Por ejemplo, si un servidor SQL Server se ejecuta con una cuenta llamada *sqlservice*, escriba `sqlservice`. 
+    * Seleccione **usuarios o equipos...** * y escriba la cuenta que hospeda el servicio. Por ejemplo, si un servidor SQL Server se ejecuta con una cuenta llamada *sqlservice*, escriba `sqlservice`. 
 
     * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN.
 

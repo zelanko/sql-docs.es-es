@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b7406edf9f7234db739730473772d77c42399ec
@@ -55,3 +56,4 @@ En la tabla siguiente se enumera opciones disponibles en la **Agregar nuevo orig
 |Mostrar solo elementos instalados|Especifique si desea ver solo los orígenes instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.| 
   
+

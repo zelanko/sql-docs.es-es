@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/09/2017
  Una vez creado el proyecto de calidad de datos, aparecerá un asistente que podrá utilizar para realizar la actividad seleccionada: limpieza o búsqueda de coincidencias. Para más información sobre las actividades de limpieza y de búsqueda de coincidencias, vea [Limpieza de datos](../data-quality-services/data-cleansing.md) y [Coincidencia de datos](../data-quality-services/data-matching.md).  
   
   
+

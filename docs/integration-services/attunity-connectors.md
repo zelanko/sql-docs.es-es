@@ -13,6 +13,7 @@ caps.latest.revision:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
 ms.openlocfilehash: fd8b0177227167f6caa3417029bb2acb974fe181
@@ -47,3 +48,4 @@ Comprobar la versión instalada de SSDT en Visual Studio desde **ayuda** | **ace
 
 Obtener la versión más reciente de SSDT aquí:  
 [Descargar SQL Server Data Tools (SSDT)](..//ssdt/download-sql-server-data-tools-ssdt.md)
+

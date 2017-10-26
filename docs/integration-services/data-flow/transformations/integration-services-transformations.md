@@ -25,6 +25,7 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
@@ -100,3 +101,4 @@ ms.lasthandoff: 08/03/2017
  También puede escribir transformaciones personalizadas. Para más información, vea [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) y [Desarrollar un componente de transformación personalizado con salidas asincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
   
+

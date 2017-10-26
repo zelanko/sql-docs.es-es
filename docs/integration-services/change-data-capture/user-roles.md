@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
@@ -177,3 +178,4 @@ ms.lasthandoff: 08/03/2017
  Las credenciales para este usuario nunca se almacenan. La Consola del diseñador CDC las solicita cada vez que son necesarias y se mantienen para las demás sesiones de la interfaz de usuario.  
   
   
+

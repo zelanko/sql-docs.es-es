@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
  DQS proporcionará las sugerencias para los valores de las columnas **Valor** y **Corregir a** de la tabla **Valor** . Al seleccionar una sugerencia en la columna **Valor** , el tipo de valor se establece en **Error**y la sugerencia se copia en la columna **Corregir a** , como si se hubiera insertado manualmente. Si hubiera una corrección existente, se convertiría en una sugerencia. En la página **Administrar y ver resultados** de la actividad **Limpieza** , al seleccionar una sugerencia en la columna **Corregir a** , DQS reemplazará el valor seleccionado actualmente por la selección, y dicho valor se convertirá en una sugerencia. En la página **Administrar y ver resultados** de la actividad **Limpieza** , no se realizan sugerencias en el nivel de registro (la cuadrícula inferior).  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
@@ -98,3 +99,4 @@ ms.lasthandoff: 09/09/2017
 -   **Directiva de coincidencia: resultados**: La base de conocimiento se cerró en la página de **Directiva de coincidencia: resultados** . La base de conocimiento está bloqueada y las actividades de detección de conocimiento y administración de dominios no están disponibles.  
   
   
+

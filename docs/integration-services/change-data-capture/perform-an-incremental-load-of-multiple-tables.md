@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/03/2017
          Para obtener un ejemplo de cómo usar esta transformación para aplicar las actualizaciones y eliminaciones, vea [Aplicar los cambios al destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
   
+

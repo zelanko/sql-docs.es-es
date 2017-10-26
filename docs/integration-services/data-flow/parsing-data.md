@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ El análisis estándar es un conjunto de rutinas de análisis dependientes de la
   
  El análisis estándar proporciona conversión de tipo de datos internacionales y se debe usar si el análisis rápido no admite el formato de datos. Para obtener más información sobre la conversión API de los tipos de automatización de datos, vea "Los tipos de conversión de datos API" en la [biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
+

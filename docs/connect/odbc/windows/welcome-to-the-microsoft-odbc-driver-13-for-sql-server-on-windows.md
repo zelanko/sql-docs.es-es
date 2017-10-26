@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7da07e66203c9bcfb4a690ccb747ff9180df8db
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 Microsoft ha puesto la documentación de este producto en línea para proporcionar la información más actual a sus clientes. Consulte la [controladores de SQL Server en Microsoft Developer Network (MSDN)](https://msdn.microsoft.com/library/mt654049.aspx) para obtener más información.  
   
 © 2016 Microsoft. Todos los derechos reservados. 
+

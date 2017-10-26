@@ -21,6 +21,7 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a3671f4af356741dce481aaafa67023aabbc763
@@ -133,3 +134,4 @@ Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** par
  [Integration Services &#40; SSIS &#41; Expresiones](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
+

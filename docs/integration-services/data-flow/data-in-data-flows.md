@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  Una vez que ha implementado un paquete en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede analizar el flujo de datos en el paquete durante la ejecución para comprobar el rendimiento o buscar si hay algún otro problema. Hay informes estándar disponibles que le permiten ver el estado del paquete y el historial y consultar las vistas de la base de datos que proporcionan información detallada sobre la ejecución del paquete. También puede agregar y quitar dinámicamente las derivaciones de datos durante la ejecución de los componentes específicos de destino del paquete. Para más información, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
+

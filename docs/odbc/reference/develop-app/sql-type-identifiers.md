@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ Cada origen de datos define sus propios tipos de datos SQL. ODBC define los iden
  ODBC define una amplia variedad de identificadores de tipo SQL. Sin embargo, el controlador no tiene que todas las de estos identificadores usar. En su lugar, usa solo esos identificadores que necesita para exponer los tipos de datos SQL admite el origen de datos subyacente. Si el origen de datos subyacente admite tipos de datos SQL para que ningún identificador de tipo correspondiente, el controlador puede definir los identificadores de tipo adicionales. Para obtener más información, consulte [tipos de datos específicos del controlador, Descriptor de tipos, información de tipos, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Para obtener una descripción completa de los identificadores de tipo SQL, vea [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) en tipos de datos de apéndice D:.
+

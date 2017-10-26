@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4609b8ec49a84b4eb5fb44c1be8c8a6a85ccc5f1
@@ -34,3 +35,4 @@ Información acerca de los orígenes de datos se almacena en el registro del sis
  Esta sección contiene el siguiente tema:  
   
 -   [Componentes de configuración](../../../odbc/reference/install/configuration-components.md)
+

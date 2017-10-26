@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Un procedimiento consiste en usar el valor predeterminado de un parámetro de entrada en un procedimiento en lugar del valor en el búfer de datos correspondiente.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** o **SQLSetPos** consiste en pasar por alto el valor en el búfer de datos. Al actualizar una fila de datos mediante una llamada a **SQLBulkOperations** o **SQLSetPos,** no se cambia el valor de columna. Cuando se inserta una nueva fila de datos mediante una llamada a **SQLBulkOperations**, el valor de columna se establece en su valor predeterminado o, si la columna no tiene un valor predeterminado, NULL.
+

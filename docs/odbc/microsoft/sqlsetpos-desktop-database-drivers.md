@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b630be96f099e1f2553c8d03b9896f32ea3e670
@@ -29,3 +30,4 @@ La semántica de forma masiva con el modelo para **SQLSetPos** llama con el *iro
  Se admite SQL_LOCK_NO_CHANGE para *genealógico*. No se admiten SQL_LOCK_EXCLUSIVE y SQL_LOCK_UNLOCK.  
   
  **SQLSetPos** admite combinaciones actualizables. (Para obtener más información, consulte el *Guía del programador del motor de base de datos Jet de Microsoft*.)
+

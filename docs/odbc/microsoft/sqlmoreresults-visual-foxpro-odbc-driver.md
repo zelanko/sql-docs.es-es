@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Determina si hay más resultados pendientes en un identificador de instrucción, *hstmt*, que contiene las instrucciones SELECT, UPDATE, INSERT o DELETE y si es así, inicializa el procesamiento de esos resultados.  
   
  Para obtener más información, consulte [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) en el *referencia del programador de ODBC*.
+

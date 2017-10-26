@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
@@ -43,3 +44,4 @@ Acceso a una base de datos a través de una red, requiere un número de componen
 -   **Entre procesos mecanismo de comunicación** el mecanismo de comunicación entre procesos (IPC) es el proceso por el que un proceso se comunica con otro. Algunos ejemplos son DECnet sockets, sockets TCP/IP y canalizaciones con nombre. La elección del mecanismo IPC está restringida por el sistema operativo y la red que se va a usar.  
   
 -   **Protocolo de red** el protocolo de red se utiliza para transportar el flujo de datos a través de una red. Se puede considerar la mecánica que admite los mecanismos IPC utilizados para implementar los datos de secuencia de protocolo, así como admitir operaciones de red básica, como las transferencias de archivos y uso compartido de impresoras. Protocolos de red incluyen NetBEUI, TCP/IP, DECnet y SPX/IPX y son específicos de cada red.
+

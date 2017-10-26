@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d36c443cb6bc4a189006a3d63e90deead3f11e66
@@ -30,3 +31,4 @@ Probar aplicaciones interoperables en el mejor es una que consumen muchos recurs
  No se puede probar aplicaciones muy interoperables prácticamente en todos los controladores. Es lo mejor que pueden realizar la mayoría de los desarrolladores de aplicaciones probarlas completamente con un pequeño número de controladores y cursorily con muchas más. Controladores probados deben incluir los controladores más populares para el DBMS más populares de mercado de la aplicación; Si el mercado cubre todos los DBMS, deberán probarse controladores para DBMS de escritorio y servidores.  
   
  Uno de los problemas en las pruebas de las aplicaciones ODBC es el número de componentes que intervienen: la propia aplicación, el Administrador de controladores, el controlador, el DBMS y posiblemente el software de red o puertas de enlace. Las aplicaciones pueden resulte más fácil realizar un seguimiento de errores mediante el registro de los mensajes de error devueltos por las funciones ODBC a través de **SQLGetDiagField** y **SQLGetDiagRec**. Estos mensajes identifican el fabricante y el componente en el que se producen errores. Para obtener más información, consulte [diagnósticos](../../../odbc/reference/develop-app/diagnostics.md).
+

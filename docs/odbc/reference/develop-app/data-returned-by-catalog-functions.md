@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Las funciones de catálogo se basan en un modelo de autorización similar a SQL en el que se realiza una conexión en función de un nombre de usuario y una contraseña y se devuelven solo los datos para el que el usuario tiene un privilegio. Protección con contraseña de archivos individuales, que no se ajusta a este modelo, es definido por el controlador.  
   
  Los conjuntos de resultados devueltos por las funciones de catálogo casi nunca son actualizables y las aplicaciones no deben esperar para que pueda cambiar la estructura de la base de datos cambiando los datos de estos conjuntos de resultados.
+

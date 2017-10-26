@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
@@ -34,3 +35,4 @@ El controlador ODBC de Visual FoxPro es segura para subprocesos. Acceso a los id
  El controlador usa un subproceso independiente para capturar los datos cuando se usa obtener progresiva. Para utilizar la obtención de progresiva para un origen de datos, seleccione la **capturar los datos en segundo plano** casilla de verificación en la [cuadro de diálogo del programa de instalación de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) o usar la palabra clave de atributo de BackgroundFetch en la conexión cadena. Evite utilizar la captura de fondo cuando se invoque el controlador desde aplicaciones multiproceso. Para obtener información sobre las palabras clave de atributo de cadena de conexión, vea [uso de cadenas de conexión](../../odbc/microsoft/using-connection-strings.md).  
   
  Para obtener más información acerca de los subprocesos y **SQLCancel**, consulte [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) en el *referencia del programador de ODBC*.
+

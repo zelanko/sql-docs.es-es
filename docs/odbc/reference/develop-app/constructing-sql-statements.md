@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55171e2c543aaf6759c1360d2fd3bf79ebb5d988
@@ -31,3 +32,4 @@ Se pueden construir instrucciones SQL en una de estas tres maneras: codificado d
 -   [Instrucciones SQL creadas en tiempo de ejecución](../../../odbc/reference/develop-app/sql-statements-constructed-at-run-time.md)  
   
 -   [Instrucciones SQL escritas por el usuario](../../../odbc/reference/develop-app/sql-statements-entered-by-the-user.md)
+

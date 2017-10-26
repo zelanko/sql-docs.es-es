@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09ec943add25acfd029fd6651f3ff5f31aa1a419
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Libera un identificador de conexión y libera toda la memoria asignada para el identificador.  
   
  Para obtener más información, consulte [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md) en el *referencia del programador de ODBC*.
+

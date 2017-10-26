@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fad2aab1020cb7a56c00a2b78c1d2c46a41c422
@@ -40,3 +41,4 @@ Para los errores que se producen en el origen de datos, el controlador ODBC devu
 |-------------------|--------------------|  
 |[Microsoft] [Administrador de controladores ODBC] *texto del mensaje*|Administrador de controladores (Odbc32.dll)|  
 |[Microsoft] [ODBC *nombre del controlador*]*texto del mensaje*|Controlador ISAM (vea controlador ISAM)|
+

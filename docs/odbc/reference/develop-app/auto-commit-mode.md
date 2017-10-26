@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9b6d354657578f7188481a2e7ff7566f725c80
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Si el DBMS subyacente no admite transacciones de modo de confirmación automática, el controlador puede emular al confirmar manualmente cada instrucción SQL que se ejecuta.  
   
  Si un lote de instrucciones SQL se ejecuta en modo de confirmación automática, es específico del origen de datos cuando las instrucciones del lote se confirman. Pueden ser confirmadas cuando se ejecutan o como un todo después de que se ha ejecutado todo el lote. Algunos orígenes de datos pueden admitir estos comportamientos y pueden proporcionar una manera de seleccionar uno o los demás. En concreto, si se produce un error en el medio del lote, es específico del origen de datos si las instrucciones de ejecución ya se haya confirmado o revertidas. Por lo tanto, las aplicaciones interoperables que usan los lotes y requieren que se haya confirmado o revertido como un todo deben ejecutar lotes solo en modo de confirmación manual.
+

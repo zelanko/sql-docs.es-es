@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
@@ -42,3 +43,4 @@ El tercer paso es compilar y ejecutar una instrucción SQL, como se muestra en l
 |**Seleccione** o función de catálogo|[El paso 4a: capturar los resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**ACTUALIZACIÓN**, **eliminar**, o **insertar**|[Paso 4b: capturar el recuento de filas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Todas las demás instrucciones SQL|Paso 3: Compilar y ejecutar una instrucción SQL (en este tema) o [paso 5: confirmar la transacción](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+

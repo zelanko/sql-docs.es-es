@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
@@ -40,3 +41,4 @@ El *el Administrador de controladores* es una biblioteca que administra la comun
  El rol principal final del Administrador de controladores se carga y descarga de controladores. La aplicación carga y descarga solo el Administrador de controladores. Cuando desea utilizar un controlador en particular, llama a una función de conexión (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**) en el Administrador de controladores y especifica el nombre de un origen de datos determinado o un controlador, por ejemplo, "Contabilidad" o "SQL Server". Con este nombre, el Administrador de controladores busca la información de origen de datos para el nombre de archivo del controlador, como Sqlsrvr.dll. A continuación, se carga el controlador (suponiendo que ya no está cargado), almacena la dirección de cada función en el controlador y llama a la función de conexión en el controlador, que, a continuación, inicializa y se conecta al origen de datos.  
   
  Cuando la aplicación ha terminado con el controlador, llama a **SQLDisconnect** en el Administrador de controladores. El Administrador de controladores llama a esta función en el controlador, que se desconecta del origen de datos. Sin embargo, el Administrador de controladores mantiene el controlador en la memoria en caso de que la aplicación vuelve a conectarse a él. Descarga el controlador solo cuando la aplicación libera la conexión usada por el controlador o usa la conexión para un controlador diferente, y ninguna otra conexión usa el controlador. Para obtener una descripción completa de rol del Administrador de controladores durante la carga y descarga de controladores, consulte [rol del Administrador de controladores en el proceso de conexión](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
+

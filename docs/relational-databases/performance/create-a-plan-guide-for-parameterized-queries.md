@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
@@ -82,3 +83,4 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
  También puede utilizar las guías de plan TEMPLATE junto con guías de plan SQL. Por ejemplo, puede crear una guía de plan TEMPLATE para asegurarse de que se parametriza una clase de consultas. A continuación, puede crear una guía de plan SQL en el formulario parametrizado de esa consulta.  
   
   
+

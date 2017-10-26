@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |PWD|La contraseña.<br /><br /> Esto es una palabra clave opcional y nunca se escribirán en el archivo por el controlador. Se utiliza en una llamada a **SQLDriverConnect** con archivos protegidos por contraseña de Paradox. La contraseña utilizada será válida siempre que se abre una tabla. Si no hay ninguna contraseña se pasa en la cadena de conexión, no se establece ninguna contraseña para esa tabla. Si las tablas tienen contraseñas diferentes, más de uno no se puede abrir en la misma sesión, ni pueden combinarse las tablas.|  
 |READONLY|TRUE para que el archivo de solo lectura; FALSE para que el archivo no sea de sólo lectura.<br /><br /> Esto establece la misma opción como **de sólo lectura** en el cuadro de diálogo de instalación.|  
 |SUBPROCESOS|El número de subprocesos en segundo plano para el motor para usar. Este valor es 3 y no se puede cambiar.<br /><br /> Esto establece la misma opción como **subprocesos** en el cuadro de diálogo de instalación.|
+

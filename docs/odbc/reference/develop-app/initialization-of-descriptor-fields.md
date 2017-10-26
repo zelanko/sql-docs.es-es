@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a42ff3940f5d1620c7ee310df24016dfa39a4cd
@@ -33,3 +34,4 @@ Cuando se asigna un descriptor de fila de la aplicación, sus campos reciban val
  El concepto de un valor predeterminado no es válido para los campos de un IRD. Una aplicación puede obtener acceso a los campos de un IRD solo cuando hay una instrucción preparada o ejecutar asociada a él.  
   
  Algunos de los campos de un IPD se definen solo después de que el controlador se rellena automáticamente el IPD. Si no es así, no están definidos. Estos campos son SQL_DESC_CASE_SENSITIVE, SQL_DESC_FIXED_PREC_SCALE, SQL_DESC_TYPE_NAME, SQL_DESC_UNSIGNED y SQL_DESC_LOCAL_TYPE_NAME.
+

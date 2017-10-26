@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b929d1fda75161e6a260e8c425c37cd9476bf7
@@ -34,3 +35,4 @@ La sintaxis de las secciones siguientes se usa para el intervalo y literales num
 -   [Sintaxis de literales de intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md)  
   
 -   [Sintaxis de los literales numéricos](../../../odbc/reference/appendixes/numeric-literal-syntax.md)
+

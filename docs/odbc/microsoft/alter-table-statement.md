@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c17230d49773262d2373017a24ab522f9eebb166
@@ -29,3 +30,4 @@ Cuando se usa el Microsoft Access, dBASE o Paradoxdriver, se admite la instrucci
   
 > [!NOTE]  
 >  Cuando se usa el controlador de Paradox sin necesidad de implementar el motor de base de datos de Borland, no se admiten las instrucciones ALTER TABLE; solo lectura y anexar se permiten las instrucciones.
+

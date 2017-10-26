@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Pares de palabra clave y valor en **SQLDriverConnect** deben seguir ciertas reglas de sintaxis. ¿Las palabras clave y sus valores no deben contener el **[] {} (),? \*=! @** caracteres. El valor de la **DSN** palabra clave no puede constar únicamente de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática del registro, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. No se permiten espacios alrededor del signo igual en el par de palabra clave y valor.  
   
  El **FILEDSN** palabra clave puede utilizarse en una llamada a **SQLDriverConnect** para especificar el nombre de un archivo que contiene información de origen de datos (vea [conectarse utilizando archivo orígenes de datos](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), más adelante en esta sección). El **SAVEFILE** palabra clave puede utilizarse para especificar el nombre de un archivo .dsn en los que los pares de palabra clave y valor de una conexión correcta realizan por la llamada a **SQLDriverConnect** se guardarán. Para obtener más información acerca de los orígenes de datos de archivo, consulte la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.
+

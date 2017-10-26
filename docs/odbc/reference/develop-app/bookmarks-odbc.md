@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 791350c93e2570ad8615e5b378e9979870e02acf
@@ -40,3 +41,4 @@ Un marcador es un valor utilizado para identificar una fila de datos. El signifi
 -   [Actualizar, eliminar o capturar marcador](../../../odbc/reference/develop-app/updating-deleting-or-fetching-by-bookmark.md)  
   
 -   [Comparación de marcadores](../../../odbc/reference/develop-app/comparing-bookmarks.md)
+

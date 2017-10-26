@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ La instrucción DELETE no se admite para el controlador de Microsoft Excel o tex
  El controlador dBASE no admite el empaquetado de una tabla para quitar valores de "eliminar".  
   
  Para que el controlador de Paradox eliminar una fila de una tabla, la tabla debe tener un índice único (clave principal Paradox).
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ Algunos controladores son capaces de establecer los campos de la IPD después de
  Cuándo el rellenado automático se admite y se habilita, el controlador rellena los campos de la IPD después de una instrucción SQL que contiene marcadores de parámetros se ha preparado mediante una llamada a **SQLPrepare**. Una aplicación puede recuperar esta información mediante una llamada a **SQLGetDescField** o **SQLGetDescRec**, o **SQLDescribeParam**. La aplicación puede utilizar la información para enlazar el búfer de aplicación más adecuado para un parámetro o para especificar una conversión de datos para él.  
   
  El rellenado automático de la IPD podría producir una reducción del rendimiento. Una aplicación puede desactivarlo al restablecer el atributo de instrucción de SQL_ATTR_ENABLE_AUTO_IPD SQL_FALSE (el valor predeterminado).
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ En la mayoría de los casos, los programadores de aplicaciones conocer si las in
  La aplicación puede llamar a **SQLNumResultCols** en cualquier momento después de la preparación o ejecución de la instrucción. Sin embargo, dado que algunos orígenes de datos no pueden describir fácilmente los conjuntos de resultados que se va a crear instrucciones preparadas, rendimiento se resentiría si **SQLNumResultCols** se llama después de prepara una instrucción pero antes de que se ejecute.  
   
  Algunos orígenes de datos también admiten determinar el número de filas devueltas por una instrucción SQL en un conjunto de resultados. Para ello, la aplicación llama **SQLRowCount**. Lo que representa el número de filas indicado por la configuración de la opción SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (dependiendo del tipo del cursor) devuelto por una llamada a **SQLGetInfo**. Esta máscara de bits indica para cada tipo de cursor si el recuento de filas devuelto es exacta, aproximada o no está disponible en absoluto. Si los recuentos de filas para estático o los cursores dinámicos se ven afectados por los cambios realizados a través de **SQLBulkOperations** o **SQLSetPos**, o por actualización por posición o las instrucciones delete, depende de otros elementos Devuelve los mismos argumentos de opción indicados anteriormente. Para obtener más información, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción de la función.
+

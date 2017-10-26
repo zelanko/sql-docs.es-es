@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  El *interval_type* campo de la SQL_INTERVAL_STRUCT indica a la aplicación qué estructura se mantiene en la unión y también qué miembros de la estructura son relevantes. El *interval_sign* campo tiene el valor SQL_FALSE si el intervalo a la izquierda campo es sin signo; si es SQL_TRUE, el campo inicial es negativo. El valor en el propio campo inicial siempre es sin signo, independientemente del valor de *interval_sign*. El *interval_sign* campo actúa como un bit de signo.
+

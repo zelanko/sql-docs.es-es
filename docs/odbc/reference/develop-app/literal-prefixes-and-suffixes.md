@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff05f946dee8f6034d04c5d719ada475255ba643
@@ -36,3 +37,4 @@ SELECT CharCol, BinaryCol, IntegerCol FROM MyTable
  Literales para algunos tipos de datos requieren especial prefijos y sufijos. En el ejemplo anterior, el literal de carácter (ABC) requiere una comilla simple (') como prefijo y un sufijo, el literal binario (FFFF) requiere que los caracteres 0 x como prefijo y el literal entero (10) no requieren un prefijo o sufijo.  
   
  Para todos los tipos de datos excepto la fecha, hora y las marcas de tiempo, aplicaciones interoperables deben utilizar los valores devueltos de las columnas de caracteres LITERAL_PREFIX y LITERAL_SUFFIX en el conjunto de resultados creados por **SQLGetTypeInfo**. Para fecha, hora, marca de tiempo y literales de intervalo de fecha y hora, aplicaciones interoperables deben usar las secuencias de escape que se describe en la sección anterior.
+

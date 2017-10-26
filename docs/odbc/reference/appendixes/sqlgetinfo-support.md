@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
@@ -43,3 +44,4 @@ Cuando un ODBC 2. *x* aplicación llama **SQLGetInfo** a una aplicación ODBC 3*
  Una aplicación ODBC 3*.x* aplicación trabajar con una aplicación ODBC 3*.x* controlador no debe llamar a **SQLGetInfo** con el *tipo de información* argumentos describen en anterior a la tabla sino que debe utilizar ODBC 3*.x* *tipo de información* los argumentos se muestran en el párrafo siguiente. No hay una correspondencia exacta entre *tipo de información* argumentos que se usan en ODBC 2.* x* y los que se usan en ODBC 3*.x*. Una aplicación ODBC 3*.x* aplicación trabajar con una API ODBC 2.* x* controlador, por otro lado, debe usar el *tipo de información* argumentos se ha descrito anteriormente.  
   
  Algunos de los tipos de información en la tabla anterior se ha sustituido por los tipos de información de atributos de cursor. Estos tipos son SQL_FETCH_DIRECTION, SQL_LOCK_TYPES, SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY y SQL_STATIC_SENSITIVITY de información en desuso. Los nuevos tipos de atributos de cursor son SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2, donde XXX es igual a DYNAMIC, FORWARD_ONLY, KEYSET_DRIVEN o STATIC. Cada uno de los nuevos tipos de indica las capacidades de controlador para un tipo de cursor simple. Para obtener más información acerca de estas opciones, consulte la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción de la función.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff70e2bf919735de40acec8b7386efd6d66b3ffe
@@ -30,3 +31,4 @@ Cuando se utiliza el controlador de Microsoft Access, dBASE o Paradox, la sintax
  Cuando se utiliza el controlador de Paradox, la instrucción DROP INDEX elimina archivos de índice secundario de Paradox.  
   
  La instrucción DROP INDEX no se admite para los controladores de Microsoft Excel o texto.
+

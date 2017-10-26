@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ Las siguientes 2 de ODBC. *x* funciones se han duplicado por ODBC 3.* x* funcion
   
 > [!NOTE]  
 >  La función **SQLBindParam** es un caso especial. **SQLBindParam** funcionalidad duplicada. Esto no es una API ODBC 2*.x* función, pero las funciones que se encuentra en los estándares Open Group e ISO. La funcionalidad proporcionada por esta función es incluir completamente de **SQLBindParameter**. Como resultado, el Administrador de controladores se asigna una llamada a **SQLBindParam** a **SQLBindParameter** cuando el controlador subyacente es una aplicación ODBC 3.* x* controlador. Sin embargo, cuando el controlador subyacente es una API ODBC 2*.x* controlador, el Administrador de controladores no realiza esta asignación.
+

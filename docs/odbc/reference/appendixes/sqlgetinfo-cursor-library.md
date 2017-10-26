@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  La biblioteca de cursores implementa el mismo comportamiento del cursor cuando las transacciones se confirma o revierte como el origen de datos. Es decir, confirmar o revertir una transacción, ya sea mediante una llamada a **SQLEndTran** o utilizando el atributo de conexión SQL_ATTR_AUTOCOMMIT, puede hacer que el origen de datos eliminar los planes de acceso y cerrar los cursores para todas las instrucciones en una conexión. Para obtener más información, vea los tipos de información SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR en [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
+

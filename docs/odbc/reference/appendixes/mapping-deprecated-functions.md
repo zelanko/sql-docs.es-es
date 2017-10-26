@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d05017039673989e1477501feb17b3da6d7220
@@ -96,3 +97,4 @@ Esta sección describen las funciones en desuso cómo se asignan por ODBC 3*.x* 
 -   [Asignación de SQLSetStmtOption](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
   
 -   [Asignación de SQLTransact](../../../odbc/reference/appendixes/sqltransact-mapping.md)
+

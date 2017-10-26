@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ El origen de datos o el controlador utilizado por una aplicación a veces es cod
 -   **Obtener acceso a un DBMS determinado una sola vez.** Por ejemplo, podría contener una hoja de cálculo que recupera los datos mediante una llamada a funciones ODBC el **controlador** palabra clave para identificar un controlador en particular. Dado que el nombre del controlador es significativo para los usuarios que tienen ese controlador, la hoja de cálculo podría pasarse entre los usuarios. Si la hoja de cálculo contiene un nombre de origen de datos, cada usuario tendría que crear el mismo origen de datos para usar la hoja de cálculo.  
   
 -   **Examinando el sistema para todas las bases de datos puede tener acceso a un controlador específico.** Para obtener más información, consulte [conectarse con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), más adelante en esta sección.
+

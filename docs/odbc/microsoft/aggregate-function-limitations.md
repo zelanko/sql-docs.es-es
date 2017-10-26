@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb46c76e0846d252ef8f905673832a7772a72ef9
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="aggregate-function-limitations"></a>Limitaciones de la función de agregado
 Una función de agregado y una referencia de columna no agregado no se pueden usar como argumentos a una única instrucción SQL.
+

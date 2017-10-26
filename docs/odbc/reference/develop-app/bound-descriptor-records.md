@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1ecc435a6b62d75527292ab8dc098e8cb121627
@@ -30,3 +31,4 @@ Cuando la aplicación establece el campo SQL_DESC_DATA_PTR de un registro de des
  Si el descriptor es un APD, cada registro enlazado constituye un parámetro enlazado. Para los parámetros de entrada, la aplicación debe enlazar un parámetro para cada marcador de parámetro dinámico en la instrucción SQL antes de ejecutar la instrucción. Para los parámetros de salida, la aplicación no necesita enlazar el parámetro.  
   
  Si el descriptor es un descartar, que describe una fila de la base de datos, cada registro enlazado constituye una columna enlazada.
+

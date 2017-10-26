@@ -26,6 +26,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
@@ -60,3 +61,4 @@ ms.lasthandoff: 06/22/2017
  Los valores de uso en torno al 100%, que indican que se están procesando muchas solicitudes de clientes, pueden mostrar que los procesos están en cola, en espera del tiempo del procesador y están causando un punto de congestión. Para solucionar este problema, agregue procesadores de mayor velocidad.  
   
   
+

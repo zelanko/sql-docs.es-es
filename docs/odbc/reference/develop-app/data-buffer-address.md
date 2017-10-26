@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d57b8ec52324dd4bec320b6179507ab3102e629
@@ -37,3 +38,4 @@ SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &dsDate, 0, &DateInd);
  Como se mencionó en la [asignar y liberar búferes](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md) sección, la dirección de un búfer aplazada debe seguir siendo válida hasta que el búfer no está enlazado.  
   
  A menos que específicamente está prohibido, la dirección de un búfer de datos puede ser un puntero nulo. Para los búferes que se utiliza para enviar datos al controlador, esto hace que el controlador pasar por alto la información de contenido normalmente en el búfer. Para los búferes que se utiliza para recuperar datos desde el controlador, esto hace que el controlador no devuelve ningún valor. En ambos casos, el controlador omite el argumento de longitud de búfer de datos correspondiente.
+

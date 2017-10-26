@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 77d2aff43a35245724fdc5f165b8e9f3361ee3a0
@@ -31,3 +32,4 @@ Hay dos tipos de orígenes de datos: orígenes de datos y orígenes de datos de 
 -   [Orígenes de datos de máquina](../../odbc/reference/machine-data-sources.md)  
   
 -   [Orígenes de datos de archivo](../../odbc/reference/file-data-sources.md)
+

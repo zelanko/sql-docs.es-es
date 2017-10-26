@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 604bde687e1e497ab82bd1ffb61e80e61dd58613
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="parameterized-query-limitations"></a>Limitaciones de la consulta con parámetros
 Cuando se utiliza el controlador de Microsoft Access, una consulta con parámetros se puede llamar mediante la sintaxis siguiente: llamar a *nombre de la consulta* [(*parámetro*[,*parámetro*]...)].
+

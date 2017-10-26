@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
@@ -54,3 +55,4 @@ Algunos controladores ODBC no cumplir estrictamente la arquitectura que se ha de
  Una ventaja de esta arquitectura es la configuración y mantenimiento de software eficaz. Controladores sólo necesitan actualizarse en un único lugar: en el servidor. Mediante el uso de orígenes de datos del sistema, los orígenes de datos se pueden definir en el servidor para su uso por todos los clientes. No es necesario definir los orígenes de datos en el cliente. Agrupación de conexiones se puede utilizar para optimizar el proceso mediante el cual los clientes se conectan a orígenes de datos.  
   
  El controlador en el cliente suele ser un controlador muy pequeño que se transfiere la llamada del Administrador de controladores al servidor. Su superficie puede ser mucho menor que los controladores ODBC totalmente funcionales en el servidor. En esta arquitectura, se pueden liberar los recursos del cliente si el servidor tiene más capacidad de proceso. Además, se pueden mejorar la eficacia y la seguridad de todo el sistema mediante la instalación de servidores de copia de seguridad y realizar el equilibrio de carga para optimizar el uso del servidor.
+

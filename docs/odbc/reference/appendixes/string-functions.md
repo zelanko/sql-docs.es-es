@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ En la tabla siguiente se enumera las funciones de manipulación de cadena. Una a
 |**ESPACIO (** *recuento* **)** (ODBC 2.0)|Devuelve una cadena de caracteres que se compone de *recuento* espacios.|  
 |**SUBSTRING (** *string_exp*, *iniciar*, longitud**)** (ODBC 1.0)|Devuelve una cadena de caracteres que se deriva de *string_exp*, empezando en la posición de carácter especificada por *iniciar* para *longitud* caracteres.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Devuelve una cadena igual que en *string_exp*, con todos los caracteres convertidas en mayúsculas de minúsculas.|
+

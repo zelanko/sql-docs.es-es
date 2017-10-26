@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
@@ -63,3 +64,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  En ODBC 2. *x*, una aplicación puede llamar a **SQLSetConnectOption** para establecer una opción de instrucción. Cuando sucede esto, el controlador establece la opción de instrucción como valor predeterminado para cualquier instrucción posterior asignado para esa conexión. Se está definido por controlador si el controlador establece la opción de instrucción para cualquier instrucción existente asociado a la conexión especificada.  
   
  Esta capacidad está en desuso en ODBC 3*.x*. ODBC 3*.x* controladores sólo necesitan admitir configuración ODBC 2.* x* atributos de instrucción en el nivel de conexión si desean trabajar con ODBC 2.* x* las aplicaciones que hacen esto. ODBC 3*.x* aplicaciones nunca deben establecer los atributos de instrucción en el nivel de conexión. ODBC 3*.x* atributos de instrucción no se puede establecer en el nivel de conexión, a excepción de los atributos SQL_ATTR_METADATA_ID y SQL_ATTR_ASYNC_ENABLE, que son atributos de conexión y los atributos de instrucción y puede ser Establezca en el nivel de conexión o en el nivel de instrucción.
+

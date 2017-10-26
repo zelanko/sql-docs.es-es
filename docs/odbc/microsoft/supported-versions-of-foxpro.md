@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ Puede usar el controlador ODBC de Microsoft® Visual FoxPro® para acceder a los
  Para obtener más información acerca de cómo conectarse a un origen de datos, vea [agregar un origen de datos de Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
  Para descargar el controlador, consulte [el sitio de descarga de Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318).
+

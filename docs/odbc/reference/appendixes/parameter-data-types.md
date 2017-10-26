@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ Aunque cada parámetro especificado con **SQLBindParameter** se definen mediante
 |Un valor que se utiliza con **en**|Igual que la expresión o el primer valor si hay un marcador de parámetro en la expresión|  
 |Un valor de patrón que se utiliza con **como**|VARCHAR|  
 |Un valor de actualización que se utiliza con **actualizar**|Igual que la columna de actualización|
+

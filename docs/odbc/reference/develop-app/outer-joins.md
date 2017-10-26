@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Para determinar los tipos de combinaciones externas que admiten un origen de datos y el controlador, una aplicación llama **SQLGetInfo** con el SQL_OJ_CAPABILITIES indicador. Los tipos de combinaciones externas que podrían ser compatibles son izquierdos, derecha, completo o combinaciones externas; anidadas combinaciones externas en que los nombres de columna en la **ON** cláusula no tiene el mismo orden que sus nombres de tabla correspondiente en el **OUTER JOIN** cláusula; las combinaciones internas junto con las combinaciones externas; y combinaciones externas mediante cualquier operador de comparación ODBC. Si el tipo de información de SQL_OJ_CAPABILITIES devuelve 0, no se admite ninguna cláusula de combinación externa.
+

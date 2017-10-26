@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cf0f0a0d8ef7f7e8dec4a7a743dbc25bc98bb8d
@@ -41,3 +42,4 @@ Existe una instancia del contador para el grupo de búferes y el grupo de objeto
 
 ## <a name="see-also"></a>Vea también  
 [Supervisar el uso de recursos (Monitor de sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

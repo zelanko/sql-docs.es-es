@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 309d575f63a776e90f32ba45239ecbd67771d250
@@ -48,3 +49,4 @@ Windows 8 incluye una versión actualizada de ODBC 3.8. ODBC 3.8 en Windows 8 in
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
+

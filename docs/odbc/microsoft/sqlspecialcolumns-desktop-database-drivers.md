@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ddd78f90927378fd0a7f8dbd78a5c66abb01f4a
@@ -29,3 +30,4 @@ Un índice único se devolverá (si existe) para la marca SQL_BEST_ROWID en *fCo
  Todos los identificadores de fila tienen un ámbito de SQL_SCOPE_CURROW.  
   
  No se admite la coincidencia de patrones para cada uno el *szTableQualifier* o *szTableName* argumento.
+

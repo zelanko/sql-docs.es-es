@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ En ODBC 3*.x*, los identificadores de fecha, hora y tipos de datos SQL de marca 
  Cuando se solicitan todos los tipos de datos en una llamada a **SQLGetTypeInfo**, el conjunto de resultados devuelto por la función contendrá tanto SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP tal como se define en ODBC 3*.x*, y SQL_DATE, SQL_TIME y SQL_TIMESTAMP tal como se define en ODBC 2. *x*.  
   
  Debido a cómo ODBC 3*.x* el Administrador de controladores realiza la asignación de los tipos de datos de fecha, hora y marca de tiempo, ODBC 3*.x* controladores sólo necesitan reconocer **#defines** de 91, 92, y 93 para la fecha, hora y tipos de datos C de la marca de tiempo especificado en el *TargetType* argumentos de **SQLBindCol** y **SQLGetData** o * Tipo de valor* argumento de **SQLBindParameter**y solo necesita reconocer **#defines** de 91, 92 y 93 para la fecha, hora y tipos de datos SQL de marca de tiempo especifican en el *ParameterType* argumento de **SQLBindParameter** o *DataType* argumento de **SQLGetTypeInfo**. Para obtener más información, consulte [cambios de tipo de datos de fecha y hora](../../../odbc/reference/develop-app/datetime-data-type-changes.md).
+

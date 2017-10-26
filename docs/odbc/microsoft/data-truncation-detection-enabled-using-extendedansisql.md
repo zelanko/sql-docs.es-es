@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 87affbd567a817ea119c405b64f96effe2358052
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="data-truncation-detection-enabled-using-extendedansisql"></a>Habilita la detección de truncamiento de datos utilizando ExtendedAnsiSQL
 Cuando se activa la marca de ExtendedAnsiSQL y la aplicación consiste en Insertar datos en un carácter o una columna binaria y los datos se truncan, se detectará el truncamiento. Cuando la marca ExtendedAnsiSQL está desactivada, los datos se truncan sin previo aviso, tal como estaba en versiones anteriores de los controladores de base de datos de escritorio de ODBC.
+

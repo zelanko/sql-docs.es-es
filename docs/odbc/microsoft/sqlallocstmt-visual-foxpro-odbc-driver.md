@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Asigna memoria para un identificador de instrucción y asocia el identificador de instrucción con la conexión especificada por *hdbc*. El Administrador de controladores pasa esta llamada al controlador, lo que le asigna memoria para el *hstmt* estructura.  
   
  Para obtener más información, consulte [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) en el *referencia del programador de ODBC*.
+

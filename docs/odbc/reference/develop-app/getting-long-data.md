@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  Algunos controladores no aplicar estas restricciones. Aplicaciones interoperables deben asumir que existen o para determinan qué restricciones no se aplican mediante una llamada a **SQLGetInfo** con la opción SQL_GETDATA_EXTENSIONS.  
   
  Si la aplicación no necesita todos los datos de un carácter o una columna de datos binarios, puede reducir el tráfico de red en los controladores basados en DBMS estableciendo el atributo de instrucción SQL_ATTR_MAX_LENGTH antes de ejecutar la instrucción. Así restringe el número de bytes de datos que se devolverán para cualquier carácter o columna binaria. Por ejemplo, suponga que una columna contiene texto largo documentos. Podría tener una aplicación que examina la tabla que contiene esta columna Mostrar solo la primera página de cada documento. Aunque puede simular este atributo de instrucción en el controlador, no hay ninguna razón para hacerlo. En concreto, si una aplicación desea truncar caracteres o datos binarios, se debe enlazar un búfer pequeño para la columna con **SQLBindCol** y dejar que el controlador truncar los datos.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc2fa42c2535d794dcf93160bf79b71d8c226640
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  El programa de instalación de traductor DLL contiene la **ConfigTranslator** función, que devuelve la opción predeterminada para un traductor. Si es necesario, pide al usuario esta información. Para obtener una descripción completa de esta función, consulte [referencia de API de DLL de instalación](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
  El programa de instalación de traductor archivo DLL está escrito por el programador de traductor. Puede ser parte del traductor de DLL o un archivo DLL independiente.
+

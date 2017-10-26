@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ La instrucción CREATE INDEX no se admite para los controladores de Microsoft Ex
  Cuando se utiliza el controlador de dBASE, el índice creado por una instrucción CREATE UNIQUE INDEX es realmente no es único, y pueden ser inserten valores duplicados en la columna indizada. Sólo un registro de un conjunto de valores clave idénticos puede agregarse al índice.  
   
  Cuando se utiliza el controlador de Paradox, debe definirse un índice único en un subconjunto de las columnas de una tabla, como la primera columna contiguo. Una tabla no se puede actualizar el controlador de Paradox si un índice único no está definido en la tabla o cuando se usa el controlador de Paradox sin la implementación del motor de base de datos de Borland.
+

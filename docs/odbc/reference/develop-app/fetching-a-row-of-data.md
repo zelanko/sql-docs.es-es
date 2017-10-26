@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
@@ -40,3 +41,4 @@ Para capturar una fila de datos, una aplicación llama **SQLFetch**. **SQLFetch*
  Datos de caracteres deben ser el controlador terminada en null antes de que se devuelva a la aplicación, incluso si se ha truncado. El carácter de terminación null no se incluye en la longitud de bytes devuelto pero requieren espacio en el búfer de enlazado. Por ejemplo, suponga que una aplicación utiliza cadenas formadas por datos de caracteres del juego de caracteres ASCII, un controlador tiene 50 caracteres de datos que se va a devolver y búfer de la aplicación tiene una longitud de 25 bytes. En el búfer de la aplicación, el controlador devuelve los primeros 24 caracteres seguidos por un carácter de terminación null. En el búfer de longitud/indicador, devuelve una longitud de bytes de 50.  
   
  La aplicación puede restringir el número de filas del conjunto estableciendo el atributo de instrucción de SQL_ATTR_MAX_ROWS antes de ejecutar la instrucción que crea el resultado de conjunto de resultados. Por ejemplo, el modo de vista previa en una aplicación que se utilizan para dar formato a informes solamente necesita suficientes datos para mostrar la primera página del informe. Al restringir el tamaño del conjunto de resultados, esta característica llevarían a cabo con mayor rapidez. Este atributo de instrucción está pensado para reducir el tráfico de red y podría no ser compatibles con todos los controladores.
+

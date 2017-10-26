@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Controladores de Unicode aún deben admitir tipos de datos de ANSI, incluidos SQL_CHAR. Si enlaza SQL_CHAR una aplicación trabaja con un controlador de Unicode, el Administrador de controladores no se asignarán los datos SQL_CHAR a SQL_WCHAR. El controlador de Unicode debe aceptar los datos SQL_CHAR.  
   
  El Administrador de controladores se almacena los nombres DSN y el controlador en Unicode y se asignan a ANSI según sea necesario. Si un carácter Unicode no se puede asignar a un carácter ANSI (ya que puede ocurrir si se utilizan caracteres de una página de códigos que no es la página de código nativo del equipo en el controlador y los nombres de DSN), los caracteres que no se pudieron convertir se representan mediante un sup de carácter predeterminado plied por el sistema.
+

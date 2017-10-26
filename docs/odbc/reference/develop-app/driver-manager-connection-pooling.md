@@ -19,6 +19,7 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
@@ -89,3 +90,4 @@ Agrupación de conexiones permite a una aplicación que utilice una conexión de
  [Conectarse a datos de un origen o el controlador](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación en Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
+

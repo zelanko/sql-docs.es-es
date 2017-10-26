@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
@@ -56,3 +57,4 @@ El *dígitos decimales* de datos decimal y numeric tipos se define como el núme
 |Todos los tipos de fecha y hora|PRECISION|  
 |Todos los tipos de intervalo con un componente de segundos|PRECISION|  
 |Todos los tipos de intervalo con ningún componente de segundos|n/d|
+

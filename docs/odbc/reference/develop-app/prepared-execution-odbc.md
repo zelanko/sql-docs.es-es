@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
@@ -96,3 +97,4 @@ while (GetPrice(&PartID, &Price)) {
  Si el controlador no puede emular la preparación de instrucciones, almacena la instrucción cuando **SQLPrepare** se llama y lo envía para su ejecución cuando **SQLExecute** se llama.  
   
  Porque no es perfecta, preparación de instrucciones emulado **SQLExecute** puede devolver los errores devueltos normalmente por **SQLPrepare**.
+

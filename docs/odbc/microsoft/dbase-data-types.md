@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49fb588f5793eb3ee2fce7417632301794a65a22
@@ -62,3 +63,4 @@ En la tabla siguiente se muestra cómo se asignan los tipos de datos de dBASE a 
 |MEMORANDO|La longitud máxima de una columna de memorando es 65.500 bytes.|  
   
  Para conocer más limitaciones en los tipos de datos pueden encontrarse en [limitaciones del tipo de datos](../../odbc/microsoft/data-type-limitations.md).
+

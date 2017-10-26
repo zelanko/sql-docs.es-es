@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ Las aplicaciones requieren metadatos para la mayoría de las operaciones de conj
  Aplicaciones genéricas, especialmente las que admiten consultas ad hoc, casi nunca se sabe los metadatos de los conjuntos de resultados que se crean. Por lo tanto, deben detectar los metadatos en tiempo de ejecución mediante las funciones de **SQLNumResultCols**, **SQLDescribeCol**, y **SQLColAttribute**, que se describen en la la sección siguiente, [SQLDescribeCol y SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Todas las aplicaciones, independientemente de su tipo, pueden codificar metadatos para los conjuntos de resultados devueltos por las funciones de catálogo. Estos conjuntos de resultados se definen en la sección de referencia de este manual.
+

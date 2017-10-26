@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c029dbb9906c4d7d738e0e705dd02e437b6c1bec
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  Este tema describe el uso de la **SQLSetScrollOptions** función en la biblioteca de cursores. Para obtener información general sobre **SQLSetScrollOptions**, consulte [SQLSetScrollOptions función](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md).  
   
  La biblioteca de cursores es compatible con **SQLSetScrollOptions** solo por compatibilidad con versiones anteriores; aplicaciones deben utilizar los atributos de instrucción SQL_ATTR_ROW_ARRAY_SIZE, SQL_ATTR_CURSOR_TYPE y SQL_ATTR_CONCURRENCY en su lugar.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7851399402ccdb8fa1ed516e1a6b400c4e09e601
@@ -34,3 +35,4 @@ ms.lasthandoff: 06/22/2017
 |[Deprecation Final Support (clase de eventos)](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|Indica que una característica se eliminará en una próxima versión principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
   
+

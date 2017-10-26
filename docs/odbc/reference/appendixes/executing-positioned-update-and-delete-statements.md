@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 |Delete posicionada|SQL_ROW_DELETED|Valores antiguos|Valores antiguos|  
   
  [1] en la aplicación debe actualizar los valores de los búferes de conjunto de filas antes de ejecutar la instrucción de actualización por posición; Después de ejecutar la instrucción de actualización por posición, la biblioteca de cursores copia los valores de los búferes de conjunto de filas a su memoria caché.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 657d0324132b279300e2a61151c790f066e4a3f5
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Cuando se utiliza el controlador de Microsoft Access, SQL_COMMIT o SQL_ROLLBACK se admiten para la *fType* argumento en una llamada a **SQLTransact**.  
   
  Si se produce un error durante el proceso de confirmación, se puede reparar la base de datos mediante la opción de base de datos de reparación en el programa de instalación del controlador de Microsoft Access, o mediante el uso de la palabra clave REPAIR_DB en el **SQLConfigDataSource** función.
+

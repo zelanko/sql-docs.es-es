@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79d5ff9920c0340d421d56693470ba4293199fd1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Usar junto con [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) para especificar los datos de parámetro en tiempo de ejecución de la instrucción.  
   
  Para obtener más información, consulte [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) en el *referencia del programador de ODBC*.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c363ecd47545868e2d40afabdce9bbef6f78031
@@ -30,3 +31,4 @@ La pregunta final acerca de la interoperabilidad es el tiempo. Desarrollar una a
  Además de tiempo de desarrollo, debe considerarse la vigencia del producto. Si la aplicación está diseñada para utilizarse una vez, por ejemplo, una aplicación que transfiere datos al migrar desde un sistema DBMS a otro, no hay ningún punto en lo que interoperable. La aplicación se usa una vez y se descartan.  
   
  Si la aplicación existirá durante mucho tiempo, puede que sea más fácil de mantener como una aplicación interoperable. Esto es verdad incluso para las aplicaciones personalizadas que tienen un DBMS único como un destino. La razón es que el código interoperable utiliza un subconjunto limitado de funciones de base de datos. El controlador es necesario para mantener las características disponibles, incluso aunque se modifiquen el DBMS subyacente. Por lo tanto, interoperable código puede cambiar la carga de hacer frente a cambios en el DBMS de desarrollador de la aplicación para el programador del controlador.
+

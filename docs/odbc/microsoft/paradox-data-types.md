@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQ
 |timestamp|Cuando un valor se inserta en una columna de marca de tiempo con el controlador de Paradox y que posteriormente se recupera de la columna, el valor recuperado puede diferir del valor insertado por tanto como 1 segundo a causa del redondeo.|  
   
  Para conocer más limitaciones en los tipos de datos pueden encontrarse en [limitaciones del tipo de datos](../../odbc/microsoft/data-type-limitations.md).
+

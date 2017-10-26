@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ Aunque SQL estático funciona bien en muchas situaciones, hay una clase de aplic
 3.  El programa puede usar la instrucción EXECUTE repetidamente, proporcionar valores de parámetro diferente cada vez que se ejecuta la instrucción dinámica.  
   
  Ejecución preparada todavía no es igual que SQL estático. En SQL estático, los cuatro primeros pasos de procesamiento de una instrucción SQL tienen lugar en tiempo de compilación. En una ejecución preparada, estos pasos siguen realizando en tiempo de ejecución, pero se realizan una sola vez; ejecución del plan tiene lugar cuando se llama a EXECUTE. Esto ayuda a eliminar algunas de las desventajas de rendimiento inherentes a la arquitectura de SQL dinámico. La ilustración siguiente muestra las diferencias entre SQL estáticos, SQL dinámico con la ejecución inmediata y SQL dinámico con la ejecución preparada.
+

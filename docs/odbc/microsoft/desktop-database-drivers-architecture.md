@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ Estos controladores están diseñados para uso en Microsoft Windows 95 o una ver
  Odbcjt32.dll implementa funciones ODBC encima de la API de Microsoft Jet. No hay ninguna asignación directa entre las funciones ODBC y Jet de Microsoft, sin embargo. Muchos factores, como los modelos de cursor y la asignación de SQL, evitar que una correlación directa de las funciones.  
   
  El controlador ODBC se encuentra entre el motor de Microsoft Jet y el Administrador de controladores ODBC. Algunas funciones ODBC llamadas a una aplicación se controla por el Administrador de controladores y no pasan al controlador. Para estas funciones, Microsoft Jet nunca ve la función llama a porque no tiene una conexión directa al administrador de controladores.
+

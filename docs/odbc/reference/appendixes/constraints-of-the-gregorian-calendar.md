@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
@@ -38,3 +39,4 @@ Tipos de datos de fecha y la fecha y hora y los campos al final de los tipos de 
 -   En el campo de segundos al final de los tipos de datos interval, el valor del campo de segundos debe estar entre 0 y 59.9 (*n*), ambos inclusive, donde * n * es el número de dígitos en el precisión de fracciones de segundo.  
   
 -   En el campo de segundos al final de los tipos de datos de fecha y hora, el valor del campo de segundos debe estar entre 0 y 61,9 (*n*), ambos inclusive, donde * n * especifica el número de "9" dígitos y el valor de * n * es la precisión de fracciones de segundo. (El intervalo de segundos permite como máximo dos segundos intercalares para mantener la sincronización de tiempo de sidereal).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
@@ -68,3 +69,4 @@ Los identificadores para el carácter de tipo de datos ODBC C son:
   
 > [!NOTE]  
 >  Se desaconseja enlazar datos de carácter C a un tipo de datos SQL binario a los desarrolladores de aplicaciones. Esta conversión suele ser ineficaz y lento.
+

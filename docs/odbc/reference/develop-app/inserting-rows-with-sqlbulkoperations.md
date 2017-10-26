@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ Insertar datos con **SQLBulkOperations** es similar a la actualización de datos
 3.  Llamadas **SQLBulkOperations** con el *operación* establecido en SQL_ADD.  
   
  Después de **SQLBulkOperations** devuelve, no se ha modificado la fila actual. Si está enlazada la columna de marcador (columna 0), **SQLBulkOperations** devuelve los marcadores de las filas insertadas en el búfer de conjunto de filas enlazados a esa columna.
+

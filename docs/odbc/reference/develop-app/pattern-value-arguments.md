@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ Algunos argumentos en el catálogo de funciones, como la *TableName* argumento e
 >  ODBC 2. *x* controladores no son compatibles con los patrones de búsqueda en el *CatalogName* argumento en **SQLTables**. ODBC 3*.x* controladores aceptan patrones de búsqueda en este argumento si el atributo de entorno SQL_ATTR_ ODBC_VERSION está establecido en SQL_OV_ODBC3; no acepta patrones de búsqueda en este argumento si se establece en SQL_OV_ODBC2.  
   
  Se pasa un puntero null a un argumento de patrón de búsqueda no limite la búsqueda para dicho argumento; es decir, un puntero nulo y el porcentaje de patrón de búsqueda (en caracteres) son equivalentes. Sin embargo, una longitud de cero Buscar patrón, es decir, un puntero válido a una cadena de longitud cero, coincide con la cadena vacía ("").
+

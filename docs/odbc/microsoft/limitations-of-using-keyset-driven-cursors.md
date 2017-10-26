@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 54581e6bf4aceebc50a752ee460458671e8047bd
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Debido al modo en que el controlador administra la instrucción SQL que se envía al servidor de Oracle, Oracle internamente devuelve el siguiente mensaje de error: "ORA-00964: tabla nombre no está en la de la lista."
+

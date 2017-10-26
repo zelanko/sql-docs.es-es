@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5845411fd329869cc49a5f4caaa5be987135841
@@ -29,3 +30,4 @@ En la tabla siguiente describe las funciones DLL el programa de instalación. Pa
 |Tarea|Nombre de función|Finalidad|  
 |----------|-------------------|-------------|  
 |Configuración de orígenes de datos y traductores|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|Instala o desinstala un controlador.<br /><br /> Agrega, modifica o elimina un origen de datos.<br /><br /> Devuelve una opción de traducción predeterminado.|
+

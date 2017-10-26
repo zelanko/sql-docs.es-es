@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46ad4937f804e5557d153ff94dd9c6ab559c9f81
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
  El controlador ODBC de Microsoft para Oracle versiones 2.0 y 2.5 no son compatibles con sinónimos para procedimientos almacenados de Oracle que realiza la llamada. Sinónimos funcionan según lo esperado cuando se usa con otros objetos de base de datos de Oracle como tablas.
+

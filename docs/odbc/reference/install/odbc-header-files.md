@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a58d17e4095afc92976094926be77ecdab1ad65
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  Msdadc.h  
   
  Sqlspi.h (utilizado para el desarrollo de controladores, consulte [referencia de interfaz de proveedor de servicio de ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) para obtener más información) disponible a partir del SDK de Windows 8.
+

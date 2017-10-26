@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ A *conexión* consta de un controlador y un origen de datos. Un identificador de
  Identificadores de conexión se utilizan principalmente al conectarse al origen de datos (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**), desconectar de los datos origen (**SQLDisconnect**), obtener información sobre el origen de datos y el controlador (**SQLGetInfo**), la recuperación de diagnóstico (**SQLGetDiagField** y **SQLGetDiagRec**) y realizar transacciones (**SQLEndTran**). También se utilizan al establecer u obtener atributos de conexión (**SQLSetConnectAttr** y **SQLGetConnectAttr**) y al obtener el formato nativo de una instrucción SQL (**SQLNativeSql **).  
   
  Se asignan a identificadores de conexión **SQLAllocHandle** y liberado con **SQLFreeHandle**.
+

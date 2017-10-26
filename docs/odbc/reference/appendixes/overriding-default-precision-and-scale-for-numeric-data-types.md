@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 613ec65d838a525251b6682cca477c5c8d24a162
@@ -35,3 +36,4 @@ Cuando se establece el campo SQL_DESC_TYPE en un Descartar para SQL_C_NUMERIC, l
  Si la aplicación llama **SQLGetData** para devolver datos en una estructura SQL_C_NUMERIC, se usan los campos predeterminados SQL_DESC_SCALE y SQL_DESC_PRECISION. Si los valores predeterminados no son aceptables, la aplicación debe llamar a **SQLSetDescRec** o **SQLSetDescField** para establecer los campos y, a continuación, llamar a **SQLGetData** con un *TargetType* de SQL_ARD_TYPE para usar los valores en los campos de descriptor.  
   
  Cuando **SQLPutData** es llama, la llamada usa los campos SQL_DESC_SCALE y SQL_DESC_PRECISION del registro de descriptor que se corresponde con el parámetro de datos en ejecución o una columna, que son campos APD para las llamadas a ** SQLExecute** o **SQLExecDirect**, o campos de Descartar para las llamadas a **SQLBulkOperations** o **SQLSetPos**.
+

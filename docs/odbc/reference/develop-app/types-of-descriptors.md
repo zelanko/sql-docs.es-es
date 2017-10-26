@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ Un descriptor de se utiliza para describir uno de los siguientes:
  Un descriptor de puede realizar distintas funciones. Instrucciones diferentes pueden compartir cualquier descriptor de la aplicación se asigna explícitamente. Un descriptor de fila en una sola instrucción puede actuar como un descriptor de parámetro en otra instrucción.  
   
  Siempre se sabe si un descriptor determinado es un descriptor de la aplicación o un descriptor de implementación, incluso si el descriptor aún no se ha usado en una operación de base de datos. Para los descriptores de la implementación se asigna implícitamente, la implementación registra la fila predefinida en relación con el identificador de instrucción. Cualquier descriptor que asigna la aplicación mediante una llamada a **SQLAllocHandle** es un descriptor de la aplicación.
+

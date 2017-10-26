@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  La biblioteca de cursores no admite el cambio del campo SQL_DESC_BIND_TYPE en un APD o descartar cuando se abre un cursor. El campo SQL_DESC_BIND_TYPE puede cambiarse después de que se cierra el cursor y antes de que se abre un nuevo cursor. Los únicos campos de descriptor que la biblioteca de cursores admite el cambio cuando se abre un cursor son SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR y SQL_DESC_ROWS_PROCESSED_ PTR.  
   
  La biblioteca de cursores no permite modificar el campo SQL_DESC_COUNT de la descartar después **SQLExtendedFetch** o **SQLFetchScroll** se ha llamado y antes de que se ha cerrado el cursor.
+

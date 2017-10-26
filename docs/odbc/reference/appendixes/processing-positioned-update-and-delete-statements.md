@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   Si el controlador admite solo una instrucción activa, las capturas de biblioteca de cursor el resto del resultado establece y, a continuación, vuelve a obtener el conjunto de filas actual desde la memoria caché antes de ejecutar una posición instrucción update o delete. Si la aplicación, a continuación, llama a una función que devuelve los metadatos en un conjunto de resultados (por ejemplo, **SQLNumResultCols** o **SQLDescribeCol**), la biblioteca de cursores devuelve un error.  
   
 -   Si se realiza una actualización por posición o una instrucción delete en una columna de una tabla que incluye una columna de marca de tiempo que se actualiza automáticamente cada vez que se realiza una actualización, actualización posicionada posterior o las instrucciones delete se producirá un error si la columna de marca de tiempo enlazado. Esto ocurre porque la búsqueda se actualiza o elimina instrucción que crea la biblioteca de cursores no identificará con precisión la fila que se va a actualizar. El valor de la instrucción por búsqueda para la columna de marca de tiempo no coincidirá con el valor actualizado automáticamente de la columna de marca de tiempo.
+

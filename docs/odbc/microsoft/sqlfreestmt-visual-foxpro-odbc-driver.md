@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 673298af856478eb1c94db4f79ef5fb56ee3396b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Detiene el procesamiento asociado con un valor concreto *hstmt*, cierra los cursores abiertos asociados con la *hstmt*, se descartan los resultados pendientes y, opcionalmente, libera todos los recursos asociados con la instrucción identificador.  
   
  Para obtener más información, consulte [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) en el *referencia del programador de ODBC*.
+

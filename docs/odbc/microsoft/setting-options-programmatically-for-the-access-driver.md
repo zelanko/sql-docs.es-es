@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |Base de datos del sistema|La ruta de acceso completa de la base de datos del sistema de Microsoft Access para su uso con la base de datos de Microsoft Access que desea tener acceso.<br /><br /> Haga clic en el **base de datos del sistema** para seleccionar la base de datos que se usará. El controlador ODBC de Microsoft Access pide al usuario un nombre y una contraseña. El nombre predeterminado es Admin y la contraseña predeterminada en Microsoft Access para el usuario Admin es una cadena vacía.<br /><br /> Para aumentar la seguridad de la base de datos de Microsoft Access, cree un nuevo usuario para reemplazar el usuario administrador y eliminar el usuario administrador o cambiar los objetos a los que el usuario administrador tiene acceso.|Para establecer esta opción de forma dinámica, utilice el **SYSTEMDB** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Subprocesos|El número de subprocesos en segundo plano para el motor para usar. Para el controlador de Microsoft Access, este valor predeterminado es 3, pero puede cambiarse. El usuario puede querer aumentar el número de subprocesos si hay una gran cantidad de actividad en la base de datos.<br /><br /> Esta opción se incluye en el **establecer opciones avanzadas** cuadro de diálogo para el controlador de Microsoft Access.|Para establecer esta opción de forma dinámica, utilice el **subprocesos** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Determina si el controlador de Microsoft Access llevará a cabo una transacciones explícitas definidas por el usuario de forma asincrónica. Este valor está establecido inicialmente en "Sí", lo que significa que el controlador de Microsoft Access esperará confirmaciones en una transacción definida por el usuario se complete.<br /><br /> Establecer esta opción en False puede tener consecuencias impredecibles en un entorno multiusuario.|Para establecer esta opción de forma dinámica, utilice el **USERCOMMITSYNC** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|
+

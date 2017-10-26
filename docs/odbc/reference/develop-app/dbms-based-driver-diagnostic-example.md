@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c0a20af8dc2a35ba451890472ad1af73e01d8688
@@ -48,3 +49,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
 ```  
   
  Porque se produjo el error en el origen de datos, el controlador agrega un prefijo para el identificador de origen de datos ([Rdb]) para el mensaje de diagnóstico. Dado que el controlador es el componente de interfaz con el origen de datos, agrega los prefijos de su proveedor ([Microsoft]) e identificador ([controlador ODBC para Rdb]) para el mensaje de diagnóstico.
+

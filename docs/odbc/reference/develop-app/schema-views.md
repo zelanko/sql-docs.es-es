@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06b9546950d5ae84b6ac5811ae4413fa1841c065
@@ -31,3 +32,4 @@ Una aplicación puede recuperar información de metadatos de lo DBMS mediante un
  Si admite el controlador y el DBMS, las vistas INFORMATION_SCHEMA proporcionan un medio más eficaz y completa de recuperación de metadatos que proporcionan las funciones de catálogo ODBC. Una aplicación puede ejecutar su propio personalizado **seleccione** instrucción con una de estas vistas, puede unir las vistas, o puede realizar una unión en las vistas. Al tiempo que ofrece una gama más amplia de metadatos y de mayor utilidad, vistas INFORMATION_SCHEMA no se admiten con frecuencia el DBMS. Esto podría cambiar como más DBMS y controladores de lograr el cumplimiento de SQL-92.  
   
  Para determinar qué vistas se admiten, llama a una aplicación **SQLGetInfo** con la opción SQL_INFO_SCHEMA_VIEWS. Para recuperar los metadatos de una vista compatible, la aplicación ejecuta un **seleccione** instrucción que especifica la información de esquema necesaria.
+

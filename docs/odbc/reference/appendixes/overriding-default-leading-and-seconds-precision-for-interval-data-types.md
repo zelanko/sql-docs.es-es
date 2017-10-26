@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ Cuando se establece el campo SQL_DESC_TYPE de una descartar a un tipo C de inter
  Si la aplicación llama **SQLGetData** para devolver datos en una fecha y hora o un intervalo de tipo C, se usan el valor predeterminado inicial de precisión de intervalo y precisión de segundos del intervalo. Si cualquier valor predeterminado no es aceptable, la aplicación debe llamar a **SQLSetDescField** para establecer uno de los campos descriptor, o **SQLSetDescRec** establecer SQL_DESC_PRECISION. La llamada a **SQLGetData** debe tener un *TargetType* de SQL_ARD_TYPE para usar los valores en los campos de descriptor.  
   
  Cuando **SQLPutData** se llama, el intervalo a la precisión y el intervalo de segundos precisión se leen de los campos del registro de descriptor que corresponden a los parámetro de datos en ejecución o una columna, que son campos APD de llamadas para **SQLExecute** o **SQLExecDirect**, o campos de Descartar para las llamadas a **SQLBulkOperations** o **SQLSetPos**.
+

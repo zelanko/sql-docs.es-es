@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67f656acd349419d7fc3d1c264985beeb36298ce
@@ -75,3 +76,4 @@ Un descriptor es una estructura de datos que contiene información sobre los dat
 |SQL_DESC_UNNAMED|Admitida|  
 |SQL_DESC_UNSIGNED|Admitida|  
 |SQL_DESC_UPDATABLE|Admitida|
+

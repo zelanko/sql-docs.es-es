@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ Las reglas siguientes rigen el control de diagnóstico en **SQLGetDiagRec** y **
  Para un componente ODBC que no sea el Administrador de controladores:  
   
 -   Debe establecer el valor de SQLSTATE en función del error nativo. Para los controladores basados en archivos y controladores basados en DBMS que no utilizan una puerta de enlace, el controlador debe establecer el valor de SQLSTATE. Para los controladores basados en DBMS que usar una puerta de enlace, el controlador o una puerta de enlace que admita ODBC puede establecer el valor de SQLSTATE.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
@@ -47,3 +48,4 @@ Los datos insertados se truncan a la derecha sin previo aviso si es demasiado la
 ```  
   
  Cuando se utiliza el controlador de texto, todos los valores de columna pueden estar rellena con espacios iniciales. La longitud de cualquier fila debe ser menor o igual a 65,543 bytes.
+

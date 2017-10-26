@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 054c274bc65c0f4ecf149607216f62e9e15df225
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 2.  Rellene la información apropiada para el cuadro de diálogo Conectar y, a continuación, haga clic en Aceptar.  
   
  Después de la conexión es comprobar información de la aplicación puede utilizar el controlador ODBC para Oracle para tener acceso a la información que contiene el origen de datos.
+

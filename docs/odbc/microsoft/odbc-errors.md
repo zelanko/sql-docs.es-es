@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 810742596134c9ffd630ba2060d60aa9f15e50d4
@@ -35,3 +36,4 @@ Cuando se produce un error, los controladores de base de datos de escritorio de 
 -   [Mensajes de error](../../odbc/microsoft/odbc-jet-error-messages.md)  
   
 -   [Errores aritméticos](../../odbc/microsoft/arithmetic-errors.md)
+

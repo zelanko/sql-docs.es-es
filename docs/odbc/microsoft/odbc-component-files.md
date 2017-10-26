@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6eb418fd3c116745ada1034ae8526a7455b1343
@@ -31,3 +32,4 @@ Los archivos del controlador de ODBC son necesarios para cada componente de ODBC
  Algunos archivos se requiere más de un componente. Estos archivos deben distribuirse si desea redistribuir cualquiera de los controladores de base de datos de escritorio ODBC con las aplicaciones comerciales.  
   
  Estos archivos se instalan en el directorio \Windows\System para Windows 95 o versiones posteriores, o en el directorio de \Windows\System32 para Windows NT 3.51 o posterior y Windows 2000. Si los archivos ODBC se instalaron anteriormente en un directorio diferente, asegúrese de que utiliza el directorio de archivos de la \Windows\System (o System32) más reciente.
+

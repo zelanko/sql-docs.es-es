@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ En la tabla siguiente indica el nivel de conformidad de cada función ODBC, dond
  [1] importantes características de esta función solo están disponibles en niveles más altos de conformidad.  
   
  [2] establecer ciertos atributos en valores no predeterminados depende del nivel de conformidad. Para obtener más información, vea la sección siguiente, [conformidad de atributo](../../../odbc/reference/develop-app/attribute-conformance.md).
+

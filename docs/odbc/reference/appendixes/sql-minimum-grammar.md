@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c225ab76f4c67938590bd19f21bfafafa20742d8
@@ -94,3 +95,4 @@ Esta sección describe la sintaxis SQL mínima que debe ser compatible con un co
 -   [Tipos de datos de parámetro](../../../odbc/reference/appendixes/parameter-data-types.md)  
   
 -   [Marcadores de parámetros](../../../odbc/reference/appendixes/parameter-markers.md)
+

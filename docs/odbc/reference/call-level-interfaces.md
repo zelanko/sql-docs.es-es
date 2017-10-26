@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ La técnica final para enviar instrucciones SQL en el DBMS es a través de una i
 3.  Si la instrucción es una instrucción SELECT, la aplicación llama a una función CLI para devolver los resultados de los búferes de la aplicación. Normalmente, esta función devuelve una fila o una columna de datos a la vez.  
   
 4.  La aplicación llama a una función CLI para desconectarse del DBMS.
+

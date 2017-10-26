@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **Especifique los búferes de longitud no sea null para los datos binarios de C.** La biblioteca de cursores asigna búferes de longitud en Sí si solo caché el *StrLen_or_IndPtr* argumento en **SQLBindCol** es distinto de null. Cuando el *TargetType* argumento es SQL_C_BINARY, la biblioteca de cursores requiere la longitud de los datos binarios para construir un **donde** cláusula de los datos. Si no hay ningún búfer de longitud para una columna SQL_C_BINARY y la aplicación llama **SQLGetData** o intenta ejecutar una actualización por posición o instrucción delete, las devoluciones de la biblioteca de cursor SQL_ERROR y SQLSTATE SL014 (una posición se emitió la solicitud y no todos los campos de número de columna se almacena en búfer).  
   
 -   **Especifique los búferes de longitud no null para las columnas que aceptan valores NULL.** La biblioteca de cursores asigna búferes de longitud en Sí si solo caché el *StrLen_or_IndPtr* argumento en **SQLBindCol** es distinto de null. Dado que SQL_NULL_DATA se almacena en el búfer de longitud, la biblioteca de cursores supone que cualquier columna que no hay hasta alcanzar la longitud del búfer que se especifica no acepta valores NULL. Si no hay ninguna columna de longitud se especifica para una columna que acepta valores NULL, la biblioteca de cursores crea un **donde** cláusula que utiliza el valor de datos para la columna. Esta cláusula no identificará correctamente la fila.
+

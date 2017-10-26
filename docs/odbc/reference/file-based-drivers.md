@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ Se utilizan controladores basados en archivos con orígenes de datos como dBASE 
  En la siguiente ilustración muestra dos configuraciones distintas de controladores basados en archivos, uno en el que residen los datos localmente y el otro en el que reside en un servidor de archivos de red.  
   
  ![Dos configuraciones de archivo &#45; controladores basados en](../../odbc/reference/media/pr06.gif "pr06")
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ Después de que se conoce el nivel básico de interoperabilidad, deben tener en 
 -   **Admite varias consultas solo si el controlador hace.** Después de conectarse a un controlador, la aplicación comprueba el número de instrucciones activas. La aplicación permite al usuario iniciar una nueva instrucción cuando uno ya está activa sólo si el controlador es compatible con varias instrucciones activas. La aplicación tiene mayor funcionalidad y la interoperabilidad, pero es más difícil de implementar.  
   
 -   **Siempre admite varias consultas y emular ellos cuando sea necesario.** Después de conectarse a un controlador, la aplicación comprueba el número de instrucciones activas. La aplicación siempre permite al usuario iniciar una nueva instrucción cuando uno ya está activa. Si el controlador admite solo una instrucción activa, la aplicación abre una conexión adicional a ese controlador y ejecuta la instrucción nuevo en esa conexión. La aplicación tiene una funcionalidad completa y la interoperabilidad alta, pero es más difícil de implementar.
+

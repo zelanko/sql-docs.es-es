@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a833509f772205258e10ec4b589da10ab2a1cbbe
@@ -66,3 +67,4 @@ Esta sección contiene los temas siguientes.
 -   [Comando de SQL de actualización:](../../odbc/microsoft/update-sql-command.md)  
   
 -   [Tipos de datos de campo de Visual FoxPro](../../odbc/microsoft/visual-foxpro-field-data-types.md)
+

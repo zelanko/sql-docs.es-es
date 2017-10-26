@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0476415619db3591fd9c26d22bc615b6d90f6c2e
@@ -58,3 +59,4 @@ timestamp-separator ::=
   
 ## <a name="remarks"></a>Comentarios  
  Si los tipos de datos de fecha, hora y marca de tiempo son compatibles con el origen de datos, se admiten las secuencias de escape de literales de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.
+

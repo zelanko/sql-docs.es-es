@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e110747e53b5c64702b6103e47942c85858901aa
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 |**TransactionRollback**|Se genera cuando una aplicación llama **SQLEndTran** para revertir una transacción local.|  
 |**JoinDTC**|Se genera cuando el Coordinador de transacciones distribuidas (DTC) se une a una aplicación.|  
 |**LeaveDTC**|Se genera cuando una aplicación sale del Coordinador de transacciones distribuidas (DTC).|
+

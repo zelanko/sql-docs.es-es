@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  La biblioteca de cursores no admite las operaciones de SQL_UPDATE y SQL_DELETE en una llamada a **SQLSetPos**. Implementa la biblioteca de cursores una posición instrucción update o delete SQL mediante la creación de una búsqueda instrucción update o delete con una cláusula WHERE que enumera los valores almacenados en su caché para cada columna enlazada. Para obtener más información, consulte [procesar actualización coloca y eliminar instrucciones](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
   
  Si el controlador no es compatible con los cursores estáticos, debe llamar una aplicación trabajar con la biblioteca de cursores **SQLSetPos** sólo en un conjunto de filas recuperado por **SQLExtendedFetch** o **SQLFetchScroll **, no en **SQLFetch**. La biblioteca de cursores implementa **SQLExtendedFetch** y **SQLFetchScroll** mediante la realización de llamadas repetidas de **SQLFetch** (con un tamaño de conjunto de filas de 1) en el controlador. La biblioteca de cursores pasa las llamadas a **SQLFetch**, en la otra parte, a través del controlador. Si **SQLSetPos** se llama en un conjunto de filas de varias filas capturado por **SQLFetch** cuando el controlador no es compatible con los cursores estáticos, la llamada producirá un error porque **SQLSetPos** no funciona con cursores de solo avance. Esto sucederá incluso si una aplicación ha llamado correctamente **SQLSetStmtAttr** establecer SQL_ATTR_CURSOR_TYPE en SQL_CURSOR_STATIC, que la biblioteca de cursores admite incluso si el controlador no es compatible con los cursores estáticos.
+

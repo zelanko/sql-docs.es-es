@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca36f0da35640ca26102f83f33ef93a6dcfae869
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Asigna memoria para un identificador de entorno, *henv*e inicializa la interfaz de nivel de llamada ODBC para su uso por una aplicación.  
   
  Para obtener más información, consulte [SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md) en el *referencia del programador de ODBC*.
+

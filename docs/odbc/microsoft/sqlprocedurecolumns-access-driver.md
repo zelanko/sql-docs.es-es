@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9faec06a2337e7b3a2e93769486f40e006d9d7c8
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT o SQL_RESULT_COL|  
 |ORDINAL|Se trata de una columna específica del controlador que se devuelve al final del conjunto de resultados. El tipo SQL de la columna es un entero.|
+

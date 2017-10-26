@@ -27,6 +27,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
@@ -50,3 +51,4 @@ A *descriptor* es una colección de metadatos que describen los parámetros de u
  Mayoría de las operaciones en ODBC puede realizarse sin uso explícito de descriptores de la aplicación. Sin embargo, los descriptores de proporcionan un acceso directo conveniente para algunas operaciones. Por ejemplo, supongamos que desea que una aplicación insertar datos de dos conjuntos diferentes de búferes. Para usar el primer conjunto de búferes, repetidamente llamaría a **SQLBindParameter** para enlazarlos a los parámetros de un **insertar** instrucción y, a continuación, ejecute la instrucción. Para usar el segundo conjunto de búferes, debería repetir este proceso. Como alternativa, podría configurar enlaces para el primer conjunto de búferes de un descriptor y el segundo conjunto de búferes en otro descriptor. Para alternar entre los conjuntos de enlaces, llamaría simplemente la aplicación **SQLSetStmtAttr** y asociar el descriptor correcta con la instrucción como el APD.  
   
  Para obtener más información acerca de los descriptores, consulte [tipos de descriptores](../../../odbc/reference/develop-app/types-of-descriptors.md).
+

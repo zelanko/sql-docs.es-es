@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b7b0b2282d287f012272e9d34a4fbf3e23f7e0
@@ -31,3 +32,4 @@ El grado de compatibilidad con transacciones es definido por el controlador. ODB
  Si el controlador no admite transacciones, pero la aplicación tiene la capacidad de (mediante una API que no sea ODBC) para bloquear y desbloquear datos, aplicaciones pueden lograr la compatibilidad con transacciones registros de bloqueos y desbloqueo y las tablas según sea necesario. Para implementar el ejemplo de transferencia de la cuenta, la aplicación podría bloquear los registros para ambas cuentas, copie los valores actuales, la primera cuenta de débito, la segunda cuenta de crédito y desbloquear los registros. Si se produce un error en todos los pasos, la aplicación podría restablecer las cuentas con las copias.  
   
  Orígenes de datos aunque admiten transacciones no puede admitir más de una transacción a la vez dentro de un entorno determinado. Aplicaciones llaman a **SQLGetInfo** con la opción SQL_MULTIPLE_ACTIVE_TXN para determinar si un origen de datos puede admitir las transacciones activas simultáneas en más de una conexión en el mismo entorno. Ya hay una transacción por conexión, esto solo es adecuada para las aplicaciones que tienen varias conexiones con el mismo origen de datos.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ El *longitud de datos* es la longitud de bytes de los datos tal y como se almace
  Por ejemplo, suponga que una aplicación asigna 50 bytes para un búfer de datos binarios. Si el controlador tiene 10 bytes de datos binarios que se va a devolver, devuelve los 10 bytes en el búfer. La longitud de bytes de los datos es 10, y la longitud de bytes del búfer es 50. Si el controlador tiene 60 bytes de datos binarios que se va a devolver, trunca los datos a 50 bytes, devuelve los bytes en el búfer y devuelve SQL_SUCCESS_WITH_INFO. La longitud de bytes de los datos es de 60 (la longitud antes de truncamiento) y la longitud de bytes del búfer todavía es 50.  
   
  Se crea un registro de diagnóstico para cada columna que se trunca. Dado que requiere tiempo para el controlador cree estos registros y para la aplicación procesarlos, truncamiento puede degradar el rendimiento. Normalmente, una aplicación puede evitar este problema asignando búferes lo suficientemente grandes, aunque esto no sería posible cuando se trabaja con datos de tipo long. Cuando se produce el truncamiento de datos, la aplicación en ocasiones, puede asignar un búfer mayor y volver a obtener los datos; Esto no es cierto en todos los casos. Si se produce un truncamiento al obtener datos con llamadas a **SQLGetData**, la aplicación no necesita llamar a **SQLGetData** para los datos que ya se ha devuelto; para obtener más información, consulte [Introducción Datos de tipo Long](../../../odbc/reference/develop-app/getting-long-data.md).
+

@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ Confirmar o revertir una transacción tiene el siguiente efecto en los cursores 
  Aplicaciones, especialmente basado en pantalla en el que el usuario se desplaza por el conjunto de resultados y actualizaciones o elimine filas, deben tener cuidadas al código de este comportamiento.  
   
  Para determinar cómo se comporta un origen de datos cuando una transacción se confirma o revierte, llama a una aplicación **SQLGetInfo** con las opciones SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR.
+

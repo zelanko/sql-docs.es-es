@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ Para establecer el valor de un parámetro, la aplicación simplemente establece 
  [d] controladores siempre deben comprobar este valor para ver si se trata de un valor especial, como SQL_NULL_DATA.  
   
  Lo que hace un controlador con un valor de parámetro en tiempo de ejecución depende del controlador. Si es necesario, el controlador convierte el valor de la longitud de bytes y de tipo de datos de C de la variable enlazada al tipo de datos SQL, precisión y escala del parámetro. En la mayoría de los casos, el controlador, a continuación, envía el valor al origen de datos. En algunos casos, se da formato al valor como texto y se inserta en la instrucción SQL antes de enviar la instrucción al origen de datos.
+

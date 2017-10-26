@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ Cuando se produce un error, el controlador de Visual FoxPro devuelve la siguient
  Por ejemplo, si el controlador ODBC de Visual FoxPro no se pudo encontrar el archivo employee.dbf, podría devolver el mensaje de error siguiente:  
   
  "[*Microsoft*] [*controlador ODBC de Visual FoxPro*] no existe el archivo 'employee.dbf'"
+

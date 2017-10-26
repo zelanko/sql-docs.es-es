@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
@@ -39,3 +40,4 @@ El Administrador de controladores comprueba los siguientes tipos de argumentos. 
 -   Números de columna y el parámetro deben ser mayor que 0 o mayor o igual a 0, dependiendo de la función. El controlador debe comprobar el límite superior de estos valores de argumento basándose en el conjunto de resultados actual o la instrucción SQL.  
   
 -   Argumentos de longitud/indicador como argumentos de longitud de búfer de datos deben contener los valores adecuados. Por ejemplo, el argumento que especifica la longitud de un nombre de tabla en **SQLColumns** (*NameLength3*) debe ser SQL_NTS o un valor mayor que 0; *BufferLength* en **SQLDescribeCol** debe ser mayor o igual que 0. El controlador también deba comprobar estos argumentos. Por ejemplo, podría comprobar que *NameLength3* es menor o igual que la longitud máxima de un nombre de tabla del origen de datos.
+

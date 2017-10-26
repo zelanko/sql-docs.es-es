@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a44ce860b8cd09c89597c0fc8ed55a1ba643e4c3
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Devuelve el nombre del cursor asociado con la determinada *hstmt*. **SQLGetCursorName** está incluido en la API del controlador de Visual FoxPro ODBC porque forma parte de la funcionalidad de la API de nivel de núcleo; no se puede usar con otras funciones de API porque el controlador no admite actualizaciones por posición.  
   
  Para obtener más información, consulte [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) en el *referencia del programador de ODBC*.
+

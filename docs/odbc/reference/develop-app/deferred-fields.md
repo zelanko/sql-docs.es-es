@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ Los valores de *diferidas campos* no se usan cuando se establecen, pero el contr
 -   Si el campo SQL_DESC_OCTET_LENGTH_PTR de un APD tiene un valor null y el parámetro es una cadena de caracteres, el controlador supone que cadena terminada en null. Para los parámetros dinámicos de salida, un valor null en este campo evita que el controlador devuelve información sobre la longitud. (Si el campo SQL_DESC_TYPE no indica un parámetro de cadena de caracteres, se omite el campo SQL_DESC_OCTET_LENGTH_PTR.)  
   
  La aplicación no debe cancelar la asignación o descartar las variables utilizadas para campos aplazados entre el momento en que asocia a los campos y el momento en el controlador lee o escribe.
+

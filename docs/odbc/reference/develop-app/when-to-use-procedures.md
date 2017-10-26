@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ Hay una serie de ventajas de utilizar procedimientos, todos basada en el hecho d
  El segundo inconveniente es que muchos DBMS no admiten procedimientos. De nuevo, esto es más probable que sea un problema para las aplicaciones verticales diseñados para ejecutarse con un número de DBMS. Para determinar si se admiten procedimientos, llama a una aplicación **SQLGetInfo** con la opción SQL_PROCEDURES.  
   
  La desventaja terceros, que es especialmente aplicable a entornos de desarrollo de aplicaciones, es que ODBC no define ninguna gramática estándar para crear procedimientos. Es decir, aunque las aplicaciones pueden llamar a procedimientos de manera interoperacional, no pueden crearlos manera interoperacional.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Con la versión 2.573.2973, la convención de nomenclatura ha dado lugar a confusión que 2.573 es una versión anterior a la de 2,73, pero cada sección del número de compilación debe tenerse en cuenta individualmente. El número 573 es mayor que 73, por lo que es una versión más reciente. Además, "2.5" indica el número de versión del controlador.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Devuelve una lista de procedimientos en el origen de datos. Para ver los procedimientos empaquetados, es la columna de nombre del procedimiento en *packagename.procedurename* formato.<br /><br /> Dado que Oracle no proporciona una manera de distinguir procedimientos empaquetados de funciones empaquetadas, el controlador devuelve SQL_PT_UNKNOWN para la columna PROCEDURE_TYPE.|  
 |**SQLSetPos**|Establece la posición del cursor en un conjunto de filas. Puede usar **SQLSetPos** con **SQLGetData** para recuperar filas de columnas sin enlazar después de colocar el cursor a una fila específica en el conjunto de filas. Filas agregadas en el conjunto de resultados mediante *fOption* SQL_ADD se agregan después de la última fila del conjunto de resultados.|  
 |**SQLSetScrollOptions**|Establece las opciones que controlan el comportamiento de los cursores asociado con un identificador de instrucción, hstmt. Para obtener más información, consulte [combinaciones de simultaneidad y el tipo de Cursor](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+

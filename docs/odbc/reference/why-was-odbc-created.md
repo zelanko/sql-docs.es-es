@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
@@ -33,3 +34,4 @@ Históricamente, las empresas usan un DBMS único. Todo el acceso de base de dat
  Un problema similar enfrenta los proveedores de software independientes (ISV). Los proveedores de software de base de datos para microcomputadoras y grandes sistemas de escritura normalmente se debe escribir una versión de una aplicación para cada DBMS o escribir código específico de DBMS para cada DBMS que deseaban tener acceso a. Los proveedores que escribir software para equipos personales se tenían que escribir rutinas de acceso a datos para cada DBMS diferente con el que deseaban trabajar. A menudo esto ha conllevado la enorme cantidad de recursos dedicados a escribir y mantener rutinas en lugar de las aplicaciones de acceso a datos y aplicaciones a menudo se vendieron no en su calidad sino también en pueden tener acceso a datos en un DBMS determinado.  
   
  Lo que necesita ambos conjuntos de desarrolladores era una manera para obtener acceso a datos en diferentes DBMS. El grupo de gran sistema y minicomputadoras necesitaba una manera para combinar datos de diferentes DBMS en una sola aplicación, mientras que el grupo de equipos personales necesita esta capacidad, así como una forma de escribir una sola aplicación que era independiente de cualquier un DBMS. En resumen, ambos grupos necesita una manera interoperable para tener acceso a datos; necesita abrir conectividad de base de datos.
+

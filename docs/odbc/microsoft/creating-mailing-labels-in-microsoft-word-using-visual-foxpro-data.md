@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
@@ -61,3 +62,4 @@ Puede usar datos de Visual FoxPro en Microsoft Word para documentos de Windows 9
 14. En la aplicación auxiliar de combinación de correspondencia, la mezcla los datos con el documento, haga clic en combinación.  
   
 15. En el cuadro de diálogo Combinar, seleccione las opciones que desee y, a continuación, haga clic en combinación.
+

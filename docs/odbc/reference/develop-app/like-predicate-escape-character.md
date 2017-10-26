@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 132359972cebd3dded36fb911a2ee8e561e5ca64
@@ -42,3 +43,4 @@ SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'
 ```  
   
  Para determinar si la **como** caracteres de escape de predicado es compatible con un origen de datos, las llamadas de una aplicación **SQLGetInfo** con la opción SQL_LIKE_ESCAPE_CLAUSE.
+

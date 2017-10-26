@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
@@ -45,3 +46,4 @@ Una aplicación compatible con los estándares o el controlador es aquella que s
 -   Para alinear con la CLI de ISO, ODBC 3*.x* archivos de encabezado contienen alias para tipos de información que se utilizan en las llamadas a **SQLGetInfo**. Una aplicación compatible con los estándares puede utilizar estos alias en lugar de ODBC 3*.x* tipos de información. Para obtener más información, vea el tema siguiente, [archivos de encabezado](../../../odbc/reference/develop-app/header-files.md).  
   
 -   Una aplicación compatible con los estándares debe comprobar que todas las características que admite son compatibles con el controlador que funcione con. Establecer el atributo de instrucción de SQL_ATTR_CURSOR_SCROLLABLE como SQL_SCROLLABLE y estableciendo el atributo de instrucción SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE o SQL_SENSITIVE son funciones que están disponibles como características opcionales en las normas pero no se incluyen en ODBC 3*.x* Core nivel y, por tanto, podría no ser compatibles con todos los ODBC 3*.x* controladores. Si una aplicación compatible con los estándares utiliza estas capacidades, debe comprobar que es compatible con el controlador que funcionará con ellos.
+

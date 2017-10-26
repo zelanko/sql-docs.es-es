@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
@@ -37,3 +38,4 @@ Se pueden convertir datos de un tipo a otro en uno de los cuatro veces: cuando s
  ODBC define cómo se convierten los datos entre cada tipo de datos SQL y C. Básicamente, ODBC admite todas las conversiones razonables, como carácter de entero y entero a float y no admite conversiones definido correctamente, por ejemplo, float hasta la fecha. Se requieren controladores para admitir todas las conversiones para cada tipo de datos SQL que admiten. Para obtener una lista completa de las conversiones entre tipos de datos SQL y C, consulte [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) y [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en tipos de datos de apéndice D:.  
   
  ODBC también define una función escalar de convertir los datos de un tipo de datos SQL a otro. El **convertir** función escalar ha sido asignada por el controlador a la función escalar subyacente o funciones definidas para realizar conversiones en el origen de datos. Dado que esta función se asigna a funciones específicas del DBMS, ODBC no define cómo funcionan estas conversiones o qué conversiones deben ser compatibles. Una aplicación detecta qué conversiones son compatibles con un origen de datos y el controlador determinado a través de las opciones de SQL_CONVERT en **SQLGetInfo**. Para obtener más información sobre la **convertir** función escalar, consulte [secuencias de Escape de ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) y [función de conversión de tipo de datos explícito](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+

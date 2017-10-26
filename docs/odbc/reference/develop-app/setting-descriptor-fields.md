@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ Para modificar los campos de un descriptor, una aplicación puede llamar a **SQL
  Al establecer campos de forma individual, la aplicación debe seguir la secuencia definida en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Establecer algunos campos, el controlador establecer otros campos. Esto garantiza que el descriptor siempre está listo para usar una vez que la aplicación ha especificado un tipo de datos. Cuando la aplicación establece el campo SQL_DESC_TYPE, el controlador comprueba que otros campos que especifican el tipo sean válidos y coherentes.  
   
  Si se produce un error en una llamada de función que establecía un campo descriptor, el contenido del campo descriptor es indefinido después de la llamada de función con errores.
+

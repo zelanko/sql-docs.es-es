@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
@@ -70,3 +71,4 @@ _C_TYPE_TIMESTAMP|Valor de datos es válido *valor timestamp o un valor de hora 
  [g], los campos de fecha de la estructura de marca de tiempo se establecen en la fecha actual.  
   
  Cuando se convierten datos de SQL de caracteres numéricos, fecha, hora, marca de tiempo o datos de intervalo C, espacios iniciales y finales se omiten.
+

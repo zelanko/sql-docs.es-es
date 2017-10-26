@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff9ebb61d8a0446f4c6015dd5c0ae56c22ebfc45
@@ -31,3 +32,4 @@ Para buscar en los componentes de acceso de la base de datos se describe en la s
 -   [Protocolo de flujo de datos estándar](../../odbc/reference/standard-data-stream-protocol.md)  
   
 -   [Puerta de enlace estándar](../../odbc/reference/standard-gateway.md)
+

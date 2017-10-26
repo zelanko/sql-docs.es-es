@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ Se utilizan controladores basados en DBMS con orígenes de datos como Oracle o S
  La ilustración siguiente muestra tres distintas configuraciones de controladores basados en DBMS. En la primera configuración, el controlador y el origen de datos residen en el mismo equipo. En el segundo, el controlador y el origen de datos residen en equipos diferentes. En la tercera, el controlador y el origen de datos residen en equipos diferentes y una puerta de enlace se ubica entre ellos, que reside en otro equipo.  
   
  ![Tres configuraciones para DBMS &#45; controladores basados en](../../odbc/reference/media/pr07.gif "pr07")
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 641c6b6324ccb0f12cb5b28bd25b06dc0fcc5029
@@ -30,3 +31,4 @@ Cuando se utiliza el controlador de Microsoft Excel, tablas de origen de datos s
  Cuando una aplicación realiza un comando Guardar como en los datos de Microsoft Excel a través del controlador de Microsoft Excel, la aplicación debe crear una nueva tabla e introducir los datos que se debe guardar en la nueva tabla. Inserciones dar un anexar a la tabla. Ninguna otra operación puede realizarse en la tabla hasta que se cierra y se vuelve a abrir. Una vez que se cierra la tabla, no se puede realizar ninguna inserción posterior porque la tabla es una tabla de sólo lectura.  
   
  Es posible actualizar valores cuando se utiliza el controlador de Microsoft Excel, pero no se puede eliminar una fila de una tabla basada en una hoja de cálculo de Microsoft Excel, por lo que las actualizaciones no se consideran compatibles oficialmente con el controlador de Microsoft Excel.
+

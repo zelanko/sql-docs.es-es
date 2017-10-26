@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f102ccec2b4a7c05ce75394526e39936db09e3fb
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sorting-limitations"></a>Limitaciones de ordenación
 La longitud máxima de un criterio de ordenación en una cláusula GROUP BY, la cláusula ORDER BY, la instrucción SELECT DISTINCT o la combinación externa es 255 bytes; la longitud máxima de todas las claves de ordenación en una fila de ordenación es 65.500 bytes.
+

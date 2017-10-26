@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ Parámetros de entrada que hacen referencia a datos de caracteres de longitud va
  Aunque las aplicaciones y controladores normalmente utilizan cadenas de C (matrices de caracteres terminada en null) para almacenar datos de caracteres, no hay ningún requisito para hacerlo. En C, los datos de caracteres también se pueden tratar como una matriz de caracteres (sin terminación null) y su longitud de bytes que se pasa por separado en el búfer de longitud/indicador.  
   
  Dado que se pueden contener datos de caracteres en una matriz no terminada null y su longitud de bytes pasa por separado, es posible incrustar caracteres nulos en los datos de caracteres. Sin embargo, el comportamiento de las funciones ODBC en este caso no está definido y es específico del controlador si un controlador encarga de ello correctamente. Por lo tanto, aplicaciones interoperables siempre deben administrar los datos de caracteres que pueden contener los caracteres nulos incrustados como datos binarios.
+

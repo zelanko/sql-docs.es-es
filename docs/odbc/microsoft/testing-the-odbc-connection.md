@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6875fa4ac03511b57239deadac748da1c37a0114
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Cuando solucione problemas de acceso ODBC para Oracle 7.x y servidores de Oracle8 RDBMS, podrían ser necesario comprobar que el código subyacente SQL * Net y adaptadores de protocolo de Oracle se han instalado correctamente. Para ello, use la utilidad suministrado por Oracle Nettest.exe en el directorio Orawin\Bin.  
   
  Nettest es una utilidad simple que intenta iniciar sesión en el servidor seleccionado con solo el instalado SQL * Net software que forma parte del cliente de Oracle. La utilidad le pedirá un nombre de inicio de sesión, contraseña y TNS cadena de conexión. Si el cliente de Oracle está instalado correctamente, la utilidad simplemente mostrará "Ping correcto." Si el inicio de sesión no se realizó correctamente, debe consultar a un administrador de base de datos.
+

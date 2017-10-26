@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ Algunas funciones ODBC obtienen acceso implícito a descriptores. Escritores de 
  **SQLSetDescRec** y **SQLGetDescRec** son funciones concisas que, con una llamada, establecer u obtener varios campos de descriptor que afectan al tipo de datos y el almacenamiento de datos de columna o parámetro. **SQLSetDescRec** es una forma eficaz para cambiar el enlace de datos de columna o parámetro en un solo paso.  
   
  **SQLSetStmtAttr** y **SQLGetStmtAttr** actúan como funciones concisas en algunos casos. (Consulte [campos de Descriptor](../../../odbc/reference/develop-app/descriptor-fields.md).)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
@@ -56,3 +57,4 @@ Un DBMS típico permite a los usuarios almacenar, tener acceso y modificar datos
 -   [Módulos SQL](../../odbc/reference/sql-modules.md)  
   
 -   [Interfaces de nivel de llamada](../../odbc/reference/call-level-interfaces.md)
+

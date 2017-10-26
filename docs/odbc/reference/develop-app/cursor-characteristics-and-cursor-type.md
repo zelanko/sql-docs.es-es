@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
@@ -53,3 +54,4 @@ Una aplicación puede especificar las características de un cursor en lugar de 
 |SQL_ATTR_CURSOR_TYPE a SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE en SQL_NONSCROLLABLE.|  
 |SQL_ATTR_CURSOR_TYPE a SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE en SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED o SQL_SENSITIVE (criterios definidos por el controlador, si no se encuentra SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY).|  
 |SQL_ATTR_CURSOR_TYPE a SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE en SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY en SQL_INSENSITIVE (si SQL_ATTR_CONCURRENCY es SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED o SQL_SENSITIVE (si SQL_ATTR_CONCURRENCY no es SQL_CONCUR_READ_ONLY).|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
@@ -36,3 +37,4 @@ Si un controlador debe ser un controlador de Unicode o ANSI depende por completo
   
 > [!NOTE]  
 >  Al determinar el tipo de controlador, el Administrador de controladores llamará **SQLSetConnectAttr** y establezca el atributo SQL_ATTR_ANSI_APP en tiempo de conexión. Si la aplicación utiliza las API de ANSI, SQL_ATTR_ANSI_APP se establecerá en SQL_AA_TRUE y, si utiliza Unicode, se establecerá en un valor de SQL_AA_FALSE. Este atributo se utiliza para que el controlador puede mostrar un comportamiento diferente en función del tipo de aplicación. El atributo no se puede establecer directamente por la aplicación y no es compatible con **SQLGetConnectAttr**. Si un controlador presenta el mismo comportamiento para las aplicaciones ANSI y Unicode, debe devolver SQL_ERROR para este atributo. Si el controlador devuelve SQL_SUCCESS, el Administrador de controladores separará conexiones ANSI y Unicode cuando se utiliza la agrupación de conexiones.
+

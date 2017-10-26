@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  Cuando el usuario selecciona un origen de datos, el Administrador de controladores construye una cadena de conexión especifica ese origen de datos y lo pasa al controlador. El controlador, a continuación, puede solicitar al usuario información adicional que necesita.  
   
  Las condiciones en las que el controlador solicita al usuario se controlan mediante la *DriverCompletion* marca; hay opciones para siempre le preguntará, símbolo del sistema si es necesario o nunca símbolo del sistema. Para obtener una descripción completa de esta marca, consulte la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.
+

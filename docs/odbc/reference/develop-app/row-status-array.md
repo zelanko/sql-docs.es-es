@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ Además de los datos, **SQLFetch** y **SQLFetchScroll** puede devolver una matri
 |SQL_ROW_DELETED|Se ha eliminado la fila se capturó en último lugar.|  
 |SQL_ROW_ADDED|La fila se ha insertado por **SQLBulkOperations**. Si la fila se vuelve a recopilar o se actualiza de forma **SQLSetPos**, su estado es SQL_ROW_SUCCESS.<br /><br /> Este valor no se establece **SQLFetch** o **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|El conjunto de filas había superpuesta al final del conjunto de resultados y se devuelve ninguna fila que correspondía a este elemento de la matriz de estado de fila.|
+

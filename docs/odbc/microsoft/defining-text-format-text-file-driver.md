@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
@@ -48,3 +49,4 @@ Cuando se utiliza el controlador de texto, puede usar el **Definir formato de te
 |**Filas para explorar**|El número de filas que el programa de instalación o el controlador explorarán cuando se establezcan las columnas y los tipos de datos de columna basados en datos existentes.<br /><br /> Puede escribir un número entre 1 y 32767 para el número de filas que se va a buscar. El valor predeterminado es 25 if el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo. (Un número que está fuera del límite devolverá un error.)|  
 |**Tablas**|Contiene una lista de todos los archivos en el directorio seleccionado en el **el programa de instalación de texto** cuadro de diálogo que coinciden con la lista de las extensiones especificadas.<br /><br /> Cuando \<predeterminado > está seleccionada, y uno de los siguientes es true, los valores de los atributos de tabla en la **tablas** grupo se escriben en Schema.ini (no hay otras entradas de Schema.ini modificadas):<br /><br /> -No hay ningún Schema.ini en el directorio especificado.<br />-El archivo Schema.ini existe, pero no hay ninguna sección de Schema.ini para uno de los archivos de texto (con la extensión especificada) en el directorio.<br />-La sección de un archivo de texto existe en Schema.ini, pero el cuerpo está vacío.<br /><br /> Cuando \<predeterminado > está seleccionada, el **columnas** grupo está deshabilitado.|  
 |**Ancho**|El ancho de la columna se puede cambiar para columnas CHAR o LONGCHAR. El ancho predeterminado es 1 si el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo.<br /><br /> Para otros tipos de datos, el ancho del control está deshabilitado y se muestra ningún valor.|
+

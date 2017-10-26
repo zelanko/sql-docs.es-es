@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b7b550bd24788f30926aaee5ae42a8de79a59c9
@@ -152,3 +153,4 @@ En este tema se trata los detalles sobre el desarrollo de un controlador ODBC qu
 ## <a name="see-also"></a>Vea también  
  [Agrupación de conexiones dependientes del controlador](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Referencia de interfaz (SPI) del proveedor de servicio ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+

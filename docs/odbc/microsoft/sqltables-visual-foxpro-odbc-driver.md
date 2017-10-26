@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd3e59437eae02a94353a6205e567fde208f4b97
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  Marca la diferencia entre el controlador ODBC de Visual FoxPro [tablas de base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) y [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md), incluso cuando ambos tipos de tablas se almacenan en el mismo directorio en el sistema. Si el origen de datos es un directorio de tablas libres, el controlador ODBC de Visual FoxPro no catálogo o devolver los nombres de las tablas que están asociados a una base de datos.  
   
  Para obtener más información, consulte [SQLTables](../../odbc/reference/syntax/sqltables-function.md) en el *referencia del programador de ODBC*.
+

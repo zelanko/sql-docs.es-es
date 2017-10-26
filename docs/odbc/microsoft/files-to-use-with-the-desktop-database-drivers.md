@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ Se usan los controladores de base de datos de escritorio ODBC con el motor de ba
 |Archivos utilizados por cada controlador de la base de datos de escritorio|Archivos del controlador ODBC|  
 |Archivos de Microsoft Jet utilizados por cada controlador de la base de datos de escritorio|Archivos de Microsoft Jet|  
 |Archivos de controlador IISAM que proporcionan acceso a los datos entre Microsoft Jet y el otro DBMS|Archivos de controlador ISAM instalable|
+

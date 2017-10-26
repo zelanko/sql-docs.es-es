@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ Agrupación de conexiones permite a una aplicación que utilice una conexión de
 |Grupos creados|El número de activos, incluidos los grupos de activos y se quitan de grupos. Este contador se agregó en Windows 8, para controladores que administran las conexiones del grupo de conexiones. Para obtener más información, consulte [agrupación de conexiones dependientes del controlador](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Debe especificar sus propios parámetros de supervisión. Ejemplos de supervisión del rendimiento se han incluido con esta versión de ODBC.
+

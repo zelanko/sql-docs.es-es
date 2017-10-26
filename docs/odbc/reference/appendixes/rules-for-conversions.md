@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ Las reglas de esta sección se aplican para las conversiones que involucran lite
          (2) el controlador redondea la cadena en Y a una escala adecuada (que puede ser cero también) y escribe el resultado en CT.  
   
          (3) el controlador no trunca ni redondea, pero sólo copia los primeros caracteres LT de Y en CT.
+

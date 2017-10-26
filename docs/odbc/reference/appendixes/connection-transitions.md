@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
@@ -304,3 +305,4 @@ Conexiones ODBC tienen los siguientes estados.
 |C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> Asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--|--|
+

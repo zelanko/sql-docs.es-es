@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ El controlador puede seleccionar un origen de datos, denominado el origen de dat
 -   En una llamada a **SQLDriverConnect** donde *InConnectionString* cualquiera especifica **DSN**= valor predeterminado o se especifica con el **DSN** palabra clave un origen de datos que no se encuentra en la información del sistema.  
   
  Es definido por el controlador cómo se especifica el origen de datos predeterminado. Esto puede implicar una acción administrativa y puede depender del usuario.
+

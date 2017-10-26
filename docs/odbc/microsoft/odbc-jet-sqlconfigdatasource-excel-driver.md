@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a4d5d0b2feb0a09aafeb441c6b33260e4f0738b
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |MAXSCANROWS|El número de filas que deben analizarse al establecer el tipo de datos de una columna en función de los datos existentes.<br /><br /> Un número comprendido entre 1 y 16 puede especificarse para que las filas que se va a buscar. El valor predeterminado es 8; Si se establece en 0, se examinan todas las filas. (Un número que está fuera del límite devolverá un error.)<br /><br /> Esto establece la misma opción como **filas para explorar** en el cuadro de diálogo de instalación.|  
 |READONLY|TRUE para que el archivo de solo lectura; FALSE para que el archivo no sea de sólo lectura.<br /><br /> Esto establece la misma opción como **de sólo lectura** en el cuadro de diálogo de instalación.|  
 |SUBPROCESOS|El número de subprocesos en segundo plano para el motor para usar. Para el controlador de Microsoft Access, este valor predeterminado es 3, pero puede cambiarse. Para dBASE, MicrosoftExceldriver este valor es 3 y no se puede cambiar.<br /><br /> Esto establece la misma opción como **subprocesos** en el cuadro de diálogo de instalación.|
+

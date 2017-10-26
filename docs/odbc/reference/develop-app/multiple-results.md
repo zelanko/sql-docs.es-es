@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  Es específica del controlador si se ejecuta la instrucción del lote completo antes de que todos los resultados estén disponibles. En algunas implementaciones, este es el caso; en otros casos, al llamar a **SQLMoreResults** desencadena la ejecución de la siguiente instrucción del lote.  
   
  Si se produce un error en una de las instrucciones en un lote, **SQLMoreResults** devolverá SQL_ERROR o SQL_SUCCESS_WITH_INFO. Si se anula el lote al error de la instrucción o la instrucción con errores era la última instrucción del lote, **SQLMoreResults** devolverá SQL_ERROR. Si no se anula el lote al error de la instrucción y la instrucción con errores no era la última instrucción del lote, **SQLMoreResults** devuelve SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO indica que se generó al menos un conjunto de resultados o recuento y que no se anuló el lote.
+

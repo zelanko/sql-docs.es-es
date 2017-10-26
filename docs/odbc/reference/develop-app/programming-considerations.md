@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
@@ -43,3 +44,4 @@ Esta sección describe brevemente una serie de temas relacionados con la escritu
 -   [Compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
 -   [ODBC en Windows](../../../odbc/reference/develop-app/odbc-in-windows.md)
+

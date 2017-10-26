@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ El identificador de la hora es de tipo de datos SQL de ODBC:
  [d] es el tamaño del tipo de datos C correspondiente.  
   
  Cuando los datos de SQL de tiempo se convierte en datos de caracteres C, la cadena resultante es en el "*hh*:*mm*:*ss*" formato. Este formato no se ve afectado por el valor de país Windows®.
+

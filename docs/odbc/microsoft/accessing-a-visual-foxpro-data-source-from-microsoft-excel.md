@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ Si tiene Microsoft Query instalado, puede crear un origen de datos en Microsoft 
 8.  Haga clic en uso.  
   
  Ahora puede agregar tablas a la consulta abierta. Para obtener más información acerca de cómo crear una consulta, vea [la importación de datos en Microsoft Excel desde una base de datos de Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
+

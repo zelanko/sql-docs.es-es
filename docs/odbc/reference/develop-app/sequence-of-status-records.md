@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ Si se devuelven dos o más registros de estado, el Administrador de controladore
 -   **Advertencias** registros de estado que describen las advertencias (clase 01) tienen el rango más bajo. Si dos o más registros describen la misma condición de advertencia advertencia SQLSTATE definido por la especificación de CLI de grupo abierto outrank SQLSTATE definida por ODBC y definidos por el controlador.  
   
  Si hay dos o más registros con la clasificación más alta, no se define cuál de los registros es el primer registro. El orden de todos los demás registros es indefinido. En particular, porque pueden aparecer advertencias antes de errores, las aplicaciones deben comprobar todos los registros de estado cuando una función devuelve un valor distinto de SQL_SUCCESS.
+

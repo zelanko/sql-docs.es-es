@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca
  [1] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
   
  [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3.* x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.
+

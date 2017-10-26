@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Comentarios  
  El primer intento de bloquear un registro o el archivo no siempre es correcta. Con frecuencia, un registro o el archivo está bloqueado por otro usuario en la red. Establezca volver a procesar determina si Visual FoxPro hace intentos adicionales para bloquear el archivo o el registro cuando el intento inicial no tiene éxito. Puede especificar cuántas veces se realizan de intentos adicionales o para los intentos de cuánto tiempo se realizan. Una rutina ON ERROR afecta a cómo incorrecta bloqueo se controlan los intentos.
+

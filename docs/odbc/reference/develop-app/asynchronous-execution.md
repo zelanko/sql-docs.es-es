@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b384bcb3ceee587edc89c6e5023a7caa4c882ed2
@@ -30,3 +31,4 @@ ODBC admite las operaciones asincrónicas para las operaciones de instrucción y
   
 ## <a name="see-also"></a>Vea también  
  [Ejecución de instrucciones ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+

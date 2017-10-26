@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ Dado que las asignaciones de tipos de datos SQL subyacentes a los identificadore
 -   ODBC no define los nombres de tipo de datos para su uso en **CREATE TABLE** y **ALTER TABLE** instrucciones. En su lugar, la aplicación debe utilizar el nombre devuelto en la columna TYPE_NAME del conjunto de resultados devuelto por **SQLGetTypeInfo**. La razón de ello es que, aunque la mayoría de SQL no varían en gran parte a través de DBMS, nombres de tipo de datos varían enormemente. En lugar de obligarle controladores para analizar las instrucciones SQL y reemplazar nombres de tipo de datos estándar con nombres de tipo de datos específicos de DBMS, ODBC requiere que las aplicaciones para usar los nombres específicos de DBMS en primer lugar.  
   
  Tenga en cuenta que **SQLGetTypeInfo** no necesariamente se describen todos los tipos de datos que se puede encontrar una aplicación. En concreto, los conjuntos de resultados podrían contener tipos de datos no es directamente compatibles con el origen de datos. Por ejemplo, se definen los tipos de datos de las columnas de conjuntos de resultados devueltos por funciones de catálogo de ODBC y pueden que el origen de datos no admite estos tipos de datos. Para determinar las características de los tipos de datos en un conjunto de resultados, una aplicación llama **SQLColAttribute**.
+

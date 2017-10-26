@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
@@ -51,3 +52,4 @@ Los ejemplos siguientes muestran cómo el controlador convierte los datos de C a
  [c], los números de esta lista son los números almacenados en los campos de la estructura SQL_DATE_STRUCT.  
   
  [d], los números de esta lista son los números almacenados en los campos de la estructura SQL_TIMESTAMP_STRUCT.
+

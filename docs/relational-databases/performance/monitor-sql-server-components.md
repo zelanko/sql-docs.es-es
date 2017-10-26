@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      La reproducción de eventos permite establecer una copia de prueba del entorno de base de datos en el que se capturaron los datos y, a continuación, repetir los eventos capturados tal y como ocurrieron originalmente en el sistema real. Esta capacidad solo está disponible con la utilidad de reproducción distribuida o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Puede reproducir los eventos a la velocidad original, a la mayor velocidad posible (para intensificar el uso del sistema) o paso a paso (el tipo de reproducción más frecuente) para analizar el sistema después de que haya ocurrido cada evento. Al analizar los eventos exactos de un entorno de pruebas, puede evitar daños en el sistema de producción. Para obtener más información, vea [Reproducir seguimientos](../../tools/sql-server-profiler/replay-traces.md).  
   
   
+

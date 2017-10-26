@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
@@ -37,3 +38,4 @@ La primera decisión que debe tomar al crear instrucciones SQL es qué gramátic
  Por lo tanto, realmente hay dos opciones de gramática para usar: la gramática de SQL-92 (y la secuencias de escape de ODBC) y una gramática específicos del DBMS. De los dos, solo la gramática de SQL-92 es interoperable, por lo que todas las aplicaciones interoperables deberían utilizarlo. Las aplicaciones que no son interoperables pueden usar la gramática de SQL-92 o una gramática específicos del DBMS. Específicos de DBMS gramáticas tienen dos ventajas: pueden aprovechar las características no cubiertas por SQL-92 y son ligeramente más rápidos porque el controlador no tienen que modificarse. La última característica se puede aplicar parcialmente estableciendo el atributo de instrucción SQL_ATTR_NOSCAN, que detiene el controlador de buscar y reemplazar las secuencias de escape.  
   
  Si se utiliza la gramática de SQL-92, la aplicación puede detectar cómo se modifica el controlador mediante una llamada a **SQLNativeSql**. A menudo resulta útil al depurar las aplicaciones. **SQLNativeSql** acepta una instrucción SQL y devuelve después de que el controlador lo ha modificado. Dado que esta función está en el nivel de conformidad de interfaz de núcleo, es compatible con todos los controladores.
+

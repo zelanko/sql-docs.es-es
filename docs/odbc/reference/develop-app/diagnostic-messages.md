@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
@@ -55,3 +56,4 @@ Se devuelve un mensaje de diagnóstico con cada SQLSTATE. A menudo se devuelve e
  [1] en este caso, el controlador actúa como el controlador y el origen de datos.  
   
  Corchetes (**[]**) debe estar incluido en el mensaje y no indican elementos opcionales.
+

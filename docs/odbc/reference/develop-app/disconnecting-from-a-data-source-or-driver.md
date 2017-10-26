@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a08f5de9829ee006c51ef6a2e795b44967c43a99
@@ -34,3 +35,4 @@ Cuando una aplicación ha terminado de usar un origen de datos, se llama a **SQL
  Después de desconectarse, la aplicación puede llamar a **SQLFreeHandle** para liberar la conexión. Después de liberar la conexión, es un error de programación de aplicaciones para usar el identificador de la conexión en una llamada a una función ODBC; al hacerlo de modo que tiene consecuencias no definidas, pero probablemente irrecuperables. Cuando **SQLFreeHandle** se llama, las versiones de controlador la estructura que se utiliza para almacenar información acerca de la conexión.  
   
  La aplicación también puede reutilizar la conexión, ya sea para conectarse a un origen de datos diferente o volver a conectarse al mismo origen de datos. La decisión de seguir conectado, en lugar de desconectarse y volver a conectar más tarde, requiere que el escritor de la aplicación, tenga en cuenta los costos relativos de cada opción; conectarse a un origen de datos tanto permanecen conectados pueden ser relativamente costosos dependiendo del medio de conexión. Para realizar un equilibrio correcto, la aplicación debe hacer también suposiciones sobre la probabilidad y temporización de otras operaciones en el mismo origen de datos.
+

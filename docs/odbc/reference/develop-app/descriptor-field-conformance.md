@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
@@ -80,3 +81,4 @@ En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado
  [1] soporte técnico para estos campos de registro sólo es necesario si el controlador es compatible con los tipos de datos es aplicable.  
   
  [2] para el acuerdo de nivel de núcleo, el controlador debe admitir SQL_PARAM_INPUT. Para el cumplimiento de la interfaz de nivel 2, el controlador también debe admitir SQL_PARAM_INPUT_OUTPUT y SQL_PARAM_OUTPUT.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f86dd2e2cb625da359c677fedd297b510fee8593
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 Una aplicación puede llamar a **SQLGetDescField** para obtener un único campo de un registro del descriptor. **SQLGetDescField** da acceso a la aplicación a todos los campos de descriptor que se definen en ODBC y a los campos definidos por el controlador.  
   
  **SQLGetDescRec** se puede llamar para recuperar la configuración de varios campos de descriptor que influyen en el tipo de datos y el almacenamiento de datos de columna o parámetro.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aad9b74b9813c0526df87437999b66f27e95414
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|El argumento solo es válido para *szTableOwner* es NULL porque ninguno de los controladores admite nombres de propietario. Con *szTableOwner* establecido en NULL, se devuelven todas las tablas. Se devuelve NULL en la columna TABLE_OWNER.|  
 |*szTableQualifier*|Cuando se usa Microsoft Excel 3.0 o 4.0 del controlador, si se llama a **SQLTables** con un valor para *szTableQualifier* que no es el nombre de una tabla existente, el controlador creará una tabla con ese nombre.<br /><br /> En la columna TABLE_QUALIFIER, **SQLTables** devolverá la ruta de acceso a un directorio.|  
 |*SzTableType*|Para Microsoft Excel 3.0 o 4.0, "TABLE" es el único tipo de tabla admitido.<br /><br /> Las versiones posteriores de los archivos de Microsoft Excel, se devuelve "Tabla del sistema" para los nombres de hoja (tablas con un "$" en el extremo) y se devuelve "TABLE" para las tablas en las hojas de cálculo.|
+

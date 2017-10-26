@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
@@ -31,3 +32,4 @@ La aplicación y el origen de datos suelen almacenan datos en distintos juegos d
  La opción de conversión es un valor que puede interpretar un archivo DLL de traducción determinada. Por ejemplo, si la traducción DLL traduce entre páginas de códigos distintas, la opción puede dar a los números de las páginas de códigos utilizados por la aplicación y el origen de datos. No hay ningún requisito para un archivo DLL de traducción que usen una opción de traducción.  
   
  Después de una traducción que se ha especificado el archivo DLL, el controlador lo carga y lo llama para traducir los datos entre la aplicación y el origen de datos. Esto incluye todas las instrucciones SQL y parámetros de caracteres que se envían al origen de datos y todos los caracteres resultantes, los metadatos de caracteres como nombres de columna y los mensajes de error que se recuperan del origen de datos. Datos de conexión no se traducen, porque el archivo DLL de traducción no se ha cargado hasta después de la aplicación se ha conectado al origen de datos.
+

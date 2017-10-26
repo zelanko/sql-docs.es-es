@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 85647e81245e8e5e76e79cd285bc73b8ff6fb364
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="interaction-with-other-functions"></a>Interacción con otras funciones  
  Una aplicación debe llamar a **SQLFetch** o **SQLFetchScroll** antes de que se prepara o ejecuta cualquiera coloca instrucciones update o delete.
+

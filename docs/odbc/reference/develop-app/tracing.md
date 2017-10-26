@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b6f35eb779b80b62e6352cef7de901f3b43bdbfc
@@ -36,3 +37,4 @@ El Administrador de controladores ODBC tiene una utilidad de seguimiento que per
 -   [La habilitación del seguimiento](../../../odbc/reference/develop-app/enabling-tracing.md)  
   
 -   [Seguimiento dinámico](../../../odbc/reference/develop-app/dynamic-tracing.md)
+

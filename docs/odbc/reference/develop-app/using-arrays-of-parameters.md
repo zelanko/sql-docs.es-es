@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ Usar matrices de parámetros, la aplicación llama **SQLSetStmtAttr** con una *a
 -   Dado que el controlador no interpreta el valor de la *ParameterValuePtr* argumento de **SQLBindParameter** para los parámetros de datos en ejecución, si la aplicación proporciona un puntero a una matriz, ** SQLParamData** no extraer y devolver un elemento de esta matriz a la aplicación. En su lugar, devuelve que el valor escalar la aplicación tenía proporcionado. Esto significa que el valor devuelto por **SQLParamData** es no son suficientes para especificar el parámetro para el que la aplicación necesita para enviar datos; la aplicación también debe tener en cuenta el número de fila actual.  
   
      Cuando solo algunos de los elementos de una matriz de parámetros son parámetros de datos en ejecución, la aplicación debe pasar la dirección de una matriz en *ParameterValuePtr* que contiene elementos para todos los parámetros. Esta matriz se interpreta normalmente para los parámetros que no son parámetros de datos en ejecución. Para los parámetros de datos en ejecución, el valor que **SQLParamData** proporciona a la aplicación, que normalmente podría usarse para identificar los datos que está solicitando el controlador en esta ocasión, siempre es la dirección de la matriz.
+

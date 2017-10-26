@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ Un cursor controlado por conjunto de claves está comprendida entre una variable
  Los cursores dinámicos se implementan normalmente mediante la creación de una tabla temporal que contiene las claves para cada fila del conjunto de resultados. Dado que el cursor también debe determinar que si se ha actualizado la fila, esta tabla también contiene una columna con la información de control de versiones de fila.  
   
  Para desplazarse por el conjunto de resultados original, el cursor controlado por conjunto de claves abre un cursor estático a través de la tabla temporal. Para recuperar una fila en el conjunto de resultados original, el cursor primero recupera la clave adecuada de la tabla temporal y, a continuación, recupera los valores actuales de la fila. Si se utilizan cursores de bloque, el cursor debe recuperar varias claves y filas.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ En la tabla siguiente se muestra el historial de versiones de controladores de b
   
 > [!NOTE]  
 >  Los controladores de versión3.5 se diseñaron para trabajar con ODBC2. *x*. Aunque también funcionan con ODBC 3.0, no admiten todas las características de ODBC 3.0. Para obtener más información acerca de cómo funcionan estos controladores con ODBC 3.0, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|No hay más datos estuvieran disponibles. La aplicación llama **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional. Se pueden devolver uno o más registros de estado definidos por el controlador de clase 02xxx. **Nota:** en ODBC 2.* x*, este valor devuelto de código se denominaba SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Se necesitan más datos, por ejemplo, cuando se envían los datos de parámetro en tiempo de ejecución o se necesita información de conexión adicionales. La aplicación llama **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional, si lo hay.|  
 |SQL_STILL_EXECUTING|Todavía se está ejecutando una función que se inicia de forma asincrónica. La aplicación llama **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional, si lo hay.|
+

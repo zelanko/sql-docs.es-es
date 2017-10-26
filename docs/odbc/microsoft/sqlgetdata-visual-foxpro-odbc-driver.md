@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bebbe74b8ee9a7cf3ac09335af0d63c8f7186d9
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Recupera el valor de un único campo en el registro actual del conjunto de resultados determinado.  
   
  Para obtener más información, consulte [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md) en el *referencia del programador de ODBC*.
+

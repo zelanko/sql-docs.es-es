@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1a98ca0b68198dada19e4ac81f8637798a99b95
@@ -35,3 +36,4 @@ Para obtener una interoperabilidad máxima, las aplicaciones deberían pasar lit
 -   Para los literales de hora, {t '*valor*'}, donde *formato de valor*e tiene el formato "hh"  
   
  Para los literales de marca de tiempo de {ts'*valor*'}, donde *formato de valor*e tiene el formato "aaaa-mm-dd hh [. f...]".
+

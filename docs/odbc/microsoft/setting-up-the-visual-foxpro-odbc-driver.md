@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ Para obtener información sobre cómo descargar e instalar el controlador ODBC d
 -   Quitar todos los componentes instalados anteriormente.  
   
  Después de instalar al controlador en el sistema, el programa de instalación reconoce los componentes del controlador instalado y presenta los cuadros de diálogo adicionales que le permiten cambiar la configuración de su controlador.
+

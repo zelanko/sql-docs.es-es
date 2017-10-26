@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
@@ -83,3 +84,4 @@ ODBC se alinea con las siguientes especificaciones y estándares que tratan con 
 -   Compatibilidad con los procedimientos almacenados, incluidas las secuencias de escape, mecanismos de enlace de parámetro de salida y las funciones de catálogo  
   
 -   Mejoras de conexión, incluida la compatibilidad para los atributos de conexión y examinar los atributos
+

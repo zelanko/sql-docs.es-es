@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41a1e5e42de608f1a67de40d8071af6d3b395f9
@@ -40,3 +41,4 @@ Los controladores de base de datos de escritorio de Microsoft ODBC admiten las s
 |DAYOFWEEK|MONTH||  
   
  Para obtener información acerca de los argumentos y valores devueltos de funciones escalares, consulte el apéndice F de la *referencia del programador de ODBC.*
+

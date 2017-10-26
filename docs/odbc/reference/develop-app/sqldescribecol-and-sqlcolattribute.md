@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Una aplicación puede recuperar metadatos del conjunto de resultados en cualquier momento después de que se ha preparado o ejecuta una instrucción y antes del cursor sobre el resultado del conjunto se cierra. Muy pocas aplicaciones requieren metadatos del conjunto de resultados después de prepara la instrucción y antes de que se ejecute. Si es posible, las aplicaciones deben esperar a recuperar los metadatos hasta después de que se ejecuta la instrucción, porque algunos orígenes de datos no pueden devolver metadatos para instrucciones preparadas y emular esta capacidad en el controlador a menudo es un proceso lento. Por ejemplo, el controlador podría generar un conjunto mediante la sustitución de resultados de fila cero la **donde** cláusula de una **seleccione** instrucción con la cláusula **WHERE 1 = 2** y ejecutar el instrucción resultante.  
   
  Los metadatos a menudo son costosos de recuperar del origen de datos. Por este motivo, los controladores deben almacenar en caché los metadatos que recuperan del servidor y contener para siempre y cuando el cursor sobre el resultado del conjunto está abierto. Además, las aplicaciones deben solicitar solo los metadatos que sea absolutamente necesitan.
+

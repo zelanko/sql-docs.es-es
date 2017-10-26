@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
@@ -53,3 +54,4 @@ Instrucciones y notas técnicas sobre cómo implementar y configurar los control
 -   [Compatibilidad con controladores de escritorio de la base de datos](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [Problemas de rendimiento del controlador de base de datos de escritorio](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
+

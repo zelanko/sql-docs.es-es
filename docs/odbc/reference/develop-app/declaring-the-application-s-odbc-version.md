@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ Antes de que una aplicación asigna una conexión, se debe establecer el atribut
   
 > [!IMPORTANT]  
 >  Aplicaciones que siguen ODBC 3. *x* especificación debe utilizar código condicional para evitar usar la funcionalidad nueva para ODBC 3.* x* al trabajar con ODBC 2.* x* controladores. ODBC 2. *x* controladores no admiten la funcionalidad nueva para ODBC 3.* x* solo porque la aplicación declara que sigue a ODBC 3.* x* especificación. Además, ODBC 3. *x* no dejan de controladores admitir la funcionalidad nueva para ODBC 3.* x* solo porque la aplicación declara que sigue a la API ODBC 2.* x* especificación.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 101879f45583fc46d5bc4aecc3ff11a92aed5112
@@ -324,3 +325,4 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 ||||  
 |-|-|-|  
 |VENTANA de ZOOM (comando)|||
+

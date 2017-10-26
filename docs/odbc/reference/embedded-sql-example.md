@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **Control de errores** el DBMS informa de errores de tiempo de ejecución en el programa de las aplicaciones a través de un área de comunicaciones de SQL o SQLCA. En el ejemplo de código anterior, la primera instrucción de SQL incrustada es incluir SQLCA. Esto indica el precompilador para incluir la estructura de SQLCA en el programa. Esto es necesario cada vez que el programa procesará los errores devueltos por el DBMS. WHENEVER... GOTO (instrucción) indica el precompilador para generar el código de control de errores que realiza una bifurcación para una etiqueta específica cuando un error se produce.  
   
 -   **Singleton seleccione** la instrucción utilizada para devolver los datos es una instrucción SELECT de singleton; es decir, devuelve una única fila de datos. Por lo tanto, el ejemplo de código no declara ni utilizar cursores.
+

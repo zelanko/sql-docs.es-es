@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
@@ -46,3 +47,4 @@ El controlador de Visual FoxPro ODBC admite tanto *bloque* (*conjunto de filas*)
   
 ## <a name="rowset"></a>conjunto de filas  
  Bloques de datos almacenados en un cursor, que representan filas recuperadas con un origen de datos.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
@@ -44,3 +45,4 @@ Puede volver a compilar una aplicación como una aplicación de Unicode de dos m
  Puede llamar a una función de una de estas tres maneras: como una llamada de función exclusivas de Unicode (con la *W* sufijo), como una llamada de función solo ANSI (con la *A* sufijo), o como la llamada de función ODBC sin sufijo. Los argumentos de las tres formas de una función son idénticos. Sólo las funciones con SQLCHAR \* argumentos o argumentos SQLPOINTER que señalan a las cadenas requieren formularios Unicode y ANSI. Para las funciones que tienen argumentos que se pueden declarar como un tipo de caracteres, como **SQLBindCol** o **SQLGetData** (que no tiene formas Unicode y ANSI), el argumento se puede declarar como el tipo de Unicode el ANSI escriba, o en el caso de una C, la macro SQL_C_TCHAR el argumento de tipo. Para obtener más información, consulte [datos Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
  Una aplicación puede escribirse como una aplicación de Unicode, incluso si no hay controladores de Unicode están disponibles para que funcione con. El Administrador de controladores se asignarán los tipos de datos y funciones de Unicode a ANSI. Hay algunas restricciones a la Unicode para las asignaciones de ANSI que se pueden realizar. La existencia de un controlador de Unicode para que funcione con la aplicación de Unicode dará como resultado un mejor rendimiento y quitará las limitaciones inherentes en Unicode para asignaciones de ANSI.
+

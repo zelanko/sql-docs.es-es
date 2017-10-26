@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ En la tabla siguiente enumera las funciones de sistema que se incluyen en el con
 |**() DE LA BASE DE DATOS** (ODBC 1.0)|Devuelve el nombre de la base de datos correspondiente al identificador de conexión. (El nombre de la base de datos también está disponible mediante una llamada a **SQLGetConnectOption** con la opción de conexión SQL_CURRENT_QUALIFIER.)|  
 |**IFNULL (** *exp*,*valor***)** (ODBC 1.0)|Si *exp* es null, *valor* se devuelve. Si *exp* no es null, *exp* se devuelve. El tipo de datos o tipos de *valor* debe ser compatible con el tipo de datos de *exp*.|  
 |**USUARIO ()** (ODBC 1.0)|Devuelve el nombre de usuario en el DBMS. (El nombre de usuario también está disponible por medio de **SQLGetInfo** especificando el tipo de información: SQL_USER_NAME.) Esto puede ser distinto del nombre de inicio de sesión.|
+

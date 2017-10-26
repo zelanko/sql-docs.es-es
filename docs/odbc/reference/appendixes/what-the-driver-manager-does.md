@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
@@ -42,3 +43,4 @@ La tabla siguiente resume cómo ODBC 3*.x* el Administrador de controladores asi
 |**SQLFetchScroll**|Devuelve el conjunto de filas especificado. Éstos son los detalles de implementación:<br /><br /> -Cuando una aplicación llama **SQLFetchScroll** en una API ODBC 2.* x* controlador ODBC 3*.x* lo asigna el Administrador de controladores **SQLExtendedFetch**. Usa el valor almacenado en caché del atributo de instrucción SQL_ATTR_ROW_STATUS_PTR para el *RowStatusArray* argumento y el valor almacenado en caché del atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR para el *RowCountPtr* argumento. Si el *FetchOrientation* argumento en **SQLFetchScroll** es SQL_FETCH_BOOKMARK, usa el valor almacenado en caché de un atributo de instrucción SQL_ATTR_FETCH_BOOKMARK_PTR de la *FetchOffset * argumento y devuelve un error si la *FetchOffset* argumento de **SQLFetchScroll** es no en 0.<br />-Cuando una aplicación llama a esto en una aplicación ODBC 3*.x* controlador ODBC 3*.x* el Administrador de controladores pasa la llamada al controlador.|  
 |**SQLSetPos**|Lleva a cabo diversas operaciones por posición. ODBC 3*.x* el Administrador de controladores pasa las llamadas a **SQLSetPos** al controlador, independientemente de la versión del controlador.|  
 |**SQLSetScrollOptions**|Cuando se asigna el Administrador de controladores **SQLSetScrollOptions** para una aplicación que trabaja con una aplicación ODBC 3*.x* controlador que no es compatible con **SQLSetScrollOptions**, el controlador El administrador establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción de SQL_ATTR_ROW_ARRAY_SIZE, para la *RowsetSize* argumento en **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** no se puede usar una aplicación al capturar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Se puede utilizar solo cuando se captura varias filas mediante una llamada a **SQLExtendedFetch**.|
+

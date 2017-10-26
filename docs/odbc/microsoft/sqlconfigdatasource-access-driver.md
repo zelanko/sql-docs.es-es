@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |SUBPROCESOS|El número de subprocesos en segundo plano para el motor para usar. Este valor predeterminado es 3, pero puede cambiarse.<br /><br /> Esto establece la misma opción como **subprocesos** en el cuadro de diálogo de instalación.|  
 |UID|Para el controlador de Microsoft Access, usa el nombre de Id. de usuario de inicio de sesión.|  
 |USERCOMMITSYNC|Determina si el controlador de Microsoft Access llevará a cabo transacciones definidas por el usuario de forma asincrónica. Este valor está establecido inicialmente en "Sí", lo que significa que el controlador de Microsoft Access esperará confirmaciones en una transacción definida por el usuario se complete.<br /><br /> El valor de esta opción no debe cambiarse sin considerar atentamente las consecuencias. Para obtener más información acerca de la opción, vea el *Guía del programador del motor de base de datos Jet de Microsoft*.<br /><br /> Esto establece la misma opción como **UserCommitSync** en el cuadro de diálogo de instalación.|
+

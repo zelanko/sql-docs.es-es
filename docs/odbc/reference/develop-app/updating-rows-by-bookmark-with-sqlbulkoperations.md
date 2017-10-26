@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ Al actualizar una fila por marcador, **SQLBulkOperations** hace que el origen de
 6.  Llamadas **SQLBulkOperations** con el *operación* establecido en SQL_UPDATE_BY_BOOKMARK.  
   
  Para cada fila que se envía al origen de datos como una actualización, los búferes de la aplicación deben tener datos de fila válidas. Si los búferes de la aplicación se rellenaron, si se ha mantenido una matriz de Estados de fila, y si el valor de estado para una fila es SQL_ROW_DELETED, SQL_ROW_ERROR ni SQL_ROW_NOROW, inadvertidamente se pudieron enviar datos no válidos al origen de datos.
+

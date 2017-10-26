@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  Por otro lado, puede especificar las sugerencias de tabla INDEX, FORCESCAN y FORCESEEK como sugerencias de consulta. Cuando se especifican como sugerencias de consulta, estas sugerencias se comportan de la misma manera que una tabla insertada o una sugerencia de vista. La sugerencia INDEX obliga al optimizador de consultas a usar solo los índices especificados para tener acceso a los datos a los que se hace referencia en la tabla o vista. La sugerencia FORCESEEK obliga al optimizador de consultas a usar solo una operación Index Seek para tener acceso a los datos a los que se hace referencia en la tabla o en la vista. Estas sugerencias proporcionan la funcionalidad de la guía de plan adicional y permiten tener más influencia sobre la optimización de consultas que usan la guía de plan.  
   
   
+

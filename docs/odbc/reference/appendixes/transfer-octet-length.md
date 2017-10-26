@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ La longitud de bytes de transferencia de una columna es el número máximo de by
 |SQL_GUID|16 (el tamaño de la estructura GUID).|  
   
  [a] si el controlador no puede determinar la longitud de columna o parámetro de tipos de variables, devuelve SQL_NO_TOTAL.
+

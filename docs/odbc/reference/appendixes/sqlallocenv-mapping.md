@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66261c8fd8236a4abc35ac70e29f63b49f646daf
@@ -36,3 +37,4 @@ Cuando una aplicación llama **SQLAllocEnv** a través de una aplicación ODBC 3
     ```  
   
      en el controlador con *OutputHandlePtr* establecido en *phenv*.
+

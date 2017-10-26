@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ SQLSTATE proporciona información detallada sobre la causa de un error o adverte
  SQLSTATE HYC00 (característica opcional no implementada) es especialmente importante porque es la única manera en que una aplicación puede determinar si un controlador es compatible con un determinado atributo de conexión o instrucción.  
   
  Para obtener una lista completa de códigos SQLState y qué funciones de estos valores, consulte [Apéndice A: códigos de Error de ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obtener una explicación detallada de las condiciones en las que cada función podría devolver un valor de SQLSTATE determinado, consulte esa función.
+

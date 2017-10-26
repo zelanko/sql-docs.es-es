@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3faac66828cdc408f9bd153377a3aefe74b882b0
@@ -48,3 +49,4 @@ El tamaño de presentación de una columna es el número máximo de caracteres n
 |SQL_GUID|36 (el número de caracteres en el *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  
   
  [a] si el controlador no puede determinar la longitud de columna o parámetro de tipos de variables, devuelve SQL_NO_TOTAL.
+

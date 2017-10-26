@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Para determinar si un controlador es compatible con las secuencias de escape ODBC para los literales de intervalo, una aplicación llama **SQLGetTypeInfo**. Si el origen de datos admite un tipo de datos del intervalo de fecha y hora, también debe admitir la secuencia de escape correspondiente.  
   
  Orígenes de datos también admiten los literales de fecha y hora definidos en la especificación ANSI SQL-92, que son diferentes de las secuencias de escape ODBC para los literales de intervalo de fecha y hora. Para determinar si un origen de datos admite los literales de ANSI, llama a una aplicación **SQLGetInfo** con la opción SQL_ANSI_SQL_DATETIME_LITERALS.
+

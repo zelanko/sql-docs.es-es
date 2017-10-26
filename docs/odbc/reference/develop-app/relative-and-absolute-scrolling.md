@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el c
  El número de filas del cursor, que es el tamaño del resultado se establece, está disponible como el campo SQL_DIAG_CURSOR_ROW_COUNT del encabezado del diagnóstico. El valor de este campo está definido sólo después **SQLExecute**, **SQLExecDirect**, o **SQLMoreResult** se ha llamado. Este número puede ser un recuento aproximado o un recuento exacto, dependiendo de las capacidades del controlador. Se puede determinar la compatibilidad del controlador mediante una llamada a **SQLGetInfo** con los tipos de información de atributos de cursor y la comprobación de si el bit SQL_CA2_CRC_APPROXIMATE o SQL_CA2_CRC_EXACT se devuelve en el tipo de cursor.  
   
  Nunca se admite un recuento exacto de filas de un cursor dinámico. Para otros tipos de cursores, el controlador puede admitir recuentos de filas exacto o aproximado, pero no ambos. Si el controlador admite exacto ni aproximado recuentos de filas para un tipo de cursor específico, el campo SQL_DIAG_CURSOR_ROW_COUNT contiene el número de filas que se han capturado hasta ahora. Independientemente de qué el controlador admite, **SQLFetchScroll** con una *operación* de SQL_FETCH_LAST hará que el campo SQL_DIAG_CURSOR_ROW_COUNT contener el número exacto de filas.
+

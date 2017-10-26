@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ La primera tarea para cualquier aplicación ODBC es cargar el Administrador de c
  Cuando **SQLFreeHandle** se llama, las versiones de controlador la estructura que se utiliza para almacenar información acerca del entorno. Tenga en cuenta que **SQLFreeHandle** no se puede llamar para un identificador de entorno hasta después de que se haya liberado todos los identificadores de conexión de ese identificador de entorno.  
   
  Para obtener más información sobre el identificador de entorno, consulte [entorno controla](../../../odbc/reference/develop-app/environment-handles.md).
+

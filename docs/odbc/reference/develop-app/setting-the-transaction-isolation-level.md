@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ Para establecer el nivel de aislamiento de transacción, una aplicación usa el 
 -   Cuando la velocidad es más importante que la precisión y los errores suelen ser pequeños. Por ejemplo, suponga que una compañía pone a su número de ventas pequeño y que sales grandes son poco frecuentes. Una transacción que calcula el valor total de todas las ventas podría utilizar de forma segura el nivel de aislamiento Read Uncommitted. Aunque la transacción incluiría pedidos que sean se abre o se cierra y posteriormente revierte, estos se generalmente se cancelan entre sí y la transacción sería mucho más rápida porque no se bloquea cada vez que TI encuentra un pedido de este tipo.  
   
  Para obtener más información, consulte [simultaneidad optimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+

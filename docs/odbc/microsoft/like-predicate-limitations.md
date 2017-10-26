@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5668f03e785c0d27133965f16af40ce69c2a2567
@@ -32,3 +33,4 @@ Si los datos de una columna tiene más de 255 caracteres, la comparación LIKE s
  No se admite el uso de una cláusula de escape en un predicado LIKE.  
   
  No se debe realizar una comparación LIKE en una columna que contiene los datos de un tipo de datos numérico o float. Los resultados pueden ser impredecibles. Para obtener más información, consulte el *Guía del programador del motor de base de datos Jet de Microsoft*.
+

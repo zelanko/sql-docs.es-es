@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
@@ -35,3 +36,4 @@ A *búfer diferida* es uno cuyo valor se utiliza en algún momento *después* se
 |Envía datos al actualizar o insertar una fila en un resultado de conjunto|Entrada diferida|**SQLBindCol**|**SQLSetPos**|  
 |Devolver datos de salida y los parámetros de entrada/salida|Salida de diferida|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |Devolver resultados establece datos|Salida de diferida|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+

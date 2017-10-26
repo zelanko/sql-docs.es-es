@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
@@ -45,3 +46,4 @@ Cuando se utiliza un cursor desplazable, las aplicaciones llaman a **SQLFetchScr
   
 > [!NOTE]  
 >  Se admite el desplazamiento en 2 de ODBC. *x* controladores por **SQLExtendedFetch**. Para obtener más información, consulte [compatibilidad con versiones anteriores, los cursores desplazables y cursores de bloque](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.
+

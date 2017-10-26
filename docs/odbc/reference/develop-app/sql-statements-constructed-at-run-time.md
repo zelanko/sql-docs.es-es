@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  Las aplicaciones que construcción instrucciones SQL en tiempo de ejecución pueden proporcionar una gran flexibilidad al usuario. Tal y como se puede ver en el ejemplo anterior, que no admitía incluso operaciones comunes como **donde** cláusulas, **ORDER BY** cláusulas o combinaciones, crear instrucciones SQL en tiempo de ejecución es considerablemente más complejo que las instrucciones de codificar de forma rígida. Además, la prueba estas aplicaciones es problemática, ya puede construir un número arbitrario de instrucciones SQL.  
   
  Una posible desventaja de crear instrucciones SQL en tiempo de ejecución es que se tarda mucho más tiempo para construir una instrucción que usa una instrucción codificado de forma rígida. Afortunadamente, rara vez es una preocupación. Estas aplicaciones tienden a ser de uso intensivo de la interfaz de usuario y el tiempo que la aplicación invierte crear instrucciones SQL es normalmente pequeño en comparación con el tiempo que el usuario invierte criterios de entrada.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6c50ea6550e9dfb255c87886e4e0375240bcd2ae
@@ -31,3 +32,4 @@ Cuando el controlador de Paradox o dBASE se usa, una vez que se ha creado un ín
   
 > [!NOTE]  
 >  Cuando se usa el controlador de Paradox sin necesidad de implementar el motor de base de datos de Borland, no se admiten las instrucciones ALTER TABLE; solo lectura y anexar se permiten las instrucciones.
+

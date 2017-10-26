@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c2c8708c18abee3609fc0b01f6ccd2e0362e5706
@@ -45,3 +46,4 @@ Según la especificación de SQL-92, una aplicación no puede colocar los marcad
 -   Como el argumento de un *referencia de funciones de conjunto*  
   
  Para obtener más información acerca de los marcadores de parámetros, vea la especificación de SQL-92. Para obtener más información acerca de los parámetros, vea [parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md).
+

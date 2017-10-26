@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
@@ -44,3 +45,4 @@ Recuerde que las aplicaciones no llamar a las funciones del controlador directam
  El Administrador de controladores se bloqueará el identificador de entorno (*henv*) antes de llamar a un controlador **SQLAllocHandle** y **SQLFreeHandle** cuando *HandleType* se establece en **SQL_HANDLE_DBC**.  
   
  Cuando la aplicación llama **SQLDisconnect**, las llamadas de administrador de controladores **SQLDisconnect** en el controlador. Sin embargo, deja el controlador que se carga en caso de que la aplicación se vuelve a conectar el controlador. Cuando la aplicación llama **SQLFreeHandle** con la opción de SQL_HANDLE_DBC, el Administrador de controladores llama **SQLFreeHandle** en el controlador. Si el controlador no se usa ninguna otra conexión, el Administrador de controladores, a continuación, llama **SQLFreeHandle** en el controlador con el SQL_HANDLE_ENV opción y descarga el controlador.
+

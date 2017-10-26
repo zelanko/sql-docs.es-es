@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
@@ -32,3 +33,4 @@ La longitud máxima de una cadena de instrucción SQL es 65.000 caracteres.
  El carácter de canalización (&#124;) no se puede usar en una cadena, si el carácter está entre comillas atrás o no.  
   
  Para obtener una interoperabilidad máxima, las aplicaciones deberían pasar cadenas en parámetros, en lugar de pasar entre comillas las cadenas.
+

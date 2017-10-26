@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddcc26d47c640562b66fc321c6cd8424e955412a
@@ -39,3 +40,4 @@ Esta sección contiene los temas siguientes.
   
 > [!NOTE]  
 >  Obtener acceso a archivos de dBASE ISAM a través de los controladores de base de datos de escritorio ODBC requiere la instalación del motor de base de datos de Borland.
+

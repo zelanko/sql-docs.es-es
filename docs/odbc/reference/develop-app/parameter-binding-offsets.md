@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b3fea1397710c5a65a03b3f829972f04cc63f5a
@@ -33,3 +34,4 @@ Una aplicación puede especificar que se ha agregado un desplazamiento a direcci
   
 > [!NOTE]  
 >  Desplazamientos de enlace no son compatibles con ODBC 2. *x* controladores.
+

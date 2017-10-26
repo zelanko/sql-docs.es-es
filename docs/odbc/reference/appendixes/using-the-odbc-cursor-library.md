@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db98c1cee3b31615ee515fd197427724a39c9433
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  Para recuperar datos de una columna sin enlazar, la aplicación llama **SQLSetPos** para colocar el cursor en la fila deseada. A continuación, se llama **SQLGetData** para recuperar los datos.  
   
  Para determinar el número de filas que han sido recuperados del origen de datos, la aplicación llama a **SQLRowCount**.
+

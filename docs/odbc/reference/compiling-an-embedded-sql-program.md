@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
@@ -46,3 +47,4 @@ Dado que un programa SQL incrustado contiene una combinación de instrucciones d
 5.  El módulo de solicitud de la base de datos generado por el precompilador se envía a una utilidad de enlace especial. Esta utilidad examina las instrucciones SQL, analiza, valida y optimiza ellos y, a continuación, genera un plan de acceso para cada instrucción. El resultado es un plan de acceso combinada para todo el programa, que representa una versión ejecutable de las instrucciones SQL incrustadas. La utilidad de enlace almacena el plan en la base de datos, normalmente asignarle el nombre de la aplicación que va a usar. Si este paso tiene lugar en tiempo de compilación o tiempo de ejecución depende del DBMS.  
   
  Tenga en cuenta que los pasos que se usan para compilar un programa SQL incrustado muy correlacionan con los pasos descritos anteriormente en [procesar una instrucción SQL](../../odbc/reference/processing-a-sql-statement.md). En concreto, tenga en cuenta que el precompilador separa las instrucciones SQL desde el código de idioma del host y la utilidad de enlace analiza y valida las instrucciones SQL y crea los planes de acceso. En DBMS donde paso 5 realiza en tiempo de compilación, los cuatro primeros pasos de procesamiento de una instrucción SQL tienen lugar en tiempo de compilación, mientras que el último paso (ejecución) tiene lugar en tiempo de ejecución. Esto tiene el efecto de hacer que la ejecución de la consulta en este tipo DBMS muy rápidos.
+

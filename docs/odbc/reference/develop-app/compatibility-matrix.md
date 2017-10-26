@@ -22,6 +22,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c980058ea2cacba7b9160571b1b42884ea02e41
@@ -74,3 +75,4 @@ En la tabla siguiente se describe la compatibilidad de los tipos de aplicaciones
   
 ## <a name="see-also"></a>Vea también  
  [Novedades de ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
@@ -53,3 +54,4 @@ La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de le
   
 ## <a name="support"></a>Soporte técnico  
  Puede encontrar información sobre las opciones de soporte técnico en el [Microsoft Help and Support](http://go.microsoft.com/fwlink?linkid=5521) sitio Web.
+

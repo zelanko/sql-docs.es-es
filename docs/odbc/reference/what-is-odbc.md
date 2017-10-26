@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ Existen muchos conceptos erróneos acerca de ODBC en el mundo informático. Para
  Es importante comprender que ODBC está diseñado para exponer las capacidades de la base de datos, no completarlas. Por lo tanto, los escritores de aplicaciones no deben esperar que usa ODBC repentinamente transforma una base de datos simple en un motor de base de datos relacional completo. Tampoco se esperan los escritores de controladores para implementar la funcionalidad que no se encuentra en la base de datos subyacente. Una excepción a esto es que los desarrolladores que escriben controladores que acceda directamente a los datos de archivo (por ejemplo, los datos en un archivo Xbase) necesarios para escribir un motor de base de datos que admite la funcionalidad SQL al menos mínima. Otro tipo de excepción es el componente ODBC del SDK de Windows, anteriormente incluida en Microsoft Data Access Components (MDAC) SDK, proporciona una biblioteca de cursores que simula los cursores desplazables para controladores que implementan un cierto nivel de funcionalidad.  
   
  Las aplicaciones que usan ODBC son responsables de cualquier funcionalidad entre bases de datos. Por ejemplo, ODBC no es un motor de combinación heterogéneo ni es un procesador de transacción distribuida. Sin embargo, dado que es independiente del DBMS, se puede utilizar para generar dichas herramientas entre bases de datos.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2545fba508ef3862834743ddaa8dd74183123b30
@@ -58,3 +59,4 @@ Este tema enumeran los requisitos para el uso de los controladores de base de da
 ## <a name="driver-specific-hardware-and-software-requirements"></a>Requisitos de Software y Hardware específicos del controlador  
   
 -   El MicrosoftAccess y dBASEdrivers pueden requerir cambios en los archivos Autoexec.bat y Config.sys.
+

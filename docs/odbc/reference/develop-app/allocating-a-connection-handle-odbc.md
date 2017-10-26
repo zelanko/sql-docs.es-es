@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
@@ -47,3 +48,4 @@ Antes de la aplicación puede conectarse a un origen de datos o el controlador, 
  Es importante tener en cuenta que asignar un identificador de conexión no es igual a cargar un controlador. El controlador no se cargará hasta que se invoque una función de conexión. Por lo tanto, después de asignar un identificador de conexión y antes de conectar con el controlador o el origen de datos, las funciones sola puede llamar la aplicación con el identificador de conexión son **SQLSetConnectAttr**, **SQLGetConnectAttr**, o **SQLGetInfo** con la opción SQL_ODBC_VER. Llamar a otras funciones con el identificador de conexión, como **SQLEndTran**, devuelve SQLSTATE 08003 (conexión no abierta). Para obtener información detallada, vea [tablas de transición de estado de apéndice B: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obtener más información acerca de los identificadores de conexión, vea [identificadores de conexión](../../../odbc/reference/develop-app/connection-handles.md).
+

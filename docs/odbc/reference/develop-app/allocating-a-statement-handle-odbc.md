@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96868755475c6fd72b2dd977375fbe0d88c22df
@@ -44,3 +45,4 @@ Antes de la aplicación puede ejecutar una instrucción, debe asignar un identif
 4.  El Administrador de controladores devuelve el identificador de instrucción de administrador de controladores a la aplicación en la variable de aplicación.  
   
  El identificador de instrucción identifica qué instrucción se debe usar al llamar a funciones ODBC. Para obtener más información sobre identificadores de instrucciones, consulte [identificadores de instrucciones](../../../odbc/reference/develop-app/statement-handles.md).
+

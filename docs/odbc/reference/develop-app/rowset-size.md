@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ En función de qué tamaño de conjunto de filas que se usará en la aplicación
 -   **SQLSetPos** utiliza el tamaño de conjunto de filas que está en vigor a partir de la llamada anterior a **SQLFetch** o **SQLFetchScroll**, porque **SQLSetPos** funciona en un conjunto de filas que ya se ha establecido. **SQLSetPos** también recogerá el nuevo tamaño de conjunto de filas si **SQLBulkOperations** se ha llamado después de que se cambió el tamaño del conjunto de filas.  
   
 -   **SQLBulkOperations** utiliza el tamaño de conjunto de filas en vigor en el momento de la llamada, ya que realiza operaciones en una tabla independiente de cualquier conjunto de filas capturada.
+

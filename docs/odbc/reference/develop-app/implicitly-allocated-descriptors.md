@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0746c31b05302eba9cd1fcf4104336ca139b6938
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="implicitly-allocated-descriptors"></a>Descriptores implícitamente asignados
 Cuando se asigna un identificador de instrucción, la aplicación asigna implícitamente un conjunto de descriptores de cuatro. La aplicación puede obtener los identificadores de estos asigna implícitamente descriptores como atributos de identificador de instrucción. Cuando la aplicación libera el identificador de instrucción, el controlador libera todos los descriptores de implícitamente asignados en ese identificador.
+

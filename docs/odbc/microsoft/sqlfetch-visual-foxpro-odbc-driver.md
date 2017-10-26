@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Recupera una fila de un conjunto de resultados en las ubicaciones especificadas por las llamadas anteriores a [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md). El controlador se prepara para una llamada a [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) para las columnas sin enlazar.  
   
  Para obtener más información, consulte [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) en el *referencia del programador de ODBC*.
+

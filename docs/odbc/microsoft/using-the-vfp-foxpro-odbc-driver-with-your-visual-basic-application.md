@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
@@ -70,3 +71,4 @@ Aplicación de su Microsoft® Visual Basic® puede comunicarse con los datos de 
     ```  
   
 8.  Ejecute el formulario y use el control de datos que se omiten a través de los campos de Id. de cliente de la base de datos de ejemplo TasTrade de Visual FoxPro.
+

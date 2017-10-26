@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d75a8985feff2ddfe26d3e19e8bafd91f228d30e
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTranslator**. Pedir al usuario un nombre de traductor y una opción. Esta función llama a **ConfigTranslator** en el traductor de DLL de la instalación.  
   
  El programa de instalación de controlador archivo DLL está escrito por el programador del controlador. Puede ser parte del controlador del archivo DLL o un archivo DLL independiente.
+

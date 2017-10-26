@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a6b4e1992ea5f446203b125261f5572c2bd9db7
@@ -47,3 +48,4 @@ Los identificadores para los tipos de datos ODBC C de mes y año intervalo son:
  La conversión de valor predeterminado de un intervalo de tipo C es el intervalo de meses del año correspondiente tipo SQL.  
   
  El controlador omite el valor de longitud/indicador al convertir datos de los tipos de datos interval C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos C de intervalo. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e7232773b97a66fc0b1b047e3fb8cc4212754f0
@@ -39,3 +40,4 @@ El identificador para el tipo de datos de bit C de ODBC es:
 |SQL_BIT|Ninguno|n/d|  
   
  El controlador omite el valor de longitud/indicador al convertir datos desde el tipo de datos de bit C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos de bit C. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
+

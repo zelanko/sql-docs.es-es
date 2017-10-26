@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 716d0e133f96f232a0d93427d734ea9c142a5ff7
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
 -   [Cifrado (controlador de Access)](../../odbc/microsoft/encryption-access-driver.md)  
   
 -   [Con el atributo de cadena de conexión ExtendedAnsiSQL (controlador de Access)](../../odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver.md)
+

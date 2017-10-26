@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  También se pueden compartir un archivo de DSN. Un archivo no se puede compartir .dsn reside en un único equipo y apunta a un origen de datos de la máquina. Orígenes de datos de archivo no se puede compartir existen principalmente para permitir la conversión sencilla de orígenes de datos de máquina a orígenes de datos de archivo para que una aplicación puede estar diseñada para que funcione únicamente con orígenes de datos de archivo. Cuando el Administrador de controladores se envía la información en un origen de datos de archivo no se puede compartir, conecta según sea necesario para el origen de datos de máquina que el archivo .dsn apunta a.  
   
  Para obtener más información acerca de los orígenes de datos de archivo, consulte [conectar orígenes de datos de archivo utilizando](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), o la [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.
+

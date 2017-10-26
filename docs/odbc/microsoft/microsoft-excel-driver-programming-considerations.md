@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d05a47366c0781480fd20c9afee2f5d10b4b84f
@@ -36,3 +37,4 @@ Esta sección contiene los temas siguientes.
 -   [SQLGetInfo devuelve valores para Excel](../../odbc/microsoft/sqlgetinfo-returned-values-for-excel.md)  
   
 -   [Otros detalles de programación del controlador de Excel](../../odbc/microsoft/other-excel-driver-programming-details.md)
+

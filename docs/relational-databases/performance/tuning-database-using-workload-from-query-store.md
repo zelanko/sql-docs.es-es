@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
@@ -57,3 +58,4 @@ La diferencia entre las opciones Almacén de consultas y caché de planes es que
 [Tutorial: Asistente para la optimización de motor de base de datos](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [Introducción a la recopilación de datos del almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Almacén de consultas, procedimientos recomendados](../../relational-databases/performance/best-practice-with-the-query-store.md)
+

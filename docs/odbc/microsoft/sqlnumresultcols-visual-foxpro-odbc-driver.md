@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 875fccd2eba497a13a8c498e5a8930bf0d7b9aa8
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Devuelve el número de columnas en un cursor de conjunto de resultados.  
   
  Para obtener más información, consulte [SQLNumResultCols](../../odbc/reference/syntax/sqlnumresultcols-function.md) en el *referencia del programador de ODBC*.
+

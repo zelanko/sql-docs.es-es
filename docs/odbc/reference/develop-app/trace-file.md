@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ Una aplicación que especifica el archivo de seguimiento estableciendo el **Trac
  El archivo de seguimiento proporciona un registro de cada llamada de función ODBC con los tipos de datos y los valores de todos los argumentos. Registra todas las funciones y registra todas las funciones devueltas con códigos de retorno y Estados de error.  
   
  En ODBC 3*.x*, no se proporcionan parámetros a las funciones de conexión en el archivo DLL de seguimiento.
+

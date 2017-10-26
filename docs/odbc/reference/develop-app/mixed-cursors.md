@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
@@ -38,3 +39,4 @@ Un cursor mixto es una combinación de un cursor controlado por conjunto de clav
  Ahora suponga que otra aplicación elimina las filas 11 y 101. Si el cursor se intenta recuperar la fila 11, producirá un "agujero" porque tiene una clave para esta fila, pero no hay ninguna fila; se trata de comportamiento de cursor dinámico. Si el cursor se intenta recuperar la fila 101, el cursor no detectará que la fila es que faltan porque no tiene una clave para la fila. En su lugar, se recuperarán que anteriormente era fila 102. Éste es el comportamiento de cursor dinámico.  
   
  Un cursor mixto es equivalente a un cursor controlado por conjunto de claves cuando el tamaño del conjunto de claves es igual que el tamaño del conjunto de resultados. Un cursor mixto es equivalente a un cursor dinámico cuando el tamaño del conjunto de claves es igual a 1.
+

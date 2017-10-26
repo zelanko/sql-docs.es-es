@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
@@ -42,3 +43,4 @@ Cada vez que una aplicación usa el mismo código con más de un controlador, qu
 -   [Comprobación de compatibilidad con las características y la variabilidad](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
 -   [Características para vigilar](../../../odbc/reference/develop-app/features-to-watch-for.md)
+

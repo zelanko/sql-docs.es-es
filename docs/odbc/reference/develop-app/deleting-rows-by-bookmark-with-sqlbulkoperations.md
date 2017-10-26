@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db7e04c5bf76855afdb24676c905c5cccbc60cbc
@@ -35,3 +36,4 @@ Cuando se elimina una fila por marcador, **SQLBulkOperations** hace que el orige
 2.  Establece el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE en el número de marcadores y enlaza el búfer que contiene el valor de marcador o la matriz de marcadores para la columna 0.  
   
 3.  Llamadas **SQLBulkOperations** con *operación* establecido en SQL_DELETE_BY_BOOKMARK.
+

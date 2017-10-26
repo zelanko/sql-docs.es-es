@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ En la siguiente tabla muestra la compatibilidad de la función en una aplicació
  [5] en determinadas circunstancias, los controladores que necesite admitir esta función. Para obtener más información, consulte la página de referencia de esta función.  
   
  [6], el controlador puede optar por admitir **SQLGetFunctions** si el conjunto de funciones que el controlador admite varía en función de la conexión para la conexión.
+

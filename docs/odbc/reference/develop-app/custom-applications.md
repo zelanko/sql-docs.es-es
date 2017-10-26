@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b899cda97d68801d03e1b5cc9655df0eaeaf8ad
@@ -31,3 +32,4 @@ Aplicaciones personalizadas suelen realizan una tarea específica para algunos d
  Por lo tanto, la aplicación personalizada requiere interoperabilidad poca o ninguna. El desarrollador de aplicaciones puede elegir un controlador único para cada DBMS y el código directamente a los controladores. La aplicación sin ningún riesgo puede contener código específico del controlador para aprovechar las capacidades de los controladores e incluso puede realizar llamadas a la API de base de datos nativo para usar la funcionalidad no admitida por ODBC.  
   
  El problema de interoperabilidad principales de la mayoría de las aplicaciones personalizada es si el DBMS de destino cambia en el futuro. Si es así, se puede simplificar este proceso al escribir código más interoperable comenzar con. Sin embargo, estos cambios en DBMS es poco frecuente y normalmente conlleva una gran cantidad de trabajo. Por este motivo, los desarrolladores de aplicaciones personalizadas rara vez eligen aumentar la interoperabilidad a costa de funcionalidad; por lo general deciden codificar esa funcionalidad cuando cambian de DBMS.
+

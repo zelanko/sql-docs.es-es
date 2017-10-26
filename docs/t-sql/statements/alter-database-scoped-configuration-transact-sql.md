@@ -80,7 +80,7 @@ PARA LA BASE DE DATOS SECUNDARIA
  
 Especifica la configuración de bases de datos secundarias (todas las bases de datos secundarias deben tener los valores idénticos).  
   
-MAXDOP ** = ** {\<valor > | PRINCIPAL}  
+MAXDOP  **=**  {\<valor > | PRINCIPAL}  
 **\<valor >**  
   
 Especifica el valor predeterminado MAXDOP configuración que debe utilizarse para las instrucciones. 0 es el valor predeterminado y se indica que se utilizará en su lugar la configuración del servidor. Reemplaza a la MAXDOP en el ámbito de la base de datos (a menos que se establece en 0) la **grado máximo de paralelismo** establece en el nivel de servidor mediante sp_configure. Sugerencias de consulta aún pueden reemplazar a la base de datos con ámbito de MAXDOP con el fin de optimizar las consultas específicas que requieran configuración diferente. Todas estas configuraciones están limitadas por el MAXDOP establecidos para el grupo de cargas de trabajo.   
@@ -96,7 +96,7 @@ PRIMARY
   
 Solo puede establecerse para los elementos secundarios, mientras la base de datos en el servidor principal e indica que la configuración se realizará la definida para la réplica principal. Si va a cambiar la configuración de los cambios principales, el valor en los servidores secundarios en consecuencia sin necesidad de establecer los servidores secundarios valor explícitamente. **PRINCIPAL** es la configuración predeterminada para los servidores secundarios.  
   
-LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | PRINCIPAL}  
+LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRINCIPAL}  
 
 Permite establecer el modelo de estimación de cardinalidad del optimizador de consultas para el SQL Server 2012 y la versión anterior independiente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que establece el modelo de estimación de cardinalidad del optimizador de consultas basado en el nivel de compatibilidad de la base de datos. Si se establece en **ON** es equivalente a habilitar [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
@@ -107,7 +107,7 @@ PRIMARY
   
 Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que la configuración de modelo de estimación de consulta optimizador cardinalidad en todas las secundarias será el valor establecido para el servidor principal. Si cambia la configuración en el servidor principal para el modelo de estimación de cardinalidad del optimizador de consultas, el valor en los servidores secundarios cambiará en consecuencia. **PRINCIPAL** es la configuración predeterminada para los servidores secundarios.  
   
-PARAMETER_SNIFFING ** = ** { **ON** | DESACTIVAR | PRINCIPAL}  
+PARAMETER_SNIFFING  **=**  { **ON** | DESACTIVAR | PRINCIPAL}  
 
 Habilita o deshabilita [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. Es equivalente a la [Marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -118,7 +118,7 @@ PRIMARY
   
 Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que el valor de esta configuración en todas las secundarias será el valor establecido para el servidor principal. Si la configuración en el servidor principal para el uso de [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) cambios, el valor en los servidores secundarios cambiará en consecuencia, sin necesidad de establecer los servidores secundarios valor explícitamente. Se trata de la configuración predeterminada para los servidores secundarios.  
   
-QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | PRINCIPAL}  
+QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRINCIPAL}  
 
 Habilita o deshabilita las revisiones de optimización de consulta, independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que deshabilita las revisiones de optimización que se publicaron después de que se introdujo el máximo nivel de compatibilidad disponible para una versión específica de consulta (RTM post). Si se establece en **ON** es equivalente a habilitar [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -133,7 +133,7 @@ DESACTIVE PROCEDURE_CACHE
 
 Borra la caché de procedimientos (plan) para la base de datos. Esto se puede ejecutar tanto en el servidor principal y los servidores secundarios.  
 
-IDENTITY_CACHE ** = ** { **ON** | {OFF}  
+IDENTITY_CACHE  **=**  { **ON** | {OFF}  
 
 **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (característica está en versión preliminar pública) 
 
@@ -184,7 +184,7 @@ en la base de datos. Este permiso se puede conceder a un usuario con permiso CON
   
 ## <a name="metadata"></a>Metadatos  
 
-El [sys.database_scoped_configurations & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) vista del sistema proporciona información acerca de las configuraciones con ámbito en una base de datos. Opciones de configuración de ámbito de base de datos sólo se muestran en sys.database_scoped_configurations tal como están invalidaciones a la configuración predeterminada de todo el servidor. El [sys.configurations & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) vista del sistema solo muestra la configuración del servidor.  
+El [sys.database_scoped_configurations &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) vista del sistema proporciona información acerca de las configuraciones con ámbito en una base de datos. Opciones de configuración de ámbito de base de datos sólo se muestran en sys.database_scoped_configurations tal como están invalidaciones a la configuración predeterminada de todo el servidor. El [sys.configurations &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) vista del sistema solo muestra la configuración del servidor.  
   
 ## <a name="examples"></a>Ejemplos  
 Estos ejemplos muestran el uso de ALTER DATABASE SCOPED CONFIGURATION  
@@ -294,10 +294,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [SQL Server modelo optimizador de consultas revisión seguimiento marca 4199 mantenimiento](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Más información  
- [Sys.database_scoped_configurations & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [Sys.database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Opciones de configuración de servidor & #40; SQL Server & #41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [Opciones de configuración de servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

@@ -74,7 +74,7 @@ DBCC INPUTBUFFER devuelve un conjunto de filas con las siguientes columnas.
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar (30)**|Tipo de evento. Esto podría ser **RPC Event** o **eventos de lenguaje**. El resultado será **No Event** cuando no se detectó ningún último evento.|  
-|**Parámetros**|**smallint**|0 = Texto<br /><br /> 1 - * n * = parámetros|  
+|**Parámetros**|**smallint**|0 = Texto<br /><br /> 1 -  *n*  = parámetros|  
 |**EventInfo**|**nvarchar(4000)**|Para una **EventType** de RPC, **EventInfo** contiene solo el nombre del procedimiento. Para una **EventType** del lenguaje, se muestran solo los primeros 4.000 caracteres del evento.|  
   
 Por ejemplo, DBCC INPUTBUFFER devuelve el siguiente conjunto de resultados cuando el último evento del búfer es DBCC INPUTBUFFER(11).
@@ -126,7 +126,7 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>Vea también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[Sys.dm_exec_input_buffer & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[Sys.dm_exec_input_buffer &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

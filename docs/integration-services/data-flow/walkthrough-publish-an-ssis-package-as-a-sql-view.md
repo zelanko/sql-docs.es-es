@@ -128,7 +128,7 @@ ms.lasthandoff: 09/27/2017
   
     4.  Haga clic en el botón **Avanzadas** . Debería abrirse el cuadro de diálogo **Configuración avanzada** .  
   
-    5.  Haga lo siguiente en ****  este cuadro de diálogo:  
+    5.  Haga lo siguiente en **Configuración avanzada**** este cuadro de diálogo:  
   
         1.  Especifique el esquema de base de datos en el que quiere crear la vista (campo Esquema).  
   

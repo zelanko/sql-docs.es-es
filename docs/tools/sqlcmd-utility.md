@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   Para ejecutar instrucciones sqlcmd en SSMS, seleccione Modo SQLCMD en la lista desplegable del menú de consulta de la navegación superior.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para la ejecución en normal y el modo SQLCMD en **Editor de consultas**. Cuando **sqlcmd** se ejecuta desde la línea de comandos, ****  usa el controlador ODBC. Dado que se pueden aplicar diferentes opciones predeterminadas, podría obtener un comportamiento diferente al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] y en la utilidad **sqlcmd** .  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para la ejecución en normal y el modo SQLCMD en **Editor de consultas**. Cuando **sqlcmd** se ejecuta desde la línea de comandos, **sqlcmd** usa el controlador ODBC. Dado que se pueden aplicar diferentes opciones predeterminadas, podría obtener un comportamiento diferente al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] y en la utilidad **sqlcmd** .  
 >   
   
  Actualmente, **sqlcmd** no requiere un espacio entre la opción de línea de comandos y el valor. Sin embargo, en versiones futuras, se puede requerir un espacio entre la opción de línea de comandos y el valor.  
@@ -337,7 +337,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  Si se especifica **-b** junto con esta opción, **sqlcmd** se cierra en caso de error. **-b** se describe más adelante en este tema.  
   
  **-t** *tiempo_de_espera_de_consulta*  
- Especifica el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera. Esta opción establece la variable de scripting de **sqlcmd** SQLCMDSTATTIMEOUT. Si no se especifica ningún valor para *tiempo_de_espera* , el comando no tiene tiempo de espera. ***tiempo_de_espera_de_consulta* debe ser un número comprendido entre 1 y 65534. Si el valor proporcionado no es numérico o no está dentro de ese intervalo, **sqlcmd** generará un mensaje de error.  
+ Especifica el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera. Esta opción establece la variable de scripting de **sqlcmd** SQLCMDSTATTIMEOUT. Si no se especifica ningún valor para *tiempo_de_espera* , el comando no tiene tiempo de espera. *tiempo_de_espera**de consulta* debe ser un número comprendido entre 1 y 65534. Si el valor proporcionado no es numérico o no está dentro de ese intervalo, **sqlcmd** generará un mensaje de error.  
   
 > [!NOTE]  
 >  El tiempo de espera real puede variar unos segundos con respecto al valor de *tiempo_de_espera* especificado.  

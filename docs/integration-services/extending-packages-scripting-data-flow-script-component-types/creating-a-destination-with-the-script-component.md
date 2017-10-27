@@ -118,7 +118,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  Crear una tabla de destino ejecutando el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] comando en el **AdventureWorks** base de datos:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

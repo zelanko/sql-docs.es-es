@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>Use este script para aislar los problemas y reproducirlos en SQL Server Management Studio  
  La operación de origen de CDC se rige por la operación de la tarea Control CDC ejecutada antes de invocar al origen de CDC. La tarea Control CDC prepara el valor de la variable de paquete de estado CDC para contener los LSN inicial y final. Realiza la función equivalente a la del script siguiente:  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

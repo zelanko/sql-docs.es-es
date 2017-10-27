@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  Cuando se usa la Consola del diseñador CDC de Oracle, los cambios se detectan automáticamente. Al actualizar la configuración de CDC de Oracle directamente mediante SQL, se debe llamar al procedimiento siguiente para que el servicio CDC de Oracle detecte el cambio de configuración:  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  La contraseña de minería de registros se almacena cifrada mediante una clave asimétrica con el nombre fijo `xdbcdc_asym_key` que se crea automáticamente con el comando siguiente:  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

@@ -80,13 +80,12 @@ ms.lasthandoff: 08/03/2017
   
  El ejemplo siguiente muestra el número de filas enviadas entre los componentes de un paquete.  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  El ejemplo siguiente se calcula el número de filas por milisegundo enviadas por cada componente de una ejecución concreta. Los valores calculados son:  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurar una salida de error en un componente de flujo de datos
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  Este es un script SQL de ejemplo que realiza los pasos descritos en el escenario anterior:  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  Los parámetros de nombre de carpeta, nombre de proyecto y nombre de paquete del procedimiento almacenado create_execution corresponden a los nombres de carpeta, proyecto y paquete del catálogo de Integration Services. Puede obtener los nombres de carpeta, proyecto y paquete que debe usar en la llamada a create_execution desde SQL Server Management Studio, como se muestra en la ilustración siguiente. Si no ve el proyecto de SSIS aquí, quizás no haya implementado todavía el proyecto en el servidor de SSIS. Haga clic con el botón secundario en el proyecto de SSIS en Visual Studio y, a continuación, haga clic en Implementar para implementar el proyecto en el servidor de SSIS esperado.  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>Quitar una derivación de datos  
  Puede quitar una derivación de datos antes de iniciar la ejecución con el procedimiento almacenado [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) . Este procedimiento almacenado toma como parámetro el identificador de la derivación de datos, que puede obtener como resultado del procedimiento almacenado add_data_tap.  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>Mostrar todas las derivaciones de datos  
  También puede enumerar todas las derivaciones de datos mediante la vista catalog.execution_data_taps. En el ejemplo siguiente se extraen derivaciones de datos para una instancia de ejecución de especificación (Id.: 54).  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   

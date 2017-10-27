@@ -116,7 +116,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
  Para obtener una descripción breve con vínculos a información adicional sobre las tareas previas a la instalación, consulte [Instalar Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
 ##  <a name="SetUpWeb"></a> Configurar la base de datos y el sitio web  
- **Configurar la base de datos y el sitio web mediante el ** de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]  
+ **Configurar la base de datos y el sitio web mediante el**  de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]  
 
  
 > [!WARNING]  

@@ -196,7 +196,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>Crear un servidor vinculado con el proveedor OLE DB para SSIS  
  Cree un servidor vinculado con el proveedor OLE DB para SSIS (SSISOLEDB); para ello, ejecute la siguiente consulta en SQL Server Management Studio.  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  Antes de crear la vista, escriba y ejecute la siguiente consulta en la ventana de nueva consulta. OPENQUERY es una función de conjunto de filas compatible con SQL Server. Ejecuta la consulta de paso a través especificada en el servidor vinculado por medio del proveedor OLE DB asociado al servidor vinculado. Se puede hacer referencia a OPENQUERY en la cláusula FROM de una consulta como si fuera un nombre de tabla. Para obtener más información, consulte la [documentación de OPENQUERY en MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) .  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  Ejecute la siguiente consulta para crear una vista en la base de datos **TestDB** para este tutorial.  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  Ejecute la siguiente consulta para comprobar la vista.  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>Función OPENQUERY  
  La sintaxis de la función OPENQUERY es:  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

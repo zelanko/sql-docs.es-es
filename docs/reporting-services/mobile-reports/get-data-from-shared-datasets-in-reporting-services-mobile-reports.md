@@ -15,7 +15,8 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
 ms.contentlocale: es-es
@@ -66,7 +67,7 @@ Si ya ha establecido una conexión a un servidor de informes, al seleccionar **A
   
 ### <a name="see-also"></a>Vea también  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [Portal web (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  [Portal Web (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  
   

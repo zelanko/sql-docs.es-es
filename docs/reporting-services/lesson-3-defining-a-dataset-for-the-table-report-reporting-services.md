@@ -16,7 +16,8 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
 ms.contentlocale: es-es
@@ -76,7 +77,7 @@ Use el diseñador de consultas del Diseñador de informes para diseñar el conju
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Vea [lección 4: agregar una tabla para el informe &#40; Reporting Services &#41; ](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Consulte [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Herramientas de diseño de consulta &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  

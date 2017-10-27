@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: es-es
@@ -159,3 +160,4 @@ CELL PROPERTIES
  [Colección de campos de conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
+

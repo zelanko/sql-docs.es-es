@@ -19,7 +19,8 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: es-es
@@ -66,7 +67,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
      ![El generador de informes Introducción](../../reporting-services/media/rb-getstarted.png "empezar a trabajar el generador de informes")  
   
-     Si no aparece el cuadro de diálogo **Introducción** , haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
+     If the **Getting Started** dialog box does not appear, click **File** >**New**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -82,7 +83,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 7.  En el cuadro **Seleccionar tipo de conexión** , haga clic en **XML**.  
   
-8.  Haga clic en el **credenciales** ficha, seleccione **usar usuario de Windows actual. La delegación de Kerberos puede ser necesaria**y, a continuación, haga clic en **Aceptar**.  
+8.  Haga clic en la pestaña **Credenciales** y seleccione **Usar usuario de Windows actual. Puede que se requiera la delegación Kerberos**, y haga clic en **Aceptar**.  
   
 9. En la página **Elegir una conexión a un origen de datos** , haga clic en **miGráficoCircular**y, a continuación, haga clic en **Siguiente**.  
   
@@ -152,7 +153,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si no aparece el cuadro de diálogo **Introducción** , haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
+    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -234,11 +235,12 @@ Observe que la superficie de diseño aumenta a medida que realiza la acción de 
   
  Finalmente, para guardar los informes en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes, necesitará la dirección URL y los permisos necesarios. Puede ejecutar cualquier informe que cree directamente desde su equipo, pero los informes tienen más funcionalidad cuando se ejecutan desde el servidor de informes o desde el sitio de SharePoint. Necesita permisos para ejecutar sus informes u otros desde el servidor de informes o desde el sitio de SharePoint donde estén publicados. Hable con el administrador del sistema para obtener acceso.  
   
- Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Vea [conceptos &#40; de la creación de informes El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Consulte [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Consulte [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Consulte [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)   
 [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

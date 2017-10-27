@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 7c86f9ecdbbf4955ba224e40c245fc412742fc30
@@ -48,3 +49,4 @@ Modo de Reporting Services y SharePoint proporciona tres características de col
 [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

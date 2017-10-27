@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePo
 4. Inicie las notificaciones al servicio de Token de Windows mediante Administración Central de SharePoint en el **administrar servicios en el servidor** página. El servicio se debe iniciar en el servidor que realizará la acción. Por ejemplo, si tiene un servidor que es WFE y otro servidor que es un servidor de aplicaciones con el servicio compartido de SQL Server Reporting Services en ejecución, que sólo deben iniciar C2WTS en el servidor de aplicaciones. C2WTS solo es necesario en un servidor de WFE si está ejecutando el elemento web Visor de informes.
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e6bf4a1dcb406f12eb212380fe09a546a982880
 ms.contentlocale: es-es
@@ -57,3 +58,4 @@ En un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
  [Listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
   
   
+

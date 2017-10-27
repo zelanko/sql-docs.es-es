@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 5966124a56131529ef8ee76f24f16e96628b1250
@@ -60,3 +61,4 @@ La característica Sincronizar archivo del Servidor de informes de [!INCLUDE[ssR
  [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

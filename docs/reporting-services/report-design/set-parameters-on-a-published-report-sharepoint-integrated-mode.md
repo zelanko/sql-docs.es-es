@@ -18,7 +18,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
 ms.contentlocale: es-es
@@ -87,6 +88,7 @@ ms.lasthandoff: 08/09/2017
 7.  Haga clic en **Aplicar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de permisos de lista de elementos del servidor de informes y el sitio de SharePoint](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
+

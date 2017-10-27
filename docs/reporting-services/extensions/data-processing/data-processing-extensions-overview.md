@@ -19,6 +19,7 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
@@ -90,3 +91,4 @@ El flujo del proceso paso a paso de una extensión de datos a la que el servidor
  [Biblioteca de extensión de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

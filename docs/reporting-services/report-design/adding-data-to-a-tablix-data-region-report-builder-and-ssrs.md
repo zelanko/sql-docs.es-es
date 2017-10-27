@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b6f41b4d1b42db5ca020841f9363df3f4cf3eb99
@@ -64,3 +65,4 @@ Para mostrar los datos de un conjunto de datos de informe en una tabla o una mat
  [Agregar una expresión &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   
+

@@ -14,7 +14,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
 ms.contentlocale: es-es
@@ -89,3 +90,4 @@ ms.lasthandoff: 08/09/2017
 [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53e1a61cc39b3aa0b3ef2f6222106ee162529417
 ms.contentlocale: es-es
@@ -83,3 +84,4 @@ Avg(expression, scope, recursive)
  [Ámbito de expresión para totales, agregados y colecciones integradas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
+

@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
@@ -195,3 +196,4 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

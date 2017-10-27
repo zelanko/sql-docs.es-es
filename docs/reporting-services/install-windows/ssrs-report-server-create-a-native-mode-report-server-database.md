@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
 ms.contentlocale: es-es
@@ -156,7 +157,8 @@ El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ss
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Configurar una conexión de base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Administrar un servidor de informes de modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

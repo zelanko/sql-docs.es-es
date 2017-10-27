@@ -16,7 +16,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
 ms.contentlocale: es-es
@@ -35,13 +36,13 @@ Use Visual Studio 2015 y la aplicación web ASP.NET para crear una página web A
   
 ## <a name="tasks"></a>Tareas  
 [Lección 1: Crear un sitio Web nuevo](../reporting-services/lesson-1-create-a-new-web-site.md)  
-[Lección 2: definir una conexión de datos y una tabla de datos para el informe primario](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-[Lección 3: diseñar el informe primario con el Asistente para informes](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-[Lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-[Lección 5: diseñar el informe secundario con el Asistente para informes](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
+[Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+[Lección 3: Diseñar el informe primario usando el Asistente para informes](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+[Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+[Lección 5: Diseñar el informe secundario usando el Asistente para informes](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
 [Lección 6: agregar un control ReportViewer a la aplicación](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
-[Lección 7: agregar una acción de obtención de detalles en el informe primario](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
-[Lección 8: crear un filtro de datos](../reporting-services/lesson-8-create-a-data-filter.md)  
+[Lección 7: Agregar una acción de obtención de detalles en el informe primario](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
+[Lección 8: Crear un filtro de datos](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Vea también  

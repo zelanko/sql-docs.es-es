@@ -17,7 +17,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: es-es
@@ -43,22 +44,23 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Aplicar formato a texto y marcadores de posición &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Describe cómo dar formato al texto y personalizar las opciones de formato para los distintos bloques de texto de un cuadro de texto.  
   
- [Importar HTML en un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importar HTML en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
  Describe cómo insertar y usar HTML en un informe.  
   
- [Aplicar formato a números y fechas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Describe cómo usar las cadenas de formato estándar y personalizadas compatibles con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Aplicar formato a líneas, colores y las imágenes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
+ [Aplicar formato a líneas, colores e imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  Describe cómo dar formato a las líneas, líneas de cuadrícula, colores e imágenes de los elementos de informe y de las regiones de datos.  
   
- [Establecer la configuración regional para un informe o cuadro de texto &#40; Reporting Services &#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Establecer la configuración regional de un informe o un cuadro de texto &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Describe cómo cambiar la configuración de los formatos de presentación de datos que difieren en función del idioma y de la región, como fecha, moneda y valores numéricos.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
+

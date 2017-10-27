@@ -1,5 +1,5 @@
 ---
-title: Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS) | Microsoft Docs
+title: Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,7 +15,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
 ms.contentlocale: es-es
@@ -116,7 +117,7 @@ Get-SPDiagnosticConfig
 |Catálogo del servidor de informes||  
 |Fragmento del servidor de informes||  
 |Limpieza del servidor de informes||  
-|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección URL interna del servidor de informes MediumUsing `http://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
+|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección url interna del servidor de informes mediumusing http://localhost `http://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
 |Criptografía del servidor de informes||  
 |Extensión de datos del servidor de informes||  
 |Sondeo de base de datos del servidor de informes||  
@@ -146,7 +147,7 @@ Get-SPDiagnosticConfig
 |Servicio compartido|Entradas de ejemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acceso de MediumGranting a las bases de datos de contenido.<br /><br /> Instancias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Cambio de la cuenta de servicio de MediumProcessing para ReportingWebServiceApplication<br /><br /> Permisos de base de datos de MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Ver un archivo de registro con PowerShell  
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")Puede usar PowerShell para devolver una lista de los eventos relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")puede usar PowerShell para devolver una lista de los [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] relacionados con eventos de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
@@ -161,4 +162,5 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Para más información y conocer los pasos para configurar el registro de diagnóstico en un servidor de SharePoint en Administración Central de SharePoint 2010, vea [Configuración de las opciones del registro de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

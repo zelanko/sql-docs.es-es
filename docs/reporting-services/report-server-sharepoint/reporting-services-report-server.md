@@ -13,6 +13,7 @@ ms.topic: get-started-article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 51e3df193ddb01eaae45c559054ae93c98a55509
@@ -163,3 +164,4 @@ Un servidor de informes de Reporting Services se ejecuta en uno de los dos modos
 [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

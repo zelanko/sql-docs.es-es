@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 795435899de548848ca64cec26d212fd8a80f900
 ms.contentlocale: es-es
@@ -50,3 +51,4 @@ Para los gráficos de columnas y de dispersión de los informes paginados de [!I
  [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
+

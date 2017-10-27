@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 140c0f085919b504ab2263abbc944b80897751fe
@@ -438,3 +439,4 @@ Además, la cuenta de seguridad del grupo de aplicaciones utilizada por la aplic
 [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

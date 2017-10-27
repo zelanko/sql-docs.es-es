@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
 ms.contentlocale: es-es
@@ -31,7 +32,7 @@ El gráfico tiene dos tipos de ejes: el principal y el secundario. El eje secund
   
  En aquellas situaciones en las que se necesita comparar más de dos series, considere un enfoque diferente para comparar y mostrar dichas series. Para obtener más información, consulte [mostrar varias Series en un gráfico de](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Un ejemplo de este gráfico está disponible como informe de ejemplo. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un ejemplo de este gráfico está disponible como informe de ejemplo. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, consulte [informes de ejemplo del generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,3 +49,4 @@ El gráfico tiene dos tipos de ejes: el principal y el secundario. El eje secund
 [Especifique un intervalo de eje](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

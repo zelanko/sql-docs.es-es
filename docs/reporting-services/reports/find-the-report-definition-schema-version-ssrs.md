@@ -19,7 +19,8 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
 ms.contentlocale: es-es
@@ -90,6 +91,7 @@ Un archivo de definición de informe especifica el espacio de nombres RDL para l
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md)   
-[Lenguaje RDL (Report Definition Language)](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[Lenguaje de definición de informe](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

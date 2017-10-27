@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!WARNING]  
 >  La vista catalog.execution_component_phases proporciona esta información cuando el nivel de registro de la ejecución del paquete se establece en Performance (Rendimiento) o Verbose (Detallado). Para más información, vea [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, subcomponent_name, execution_path,  
     SUM(DATEDIFF(ms,start_time,end_time)) as active_time,  

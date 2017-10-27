@@ -58,13 +58,13 @@ ms.lasthandoff: 09/27/2017
   
  En el ejemplo siguiente, la función devuelve estadísticas para la ejecución actual con el identificador 34.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
  En el ejemplo siguiente, la función devuelve estadísticas para todas las ejecuciones actuales en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

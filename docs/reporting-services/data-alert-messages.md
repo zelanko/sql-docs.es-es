@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
 ms.contentlocale: es-es
@@ -78,3 +79,4 @@ El propietario de la definición de la alerta de datos también puede ver la inf
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
 ms.contentlocale: es-es
@@ -46,15 +47,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **Conjuntos de datos** Los conjuntos de datos se pueden publicar y administrar aparte de los informes o los orígenes de datos compartidos de los que dependen. Usted o el propietario de la base de datos pueden proporcionar consultas optimizadas para los autores de informes que se van a usar. Cuando cambie la consulta, todos los informes que usan el conjunto de datos compartido utilizan la consulta actualizada. Puede habilitar el almacenamiento en caché del conjunto de datos para mejorar el rendimiento. Puede programar el almacenamiento en caché de la consulta para un momento concreto o usar una programación compartida.  
   
--   **Datos usados por los elementos de informe** Los elementos de informe pueden incluir los datos de los que dependen. Para obtener más información acerca de los elementos de informe, vea [elementos de informe en el Diseñador de informes &#40; SSRS &#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+-   **Datos usados por los elementos de informe** Los elementos de informe pueden incluir los datos de los que dependen. Para más información sobre los elementos de informe, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 -   **Filtrar datos** Los datos del informe se pueden filtrar en la consulta o en el informe. Puede usar conjuntos de datos y variables de consulta para crear parámetros en cascada y proporcionar al usuario la posibilidad de reducir las opciones de miles de selecciones a un número más fácil de administrar. Puede filtrar los datos en una tabla o un gráfico basándose en los valores de parámetro u otros valores que especifique.  
   
--   **Parámetros** Los comandos de consulta de conjunto datos que incluyen variables de consulta crean automáticamente los parámetros de informe correspondientes. También puede crear los parámetros de forma manual. Al ver un informe, la barra de herramientas de informe muestra los parámetros. Los usuarios pueden seleccionar valores para controlar el aspecto del informe o de los datos del informe. Para personalizar los datos de destinatarios específicos, puede crear conjuntos de parámetros de informe con diferentes valores predeterminados vinculados a la misma definición de informe o usar el campo integrado **UserID** . Para obtener más información, vea [parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) y [colecciones integradas en expresiones &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **Parámetros** Los comandos de consulta de conjunto datos que incluyen variables de consulta crean automáticamente los parámetros de informe correspondientes. También puede crear los parámetros de forma manual. Al ver un informe, la barra de herramientas de informe muestra los parámetros. Los usuarios pueden seleccionar valores para controlar el aspecto del informe o de los datos del informe. Para personalizar los datos de destinatarios específicos, puede crear conjuntos de parámetros de informe con diferentes valores predeterminados vinculados a la misma definición de informe o usar el campo integrado **UserID**. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) y [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 -   **Alertas de datos** Una vez publicado un informe, se puede crear alertas basadas en datos de informe y recibir mensajes de correo electrónico cuando cumplan las reglas que especifique.  
   
--   **Datos de grupo y de agregado** Los datos del informe se pueden agrupar y agregar en la consulta o en el informe. Si agrega valores a la consulta, puede continuar combinando valores en el informe dentro de los límites de lo que es significativo.  Para obtener más información, vea [filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) y [Agregar función &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
+-   **Datos de grupo y de agregado** Los datos del informe se pueden agrupar y agregar en la consulta o en el informe. Si agrega valores a la consulta, puede continuar combinando valores en el informe dentro de los límites de lo que es significativo.  Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) y [Función de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 -   **Ordenar datos** Los datos de informe se pueden clasificar en la consulta o en el informe. En las tablas, también puede agregar un botón de ordenación interactivo para permitir al usuario controlar el criterio de ordenación.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Los orígenes de datos que puede usar dependen de las extensiones de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas. La compatibilidad con los orígenes de datos puede diferir en lo relativo a herramienta de creación de cliente, versión del servidor de informes y plataforma del servidor de informes. Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
--   Las credenciales del origen de datos varían según el tipo de origen de datos y de si los informes se muestran en el cliente, en el servidor de informes o en el sitio de SharePoint. Para obtener más información, vea [establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40; Reporting Services en SharePoint integrado modo &#41; ](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Especificar credenciales y la información de conexión para orígenes de datos de informe](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)y la información de credenciales específica para cada herramienta de [herramientas de servicios de informes](../../reporting-services/tools/reporting-services-tools.md).  
+-   Las credenciales del origen de datos varían según el tipo de origen de datos y de si los informes se muestran en el cliente, en el servidor de informes o en el sitio de SharePoint. Para más información, vea [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e información de credenciales específica de cada herramienta en [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
  Las tareas relacionadas con crear conexiones de datos, agregar datos de orígenes externos, conjuntos de datos y consultas.  
@@ -95,3 +96,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>Contenido relacionado  
   
+

@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: es-es
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Haga clic con el botón derecho en el nodo del servidor de informes y seleccione **Propiedades**.  
   
-3.  Haga clic en **Avanzadas** para abrir la página de propiedades. Para obtener más información, vea [propiedades del servidor &#40; Página avanzadas &#41; -Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+3.  Haga clic en **Avanzadas** para abrir la página de propiedades. Para obtener más información, vea [Propiedades del servidor &#40;página Avanzadas&#41;](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  En **EnableRemoteErrors**, seleccione **True**.  
   
@@ -119,3 +120,4 @@ ms.lasthandoff: 08/09/2017
     >  Puede editar la tabla **ConfigurationInfo** de la base de datos del servidor de informes para establecer **EnableRemoteErrors** en **True**, pero si el servidor de informes se utiliza mucho, debe usar SQL Server Management Studio o un script para modificar la configuración. Si modifica el valor de la base de datos, debe reiniciar el servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que los cambios surtan efecto.  
   
   
+

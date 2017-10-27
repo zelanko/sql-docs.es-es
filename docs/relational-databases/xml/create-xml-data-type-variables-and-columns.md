@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
@@ -146,3 +147,4 @@ INSERT INTO T values(1,'<Product />')
 -   No desea que se ralenticen los recorridos de las tablas por la presencia de la columna XML en la tabla. Ésta usa espacio independientemente de si está o no almacenada de manera consecutiva.  
   
   
+

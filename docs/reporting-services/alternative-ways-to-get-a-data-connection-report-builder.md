@@ -16,7 +16,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
 ms.contentlocale: es-es
@@ -67,7 +68,7 @@ Para usar un origen de datos compartido, vaya a un servidor de informes y selecc
   
     Volverá a encontrarse en la página **Elegir una conexión a un origen de datos** .  
   
-6.  Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**.  
+6.  Para comprobar que se puede conectar al origen de datos, haga clic en **Prueba de conexión**.  
   
     Aparece un mensaje que indica que la conexión se ha creado correctamente. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

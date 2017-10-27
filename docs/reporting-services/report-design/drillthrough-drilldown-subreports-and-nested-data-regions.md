@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: es-es
@@ -85,22 +86,23 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="InThisSection"></a> En esta sección  
- [Informes de obtención de detalles &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Se explican los informes que se abren cuando un usuario hace clic en un vínculo de un informe principal.  
   
- [Subinformes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  Se explican los informes que se muestran dentro del cuerpo de un informe principal.  
   
- [Regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  Se explica cómo anidar una región de datos dentro de otra; por ejemplo, un gráfico anidado en el interior de una matriz.  
   
- [Acción de obtención de detalles &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  Explica cómo utilizar la acción de obtención de detalles para ocultar y mostrar elementos de informe.  
   
- [Especificar rutas de acceso a los elementos externos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explica cómo hacer referencia a elementos que están fuera del archivo de definición de informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
+

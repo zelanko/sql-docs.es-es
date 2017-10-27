@@ -15,7 +15,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
 ms.contentlocale: es-es
@@ -90,6 +91,7 @@ ms.lasthandoff: 08/09/2017
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Cargar documentos en una biblioteca de SharePoint &#40; Reporting Services en modo de SharePoint &#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
+ [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   
+

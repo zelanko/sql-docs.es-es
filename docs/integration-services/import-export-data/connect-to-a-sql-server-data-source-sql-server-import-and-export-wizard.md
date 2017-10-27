@@ -98,18 +98,18 @@ Especifique **Trusted_Connection = Yes** para conectarse con la autenticación i
 ### <a name="connection-string-format"></a>Formato de cadena de conexión
 Este es el formato de una cadena de conexión que usa la autenticación integrada de Windows.
 
-    Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Este es el formato de una cadena de conexión que utiliza autenticación de SQL Server en lugar de la autenticación integrada de Windows.
 
-     Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;
+     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Escriba la cadena de conexión
 Escriba la cadena de conexión en el **ConnectionString** campo o escriba el nombre DSN en el **Dsn** campo, en la **elegir un origen de datos** o **elegir un destino** página. Después de escribir la cadena de conexión, el asistente analiza la cadena y muestra las propiedades individuales y sus valores en la lista.
 
 En el ejemplo siguiente se utiliza esta cadena de conexión.
 
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Esta es la pantalla que verá después de escribir la cadena de conexión.
 

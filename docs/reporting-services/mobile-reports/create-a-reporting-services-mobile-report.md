@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
 ms.contentlocale: es-es
@@ -76,3 +77,4 @@ La primera vez que cree un informe móvil, puede instalar a SQL Server Mobile Re
 -   [Diseñar un informe de Reporting Services móvil para tableta o teléfono](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
+

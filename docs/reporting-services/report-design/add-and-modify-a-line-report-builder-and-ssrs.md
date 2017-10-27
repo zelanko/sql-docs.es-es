@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca5f80521b142435210737f2e6c971c8d6853510
 ms.contentlocale: es-es
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/09/2017
  [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   
+

@@ -16,7 +16,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: es-es
@@ -56,7 +57,7 @@ De forma predeterminada, el portal web dirección URL se compone de un nombre ú
 
 4. Haga clic en **Aplicar**.
 
-5. Si utilizas [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, adicionales pueden ser necesarios pasos antes de poder utilizar el portal web. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+5. Si utilizas [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, adicionales pueden ser necesarios pasos antes de poder utilizar el portal web. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 ## <a name="configure-the-web-portal-to-use-a-specific-report-server-url"></a>Configurar el portal web para usar una dirección URL de servidor de informes específico
 
@@ -100,9 +101,10 @@ Puede crear un paquete de marca personalizada para modificar los colores utiliza
 [Compatibilidad del explorador de Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [configurar una dirección URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Activar o desactivar las características de Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[Activar o desactivar los informes de características de servicios](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurar un servidor de informes de modo nativo para la administración Local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4a37208813e989353a381070e1ecfa0888e1e33b
 ms.contentlocale: es-es
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Gráfico de cotizaciones](../../reporting-services/report-design/media/rs-stockchart.gif "gráfico de cotizaciones")  
   
- Un ejemplo de un gráfico de cotizaciones está disponible como un informe del generador de informes de ejemplo. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un ejemplo de un gráfico de cotizaciones está disponible como un informe del generador de informes de ejemplo. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, consulte [informes de ejemplo del generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/09/2017
 [Cuadro de diálogo de propiedades de eje, opciones del eje](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

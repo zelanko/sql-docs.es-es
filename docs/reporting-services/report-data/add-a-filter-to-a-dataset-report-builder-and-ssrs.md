@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
 ms.contentlocale: es-es
@@ -82,3 +83,4 @@ ms.lasthandoff: 08/09/2017
  [Agregar un filtro &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   
+

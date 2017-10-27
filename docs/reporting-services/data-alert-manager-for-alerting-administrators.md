@@ -18,7 +18,8 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: es-es
@@ -86,3 +87,4 @@ SQL Server Reporting Services proporciona el Administrador de alertas de datos p
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

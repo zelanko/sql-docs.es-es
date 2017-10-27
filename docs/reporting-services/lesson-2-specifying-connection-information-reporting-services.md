@@ -16,7 +16,8 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d0667dec1b59d5560ca24176634dddc5d6d8d18
 ms.contentlocale: es-es
@@ -62,7 +63,7 @@ Si el panel **Datos de informe** no está visible, haga clic en **Datos de infor
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] El origen de datos **AdventureWorks2014** se agrega al panel **Datos de informe** .  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>Tarea siguiente  
-Ha definido correctamente una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . A continuación, creará el informe. Vea [lección 3: definir un conjunto de datos para el informe de tabla &#40; Reporting Services &#41; ](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+Ha definido correctamente una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . A continuación, creará el informe. Consulte la [Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

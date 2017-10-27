@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
 ms.contentlocale: es-es
@@ -116,9 +117,10 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
 4.  Pegue la dirección URL en el Administrador de informes y, a continuación, presione ENTRAR. El informe se ejecuta con el mapa del documento oculto.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [Informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obtener más información sobre cómo descargar los informes de ejemplo, vea [informes de ejemplo del generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
 
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

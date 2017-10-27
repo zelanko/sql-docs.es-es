@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  La siguiente instrucción SQL muestra la instrucción CREATE TABLE predeterminada que proporciona el Asistente para la configuración de paquetes.  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
@@ -68,3 +69,4 @@ Utilice las secciones siguientes para ayudarle a entender los conceptos, escenar
  Para obtener más información acerca de Reporting Services, consulte [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../../sql-server/sql-server-technical-documentation.md).  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

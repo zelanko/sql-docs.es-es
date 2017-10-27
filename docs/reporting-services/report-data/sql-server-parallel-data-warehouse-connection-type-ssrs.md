@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
 ms.contentlocale: es-es
@@ -73,7 +74,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Importe una consulta existente de un archivo o informe. Utilice el botón de consulta **Importar** desde cualquier diseñador de consultas para buscar un archivo .sql o .rdl e importar una consulta.  
   
- Para obtener más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) e [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Para más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) e [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
  El diseñador de consultas basado en texto admite el modo [Texto](#QueryText) en el que el usuario escribe los comandos de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] que seleccionan datos del origen de datos.  
   
@@ -85,7 +86,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)] admite la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona para resumir los datos.  
   
- El diseñador gráfico de consultas usado por [!INCLUDE[ssDW](../../includes/ssdw-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. Las características de lenguaje de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] son: la cláusula GROUP BY, la palabra clave DISTINCT y agregados, como SUM y COUNT. El diseñador de consultas basado en texto es totalmente compatible con el lenguaje de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , incluidas las agrupaciones y los agregados.  
+ El diseñador gráfico de consultas usado por [!INCLUDE[ssDW](../../includes/ssdw-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. Las características de lenguaje de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] son: la cláusula GROUP BY, la palabra clave DISTINCT y agregados, como SUM y COUNT. El diseñador de consultas basado en texto es totalmente compatible con el lenguaje de [!INCLUDE[DWsql](../../includes/dwsql-md.md)], incluidas las agrupaciones y los agregados.  
   
  Para obtener más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/transact-sql-reference-database-engine.md) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
@@ -141,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Agregar un filtro a un conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Secciones relacionadas  
@@ -150,13 +151,13 @@ WHERE EmployeeID = (@EmpID)
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
- [Informe incrusta los conjuntos de datos y conjuntos de datos compartidos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Proporciona información sobre conjuntos de datos compartidos e incrustados.  
   
- [Colección de campos de conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -169,3 +170,4 @@ WHERE EmployeeID = (@EmpID)
 [Expresiones](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

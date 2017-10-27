@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Tener restricciones CHECK o reglas habilitadas.  
   
- *column_list*  
+*column_list*  
  Es una lista opcional de nombres de columna de la tabla de destino de la cláusula INTO. Este bloque es análogo a la lista de columnas permitida en el [insertar](../../t-sql/statements/insert-transact-sql.md) instrucción.  
   
  *scalar_expression*  

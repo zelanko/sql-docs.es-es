@@ -20,7 +20,8 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: es-es
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>Iniciar el Generador de informes
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es un entorno de creación de informes independiente. Con él, puede crear informes paginados y publicarlos en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado en modo nativo o modo integrado de SharePoint.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]es un informe independiente el entorno de creación. Con él, puede crear informes paginados y publicarlos en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado en modo nativo o modo integrado de SharePoint.  
   
  La primera vez que inicie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo integrado de SharePoint, se le pedirá que lo descargue del Centro de descarga de Microsoft. 
  
@@ -73,6 +74,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
-[Establecimiento de opciones predeterminadas para el Generador de informes](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+[Establecer opciones predeterminadas para el generador de informes](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

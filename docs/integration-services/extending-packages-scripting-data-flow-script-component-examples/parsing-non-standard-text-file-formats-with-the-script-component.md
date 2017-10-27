@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Seleccione una base de datos de destino y abra una nueva ventana de consulta. En la ventana de consulta, ejecute el siguiente script para crear la tabla de destino:  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  Seleccione una base de datos de destino y abra una nueva ventana de consulta. En la ventana de consulta, ejecute el siguiente script para crear las tablas de destino:  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

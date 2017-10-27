@@ -16,7 +16,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: es-es
@@ -64,7 +65,7 @@ Esta lección se supone que usa [!INCLUDE[ssManStudioFull_md](../includes/ssmans
     GO  
     ```  
   
-7.  Haga clic en **! Ejecutar** en la barra de herramientas.  
+7.  Haga clic en **! en Ejecutar** en la barra de herramientas.  
   
 8.  Use una instrucción SELECT para comprobar que tiene tres filas de datos. Por ejemplo: `select * from OrderInfo`  
   
@@ -80,3 +81,4 @@ Esta lección se supone que usa [!INCLUDE[ssManStudioFull_md](../includes/ssmans
 [Crear un informe de tabla básico](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

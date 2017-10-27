@@ -15,7 +15,8 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f50d9023da6fb4498f159c6622ed1d6648ad57a5
 ms.contentlocale: es-es
@@ -74,3 +75,4 @@ ms.lasthandoff: 08/09/2017
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
   
+

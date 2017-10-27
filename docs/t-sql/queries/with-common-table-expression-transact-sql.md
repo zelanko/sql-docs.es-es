@@ -64,7 +64,7 @@ Es un identificador válido para la expresión de tabla común. *expression_name
  Especifica un nombre de columna en la expresión de tabla común. No se permiten nombres duplicados en una misma definición de CTE. El número de nombres de columna especificado debe coincidir con el número de columnas del conjunto de resultados de la *definiciones*. La lista de nombres de columna es opcional solamente si en la definición de la consulta se suministran nombres diferentes para todas las columnas resultantes.  
   
  *Definiciones*  
- Especifica una instrucción SELECT cuyo conjunto de resultados llena la expresión de tabla común. La instrucción SELECT para *definiciones* debe cumplir los mismos requisitos que para crear una vista, excepto una CTE no puede definir otra expresión CTE. Para obtener más información, vea la sección Comentarios y [CREATE VIEW & #40; Transact-SQL & #41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Especifica una instrucción SELECT cuyo conjunto de resultados llena la expresión de tabla común. La instrucción SELECT para *definiciones* debe cumplir los mismos requisitos que para crear una vista, excepto una CTE no puede definir otra expresión CTE. Para obtener más información, vea la sección Comentarios y [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  Si más de un *definiciones* está definido, las definiciones de consulta deben combinarse mediante uno de estos operadores de conjuntos: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
@@ -175,7 +175,7 @@ Es un identificador válido para la expresión de tabla común. *expression_name
   
 -   Cuando se utiliza una expresión CTE en una instrucción que forma parte de un lote, la instrucción que la precede debe ir seguida de punto y coma.  
   
--   Cuando se utiliza en instrucciones preparadas por **sp_prepare**, las CTE comportarán del mismo modo que otros **seleccione** las instrucciones de PDW. Sin embargo, si las CTE se usan como parte de CETAS redactado por el **sp_prepare**, el comportamiento puede diferir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otras instrucciones PDW debido a la forma de enlace se implementa para **sp_prepare**. Si **seleccione** que las referencias CTE está utilizando una columna incorrecta que no existe en la CTE, el **sp_prepare** pasará sin detectar el error, pero el error se producirá durante **sp_execute ** en su lugar.  
+-   Cuando se utiliza en instrucciones preparadas por **sp_prepare**, las CTE comportarán del mismo modo que otros **seleccione** las instrucciones de PDW. Sin embargo, si las CTE se usan como parte de CETAS redactado por el **sp_prepare**, el comportamiento puede diferir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otras instrucciones PDW debido a la forma de enlace se implementa para **sp_prepare**. Si **seleccione** que las referencias CTE está utilizando una columna incorrecta que no existe en la CTE, el **sp_prepare** pasará sin detectar el error, pero el error se producirá durante **sp_execute**  en su lugar.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -722,7 +722,7 @@ SELECT TableName, TotalAvg FROM CountCustomer;
 ## <a name="see-also"></a>Vea también  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [EXCEPTO y INTERSECT & #40; Transact-SQL & #41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPTO y INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

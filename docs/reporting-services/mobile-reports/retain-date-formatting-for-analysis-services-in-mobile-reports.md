@@ -14,7 +14,8 @@ caps.latest.revision: 3
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
 ms.contentlocale: es-es
@@ -44,5 +45,6 @@ Para solucionar esto, agregue un miembro calculado al crear un conjunto de datos
    
 ### <a name="see-also"></a>Vea también
 
--  [Datos para informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Datos para informes móviles de Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [Preparar datos para informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+

@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  Hacer coincidir un valor ordinal con su operación correspondiente no es tan fácil como utilizar una tecla de acceso para la operación. Por ejemplo, 'D' puede representar fácilmente una operación de eliminación e 'I' una operación de inserción. La consulta de ejemplo que se creó en el tema, [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)realiza esta conversión de un valor ordinal a un valor de cadena descriptivo que se devuelve en una nueva columna. El segmento de código siguiente muestra esta conversión:  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

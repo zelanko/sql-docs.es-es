@@ -19,6 +19,7 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
@@ -87,3 +88,4 @@ Un servidor de informes de SQL Server Reporting Services instalado en modo de Sh
  [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

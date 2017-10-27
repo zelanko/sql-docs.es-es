@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: es-es
@@ -62,7 +63,7 @@ Para mostrar los datos reales en el mapa, debe establecer los valores de, como m
   
 1. Seleccione la pestaña **Datos** , situada en la esquina superior izquierda.  
   
-2. Seleccione **Agregar datos**y, después, **Local Excel** (Excel local) o **SSRS Server**(Servidor de SSRS).  
+2. Seleccione **agregar datos**, a continuación, ya sea **Excel Local** o **servidor SSRS**.  
   
    > **Sugerencia**: asegúrese de que [los datos están en un formato apto para informes para dispositivos móviles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -84,7 +85,7 @@ Para mostrar los datos reales en el mapa, debe establecer los valores de, como m
 8. Seleccione el icono de **Guardar** , situado en la esquina superior izquierda, y elija entre **guardar el mapa localmente** en su equipo o **guardarlo en el servidor**.  
   
 ### <a name="see-also"></a>Vea también  
--  [Mapas personalizados en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

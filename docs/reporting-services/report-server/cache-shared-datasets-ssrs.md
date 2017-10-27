@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 98ebdbf63808c31b1e1fc5b9b2bcde91ebe2e33d
-ms.openlocfilehash: 8d7bb0e524b90ac621570da5c2653db6e0a4cb6a
+ms.workload: Inactive
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Debe tener los permisos ReadPolicy y UpdatePolicy en el conjunto de datos compartido.  
   
- Los planes de actualización de memoria caché se aplican a los conjuntos de datos compartidos y a los informes. Para obtener más información, vea [opciones de actualización de caché &#40; El Administrador de informes &#41; ](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Los planes de actualización de memoria caché se aplican a los conjuntos de datos compartidos y a los informes. Para más información, vea [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Situaciones que pueden provocar la expiración de la memoria caché  
  Las siguientes condiciones pueden hacer que una memoria caché del conjunto de datos compartido deje de ser válida.  
@@ -104,3 +105,4 @@ ms.lasthandoff: 08/09/2017
  [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
+

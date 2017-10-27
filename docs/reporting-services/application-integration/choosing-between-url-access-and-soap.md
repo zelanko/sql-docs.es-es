@@ -13,6 +13,7 @@ ms.topic: reference
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 1d9b4df388cd1d6bb96d88b64bf319f5fd9866e9
@@ -53,3 +54,4 @@ Integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplica
  Para obtener un ejemplo de cómo combinar el acceso URL y el servicio Web para proporcionar informes integrados, vea [muestras de producto de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

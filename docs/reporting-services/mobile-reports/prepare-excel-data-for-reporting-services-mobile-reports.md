@@ -15,7 +15,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: es-es
@@ -82,7 +83,7 @@ Los campos de fecha resultan esenciales para muchos informes móviles, por lo qu
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-Después de haber convertido las celdas, tiene que darles el formato como fechas seleccionando o toda la columna > **contexto** menú > **formato de celdas** > **fecha** desde el **categoría** lista. También puede utilizar al Asistente para convertir texto en columnas a fin de transformar las celdas de texto en fechas con el formato correcto.  
+Después de convertir las celdas, tiene que darles el formato de fecha; para hacerlo, seleccione las celdas o toda la columna y siga estos pasos: **menú contextual** > **Formato de celdas** > **Fecha** en la lista **Categoría**. También puede utilizar al Asistente para convertir texto en columnas a fin de transformar las celdas de texto en fechas con el formato correcto.  
   
 ## <a name="unsupported"></a>No compatible  
   

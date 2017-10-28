@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: 7b2c96006c5495c89486c8a86e1b60b64f2dd22c
@@ -44,3 +45,4 @@ Si abre un proyecto desde una versión anterior de SSMA para SAP ASE, SSMA le pr
   
 ## <a name="see-also"></a>Vea también  
 [Migrar SAP ASE bases de datos a SQL Server: base de datos de SQL de Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+

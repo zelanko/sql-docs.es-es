@@ -16,7 +16,8 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: es-es
@@ -53,7 +54,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -68,7 +69,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
     > [!NOTE]  
     > El origen de datos que elija no importa, con tal de que tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
+6.  En la página **Diseñar una consulta**, haga clic en **Editar como texto**.  
   
 7.  Pegue la siguiente consulta en el panel de consulta:  
   
@@ -127,9 +128,9 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga clic en el eje horizontal > **propiedades del eje Horizontal**.  
+2.  Haga clic con el botón derecho en el eje horizontal > **Propiedades del eje horizontal**.  
   
-3.  En la pestaña **Número** , en **Categoría**, seleccione **fecha**.  
+3.  En la pestaña **Número**, en **Categoría**, seleccione **fecha**.  
   
 5.  En el cuadro **Tipo** , seleccione **31 Ene 2000**.  
   
@@ -143,15 +144,15 @@ La fecha se mostrará en el formato de fecha que haya seleccionado. El gráfico 
   
 Puede personalizar la presentación de las etiquetas girándolas y especificando el intervalo.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas del eje en el eje horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas de eje en el eje horizontal  
   
 1.  Cambie a la vista de diseño del informe.  
   
 2.  Haga clic con el botón derecho en el título del eje horizontal y, después, haga clic en **Mostrar título del eje** para quitar el título. Dado que el eje horizontal muestra las fechas, no es necesario el título.  
   
-3.  Haga clic en el eje horizontal > **propiedades del eje Horizontal**.  
+3.  Haga clic con el botón derecho en el eje horizontal > **Propiedades del eje horizontal**.  
   
-5.  En la pestaña **Etiquetas** , bajo **Cambiar opciones de ajuste automát. de etiquetas de eje**, seleccione **Deshabilitar el ajuste automático**.  
+5.  En la pestaña **Etiquetas**, bajo **Cambiar opciones de ajuste automát. de etiquetas de eje**, seleccione **Deshabilitar el ajuste automático**.  
   
 7.  En **Ángulo de giro de etiqueta**, seleccione **-90**.  
   
@@ -172,7 +173,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga clic en la leyenda del gráfico > **propiedades de la leyenda**.  
+2.  Haga clic con el botón derecho en la leyenda en el gráfico > **Propiedades de la leyenda**.  
   
 3.  En **Diseño y posición**, seleccione una posición diferente. Por ejemplo, seleccione la opción centrada en la parte inferior.  
   
@@ -180,7 +181,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Opcional) Como en este tutorial solo hay una categoría, el gráfico no necesita una leyenda. Para quitarlo, haga clic en la leyenda > **eliminar leyenda**.  
+5.  (Opcional) Como en este tutorial solo hay una categoría, el gráfico no necesita una leyenda. Para quitarla, haga clic con el botón derecho en la leyenda > **Eliminar leyenda**.  
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -199,23 +200,23 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
   
 2. Haga clic en las etiquetas del eje vertical a lo largo del lateral izquierdo del gráfico para seleccionarlas.  
   
-3.  En el **inicio** ficha > **número** grupo, haga clic en el **moneda** botón. Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
+3.  En la pestaña **Inicio** > grupo **Número**, haga clic en el botón **Moneda**. Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
   
 4.  Haga clic dos veces en el botón **Disminuir decimales** para mostrar el número redondeado al dólar más próximo.  
   
-5.  Haga clic en el eje vertical > **propiedades del eje Vertical**.  
+5.  Haga clic con el botón derecho en el eje vertical > **Propiedades del eje vertical**.  
   
-6.  En la pestaña **Número** , observe que **Moneda** ya está seleccionado en el cuadro **Categoría** y **Posiciones decimales** ya tiene el valor **0** (cero).  
+6.  En la pestaña **Número**, observe que **Moneda** ya está seleccionado en el cuadro **Categoría** y **Posiciones decimales** ya tiene el valor **0** (cero).  
   
 7.  Active **Mostrar valores en**. **Miles** ya está seleccionado.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Haga clic en el eje vertical > **Mostrar título del eje**. 
+9. Haga clic con el botón derecho en el eje vertical > **Mostrar título del eje**. 
 
-10. Haga clic en el título del eje vertical > **propiedades del título del eje**.  
+10. Haga clic con el botón derecho en el eje vertical > **Propiedades del título del eje**.  
   
-10. Reemplace el texto del campo **Texto del título** con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
+10. Reemplace el texto del campo **Texto del título**  con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -223,7 +224,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
 
     ![generador-informes-gráfico-columnas-formato-eje-x](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostrar todas las etiquetas en el eje horizontal (x)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostrar todas las etiquetas del eje horizontal (x)
 
 Observe que solo se muestran algunas de las etiquetas del eje x. En esta sección, se establece una propiedad en el panel Propiedades para mostrarlas todas.
 
@@ -283,7 +284,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
   
 4.  Seleccione **Gráfico de ventas** y, en la pestaña **Inicio** sección > **Fuente** > **Negrita**.  
   
-5.  Seleccione **enero a diciembre de 2015**y en el **inicio** ficha > **fuente** sección > Establezca el tamaño de fuente **10**.  
+5.  Seleccione **Enero a diciembre de 2015** y, en la pestaña **Inicio** > sección **Fuente** > establezca el tamaño de fuente en **10**.  
   
 6.  (Opcional) Es posible que necesite hacer más alto el cuadro de texto **Título** para que quepan las dos líneas de texto. Despliegue las flechas de dos puntas al hacer clic en el centro del borde inferior. Es posible que necesite arrastrar la parte superior del gráfico para que no se superponga el título.  
   
@@ -306,7 +307,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
 4.  Haga clic en **Guardar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para más información acerca de los gráficos, consulte [gráficos &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [minigráficos y barras de datos &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, consulte [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
 -    [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 

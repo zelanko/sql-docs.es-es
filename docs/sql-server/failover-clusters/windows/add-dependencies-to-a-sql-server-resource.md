@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
@@ -73,3 +74,4 @@ ms.lasthandoff: 06/22/2017
 -   Seleccione el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , abra el cuadro de diálogo **Propiedades** y utilice la pestaña **Dependencias** para agregar el disco al conjunto de dependencias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
   
+

@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ El procedimiento `Application.Configuration_PopulateLargeSaleTable` puede utiliz
 Aproximadamente el número necesario de filas se inserta en la `Fact.Sale` tabla en el año 2012. El procedimiento limita artificialmente el número de filas por día a 50000. Esto podría cambiarse pero no existe evitar overinflations a las medidas de la tabla.
 
 Además, el procedimiento aplica indización de almacén de columnas agrupado, si ya no se han aplicado.
+

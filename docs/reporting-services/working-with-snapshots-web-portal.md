@@ -14,7 +14,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: es-es
@@ -84,3 +85,4 @@ Si activa esta casilla, se copiará en el historial de un informe una instantán
 [Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

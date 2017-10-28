@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
 ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
@@ -141,3 +142,4 @@ Además, el Visor de Ayuda no admite la configuración del proxy ni tampoco el f
 [Visor de Ayuda de Microsoft (Visual Studio 2015)](https://msdn.microsoft.com/library/hh580782.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

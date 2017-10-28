@@ -23,7 +23,8 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: es-es
@@ -74,3 +75,4 @@ ms.lasthandoff: 08/09/2017
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
+

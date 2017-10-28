@@ -23,7 +23,8 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
 ms.contentlocale: es-es
@@ -49,7 +50,7 @@ public class MSReportServer_ConfigurationSetting
  Todos los miembros estáticos (**compartidos** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) públicos de este tipo son seguros para operaciones multiproceso. No se garantiza que los miembros de instancia sean seguros para subprocesos.  
   
 ## <a name="example"></a>Ejemplo  
- Para ejecutar el siguiente código, agregue el nombre del servidor en lugar de cada \< *servername*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase *MSReportServer_ConfigurationSetting*, imprimiendo el nombre de cada propiedad y su valor en la consola.  
+ Para ejecutar el siguiente código, agregue el nombre del servidor en lugar de cada \< *servername*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase *MSReportServer_ConfigurationSetting* , imprimiendo el nombre de cada propiedad y su valor en la consola.  
   
 ```vb  
 Imports System  
@@ -174,11 +175,12 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **Plataforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

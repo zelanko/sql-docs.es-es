@@ -19,7 +19,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: es-es
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Al crear una suscripción, puede seleccionar un formato de archivo de salida. No todos los informes funcionan bien en todos los formatos. Antes de seleccionar un formato en una suscripción, abra el informe y expórtelo a otros formatos para asegurarse de que aparece de la manera esperada.  
   
- Los usuarios necesitan el permiso de lista **Editar elementos** en SharePoint si desean poder crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, consulte [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Los usuarios necesitan el permiso de lista **Editar elementos** en SharePoint si desean poder crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, consulte [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  Una suscripción que entrega un informe a una biblioteca o a una carpeta compartida crea un nuevo archivo estático basado en el informe original, pero no se trata de una verdadera definición de informe que se ejecute en el elemento web Visor de informes. Si el informe original cuenta con funciones interactivas (como vínculos de obtención de detalles) o contenido dinámico, estas características no estarán disponibles en el archivo estático que se entregue en la ubicación de destino. Si selecciona una "Página web", puede mantener parte de esta interactividad pero, dado que el documento no es un archivo .rdl que se ejecute en el Visor de informes, al hacer varias veces clic en un informe se crearán nuevas páginas en la sesión de explorador por las que tendrá que desplazarse para regresar al sitio.  
@@ -169,3 +170,4 @@ ms.lasthandoff: 08/09/2017
  [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
+

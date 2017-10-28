@@ -1,7 +1,7 @@
 ---
 title: FREETEXT (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Es un predicado utilizado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción SELECT para realizar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] búsqueda de texto completo en texto completo indizadas las columnas que contienen tipos de datos basados en caracteres. Este predicado busca valores que coincidan con el significado y no solo con la redacción exacta de las palabras en la condición de búsqueda. Cuando se utiliza FREETEXT, el motor de consultas de texto completo realiza internamente las siguientes acciones en el *freetext_string*, asigna cada términos un peso y busca las coincidencias:  
   

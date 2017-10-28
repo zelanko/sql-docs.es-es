@@ -19,6 +19,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ae1001b60f61120999ef61b7385464ca7af0fc5
@@ -42,3 +43,4 @@ ms.lasthandoff: 06/22/2017
  Si lo que ha escrito tiene más de una posible coincidencia, invoque Palabra completa para mostrar una lista de las posibles coincidencias, que luego podrá utilizar para encontrar el término e insertarlo en el código.  
   
   
+

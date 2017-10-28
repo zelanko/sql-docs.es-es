@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: es-es
@@ -56,7 +57,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  Valor **booleano** que indica el estado deseado del Administrador de informes.
  
  > [!NOTE] 
- > Esta opción está en desuso desde la actualización acumulativa 2 de SQL Server 2016 Reporting Services. El portal web siempre estará habilitado. El valor se omitirá.
+ > Esta opción está en desuso a partir de SQL Server 2016 Reporting Services actualización acumulativa 2. Siempre se habilitará el portal web. El valor se omitirá.
   
  *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
@@ -67,7 +68,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

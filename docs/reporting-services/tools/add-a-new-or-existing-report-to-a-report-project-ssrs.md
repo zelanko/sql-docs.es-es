@@ -17,7 +17,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: es-es
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Para obtener la vista previa de un informe con orígenes de datos existentes, debe tener permisos en el origen de datos del cliente de creación de informes. Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Después de agregar un informe, puede definir orígenes de datos, conjuntos de datos y establecer un diseño de informe. Para empezar, vea [crear un informe de tabla básico &#40; Tutorial de SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) o [tablas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Después de agregar un informe, puede definir orígenes de datos, conjuntos de datos y establecer un diseño de informe. Para comenzar, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) y [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>Para agregar un nuevo informe utilizando el Asistente para informes  
   

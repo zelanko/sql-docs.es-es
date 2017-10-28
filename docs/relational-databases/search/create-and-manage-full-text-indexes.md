@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
@@ -204,3 +205,4 @@ Para crear un índice de texto completo en una columna **varbinary(max)** , el m
 3.  Cuando se le pida, haga clic en **Aceptar** para confirmar que quiere eliminar el índice de texto completo.  
   
   
+

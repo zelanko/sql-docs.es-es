@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  En **Asignaciones**, seleccione un campo del origen de datos para **Columna de origen**y, continuación, seleccione el dominio correspondiente. Repita este procedimiento con todos los dominios que utilice en el proceso de búsqueda de coincidencias. Cada dominio definido en la directiva de coincidencia debe asignarse a la columna de origen correspondiente. En el panel derecho de la página Asignación aparecen los dominios que se han definido en la directiva de coincidencia y las reglas existentes en dicha directiva.  
   
     > [!NOTE]  
-    >  Solo puede asignar los datos de origen para un dominio DQS si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Solo puede asignar los datos de origen para un dominio DQS si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 4.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (–)** para eliminarla.  
   

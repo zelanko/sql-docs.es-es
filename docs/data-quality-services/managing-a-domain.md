@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  También puede crear un dominio compuesto formado por dos o más dominios individuales que contengan conocimiento sobre datos comunes. Para más información, vea [Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md).  
   
 ## <a name="domain-properties"></a>Propiedades del dominio  
- Al crear un dominio, tendrá las opciones siguientes para rellenarlo a partir de los datos de origen y mostrar los valores del dominio. Para más información, consulte [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ Al crear un dominio, tendrá las opciones siguientes para rellenarlo a partir de los datos de origen y mostrar los valores del dominio. Para más información, consulte [Conjunto propiedades de dominio](../data-quality-services/set-domain-properties.md).  
   
--   Seleccione el tipo de los datos con los que va a rellenar el dominio. Para obtener más información acerca de los tipos de datos admitidos para cada uno de los tipos de datos de dominio, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+-   Seleccione el tipo de los datos con los que va a rellenar el dominio. Para obtener más información acerca de los tipos de datos admitidos para cada uno de los tipos de datos de dominio, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 -   Especifique que solo se mostrarán los valores iniciales del dominio, no sus sinónimos.  
   

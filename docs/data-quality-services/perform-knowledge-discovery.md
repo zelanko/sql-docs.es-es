@@ -71,12 +71,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  En la tabla **Asignaciones** , asigne cada una de las columnas de origen en las que desea realizar la detección de conocimiento a un dominio de la base de conocimiento, de la manera siguiente:  
   
-    1.  Para crear una asignación, seleccione una columna de origen en la lista desplegable de la columna **Columna de origen** de una fila vacía y, a continuación, seleccione un dominio (si lo hay) en la lista desplegable de la columna **Dominio** de la misma fila. Si no existe ningún dominio, haga clic en **Crear un dominio** o en **Crear un dominio compuesto** para crear uno. Para obtener más información, consulte [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) o [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+    1.  Para crear una asignación, seleccione una columna de origen en la lista desplegable de la columna **Columna de origen** de una fila vacía y, a continuación, seleccione un dominio (si lo hay) en la lista desplegable de la columna **Dominio** de la misma fila. Si no existe ningún dominio, haga clic en **Crear un dominio** o en **Crear un dominio compuesto** para crear uno. Para obtener más información, consulte [Cree una regla de dominio](../data-quality-services/create-a-domain-rule.md) o [Crear un dominio compuesto](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Repita el paso anterior para cada asignación. Para cambiar el número de filas de la tabla, haga clic en **Agregar una asignación de columna**, o seleccione una fila y haga clic en **Quitar la asignación de columna seleccionada**. Si hace clic en **Quitar la asignación de columna seleccionada** cuando está seleccionada una fila rellena, la fila seleccionada se eliminará aunque haya una fila vacía.  
   
         > [!NOTE]  
-        >  Solo puede asignar los datos de origen para un dominio DQS a fin de realizar la detección de conocimiento si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener más información acerca de los tipos de datos admitidos, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Solo puede asignar los datos de origen para un dominio DQS a fin de realizar la detección de conocimiento si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener más información acerca de los tipos de datos admitidos, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Haga clic en **Ver o seleccionar dominios compuestos** para mostrar los dominios compuestos definidos. Si no se ha definido ningún dominio compuesto, el control no estará disponible.  
   

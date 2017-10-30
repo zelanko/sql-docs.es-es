@@ -88,7 +88,7 @@ ms.lasthandoff: 09/09/2017
   
  **Procesos de calidad de datos en Master Data Services**  
   
- La funcionalidad de Data Quality Services se ha integrado en Master Data Services (MDS), de modo que puede realizar la desduplicación de los datos de origen y los datos maestros del complemento Master Data Services de Microsoft SQL Server 2014 para Microsoft Excel. Para efectuar la coincidencia y la carga de datos administrados por MDS en una hoja de cálculo de Excel, combínelos con los datos no administrados por MDS y después realice la coincidencia en Excel. Los componentes de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se deben instalar con MDS. Para obtener más información, consulte  [Data Quality Matching in the MDS Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+ La funcionalidad de Data Quality Services se ha integrado en Master Data Services (MDS), de modo que puede realizar la desduplicación de los datos de origen y los datos maestros del complemento Master Data Services de Microsoft SQL Server 2014 para Microsoft Excel. Para efectuar la coincidencia y la carga de datos administrados por MDS en una hoja de cálculo de Excel, combínelos con los datos no administrados por MDS y después realice la coincidencia en Excel. Los componentes de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se deben instalar con MDS. Para obtener más información, consulte  [Coincidencia de calidad de datos en el Complemento MDS para Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
 

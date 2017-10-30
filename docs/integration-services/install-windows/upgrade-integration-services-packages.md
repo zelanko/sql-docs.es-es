@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  Es posible que los scripts Tarea de script y Componente de script que hacen referencia de forma explícita a ADODB.dll no se actualicen o ejecuten en equipos sin [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] instalado. Para actualizar los scripts Tarea de script o Componente de script, se recomienda que quite la dependencia de ADODB.dll.  Ado.Net es la alternativa recomendada para el código administrado como scripts VB y C#.  
   
   
+

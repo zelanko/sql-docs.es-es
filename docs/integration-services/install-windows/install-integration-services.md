@@ -22,6 +22,7 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e91abac8902868dc9edefc1466fb2d25a602462
@@ -96,3 +97,4 @@ ms.lasthandoff: 09/26/2017
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se admite en el sistema operativo de 64 bits de [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en los servidores [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].    
     
   
+

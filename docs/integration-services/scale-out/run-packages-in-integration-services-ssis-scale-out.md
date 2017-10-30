@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ Para cambiar el modo de ejecución predeterminado al modo no - horizontalmente, 
 
 ## <a name="run-package-in-sql-agent-job"></a>Ejecutar el paquete en el trabajo del Agente SQL
 En el trabajo del agente Sql, puede ejecutar un paquete SSIS como un paso del trabajo. Para ejecutar el paquete en horizontalmente, puede aprovechar el modo de ejecución predeterminado anterior. Después de configurar el modo de ejecución predeterminado para "Escala Out", paquetes de trabajos del agente Sql se ejecutará en horizontalmente.
+

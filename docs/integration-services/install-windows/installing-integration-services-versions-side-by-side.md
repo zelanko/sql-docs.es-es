@@ -17,6 +17,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/27/2017
  Puede usar la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de la utilidad **dtexec** o del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar paquetes de Integration Services que se crearon con las versiones anteriores de las herramientas de desarrollo. Cuando estas herramientas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cargan un paquete que se desarrolló en una versión anterior de las herramientas de desarrollo, la herramienta convierte, de forma temporal, el paquete en memoria en el formato de paquete que [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] usa. Si el paquete presenta problemas que impiden realizar una conversión correcta, la herramienta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no podrá ejecutar el paquete hasta que se resuelvan esos problemas. Para obtener más información, vea [Actualizar paquetes de Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
   
+

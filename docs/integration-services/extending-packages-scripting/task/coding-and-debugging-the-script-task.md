@@ -27,6 +27,7 @@ caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
@@ -256,3 +257,4 @@ To open Help, press F1.
  [Configurar la tarea de secuencia de comandos en el Editor de la tarea de secuencia de comandos](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
+

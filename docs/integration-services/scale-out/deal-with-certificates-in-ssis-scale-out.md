@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2970b2b2cc7cf30c18a203ebbb92b5418bfc9be5
@@ -120,3 +121,4 @@ Archivo de configuración de servicio de escala a un trabajo de actualización, 
 #### <a name="5-install-the-client-certificate-to-the-root-store-of-local-machine-on-master-node"></a>5. Instale el certificado de cliente en el almacén raíz del equipo local en el maestro de nodo
 
 #### <a name="6-restart-scale-out-worker-service"></a>6. Reiniciar servicio escala Out Worker
+

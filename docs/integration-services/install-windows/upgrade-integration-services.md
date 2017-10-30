@@ -19,6 +19,7 @@ caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: ac549895dbe211f38529f657caa58fc766f911f0
@@ -151,3 +152,4 @@ ms.lasthandoff: 09/26/2017
  Entrada de blog [Hacer que las extensiones y aplicaciones personalizadas existentes de SSIS funcionen en Denali](http://go.microsoft.com/fwlink/?LinkId=238157), en blogs.msdn.com.  
   
   
+

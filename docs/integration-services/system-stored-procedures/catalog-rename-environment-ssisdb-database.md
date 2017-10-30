@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
@@ -73,3 +74,4 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  Cuando una referencia de entorno no es válida, la validación y ejecución de los paquetes correspondientes que utilizan esas referencias no se ejecutarán correctamente.  
   
   
+

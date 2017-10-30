@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f707687b62be599d74bde892f86ff50754185ff8
@@ -57,3 +58,4 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  El procedimiento almacenado devuelve un mensaje para confirmar la configuración de la nueva descripción de la carpeta.  
   
   
+

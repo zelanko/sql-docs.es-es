@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
 ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
@@ -156,3 +157,4 @@ GO
 ```
 ## <a name="next-steps"></a>Pasos siguientes
 Ha finalizado la configuración de la característica de escalado horizontal. Ahora puede ejecutar paquetes en horizontalmente. Para obtener más información, consulte [Execute Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md) (Ejecutar paquetes en el escalado horizontal de Integration Services (SSIS)).
+

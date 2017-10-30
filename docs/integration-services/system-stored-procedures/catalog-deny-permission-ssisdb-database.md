@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
@@ -96,3 +97,4 @@ catalog.deny_permission [ @object_type = ] object_type
 -   Si se omite permission_type, el procedimiento deniega todos los permisos de la entidad de seguridad especificada en el objeto especificado.  
   
   
+

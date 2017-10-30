@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 76a41be8ac6066a4f163b5049a758302d43d5219
@@ -64,3 +65,4 @@ catalog.stop_operation [ @operation_id = ] operation_id
  Solo un usuario, y no más de uno a la vez, debe detener una operación en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si varios usuarios intentan detener la operación, el procedimiento almacenado indicará que se ha realizado correctamente (valor `0`) en el primer intento, pero los intentos subsiguientes producirán un error.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
@@ -75,3 +76,4 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  Si se especifica una referencia relativa, la *environment_folder_name* no se utiliza el valor del parámetro y el nombre de la carpeta de entorno se establece automáticamente en **NULL**. Si se especifica una referencia absoluta, se debe proporcionar el nombre de la carpeta de entorno en el *environment_folder_name* parámetro.  
   
   
+

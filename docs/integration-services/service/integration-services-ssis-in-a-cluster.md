@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
@@ -135,3 +136,4 @@ Para los clientes que decidan que las ventajas de configurar el servicio [!INCLU
 -   En el **Administrador de clústeres**, seleccione el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , haga clic con el botón derecho y seleccione **Poner en línea** en el menú emergente. El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está en línea ahora como recurso de clúster.  
   
   
+

@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: es-es
@@ -36,7 +35,7 @@ En la siguiente ilustración se muestra el gráfico circular que creará.
 Si hay demasiados puntos de datos en un gráfico circular, es posible que las etiquetas de los puntos de datos estén demasiado amontonadas y no puedan leerse. En ese caso, considere la posibilidad de combinar varios segmentos pequeños en un segmento mayor. Los gráficos circulares son más legibles al agregar los datos en algunos puntos de datos.  
  
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 10 minutos  
   
@@ -49,7 +48,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -124,7 +123,7 @@ En cada sector del gráfico circular, puede mostrar un porcentaje de este sector
   
 4.  En el cuadro **Datos de etiqueta** , seleccione **#PERCENT**.  
     
-5.  (Opcional) Para especificar cuántas posiciones decimales la etiqueta se muestra, en la **etiquetar los datos** cuadro después **#PERCENT**, tipo **{Pn}** donde  *n*  es el número de posiciones decimales que se van a mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}**.  
+5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, en el cuadro **Datos de etiqueta** tras **#PERCENT**, escriba **{Pn}** , donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}**.  
 
 6.  Para mostrar los valores como porcentajes, la propiedad UseValueAsLabel debe ser falsa. Si se le pide que establezca este valor en el cuadro de diálogo **Confirmar acción** , haga clic en **Sí**.  
   
@@ -144,7 +143,7 @@ Tres de los sectores del gráfico son bastante pequeños. Puede combinar varios 
 
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Si no ve el panel Propiedades, en la pestaña **Vista** > en el grupo **Mostrar u ocultar**, seleccione **Propiedades**.  
+2.  Si no aparece el panel de propiedades, en la **vista** ficha > **mostrar/ocultar** grupo > seleccione **propiedades**.  
   
 3.  En la superficie de diseño, haga clic en cualquier sector del gráfico circular. Las propiedades de la serie se muestran en el panel de propiedades.  
   
@@ -198,7 +197,7 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
   
 3.  Seleccione **Ventas de cámaras y cámaras de vídeo** y en la pestaña **Inicio** > en la sección **Fuente** > haga clic en **Negrita**.  
   
-4.  Seleccione **Como porcentaje de ventas totales** y en la pestaña **Inicio** > en la sección **Fuente** > establezca el tamaño de fuente en **10**.  
+4.  Seleccione **como porcentaje de ventas totales**y en el **inicio** ficha > **fuente** sección > establecer el tamaño de fuente en **10**.  
   
 5.  (Opcional) Es posible que necesite hacer más alto el cuadro de texto Título para que quepan las dos líneas de texto.  
   
@@ -221,7 +220,7 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
 El informe se guardará en el servidor de informes.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Ha completado correctamente el tutorial Agregar un gráfico circular al informe. Para obtener más información sobre los gráficos, consulte [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Ha completado correctamente el tutorial Agregar un gráfico circular al informe. Para más información acerca de los gráficos, consulte [gráficos &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [minigráficos y barras de datos &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  

@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: es-es
@@ -51,7 +50,7 @@ En el cuadro de diálogo Introducción, cree un informe de matriz usando el **As
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -60,7 +59,7 @@ En el cuadro de diálogo Introducción, cree un informe de matriz usando el **As
 3.  En el panel derecho, compruebe que **Asistente para tabla o matriz** está seleccionado.  
   
 ## <a name="DConnection"></a>1a. Especificar una conexión de datos  
-Una conexión de datos contiene la información necesaria para conectarse a un origen de datos externo, por ejemplo un cubo de Analysis Services o una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe. En este tutorial, utilizará un origen del datos incrustado. Para obtener más información sobre cómo usar orígenes de datos compartidos, vea [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Una conexión de datos contiene la información necesaria para conectarse a un origen de datos externo, por ejemplo un cubo de Analysis Services o una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe. En este tutorial, utilizará un origen del datos incrustado. Para más información sobre el uso de un origen de datos compartido, consulte [alternativa maneras para obtener una conexión de datos &#40; El generador de informes &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
@@ -91,11 +90,11 @@ Una conexión de datos contiene la información necesaria para conectarse a un o
 10. Haga clic en **Tipo de credenciales**.  
   
     > [!NOTE]  
-    > Dependiendo de cómo se configuran los permisos en el origen de datos, podría necesitar cambiar las opciones de autenticación predeterminadas. Para más información, vea [Seguridad &#40;Generador de informes&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Dependiendo de cómo se configuran los permisos en el origen de datos, podría necesitar cambiar las opciones de autenticación predeterminadas. Para más información, vea [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Se abre la página **Elegir una conexión a un origen de datos**.  
+    Se abre la página **Elegir una conexión a un origen de datos** .  
   
 12. Para comprobar que se puede conectar al origen de datos, haga clic en **Prueba de conexión**.  
   
@@ -115,7 +114,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    > Si no desea compilar la consulta MDX manualmente, haga clic en el ![cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icono, alterne el Diseñador de consultas en modo de consulta, pegue el MDX completado al diseñador de consultas y, a continuación, vaya al paso 6 de [para crear el conjunto de datos](#DSkip).  
+    > Si no desea compilar la consulta MDX manualmente, haga clic en el ![cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "cambiar al modo de diseño") icono, alterne el Diseñador de consultas en modo de consulta, pegue el MDX completado al diseñador de consultas y, a continuación, vaya al paso 6 de [para crear el conjunto de datos](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -345,13 +344,13 @@ Puede guardar el informe en una biblioteca de SharePoint, en un servidor de info
 7.  Haga clic en **Guardar**.  
   
 ## <a name="MMatrixAndDataset"></a>1. Crear el informe principal desde el Asistente para tabla o matriz  
-En el cuadro de diálogo **Introducción**, cree un informe de matriz usando el **Asistente para tabla o matriz**.  
+En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el **Asistente para tabla o matriz**.  
   
 #### <a name="to-create-the-main-report"></a>Para crear el informe principal  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
  
@@ -406,7 +405,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    > Si no desea compilar la consulta MDX manualmente, haga clic en el ![cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icono, alterne el Diseñador de consultas en modo de consulta, pegue el MDX completado al diseñador de consultas y, a continuación, vaya al paso 5 de [para crear el conjunto de datos](#MSkip).  
+    > Si no desea compilar la consulta MDX manualmente, haga clic en el ![cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "cambiar al modo de diseño") icono, alterne el Diseñador de consultas en modo de consulta, pegue el MDX completado al diseñador de consultas y, a continuación, vaya al paso 5 de [para crear el conjunto de datos](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

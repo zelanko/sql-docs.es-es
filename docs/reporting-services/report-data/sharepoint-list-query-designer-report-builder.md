@@ -17,8 +17,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
 ms.contentlocale: es-es
@@ -101,7 +100,6 @@ ms.lasthandoff: 08/09/2017
 |**Mostrar campos ocultos**|Alterna entre mostrar u ocultar los campos que SharePoint generó automáticamente como el ProgID y Level para los elementos de vínculo de SharePoint, pero normalmente no se utiliza en informes. Al ocultar estos campos, la lista de campos se hace más corta y más fácil de utilizar.|  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Diseñadores de consultas &#40; El generador de informes &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
-

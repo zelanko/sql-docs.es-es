@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: es-es
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  Utilice regiones de datos para anidar grupos de datos del mismo origen de datos en una única región de datos. Utilice subinformes para anidar grupos de datos de distintos orígenes de datos en una única región de datos, volver a utilizar un subinforme en varios informes primarios o mostrar un informe independiente dentro de otro informe. Por ejemplo, puede crear un "libro de instrucciones" mediante la inclusión de varios subinformes en el cuerpo de otro informe.  
   
- Las regiones de datos ofrecen casi la misma funcionalidad y flexibilidad que los subinformes, pero con un mejor rendimiento. Puesto que el servidor de informes procesa cada instancia de un subinforme como un informe independiente, el rendimiento se puede ver afectado. Para obtener más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
+ Las regiones de datos ofrecen casi la misma funcionalidad y flexibilidad que los subinformes, pero con un mejor rendimiento. Puesto que el servidor de informes procesa cada instancia de un subinforme como un informe independiente, el rendimiento se puede ver afectado. Para más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="using-parameters-in-subreports"></a>Usar parámetros en subinformes  
  Para pasar parámetros del informe primario al subinforme, defina un parámetro de informe en el informe que utiliza como subinforme. Cuando se coloca el subinforme en el informe primario, se puede seleccionar el parámetro de informe y el valor que se van a pasar desde el informe primario al parámetro de informe del subinforme.  
@@ -51,17 +50,16 @@ ms.lasthandoff: 08/09/2017
   
  Se puede colocar un subinforme en el cuerpo principal del informe o en una región de datos. Si se coloca un subinforme en una región de datos, éste se repetirá con cada instancia del grupo o de la fila de la región de datos. Para pasar un valor del grupo o de la fila al subinforme, en la propiedad de valor del subinforme, utilice una expresión de campo para el campo que contiene el valor que se desea pasar al parámetro del subinforme.  
   
- Para obtener más información sobre el trabajo con subinformes, vea [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo trabajar con subinformes, vea [agregar un subinforme y parámetros &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Especificar nombres y ubicaciones de subinforme  
  Puede diseñar un informe principal que especifique un subinforme situado en una carpeta diferente del mismo servidor de informes.  
   
- La sintaxis usada para especificar el subinforme depende de si el servidor de informes está en modo nativo o en el modo integrado de SharePoint. Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+ La sintaxis usada para especificar el subinforme depende de si el servidor de informes está en modo nativo o en el modo integrado de SharePoint. Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
  En el Generador de informes, para obtener una vista previa de un subinforme en un informe principal, ambos informes se deben encontrar en el mismo servidor de informes o se debe especificar una ruta de acceso completa al subinforme.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, obtención de detalles, subinformes y regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

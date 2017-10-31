@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cc52b4687f9a2c944ea3a93c15b637d894c7a96
 ms.contentlocale: es-es
@@ -53,4 +52,3 @@ Dado que se gira el cuadro de texto y no el texto, la rotación se aplica a todo
  [Tutorial: Dar formato al texto &#40; El generador de informes &#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   
-

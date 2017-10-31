@@ -1,5 +1,5 @@
 ---
-title: "Gráficos de rectángulos y de proyección solar en Reporting Services | Microsoft Docs"
+title: "Gráficos de gráfico de rectángulos y proyección solar en SQL Server Reporting Services | Documentos de Microsoft"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,141 +15,144 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
-ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
 ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/30/2017
 
 ---
-# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services
+# <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de gráfico de rectángulos y proyección solar en Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  Las visualizaciones de rectángulos y proyección solar de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] resultan excepcionales para representar visualmente datos jerárquicos.   En este tema se describe cómo agregar un gráfico de rectángulos o de proyección solar a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Aquí también encontrará una consulta de AdventureWorks de ejemplo para ayudarlo a ponerse manos a la obra.  
+El servidor SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] visualizaciones gráfico de rectángulos y proyección solar resultan excepcionales para representar visualmente datos jerárquicos. Este artículo es una visión general de cómo agregar un gráfico de gráfico de rectángulos o de proyección solar a un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informes. El artículo también incluye una consulta de ejemplo de AdventureWorks para ayudarle a empezar a trabajar.  
   
-##  <a name="bkmk_treemap_chart"></a> Gráfico de rectángulos  
- ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
+##  <a name="bkmk_treemap_chart"></a>Gráfico de gráfico de rectángulos  
+
+Un gráfico de gráfico de rectángulos divide el área del gráfico en los rectángulos que representan los diferentes niveles y tamaños relativos de la jerarquía de datos. La distribución se asemeja a las ramas de un árbol, que parten de un tronco y se dividen en ramas cada vez más pequeñas. Cada rectángulo se divide en rectángulos más pequeños que representan el siguiente nivel en la jerarquía. Los rectángulos de nivel superior del gráfico de rectángulos se ordenan de forma que el rectángulo más grande en la esquina superior izquierda del gráfico para el rectángulo más pequeño en la esquina inferior derecha.  Dentro de cada rectángulo, el siguiente nivel del más alto también se organiza con rectángulos en la misma distribución, de la esquina superior izquierda a la inferior derecha.  
+
+Por ejemplo, en la siguiente imagen de gráfico de rectángulos de ejemplo, el territorio del suroeste es la más grande y Alemania es el más pequeño. En el suroeste de EE. UU., las bicicletas de carretera se han vendido más que las de montaña.  
+ 
+![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
- Un gráfico de rectángulos divide el área del gráfico en los rectángulos que representan los diferentes niveles y tamaños relativos de la jerarquía de datos. La distribución se asemeja a las ramas de un árbol, que parten de un tronco y se dividen en ramas cada vez más pequeñas. Cada rectángulo se divide en rectángulos más pequeños que representan el siguiente nivel en la jerarquía. Los rectángulos de nivel superior del gráfico se ordenan de forma que el rectángulo más grande quede en la esquina superior izquierda y el más pequeño, en la inferior derecha.  Dentro de cada rectángulo, el siguiente nivel del más alto también se organiza con rectángulos en la misma distribución, de la esquina superior izquierda a la inferior derecha.  
-  
- Por ejemplo, en la siguiente imagen de los rectángulos de ejemplo, el territorio del suroeste es la más grande y Alemania es el más pequeño. En el suroeste de EE. UU., las bicicletas de carretera se han vendido más que las de montaña.  
-  
- ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
-  
-### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Para insertar un gráfico de rectángulos y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
+### <a name="to-insert-a-treemap-chart-and-set-up-the-sample-adventureworks-data"></a>Para insertar un gráfico de gráfico de rectángulos y configurar los datos de ejemplo AdventureWorks  
    
-[!NOTE] Antes de agregar un gráfico a un informe, cree un origen de datos y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
+> [!NOTE]
+> Antes de agregar un gráfico a un informe, cree un origen de datos y un conjunto de datos.  Para datos de ejemplo y una consulta de ejemplo, vea [datos de ejemplo AdventureWorks](#bkmk_sample_data).  
   
-1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar**y, después, **Gráfico** .  
-  
-     Seleccione el gráfico de rectángulos ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
-  
-     ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
-  
-2.  Cambie la posición y el tamaño del gráfico.   Para utilizarlo con los datos de ejemplo, puede empezar con un gráfico de 5 pulgadas de ancho.  
+1.  Haga clic en la superficie de diseño, a continuación, seleccione **insertar** > **gráfico**. Seleccione el **Treemap** icono.
+
+    ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
+   
+2.  Cambie la posición y el tamaño del gráfico. Para usar con los datos de ejemplo, un gráfico de 5 pulgadas de ancho es un buen punto de partida.  
   
 3.  Agregue los siguientes campos de los datos de ejemplo:  
   
-    |||  
-    |-|-|  
-    |![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")|**Valores:** LineTotal<br /><br /> **Grupos de categorías:** agréguelos en el siguiente orden:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> **Grupos de series:** TerritoryName|  
+    * **Valores**: LineTotal
+    * **Grupos de categorías** (en el siguiente orden):
+        1. nombreDeCategoría
+        2. SubcategoryName
+    * **Grupos de series**: TerritoryName  
+
+    ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
-4.  Si desea optimizar el tamaño de página para la forma general de un gráfico de rectángulos, establezca la posición de la leyenda en la parte inferior.  
+4.  Para optimizar el tamaño de página para la forma general de un gráfico de rectángulos, establezca la posición de la leyenda en la parte inferior.  
   
-5.  Para agregar información sobre herramientas en la que se muestre la subcategoría y el total de línea, haga clic con el botón derecho en **LineTotal** y, después, en **Propiedades de la serie**.  
+5.  Para agregar información sobre herramientas que muestre la subcategoría y el total de línea, haga clic en **LineTotal**y, a continuación, seleccione **propiedades de la serie**.  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
-     Establezca la propiedad **Información sobre herramientas** en la siguiente cadena:  
+     Establecer el **información sobre herramientas** valor para la propiedad siguiente:  
   
     ```  
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     Para obtener más información, vea [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
+    Para obtener más información, vea [mostrar información sobre herramientas en una serie &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
   
-6.  Cambie el título predeterminado del gráfico a "Ventas categorizadas por territorio".  
+6.  Cambie el título de gráfico predeterminada a **clasifica por categorías de ventas por territorio**.  
   
-7.  El número de valores de etiqueta que se muestran viene determinado por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 10 pt en lugar del valor predeterminado de 8 pt.  
+7.  El número de valores de etiqueta que se muestran viene determinado por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos. Para ver más etiquetas, cambie la **fuente de etiqueta** propiedad de **LineTotal** a **10 pto** desde el valor predeterminado de **8 pt**.  
   
   
-##  <a name="bkmk_sunburst_chart"></a> Gráfico de proyección solar  
- ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
+##  <a name="bkmk_sunburst_chart"></a>Gráfico de proyección solar  
+ 
+En un gráfico de proyección solar, la jerarquía se representa mediante una serie de círculos. El nivel más alto de la jerarquía se encuentra en el centro y niveles inferiores de la jerarquía son anillos muestra fuera del centro.  El nivel más bajo de la jerarquía es el anillo exterior.  
   
- En un gráfico de proyección solar, la jerarquía se representa a mediante una serie de círculos; el nivel más alto de la jerarquía se muestra en el centro y los inferiores se visualizan como anillos colocados fuera del centro.  El nivel más bajo de la jerarquía es el anillo exterior.  
+![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
- ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
+### <a name="to-insert-a-sunburst-chart-and-set-up-the-sample-adventureworks-data"></a>Para insertar un gráfico de proyección solar y configurar los datos de ejemplo AdventureWorks  
+> [!NOTE] 
+> Antes de agregar un gráfico a un informe, cree un origen de datos y un conjunto de datos. Para datos de ejemplo y una consulta de ejemplo, vea [datos de ejemplo AdventureWorks](#bkmk_sample_data).  
   
-### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Para insertar un gráfico de proyección solar y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
- [!NOTE] Antes de agregar un gráfico a un informe, cree un origen de datos y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
+1.  Haga clic en la superficie de diseño y, a continuación, seleccione **insertar** > **gráfico**. Seleccione el **proyección solar** icono.
+     
+     ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
-1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar**y, después, **Gráfico** .  
-  
-     Seleccione el gráfico de proyección solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
-  
-     ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
-  
-2.  Cambie la posición y el tamaño del gráfico.   Para utilizarlo con los datos de ejemplo, puede empezar con un gráfico de 5 pulgadas de ancho.  
+2.  Cambie la posición y el tamaño del gráfico. Para usar con los datos de ejemplo, un gráfico de 5 pulgadas de ancho es un buen punto de partida.  
   
 3.  Agregue los siguientes campos de los datos de ejemplo:  
+
+    * **Valores**: LineTotal
+    * **Grupos de categorías** (en el siguiente orden):
+        1. nombreDeCategoría
+        2. SubcategoryName
+        3. SalesReasonName
+    * **Grupos de series**: TerritoryName  
+
+    ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
-    |||  
-    |-|-|  
-    |![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")|**Valores:** LineTotal<br /><br /> **Grupos de categorías:** agréguelos en el siguiente orden:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> 3) SalesReasonName<br /><br /> **Grupos de series:** TerritoryName|  
+4.  Para optimizar el tamaño de página para la forma general de un gráfico de proyección solar, establezca la posición de la leyenda en la parte inferior.  
   
-4.  Si desea optimizar el tamaño de página para la forma general de un gráfico de proyección solar, establezca la posición de la leyenda en la parte inferior.  
+5.  Cambie el título de gráfico predeterminada a **clasifica por categorías ventas por territorio, con motivo de venta**.  
   
-5.  Cambie el título predeterminado del gráfico a "Ventas categorizadas por territorio, con motivo de venta".  
-  
-6.
-    |||  
-    |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para agregar los valores de los grupos de categorías al gráfico de proyección solar como etiquetas, establezca la propiedad de etiqueta **Visible** en True y **UseValueAsLabel**en False.<br /><br /> Los valores de etiqueta que se muestran vienen determinados por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 8 pt en lugar del valor predeterminado de 10 pt.|
+6. Para agregar los valores de los grupos de categorías al gráfico de proyección solar como etiquetas, establecer las propiedades de etiqueta **Visible = true** y **UseValueAsLabel = false**.<br /><br /> Los valores de etiqueta que se muestran vienen determinados por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la **fuente de etiqueta** propiedad de **LineTotal** a **10 pto** desde el valor predeterminado de **8 pt**.
+
+    ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
 7.  Si desea utilizar una gama de colores distinta, cambie la propiedad **Paleta** del gráfico.  
-  
-  
+    
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
   
-##  <a name="bkmk_sample_data"></a> Datos de ejemplo de AdventureWorks  
- En esta sección se incluye una consulta de ejemplo y los pasos básicos para crear un origen y un conjunto de datos en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si el informe ya contiene un origen y un conjunto de datos, puede omitir esta sección.  
+##  <a name="bkmk_sample_data"></a>Datos de ejemplo AdventureWorks  
+ Esta sección incluye una consulta de ejemplo y los pasos básicos para crear un origen de datos y el conjunto de datos en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si el informe ya contiene un origen de datos y un conjunto de datos, puede omitir esta sección.  
   
- La consulta devuelve los datos detallados de los pedidos de venta de AdventureWorks con la información sobre el territorio de ventas, la categoría del producto, la subcategoría del producto y los motivos de la venta.  
+ La consulta devuelve datos de detalle de pedido de ventas de AdventureWorks con territorio de ventas, categoría de producto, subcategoría de producto y datos de la razón de venta.  
   
-1.  **Obtener los datos:**  
+1.  **Obtener los datos**.  
   
-     La consulta de esta sección se ha creado a partir de la base de datos de AdventureWorks, que puede descargar en  [aquí](https://msftdbprodsamples.codeplex.com/releases/view/125550)con el nombre Adventure Works 2014 Full Database Backup.zip.  
+     La consulta en esta sección se basa en la base de datos AdventureWorks, que está disponible para su descarga desde GitHub: [copia de seguridad completa de 2016 de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-     Para obtener más información sobre cómo instalar la base de datos, consulte [How to install Adventure Works 2014 Sample Databases.pdf](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Instalación de las bases de datos de ejemplo de AdventureWorks 2014).  
   
-2.  **Crear un origen de datos:**  
+2.  **Crear un origen de datos**.  
   
-    1.  En el panel **Datos de informe** , haga clic con el botón derecho **Orígenes de datos** y, después, haga clic en **Agregar origen de datos**.  
+    1.  En **datos de informe**, haga clic en **orígenes de datos**y, a continuación, seleccione **agregar origen de datos**.  
   
     2.  Seleccione **Usar una conexión incrustada en el informe**.  
   
-    3.  Seleccione **Microsoft SQL Server**como el tipo de conexión.  
+    3.  Para el tipo de conexión, seleccione **Microsoft SQL Server**.  
   
-    4.  Escriba la cadena de conexión a su servidor y base de datos; por ejemplo, la siguiente:  
+    4.  Escriba la cadena de conexión con el servidor y la base de datos. Por ejemplo:  
   
         ```  
-        Data Source=[server name];Initial Catalog=AdventureWorks2014  
+        Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
-    5.  Se recomienda verificarla con el botón **Probar conexión** . Después, haga clic en **Aceptar**.  
+    5.  Para comprobar la conexión, seleccione la **Probar conexión** y, a continuación, seleccione **Aceptar**.  
   
-     Para obtener más información sobre la creación de un origen de datos, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Para obtener más información acerca de cómo crear un origen de datos, vea [agregar y comprobar una conexión de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-3.  **Crear un conjunto de datos:**  
+3.  **Crear un conjunto de datos**.  
   
-    -   En el panel **Datos de informe** , haga clic con el botón derecho en **Conjuntos de datos** y haga clic en **Agregar conjunto de datos**.  
+    1. En **datos de informe**, haga clic en **conjuntos de datos**y, a continuación, seleccione **Agregar conjunto de datos**.  
   
-    -   Seleccione **Usar un conjunto de datos insertado en el informe**.  
+    2. Seleccione **Usar un conjunto de datos insertado en el informe**.  
   
-    -   Seleccione el origen de datos que creó en los pasos anteriores.  
+    3. Seleccione el origen de datos que ha creado.  
   
-    -   Seleccione **Texto** como el tipo de consulta y copie y pegue la siguiente consulta en el cuadro de texto **Consulta** :  
+    4. Seleccione el **texto** tipo, de consulta y, a continuación, copie y pegue la siguiente consulta en el **consulta** cuadro de texto:  
   
         ```  
         SELECT    Sales.SalesOrderHeader.SalesOrderID, Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderDetail.SalesOrderDetailID, Sales.SalesOrderDetail.ProductID, Sales.SalesOrderDetail.LineTotal,   
@@ -174,18 +177,17 @@ ms.lasthandoff: 10/02/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   Haga clic en **Aceptar**.  
+    5. Seleccione **Aceptar**.  
   
-     Para obtener más información sobre la creación de un conjunto de datos, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+     Para obtener más información acerca de cómo crear un conjunto de datos, vea [crear un conjunto de datos compartido o conjunto de datos incrustado &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>Vea también  
- [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
- [Tutorial: Gráficos de rectángulos en Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
- [Gráfico de rectángulos: Aplicaciones de visualización de datos de investigaciones de Microsoft para Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
-  
-  
+* [Compartir la vista de diseño de conjunto de datos &#40; El generador de informes &#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
+* [Mostrar información sobre herramientas en una serie &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
+* [Tutorial: Gráficos de rectángulos en Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Gráfico de rectángulos: Aplicaciones de visualización de datos de investigaciones de Microsoft para Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+<br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 

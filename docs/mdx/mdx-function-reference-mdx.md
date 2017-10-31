@@ -126,7 +126,7 @@ ms.lasthandoff: 08/02/2017
 |[LinRegPoint &#40; MDX &#41;](../mdx/linregpoint-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de *y* en la recta de regresión y = ax + b.|  
 |[LinRegR2 &#40; MDX &#41;](../mdx/linregr2-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el coeficiente de determinación, R2.|  
 |[LinRegSlope &#40; MDX &#41;](../mdx/linregslope-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la pendiente de la recta de regresión y = ax + b.|  
-|[LinRegVariance &#40; MDX &#41;](../mdx/linregvariance-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve la varianza asociada a la recta de regresión y = ax + b..|  
+|[LinRegVariance &#40; MDX &#41;](../mdx/linregvariance-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve la varianza asociada a la recta de regresión y = ax + b.|  
 |[LookupCube &#40; MDX &#41;](../mdx/lookupcube-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre otro cubo especificado en la misma base de datos.|  
 |[Max &#40; MDX &#41;](../mdx/max-mdx.md)|Devuelve el valor máximo de una expresión numérica evaluada sobre un conjunto.|  
 |[Mediana &#40; MDX &#41;](../mdx/median-mdx.md)|Devuelve el valor medio de una expresión numérica evaluada sobre un conjunto.|  

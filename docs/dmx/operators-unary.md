@@ -36,19 +36,19 @@ ms.lasthandoff: 08/02/2017
   
 |Operador|Description|  
 |--------------|-----------------|  
-|[-& #40; Negativo & #41; & #40; MDX & #41;](../mdx/negative-mdx.md)|Devuelve el valor negativo de una expresión numérica.|  
-|[+ & #40; Positivo & #41; & #40; MDX & #41;](../mdx/positive-mdx.md)|Devuelve el valor positivo de una expresión numérica.|  
+|[-&#40; Negativo &#41; &#40; MDX &#41;](../mdx/negative-mdx.md)|Devuelve el valor negativo de una expresión numérica.|  
+|[+ &#40; Positivo &#41; &#40; MDX &#41;](../mdx/positive-mdx.md)|Devuelve el valor positivo de una expresión numérica.|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Expresiones & #40; DMX & #41;](../dmx/expressions-dmx.md)   
- [Funciones de predicción generales & #40; DMX & #41;](../dmx/general-prediction-functions-dmx.md)   
- [Operadores & #40; DMX & #41;](../dmx/operators-dmx.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Expresiones &#40; DMX &#41;](../dmx/expressions-dmx.md)   
+ [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: es-es
@@ -162,3 +163,4 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
  [Solucionar problemas de informes: Asignar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
+

@@ -72,9 +72,9 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones & #40; DMX & #41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales & #40; DMX & #41;](../dmx/general-prediction-functions-dmx.md)  
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

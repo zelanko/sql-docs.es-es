@@ -56,7 +56,7 @@ ms.lasthandoff: 09/27/2017
  -  
  -##### Para iniciar el Administrador de configuración de SQL Server  
  -  
- -- En las versiones actuales de Windows, en la página de **Inicio**, escriba **Administrador de configuración** y luego haga clic en **Administrador de configuración de SQL Server *versión***.   
+ -- En las versiones actuales de Windows, en la página de **Inicio** , escriba **Administrador de configuración**y luego haga clic en **Administrador de configuración de SQL Server *versión* Administrador de configuración**.   
  --   Si usa versiones anteriores de Windows, en el menú **Inicio**, seleccione **Todos los programas**, elija [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de SQL Server**.  
  -  
  -## <a name="connect"></a>Conectarse a Management Studio  

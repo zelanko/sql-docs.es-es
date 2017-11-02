@@ -108,7 +108,7 @@ ms.lasthandoff: 09/26/2017
  Los ejemplos siguientes muestran código que se requiere en el **ScriptMain** clase para crear un componente de destino.  
   
 > [!NOTE]  
->  Estos ejemplos utilizan la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo y pasar sus columnas primeros y cuarto, la  **int*AddressID* ** y **nvarchar (30) Ciudad** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  Estos ejemplos utilizan la **Person.Address** tabla el **AdventureWorks** base de datos de ejemplo y pasar sus columnas primeros y cuarto, la **int*AddressID*** y **nvarchar (30) Ciudad** columnas, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
 ### <a name="adonet-destination-example"></a>Ejemplo de destino ADO.NET  
  En este ejemplo se muestra un componente de destino que utiliza un archivo [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Administrador de conexiones para guardar los datos del flujo de datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla.  

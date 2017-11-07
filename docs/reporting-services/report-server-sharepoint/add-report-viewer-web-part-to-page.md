@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
@@ -49,7 +50,7 @@ Mostrar un informe de SQL Server Reporting Services o el servidor de informes de
 
     ![Insertar un elemento web de la cinta de opciones de office.](media/sharepoint-insert-web-part.png)
 
-4. En **categorías**, seleccione ** SQL Server Reporting Services (modo nativo). En **elementos**, seleccione **Visor de informes**. A continuación, seleccione **agregar**.
+4. En **categorías**, seleccione **SQL Server Reporting Services (modo nativo). En **elementos**, seleccione **Visor de informes**. A continuación, seleccione **agregar**.
 
     ![Agregar elemento web Visor de informes.](media/sharepoint-report-viewer-web-part.png)
 
@@ -82,3 +83,4 @@ Para configurar el elemento web para que señale a un informe específico, haga 
 * Si no ve el elemento web Visor de informes, agregar a la página, asegúrese de que tiene [implementa el elemento web Visor de informes](deploy-report-viewer-web-part.md).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

@@ -22,7 +22,8 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
-manager: jhubbard
+manager: kfile
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ccf1a17862dd132865111d6ab7c6c5175bf86c0d
@@ -92,3 +93,4 @@ ms.lasthandoff: 09/01/2017
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

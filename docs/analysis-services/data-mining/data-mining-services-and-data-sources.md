@@ -14,7 +14,8 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
-manager: jhubbard
+manager: kfile
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0207dac1835ae9e478802d2f3d501642d4866454
@@ -133,3 +134,4 @@ ms.lasthandoff: 09/01/2017
  [Administración de las soluciones y los objetos de minería de datos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
+

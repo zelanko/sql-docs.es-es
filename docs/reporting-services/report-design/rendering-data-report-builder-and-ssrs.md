@@ -17,10 +17,10 @@ ms.author: maggies
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Representar datos (Generador de informes y SSRS)
@@ -47,17 +47,17 @@ ms.lasthandoff: 08/09/2017
   
 -   La propiedad DataElementStyle controla en XML si el elemento de informe se representa o no como un elemento o como un atributo.  
   
- La opción de exportación CSV guarda los datos del informe como archivos de texto simple delimitados por comas. De forma predeterminada, el archivo usa una coma (,) para delimitar los campos y las filas, pero este valor se puede configurar usando la Configuración de la información del dispositivo. El archivo resultante puede abrirse en un programa de hoja de cálculo como Office SharePoint Server o usarse como un formato de importación para otros programas. El archivo .csv se abre en un editor de texto como el Bloc de notas. Si se obtiene acceso al archivo .csv como dirección URL, este devuelve un tipo MIME de **text/csv**. Los archivos son MIME versión 1.0. Para obtener más información sobre cómo representar el informe en el tipo de archivo CSV, vea [Exportar a un archivo CSV &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
+ La opción de exportación CSV guarda los datos del informe como archivos de texto simple delimitados por comas. De forma predeterminada, el archivo usa una coma (,) para delimitar los campos y las filas, pero este valor se puede configurar usando la Configuración de la información del dispositivo. El archivo resultante puede abrirse en un programa de hoja de cálculo como Office SharePoint Server o usarse como un formato de importación para otros programas. El archivo .csv se abre en un editor de texto como el Bloc de notas. Si se obtiene acceso al archivo .csv como dirección URL, este devuelve un tipo MIME de **text/csv**. Los archivos son MIME versión 1.0. Para obtener más información sobre cómo representar el informe en el tipo de archivo CSV, consulte [exportar a un archivo CSV &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- El archivo XML con la opción de exportación de los datos del informe guarda el informe como un archivo XML. El esquema XML para el informe es específico del informe. La opción de exportación XML no guarda la información de diseño del informe. El XML que se genera mediante esta opción se puede importar a una base de datos, se puede utilizar como mensaje de datos XML o se puede enviar a una aplicación personalizada. Para obtener más información sobre cómo representar el informe en el tipo de archivo XML, vea [Exportar a XML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
+ El archivo XML con la opción de exportación de los datos del informe guarda el informe como un archivo XML. El esquema XML para el informe es específico del informe. La opción de exportación XML no guarda la información de diseño del informe. El XML que se genera mediante esta opción se puede importar a una base de datos, se puede utilizar como mensaje de datos XML o se puede enviar a una aplicación personalizada. Para obtener más información sobre cómo representar el informe en el tipo de archivo XML, vea [exportar a XML &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Paginación en Reporting Services &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes informes representar extensiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Configuración de información de dispositivos de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Reporting Services Device Information Settings](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
 

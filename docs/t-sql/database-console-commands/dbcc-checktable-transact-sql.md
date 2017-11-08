@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Comprueba la integridad de todas las páginas y estructuras que constituyen la tabla o vista indizada.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Comprueba la integridad de todas las páginas y estructuras que constituyen la tabla o vista indizada.
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Sintaxis    
@@ -160,7 +160,7 @@ La comprobación de coherencia lógica en índices varía según el nivel de com
 [Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Instantánea de base de datos interna    
-DBCC CHECKTABLE utiliza una instantánea de base de datos interna para proporcionar la coherencia transaccional que debe tener para realizar estas comprobaciones. Para obtener más información, vea [ver el tamaño del archivo disperso de una instantánea de base de datos &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) y en la sección "DBCC de interno uso de instantáneas de base de datos" [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE utiliza una instantánea de base de datos interna para proporcionar la coherencia transaccional que debe tener para realizar estas comprobaciones. Para obtener más información, vea [ver el tamaño del archivo disperso de una instantánea de base de datos & #40; Transact-SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) y en la sección "DBCC de interno uso de instantáneas de base de datos" [DBCC & #40; Transact-SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Si no se puede crear una instantánea, o se ha especificado TABLOCK, DBCC CHECKTABLE adquiere un bloqueo de tabla compartido para lograr la coherencia requerida.
     
 > [!NOTE]    

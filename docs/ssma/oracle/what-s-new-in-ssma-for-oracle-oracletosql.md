@@ -1,5 +1,5 @@
 ---
-title: "¿Qué &#39; s de SSMA para Oracle (OracleToSQL) | Documentos de Microsoft"
+title: Novedades de SSMA para Oracle (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -16,13 +16,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: 9e1b0d59ec958bdd5abc254ce289df88ea80e04f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>¿Qué &#39; s de SSMA para Oracle (OracleToSQL)
+# <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 Este tema enumeran SSMA para cambios de Oracle en cada versión.  
 
 ## <a name="ssma-v76"></a>SSMA v7.6

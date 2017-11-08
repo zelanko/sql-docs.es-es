@@ -1,6 +1,6 @@
 ---
 title: Novedades de Analysis Services de SQL Server de 2017 | Documentos de Microsoft
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: es-es
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Novedades de Analysis Services de SQL Server de 2017
@@ -47,9 +47,9 @@ Para actualizar un modelo tabular existente en SSDT, en el Explorador de solucio
 Es importante tener en cuenta que, una vez que se actualiza un modelo existente a 1400, no se puede cambiar. Asegúrese de mantener una copia de seguridad de la base de datos de modelo de 1200.
 
 ## <a name="modern-get-data-experience"></a>Experiencia moderna de Obtener datos
-En cuanto a la introducción de datos de orígenes de datos en los modelos tabulares, SQL Server Data Tools (SSDT) presenta el moderno **obtener datos** experiencia para los modelos en el nivel de compatibilidad de 1400. Esta característica nueva se basa en una funcionalidad similar de Power BI Desktop y Microsoft Excel 2016. La experiencia de obtener datos moderna proporciona capacidades de mashup de datos y transformación de datos gran mediante el generador de consultas de obtener datos y expresiones de M.
+En cuanto a la importación de datos de orígenes de datos en los modelos tabulares, SQL Server Data Tools (SSDT) presenta el moderno **obtener datos** experiencia para los modelos en el nivel de compatibilidad de 1400. Esta característica nueva se basa en una funcionalidad similar de Power BI Desktop y Microsoft Excel 2016. La experiencia de obtener datos moderna proporciona capacidades de mashup de datos y transformación de datos gran mediante el generador de consultas de obtener datos y expresiones de M.
 
-Obtener datos moderna experiencia ofrecían compatibilidad para una amplia gama de origen de datos adicional. Las actualizaciones futuras será compatible con orígenes de datos adicionales.
+La experiencia de obtener datos moderna proporciona compatibilidad para una amplia gama de orígenes de datos. En el futuro, las actualizaciones incluyen compatibilidad con incluso más.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

@@ -257,7 +257,7 @@ Para obtener más información sobre el uso o que han contribuido a la extensió
 
 Para obtener más información sobre el uso de código de VS, consulte el [documentación de código de Visual Studio](https://code.visualstudio.com/docs).
 
-[** mssql ** extensión para el código de VS]:https://aka.ms/mssql-marketplace
+[**mssql** extensión de VS Code]:https://aka.ms/mssql-marketplace
 [descargar e instalar VS Code]:https://code.visualstudio.com/Download
 [.Net Core instrucciones]:https://www.microsoft.com/net/core
 [administrar perfiles de conexión]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles

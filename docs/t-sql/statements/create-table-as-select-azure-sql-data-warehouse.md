@@ -2,7 +2,7 @@
 title: Crear tabla como SELECT (almacenamiento de datos SQL Azure) | Documentos de Microsoft
 ms.custom: 
 ms.date: 10/07/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

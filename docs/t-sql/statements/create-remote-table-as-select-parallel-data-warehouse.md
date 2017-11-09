@@ -2,7 +2,7 @@
 title: CREAR remoto tabla como SELECT (almacenamiento de datos en paralelo) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

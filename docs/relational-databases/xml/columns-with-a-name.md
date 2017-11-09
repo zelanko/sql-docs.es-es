@@ -18,10 +18,10 @@ ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
+ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="columns-with-a-name"></a>Columnas con nombre
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
 -   Una columna tiene un nombre distinto.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>El nombre de la columna empieza por @  
- Si el nombre de la columna empieza por @ (arroba) y no contiene una barra diagonal (/), se creará un atributo del elemento <`row`> con el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento <`row`> correspondiente y se le asigna un valor de ProductModelID.  
+ Si el nombre de la columna empieza por un signo de arroba (@) y no contiene una barra diagonal (/), un atributo de la `row` se crea el elemento que tiene el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (@PmId y Name). En el XML resultante, un **PmId** atributo se agrega a la correspondiente `row` tiene asignado un valor de ProductModelID y de elemento.  
   
 ```  
   
@@ -71,9 +71,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>El nombre de la columna no empieza por @  
- Si el nombre de la columna no empieza con un signo (@), no es una de las pruebas de nodo XPath y no incluye una marca de barra diagonal (/), se creará un elemento XML que es un subelemento del elemento de fila, <`row`> de forma predeterminada.  
+ Si el nombre de columna no empieza por un signo de arroba (@), no es una de las pruebas de nodo XPath y no contiene una barra diagonal (/), un elemento XML que es un subelemento del elemento de fila, `row` de forma predeterminada, se crea.  
   
- La consulta siguiente especifica el nombre de la columna, el resultado. Por tanto, se agrega un elemento secundario <`result`> al elemento <`row`>.  
+ La consulta siguiente especifica el nombre de la columna, el resultado. Por lo tanto, un `result` elemento secundario se agrega a la `row` elemento.  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +88,7 @@ for xml PATH
 </row>  
 ```  
   
- La consulta siguiente especifica el nombre de la columna, ManuWorkCenterInformation, para el XML devuelto por la expresión XQuery especificada con la columna Instructions de tipo **xml** . Por tanto, se agrega un elemento <`ManuWorkCenterInformation`> como elemento secundario del elemento <`row`>.  
+ La consulta siguiente especifica el nombre de la columna, ManuWorkCenterInformation, para el XML devuelto por la expresión XQuery especificada con la columna Instructions de tipo **xml** . Por lo tanto, un `ManuWorkCenterInformation` elemento se agrega como un elemento secundario de la `row` elemento.  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Los nombres de columna se utilizan como una ruta de acceso en la creación de XML en el modo PATH. El nombre de columna que incluye valores de Id. de empleados empieza por @. Por tanto, se agrega un atributo, **EmpID**, al elemento <`row`>. Todas las demás columnas incluyen una barra diagonal ('/') en el nombre de columna que indica la jerarquía. El XML resultante tendrá el elemento secundario <`EmpName`> debajo del elemento <`row`>, y el elemento secundario <`EmpName`> tendrá los elementos secundarios <`First`>, <`Middle`> y <`Last`>.  
+ Los nombres de columna se utilizan como una ruta de acceso en la creación de XML en el modo PATH. El nombre de columna que contiene los valores de Id. de empleado, empieza por '\@'. Por lo tanto, un atributo, **EmpID**, se agrega a la `row` elemento. Todas las demás columnas incluyen una barra diagonal ('/') en el nombre de columna que indica la jerarquía. El XML resultante tendrá el `EmpName` secundarios bajo el `row` elemento y el `EmpName` secundario tendrá `First`, `Middle` y `Last` elementos secundarios.  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +172,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  De forma predeterminada, el modo PATH genera XML centrado en elementos. Por tanto, la especificación de la directiva ELEMENTS en una consulta de modo PATH no tiene ningún efecto. No obstante, tal y como se muestra en el ejemplo anterior, la directiva ELEMENTS resulta útil con XSINIL a fin de generar elementos para valores Null.  
   
- Además del Id. y el nombre, la consulta siguiente recupera una dirección del empleado. Según la ruta de acceso de los nombres de las columnas de direcciones, se agregará un elemento secundario <`Address`> al elemento <`row`> y los detalles de la dirección se agregarán como elemento secundario del elemento <`Address`>.  
+ Además del Id. y el nombre, la consulta siguiente recupera una dirección del empleado. Según la ruta de acceso en los nombres de columna para las columnas de dirección, un `Address` elemento secundario se agrega a la `row` elemento y los detalles de dirección se agregan como elementos secundarios de la `Address` elemento.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +205,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>Varias columnas comparten el mismo prefijo de ruta de acceso  
- Si varias columnas consecutivas comparten el mismo prefijo de ruta de acceso, se agruparán con el mismo nombre. Si se utilizan distintos prefijos de espacio de nombres aunque estén enlazados al mismo espacio de nombres, una ruta de acceso se considerará diferente. En la consulta anterior, las columnas FirstName, MiddleName y LastName comparten el mismo prefijo EmpName. Por tanto, se agregarán como elementos secundarios del elemento <`EmpName`>. Lo mismo ocurrió al crear el elemento <`Address`> en el ejemplo anterior.  
+ Si varias columnas consecutivas comparten el mismo prefijo de ruta de acceso, se agruparán con el mismo nombre. Si se utilizan distintos prefijos de espacio de nombres aunque estén enlazados al mismo espacio de nombres, una ruta de acceso se considerará diferente. En la consulta anterior, las columnas FirstName, MiddleName y LastName comparten el mismo prefijo EmpName. Por lo tanto, se agregan como elementos secundarios de la `EmpName` elemento. Esto también es el caso cuando se crea el `Address` elemento en el ejemplo anterior.  
   
 ## <a name="one-column-has-a-different-name"></a>Una columna tiene un nombre distinto  
  Si aparece una columna con un nombre distinto, interrumpirá la agrupación, tal y como se muestra en la siguiente consulta modificada. La consulta interrumpe la agrupación de FirstName, MiddleName y LastName, tal y como se especificaba en la consulta anterior, al agregar columnas de dirección entre las columnas FirstName y MiddleName.  
@@ -225,7 +225,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Como resultado, la consulta crea dos elementos <`EmpName`>. El primer elemento <`EmpName`> tiene el elemento secundario <`FirstName`> y el segundo elemento <`EmpName`> tiene los elementos secundarios <`MiddleName`> y <`LastName`>.  
+ Como resultado, la consulta crea dos `EmpName` elementos. La primera `EmpName` elemento tiene el `FirstName` elemento secundario y el segundo `EmpName` elemento tiene el `MiddleName` y `LastName` elementos secundarios.  
   
  El resultado es el siguiente:  
   

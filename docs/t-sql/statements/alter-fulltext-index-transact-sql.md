@@ -132,7 +132,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Crea los índices adicionales de similitud de documentos y frases clave que forman parte de la indización semántica estadística. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,***.. .n*]  
+ [ **,***...n*]  
  Indica que se pueden especificar varias columnas para las cláusulas ADD, ALTER o DROP. Si se especifican varias columnas, sepárelas con comas.  
   
  WITH NO POPULATION  
@@ -217,8 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
 |---------------------|------------------------|------------|  
 |No se ha habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
 |No se ha habilitado|Specified|No se produce el rellenado del índice hasta que se emite una instrucción ALTER FULLTEXT INDEX...START POPULATION.|  
-|Habilitado|
-          Specified|Se produce un error y no se altera el índice.|  
+|Habilitado|Specified|Se produce un error y no se altera el índice.|  
 |Habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
   
  Para obtener más información acerca de cómo rellenar índices de texto completo, vea [rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  

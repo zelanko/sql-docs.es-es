@@ -48,8 +48,7 @@ ms.lasthandoff: 09/01/2017
     ```  
      **Resultado**
 
-    |
-          pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|  
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|  
     |-|-|-|-|-|-|-|-|-|  
     |2|predeterminados|0|100|0|100|100|0|0|  
 

@@ -33,7 +33,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40idle-transact-sql"></a>& #x 40; & #x 40; inactivo (Transact-SQL)
+# <a name="x40x40idle-transact-sql"></a>&#x40;&#x40; inactivo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el tiempo durante el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha estado inactivo desde su último inicio. El resultado se indica en incrementos de tiempo de la CPU o "tics" y es acumulativo para todas las CPU, de modo que puede superar el tiempo transcurrido real. Multiplique por@TIMETICKS para convertir a microsegundos.  
@@ -74,9 +74,9 @@ Idle microseconds  as of
   
 ## <a name="see-also"></a>Vea también  
  [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)   
- [Funciones estadísticas del sistema &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Funciones estadísticas del sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 

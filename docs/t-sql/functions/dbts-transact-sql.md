@@ -30,7 +30,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40dbts-transact-sql"></a>& #x 40; & #x 40; DBTS (Transact-SQL)
+# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve el valor del tipo de datos **timestamp** actual de la base de datos actual. Se garantiza que la marca de tiempo es única en la base de datos.

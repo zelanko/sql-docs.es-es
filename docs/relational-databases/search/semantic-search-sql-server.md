@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Buscar frases clave que hacen a los documentos similares o relacionados  
  La consulta siguiente obtiene las frases clave que hacen a los dos documentos de ejemplo similares o relacionados entre sí. Muestra los resultados en orden descendente por la puntuación que clasifica el peso de cada frase clave.
  
  Esta consulta llama a la función [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  

@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|LOG_INVALID_LSN|  
-|Texto del mensaje|El número de examen del registro %S_LSN pasado al examen del registro de la base de datos '%.*ls' no es válido. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. De lo contrario, restaure la base de datos a partir de una copia de seguridad si el problema da lugar a un error durante el inicio.|  
+|Texto del mensaje|El número de examen del registro %S_LSN pasado al examen del registro de la base de datos '%.*ls' no es válido. Este error puede indicar daños en los datos o que el archivo de registro (.ldf) no coincide con el archivo de datos (.mdf). Si esto error se produjo durante la replicación, vuelva a crear la publicación. De lo contrario, restaure la base de datos a partir de una copia de seguridad si el problema da lugar a un error durante el inicio.|  
   
 ## <a name="explanation"></a>Explicación  
 Un componente pasó un número de flujo de registro no válido al administrador de registros para la base de datos. Podría corresponder a la replicación, a daños o a una incoherencia entre el archivo de datos principal y el registro.  

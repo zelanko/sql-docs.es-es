@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Agregar un minigráfico a un informe (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Agregar un minigráfico a un informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: es-es
@@ -42,7 +41,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -53,7 +52,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
 4.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos** > **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
   
     > [!NOTE]  
-    > Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de SQL Server. Si ya tiene una conexión de origen de datos enumerada en **Conexiones de origen de datos**, puede seleccionarla e ir al paso 10. Para obtener más información, vea [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Para este tutorial no se necesitan datos concretos, solo una conexión a una base de datos de SQL Server. Si ya tiene una conexión de origen de datos enumerada en **Conexiones de origen de datos**, puede seleccionarla e ir al paso 10. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
@@ -73,7 +72,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
     Volverá a encontrarse en la página **Elegir una conexión a un origen de datos** .  
   
-11. Para comprobar que se puede conectar al origen de datos, haga clic en **Prueba de conexión**.  
+11. Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**.  
   
     Aparece un mensaje que indica que la conexión se ha creado correctamente.  
   
@@ -289,7 +288,7 @@ El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colo
   
 3.  Seleccione el cuadro de texto que contiene **Ventas de producto**.  
   
-4.  En la pestaña Inicio > grupo **Fuente** > para **Color**, seleccione **Verde azulado**.  
+4.  En la pestaña Inicio > grupo **Fuente** > seleccione **Verde azulado** para **Color**.  
   
 7.  Seleccione **Negrita**.  
   
@@ -326,10 +325,9 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 ## <a name="next-steps"></a>Pasos siguientes  
 
-Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información acerca de los minigráficos, vea [minigráficos y barras de datos](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información sobre los minigráficos, vea [Minigráficos y barras de datos](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Tutoriales (Generador de informes)](../reporting-services/report-builder-tutorials.md) 
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

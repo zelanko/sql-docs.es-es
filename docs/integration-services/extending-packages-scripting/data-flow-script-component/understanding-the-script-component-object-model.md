@@ -122,7 +122,7 @@ public override void PreExecute()
   
 -   Propiedades de descriptor de acceso con nombre y tipo para cada columna de entrada seleccionada. Estas propiedades son de solo lectura o lectura/escritura según el **tipo de uso** especificado para la columna en la **columnas de entrada** página de la **Editor de transformación Script**.  
   
--   A ** \<columna > _IsNull** columna de propiedades para cada seleccionado de entrada. Esta propiedad también es de solo lectura o lectura/escritura según el **tipo de uso** especificada para la columna.  
+-   A  **\<columna > _IsNull** columna de propiedades para cada seleccionado de entrada. Esta propiedad también es de solo lectura o lectura/escritura según el **tipo de uso** especificada para la columna.  
   
 -   A **DirectRowTo\<outputbuffer >** método para cada salida configurada. Utilizará estos métodos al filtrar las filas a una de varias salidas en la misma **ExclusionGroup**.  
   
@@ -131,18 +131,18 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Qué proporciona el elemento de proyecto ComponentWrapper  
  El elemento de proyecto ComponentWrapper contiene una clase denominada **UserComponent** que se deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. El **ScriptMain** clase en la que escribe el código personalizado a su vez deriva de **UserComponent**. El **UserComponent** clase contiene los métodos siguientes:  
   
--   Una implementación invalidada de la **ProcessInput** método. Este es el método que el flujo de datos motor llama en tiempo de ejecución después de la **PreExecute** método y se pueden llamar varias veces. **ProcessInput** entrega el procesamiento para la ** \<inputbuffer > _ProcessInput** método. La **ProcessInput** método comprueba si el final del búfer de entrada y, si se ha alcanzado el final del búfer, llama el reemplazable **FinishOutputs** método y privado **MarkOutputsAsFinished** método. El **MarkOutputsAsFinished** , a continuación, llama a método **SetEndOfRowset** en el último búfer de salida.  
+-   Una implementación invalidada de la **ProcessInput** método. Este es el método que el flujo de datos motor llama en tiempo de ejecución después de la **PreExecute** método y se pueden llamar varias veces. **ProcessInput** entrega el procesamiento para la  **\<inputbuffer > _ProcessInput** método. La **ProcessInput** método comprueba si el final del búfer de entrada y, si se ha alcanzado el final del búfer, llama el reemplazable **FinishOutputs** método y privado **MarkOutputsAsFinished** método. El **MarkOutputsAsFinished** , a continuación, llama a método **SetEndOfRowset** en el último búfer de salida.  
   
--   Una implementación reemplazable de la ** \<inputbuffer > _ProcessInput** método. Esta implementación predeterminada simplemente recorre cada fila de entrada y llama ** \<inputbuffer > _ProcessInputRow**.  
+-   Una implementación reemplazable de la  **\<inputbuffer > _ProcessInput** método. Esta implementación predeterminada simplemente recorre cada fila de entrada y llama  **\<inputbuffer > _ProcessInputRow**.  
   
--   Una implementación reemplazable de la ** \<inputbuffer > _ProcessInputRow** método. La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.  
+-   Una implementación reemplazable de la  **\<inputbuffer > _ProcessInputRow** método. La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.  
   
 #### <a name="what-your-custom-code-should-do"></a>Qué debe hacer el código personalizado  
  Puede usar los métodos siguientes para procesar la entrada en el **ScriptMain** clase:  
   
--   Invalidar ** \<inputbuffer > _ProcessInputRow** para procesar los datos en cada fila de entrada según van pasando por.  
+-   Invalidar  **\<inputbuffer > _ProcessInputRow** para procesar los datos en cada fila de entrada según van pasando por.  
   
--   Invalidar ** \<inputbuffer > _ProcessInput** sólo si tiene que realizar alguna acción adicional mientras en bucle a través de filas de entrada. (Por ejemplo, tendrá que probar **EndOfRowset** para realizar alguna otra acción después de que todos se han procesado filas.) Llame a ** \<inputbuffer > _ProcessInputRow** para realizar el procesamiento de filas.  
+-   Invalidar  **\<inputbuffer > _ProcessInput** sólo si tiene que realizar alguna acción adicional mientras en bucle a través de filas de entrada. (Por ejemplo, tendrá que probar **EndOfRowset** para realizar alguna otra acción después de que todos se han procesado filas.) Llame a  **\<inputbuffer > _ProcessInputRow** para realizar el procesamiento de filas.  
   
 -   Invalidar **FinishOutputs** si tiene que hacer algo a las salidas antes de que se han cerrado.  
   
@@ -156,7 +156,7 @@ public override void PreExecute()
   
 -   Propiedades de descriptor de acceso con nombre y tipo de solo escritura para cada columna de salida.  
   
--   De solo escritura ** \<columna > _IsNull** propiedad para cada columna de salida seleccionada que puede usar para establecer el valor de columna en **null**.  
+-   De solo escritura  **\<columna > _IsNull** propiedad para cada columna de salida seleccionada que puede usar para establecer el valor de columna en **null**.  
   
 -   Un **AddRow** método para agregar una nueva fila vacía al búfer de salida.  
   

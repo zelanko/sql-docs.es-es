@@ -1,5 +1,5 @@
 ---
-title: "Información sobre SQL Server Master Data Services | Microsoft Docs"
+title: "Obtenga información acerca de SQL Server Master Data Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 02/14/2017
 ms.prod: sql-server-2016
@@ -13,15 +13,14 @@ keywords:
 - "información sobre sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 caps.latest.revision: 19
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0a3198e7cc00f01d31b7951e0d1298bee9b8dec2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="learn-sql-server-master-data-services"></a>Información sobre SQL Server Master Data Services
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/07/2017
 ## <a name="samples"></a>Ejemplos  
 * Para obtener más información sobre cómo se pueden estructurar los datos en [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] con modelos, entidades y jerarquías, pruebe los modelos de ejemplo que se incluyen al instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Para obtener instrucciones sobre la implementación de los ejemplos, consulte [Implementar modelos de ejemplo y datos](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
-    Para información sobre las actualizaciones de [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de los modelos de ejemplo, vea [Ejemplos de SQL Server: paquetes de implementación de modelos](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+    Para obtener información sobre la [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] las actualizaciones a los modelos de ejemplo, vea [ejemplos de SQL Server: paquetes de implementación de modelos](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 * Para obtener una demostración sobre cómo personalizar la forma en que sus usuarios y usted interactúan con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], pruebe los ejemplos de aplicación de consola de C# de MDS que se incluyen con los ejemplos de SQL Server. Puede descargar los ejemplos de SQL Server como un archivo .zip desde este [repositorio de GitHub](https://github.com/Microsoft/sql-server-samples).  
   

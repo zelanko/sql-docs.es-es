@@ -36,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  Versión introdujo: ODBC 3.0  
   
  **Resumen**  
- **SQLPostInstallerError** proporciona un mecanismo para una biblioteca del programa de instalación de controlador o traductor para informar de errores para el **ConfigDriver**, **ConfigDSN**, y **ConfigTranslator ** funciones a la cola de error del instalador. Las aplicaciones no usan esta API; usan **SQLInstallerError** para recuperar el error.  
+ **SQLPostInstallerError** proporciona un mecanismo para una biblioteca del programa de instalación de controlador o traductor para informar de errores para el **ConfigDriver**, **ConfigDSN**, y **ConfigTranslator**  funciones a la cola de error del instalador. Las aplicaciones no usan esta API; usan **SQLInstallerError** para recuperar el error.  
   
 ## <a name="syntax"></a>Sintaxis  
   

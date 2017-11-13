@@ -46,11 +46,11 @@ ms.lasthandoff: 09/09/2017
   
  La biblioteca de cursores admite sólo el valor SQL_SC_NON_UNIQUE del atributo de instrucción SQL_ATTR_SIMULATE_CURSOR.  
   
- Aunque la especificación de ODBC admite llamadas a **SQLSetStmtAttr** con los atributos SQL_ATTR_PARAM_BIND_TYPE o SQL_ATTR_ROW_BIND_TYPE después **SQLFetch** o **SQLFetchScroll ** se ha llamado, el cursor biblioteca no. Antes de que puede cambiar el tipo de enlace en la biblioteca de cursores, la aplicación debe cerrar el cursor. La biblioteca de cursores admite el cambio de la SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR y atributos de instrucción SQL_ATTR_PARAMS_PROCESSED_PTR cuando un cursor está abierto.  
+ Aunque la especificación de ODBC admite llamadas a **SQLSetStmtAttr** con los atributos SQL_ATTR_PARAM_BIND_TYPE o SQL_ATTR_ROW_BIND_TYPE después **SQLFetch** o **SQLFetchScroll**  se ha llamado, el cursor biblioteca no. Antes de que puede cambiar el tipo de enlace en la biblioteca de cursores, la aplicación debe cerrar el cursor. La biblioteca de cursores admite el cambio de la SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR y atributos de instrucción SQL_ATTR_PARAMS_PROCESSED_PTR cuando un cursor está abierto.  
   
  Una aplicación puede llamar a **SQLSetStmtAttr** con una **atributo** de SQL_ATTR_ROW_ARRAY_SIZE para cambiar el tamaño de conjunto de filas mientras el cursor está abierto. El nuevo tamaño de conjunto de filas surtirán efecto la próxima vez que **SQLFetchScroll** o **SQLFetch** se llama.  
   
- La biblioteca de cursores es compatible con el establecimiento del atributo de instrucción SQL_ATTR_PARAM_BIND_OFFSET_PTR o SQL_ATTR_ROW_BIND_OFFSET_PTR para habilitar los desplazamientos de enlace. El desplazamiento de enlace no se usará para las llamadas a **SQLFetch** cuando se utiliza la biblioteca de cursores con una API ODBC 2.* x* controlador.  
+ La biblioteca de cursores es compatible con el establecimiento del atributo de instrucción SQL_ATTR_PARAM_BIND_OFFSET_PTR o SQL_ATTR_ROW_BIND_OFFSET_PTR para habilitar los desplazamientos de enlace. El desplazamiento de enlace no se usará para las llamadas a **SQLFetch** cuando se utiliza la biblioteca de cursores con una API ODBC 2. *x* controlador.  
   
  La biblioteca de cursores admite establecer el atributo de instrucción de SQL_ATTR_USE_BOOKMARKS como SQL_UB_VARIABLE.
 

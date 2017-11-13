@@ -32,7 +32,7 @@ ms.lasthandoff: 09/09/2017
   
  Conformidad de la API de ODBC: Nivel de núcleo  
   
- Devuelve información de estado o de error sobre el último error. El controlador mantiene una pila o una lista de errores que se pueden devolver para la *hstmt*, *hdbc*, y *henv* argumentos, dependiendo de cómo la llamada a **SQLError ** se realiza. La cola de errores se vacía después de cada instrucción.  
+ Devuelve información de estado o de error sobre el último error. El controlador mantiene una pila o una lista de errores que se pueden devolver para la *hstmt*, *hdbc*, y *henv* argumentos, dependiendo de cómo la llamada a **SQLError**  se realiza. La cola de errores se vacía después de cada instrucción.  
   
  La tabla siguiente se describen los **SQLError** argumentos y valores devueltos que utiliza el controlador.  
   

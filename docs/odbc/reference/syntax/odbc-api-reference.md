@@ -46,7 +46,7 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   Referencias a funciones relacionadas  
   
- El nivel de conformidad de CLI estándar puede ser uno de los siguientes: 92 ISO, Open Group, ODBC o en desuso. Una función de etiquetado como compatible con ISO 92 también aparece en Open Group versión 1, como Open Group es un superconjunto puro de ISO 92. Una función que se etiquetan como grupo conforme abra también aparece en ODBC 3. *x*, ya que ODBC 3.* x* es un superconjunto de Open Group versión 1. Una función que se etiquetan como compatible con ODBC aparece en ningún estándar. Una función de etiquetado como en desuso está en desuso en ODBC 3. *x*.  
+ El nivel de conformidad de CLI estándar puede ser uno de los siguientes: 92 ISO, Open Group, ODBC o en desuso. Una función de etiquetado como compatible con ISO 92 también aparece en Open Group versión 1, como Open Group es un superconjunto puro de ISO 92. Una función que se etiquetan como grupo conforme abra también aparece en ODBC 3. *x*, ya que ODBC 3. *x* es un superconjunto de Open Group versión 1. Una función que se etiquetan como compatible con ODBC aparece en ningún estándar. Una función de etiquetado como en desuso está en desuso en ODBC 3. *x*.  
   
  Control de información de diagnóstico se describe en el [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descripción de la función. El texto asociado a los valores de SQLSTATE se incluye para proporcionar una descripción de la condición, pero no está diseñado para prescribir un texto específico.  
   

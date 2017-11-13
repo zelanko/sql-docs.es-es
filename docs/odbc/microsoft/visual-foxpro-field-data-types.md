@@ -33,12 +33,12 @@ En la tabla siguiente se enumera los valores para la *FieldType* argumento en AL
 |B|-|d|Doble|  
 |C|N|-|Campo de caracteres de ancho*n*|  
 |D|-|-|Date|  
-|F|N|d|Flotante campo numérico de ancho * n * con *d.* posiciones decimales|  
+|F|N|d|Flotante campo numérico de ancho  *n*  con *d.* posiciones decimales|  
 |G|-|-|General|  
 |I|-|-|Integer|  
 |L|-|-|Lógico|  
 |M|-|-|Memorándum|  
-|N|N|d|Campo numérico de ancho * n * con *d.* posiciones decimales|  
+|N|N|d|Campo numérico de ancho  *n*  con *d.* posiciones decimales|  
 |T|-|-|DateTime|  
 |S|-|-|Moneda|
 

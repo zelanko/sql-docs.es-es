@@ -70,7 +70,7 @@ El Administrador de controladores ODBC 3.5 (o superior) es compatible con las ve
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  Funciones en desuso tienen compatibilidad de asignación de Unicode a ANSI porque ODBC 3*.x* el Administrador de controladores es compatible con volver a compilar ODBC 2.* x* aplicaciones con UNICODE **#define**.  
+>  Funciones en desuso tienen compatibilidad de asignación de Unicode a ANSI porque ODBC 3*.x* el Administrador de controladores es compatible con volver a compilar ODBC 2. *x* aplicaciones con UNICODE **#define**.  
   
  Esta sección contiene los temas siguientes.  
   

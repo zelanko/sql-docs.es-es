@@ -54,7 +54,7 @@ DataControl.Handler = String
   
  El nombre del controlador predeterminado es **MSDFMAP. Controlador**, y su parámetro predeterminado es un archivo de personalización denominado **MSDFMAP. INI**. Utilice esta propiedad para invocar los archivos de personalización alternativos creados por el administrador del servidor.  
   
- La alternativa a la configuración de la **controlador** propiedad consiste en especificar un controlador y parámetros en el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad; es decir, "**controlador =** * handlerName, parámetro1, parámetro2,...; *".  
+ La alternativa a la configuración de la **controlador** propiedad consiste en especificar un controlador y parámetros en el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad; es decir, "**controlador =**  *handlerName, parámetro1, parámetro2,...;* ".  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -36,7 +36,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
     }  
     ```  
   
-2.  Defina un objeto de controlador para representar el controlador de eventos. El objeto de controlador debe ser del tipo de datos **ConnectEventHandler** para un evento de tipo **ConnectionEvent**, tipo de datos o **RecordsetEventHandler** para un evento de tipo ** RecordsetEvent**. Por ejemplo, el siguiente código para su **ConnectComplete** controlador de eventos:  
+2.  Defina un objeto de controlador para representar el controlador de eventos. El objeto de controlador debe ser del tipo de datos **ConnectEventHandler** para un evento de tipo **ConnectionEvent**, tipo de datos o **RecordsetEventHandler** para un evento de tipo  **RecordsetEvent**. Por ejemplo, el siguiente código para su **ConnectComplete** controlador de eventos:  
   
     ```  
     ConnectionEventHandler handler =   

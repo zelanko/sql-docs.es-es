@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources** devuelve FALSE si *hwnd* no es un identificador de ventana válido. En caso contrario, devuelve TRUE.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Cuando **SQLManageDataSources** devuelve FALSE, un asociado * \*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los * \*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLManageDataSources** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los  *\*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  

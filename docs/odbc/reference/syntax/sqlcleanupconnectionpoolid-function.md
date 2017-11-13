@@ -55,7 +55,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  Una aplicación no puede recibir el mensaje de error devuelto por el controlador.  
   
 ## <a name="remarks"></a>Comentarios  
- **SQLCleanupConnectionPoolID** se puede llamar en cualquier momento, pero el Administrador de controladores garantiza que ningún otro subproceso llama al mismo tiempo **SQLGetPoolID** y ningún otro subproceso está llamando al mismo tiempo ** SQLRateConnection** y **SQLPoolConnect** con un símbolo (token) de información de conexión asignado con ese identificador de grupo. Por lo tanto, el controlador debe asegurarse de que esta función es segura para subprocesos.  
+ **SQLCleanupConnectionPoolID** se puede llamar en cualquier momento, pero el Administrador de controladores garantiza que ningún otro subproceso llama al mismo tiempo **SQLGetPoolID** y ningún otro subproceso está llamando al mismo tiempo  **SQLRateConnection** y **SQLPoolConnect** con un símbolo (token) de información de conexión asignado con ese identificador de grupo. Por lo tanto, el controlador debe asegurarse de que esta función es segura para subprocesos.  
   
  Un controlador puede limpiar los recursos asociados con el identificador de grupo.  
   

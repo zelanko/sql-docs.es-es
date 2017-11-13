@@ -34,7 +34,7 @@ El tipo de datos C de marcador permite que una aplicación recuperar un marcador
  En la tabla siguiente muestra el valor de *CType* para el tipo de datos C de marcador, escriba el tipo de datos C de ODBC que implementa el tipo de datos de marcador C y la definición de estos datos de SQL. H.  
   
 > [!NOTE]  
->  El tipo de datos SQL_C_BOOKMARK está en desuso. ODBC 3*.x* aplicaciones no deben utilizar SQL_C_BOOKMARK. ODBC 3*.x* controladores necesitan admitir SQL_C_BOOKMARK solo si desean trabajar con ODBC 2.* x* las aplicaciones que lo usan. El Administrador de controladores asigna SQL_C_VARBOOKMARK a SQL_C_BOOKMARK cuando una aplicación trabaja con una API ODBC 2. *x* controlador.  
+>  El tipo de datos SQL_C_BOOKMARK está en desuso. ODBC 3*.x* aplicaciones no deben utilizar SQL_C_BOOKMARK. ODBC 3*.x* controladores necesitan admitir SQL_C_BOOKMARK solo si desean trabajar con ODBC 2. *x* las aplicaciones que lo usan. El Administrador de controladores asigna SQL_C_VARBOOKMARK a SQL_C_BOOKMARK cuando una aplicación trabaja con una API ODBC 2. *x* controlador.  
   
 |Identificador de tipo de C|Definición de tipo C de ODBC|Tipo de C|  
 |-----------------------|--------------------|------------|  

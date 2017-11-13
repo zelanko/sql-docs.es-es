@@ -74,7 +74,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr* y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY009|Uso no válido del puntero null|El argumento de atributo identifica un atributo de entorno que requería un valor de cadena, y el *ValuePtr* argumento era un puntero nulo.|  
 |HY010|Error de secuencia de función|(DM) se ha asignado un identificador de conexión en *EnvironmentHandle*.<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION** no se estableció con **SQLSetEnvAttr** y *atributo* no es igual a **SQL_ATTR_ODBC_VERSION**. No es necesario establecer **SQL_ATTR_ODBC_VERSION** explícitamente si utilizas **SQLAllocHandleStd**.|  

@@ -84,7 +84,7 @@ SQLRETURN SQLDataSources(
  [Entrada] Longitud en caracteres de la **descripción* búfer.  
   
  *NameLength2Ptr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *descripción*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength2*, la descripción del controlador en \* *descripción* se trunca a *BufferLength2 * menos la longitud de un carácter de terminación null.  
+ [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *descripción*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength2*, la descripción del controlador en \* *descripción* se trunca a *BufferLength2*  menos la longitud de un carácter de terminación null.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -96,7 +96,7 @@ SQLRETURN SQLDataSources(
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|(DM) mensaje informativo del Administrador de controladores específicos. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, delimitado truncados|(DM) el búfer \* *ServerName* no era lo suficientemente grande como para devolver el nombre de origen de datos completo. Por lo tanto, el nombre se ha truncado. Se devuelve la longitud del nombre del origen de datos completo en \* *NameLength1Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) el búfer \* *descripción* no era lo suficientemente grande como para devolver la descripción completa del controlador. Por lo tanto, la descripción se ha truncado. Se devuelve la longitud de la descripción del origen de datos untruncated en **NameLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|(DM) debido a un error para que no se produjo ningún SQLSTATE específico para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|(DM) debido a un error para que no se produjo ningún SQLSTATE específico para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El Administrador de controladores (DM) no pudo asignar memoria que es necesario para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llamó para el *StatementHandle* devolvió SQL_PARAM_DATA_ ESTÁ DISPONIBLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  

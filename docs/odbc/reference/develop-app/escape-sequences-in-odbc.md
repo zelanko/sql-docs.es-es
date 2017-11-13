@@ -51,7 +51,7 @@ Un número de características del lenguaje, como las combinaciones externas y l
  La secuencia de escape se reconocen y analizan los controladores, que sustituyen a las secuencias de escape con gramática específica del DBMS. Para obtener más información sobre la sintaxis de la secuencia de escape, vea [secuencias de Escape de ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) en Apéndice C: SQL gramática.  
   
 > [!NOTE]  
->  En ODBC 2. *x*, era la sintaxis estándar de la secuencia de escape: **--(\*proveedor (***nombre de proveedor***), producto (** *nombre de producto***)***extensión* ** \*):**  
+>  En ODBC 2. *x*, era la sintaxis estándar de la secuencia de escape: **--(\*proveedor (***nombre de proveedor***), producto (** *nombre de producto***)***extensión*  **\*):**  
 >   
 >  Además de esta sintaxis, sintaxis abreviada se definió el formato: **{***extensión***}**  
 >   

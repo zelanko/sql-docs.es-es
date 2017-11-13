@@ -51,7 +51,7 @@ El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQ
   
  [1] válido únicamente para versiones de Paradox 5. *x*.  
   
- [2] válido sólo para versiones de Paradox 4. *x* y 5.* x*.  
+ [2] válido sólo para versiones de Paradox 4. *x* y 5. *x*.  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo** devuelve tipos de datos de SQL de ODBC. Todas las conversiones en el apéndice D de la *referencia del programador de ODBC* son compatibles con los tipos de datos SQL de ODBC enumerados anteriormente en este tema.  

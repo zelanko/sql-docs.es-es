@@ -41,10 +41,10 @@ Las aplicaciones ODBC pueden clasificarse de la siguiente manera:
     -   No se han recopilado con encabezados de ODBC 3.5.  
   
 -   **Puro ODBC 2.**  
-     ***x* vuelve a compilar la aplicación** un puro ODBC 2.* x* aplicación que se ha vuelto a compilar utilizando los archivos de encabezado ODBC 3.5, estableciendo ODBCVER = 0x0250.  
+     ***x* vuelve a compilar la aplicación** un puro ODBC 2. *x* aplicación que se ha vuelto a compilar utilizando los archivos de encabezado ODBC 3.5, estableciendo ODBCVER = 0x0250.  
   
 -   **Puro ODBC 2.**  
-     ***x* aplicación Unicode** un puro ODBC 2.* x* vuelve a compilar la aplicación que es compatible con Unicode y usa el tipo de datos SQL_WCHAR.  
+     ***x* aplicación Unicode** un puro ODBC 2. *x* vuelve a compilar la aplicación que es compatible con Unicode y usa el tipo de datos SQL_WCHAR.  
   
 -   **Open Group puras e ISO**:**aplicaciones ODBC compatibles con** aplicación de 32 bits que:  
   

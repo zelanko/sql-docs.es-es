@@ -40,7 +40,7 @@ La cuenta anónima de servidor Web (IUSR_*ComputerName*) debe agregarse al grupo
   
 4.  En el **propiedades de invitados** cuadro de diálogo, haga clic en **agregar**.  
   
-5.  Si la cuenta anónima de servidor Web no aparece en la lista en la **Seleccionar usuarios o grupos** diálogo cuadro, escriba su nombre (IUSR_*ComputerName*) en el cuadro vacío inferior y, a continuación, haga clic en **agregar **.  
+5.  Si la cuenta anónima de servidor Web no aparece en la lista en la **Seleccionar usuarios o grupos** diálogo cuadro, escriba su nombre (IUSR_*ComputerName*) en el cuadro vacío inferior y, a continuación, haga clic en **agregar** .  
   
 6.  Haga clic en **Aceptar**.
 

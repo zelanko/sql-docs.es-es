@@ -88,7 +88,7 @@ BOOL SQLConfigDriver(
  La función devuelve TRUE si se realiza correctamente, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Cuando **SQLConfigDriver** devuelve FALSE, un asociado * \*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los * \*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLConfigDriver** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los  *\*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -111,7 +111,7 @@ BOOL SQLConfigDriver(
 ## <a name="setting-connection-pooling-timeout"></a>Establecer tiempo de espera de agrupación de conexiones  
  Propiedades de tiempo de espera de agrupación de conexiones se pueden establecer cuando se establece la configuración del controlador. **SQLConfigDriver** se llama con un *referien* de ODBC_CONFIG_DRIVER y *lpszArgs* establecido en **CPTimeout**. **CPTimeout** determina el período de tiempo que una conexión puede permanecer en la agrupación de conexiones sin que se va a usar. Cuando expira el tiempo de espera, la conexión se cierra y se quita del grupo. El tiempo de espera predeterminado es 60 segundos.  
   
- Cuando **SQLConfigDriver** se llama con *referien* establecido en ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, el Administrador de controladores que se carga el archivo DLL de configuración de controlador adecuado y llama el ** ConfigDriver** función. Cuando **SQLConfigDriver** se llama con un *referien* de ODBC_CONFIG_DRIVER, todo el procesamiento se realiza en el instalador ODBC, por lo que el archivo DLL de configuración de controlador no tiene que se va a cargar.  
+ Cuando **SQLConfigDriver** se llama con *referien* establecido en ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, el Administrador de controladores que se carga el archivo DLL de configuración de controlador adecuado y llama el  **ConfigDriver** función. Cuando **SQLConfigDriver** se llama con un *referien* de ODBC_CONFIG_DRIVER, todo el procesamiento se realiza en el instalador ODBC, por lo que el archivo DLL de configuración de controlador no tiene que se va a cargar.  
   
 ## <a name="messages"></a>Mensajes  
  Una rutina de instalación de controlador puede enviar un mensaje de texto a una aplicación como cadenas terminadas en null en la *lpszMsg* búfer. El mensaje se truncará a *cbMsgMax* menos el carácter de terminación null por la **ConfigDriver** funcionar si es mayor o igual que *cbMsgMax* caracteres.  

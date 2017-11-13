@@ -67,7 +67,7 @@ identifier
   
 -   A **userlist** sección se usa si la **userlist** sección identificador coincidencias un **conectar** identificador de la sección. Si se encuentra una coincidencia, el contenido de la **userlist** sección se aplican a la conexión que rige la **conectar** sección.  
   
--   Si la cadena en una cadena de conexión o de comandos no coincide con el identificador en cualquier **conectar** o **sql** encabezado de sección y no hay ningún **conectar** o **sql ** sección encabezado con un parámetro predeterminado, a continuación, se usa la cadena de cliente sin modificación.  
+-   Si la cadena en una cadena de conexión o de comandos no coincide con el identificador en cualquier **conectar** o **sql** encabezado de sección y no hay ningún **conectar** o **sql**  sección encabezado con un parámetro predeterminado, a continuación, se usa la cadena de cliente sin modificación.  
   
 -   El **registros** sección se usa siempre que el **DataFactory** está en funcionamiento.  
   

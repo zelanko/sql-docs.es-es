@@ -65,7 +65,7 @@ En la tabla siguiente se enumera funciones de fecha y hora ODBC compatibles con 
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- En esta sintaxis, **d.** indica que *valor* es una fecha en el *aaaa-mm-dd* formato y **ts** indica que *valor * es una marca de tiempo en el *aaaa-mm-dd hh*[.* f... *] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  
+ En esta sintaxis, **d.** indica que *valor* es una fecha en el *aaaa-mm-dd* formato y **ts** indica que *valor*  es una marca de tiempo en el *aaaa-mm-dd hh*[. *f...* ] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  
   
 ```  
 {d 'value'}  

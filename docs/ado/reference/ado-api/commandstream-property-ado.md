@@ -40,7 +40,7 @@ Indica la secuencia que se usa como entrada para un [comando](../../../ado/refer
   
  El flujo de entrada no está disponible para otros objetos de ADO que devuelven el origen de un **comando**. Por ejemplo, si la [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) está establecido en un **comando** objeto que tiene una secuencia como entrada, **Recordset.Source** continúa devolviendo el **CommandText** propiedad, que contiene una cadena vacía (""), en lugar del contenido de la secuencia de la **CommandStream** propiedad.  
   
- Cuando se utiliza una secuencia de comandos (tal y como especifica **CommandStream**), el único valor válido [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) los valores para la [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propiedad son ** adCmdText** y **adCmdUnknown**. Cualquier otro valor producirá un error.  
+ Cuando se utiliza una secuencia de comandos (tal y como especifica **CommandStream**), el único valor válido [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) los valores para la [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propiedad son  **adCmdText** y **adCmdUnknown**. Cualquier otro valor producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

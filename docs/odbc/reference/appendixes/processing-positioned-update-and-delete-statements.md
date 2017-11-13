@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
  Coloca update y delete instrucciones están sujetos a las restricciones siguientes:  
   
--   Coloca update y delete instrucciones se pueden usar sólo en los siguientes casos: cuando un **seleccione** instrucción genera el conjunto de resultados; si la **seleccione** instrucción no contenía una combinación, un ** Unión** cláusula, o un **GROUP BY** cláusula; y cuando no se enlazaron columnas que utilicen un alias o una expresión en la lista de selección con **SQLBindCol**.  
+-   Coloca update y delete instrucciones se pueden usar sólo en los siguientes casos: cuando un **seleccione** instrucción genera el conjunto de resultados; si la **seleccione** instrucción no contenía una combinación, un  **Unión** cláusula, o un **GROUP BY** cláusula; y cuando no se enlazaron columnas que utilicen un alias o una expresión en la lista de selección con **SQLBindCol**.  
   
 -   Si una aplicación prepara una actualización por posición o una instrucción delete, debe hacerlo después de haber llamado **SQLFetch** o **SQLFetchScroll**. Aunque la biblioteca de cursores envía la instrucción del controlador para la preparación, se cierra la instrucción y lo ejecuta directamente cuando la aplicación llama **SQLExecute**.  
   

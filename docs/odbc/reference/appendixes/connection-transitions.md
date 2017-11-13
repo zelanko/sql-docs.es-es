@@ -58,7 +58,7 @@ Conexiones ODBC tienen los siguientes estados.
   
  [4] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DESC.  
   
- [5] llamada **SQLAllocHandle** con *OutputHandlePtr* que apunta a un identificador válido sobrescribe este identificador sin tener en cuenta el identificador de ofthat contenido anterior y podría causar problemas para los controladores ODBC. Es incorrecta programación de aplicaciones de ODBC para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \*OutputHandlePtr* sin llamar a ** SQLFreeHandle** para liberar el identificador antes de reasignación de él. Sobrescribir ODBC identificadores de esta manera pueden provocar un comportamiento incoherente o errores por parte de controladores ODBC.  
+ [5] llamada **SQLAllocHandle** con *OutputHandlePtr* que apunta a un identificador válido sobrescribe este identificador sin tener en cuenta el identificador de ofthat contenido anterior y podría causar problemas para los controladores ODBC. Es incorrecta programación de aplicaciones de ODBC para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para  *\*OutputHandlePtr* sin llamar a  **SQLFreeHandle** para liberar el identificador antes de reasignación de él. Sobrescribir ODBC identificadores de esta manera pueden provocar un comportamiento incoherente o errores por parte de controladores ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

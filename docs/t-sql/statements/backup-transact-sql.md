@@ -181,7 +181,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  Después de una copia de seguridad del registro típica, algunas entradas del registro de transacciones se quedan inactivas, a menos que se especifique WITH NO_TRUNCATE o COPY_ONLY. El registro se trunca después de que todos los registros de uno o varios archivos del registro virtual se queden inactivos. Si el registro no se trunca después de las copias de seguridad del registro rutinarias, algo podría estar retrasando el truncamiento de los registros. Para obtener más información, vea:  
   
  { *database_name* | **@**database_name_var *}   
- Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (** @ ** * database_name_var***=***nombre de base de datos*) o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
+ Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena ( **@**   *database_name_var***=***nombre de base de datos*) o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
   
 > [!NOTE]  
 >  No se puede hacer una copia de seguridad de la base de datos reflejada en una asociación de creación de reflejo de la base de datos.  
@@ -189,10 +189,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup > [ **,**... *n* ]  
  Se utiliza solo con BACKUP DATABASE, especifica un grupo de archivos o un archivo de copia de seguridad que se va a incluir en una copia de seguridad de archivos, o especifica un grupo de archivos o un archivo de solo lectura que se va a incluir en una copia de seguridad parcial.  
   
- ARCHIVO ** = ** { *nombre_de_archivo_lógico*| **@***varDeNombreLógicoDeArchivo* }  
+ ARCHIVO  **=**  { *nombre_de_archivo_lógico*| **@***varDeNombreLógicoDeArchivo* }  
  Es el nombre lógico de un archivo o una variable cuyo valor equivale al nombre lógico de un archivo que se va a incluir en la copia de seguridad.  
   
- Grupo de archivos ** = ** { *nombreLógicoDeGrupoDeArchivos*| **@***varDeNombreLógicoDeGrupoDeArchivos* }  
+ Grupo de archivos  **=**  { *nombreLógicoDeGrupoDeArchivos*| **@***varDeNombreLógicoDeGrupoDeArchivos* }  
  Es el nombre lógico de un grupo de archivos o una variable cuyo valor equivale al nombre lógico de un grupo de archivos que se va a incluir en la copia de seguridad. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.  
   
 > [!NOTE]  
@@ -220,14 +220,14 @@ Es el nombre lógico de un grupo de archivos de solo lectura o una variable cuyo
   
  Para obtener más información acerca de copias de seguridad parciales, consulte [copias de seguridad parciales &#40; SQL Server &#41; ](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-PARA \<dispositivodecopiadeseguridad > [ **,**... * n * ] Indica que el conjunto de [dispositivos de copia de seguridad](../../relational-databases/backup-restore/backup-devices-sql-server.md) es un conjunto de medios no reflejado o el primero de los reflejos de un conjunto (por qué uno o más MIRROR TO de medios reflejado las cláusulas se declaran).  
+PARA \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Indica que el conjunto de [dispositivos de copia de seguridad](../../relational-databases/backup-restore/backup-devices-sql-server.md) es un conjunto de medios no reflejado o el primero de los reflejos de un conjunto (por qué uno o más MIRROR TO de medios reflejado las cláusulas se declaran).  
   
 \<backup_device > especifica un dispositivo de copia de seguridad físico o lógico que se usará para la operación de copia de seguridad.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se pueden especificar como una constante de cadena (@*logical_device_name_var* ** = ** nombre de dispositivo lógico de copia de seguridad) o como una variable de cualquier tipo de datos de cadena de caracteres excepto para la **ntext** o **texto** tipos de datos.  
+ Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se pueden especificar como una constante de cadena (@*logical_device_name_var*  **=**  nombre de dispositivo lógico de copia de seguridad) o como una variable de cualquier tipo de datos de cadena de caracteres excepto para la **ntext** o **texto** tipos de datos.  
   
- {DISCO | CINTA | Dirección URL} ** = ** { **'***physical_device_name***'**  |  ** @ ** *physical_device_name_var* }  
+ {DISCO | CINTA | Dirección URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
  Especifica un archivo de disco o un dispositivo de cinta, o un servicio de almacenamiento Blob de Windows Azure. El formato de dirección URL se usa para crear copias de seguridad para el servicio de almacenamiento de Windows Azure. Para obtener más información y ejemplos, vea [SQL Server Backup and Restore con el servicio de almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: SQL Server Backup and Restore a Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
@@ -245,7 +245,7 @@ PARA \<dispositivodecopiadeseguridad > [ **,**... * n * ] Indica que el conjunto
  *n*  
  Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas.  
   
-MIRROR TO \<dispositivodecopiadeseguridad > [ **,**... * n * ] Especifica un conjunto de hasta tres dispositivos de copia de seguridad secundarios, cada uno de los reflejos los dispositivos de las copias de seguridad especificados en la cláusula TO. La cláusula MIRROR TO debe especificar el mismo tipo y número de los dispositivos de copia de seguridad como la cláusula TO. El número máximo de cláusulas MIRROR TO es tres.  
+MIRROR TO \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Especifica un conjunto de hasta tres dispositivos de copia de seguridad secundarios, cada uno de los reflejos los dispositivos de las copias de seguridad especificados en la cláusula TO. La cláusula MIRROR TO debe especificar el mismo tipo y número de los dispositivos de copia de seguridad como la cláusula TO. El número máximo de cláusulas MIRROR TO es tres.  
   
  Esta opción solo está disponible en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -310,7 +310,7 @@ MIRROR TO \<dispositivodecopiadeseguridad > [ **,**... * n * ] Especifica un con
 Estas opciones funcionan en el conjunto de copia de seguridad que se crea con esta operación de copia de seguridad.  
   
 > [!NOTE]  
->  Para especificar una copia de seguridad para una operación de restauración, utilice el archivo ** = ** * \<backup_set_file_number >* opción. Para obtener más información sobre cómo especificar un conjunto de copia de seguridad, vea "Especificar de un conjunto copia de seguridad" en [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  Para especificar una copia de seguridad para una operación de restauración, utilice el archivo  **=**   *\<backup_set_file_number >* opción. Para obtener más información sobre cómo especificar un conjunto de copia de seguridad, vea "Especificar de un conjunto copia de seguridad" en [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Especifica que la copia de seguridad es un *copia de seguridad solo*, que no afecta a la secuencia normal de las copias de seguridad. Se crea una copia de seguridad de solo copia independientemente de las copias de seguridad convencionales programadas regularmente. Una copia de seguridad de solo copia no afecta a los procedimientos de copias de seguridad y restauración generales de la base de datos.  
@@ -340,10 +340,10 @@ Deshabilita de forma explícita la compresión de copia de seguridad.
 DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
 Especifica el texto de forma libre que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
-NOMBRE ** = ** { *nombreDeConjuntoDeCopia*| **@***backup_set_var* }  
+NOMBRE  **=**  { *nombreDeConjuntoDeCopia*| **@***backup_set_var* }  
 Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
-{EXPIREDATE **='***fecha***'**| RETAINDAYS ** = ** *días* }  
+{EXPIREDATE **='***fecha***'**| RETAINDAYS  **=**  *días* }  
 Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Si se usan las dos opciones, RETAINDAYS tiene precedencia sobre EXPIREDATE.  
   
 Si se especifica ninguna opción, la fecha de expiración está determinada por la **mediaretention** de configuración. Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
@@ -351,10 +351,10 @@ Si se especifica ninguna opción, la fecha de expiración está determinada por 
 > [!IMPORTANT]  
 >  Estas opciones solo impiden que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobrescriba un archivo. Las cintas se pueden borrar utilizando otros métodos, y los archivos de disco se pueden eliminar usando el sistema operativo. Para obtener más información acerca de la comprobación de la expiración, vea SKIP y FORMAT en este tema.  
   
-EXPIREDATE ** = ** { **'***fecha***'** |  ** @ ** *date_var* }  
+EXPIREDATE  **=**  { **'***fecha***'** |   **@**  *date_var* }  
  Especifica cuándo expira el conjunto de copia de seguridad y se puede sobrescribir. Si se proporciona como una variable (@*date_var*), esta fecha debe seguir el sistema configurado **datetime** dar formato y se pueden especificar uno de los siguientes:  
   
--   Una constante de cadena (@*date_var* ** = ** fecha)  
+-   Una constante de cadena (@*date_var*  **=**  fecha)  
 -   Una variable de tipo de datos de cadena de caracteres (excepto el **ntext** o **texto** tipos de datos)  
 -   Un **smalldatetime**  
 -   A **datetime** variable  
@@ -369,7 +369,7 @@ Para obtener información sobre cómo especificar **datetime** valores, consulte
 > [!NOTE]  
 >  Para omitir la fecha de caducidad, use la opción SKIP.  
   
-RETAINDAYS ** = ** { *días*| **@***days_var* }  
+RETAINDAYS  **=**  { *días*| **@***days_var* }  
  Especifica el número de días que deben transcurrir antes de que se pueda sobrescribir este conjunto de medios de copia de seguridad. Si se proporciona como una variable (**@***days_var*), debe especificarse como un entero.  
   
 **Opciones del conjunto de medios**  
@@ -424,13 +424,13 @@ Especifica que se debe crear un conjunto de medios nuevo. FORMAT hace que la ope
   
 La especificación de FORMAT implica SKIP y no es necesario especificar SKIP de forma explícita.  
   
-MEDIADESCRIPTION ** = ** { *texto* | **@***text_variable* }  
+MEDIADESCRIPTION  **=**  { *texto* | **@***text_variable* }  
 Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.  
   
-MEDIANAME ** = ** { *nombreDeMedio* | **@***media_name_variable* }  
+MEDIANAME  **=**  { *nombreDeMedio* | **@***media_name_variable* }  
 Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio no puede tener más de 128 caracteres y, si se especifica MEDIANAME, debe coincidir con el nombre de medio especificado que ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.  
   
-BLOCKSIZE ** = ** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
 Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 512, 1024, 2048, 4096, 8192, 16384, 32768 y 65536 (64 KB) bytes. El valor predeterminado es 65536 para dispositivos de cinta y 512 para otros dispositivos. Normalmente, esta opción no es necesaria, ya que BACKUP selecciona automáticamente un tamaño de bloque apropiado para el dispositivo. La especificación explícita de un tamaño de bloque invalida la selección automática del tamaño de bloque.  
   
 Si va a realizar una copia de seguridad en CD-ROM que pretende utilizar para copiar y restaurar, especifique BLOCKSIZE=2048.  
@@ -440,7 +440,7 @@ Si va a realizar una copia de seguridad en CD-ROM que pretende utilizar para cop
   
 **Opciones de transferencia de datos**  
   
-BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
 Especifica el número total de búferes de E/S que se van a utilizar para la operación de copia de seguridad. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
 El espacio total utilizado por los búferes está determinado por: *buffercount***\****maxtransfersize*.  
@@ -448,7 +448,7 @@ El espacio total utilizado por los búferes está determinado por: *buffercount*
 > [!NOTE]  
 >  Para obtener información importante sobre el uso de la opción BUFFERCOUNT, vea el [opción de transferencia de datos BufferCount incorrecta puede dar lugar a una condición OOM](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
 > [!NOTE]  
 >  Al crear copias de seguridad mediante el servicio SQL Writer, si la base de datos configurada FILESTREAM o incluye grupos de archivos de OLTP en memoria, la `MAXTRANSFERSIZE` en el momento de restauración debe ser mayor o igual que el `MAXTRANSFERSIZE` que estaba se usa cuando el se creó la copia de seguridad. 
@@ -490,7 +490,7 @@ A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], no tiene ningú
   
 **Opciones de supervisión**  
   
-ESTADÍSTICAS [ ** = ** *porcentaje* ]  
+ESTADÍSTICAS [  **=**  *porcentaje* ]  
  Muestra un mensaje cada vez que otro *porcentaje* completa y se usa para medir el progreso. Si *porcentaje* se omite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un mensaje después de completar cada 10 por ciento.  
   
 La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Éste es aproximadamente el porcentaje especificado; por ejemplo, con STATS=10, si la cantidad completada equivale al 40 por ciento, la opción puede mostrar el 43 por ciento. En el caso de los conjuntos de copia de seguridad de gran tamaño, esto no representa ningún problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S.  
@@ -531,13 +531,13 @@ Estas opciones solo se usan con BACKUP LOG.
 > [!NOTE]  
 >  Si no desea hacer copias de seguridad del registro, use el modelo de recuperación simple. Para obtener más información, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{NORECOVERY | STANDBY ** = ** *nombreArchivoParaDeshacer* }  
+{NORECOVERY | STANDBY  **=**  *nombreArchivoParaDeshacer* }  
   NORECOVERY  
   Realiza una copia de seguridad del registro después del error y deja la base de datos en el estado RESTORING. NORECOVERY resulta útil cuando, en caso de error, se conmuta a una base de datos secundaria y al guardar los registros después del error antes de una operación RESTORE.  
   
   Para hacer una copia de seguridad del registro óptima que omita el truncamiento de los registros y, a continuación, establecer la base de datos en el estado RESTORING de forma atómica, utilice las opciones NO_TRUNCATE y NORECOVERY conjuntamente.  
   
-  STANDBY ** = ** *standby_file_name*  
+  STANDBY  **=**  *standby_file_name*  
   Realiza una copia de seguridad del final del registro y deja la base de datos en modo de solo lectura y en el estado STANDBY. La cláusula STANDBY escribe datos en espera (realiza la reversión, pero con la posibilidad de recuperaciones posteriores). El uso de la opción STANDBY es equivalente a BACKUP LOG WITH NORECOVERY seguido de RESTORE WITH STANDBY.  
   
   Uso de modo de espera requiere un archivo en espera, especificado por *standby_file_name*, cuya ubicación se almacena en el registro de la base de datos. Si el archivo especificado ya existe, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] lo sobrescribe; si no existe, [!INCLUDE[ssDE](../../includes/ssde-md.md)] lo crea. El archivo en espera pasa a formar parte de la base de datos.  

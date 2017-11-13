@@ -60,13 +60,13 @@ SQLRETURN SQLGetEnvAttr(
  *ValuePtr*  
  [Salida] Puntero a un búfer en el que se va a devolver el valor actual del atributo especificado por *atributo*.  
   
- Si *ValuePtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por * ValuePtr*.  
+ Si *ValuePtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por  *ValuePtr*.  
   
  *BufferLength*  
- [Entrada] Si *ValuePtr* apunta a una cadena de caracteres, este argumento debe ser la longitud de \* *ValuePtr*. Si \* *ValuePtr* es un entero, *BufferLength* se omite. Si * \*ValuePtr* es una cadena Unicode (cuando se llama a **SQLGetEnvAttrW**), el *BufferLength* el argumento debe ser un número par. Si el valor de atributo no es una cadena de caracteres *BufferLength* no se utiliza.  
+ [Entrada] Si *ValuePtr* apunta a una cadena de caracteres, este argumento debe ser la longitud de \* *ValuePtr*. Si \* *ValuePtr* es un entero, *BufferLength* se omite. Si  *\*ValuePtr* es una cadena Unicode (cuando se llama a **SQLGetEnvAttrW**), el *BufferLength* el argumento debe ser un número par. Si el valor de atributo no es una cadena de caracteres *BufferLength* no se utiliza.  
   
  *StringLengthPtr*  
- [Salida] Un puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el carácter de terminación null) disponible para devolver en * \*ValuePtr*. Si *ValuePtr* es un puntero nulo, no se devuelve ninguna longitud. Si el valor del atributo es una cadena de caracteres y el número de bytes disponible para devolver es mayor o igual que *BufferLength*, los datos de \* *ValuePtr* se trunca a * BufferLength* menos la longitud de un carácter de terminación null y termina en null el controlador.  
+ [Salida] Un puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el carácter de terminación null) disponible para devolver en  *\*ValuePtr*. Si *ValuePtr* es un puntero nulo, no se devuelve ninguna longitud. Si el valor del atributo es una cadena de caracteres y el número de bytes disponible para devolver es mayor o igual que *BufferLength*, los datos de \* *ValuePtr* se trunca a  *BufferLength* menos la longitud de un carácter de terminación null y termina en null el controlador.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, delimitado truncados|Los datos devueltos en \* *ValuePtr* se ha truncado para ser *BufferLength* menos el carácter de terminación null. Se devuelve la longitud del valor de cadena untruncated en **StringLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) **SQL_ATTR_ODBC_VERSION** aún no se ha establecido a través de **SQLSetEnvAttr**. No es necesario establecer **SQL_ATTR_ODBC_VERSION** explícitamente si utilizas **SQLAllocHandleStd**.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  

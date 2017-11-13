@@ -35,7 +35,7 @@ Indica el nombre de un objeto.
  Establece o devuelve un **cadena** valor que indica el nombre de un objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **nombre** propiedad para asignar un nombre a o recuperar el nombre de un **comando**, **propiedad**, **campo**, o **parámetro ** objeto.  
+ Use la **nombre** propiedad para asignar un nombre a o recuperar el nombre de un **comando**, **propiedad**, **campo**, o **parámetro**  objeto.  
   
  El valor es de lectura/escritura en un **comando** objeto y de solo lectura en un **propiedad** objeto.  
   

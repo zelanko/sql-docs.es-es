@@ -34,7 +34,7 @@ Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones p
   
 2.  Cree cuatro botones de comando en la parte superior del formulario y establezca la **nombre** y **título** propiedades según los valores mostrados en la tabla al final de este tema.  
   
-3.  Debajo de los botones, agregue un **Microsoft DataGrid (Control)** (Msdatgrd.ocx). El archivo Msdatgrd.ocx se incluye con Visual Basic y se encuentra en el directorio \windows\system32 o \winnt\system32. Para agregar el control DataGrid a su panel de cuadro de herramientas de Visual Basic, seleccione **componentes... ** desde el **proyecto** menú. A continuación, active la casilla junto a "Microsoft DataGrid Control 6.0 (SP3) (OLEDB)" y, a continuación, haga clic en **Aceptar**. Para agregar el control al proyecto, arrastre el control DataGrid en el cuadro de herramientas al formulario de Visual Basic.  
+3.  Debajo de los botones, agregue un **Microsoft DataGrid (Control)** (Msdatgrd.ocx). El archivo Msdatgrd.ocx se incluye con Visual Basic y se encuentra en el directorio \windows\system32 o \winnt\system32. Para agregar el control DataGrid a su panel de cuadro de herramientas de Visual Basic, seleccione **componentes...**  desde el **proyecto** menú. A continuación, active la casilla junto a "Microsoft DataGrid Control 6.0 (SP3) (OLEDB)" y, a continuación, haga clic en **Aceptar**. Para agregar el control al proyecto, arrastre el control DataGrid en el cuadro de herramientas al formulario de Visual Basic.  
   
 4.  Crear un **cuadro de texto** en el formulario debajo de la cuadrícula y establezca sus propiedades como se muestra en la tabla. El formato debe ser similar a la ilustración siguiente cuando haya terminado.  
   

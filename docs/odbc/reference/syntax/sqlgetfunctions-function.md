@@ -76,7 +76,7 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) **SQLGetFunctions** se llamó antes de **SQLConnect**, **SQLBrowseConnect**, o **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** se llamó para el *IdentificadorConexión* y devuelve SQL_NEED_DATA. Esta función se invoca antes de **SQLBrowseConnect** devuelve SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llamó para el *IdentificadorConexión* devolvió SQL_PARAM_DATA_ ESTÁ DISPONIBLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  
@@ -133,7 +133,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] cuando se trabaja con una API ODBC 2*.x* controlador, **SQLBulkOperations** se devolverá como solo se admite si las dos opciones siguientes son verdaderas: la API ODBC 2*.x* controlador es compatible con ** SQLSetPos**, y el tipo de información SQL_POS_OPERATIONS devuelve el bit SQL_POS_ADD como conjunto.  
+ [1] cuando se trabaja con una API ODBC 2*.x* controlador, **SQLBulkOperations** se devolverá como solo se admite si las dos opciones siguientes son verdaderas: la API ODBC 2*.x* controlador es compatible con  **SQLSetPos**, y el tipo de información SQL_POS_OPERATIONS devuelve el bit SQL_POS_ADD como conjunto.  
   
  La siguiente es una lista de valores válidos para *FunctionId* para funciones que se introdujeron en ODBC 3.8 o posterior:  
   
@@ -141,16 +141,16 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** se devolverá como solo se admite si el controlador admite tanto **SQLCancel** y **SQLCancelHandle**. Si **SQLCancel** se admite pero **SQLCancelHandle** no lo es, la aplicación puede seguir llamando a **SQLCancelHandle** en un identificador de instrucción, ya que se va a asignar a ** SQLCancel**.  
+ [2] **SQLCancelHandle** se devolverá como solo se admite si el controlador admite tanto **SQLCancel** y **SQLCancelHandle**. Si **SQLCancel** se admite pero **SQLCancelHandle** no lo es, la aplicación puede seguir llamando a **SQLCancelHandle** en un identificador de instrucción, ya que se va a asignar a  **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS (macro)  
- El SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro se usa para determinar la compatibilidad con ODBC 3*.x* o funciones anteriores después **SQLGetFunctions ** se ha llamado con un *FunctionId* argumento de SQL_API_ODBC3_ALL_FUNCTIONS. La aplicación llama a SQL_FUNC_EXISTS con el *SupportedPtr* establecido en el *SupportedPtr* pasa *SQLGetFunctions*y con el * FunctionID* establecido en el **#define** para la función. SQL_FUNC_EXISTS devuelve SQL_TRUE si se admite la función y SQL_FALSE en caso contrario.  
+ El SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro se usa para determinar la compatibilidad con ODBC 3*.x* o funciones anteriores después **SQLGetFunctions**  se ha llamado con un *FunctionId* argumento de SQL_API_ODBC3_ALL_FUNCTIONS. La aplicación llama a SQL_FUNC_EXISTS con el *SupportedPtr* establecido en el *SupportedPtr* pasa *SQLGetFunctions*y con el  *FunctionID* establecido en el **#define** para la función. SQL_FUNC_EXISTS devuelve SQL_TRUE si se admite la función y SQL_FALSE en caso contrario.  
   
 > [!NOTE]  
 >  Cuando se trabaja con una API ODBC 2*.x* controlador ODBC 3*.x* el Administrador de controladores devuelve SQL_TRUE para **SQLAllocHandle** y **SQLFreeHandle**porque **SQLAllocHandle** se asigna a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, y Dado que **SQLFreeHandle** se asigna a **SQLFreeEnv**, **SQLFreeConnect**, o **SQLFreeStmt**. **SQLAllocHandle** o **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DESC no se admite, sin embargo, incluso si se devuelve SQL_TRUE para las funciones, porque no hay ninguna ODBC 2*.x* función que asigna a en este caso.  
   
 ## <a name="code-example"></a>Ejemplo de código  
- Los tres ejemplos siguientes muestran cómo una aplicación usa **SQLGetFunctions** para determinar si un controlador es compatible con **SQLTables**, **SQLColumns**, y ** SQLStatistics**. Si el controlador no admite estas funciones, la aplicación desconecta el controlador. El primer ejemplo se llama **SQLGetFunctions** una vez para cada función.  
+ Los tres ejemplos siguientes muestran cómo una aplicación usa **SQLGetFunctions** para determinar si un controlador es compatible con **SQLTables**, **SQLColumns**, y  **SQLStatistics**. Si el controlador no admite estas funciones, la aplicación desconecta el controlador. El primer ejemplo se llama **SQLGetFunctions** una vez para cada función.  
   
 ```  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  

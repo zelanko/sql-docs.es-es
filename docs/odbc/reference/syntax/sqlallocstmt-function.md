@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: en desuso  
   
  **Resumen**  
- En ODBC 3. *x*, ODBC 2.* x* función **SQLAllocStmt** se ha reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [SQLAllocHandle, función](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ En ODBC 3. *x*, ODBC 2. *x* función **SQLAllocStmt** se ha reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [SQLAllocHandle, función](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Para obtener más información acerca de qué el Administrador de controladores asigna esta función cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3.* x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
+>  Para obtener más información acerca de qué el Administrador de controladores asigna esta función cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="data-buffer-type"></a>Tipo de búfer de datos
 El tipo de datos C de un búfer especificado por la aplicación. Con una variable simple, esto se produce cuando la aplicación asigna la variable. Con genéricos de memoria, es decir, memoria indicada por un puntero de tipo void, esto se produce cuando la aplicación convierte la memoria a un tipo determinado. El controlador detecta este tipo de dos maneras:  
   
--   **Argumento de tipo de búfer de datos.** Búferes que usa para transferir valores de parámetro y de datos del conjunto de resultados, como el búfer enlazado con *TargetValuePtr* en **SQLBindCol**, normalmente tiene un argumento de tipo asociado, como el * TargetType* argumento en **SQLBindCol**. En este argumento, la aplicación pasa el identificador de tipo de C que corresponde al tipo de búfer. Por ejemplo, en la siguiente llamada a **SQLBindCol**, el valor SQL_C_TYPE_DATE indica al controlador que la *fecha* búfer es un SQL_DATE_STRUCT:  
+-   **Argumento de tipo de búfer de datos.** Búferes que usa para transferir valores de parámetro y de datos del conjunto de resultados, como el búfer enlazado con *TargetValuePtr* en **SQLBindCol**, normalmente tiene un argumento de tipo asociado, como el  *TargetType* argumento en **SQLBindCol**. En este argumento, la aplicación pasa el identificador de tipo de C que corresponde al tipo de búfer. Por ejemplo, en la siguiente llamada a **SQLBindCol**, el valor SQL_C_TYPE_DATE indica al controlador que la *fecha* búfer es un SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  

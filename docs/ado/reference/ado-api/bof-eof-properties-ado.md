@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  El **BOF** y **EOF** devuelven propiedades **booleano** valores.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **BOF** y **EOF** propiedades para determinar si un **Recordset** objeto contiene registros o si ha ido más allá de los límites de un **conjunto de registros ** objeto cuando se mueve de un registro a otro.  
+ Use la **BOF** y **EOF** propiedades para determinar si un **Recordset** objeto contiene registros o si ha ido más allá de los límites de un **conjunto de registros**  objeto cuando se mueve de un registro a otro.  
   
  El **BOF** propiedad devuelve **True** (-1) si la posición del registro actual está delante del primer registro y **False** (0) si la posición del registro actual está en o después del primero registro.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
  Si el **BOF** o **EOF** propiedad es **True**, no hay ningún registro actual.  
   
- Si abre un **Recordset** objeto que no contiene registros, la **BOF** y **EOF** propiedades se establecen en **True** (consulte la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para obtener más información sobre este estado de un **Recordset**). Cuando se abre un **Recordset** objeto que contiene al menos un registro, el primer registro es el registro actual y la **BOF** y **EOF** propiedades son **False **.  
+ Si abre un **Recordset** objeto que no contiene registros, la **BOF** y **EOF** propiedades se establecen en **True** (consulte la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para obtener más información sobre este estado de un **Recordset**). Cuando se abre un **Recordset** objeto que contiene al menos un registro, el primer registro es el registro actual y la **BOF** y **EOF** propiedades son **False** .  
   
  Si elimina el último registro que queda en el **Recordset** objeto, el **BOF** y **EOF** propiedades pueden permanecer **False** hasta que Intente volver a colocar el registro actual.  
   

@@ -39,9 +39,9 @@ ms.lasthandoff: 09/09/2017
   
      **ACTUALIZACIÓN** *nombre de la tabla*  
   
-     **ESTABLECER** *identificador de la columna* ** = ** {*expresión* &#124; **NULL**}  
+     **ESTABLECER** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}  
   
-     [**,** *identificador de la columna* ** = ** {*expresión* &#124; **NULL**}]  
+     [**,** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *nombre del cursor*  
   

@@ -48,7 +48,7 @@ En este tema define los términos relacionados con ADO.
 ## <a name="b"></a>B
  asignación de una entrada de enlace entre un campo en una tabla y una variable. En las extensiones de Visual C++ de ADO, **Recordset** campos se asignan a variables de C o C++.
 
- valor numérico de máscara de bits A destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente a opciones de marcador de parámetro o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic, ** & ** y **&#124;** en C++.
+ valor numérico de máscara de bits A destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente a opciones de marcador de parámetro o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic,  **&**  y **&#124;** en C++.
 
  Por ejemplo, la propiedad ADO **FieldAttributeEnum** valores pueden utilizarse como máscaras de bits para determinar los atributos de un campo. Suponga que desea determinar si un campo se puede actualizar. Puede comprobar con la siguiente expresión en Visual Basic:`Field.Attributes AND adFldUpdatable`
 
@@ -65,7 +65,7 @@ En este tema define los términos relacionados con ADO.
 
  referencia de capítulo A un intervalo de filas desde un origen de datos. En ADO, un capítulo suele ser una referencia a otro **conjunto de registros**.
 
- Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y * secundario* es el **Recordset** representado por el capítulo.
+ Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y  *secundario* es el **Recordset** representado por el capítulo.
 
  alias de capítulo un alias que hace referencia a la columna anexada al elemento primario.
 
@@ -169,7 +169,7 @@ En este tema define los términos relacionados con ADO.
 
  optimista de bloqueo de un tipo de bloqueo en el que es la página de datos que contiene uno o más registros, incluido el registro que se está editando, no está disponible para otros usuarios sólo mientras el registro está siendo actualizada por la **actualización** método, pero está disponible antes y después de llamar a **actualización**.
 
- Bloqueo optimista se utiliza cuando la **Recordset** objeto se abre con la **LockType** parámetro o la propiedad **adLockOptimistic** o ** adLockBatchOptimistic**. Vea también el bloqueo pesimista.
+ Bloqueo optimista se utiliza cuando la **Recordset** objeto se abre con la **LockType** parámetro o la propiedad **adLockOptimistic** o  **adLockBatchOptimistic**. Vea también el bloqueo pesimista.
 
  valor ordinal la ubicación de un elemento incluido en un orden numérica. En una colección de ADO, el valor ordinal del primer elemento es cero (0). El elemento siguiente es uno (1) y así sucesivamente.
 

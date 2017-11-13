@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- CREATION_DISPOSITION ** = ** CREATE_NEW  
+ CREATION_DISPOSITION  **=**  CREATE_NEW  
  Crea una nueva clave en el dispositivo de Administración extensible de claves.  Si ya existe una clave en el dispositivo, se producirá un error en la instrucción.  
   
- CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  Asigna una clave simétrica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una clave de Administración extensible de claves. Si no se proporciona CREATION_DISPOSITION = OPEN_EXISTING, de forma predeterminada es CREATE_NEW.  
   
  *nombre_de_certificado*  

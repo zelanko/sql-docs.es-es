@@ -48,7 +48,7 @@ BOOL SQLGetConfigMode(
   
 ## <a name="arguments"></a>Argumentos  
  *pwConfigMode*  
- [Salida] Puntero al búfer que contiene el modo de configuración. (Vea "Comentarios".) El valor de * \*pwConfigMode* puede ser:  
+ [Salida] Puntero al búfer que contiene el modo de configuración. (Vea "Comentarios".) El valor de  *\*pwConfigMode* puede ser:  
   
  ODBC_USER_DSN  
   
@@ -60,14 +60,14 @@ BOOL SQLGetConfigMode(
  La función devuelve TRUE si se realiza correctamente, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Cuando **SQLGetConfigMode** devuelve FALSE, un asociado * \*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los * \*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLGetConfigMode** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los  *\*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El programa de instalación no pudo realizar la función debido a la falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- Esta función se utiliza para determinar dónde está la entrada de Odbc.ini enumerar valores DSN en la información del sistema. Si * \*pwConfigMode* es ODBC_USER_DSN, el DSN es un DSN de usuario y la función lee de la entrada Odbc.ini en HKEY_CURRENT_USER. Si es ODBC_SYSTEM_DSN, el DSN es un DSN de sistema y la función lee de la entrada Odbc.ini en HKEY_LOCAL_MACHINE. Si es ODBC_BOTH_DSN, se prueba con HKEY_CURRENT_USER, y si se produce un error, se utiliza HKEY_LOCAL_MACHINE.  
+ Esta función se utiliza para determinar dónde está la entrada de Odbc.ini enumerar valores DSN en la información del sistema. Si  *\*pwConfigMode* es ODBC_USER_DSN, el DSN es un DSN de usuario y la función lee de la entrada Odbc.ini en HKEY_CURRENT_USER. Si es ODBC_SYSTEM_DSN, el DSN es un DSN de sistema y la función lee de la entrada Odbc.ini en HKEY_LOCAL_MACHINE. Si es ODBC_BOTH_DSN, se prueba con HKEY_CURRENT_USER, y si se produce un error, se utiliza HKEY_LOCAL_MACHINE.  
   
  De forma predeterminada, **SQLGetConfigMode** devuelve ODBC_BOTH_DSN. Cuando se crea un DSN de usuario o un DSN de sistema mediante una llamada a **SQLConfigDataSource**, la función establece el modo de configuración para ODBC_USER_DSN o ODBC_SYSTEM_DSN para distinguir los DSN de sistema y de usuario al modificar un DSN. Antes de devolver, **SQLConfigDataSource** restablece el modo de configuración a ODBC_BOTH_DSN.  
   

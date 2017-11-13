@@ -30,11 +30,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarar la aplicación &#39; s versión de ODBC
-Antes de que una aplicación asigna una conexión, se debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue la API ODBC 2. *x* u ODBC 3.* x* especificación al usar los siguientes elementos:  
+Antes de que una aplicación asigna una conexión, se debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue la API ODBC 2. *x* u ODBC 3. *x* especificación al usar los siguientes elementos:  
   
--   **SQLSTATE**. Muchos de los valores SQLSTATE son diferentes en ODBC 2. *x* y ODBC 3.* x*.  
+-   **SQLSTATE**. Muchos de los valores SQLSTATE son diferentes en ODBC 2. *x* y ODBC 3. *x*.  
   
--   **Fecha, hora y los identificadores de tipo de marca de tiempo**. La siguiente tabla muestra los identificadores de tipo de fecha, hora y datos de marca de tiempo de ODBC 2. *x* y ODBC 3.* x*.  
+-   **Fecha, hora y los identificadores de tipo de marca de tiempo**. La siguiente tabla muestra los identificadores de tipo de fecha, hora y datos de marca de tiempo de ODBC 2. *x* y ODBC 3. *x*.  
   
     |ODBC 2. *x*|ODBC 3. *x*|  
     |----------------|----------------|  
@@ -52,5 +52,5 @@ Antes de que una aplicación asigna una conexión, se debe establecer el atribut
  ODBC 3*.x* el Administrador de controladores mientras que ODBC 3*.x* controladores comprobar la versión de la especificación de ODBC en el que se escribe una aplicación y responder según corresponda. Por ejemplo, si la aplicación sigue a la API ODBC 2. *x* especificación y llamadas **SQLExecute** antes de llamar a **SQLPrepare**, ODBC 3*.x* Administrador de controladores devuelve SQLSTATE S1010 ( Error de secuencia de función). Si la aplicación sigue ODBC 3*.x* especificación, el Administrador de controladores devuelve SQLSTATE HY010 (error de secuencia de función). Para obtener más información, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Aplicaciones que siguen ODBC 3. *x* especificación debe utilizar código condicional para evitar usar la funcionalidad nueva para ODBC 3.* x* al trabajar con ODBC 2.* x* controladores. ODBC 2. *x* controladores no admiten la funcionalidad nueva para ODBC 3.* x* solo porque la aplicación declara que sigue a ODBC 3.* x* especificación. Además, ODBC 3. *x* no dejan de controladores admitir la funcionalidad nueva para ODBC 3.* x* solo porque la aplicación declara que sigue a la API ODBC 2.* x* especificación.
+>  Aplicaciones que siguen ODBC 3. *x* especificación debe utilizar código condicional para evitar usar la funcionalidad nueva para ODBC 3. *x* al trabajar con ODBC 2. *x* controladores. ODBC 2. *x* controladores no admiten la funcionalidad nueva para ODBC 3. *x* solo porque la aplicación declara que sigue a ODBC 3. *x* especificación. Además, ODBC 3. *x* no dejan de controladores admitir la funcionalidad nueva para ODBC 3. *x* solo porque la aplicación declara que sigue a la API ODBC 2. *x* especificación.
 

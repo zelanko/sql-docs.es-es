@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Asignar los tipos de información de Cursor Attributes1
-Cuando un ODBC 3. *x* aplicación llama **SQLGetInfo** en una API ODBC 2*.x* controlador con el tipo de información SQL_XXXX_CURSOR_ATTRIBUTES1 (dinámico, solo avance, keyset-controlador de, o los cursores estáticos), la configuración de los bits devueltos por el Administrador de controladores depende de qué la API ODBC 2. *x* controlador devuelve el 2 de ODBC correspondiente.* x* tipos de información. Los bits se establecen como se muestra en la tabla siguiente.  
+Cuando un ODBC 3. *x* aplicación llama **SQLGetInfo** en una API ODBC 2*.x* controlador con el tipo de información SQL_XXXX_CURSOR_ATTRIBUTES1 (dinámico, solo avance, keyset-controlador de, o los cursores estáticos), la configuración de los bits devueltos por el Administrador de controladores depende de qué la API ODBC 2. *x* controlador devuelve el 2 de ODBC correspondiente. *x* tipos de información. Los bits se establecen como se muestra en la tabla siguiente.  
   
 |Valor del bit en<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Tipo de cursor|ODBC 2. *x* información<br /><br /> Tipo|  
 |-----------------------------------------------|-----------------|-------------------------------------|  

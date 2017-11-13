@@ -50,11 +50,11 @@ La sintaxis de la instrucción CREATE INDEX para el controlador de ODBC Paradox 
   
 -   El *nombre del índice* argumento para un índice principal debe ser el mismo que el nombre de base de la tabla, según sea necesario por Paradox.  
   
- Si la palabra clave **UNIQUE** es se omite, el controlador ODBC Paradox creará un índice no único. Esto consta de dos archivos de índice secundario de Paradox denominados *nombre de la tabla*. X* nn * y *nombre de la tabla*. Y*nn*, donde * nn * es el número de la columna en la tabla. Índices no únicos están sujetos a las restricciones siguientes:  
+ Si la palabra clave **UNIQUE** es se omite, el controlador ODBC Paradox creará un índice no único. Esto consta de dos archivos de índice secundario de Paradox denominados *nombre de la tabla*. X *nn*  y *nombre de la tabla*. Y*nn*, donde  *nn*  es el número de la columna en la tabla. Índices no únicos están sujetos a las restricciones siguientes:  
   
 -   Para poder crear un índice no único para una tabla, debe existir un índice principal para esa tabla.  
   
--   Para Paradox 3. *x*, *nombre del índice* argumento para todos los índices que no sea un índice principal (único o no es único) debe ser el mismo que el nombre de columna. Para Paradox 4. *x* y 5.* x*, puede ser el nombre de ese índice, pero no tiene que ser el mismo que el nombre de columna.  
+-   Para Paradox 3. *x*, *nombre del índice* argumento para todos los índices que no sea un índice principal (único o no es único) debe ser el mismo que el nombre de columna. Para Paradox 4. *x* y 5. *x*, puede ser el nombre de ese índice, pero no tiene que ser el mismo que el nombre de columna.  
   
 -   Solo una columna se puede especificar para un índice no único.  
   

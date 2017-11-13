@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **SQLGetData** no se puede llamar para cursores de solo avance.  
   
--   **SQLGetData** se puede llamar solo cuando se cumplen las condiciones siguientes: una **seleccione** instrucción genera el conjunto de resultados; el **seleccione** instrucción no contenía una combinación, un ** Unión** cláusula, o un **GROUP BY** cláusula; y columnas que utilicen un alias o una expresión en la lista select no se enlazaron con **SQLBindCol**.  
+-   **SQLGetData** se puede llamar solo cuando se cumplen las condiciones siguientes: una **seleccione** instrucción genera el conjunto de resultados; el **seleccione** instrucción no contenía una combinación, un  **Unión** cláusula, o un **GROUP BY** cláusula; y columnas que utilicen un alias o una expresión en la lista select no se enlazaron con **SQLBindCol**.  
   
 -   Si el controlador admite solo una instrucción activa, la biblioteca de cursores captura el resto del resultado establecer antes de ejecutar el **seleccione** instrucción y llamar al método **SQLGetData**.
 

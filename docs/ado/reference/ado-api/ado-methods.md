@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ffd5c3c3a735c86aa39f7ab0b521bb23e0c4e14
@@ -33,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |[BeginTrans, CommitTrans y RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Administra el procesamiento de transacciones en un **conexión** objeto como sigue:<br /><br /> **BeginTrans** : inicia una transacción nueva.<br /><br /> **CommitTrans** : guarda los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.<br /><br /> **RollbackTrans** : cancela cualquier cambio y termina la transacción actual. También puede iniciar una nueva transacción.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela la ejecución de una pendiente, llamada de método asincrónico.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela una actualización por lotes pendientes.|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila actual o nueva de un **Recordset** objeto, o el **campos** colección de un **registro** objeto antes de llamar a la ** Actualización** método.|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila actual o nueva de un **Recordset** objeto, o el **campos** colección de un **registro** objeto antes de llamar a la  **Actualización** método.|  
 |[Desactivar](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los **Error** objetos desde la **errores** colección.|  
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un duplicado **Recordset** objeto a partir de una existente **Recordset** objeto. Opcionalmente, especifica que la clonación sea de solo lectura.|  
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Interfaces y los objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propiedades de ADO](../../../ado/reference/ado-api/ado-properties.md)
+

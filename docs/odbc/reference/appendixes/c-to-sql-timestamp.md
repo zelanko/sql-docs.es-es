@@ -45,7 +45,7 @@ El identificador para el tipo de datos ODBC C de marca de tiempo es:
   
  Para obtener información acerca de qué valores son válidos en una estructura SQL_C_TIMESTAMP, consulte [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md), anteriormente en este apéndice.  
   
- Cuando los datos de marca de tiempo C se convierte en datos de SQL de caracteres, los datos de caracteres resultante están en la "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.* f... *] "formato.  
+ Cuando los datos de marca de tiempo C se convierte en datos de SQL de caracteres, los datos de caracteres resultante están en la "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[. *f...* ] "formato.  
   
  El controlador omite el valor de longitud/indicador al convertir datos del tipo de datos C de la marca de tiempo y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos C de la marca de tiempo. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
 

@@ -47,7 +47,7 @@ Indica si está habilitada la ejecución asincrónica.
   
  Si intenta llamar a [restablecer](../../../ado/reference/rds-api/reset-method-rds.md), [actualizar](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), o [conjunto de registros](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) mientras que otra operación asincrónica que podría cambiar el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto **Recordset** se está ejecutando, se produce un error.  
   
- Si se produce un error durante una operación asincrónica, la **RDS. DataControl** del objeto [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) cambia el valor de **adcReadyStateLoaded** a **adcReadyStateComplete**y el ** Conjunto de registros** sigue siendo el valor de la propiedad *nada*.  
+ Si se produce un error durante una operación asincrónica, la **RDS. DataControl** del objeto [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) cambia el valor de **adcReadyStateLoaded** a **adcReadyStateComplete**y el  **Conjunto de registros** sigue siendo el valor de la propiedad *nada*.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

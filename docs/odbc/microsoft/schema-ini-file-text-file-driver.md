@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 Cuando se utiliza el controlador de texto, el formato del archivo de texto se determina mediante un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y se mantiene siempre en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona el IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe utilizar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre el tratamiento de los datos de la tabla.  
   
 > [!NOTE]  
->  El ISAM de texto obtendrá los valores iniciales del registro, no de Schema.ini. El mismo formato de archivo predeterminado se aplica a todas las tablas de datos de texto nuevo. Todos los archivos creados por la instrucción CREATE TABLE heredan los mismos valores de formato predeterminado, que se establecen mediante la selección de valores de formato de archivo en el **Definir formato de texto** cuadro de diálogo con \<predeterminado > elegido en el ** Tablas** lista. Si los valores del registro difieren de los valores de Schema.ini, los valores de Schema.ini sobrescribirá los valores en el registro.  
+>  El ISAM de texto obtendrá los valores iniciales del registro, no de Schema.ini. El mismo formato de archivo predeterminado se aplica a todas las tablas de datos de texto nuevo. Todos los archivos creados por la instrucción CREATE TABLE heredan los mismos valores de formato predeterminado, que se establecen mediante la selección de valores de formato de archivo en el **Definir formato de texto** cuadro de diálogo con \<predeterminado > elegido en el  **Tablas** lista. Si los valores del registro difieren de los valores de Schema.ini, los valores de Schema.ini sobrescribirá los valores en el registro.  
   
 ## <a name="understanding-schemaini-files"></a>Descripción de los archivos de Schema.ini  
  Archivos de Schema.ini proporcionan información del esquema acerca de los registros en un archivo de texto. Cada entrada de Schema.ini especifica uno de los cinco características de la tabla:  
@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintaxis de **Col** * n * es:  
+ La sintaxis de **Col**  *n*  es:  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En la tabla siguiente describe cada parte de la **Col** * n * entrada.  
+ En la tabla siguiente describe cada parte de la **Col**  *n*  entrada.  
   
 |Parámetro|Description|  
 |---------------|-----------------|  

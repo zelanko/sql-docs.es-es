@@ -53,7 +53,7 @@ Una **matriz** de matrices o el valor **False**. La matriz consta de una matriz 
 |Tamaño|Número de caracteres de los campos de tipo de carácter: char(n), varchar(n), nchar(n), nvarchar(n) y XML. Número de bytes de los campos de tipo binario: binary(n), varbinary(n) y UDT. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
 |Precisión|La precisión de los tipos de precisión de variables: real, numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
 |Escala|La escala de los tipos de escala de variables: numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
-|Admisión de valores NULL|Un valor enumerado que indica si la columna acepta valores null (**SQLSRV_NULLABLE_YES**), la columna no acepta valores null (**SQLSRV_NULLABLE_NO**), o que no se sabe si la columna admite valores null (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|Admisión de valores NULL|Un valor enumerado que indica si la columna acepta valores null (**SQLSRV_NULLABLE_YES**), la columna no acepta valores null (**SQLSRV_NULLABLE_NO**), o que no se sabe si la columna admite valores null ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 En la tabla siguiente se proporciona más información sobre las claves de cada submatriz (consulte la documentación de SQL Server para obtener más información sobre estos tipos):  
   

@@ -32,9 +32,9 @@ ms.lasthandoff: 09/09/2017
 # <a name="datetime-data-type-changes"></a>Cambia el tipo de datos de fecha y hora
 En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca de tiempo han cambiado desde SQL_DATE, SQL_TIME y SQL_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 9, 10 y 11) a SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 91, 92 y 93), respectivamente. Los identificadores de tipo C correspondientes han cambiado desde SQL_C_DATE, SQL_C_TIME y SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME y SQL_C_TYPE_TIMESTAMP, respectivamente.  
   
- El tamaño de la columna y los dígitos decimales que se devuelve para los tipos de datos de fecha y hora SQL en ODBC 3. *x* son el mismo que la precisión y escala devueltos para ellos en ODBC 2.* x*. Estos valores son diferentes de los valores de los campos de descriptor SQL_DESC_PRECISION y SQL_DESC_SCALE. (Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferencia de longitud de bytes y el tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
+ El tamaño de la columna y los dígitos decimales que se devuelve para los tipos de datos de fecha y hora SQL en ODBC 3. *x* son el mismo que la precisión y escala devueltos para ellos en ODBC 2. *x*. Estos valores son diferentes de los valores de los campos de descriptor SQL_DESC_PRECISION y SQL_DESC_SCALE. (Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferencia de longitud de bytes y el tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
   
- Estos cambios afectan a **SQLDescribeCol**, **SQLDescribeParam**, y **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, y **SQLGetData**; y **SQLColumns**, **SQLGetTypeInfo **, **SQLProcedureColumns**, **SQLStatistics**, y **SQLSpecialColumns**.  
+ Estos cambios afectan a **SQLDescribeCol**, **SQLDescribeParam**, y **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, y **SQLGetData**; y **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, y **SQLSpecialColumns**.  
   
  La tabla siguiente muestra cómo ODBC 3*.x* el Administrador de controladores realiza la asignación de los tipos de datos de C de fecha, hora y marca de tiempo que se especificó en el *TargetType* argumentos de **SQLBindCol**y **SQLGetData** o en la *ValueType* argumento de **SQLBindParameter**.  
   
@@ -47,11 +47,11 @@ En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca
 |SQL_C_TIMESTAMP (11)|Ninguna asignación|SQL_C_TYPE_TIMESTAMP (93)|Ninguna asignación [1]|SQL_C_TYPE_TIMESTAMP (93)|  
 |SQL_C_TYPE_TIMESTAMP (93)|Error (a través de DM)|Error (a través de DM)|SQL_C_TIMESTAMP (11)|Ninguna asignación [2]|  
   
- [1] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
+ [1] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
   
- [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3.* x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
+ [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
   
- La tabla siguiente muestra cómo ODBC 3*.x* el Administrador de controladores realiza la asignación de los tipos de datos SQL de fecha, hora y marca de tiempo que se escribió en el *ParameterType* argumento de **SQLBindParameter ** o en la *DataType* argumento de **SQLGetTypeInfo**.  
+ La tabla siguiente muestra cómo ODBC 3*.x* el Administrador de controladores realiza la asignación de los tipos de datos SQL de fecha, hora y marca de tiempo que se escribió en el *ParameterType* argumento de **SQLBindParameter**  o en la *DataType* argumento de **SQLGetTypeInfo**.  
   
 |Tipo de datos<br /><br /> código escrito|2.*x* aplicación<br /><br /> 2.*x* controlador|2.*x* aplicación<br /><br /> 3.*x* controlador|3.*x* aplicación<br /><br /> 2.*x* controlador|3.*x* aplicación<br /><br /> 3.*x* controlador|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -62,7 +62,7 @@ En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca
 |SQL_TIMESTAMP (11)|Ninguna asignación|SQL_TYPE_TIMESTAMP (93)|Ninguna asignación [1]|SQL_TYPE_TIMESTAMP (93)|  
 |SQL_TYPE_TIMESTAMP (93)|Error (a través de DM)|Error (a través de DM)|SQL_TIMESTAMP (11)|Ninguna asignación [2]|  
   
- [1] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
+ [1] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
   
- [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3.* x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.
+ [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.
 

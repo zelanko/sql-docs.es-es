@@ -37,7 +37,7 @@ Para ayudar en la depuración, las enumeraciones ADO muestran un valor para cada
 |[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)|Especifica un marcador que indica dónde debe comenzar la operación.|  
 |[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|Especifica cómo se debe interpretar un argumento de comando.|  
 |[CompareEnum](../../../ado/reference/ado-api/compareenum.md)|Especifica la posición relativa de dos registros representados por sus marcadores.|  
-|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Especifica los permisos disponibles para modificar datos en un **conexión**, abra un **registro**, o especificar valores para la **modo** propiedad de la ** Registro** y **flujo** objetos.|  
+|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Especifica los permisos disponibles para modificar datos en un **conexión**, abra un **registro**, o especificar valores para la **modo** propiedad de la  **Registro** y **flujo** objetos.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|Especifica si el **abiertos** método de un **conexión** objeto debe devolver después (sincrónicamente) o antes (asincrónicamente) se establece la conexión.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|Especifica si se debe mostrar un cuadro de diálogo para solicitar parámetros que faltan al abrir una conexión a un origen de datos ODBC.|  
 |[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Especifica el comportamiento de la **CopyRecord** método.|  

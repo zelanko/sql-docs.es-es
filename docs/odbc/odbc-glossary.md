@@ -59,7 +59,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="b"></a>B  
  **cambio de comportamiento**  
- Un cambio en cierta funcionalidad de ODBC 3*.x* comportamiento de ODBC 2.* x* comportamiento, o viceversa. Ocasiona el cambio del atributo de entorno SQL_ATTR_ODBC_VERSION.  
+ Un cambio en cierta funcionalidad de ODBC 3*.x* comportamiento de ODBC 2. *x* comportamiento, o viceversa. Ocasiona el cambio del atributo de entorno SQL_ATTR_ODBC_VERSION.  
   
  **Objeto binario grande (BLOB)**  
  Todos los datos binarios a través de un número determinado de bytes, como 255. Suele ser mucho mayor. En general, estos datos se envía a y recuperados del origen de datos en partes. También se denomina *datos long*.  

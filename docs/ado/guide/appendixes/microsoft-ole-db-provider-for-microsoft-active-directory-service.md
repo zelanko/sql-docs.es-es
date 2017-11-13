@@ -90,7 +90,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>Comportamiento del conjunto de registros  
  Las tablas siguientes enumeran las características disponibles en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto abierto mediante este proveedor. El tipo de cursor estático (**adOpenStatic**) está disponible.  
   
- Para obtener más información acerca de **Recordset** comportamiento de la configuración del proveedor, ejecute el [admite](../../../ado/reference/ado-api/supports-method.md) método y enumerar el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de la ** Conjunto de registros** para determinar si las propiedades dinámicas específicas del proveedor están presentes.  
+ Para obtener más información acerca de **Recordset** comportamiento de la configuración del proveedor, ejecute el [admite](../../../ado/reference/ado-api/supports-method.md) método y enumerar el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de la  **Conjunto de registros** para determinar si las propiedades dinámicas específicas del proveedor están presentes.  
   
  **Disponibilidad de las propiedades de conjunto de registros ADO estándares:**  
   

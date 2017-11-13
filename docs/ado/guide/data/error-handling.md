@@ -42,7 +42,7 @@ ADO utiliza varios métodos diferentes para notificar a una aplicación de error
   
 -   Problemas que se producen al procesar por lotes las actualizaciones u otras operaciones masivas que implican un **Recordset** puede indicarse mediante la **estado** propiedad de la **conjunto de registros**. Por ejemplo, pueden especificar por infracciones de restricción de esquema o permisos insuficientes **RecordStatusEnum** valores.  
   
--   Problemas que se producen implicando a un determinado **campo** en el registro actual también se indican mediante el **estado** propiedad de cada **campo** en la **campos ** colección de la **registro** o **conjunto de registros**. Por ejemplo, se pueden especificar las actualizaciones que no se pudieron completar o tipos de datos incompatibles por **FieldStatusEnum** valores.  
+-   Problemas que se producen implicando a un determinado **campo** en el registro actual también se indican mediante el **estado** propiedad de cada **campo** en la **campos**  colección de la **registro** o **conjunto de registros**. Por ejemplo, se pueden especificar las actualizaciones que no se pudieron completar o tipos de datos incompatibles por **FieldStatusEnum** valores.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -82,7 +82,7 @@ shutdown /r /t 1
  Antes de la versión 4.0 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], se tenía que anexar el nombre del servidor al identificador de usuario en la cadena de conexión. Por ejemplo, user@servername. A partir de la versión 4.0 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ya no es necesario anexar @servername al identificador de usuario en la cadena de conexión.  
   
  Usar el cifrado requiere establecer hostNameInCertificate  
- Cuando se conecta a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **cifrar = true**. (Si es el nombre del servidor en la cadena de conexión *shortName*.* domainName*, establezca el **hostNameInCertificate** propiedad \*.* domainName*.)  
+ Cuando se conecta a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **cifrar = true**. (Si es el nombre del servidor en la cadena de conexión *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.)  
   
  Por ejemplo:  
   

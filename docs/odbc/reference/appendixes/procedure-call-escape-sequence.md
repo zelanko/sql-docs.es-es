@@ -43,11 +43,11 @@ ODBC utiliza secuencias de escape para las llamadas de procedimiento. La sintaxi
   
  *nombre del procedimiento* :: = *identificador de procedimiento*  
   
- &#124; *nombre del propietario*.* identificador de procedimiento*  
+ &#124; *nombre del propietario*. *identificador de procedimiento*  
   
  &#124; *separador del catálogo de nombre del catálogo* *identificador de procedimiento*  
   
- &#124; *separador del catálogo de nombre del catálogo* [*nombre del propietario*].* identificador de procedimiento*  
+ &#124; *separador del catálogo de nombre del catálogo* [*nombre del propietario*]. *identificador de procedimiento*  
   
  (La sintaxis de la tercera es válida únicamente si el origen de datos no es compatible con los propietarios).  
   

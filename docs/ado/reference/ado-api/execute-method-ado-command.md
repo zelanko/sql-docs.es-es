@@ -61,7 +61,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  Si el comando no está diseñado para devolver resultados (por ejemplo, una consulta UPDATE de SQL) el proveedor devuelve **nada** siempre que la opción **adExecuteNoRecords** especificado; en caso contrario, Execute devuelve un cerrado **conjunto de registros**. Algunos lenguajes de aplicación permiten omitir este valor devuelto si no hay ningún **Recordset** se desea.  
   
- **Ejecutar** genera un error si el usuario especifica un valor para **CommandStream** cuando el **CommandType** es **adCmdStoredProc**, ** adCmdTable**, o **adCmdTableDirect**.  
+ **Ejecutar** genera un error si el usuario especifica un valor para **CommandStream** cuando el **CommandType** es **adCmdStoredProc**,  **adCmdTable**, o **adCmdTableDirect**.  
   
  Si la consulta tiene parámetros, valores actual para la **comando** se usan los parámetros del objeto a menos que se reemplacen éstos con los valores de parámetro pasados con la **Execute** llamar. Puede reemplazar un subconjunto de los parámetros omitiendo valores nuevos para algunos de los parámetros cuando se llama a la **Execute** método. El orden en que se especifican los parámetros es el mismo orden en que los pasa al método. Por ejemplo, si hay cuatro (o más) parámetros y desea pasar valores nuevos para los parámetros primeros y cuarto, pasaría `Array(var1,,,var4)` como el *parámetros* argumento.  
   

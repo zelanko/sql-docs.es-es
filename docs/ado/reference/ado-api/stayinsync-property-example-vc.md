@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="stayinsync-property-example-vc"></a>Ejemplo de la propiedad StayInSync (VC ++)
 Este ejemplo se muestra cómo el [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propiedad facilita el acceso a las filas en una jerárquica [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- El bucle externo muestra el nombre y apellido de cada autor, estado e identificación. Anexa **Recordset** para cada fila se recupera de la [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección y asignada automáticamente a **rstTitleAuthor** por el **StayInSync ** propiedad cada vez que el elemento primario **Recordset** se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila en el conjunto de registros anexado.  
+ El bucle externo muestra el nombre y apellido de cada autor, estado e identificación. Anexa **Recordset** para cada fila se recupera de la [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección y asignada automáticamente a **rstTitleAuthor** por el **StayInSync**  propiedad cada vez que el elemento primario **Recordset** se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila en el conjunto de registros anexado.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

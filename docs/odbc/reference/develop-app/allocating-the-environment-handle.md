@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="allocating-the-environment-handle"></a>Asignar el identificador de entorno
-La primera tarea para cualquier aplicación ODBC es cargar el Administrador de controladores; cómo llevarlo a cabo depende del sistema operativo. Por ejemplo, en un equipo que ejecuta Microsoft® Windows NT® Server o Windows 2000 Server, Windows NT Workstation o Windows 2000 Professional o Microsoft Windows® 95 ó 98, la aplicación o se vincula a la biblioteca del Administrador de controladores o llamadas ** LoadLibrary** para cargar la DLL del Administrador de controladores.  
+La primera tarea para cualquier aplicación ODBC es cargar el Administrador de controladores; cómo llevarlo a cabo depende del sistema operativo. Por ejemplo, en un equipo que ejecuta Microsoft® Windows NT® Server o Windows 2000 Server, Windows NT Workstation o Windows 2000 Professional o Microsoft Windows® 95 ó 98, la aplicación o se vincula a la biblioteca del Administrador de controladores o llamadas  **LoadLibrary** para cargar la DLL del Administrador de controladores.  
   
  La tarea siguiente, que debe realizarse antes de que una aplicación puede llamar a cualquier otra función ODBC, es inicializar el entorno de ODBC y asignar un identificador de entorno, como se indica a continuación:  
   

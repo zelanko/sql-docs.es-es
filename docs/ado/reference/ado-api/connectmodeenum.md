@@ -28,13 +28,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Especifica los permisos disponibles para modificar datos en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md), abra un [registro](../../../ado/reference/ado-api/record-object-ado.md), o especificar valores para la [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad de la ** Registro** y [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
+Especifica los permisos disponibles para modificar datos en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md), abra un [registro](../../../ado/reference/ado-api/record-object-ado.md), o especificar valores para la [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad de la  **Registro** y [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica los permisos de solo lectura.|  
 |**adModeReadWrite**|3|Indica los permisos de lectura/escritura.|  
-|**adModeRecursive**|0x400000|Usar junto con las demás * \*ShareDeny\* * valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, o **adModeShareDenyRead**) para propagar restricciones de uso compartido para todos los registros secundarios del elemento actual **registro**. No tiene ningún efecto si la **registro** no tiene ningún elemento secundario. Se genera un error de tiempo de ejecución si se utiliza con **adModeShareDenyNone** solo. Sin embargo, puede utilizarse con **adModeShareDenyNone** cuando se combina con otros valores. Por ejemplo, puede usar "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
+|**adModeRecursive**|0x400000|Usar junto con las demás  *\*ShareDeny\**  valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, o **adModeShareDenyRead**) para propagar restricciones de uso compartido para todos los registros secundarios del elemento actual **registro**. No tiene ningún efecto si la **registro** no tiene ningún elemento secundario. Se genera un error de tiempo de ejecución si se utiliza con **adModeShareDenyNone** solo. Sin embargo, puede utilizarse con **adModeShareDenyNone** cuando se combina con otros valores. Por ejemplo, puede usar "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
 |**adModeShareDenyNone**|16|Permite a otros usuarios abrir una conexión con los permisos. No se puede negar a los demás el acceso de lectura ni el de escritura.|  
 |**adModeShareDenyRead**|4|Se evita que otros puedan abrir una conexión con permisos de lectura.|  
 |**adModeShareDenyWrite**|8|Se evita que otros puedan abrir una conexión con permisos de escritura.|  

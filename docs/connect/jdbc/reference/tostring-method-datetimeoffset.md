@@ -38,7 +38,7 @@ public String toString()
  Una representación de cadena de la **DateTimeOffset** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- La cadena tiene el formato *aaaa*-*MM*-*DD**hh*:*mm*: *ss*[.* fffffff*] [+ |-]*hh*:*mm*.  
+ La cadena tiene el formato *aaaa*-*MM*-*DD**hh*:*mm*: *ss*[. *fffffff*] [+ |-]*hh*:*mm*.  
   
  Las fracciones de segundo de la cadena devuelta se rellenan con ceros hasta la precisión definida. Por ejemplo, un **datetimeoffset(6)** con un valor de "2010-03-10 12:34:56.78 -08:00" formateará DateTimeOffset.toString como "12:34:56.780000 2010-03-10-08:00".  
   

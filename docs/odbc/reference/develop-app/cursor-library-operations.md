@@ -33,5 +33,5 @@ ms.lasthandoff: 09/09/2017
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del controlador cursor.  
   
- Si una aplicación que trabaja con una API ODBC 2*.x* controlador realiza llamadas a ODBC 3.* x* biblioteca de cursores, la aplicación puede usar ODBC 3.* x* características que no son compatibles con la API ODBC 2*.x* controlador. Un escritor de la aplicación debe tener cuidado, cómo se utilizan estas características, sin embargo. Uso de ODBC 3. *x* biblioteca de cursores no realiza un ODBC 2*.x* controlador en una aplicación ODBC 3.* x* controlador.
+ Si una aplicación que trabaja con una API ODBC 2*.x* controlador realiza llamadas a ODBC 3. *x* biblioteca de cursores, la aplicación puede usar ODBC 3. *x* características que no son compatibles con la API ODBC 2*.x* controlador. Un escritor de la aplicación debe tener cuidado, cómo se utilizan estas características, sin embargo. Uso de ODBC 3. *x* biblioteca de cursores no realiza un ODBC 2*.x* controlador en una aplicación ODBC 3. *x* controlador.
 

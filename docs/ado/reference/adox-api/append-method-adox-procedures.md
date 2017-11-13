@@ -51,7 +51,7 @@ Procedures.Append Name, Command
  Si el texto del comando que especifica el usuario representa una vista en lugar de un procedimiento, el comportamiento depende del proveedor que se está usando. **Anexar** se producirá un error si el proveedor no admite comandos persistentes.  
   
 > [!NOTE]
->  Cuando se utiliza el proveedor OLE DB para Microsoft Jet, el **procedimientos** colección **anexado** método le permitirá especificar una **vista** en lugar de un ** Procedimiento** en el *comando* parámetro. El **vista** se agregará al origen de datos y se agregará a la **procedimientos** colección. Después de la **anexado**, si la **procedimientos** y **vistas** se actualizan las colecciones, el **vista** ya no estará en el **Procedimientos** colección y se mostrarán en el **vistas** colección.  
+>  Cuando se utiliza el proveedor OLE DB para Microsoft Jet, el **procedimientos** colección **anexado** método le permitirá especificar una **vista** en lugar de un  **Procedimiento** en el *comando* parámetro. El **vista** se agregará al origen de datos y se agregará a la **procedimientos** colección. Después de la **anexado**, si la **procedimientos** y **vistas** se actualizan las colecciones, el **vista** ya no estará en el **Procedimientos** colección y se mostrarán en el **vistas** colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Colección de procedimientos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  

@@ -43,7 +43,7 @@ Todos los controladores ODBC deben exhibir el mínimo nivel de núcleo conformid
   
 -   Administrar nombres de cursores y los cursores mediante una llamada a **SQLCloseCursor**, **SQLGetCursorName**, y **SQLSetCursorName**.  
   
--   Obtener acceso a la descripción (metadatos) de conjuntos de resultados, mediante una llamada a **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, y **SQLRowCount **. (Uso de estas funciones en la columna número 0 para recuperar los metadatos de marcador es característica 204 en [conformidad de interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Obtener acceso a la descripción (metadatos) de conjuntos de resultados, mediante una llamada a **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, y **SQLRowCount** . (Uso de estas funciones en la columna número 0 para recuperar los metadatos de marcador es característica 204 en [conformidad de interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   Consultar el diccionario de datos, mediante una llamada a las funciones de catálogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, y **SQLTables**.  
   

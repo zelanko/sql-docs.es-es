@@ -44,7 +44,7 @@ Contiene todos los [campo](../../../ado/reference/ado-api/field-object.md) objet
   
  Ciertos proveedores (por ejemplo, el [proveedor Microsoft OLE DB para Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) puede rellenar el **campos** colección con un subconjunto de los campos disponibles para la **registro** o **conjunto de registros**. Otros campos no se agregarán a la colección hasta que hace referencia por nombre o por primera vez indizados por el código.  
   
- Si intenta hacer referencia a un campo inexistente por su nombre, un nuevo **campo** objeto se anexará a la **campos** colección con un [estado](../../../ado/reference/ado-api/status-property-ado-field.md) de ** adFieldPendingInsert**. Cuando se llama a [actualización](../../../ado/reference/ado-api/update-method.md), ADO creará un nuevo campo en el origen de datos si permitido por el proveedor.  
+ Si intenta hacer referencia a un campo inexistente por su nombre, un nuevo **campo** objeto se anexará a la **campos** colección con un [estado](../../../ado/reference/ado-api/status-property-ado-field.md) de  **adFieldPendingInsert**. Cuando se llama a [actualización](../../../ado/reference/ado-api/update-method.md), ADO creará un nuevo campo en el origen de datos si permitido por el proveedor.  
   
  Esta sección contiene el siguiente tema.  
   

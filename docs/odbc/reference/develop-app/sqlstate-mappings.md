@@ -27,13 +27,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlstate-mappings"></a>Asignaciones SQLSTATE
-En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3.* x*. Para obtener más información sobre ODBC 3. *x* valores de SQLSTATE, consulte [Apéndice A: códigos de Error de ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3. *x*. Para obtener más información sobre ODBC 3. *x* valores de SQLSTATE, consulte [Apéndice A: códigos de Error de ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  En ODBC 3. *x*, HYxxx SQLSTATE se devuelven en lugar de S1xxx y 42Sxx SQLSTATE se devuelve en lugar de S00XX. Esto se hacía para alinearse con estándares Open Group e ISO. En muchos casos, la asignación no es uno a uno porque los estándares han redefinido la interpretación de SQLSTATE varias.  
   
- Cuando un ODBC 2. *x* aplicación se actualiza a una aplicación ODBC 3.* x* aplicación, la aplicación tiene que cambiar para esperar que ODBC 3.* x* SQLSTATEs en lugar de ODBC 2.* x* SQLSTATEs. En la tabla siguiente se enumera ODBC 3. *x* SQLSTATE que cada ODBC 2.* x* SQLSTATE se asigna a.  
+ Cuando un ODBC 2. *x* aplicación se actualiza a una aplicación ODBC 3. *x* aplicación, la aplicación tiene que cambiar para esperar que ODBC 3. *x* SQLSTATEs en lugar de ODBC 2. *x* SQLSTATEs. En la tabla siguiente se enumera ODBC 3. *x* SQLSTATE que cada ODBC 2. *x* SQLSTATE se asigna a.  
   
- Cuando se establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC2, el controlador envía ODBC 2. *x* SQLSTATEs en lugar de ODBC 3.* x* SQLSTATEs cuando **SQLGetDiagField** o **SQLGetDiagRec** se llama. Una asignación determinada se puede determinar mediante la anotación de la API ODBC 2*.x* SQLSTATE en la columna 1 de la siguiente tabla que corresponde a ODBC 3.* x* SQLSTATE en la columna 2.  
+ Cuando se establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC2, el controlador envía ODBC 2. *x* SQLSTATEs en lugar de ODBC 3. *x* SQLSTATEs cuando **SQLGetDiagField** o **SQLGetDiagRec** se llama. Una asignación determinada se puede determinar mediante la anotación de la API ODBC 2*.x* SQLSTATE en la columna 1 de la siguiente tabla que corresponde a ODBC 3. *x* SQLSTATE en la columna 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Comentarios|  
 |-------------------------|-------------------------|--------------|  
@@ -54,7 +54,7 @@ En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3.* x*. Pa
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2. *x* S1002 SQLSTATE se asigna a ODBC 3.* x* SQLSTATE 07009 si la función subyacente se **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch **, **SQLFetchScroll**, o **SQLGetData**.|  
+|S1002|07009|ODBC 2. *x* S1002 SQLSTATE se asigna a ODBC 3. *x* SQLSTATE 07009 si la función subyacente se **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch** , **SQLFetchScroll**, o **SQLGetData**.|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
@@ -67,7 +67,7 @@ En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3.* x*. Pa
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3. *x* SQLSTATE 07009 se asigna a la API ODBC 2.* x* SQLSTATE S1093 si la función subyacente se **SQLBindParameter** o **SQLDescribeParam**.|  
+|S1093|07009|ODBC 3. *x* SQLSTATE 07009 se asigna a la API ODBC 2. *x* SQLSTATE S1093 si la función subyacente se **SQLBindParameter** o **SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -87,5 +87,5 @@ En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3.* x*. Pa
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3. *x* SQLSTATE 07008 se asigna a la API ODBC 2.* x* SQLSTATE S1000.
+>  ODBC 3. *x* SQLSTATE 07008 se asigna a la API ODBC 2. *x* SQLSTATE S1000.
 

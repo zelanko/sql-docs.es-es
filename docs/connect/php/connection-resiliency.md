@@ -28,7 +28,7 @@ Resistencia de conexión se implementa con dos palabras clave de conexión que s
 |**ConnectRetryCount**| Número entero comprendido entre 0 y 255 (ambos inclusive)|1|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para volver a establecer una conexión cuando se divide. Un valor de 0 significa que no se intentará ninguna reconexión.|
 |**ConnectRetryInterval**| Número entero comprendido entre 1 y 60 (inclusive)|1| El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente cuando detecta una conexión interrumpida y, a continuación, esperará **ConnectRetryInterval** segundos antes de volver a intentarlo. Esta palabra clave se omite si **ConnectRetryCount** es igual a 0.
 
-Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** es mayor que **LoginTimeout**, a continuación, el cliente dejará de intentar conectarse una vez ** LoginTimeout** se alcanza; en caso contrario, continuará intentar volver a conectarse hasta que **ConnectRetryCount** se alcanza.
+Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** es mayor que **LoginTimeout**, a continuación, el cliente dejará de intentar conectarse una vez  **LoginTimeout** se alcanza; en caso contrario, continuará intentar volver a conectarse hasta que **ConnectRetryCount** se alcanza.
 
 #### <a name="remarks"></a>Comentarios
 

@@ -36,7 +36,7 @@ Indica la longitud real de un campo??? valor s en bytes.
 ## <a name="remarks"></a>Comentarios  
  Use la **ActualSize** propiedad para devolver la longitud real de un [campo](../../../ado/reference/ado-api/field-object.md) valor del objeto. Para todos los campos, el **ActualSize** propiedad es de solo lectura. Si ADO no puede determinar la longitud de la **campo** valor de objeto, el **ActualSize** propiedad devuelve **adUnknown**.  
   
- El **ActualSize** y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades son diferentes, como se muestra en el ejemplo siguiente. A **campo** objeto con un tipo declarado de **parámetros** y una longitud máxima de 50 caracteres devuelve un **DefinedSize** valor de la propiedad de 50, pero la ** ActualSize** devuelve el valor de propiedad es la longitud de los datos almacenados en el campo para el registro actual. **Campos** con un **DefinedSize** mayores que 255 bytes se tratan como columnas de longitud variable.  
+ El **ActualSize** y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades son diferentes, como se muestra en el ejemplo siguiente. A **campo** objeto con un tipo declarado de **parámetros** y una longitud máxima de 50 caracteres devuelve un **DefinedSize** valor de la propiedad de 50, pero la  **ActualSize** devuelve el valor de propiedad es la longitud de los datos almacenados en el campo para el registro actual. **Campos** con un **DefinedSize** mayores que 255 bytes se tratan como columnas de longitud variable.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)  

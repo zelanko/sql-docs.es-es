@@ -38,13 +38,13 @@ Este tema enumeran las nuevas características introducidas con cada versión de
  *No se permite el acceso de unidad de disco duro fuera de una zona de confianza.*
 En entre dominios scripting debidos a sitios no es de confianza, se deshabilitan las siguientes operaciones: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, y **Recordset.Open**, que se usa junto con el **adCmdFile** marca o con el proveedor Microsoft OLE DB persistencia (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *y* **Stream.LoadFromFile***operan sobre solo los archivos físicos.        *
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *y* **Stream.LoadFromFile***operan sobre solo los archivos físicos.* 
 Estos métodos ahora comprobar que los identificadores de archivo señalan a solo los archivos físicos.
 
- **Recordset.ActiveCommand***devuelve un error cuando se invoca desde una página HTML/ASP.  *
+ **Recordset.ActiveCommand***devuelve un error cuando se invoca desde una página HTML/ASP.* 
 Esto evita que el **comando** objeto desde que se usen incorrectamente.
 
- *El número de***conjuntos de registros***devuelto por una anidada***forma***comando tiene un límite superior.        *
+ *El número de***conjuntos de registros***devuelto por una anidada***forma***comando tiene un límite superior.* 
 Un comando shape anidado ahora devuelve un máximo de 512 **conjuntos de registros**. Esto significa que un **forma** comando ya no se puede anidar en cualquier nivel de profundidad. En su lugar, la profundidad del nivel máxima es 512, si cada comando da como resultado un único (elemento secundario) **conjunto de registros**. If, en cualquier nivel, una **forma** comando devuelve varios **conjuntos de registros**, el nivel máximo de profundidad será inferior a 512.
 
 ## <a name="ado-27"></a>ADO 2.7

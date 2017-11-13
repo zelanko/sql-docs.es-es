@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Desplazamiento y captura filas (ODBC)
-Cuando se utiliza un cursor desplazable, las aplicaciones llaman a **SQLFetchScroll** para colocar las filas del cursor y fetch. **SQLFetchScroll** permite el desplazamiento relativo (siguiente, anterior y relative * n * filas), desplazamiento absoluto (, apellidos y fila * n *), y posicionamiento por marcador. El *FetchOrientation* y *FetchOffset* argumentos en **SQLFetchScroll** especificar qué filas que se va a capturar, como se muestra en los diagramas siguientes.  
+Cuando se utiliza un cursor desplazable, las aplicaciones llaman a **SQLFetchScroll** para colocar las filas del cursor y fetch. **SQLFetchScroll** permite el desplazamiento relativo (siguiente, anterior y relative  *n*  filas), desplazamiento absoluto (, apellidos y fila  *n* ), y posicionamiento por marcador. El *FetchOrientation* y *FetchOffset* argumentos en **SQLFetchScroll** especificar qué filas que se va a capturar, como se muestra en los diagramas siguientes.  
   
  ![A continuación, capturar anterior, primero y último conjuntos de filas](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

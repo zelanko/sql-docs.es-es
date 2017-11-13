@@ -53,30 +53,30 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszFileName*  
- [Entrada] Puntero al búfer de datos que contiene el nombre del archivo DSN. Se anexa una extensión .dsn a todos los nombres de archivo que aún no tiene una extensión .dsn. El valor de * \*lpszFileName* debe ser una cadena terminada en null.  
+ [Entrada] Puntero al búfer de datos que contiene el nombre del archivo DSN. Se anexa una extensión .dsn a todos los nombres de archivo que aún no tiene una extensión .dsn. El valor de  *\*lpszFileName* debe ser una cadena terminada en null.  
   
  *lpszAppName*  
- [Entrada] Puntero al búfer de datos que contiene el nombre de la aplicación. Esto es "ODBC" de la sección ODBC. El valor de * \*lpszAppName* debe ser una cadena terminada en null.  
+ [Entrada] Puntero al búfer de datos que contiene el nombre de la aplicación. Esto es "ODBC" de la sección ODBC. El valor de  *\*lpszAppName* debe ser una cadena terminada en null.  
   
  *lpszKeyName*  
- [Entrada] Puntero al búfer de datos que contiene el nombre de la clave que se va a leer. Palabras clave reservadas, vea "Comentarios". El valor de * \*lpszAppName* debe ser una cadena terminada en null.  
+ [Entrada] Puntero al búfer de datos que contiene el nombre de la clave que se va a leer. Palabras clave reservadas, vea "Comentarios". El valor de  *\*lpszAppName* debe ser una cadena terminada en null.  
   
  *lpszString*  
  [Salida] Puntero al búfer de datos que contiene la cadena asociada a la clave que se va a leer.  
   
- Si * \*lpszFileName* es un nombre de archivo .dsn válido pero la *lpszAppName* argumento es un puntero nulo y la *lpszKeyName* argumento es un puntero nulo, a continuación, * \*lpszString* contiene una lista de aplicaciones válidas. Si * \*lpszFileName* es un nombre de archivo .dsn válido y * \*lpszAppName* es un nombre de aplicación válido, pero la *lpszKeyName* argumento es un valor null puntero, a continuación, * \*lpszString* contiene una lista de palabras clave reservadas válidas en la sección correspondiente del archivo DSN, delimitado por punto y coma. Si * \*lpszFileName* es un nombre de archivo .dsn válida pero * \*lpszAppName* es un puntero nulo y la *lpszKeyName* argumento es un puntero nulo, a continuación, * \*lpszString* contiene una lista de las secciones en el archivo DSN, delimitados por punto y coma.  
+ Si  *\*lpszFileName* es un nombre de archivo .dsn válido pero la *lpszAppName* argumento es un puntero nulo y la *lpszKeyName* argumento es un puntero nulo, a continuación,  *\*lpszString* contiene una lista de aplicaciones válidas. Si  *\*lpszFileName* es un nombre de archivo .dsn válido y  *\*lpszAppName* es un nombre de aplicación válido, pero la *lpszKeyName* argumento es un valor null puntero, a continuación,  *\*lpszString* contiene una lista de palabras clave reservadas válidas en la sección correspondiente del archivo DSN, delimitado por punto y coma. Si  *\*lpszFileName* es un nombre de archivo .dsn válida pero  *\*lpszAppName* es un puntero nulo y la *lpszKeyName* argumento es un puntero nulo, a continuación,  *\*lpszString* contiene una lista de las secciones en el archivo DSN, delimitados por punto y coma.  
   
  *cbString*  
- [Entrada] Longitud de la * \*lpszString* búfer.  
+ [Entrada] Longitud de la  *\*lpszString* búfer.  
   
  *pcbString*  
- [Salida] Número total de bytes disponible para devolver en * \*lpszString*. Si el número de bytes disponible para devolver es mayor o igual que *cbString*, la cadena de salida en * \*lpszString* se trunca a *cbString* menos el carácter de terminación null. El *pcbString* argumento puede ser un puntero nulo.  
+ [Salida] Número total de bytes disponible para devolver en  *\*lpszString*. Si el número de bytes disponible para devolver es mayor o igual que *cbString*, la cadena de salida en  *\*lpszString* se trunca a *cbString* menos el carácter de terminación null. El *pcbString* argumento puede ser un puntero nulo.  
   
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si se realiza correctamente, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Cuando **SQLReadFileDSN** devuelve FALSE, un asociado * \*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los * \*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLReadFileDSN** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los  *\*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -85,7 +85,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_INVALID_PATH|Ruta de acceso de instalación no válida|La ruta de acceso del nombre de archivo especificado en el *lpszFileName* argumento no era válido.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitud no válido|El *lpszAppName* argumento era nulo, mientras que la *lpszKeyName* argumento era válido.|  
 |ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El programa de instalación no pudo realizar la función debido a la falta de memoria.|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Cadena de salida truncada|La cadena devuelta en * \*lpszString* se truncó porque el valor de *cbString* era menor o igual al valor de * \*pcbString*.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Cadena de salida truncada|La cadena devuelta en  *\*lpszString* se truncó porque el valor de *cbString* era menor o igual al valor de  *\*pcbString*.|  
 |ODBC_ERROR_REQUEST_FAILED|Error en la solicitud|La palabra clave no existía en el DSN de archivo.|  
   
 ## <a name="comments"></a>Comentarios  

@@ -29,5 +29,5 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="calling-sqlgetdiagfield"></a>Al llamar a SQLGetDiagField
-Cuando un ODBC 3. *x* aplicación llama **SQLGetDiagField** en una API ODBC 2*.x* controlador, el controlador devuelve SQL_SUCCESS y la información correspondiente en * \*DiagInfoPtr* si la *DiagIdentifier* argumento es SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_ NÚMERO, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME o SQL_DIAG_SQLSTATE. Todos los demás campos de diagnóstico devolverá SQL_ERROR.
+Cuando un ODBC 3. *x* aplicación llama **SQLGetDiagField** en una API ODBC 2*.x* controlador, el controlador devuelve SQL_SUCCESS y la información correspondiente en  *\*DiagInfoPtr* si la *DiagIdentifier* argumento es SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_ NÚMERO, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME o SQL_DIAG_SQLSTATE. Todos los demás campos de diagnóstico devolverá SQL_ERROR.
 

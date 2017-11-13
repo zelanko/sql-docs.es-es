@@ -56,7 +56,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Si determina en el evento Will que la operación debe continuar, no modifique la *estado* parámetro sin cambios. Siempre y cuando no se estableció el parámetro de estado entrante **adStatusCantDeny**, sin embargo, puede cancelar la operación pendiente cambiando *estado* a **adStatusCancel**. Al hacer esto, el evento Complete asociado a la operación tiene su *estado* parámetro establecido en **adStatusErrorsOccurred**. El **Error** objeto que se pasa al evento Complete contendrá el valor **adErrOperationCancelled**.  
   
- Si ya no desea procesar un evento, puede establecer *estado* a **adStatusUnwantedEvent** y su aplicación ya no recibirá notificación de dicho evento. Sin embargo, recuerde que algunos eventos se pueden generar más de una de las razones. En ese caso, debe especificar **adStatusUnwantedEvent** para todas las posibles razones. Por ejemplo, para dejar de recibir notificaciones de pendiente **RecordChange** eventos, debe establecer el *estado* parámetro **adStatusUnwantedEvent** para ** adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, y **adRsnFirstChange** cuando se producen.  
+ Si ya no desea procesar un evento, puede establecer *estado* a **adStatusUnwantedEvent** y su aplicación ya no recibirá notificación de dicho evento. Sin embargo, recuerde que algunos eventos se pueden generar más de una de las razones. En ese caso, debe especificar **adStatusUnwantedEvent** para todas las posibles razones. Por ejemplo, para dejar de recibir notificaciones de pendiente **RecordChange** eventos, debe establecer el *estado* parámetro **adStatusUnwantedEvent** para  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, y **adRsnFirstChange** cuando se producen.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -64,7 +64,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Solicitar la cancelación de la operación que está a punto de producirse.|  
   
 ## <a name="error-parameter"></a>Parámetro de error  
- El *Error* parámetro es una referencia a ADO [Error](../../../ado/reference/ado-api/error-object.md) objeto. Cuando el *estado* parámetro está establecido en **adStatusErrorsOccurred**, **Error** objeto contiene los detalles sobre por qué falló la operación. Si el evento Will asociado a un evento Complete ha cancelado la operación estableciendo el *estado* parámetro **adStatusCancel**, el objeto de error siempre se establece en ** adErrOperationCancelled**.  
+ El *Error* parámetro es una referencia a ADO [Error](../../../ado/reference/ado-api/error-object.md) objeto. Cuando el *estado* parámetro está establecido en **adStatusErrorsOccurred**, **Error** objeto contiene los detalles sobre por qué falló la operación. Si el evento Will asociado a un evento Complete ha cancelado la operación estableciendo el *estado* parámetro **adStatusCancel**, el objeto de error siempre se establece en  **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Parámetro de objeto  
  Cada evento recibe uno o más objetos que representan los objetos implicados en la operación. Por ejemplo, el **ExecuteComplete** evento recibe un **comando** objeto, un **Recordset** objeto y un **conexión** objeto.  

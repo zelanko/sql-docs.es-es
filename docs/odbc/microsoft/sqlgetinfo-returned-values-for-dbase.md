@@ -101,7 +101,7 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_DRIVER_HSTMT|Controlado por el Administrador de controladores.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (* nnnn * especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" ( *nnnn*  especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

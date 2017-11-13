@@ -33,11 +33,11 @@ Las aplicaciones basadas en SQL realizan cambios en las tablas mediante la ejecu
   
  Es la sintaxis de estas instrucciones:  
   
- **ACTUALIZACIÓN***nombre de la tabla  *  
+ **ACTUALIZACIÓN***nombre de la tabla*   
   
- **ESTABLECER** *identificador de la columna* ** = ** {*expresión* &#124; **NULL**}  
+ **ESTABLECER** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}  
   
- [**,** *identificador de la columna* ** = ** {*expresión* &#124; **NULL**}]...  
+ [**,** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}]...  
   
  [**Donde** *condición de búsqueda*]  
   

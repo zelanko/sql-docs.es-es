@@ -25,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="connecting-with-ssl-encryption"></a>Conectar con el cifrado SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Los ejemplos en este tema describen cómo utilizar propiedades de cadena de conexión que permiten a las aplicaciones utilizar el cifrado de Capa de sockets seguros (SSL) en una aplicación Java. Para obtener más información sobre estos nueva conexión de cadena como propiedades **cifrar**, **trustServerCertificate**, **trustStore**, ** trustStorePassword**, y **hostNameInCertificate**, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
+  Los ejemplos en este tema describen cómo utilizar propiedades de cadena de conexión que permiten a las aplicaciones utilizar el cifrado de Capa de sockets seguros (SSL) en una aplicación Java. Para obtener más información sobre estos nueva conexión de cadena como propiedades **cifrar**, **trustServerCertificate**, **trustStore**,  **trustStorePassword**, y **hostNameInCertificate**, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
  Cuando el **cifrar** propiedad está establecida en **true** y **trustServerCertificate** propiedad está establecida en **true**, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no se validará el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] certificado SSL. Esto se suele ser necesario para permitir conexiones en entornos de prueba, como dónde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instancia tiene solo un certificado autofirmado.  
   

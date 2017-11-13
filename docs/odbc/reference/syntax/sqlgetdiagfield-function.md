@@ -80,10 +80,10 @@ SQLRETURN SQLGetDiagField(
  *DiagInfoPtr*  
  [Salida] Puntero a un búfer en el que se va a devolver la información de diagnóstico. El tipo de datos depende del valor de *DiagIdentifier*. Si *DiagInfoPtr* es de tipo entero, las aplicaciones deben utilizar un búfer de SQLULEN e inicializar el valor en 0 antes de llamar a esta función, como algunos controladores solo puede escribir el menor de 32 bits o de 16 bits de un búfer y dejar el orden superior bits no cambia.  
   
- Si *DiagInfoPtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por * DiagInfoPtr*.  
+ Si *DiagInfoPtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por  *DiagInfoPtr*.  
   
  *BufferLength*  
- [Entrada] Si *DiagIdentifier* es un diagnóstico definida por ODBC y *DiagInfoPtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de \* *DiagInfoPtr *. Si *DiagIdentifier* es un campo definido en ODBC y \* *DiagInfoPtr* es un entero, *BufferLength* se omite. Si el valor de * \*DiagInfoPtr* es una cadena Unicode (cuando se llama a **SQLGetDiagFieldW**), el *BufferLength* el argumento debe ser un número par.  
+ [Entrada] Si *DiagIdentifier* es un diagnóstico definida por ODBC y *DiagInfoPtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de \* *DiagInfoPtr* . Si *DiagIdentifier* es un campo definido en ODBC y \* *DiagInfoPtr* es un entero, *BufferLength* se omite. Si el valor de  *\*DiagInfoPtr* es una cadena Unicode (cuando se llama a **SQLGetDiagFieldW**), el *BufferLength* el argumento debe ser un número par.  
   
  Si *DiagIdentifier* es un campo definido por el controlador, la aplicación indica la naturaleza del campo para el Administrador de controladores al establecer el *BufferLength* argumento. *BufferLength* puede tener los valores siguientes:  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Si *DiagInfoPtr* es un puntero a un valor distinto de una cadena de carácter o cadena binaria, *BufferLength* debería tener el valor SQL_IS_POINTER.  
   
--   Si * \*DiagInfoPtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
+-   Si  *\*DiagInfoPtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
   
  *StringLengthPtr*  
  [Salida] Puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el número de bytes necesarios para el carácter de terminación null) disponible para devolver en \* *DiagInfoPtr*, para datos de caracteres. Si el número de bytes disponible para devolver es mayor o igual que *BufferLength*, el texto en \* *DiagInfoPtr* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
@@ -129,7 +129,7 @@ SQLRETURN SQLGetDiagField(
   
 1.  Para obtener información sobre la advertencia o error específico cuando una llamada de función ha devuelto SQL_ERROR o SQL_SUCCESS_WITH_INFO (o SQL_NEED_DATA para la **SQLBrowseConnect** función).  
   
-2.  Para determinar el número de filas del origen de datos que se ven afectados cuando se lleva a cabo operaciones de inserción, eliminación o actualización con una llamada a **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, o **SQLSetPos** (desde el campo de encabezado SQL_DIAG_ROW_COUNT), o para determinar el número de filas que existen en el cursor abierto actual, si el controlador puede proporcionar esta información (desde el Campo de encabezado SQL_DIAG_CURSOR_ROW_COUNT).  
+2.  Para determinar el número de filas del origen de datos que se ven afectados cuando se lleva a cabo operaciones de inserción, eliminación o actualización con una llamada a **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, o **SQLSetPos** (desde el campo de encabezado SQL_DIAG_ROW_COUNT), o para determinar el número de filas que existen en el cursor abierto actual, si el controlador puede proporcionar esta información (desde el Campo de encabezado SQL_DIAG_CURSOR_ROW_COUNT).  
   
 3.  Para determinar qué función se ejecuta mediante una llamada a **SQLExecDirect** o **SQLExecute** (de los campos de encabezado SQL_DIAG_DYNAMIC_FUNCTION y SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
@@ -238,7 +238,7 @@ n-definición *|"CREAR EL DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
 -   Para todos los registros que pertenecen a filas específicas, los registros se ordenan por el valor del campo SQL_DIAG_ROW_NUMBER. Se muestran todos los errores y advertencias de la primera fila afectada y, a continuación, todos los errores y advertencias de la siguiente fila afectada y así sucesivamente.  
   
 > [!NOTE]  
->  ODBC 3*.x* el Administrador de controladores no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (Error en la fila) devuelto por una API ODBC 2*.x* controlador o si SQLSTATE 01S01 (Error en la fila) se devuelve un ODBC 3*.x* controlador cuando **SQLExtendedFetch** se llama o **SQLSetPos** se llama en un cursor que se ha colocado con **SQLExtendedFetch **.  
+>  ODBC 3*.x* el Administrador de controladores no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (Error en la fila) devuelto por una API ODBC 2*.x* controlador o si SQLSTATE 01S01 (Error en la fila) se devuelve un ODBC 3*.x* controlador cuando **SQLExtendedFetch** se llama o **SQLSetPos** se llama en un cursor que se ha colocado con **SQLExtendedFetch** .  
   
  Dentro de cada fila, o para todos los registros que no corresponden a una fila o para que se desconoce el número de fila o de todos los registros con un número de filas igual a SQL_NO_ROW_NUMBER, el primer registro enumerado se determina mediante el uso de un conjunto de reglas de ordenación. Después del primer registro, el orden de los demás registros que afectan a una fila es indefinido. Una aplicación no puede suponer que los errores preceden advertencias después del primer registro. Las aplicaciones deben examinar la estructura de datos de diagnóstico completo para obtener información completa sobre una llamada a una función incorrecta.  
   

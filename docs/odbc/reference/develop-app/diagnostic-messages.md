@@ -37,11 +37,11 @@ Se devuelve un mensaje de diagnóstico con cada SQLSTATE. A menudo se devuelve e
   
  Si el origen de un error o advertencia es un componente de sí mismo, el mensaje de diagnóstico debe explicar esto. Por lo tanto, el texto de mensajes tiene dos formatos diferentes. Para errores y advertencias que no se producen en un origen de datos, el mensaje de diagnóstico debe usar este formato:  
   
- **[** *identificador de proveedor* **] [** *identificador de componente de ODBC* **]** * texto suministrado por el componente*  
+ **[** *identificador de proveedor* **] [** *identificador de componente de ODBC* **]**  *texto suministrado por el componente*  
   
  Para errores y advertencias que se producen en un origen de datos, el mensaje de diagnóstico debe usar este formato:  
   
- **[** *identificador de proveedor* **] [** *identificador de componente de ODBC* **] [** * identificador del origen de datos* **]** *datos-proporcionado-texto de código fuente*  
+ **[** *identificador de proveedor* **] [** *identificador de componente de ODBC* **] [**  *identificador del origen de datos* **]** *datos-proporcionado-texto de código fuente*  
   
  En la tabla siguiente muestra el significado de cada elemento.  
   

@@ -63,23 +63,23 @@ SQLRETURN SQLGetConnectAttr(
  *ValuePtr*  
  [Salida] Un puntero a la memoria en el que se va a devolver el valor actual del atributo especificado por *atributo*. Para los atributos de tipo entero, algunos controladores pueden escribir solo inferior 32 bits o el bit de orden superior de 16 bits de un búfer y dejar sin cambios. Por lo tanto, las aplicaciones deben usar un búfer de SQLULEN e inicializar el valor en 0 antes de llamar a esta función.  
   
- Si *ValuePtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por * ValuePtr*.  
+ Si *ValuePtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por  *ValuePtr*.  
   
  *BufferLength*  
- [Entrada] Si *atributo* es un atributo definido en ODBC y *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de \* *ValuePtr*. Si *atributo* es un atributo definido en ODBC y \* *ValuePtr* es un entero, *BufferLength* se omite. Si el valor de * \*ValuePtr* es una cadena Unicode (cuando se llama a **SQLGetConnectAttrW**), el *BufferLength* el argumento debe ser un número par.  
+ [Entrada] Si *atributo* es un atributo definido en ODBC y *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de \* *ValuePtr*. Si *atributo* es un atributo definido en ODBC y \* *ValuePtr* es un entero, *BufferLength* se omite. Si el valor de  *\*ValuePtr* es una cadena Unicode (cuando se llama a **SQLGetConnectAttrW**), el *BufferLength* el argumento debe ser un número par.  
   
  Si *atributo* es un atributo definido por el controlador, la aplicación indica la naturaleza del atributo para el Administrador de controladores al establecer el *BufferLength* argumento. *BufferLength* puede tener los valores siguientes:  
   
--   Si * \*ValuePtr* es un puntero a una cadena de caracteres *BufferLength* es la longitud de la cadena.  
+-   Si  *\*ValuePtr* es un puntero a una cadena de caracteres *BufferLength* es la longitud de la cadena.  
   
--   Si * \*ValuePtr* es un puntero a un búfer binario, los lugares de la aplicación en el resultado de la SQL_LEN_BINARY_ATTR (*longitud*) macro en *BufferLength*. Esto coloca un valor negativo en *BufferLength*.  
+-   Si  *\*ValuePtr* es un puntero a un búfer binario, los lugares de la aplicación en el resultado de la SQL_LEN_BINARY_ATTR (*longitud*) macro en *BufferLength*. Esto coloca un valor negativo en *BufferLength*.  
   
--   Si * \*ValuePtr* es un puntero a un valor distinto de una cadena de carácter o cadena binaria, *BufferLength* debería tener el valor SQL_IS_POINTER.  
+-   Si  *\*ValuePtr* es un puntero a un valor distinto de una cadena de carácter o cadena binaria, *BufferLength* debería tener el valor SQL_IS_POINTER.  
   
--   Si * \*ValuePtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER o SQL_IS_UINTEGER, según corresponda.  
+-   Si  *\*ValuePtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER o SQL_IS_UINTEGER, según corresponda.  
   
  *StringLengthPtr*  
- [Salida] Un puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el carácter de terminación null) disponible para devolver en \* *ValuePtr*. Si \* *ValuePtr* es un puntero nulo, no se devuelve ninguna longitud. Si el valor del atributo es una cadena de caracteres y el número de bytes disponible para devolver es mayor que *BufferLength* menos la longitud del carácter de terminación null, los datos de * \*ValuePtr*se trunca a *BufferLength* menos la longitud del carácter de terminación null y termina en null el controlador.  
+ [Salida] Un puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el carácter de terminación null) disponible para devolver en \* *ValuePtr*. Si \* *ValuePtr* es un puntero nulo, no se devuelve ninguna longitud. Si el valor del atributo es una cadena de caracteres y el número de bytes disponible para devolver es mayor que *BufferLength* menos la longitud del carácter de terminación null, los datos de  *\*ValuePtr*se trunca a *BufferLength* menos la longitud del carácter de terminación null y termina en null el controlador.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria que es necesario para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) **SQLBrowseConnect** se llamó para el *IdentificadorConexión* y devuelve SQL_NEED_DATA. Esta función se invoca antes de **SQLBrowseConnect** devuelve SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llamó para el *IdentificadorConexión* devolvió SQL_PARAM_DATA_ ESTÁ DISPONIBLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  
-|HY090|Longitud de búfer o cadena no válida|(DM) * \*ValuePtr* es una cadena de caracteres y BufferLength era menor que cero, pero no es igual a SQL_NTS.|  
+|HY090|Longitud de búfer o cadena no válida|(DM)  *\*ValuePtr* es una cadena de caracteres y BufferLength era menor que cero, pero no es igual a SQL_NTS.|  
 |HY092|Identificador de opción o atributo no válido|El valor especificado para el argumento *atributo* no era válido para la versión de ODBC compatible con el controlador.|  
 |HY114|Controlador no admite la ejecución de la función de nivel de conexión asincrónica|(DM) una aplicación intentó habilitar la ejecución de la función asincrónica con SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE para un controlador que no admite operaciones de conexión asincrónica.|  
 |HY117|Se suspende la conexión debido al estado de transacción desconocido. Solo se desconecte y se permiten las funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -114,7 +114,7 @@ SQLRETURN SQLGetConnectAttr(
   
  Si *atributo* es SQL_ATTR_ seguimiento o SQL_ATTR_ TRACEFILE, *IdentificadorConexión* no tiene que ser válido, y **SQLGetConnectAttr** no devolverá SQL_ERROR o SQL_ INVALID_HANDLE si *IdentificadorConexión* no es válido. Estos atributos se aplican a todas las conexiones. **SQLGetConnectAttr** devolverá SQL_ERROR o SQL_INVALID_HANDLE si otro argumento no es válido.  
   
- Aunque una aplicación puede establecer los atributos de instrucción mediante **SQLSetConnectAttr**, no se puede usar una aplicación **SQLGetConnectAttr** para recuperar el atributo de instrucción valores; debe llamar a ** SQLGetStmtAttr** para recuperar la configuración de atributos de instrucción.  
+ Aunque una aplicación puede establecer los atributos de instrucción mediante **SQLSetConnectAttr**, no se puede usar una aplicación **SQLGetConnectAttr** para recuperar el atributo de instrucción valores; debe llamar a  **SQLGetStmtAttr** para recuperar la configuración de atributos de instrucción.  
   
  Atributos de conexión SQL_ATTR_AUTO_IPD y SQL_ATTR_CONNECTION_DEAD pueden devolver una llamada a **SQLGetConnectAttr** pero no se puede establecer mediante una llamada a **SQLSetConnectAttr**.  
   

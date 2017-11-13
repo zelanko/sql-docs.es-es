@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto está abierto, su origen puede ser la fila actual de un formato de archivo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), una dirección URL absoluta o una dirección URL relativa junto con un formato de archivo [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
   
- Si el **registro** se abre desde una **Recordset**, el **registro** objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección contendrá todos los campos de la ** Conjunto de registros**, además de los campos agregados por el proveedor subyacente.  
+ Si el **registro** se abre desde una **Recordset**, el **registro** objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección contendrá todos los campos de la  **Conjunto de registros**, además de los campos agregados por el proveedor subyacente.  
   
  El proveedor puede insertar campos adicionales que sirven de características adicionales de la **registro**. Como resultado, un **registro** puede tener campos únicos no en el **Recordset** como un todo o cualquier **registro** derivado de otra fila de la **Recordset**.  
   

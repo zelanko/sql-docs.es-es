@@ -57,7 +57,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Usar opcional *ConnectionString* argumento para especificar una cadena de conexión que contiene una serie de *argumento* *= valor* instrucciones separadas por punto y coma, o un recurso de archivo o directorio identificado con una dirección URL. El **ConnectionString** propiedad hereda automáticamente el valor utilizado para la *ConnectionString* argumento. Por lo tanto, puede establecer la **ConnectionString** propiedad de la **conexión** objeto antes de abrirlo o usar el *ConnectionString* argumento para establecer o reemplazar los parámetros de conexión actual durante la **abiertos** llamada al método.  
   
- Si se pasa de usuario y una contraseña información tanto en el *ConnectionString* argumento y en la parte opcional *UserID* y *contraseña* argumentos, la *UserID * y *contraseña* argumentos reemplazarán los valores especificados en *ConnectionString*.  
+ Si se pasa de usuario y una contraseña información tanto en el *ConnectionString* argumento y en la parte opcional *UserID* y *contraseña* argumentos, la *UserID*  y *contraseña* argumentos reemplazarán los valores especificados en *ConnectionString*.  
   
  Cuando haya finalizado las operaciones en un formato de archivo **conexión**, use la [cerrar](../../../ado/reference/ado-api/close-method-ado.md) método para liberarlos recursos del sistema asociados. Cerrar un objeto no se quita de la memoria; puede cambiar sus valores de propiedad y usar el **abrir** método para abrirla de nuevo más tarde. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto *nada*.  
   

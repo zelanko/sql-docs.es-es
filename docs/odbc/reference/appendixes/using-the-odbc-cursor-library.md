@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  Llamadas **SQLFetch** o **SQLFetchScroll** una o varias veces para desplazarse por el conjunto de resultados.  
   
- La aplicación puede cambiar los valores de datos de los búferes de conjunto de filas. Para actualizar los búferes de conjunto de filas con los datos de caché de la biblioteca de cursores, llama a una aplicación **SQLFetchScroll** con el *FetchOrientation* establecido en SQL_FETCH_RELATIVE y * FetchOffset* establecido en 0.  
+ La aplicación puede cambiar los valores de datos de los búferes de conjunto de filas. Para actualizar los búferes de conjunto de filas con los datos de caché de la biblioteca de cursores, llama a una aplicación **SQLFetchScroll** con el *FetchOrientation* establecido en SQL_FETCH_RELATIVE y  *FetchOffset* establecido en 0.  
   
  Para recuperar datos de una columna sin enlazar, la aplicación llama **SQLSetPos** para colocar el cursor en la fila deseada. A continuación, se llama **SQLGetData** para recuperar los datos.  
   

@@ -29,15 +29,15 @@ ms.lasthandoff: 09/09/2017
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos
 Controladores pueden asignar valores específicos del controlador para lo siguiente:  
   
--   **Indicadores de tipo de datos de SQL** se utilizan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y devolviendo **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
+-   **Indicadores de tipo de datos de SQL** se utilizan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y devolviendo **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
   
--   **Campos de descriptor** se utilizan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**, y **SQLSetDescField **.  
+-   **Campos de descriptor** se utilizan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**, y **SQLSetDescField** .  
   
 -   **Campos de diagnóstico** se utilizan en *DiagIdentifier* en **SQLGetDiagField** y **SQLGetDiagRec**.  
   
 -   **Tipos de información** se utilizan en *tipo de información* en **SQLGetInfo**.  
   
--   **Conexión y los atributos de instrucción** se utilizan en *atributo* en **SQLGetConnectAttr**, **SQLGetStmtAttr**, ** SQLSetConnectAttr**, y **SQLSetStmtAttr**.  
+-   **Conexión y los atributos de instrucción** se utilizan en *atributo* en **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, y **SQLSetStmtAttr**.  
   
  Para cada uno de estos elementos, hay dos conjuntos de valores: valores reservados para su uso por ODBC y los valores reservados para su uso por los controladores. Antes de implementar los valores específicos del controlador, un escritor de controlador debe solicitar un valor para cada tipo específico del controlador, campo o atributo de Open Group. Para nuevas implementaciones de controlador, utilice el intervalo que se describe en la tabla siguiente. El Administrador de ODBC 3.8 controladores no generará un error si se utiliza un valor desconocido que no está en el intervalo que se describe a continuación. Sin embargo, las versiones posteriores del Administrador de controladores podrían generarse un error si no se reciben que no están en el intervalo de valores desconocidos.  
   

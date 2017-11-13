@@ -31,7 +31,7 @@ El paso siguiente es capturar el recuento de filas, como se muestra en la siguie
   
  ![Muestra cómo recuperar el recuento de filas](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  
   
- Si la instrucción ejecutada en el paso 3 fue un **actualización**, **eliminar**, o **insertar** (instrucción), la aplicación recupera el recuento de filas afectadas con ** SQLRowCount**. Para obtener más información, consulte [determinar el número de filas afectadas](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
+ Si la instrucción ejecutada en el paso 3 fue un **actualización**, **eliminar**, o **insertar** (instrucción), la aplicación recupera el recuento de filas afectadas con  **SQLRowCount**. Para obtener más información, consulte [determinar el número de filas afectadas](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
  Ahora, la aplicación vuelve al paso 3 para ejecutar otra instrucción en la misma transacción o continúa con el paso 5 para confirmar o revertir la transacción.
 

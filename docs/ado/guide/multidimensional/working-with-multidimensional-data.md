@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="working-with-multidimensional-data"></a>Trabajar con datos multidimensionales
 A *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o más dimensiones, que se utiliza para localizar o filtrar valores específicos de un cubo.  
   
- A *posición* es un punto de un eje. Para un eje que consta de una sola dimensión, estas posiciones son un subconjunto de los miembros de dimensión. Si un eje consta de más de una dimensión, cada posición es una entidad compuesta, que tiene * n * elementos where * n * es el número de dimensiones orientadas a lo largo del eje. Cada parte de la posición es un miembro de una dimensión que lo componen.  
+ A *posición* es un punto de un eje. Para un eje que consta de una sola dimensión, estas posiciones son un subconjunto de los miembros de dimensión. Si un eje consta de más de una dimensión, cada posición es una entidad compuesta, que tiene  *n*  elementos where  *n*  es el número de dimensiones orientadas a lo largo del eje. Cada parte de la posición es un miembro de una dimensión que lo componen.  
   
  Por ejemplo, si las dimensiones de geografía y producto de un cubo que contiene datos de ventas se orientan a lo largo del eje x de un conjunto de celdas, una posición a lo largo de este eje puede contener a los miembros "EE" y "Equipos". En este ejemplo, para determinar una posición a lo largo del eje x se requiere que los miembros de cada dimensión se orientan a lo largo del eje.  
   

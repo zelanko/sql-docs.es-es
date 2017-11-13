@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="date-time-and-timestamp-literals"></a>Fecha, hora y marca de tiempo literales
 La secuencia de escape para literales de fecha, hora y marca de tiempo es  
   
- **{***-tipo* **'** *valor* **'}  **  
+ **{***-tipo* **'** *valor* **'}**   
   
  donde *tipo literal* es uno de los valores enumerados en la tabla siguiente.  
   
@@ -35,7 +35,7 @@ La secuencia de escape para literales de fecha, hora y marca de tiempo es
 |---------------------|-------------|-----------------------|  
 |**d**|Date|*aaaa*-*mm*-*dd*|  
 |**t**|Hora *|*hh*:*mm*:*ss*[1]|  
-|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss* [. *f... *] [1]|  
+|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   
  [1], el número de dígitos a la derecha del separador decimal en un intervalo de tiempo o marca de tiempo literal que contiene un componente de segundos es dependiente de la precisión de segundos, tal y como figura en el campo de descriptor SQL_DESC_PRECISION. (Para obtener más información, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

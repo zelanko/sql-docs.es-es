@@ -51,7 +51,7 @@ Recordset = DataControl.Recordset
 ## <a name="remarks"></a>Comentarios  
  Puede establecer la **SourceRecordset** propiedad a una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) devuelto desde un objeto de negocios personalizada.  
   
- Estas propiedades permiten que una aplicación controlar el proceso de enlace por medio de un proceso personalizado. Reciben un conjunto de filas que se encapsulan en un **Recordset** para que puedan interactuar directamente con el **Recordset**, realizar acciones como establecer propiedades o recorrer en iteración el **conjunto de registros **.  
+ Estas propiedades permiten que una aplicación controlar el proceso de enlace por medio de un proceso personalizado. Reciben un conjunto de filas que se encapsulan en un **Recordset** para que puedan interactuar directamente con el **Recordset**, realizar acciones como establecer propiedades o recorrer en iteración el **conjunto de registros** .  
   
  Puede establecer la **SourceRecordset** propiedad u obtenga el **Recordset** propiedad en tiempo de ejecución en código de scripting.  
   

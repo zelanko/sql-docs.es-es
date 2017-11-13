@@ -40,7 +40,7 @@ Indica un marcador que identifica de forma única el registro actual en un [Reco
   
  Es posible que el usuario no pueda ver el valor del marcador. Además, los usuarios no deben esperar que marcadores ser comparables directamente??? dos marcadores que hacen referencia al mismo registro pueden tener valores diferentes.  
   
- Si usas el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear una copia de un **Recordset** objeto, el **marcador** valores de propiedad para la versión original y el duplicado **conjunto de registros ** objetos son idénticos y se pueden usar indistintamente. Sin embargo, no puede utilizar marcadores de diferentes **Recordset** objetos de forma intercambiable, incluso si se crearon a partir del mismo origen o comando.  
+ Si usas el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear una copia de un **Recordset** objeto, el **marcador** valores de propiedad para la versión original y el duplicado **conjunto de registros**  objetos son idénticos y se pueden usar indistintamente. Sin embargo, no puede utilizar marcadores de diferentes **Recordset** objetos de forma intercambiable, incluso si se crearon a partir del mismo origen o comando.  
   
 > [!NOTE]
 >  **Uso de servicios de datos remoto** cuando se utiliza en un lado del cliente **Recordset** objeto, el **marcador** propiedad siempre está disponible.  

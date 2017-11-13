@@ -36,7 +36,7 @@ Indica el tamaño máximo, en bytes o caracteres, de un [parámetro](../../../ad
 ## <a name="remarks"></a>Comentarios  
  Use la **tamaño** propiedad para determinar el tamaño máximo de los valores escritos en o leer desde el [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad de un **parámetro** objeto.  
   
- Si se especifica un tipo de datos de longitud variable para un **parámetro** objeto (por ejemplo, cualquier **cadena** escriba, por ejemplo, **parámetros**), debe establecer el objeto ** Tamaño** propiedad antes de agregarlo a la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección; en caso contrario, se produce un error.  
+ Si se especifica un tipo de datos de longitud variable para un **parámetro** objeto (por ejemplo, cualquier **cadena** escriba, por ejemplo, **parámetros**), debe establecer el objeto  **Tamaño** propiedad antes de agregarlo a la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección; en caso contrario, se produce un error.  
   
  Si ya se ha anexado el **parámetro** el objeto a la **parámetros** colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y cambiar el tipo a un tipo de datos de longitud variable, debe establecer el **parámetro** del objeto **tamaño** propiedad antes de ejecutar el **comando** objeto; en caso contrario, se produce un error.  
   

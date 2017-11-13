@@ -53,7 +53,7 @@ Un lote de instrucciones SQL es un grupo de dos o más instrucciones SQL o una s
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     El **CREATE PROCEDURE** propia instrucción no es un lote de instrucciones SQL. Sin embargo, el procedimiento que crea es un lote de instrucciones SQL. Punto y coma no separar los dos **seleccione** instrucciones porque la **CREATE PROCEDURE** instrucción es específica de SQL Server y SQL Server no requiere el punto y coma para separar varias instrucciones en un ** CREATE PROCEDURE** instrucción.  
+     El **CREATE PROCEDURE** propia instrucción no es un lote de instrucciones SQL. Sin embargo, el procedimiento que crea es un lote de instrucciones SQL. Punto y coma no separar los dos **seleccione** instrucciones porque la **CREATE PROCEDURE** instrucción es específica de SQL Server y SQL Server no requiere el punto y coma para separar varias instrucciones en un  **CREATE PROCEDURE** instrucción.  
   
 -   **Las matrices de parámetros** matrices de parámetros pueden utilizarse con una instrucción SQL con parámetros como una manera eficaz para realizar operaciones masivas. Por ejemplo, las matrices de parámetros pueden usarse con el siguiente **insertar** instrucción que se va a insertar varias filas en la tabla de líneas al ejecutar una única instrucción SQL:  
   

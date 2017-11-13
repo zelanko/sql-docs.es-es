@@ -41,7 +41,7 @@ Para obtener más información sobre la agrupación de conexiones, consulte [Dri
   
 ## <a name="enablingdisabling-connection-pooling"></a>Agrupación de conexiones de habilitar/deshabilitar
 ### <a name="windows"></a>Windows
-También puede forzar el controlador para crear una nueva conexión (en lugar de buscar una conexión equivalente en la agrupación de conexiones) estableciendo el valor de la *ConnectionPooling* atributo en la cadena de conexión para **false ** (o 0).  
+También puede forzar el controlador para crear una nueva conexión (en lugar de buscar una conexión equivalente en la agrupación de conexiones) estableciendo el valor de la *ConnectionPooling* atributo en la cadena de conexión para **false**  (o 0).  
   
 Si el *ConnectionPooling* se omite el atributo de la cadena de conexión o si se establece en **true** (o 1), el controlador solo creará una nueva conexión si no existe una conexión equivalente en el grupo de conexiones.  
   

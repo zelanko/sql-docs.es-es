@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  En el último paso, el Asistente para instalación de aplicaciones crea un .htm y un archivo .cab. A continuación, puede copiar estos dos archivos en el equipo de destino y haga doble clic en el archivo .htm para cargar la página y registrar correctamente el servidor.  
   
- Dado que el objeto de negocios se instalarán en el directorio Windows\System32\Occache de forma predeterminada, muévalo al directorio Windows\System32 y cambie la **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** clave del registro para que coincida con la ruta de acceso correcta.
+ Dado que el objeto de negocios se instalarán en el directorio Windows\System32\Occache de forma predeterminada, muévalo al directorio Windows\System32 y cambie la **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** clave del registro para que coincida con la ruta de acceso correcta.
 
 
 

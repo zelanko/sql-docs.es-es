@@ -50,7 +50,7 @@ En este tema se describe cómo utilizar el controlador SQLSRV para especificar l
     > [!NOTE]  
     > Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
   
-3.  Use las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetros que corresponden, en orden, para los marcadores de posición de parámetro en la cadena de Transact-SQL. Especifique la dirección de cada parámetro de la matriz. La dirección de cada parámetro se establece en uno de dos maneras: de forma predeterminada (para los parámetros de entrada) o mediante el uso de **SQLSRV_PARAM_\* ** constantes (para los parámetros de salida y bidireccionales). Por ejemplo, en el siguiente código se especifica el parámetro *$employeeId* como parámetro de entrada, y el parámetro *$usedVacationHours* , como un parámetro bidireccional:  
+3.  Use las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetros que corresponden, en orden, para los marcadores de posición de parámetro en la cadena de Transact-SQL. Especifique la dirección de cada parámetro de la matriz. La dirección de cada parámetro se establece en uno de dos maneras: de forma predeterminada (para los parámetros de entrada) o mediante el uso de **SQLSRV_PARAM_\***  constantes (para los parámetros de salida y bidireccionales). Por ejemplo, en el siguiente código se especifica el parámetro *$employeeId* como parámetro de entrada, y el parámetro *$usedVacationHours* , como un parámetro bidireccional:  
   
     ```  
     $params = array(  

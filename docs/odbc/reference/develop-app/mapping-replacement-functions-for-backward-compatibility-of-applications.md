@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
-Una aplicación ODBC 3*.x* aplicación funcione a través de ODBC 3*.x* el Administrador de controladores funcionará con una API ODBC 2.* x* controlador siempre y cuando no se utilizan características nuevas. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo, ser afectan al modo en que ODBC 3. *x* aplicación funciona en una API ODBC 2.* x* controlador. Cuando se trabaja con una API ODBC 2. *x* controlador, el Administrador de controladores asigna el siguiente ODBC 3.* x* funciones, que se reemplazaron uno o más ODBC 2.* x* funciones, en la correspondiente API ODBC 2.* x* funciones.  
+Una aplicación ODBC 3*.x* aplicación funcione a través de ODBC 3*.x* el Administrador de controladores funcionará con una API ODBC 2. *x* controlador siempre y cuando no se utilizan características nuevas. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo, ser afectan al modo en que ODBC 3. *x* aplicación funciona en una API ODBC 2. *x* controlador. Cuando se trabaja con una API ODBC 2. *x* controlador, el Administrador de controladores asigna el siguiente ODBC 3. *x* funciones, que se reemplazaron uno o más ODBC 2. *x* funciones, en la correspondiente API ODBC 2. *x* funciones.  
   
 |ODBC 3. *x* (función)|ODBC 2. *x* (función)|  
 |-------------------------|-------------------------|  
@@ -223,7 +223,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  se producirá la siguiente secuencia de pasos:  
   
-1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2.* x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
+1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2. *x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
   
 2.  Si *atributo* es igual a SQL_ATTR_AUTO_IPD o SQL_ATTR_METADATA_ID, el Administrador de controladores, devolverá SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido).  
   
@@ -249,7 +249,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  se producirá la siguiente secuencia de pasos:  
   
-1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2.* x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
+1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2. *x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
   
 2.  Si *atributo* es uno de los siguientes:  
   
@@ -285,7 +285,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
 3.  El Administrador de controladores realiza comprobaciones necesarias para ver si SQLSTATE HY010 (error de secuencia de función) debe generarse. Si es así, el Administrador de controladores devuelve SQL_ERROR y SQLSTATE HY010 (error de secuencia de función). Ninguna otra regla de esta sección se aplica.  
   
-4.  Si *atributo* es igual a SQL_ATTR_ROWS_FETCHED_PTR, la devuelve el Administrador de controladores, un puntero a la variable interna del Administrador de controladores *gallo*, que ha utilizado o va a utilizar en una llamada a ** SQLExtendedFetch**. Ninguna otra regla de esta sección se aplica.  
+4.  Si *atributo* es igual a SQL_ATTR_ROWS_FETCHED_PTR, la devuelve el Administrador de controladores, un puntero a la variable interna del Administrador de controladores *gallo*, que ha utilizado o va a utilizar en una llamada a  **SQLExtendedFetch**. Ninguna otra regla de esta sección se aplica.  
   
 5.  Si *atributo* es igual a SQL_DESC_FETCH_BOOKMARK_PTR, el Administrador de controladores devuelve el puntero adecuado que había almacenado en memoria caché durante una llamada a **SQLSetStmtAttr**.  
   
@@ -308,7 +308,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  se producirá la siguiente secuencia de pasos:  
   
-1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2.* x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
+1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2. *x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
   
 2.  Si *atributo* es igual a SQL_ATTR_AUTO_IPD, el Administrador de controladores, devolverá SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido).  
   
@@ -334,7 +334,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  se producirá la siguiente secuencia de pasos:  
   
-1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2.* x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
+1.  Si *atributo* no es un atributo de conexión o instrucción definidos por el controlador y no es un atributo definido en ODBC 2. *x*, el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY092 (identificador de atributo u opción no válido). Ninguna otra regla en esta sección se aplica.  
   
 2.  Si *atributo* es uno de los siguientes:  
   
@@ -386,7 +386,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      donde *hstmt*, *fOption*, y *vParam* se establecerá en los valores de *StatementHandle*, *atributo*, y *ValuePtr*, respectivamente. El *StringLength* argumento se omite.  
   
-     Si está un ODBC 2. *x* controlador admite opciones de la instrucción de cadena de caracteres, específica del controlador, una aplicación ODBC 3.* x* aplicación debe llamar a **SQLSetStmtOption** para establecer las opciones.  
+     Si está un ODBC 2. *x* controlador admite opciones de la instrucción de cadena de caracteres, específica del controlador, una aplicación ODBC 3. *x* aplicación debe llamar a **SQLSetStmtOption** para establecer las opciones.  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>Asignaciones para el tratamiento de matrices de parámetros  
  Cuando llama a la aplicación:  
@@ -408,18 +408,18 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>Tratamiento de errores  
  En ODBC 3. *x*, si se llama **SQLFetch** o **SQLFetchScroll** rellena el SQL_DESC_ARRAY_STATUS_PTR en IRD y el campo SQL_DIAG_ROW_NUMBER de un determinado registro de diagnóstico contiene el número de la fila del conjunto de filas que pertenece este registro a. Con esto, la aplicación puede correlacionar un mensaje de error con una posición de fila determinada.  
   
- Un ODBC 2. *x* controlador no podrá proporcionar esta funcionalidad. Sin embargo, proporcionará demarcación de error con SQLSTATE 01S01 (Error en la fila). Un ODBC 3. *x* aplicación que esté utilizando **SQLFetch** o **SQLFetchScroll** al ir en una API ODBC 2.* x* controlador debe tener en cuenta este hecho. Tenga en cuenta también que este tipo de aplicación se podrá llamar a **SQLGetDiagField** realmente obtener el campo SQL_DIAG_ROW_NUMBER de todos modos. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador podrá llamar a **SQLGetDiagField** sólo con una *DiagIdentifier* argumento de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE o SQL_DIAG_ SQLSTATE. ODBC 3*.x* el Administrador de controladores mantiene la estructura de datos de diagnóstico cuando se trabaja con una API ODBC 2.* x* controlador, pero la API ODBC 2.* x* controlador devuelve solo estos cuatro campos.  
+ Un ODBC 2. *x* controlador no podrá proporcionar esta funcionalidad. Sin embargo, proporcionará demarcación de error con SQLSTATE 01S01 (Error en la fila). Un ODBC 3. *x* aplicación que esté utilizando **SQLFetch** o **SQLFetchScroll** al ir en una API ODBC 2. *x* controlador debe tener en cuenta este hecho. Tenga en cuenta también que este tipo de aplicación se podrá llamar a **SQLGetDiagField** realmente obtener el campo SQL_DIAG_ROW_NUMBER de todos modos. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador podrá llamar a **SQLGetDiagField** sólo con una *DiagIdentifier* argumento de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE o SQL_DIAG_ SQLSTATE. ODBC 3*.x* el Administrador de controladores mantiene la estructura de datos de diagnóstico cuando se trabaja con una API ODBC 2. *x* controlador, pero la API ODBC 2. *x* controlador devuelve solo estos cuatro campos.  
   
- Cuando un ODBC 2. *x* aplicación está trabajando con una API ODBC 2.* x* controlador, si una operación puede producir varios errores devolverá por el Administrador de controladores, errores diferentes pueden devolver ODBC 3*.x* Administrador de controladores que mediante la API ODBC 2.* x* el Administrador de controladores.  
+ Cuando un ODBC 2. *x* aplicación está trabajando con una API ODBC 2. *x* controlador, si una operación puede producir varios errores devolverá por el Administrador de controladores, errores diferentes pueden devolver ODBC 3*.x* Administrador de controladores que mediante la API ODBC 2. *x* el Administrador de controladores.  
   
 ## <a name="mappings-for-bookmark-operations"></a>Asignaciones para las operaciones de marcador  
- ODBC 3*.x* el Administrador de controladores realiza las siguientes asignaciones cuando una aplicación ODBC 3.* x* aplicación trabajar con una API ODBC 2.* x* controlador realiza operaciones de marcador.  
+ ODBC 3*.x* el Administrador de controladores realiza las siguientes asignaciones cuando una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador realiza operaciones de marcador.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador llama **SQLBindCol** para enlazar a la columna 0 con *fCType* igual a SQL_C_VARBOOKMARK, ODBC 3*.x* comprueba el Administrador de controladores Si el *BufferLength* argumento es menor que 4 o mayor que 4 y si es así, devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida). Si el *BufferLength* argumento es igual a 4, el Administrador de controladores llama **SQLBindCol** en el controlador, después de reemplazar *fCType* con SQL_C_BOOKMARK.  
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLBindCol** para enlazar a la columna 0 con *fCType* igual a SQL_C_VARBOOKMARK, ODBC 3*.x* comprueba el Administrador de controladores Si el *BufferLength* argumento es menor que 4 o mayor que 4 y si es así, devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida). Si el *BufferLength* argumento es igual a 4, el Administrador de controladores llama **SQLBindCol** en el controlador, después de reemplazar *fCType* con SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador llama **SQLColAttribute** con el *ColumnNumber* argumento se establece en 0, el Administrador de controladores devuelve el *FieldIdentifier* valores se muestran en la tabla siguiente.  
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLColAttribute** con el *ColumnNumber* argumento se establece en 0, el Administrador de controladores devuelve el *FieldIdentifier* valores se muestran en la tabla siguiente.  
   
 |*FieldIdentifier*|Valor|  
 |-----------------------|-----------|  
@@ -451,7 +451,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador llama **SQLDescribeCol** con el *ColumnNumber* argumento establecido en 0, el Administrador de controladores devuelve los valores enumerados en la tabla siguiente.  
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLDescribeCol** con el *ColumnNumber* argumento establecido en 0, el Administrador de controladores devuelve los valores enumerados en la tabla siguiente.  
   
 |Búfer|Valor|  
 |------------|-----------|  
@@ -463,7 +463,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador realiza la llamada siguiente a **SQLGetData** para recuperar un marcador:  
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador realiza la llamada siguiente a **SQLGetData** para recuperar un marcador:  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -477,10 +477,10 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  donde *hstmt* y *pvParam* se establecen en los valores de *StatementHandle* y *TargetValuePtr*, respectivamente. El marcador se devuelve en el búfer señalado por el *pvParam* (*TargetValuePtr*) argumento. El valor en el búfer que señala el *StrLen_or_IndPtr* argumento en la llamada a **SQLGetData** se establece en 4.  
   
- Esta asignación es necesaria para tener en cuenta el caso en el que **SQLFetch** se llamó antes de la llamada a **SQLGetData** y la API ODBC 2.* x* controlador no admitía **SQLExtendedFetch**. En este caso, **SQLFetch** luego se pasarían a través de la API ODBC 2.* x* controlador, en el que no se admite la recuperación de marcador mayúsculas.  
+ Esta asignación es necesaria para tener en cuenta el caso en el que **SQLFetch** se llamó antes de la llamada a **SQLGetData** y la API ODBC 2. *x* controlador no admitía **SQLExtendedFetch**. En este caso, **SQLFetch** luego se pasarían a través de la API ODBC 2. *x* controlador, en el que no se admite la recuperación de marcador mayúsculas.  
   
- **SQLGetData** no se puede llamar varias veces en una API ODBC 2.* x* controlador que recupere un marcador en partes, por lo que una llamada a **SQLGetData** con el *BufferLength* establecido en un valor inferior a 4 y la *ColumnNumber*argumento establecido en 0 devolverá SQLSTATE HY090 (longitud de búfer o cadena no válida). **SQLGetData** , sin embargo, puede llamar varias veces para recuperar el mismo marcador.  
+ **SQLGetData** no se puede llamar varias veces en una API ODBC 2. *x* controlador que recupere un marcador en partes, por lo que una llamada a **SQLGetData** con el *BufferLength* establecido en un valor inferior a 4 y la *ColumnNumber*argumento establecido en 0 devolverá SQLSTATE HY090 (longitud de búfer o cadena no válida). **SQLGetData** , sin embargo, puede llamar varias veces para recuperar el mismo marcador.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador llama **SQLSetStmtAttr** para establecer el atributo SQL_ATTR_USE_BOOKMARKS en SQL_UB_VARIABLE, el Administrador de controladores define el atributo SQL_UB_ON en subyacente ODBC 2.* x* controlador.
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLSetStmtAttr** para establecer el atributo SQL_ATTR_USE_BOOKMARKS en SQL_UB_VARIABLE, el Administrador de controladores define el atributo SQL_UB_ON en subyacente ODBC 2. *x* controlador.
 

@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para el índice de sintaxis de Visual C++ para COM
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basado en Microsoft Visual C++.  
   
- Si usas el **#import** directivas en la aplicación, se generará un archivo de encabezado que le permitirá utilizar una sintaxis similar a Microsoft Visual Basic. Nombres de las propiedades del formulario **get_***PropertyName* y **put_***PropertyName* puede tratarse como si se hubieran declarado simplemente como * PropertyName*. Una propiedad, a continuación, se puede tratar como un miembro de datos en lugar de una función.  
+ Si usas el **#import** directivas en la aplicación, se generará un archivo de encabezado que le permitirá utilizar una sintaxis similar a Microsoft Visual Basic. Nombres de las propiedades del formulario **get_***PropertyName* y **put_***PropertyName* puede tratarse como si se hubieran declarado simplemente como  *PropertyName*. Una propiedad, a continuación, se puede tratar como un miembro de datos en lugar de una función.  
   
  Todos los métodos, propiedades y eventos son funciones que devuelven un **HRESULT**, que se puede comprobar para determinar si la función se ejecuta correctamente.  
   

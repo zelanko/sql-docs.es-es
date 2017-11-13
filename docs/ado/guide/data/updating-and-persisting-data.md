@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="updating-and-persisting-data"></a>Actualizar y conservar datos
-Los capítulos anteriores han explicado cómo utilizar ADO para obtener datos de un origen de datos, cómo desplazarse por los datos e incluso cómo editar los datos. Por supuesto, si el objetivo de la aplicación es permitir a los usuarios realizar cambios en los datos, debe entender cómo guardar los cambios. O bien puede conservar la **conjunto de registros** cambia a un archivo mediante la **guardar** método, también puede enviar los cambios de vuelta al origen de datos de almacenamiento con el **actualización** o ** UpdateBatch** métodos.  
+Los capítulos anteriores han explicado cómo utilizar ADO para obtener datos de un origen de datos, cómo desplazarse por los datos e incluso cómo editar los datos. Por supuesto, si el objetivo de la aplicación es permitir a los usuarios realizar cambios en los datos, debe entender cómo guardar los cambios. O bien puede conservar la **conjunto de registros** cambia a un archivo mediante la **guardar** método, también puede enviar los cambios de vuelta al origen de datos de almacenamiento con el **actualización** o  **UpdateBatch** métodos.  
   
  En los capítulos anteriores, se ha cambiado los datos en varias filas de la **conjunto de registros**. ADO admite dos nociones básicas relacionadas con la adición, eliminación y modificación de filas de datos.  
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Establecer el [propiedad CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient**.  
   
--   Especifique el nombre del controlador que se va a usar en el [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto **controlador** propiedad, o la [conjunto de registros ADO (objetos)](../../../ado/reference/ado-api/recordset-object-ado.md) "delacadenadeconexióndeobjeto** Controlador**= "palabra clave. (No se puede establecer el controlador el **conexión** cadena de conexión del objeto.)  
+-   Especifique el nombre del controlador que se va a usar en el [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto **controlador** propiedad, o la [conjunto de registros ADO (objetos)](../../../ado/reference/ado-api/recordset-object-ado.md) "delacadenadeconexióndeobjeto **Controlador**= "palabra clave. (No se puede establecer el controlador el **conexión** cadena de conexión del objeto.)  
   
  RDS proporciona un controlador predeterminado en el servidor denominado **MSDFMAP. Controlador**. (El archivo de personalización predeterminado se denomina MSDFMAP. INI).  
   
@@ -71,7 +71,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Especifique el [propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propiedad o palabra clave; el [propiedad de proveedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propiedad o palabra clave; y la *CustomerById* y * CustomerDatabase* identificadores. A continuación, abra el **Recordset** objeto  
+ Especifique el [propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propiedad o palabra clave; el [propiedad de proveedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propiedad o palabra clave; y la *CustomerById* y  *CustomerDatabase* identificadores. A continuación, abra el **Recordset** objeto  
   
  RS. Abra "CustomerById (4)", "controlador = MSDFMAP. Controlador;"& _  
   

@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [Entrada] Longitud de la **MessageText* búfer en caracteres. No hay ninguna longitud máxima del texto del mensaje de diagnóstico.  
   
  *TextLengthPtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el número de caracteres necesarios para el carácter de terminación null) disponible para devolver en * \*MessageText*. Si es mayor que el número de caracteres disponibles para devolver *BufferLength*, el texto del mensaje de diagnóstico en * \*MessageText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el número de caracteres necesarios para el carácter de terminación null) disponible para devolver en  *\*MessageText*. Si es mayor que el número de caracteres disponibles para devolver *BufferLength*, el texto del mensaje de diagnóstico en  *\*MessageText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  

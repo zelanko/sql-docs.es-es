@@ -31,7 +31,7 @@ El Administrador de controladores es compatible con dos puntos de entrada para l
   
  El archivo de encabezado ODBC también admite funciones decoradas con un *A* (**SQLDriverConnectA**) para la comodidad de aplicaciones mixtas de ANSI o Unicode. Las llamadas realizadas a la **A** funciones son en realidad llama en el punto de entrada no representativo (**SQLDriverConnect**.)  
   
- Si la aplicación se compila con la _UNICODE **#define**, el archivo de encabezado ODBC asignará las llamadas a funciones no representativo (**SQLDriverConnect**) a la versión de Unicode (**SQLDriverConnectW **.)  
+ Si la aplicación se compila con la _UNICODE **#define**, el archivo de encabezado ODBC asignará las llamadas a funciones no representativo (**SQLDriverConnect**) a la versión de Unicode (**SQLDriverConnectW** .)  
   
  El Administrador de controladores reconoce un controlador como un controlador de Unicode si **SQLConnectW** es compatible con el controlador.  
   

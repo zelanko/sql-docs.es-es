@@ -66,7 +66,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
  [4] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DESC.  
   
- [5] llamada **SQLAllocHandle** con *OutputHandlePtr* que apunta a un identificador válido sobrescribe este identificador sin tener en cuenta para el contenido anterior para que controle y podría causar problemas para los controladores ODBC. Es incorrecta programación de aplicaciones de ODBC para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \*OutputHandlePtr* sin llamar a ** SQLFreeHandle** para liberar el identificador antes de reasignación de él. Sobrescribir ODBC controla de manera podría provocar un comportamiento incoherente o errores por parte de controladores ODBC.  
+ [5] llamada **SQLAllocHandle** con *OutputHandlePtr* que apunta a un identificador válido sobrescribe este identificador sin tener en cuenta para el contenido anterior para que controle y podría causar problemas para los controladores ODBC. Es incorrecta programación de aplicaciones de ODBC para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para  *\*OutputHandlePtr* sin llamar a  **SQLFreeHandle** para liberar el identificador antes de reasignación de él. Sobrescribir ODBC controla de manera podría provocar un comportamiento incoherente o errores por parte de controladores ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -255,7 +255,7 @@ Instrucciones de ODBC tienen los siguientes estados.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [1] este error se devuelve mediante el Administrador de controladores si **SQLFetch** o **SQLFetchScroll** no se devuelve SQL_NO_DATA y se devuelve el controlador si **SQLFetch** o ** SQLFetchScroll** devuelva SQL_NO_DATA.  
+ [1] este error se devuelve mediante el Administrador de controladores si **SQLFetch** o **SQLFetchScroll** no se devuelve SQL_NO_DATA y se devuelve el controlador si **SQLFetch** o  **SQLFetchScroll** devuelva SQL_NO_DATA.  
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
@@ -279,7 +279,7 @@ Instrucciones de ODBC tienen los siguientes estados.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 HY010 [p] [np]|24000 [p], [1] HY010 [np]|24000 HY010 [p] [np]|  
   
- [1] este error se devuelve mediante el Administrador de controladores si **SQLFetch** o **SQLFetchScroll** no se devuelve SQL_NO_DATA y se devuelve el controlador si **SQLFetch** o ** SQLFetchScroll** devuelva SQL_NO_DATA.  
+ [1] este error se devuelve mediante el Administrador de controladores si **SQLFetch** o **SQLFetchScroll** no se devuelve SQL_NO_DATA y se devuelve el controlador si **SQLFetch** o  **SQLFetchScroll** devuelva SQL_NO_DATA.  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
@@ -328,7 +328,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
  [1] esta fila muestra las transiciones cuando *opción* era SQL_CLOSE.  
   
- [2] esta fila muestra las transiciones cuando *opción* era SQL_UNBIND o SQL_RESET_PARAMS. Si el *opción* argumento era SQL_DROP y el controlador subyacente es una aplicación ODBC 3*.x* controlador, el Administrador de controladores se asigna a una llamada a **SQLFreeHandle** con * HandleType* establecido en SQL_HANDLE_STMT. Para obtener más información, consulte la tabla de transición para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] esta fila muestra las transiciones cuando *opción* era SQL_UNBIND o SQL_RESET_PARAMS. Si el *opción* argumento era SQL_DROP y el controlador subyacente es una aplicación ODBC 3*.x* controlador, el Administrador de controladores se asigna a una llamada a **SQLFreeHandle** con  *HandleType* establecido en SQL_HANDLE_STMT. Para obtener más información, consulte la tabla de transición para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

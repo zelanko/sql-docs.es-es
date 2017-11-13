@@ -37,7 +37,7 @@ ODBC se alinea con las siguientes especificaciones y estándares que tratan con 
   
  Como resultado de esta alineación, las siguientes afirmaciones son ciertas:  
   
--   Una aplicación escrita en las especificaciones de ISO CLI y Open Group funcionará con una aplicación ODBC 3. *x* controlador o un controlador compatible con los estándares cuando se compila con ODBC 3.* x* archivos de encabezado y vincular con ODBC 3.* x* bibliotecas, y cuando obtiene acceso al controlador a través de ODBC 3.* x* el Administrador de controladores.  
+-   Una aplicación escrita en las especificaciones de ISO CLI y Open Group funcionará con una aplicación ODBC 3. *x* controlador o un controlador compatible con los estándares cuando se compila con ODBC 3. *x* archivos de encabezado y vincular con ODBC 3. *x* bibliotecas, y cuando obtiene acceso al controlador a través de ODBC 3. *x* el Administrador de controladores.  
   
 -   Un controlador que se escriben en las especificaciones de Open Group y ISO CLI funcionará con una aplicación ODBC 3*.x* aplicación o una aplicación compatible con los estándares cuando se compila con ODBC 3*.x* archivos de encabezado y vincular con ODBC 3*.x* bibliotecas, y cuando la aplicación obtiene acceso al controlador a través de ODBC 3*.x* el Administrador de controladores. (Para obtener más información, consulte [controladores y aplicaciones compatibles con los estándares](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   

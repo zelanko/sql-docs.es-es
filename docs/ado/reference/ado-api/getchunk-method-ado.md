@@ -52,7 +52,7 @@ variable = field.GetChunk(Size)
   
  Cada uno de ellos posteriores **GetChunk** llamada recupera datos a partir de donde anterior **GetChunk** dejó de llamada. Sin embargo, si va a recuperar datos de un campo y, a continuación, establecer o leer el valor de otro campo en el registro actual, ADO supone que ha terminado de recuperar datos desde el primer campo. Si se llama a la **GetChunk** método en el primer campo una vez más, ADO interpreta la llamada como una nueva **GetChunk** operación e inicia leer desde el principio de los datos. Obtener acceso a campos de otros [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos que no son clones del primer **Recordset** no interrumpirá el objeto **GetChunk** operaciones.  
   
- Si el **adFldLong** de bits en el [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad de un **campo** objeto se establece en **True**, puede usar el **GetChunk ** método para ese campo.  
+ Si el **adFldLong** de bits en el [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad de un **campo** objeto se establece en **True**, puede usar el **GetChunk**  método para ese campo.  
   
  Si no hay ningún registro actual cuando se usa el **GetChunk** método en un **campo** del objeto, se produce el error 3021 (no hay registro actual).  
   

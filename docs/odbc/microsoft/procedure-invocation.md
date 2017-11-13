@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="procedure-invocation"></a>Invocación del procedimiento
-Cuando se utiliza el controlador de Microsoft Access, los procedimientos se pueden invocar desde el controlador mediante el uso de la **SQLExecDirect** o **SQLPrepare** función con la sintaxis siguiente: {llamar *nombre del procedimiento * [(*parámetro*[,*parámetro*]...)]}. Tenga en cuenta que no se admiten expresiones como parámetros a un procedimiento llamado.  
+Cuando se utiliza el controlador de Microsoft Access, los procedimientos se pueden invocar desde el controlador mediante el uso de la **SQLExecDirect** o **SQLPrepare** función con la sintaxis siguiente: {llamar *nombre del procedimiento*  [(*parámetro*[,*parámetro*]...)]}. Tenga en cuenta que no se admiten expresiones como parámetros a un procedimiento llamado.  
   
  Si un nombre de procedimiento incluye un guión, el nombre debe estar delimitado con comillas atrás (').  
   

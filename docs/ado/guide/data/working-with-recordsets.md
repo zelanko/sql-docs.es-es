@@ -78,7 +78,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
 ## <a name="filtering-the-results"></a>Filtrar los resultados  
  El **buscar** método limita la búsqueda al contenido de un campo. El **Seek** método requiere un índice y tiene también otras limitaciones. Si debe buscar en varios campos que no son la base de un índice o si el proveedor no admite índices, puede limitar los resultados mediante el **filtro** propiedad de la **Recordset** objeto.  
   
- Use la **filtro** propiedad para ocultar selectivamente los registros de un **Recordset** objeto. El filtrado **Recordset** se convierte en el cursor actual, lo que significa que los registros que no cumple la **filtro** criterios no están disponibles en la **Recordset** hasta que el **Filtro** se quita. Otras propiedades que devuelven valores basados en el cursor actual se ven afectadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**, y ** PageCount**. Esto es porque al establecer la **filtro** propiedad en un valor específico moverá el registro actual al primer registro que cumpla el nuevo valor.  
+ Use la **filtro** propiedad para ocultar selectivamente los registros de un **Recordset** objeto. El filtrado **Recordset** se convierte en el cursor actual, lo que significa que los registros que no cumple la **filtro** criterios no están disponibles en la **Recordset** hasta que el **Filtro** se quita. Otras propiedades que devuelven valores basados en el cursor actual se ven afectadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**, y  **PageCount**. Esto es porque al establecer la **filtro** propiedad en un valor específico moverá el registro actual al primer registro que cumpla el nuevo valor.  
   
  El **filtro** propiedad toma un argumento de tipo variant. Este valor representa uno de los tres métodos para usar la **filtro** propiedad: una cadena de criterios, un **FilterGroupEnum** constante o una matriz de marcadores. Para obtener más información, vea Filtrar con una cadena de criterios, filtrar por una constante y filtrar por marcadores más adelante en este tema.  
   
@@ -92,7 +92,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
   
 -   *FieldName* debe ser un nombre de campo válido de la **conjunto de registros**. Si el nombre del campo contiene espacios, debe incluir el nombre entre corchetes.  
   
--   *Operador* debe ser uno de los siguientes: ** \< **, ** > **, ** \< = **, ** >= ** , ** <> **, ** = **, o **como**.  
+-   *Operador* debe ser uno de los siguientes:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , o **como**.  
   
 -   *Valor* es el valor con el que comparará los valores de campo (por ejemplo, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilice comillas simples (') con las cadenas y signos de número (`#`) con las fechas. Para números, puede utilizar separadores decimales, signos de dólar y notación científica. Si *operador* es **como**, *valor* puede usar caracteres comodín. Solo el asterisco (\*) y caracteres comodín (%) que se permiten caracteres de signo de porcentaje, y deben ser el último carácter de la cadena. *Valor* no puede ser nulo.  
   

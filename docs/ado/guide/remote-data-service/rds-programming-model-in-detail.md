@@ -52,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
  El modelo de objetos RDS incluye esta funcionalidad con el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
- Además, este objeto tiene un método para crear vacío **Recordset** objeto que se puede rellenar mediante programación ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) y otro método para convertir un **conjunto de registros ** objeto en una cadena de texto para crear una página Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ Además, este objeto tiene un método para crear vacío **Recordset** objeto que se puede rellenar mediante programación ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) y otro método para convertir un **conjunto de registros**  objeto en una cadena de texto para crear una página Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
   
  Con ADO, puede invalidar algunas de las conexiones estándar y el comportamiento de comando de la **RDSServer.DataFactory** con un **DataFactory** controlador y un archivo de personalización que contiene la conexión, comando y los parámetros de seguridad.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 09/09/2017
   
  El modelo de objetos RDS incluye esta funcionalidad con el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- El **RDS. DataControl** tiene dos aspectos. Un aspecto pertenece al origen de datos. Si establece el comando y la información de conexión mediante el **conectar** y **SQL** propiedades de la **RDS. DataControl**, utilizará automáticamente el **RDS. DataSpace** para crear una referencia en el valor predeterminado **RDSServer.DataFactory** objeto. La **RDSServer.DataFactory** usará la **conectar** valor de propiedad para conectarse al origen de datos, use la **SQL** valor de propiedad para obtener un ** Conjunto de registros** desde el origen de datos y se devuelve el **Recordset** el objeto a la **RDS. DataControl**.  
+ El **RDS. DataControl** tiene dos aspectos. Un aspecto pertenece al origen de datos. Si establece el comando y la información de conexión mediante el **conectar** y **SQL** propiedades de la **RDS. DataControl**, utilizará automáticamente el **RDS. DataSpace** para crear una referencia en el valor predeterminado **RDSServer.DataFactory** objeto. La **RDSServer.DataFactory** usará la **conectar** valor de propiedad para conectarse al origen de datos, use la **SQL** valor de propiedad para obtener un  **Conjunto de registros** desde el origen de datos y se devuelve el **Recordset** el objeto a la **RDS. DataControl**.  
   
  El segundo aspecto pertenece a la presentación de devuelto **Recordset** información en un control visual. Puede asociar un control visual con el **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información en el asociado **Recordset** objeto, mostrar los resultados de la consulta en una página Web en Microsoft® Internet Explorer. Cada **RDS. DataControl** objeto enlaza una **Recordset** objeto, que representa los resultados de una sola consulta, en uno o más controles visuales (por ejemplo, un cuadro de texto, un cuadro combinado, un control de cuadrícula etc.). Puede haber más de un **RDS. DataControl** objeto en cada página. Cada **RDS. DataControl** objeto puede estar conectado a un origen de datos diferente y contiene los resultados de una consulta independiente.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 09/09/2017
  RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. El [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) eventos se llama cada vez que la **RDS. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) cambios de propiedad, lo que le avise cuando se haya completado correctamente una operación asincrónica, finaliza o se ha producido un error. El [onError](../../../ado/reference/rds-api/onerror-event-rds.md) eventos se llaman cada vez que se produce un error, incluso si el error se produce durante una operación asincrónica.  
   
 > [!NOTE]
->  Microsoft Internet Explorer proporciona dos eventos adicionales a RDS: **onDataSetChanged**, lo que indica que la **Recordset** es funcional pero sigue recuperando filas, y ** onDataSetComplete**, lo que indica que la **Recordset** ha terminado de recuperar filas.  
+>  Microsoft Internet Explorer proporciona dos eventos adicionales a RDS: **onDataSetChanged**, lo que indica que la **Recordset** es funcional pero sigue recuperando filas, y  **onDataSetComplete**, lo que indica que la **Recordset** ha terminado de recuperar filas.  
   
 ## <a name="see-also"></a>Vea también  
  [Modelo de programación de RDS con objetos](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   

@@ -58,10 +58,10 @@ La tabla siguiente describen las funciones numéricas que se incluyen en el conj
 |**POWER (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve el valor de *numeric_exp* a la potencia de *integer_exp*.|  
 |**RADIANES (** *numeric_exp* **)** (ODBC 2.0)|Devuelve el número de radianes convertido a partir de *numeric_exp* grados.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|Devuelve un valor de punto flotante aleatorio con *integer_exp* como el valor de inicialización opcional.|  
-|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* redondeado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se redondea a &#124;* integer_exp*&#124; posiciones a la izquierda del separador decimal.|  
+|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* redondeado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se redondea a &#124; *integer_exp*&#124; posiciones a la izquierda del separador decimal.|  
 |**Inicio de sesión (** *numeric_exp* **)** (ODBC 1.0)|Devuelve un indicador del inicio de sesión de *numeric_exp*. Si *numeric_exp* es menor que cero, – 1 se devuelve. Si *numeric_exp* es igual a cero, se devuelve 0. Si *numeric_exp* es mayor que cero, se devuelve 1.|  
 |**SENO (** *float_exp* **)** (ODBC 1.0)|Devuelve el seno de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Devuelve la raíz cuadrada de *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Devuelve la tangente de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
-|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* truncado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se trunca a &#124;* integer_exp*&#124; posiciones a la izquierda del separador decimal.|
+|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* truncado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se trunca a &#124; *integer_exp*&#124; posiciones a la izquierda del separador decimal.|
 

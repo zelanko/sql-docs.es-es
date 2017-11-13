@@ -79,7 +79,7 @@ ms.lasthandoff: 09/09/2017
   
 -   El certificado no ha expirado.  
   
--   El nombre común (CN) en el asunto o un nombre DNS en el nombre alternativo sujeto (SAN) del certificado coincide exactamente con el **serverName** valor especificado en la cadena de conexión o, si no se especifica, el ** hostNameInCertificate** valor de propiedad.  
+-   El nombre común (CN) en el asunto o un nombre DNS en el nombre alternativo sujeto (SAN) del certificado coincide exactamente con el **serverName** valor especificado en la cadena de conexión o, si no se especifica, el  **hostNameInCertificate** valor de propiedad.  
   
 -   Un nombre DNS puede incluir caracteres comodín. Pero la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no admite la coincidencia de carácter comodín. Es decir, abc.com no coincidirá con *.com pero \*coincidirá con .com \*. com.  
   

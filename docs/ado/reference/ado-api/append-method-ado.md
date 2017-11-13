@@ -88,7 +88,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Se puede crear un campo inexistente y anexa a la **campos** colección asignando un valor para el objeto de campo como si ya existiese en la colección. La asignación desencadenará la creación automática y agregar información de la **campo** objeto y, a continuación, la asignación se llevará a cabo.  
   
- Después de anexar una **campo** a la **campos** colección de un **registro** objeto, llame a la **actualización** método de la **campos ** colección para guardar el cambio.  
+ Después de anexar una **campo** a la **campos** colección de un **registro** objeto, llame a la **actualización** método de la **campos**  colección para guardar el cambio.  
   
 ## <a name="applies-to"></a>Se aplica a  
   

@@ -31,7 +31,7 @@ La operación de eliminación de **SQLSetPos** hace que el origen de datos elimi
   
  Después de **SQLSetPos** devuelve la fila eliminada es la fila actual y su estado es SQL_ROW_DELETED. La fila no se puede usar en las operaciones más posicionadas, como llamadas a **SQLGetData** o **SQLSetPos**.  
   
- Al eliminar todas las filas del conjunto de filas (*RowNumber* es igual a 0), la aplicación puede impedir que el controlador elimine determinadas filas utilizando la matriz de operación de fila, en la misma forma que para la operación de actualización de **SQLSetPos **. (Consulte [actualizar las filas del conjunto de filas con SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).)  
+ Al eliminar todas las filas del conjunto de filas (*RowNumber* es igual a 0), la aplicación puede impedir que el controlador elimine determinadas filas utilizando la matriz de operación de fila, en la misma forma que para la operación de actualización de **SQLSetPos** . (Consulte [actualizar las filas del conjunto de filas con SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).)  
   
  Cada fila que se elimina debe ser una fila que exista en el conjunto de resultados. Si se rellenaron los búferes de la aplicación y se ha mantenido una matriz de Estados de fila, sus valores en cada una de estas posiciones de fila no deben ser SQL_ROW_DELETED, SQL_ROW_ERROR ni SQL_ROW_NOROW.
 

@@ -133,7 +133,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como una instancia de la clase *Product* definida en la secuencia de comandos. En el ejemplo se recupera información del producto desde la *Purchasing.PurchaseOrderDetail* y *Production.Product* tablas de la base de datos de AdventureWorks para productos que tienen un determinado (defechadevencimiento* DueDate*) y una cantidad mantenida en existencias (*StockQty*) menor que un valor especificado. En el ejemplo se resaltan algunas de las reglas que se aplican cuando se especifica una clase en una llamada a **sqlsrv_fetch_object**:  
+En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como una instancia de la clase *Product* definida en la secuencia de comandos. En el ejemplo se recupera información del producto desde la *Purchasing.PurchaseOrderDetail* y *Production.Product* tablas de la base de datos de AdventureWorks para productos que tienen un determinado (defechadevencimiento *DueDate*) y una cantidad mantenida en existencias (*StockQty*) menor que un valor especificado. En el ejemplo se resaltan algunas de las reglas que se aplican cuando se especifica una clase en una llamada a **sqlsrv_fetch_object**:  
   
 -   La variable *$product* es una instancia de la clase *Product* , ya que se especificó "Product" con el parámetro *$className* y existe la clase *Product* .  
   

@@ -34,13 +34,13 @@ La forma de datos admite las funciones siguientes: Es el nombre asignado al cap�
   
 |Funciones de agregado|Description|  
 |-------------------------|-----------------|  
-|SUM (*alias de capítulo*.* nombre de la columna*)|Calcula la suma de todos los valores de la columna especificada.|  
-|AVG (*alias de capítulo*.* nombre de la columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
-|MAX (*alias de capítulo*.* nombre de la columna*)|Calcula el valor máximo de la columna especificada.|  
-|MIN (*alias de capítulo*.* nombre de la columna*)|Calcula el valor mínimo de la columna especificada.|  
-|RECUENTO (*alias de capítulo*[.* nombre de la columna*])|Cuenta el número de filas en el alias especificado. Si se especifica una columna, solo las filas para los que esa columna es distinto de Null se incluyen en el recuento.|  
-|STDEV (*alias de capítulo*.* nombre de la columna*)|Calcula la desviación estándar de la columna especificada.|  
-|CUALQUIER (*alias de capítulo*.* nombre de la columna*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción sólo cuando el valor de la columna es el mismo para todas las filas del capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE devuelve arbitrariamente uno de los valores con el valor de la función ANY.|  
+|SUM (*alias de capítulo*. *nombre de la columna*)|Calcula la suma de todos los valores de la columna especificada.|  
+|AVG (*alias de capítulo*. *nombre de la columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
+|MAX (*alias de capítulo*. *nombre de la columna*)|Calcula el valor máximo de la columna especificada.|  
+|MIN (*alias de capítulo*. *nombre de la columna*)|Calcula el valor mínimo de la columna especificada.|  
+|RECUENTO (*alias de capítulo*[. *nombre de la columna*])|Cuenta el número de filas en el alias especificado. Si se especifica una columna, solo las filas para los que esa columna es distinto de Null se incluyen en el recuento.|  
+|STDEV (*alias de capítulo*. *nombre de la columna*)|Calcula la desviación estándar de la columna especificada.|  
+|CUALQUIER (*alias de capítulo*. *nombre de la columna*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción sólo cuando el valor de la columna es el mismo para todas las filas del capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE devuelve arbitrariamente uno de los valores con el valor de la función ANY.|  
   
 |expresión calculada|Description|  
 |---------------------------|-----------------|  

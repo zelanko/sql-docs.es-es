@@ -34,7 +34,7 @@ Como sucede con los parámetros en instrucciones SQL, se pueden enviar datos lar
 > [!NOTE]  
 >  Una aplicación puede enviar cualquier tipo de datos en tiempo de ejecución con **SQLPutData**, aunque solo datos de caracteres y binarios se pueden enviar en partes. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un único búfer, no suele haber motivo para utilizar **SQLPutData**. Es mucho más fácil enlazar el búfer y dejar que el controlador de recuperar los datos desde el búfer.  
   
- Dado que las columnas de datos de tipo long no se enlazan normalmente, la aplicación debe enlazar la columna antes de llamar a **SQLBulkOperations** o **SQLSetPos** y desenlace después de llamar a **SQLBulkOperations ** o **SQLSetPos**. La columna debe estar enlazada porque **SQLBulkOperations** o **SQLSetPos** solo funciona en las columnas enlazadas y debe ser independiente para que **SQLGetData** puede usarse para recuperar datos en la columna.  
+ Dado que las columnas de datos de tipo long no se enlazan normalmente, la aplicación debe enlazar la columna antes de llamar a **SQLBulkOperations** o **SQLSetPos** y desenlace después de llamar a **SQLBulkOperations**  o **SQLSetPos**. La columna debe estar enlazada porque **SQLBulkOperations** o **SQLSetPos** solo funciona en las columnas enlazadas y debe ser independiente para que **SQLGetData** puede usarse para recuperar datos en la columna.  
   
  Para enviar datos en tiempo de ejecución, la aplicación hace lo siguiente:  
   

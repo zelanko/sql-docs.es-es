@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
  El controlador JDBC implementa todos los métodos de las interfaces java.sql.Blob, java.sql.Clob y java.sql.NClob.  
   
 > [!NOTE]  
->  Valores CLOB se pueden usar con [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (o posterior) tipos de datos de valor grande. En concreto, los tipos CLOB se pueden usar con la **varchar (max)** y **nvarchar (max)** tipos de datos, tipos BLOB pueden usarse con **varbinary (max)** y **imagen ** tipos de datos y los tipos NCLOB pueden utilizarse con **ntext** y **nvarchar (max)**.  
+>  Valores CLOB se pueden usar con [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (o posterior) tipos de datos de valor grande. En concreto, los tipos CLOB se pueden usar con la **varchar (max)** y **nvarchar (max)** tipos de datos, tipos BLOB pueden usarse con **varbinary (max)** y **imagen**  tipos de datos y los tipos NCLOB pueden utilizarse con **ntext** y **nvarchar (max)**.  
   
 ## <a name="large-value-data-types"></a>Tipos de datos de valores grandes  
  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], trabajar con datos de valores grandes tipos requería un tratamiento especial. Los tipos de datos de gran tamaño son aquellos que superan el tamaño de fila máximo de 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Introduce un especificador de máximo para **varchar**, **nvarchar**, y **varbinary** tipos de datos para permitir el almacenamiento de valores tan grandes como 2 ^ 31 bytes. Columnas de la tabla y [!INCLUDE[tsql](../../includes/tsql_md.md)] pueden especificar variables **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipos de datos.  

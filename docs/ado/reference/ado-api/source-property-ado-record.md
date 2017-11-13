@@ -41,7 +41,7 @@ Indica el origen de datos o el objeto representado por la [registro](../../../ad
 ## <a name="remarks"></a>Comentarios  
  El **origen** propiedad devuelve el *origen* argumento de la **registro** objeto [abiertos](../../../ado/reference/ado-api/open-method-ado-record.md) método. Puede contener una cadena de dirección URL absoluta o relativa. Se puede utilizar una dirección URL absoluta sin configuración de la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad que se va a abrir directamente el **registro** objeto. Un modo implícito **conexión** objeto se crea en este caso.  
   
- El **origen** propiedad también puede contener una referencia a una ya está abierto **Recordset**, que abre un **registro** objeto que representa la fila actual en el ** Conjunto de registros**.  
+ El **origen** propiedad también puede contener una referencia a una ya está abierto **Recordset**, que abre un **registro** objeto que representa la fila actual en el  **Conjunto de registros**.  
   
  El **origen** propiedad también podría incluir una referencia a un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que devuelve una sola fila de datos desde el proveedor.  
   

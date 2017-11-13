@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Las longitudes de los siguientes son válidas como valores de longitud/indicador:  
   
--   *n*, donde * n * > 0.  
+-   *n*, donde  *n*  > 0.  
   
 -   0.  
   

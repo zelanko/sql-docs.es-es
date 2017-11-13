@@ -54,5 +54,5 @@ _C_TYPE_TIMESTAMP|No se trunca la parte de las fracciones de segundo de marca de
   
  [f] es el tamaño del tipo de datos C correspondiente.  
   
- Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres C, la cadena resultante es en el "*aaaa*-*mm*-*dd* *hh *:*mm*:*ss*[.* f... *] "formato, donde puede usarse hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por el valor de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)
+ Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres C, la cadena resultante es en el "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[. *f...* ] "formato, donde puede usarse hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por el valor de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)
 

@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="fixed-length-bookmarks"></a>Marcadores de longitud fija
-Si una aplicación ODBC 3*.x* controlador debería funcionar con una API ODBC 2.* x* aplicación que usa marcadores de longitud fija, el controlador deben admitir lo siguiente:  
+Si una aplicación ODBC 3*.x* controlador debería funcionar con una API ODBC 2. *x* aplicación que usa marcadores de longitud fija, el controlador deben admitir lo siguiente:  
   
 -   SQL_UB_ON como un valor para la opción de instrucción SQL_USE_BOOKMARKS. (SQL_UB_ON está en desuso en ODBC 3*.x*.)  
   

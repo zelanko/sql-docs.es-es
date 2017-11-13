@@ -87,7 +87,7 @@ SQLRETURN SQLDriverConnect(
  [Entrada] Longitud de la **OutConnectionString* búfer en caracteres.  
   
  *StringLength2Ptr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *OutConnectionString*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, el completado de la cadena de conexión en \* *OutConnectionString* se trunca a * BufferLength* menos la longitud de un carácter de terminación null.  
+ [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *OutConnectionString*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, el completado de la cadena de conexión en \* *OutConnectionString* se trunca a  *BufferLength* menos la longitud de un carácter de terminación null.  
   
  *DriverCompletion*  
  [Entrada] Marca que indica si el Administrador de controladores o el controlador debe solicitar más información de conexión:  
@@ -108,14 +108,14 @@ SQLRETURN SQLDriverConnect(
 |01004|Datos de cadena, delimitado truncados|El búfer \* *OutConnectionString* no era lo suficientemente grande como para devolver la cadena de conexión completa, por lo que se trunca la cadena de conexión. Se devuelve la longitud de la cadena de conexión untruncated en **StringLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S00|Atributo de cadena de conexión no válido|Se especificó una palabra clave de atributo no válido en la cadena de conexión (*InConnectionString*), pero el controlador fue capaz de conectarse al origen de datos de todos modos. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado que apunta el *ValuePtr* argumento en **SQLSetConnectAttr** y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S08|Error al guardar DSN de archivo|La cadena en * \*InConnectionString* contiene un **FILEDSN** palabra clave, pero el archivo .dsn no se había guardado. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S09|Palabra clave no válida|(DM) la cadena en * \*InConnectionString* contiene un **SAVEFILE** palabra clave pero no un **controlador** o un **FILEDSN** palabra clave. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S08|Error al guardar DSN de archivo|La cadena en  *\*InConnectionString* contiene un **FILEDSN** palabra clave, pero el archivo .dsn no se había guardado. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S09|Palabra clave no válida|(DM) la cadena en  *\*InConnectionString* contiene un **SAVEFILE** palabra clave pero no un **controlador** o un **FILEDSN** palabra clave. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08001|No se puede establecer la conexión de cliente|El controlador no pudo establecer una conexión con el origen de datos.|  
 |08002|Nombre de la conexión en uso|(DM) especificado *IdentificadorConexión* ya hubiese utilizado para establecer una conexión con un origen de datos, y la conexión todavía estaba abierta.|  
 |08004|Servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos de definido por la implementación.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos a la que estaba intentando conectar el controlador antes de la **SQLDriverConnect** procesamiento de la función se ha completado.|  
 |28000|Especificación de autorización no válido|El identificador de usuario o la cadena de autorización o ambos, según se especifica en la cadena de conexión (*InConnectionString*), han infringido las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*szMessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*szMessageText* búfer describe el error y su causa.|  
 |HY000|Error general: dsn de archivo no válido|(DM) la cadena en **InConnectionString* contiene una palabra clave FILEDSN, pero no se encontró el nombre del archivo DSN.|  
 |HY000|Error general: no se puede crear el búfer de archivos|(DM) la cadena en **InConnectionString* contiene una palabra clave FILEDSN, pero el archivo .dsn es ilegible.|  
 |HY001|Error de asignación de memoria|El Administrador de controladores no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la **SQLDriverConnect** función.<br /><br /> El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
@@ -139,7 +139,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|No se puede cargar el archivo DLL de traducción|El controlador no pudo cargar el archivo DLL que se especificó para el origen de datos o para la conexión de traducción.|  
 |IM010|Nombre del origen de datos es demasiado largo|(DM) el valor de atributo para la palabra clave DSN era más de SQL_MAX_DSN_LENGTH caracteres.|  
 |IM011|Nombre de controlador demasiado largo|Valor de atributo (DM) para la **controlador** palabra clave tenía más de 255 caracteres.|  
-|IM012|Error de sintaxis de palabra clave DRIVER|Pares de palabra clave y valor (DM) para la **controlador** palabra clave contiene un error de sintaxis.<br /><br /> (DM) la cadena en * \*InConnectionString* contiene un **FILEDSN** palabra clave, pero el archivo .dsn no contenía un **controlador** palabra clave o un ** DSN** palabra clave.|  
+|IM012|Error de sintaxis de palabra clave DRIVER|Pares de palabra clave y valor (DM) para la **controlador** palabra clave contiene un error de sintaxis.<br /><br /> (DM) la cadena en  *\*InConnectionString* contiene un **FILEDSN** palabra clave, pero el archivo .dsn no contenía un **controlador** palabra clave o un  **DSN** palabra clave.|  
 |IM014|El DSN especificado contiene un error de coincidencia de arquitectura entre el controlador y la aplicación|Aplicación de 32 bits (DM) usa un DSN que se conecta a un controlador de 64 bits; o viceversa.|  
 |IM015|Error SQLDriverConnect del controlador en SQL_HANDLE_DBC_INFO_HANDLE|Si un controlador devuelve SQL_ERROR, el Administrador de controladores devolverá SQL_ERROR a la aplicación y se producirá un error en la conexión.<br /><br /> Para obtener más información sobre SQL_HANDLE_DBC_INFO_TOKEN, consulte [desarrollar conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Sondeo está deshabilitado en el modo de notificación asincrónica|Cada vez que se utiliza el modelo de notificación, se deshabilita el sondeo.|  

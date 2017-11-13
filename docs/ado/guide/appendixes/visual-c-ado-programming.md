@@ -55,7 +55,7 @@ objectPtr->PutRefProperty(&value);   // set property with object pointer
 ```  
   
 ## <a name="using-property-directives"></a>Utilizar directivas de propiedad  
- El **__declspec(property...) ** directiva de compilador es una extensión del lenguaje C específicas de Microsoft que declara una función utilizada como una propiedad que tenga una sintaxis alternativa. Como resultado, puede establecer u obtener valores de una propiedad de una manera similar a Visual Basic. Por ejemplo, puede establecer y obtener una propiedad de esta manera:  
+ El **__declspec(property...)**  directiva de compilador es una extensión del lenguaje C específicas de Microsoft que declara una función utilizada como una propiedad que tenga una sintaxis alternativa. Como resultado, puede establecer u obtener valores de una propiedad de una manera similar a Visual Basic. Por ejemplo, puede establecer y obtener una propiedad de esta manera:  
   
 ```  
 objectPtr->property = value;        // set property value  
@@ -71,16 +71,16 @@ variable = objectPtr->GetProperty;  // get property value
   
  El compilador generará la correspondiente **obtener***-*, **colocar**-, o **PutRef***propiedad* llamada según la sintaxis alternativa declarada y si la propiedad se va a leer o escribir.  
   
- El **__declspec(property...) ** sólo puede declarar la directiva de compilador **obtener**, **colocar**, o **obtener** y **colocar** sintaxis alternativa para una función. Operaciones de solo lectura únicamente tienen un **obtener** declaración; las operaciones de solo escritura solo tiene un **colocar** declaración; las operaciones que son ambos leen y escriben tener **obtener** y **colocar** declaraciones.  
+ El **__declspec(property...)**  sólo puede declarar la directiva de compilador **obtener**, **colocar**, o **obtener** y **colocar** sintaxis alternativa para una función. Operaciones de solo lectura únicamente tienen un **obtener** declaración; las operaciones de solo escritura solo tiene un **colocar** declaración; las operaciones que son ambos leen y escriben tener **obtener** y **colocar** declaraciones.  
   
- Solo dos declaraciones son posibles con esta directiva; Sin embargo, cada propiedad tiene tres funciones de propiedad: **obtener***propiedad*, **colocar***propiedad*, y **PutRef ** *Propiedad*. En ese caso, solo dos formas de la propiedad tienen la sintaxis alternativa.  
+ Solo dos declaraciones son posibles con esta directiva; Sin embargo, cada propiedad tiene tres funciones de propiedad: **obtener***propiedad*, **colocar***propiedad*, y **PutRef**  *Propiedad*. En ese caso, solo dos formas de la propiedad tienen la sintaxis alternativa.  
   
  Por ejemplo, el **comando** objeto **ActiveConnection** propiedad se declara con una sintaxis alternativa para **obtener***ActiveConnection*y **PutRef***ActiveConnection*. El **PutRef**-sintaxis es una buena elección porque en la práctica, normalmente deberá colocar abierto **conexión** objeto (es decir, un **conexión** puntero de objeto) en este propiedad. Por otro lado, el **Recordset** objeto tiene **obtener**-, **colocar**-, y **PutRef***ActiveConnection*las operaciones, pero sin sintaxis alternativa.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Colecciones, el método GetItem y la propiedad del elemento  
  ADO define varias colecciones, incluidas **campos**, **parámetros**, **propiedades**, y **errores**. En Visual C++, el **GetItem (***índice***)** método devuelve un miembro de la colección. *Índice* es un **Variant**, el valor de los cuales es un índice numérico del miembro de la colección o una cadena que contiene el nombre del miembro.  
   
- El **__declspec(property...) ** directiva de compilador se declara el **elemento** de la propiedad como una sintaxis alternativa para cada colección fundamental **GetItem()** método. La sintaxis alternativa utiliza corchetes y es similar a una referencia a la matriz. En general, las dos formas de tener un aspecto similar al siguiente:  
+ El **__declspec(property...)**  directiva de compilador se declara el **elemento** de la propiedad como una sintaxis alternativa para cada colección fundamental **GetItem()** método. La sintaxis alternativa utiliza corchetes y es similar a una referencia a la matriz. En general, las dos formas de tener un aspecto similar al siguiente:  
   
 ```  
   
@@ -116,7 +116,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  Para obtener ejemplos de cómo recorrer en iteración una colección, vea la sección "Colecciones de ADO" de "Referencia de ADO".  
   
 ## <a name="com-specific-data-types"></a>Tipos de datos específicos de COM  
- En general, cualquier tipo de datos de Visual Basic que encuentra en la referencia de API de ADO tiene un equivalente en Visual C++. Éstos incluyen tipos de datos estándar como **unsigned char** para un Visual Basic **bytes**, **corto** para **entero**, y ** Long** para **largo**. Buscar en la sintaxis Indexesto ver exactamente qué se requiere para los operandos de un determinado método o propiedad.  
+ En general, cualquier tipo de datos de Visual Basic que encuentra en la referencia de API de ADO tiene un equivalente en Visual C++. Éstos incluyen tipos de datos estándar como **unsigned char** para un Visual Basic **bytes**, **corto** para **entero**, y  **Long** para **largo**. Buscar en la sintaxis Indexesto ver exactamente qué se requiere para los operandos de un determinado método o propiedad.  
   
  Las excepciones a esta regla son los tipos de datos específicos de COM: **Variant**, **BSTR**, y **SafeArray**.  
   
@@ -267,7 +267,7 @@ rs->Open(...);
   
  Tenga en cuenta que en un caso, el "`.`" operador se utiliza como si la variable fuera una instancia de una clase (`rs.CreateInstance`) y en otro caso, el "`->`" operador se utiliza como si la variable fuera un puntero a una interfaz (`rs->Open`).  
   
- Una variable se puede usar de dos maneras porque el "`->`" operador está sobrecargado para permitir a una instancia de una clase se comporte como un puntero a una interfaz. Un miembro de clase privada de la variable de instancia contiene un puntero a la **_Recordset** interfaz; el "`->`" operador devuelve ese puntero; y el puntero devuelto obtiene acceso a los miembros de la **_Recordset ** objeto.  
+ Una variable se puede usar de dos maneras porque el "`->`" operador está sobrecargado para permitir a una instancia de una clase se comporte como un puntero a una interfaz. Un miembro de clase privada de la variable de instancia contiene un puntero a la **_Recordset** interfaz; el "`->`" operador devuelve ese puntero; y el puntero devuelto obtiene acceso a los miembros de la **_Recordset**  objeto.  
   
 ### <a name="coding-a-missing-parameter--string"></a>Codificar un parámetro que falta: cadena  
  Cuando necesite una falta de código **cadena** operando en Visual Basic, simplemente omita el operando. Debe especificar el operando en Visual C++. Código de un **_bstr_t** que tiene una cadena vacía como un valor.  
@@ -442,7 +442,7 @@ End Sub
 #### <a name="notes"></a>Notas  
  Las notas siguientes corresponden a secciones comentadas en el ejemplo de código.  
   
-1.  Este ejemplo utiliza dos formas de un argumento de cadena que falta: una constante explícita, **strMissing**y una cadena que el compilador utilizará para crear un archivo temporal **_bstr_t** que existirá durante el ámbito de la ** Abra** método.  
+1.  Este ejemplo utiliza dos formas de un argumento de cadena que falta: una constante explícita, **strMissing**y una cadena que el compilador utilizará para crear un archivo temporal **_bstr_t** que existirá durante el ámbito de la  **Abra** método.  
   
 2.  No es necesario convertir explícitamente el operando de `rs->PutRefActiveConnection(cn)` a `(IDispatch *)` porque el tipo del operando es ya `(IDispatch *)`.  
   
@@ -563,7 +563,7 @@ void main() {
   
 1.  Especificar un formato de archivo **conexión** objeto codificado explícitamente **Variant**. Conviértalo explícitamente con (IDispatch \*) por lo que se invocará el constructor correcto. Además, establezca explícitamente el segundo **_variant_t** parámetro en el valor predeterminado de **true**, por lo que el recuento de referencias de objeto serán las correctas cuando el **Recordset:: Open** finaliza la operación.  
   
-2.  La expresión `(_bstr_t)`, no es una conversión de tipos, pero un **_variant_t** operador que extrae una **_bstr_t** de cadena de la **Variant** devuelto por **valor **.  
+2.  La expresión `(_bstr_t)`, no es una conversión de tipos, pero un **_variant_t** operador que extrae una **_bstr_t** de cadena de la **Variant** devuelto por **valor** .  
   
  La expresión `(char*)`, no es una conversión de tipos, pero un **_bstr_t** operador que extrae un puntero a la cadena encapsulada en un **_bstr_t** objeto.  
   

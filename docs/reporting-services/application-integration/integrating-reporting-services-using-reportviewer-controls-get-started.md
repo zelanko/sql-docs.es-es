@@ -243,7 +243,7 @@ El Control de Visor de informes ahora se incluye como un paquete de NuGet. Por e
 
     ![ssRS-remove-antiguo-rvcontrol-cuadro de herramientas](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Haga clic en cualquier lugar en el cuadro de herramientas y, a continuación, seleccione **elegir elementos... **.
+3. Haga clic en cualquier lugar en el cuadro de herramientas y, a continuación, seleccione **elegir elementos...** .
 
     ![ssRS-cuadro de herramientas-elija-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

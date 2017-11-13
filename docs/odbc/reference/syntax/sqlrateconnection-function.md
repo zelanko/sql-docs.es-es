@@ -79,7 +79,7 @@ SQLRETURN  SQLRateConnection(
   
  Si el Administrador de controladores se reutiliza una conexión cuya puntuación es estrictamente menor que 100 (incluyendo 99), el Administrador de controladores llamará a SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) para restablecer la conexión en el estado solicitado por la aplicación. El controlador no debe restablecer la conexión en esta llamada a función.  
   
- Si *fRequiredTransactionEnlistment* es TRUE, reutilizar *hCandidateConnection* necesita una inscripción adicional (*ID* ! = NULL) o unenlistment (* ID* == NULL). Esto indica que el costo de reutilización de una conexión y si el controlador debe dar de alta / dar de baja la conexión si se va a reutilizar la conexión. Si *fRequireTransactionEnlistment* es FALSE, controlador debe pasar por alto el valor de *ID*.  
+ Si *fRequiredTransactionEnlistment* es TRUE, reutilizar *hCandidateConnection* necesita una inscripción adicional (*ID* ! = NULL) o unenlistment ( *ID* == NULL). Esto indica que el costo de reutilización de una conexión y si el controlador debe dar de alta / dar de baja la conexión si se va a reutilizar la conexión. Si *fRequireTransactionEnlistment* es FALSE, controlador debe pasar por alto el valor de *ID*.  
   
  El Administrador de controladores garantiza que el elemento primario HENV controlar de *hRequest* y *hCandidateConnection* son los mismos. El Administrador de controladores garantiza que el identificador del grupo asociado *hRequest* y *hCandidateConnection* son los mismos.  
   

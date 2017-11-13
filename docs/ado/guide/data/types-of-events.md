@@ -32,15 +32,15 @@ ms.lasthandoff: 09/09/2017
 Hay dos tipos básicos de eventos. "Eventos will", que se llama antes de que comience una operación, normalmente incluyen "Will" en sus nombres, por ejemplo, **WillChangeRecordset** o **WillConnect**. Los eventos que se llaman una vez completado un evento normalmente incluyen "Complete" en sus nombres, por ejemplo, **RecordChangeComplete** o **ConnectComplete**. Existen excepciones, como **InfoMessage** , pero éstas se producen una vez completada la operación asociada.  
   
 ## <a name="will-events"></a>Eventos Will  
- Controladores de eventos llama antes de iniciar la operación ofrecerle la oportunidad de examinar o modificar los parámetros de operación y, a continuación, cancelar la operación o permitir que se complete. Estas rutinas de controlador de eventos normalmente tienen nombres de la forma * *le*eventos***.  
+ Controladores de eventos llama antes de iniciar la operación ofrecerle la oportunidad de examinar o modificar los parámetros de operación y, a continuación, cancelar la operación o permitir que se complete. Estas rutinas de controlador de eventos normalmente tienen nombres de la forma  **le*eventos***.  
   
 ## <a name="complete-events"></a>Eventos Complete  
- Controladores de eventos que se llama cuando se complete una operación pueden notificar a la aplicación que ha finalizado una operación. Un controlador de eventos de este tipo también recibe una notificación cuando un controlador de eventos Will cancela una operación pendiente. Estas rutinas de controlador de eventos normalmente tienen nombres de la forma ** *eventos*completar**.  
+ Controladores de eventos que se llama cuando se complete una operación pueden notificar a la aplicación que ha finalizado una operación. Un controlador de eventos de este tipo también recibe una notificación cuando un controlador de eventos Will cancela una operación pendiente. Estas rutinas de controlador de eventos normalmente tienen nombres de la forma  ***eventos*completar**.  
   
  Eventos Will y Complete normalmente se utilizan en pares.  
   
 ## <a name="other-events"></a>Otros eventos  
- Los otros controladores de eventos, es decir, los eventos cuyo nombre no tiene el formato * *le*eventos*** o ** *eventos*completar** : se denominan solo Cuando se complete una operación. Estos eventos son **desconexión**, **EndOfRecordset**, y **InfoMessage**.  
+ Los otros controladores de eventos, es decir, los eventos cuyo nombre no tiene el formato  **le*eventos*** o  ***eventos*completar** : se denominan solo Cuando se complete una operación. Estos eventos son **desconexión**, **EndOfRecordset**, y **InfoMessage**.  
   
 ## <a name="see-also"></a>Vea también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

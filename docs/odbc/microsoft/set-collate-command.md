@@ -51,7 +51,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|Peso único|  
   
 > [!NOTE]  
->  Cuando se especifica la opción español, *ch* es una letra única que ordena entre *c* y *d.*, y *ll* ordena entre * l* y *m*.  
+>  Cuando se especifica la opción español, *ch* es una letra única que ordena entre *c* y *d.*, y *ll* ordena entre  *l* y *m*.  
   
  Si especifica una opción de secuencia de intercalación como una cadena de caracteres literales, asegúrese de incluir la opción entre comillas:  
   

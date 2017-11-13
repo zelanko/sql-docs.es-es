@@ -52,11 +52,11 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- En los tres casos anteriores, el *StatementHandle* argumento tiene asignado el valor de *hstmt*, *atributo* argumento tiene asignado el valor de *fOption *y el *ValuePtr* argumento tiene asignado el mismo valor que *pvParam*.  
+ En los tres casos anteriores, el *StatementHandle* argumento tiene asignado el valor de *hstmt*, *atributo* argumento tiene asignado el valor de *fOption* y el *ValuePtr* argumento tiene asignado el mismo valor que *pvParam*.  
   
  Opciones de conexión de la cadena definida por ODBC, el Administrador de controladores establece la *BufferLength* argumento en la llamada a **SQLGetConnectAttr** a la longitud máxima predefinida (SQL_MAX_OPTION_STRING_LENGTH); para una opción de conexión que no son cadenas, *BufferLength* se establece en 0.  
   
- La opción de instrucción SQL_GET_BOOKMARK está en desuso en ODBC 3*.x*. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2.* x* las aplicaciones que utilizan SQL_GET_BOOKMARK, debe admitir SQL_GET_BOOKMARK. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2.* x* de las aplicaciones, deben admitir establecer SQL_USE_BOOKMARKS en SQL_UB_ON y debe exponer los marcadores de longitud fija. Si una aplicación ODBC 3*.x* controlador admite solamente los marcadores de longitud variable, marcadores de longitud no fija, debe devolver HYC00 SQLSTATE (característica opcional no implementada) si una API ODBC 2.* x* aplicación intenta establecer SQL_USE_BOOKMARKS a SQL_UB_ON.  
+ La opción de instrucción SQL_GET_BOOKMARK está en desuso en ODBC 3*.x*. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2. *x* las aplicaciones que utilizan SQL_GET_BOOKMARK, debe admitir SQL_GET_BOOKMARK. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2. *x* de las aplicaciones, deben admitir establecer SQL_USE_BOOKMARKS en SQL_UB_ON y debe exponer los marcadores de longitud fija. Si una aplicación ODBC 3*.x* controlador admite solamente los marcadores de longitud variable, marcadores de longitud no fija, debe devolver HYC00 SQLSTATE (característica opcional no implementada) si una API ODBC 2. *x* aplicación intenta establecer SQL_USE_BOOKMARKS a SQL_UB_ON.  
   
  Para una aplicación ODBC 3*.x* controlador, el Administrador de controladores ya no se comprueba para ver si *opción* es entre SQL_STMT_OPT_MIN y SQL_STMT_OPT_MAX o es mayor que SQL_CONNECT_OPT_DRVR_START. El controlador debe comprobarlo.
 

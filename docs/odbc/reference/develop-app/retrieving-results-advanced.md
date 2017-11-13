@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="retrieving-results-advanced"></a>Al recuperar los resultados (avanzados)
-Una aplicación puede especificar que se ha agregado un desplazamiento a direcciones de búfer de datos y la longitud/indicador correspondiente enlazados búfer direcciones cuando **SQLBulkOperations**, **SQLFetch**, ** SQLFetchScroll**, o **SQLSetPos** se llama. Los resultados de estas adiciones determinarán las direcciones usadas en estas operaciones.  
+Una aplicación puede especificar que se ha agregado un desplazamiento a direcciones de búfer de datos y la longitud/indicador correspondiente enlazados búfer direcciones cuando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, o **SQLSetPos** se llama. Los resultados de estas adiciones determinarán las direcciones usadas en estas operaciones.  
   
  Desplazamientos de enlace permiten que una aplicación cambiar los enlaces sin llamar a **SQLBindCol** para las columnas enlazadas previamente. Una llamada a **SQLBindCol** volver a enlazar los datos cambia la dirección del búfer y el puntero de longitud/indicador. Volver a enlazar con un desplazamiento, por otro lado, simplemente agrega un desplazamiento a la dirección de búfer de datos enlazados existente y la dirección del búfer de longitud/indicador. Cuando se utilizan los desplazamientos, los enlaces son "plantilla" de cómo se distribuyen los búferes de la aplicación y la aplicación puede mover esta "plantilla" a diferentes áreas de memoria cambiando el desplazamiento. Un desplazamiento nuevo puede especificarse en cualquier momento y siempre se agrega a los valores enlazados originalmente.  
   

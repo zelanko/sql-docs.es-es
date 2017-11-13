@@ -70,7 +70,7 @@ SQLRETURN SQLBrowseConnect(
  [Entrada] Longitud, en caracteres, de la **OutConnectionString* búfer.  
   
  *StringLength2Ptr*  
- [Salida] El número total de caracteres (excluyendo-finalización en null) disponible para devolver en \* *OutConnectionString*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena de conexión en \* *OutConnectionString* se trunca a * BufferLength* menos la longitud de un carácter de terminación null.  
+ [Salida] El número total de caracteres (excluyendo-finalización en null) disponible para devolver en \* *OutConnectionString*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena de conexión en \* *OutConnectionString* se trunca a  *BufferLength* menos la longitud de un carácter de terminación null.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
@@ -89,7 +89,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|Servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos de definido por la implementación.|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos a la que estaba intentando conectar el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |28000|Especificación de autorización no válido|El identificador de usuario, la cadena de autorización o ambos, según se especifica en el botón Examinar solicitan la cadena de conexión (*InConnectionString*), han infringido las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El Administrador de controladores (DM) no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.<br /><br /> El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|Se canceló una operación asincrónica mediante una llamada a [SQLCancelHandle función](../../../odbc/reference/syntax/sqlcancelhandle-function.md). A continuación, se llamó a la función original en el *IdentificadorConexión*.<br /><br /> Se canceló una operación mediante una llamada a **SQLCancelHandle** en el *IdentificadorConexión* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función ejecuta de forma asincrónica (no esta uno) para la *IdentificadorConexión* y aún se estaba ejecutando cuando se llamó a esta función.|  

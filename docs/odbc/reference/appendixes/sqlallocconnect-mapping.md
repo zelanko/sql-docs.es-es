@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlallocconnect-mapping"></a>Asignación de SQLAllocConnect
-Cuando una aplicación llama **SQLAllocConnect** a través de una aplicación ODBC 3.* x* controlador, la llamada a **SQLAllocConnect**(*henv*, *phdbc*) se asigna a **SQLAllocHandle** como se indica a continuación:  
+Cuando una aplicación llama **SQLAllocConnect** a través de una aplicación ODBC 3. *x* controlador, la llamada a **SQLAllocConnect**(*henv*, *phdbc*) se asigna a **SQLAllocHandle** como se indica a continuación:  
   
 1.  El Administrador de controladores se asigna una conexión y se devuelve a la aplicación.  
   

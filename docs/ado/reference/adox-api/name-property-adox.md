@@ -64,7 +64,7 @@ Indica el nombre del objeto.
   
  El **nombre** propiedad es de lectura/escritura en [columna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [clave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabla](../../../ado/reference/adox-api/table-object-adox.md), y [usuario](../../../ado/reference/adox-api/user-object-adox.md) objetos. El **nombre** propiedad es de solo lectura en [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md), y [vista](../../../ado/reference/adox-api/view-object-adox.md) objetos.  
   
- Para los objetos de lectura/escritura (**columna**, **grupo**, **clave**, **índice**, **tabla** y ** Usuario** objetos), el valor predeterminado es una cadena vacía ("").  
+ Para los objetos de lectura/escritura (**columna**, **grupo**, **clave**, **índice**, **tabla** y  **Usuario** objetos), el valor predeterminado es una cadena vacía ("").  
   
 > [!NOTE]
 >  Para las claves, esta propiedad es de solo lectura en **clave** ya anexados a una colección de objetos. Para las tablas, esta propiedad es de solo lectura para **tabla** ya anexados a una colección de objetos.  

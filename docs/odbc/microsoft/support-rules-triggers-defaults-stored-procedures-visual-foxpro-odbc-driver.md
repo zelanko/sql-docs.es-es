@@ -48,7 +48,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
  Si su aplicación interactúa con los datos cuyas reglas, desencadenadores, valores predeterminados o procedimientos almacenados llamar a cualquier otro comando de Visual FoxPro o funciones, el controlador genera un error. Vea [comandos no compatibles de Visual FoxPro y funciones](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) para obtener una lista de comandos y funciones no admitidas por el controlador.  
   
 > [!TIP]  
->  Si desea insertar código condicional en sus reglas, desencadenadores o procedimientos almacenados que determina los comandos que desea ejecutar cuando se llama por el controlador, puede usar el **() versión** (función). El **() versión** función devuelve "controlador de ODBC de Visual FoxPro * \<versión >*" cuando se llama por el controlador.  
+>  Si desea insertar código condicional en sus reglas, desencadenadores o procedimientos almacenados que determina los comandos que desea ejecutar cuando se llama por el controlador, puede usar el **() versión** (función). El **() versión** función devuelve "controlador de ODBC de Visual FoxPro  *\<versión >*" cuando se llama por el controlador.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Comandos de Visual FoxPro y las funciones admitidas en procedimientos almacenados, desencadenadores, valores predeterminados y reglas  
   

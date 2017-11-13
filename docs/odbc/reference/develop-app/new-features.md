@@ -85,7 +85,7 @@ Se ha introducido la nueva funcionalidad siguiente en ODBC 3. *x*. Un ODBC 3. *x
   
 -   Parámetros con nombre.  
   
--   Cualquiera de ODBC 3. *x*– específico **SQLGetInfo** opciones. (Si es un ODBC 3. *x* aplicación trabajar con una API ODBC 2.* x* controlador llama a los tipos de información SQL_XXX_CURSOR_ATTRIBUTES1, que se reemplazaron varias API ODBC 2.* x* tipos de información, parte de la información puede ser confiable, pero algunos podrían no ser confiables. Para obtener más información, consulte [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Cualquiera de ODBC 3. *x*– específico **SQLGetInfo** opciones. (Si es un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama a los tipos de información SQL_XXX_CURSOR_ATTRIBUTES1, que se reemplazaron varias API ODBC 2. *x* tipos de información, parte de la información puede ser confiable, pero algunos podrían no ser confiables. Para obtener más información, consulte [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Enlazar los desplazamientos.  
   

@@ -58,7 +58,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** devuelve TRUE si se crea el origen de datos. En caso contrario, devuelve FALSE.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Cuando **SQLCreateDataSource** devuelve FALSE, un asociado * \*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los * \*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLCreateDataSource** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los  *\*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -102,7 +102,7 @@ BOOL SQLCreateDataSource(
   
  ![Crear cuadro de diálogo nuevo origen de datos: revisar](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
   
- Si **finalizar** se hace clic en y **origen de datos de archivo** se seleccionó como el tipo de origen de datos y si la **comprobar esta conexión** opción es TRUE, ** SQLDriverConnect** se llama con la **SAVEFILE** y **controlador** palabras clave. El *DriverCompletion* argumento está establecido en SQL_DRIVER_COMPLETE. El nombre de archivo para el **SAVEFILE** palabra clave es el nombre que se ha especificado o elegido y el nombre del controlador para el **controlador** palabra clave es el nombre que se ha elegido. Si se especifica una cadena de conexión específicos del controlador en la página avanzadas del asistente, esa cadena se anexa después de la **controlador** palabra clave.  
+ Si **finalizar** se hace clic en y **origen de datos de archivo** se seleccionó como el tipo de origen de datos y si la **comprobar esta conexión** opción es TRUE,  **SQLDriverConnect** se llama con la **SAVEFILE** y **controlador** palabras clave. El *DriverCompletion* argumento está establecido en SQL_DRIVER_COMPLETE. El nombre de archivo para el **SAVEFILE** palabra clave es el nombre que se ha especificado o elegido y el nombre del controlador para el **controlador** palabra clave es el nombre que se ha elegido. Si se especifica una cadena de conexión específicos del controlador en la página avanzadas del asistente, esa cadena se anexa después de la **controlador** palabra clave.  
   
  Si **SQLDriverConnect** devuelve SQL_SUCCESS, el Administrador de controladores ha creado el DSN de archivo. **SQLCreateDataSource** devuelve TRUE. Si **SQLDriverConnect** no devuelve SQL_SUCCESS, un mensaje de advertencia cuadro indica que no se pudo establecer una conexión al origen de datos. Todavía se puede crear un DSN con información de conexión mínimo. Este cuadro de mensaje permite al usuario cancelar o continuar con la creación de DSN de archivo.  
   
@@ -110,7 +110,7 @@ BOOL SQLCreateDataSource(
   
  Si **origen de datos de archivo** se seleccionó como el tipo de origen de datos y la **comprobar esta conexión** opción es FALSE, se crea un DSN de archivo con el **controlador** (palabra clave) y especificado por el usuario cadena de conexión (si existe) desde la página avanzadas del asistente. Si la creación del archivo se realizó correctamente, se devuelve TRUE para **SQLCreateDataSource**. Si la creación del archivo no se realizó correctamente, un cuadro de mensaje de error notifica al usuario con el sistema operativo devolvió el error. Se devuelve FALSE para **SQLCreateDataSource** con un código de error de ODBC_ERROR_CREATE_DSN_FAILED. Para obtener más información acerca de los orígenes de datos de archivo, consulte [conectar orígenes de datos de archivo utilizando](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), o vea [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Si **usuario** o **origen de datos del sistema** se seleccionó como el tipo de origen de datos, **ConfigDSN** el programa de instalación de controlador de biblioteca se denomina con el ODBC_ADD_DSN * fRequest*. Para obtener más información, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Si **usuario** o **origen de datos del sistema** se seleccionó como el tipo de origen de datos, **ConfigDSN** el programa de instalación de controlador de biblioteca se denomina con el ODBC_ADD_DSN  *fRequest*. Para obtener más información, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   

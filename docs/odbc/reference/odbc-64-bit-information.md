@@ -27,11 +27,11 @@ A partir de Windows Server 2003, los sistemas operativos de Microsoft han admiti
   
  Hay varios puntos que tener en cuenta al programar para que un procesador de 64 bits:  
   
--   Aunque ha cambiado el tamaño de un puntero de bytes 4 a 8 bytes, números enteros y valores Long siguen siendo valores de 4 bytes. Los tipos de **INT64** y **UINT64** se han definido para los enteros de 8 bytes. Los nuevos tipos ODBC **SQLLEN** y **SQLULEN** se definen en el archivo de encabezado ODBC como **INT64** y **UINT64** cuando **_WIN64 ** se ha definido.  
+-   Aunque ha cambiado el tamaño de un puntero de bytes 4 a 8 bytes, números enteros y valores Long siguen siendo valores de 4 bytes. Los tipos de **INT64** y **UINT64** se han definido para los enteros de 8 bytes. Los nuevos tipos ODBC **SQLLEN** y **SQLULEN** se definen en el archivo de encabezado ODBC como **INT64** y **UINT64** cuando **_WIN64**  se ha definido.  
   
 -   Varias funciones de ODBC se declaran como tomar un parámetro de puntero. En ODBC de 32 bits, parámetros definen igual que con frecuencia se usaran punteros para pasar un valor entero o un puntero a un búfer dependiendo del contexto de la llamada. Esto podía, por supuesto, puesto que los punteros y enteros tenían el mismo tamaño. En Windows de 64 bits, no es el caso.  
   
--   Algunas funciones ODBC que anteriormente se definieron con **SQLINTEGER** y **SQLUINTEGER** se cambiaron los parámetros cuando sea necesario utilizar el nuevo **SQLLEN** y ** SQLULEN** definiciones de tipo. Estos cambios se muestran en la siguiente sección, cambios de la declaración de función.  
+-   Algunas funciones ODBC que anteriormente se definieron con **SQLINTEGER** y **SQLUINTEGER** se cambiaron los parámetros cuando sea necesario utilizar el nuevo **SQLLEN** y  **SQLULEN** definiciones de tipo. Estos cambios se muestran en la siguiente sección, cambios de la declaración de función.  
   
 -   Algunos de los campos de descriptor que se pueden establecer a través de los distintos **SQLSet** y **SQLGet** funciones han cambiado para dar cabida a valores de 64 bits, mientras que otras son valores todavía de 32 bits. Asegúrese de que usa la variable de tamaño adecuada al establecer y recuperar estos campos. Detalles del descriptor de qué campos han cambiado se muestran bajo los cambios de la declaración de función.  
   

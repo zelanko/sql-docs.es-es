@@ -53,7 +53,7 @@ SQLRETURN  SQLGetPoolID (
  Cuando **SQLGetPoolID** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, el Administrador de controladores se usará un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **controlar** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentarios  
- **SQLGetPoolID** se utiliza para obtener el identificador del grupo dado un conjunto de información de conexión (de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, y ** SQLSetConnectInfo**). Este grupo de identificador se usa para identificar un conjunto de conexiones que se pueden usar indistintamente (posiblemente, lo que requiere un reinicio adicional). El identificador del grupo se utilizará para identificar el grupo de conexiones para el grupo de conexiones.  
+ **SQLGetPoolID** se utiliza para obtener el identificador del grupo dado un conjunto de información de conexión (de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, y  **SQLSetConnectInfo**). Este grupo de identificador se usa para identificar un conjunto de conexiones que se pueden usar indistintamente (posiblemente, lo que requiere un reinicio adicional). El identificador del grupo se utilizará para identificar el grupo de conexiones para el grupo de conexiones.  
   
  Cada vez que un controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el Administrador de controladores devuelve el error a la aplicación (en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   

@@ -33,7 +33,7 @@ Algunas funciones ODBC obtienen acceso implícito a descriptores. Escritores de 
   
  Las funciones concisas **SQLBindCol** y **SQLBindParameter** enlazar una columna o parámetro estableciendo los campos de descriptor que corresponden a sus argumentos. Cada una de estas funciones realiza más tareas que simplemente establecer descriptores. **SQLBindCol** y **SQLBindParameter** proporciona una especificación completa del enlace de una columna de datos o el parámetro dinámico. Una aplicación sin embargo, puede cambiar los detalles individuales de un enlace mediante una llamada a **SQLSetDescField** o **SQLSetDescRec** y completamente puede enlazar una columna o parámetro mediante la realización de una serie de llamadas adecuadas para Estas funciones.  
   
- Las funciones concisas **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, y ** SQLNumResultCols** recuperar valores de campos de descriptor.  
+ Las funciones concisas **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, y  **SQLNumResultCols** recuperar valores de campos de descriptor.  
   
  **SQLSetDescRec** y **SQLGetDescRec** son funciones concisas que, con una llamada, establecer u obtener varios campos de descriptor que afectan al tipo de datos y el almacenamiento de datos de columna o parámetro. **SQLSetDescRec** es una forma eficaz para cambiar el enlace de datos de columna o parámetro en un solo paso.  
   

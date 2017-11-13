@@ -52,5 +52,5 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- Tenga en cuenta que **oRs.Open** toma una cadena de conexión (*sConn*), en lugar de un **conexión** objeto (*oConn*), como el valor de su ** ActiveConnection** parámetro. También se aplica el tipo de cursor de cliente estableciendo el **CursorLocation** propiedad en el **Recordset** objeto. De nuevo, Compare esto con el **HelloData** ejemplo.
+ Tenga en cuenta que **oRs.Open** toma una cadena de conexión (*sConn*), en lugar de un **conexión** objeto (*oConn*), como el valor de su  **ActiveConnection** parámetro. También se aplica el tipo de cursor de cliente estableciendo el **CursorLocation** propiedad en el **Recordset** objeto. De nuevo, Compare esto con el **HelloData** ejemplo.
 

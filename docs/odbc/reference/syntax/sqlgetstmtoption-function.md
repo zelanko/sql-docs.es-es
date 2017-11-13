@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  En ODBC 3. *x*, la función de ODBC 2.0 **SQLGetStmtOption** se ha reemplazado por **SQLGetStmtAttr**. Para obtener más información, consulte [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obtener más información acerca de qué el Administrador de controladores asigna esta función cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3.* x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
+>  Para obtener más información acerca de qué el Administrador de controladores asigna esta función cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

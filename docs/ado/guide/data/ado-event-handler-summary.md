@@ -26,11 +26,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ado-connection-and-recordset-events"></a>Conexión ADO y los eventos de conjunto de registros
-Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. El **ConnectionEvent** familia pertenece a las operaciones en el **conexión** objeto y el **RecordsetEvent** familia pertenece a las operaciones en el ** Conjunto de registros** objeto.
+Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. El **ConnectionEvent** familia pertenece a las operaciones en el **conexión** objeto y el **RecordsetEvent** familia pertenece a las operaciones en el  **Conjunto de registros** objeto.
 
 -   **Eventos de conexión**: eventos se emiten cuando comienza, se confirma o se revierte atrás; si una transacción en una conexión un [comando](../../../ado/reference/ado-api/command-object-ado.md) ejecuta; cuando se produce una advertencia durante una **el evento de conexión**operación; o cuando un **conexión** se inicie o finalice.
 
--   **Eventos de conjunto de registros**: eventos se emiten alrededor de las operaciones de búsqueda asincrónica, así como al navegar a través de las filas de un **Recordset** de objetos, cambiar un campo de una fila de un **Recordset**, cambia una fila en un **Recordset**, abra un **Recordset** con un cursor de servidor, cierre una **Recordset**, o realizar cualquier cambio en el ** Conjunto de registros**.
+-   **Eventos de conjunto de registros**: eventos se emiten alrededor de las operaciones de búsqueda asincrónica, así como al navegar a través de las filas de un **Recordset** de objetos, cambiar un campo de una fila de un **Recordset**, cambia una fila en un **Recordset**, abra un **Recordset** con un cursor de servidor, cierre una **Recordset**, o realizar cualquier cambio en el  **Conjunto de registros**.
 
  Las tablas siguientes resumen los eventos y sus descripciones.
 

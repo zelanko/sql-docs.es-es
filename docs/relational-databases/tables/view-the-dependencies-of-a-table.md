@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **Dependencias del objeto***\<nombre del objeto>*, seleccione **Objetos que dependen de** *\<nombre del objeto>* u **Objetos de los que depende***\<nombre del objeto>*****.  
+3.  En el cuadro de diálogo **Dependencias del objeto***\<nombre del objeto>*, seleccione **Objetos que dependen de** *\<nombre del objeto>* u **Objetos de los que** **depende***\<nombre del objeto>*.  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

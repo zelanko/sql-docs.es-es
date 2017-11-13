@@ -22,12 +22,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
-ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
+ms.translationtype: HT
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
 ms.contentlocale: es-es
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Crear, eliminar o modificar una carpeta (Administrador de informes)
@@ -80,9 +79,9 @@ ms.lasthandoff: 11/07/2017
 7.  Haga clic en **Aplicar** para guardar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Página Nueva carpeta &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Página nueva carpeta &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Página contenido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

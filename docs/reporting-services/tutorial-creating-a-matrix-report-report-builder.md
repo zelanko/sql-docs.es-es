@@ -16,8 +16,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
 ms.contentlocale: es-es
@@ -46,7 +45,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -58,7 +57,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener información sobre cómo crear un origen de datos insertado, consulte [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener información acerca de cómo crear un origen de datos incrustados, vea [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -163,7 +162,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 2.  Presione la tecla CTRL y, a continuación, seleccione las nueve celdas que contienen `[Sum(Sales)]`.  
   
-3.  On the **Home** tab > **Number** > **Currency**. Las celdas cambian para mostrar la moneda con formato.  
+3.  En el **inicio** ficha > **número** > **moneda**. Las celdas cambian para mostrar la moneda con formato.  
   
     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
     
@@ -171,7 +170,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 4.  Haga clic en la celda que contiene `[SalesDate]`.  
   
-5.  En el grupo **Número** > **Fecha**.  
+5.  En el **número** grupo > **fecha**.  
   
     La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
@@ -204,7 +203,7 @@ En esta sección, agregará un grupo de columnas adyacente al grupo de columnas 
     =WeekdayName(DatePart("w",Fields!SalesDate.Value))  
     ```  
   
-    Esta expresión extrae el nombre del día de la semana de la fecha de ventas. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+    Esta expresión extrae el nombre del día de la semana de la fecha de ventas. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 6.  Haga clic con el botón derecho en la celda del grupo de columnas de Subcategory que contiene Total y luego haga clic en **Copiar**.  
   
@@ -269,7 +268,7 @@ El área de la esquina está en la esquina superior izquierda de la matriz Depen
   
 5.  Haga clic con el botón derecho en la nueva celda combinada y haga clic en **Propiedades de cuadro de texto**.  
   
-6.  On the **Border** tab > **Presets** > **None**.
+6.  En el **borde** ficha > **valores preestablecidos** > **ninguno**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -284,9 +283,9 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Seleccione el cuadro de texto de la parte superior del cuerpo del informe que contiene **Haga clic para agregar un título** y, después, pulse la tecla Suprimir.  
+2.  Seleccione el cuadro de texto de la parte superior del cuerpo del informe que contiene **Haga clic para agregar un título**y, después, pulse la tecla Suprimir.  
   
-3.  En la pestaña **Insertar** > **Encabezado** > **Agregar encabezado**.  
+3.  En el **insertar** ficha > **encabezado** > **agregar encabezado**.  
   
     Se agrega un encabezado a la parte superior del cuerpo del informe.  
   
@@ -336,7 +335,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 ## <a name="RotateTextBox"></a>9. (Opcional) Girar 270 grados el cuadro de texto  
 Un informe con matrices se puede expandir horizontal y verticalmente cuando se ejecuta. Girando los cuadros de texto verticalmente o 270 grados, puede ahorrar espacio horizontal. El informe representado se hace más estrecho y, si se exporta a un formato como Microsoft Word, tendrá más posibilidades de ajustar en una página impresa.  
   
-Un cuadro de texto también puede mostrar el texto como horizontal o como, vertical (de arriba abajo). Para obtener más información, consulte [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Un cuadro de texto también puede mostrar el texto como horizontal o como, vertical (de arriba abajo). Para obtener más información, vea [cuadros de texto &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Para girar el cuadro de texto 270 grados  
   
@@ -354,7 +353,7 @@ Un cuadro de texto también puede mostrar el texto como horizontal o como, verti
   
 4.  Compruebe que la propiedad CanGrow está establecida en **True**.  
   
-5.  En la pestaña **Inicio** > sección **Párrafo**, seleccione **Centro** y **Centrar** para colocar el texto en el centro de la celda tanto vertical como horizontalmente.  
+5.  En la pestaña **Inicio**, sección **Párrafo**, seleccione **Centro** y **Centrar** para colocar el texto en el centro de la celda tanto vertical como horizontalmente.  
  
 6. Cambie el tamaño de la columna Territory para que tenga un ancho de 1/2 pulgada y elimine el título de columna.  
 6.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  

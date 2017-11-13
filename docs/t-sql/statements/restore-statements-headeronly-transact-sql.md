@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   Devuelve un conjunto de resultados que contiene toda la información de encabezado de copia de seguridad de todos los conjuntos de copia de seguridad de un dispositivo de copia de seguridad determinado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para ver descripciones de los argumentos, vea [argumentos RESTORE & #40; Transact-SQL & #41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  Para ver descripciones de los argumentos, vea [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,13 +82,13 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Para obtener descripciones de los argumentos de RESTORE HEADERONLY, consulte [argumentos RESTORE & #40; Transact-SQL & #41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Para obtener descripciones de los argumentos de RESTORE HEADERONLY, consulte [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Por cada copia de seguridad que hay en un dispositivo determinado, el servidor envía una fila de información de encabezado con las siguientes columnas:  
   
 > [!NOTE]  
->  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para obtener un vistazo rápido a los medios sin obtener información acerca de cada conjunto de copia de seguridad, utilice RESTORE LABELONLY o especifique el archivo ** = ** *backup_set_file_number*.  
+>  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para obtener un vistazo rápido a los medios sin obtener información acerca de cada conjunto de copia de seguridad, utilice RESTORE LABELONLY o especifique el archivo  **=**  *backup_set_file_number*.  
   
 > [!NOTE]  
 >  Debido a la naturaleza de [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato de cinta, es posible para conjuntos de copia de seguridad de otros programas de software ocupen espacio en el mismo medio que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de copia de seguridad. El conjunto de resultados que devuelve RESTORE HEADERONLY contiene una fila por cada uno de estos otros conjuntos de copia de seguridad.  
@@ -101,7 +101,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Fecha de expiración del conjunto de copia de seguridad.|  
 |**Comprimido**|**BYTE(1)**|Si el conjunto de copia de seguridad se comprime con el sistema de compresión por software:<br /><br /> **0** = No<br /><br /> **1** = yes|  
 |**Posición**|**smallint**|Posición del conjunto de copia de seguridad en el volumen (para utilizarlo con la opción FILE =).|  
-|**Tipo de dispositivo**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = lógico<br /><br /> **102** = físico<br /><br /> Cinta:<br /><br /> **5** = lógico<br /><br /> **105** = físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = lógico<br /><br /> **107** = físico<br /><br /> Nombres de dispositivos lógicos y números de dispositivo se encuentran en **sys.backup_devices**; para obtener más información, consulte [sys.backup_devices & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**Tipo de dispositivo**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = lógico<br /><br /> **102** = físico<br /><br /> Cinta:<br /><br /> **5** = lógico<br /><br /> **105** = físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = lógico<br /><br /> **107** = físico<br /><br /> Nombres de dispositivos lógicos y números de dispositivo se encuentran en **sys.backup_devices**; para obtener más información, consulte [sys.backup_devices &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar (128)**|Nombre del usuario que ha ejecutado la operación de copia de seguridad.|  
 |**ServerName**|**nvarchar (128)**|Nombre del servidor que escribió el conjunto de copia de seguridad.|  
 |**DatabaseName**|**nvarchar (128)**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
@@ -124,7 +124,7 @@ FROM <backup_device>
 |**SoftwareVersionMinor**|**int**|Número de versión secundario del servidor donde se creó el conjunto de copia de seguridad.|  
 |**SoftwareVersionBuild**|**int**|Número de compilación del servidor donde se creó el conjunto de copia de seguridad.|  
 |**MachineName**|**nvarchar (128)**|Nombre del equipo donde se realizó la operación de copia de seguridad.|  
-|**Marcas**|**int**|Significados de los bits de marcas individuales si establece en **1**:<br /><br /> **1** = registro de copia de seguridad contiene operaciones masivas.<br /><br /> **2** = copia de seguridad de instantánea.<br /><br /> **4** = base de datos era de solo lectura al copia de seguridad.<br /><br /> **8** = base de datos estaba en modo de usuario único al copia de seguridad.<br /><br /> **16** = copia de seguridad contiene sumas de comprobación de copia de seguridad.<br /><br /> **32** = base de datos se dañó durante la copia de seguridad, pero se solicitó la operación de copia de seguridad que continúe a pesar de errores.<br /><br /> **64** = copia del final del registro.<br /><br /> **128** = copia del final del registro con metadatos incompletos.<br /><br /> **256** = copia del final del registro con NORECOVERY.<br /><br /> **Importante:** se recomienda que, en lugar de **marcas** usar las columnas booleanas individuales (enumerados a continuación a partir de **HasBulkLoggedData** y terminando con ** IsCopyOnly**).|  
+|**Marcas**|**int**|Significados de los bits de marcas individuales si establece en **1**:<br /><br /> **1** = registro de copia de seguridad contiene operaciones masivas.<br /><br /> **2** = copia de seguridad de instantánea.<br /><br /> **4** = base de datos era de solo lectura al copia de seguridad.<br /><br /> **8** = base de datos estaba en modo de usuario único al copia de seguridad.<br /><br /> **16** = copia de seguridad contiene sumas de comprobación de copia de seguridad.<br /><br /> **32** = base de datos se dañó durante la copia de seguridad, pero se solicitó la operación de copia de seguridad que continúe a pesar de errores.<br /><br /> **64** = copia del final del registro.<br /><br /> **128** = copia del final del registro con metadatos incompletos.<br /><br /> **256** = copia del final del registro con NORECOVERY.<br /><br /> **Importante:** se recomienda que, en lugar de **marcas** usar las columnas booleanas individuales (enumerados a continuación a partir de **HasBulkLoggedData** y terminando con  **IsCopyOnly**).|  
 |**BindingID**|**uniqueidentifier**|Id. de enlace de la base de datos. Esto corresponde a **sys.database_recovery_status***database_guid**. Cuando se restaura una base de datos, se asigna un valor nuevo. Consulte también **FamilyGUID** (abajo).|  
 |**RecoveryForkID**|**uniqueidentifier**|Id. de la bifurcación de recuperación final. Esta columna corresponde a **last_recovery_fork_guid** en el [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabla.<br /><br /> Para las copias de seguridad de datos, **RecoveryForkID** es igual a **FirstRecoveryForkID**.|  
 |**Intercalación**|**nvarchar (128)**|Intercalación que utiliza la base de datos.|  
@@ -136,7 +136,7 @@ FROM <backup_device>
 |**HasBackupChecksums**|**bit**|**1** = copia de seguridad contiene sumas de comprobación de copia de seguridad.|  
 |**IsDamaged**|**bit**|**1** = base de datos se dañó durante la copia de seguridad, pero se solicitó la operación de copia de seguridad que continúe a pesar de errores.|  
 |**BeginsLogChain**|**bit**|**1** = es el primer elemento de una cadena continua de copias de seguridad del registro. Una cadena de registro empieza por la primera copia de seguridad de registros realizada después de crear la base de datos o cuando se cambia del modelo de recuperación simple al completo o al modelo de recuperación optimizado para cargas masivas de registros.|  
-|**HasIncompleteMetaData**|**bit**|**1** = una copia de seguridad del final del registro con metadatos incompletos.<br /><br /> Para obtener información acerca de las copias de seguridad del final del registro con metadatos incompletos de copia de seguridad, consulte [copias de seguridad del final del registro & #40; SQL Server & #41; ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
+|**HasIncompleteMetaData**|**bit**|**1** = una copia de seguridad del final del registro con metadatos incompletos.<br /><br /> Para obtener información acerca de las copias de seguridad del final del registro con metadatos incompletos de copia de seguridad, consulte [copias de seguridad del final del registro &#40; SQL Server &#41; ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
 |**IsForceOffline**|**bit**|**1** = copia de seguridad realizada con NORECOVERY; la base de datos fue desconectado por copia de seguridad.|  
 |**IsCopyOnly**|**bit**|**1** = una copia de seguridad de solo copia.<br /><br /> Una copia de seguridad de solo copia no afecta a los procedimientos de copias de seguridad y restauración generales de la base de datos. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|Id. de la bifurcación de recuperación inicial. Esta columna corresponde a **first_recovery_fork_guid** en el [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabla.<br /><br /> Para las copias de seguridad de datos, **FirstRecoveryForkID** es igual a **RecoveryForkID**.|  
@@ -184,7 +184,7 @@ GO
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Historial de copias de seguridad e información de encabezados &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
- [Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante la copia de seguridad o restauración & #40; SQL Server & #41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)   
+ [Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante la copia de seguridad o restauración &#40; SQL Server &#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   

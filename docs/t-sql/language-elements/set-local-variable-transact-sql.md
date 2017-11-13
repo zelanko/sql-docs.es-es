@@ -174,25 +174,25 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Impide que se realicen actualizaciones a través de este cursor. No es posible hacer referencia al cursor en una cláusula WHERE CURRENT OF de una instrucción UPDATE o DELETE. Esta opción reemplaza la capacidad predeterminada de actualizar el cursor. Esta palabra clave varía con respecto a la READ_ONLY anterior en que contiene un espacio en lugar de un carácter de subrayado entre READ y ONLY.  
   
  UPDATE [OF *column_name*[ **,**... *n* ] ]  
- Define las columnas actualizables en el cursor. Si se especifica OF *column_name* [**,**... * n *] se proporciona, solo las columnas enumeradas admitirán modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
+ Define las columnas actualizables en el cursor. Si se especifica OF *column_name* [**,**...  *n* ] se proporciona, solo las columnas enumeradas admitirán modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
   
 ## <a name="remarks"></a>Comentarios  
  Después de declarada una variable, ésta se inicializa en NULL. Puede usar la instrucción SET para asignar a una variable declarada un valor distinto de NULL. La instrucción SET que asigna un valor a la variable devuelve un solo valor. Cuando inicialice varias variables, utilice una instrucción SET distinta para cada variable local.  
   
  Las variables solo se pueden utilizar en expresiones y no en lugar de nombres de objeto o palabras clave. Para formar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] dinámicas, utilice EXECUTE.  
   
- Las reglas de sintaxis de SET ** @ ** *cursor_variable* no incluyen las palabras clave LOCAL y GLOBAL. Cuando el conjunto de ** @ ** *cursor_variable* = CURSOR... se utilizan la sintaxis, el cursor se crea como GLOBAL o LOCAL, según la configuración de manera predeterminada para la opción de base de datos de cursor local.  
+ Las reglas de sintaxis de SET  **@**  *cursor_variable* no incluyen las palabras clave LOCAL y GLOBAL. Cuando el conjunto de  **@**  *cursor_variable* = CURSOR... se utilizan la sintaxis, el cursor se crea como GLOBAL o LOCAL, según la configuración de manera predeterminada para la opción de base de datos de cursor local.  
   
  Las variables de cursor son siempre locales, incluso cuando hacen referencia a un cursor global. Cuando una variable de cursor hace referencia a un cursor global, éste tiene a la vez una referencia de cursor global y otra local. Para obtener más información, vea el ejemplo C.  
   
- Para obtener más información, vea [DECLARE CURSOR & #40; Transact-SQL & #41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ Para obtener más información, vea [DECLARE CURSOR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  Se puede utilizar el operador de asignación compuesta en cualquier lugar donde haya una asignación con una expresión en el lado derecho del operador, incluso las variables, y un SET en una instrucción UPDATE, SELECT y RECEIVE.  
   
  No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no se garantiza que todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecuten exactamente una vez por cada fila de salida. Para obtener más información, consulte [este artículo de KB](http://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissions  
- Debe pertenecer al rol public. Todos los usuarios pueden usar conjunto ** @ ** *local_variable*.  
+ Debe pertenecer al rol public. Todos los usuarios pueden usar conjunto  **@**  *local_variable*.  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -3,9 +3,12 @@ title: Glosario de ADO | Documentos de Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
@@ -296,3 +299,4 @@ En este tema define los términos relacionados con ADO.
   
  Servidor Web  
  Un equipo que proporciona servicios Web y páginas de la intranet y los usuarios de Internet.
+

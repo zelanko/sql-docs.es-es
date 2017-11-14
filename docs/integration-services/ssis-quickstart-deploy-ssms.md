@@ -36,7 +36,7 @@ Usar SQL Server Management Studio para establecer una conexión con el catálogo
 
 2. En el **conectar al servidor** diálogo cuadro, escriba la siguiente información:
 
-   | Configuración       | Valor recomendado | Más información | 
+   | Configuración       | Valor recomendado | Más información | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Motor de base de datos | Este valor es necesario. |
    | **Nombre del servidor** | El nombre completo del servidor | Si se está conectando a un servidor de base de datos de SQL Azure, el nombre está en este formato: `<server_name>.database.windows.net`. |

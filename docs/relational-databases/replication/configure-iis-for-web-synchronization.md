@@ -354,7 +354,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>**, especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
-5.  En la ventana de Internet Explorer con ****información de diagnóstico sobre la sincronización web de SQL, compruebe que el valor de todas las columnas **** de estado de la página sea **SUCCESS**.  
+5.  En la ventana de Internet Explorer con **información de diagnóstico sobre la sincronización web de SQL**, compruebe que el valor de todas las columnas **de estado** de la página sea **SUCCESS**.  
   
 6.  Compruebe que el certificado se haya instalado correctamente en el suscriptor:  
   

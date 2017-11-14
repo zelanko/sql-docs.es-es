@@ -40,7 +40,7 @@ Antes de empezar, asegúrese de que tiene versión 17.2 u otra posterior de SQL 
 
 2. **Conectarse al servidor**. En el **conectar al servidor** diálogo cuadro, escriba la siguiente información:
 
-   | Configuración       | Valor recomendado | Description | 
+   | Configuración       | Valor recomendado | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Motor de base de datos | Este valor es necesario. |
    | **Nombre del servidor** | El nombre completo del servidor | El nombre debe tener este formato: **mysqldbserver.database.windows.net**. |

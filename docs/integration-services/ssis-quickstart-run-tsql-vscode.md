@@ -52,7 +52,7 @@ Usar código de Visual Studio para establecer una conexión con el catálogo de 
 
 4. Siga las indicaciones para especificar las propiedades de conexión para el nuevo perfil de conexión. Después de especificar cada valor, presione **ENTRAR** para continuar. 
 
-   | Configuración       | Valor recomendado | Más información |
+   | Configuración       | Valor recomendado | Más información |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | El nombre completo del servidor | Si se está conectando a un servidor de base de datos de SQL Azure, el nombre está en este formato: `<server_name>.database.windows.net`. |
    | **Nombre de la base de datos** | **SSISDB** | El nombre de la base de datos que se va a conectar. |

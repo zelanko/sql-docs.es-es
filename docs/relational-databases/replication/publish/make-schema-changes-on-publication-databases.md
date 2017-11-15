@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: b3ba5fca89b73eaff7ec444d3a9eeec2398f1656
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
   La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -150,7 +149,7 @@ ms.lasthandoff: 06/22/2017
         |**hierarchyid**|Permitir cambio|Bloquear cambio|Bloquear cambio|  
         |**geography** y **geometry**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
         |**secuencia de archivo**|Permitir cambio|Bloquear cambio|Bloquear cambio|  
-        |**date**, **time**, **datetime2**, and **datetimeoffset**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
+        |**date**, **time**, **datetime2**y **datetimeoffset**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
   
          *Los suscriptores de SQL Server Compact convierten estos tipos de datos en el suscriptor.  
   

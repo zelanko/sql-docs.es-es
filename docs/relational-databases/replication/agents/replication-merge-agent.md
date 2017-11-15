@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 347348a43528881c76615fd348ba94130210ce93
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-merge-agent"></a>Agente de mezcla de replicación
   El Agente de mezcla de replicación es una utilidad ejecutable que aplica la instantánea inicial contenida en las tablas de base de datos a los Suscriptores. También mezcla los cambios incrementales de los datos que tienen lugar en el publicador después de la creación de la instantánea inicial y reconcilia los conflictos según las reglas configuradas por el usuario o mediante un solucionador personalizado creado por el usuario.  
@@ -143,7 +142,7 @@ replmerg [-?]
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de símbolo del sistema para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Para la distribución del distribuidor (inserción), el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
+ Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Para la distribución del distribuidor (inserción), el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
   
  **-DistributorLogin** *distributor_login*  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -299,7 +298,7 @@ replmerg [-?]
  Es la frecuencia, en segundos, con la que el Publicador o el Suscriptor recibe consultas de cambios de datos. El valor predeterminado es 60 segundos.  
   
  **-ProfileName** *profile_name*  
- Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md) (Perfiles del Agente de replicación).  
+ Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
  Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
@@ -397,7 +396,6 @@ replmerg [-?]
  El historial del agente de mezcla de la sesión actual no se quita mientras se está ejecutando de forma continua. Una ejecución prolongada del agente puede tener como resultado un gran número de entradas en las tablas del historial de mezcla, lo que puede afectar al rendimiento. Para resolver este problema cambie al modo programado o siga usando el modo continuado, pero cree un trabajo dedicado para reiniciar periódicamente el agente de mezcla, o reduzca el nivel de detalle para reducir el número de filas y, en consecuencia, reducir el impacto en el rendimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md) (Administración del Agente de replicación)  
+ [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

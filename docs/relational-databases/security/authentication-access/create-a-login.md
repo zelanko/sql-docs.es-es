@@ -5,8 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: fa1d1c3cc20155dd5f53c1e62bc15a96c7f3758c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,10 +150,10 @@ ms.lasthandoff: 06/22/2017
  **Esquema predeterminado**  
  Especifica el esquema predeterminado del usuario. Cuando se crea un usuario por primera vez, el esquema predeterminado es **dbo**. Es posible especificar un esquema predeterminado que aún no existe. No puede especificar un esquema predeterminado para un usuario asignado a un grupo, un certificado o una clave asimétrica de Windows.  
   
- **Guest account enabled for:**  *database_name*  
+ **Cuenta de invitado habilitada para:**  *nombre_baseDeDatos*  
  Atributo de solo lectura que indica si la cuenta de invitado está habilitada en la base de datos seleccionada. Utilice la página **Estado** del cuadro de diálogo **Propiedades de inicio de sesión** de la cuenta de invitado para habilitarla o deshabilitarla.  
   
- **Database role membership for:**  *database_name*  
+ **Miembros del rol de base de datos para:**  *nombre_baseDeDatos*  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Elementos protegibles  
@@ -279,4 +278,3 @@ ms.lasthandoff: 06/22/2017
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

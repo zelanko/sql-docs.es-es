@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d94f902d6183eacd623eaf0f08ee9525ca441ae6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Establecer un valor mínimo o máximo en un medidor (Generador de informes y SSRS)
   A diferencia de los gráficos de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , donde se definen varios grupos, los medidores muestran un solo valor. Puesto que el Generador de informes y el Diseñador de informes determinan el contexto o la importancia relativa del valor que se está intentando mostrar en el medidor, se deberán definir los valores mínimo y máximo de la escala.   
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Si el intervalo de valores es grande, por ejemplo de 0 a 10000, considere la posibilidad de usar un multiplicador para reducir el número de ceros en el medidor. El multiplicador únicamente reducirá la escala de los números en el medidor, no el valor en sí mismo.  
   
- Puede utilizar las expresiones para establecer los valores de las opciones **Mínimo** y **Máximo** . Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Puede utilizar las expresiones para establecer los valores de las opciones **Mínimo** y **Máximo** . Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>Para establecer los valores mínimo y máximo en el medidor  
   
@@ -43,9 +42,8 @@ ms.lasthandoff: 08/09/2017
 4.  (Opcional) Si los valores mínimo y máximo son grandes, especifique un valor para la opción **Multiplicar etiquetas de escala por** . Para especificar un multiplicador que reduzca la escala, use un número decimal. Por ejemplo, si tiene una escala de 0 a 1000, puede especificar un valor de multiplicador de 0,01 para que se vea de 0 a 10.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a las escalas en un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Aplicar formato a punteros de un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d1b594d608fc266567c0a5c86a24f8130c3b6c4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
   El objeto **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la forma en que se obtiene acceso a los datos lógicos de una base de datos. El acceso físico a las páginas de base de datos en disco se supervisa mediante los contadores de **Buffer Manager** . La supervisión de los métodos que se utilizan para el acceso a los datos almacenados en la base de datos puede ayudar a determinar si se puede mejorar el rendimiento de las consultas al agregar o modificar índices, agregar o mover particiones, agregar archivos o grupos de archivos, desfragmentar índices o volver a escribir las consultas. Los contadores de **Access Methods** también se pueden utilizar para supervisar la cantidad de datos, los índices y el espacio disponible en la base de datos, con lo que se indica el volumen de datos y la fragmentación para cada instancia de servidor. Una fragmentación excesiva de los índices puede tener un efecto negativo sobre el rendimiento.  
@@ -96,7 +94,6 @@ ms.lasthandoff: 06/22/2017
 |**Relación de tablas de trabajo desde caché**|Porcentaje de tablas de trabajo creadas donde las dos páginas iniciales de la tabla de trabajo no fueron asignadas pero estaban inmediatamente disponibles desde la caché de la tabla de trabajo. (Cuando se elimina una tabla de trabajo, dos páginas pueden permanecer asignadas y se devuelven a la caché de la tabla de trabajo. Esto aumenta el rendimiento.)|  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

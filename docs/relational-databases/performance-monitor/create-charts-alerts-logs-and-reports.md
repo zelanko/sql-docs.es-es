@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - System Monitor [SQL Server], logs
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4350582f3a798a4543f84a09c089976e4d18f712
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 14e449b64d959cd6f877b27871f329b231038955
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Crear gráficos, alertas, registros e informes
   El Monitor de sistema le permite crear gráficos, alertas, registros e informes para supervisar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -67,7 +65,6 @@ ms.lasthandoff: 06/22/2017
  Para obtener más información acerca de la creación gráficos, alertas, registros e informes, o acerca de objetos y contadores de Windows, consulte la documentación de Windows.  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

@@ -5,28 +5,25 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.AG.MAINTPLAN.LEGACY.F1
+f1_keywords: sql13.AG.MAINTPLAN.LEGACY.F1
 helpviewer_keywords:
 - maintenance plans [SQL Server], about database maintenance plans
 - maintenance plans [SQL Server], database compatibility level displayed in designer
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: abd4882c905f18643da40892c4cbf200091d5363
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-plans"></a>Planes de mantenimiento
   Los planes de mantenimiento crean un flujo de trabajo de las tareas necesarias para asegurarse de que la base de datos está optimizada, se realizan copias de seguridad de la misma con regularidad y no tiene incoherencias. El Asistente para planes de mantenimiento también crea planes de mantenimiento principales, pero la creación manual de planes le da mucha más flexibilidad.  
@@ -75,4 +72,3 @@ ms.lasthandoff: 06/22/2017
 |Documenta la funcionalidad de los planes de mantenimiento disponible en el Explorador de objetos.|[Planes de mantenimiento &#40;nodo del Explorador de objetos&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
-

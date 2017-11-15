@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b22b667a679c2dee3a87b0348170c793af0c9e1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir una relación de registros lógicos entre artículos de tabla de mezcla
   En este tema se describe cómo definir una relación de registros lógicos entre los artículos de tabla de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -160,9 +159,9 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Para definir una relación de registros lógicos sin un filtro de combinación asociado  
   
-1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication>, establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> , establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve **false**, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
@@ -174,25 +173,25 @@ ms.lasthandoff: 06/22/2017
   
     -   El nombre de la publicación para <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
   
-    -   (Opcional) Si se filtra el artículo horizontalmente, especifique la cláusula de filtro de filas para la propiedad <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A>. Utilice esta propiedad para especificar un filtro de fila estático o con parámetros. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   (Opcional) Si se filtra el artículo horizontalmente, especifique la cláusula de filtro de filas para la propiedad <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Utilice esta propiedad para especificar un filtro de fila estático o con parámetros. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Create%2A>.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Create%2A> .  
   
 7.  Repita los pasos 5 y 6 para cada artículo que comprende el registro lógico.  
   
 8.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> para definir la relación de registros lógicos entre los artículos. A continuación, establezca las siguientes propiedades:  
   
-    -   El nombre del artículo secundario en la relación de registros lógicos para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A>.  
+    -   El nombre del artículo secundario en la relación de registros lógicos para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> .  
   
-    -   El nombre del artículo primario, ya existente, en la relación de registros lógicos para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A>.  
+    -   El nombre del artículo primario, ya existente, en la relación de registros lógicos para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> .  
   
-    -   Un nombre para la relación de registros lógicos para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A>.  
+    -   Un nombre para la relación de registros lógicos para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> .  
   
-    -   La expresión que define la relación para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A>.  
+    -   La expresión que define la relación para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> .  
   
-    -   El valor de <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A>. Si la relación de registros lógicos también es un filtro de combinación, especifique el valor <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> para esta propiedad. Para obtener más información, vea [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md) (Agrupar cambios en filas relacionadas con registros lógicos).  
+    -   El valor <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> para la propiedad <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> . Si la relación de registros lógicos también es un filtro de combinación, especifique el valor <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> para esta propiedad. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 9. Llame al método <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> en el objeto que representa el artículo secundario en la relación. Pase el objeto <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> del paso 8 para definir la relación.  
   

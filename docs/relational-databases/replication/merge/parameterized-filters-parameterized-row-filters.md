@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros con parámetros: filtros de fila con parámetros
   Los filtros de filas con parámetros permiten enviar diferentes particiones de datos a diferentes suscriptores sin necesidad de crear varias publicaciones (los filtros con parámetros se denominaban filtros dinámicos en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Una partición es un subconjunto de filas de una tabla; dependiendo de la configuración elegida al crear un filtro de filas con parámetros, cada fila de una tabla publicada puede pertenecer a una sola partición (lo que produce particiones no superpuestas) o a dos o más particiones (lo que produce particiones superpuestas).  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Los filtros con parámetros se utilizan en una sola tabla y generalmente se combinan con filtros de combinación para extender el filtrado a las tablas relacionadas. Para más información, vea [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Para definir o modificar un filtro de fila con parámetros, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Para definir o modificar un filtro de fila con parámetros, vea [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Cómo funcionan los filtros con parámetros  
  Un filtro de fila con parámetros utiliza una cláusula WHERE para seleccionar los datos apropiados para publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: SUSER_SNAME() y HOST_NAME(). También se pueden utilizar funciones definidas por el usuario, pero deben incluir SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, o evaluar una de estas funciones del sistema (como `MyUDF(SUSER_SNAME()`). Si una función definida por el usuario incluye SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, no se pueden pasar parámetros a la función.  

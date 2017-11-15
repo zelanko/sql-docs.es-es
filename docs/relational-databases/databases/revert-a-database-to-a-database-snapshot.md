@@ -5,24 +5,23 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1aff08fa0edd0f2376114478499a6ac8bec7df8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
   Si se dañan los datos de una base de datos en línea, revertir la base de datos a una instantánea de base de datos anterior puede ser, en algunos casos, ser una alternativa adecuada a restaurar la base de datos a partir de una copia de seguridad. Por ejemplo, revertir una base de datos puede resultar útil para revertir un error grave del usuario que sea reciente, por ejemplo la eliminación de una tabla. Tenga en cuenta que se pierden todos los cambios realizados después de que se creara la instantánea.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
      [Seguridad](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para revertir una base de datos a una instantánea de base de datos, mediante:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   

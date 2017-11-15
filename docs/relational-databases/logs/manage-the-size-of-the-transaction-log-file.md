@@ -5,24 +5,21 @@ ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-transaction-log
+ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transaction logs [SQL Server], size management
+helpviewer_keywords: transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9076e3fbddd2af5459e4d8895ce969c61a4315ad
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3b0a01269443e7d2c66f200c165409bb72404849
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
 En este tema se incluye información sobre cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
@@ -89,4 +86,3 @@ Para obtener información sobre cómo cambiar la propiedad de crecimiento de un 
  [Solucionar problemas de un registro de transacciones lleno (error 9002 de SQL Server)](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   
-

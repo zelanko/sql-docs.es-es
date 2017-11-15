@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57fcddb2d5f87d0b03ab1ed504e07072dc41d367
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae6040d1ba9e14a4e77135a1f1f99ebf350aa33d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
   Con el editor, puede aplicar formato al código mediante sangrías, texto oculto, direcciones URL, etc. También se puede aplicar formato al código automáticamente a medida que se escribe mediante sangrías automáticas.  
@@ -154,4 +152,3 @@ ms.lasthandoff: 06/22/2017
 4.  Active **Habilitar la navegación a direcciones URL con un solo clic**.  
   
   
-

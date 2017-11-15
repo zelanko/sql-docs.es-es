@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd4ea4d94bb9986127e4d5ffd2b8801f73528b93
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: cd7a911a8828bf4738df967c8af14a0ee52d2272
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
   En este tema se describe cómo configurar la publicación y distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -95,67 +94,67 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>Para configurar la publicación y distribución en un único servidor  
   
-1.  Cree una conexión al servidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Cree una conexión al servidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> desde el paso 1.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.  
+3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .  
   
-4.  Establezca la propiedad <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> del publicador y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1.  
+4.  Establezca la propiedad <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> en el nombre de la base de datos y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-5.  Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Pase el to <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3.  
+5.  Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Transfiera el objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3.  
   
-6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.  
+6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .  
   
 7.  Establezca las siguientes propiedades de <xref:Microsoft.SqlServer.Replication.DistributionPublisher>:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>: nombre del publicador.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - nombre del publicador.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>: la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A>: el nombre de la base de datos creada en el paso 5.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - el nombre de la base de datos creada en el paso 5.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A>: el recurso compartido utilizado para tener acceso a los archivos de instantáneas.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - el recurso compartido utilizado para tener acceso a los archivos de instantáneas.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A>: el modo de seguridad empleado cuando se conecta con el publicador. Se recomienda <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : el modo de seguridad empleado cuando se conecta con el publicador. Se recomienda<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> .  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> .  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>Para configurar la publicación y distribución mediante un distribuidor remoto  
   
-1.  Cree una conexión al servidor del distribuidor remoto mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Cree una conexión al servidor del distribuidor remoto mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> desde el paso 1.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.  
+3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .  
   
-4.  Establezca la propiedad <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> del publicador y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1.  
+4.  Establezca la propiedad <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> en el nombre de la base de datos y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-5.  Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Especifique una contraseña segura (la que utiliza el publicador al conectarse al distribuidor remoto) y el objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3. Para más información, vea [Proteger el distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).  
+5.  Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Especifique una contraseña segura (la que utiliza el publicador al conectarse al distribuidor remoto) y el objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3. Para más información, vea [Proteger el distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).  
   
     > **IMPORTANTE:** Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](http://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
-6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.  
+6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .  
   
 7.  Establezca las siguientes propiedades de <xref:Microsoft.SqlServer.Replication.DistributionPublisher>:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>: nombre del servidor publicador local.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - nombre del servidor publicador local.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>: la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A>: el nombre de la base de datos creada en el paso 5.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - el nombre de la base de datos creada en el paso 5.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A>: el recurso compartido utilizado para tener acceso a los archivos de instantáneas.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - el recurso compartido utilizado para tener acceso a los archivos de instantáneas.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A>: el modo de seguridad empleado cuando se conecta con el publicador. Se recomienda <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : el modo de seguridad empleado cuando se conecta con el publicador. Se recomienda<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> .  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> .  
   
-9. Cree una conexión al servidor del publicador local mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+9. Cree una conexión al servidor publicador local mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-10. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> desde el paso 9.  
+10. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Transfiera el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 9.  
   
-11. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Pase el nombre del distribuidor remoto y la contraseña para el distribuidor remoto especificado en el paso 5.  
+11. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Pase el nombre del distribuidor remoto y la contraseña para el distribuidor remoto especificado en el paso 5.  
   
     > **IMPORTANTE:**  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](http://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por Windows .NET Framework.  
   
@@ -174,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [Configurar la replicación para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   
-

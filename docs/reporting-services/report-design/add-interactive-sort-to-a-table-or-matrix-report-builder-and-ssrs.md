@@ -14,16 +14,16 @@ f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a87f586dfc1846f3224d2e24f566a5575e35965f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
   Agregue botones de ordenación interactiva para que los usuarios puedan cambiar el criterio de ordenación de las filas y las columnas en las tablas y matrices. Esta característica solo es compatible con los formatos de representación que admiten la interacción con el usuario, como HTML.  
@@ -117,9 +117,9 @@ ms.lasthandoff: 08/09/2017
  ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Ordenar filas basadas en una expresión de grupo compleja  
- Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar los grupos primarios y secundarios combinados. Para lograr este efecto, debe cambiar la expresión de grupo para que sea una expresión compuesta de ambos grupos. Por ejemplo, imagine que una matriz muestra los totales de inventario de una tienda para los artículos agrupados por color y tamaño. Para ordenar las filas basadas en la combinación de color y tamaño, en lugar de tener un grupo para el color y otro para el tamaño, puede definir un grupo basado en la combinación de ambos. Para más información sobre la definición de expresiones de grupo, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+ Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar los grupos primarios y secundarios combinados. Para lograr este efecto, debe cambiar la expresión de grupo para que sea una expresión compuesta de ambos grupos. Por ejemplo, imagine que una matriz muestra los totales de inventario de una tienda para los artículos agrupados por color y tamaño. Para ordenar las filas basadas en la combinación de color y tamaño, en lugar de tener un grupo para el color y otro para el tamaño, puede definir un grupo basado en la combinación de ambos. Para obtener más información sobre la definición de expresiones de grupo, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- En el procedimiento siguiente, los términos especifican las áreas de la región de datos Tablix. Para más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ En el procedimiento siguiente, los términos especifican las áreas de la región de datos Tablix. Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Normalmente, cuando se ordenan filas basadas en varios grupos, se desea ver los totales para las filas ordenadas, sin tener en cuenta los grupos de columnas. En este procedimiento no se usa ningún grupo de columnas. Puede empezar agregando una matriz y quitando el grupo de columnas predeterminado. También podría empezar agregando una tabla y quitando el grupo de detalles.  
   
@@ -223,9 +223,9 @@ ms.lasthandoff: 08/09/2017
  ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ## <a name="see-also"></a>Vea también  
- [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Ordenación interactiva &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [Ordenar datos en una región de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Explorar la flexibilidad de una región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Ordenación interactiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
+ [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   

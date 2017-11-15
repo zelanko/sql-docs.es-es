@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Performance Statistics event class
+helpviewer_keywords: Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94f6ab1826086a7c835b7a5a371f92b362727cff
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, clase de eventos
   La clase de eventos Performance Statistics se puede utilizar para supervisar el rendimiento de las consultas, los procedimientos almacenados y los desencadenadores que se están ejecutando. Cada una de las seis subclases de evento indica un evento en la vigencia de las consultas, los procedimientos almacenados y los desencadenadores dentro del sistema. Si usa la combinación de estas subclases de evento y las vistas de administración dinámica asociadas sys.dm_exec_query_stats, sys.dm_exec_procedure_stats y sys.dm_exec_trigger_stats, puede reconstituir el historial de rendimiento de cualquier consulta, procedimiento almacenado o desencadenador dados.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 06/22/2017
 |DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
-|EventSubClass|**int**|Tipo de la subclase de eventos.<br /><br /> 2 = Las consultas en una instrucción SQL ad hoc se han compilado.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para lotes ad hoc.<br /><br /> Para lotes ad hoc con *n* consultas:<br /><br /> número*n* de tipo 2|21|Sí|  
+|EventSubClass|**int**|Tipo de la subclase de eventos.<br /><br /> 2 = Las consultas en una instrucción SQL ad hoc se han compilado.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para lotes ad hoc.<br /><br /> Para lotes ad hoc con *n* consultas:<br /><br /> *n* de tipo 2|21|Sí|  
 |IntegerData2|**int**|Final de la instrucción dentro del lote.<br /><br /> -1 para el final del lote.|55|Sí|  
 |ObjectID|**int**|N/D|22|Sí|  
 |Offset|**int**|Desplazamiento inicial de la instrucción dentro del lote.<br /><br /> 0 para el comienzo del lote.|61|Sí|  
@@ -162,4 +160,3 @@ ms.lasthandoff: 06/22/2017
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parameterized queries, plan guides for
 - plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7632532035f32bd659ac8ac675dac7177666291e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>Crear una guía de plan para consultas parametrizadas
   Una guía de plan TEMPLATE compara consultas independientes que se parametrizan en un formulario especificado.  
@@ -83,4 +81,3 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
  También puede utilizar las guías de plan TEMPLATE junto con guías de plan SQL. Por ejemplo, puede crear una guía de plan TEMPLATE para asegurarse de que se parametriza una clase de consultas. A continuación, puede crear una guía de plan SQL en el formulario parametrizado de esa consulta.  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 288ed137e701d6cfb416d12b6ff2176c59ec0278
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 67ccf264539c01071c3dff0e0e9fc1c70f14d7e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>Guía del programador: temas de procedimientos (replicación)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Ejecutar scripts durante la sincronización &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)  
   
--   [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 -   [Depurar un controlador de lógica de negocios &#40;programación de la replicación&#41;](../../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)  
   
@@ -194,4 +191,3 @@ ms.lasthandoff: 06/22/2017
 -   [Medir la latencia y validar las conexiones de la replicación transaccional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
-

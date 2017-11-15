@@ -5,24 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.sortcolumns.f1
+f1_keywords: sql13.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2580942a4a0cb482b499ab556a0c0dcb7c215d40
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: aeee2daf8cdfed0c8e4dd52e7e44dd56078849a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-columns"></a>Ordenar columnas
   El cuadro de diálogo **Ordenar columnas** le permite ordenar las cuadrículas en el Monitor de replicación basado en una o más columnas. (También puede ordenar en una columna única haciendo clic en el encabezado de columna en la cuadrícula del Monitor de replicación). Por ejemplo, para ordenar suscripciones en la pestaña **Todas las suscripciones** basándose en el estado y después el tipo de conexión, siga estos pasos:  
@@ -45,4 +42,3 @@ ms.lasthandoff: 06/22/2017
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

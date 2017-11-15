@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - transactional replication, tracer tokens
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f3ba3c3a7fa30209c1777bcc7ddd5b1754924fa9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
   En este tema se describe cómo medir la latencia y validar conexiones para la replicación transaccional en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante el Monitor de replicación, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). La replicación transaccional proporciona la característica de testigo de seguimiento, que ofrece una forma cómoda de medir la latencia en topologías de replicación transaccional y validar las conexiones entre el publicador, el distribuidor y los suscriptores. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  

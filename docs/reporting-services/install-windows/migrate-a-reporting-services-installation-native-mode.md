@@ -19,19 +19,17 @@ helpviewer_keywords:
 - upgrading Reporting Services
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8332575380b41698e6769a7a683b2b90b99a3ec7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 8b6d83cb8261483890c376121b23f1ffca9f6bbf
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
@@ -292,5 +290,4 @@ Una vez que haya migrado correctamente el servidor de informes a una nueva insta
 [Compatibilidad con versiones anteriores de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

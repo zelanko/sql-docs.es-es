@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit App Role Change Password event class
+helpviewer_keywords: Audit App Role Change Password event class
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4feb283766a031f15c2c57de370b19018980f3b2
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6b4c39f29d6f7b86b7b35d500cfe73e23c8225cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password, clase de eventos
   La clase de eventos **Audit App Role Change Password** se produce cuando se cambia la contraseña de un rol de aplicación.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectName**|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|**ObjectType**|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo **sys.objects** . Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|**ObjectType**|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo **sys.objects** . Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |**OwnerName**|**nvarchar**|Nombre de usuario de base de datos del propietario del objeto.|37|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |**RoleName**|**nvarchar**|Nombre del rol de aplicación.|38|Sí|  
@@ -61,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -42,23 +41,23 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4632b3a980608ca8feb63436d4120759e7a1e756
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 5d10e5a92fe19da764d341039ed348f8297193a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente Generar y publicar scripts
   Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.  
   
-1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
+1.  **Antes de empezar:**  [Publicar en un servicio hospedado](#PubHostSvc), [Permisos](#Permissions)  
   
-2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
+2.  **Para generar o publicar un script con:**  [El Asistente para generar y publicar scripts](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
  Las bases de datos de origen y de destino pueden estar en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecuta [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior.  

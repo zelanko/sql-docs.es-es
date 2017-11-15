@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event classes [SQL Server], QN:Subscription
+helpviewer_keywords: event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 974995d2e76e47234003981115e08d10428182dd
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8fc4a6185bc401be418150fb4da6843ec0ced252
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription (clase de eventos)
   El evento QN:Subscription ofrece información acerca de las suscripciones a notificaciones.  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 |TextData|**ntext**|Devuelve un documento XML que contiene información específica de este evento. Este documento se ajusta al esquema XML disponible en la página sobre el [esquema de eventos del analizador de notificaciones de consultas de SQL Server](http://go.microsoft.com/fwlink/?LinkId=63331)|1|Sí|  
   
   
-

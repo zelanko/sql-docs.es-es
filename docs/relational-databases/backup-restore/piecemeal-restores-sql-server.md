@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,21 +14,21 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: f5ff052d1d6981fe0383ac75c38fc643565d4430
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
   Este tema es pertinente solo para las bases de datos de la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que incluyen varios archivos o grupos de archivos y, en el modelo simple, únicamente para grupos de archivos de solo lectura.  
   
- Para obtener información sobre la restauración por etapas y las tablas con optimización para memoria, vea [Restauración por etapas de bases de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
+ Para obtener información sobre la restauración por etapas y las tablas optimizadas para memoria, vea [Restauración por etapas de bases de datos con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
  La*restauración por etapas* , permite la restauración y recuperación en fases de las bases de datos que contienen varios grupos de archivos. Este tipo de restauración implica una serie de secuencias de restauración, empezando por el grupo de archivos principal y, en algunos casos, uno o varios grupos de archivos secundarios. La restauración por etapas mantiene comprobaciones para garantizar que, al final, la base de datos será coherente. Una vez completada la secuencia de restauración, los archivos recuperados (si son válidos y coherentes con la base de datos) pueden ponerse en línea directamente.  
   

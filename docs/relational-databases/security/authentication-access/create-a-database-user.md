@@ -5,8 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +22,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
----   
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
+---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -56,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 > **IMPORTANTE:** Al conectarse como un usuario de base de datos independiente, debe proporcionar el nombre de la base de datos como parte de la cadena de conexión. Para especificar la base de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], en el cuadro de diálogo **Conectar a** , haga clic en **Opciones**y en la pestaña **Propiedades de la conexión** .  
   
- Seleccione **Usuario SQL con contraseña** o **Usuario SQL con inicio de sesión** basado en un **SQL Server authentication login**(Inicio de sesión de autenticación de SQL Server) cuando la persona que se conecta no pueda autenticarse con Windows. Esto suele ocurrir cuando se conectan a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] personas de fuera de su organización (por ejemplo, clientes).  
+ Seleccione **Usuario SQL con contraseña** o **Usuario SQL con inicio de sesión** basado en un **SQL Server authentication login**(Inicio de sesión de autenticación de SQL Server) cuando la persona que se conecta no pueda autenticarse con Windows. Esto suele ocurrir cuando se conectan a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]personas de fuera de su organización (por ejemplo, clientes).  
   
 > **SUGERENCIA** Para las personas de dentro de su organización, la autenticación de Windows es una opción más acertada. De este modo, no tienen que recordar otra contraseña y, además, la autenticación de Windows ofrece características de seguridad adicionales, como Kerberos.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Debe tener el permiso **ALTER ANY USER** para la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Crear un usuario con SSMS  
@@ -77,13 +75,13 @@ ms.lasthandoff: 06/22/2017
   
 2.  Expanda la base de datos en la que se va a crear el usuario de la misma.  
   
-3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y seleccione **Usuario…**.  
+3.  Haga clic con el botón derecho en la carpeta **Seguridad** , seleccione **Nuevo**y seleccione **Usuario…**.  
   
 4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo** , en la página **General** , seleccione uno de los siguientes tipos de usuario de la lista **Tipo de usuario** :  
   
-    -   **Usuario SQL con inicio de sesión**  
+    -   **usuario SQL con inicio de sesión**  
   
-    -   **Usuario SQL con contraseña**  
+    -   **usuario SQL con contraseña**  
   
     -   **Usuario SQL sin inicio de sesión**  
   
@@ -91,15 +89,15 @@ ms.lasthandoff: 06/22/2017
   
     -   **Usuario asignado a una clave asimétrica**  
   
-    -   **Usuario de Windows**  
+    -   **usuario de Windows**  
   
 5.  Cuando se selecciona una opción, las demás opciones del cuadro de diálogo podrían cambiar. Algunas opciones solo se aplican a tipos específicos de usuarios de base de datos. Algunas opciones pueden dejarse en blanco y usarán un valor predeterminado.  
   
      **Nombre de usuario.**  
-     Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
+     Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario** , también puede hacer clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo** .  
   
      **Nombre de inicio de sesión**  
-     Especifique el inicio de sesión del usuario. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
+     Especifique el inicio de sesión del usuario. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión** . Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
   
      **Contraseña** y **Confirmar contraseña**  
      Escriba una contraseña para los usuarios que se autentican en la base de datos.  
@@ -108,13 +106,13 @@ ms.lasthandoff: 06/22/2017
      Escriba el idioma predeterminado del usuario.  
   
      **Esquema predeterminado**  
-     Escriba el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar esquema**. Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
+     Escriba el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar esquema** . Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
   
      **Nombre de certificado**  
-     Escriba el certificado que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
+     Escriba el certificado que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar certificado** . Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
   
      **Nombre de clave asimétrica**  
-     Escriba la clave que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
+     Escriba la clave que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica** . Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 06/22/2017
      **Puntos suspensivos (…)**  
      Haga clic en los puntos suspensivos **(…)** que se encuentran a continuación de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Delete**  
+     **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  
   
 ##  <a name="TsqlProcedure"></a> Crear un usuario con T-SQL  
@@ -171,4 +169,3 @@ ms.lasthandoff: 06/22/2017
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
-

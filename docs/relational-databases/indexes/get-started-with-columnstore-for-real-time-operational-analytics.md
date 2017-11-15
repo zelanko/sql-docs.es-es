@@ -1,26 +1,24 @@
 ---
 title: "Introducción al almacén de columnas para análisis operativos en tiempo real | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Los análisis operativos en tiempo real abordan un escenario con un único origen de datos, como una aplicación de planificación de recursos empresariales (ERP) en la que se pueden ejecutar las cargas de trabajo tanto operativas como de análisis. Esto no significa que no pueda necesitarse un almacén de datos independiente cuando haya que integrar datos procedentes de varios orígenes antes de ejecutar la carga de trabajo de análisis, o cuando necesite disponer de un rendimiento de análisis extremo con datos previamente agregados, como los cubos.  
   
- Los análisis en tiempo real usan un índice de almacén de columnas actualizable en una tabla de almacén de filas.  El índice de almacén de columnas mantiene una copia de los datos, por lo que las cargas de trabajo OLTP y de análisis ejecutarán copias de los datos distintas. Esto reduce el impacto en el rendimiento que supone ejecutar ambas cargas de trabajo al mismo tiempo.  SQL Server mantiene automáticamente los cambios en el índice para que los cambios de OLTP siempre estén actualizados para los análisis. Con este diseño, es posible (y útil) ejecutar análisis en tiempo real en los datos actualizados. Esto es válido tanto para las tablas basadas en disco como para las tablas con optimización de memoria.  
+ Los análisis en tiempo real usan un índice de almacén de columnas actualizable en una tabla de almacén de filas.  El índice de almacén de columnas mantiene una copia de los datos, por lo que las cargas de trabajo OLTP y de análisis ejecutarán copias de los datos distintas. Esto reduce el impacto en el rendimiento que supone ejecutar ambas cargas de trabajo al mismo tiempo.  SQL Server mantiene automáticamente los cambios en el índice para que los cambios de OLTP siempre estén actualizados para los análisis. Con este diseño, es posible (y útil) ejecutar análisis en tiempo real en los datos actualizados. Esto es válido tanto para las tablas basadas en disco como para las tablas optimizadas para memoria.  
   
 ## <a name="get-started-example"></a>Ejemplo introductorio  
  Para empezar a usar análisis en tiempo real:  
@@ -107,7 +105,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Minimizing the impact of nonclustered columnstore index maintenance by using a compression delay - performance numbers (Minimizar el impacto del mantenimiento de índices de almacén de columnas no agrupados mediante un retraso de compresión: cifras de rendimiento)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [Real time operational analytics with memory-optimized tables (Análisis operativos en tiempo real con tablas con optimización de memoria)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   
+            [Real time operational analytics with memory-optimized tables (Análisis operativos en tiempo real con tablas optimizadas para memoria)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [Minimize index fragmentation in a columnstore index (Minimizar la fragmentación de índice de un índice de almacén de columnas)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 06/22/2017
  Las consultas de análisis tienen un acceso transparente a los datos tanto activos como semiactivos, según sea necesario para proporcionar análisis en tiempo real. Si una parte considerable de la carga de trabajo operativa usa los datos 'activos', esas operaciones no requerirán un mantenimiento adicional del índice del almacén de columnas. Un procedimiento recomendado es tener un índice agrupado de almacén de filas en las columnas usadas en la definición del índice filtrado.   SQL Server usa el índice agrupado para examinar rápidamente las filas que no cumplen la condición de filtrado. Sin este índice agrupado, sería necesario realizar un recorrido de tabla completo de la tabla de almacén de filas para encontrar dichas filas, lo que puede repercutir negativamente y en gran medida en el rendimiento de las consultas de análisis. Si no hay un índice agrupado, podría crear un índice complementario de árbol b no agrupado filtrado para identificar esas filas, pero esto no es recomendable porque el acceso a un amplio rango de filas a través de índices de árbol b no agrupados es muy costoso.  
   
 > [!NOTE]  
->  Un índice de almacén de columnas no agrupado filtrado solo se puede usar en tablas basadas en disco. No se admite en tablas con optimización de memoria.  
+>  Un índice de almacén de columnas no agrupado filtrado solo se puede usar en tablas basadas en disco. No se admite en tablas optimizadas para memoria.  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Ejemplo A: acceso a datos activos del índice de árbol b y a datos semiactivos del índice de almacén de columnas  
  En este ejemplo se usa una condición filtrada (accountkey > 0) para establecer qué filas se van a incluir en el índice de almacén de columnas. El objetivo es diseñar la condición de filtrado y las consultas posteriores para tener acceso a los datos “activos” del índice de árbol b que cambian con frecuencia, así como para tener acceso a los datos “semiactivos” del índice de almacén de columnas, que son más estables.  
@@ -231,4 +230,3 @@ ORDER BY created_time DESC
  [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

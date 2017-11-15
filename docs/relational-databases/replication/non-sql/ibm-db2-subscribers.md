@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>suscriptores de IBM DB2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      La mayoría de las opciones de la cadena son específicas para el servidor DB2 que está configurando, pero las opciones `Process Binary as Character` y `Derive Parameters` siempre deben establecerse en `False`. Se requiere un valor para que la opción `Initial Catalog` identifique la base de datos de suscripciones. La cadena de conexión se insertará en el Asistente para nueva suscripción cuando se cree la suscripción.  
   
-3.  Cree una instantánea o una publicación transaccional, habilítela para suscriptores que no sean[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, cree una suscripción de inserción para el suscriptor. Para más información, consulte [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Cree una instantánea o una publicación transaccional, habilítela para suscriptores que no sean[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, cree una suscripción de inserción para el suscriptor. Para más información, consulte [Crear una suscripción para un suscriptor que no sea de SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  O bien, especifique un script de creación personalizado para uno o más artículos. Cuando se publica la tabla, se crea un script `CREATE TABLE` para ella. Para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el script se crea en dialecto de [!INCLUDE[tsql](../../../includes/tsql-md.md)] y, posteriormente, el Agente de distribución lo convierte a un dialecto SQL más general antes de aplicarlo en el suscriptor. Para especificar un script de creación personalizado, modifique el script [!INCLUDE[tsql](../../../includes/tsql-md.md)] existente o cree un script completo que utilice el dialecto DB2 SQL; si crea un script DB2, use la directiva **bypass_translation** para que el Agente de distribución aplique el script sin convertir en el suscriptor.  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

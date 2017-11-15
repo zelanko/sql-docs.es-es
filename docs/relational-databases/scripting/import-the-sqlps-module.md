@@ -5,28 +5,27 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 39b5b945994c9531deb3d545dbb438657b1914fe
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-the-sqlps-module"></a>Importar el módulo SQLPS
   El método recomendado para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde PowerShell consiste en importar el módulo **sqlps** en un entorno de Windows PowerShell. El módulo carga y registra los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los ensamblados de administración.  A partir de Windows PowerShell 3.0, los módulos se importan automáticamente cuando se usa cualquier cmdlet o función del módulo en un comando. Esta característica funciona en cualquier módulo de un directorio incluido en el valor de la variable de entorno PSModulePath.  Para más información, consulte [Importación de un módulo de PowerShell](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **Antes de comenzar:**  [Seguridad](#Security)  
   
-2.  **To load the module:**  [Load the sqlps Module](#LoadSqlps)  
+2.  **Para cargar el módulo:**  [Cargar el módulo sqlps](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
  Después de importar el módulo de **sqlps** en Windows PowerShell, a continuación puede:  
@@ -78,4 +77,3 @@ Get-Module -ListAvailable -Name Sqlps;
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   
   
-

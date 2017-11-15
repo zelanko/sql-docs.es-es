@@ -5,29 +5,26 @@ ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.schemas.general.f1
+f1_keywords: sql13.swb.schemas.general.f1
 helpviewer_keywords:
 - creating schemas with Management Studio
 - CREATE SCHEMA [Management Studio]
 - database schemas
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
-ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: fe8ac92bb4e20d0070cc81e4f58a25babb53a236
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-database-schema"></a>Crear un esquema de la base de datos
   En este tema se describe cómo crear un esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -118,4 +115,3 @@ ms.lasthandoff: 07/31/2017
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  
   
   
-

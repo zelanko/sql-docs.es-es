@@ -5,8 +5,7 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - logs [SQL Server], SQL Server error logs
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 177b287f4a107d87ed96acd96bd7a06efe5ecde4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
-ms.openlocfilehash: a8c1290e33ad567520c813a1f365830644f545c7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Ver el registro de errores de SQL Server (SQL Server Management Studio)
 
@@ -49,5 +47,4 @@ El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 5.  Aparecerá el Visor de archivos de registro (esto puede demorar un minuto) con una lista de los registros que puede ver.
   
 6. Varias personas han recomendado la publicación [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/) (Identificar la ubicación del archivo de registro de errores de SQL Server) de [MSSQLTips.com](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/). Ahí puede encontrar gran cantidad de excelente información, no se olvide de revisarlo.
-
 

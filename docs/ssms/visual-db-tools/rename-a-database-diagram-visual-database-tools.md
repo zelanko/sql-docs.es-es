@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - renaming database diagrams
 - database diagrams [SQL Server], renaming
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f134aea8903ab0c31c3790c90d07f062ff292055
-ms.contentlocale: es-es
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 64cf68704ed44f2f2aa8b82abb9b717e2be9d39c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Cambiar el nombre de un diagrama de base de datos (Visual Database Tools)
 Puede cambiar el nombre de un diagrama de base de datos en el Explorador de objetos. Requiere el permiso ALTER en la base de datos.  
@@ -47,4 +45,3 @@ Puede cambiar el nombre de un diagrama de base de datos en el Explorador de obje
 ## <a name="see-also"></a>Vea también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

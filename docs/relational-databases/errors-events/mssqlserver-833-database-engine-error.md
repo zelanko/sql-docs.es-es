@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 833 (Database Engine error)
+helpviewer_keywords: 833 (Database Engine error)
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fd32f5eb35a0d938e60e3ea43aa8428a4b458930
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3fdfc0ea95b60668bb6d30e0f23d6959857761e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
   
@@ -61,4 +58,3 @@ Por ejemplo, el tiempo de **Average Disk Sec/Transfer** en un equipo que ejecuta
   
 Para obtener más información sobre de los errores de E/S, vea el [capítulo 2 del documento sobre elementos fundamentales de E/S de Microsoft SQL Server ](http://go.microsoft.com/fwlink/?LinkId=69370) y el artículo de Knowledge Base en [http://support.microsoft.com/kb/897284/en-us](http://support.microsoft.com/kb/897284/en-us);.  
   
-

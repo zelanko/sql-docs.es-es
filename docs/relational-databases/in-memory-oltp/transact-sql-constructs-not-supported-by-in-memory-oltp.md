@@ -5,22 +5,20 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 986ad79967b8b8f4a83e11c271cf350033409f0d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,7 +27,7 @@ ms.lasthandoff: 07/31/2017
   
  El mensaje de error menciona el tipo de instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] (por ejemplo, característica, operación, opción) y el nombre de la característica o palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La mayor parte de características no admitidas devolverán el error 10794, con un mensaje de error que indique la función no admitida. En las tablas siguientes se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto del mensaje de error, así como la acción correctiva para resolver el error.  
   
- Para obtener más información sobre las características admitidas con las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa, vea:  
+ Para obtener más información sobre las características admitidas con las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa, vea:  
   
 -   [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   
@@ -48,47 +46,47 @@ ms.lasthandoff: 07/31/2017
 |Opción|ATTACH_REBUILD_LOG|La opción de base de datos ATTACH_REBUILD_LOG de CREATE no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
 |Característica|DATABASE SNAPSHOT|La creación de instantáneas de base de datos no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
 |Característica|Replicación con el sync_method 'database snapshot' o 'database snapshot character'|La replicación con sync_method 'database snapshot' o 'database snapshot character' no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
-|Característica|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB omite las tablas con optimización para memoria en la base de datos.<br /><br /> DBCC CHECKTABLE producirá un error en las tablas con optimización para memoria.|  
+|Característica|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB omite las tablas optimizadas para memoria en la base de datos.<br /><br /> DBCC CHECKTABLE producirá un error en las tablas optimizadas para memoria.|  
   
 ## <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
- En la siguiente tabla se enumeran las características de [!INCLUDE[tsql](../../includes/tsql-md.md)] no compatibles y las palabras clave que pueden aparecer en el texto del mensaje de error que implica una tabla con optimización para memoria. La tabla también muestra la resolución del error.  
+ En la siguiente tabla se enumeran las características de [!INCLUDE[tsql](../../includes/tsql-md.md)] no compatibles y las palabras clave que pueden aparecer en el texto del mensaje de error que implica una tabla optimizada para memoria. La tabla también muestra la resolución del error.  
   
 |Tipo|Nombre|Solución|  
 |----------|----------|----------------|  
-|Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas con optimización para memoria se asignan al grupo de archivos con optimización para memoria.|  
+|Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas optimizadas para memoria se asignan al grupo de archivos optimizados para memoria.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Característica|Columnas calculadas|Las tablas con optimización para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.|  
-|Característica|Replicación|La replicación no es compatible con las tablas con optimización para memoria.|  
-|Característica|FILESTREAM|Las columnas de las tablas con optimización para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave **FILESTREAM** de la definición de columna.|  
-|Característica|SPARSE|Las columnas de las tablas con optimización para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave **SPARSE** de la definición de columna.|  
-|Característica|ROWGUIDCOL|Las columnas de las tablas con optimización para memoria no admiten la opción ROWGUIDCOL. Quite la palabra clave **ROWGUIDCOL** de la definición de columna.|  
-|Característica|FOREIGN KEY|En tablas con optimización para memoria, las restricciones FOREIGN KEY solo se admiten para claves externas que hacen referencia a las claves principales. Quite la restricción de la definición de tabla si la clave externa hace referencia a una restricción única.|  
+|Característica|Columnas calculadas|Las tablas optimizadas para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.|  
+|Característica|Replicación|La replicación no es compatible con las tablas optimizadas para memoria.|  
+|Característica|FILESTREAM|Las columnas de las tablas optimizadas para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave **FILESTREAM** de la definición de columna.|  
+|Característica|SPARSE|Las columnas de las tablas optimizadas para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave **SPARSE** de la definición de columna.|  
+|Característica|ROWGUIDCOL|Las columnas de las tablas optimizadas para memoria no admiten la opción ROWGUIDCOL. Quite la palabra clave **ROWGUIDCOL** de la definición de columna.|  
+|Característica|FOREIGN KEY|En tablas optimizadas para memoria, las restricciones FOREIGN KEY solo se admiten para claves externas que hacen referencia a las claves principales. Quite la restricción de la definición de tabla si la clave externa hace referencia a una restricción única.|  
 |Característica|índice clúster|Especifique un índice no clúster. Si se trata de un índice de clave principal, no se olvide de especificar **PRIMARY KEY NONCLUSTERED [HASH]**.|  
 |Característica|DDL dentro de transacciones|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar en el contexto de una transacción de usuario. No inicie ninguna transacción y asegúrese de que el parámetro de sesión IMPLICIT_TRANSACTIONS está establecido en OFF antes de ejecutar la instrucción CREATE o DROP.|  
 |Característica|DDL, desencadenadores|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar si existe un desencadenador de base de datos o de servidor para la operación DDL. Quite los desencadenadores de servidor y de base de datos de CREATE/DROP TABLE y CREATE/DROP PROCEDURE.|  
 |Característica|EVENT NOTIFICATION|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar si existe una notificación de evento de base de datos o de servidor para la operación DDL. Quite las notificaciones de eventos de servidor y de base de datos en CREATE TABLE o DROP TABLE y CREATE PROCEDURE o DROP PROCEDURE.|  
 |Característica|FileTable|Las tablas con optimización para memoria no se pueden crear como tablas de archivos. Quite el argumento **AS FileTable** de la instrucción **CREATE TABLE** .|  
-|Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas con optimización para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
-|Operación|CREATE INDEX|Los índices de las tablas con optimización para memoria deben especificarse insertados con la instrucción **CREATE TABLE** o con la instrucción **ALTER TABLE** .|  
-|Operación|CREATE FULLTEXT INDEX|Las tablas con optimización para memoria no admiten índices de texto completo.|  
-|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, **sp_rename**.<br /><br /> El intento de realizar algunos cambios de esquema generará el error 12320. No se admiten las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, con tablas con optimización para memoria.<br /><br /> Se permiten algunos cambios de esquema que usen ALTER TABLE y ALTER PROCEDURE.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], se admite sp_rename.| 
-|Operación|TRUNCATE TABLE|Las tablas con optimización para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM***table* , o bien quite y vuelva a crear la tabla.|  
-|Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla con optimización para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
+|Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas optimizadas para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
+|Operación|CREATE INDEX|Los índices de las tablas optimizadas para memoria deben especificarse insertados con la instrucción **CREATE TABLE** o con la instrucción **ALTER TABLE** .|  
+|Operación|CREATE FULLTEXT INDEX|Las tablas optimizadas para memoria no admiten índices de texto completo.|  
+|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, **sp_rename**.<br /><br /> El intento de realizar algunos cambios de esquema generará el error 12320. No se admiten las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, con tablas optimizadas para memoria.<br /><br /> Se permiten algunos cambios de esquema que usen ALTER TABLE y ALTER PROCEDURE.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], se admite sp_rename.| 
+|Operación|TRUNCATE TABLE|Las tablas optimizadas para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM***table* , o bien quite y vuelva a crear la tabla.|  
+|Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operación|ALTER SCHEMA|Transferencia de un elemento protegible entre esquemas.|  
-|Operación|DBCC CHECKTABLE|DBCC CHECKTABLE no es compatible con las tablas con optimización para memoria.|  
-|Característica|ANSI_PADDING OFF|Cuando se crean tablas con optimización para memoria o procedimientos almacenados compilados de forma nativa, la opción de sesión **ANSI_PADDING** debe estar establecida en ON. Ejecute **SET ANSI_PADDING ON** antes de ejecutar la instrucción CREATE.|  
-|Opción|DATA_COMPRESSION|Las tablas con optimización para memoria no admiten la compresión de datos. Quite la opción de la definición de tabla.|  
+|Operación|DBCC CHECKTABLE|DBCC CHECKTABLE no es compatible con las tablas optimizadas para memoria.|  
+|Característica|ANSI_PADDING OFF|Cuando se crean tablas optimizadas para memoria o procedimientos almacenados compilados de forma nativa, la opción de sesión **ANSI_PADDING** debe estar establecida en ON. Ejecute **SET ANSI_PADDING ON** antes de ejecutar la instrucción CREATE.|  
+|Opción|DATA_COMPRESSION|Las tablas optimizadas para memoria no admiten la compresión de datos. Quite la opción de la definición de tabla.|  
 |Característica|DTC|No se puede tener acceso a las tablas con optimización para memoria ni a los procedimientos almacenados compilados de forma nativa desde transacciones distribuidas. En su lugar, use transacciones SQL.|  
 |Operación|Tablas con optimización para memoria como destino de MERGE|Las tablas con optimización para memoria no pueden ser el destino de una operación **MERGE** . En su lugar, use las instrucciones **INSERT**, **UPDATE**o **DELETE** .|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria  
- En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de una tabla con optimización para memoria, así como la acción correctiva para resolver el error.  
+ En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de una tabla optimizada para memoria, así como la acción correctiva para resolver el error.  
   
 |Tipo|Nombre|Solución|  
 |----------|----------|----------------|  
-|Característica|Índice filtrado|Las tablas con optimización para memoria no admiten índices filtrados. Omita la cláusula **WHERE** en la especificación de índice.|  
-|Característica|Columnas incluidas|No es necesario especificar columnas incluidas en las tablas con optimización para memoria. Todas las columnas de la tabla con optimización para memoria se incluyen de forma implícita en cada índice con optimización para memoria.|  
-|Operación|DROP INDEX|No es posible quitar los índices de las tablas con optimización para memoria. Puede eliminar los índices mediante ALTER TABLE.<br /><br /> Para obtener más información, vea [Modificar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
+|Característica|Índice filtrado|Las tablas optimizadas para memoria no admiten índices filtrados. Omita la cláusula **WHERE** en la especificación de índice.|  
+|Característica|Columnas incluidas|No es necesario especificar columnas incluidas en las tablas optimizadas para memoria. Todas las columnas de la tabla optimizada para memoria se incluyen de forma implícita en cada índice optimizado para memoria.|  
+|Operación|DROP INDEX|No es posible quitar los índices de las tablas optimizadas para memoria. Puede eliminar los índices mediante ALTER TABLE.<br /><br /> Para obtener más información, vea [Modificar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
 |Opción de índice|*Opción de índice*|Solo se admite una opción de índice (BUCKET_COUNT) para los índices HASH.|  
   
 ## <a name="nonclustered-hash-indexes"></a>Índices de hash no clúster  
@@ -124,12 +122,12 @@ ms.lasthandoff: 07/31/2017
 |Característica|Procedimientos temporales|Los procedimientos almacenados temporales no se pueden compilar de forma nativa. Cree un procedimiento almacenado compilado de forma nativa que sea permanente o un procedimiento almacenado interpretado de [!INCLUDE[tsql](../../includes/tsql-md.md)] que sea temporal.|  
 |Nivel de aislamiento|READ UNCOMMITTED|Los procedimientos almacenados compilados de forma nativa no admiten el nivel de aislamiento READ UNCOMMITTED. Use un nivel de aislamiento compatible, como SNAPSHOT.|  
 |Nivel de aislamiento|READ COMMITTED|Los procedimientos almacenados compilados de forma nativa no admiten el nivel de aislamiento READ COMMITTED. Use un nivel de aislamiento compatible, como SNAPSHOT.|  
-|Característica|tablas temporales|En los procedimientos almacenados compilados de forma nativa no se pueden usar tablas de tempdb. En su lugar, use una variable de tabla o una tabla con optimización para memoria con DURABILITY=SCHEMA_ONLY.|  
+|Característica|tablas temporales|En los procedimientos almacenados compilados de forma nativa no se pueden usar tablas de tempdb. En su lugar, use una variable de tabla o una tabla optimizada para memoria con DURABILITY=SCHEMA_ONLY.|  
 |Característica|DTC|No se puede tener acceso a las tablas con optimización para memoria ni a los procedimientos almacenados compilados de forma nativa desde transacciones distribuidas. En su lugar, use transacciones SQL.|  
 |Característica|EXECUTE WITH RECOMPILE|Los procedimientos almacenados compilados de forma nativa no admiten la opción **WITH RECOMPILE** .|  
 |Característica|Ejecución de la conexión de administrador dedicada|Los procedimientos almacenados compilados de forma nativa no se pueden ejecutar desde la conexión de administrador dedicada (DAC). En su lugar, use una conexión normal.|  
 |Operación|punto de retorno|Los procedimientos almacenados compilados de forma nativa no se pueden invocar desde transacciones que tienen un punto de retorno activo. Quite el punto retorno de la transacción.|  
-|Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla con optimización para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
+|Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operador|OPENROWSET|No se admite este operador. Quite **OPENROWSET** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|OPENQUERY|No se admite este operador. Quite **OPENQUERY** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|OPENDATASOURCE|No se admite este operador. Quite **OPENDATASOURCE** del procedimiento almacenado compilado de forma nativa.|  
@@ -172,7 +170,7 @@ ms.lasthandoff: 07/31/2017
 |Característica|CUBE|En los procedimientos almacenados compilados de forma nativa,**CUBE** no se puede utilizar con cláusulas **GROUP BY** . Quite **CUBE** de la definición de procedimiento.|  
 |Característica|GROUPING SETS|En los procedimientos almacenados compilados de forma nativa,**GROUPING SETS** no se puede utilizar con cláusulas **GROUP BY** . Quite **GROUPING SETS** de la definición de procedimiento.|  
 |Característica|BEGIN TRANSACTION, COMMIT TRANSACTION y ROLLBACK TRANSACTION|Utilice bloques ATÓMICOS para controlar las transacciones y tratar los errores. Para obtener más información, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
-|Característica|Declaraciones de variable de tabla alineada.|Las variables de tabla deben hacer referencia explícitamente a los tipos definidos de tabla con optimización para memoria. Debe crear un tipo de tabla con optimización para memoria y usar ese tipo para la declaración de la variable, en lugar de especificar el tipo insertado.|  
+|Característica|Declaraciones de variable de tabla alineada.|Las variables de tabla deben hacer referencia explícitamente a los tipos definidos de tabla optimizada para memoria. Debe crear un tipo de tabla optimizada para memoria y usar ese tipo para la declaración de la variable, en lugar de especificar el tipo insertado.|  
 |Característica|Tablas basadas en disco|No se puede tener acceso a las tablas basadas en disco desde procedimientos almacenados compilados de forma nativa. Quite las referencias a las tablas basadas en disco desde los procedimientos almacenados compilados de forma nativa. O bien, migre las tablas basadas en disco a la memoria optimizada.|  
 |Característica|Vistas|No se puede tener acceso a las vistas desde procedimientos almacenados compilados de forma nativa. En lugar de a las vistas, haga referencia a las tablas base subyacentes.|  
 |Característica|Funciones con valores de tabla|En los procedimientos almacenados compilados de forma nativa no se puede hacer tener acceso a funciones con valores de tabla. Quite las referencias a las funciones con valores de tabla desde los procedimientos almacenados compilados de forma nativa.|  
@@ -181,16 +179,15 @@ ms.lasthandoff: 07/31/2017
 |Opción|STATISTICS XML|No compatible. Al ejecutar una consulta con STATISTICS XML habilitada, el contenido XML se devuelve sin la parte del procedimiento almacenado compilado de forma nativa.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transacciones que tienen acceso a tablas con optimización para memoria  
- En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con transacciones que tienen acceso a tablas con optimización para memoria, así como la acción correctiva para resolver el error.  
+ En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con transacciones que tienen acceso a tablas optimizadas para memoria, así como la acción correctiva para resolver el error.  
   
 |Tipo|Nombre|Solución|  
 |----------|----------|----------------|  
-|Característica|punto de retorno|No se pueden crear puntos de retorno explícitos en transacciones que tienen acceso a tablas con optimización para memoria.|  
-|Característica|Transacción enlazada|Las sesiones enlazadas no pueden participar en transacciones que tienen acceso a tablas con optimización para memoria. No enlace la sesión antes de ejecutar el procedimiento.|  
-|Característica|DTC|Las transacciones que tienen acceso a tablas con optimización para memoria no pueden ser transacciones distribuidas.|  
+|Característica|punto de retorno|No se pueden crear puntos de retorno explícitos en transacciones que tienen acceso a tablas optimizadas para memoria.|  
+|Característica|Transacción enlazada|Las sesiones enlazadas no pueden participar en transacciones que tienen acceso a tablas optimizadas para memoria. No enlace la sesión antes de ejecutar el procedimiento.|  
+|Característica|DTC|Las transacciones que tienen acceso a tablas optimizadas para memoria no pueden ser transacciones distribuidas.|  
   
 ## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

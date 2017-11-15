@@ -1,27 +1,24 @@
 ---
 title: "Requisitos para usar las tablas con optimización para memoria | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: de8c79ca45f7b02e25a893afd017c38c25340f2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +30,12 @@ ms.lasthandoff: 06/22/2017
 -   SQL Server 2016 SP1 (o posterior), cualquier edición. Para SQL Server 2014 y SQL Server 2016 RTM (pre-SP1) necesita la edición Evaluation, Developer o Enterprise.
     - Nota: OLTP en memoria necesita la versión de 64 bits de SQL Server.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita suficiente memoria para almacenar los datos en tablas con optimización para memoria e índices, así como memoria adicional para admitir la carga de trabajo en línea. Vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para obtener más información.  
+-   
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita suficiente memoria para almacenar los datos en tablas optimizadas para memoria e índices, así como memoria adicional para admitir la carga de trabajo en línea. Vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para obtener más información.  
 
--   Cuando ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM), asegúrese de que haya suficiente memoria asignada a la VM para admitir la memoria necesaria para índices y tablas con optimización para memoria. Dependiendo de la aplicación host de VM, la opción de configuración para garantizar la asignación de memoria para la VM podría denominarse Reserva de memoria o, si se usa la memoria dinámica, RAM mínima. Asegúrese de que esta configuración sea suficiente para las necesidades de las bases de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+-   Cuando ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM), asegúrese de que haya suficiente memoria asignada a la VM para admitir la memoria necesaria para índices y tablas optimizadas para memoria. Dependiendo de la aplicación host de VM, la opción de configuración para garantizar la asignación de memoria para la VM podría denominarse Reserva de memoria o, si se usa la memoria dinámica, RAM mínima. Asegúrese de que esta configuración sea suficiente para las necesidades de las bases de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
--   Espacio en disco libre equivalente al doble del tamaño de las tablas durables con optimización para memoria.  
+-   Espacio en disco libre equivalente al doble del tamaño de las tablas durables optimizadas para memoria.  
   
 -   El procesador debe admitir la instrucción **cmpxchg16b** para usar OLTP en memoria. Todos los procesadores de 64 bits modernos admiten la instrucción **cmpxchg16b**.  
   
@@ -49,13 +47,12 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   A partir de SQL Server 2016 no hay límite para el tamaño de las tablas con optimización para memoria más que la memoria disponible. En SQL Server 2014, el tamaño total en memoria de todas las tablas durables de una base de datos no debería superar los 250 GB para las bases de datos de SQL Server 2014. Para obtener más información, vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
-    - Nota: A partir de SQL Server 2016 SP1, las ediciones Standard y Express admiten OLTP en memoria, pero imponen cuotas con respecto a la cantidad de memoria que se puede usar para las tablas con optimización para memoria en una base de datos determinada. En la edición Standard es de 32 GB por base de datos; en la edición Express es de 352 MB por base de datos. 
+-   A partir de SQL Server 2016 no hay límite para el tamaño de las tablas optimizadas para memoria más que la memoria disponible. En SQL Server 2014, el tamaño total en memoria de todas las tablas durables de una base de datos no debería superar los 250 GB para las bases de datos de SQL Server 2014. Para obtener más información, vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
+    - Nota: A partir de SQL Server 2016 SP1, las ediciones Standard y Express admiten OLTP en memoria, pero imponen cuotas con respecto a la cantidad de memoria que se puede usar para las tablas optimizadas para memoria en una base de datos determinada. En la edición Standard es de 32 GB por base de datos; en la edición Express es de 352 MB por base de datos. 
   
--   Si crea una o más bases de datos con tablas con optimización para memoria, debe habilitar la inicialización instantánea de archivos (conceda el derecho de usuario SE_MANAGE_VOLUME_NAME a la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin la inicialización instantánea de archivos, los archivos de almacenamiento con optimización para memoria (datos y archivos delta) se inicializarán en el momento de la creación, lo cual puede tener un impacto negativo en el rendimiento de la carga de trabajo. Para obtener más información sobre la inicialización instantánea de archivos, vea [Inicialización de archivos de base de datos](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Para obtener información sobre cómo habilitar la inicialización instantánea de archivos, vea [Cómo y por qué habilitar la inicialización instantánea de archivos](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Si crea una o más bases de datos con tablas optimizadas para memoria, debe habilitar la inicialización instantánea de archivos (conceda el derecho de usuario SE_MANAGE_VOLUME_NAME a la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin la inicialización instantánea de archivos, los archivos de almacenamiento optimizados para memoria (datos y archivos delta) se inicializarán en el momento de la creación, lo cual puede tener un impacto negativo en el rendimiento de la carga de trabajo. Para obtener más información sobre la inicialización instantánea de archivos, vea [Inicialización de archivos de base de datos](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Para obtener información sobre cómo habilitar la inicialización instantánea de archivos, vea [Cómo y por qué habilitar la inicialización instantánea de archivos](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="see-also"></a>Vea también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

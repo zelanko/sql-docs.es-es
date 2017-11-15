@@ -1,28 +1,25 @@
 ---
 title: "Uso del almacén de consultas con OLTP en memoria | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, in-memory
+helpviewer_keywords: Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 53942f718cdb697db2d7644b39b2c241d715234e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso del almacén de consultas con OLTP en memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ Sin embargo, existen algunos aspectos específicos que los usuarios deben tener 
   
 ## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Habilitación y uso del almacén de consultas con OLTP en memoria  
  En el ejemplo siguiente se demuestra el uso del almacén de consultas con OLTP en memoria en un escenario de usuario integral. En este ejemplo, se supone que una base de datos (`MemoryOLTP`) está habilitada para OLTP en memoria.  
-    Para obtener más información sobre los requisitos previos de las tablas con optimización para memoria, vea [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+    Para obtener más información sobre los requisitos previos de las tablas optimizadas para memoria, vea [Crear una tabla optimizada para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ```  
 USE MemoryOLTP;  
@@ -146,4 +143,3 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
-

@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.profiles.perfprofileprops.f1
-helpviewer_keywords:
-- Agent Profile Properties dialog box
+f1_keywords: sql13.rep.profiles.perfprofileprops.f1
+helpviewer_keywords: Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6932152bce33b84877287560d2ec769005c0c20f
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3cb8e78c6cd93c0948a2169212c6e0504676ea8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propiedades de &lt;Nombredeperfildeagente&gt;
   Utilice el cuadro de diálogo **Propiedades del perfil de agente** para ver los valores especificados para cada parámetro de agente y modificar los valores de los perfiles definidos por el usuario.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Perfiles del Agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)  
   
   

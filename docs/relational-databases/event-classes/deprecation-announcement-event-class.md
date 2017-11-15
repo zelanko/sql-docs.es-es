@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deprecation [SQL Server], events announced stage
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f937e252123265ac28d215a751fc6419b5fe8dcc
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2ab108ddb69d1de2859d80ba0c158d11c9ddb991
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement, clase de eventos
   La clase de eventos **Deprecation Announcement** se produce cuando se usa una característica que se va a quitar de una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no de la próxima versión principal. Para que sus aplicaciones duren el mayor tiempo posible, debe evitar el uso de características que provoquen la aparición de las clase de eventos **Deprecation Announcement** o **Deprecation Final Support** .  

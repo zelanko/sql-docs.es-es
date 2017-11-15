@@ -5,28 +5,27 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbe943177e89f98640f0184d6402a4b8b3d1c864
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 50b3d97a82011d0fefbf15ef716a8020cc44413f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distributor-properties"></a>Propiedades del distribuidor
   En esta sección se proporciona información sobre las propiedades del distribuidor y la base de datos de distribución:  
   
 -   [Propiedades del distribuidor, General](../../relational-databases/replication/distributor-properties-general.md)  
   
--   [Propiedades del distribuidor, Publicadores](../../relational-databases/replication/distributor-properties-publishers.md)  
+-   [Propiedades del distribuidor, publicadores](../../relational-databases/replication/distributor-properties-publishers.md)  
   
 -   [Propiedades de base de datos de distribución](../../relational-databases/replication/distribution-database-properties.md)  
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dad074bfa7a777690f625fa175f631332f94e58b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d1ed3b2823e6de0f4afe534398c40ec461e59850
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Supervisar el trasvase de registros (Transact-SQL)
   Después de configurar el trasvase de registros, puede supervisar la información acerca del estado de todos los servidores de trasvase de registros. El historial y el estado de las operaciones de trasvase de registros siempre se guardan de forma local en los trabajos de trasvase de registros. El historial y el estado de la operación de copia de seguridad se almacenan en el servidor principal, y el historial y el estado de las operaciones de copia y restauración se almacenan en el servidor secundario. Si ha implementado un servidor de supervisión remoto, esta información se almacena también en dicho servidor.  
@@ -69,4 +67,3 @@ ms.lasthandoff: 08/02/2017
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

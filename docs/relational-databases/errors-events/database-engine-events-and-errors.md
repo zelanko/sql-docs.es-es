@@ -5,22 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78b8df4b3bc143c06b2876856dcbd5f26711a3d7
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5d905daa4fb553b7152befcefd97ea0afbdf6cfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-events-and-errors"></a>Eventos y errores del motor de base de datos
   En este tema se proporciona información acerca de los errores y eventos de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -33,4 +31,3 @@ ms.lasthandoff: 06/22/2017
  Proporciona una explicación de los mensajes de error del sistema, las posibles causas y las medidas que se pueden tomar.  
   
   
-

@@ -1,12 +1,11 @@
 ---
-title: "Jerarquías explícitas (Master Data Services) | Documentos de Microsoft"
+title: "Jerarquías explícitas (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "10"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: cab8d24ba8b634850f700dd15e71a81c006c8562
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Jerarquías explícitas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una jerarquía explícita organiza los miembros de una sola entidad de la forma que se especifique. La estructura puede ser irregular y, a diferencia de las jerarquías derivadas, las jerarquías explícitas no se basan en relaciones de atributo basadas en dominio.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  Para resumir estos miembros hoja en puntos específicos de consolidación, puede crear miembros consolidados en la entidad Product. Inserte los miembros consolidados en los niveles del árbol de jerarquía donde desea resumir los miembros hoja. No existe limitación alguna con respecto al lugar donde insertar los miembros consolidados; sin embargo, solo puede utilizar cada miembro (hoja o consolidado) una vez.  
   
- ![Ejemplo de jerarquía explícita de bicicleta de montaña](../master-data-services/media/mds-conc-explicit-hierarchy.gif "ejemplo de jerarquía explícita de bicicleta de montaña")  
+ ![Ejemplo de jerarquía explícita de bicicleta de montaña](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Ejemplo de jerarquía explícita de bicicleta de montaña")  
   
  Los miembros consolidados se pueden usar para agrupar miembros en cualquier nivel, y los miembros hoja y consolidados se ordenan según se determine.  
   
@@ -88,16 +87,15 @@ ms.lasthandoff: 09/01/2017
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una nueva jerarquía explícita.|[Crear una jerarquía explícita &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Cambiar el nombre de una jerarquía explícita existente.|[Cambiar el nombre de una jerarquía explícita &#40; Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Eliminar una jerarquía explícita existente.|[Eliminar una jerarquía explícita &#40; Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Crear una nueva jerarquía explícita.|[Crear una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Cambiar el nombre de una jerarquía explícita existente.|[Crear un nombre de jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Eliminar una jerarquía explícita existente.|[Eliminar una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Jerarquías derivadas &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Colecciones de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
-

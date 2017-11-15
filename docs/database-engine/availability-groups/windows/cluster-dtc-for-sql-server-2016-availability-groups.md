@@ -5,22 +5,20 @@ ms.date: 08/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: bf3445a7f28bc53b844946f66bc86712931d82e2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9291f9ce4659e022652078a9f1fadb3502c0e6e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC de clúster para grupos de disponibilidad de SQL Server 2016
 En este tema se describen los requisitos y los pasos para agrupar en clústeres el servicio Microsoft DTC (Coordinador de transacciones distribuidas) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información sobre las transacciones distribuidas y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
@@ -68,4 +66,3 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 [SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 
 
 [Vínculo externo a un artículo sobre cómo configurar DTC para una instancia agrupada de SQL Server con Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
-

@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 68a7e937e1c1f0f753779f267cf1fffa16fc3b8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
   En este tema se describe cómo crear un dominio vinculado en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los dominios vinculados se crean a partir de otros dominios previamente existentes, y heredan todos los valores, reglas y propiedades de los dominios a los que están vinculados, con la excepción del nombre y la descripción. Es posible administrar un conjunto de dominios vinculados como si fuera un único dominio. Al vincular un dominio al otro, se crea un dominio que hereda su contenido de otro dominio.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/create-a-knowledge-base.md) o [Abrir una base de conocimiento](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  En la **lista de dominios** de la página **Administración de dominios** , haga clic con el botón secundario en el dominio con el que desea vincular un nuevo dominio y, a continuación, haga clic en **Crear dominio vinculado**.  
   
@@ -85,7 +82,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Puede cambiar el nombre y la descripción de un dominio vinculado.  
   
--   Para cambiar las propiedades de dominio **Tipo de datos**, **Usar valores iniciales**o **Dar formato a la salida para** , seleccione el dominio con el que ha establecido el vínculo y modifique la configuración de la pestaña **Propiedades del dominio** para dicho dominio. Esta configuración no se puede cambiar en las propiedades del dominio vinculado. Para obtener más información, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
+-   Para cambiar las propiedades de dominio **Tipo de datos**, **Usar valores iniciales**o **Dar formato a la salida para** , seleccione el dominio con el que ha establecido el vínculo y modifique la configuración de la pestaña **Propiedades del dominio** para dicho dominio. Esta configuración no se puede cambiar en las propiedades del dominio vinculado. Para más información, consulte [Crear un dominio](../data-quality-services/create-a-domain.md).  
   
 -   La configuración de las pestañas **Datos de referencia**, **Reglas de dominio**, **Valores del dominio**y **Relaciones basadas en términos** de la página Administración de dominios se puede cambiar tanto para el dominio vinculado como para el dominio al que está vinculado, y los cambios los heredará el otro dominio.  
   
@@ -104,4 +101,3 @@ ms.lasthandoff: 09/09/2017
 -   Al hacer doble clic en un dominio vinculado en cualquiera de las pestañas de la administración de dominios, el dominio se abrirá para su edición indicando en la cadena de nombre que es un dominio vinculado.  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 524b80a46a12738928b757e249c01f6d852b86d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Las cargas de trabajo de solo lectura para tablas basadas en disco usan las versiones de fila para quitar la contención de bloqueo en las bases de datos secundarias. Todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita. Asimismo, se pasan por alto todas las sugerencias de bloqueo. Esto elimina la contención de lectura y escritura.  
   
--   Las cargas de trabajo de solo lectura para tablas duraderas con optimización para memoria tienen acceso a los datos exactamente de la misma forma que en la base de datos principal, con el uso de procedimientos almacenados nativos o interoperabilidad de SQL con las mismas limitaciones del nivel de aislamiento de transacción (vea [Niveles de aislamiento del motor de base de datos](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). La carga de trabajo de informes o las consultas de solo lectura que se ejecutan en la réplica principal se pueden ejecutar en la réplica secundaria sin necesidad de hacer ningún cambio. De forma similar, las cargas de trabajo de informes o las consultas de solo lectura que se ejecutan en una réplica secundaria se pueden ejecutar en la réplica principal sin necesidad de hacer ningún cambio.  Al igual que ocurre con las tablas basadas en disco, todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita.  
+-   Las cargas de trabajo de solo lectura para tablas duraderas optimizadas para memoria tienen acceso a los datos exactamente de la misma forma que en la base de datos principal, con el uso de procedimientos almacenados nativos o interoperabilidad de SQL con las mismas limitaciones del nivel de aislamiento de transacción (vea [Niveles de aislamiento del motor de base de datos](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). La carga de trabajo de informes o las consultas de solo lectura que se ejecutan en la réplica principal se pueden ejecutar en la réplica secundaria sin necesidad de hacer ningún cambio. De forma similar, las cargas de trabajo de informes o las consultas de solo lectura que se ejecutan en una réplica secundaria se pueden ejecutar en la réplica principal sin necesidad de hacer ningún cambio.  Al igual que ocurre con las tablas basadas en disco, todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita.  
   
 -   Las operaciones DML se permiten en variables de tabla tanto para los tipos de tabla basadas en disco como para los tipos de tabla con optimización para memoria en la réplica secundaria.  
   
@@ -206,7 +204,9 @@ ms.lasthandoff: 08/02/2017
   
 -   El sufijo _readonly_database_statistic está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este sufijo no se puede usar al crear estadísticas en una base de datos principal. Para obtener más información, vea [Statistics](../../../relational-databases/statistics/statistics.md).  
   
-##  <a name="bkmk_AccessInMemTables"></a> Obtener acceso a tablas con optimización para memoria en una réplica secundaria  
+##  
+            <a name="bkmk_AccessInMemTables">
+            </a> Obtener acceso a tablas optimizadas para memoria en una réplica secundaria  
  Los niveles de aislamiento de transacción que se pueden usar con tablas con optimización para memoria en una réplica secundaria son los mismos que en la réplica principal. Se recomienda establecer el nivel de aislamiento de nivel de sesión en READ COMMITTED y establecer la opción de nivel de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT en ON. Por ejemplo:  
   
 ```tsql  
@@ -266,4 +266,3 @@ GO
  [Estadísticas](../../../relational-databases/statistics/statistics.md)  
   
   
-

@@ -5,32 +5,32 @@ ms.date: 04/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
-ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
 
-OLTP en memoria introduce el concepto de compilación nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas con optimización para memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas con optimización para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.
+OLTP en memoria introduce el concepto de compilación nativa. 
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas optimizadas para memoria. 
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas optimizadas para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.
 
 Se admite también la compilación nativa de los tipos de tabla con optimización para memoria. Para obtener más información, vea [Faster temp table and table variable by using memory optimization (Tabla temporal y variable de tabla más rápidas con optimización de memoria)](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
 
 La compilación nativa se refiere al proceso de convertir construcciones de programación a código nativo, que consta de instrucciones de procesador sin necesidad de compilación o interpretación adicional.
 
-OLTP en memoria compila las tablas con optimización para memoria cuando se crean, y los procedimientos almacenados compilados de forma nativa cuando se cargan en archivos DLL nativos. Además, los archivos DLL se recompilan tras reiniciar una base de datos o un servidor. La información necesaria para volver a crear los archivos DLL se almacena en los metadatos de la base de datos. Los archivos DLL no forman parte de la base de datos, aunque están asociados a la base de datos. Por ejemplo, los archivos DLL no se incluyen en las copias de seguridad de bases de datos.
+OLTP en memoria compila las tablas optimizadas para memoria cuando se crean, y los procedimientos almacenados compilados de forma nativa cuando se cargan en archivos DLL nativos. Además, los archivos DLL se recompilan tras reiniciar una base de datos o un servidor. La información necesaria para volver a crear los archivos DLL se almacena en los metadatos de la base de datos. Los archivos DLL no forman parte de la base de datos, aunque están asociados a la base de datos. Por ejemplo, los archivos DLL no se incluyen en las copias de seguridad de bases de datos.
 
 > [!NOTE]
 > Las tablas con optimización para memoria se vuelven a compilar durante un reinicio del servidor. Para acelerar la recuperación de bases de datos, los procedimientos almacenados compilados de forma nativa no se vuelven a compilar durante un reinicio del servidor, sino que se compilan en el momento de la primera ejecución. Como consecuencia de esta compilación diferida, los procedimientos almacenados compilados de forma nativa solo aparecen al llamar a [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md) tras la primera ejecución.
@@ -59,9 +59,9 @@ Los administradores de bases de datos no necesitan mantener los archivos generad
 
 ## <a name="native-compilation-of-tables"></a>Compilación nativa de tablas
 
-Al crear una tabla con optimización para memoria mediante la instrucción **CREATE TABLE** , la información de la tabla se escribe en los metadatos de la base de datos y se crean las estructuras de tabla y de índice en la memoria. Además, la tabla se compila en un archivo DLL.
+Al crear una tabla optimizada para memoria mediante la instrucción **CREATE TABLE** , la información de la tabla se escribe en los metadatos de la base de datos y se crean las estructuras de tabla y de índice en la memoria. Además, la tabla se compila en un archivo DLL.
 
-Considere el script de ejemplo siguiente, que crea una base de datos y una tabla con optimización para memoria:
+Considere el script de ejemplo siguiente, que crea una base de datos y una tabla optimizada para memoria:
 
 ```tsql
 USE master;
@@ -218,4 +218,3 @@ No se necesita ninguna interacción del usuario para administrar estos archivos.
 [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
-

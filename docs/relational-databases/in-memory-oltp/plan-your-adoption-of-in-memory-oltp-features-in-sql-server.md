@@ -5,22 +5,20 @@ ms.date: 05/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: cd0761385c8cfd00c065f9593308c43328539ebd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planear la adopción de características de OLTP en memoria en SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -50,11 +48,11 @@ Un requisito previo para usar las características en memoria puede implicar el 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 Previsión de la cantidad de memoria activa
 
-¿Tiene su sistema suficiente memoria activa para admitir una tabla nueva con optimización para memoria?
+¿Tiene su sistema suficiente memoria activa para admitir una tabla nueva optimizada para memoria?
 
 #### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
-Una tabla con optimización para memoria que contiene 200 GB de datos requiere que más de 200 GB de memoria activa se dediquen a su soporte. Antes de implementar una tabla con optimización para memoria que contenga gran cantidad de datos, debe prever la cantidad de memoria activa adicional que va a necesitar agregar a su equipo servidor. Para obtener una guía de estimación, consulte:
+Una tabla optimizada para memoria que contiene 200 GB de datos requiere que más de 200 GB de memoria activa se dediquen a su soporte. Antes de implementar una tabla optimizada para memoria que contenga gran cantidad de datos, debe prever la cantidad de memoria activa adicional que va a necesitar agregar a su equipo servidor. Para obtener una guía de estimación, consulte:
 
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
@@ -69,13 +67,13 @@ Para una base de datos hospedada en el servicio en la nube de Base de datos SQL 
 
 A veces, una variable de tabla que se declara como tabla con optimización para memoria es preferible a una #TempTable tradicional que resida en la base de datos **tempdb** . Dichas variables de tabla pueden proporcionar mejoras de rendimiento significativas sin usar grandes cantidades de memoria activa.
 
-### <a name="a3-table-must-be-offline-to-convert-to-memory-optimized"></a>A.3 La tabla debe estar sin conexión para convertirse en una con optimización para memoria
+### <a name="a3-table-must-be-offline-to-convert-to-memory-optimized"></a>A.3 La tabla debe estar sin conexión para convertirse en una optimizada para memoria
 
-Algunas características de ALTER TABLE están disponibles para las tablas con optimización para memoria. Pero no puede emitir una instrucción ALTER TABLE para convertir una tabla basada en disco en una tabla con optimización para memoria. En su lugar, debe usar un conjunto de pasos más manual. Lo que se muestra a continuación son varias maneras en las que puede convertir su tabla basada en disco en una con optimización para memoria.
+Algunas características de ALTER TABLE están disponibles para las tablas optimizadas para memoria. Pero no puede emitir una instrucción ALTER TABLE para convertir una tabla basada en disco en una tabla optimizada para memoria. En su lugar, debe usar un conjunto de pasos más manual. Lo que se muestra a continuación son varias maneras en las que puede convertir su tabla basada en disco en una optimizada para memoria.
 
 #### <a name="manual-scripting"></a>Scripting manual
 
-Una manera de convertir su tabla basada en disco en una con optimización para memoria es codificar los pasos de Transact-SQL necesarios.
+Una manera de convertir su tabla basada en disco en una optimizada para memoria es codificar los pasos de Transact-SQL necesarios.
 
 
 1. Suspenda la actividad de la aplicación.
@@ -84,9 +82,9 @@ Una manera de convertir su tabla basada en disco en una con optimización para m
 
 3. Cambie el nombre de la tabla basada en disco.
 
-4. Emita una instrucción CREATE TABLE para crear su nueva tabla con optimización para memoria.
+4. Emita una instrucción CREATE TABLE para crear su nueva tabla optimizada para memoria.
 
-5. Inserte en la tabla con optimización para memoria con una instrucción sub-SELECT desde la tabla basada en disco.
+5. Inserte en la tabla optimizada para memoria con una instrucción sub-SELECT desde la tabla basada en disco.
 
 6. Quite la tabla basada en disco.
 
@@ -97,7 +95,7 @@ Una manera de convertir su tabla basada en disco en una con optimización para m
 
 #### <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
 
-La herramienta Asistente de optimización de memoria puede generar un script para ayudarle a implementar la conversión de una tabla basada en disco a una tabla con optimización para memoria. La herramienta se instala como parte de SQL Server Data Tools (SSDT).
+La herramienta Asistente de optimización de memoria puede generar un script para ayudarle a implementar la conversión de una tabla basada en disco a una tabla optimizada para memoria. La herramienta se instala como parte de SQL Server Data Tools (SSDT).
 
 - [Asesor de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
 - [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
@@ -133,65 +131,65 @@ En las siguientes subsecciones se destacan algunas de las características no ad
 
 ### <a name="b1-snapshot-of-a-database"></a>B.1 Instantánea de una base de datos
 
-Después de que cualquier módulo o tabla con optimización para memoria se cree por primera vez en una base de datos determinada, nunca puede tomarse ninguna [instantánea](../../relational-databases/databases/database-snapshots-sql-server.md) de la base de datos. La razón específica es que:
+Después de que cualquier módulo o tabla optimizada para memoria se cree por primera vez en una base de datos determinada, nunca puede tomarse ninguna [instantánea](../../relational-databases/databases/database-snapshots-sql-server.md) de la base de datos. La razón específica es que:
 
-- El primer elemento con optimización para memoria hace imposible quitar alguna vez el último archivo del grupo de archivos con optimización para memoria; y
-- Ninguna base de datos que tenga un archivo en un grupo de archivos con optimización para memoria puede admitir una instantánea.
+- El primer elemento optimizado para memoria hace imposible quitar alguna vez el último archivo del grupo de archivos optimizados para memoria; y
+- Ninguna base de datos que tenga un archivo en un grupo de archivos optimizados para memoria puede admitir una instantánea.
 
 Normalmente, una instantánea puede ser útil para las iteraciones de pruebas rápidas.
 
 
 ### <a name="b2-cross-database-queries"></a>B.2 Consultas entre bases de datos
 
-Las tablas con optimización para memoria no admiten las transacciones [entre bases de datos](../../relational-databases/in-memory-oltp/cross-database-queries.md) . No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla con optimización para memoria.
+Las tablas con optimización para memoria no admiten las transacciones [entre bases de datos](../../relational-databases/in-memory-oltp/cross-database-queries.md) . No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla optimizada para memoria.
 
-Las variables de tabla no son transaccionales. Por tanto, las [variables de tabla con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) pueden usarse en consultas entre bases de datos.
+Las variables de tabla no son transaccionales. Por tanto, las [variables de tabla optimizada para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) pueden usarse en consultas entre bases de datos.
 
 
 ### <a name="b3-readpast-table-hint"></a>B.3 Sugerencia de tabla READPAST
 
-Ninguna consulta puede aplicar la [sugerencia de tabla](../../t-sql/queries/hints-transact-sql-table.md) READPAST a ninguna tabla con optimización para memoria.
+Ninguna consulta puede aplicar la [sugerencia de tabla](../../t-sql/queries/hints-transact-sql-table.md) READPAST a ninguna tabla optimizada para memoria.
 
 La sugerencia READPAST es útil en escenarios donde varias sesiones están teniendo acceso y modificando el mismo conjunto pequeño de filas, como en el procesamiento de una cola.
 
 
 ### <a name="b4-rowversion-sequence"></a>B.4 RowVersion, Sequence
 
-- Ninguna columna puede etiquetarse para [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) en una tabla con optimización para memoria.
+- Ninguna columna puede etiquetarse para [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) en una tabla optimizada para memoria.
 
 
-- Un objeto [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) no puede usarse con una restricción en una tabla con optimización para memoria. Por ejemplo, no se puede crear una restricción DEFAULT con una cláusula NEXT VALUE FOR. Los objetos SEQUENCE se pueden usar con las instrucciones INSERT y UPDATE.
+- Un objeto [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) no puede usarse con una restricción en una tabla optimizada para memoria. Por ejemplo, no se puede crear una restricción DEFAULT con una cláusula NEXT VALUE FOR. Los objetos SEQUENCE se pueden usar con las instrucciones INSERT y UPDATE.
 
 
 ## <a name="c-administrative-maintenance"></a>C. Mantenimiento administrativo
 
 
-En esta sección se describen las diferencias en la administración de base de datos donde se usan las tablas con optimización para memoria.
+En esta sección se describen las diferencias en la administración de base de datos donde se usan las tablas optimizadas para memoria.
 
 
 ### <a name="c1-identity-seed-reset-increment--1"></a>C.1 Restablecimiento del valor de inicialización de la identidad, incremento > 1
 
-Para reinicializar una columna IDENTITY,[DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)no puede usarse en una tabla con optimización para memoria.
+Para reinicializar una columna IDENTITY,[DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)no puede usarse en una tabla optimizada para memoria.
 
-El valor de incremento está restringido a exactamente 1 para una columna IDENTITY en una tabla con optimización para memoria.
+El valor de incremento está restringido a exactamente 1 para una columna IDENTITY en una tabla optimizada para memoria.
 
 
-### <a name="c2-dbcc-checkdb-cannot-validate-memory-optimized-tables"></a>C.2 DBCC CHECKDB no puede validar tablas con optimización para memoria
+### <a name="c2-dbcc-checkdb-cannot-validate-memory-optimized-tables"></a>C.2 DBCC CHECKDB no puede validar tablas optimizadas para memoria
 
-El comando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no hace nada cuando su destino es una tabla con optimización para memoria. Los pasos siguientes son una solución alternativa:
+El comando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no hace nada cuando su destino es una tabla optimizada para memoria. Los pasos siguientes son una solución alternativa:
 
 
 1. [Realice una copia de seguridad del registro de transacciones](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).
 
-2. Realice una copia de seguridad de los archivos del grupo de archivos con optimización para memoria en un dispositivo NULL. El proceso de copia de seguridad invoca una validación de suma de comprobación.
+2. Realice una copia de seguridad de los archivos del grupo de archivos optimizados para memoria en un dispositivo NULL. El proceso de copia de seguridad invoca una validación de suma de comprobación.
 
     Si se encuentran daños, siga con los pasos siguientes.
 
-3. Copie los datos de sus tablas con optimización para memoria en tablas basadas en disco para un almacenamiento temporal.
+3. Copie los datos de sus tablas optimizadas para memoria en tablas basadas en disco para un almacenamiento temporal.
 
-4. Restaure los archivos del grupo de archivos con optimización para memoria.
+4. Restaure los archivos del grupo de archivos optimizados para memoria.
 
-5. Inserte en la tabla con optimización para memoria los datos que ha almacenado temporalmente en las tablas basadas en disco.
+5. Inserte en la tabla optimizada para memoria los datos que ha almacenado temporalmente en las tablas basadas en disco.
 
 6. Quite las tablas basadas en disco que contenían los datos de manera temporal.
 
@@ -199,18 +197,18 @@ El comando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-tra
 
 ## <a name="d-performance"></a>D. Rendimiento
 
-En esta sección se describen situaciones en las que el excelente rendimiento de las tablas con optimización para memoria se mantiene por debajo de todo su potencial.
+En esta sección se describen situaciones en las que el excelente rendimiento de las tablas optimizadas para memoria se mantiene por debajo de todo su potencial.
 
 
 ### <a name="d1-index-considerations"></a>D.1 Consideraciones de índice
 
-Todos los índices de una tabla con optimización para memoria se crean y administran mediante las instrucciones CREATE TABLE y ALTER TABLE relacionadas con las tablas. No puede dirigirse a una tabla con optimización para memoria con una instrucción CREATE INDEX.
+Todos los índices de una tabla optimizada para memoria se crean y administran mediante las instrucciones CREATE TABLE y ALTER TABLE relacionadas con las tablas. No puede dirigirse a una tabla optimizada para memoria con una instrucción CREATE INDEX.
 
-El índice no agrupado tradicional de árbol B a menudo es la elección sencilla y razonable cuando implementa una tabla con optimización para memoria por primera vez. Después, cuando vea cómo actúa la aplicación, puede considerar la posibilidad de cambiar a otro tipo de índice.
+El índice no agrupado tradicional de árbol B a menudo es la elección sencilla y razonable cuando implementa una tabla optimizada para memoria por primera vez. Después, cuando vea cómo actúa la aplicación, puede considerar la posibilidad de cambiar a otro tipo de índice.
 
-Dos tipos de índices especiales necesitan tratarse en el contexto de una tabla con optimización para memoria: los índices de hash y los índices de almacén de columnas.
+Dos tipos de índices especiales necesitan tratarse en el contexto de una tabla optimizada para memoria: los índices de hash y los índices de almacén de columnas.
 
-Para obtener información general de los índices de las tablas con optimización para memoria, consulte:
+Para obtener información general de los índices de las tablas optimizadas para memoria, consulte:
 
 - [Índices de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 
@@ -229,23 +227,23 @@ Los índices de hash pueden ser el formato más rápido para tener acceso a una 
 
 #### <a name="nonclustered-columnstore-indexes"></a>Índices no agrupados de almacén de columnas
 
-Las tablas con optimización para memoria proporcionan un alto rendimiento de los datos típicos transaccionales empresariales, en el paradigma que denominamos *procesamiento de transacciones en línea* u *OLTP*. Los índices de almacén de columnas proporcionan un alto rendimiento de agregaciones y un procesamiento similar denominado *Analytics*. En los últimos años, el mejor enfoque disponible para satisfacer las necesidades de OLTP y Analytics era tener tablas independientes con un gran movimiento de datos, y con un cierto grado de duplicación de datos. Hoy en día, está disponible una **solución híbrida** más sencilla: tener un índice de almacén de columnas en una tabla con optimización para memoria.
+Las tablas con optimización para memoria proporcionan un alto rendimiento de los datos típicos transaccionales empresariales, en el paradigma que denominamos *procesamiento de transacciones en línea* u *OLTP*. Los índices de almacén de columnas proporcionan un alto rendimiento de agregaciones y un procesamiento similar denominado *Analytics*. En los últimos años, el mejor enfoque disponible para satisfacer las necesidades de OLTP y Analytics era tener tablas independientes con un gran movimiento de datos, y con un cierto grado de duplicación de datos. Hoy en día, está disponible una **solución híbrida** más sencilla: tener un índice de almacén de columnas en una tabla optimizada para memoria.
 
 
-- Un [índice de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md) puede crearse en una tabla basada en disco, incluso como el índice agrupado. Pero en una tabla con optimización para memoria no puede agruparse un índice de almacén de columnas.
+- Un [índice de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md) puede crearse en una tabla basada en disco, incluso como el índice agrupado. Pero en una tabla optimizada para memoria no puede agruparse un índice de almacén de columnas.
 
 
-- Las columnas no consecutivas o de LOB de una tabla con optimización para memoria evitan la creación de un índice de almacén de columnas en la tabla.
+- Las columnas no consecutivas o de LOB de una tabla optimizada para memoria evitan la creación de un índice de almacén de columnas en la tabla.
 
 
-- No puede ejecutarse ninguna instrucción ALTER TABLE en una tabla con optimización para memoria mientras exista un índice de almacén de columnas en la tabla.
+- No puede ejecutarse ninguna instrucción ALTER TABLE en una tabla optimizada para memoria mientras exista un índice de almacén de columnas en la tabla.
     - Desde agosto de 2016, Microsoft tiene planes a corto plazo para mejorar el rendimiento a la hora de volver a crear el índice de almacén de columnas.
 
 
 
 ### <a name="d2-lob-and-off-row-columns"></a>D.2 Columnas no consecutivas y de LOB
 
-Los objetos grandes (LOB) son columnas de tipos como varchar(**max**). Probablemente, tener un par de columnas de LOB en una tabla con optimización para memoria no perjudica el rendimiento lo suficiente para que sea preocupante. Pero evite tener más columnas de LOB de las que necesitan sus datos. El mismo consejo se aplica a las columnas no consecutivas. No defina una columna como nvarchar(3072) si varchar(512) es suficiente.
+Los objetos grandes (LOB) son columnas de tipos como varchar(**max**). Probablemente, tener un par de columnas de LOB en una tabla optimizada para memoria no perjudica el rendimiento lo suficiente para que sea preocupante. Pero evite tener más columnas de LOB de las que necesitan sus datos. El mismo consejo se aplica a las columnas no consecutivas. No defina una columna como nvarchar(3072) si varchar(512) es suficiente.
 
 
 Puede encontrar más información sobre columnas no consecutivas y de LOB en:
@@ -283,12 +281,12 @@ La [instrucción MERGE](../../t-sql/statements/merge-transact-sql.md) de Transac
 
 ### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 Ninguna combinación en instrucciones UPDATE o DELETE en un procedimiento nativo
 
-Las instrucciones de Transact-SQL en un procedimiento nativo solo pueden tener acceso a las tablas con optimización para memoria. En las instrucciones UPDATE y DELETE no puede combinar ninguna tabla. Los intentos en un procedimiento nativo producen un error con un mensaje como Msg 12319 que explica que:
+Las instrucciones de Transact-SQL en un procedimiento nativo solo pueden tener acceso a las tablas optimizadas para memoria. En las instrucciones UPDATE y DELETE no puede combinar ninguna tabla. Los intentos en un procedimiento nativo producen un error con un mensaje como Msg 12319 que explica que:
 
 - No puede usar la cláusula FROM en una instrucción UPDATE.
 - No puede especificar un origen de tabla en una instrucción DELETE.
 
-Ningún tipo de subconsulta proporciona una solución alternativa. En cambio, puede usar una variable de tabla con optimización para memoria para lograr un resultado de combinación en varias instrucciones. Aquí se muestran dos ejemplos de código:
+Ningún tipo de subconsulta proporciona una solución alternativa. En cambio, puede usar una variable de tabla optimizada para memoria para lograr un resultado de combinación en varias instrucciones. Aquí se muestran dos ejemplos de código:
 
 - DELETE...JOIN... queremos ejecutar en un procedimiento nativo, pero no podemos.
 - Un conjunto de soluciones alternativas de instrucciones de Transact-SQL que consigue la combinación de eliminación.
@@ -400,7 +398,7 @@ Cuando el plan de consulta de un procedimiento nativo requiere una fase de agreg
 
 ## <a name="f-application-design-transactions-and-retry-logic"></a>F. Diseño de aplicación: transacciones y lógica de reintento
 
-Una transacción que implica una tabla con optimización para memoria puede llegar a ser dependiente de otra transacción que implique la misma tabla. Si el recuento de transacciones dependientes supera el máximo permitido se producirá un error en todas las transacciones dependientes.
+Una transacción que implica una tabla optimizada para memoria puede llegar a ser dependiente de otra transacción que implique la misma tabla. Si el recuento de transacciones dependientes supera el máximo permitido se producirá un error en todas las transacciones dependientes.
 
 En SQL Server 2016:
 
@@ -408,7 +406,7 @@ En SQL Server 2016:
 - El número de error es 41839. (En SQL Server 2014 el número de error es 41301).
 
 
-Puede hacer que sus scripts de Transact-SQL sean más sólidos frente a un posible error de transacción agregando *lógica de reintento* a sus scripts. Probablemente, la lógica de reintento le ayudará cuando las llamadas a UPDATE y DELETE sean frecuentes, o si se hace referencia a la tabla con optimización para memoria mediante una clave externa de otra tabla. Para obtener detalles, consulte:
+Puede hacer que sus scripts de Transact-SQL sean más sólidos frente a un posible error de transacción agregando *lógica de reintento* a sus scripts. Probablemente, la lógica de reintento le ayudará cuando las llamadas a UPDATE y DELETE sean frecuentes, o si se hace referencia a la tabla optimizada para memoria mediante una clave externa de otra tabla. Para obtener detalles, consulte:
 
 - [Transacciones con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [Límites de dependencia de transacciones en tablas con optimización para memoria: error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
@@ -418,6 +416,5 @@ Puede hacer que sus scripts de Transact-SQL sean más sólidos frente a un posib
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [OLTP en memoria (optimización en memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
 
 

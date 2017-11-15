@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d92bf7d6279cc367e3ea2d67d19e78d362a39151
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicar la ejecución de procedimientos almacenados en la replicación transaccional
   Si tiene uno o más procedimientos almacenados que se ejecutan en el publicador y afectan a las tablas publicadas, considere la posibilidad de incluir esos procedimientos en la publicación como artículos de ejecución de procedimientos almacenados. La definición del procedimiento (la instrucción CREATE PROCEDURE) se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede proporcionar un rendimiento significativamente mejor en los casos en los que se llevan a cabo grandes operaciones por lotes, debido a que únicamente se replica la ejecución del procedimiento, evitando la necesidad de replicar los cambios individuales de cada fila. Por ejemplo, supongamos que crea el siguiente procedimiento almacenado en la base de datos de publicaciones:  
@@ -102,4 +100,3 @@ COMMIT TRANSACTION T2
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

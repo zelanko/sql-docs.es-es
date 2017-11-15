@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Bitmap Warning event class
+helpviewer_keywords: Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac451108447cd57642deed94ea2f18bfbeaa293b
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e7272051a221476822c4d3d92c2f7b4ceaaeaa2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning, clase de eventos
   La clase de eventos **Bitmap Warning** se puede utilizar para supervisar el uso de filtros de mapas de bits en consultas. La subclase de evento se puede utilizar para notificar cuándo los filtros de mapas de bits se han deshabilitado en una consulta.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 |**XactSequence**|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
   
-

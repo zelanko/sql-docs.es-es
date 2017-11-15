@@ -5,8 +5,7 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>Actualización de instancias reflejadas
   Al actualizar una instancia reflejada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , que puede ser un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o a un nuevo Service Pack o una actualización acumulativa de Windows, puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una conmutación por error manual realizando una actualización gradual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original). Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de la base de datos principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se van a actualizar.  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

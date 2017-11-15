@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7711 (Database Engine error)
+helpviewer_keywords: 7711 (Database Engine error)
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6faacaf1a80fb4a2f3364da82936521691452db5
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 870b2060d5a43e3e8cfd3430e38ef95356d492ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver7711"></a>MSSQLSERVER_7711
   
@@ -53,4 +50,3 @@ Si la tabla o índice mencionado tiene particiones, la opción DATA_COMPRESSION 
 ## <a name="user-action"></a>Acción del usuario  
 Para una tabla o índice con particiones, asegúrese de que la opción DATA_COMPRESSION se especifica solo una vez para cada partición. Para una tabla o índice sin particiones, utilice la opción DATA_COMPRESSION solo una vez en la instrucción.  
   
-

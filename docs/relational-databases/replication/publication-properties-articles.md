@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.articles.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3d08559887a470d82cfe98848373191f26f467b
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c0f2c87e7f36b1c1952b9126f43a0be8d04ea4d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-articles"></a>Propiedades de la publicación, Artículos
   La página **Artículos** del cuadro de diálogo **Propiedades de la publicación** contiene información acerca de los artículos incluidos en una publicación, le permite agregar artículos a publicaciones existentes o quitarlos de las mismas y le permite cambiar las propiedades de los artículos y los filtros de columnas.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Las tablas sin claves principales no se pueden publicar en las publicaciones transaccionales.  
   
--   No es posible publicar tablas en publicaciones de combinación o publicaciones transaccionales habilitadas para suscripciones de actualización en cola. Para obtener más información sobre cómo publicar un artículo en más de una publicación, vea "Publicar tablas en más de una publicación" en [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+-   No es posible publicar tablas en publicaciones de combinación o publicaciones transaccionales habilitadas para suscripciones de actualización en cola. Para más información sobre cómo publicar un artículo en más de una publicación, vea la sección sobre cómo publicar tablas en varias publicaciones en [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 ## <a name="oracle-publishers"></a>Publicadores de Oracle  
  Existen consideraciones adicionales para los publicadores de Oracle:  
@@ -49,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 -   Para obtener una lista de los tipos de datos que se pueden publicar, vea [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md). No se mostrarán columnas con tipos de datos que no se pueden publicar.  
   
 ## <a name="column-filters"></a>Filtros de columnas  
- Para filtrar columnas en esta página, debe expandir una tabla en el panel **Objetos para publicar** y seleccionar solo las columnas que desea filtrar (puede filtrar filas en la página **Filtrar filas de tabla** de este asistente). Filtrar columnas es útil por diversas razones, entre las que se incluye la seguridad (evitar replicaciones de datos confidenciales) y el rendimiento (por ejemplo, evitar la replicación de columnas de objetos binarios grandes (BLOB)). Para obtener más información sobre cómo filtrar columnas, incluida una lista de tipos de columnas que no pueden filtrarse, vea [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md).  
+ Para filtrar columnas en esta página, debe expandir una tabla en el panel **Objetos para publicar** y seleccionar solo las columnas que desea filtrar (puede filtrar filas en la página **Filtrar filas de tabla** de este asistente). Filtrar columnas es útil por diversas razones, entre las que se incluye la seguridad (evitar replicaciones de datos confidenciales) y el rendimiento (por ejemplo, evitar la replicación de columnas de objetos binarios grandes (BLOB)). Para más información sobre cómo filtrar columnas, incluida una lista de tipos de columnas que no pueden filtrarse, vea [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md).  
   
 ## <a name="options"></a>Opciones  
  El panel **Objetos para publicar** le permite:  
@@ -79,13 +77,13 @@ ms.lasthandoff: 06/22/2017
     >  Los cambios de propiedades realizados en el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** reemplazan los que se hicieran anteriormente en el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>**. Por ejemplo, si desea establecer varios valores predeterminados para todos los artículos de un tipo de objeto, pero solamente desea establecer algunas propiedades para objetos individuales, establezca primero los valores predeterminados para todos los artículos. A continuación, establezca las propiedades de los objetos individuales.  
   
  **La tabla resaltada es de solo descarga**  
- Solo replicación de mezcla. Solo para[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione esta opción para especificar qué cambios no desea permitir en el suscriptor si usa una suscripción de cliente. Los artículos de solo descarga no se pueden actualizar en el suscriptor, y por ello los metadatos de seguimiento no se envían a los suscriptores. Esto puede reducir la capacidad de almacenamiento en los suscriptores y aumentar el rendimiento, sobre todo si la conexión de red es lenta. Esta opción se corresponde con un valor de **Solo descargar en suscriptor y prohibir cambios del suscriptor** para la opción **Dirección de la sincronización** en el cuadro de diálogo **Propiedades del artículo** . Para obtener más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Solo replicación de mezcla. Solo para[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione esta opción para especificar qué cambios no desea permitir en el suscriptor si usa una suscripción de cliente. Los artículos de solo descarga no se pueden actualizar en el suscriptor, y por ello los metadatos de seguimiento no se envían a los suscriptores. Esto puede reducir la capacidad de almacenamiento en los suscriptores y aumentar el rendimiento, sobre todo si la conexión de red es lenta. Esta opción se corresponde con un valor de **Solo descargar en suscriptor y prohibir cambios del suscriptor** para la opción **Dirección de la sincronización** en el cuadro de diálogo **Propiedades del artículo** . Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Mostrar solamente los objetos seleccionados en la lista**  
  Active esta casilla para mostrar solamente aquellos artículos seleccionados en el panel de objetos.  
   
 ## <a name="see-also"></a>Vea también  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   

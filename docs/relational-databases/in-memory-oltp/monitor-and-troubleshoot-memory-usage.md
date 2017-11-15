@@ -5,30 +5,30 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consume memoria en patrones distintos que las tablas basadas en disco. Puede supervisar la cantidad de memoria asignada y usada por las tablas e índices con optimización para memoria en la base de datos mediante las DMV o los contadores de rendimiento suministrados para la memoria y el subsistema de recolección de elementos no utilizados.  Esto le ofrece visibilidad en los niveles de sistema y de base de datos, y permite evitar problemas debidos al agotamiento de la memoria.  
+  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consume memoria en patrones distintos que las tablas basadas en disco. Puede supervisar la cantidad de memoria asignada y usada por las tablas e índices optimizados para memoria en la base de datos mediante las DMV o los contadores de rendimiento suministrados para la memoria y el subsistema de recolección de elementos no utilizados.  Esto le ofrece visibilidad en los niveles de sistema y de base de datos, y permite evitar problemas debidos al agotamiento de la memoria.  
   
  En este tema se trata la supervisión del uso de memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ## <a name="sections-in-this-topic"></a>Secciones de este tema  
   
--   [Crear una base de datos de ejemplo con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
+-   
+            [Crear una base de datos de ejemplo con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
 -   [Supervisar el uso de la memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
   
@@ -36,14 +36,17 @@ ms.lasthandoff: 06/22/2017
   
     -   [Usar DMVs](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
   
--   [Administrar la memoria utilizada por los objetos con optimización para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
+-   
+            [Administrar la memoria utilizada por los objetos optimizados para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
   
 -   [Solucionar problemas de memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> Crear una base de datos de ejemplo con tablas con optimización para memoria  
- Puede omitir esta sección si ya tiene una base de datos con tablas con optimización para memoria.  
+##  
+            <a name="bkmk_CreateDB">
+            </a> Crear una base de datos de ejemplo con tablas optimizadas para memoria  
+ Puede omitir esta sección si ya tiene una base de datos con tablas optimizadas para memoria.  
   
- En los pasos siguientes se crea una base de datos con tres tablas con optimización para memoria que puede usar en el resto de este tema. En el ejemplo, asignamos la base de datos a un grupo de recursos de servidor de modo que pueda controlar cuánta memoria pueden utilizar las tablas con optimización para memoria.  
+ En los pasos siguientes se crea una base de datos con tres tablas optimizadas para memoria que puede usar en el resto de este tema. En el ejemplo, asignamos la base de datos a un grupo de recursos de servidor de modo que pueda controlar cuánta memoria pueden utilizar las tablas optimizadas para memoria.  
   
 1.  Inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -130,7 +133,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_Monitoring"></a> Supervisar el uso de la memoria  
   
 ###  <a name="bkmk_UsingSSMS"></a> Usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se envía con informes estándar integrados para supervisar la memoria que han usado las tablas en memoria. Puede obtener acceso a estos informes mediante el Explorador de objetos como se describe [aquí](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). También puede utilizar el explorador de objetos para supervisar la memoria utilizada por las tablas con optimización para memoria individuales.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se envía con informes estándar integrados para supervisar la memoria que han usado las tablas en memoria. Puede obtener acceso a estos informes mediante el Explorador de objetos como se describe [aquí](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). También puede utilizar el explorador de objetos para supervisar la memoria utilizada por las tablas optimizadas para memoria individuales.  
   
 #### <a name="consumption-at-the-database-level"></a>Consumo en el nivel de base de datos  
  Puede supervisar el uso de memoria en el nivel de base de datos como se indica a continuación.  
@@ -148,9 +151,9 @@ ms.lasthandoff: 06/22/2017
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="bkmk_UsingDMVs"></a> Usar DMVs  
- Hay varias DMV disponibles para supervisar la memoria utilizada por las tablas con optimización para memoria, los índices, los objetos del sistema y las estructuras de tiempo de ejecución.  
+ Hay varias DMV disponibles para supervisar la memoria utilizada por las tablas optimizadas para memoria, los índices, los objetos del sistema y las estructuras de tiempo de ejecución.  
   
-#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Uso de memoria de las tablas e índices con optimización para memoria  
+#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Uso de memoria de las tablas e índices optimizados para memoria  
  Puede encontrar el uso de memoria de todas las tablas de usuario, los índices y los objetos del sistema consultando `sys.dm_db_xtp_table_memory_stats` como se muestra a continuación.  
   
 ```tsql  
@@ -215,7 +218,7 @@ PGPOOL:  4K               0                    0                    0
   
  Para obtener más información, vea [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
   
-#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Uso de memoria en tiempo de ejecución al obtener acceso a las tablas con optimización para memoria  
+#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Uso de memoria en tiempo de ejecución al obtener acceso a las tablas optimizadas para memoria  
  Puede determinar la memoria utilizada por las estructuras de tiempo de ejecución, como la memoria caché de procedimientos con la consulta siguiente: ejecute esta consulta para obtener la memoria utilizada por las estructuras de tiempo de ejecución como para la caché de procedimientos. Todas las estructuras de tiempo de ejecución se etiquetan con XTP.  
   
 ```tsql  
@@ -249,7 +252,7 @@ memory_object_address pages_ in_bytes bytes_used type
  Para obtener más información, vea [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Memoria usada por el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en la instancia  
- La memoria asignada al motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] y a los objetos con optimización para memoria se administra de la misma forma que cualquier otro consumidor de memoria dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los distribuidores de tipo MEMORYCLERK_XTP tienen en cuenta toda la memoria asignada al motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Use la consulta siguiente para encontrar toda la memoria usada por el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
+ La memoria asignada al motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] y a los objetos optimizados para memoria se administra de la misma forma que cualquier otro consumidor de memoria dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los distribuidores de tipo MEMORYCLERK_XTP tienen en cuenta toda la memoria asignada al motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Use la consulta siguiente para encontrar toda la memoria usada por el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ```tsql  
 -- this DMV accounts for all memory used by the hek_2 engine  
@@ -274,13 +277,15 @@ MEMORYCLERK_XTP      Default    64             0
   
  Para obtener más información, vea [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-##  <a name="bkmk_MemOptObjects"></a> Administrar la memoria utilizada por los objetos con optimización para memoria  
- Puede controlar la memoria total que han usado las tablas con optimización para memoria enlazándola a un grupo de recursos con nombre como se describe en el tema [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
+##  
+            <a name="bkmk_MemOptObjects">
+            </a> Administrar la memoria utilizada por los objetos optimizados para memoria  
+ Puede controlar la memoria total que han usado las tablas optimizadas para memoria enlazándola a un grupo de recursos con nombre como se describe en el tema [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
 ##  <a name="bkmk_Troubleshooting"></a> Solucionar problemas de memoria  
  La solución de problemas de memoria es un proceso de tres pasos:  
   
-1.  Identificar la cantidad de memoria utilizada por los objetos de la base de datos o de la instancia. Puede utilizar un conjunto completo de herramientas de supervisión disponibles para las tablas con optimización para memoria como se describe anteriormente.  Por ejemplo, las DMV `sys.dm_db_xtp_table_memory_stats` o `sys.dm_os_memory_clerks`.  
+1.  Identificar la cantidad de memoria utilizada por los objetos de la base de datos o de la instancia. Puede utilizar un conjunto completo de herramientas de supervisión disponibles para las tablas optimizadas para memoria como se describe anteriormente.  Por ejemplo, las DMV `sys.dm_db_xtp_table_memory_stats` o `sys.dm_os_memory_clerks`.  
   
 2.  Determinar en qué medida aumenta el consumo de memoria y cuánto espacio queda. Mediante la supervisión periódica del consumo de memoria, puede saber cuánto aumenta el uso de memoria. Por ejemplo, si ha asignado la base de datos a un grupo de recursos de servidor con nombre, puede supervisar el contador de rendimiento Memoria usada (KB) para ver cómo aumenta el uso de memoria.  
   

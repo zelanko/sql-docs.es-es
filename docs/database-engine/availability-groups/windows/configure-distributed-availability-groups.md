@@ -9,19 +9,17 @@ ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
-ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
-ms.contentlocale: es-es
-ms.lasthandoff: 09/20/2017
-
+ms.openlocfilehash: 335077eef51f479d55526ae47fe9b7bff3144f4e
+ms.sourcegitcommit: 284a64817d5641b5245bc70ddebef2dc51d2e558
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/13/2017
 ---
-
 # <a name="configure-distributed-availability-group"></a>Configurar un grupo de disponibilidad distribuido  
 
 Para crear un grupo de disponibilidad distribuido, debe crear un grupo de disponibilidad y el agente de escucha en cada clúster de conmutación por error de Windows Server (WSFC). Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave. 
@@ -344,4 +342,3 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
-

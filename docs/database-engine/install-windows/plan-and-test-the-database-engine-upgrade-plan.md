@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planear y probar el plan de actualización del Motor de base de datos
   Para realizar una actualización a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] correcta, se precisa una planeación adecuada, con independencia del enfoque.  
@@ -69,13 +67,14 @@ ms.lasthandoff: 08/02/2017
   
 -   **Comprobador de configuración del sistema:**  ejecute el Comprobador de configuración del sistema (SCC) de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para determinar si el programa de instalación de SQL Server detecta cualquier problema de bloqueo antes de programar realmente la actualización. Para obtener más información, vea [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
--   **Actualizar las tablas con optimización para memoria:** al actualizar una instancia de base de datos de SQL Server 2014 que contenga tablas con optimización para memoria a SQL Server 2016, el proceso requiere un tiempo adicional para convertir dichas tablas en el nuevo formato en disco (y la base de datos estará sin conexión mientras se producen estos pasos).   La cantidad de tiempo depende del tamaño de las tablas con optimización para memoria y de la velocidad del subsistema de E/S. Se requieren tres operaciones de tamaño de datos en el caso de las actualizaciones locales y de nueva instalación (el paso 1 no es obligatorio en el caso de las actualizaciones graduales, pero los pasos 2 y 3, sí):  
+-   
+            **Actualizar las tablas optimizadas para memoria:** al actualizar una instancia de base de datos de SQL Server 2014 que contenga tablas optimizadas para memoria a SQL Server 2016, el proceso requiere un tiempo adicional para convertir dichas tablas en el nuevo formato en disco (y la base de datos estará sin conexión mientras se producen estos pasos).   La cantidad de tiempo depende del tamaño de las tablas optimizadas para memoria y de la velocidad del subsistema de E/S. Se requieren tres operaciones de tamaño de datos en el caso de las actualizaciones locales y de nueva instalación (el paso 1 no es obligatorio en el caso de las actualizaciones graduales, pero los pasos 2 y 3, sí):  
   
-    1.  Ejecute la recuperación de bases de datos con el formato en disco antiguo (esto incluye la carga de todos los datos de tablas con optimización para memoria en la memoria desde el disco).  
+    1.  Ejecute la recuperación de bases de datos con el formato en disco antiguo (esto incluye la carga de todos los datos de tablas optimizadas para memoria en la memoria desde el disco).  
   
     2.  Serialice los datos en el disco en el nuevo formato en disco.  
   
-    3.  Ejecute la recuperación de bases de datos con el nuevo formato (esto incluye la carga de todos los datos de tablas con optimización para memoria en la memoria desde el disco).  
+    3.  Ejecute la recuperación de bases de datos con el nuevo formato (esto incluye la carga de todos los datos de tablas optimizadas para memoria en la memoria desde el disco).  
   
      Además, si no hay suficiente espacio en disco durante este proceso, se producirá un error de recuperación. Asegúrese de que hay suficiente espacio en disco para almacenar la base de datos existente, más almacenamiento adicional, igual al tamaño actual de los contenedores del grupo de archivos MEMORY_OPTIMIZED_DATA de la base de datos, para realizar una actualización local o cuando se asocie una base de datos de SQL Server 2014 a una instancia de SQL Server 2016. Utilice la siguiente consulta para determinar el espacio en disco necesario para el grupo de archivos MEMORY_OPTIMIZED_DATA y, por lo tanto, también la cantidad de espacio libre en disco necesaria para que la actualización se realice correctamente:  
   
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/02/2017
  [Actualizar el motor de base de datos](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   
-

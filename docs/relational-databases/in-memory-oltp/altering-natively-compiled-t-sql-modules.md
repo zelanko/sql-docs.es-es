@@ -1,27 +1,24 @@
 ---
 title: "Modificar módulos T-SQL compilados de forma nativa | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1bf925251acede3f7d1139c9d152c392c59ae7b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  Si ejecuta sp_recompile en un módulo T-SQL compilado de forma nativa, hará que se vuelva a compilar en la siguiente ejecución.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea una tabla con optimización para memoria (T1) y un procedimiento almacenado compilado de forma nativa (SP1) que selecciona todas las columnas de T1. Después, se modifica SP1 para quitar la cláusula EXECUTE AS, cambiar el valor de LANGUAGE y seleccionar una sola columna (C1) de T1.  
+ En el ejemplo siguiente se crea una tabla optimizada para memoria (T1) y un procedimiento almacenado compilado de forma nativa (SP1) que selecciona todas las columnas de T1. Después, se modifica SP1 para quitar la cláusula EXECUTE AS, cambiar el valor de LANGUAGE y seleccionar una sola columna (C1) de T1.  
   
 ```  
 CREATE TABLE [dbo].[T1]  
@@ -86,4 +83,3 @@ GO
 ```  
   
   
-

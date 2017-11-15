@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords:
-- Article Properties dialog box
+f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
@@ -70,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Para artículos de publicaciones de Oracle: de forma predeterminada, el propietario se especifica como **dbo**.  
   
--   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se usan tanto para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como para los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
+-   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
  Esta opción no se puede cambiar para artículos de publicaciones que están habilitadas para replicación transaccional punto a punto.  
   
@@ -177,7 +174,7 @@ ms.lasthandoff: 06/22/2017
 -   Para algunos tipos, hay más de un tipo que puede seleccionar. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de la asignación predeterminada a menos que la aplicación requiera una asignación diferente. Para más información, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   

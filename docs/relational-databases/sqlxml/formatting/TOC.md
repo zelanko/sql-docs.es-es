@@ -1,0 +1,5 @@
+# [Cliente y servidor formato (SQLXML 4.0)](client-side-and-server-side-formatting-sqlxml-4-0.md)
+# [Arquitectura de cliente y servidor XML formato (SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
+# [Vs del lado cliente. Servidor de aplicación de formato XML (SQLXML 4.0)](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)
+# [Cliente de aplicación de formato XML (SQLXML 4.0)](client-side-xml-formatting-sqlxml-4-0.md)
+# [Servidor de aplicación de formato XML (SQLXML 4.0)](server-side-xml-formatting-sqlxml-4-0.md)

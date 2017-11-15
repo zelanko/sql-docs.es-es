@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c1d447993d3d72272b1e8e6f84c367db4a03f5be
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2591464744621eaf94e9367ab88152019aaf534c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>Lección 1.7: Establecer las opciones de inicio
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se puede configurar para abrir la superficie de diseño con la configuración que prefiera al iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Configurar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para que se abra con la configuración deseada puede ahorrarle tiempo.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

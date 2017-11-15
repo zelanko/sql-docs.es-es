@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: b09f254256c4b9a01b99bfe77768a28185f5ffd9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 140a909962391f037158178f9f5c85441714cfaa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lección 1.3: Cambiar el diseño del entorno
 Los componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] compiten por tener espacio en la pantalla. Para aprovechar mejor el espacio, puede cerrar, ocultar o mover los componentes de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Las prácticas de esta página muestran cómo mover los componentes a ubicaciones diferentes.  
@@ -90,4 +87,3 @@ Puede personalizar la presentación de los componentes de [!INCLUDE[ssManStudio]
   
   
   
-

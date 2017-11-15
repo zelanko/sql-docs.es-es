@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>Términos de licencia de PowerShell SQL Server
 **TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT**
@@ -108,4 +106,3 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
     - reclamaciones por incumplimiento de contrato, incumplimiento de garantía, condición impuesta, responsabilidad estricta, negligencia u otro agravio hasta el límite permitido por la ley vigente.
 
     También se aplica incluso si Microsoft conocía o debería haber conocido la posibilidad de dichos daños. Algunos estados no admiten la exclusión o limitación de la responsabilidad por daños consecuentes o incidentales, por lo que es posible que la limitación o las exclusiones anteriores no sean de aplicación a su caso.
-

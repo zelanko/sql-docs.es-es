@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- property pages [SQL Server Management Studio]
+helpviewer_keywords: property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 32da2911fb4daf39e6086beb6e10c7ff5922bace
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 94c531a2fa9fd1c654329c6120906dda1abe7c46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propiedades de SQL Server Management Studio
 Los cuadros de diálogo de las páginas de propiedades de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] utilizan un formato común para mostrar la información con categorías que se expanden y se contraen. Los campos que aparecen dependen de la propiedad concreta. Las propiedades atenuadas son de solo lectura. Muy cerca de la parte superior de cada página de propiedades se encuentran los botones Por categorías y Alfabético.  
@@ -37,4 +34,3 @@ En la tabla siguiente se describen los elementos comunes de los cuadros de diál
 |Propiedades|La segunda columna de la cuadrícula muestra los valores de las propiedades.|  
 |Panel de descripción|El panel de descripción aparece en la parte inferior de la página; muestra el tipo de propiedad y una breve descripción de la misma. La descripción de la propiedad puede desactivarse y activarse por medio del comando **Descripción** del menú contextual.|  
   
-

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5352e093cf531e4bbacdfb284966b8c9739abf4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
   Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  
@@ -123,7 +121,7 @@ ms.lasthandoff: 08/03/2017
   
  Aunque se produzca un error en las TVF de consulta generadas si se proporciona un valor NULL para los valores @from_lsn o @to_lsn, las funciones contenedores de fecha y hora usan el valor NULL para permitir que los contenedores de fecha y hora devuelvan todos los cambios actuales. Es decir, si se pasa un valor NULL como extremo inferior de la ventana de consulta para el contenedor de fecha y hora, el extremo inferior del intervalo de validez de la instancia de captura se utiliza en la instrucción SELECT subyacente que se aplica a la TVF de consulta. Del mismo modo, si se pasa un valor NULL como extremo superior de la ventana de consulta, el extremo superior del intervalo de validez de la instancia de captura se utiliza al realizar la selección en la TVF de consulta.  
   
- El conjunto de resultados devuelto por una función contenedora incluye todas las columnas solicitadas seguidas por una columna de operación, que se codifica de nuevo como uno o dos caracteres para identificar la operación que está asociada a la fila. Si las marcas de actualización se han solicitado, aparecen como columnas de bits después del código de operación en el orden especificado en el parámetro @update_flag_list . Para obtener información sobre la llamada de opciones para personalizar los contenedores de fecha y hora generados, vea [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
+ El conjunto de resultados devuelto por una función contenedora incluye todas las columnas solicitadas seguidas por una columna de operación, que se codifica de nuevo como uno o dos caracteres para identificar la operación que está asociada a la fila. Si las marcas de actualización se han solicitado, aparecen como columnas de bits después del código de operación en el orden especificado en el parámetro @update_flag_list. Para obtener información sobre la llamada de opciones para personalizar los contenedores de fecha y hora generados, vea [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
  En la plantilla para la creación de instancias de una TVF contenedora con una marca de actualización, se muestra cómo se personaliza una función contenedora para anexar una marca de actualización de una determinada columna al conjunto de resultados devuelto por una consulta de cambios netos. En la plantilla para la creación de instancias de TVF contenedoras de CDC para un esquema, se muestra cómo se crean instancias de los contenedores de fecha y hora para las TVF de consulta de todas las instancias de captura creadas para las tablas de origen en un esquema de la base de datos específico.  
   
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/03/2017
  [Administrar y supervisar la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 567cb988769e738f414f1c2a37971a792f8a41ec
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7d870ebdb27bcb83de08db14653b022aaba002de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Conectar a un componente de SQL Server desde SQL Server Management Studio
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona funcionalidad para administrar todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] para conectarse a:  
@@ -43,7 +41,7 @@ Aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] permite trabaja
 > [!NOTE]  
 > Es posible desactivar esta característica con el fin de que no se inicie ninguna conexión automáticamente. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5).  
   
-## <a name="saving-connections"></a>Guardar las conexiones  
+## <a name="saving-connections"></a>guardar conexiones  
 Puede guardar las conexiones a servidores concretos en Servidores registrados o en proyectos del Explorador de soluciones.  
   
 ### <a name="saving-connections-in-registered-servers"></a>Guardar las conexiones en Servidores registrados  
@@ -56,4 +54,3 @@ El Explorador de soluciones permite almacenar consultas, scripts, conexiones y o
 [Usar SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Explorador de objetos](../../ssms/object/object-explorer.md)  
   
-

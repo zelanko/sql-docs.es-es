@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], how-to topics
 - Visual Database Tools [SQL Server], database diagrams
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
-ms.contentlocale: es-es
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 820ffd353a057d3d265ad887a0d5e1ef35c99852
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copiar una imagen del diagrama de base de datos en el Portapapeles (Visual Database Tools)
 Puede crear una imagen del diagrama de base de datos y copiarla en otra aplicación.  
@@ -42,4 +40,3 @@ Puede crear una imagen del diagrama de base de datos y copiarla en otra aplicaci
 ## <a name="see-also"></a>Vea también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

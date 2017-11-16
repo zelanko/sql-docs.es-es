@@ -2,9 +2,12 @@
 title: "Guía del procesamiento de consultas para tablas con optimización para memoria | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los procedimientos almacenados compilados de forma nativa y las tablas con optimización para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas con optimización para memoria como para los procedimientos almacenados compilados de forma nativa.  
   

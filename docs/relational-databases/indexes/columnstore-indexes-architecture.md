@@ -2,26 +2,31 @@
 title: "Diseño de los índices de almacén de columnas | Microsoft Docs"
 ms.custom: 
 ms.date: 01/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96b8e884-8244-425f-b856-72a8ff6895a6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 86700a7247c7a712e03a5b34c6b68e9364d870b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 835e3acd76972eef01b4d286cbc1f6ecf6fac605
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="columnstore-indexes---architecture"></a>Diseño de los índices de almacén de columnas
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Obtenga información sobre cómo está diseñado un índice de almacén de columnas. Si conoce estos conceptos básicos, le resultará más fácil entender otros artículos sobre almacenes de columnas que explican cómo utilizarlos de forma eficaz.
 
@@ -134,3 +139,4 @@ Tenga en cuenta que todas las columnas de un índice de almacén de columnas se 
 
 ## <a name="next-steps"></a>Pasos siguientes
  Para obtener instrucciones sobre cómo diseñar los índices de almacén de columnas, consulte [Guía de diseño de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
+

@@ -2,31 +2,36 @@
 title: "Optimización del procesamiento de OLTP en memoria JSON | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-json
+ms.suite: sql
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baceef80e5e24975b3144d6e239c6fb70fbf1c16
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimización del procesamiento de OLTP en memoria JSON
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SQL Server y Azure SQL Database permiten trabajar con texto en formato JSON. Para aumentar el rendimiento de las consultas que procesan datos JSON, puede almacenar documentos JSON en tablas optimizadas para memoria mediante las columnas de cadena estándar (tipo NVARCHAR). Al almacenar datos JSON en tablas optimizadas para memoria, se aumenta el rendimiento de consulta gracias a que se aprovecha el acceso a los datos en memoria sin bloqueo.
+SQL Server y Azure SQL Database permiten trabajar con texto en formato JSON. Para aumentar el rendimiento de las consultas que procesan datos JSON, puede almacenar documentos JSON en tablas optimizadas para memoria mediante las columnas de cadena estándar (tipo NVARCHAR). Al almacenar datos JSON en tablas con optimización para memoria, se aumenta el rendimiento de consulta gracias a que se aprovecha el acceso a los datos en memoria sin bloqueo.
 
-## <a name="store-json-in-memory-optimized-tables"></a>Almacenamiento de datos JSON en tablas optimizadas para memoria
-En el ejemplo siguiente se crea una tabla `Product` optimizada para memoria con dos columnas: `Tags` y `Data`.
+## <a name="store-json-in-memory-optimized-tables"></a>Almacenamiento de datos JSON en tablas con optimización para memoria
+En el ejemplo siguiente se crea una tabla `Product` con optimización para memoria con dos columnas: `Tags` y `Data`.
 
 ```sql
 CREATE SCHEMA xtp;
@@ -46,12 +51,11 @@ CREATE TABLE xtp.Product(
 Las características disponibles en SQL Server y Azure SQL Database permiten integrar completamente la funcionalidad JSON con las tecnologías existentes de OLTP en memoria. Por ejemplo, puede realizar las siguientes tareas:
  - [Valide la estructura de los documentos JSON](#validate) almacenados en tablas optimizadas para memoria mediante las restricciones CHECK compiladas de forma nativa.
  - [Exponga y tipe fuertemente los valores](#computedcol) almacenados en documentos JSON mediante el uso de columnas calculadas.
- - 
-            [Indexe los valores](#index) de los documentos JSON con índices optimizados para memoria.
+ - [Indexe los valores](#index) de los documentos JSON con índices con optimización para memoria.
  - [Compile de forma nativa las consultas SQL](#compile) que usan valores de documentos JSON o que dan formato a los resultados como texto JSON.
 
 ## <a name="validate"></a> Validación de columnas JSON
-SQL Server y Azure SQL Database permiten agregar restricciones CHECK compiladas de forma nativa que validan el contenido de los documentos JSON almacenados en una columna de cadena. Con las restricciones CHECK de JSON compiladas de forma nativa, puede asegurarse de que el texto JSON almacenado en las tablas optimizadas para memoria tiene el formato correcto.
+SQL Server y Azure SQL Database permiten agregar restricciones CHECK compiladas de forma nativa que validan el contenido de los documentos JSON almacenados en una columna de cadena. Con las restricciones CHECK de JSON compiladas de forma nativa, puede asegurarse de que el texto JSON almacenado en las tablas con optimización para memoria tiene el formato correcto.
 
 En el ejemplo siguiente, se crea una tabla `Product` con una columna JSON `Tags`. La columna `Tags` tiene una restricción CHECK que usa la función `ISJSON` para validar el texto JSON en la columna.
 
@@ -105,7 +109,7 @@ CREATE TABLE xtp.Product(
 ```
 
 ## <a name="index"></a> Indexación de valores en las columnas JSON
-SQL Server y Azure SQL Database permiten indexar valores en columnas JSON mediante índices optimizados para memoria. Los valores JSON que se indexan se deben exponer y tipar fuertemente mediante el uso de columnas calculadas, tal como se describe en el ejemplo anterior.
+SQL Server y Azure SQL Database permiten indexar valores en columnas JSON mediante índices con optimización para memoria. Los valores JSON que se indexan se deben exponer y tipar fuertemente mediante el uso de columnas calculadas, tal como se describe en el ejemplo anterior.
 
 Los valores de las columnas JSON se pueden indexar con los índices NONCLUSTERED y HASH estándar.
 -   Los índices NONCLUSTERED optimizan las consultas que seleccionan rangos de filas por algún valor JSON u ordenan los resultados por valores JSON.
@@ -167,3 +171,4 @@ END
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
 Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.
+

@@ -2,26 +2,33 @@
 title: MSSQLSERVER_41332 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 41332 (Database Engine error)
+helpviewer_keywords:
+- 41332 (Database Engine error)
 ms.assetid: d3403c3e-d178-4006-b6c9-c18609562db5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: e7d9f10267821e03d89bd8a0c32ea8ceb55499fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: be21e36f47e2bae00387e1f5aed087c94688f930
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver41332"></a>MSSQLSERVER_41332
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
   
@@ -43,3 +50,4 @@ Inicie la transacción con otro nivel de aislamiento. Para obtener más informac
 ## <a name="see-also"></a>Vea también  
 [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
+

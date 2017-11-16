@@ -2,29 +2,34 @@
 title: "Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d2c7a4a2d87fb730ebca3f4804b059471899823
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e465c19541d7577b19eef3b875697ba843cba000
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  
   Las cargas de trabajo de análisis y el almacenamiento de datos pueden beneficiarse en gran medida de los [índices de almacén de columnas](../../t-sql/statements/create-columnstore-index-transact-sql.md), así como los índices de almacén de filas tradicionales. La elección de los índices de almacén de columnas y de filas que se generará es dependiente de la carga de trabajo de la aplicación. En SQL Server 2016, el [Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) puede analizar la carga de trabajo y recomienda una combinación adecuada de índices de almacén y de columnas para crear la base de datos. 
@@ -64,4 +69,5 @@ Para obtener información sobre la utilidad de línea de comandos dta.exe, vea [
 
 
   
+
 

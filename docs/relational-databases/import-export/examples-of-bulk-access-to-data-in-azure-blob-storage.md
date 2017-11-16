@@ -2,10 +2,14 @@
 title: Ejemplos de acceso masivo a datos en Azure Blob Storage | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - BULK INSERT, Azure blob storage
 - OPENROWSET, Azure blob storage
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ae984df5d86e1f93281653e8d62b6ad2d1f649e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: ece80f578fc797dcd721dfb3f831e9bf3937abd1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/14/2017
+
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de acceso masivo a datos en Azure Blob Storage
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Las instrucciones `BULK INSERT` y `OPENROWSET` pueden obtener acceso directamente a un archivo en Azure Blob Storage. En los ejemplos siguientes se usan datos de un archivo CSV (valores separados por comas) (denominado `inv-2017-01-19.csv`), almacenado en un contenedor (denominado `Week3`), almacenado en una cuenta de almacenamiento (denominada `newinvoices`). Se puede usar la ruta de acceso al archivo de formato, pero no se incluye en estos ejemplos. 
 
@@ -111,4 +116,5 @@ WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)   
 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)   
 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)   
+
 

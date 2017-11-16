@@ -1,43 +1,46 @@
 ---
 title: "Replicación en suscriptores de tablas con optimización para memoria | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eda94d43e65319f152ea387372c5f28193697818
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b426bdc8e0485bdbada8c9dbd7371b63612465
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Las tablas que actúan como instantáneas y suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+  Las tablas que actúan como instantáneas y suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas con optimización para memoria. Otras configuraciones de replicación no son compatibles con las tablas con optimización para memoria. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## <a name="two-configurations-are-required"></a>Son necesarias dos configuraciones  
   
--   
-            **Configurar la base de datos de suscriptor para admitir la replicación a tablas optimizadas para memoria**  
+-   **Configurar la base de datos de suscriptor para admitir la replicación a tablas con optimización para memoria**  
   
      Establezca la propiedad **@memory_optimized** en **true** mediante [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) o [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
--   
-            **Configurar el artículo para admitir la replicación a tablas optimizadas para memoria**  
+-   **Configurar el artículo para admitir la replicación a tablas con optimización para memoria**  
   
      Establezca la opción `@schema_option = 0x40000000000` para el artículo mediante [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md).  
   
-#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Para configurar una tabla optimizada para memoria como suscriptor  
+#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Para configurar una tabla con optimización para memoria como suscriptor  
   
 1.  Cree una publicación transaccional. Para más información, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -78,19 +81,19 @@ ms.lasthandoff: 11/09/2017
   
  Las tablas con optimización para memoria no se pueden publicar.  
   
- Las tablas de replicación del distribuidor no se pueden configurar como tablas optimizadas para memoria.  
+ Las tablas de replicación del distribuidor no se pueden configurar como tablas con optimización para memoria.  
   
- La replicación de mezcla no puede incluir tablas optimizadas para memoria.  
+ La replicación de mezcla no puede incluir tablas con optimización para memoria.  
   
- En el suscriptor, las tablas implicadas en la replicación transaccional se pueden configurar como tablas optimizadas para memoria, pero las tablas del suscriptor deben cumplir los requisitos de las tablas optimizadas para memoria. Esto requiere las restricciones siguientes.  
+ En el suscriptor, las tablas implicadas en la replicación transaccional se pueden configurar como tablas con optimización para memoria, pero las tablas del suscriptor deben cumplir los requisitos de las tablas con optimización para memoria. Esto requiere las restricciones siguientes.  
  
--   Las tablas replicadas en tablas optimizadas para memoria de un suscriptor están limitadas a los tipos de datos permitidos en las tablas optimizadas para memoria. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+-   Las tablas replicadas en tablas con optimización para memoria de un suscriptor están limitadas a los tipos de datos permitidos en las tablas con optimización para memoria. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
 -   No todas las características de Transact-SQL son compatibles con las tablas optimizadas en memoria. Vea [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información detallada.  
   
 ##  <a name="Schema"></a> Modificar un archivo de esquema  
   
--   Si se usa la opción `DURABILITY = SCHEMA_AND_DATA` de tabla optimizada para memoria, la tabla debe tener un índice de clave principal no clúster.  
+-   Si se usa la opción `DURABILITY = SCHEMA_AND_DATA` de tabla con optimización para memoria, la tabla debe tener un índice de clave principal no clúster.  
   
 -   ANSI_PADDING debe ser ON.  
   
@@ -98,3 +101,4 @@ ms.lasthandoff: 11/09/2017
  [Características y tareas de replicación](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
+

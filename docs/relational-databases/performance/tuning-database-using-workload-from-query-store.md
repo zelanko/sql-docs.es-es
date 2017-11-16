@@ -2,9 +2,12 @@
 title: "Optimización de la base de datos mediante carga de trabajo del Almacén de consultas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 La característica [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) de SQL Server captura automáticamente un historial de las consultas, planes y estadísticas de tiempo de ejecución, y almacena esta información en la base de datos. El [Asistente para la optimización del motor de base de datos (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) es compatible con una nueva opción para usar el Almacén de consultas para seleccionar automáticamente una carga de trabajo adecuada para la optimización. Para muchos usuarios, esto puede evitar la necesidad de recopilar explícitamente una carga de trabajo para la optimización. Esta característica solo está disponible si la base de datos tiene activada la característica Almacén de consultas. 

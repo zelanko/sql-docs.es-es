@@ -3,28 +3,33 @@ title: "Guía de arquitectura de subprocesos y tareas | Microsoft Docs"
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f2ded3d40a1f17980507fdf92d05e3517f0bc54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Los subprocesos son una característica del sistema operativo que permite separar la lógica de aplicación en varias rutas de ejecución simultánea. Esta característica resulta útil cuando se trabaja con aplicaciones complejas que tienen muchas tareas que pueden ejecutarse a la vez. 
 
@@ -128,5 +133,6 @@ La tabla siguiente contiene una lista de los componentes de SQL Server e indica 
 |Agente SQL Server   |Sqlagent.exe   |No |  
 |SQL Server Management Studio   |Ssms.exe   |No |  
 |programa de instalación de SQL Server   |Setup.exe  |No |  
+
 
 

@@ -2,26 +2,31 @@
 title: Copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 10/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd210025eb75eceedfbeb31bc485ef0f8b4d37e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
+ms.contentlocale: es-es
+ms.lasthandoff: 08/24/2017
+
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio Almacenamiento de blobs de Microsoft Azure. Puede dejar que SQL Server determine la programación copia de seguridad según la carga de trabajo de transacciones de la base de datos. Como alternativa, puede usar las opciones avanzadas para definir una programación. La configuración de retención determina durante cuánto tiempo se almacenan las copias de seguridad en Almacenamiento de blobs de Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.  
   
@@ -138,3 +143,4 @@ ms.lasthandoff: 11/09/2017
 - [Copias de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
+

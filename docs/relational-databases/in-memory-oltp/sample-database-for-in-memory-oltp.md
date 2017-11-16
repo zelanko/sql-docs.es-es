@@ -2,35 +2,41 @@
 title: Base de datos de ejemplo para OLTP en memoria | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e133c38f2944735282d8a8eca76dbab481538105
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>Información general  
- Este ejemplo muestra la característica OLTP en memoria. Muestra tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa y se puede usar para mostrar las ventajas de rendimiento de OLTP en memoria.  
+ Este ejemplo muestra la característica OLTP en memoria. Muestra tablas con optimización para memoria y procedimientos almacenados compilados de forma nativa y se puede usar para mostrar las ventajas de rendimiento de OLTP en memoria.  
   
 > [!NOTE]  
 >  Para ver este tema para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Extensiones de AdventureWorks para mostrar OLTP en memoria](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
   
- El ejemplo migra 5 tablas de la base de datos AdventureWorks a tablas optimizadas para memoria e incluye una carga de trabajo de demostración para el procesamiento de pedidos de venta. Se puede usar esta carga de trabajo de demostración para ver la ventaja de rendimiento que supone emplear OLTP en memoria en el servidor.  
+ El ejemplo migra 5 tablas de la base de datos AdventureWorks a tablas con optimización para memoria e incluye una carga de trabajo de demostración para el procesamiento de pedidos de venta. Se puede usar esta carga de trabajo de demostración para ver la ventaja de rendimiento que supone emplear OLTP en memoria en el servidor.  
   
- En la descripción del ejemplo se explican los compromisos realizados al migrar las tablas a OLTP en memoria para compensar las características que no se admiten (todavía) en las tablas optimizadas para memoria.  
+ En la descripción del ejemplo se explican los compromisos realizados al migrar las tablas a OLTP en memoria para compensar las características que no se admiten (todavía) en las tablas con optimización para memoria.  
   
  La documentación de este ejemplo está estructurada de la manera siguiente:  
   
@@ -44,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Uso de memoria y de espacio en disco del ejemplo](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -81,12 +87,12 @@ ms.lasthandoff: 11/09/2017
   
 3.  Para ver la carga de trabajo y scripts de ejemplo, descomprima el archivo SQLServer2016CTP3Samples.zip en una carpeta local. Para obtener instrucciones sobre cómo ejecutar la carga de trabajo, consulte el archivo In-Memory OLTP\readme.txt.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Descripción de las tablas y los procedimientos de ejemplo:  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  El ejemplo crea nuevas tablas para productos y pedidos de venta basadas en tablas existentes en AdventureWorks. El esquema de las nuevas tablas es similar a las tablas existentes, con algunas diferencias, como se explica a continuación.  
   
- Las nuevas tablas optimizadas para memoria llevan el sufijo '_inmem'. El ejemplo también incluye las tablas correspondientes que llevan el sufijo '_ondisk'; estas tablas se pueden usar para realizar una comparación uno a uno entre el rendimiento de las tablas optimizadas para memoria y las tablas basadas en disco del sistema.  
+ Las nuevas tablas con optimización para memoria llevan el sufijo '_inmem'. El ejemplo también incluye las tablas correspondientes que llevan el sufijo '_ondisk'; estas tablas se pueden usar para realizar una comparación uno a uno entre el rendimiento de las tablas con optimización para memoria y las tablas basadas en disco del sistema.  
   
- Tenga en cuenta que las tablas optimizadas para memoria empleadas en la carga de trabajo para la comparación de rendimiento son totalmente durables y con registro completo. No sacrifican la durabilidad o la confiabilidad para conseguir la mejora del rendimiento.  
+ Tenga en cuenta que las tablas con optimización para memoria empleadas en la carga de trabajo para la comparación de rendimiento son totalmente durables y con registro completo. No sacrifican la durabilidad o la confiabilidad para conseguir la mejora del rendimiento.  
   
  La carga de trabajo de destino de este ejemplo es el procesamiento de pedidos de venta, donde también tenemos en cuenta la información sobre productos y descuentos. Para eso se usan las tablas SalesOrderHeader, SalesOrderDetail, Product, SpecialOffer y SpecialOfferProduct.  
   
@@ -135,35 +141,32 @@ ms.lasthandoff: 11/09/2017
   
 -   Production.Product_ondisk  
   
-#### <a name="differences-between-original-disk-based-and-the-and-new-memory-optimized-tables"></a>Diferencias entre las tablas originales basadas en disco y las nuevas tablas optimizadas para memoria  
+#### <a name="differences-between-original-disk-based-and-the-and-new-memory-optimized-tables"></a>Diferencias entre las tablas originales basadas en disco y las nuevas tablas con optimización para memoria  
  En general, las nuevas tablas de este ejemplo emplean las mismas columnas y los mismos tipos de datos que las tablas originales. Sin embargo, hay algunas diferencias. A continuación se enumeran las diferencias y el motivo de los cambios.  
   
  Sales.SalesOrderHeader_inmem  
   
--   Las*restricciones DEFAULT* se admiten en las tablas optimizadas para memoria y la mayoría de las restricciones DEFAULT se migran tal cual. Sin embargo, la tabla original Sales.SalesOrderHeader contiene dos restricciones DEFAULT que recuperan la fecha actual, para las columnas OrderDate y ModifiedDate. En una carga de trabajo de procesamiento de pedidos de alto rendimiento con mucha simultaneidad, cualquier recurso global puede convertirse en un punto de contención. La hora del sistema es un recurso global y hemos observado que puede convertirse en un cuello de botella cuando se ejecuta una carga de trabajo de OLTP en memoria que inserta pedidos de venta, especialmente si es necesario recuperar la hora del sistema para varias columnas en el encabezado del pedido de venta, así como los detalles del pedido de venta. Para resolver el problema en este ejemplo se recupera la hora del sistema solo una vez para cada pedido de venta que se inserta, y se usa ese valores para las columnas datetime de SalesOrderHeader_inmem y SalesOrderDetail_inmem, en el procedimiento almacenado Sales.usp_InsertSalesOrder_inmem.  
+-   Las*restricciones DEFAULT* se admiten en las tablas con optimización para memoria y la mayoría de las restricciones DEFAULT se migran tal cual. Sin embargo, la tabla original Sales.SalesOrderHeader contiene dos restricciones DEFAULT que recuperan la fecha actual, para las columnas OrderDate y ModifiedDate. En una carga de trabajo de procesamiento de pedidos de alto rendimiento con mucha simultaneidad, cualquier recurso global puede convertirse en un punto de contención. La hora del sistema es un recurso global y hemos observado que puede convertirse en un cuello de botella cuando se ejecuta una carga de trabajo de OLTP en memoria que inserta pedidos de venta, especialmente si es necesario recuperar la hora del sistema para varias columnas en el encabezado del pedido de venta, así como los detalles del pedido de venta. Para resolver el problema en este ejemplo se recupera la hora del sistema solo una vez para cada pedido de venta que se inserta, y se usa ese valores para las columnas datetime de SalesOrderHeader_inmem y SalesOrderDetail_inmem, en el procedimiento almacenado Sales.usp_InsertSalesOrder_inmem.  
   
--   *UDT de alias:* la tabla original usa dos tipos de datos definidos por el usuario (UDT) de alias, dbo.OrderNumber y dbo.AccountNumber, para las columnas PurchaseOrderNumber y AccountNumber, respectivamente. 
-            [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite UDT de alias para las tablas optimizadas para memoria, por lo que las tablas nuevas usan los tipos de datos del sistema nvarchar(25) y nvarchar(15), respectivamente.  
+-   *UDT de alias:* la tabla original usa dos tipos de datos definidos por el usuario (UDT) de alias, dbo.OrderNumber y dbo.AccountNumber, para las columnas PurchaseOrderNumber y AccountNumber, respectivamente. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite UDT de alias para las tablas con optimización para memoria, por lo que las tablas nuevas usan los tipos de datos del sistema nvarchar(25) y nvarchar(15), respectivamente.  
   
--   *Columnas que aceptan valores NULL en claves de índice:* en la tabla original, la columna SalesPersonID acepta valores NULL, mientras que en las tablas nuevas esa columna no acepta valores NULL y tiene una restricción DEFAULT con el valor (-1). Esto se debe a que los índices de las tablas optimizadas para memoria no pueden tener columnas que aceptan valores NULL en la clave de índice; -1 es un suplente para NULL en este caso.  
+-   *Columnas que aceptan valores NULL en claves de índice:* en la tabla original, la columna SalesPersonID acepta valores NULL, mientras que en las tablas nuevas esa columna no acepta valores NULL y tiene una restricción DEFAULT con el valor (-1). Esto se debe a que los índices de las tablas con optimización para memoria no pueden tener columnas que aceptan valores NULL en la clave de índice; -1 es un suplente para NULL en este caso.  
   
--   
-            *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
+-   *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite columnas calculadas en tablas con optimización para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
 
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.
 
   
--   Las*restricciones FOREIGN KEY* se admiten para tablas optimizadas para memoria en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], pero solo si las tablas de referencia también están optimizadas para memoria. Las claves externas que hagan referencia a tablas de referencia que también se migran a tablas optimizadas para memoria se conservan en esas tablas migradas, mientras que otras claves externas se omiten.  Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial de la tabla Sales.SalesOrderHeader_inmem, y la integridad referencial no se valida cuando se insertan filas.  
+-   Las*restricciones FOREIGN KEY* se admiten para tablas con optimización para memoria en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], pero solo si las tablas de referencia también cuentan con optimización para memoria. Las claves externas que hagan referencia a tablas de referencia que también se migran a optimización para memoria se conservan en esas tablas migradas, mientras que otras claves externas se omiten.  Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial de la tabla Sales.SalesOrderHeader_inmem, y la integridad referencial no se valida cuando se insertan filas.  
   
--   *Rowguid:* la columna rowguid se omite. Aunque se admite uniqueidentifier en las tablas optimizadas para memoria, la opción ROWGUIDCOL no se admite en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Las columnas de esta clase se suelen usar para la replicación de mezcla o para tablas que incluyen columnas FILESTREAM. En este ejemplo no se incluye ninguna de ellas.  
+-   *Rowguid:* la columna rowguid se omite. Aunque se admite uniqueidentifier en las tablas con optimización para memoria, la opción ROWGUIDCOL no se admite en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Las columnas de esta clase se suelen usar para la replicación de mezcla o para tablas que incluyen columnas FILESTREAM. En este ejemplo no se incluye ninguna de ellas.  
   
  Sales.SalesOrderDetail  
   
 -   *Restricciones DEFAULT:* igual que en SalesOrderHeader, la restricción DEFAULT que requiere la fecha y la hora del sistema no se migra; en su lugar, el procedimiento almacenado que inserta pedidos de venta se encarga de insertar la fecha y la hora actuales del sistema en la primera inserción.  
   
--   
-            *Columnas calculadas:* la columna calculada LineTotal no se ha migrado, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]no admite columnas calculadas en las tablas optimizadas para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
+-   *Columnas calculadas:* la columna calculada LineTotal no se ha migrado, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]no admite columnas calculadas en las tablas con optimización para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -181,8 +184,8 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
-#### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>Consideraciones sobre los índices de tablas optimizadas para memoria  
- El índice de línea base para las tablas optimizadas para memoria es el índice no clúster, que admite búsquedas de puntos (búsqueda de índice en predicado de igualdad), recorridos de intervalo (búsqueda de índice en predicados de desigualdad), exámenes de índice completos y exámenes ordenados. Además, los índices no clúster admiten búsquedas en las columnas iniciales de la clave de índice. De hecho, los índices no clúster optimizados para memoria admiten todas las operaciones compatibles con los índices no clúster basados en disco, con la única excepción de los exámenes hacia atrás. Por tanto, el uso de índices no clúster es una opción segura para los índices.  
+#### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>Consideraciones sobre los índices de tablas con optimización para memoria  
+ El índice de línea base para las tablas con optimización para memoria es el índice no clúster, que admite búsquedas de puntos (búsqueda de índice en predicado de igualdad), recorridos de intervalo (búsqueda de índice en predicados de desigualdad), exámenes de índice completos y exámenes ordenados. Además, los índices no clúster admiten búsquedas en las columnas iniciales de la clave de índice. De hecho, los índices no clúster con optimización para memoria admiten todas las operaciones compatibles con los índices no clúster basados en disco, con la única excepción de los exámenes hacia atrás. Por tanto, el uso de índices no clúster es una opción segura para los índices.  
   
  Se pueden usar índices hash para optimizar aún más la carga de trabajo. Están optimizados especialmente para las búsquedas de puntos y las inserciones de filas. Sin embargo, hay que tener en cuenta que no admiten recorridos de intervalo, exámenes ordenados ni búsquedas en columnas de clave de índice iniciales. Por tanto, hay que tener cuidado cuando se usen estos índices. Además, es necesario especificar el bucket_count en el momento de la creación. Normalmente se debe establecer entre una y dos veces el número de valores de clave de índice, pero la sobrestimación no suele suponer ningún problema.  
   
@@ -221,7 +224,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
  Observe que en la información anterior algunos valores de bucket_count están sobredimensionados, pero no los bucket_counts de los índices de SalesOrderHeader_inmem y SalesOrderDetail_inmem: tienen un tamaño para 10 millones de pedidos de venta. Esto se hace para permitir la instalación del ejemplo en sistemas con poca disponibilidad de memoria, aunque en esos casos la carga de trabajo de demostración producirá un error si no hay memoria suficiente. Si desea escalar el ejemplo más allá de 10 millones de pedidos de venta, no dude en aumentar los números de depósitos en consecuencia.  
   
 #### <a name="considerations-for-memory-utilization"></a>Consideraciones sobre el uso de memoria  
- El uso de memoria en la base de datos de ejemplo, tanto antes como después de ejecutar la carga de trabajo de demostración, se describe en la sección [Uso de memoria para las tablas optimizadas para memoria](#Memoryutilizationforthememory-optimizedtables).  
+ El uso de memoria en la base de datos de ejemplo, tanto antes como después de ejecutar la carga de trabajo de demostración, se describe en la sección [Uso de memoria para las tablas con optimización para memoria](#Memoryutilizationforthememory-optimizedtables).  
   
 ### <a name="stored-procedures-added-by-the-sample"></a>Procedimientos almacenados agregados por el ejemplo  
  Los dos procedimientos almacenados principales para insertar pedidos de venta y actualizar los detalles de envío son los siguientes:  
@@ -286,7 +289,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
     -   Restablece la demostración vaciando y reinicializando las tablas SalesOrderHeader y SalesOrderDetail.  
   
- Los procedimientos almacenados siguientes se usan para insertar y eliminar información de las tablas optimizadas para memoria garantizando la integridad del dominio y referencial.  
+ Los procedimientos almacenados siguientes se usan para insertar y eliminar información de las tablas con optimización para memoria garantizando la integridad del dominio y referencial.  
   
 -   Production.usp_InsertProduct_inmem  
   
@@ -308,7 +311,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
     -   Usa los procedimientos auxiliares dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
  Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de Microsoft CSS SQL Server. Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
   
 ### <a name="installing-ostress"></a>Instalar ostress  
@@ -348,7 +351,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  La herramienta ostress se emplea para ejecutar las llamadas a procedimientos almacenados en paralelo, con el fin de simular que los clientes insertan los pedidos de venta simultáneamente.  
   
- Restablezca la demostración después de cada prueba de esfuerzo ejecutando Demo.usp_DemoReset. Este procedimiento elimina las filas de las tablas optimizadas para memoria, trunca las tablas basadas en disco y ejecuta un punto de comprobación de la base de datos.  
+ Restablezca la demostración después de cada prueba de esfuerzo ejecutando Demo.usp_DemoReset. Este procedimiento elimina las filas de las tablas con optimización para memoria, trunca las tablas basadas en disco y ejecuta un punto de comprobación de la base de datos.  
   
  El script siguiente se ejecuta simultáneamente para simular una carga de trabajo de procesamiento de pedidos de venta:  
   
@@ -378,7 +381,7 @@ END
   
  Con este script, cada pedido de ejemplo que se crea se inserta 20 veces, mediante 20 procedimientos almacenados que se ejecutan en un bucle WHILE. El bucle se usa para tener en cuenta el hecho de que la base de datos se emplea para crear el pedido de ejemplo. En los entornos de producción típicos, la aplicación de nivel intermedio creará el pedido de venta que se va a insertar.  
   
- El script anterior inserta los pedidos de venta en tablas optimizadas para memoria. El script para insertar pedidos de venta en tablas basadas en disco se deriva reemplazando las dos apariciones de '_inmem' por '_ondisk'.  
+ El script anterior inserta los pedidos de venta en tablas con optimización para memoria. El script para insertar pedidos de venta en tablas basadas en disco se deriva reemplazando las dos apariciones de '_inmem' por '_ondisk'.  
   
  Se usará la herramienta ostress para ejecutar los scripts con varias conexiones simultáneas. Usaremos el parámetro '-n' para controlar el número de conexiones y el parámetro 'r' para controlar cuántas veces se ejecuta el script en cada conexión.  
   
@@ -390,7 +393,7 @@ END
  En las medidas e instrucciones siguientes se usa una carga de trabajo que inserta 10 millones de pedidos de ventas. Para obtener instrucciones para ejecutar una carga de trabajo reducida que inserta 1 millón de pedidos de ventas, vea las instrucciones del archivo “In-Memory OLTP\readme.txt” incluido en el archivo SQLServer2016CTP3Samples.zip.  
   
 ##### <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
- Empezaremos ejecutando la carga de trabajo en las tablas optimizadas para memoria. El comando siguiente abre 100 subprocesos, cada uno de los cuales se ejecuta para 5.000 iteraciones.  Cada iteración inserta 20 pedidos de venta en transacciones diferentes. Hay 20 inserciones por iteración para compensar el hecho de que la base de datos se usa para generar los datos que se van a insertar. Esto produce un total de 20 * 5000 \* 100 = 10 000 000 inserciones de pedidos de venta.  
+ Empezaremos ejecutando la carga de trabajo en las tablas con optimización para memoria. El comando siguiente abre 100 subprocesos, cada uno de los cuales se ejecuta para 5.000 iteraciones.  Cada iteración inserta 20 pedidos de venta en transacciones diferentes. Hay 20 inserciones por iteración para compensar el hecho de que la base de datos se usa para generar los datos que se van a insertar. Esto produce un total de 20 * 5000 \* 100 = 10 000 000 inserciones de pedidos de venta.  
   
  Abra RML Cmd Prompt y ejecute el comando siguiente:  
   
@@ -417,7 +420,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  En un servidor de prueba con un número total de 8 núcleos físicos (16 lógicos), se tardaron 41 minutos y 25 segundos. En un segundo servidor de prueba con 24 núcleos físicos (48 lógicos), se tardaron 52 minutos y 16 segundos.  
   
- La causa principal de la diferencia de rendimiento entre las tablas optimizadas para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, SQL Server no puede usar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de OLTP en memoria no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por tanto, las transacciones simultáneas no bloquean las inserciones de las demás, lo que permite a SQL Server usar totalmente la CPU.  
+ La causa principal de la diferencia de rendimiento entre las tablas con optimización para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, SQL Server no puede usar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de OLTP en memoria no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por tanto, las transacciones simultáneas no bloquean las inserciones de las demás, lo que permite a SQL Server usar totalmente la CPU.  
   
  Puede observar el uso de la CPU mientras se está ejecutando la carga de trabajo, por ejemplo con el Administrador de tareas. Con las tablas basadas en disco verá que el uso de la CPU está muy alejado del 100 %. En una configuración de prueba con 16 procesadores lógicos, el uso rondaría el 24 %.  
   
@@ -434,7 +437,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Se recomienda restablecer la demostración tras cada ejecución. Como esta carga de trabajo solo realiza inserciones, cada ejecución consume más memoria, por lo que es necesario un restablecimiento para no quedarse sin memoria. La cantidad de memoria consumida después de una ejecución se explica en la sección [Utilización de memoria después de ejecutar la carga de trabajo](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Solucionar problemas de pruebas de ejecución lenta  
+###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
  Los resultados de prueba variarán normalmente según el hardware, y también el nivel de simultaneidad empleado en la serie de pruebas. He aquí varios aspectos que hay que examinar si los resultados no son los esperados:  
   
 -   Número de transacciones simultáneas: cuando se ejecuta la carga de trabajo en un solo subproceso, el aumento del rendimiento con OLTP en memoria probablemente será menor del doble. La contención de bloqueos temporales solo supone un gran problema si hay un nivel elevado de simultaneidad.  
@@ -445,14 +448,12 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
 -   Velocidad de la unidad de registro: si la unidad de registro no puede seguir el nivel de rendimiento de transacciones del sistema, la carga de trabajo se convierte en un cuello de botella para la E/S de registro. Aunque el registro es más eficaz con OLTP en memoria, si la E/S de registro es un cuello de botella, se limita el aumento potencial de rendimiento.  
   
-    -   Síntoma: si la utilización de la CPU no está cercana al 100 % o tiene muchos picos cuando se ejecuta la carga de trabajo en tablas optimizadas para memoria, es posible que haya un cuello de botella de la E/S de registro. Esto se puede confirmar abriendo el Monitor de recursos y examinando la longitud de la cola de la unidad de registro.  
+    -   Síntoma: si la utilización de la CPU no está cercana al 100 % o tiene muchos picos cuando se ejecuta la carga de trabajo en tablas con optimización para memoria, es posible que haya un cuello de botella de la E/S de registro. Esto se puede confirmar abriendo el Monitor de recursos y examinando la longitud de la cola de la unidad de registro.  
   
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Uso de memoria y de espacio en disco del ejemplo  
  A continuación se describe qué cabe esperar en cuando a uso de la memoria y del espacio en disco para la base de datos de ejemplo. También se muestran los resultados obtenidos en un servidor de prueba con 16 núcleos lógicos.  
   
-###  
-            <a name="Memoryutilizationforthememory-optimizedtables">
-            </a> Uso de memoria para las tablas optimizadas para memoria  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilización global de la base de datos  
  Se puede usar la consulta siguiente para obtener la utilización de memoria total para OLTP en memoria en el sistema.  
@@ -505,7 +506,7 @@ WHERE t.type='U'
   
  Lo sorprendente aquí es el tamaño de la memoria asignada para los índices, en comparación con el tamaño de los datos de tabla. Esto se debe a que los índices hash del ejemplo tienen establecido previamente un tamaño de datos mayor. Observe que los índices hash tienen un tamaño fijo y por tanto su tamaño no crece junto con el tamaño de los datos de la tabla.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilización de memoria después de ejecutar la carga de trabajo  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
  Después de insertar 10 millones de pedidos de venta, la utilización total de memoria es similar a lo siguiente:  
   
 ```  
@@ -523,7 +524,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
   
- Como puede ver, SQL Server usa un bit por debajo de 8 GB para las tablas y los índices optimizados para memoria de la base de datos de ejemplo.  
+ Como puede ver, SQL Server usa un bit por debajo de 8 GB para las tablas y los índices con optimización para memoria de la base de datos de ejemplo.  
   
  Examinando el uso detallado de memoria por tabla después de ejecutar un ejemplo:  
   
@@ -552,7 +553,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Después de restablecer la demostración  
  Se puede usar el procedimiento almacenado Demo.usp_DemoReset para restablecer la demostración. Elimina los datos de las tablas SalesOrderHeader_inmem y SalesOrderDetail_inmem, y reinicializa los datos de las tablas originales SalesOrderHeader y SalesOrderDetail.  
   
- Ahora, aunque las filas de las tablas se han eliminado, esto no significa que la memoria se recupera inmediatamente. SQL Server recupera memoria de las filas eliminadas de las tablas optimizadas para memoria en segundo plano, según sea necesario. Verá que inmediatamente después de restablecer la demostración, sin ninguna carga de trabajo transaccional en el sistema, la memoria de las filas eliminadas aún no se ha recuperado:  
+ Ahora, aunque las filas de las tablas se han eliminado, esto no significa que la memoria se recupera inmediatamente. SQL Server recupera memoria de las filas eliminadas de las tablas con optimización para memoria en segundo plano, según sea necesario. Verá que inmediatamente después de restablecer la demostración, sin ninguna carga de trabajo transaccional en el sistema, la memoria de las filas eliminadas aún no se ha recuperado:  
   
 ```  
 SELECT type  
@@ -588,7 +589,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
   
-### <a name="disk-utilization-for-memory-optimized-tables"></a>Uso de disco para las tablas optimizadas para memoria  
+### <a name="disk-utilization-for-memory-optimized-tables"></a>Uso de disco para las tablas con optimización para memoria  
  El tamaño total en disco de los archivos de punto de comprobación de una base de datos en un momento dado se puede averiguar con la consulta:  
   
 ```  
@@ -600,7 +601,7 @@ WHERE f.type=N'FX'
 ```  
   
 #### <a name="initial-state"></a>Estado inicial  
- Cuando se crean inicialmente el grupo de archivos de ejemplo y las tablas optimizadas para memoria de ejemplo, se crean previamente varios archivos de punto de comprobación y el sistema empieza a rellenar los archivos; el número de archivos de punto de comprobación creados previamente depende del número de procesadores lógicos del sistema. Como el ejemplo es inicialmente muy pequeño, los archivos creados previamente estarán vacíos en su mayoría después de la creación inicial.  
+ Cuando se crean inicialmente el grupo de archivos de ejemplo y las tablas con optimización para memoria de ejemplo, se crean previamente varios archivos de punto de comprobación y el sistema empieza a rellenar los archivos; el número de archivos de punto de comprobación creados previamente depende del número de procesadores lógicos del sistema. Como el ejemplo es inicialmente muy pequeño, los archivos creados previamente estarán vacíos en su mayoría después de la creación inicial.  
   
  A continuación se muestra el tamaño inicial en disco del ejemplo en un equipo con 16 procesadores lógicos:  
   
@@ -647,7 +648,7 @@ ORDER BY state, file_type
   
  Como puede ver, la mayor parte del espacio la usan archivos de datos y delta creados previamente. SQL Server creó previamente un par de archivos (datos, delta) por procesador lógico. Además, los archivos de datos tienen un tamaño previo de 128 MB, y los archivos delta de 8 MB, para que la inserción de datos en estos archivos sea más eficaz.  
   
- Los datos reales de las tablas optimizadas para memoria están en el archivo de datos.  
+ Los datos reales de las tablas con optimización para memoria están en el archivo de datos.  
   
 #### <a name="after-running-the-workload"></a>Después de ejecutar la carga de trabajo  
  Después de una única serie de pruebas que inserta 10 millones de pedidos de venta, el tamaño total en disco es similar al siguiente (para un servidor de prueba de 16 núcleos):  
@@ -778,4 +779,5 @@ ORDER BY state, file_type
  [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+
 

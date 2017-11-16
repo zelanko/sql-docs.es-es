@@ -1,30 +1,35 @@
 ---
 title: Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 13b7c99ce7dc82823dec6f518e84b55820fcdc63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
@@ -34,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Analizar la carga de trabajo para determinar las zonas activas donde OLTP en memoria podría contribuir a mejorar el rendimiento. El informe de análisis de rendimiento de las transacciones recomienda las tablas y los procedimientos almacenados que se beneficiarían de la conversión a OLTP en memoria.  
   
--   Le ayuda a planear y ejecutar la migración a OLTP en memoria. La migración de una tabla basada en disco a una tabla optimizada para memoria puede llevar mucho tiempo. El Asesor de optimización para memoria permite identificar las incompatibilidades que debe quitar de la tabla antes de migrar la tabla a OLTP en memoria. El Asesor de optimización para memoria permite también comprender el impacto que la migración de una tabla a una tabla optimizada para memoria tendrá sobre su aplicación.  
+-   Le ayuda a planear y ejecutar la migración a OLTP en memoria. La migración de una tabla basada en disco a una tabla con optimización para memoria puede llevar mucho tiempo. El Asesor de optimización para memoria permite identificar las incompatibilidades que debe quitar de la tabla antes de migrar la tabla a OLTP en memoria. El Asesor de optimización para memoria permite también comprender el impacto que la migración de una tabla a una tabla con optimización para memoria tendrá sobre su aplicación.  
   
      Puede ver si la aplicación se beneficiaría de OLTP en memoria, si desea planear la migración a OLTP en memoria y siempre que migre algunas de sus tablas y procedimientos almacenados a OLTP en memoria.  
   
@@ -70,13 +75,13 @@ ms.lasthandoff: 11/09/2017
   
 -   Sección de dificultades de migración  
   
-     Esta sección incluye una tabla que muestra las dificultades de convertir esta tabla de base de datos en una tabla optimizada para memoria. Una clasificación de mayor dificultad indica que convertir la tabla es más difícil. Para ver información sobre cómo convertir esta tabla de base de datos, utilice el Asesor de optimización de memoria.  
+     Esta sección incluye una tabla que muestra las dificultades de convertir esta tabla de base de datos en una tabla con optimización para memoria. Una clasificación de mayor dificultad indica que convertir la tabla es más difícil. Para ver información sobre cómo convertir esta tabla de base de datos, utilice el Asesor de optimización de memoria.  
   
 Las estadísticas de contención del informe de detalles de la tabla se recopilan y agregan desde sys.dm_db_index_operational_stats (Transact-SQL).  
 
 ### <a name="stored-procedures"></a>Procedimientos almacenados
 
- Un procedimiento almacenado con un proporción alta de tiempo de CPU/tiempo transcurrido es un candidato a la migración. El informe muestra todas las referencias de tabla, ya que los procedimientos almacenados compilados de forma nativa solo pueden hacer referencia a tablas optimizadas para memoria, que pueden incrementar el costo de la migración.  
+ Un procedimiento almacenado con un proporción alta de tiempo de CPU/tiempo transcurrido es un candidato a la migración. El informe muestra todas las referencias de tabla, ya que los procedimientos almacenados compilados de forma nativa solo pueden hacer referencia a tablas con optimización para memoria, que pueden incrementar el costo de la migración.  
   
  El informe de detalles de un procedimiento almacenado consta de dos secciones:  
   
@@ -96,7 +101,7 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
   
 -   Sección de referencias de tabla  
   
-     Esta sección incluye una tabla que muestra las tablas a las que este procedimiento almacenado hace referencia. Antes de convertir el procedimiento almacenado en un procedimiento almacenado compilado de forma nativa, todas estas tablas deben convertirse en tablas optimizadas para memoria y deben permanecer en el mismo servidor y base de datos.  
+     Esta sección incluye una tabla que muestra las tablas a las que este procedimiento almacenado hace referencia. Antes de convertir el procedimiento almacenado en un procedimiento almacenado compilado de forma nativa, todas estas tablas deben convertirse en tablas con optimización para memoria y deben permanecer en el mismo servidor y base de datos.  
   
  Las estadísticas de ejecución del informe de detalles del procedimiento almacenado se recopilan y agregan desde sys.dm_exec_procedure_stats (Transact-SQL). Las referencias se obtienen de sys.sql_expression_dependencies (Transact-SQL).  
   
@@ -178,3 +183,4 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

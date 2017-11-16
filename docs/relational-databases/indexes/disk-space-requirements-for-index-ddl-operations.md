@@ -2,10 +2,14 @@
 title: "Requisitos de espacio en disco para operaciones DDL de índice | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa0c1457fbe63f013759b545929d98ea16ff3bf4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espacio en disco para operaciones DDL de índice
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   El espacio en disco es una consideración importante a la hora de crear, volver a generar o quitar índices. Un espacio en disco inadecuado puede degradar el rendimiento e incluso provocar errores en las operaciones de índice. En este tema se proporciona información general que puede ayudar a determinar la cantidad de espacio necesario para las operaciones de lenguaje de definición de datos (DDL).  
   
@@ -107,3 +112,4 @@ ms.lasthandoff: 11/09/2017
  [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
+

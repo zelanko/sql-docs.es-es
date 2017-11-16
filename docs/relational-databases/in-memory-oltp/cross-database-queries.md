@@ -2,33 +2,38 @@
 title: Consultas entre bases de datos | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 92ee900e67fc15542188e8606c4331775738252c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
+ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="cross-database-queries"></a>Consultas entre bases de datos
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las tablas optimizadas para memoria no admiten las transacciones entre bases de datos. No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla optimizada para memoria. No puede copiar fácilmente los datos de una tabla de una base de datos en una tabla optimizada para memoria de otra base de datos.  
+  Desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las tablas con optimización para memoria no admiten las transacciones entre bases de datos. No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla con optimización para memoria. No puede copiar fácilmente los datos de una tabla de una base de datos en una tabla con optimización para memoria de otra base de datos.  
   
- Las variables de tabla no son transaccionales. Por tanto, se pueden utilizar las variables de tabla optimizada para memoria en consultas entre bases de datos y pueden así facilitar la migración de datos de una base de datos a tablas optimizadas para memoria de otra. Puede utilizar dos transacciones. En la primera transacción, inserte los datos de la tabla remota en la variable. En la segunda transacción, inserte los datos en la tabla optimizada para memoria local desde la variable.  Para más información sobre las variables de tabla optimizada para memoria, consulte [Tabla temporal y variante de tabla más rápidas utilizando la optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+ Las variables de tabla no son transaccionales. Por tanto, se pueden utilizar las variables de tabla con optimización para memoria en consultas entre bases de datos y pueden así facilitar la migración de datos de una base de datos a tablas con optimización para memoria de otra. Puede utilizar dos transacciones. En la primera transacción, inserte los datos de la tabla remota en la variable. En la segunda transacción, inserte los datos en la tabla con optimización para memoria local desde la variable.  Para más información sobre las variables de tabla con optimización para memoria, consulte [Tabla temporal y variante de tabla más rápidas con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
 ## <a name="example"></a>Ejemplo
-En este ejemplo se muestra un método para transferir datos desde una base de datos a una tabla optimizada para memoria en una tabla de datos distinta.
+En este ejemplo se muestra un método para transferir datos desde una base de datos a una tabla con optimización para memoria en una tabla de datos distinta.
 
 1. Cree objetos de prueba.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
@@ -93,7 +98,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     > Mensaje 41317, nivel 16, estado 5  
     > Una transacción de usuario que accede a tablas con optimización para memoria o módulos compilados de forma nativa no puede acceder a más de una base de datos de usuario o a las bases de datos modelo y msdb, y no puede escribir en la base de datos maestra.
 
-3.  Cree un tipo de tabla optimizada para memoria.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+3.  Cree un tipo de tabla con optimización para memoria.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
     ```tsql
     USE DestinationDatabase;
@@ -110,7 +115,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     GO
     ```
 
-4.  Vuelva a intentar ejecutar la consulta a través de las bases de datos.  Esta vez, los datos de origen se transmitirán primero a una variable de tabla optimizada para memoria.  Luego los datos de la variable de tabla se transferirán a la tabla optimizada para memoria.
+4.  Vuelva a intentar ejecutar la consulta a través de las bases de datos.  Esta vez, los datos de origen se transmitirán primero a una variable de tabla con optimización para memoria.  Luego los datos de la variable de tabla se transferirán a la tabla con optimización para memoria.
     ```tsql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
@@ -127,3 +132,4 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

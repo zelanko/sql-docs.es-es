@@ -2,10 +2,14 @@
 title: "Creación de nombre de los índices | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f02df330226be64a6a1dc6f89318cc1fb2fcc5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   En este tema se describe cómo crear un índice único en una tabla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice único garantiza que la clave de índice no contiene valores duplicados y, por tanto, cada fila de la tabla es en cierta forma única. No existen diferencias significativas entre crear una restricción UNIQUE y crear un índice único que es independiente de una restricción. La validación de datos se produce de igual modo y el optimizador de consultas no distingue entre un índice único creado mediante una restricción o creado manualmente. Sin embargo, la creación de una restricción UNIQUE en la columna aclara el objetivo del índice. Para obtener más información acerca de las restricciones UNIQUE, vea [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
@@ -147,7 +152,7 @@ ms.lasthandoff: 11/09/2017
   
 7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla* , active las casillas de las columnas de tabla que se van a agregar al índice único.  
+8.  En el cuadro de diálogo **Seleccionar columnas de***table_name* , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
 9. Haga clic en **Aceptar**.  
   
@@ -181,3 +186,4 @@ ms.lasthandoff: 11/09/2017
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

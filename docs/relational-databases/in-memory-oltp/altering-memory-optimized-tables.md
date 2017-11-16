@@ -1,37 +1,42 @@
 ---
 title: "Modificar tablas con optimización para memoria | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb499975e6429ac0a54f60cbfca6e72b0290f946
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Los cambios de esquema y de índice en las tablas optimizadas para memoria pueden realizarse mediante la instrucción ALTER TABLE. En SQL Server 2016 y Azure SQL Database, las operaciones ALTER TABLE en tablas optimizadas para memoria son sin conexión, lo que significa que la tabla no está disponible para realizar consultas mientras la operación está en curso. La aplicación de base de datos puede seguir ejecutándose, y cualquier operación que tenga acceso a la tabla se bloqueará hasta que se complete el proceso de modificación. Es posible combinar varias operaciones ADD, DROP o ALTER en una sola instrucción ALTER TABLE.
+  Los cambios de esquema y de índice en las tablas con optimización para memoria pueden realizarse mediante la instrucción ALTER TABLE. En SQL Server 2016 y Azure SQL Database, las operaciones ALTER TABLE en tablas optimizadas para memoria son sin conexión, lo que significa que la tabla no está disponible para realizar consultas mientras la operación está en curso. La aplicación de base de datos puede seguir ejecutándose, y cualquier operación que tenga acceso a la tabla se bloqueará hasta que se complete el proceso de modificación. Es posible combinar varias operaciones ADD, DROP o ALTER en una sola instrucción ALTER TABLE.
   
 ## <a name="alter-table"></a>ALTER TABLE  
  
 La sintaxis ALTER TABLE se usa para realizar cambios en el esquema de la tabla, así como para agregar, eliminar y volver a generar índices. Los índices se consideran parte de la definición de tabla:  
   
--   La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.  
+-   La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas con optimización para memoria.  
   
--   Si no se usa una instrucción ALTER TABLE, las instrucciones CREATE INDEX, DROP INDEX y ALTER INDEX *no* son compatibles con los índices de las tablas optimizadas para memoria.  
+-   Si no se usa una instrucción ALTER TABLE, las instrucciones CREATE INDEX, DROP INDEX y ALTER INDEX *no* son compatibles con los índices de las tablas con optimización para memoria.  
   
  A continuación se muestra la sintaxis de las cláusulas ADD, DROP y ALTER INDEX en la instrucción ALTER TABLE.  
   
@@ -83,8 +88,8 @@ La sintaxis ALTER TABLE se usa para realizar cambios en el esquema de la tabla, 
   
  Por ejemplo, si un procedimiento almacenado compilado de forma nativa enlazado a esquema hace referencia a una columna *c1* de la tabla *mytable*, la columna *c1* no se puede quitar. Igualmente, si hay un procedimiento así con una instrucción INSERT sin lista de columnas (por ejemplo, `INSERT INTO dbo.mytable VALUES (...)`), no se puede quitar ninguna columna de la tabla.  
  
-## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Registro de ALTER TABLE en tablas optimizadas para memoria
-En una tabla optimizada para memoria, la mayoría de los escenarios ALTER TABLE ahora se ejecutan en paralelo y generan una optimización de las escrituras en el registro de transacciones. La optimización se consigue únicamente al registrar los cambios de metadatos en el registro de transacciones. Sin embargo, las siguientes operaciones de ALTER TABLE se ejecutan en un solo subproceso y no tienen optimización para registro.
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Registro de ALTER TABLE en tablas con optimización para memoria
+En una tabla con optimización para memoria, la mayoría de los escenarios ALTER TABLE ahora se ejecutan en paralelo y generan una optimización de las escrituras en el registro de transacciones. La optimización se consigue únicamente al registrar los cambios de metadatos en el registro de transacciones. Sin embargo, las siguientes operaciones de ALTER TABLE se ejecutan en un solo subproceso y no tienen optimización para registro.
 
 En este caso, la operación de un solo subproceso registraría todo el contenido de la tabla modificada en el registro de transacciones. La siguiente es una lista de las operaciones de un solo subproceso:
 
@@ -172,4 +177,5 @@ GO
 
 [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
 

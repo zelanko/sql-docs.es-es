@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- solutions [SQL Server Management Studio], creating
+helpviewer_keywords: solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53422674214e97dbc331d06bbb210dd27858296b
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 08c16387a7b73b26a2c9448623e9a2799c04e476
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-new-solution"></a>Crear una nueva solución
 Cuando se crea un proyecto, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crea una solución que lo incluye. Solo puede abrir una solución al mismo tiempo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] no permite crear carpetas dentro de los proyectos. Para organizar el trabajo, cree varios proyectos.  
@@ -47,4 +44,3 @@ Para obtener acceso al Explorador de soluciones, en el menú **Ver** , haga clic
 [Ver](../../ssms/solution/solution-explorer.md)  
 [Abrir soluciones desde el control de código fuente](https://msdn.microsoft.com/en-us/library/ms174216.aspx)  
   
-

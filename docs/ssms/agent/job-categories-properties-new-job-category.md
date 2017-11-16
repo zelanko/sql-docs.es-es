@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.categoriesproperties
+f1_keywords: sql13.ag.job.categoriesproperties
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6bd0292c54871a224945c43a10a94272dbb001a8
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b26f1ff05b93b81aed61a7ee0ea0aa7beece47fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-categories-properties---new-job-category"></a>Propiedades de las categorías de trabajo - Nueva categoría de trabajo
 Enumera los trabajos de una categoría de trabajo o todas las categorías de trabajo, y permite agregar una categoría de trabajo nueva.  
@@ -46,4 +43,3 @@ Muestra el nombre del trabajo.
 ## <a name="see-also"></a>Vea también  
 [Crear trabajos](../../ssms/agent/create-jobs.md)  
   
-

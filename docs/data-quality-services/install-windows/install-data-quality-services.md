@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-data-quality-services"></a>Instalar Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contiene los dos componentes siguientes: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** y **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
@@ -105,9 +103,9 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     De forma predeterminada, si la cuenta de usuario es miembro del rol fijo de servidor sysadmin, puede iniciar sesión en el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mediante el [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] aunque no se haya concedido ninguno de los roles de DQS a su cuenta de usuario. Para obtener más información acerca de los tres roles de DQS, vea [Seguridad DQS](../../data-quality-services/dqs-security.md).  
+     De forma predeterminada, si la cuenta de usuario es miembro del rol fijo de servidor sysadmin, puede iniciar sesión en el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mediante el [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] aunque no se haya concedido ninguno de los roles de DQS a su cuenta de usuario. Para obtener más información acerca de los tres roles de DQS, vea [DQS Security](../../data-quality-services/dqs-security.md).  
   
-     Para obtener más información, consulte [Conceder roles de DQS a los usuarios](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
+     Para obtener más información, consulte [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
     > [!NOTE]  
     >  Los tres roles de DQS no están disponibles para las bases de datos DQS_PROJECTS y DQS_STAGING_DATA.  

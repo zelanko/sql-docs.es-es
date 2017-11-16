@@ -1,29 +1,25 @@
 ---
 title: "Lección 3: Copia de seguridad de base de datos en la dirección URL | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Lesson 3: Database backup to URL (Lección 3: Copia de seguridad de base de datos en la dirección URL)
 En esta lección, realizará una copia de seguridad de la base de datos AdventureWorks2014 en la instancia local de SQL Server 2016 en el contenedor de Azure que ha creado en la [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
@@ -62,4 +58,3 @@ Para realizar una copia de seguridad de una base de datos en Blob Storage, siga 
   
 [Lección 4: Restaurar la base de datos a la máquina virtual desde la dirección URL](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
-

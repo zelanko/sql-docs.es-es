@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
   A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite las suscripciones de inserción a Oracle a través del proveedor Oracle OLE DB suministrado por Oracle.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
     |Seleccionar el protocolo de red|Seleccione los protocolos que desee admitir. La mayoría de aplicaciones utilizan TCP.|  
     |Especificar la información de host para identificar las escuchas de base de datos|El host es el nombre o el alias de DNS del equipo donde se está ejecutando la escucha de Oracle, que normalmente es el mismo equipo donde reside la base de datos. En algunos protocolos, se debe proporcionar información adicional. Por ejemplo, si se selecciona TCP, se debe proporcionar el puerto donde se escuchan las solicitudes de conexión a la base de datos de destino. La configuración predeterminada de TCP utiliza el puerto 1521.|  
   
-3.  Cree una instantánea o una publicación transaccional, habilítela para suscriptores que no sean[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, cree una suscripción de inserción para el suscriptor. Para más información, consulte [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Cree una instantánea o una publicación transaccional, habilítela para suscriptores que no sean[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, cree una suscripción de inserción para el suscriptor. Para más información, consulte [Crear una suscripción para un suscriptor que no sea de SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 ### <a name="setting-directory-permissions"></a>Configurar permisos de directorio  
  A la cuenta con la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor deben concederse permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que esté instalado el software de red de cliente de Oracle.  
@@ -70,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Por ejemplo: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Por ejemplo, `sqlplus replication/$tr0ngPasswerd@Oracle90Server`.  
   
 4.  Si la configuración de red es correcta, se iniciará la sesión y verá el símbolo de `SQL` .  
   

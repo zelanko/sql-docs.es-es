@@ -1,36 +1,34 @@
 ---
 title: "Creación de una tabla temporal con control de versiones del sistema con optimización para memoria | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 32df29be26fb5e26217a09bbb20b9cef39539aee
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f87c849fff748a95cefa9b960594a2866b5f6bae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Igual que crea una tabla de historial basada en disco, puede crear una tabla temporal con optimización para memoria de varias maneras.  
+  Igual que crea una tabla de historial basada en disco, puede crear una tabla temporal optimizada para memoria de varias maneras.  
   
 > [!NOTE]  
->  Para crear tablas con optimización para memoria, primero debe crear el [grupo de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).  
+>  Para crear tablas optimizadas para memoria, primero debe crear el [grupo de archivos optimizados para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).  
   
- Esta opción es práctica en casos en los que quiera controlar la nomenclatura y, aun así, delegar en el sistema la generación de la tabla de historial con la configuración predeterminada. En el ejemplo siguiente, una tabla temporal con control de versiones del sistema con optimización para memoria se vincula a una nueva tabla de historial basada en disco.  
+ Esta opción es práctica en casos en los que quiera controlar la nomenclatura y, aun así, delegar en el sistema la generación de la tabla de historial con la configuración predeterminada. En el ejemplo siguiente, una tabla temporal con control de versiones del sistema optimizada para memoria se vincula a una nueva tabla de historial basada en disco.  
   
 ```  
 CREATE SCHEMA History  
@@ -103,4 +101,3 @@ WITH
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

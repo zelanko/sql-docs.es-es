@@ -1,5 +1,5 @@
 ---
-title: "Características compatibles con las ediciones de SQL Server 2016 Reporting Services | Documentos de Microsoft"
+title: "Características de Reporting Services compatibles con las ediciones de SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 82a69675cde69283bf74a700bb1bd09ebea4d44b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Características de Reporting Services compatibles con las ediciones de SQL Server 2016
 
-Este tema proporciona detalles de las características admitidas por las diversas ediciones de SQL Server 2016.  
+En este tema se indica información detallada de las características admitidas por las diversas ediciones de SQL Server 2016.  
   
  La edición de evaluación de SQL Server está disponible durante un período de prueba de 180 días.  
   
@@ -34,9 +32,9 @@ Este tema proporciona detalles de las características admitidas por las diversa
     
  **Pruebe SQL Server 2016.**    
     
- > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Descargar desde el Centro de evaluación](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Descargar SQL Server 2016 desde el Centro de evaluación](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Máquina virtual de Azure pequeña ](../analysis-services/media/azure-virtual-machine-small.png)**[Poner en marcha una máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Máquina virtual de Azure pequeña](../analysis-services/media/azure-virtual-machine-small.png) **[Poner en marcha una máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Para conocer las características admitidas por las ediciones Evaluation y Developer, consulte SQL Server Enterprise Edition.
 
@@ -78,7 +76,7 @@ Para navegar por la tabla para buscar una tecnología de SQL Server, haga clic e
 |Alertas<sup>2</sup>|Sí||||||Sí|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Sí||||||Sí|  
   
- <sup>1</sup> para obtener más información sobre orígenes de datos admitidos en SQL Server 2016 Reporting Services (SSRS), consulte [orígenes de datos admitidos por Reporting Services &#40; SSRS &#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> Para obtener más información sobre los orígenes de datos compatibles con SQL Server 2016 Reporting Services (SSRS), consulte [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> Requiere Reporting Services en el modo de SharePoint. Para obtener más información, vea [Instalar el modo de SharePoint de Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -110,8 +108,7 @@ Para navegar por la tabla para buscar una tecnología de SQL Server, haga clic e
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[Especificaciones de producto de SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[Especificaciones de producto para SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [Instalación de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

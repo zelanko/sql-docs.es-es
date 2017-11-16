@@ -1,27 +1,24 @@
 ---
 title: "Implementación de UPDATE con FROM o subconsultas | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 337a85dddb52869d8ec54d13bb8231164b98f4e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementación de UPDATE con FROM o subconsultas
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ Esta es la instrucción UPDATE de T-SQL original:
 
 El código de T-SQL de ejemplo de esta sección muestra una solución alternativa que proporciona un buen rendimiento. Dicha solución se implementa en un desencadenador compilado de forma nativa. Es fundamental que se fije en lo siguiente en el código:  
   
-- El tipo denominado dbo.Type1, que es un tipo de tabla con optimización para memoria.  
+- El tipo denominado dbo.Type1, que es un tipo de tabla optimizada para memoria.  
 - El bucle WHILE en el desencadenador.  
   - El bucle recupera las filas de Inserted una de cada vez.  
   
@@ -163,4 +160,3 @@ El código de T-SQL de ejemplo de esta sección muestra una solución alternativ
   
   
   
-

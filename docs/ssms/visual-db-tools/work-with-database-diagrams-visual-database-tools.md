@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.workingwithsql2000diagrams
+f1_keywords: sql13.swb.workingwithsql2000diagrams
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - diagrams [SQL Server], about diagrams
 - database diagrams [SQL Server]
 - diagrams [SQL Server]
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f6ecc2b7d8048af0d596d49efb918d533348d62f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 2480ce8d2efb0a700c2c067640ef92a2d0f39119
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Trabajar con diagramas de base de datos (Visual Database Tools)
 Puede crear un diagrama visual de la base de datos con el Diseñador de base de datos. En los temas siguientes se tratan los conceptos básicos relativos al uso del diseñador para trabajar con diagramas de base de datos.  
@@ -54,4 +51,3 @@ Puede crear un diagrama visual de la base de datos con el Diseñador de base de 
   
 [Trabajar con el diseño de diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
-

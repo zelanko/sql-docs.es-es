@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 5a1f1379effcdfe728dae0f3a74f1a014876b9d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
   En este tema se describe cómo crear una directiva de coincidencia en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias se prepara en DQS ejecutando la actividad Directiva de coincidencia con los datos de ejemplo. En esta actividad creará y probará una o varias reglas de coincidencia en la directiva y después publicará la base de conocimiento para poner a disposición pública las reglas de coincidencia. Solo puede haber una directiva de coincidencia en cada base de conocimiento, pero esta directiva puede contener varias reglas de coincidencia.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
  La creación de una regla de coincidencia es un proceso iterativo porque puede que necesite cambiar las ponderaciones relativas de los dominios de la regla, la similitud o la propiedad de requisito previo de un dominio o la puntuación de coincidencia mínima para la regla con la finalidad de obtener los resultados que precisa. También puede darse el caso de que necesite crear varias reglas, que se ejecutarán sucesivamente para crear la puntuación de coincidencia. Puede que le resulte difícil obtener el resultado que necesita con una sola regla. El uso de varias reglas proporcionará distintas vistas de una coincidencia necesaria. Con varias reglas, quizá pueda incluir menos dominios en cada regla, utilizar ponderaciones mayores para cada dominio y lograr mejores resultados. Si los datos son menos precisos y completos, puede que necesite más reglas para buscar las coincidencias necesarias. Si los datos son más precisos y completos, necesitará menos reglas.  
   
- La generación de perfiles proporciona nuevas perspectivas sobre la integridad y la unicidad. Considere que la integridad y la unicidad forman un tándem. Utilice los datos de integridad y unicidad para determinar qué ponderación debe tener un campo en el proceso de búsqueda de coincidencias. Si hay un nivel alto de unicidad en un campo, utilizar ese campo en una directiva de coincidencia puede reducir los resultados de búsqueda de coincidencias, por lo que puede establecer la ponderación de ese campo en un valor relativamente pequeño. Si tiene un bajo nivel de unicidad en una columna, pero la integridad es baja, es posible que no desee incluir un dominio para esa columna. Si el nivel de unicidad es bajo, pero el nivel de integridad es alto, puede que desee incluir el dominio. Algunas columnas, como sexo, pueden tener un nivel bajo de unicidad intrínseco. Para obtener más información, consulte [Pestañas Generador de perfiles y Resultados](#Tabs).  
+ La generación de perfiles proporciona nuevas perspectivas sobre la integridad y la unicidad. Considere que la integridad y la unicidad forman un tándem. Utilice los datos de integridad y unicidad para determinar qué ponderación debe tener un campo en el proceso de búsqueda de coincidencias. Si hay un nivel alto de unicidad en un campo, utilizar ese campo en una directiva de coincidencia puede reducir los resultados de búsqueda de coincidencias, por lo que puede establecer la ponderación de ese campo en un valor relativamente pequeño. Si tiene un bajo nivel de unicidad en una columna, pero la integridad es baja, es posible que no desee incluir un dominio para esa columna. Si el nivel de unicidad es bajo, pero el nivel de integridad es alto, puede que desee incluir el dominio. Algunas columnas, como sexo, pueden tener un nivel bajo de unicidad intrínseco. Para obtener más información, consulte [Profiler and Results Tabs](#Tabs).  
   
 ##  <a name="Starting"></a> Primer paso: iniciar una directiva de coincidencia  
  La actividad de directiva de coincidencia se realiza en el área de administración de la base de conocimiento de la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -137,7 +135,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Si hace doble clic en un registro en la tabla de resultados de búsqueda de coincidencias, DQS muestra un cuadro emergente **Detalles de puntuación de coincidencia** que muestra el registro dinámico y el registro de origen (y los valores de todos sus campos), la puntuación entre ellos y una exploración en profundidad de la coincidencia de registros. La exploración en profundidad muestra los valores de cada campo del registro dinámico y del registro de origen para que pueda compararlos, y muestra la puntuación de coincidencia con la que cada campo contribuye a la puntuación de coincidencia total de los dos registros.  
   
-14. Vea las estadísticas en la pestaña **Generador de perfiles** y **Resultados de búsqueda de coincidencias** para asegurarse de que ha obtenido los resultados esperados. Para obtener más información, consulte [Pestañas Generador de perfiles y Resultados](#Tabs).  
+14. Vea las estadísticas en la pestaña **Generador de perfiles** y **Resultados de búsqueda de coincidencias** para asegurarse de que ha obtenido los resultados esperados. Para obtener más información, consulte [Profiler and Results Tabs](#Tabs).  
   
 15. Si es necesario cambiar la regla, cámbiela en el Editor de reglas y haga clic en **Reiniciar**.  
   
@@ -169,7 +167,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Si hace doble clic en un registro en la tabla de resultados de búsqueda de coincidencias, DQS muestra un cuadro emergente **Detalles de puntuación de coincidencia** que muestra el registro dinámico y el registro de origen (y los valores de todos sus campos), la puntuación entre ellos y una exploración en profundidad de la coincidencia de registros. La exploración en profundidad muestra los valores de cada campo del registro dinámico y del registro de origen para que pueda compararlos, y muestra la puntuación de coincidencia con la que cada campo contribuye a la puntuación de coincidencia total de los dos registros.  
   
-5.  Vea las estadísticas en la pestaña **Generador de perfiles** y **Resultados de búsqueda de coincidencias** para asegurarse de que ha obtenido los resultados esperados. Haga clic en la pestaña **Reglas de coincidencia** para ver cuál es la configuración de dominio para cada regla. Para obtener más información, consulte [Pestañas Generador de perfiles y Resultados](#Tabs).  
+5.  Vea las estadísticas en la pestaña **Generador de perfiles** y **Resultados de búsqueda de coincidencias** para asegurarse de que ha obtenido los resultados esperados. Haga clic en la pestaña **Reglas de coincidencia** para ver cuál es la configuración de dominio para cada regla. Para obtener más información, consulte [Profiler and Results Tabs](#Tabs).  
   
 6.  Si no está satisfecho con los resultados de todas las reglas, haga clic en **Atrás** para volver a la página **Directiva de coincidencia** , modifique una o varias reglas según sea necesario, vuelva a la página **Resultados de búsqueda de coincidencias** y, a continuación, haga clic en **Reiniciar**.  
   
@@ -194,7 +192,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="FollowUp"></a> Seguimiento: después de crear una directiva de coincidencia  
  Después de crear una directiva de coincidencia, puede ejecutar un proyecto de búsqueda de coincidencias basándose en la base de conocimiento que contiene la directiva de coincidencia. Para obtener más información, consulte [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Pestañas Generador de perfiles y Resultados  
+##  <a name="Tabs"></a> Profiler and Results Tabs  
  Las pestañas Generador de perfiles y Resultados contienen estadísticas para las páginas Directiva de coincidencia y Resultados de búsqueda de coincidencias.  
   
 ###  <a name="Profiler"></a> Pestaña Generador de perfiles  
@@ -259,4 +257,3 @@ ms.lasthandoff: 09/09/2017
 -   El mayor número de duplicados existentes en un clúster  
   
   
-

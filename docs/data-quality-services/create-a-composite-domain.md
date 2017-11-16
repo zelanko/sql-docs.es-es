@@ -5,25 +5,23 @@ ms.date: 11/22/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
   En este tema se describe cómo crear un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de uno o varios dominios individuales que se aplican a un único campo de datos. Para más información sobre los dominios compuestos, vea [Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md).  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  En la tabla **Asignaciones** , seleccione una columna de origen en la lista desplegable para la columna **Columna de origen** de una fila vacía. Asegúrese de que la columna de origen contiene el dominio compuesto formado por dos dominios individuales existentes. Si no existe un dominio individual correspondiente, haga clic en el icono **Crear un dominio** .  
   
-6.  En la tabla **Asignaciones** , seleccione una columna de origen en la lista desplegable para la columna **Columna de origen** de una fila vacía. Asegúrese de que la columna de origen contiene elementos de dominio compuesto asociados a dos dominios individuales existentes. Si no existen los dominios individuales correspondientes, haga clic en el icono **Crear un dominio** para crearlos. Para obtener más información, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
+6.  En la tabla **Asignaciones** , seleccione una columna de origen en la lista desplegable para la columna **Columna de origen** de una fila vacía. Asegúrese de que la columna de origen contiene elementos de dominio compuesto asociados a dos dominios individuales existentes. Si no existen los dominios individuales correspondientes, haga clic en el icono **Crear un dominio** para crearlos. Para más información, consulte [Crear un dominio](../data-quality-services/create-a-domain.md).  
   
 7.  Haga clic en el icono **Crear un dominio compuesto** .  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Crear** para crear la nueva base de conocimiento o en **Abrir** para abrir una ya existente.  
   
-3.  Asegúrese de que existen dos o más dominios individuales que son necesarios para el dominio compuesto. En caso contrario, haga clic en el icono **Crear un dominio** y créelos. Para obtener más información, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Asegúrese de que existen dos o más dominios individuales que son necesarios para el dominio compuesto. En caso contrario, haga clic en el icono **Crear un dominio** y créelos. Para más información, consulte [Crear un dominio](../data-quality-services/create-a-domain.md).  
   
 4.  En la página **Administración de dominios** , haga clic en el icono **Crear un dominio compuesto** situado sobre la lista de dominios.  
   
@@ -107,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  Si, cuando se utiliza el análisis basado en conocimiento, los datos de origen contienen un número de valores inferior al número de dominios que hay en el dominio compuesto, DQS colocará un valor NULL en el dominio que falta. Cuando los datos de origen contienen un número de valores superior al número de dominios que hay en el dominio compuesto, DQS agregará los datos adicionales a una de las columnas. Si dos o más dominios incluyen los mismos valores, el origen de datos se analizará para el primer dominio coincidente.  
   
   
-

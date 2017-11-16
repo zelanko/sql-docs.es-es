@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9edea4b9fa85c59f41a48b299e2693fcfc00c9e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
   Este tema describe instrucciones para llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos.  
@@ -90,7 +88,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
  Para ejecutar este ejemplo:  
   
-1.  Cree una base de datos de ejemplo con un grupo de archivos de datos con optimización para memoria. Para obtener más información sobre cómo crear una base de datos con un grupo de archivos con optimización para memoria, vea [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+1.  Cree una base de datos de ejemplo con un grupo de archivos de datos optimizados para memoria. Para obtener más información sobre cómo crear una base de datos con un grupo de archivos optimizados para memoria, vea [Crear una tabla optimizada para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 2.  Cree un origen de datos ODBC denominado PrepExecSample que apunte a la base de datos. Utilice el controlador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. También podría modificar el ejemplo y utilizar [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
   
@@ -108,7 +106,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
     SELECT * FROM dbo.Item  
     ```  
   
- A continuación se muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] que crea los objetos de base de datos con optimización para memoria.  
+ A continuación se muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] que crea los objetos de base de datos optimizada para memoria.  
   
 ```  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))  
@@ -401,4 +399,3 @@ int _tmain() {
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

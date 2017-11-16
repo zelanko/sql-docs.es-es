@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos en expresiones (generador de informes y SSRS) | Documentos de Microsoft
+title: Tipos de datos en expresiones (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  
@@ -101,9 +100,9 @@ ms.lasthandoff: 08/09/2017
  Cuando se establece conexión con un origen de datos cuyo proveedor de datos no permite convertir todos los tipos de datos existentes en dicho origen de datos, el tipo de datos predeterminado para los tipos de datos no compatibles es String. En los ejemplos siguientes, se ofrecen soluciones para tipos de datos concretos que se devuelven como String.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Concatenar un tipo de datos String y un tipo de datos CLR DateTimeOffset  
- Para la mayoría de los tipos de datos, el lenguaje CLR proporciona conversiones predeterminadas que permiten concatenar valores de tipos de datos diferentes en una cadena con el operador &. Por ejemplo, la expresión siguiente concatena el texto "The date and time are: " con un campo de conjunto de datos StartDate, que es un valor <xref:System.DateTime>: `="The date and time are: " & Fields!StartDate.Value`.  
+ Para la mayoría de los tipos de datos, el lenguaje CLR proporciona conversiones predeterminadas que permiten concatenar valores de tipos de datos diferentes en una cadena con el operador &. Por ejemplo, la expresión siguiente concatena el texto "The date and time are:" con un campo de conjunto de datos StartDate, que es un valor <xref:System.DateTime> : `="The date and time are: " & Fields!StartDate.Value`.  
   
- Para algunos tipos de datos, puede ser necesario incluir la función ToString. Por ejemplo, la siguiente expresión muestra el mismo ejemplo utilizando el tipo de datos CLR <xref:System.DateTimeOffset>, que incluye la fecha, la hora y una zona horaria desplaza en relación con la zona horaria UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Para algunos tipos de datos, puede ser necesario incluir la función ToString. Por ejemplo, la expresión siguiente muestra el mismo ejemplo con el tipo de datos CLR <xref:System.DateTimeOffset>, que incluye la fecha, la hora y un ajuste de zona horaria en relación con la zona horaria UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Convertir un tipo de datos String en un tipo de datos CLR DateTime  
  Si una extensión de procesamiento de datos no admite todos los tipos de datos definidos en un origen de datos, los datos se pueden recuperar como texto. Por ejemplo, un valor del tipo de datos **datetimeoffset(7)** se puede recuperar como un tipo de datos String. En Perth, Australia, el valor de cadena para la fecha 1 de julio de 2008, a las 6:05:07,9999999 a.m. sería algo parecido a:  
@@ -146,10 +145,9 @@ ms.lasthandoff: 08/09/2017
   
  Para obtener más información sobre los tipos de datos de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) y [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- Para obtener más información sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Tipos de datos en Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obtener más en losformación sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Tipos de datos en Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) en los [SQL Server Books Onlen lose](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   
-

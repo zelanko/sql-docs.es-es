@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Login GDR event class
+helpviewer_keywords: Audit Login GDR event class
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ffbe4f7d3d0fdc31050aa96b7606aab622ca0b40
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ddbf4afa06c6905780327a66510e035c12b66f8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR [clase de eventos]
   La clase de eventos **Audit Login GDR** se produce siempre que se agrega o quita un derecho de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Esta clase de eventos se aplica a los procedimientos almacenados **sp_grantlogin**, **sp_revokelogin**y **sp_denylogin** .  

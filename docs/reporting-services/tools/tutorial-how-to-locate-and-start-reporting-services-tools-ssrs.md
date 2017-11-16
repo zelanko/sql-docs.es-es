@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Cómo buscar e iniciar Reporting Services herramientas (SSRS) | Documentos de Microsoft"
+title: "Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -21,19 +21,17 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e25bb9ad2ff8136d4a5ff1a234092ec730ecae37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
 
   En este tutorial se presentan las herramientas utilizadas para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes y crear y publicar informes paginados y móviles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si ya está familiarizado con estas herramientas, puede pasar a los otros tutoriales, donde podrá adquirir conocimientos para utilizar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para otros tutoriales, vea [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
@@ -49,13 +47,13 @@ ms.lasthandoff: 08/09/2017
 -   Administre las claves de cifrado.  
 -   Configure el procesamiento desatendido de informes y la entrega de informes por correo electrónico.  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. Para más información, consulte [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+ **Instalación:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, consulte [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Para iniciar el Administrador de configuración de Reporting Services  
   
 1.  En la pantalla de inicio de Windows, escriba **reporting** y, en los resultados de búsqueda de **Aplicaciones** , haga clic en **Administrador de configuración de Reporting Services**.  
   
-     ![Administrador de configuración de inicio de Reporting services](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Administrador de configuración de inicio de reporting services")  
+     ![administrador de configuración de Reporting Services al inicio](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "administrador de configuración de Reporting Services al inicio")  
   
      **Or**  
   
@@ -67,28 +65,28 @@ ms.lasthandoff: 08/09/2017
   
      Si especifica un equipo remoto, haga clic en **Buscar** para establecer una conexión. Previamente, debe haber configurado el servidor de informes para la administración remota. Para obtener más información, vea [Configurar un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  En **Enstance Name**, elija la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desee configurar. Solo SQL Server 2008 y posteriores instancias del servidor de informes aparecen en la lista. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+3.  En **Enstance Name**, elija la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desee configurar. En la lista solo aparecen instancias del servidor de informes de SQL Server 2008 y versiones posteriores. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 4.  Haga clic en **Conectar**.  
   
 5.  Para comprobar que se haya iniciado la herramienta, compare sus resultados con los de la siguiente imagen:  
   
-     ![Herramienta de configuración de servicios de informes](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "herramienta de configuración de Reporting Services")  
+     ![Herramienta de configuración de Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Herramienta de configuración de Reporting Services")  
   
  **Próximos pasos:** [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) y [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="web-portal-native-mode"></a>Portal web (modo nativo)  
  Use [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) para establecer permisos, administrar suscripciones y programaciones, y trabajar con informes. También puede usar el portal web para ver informes.  
   
- **Instalación:** el portal web se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Instalación:** el portal web se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
- Antes de abrir el portal web, necesita tener permisos suficientes (inicialmente, solo los miembros del grupo de administradores locales tienen permisos que proporcionan acceso a las características del portal web). El portal web proporciona distintas páginas y opciones, según las asignaciones de roles del usuario actual. Los usuarios que no poseen permisos verán una página vacía. Los usuarios que posean permisos para ver informes contarán con vínculos en los que podrán hacer clic para abrir los informes. Para más información sobre permisos, vea [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Antes de abrir el portal web, necesita tener permisos suficientes (inicialmente, solo los miembros del grupo de administradores locales tienen permisos que proporcionan acceso a las características del portal web). El portal web proporciona distintas páginas y opciones, según las asignaciones de roles del usuario actual. Los usuarios que no poseen permisos verán una página vacía. Los usuarios que posean permisos para ver informes contarán con vínculos en los que podrán hacer clic para abrir los informes. Para obtener más información sobre permisos, vea [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
 ### <a name="to-start-the-web-portal"></a>Para iniciar el portal web  
   
 1.  Abra el explorador. Para obtener información sobre los exploradores y las versiones de los exploradores compatibles, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  En la barra de direcciones del explorador web, escriba la URL del portal web. De forma predeterminada, la dirección URL es `http://<serverName>/reports`. Puede utilizar la herramienta de configuración de Reporting Services para confirmar el nombre del servidor y la dirección URL. Para más información sobre las direcciones URL que se usan en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  En la barra de direcciones del explorador web, escriba la URL del portal web. De forma predeterminada, la dirección URL es `http://<serverName>/reports`. Puede utilizar la herramienta de configuración de Reporting Services para confirmar el nombre del servidor y la dirección URL. Para obtener más información sobre las direcciones URL que se usan en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  El portal web se abre en la ventana del explorador. La página de inicio es la carpeta Inicio. Según los permisos que posea, podrá ver otras carpetas, hipervínculos a informes y archivos de recursos dentro de la página de inicio. También puede ver otros botones y comandos en la barra de herramientas.  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  En la pantalla de inicio de Windows, escriba **sql server** y, en los resultados de búsqueda de **Aplicaciones** , haga clic en **SQL Server Management Studio**.  
   
-     ![pantalla de inicio de Management studio desde windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "pantalla de inicio de management studio desde windows")  
+     ![Management Studio desde la pantalla de Inicio de Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Management Studio desde la pantalla de Inicio de Windows")  
   
      **Or**  
   
@@ -132,7 +130,7 @@ Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
   
 4.  En la lista **Plantillas** , haga clic en **Proyecto de servidor de informes**. El siguiente diagrama muestra cómo aparecen las plantillas de proyecto en el cuadro de diálogo:  
   
-     ![Nuevo cuadro de diálogo de plantilla de proyecto](../../reporting-services/tools/media/rs-ui-newrsproject.gif "cuadro de diálogo de plantilla de proyecto nuevo")  
+     ![Cuadro de diálogo Plantilla de proyecto nuevo](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Cuadro de diálogo Plantilla de proyecto nuevo")  
   
 5.  Escriba un nombre y ubicación para el proyecto, o haga clic en **Examinar** y seleccione una ubicación.  
   
@@ -180,13 +178,12 @@ Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Descargue el publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
+[Descargue el Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
 [Descargue el Generador de informes](http://go.microsoft.com/fwlink/?LinkID=219138)  
 [Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
-[instalar Reporting Services el modo de SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+[Instalar el modo de SharePoint de Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Herramientas de diseño de consulta](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Tutoriales de Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

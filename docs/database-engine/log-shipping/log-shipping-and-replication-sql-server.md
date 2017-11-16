@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Trasvase de registros y replicación (SQL Server)
   El trasvase de registros incluye dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos principal se propagan mediante el trasvase de registros a la otra copia de la base de datos, conocida como la base de datos secundaria. El trasvase de registros incluye la aplicación a la base de datos secundaria del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos principal.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>Trasvase de registros con la replicación transaccional  
  En la replicación transaccional, el comportamiento del trasvase de registros depende de la opción **sync with backup** . Esta opción se puede establecer en la base de datos de publicaciones y en la base de datos de distribución. En lo que respecta al trasvase de registros para el publicador, solo tiene relevancia la configuración de la base de datos de publicaciones.  
   
- Establecer esta opción en la base de datos de publicaciones garantiza que las transacciones no se enviarán a la base de datos de distribución hasta que se hayan incluido en la copia de seguridad en la base de datos de publicaciones. La última copia de seguridad de la base de datos de publicaciones se puede restaurar posteriormente en el servidor secundario sin que exista ninguna posibilidad de que la base de datos de distribución contenga transacciones que no existan en la base de datos de publicaciones restaurada. Esta opción garantiza que si el publicador genera un error en el servidor secundario, se mantendrá la coherencia entre el publicador, el distribuidor y los suscriptores. La latencia y el rendimiento se verán afectados porque no será posible entregar transacciones a la base de datos de distribución hasta que se haya hecho una copia de seguridad de ellas en el publicador. Si la aplicación puede tolerar esta latencia, se recomienda establecer esta opción en la base de datos de publicaciones. Si no se establece la opción **sync with backup** , los suscriptores podrían recibir cambios que ya no están incluidos en la base de datos recuperada en el servidor secundario. Para más información, consulte [Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+ Establecer esta opción en la base de datos de publicaciones garantiza que las transacciones no se enviarán a la base de datos de distribución hasta que se hayan incluido en la copia de seguridad en la base de datos de publicaciones. La última copia de seguridad de la base de datos de publicaciones se puede restaurar posteriormente en el servidor secundario sin que exista ninguna posibilidad de que la base de datos de distribución contenga transacciones que no existan en la base de datos de publicaciones restaurada. Esta opción garantiza que si el publicador genera un error en el servidor secundario, se mantendrá la coherencia entre el publicador, el distribuidor y los suscriptores. La latencia y el rendimiento se verán afectados porque no será posible entregar transacciones a la base de datos de distribución hasta que se haya hecho una copia de seguridad de ellas en el publicador. Si la aplicación puede tolerar esta latencia, se recomienda establecer esta opción en la base de datos de publicaciones. Si no se establece la opción **sync with backup** , los suscriptores podrían recibir cambios que ya no están incluidos en la base de datos recuperada en el servidor secundario. Para más información, consulte [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  **Para configurar la replicación transaccional y el trasvase de registros con la opción sync with backup:**  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   
-

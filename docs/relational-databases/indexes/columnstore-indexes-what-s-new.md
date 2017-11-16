@@ -1,27 +1,24 @@
 ---
 title: "Novedades de los índices de almacén de columnas | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
-ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 919cdbcd48d8773b906ad7e410cb18627fddd8bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +47,7 @@ ms.lasthandoff: 07/31/2017
 |Índices de árbol B adicionales permitidos en un montículo o árbol B con índice de almacén de columnas no agrupado|sí|sí|sí|sí|sí|sí|  
 |Índice de almacén de columnas agrupado actualizable||sí|sí|sí|sí|sí|  
 |Índice de árbol B en índice de almacén de columnas agrupado|||sí|sí|sí|sí|  
-|Índice de almacén de columnas en una tabla con optimización para memoria|||sí|sí|sí|sí|  
+|Índice de almacén de columnas en una tabla optimizada para memoria|||sí|sí|sí|sí|  
 |Compatibilidad de la definición del índice de almacén de columnas no agrupado con el uso de una condición filtrada|||sí|sí|sí|sí|  
 |Opción de retraso para los índices de almacén de columnas en CREATE TABLE y ALTER TABLE.|||sí|sí|sí|sí|
 |El índice de almacén de columnas puede tener una columna calculada no persistente.||||sí|||   
@@ -182,4 +179,3 @@ ms.lasthandoff: 07/31/2017
  [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

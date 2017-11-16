@@ -1,37 +1,35 @@
 ---
 title: "Trabajo con tablas temporales con control de versiones del sistema con optimización para memoria | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d2b2254b9ee5e3c0e041efe38580b226124c005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Trabajo con tablas temporales con control de versiones del sistema con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  En este tema se describen las diferencias entre trabajar con una tabla temporal con versiones del sistema con optimización para memoria y trabajar con una tabla temporal con versiones del sistema basadas en disco.  
+  En este tema se describen las diferencias entre trabajar con una tabla temporal con versiones del sistema optimizadas para memoria y trabajar con una tabla temporal con versiones del sistema basadas en disco.  
   
 > [!NOTE]  
 >  El uso de tablas temporales con tablas con optimización para memoria solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="discovering-metadata"></a>Detección de metadatos  
- Para detectar los metadatos sobre una tabla temporal con versiones del sistema con optimización para memoria, tiene que combinar información de [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) y [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md). Una tabla temporal con versiones del sistema se presenta como parent_object_id de la tabla de historial en memoria interno.  
+ Para detectar los metadatos sobre una tabla temporal con versiones del sistema optimizadas para memoria, tiene que combinar información de [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) y [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md). Una tabla temporal con versiones del sistema se presenta como parent_object_id de la tabla de historial en memoria interno.  
   
  En este ejemplo se muestra cómo consultar y combinar estas tablas.  
   
@@ -52,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
 ```  
   
 ## <a name="modifying-data"></a>Modificar datos  
- Las tablas temporales con versiones del sistema con optimización para memoria se pueden modificar mediante procedimientos almacenados compilados de forma nativa, que permiten convertir tablas no temporales con optimización para memoria a las versiones del sistema y mantener los procedimientos existentes almacenados de forma nativa.  
+ Las tablas temporales con versiones del sistema optimizadas para memoria se pueden modificar mediante procedimientos almacenados compilados de forma nativa, que permiten convertir tablas no temporales optimizadas para memoria a las versiones del sistema y mantener los procedimientos existentes almacenados de forma nativa.  
   
  En este ejemplo se muestra cómo se puede modificar una tabla creada anteriormente en un módulo compilado de forma nativa.  
   
@@ -91,4 +89,3 @@ GO ;
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

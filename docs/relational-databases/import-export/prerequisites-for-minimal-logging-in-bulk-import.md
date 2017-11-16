@@ -1,13 +1,11 @@
 ---
 title: "Requisitos previos para el registro mínimo durante la importación masiva | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 50e42a9267199f6e7e00b221a548b216625f5f91
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Requisitos previos para el registro mínimo durante la importación masiva
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Aunque no se registren las inserciones de datos en el registro de transacciones cuando se realiza una importación masiva de registro mínimo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] seguirá registrando las asignaciones de extensiones cada vez que se asigne una nueva a la tabla.  
   
--   La tabla no es con optimización para memoria.  
+-   La tabla no está optimizada para memoria.  
   
  La posibilidad de utilizar el registro mínimo con una tabla también depende de si la tabla está indizada y, en este caso, de si está vacía:  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
         > [!NOTE]  
         >  Si empieza con una tabla vacía y realiza una importación masiva de datos mediante varios lotes, el registro de las páginas de índice y de datos será mínimo para el primer lote pero, a partir del segundo lote, solo las páginas de datos se registrarán de forma mínima.  
   
--   Si la tabla tiene un índice clúster y está vacía, tanto las páginas de datos como de índice se registrarán de forma mínima. En cambio, si la tabla tiene un índice en clúster basado en btree pero no está vacía, tanto las páginas de datos como las de índice se registrarán de forma completa, independientemente del modelo de recuperación utilizado. Para las tablas con índices de almacén de columnas en clúster, los registros mínimos de los datos cargados en grupos de filas comprimidos siempre se realizan con independencia de que la tabla esté vacía o no cuando el tamaño es igual o superior a 102 400.  
+-   Si la tabla tiene un índice clúster y está vacía, tanto las páginas de datos como de índice se registrarán de forma mínima. En cambio, si la tabla tiene un índice en clúster basado en btree pero no está vacía, tanto las páginas de datos como las de índice se registrarán de forma completa, independientemente del modelo de recuperación utilizado. Para las tablas con índices de almacén de columnas en clúster, los registros mínimos de los datos cargados en grupos de filas comprimidos siempre se realizan con independencia de que la tabla esté vacía o no cuando el tamaño es igual o superior a 102 400.  
   
     > [!NOTE]  
     >  Si empieza con una tabla de almacén de filas vacía y realiza una importación masiva de datos mediante varios lotes, el registro de las páginas de índice y de datos será mínimo para el primer lote pero, a partir del segundo lote, solo las páginas de datos se registrarán de forma mínima.  

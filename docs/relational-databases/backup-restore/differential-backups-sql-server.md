@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="differential-backups-sql-server"></a>Copias de seguridad diferenciales (SQL Server)
   Este tema de copias de seguridad y restauración es pertinente para todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -55,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  En el momento de la restauración, antes de restaurar una copia de seguridad diferencial, debe restaurar su base. A continuación, solo necesita restaurar la copia diferencial más reciente para poner al día la base de datos hasta el momento en que se creó la copia de seguridad diferencial. Por lo general, restaurará la copia de seguridad completa más reciente seguida de la copia de seguridad diferencial más reciente que está basada en la copia de seguridad completa.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Copias de seguridad diferenciales de bases de datos con tablas con optimización para memoria  
- Para obtener información sobre las copias de seguridad diferenciales y las bases de datos con optimización para memoria, vea [Hacer copia de seguridad de una base de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md).  
+ Para obtener información sobre las copias de seguridad diferenciales y las bases de datos optimizadas para memoria, vea [Hacer copia de seguridad de una base de datos con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md).  
   
 ##  <a name="ReadOnlyDbs"></a> Copias de seguridad diferencias de bases de datos de solo lectura  
  En el caso de bases de datos de solo lectura, resulta más fácil gestionar las copias de seguridad completas por sí solas que cuando se utilizan junto copias de seguridad diferenciales. Cuando una base de datos es de solo lectura, las operaciones de copia de seguridad y de otro tipo no tienen capacidad para modificar los metadatos del archivo. Por lo tanto, los metadatos que precisan las copias de seguridad diferenciales, como el número de secuencia de registro en el que comienza la copia de seguridad diferencial (el número LSN base diferencial), se almacenan en la base de datos **maestra** . Si la base diferencial se establece cuando la base de datos es de solo lectura, el mapa de bits diferencial indicará más cambios de los que en realidad han ocurrido desde que se realizó la copia de seguridad de base. La copia de seguridad lee los datos adicionales, pero estos no se escriben en la misma, dado que el **differential_base_lsn** almacenado en la tabla del sistema [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) se usa para determinar si los datos realmente han cambiado desde que se creó la base.  

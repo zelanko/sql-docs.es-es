@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c31b1ebaa449c650edfcac6e045770652d7989be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-sql-server-components"></a>Supervisar los componentes de SQL Server
   La supervisión es importante, puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece un servicio en un entorno dinámico. Los datos de la aplicación cambian. El tipo de acceso que requieren los usuarios cambia. La forma de conexión de los usuarios cambia. También pueden cambiar los tipos de aplicaciones que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra automáticamente los recursos del sistema, como la memoria y el espacio en disco, para minimizar la necesidad de optimizar manualmente el sistema. La supervisión permite a los administradores identificar las tendencias de funcionamiento para determinar si es necesario realizar cambios.  
@@ -142,4 +140,3 @@ ms.lasthandoff: 08/03/2017
      La reproducción de eventos permite establecer una copia de prueba del entorno de base de datos en el que se capturaron los datos y, a continuación, repetir los eventos capturados tal y como ocurrieron originalmente en el sistema real. Esta capacidad solo está disponible con la utilidad de reproducción distribuida o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Puede reproducir los eventos a la velocidad original, a la mayor velocidad posible (para intensificar el uso del sistema) o paso a paso (el tipo de reproducción más frecuente) para analizar el sistema después de que haya ocurrido cada evento. Al analizar los eventos exactos de un entorno de pruebas, puede evitar daños en el sistema de producción. Para obtener más información, vea [Reproducir seguimientos](../../tools/sql-server-profiler/replay-traces.md).  
   
   
-

@@ -1,29 +1,25 @@
 ---
 title: "Lección 7: Restauración de una base de datos a un momento dado | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a25788a3b7eda518aeff01329eb5e207d9092bd6
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 479f890cd6623b457b53cc0024691f9169937538
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lección 7: Restaurar una base de datos a un momento dado
 En esta lección, restaurará la base de datos AdventureWorks2014 a un momento dado entre dos de las copias de seguridad del registro de transacciones.  
@@ -75,4 +71,3 @@ Para restaurar una base de datos a un momento dado a partir de conjuntos de copi
   
   
   
-

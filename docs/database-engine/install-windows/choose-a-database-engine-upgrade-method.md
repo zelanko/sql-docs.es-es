@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 418cb013fddfa58783babbee63e00524f411a39c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
   Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Un entorno de desarrollo sin una configuración de alta disponibilidad.  
   
--   Un entorno de producción no esencial que pueda tolerar el tiempo de inactividad y que ejecute hardware y software recientes. La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas con optimización para memoria. Para obtener más información, consulte [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Un entorno de producción no esencial que pueda tolerar el tiempo de inactividad y que ejecute hardware y software recientes. La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas optimizadas para memoria. Para obtener más información, consulte [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  Cuando se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene y reinicia como parte de la ejecución de las comprobaciones previas a la actualización.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/02/2017
  Cuando el nuevo entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuente con los mismos objetos de sistema que el antiguo, deberá migrar las bases de datos de usuario desde el sistema existente a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un método que reduzca al mínimo el tiempo de inactividad en dicho sistema. Podrá realizar la migración de la base de datos por medio de una copia de seguridad y una restauración, o bien redirigiendo LUN si se encuentra en un entorno de SAN. Los pasos de ambos métodos se escriben en los diagramas siguientes.  
   
 > [!CAUTION]  
->  La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas con optimización para memoria. Para obtener más información, consulte [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+>  La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas optimizadas para memoria. Para obtener más información, consulte [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  Después de migrar las bases de datos de usuario, dirija a los nuevos usuarios a la nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante uno de los diversos métodos disponibles (por ejemplo, cambiar el nombre del servidor, usar una entrada DNS, modificar las cadenas de conexión, etc.).  El método de nueva instalación reduce los riesgos y el tiempo de inactividad (en comparación con una actualización local). Además, facilita que se actualice el hardware y el sistema operativo con la actualización a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [Completar la actualización motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
-

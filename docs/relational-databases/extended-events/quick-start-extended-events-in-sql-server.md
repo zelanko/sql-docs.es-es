@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -98,21 +98,21 @@ El texto y las capturas de pantalla de ayuda pueden ser ligeramente inexactas cu
 
     ![Nueva sesión > General > Nombre de sesión](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. En la parte superior izquierda, haga clic en la página **Eventos** y, después, haga clic en el botón **Seleccionar**.
+4. En la parte superior izquierda, haga clic en la página **Eventos** y, después, haga clic en el botón **Seleccionar** .
 
     ![Nueva sesión > Eventos > Seleccionar > Biblioteca de eventos, eventos seleccionados](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. En el área **Biblioteca de eventos**, en la lista desplegable, elija **Solo los nombres de evento**.
+5. En el área **Biblioteca de eventos** , en la lista desplegable, elija **Solo los nombres de evento**.
     - Dentro del cuadro de texto, escriba **sql**, que filtra y reduce la larga lista de eventos disponibles mediante un operador *contains* .
     - Desplácese y haga clic en el evento denominado **sql_statement_completed**.
     - Haga clic en el botón de flecha derecha **>** para mover el evento al cuadro **Eventos seleccionados** .
 
 6. Siga en la página **Eventos** y haga clic en el botón **Configurar** en el extremo derecho.
-    - Con el lateral izquierdo reducido para obtener una mejor visualización, en la siguiente captura de pantalla puede ver el área **Opciones de configuración de eventos**.
+    - Con el lateral izquierdo reducido para obtener una mejor visualización, en la siguiente captura de pantalla puede ver el área **Opciones de configuración de eventos** .
 
     ![Nueva sesión > Eventos > Configurar > Filtro (predicado) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Haga clic en la pestaña **Filtro (predicado)**. Después, haga clic en **Haga clic aquí para agregar una cláusula**para capturar todas las instrucciones SQL SELECT que tengan una cláusula HAVING.
+7. Haga clic en la pestaña **Filtro (predicado)** . Después, haga clic en **Haga clic aquí para agregar una cláusula**para capturar todas las instrucciones SQL SELECT que tengan una cláusula HAVING.
 
 8. En la lista desplegable **Campo** , elija **sqlserver.sql_text**.
    - En **Operador** , elija un operador LIKE.
@@ -129,17 +129,17 @@ El texto y las capturas de pantalla de ayuda pueden ser ligeramente inexactas cu
 
     ![Nueva sesión > Almacenamiento de datos > Destinos > Tipo > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
-11. En el área **Propiedades**, escriba una ruta de acceso completa y un nombre de archivo en el cuadro de texto **Nombre de archivo en el servidor**.
+11. En el área **Propiedades** , escriba una ruta de acceso completa y un nombre de archivo en el cuadro de texto **Nombre de archivo en el servidor** .
     - La extensión del nombre de archivo debe ser *.xel*.
     - Nuestra pequeña prueba necesitará menos de 1 MB de tamaño de archivo.
 
     ![Nueva sesión > Avanzado > Latencia máxima de envío > Aceptar](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. En la parte superior izquierda, haga clic en la página **Advanced (Avanzado)**.
+12. En la parte superior izquierda, haga clic en la página **Advanced (Avanzado)** .
     - Reduce la **latencia máxima de envío** a 3 segundos.
     - Por último, haga clic en el botón **Aceptar** situado en la parte inferior.
 
-13. Vuelva al **Explorador de objetos**, expanda **Administración** > **Sesiones** y verá el nuevo nodo de **SuSesión**.
+13. Vuelva al **Explorador de objetos**, expanda **Administración** > **Sesiones**y verá el nuevo nodo de **SuSesión**.
 
     ![El nodo de su nueva *sesión de eventos* denominado SuSesión, en el Explorador de objetos, en Administración > Eventos extendidos > Sesiones](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -398,7 +398,7 @@ La visualización no se actualiza ya que el evento notifica datos nuevos. Pero p
 ![View Target Data (Ver datos de destino), en SSMS, Administración > Eventos extendidos > Sesiones > SuSesión > package0.event_file, hacer clic con el botón derecho](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
 
 
-### <a name="watch-live-data"></a>Observar datos en directo
+### <a name="watch-live-data"></a>Watch Live Data (Observar datos en directo)
 
 
 En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho en el nodo de la sesión de eventos. En el menú contextual, haga clic en **Watch Live Data (Observar datos en directo)**. SSMS muestra los datos entrantes a medida que llegan en tiempo real.
@@ -661,6 +661,5 @@ Aquí se muestran vínculos a la documentación relacionada con estas instruccio
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

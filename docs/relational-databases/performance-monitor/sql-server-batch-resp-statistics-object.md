@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:Batch Resp Statistics
+helpviewer_keywords: SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7e7dd5d90f7e7b59e6d685f1e2dd4e4c1cdb319e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>Objeto SQL Server, Batch Resp Statistics
 El objeto de rendimiento **SQLServer:Batch Resp Statistics** proporciona contadores para hacer seguimiento de los tiempos de respuesta del proceso por lotes de SQL Server.
@@ -48,7 +45,7 @@ En la tabla siguiente se describen los objetos de rendimiento **Batch Resp Stati
 |**Lotes >=010000 ms y \<020000 ms**|Número de procesos por lotes de SQL que tienen un tiempo de respuesta mayor o igual a 10 000 ms pero menor que 20 000 ms|
 |**Lotes >=020000 ms y \<050000 ms**|Número de procesos por lotes de SQL que tienen un tiempo de respuesta mayor o igual a 20 000 ms pero menor que 50 000 ms|
 |**Lotes >=050000 ms y \<100000 ms**|Número de procesos por lotes de SQL que tienen un tiempo de respuesta mayor o igual a 50 000 ms pero menor que 100 000 ms| 
-|**Batches &gt;=100000ms**|Número de procesos por lotes de SQL que tienen un tiempo de respuesta mayor o igual a 100 000 ms| 
+|**Batches >=100000ms**|Número de procesos por lotes de SQL que tienen un tiempo de respuesta mayor o igual a 100 000 ms| 
 
 Cada contador del objeto contiene las instancias siguientes:  
   
@@ -62,4 +59,3 @@ Cada contador del objeto contiene las instancias siguientes:
 ## <a name="see-also"></a>Vea también
 [Plan Cache (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Supervisar el uso de recursos (Monitor de sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-

@@ -5,22 +5,20 @@ ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: caa1851ca33c49b0199cfa76589d278ec8974a95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 07/31/2017
   
 -   El tamaño de los datos de una fila y si cabe en la limitación de tamaño de fila de 8.060 bytes. Para responder a estas preguntas, utilice el cálculo del [tamaño del texto de la fila], descrito a continuación.  
 
-  Una tabla con optimización para memoria consta de una colección de filas e índices que contienen punteros a las filas. La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
+  Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
   
  ![Tabla optimizada en memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabla optimizada en memoria.")  
 La tabla con optimización para memoria, que consta de índices y filas.  
@@ -71,7 +69,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
 
 **Estructura de filas**
     
- Las filas de una tabla con optimización para memoria tienen los siguientes componentes:  
+ Las filas de una tabla optimizada para memoria tienen los siguientes componentes:  
   
 -   El encabezado de fila contiene la marca de tiempo necesaria para implementar las versiones de fila. El encabezado de fila también contiene el puntero de índice para implementar el encadenamiento de filas en cubos de hash (descritos arriba).  
   
@@ -251,4 +249,3 @@ La entrada de blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

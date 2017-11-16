@@ -6,7 +6,7 @@
 ## [Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn](set-up-login-accounts-database-mirroring-always-on-availability.md)  
 ## [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows](database-mirroring-allow-network-access-windows-authentication.md)  
 ## [Usar certificados para un punto de conexión de creación de reflejo de la base de datos (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
-### [Permitir que un punto de conexión de creación de reflejo de la base de datos use certificados para las conexiones salientes (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
+### [Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones salientes (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
 ### [Permitir que un punto de conexión de creación de reflejo de la base de datos use certificados para las conexiones entrantes (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
 
 # [Creación de reflejo de base de datos](database-mirroring-sql-server.md)  

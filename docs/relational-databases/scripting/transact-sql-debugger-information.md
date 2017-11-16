@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 706952bff0744cb88d12a624ba4c68363cb85652
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
   Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transact-sql-expressions"></a>Expresiones de Transact-SQL  
  Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**e **Inspección4**.  
   
- La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en la **Locales** ventana cambia a medida que el depurador se ejecuta en las distintas partes del código.  
+ La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en **esta ventana** cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   
  Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Los ejemplos incluyen:  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede usar la ventana **Inspección rápida** para ver el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] y, a continuación, guardarla en una ventana **Inspección** . Para seleccionar una expresión en **Inspección rápida**, seleccione o escriba el nombre de la expresión en el cuadro **Expresión** .  
   
- Las cuatro ventanas **Inspección** muestran información sobre las variables y las expresiones que haya seleccionado. El conjunto de expresiones que se muestran en la **Inspección** ventanas no cambian hasta que agregue o elimine expresiones desde la lista.  
+ Las cuatro ventanas **Inspección** muestran información sobre las variables y las expresiones que haya seleccionado. El conjunto de expresiones que se muestran en **estas ventanas** no cambian hasta que agregue o elimine expresiones desde la lista.  
   
  Para agregar una expresión a una ventana **Inspección** , puede seleccionar la opción **Agregar inspección** del cuadro de diálogo **Inspección rápida** o escribir el nombre de la expresión en la columna **Nombre** de una fila vacía en una ventana **Inspección** .  
   

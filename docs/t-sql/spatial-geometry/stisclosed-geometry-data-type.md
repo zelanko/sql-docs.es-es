@@ -3,8 +3,11 @@ title: STIsClosed (tipo de datos geometry) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve 1 si los puntos inicial y final de la determinada **geometry** instancia son los mismos. Devuelve 1 para **geometrycollection** tipos si cada una contiene **geometry** instancia está cerrada. Devuelve 0 si la instancia no está cerrada.
   

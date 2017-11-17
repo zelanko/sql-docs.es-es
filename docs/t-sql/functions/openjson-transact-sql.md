@@ -1,11 +1,13 @@
 ---
 title: OPENJSON (Transact-SQL) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -31,7 +33,7 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** es una función con valores de tabla que analiza el texto JSON y devuelve objetos y propiedades de la entrada JSON como filas y columnas. En otras palabras, **OPENJSON** proporciona una vista de conjunto de filas en un documento JSON. Puede especificar explícitamente las columnas en el conjunto de filas y las rutas de acceso de propiedad JSON usados para rellenar las columnas. Puesto que **OPENJSON** devuelve un conjunto de filas, puede usar **OPENJSON** en el `FROM` cláusula de una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción al igual que puede usar cualquier otra tabla, vista o función con valores de tabla.  
   

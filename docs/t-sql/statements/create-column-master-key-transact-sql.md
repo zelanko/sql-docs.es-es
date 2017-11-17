@@ -1,11 +1,13 @@
 ---
 title: CREAR claves maestras de columna (Transact-SQL) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Crea un objeto de metadatos de la clave maestra de columna en una base de datos. Una entrada de metadatos de clave maestra de columna que representa una clave almacenada en un almacén de claves externo, que se usa para proteger (cifrar) claves de cifrado de columna cuando se usa el [Always Encrypted &#40; motor de base de datos &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) característica. Permitir varias claves maestras de columna para la rotación de claves; cambiar periódicamente la clave para mejorar la seguridad. Puede crear una clave maestra de columna en un almacén de claves y su objeto de metadatos correspondiente en la base de datos mediante el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Para obtener más información, consulte [información general de administración de claves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   

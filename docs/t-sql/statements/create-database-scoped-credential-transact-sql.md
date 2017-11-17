@@ -3,8 +3,11 @@ title: "CREAR CREDENCIAL en el ámbito de base de datos (Transact-SQL) | Documen
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREAR CREDENCIAL en el ámbito de base de datos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Crea una credencial de base de datos. Una credencial de base de datos no está asignada a un usuario de base de datos o de inicio de sesión de servidor. La credencial se utiliza la base de datos para el acceso a la ubicación externa siempre que la base de datos está realizando una operación que requiere acceso.  
   

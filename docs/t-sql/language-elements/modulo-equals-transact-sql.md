@@ -3,8 +3,11 @@ title: "Módulo igual (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="modulo-equals-transact-sql"></a>Módulo igual (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Divide un número entre otro y establece un valor en el resultado de la operación. Por ejemplo, si una variable @x es igual a 38, a continuación, @x % = 5 toma el valor original de @x, divide entre 5 y establece @x al resto de esa división (3).  
   

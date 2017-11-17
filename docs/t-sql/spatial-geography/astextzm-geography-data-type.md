@@ -3,8 +3,11 @@ title: AsTextZM (tipo de datos geography) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve la representación de Open Geospatial Consortium (OGC) Well-Known Text (WKT) de un **geography** instancia ampliada con los **Z** (elevación) y **M** (medida) valores pertenecientes a la instancia.  
   

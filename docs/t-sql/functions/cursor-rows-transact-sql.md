@@ -3,8 +3,11 @@ title: '@@CURSOR_ROWS (Transact-SQL) | Documentos de Microsoft'
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40; @Cursor_rows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. @@CURSOR_ROWS se puede llamar para determinar que el número de filas que se incluyen en un cursor se recupera en el momento @@CURSOR_ROWS se llama.
   

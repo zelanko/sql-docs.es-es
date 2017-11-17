@@ -3,8 +3,11 @@ title: CREAR la prioridad de BROKER (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define un nivel de prioridad y el conjunto de criterios para determinar a qué conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe asignar el nivel de prioridad. El nivel de prioridad se asigna a cualquier extremo de conversación que utilice la misma combinación de contratos y servicios que se especifican en la prioridad de conversación. El valor de las prioridades va de 1 (bajo) a 10 (alto). El valor predeterminado es 5.  
   

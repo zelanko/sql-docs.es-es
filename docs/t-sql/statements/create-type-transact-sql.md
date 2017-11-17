@@ -3,8 +3,11 @@ title: Crear tipo (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un tipo de datos de alias o un tipo definido por el usuario en la base de datos actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La implementación de un tipo de datos de alias se basa en un tipo nativo del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo definido por el usuario se implementa a través de una clase de un ensamblado en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR). Para enlazar un tipo definido por el usuario para su implementación, el ensamblado CLR que contiene la implementación del tipo en primer lugar debe estar registrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   

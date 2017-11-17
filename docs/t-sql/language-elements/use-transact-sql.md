@@ -3,8 +3,11 @@ title: USE (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Cambia el contexto de la base de datos al de la base de datos especificada o a la instantánea en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

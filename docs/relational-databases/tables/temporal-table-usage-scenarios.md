@@ -1,27 +1,32 @@
 ---
 title: Escenarios de uso de tablas temporales | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ff915a277c4c51a3967db5c9bc880c6bae2a97c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Las tablas temporales suelen ser útiles en escenarios que requieren historial de seguimiento de cambios de datos.    
 Debido a las enormes ventajas de productividad, se recomienda tener en cuenta las tablas temporales en los siguientes casos de uso.  
@@ -163,7 +168,7 @@ Para cargas de trabajo con mucho procesamiento de transacciones, se recomienda u
   
 -   El análisis de tendencias típico aprovecha el rendimiento de las consultas que proporciona un índice de almacén de columnas agrupado.  
   
--   La tarea de vaciado de datos con tablas optimizadas para memoria funciona mejor con mucha carga de trabajo OLTP cuando la tabla de historial tiene un índice de almacén de columnas agrupado.  
+-   La tarea de vaciado de datos con tablas con optimización para memoria funciona mejor con mucha carga de trabajo OLTP cuando la tabla de historial tiene un índice de almacén de columnas agrupado.  
   
 -   Un índice de almacén de columnas agrupado proporciona una compresión excelente, especialmente en escenarios donde no todas las columnas se cambian al mismo tiempo.  
   
@@ -177,7 +182,7 @@ Ejemplos de escenarios reales que encajan bien en esta categoría son la adminis
  En el ejemplo de código siguiente se crea ProductInventory como una tabla temporal con versión del sistema en memoria con un índice de almacén de columnas agrupado en la tabla de historial (que realmente reemplaza al índice de almacén de filas que se crea de forma predeterminada):  
   
 > [!NOTE]  
->  Asegúrese de que la base de datos permite la creación de tablas optimizadas para memoria. Vea [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+>  Asegúrese de que la base de datos permite la creación de tablas con optimización para memoria. Vea [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ```  
 USE TemporalProductInventory  
@@ -593,3 +598,4 @@ Si un valor recién actualizado no es correcto entonces, en muchos escenarios, l
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

@@ -3,8 +3,11 @@ title: Restaurar base de datos (almacenamiento de datos en paralelo) | Documento
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>Restaurar base de datos (almacenamiento de datos en paralelo)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Restaura una [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] base de datos de usuario desde una copia de seguridad de base de datos en un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo. La base de datos se restaura desde una copia de seguridad que se creó anteriormente mediante el [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [copia de seguridad de la base de datos &#40; Almacenamiento de datos en paralelo &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) comando. Utilice la copia de seguridad y restaurar las operaciones para crear un plan de recuperación ante desastres o para mover las bases de datos de un dispositivo a otro.  
   

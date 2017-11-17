@@ -3,8 +3,11 @@ title: SET FORCEPLAN (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cuando se establece FORCEPLAN en ON, el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa una combinación en el mismo orden en que aparecen las tablas en la cláusula FROM de una consulta. Además, si se establece FORCEPLAN en ON, se fuerza el uso de una combinación de bucles anidados, a menos que sea necesario utilizar otros tipos de combinaciones para construir un plan para la consulta o que se soliciten dichas combinaciones con sugerencias de combinación o sugerencias de consulta.  
   

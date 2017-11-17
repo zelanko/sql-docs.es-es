@@ -3,8 +3,11 @@ title: EVENTDATA (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve información acerca de los eventos de base de datos o servidor. EVENTDATA se llama cuando se activa una notificación de eventos y el resultado se devuelve al Service Broker especificado. EVENTDATA también se puede utilizar dentro del cuerpo de un desencadenador DDL o logon.  
   

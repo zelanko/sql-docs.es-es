@@ -1,11 +1,13 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Modifica una clave de cifrado de columna en una base de datos, agregar o quitar un valor cifrado. Una CEK puede tener hasta dos valores que permite la rotación de la clave maestra de columna correspondiente. Se utiliza una CEK al cifrar las columnas utilizando la [Always Encrypted &#40; motor de base de datos &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) característica. Antes de agregar un valor CEK, debe definir la clave maestra de columna que se usó para cifrar el valor mediante el uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrucción.  
   

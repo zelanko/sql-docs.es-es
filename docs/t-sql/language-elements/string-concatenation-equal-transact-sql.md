@@ -3,8 +3,11 @@ title: "+= (Concatenación de cadenas) (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-concatenation---equal-transact-sql"></a>Concatenación de cadenas: igual (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concatena dos cadenas y establece como valor de la cadena el resultado de la operación. Por ejemplo, si una variable @x es igual a 'Adventure', a continuación, @x += '´Works' toma el valor original de @x, agrega 'Works' a la cadena y establece @x en el nuevo valor 'AdventureWorks'.  
   

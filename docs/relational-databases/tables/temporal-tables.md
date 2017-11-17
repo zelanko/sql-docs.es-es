@@ -1,27 +1,32 @@
 ---
 title: Tablas temporales | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 185ef27c1e194a7d104482d0cab40502b7acac3e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
+ms.contentlocale: es-es
+ms.lasthandoff: 09/29/2017
+
 ---
 # <a name="temporal-tables"></a>Tablas temporales
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento, en vez de únicamente los datos que son correctos en la actualidad. La característica temporal de las bases de datos surgió con ANSI SQL 2011.  
   
@@ -167,3 +172,4 @@ SELECT * FROM Employee
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

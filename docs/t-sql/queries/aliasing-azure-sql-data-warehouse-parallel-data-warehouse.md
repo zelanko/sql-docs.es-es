@@ -3,8 +3,11 @@ title: Alias (almacenamiento de datos SQL Azure, almacenamiento de datos paralel
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Alias (almacenamiento de datos SQL Azure, almacenamiento de datos en paralelo)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   El aliasing permite la sustitución temporal de una cadena breve y fácil de recordar en lugar de un nombre de tabla o columna en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] consultas. Alias de tabla se utilizan a menudo en consultas de combinación porque la sintaxis de unión requiere nombres de objeto completo al hacer referencia a columnas.  
   

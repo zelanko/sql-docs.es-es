@@ -3,8 +3,11 @@ title: Crear cola (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una nueva cola en una base de datos. Las colas almacenan mensajes. Cuando llega un mensaje para un servicio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] lo coloca en la cola asociada a ese servicio.  
   

@@ -3,8 +3,11 @@ title: RESTORE REWINDONLY (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instrucciones - de RESTORE REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rebobina y cierra los dispositivos de cinta especificados que se quedaron abiertos con las instrucciones BACKUP o RESTORE ejecutadas con la opción NOREWIND. Este comando solo se admite para dispositivos de cinta.  
   

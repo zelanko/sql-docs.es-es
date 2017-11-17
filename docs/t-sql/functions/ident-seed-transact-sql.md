@@ -3,8 +3,11 @@ title: IDENT_SEED (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el valor de inicialización original (devuelto como **numérico**(**@@**MAXPRECISION, 0)) que se especificó cuando se creó una columna de identidad en una tabla o una vista. La acción de cambiar el valor actual de una columna de identidad utilizando DBCC CHECKIDENT no cambia el valor devuelto por esta función.  
   

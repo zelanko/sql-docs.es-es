@@ -3,9 +3,11 @@ title: Crear tabla como SELECT (almacenamiento de datos SQL Azure) | Documentos 
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>Crear tabla como SELECT (almacenamiento de datos SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Crear tabla AS seleccione (CTAS) es una de las características más importantes de T-SQL disponibles. Es una operación de ejecución en paralelo totalmente que crea una nueva tabla basada en la salida de una instrucción SELECT. CTAS es la forma más sencilla y rápida para crear una copia de una tabla.   
  

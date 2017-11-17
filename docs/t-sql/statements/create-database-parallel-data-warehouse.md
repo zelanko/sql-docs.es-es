@@ -3,8 +3,11 @@ title: Crear base de datos (almacenamiento de datos en paralelo) | Documentos de
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-database-parallel-data-warehouse"></a>Crear base de datos (almacenamiento de datos en paralelo)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Crea una nueva base de datos en un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo. Use esta instrucción para crear todos los archivos asociados con una base de datos del dispositivo y para establecer las opciones de crecimiento automático para las tablas de base de datos y registro de transacciones y el tamaño máximo.  
   

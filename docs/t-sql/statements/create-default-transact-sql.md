@@ -3,8 +3,11 @@ title: CREAR valor predeterminado (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un objeto denominado valor predeterminado. Cuando se enlaza a una columna o a un tipo de datos del alias, un valor predeterminado especifica un valor que debe insertarse en la columna a la que está enlazado el objeto (o en todas las columnas, en el caso de un tipo de datos del alias) si no se proporciona explícitamente un valor durante la inserción.  
   

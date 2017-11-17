@@ -3,8 +3,11 @@ title: RESTORE FILELISTONLY (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instrucciones - de RESTORE FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve un conjunto de resultados que contiene una lista con los archivos de base de datos y de registro del conjunto de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -3,8 +3,11 @@ title: Parse (tipo de datos geography) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve un **geography** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Text (WKT). Parse() equivale a [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), salvo que presupone un identificador (SRID) de 4326 como parámetro de referencia espacial. La entrada puede incluir valores opcionales para Z (elevación) y M (medida).
   

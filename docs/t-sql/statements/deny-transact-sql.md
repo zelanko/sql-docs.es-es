@@ -3,8 +3,11 @@ title: DENY (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Deniega un permiso a una entidad de seguridad. Evita que la entidad de seguridad herede permisos por su pertenencia a grupos o roles. DENY tiene prioridad sobre todos los permisos, salvo que no se aplica a los propietarios de objetos o miembros del rol fijo de servidor sysadmin.
   **Nota de seguridad** miembros del rol sysadmin rol fijo de servidor y no se puede denegar permisos a los propietarios de objetos. "

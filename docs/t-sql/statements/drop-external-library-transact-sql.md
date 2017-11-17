@@ -2,9 +2,12 @@
 title: QUITAR biblioteca externa (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - r-services
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="drop-external-library-transact-sql"></a>QUITAR biblioteca externa (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Elimina una biblioteca de paquete existente.
 

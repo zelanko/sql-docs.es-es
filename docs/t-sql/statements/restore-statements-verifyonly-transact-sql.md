@@ -3,8 +3,11 @@ title: RESTORE VERIFYONLY (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,6 +29,7 @@ caps.latest.revision: 64
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6996997ff66c291285fef4081dc7c21477ea8584
@@ -34,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Instrucciones - de RESTORE VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Comprueba la copia de seguridad, pero no la restaura, y comprueba si el conjunto de la copia de seguridad se ha completado y se puede leer en su totalidad. Sin embargo, RESTORE VERIFYONLY no intenta comprobar la estructura de los datos que contienen los volúmenes de la copia de seguridad. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY se ha mejorado para realizar comprobaciones adicionales en los datos que se va a aumentar la probabilidad de detectar errores. El objetivo es acercarse lo máximo posible a una operación de restauración real de forma práctica. Para obtener más información, vea la sección Notas.  
   
@@ -130,3 +134,4 @@ FROM <backup_device> [ ,...n ]
  [Historial de copias de seguridad e información de encabezados &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
+

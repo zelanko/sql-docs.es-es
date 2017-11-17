@@ -3,8 +3,11 @@ title: Transacciones (almacenamiento de datos SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transacciones (almacenamiento de datos SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Una transacción es un grupo de una o varias instrucciones de base de datos totalmente confirmado o revertido completamente. Cada transacción es atómicas, coherentes, aisladas y duraderas (ACID). Si la transacción se realiza correctamente, se confirman todas las instrucciones dentro de él. Si se produce un error en la transacción, que es al menos una de las instrucciones en el grupo se produce un error, a continuación, se revierte todo el grupo.  
   

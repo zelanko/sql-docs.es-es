@@ -3,8 +3,11 @@ title: Constructor (Transact-SQL) con valores de tabla | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>Constructor con valores de tabla (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Especifica un conjunto de expresiones de valores de fila que se va a construir en una tabla. El constructor de valor de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que se especifiquen varias filas de datos en una sola instrucción DML. El constructor con valores de tabla puede especificarse en la cláusula VALUES de la instrucción INSERT, en la opción uso \<tabla de origen > cláusula de la instrucción MERGE y en la definición de una tabla derivada en la cláusula FROM.  
   

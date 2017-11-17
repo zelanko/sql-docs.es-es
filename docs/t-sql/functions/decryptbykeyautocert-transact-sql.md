@@ -3,8 +3,11 @@ title: DECRYPTBYKEYAUTOCERT() (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,14 +32,14 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/01/2017
 
 ---
-# DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Se descifra mediante una clave simétrica que se descifra automáticamente con un certificado.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -46,7 +49,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *cert_ID*  
  Es el identificador del certificado que se usa para proteger la clave simétrica. *cert_ID* es **int**.  
   
@@ -71,16 +74,16 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
  @authenticator  
  Es una variable que contiene los datos a partir de los cuales se generará un autenticador. Debe coincidir con el valor que se proporcionó para EncryptByKey.  
   
-## Tipos devueltos  
+## <a name="return-types"></a>Tipos devueltos  
  **varbinary** con un tamaño máximo de 8.000 bytes.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  DecryptByKeyAutoCert combina la funcionalidad de OPEN SYMMETRIC KEY con la de DecryptByKey. En una sola operación descifra una clave simétrica y utiliza esa clave para descifrar texto cifrado.  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  Se requiere el permiso VIEW DEFINITION sobre la clave simétrica y el permiso CONTROL sobre el certificado.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo se puede utilizar `DecryptByKeyAutoCert` para simplificar código de descifrado. Este código se debería ejecutar en una base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que aún no tenga una clave maestra de base de datos.  
   
 ```  
@@ -130,7 +133,7 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   

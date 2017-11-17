@@ -3,8 +3,11 @@ title: CERTENCODED (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Devuelve la parte pública de un certificado en formato binario. Esta función toma un identificador de certificado y devuelve el certificado codificado. El resultado binario puede pasarse a **crear certificado... CON binario** para crear un nuevo certificado.
   

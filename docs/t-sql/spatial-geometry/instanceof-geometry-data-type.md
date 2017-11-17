@@ -3,8 +3,11 @@ title: InstanceOf (tipo de datos geometry) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Un método que comprueba si el **geometry** instancia es el mismo que el tipo especificado. Devuelve 1 si el tipo de un **geometry** instancia es el mismo que el tipo especificado, o si el tipo especificado es un antecesor del tipo de instancia; en caso contrario, devuelve 0.
   

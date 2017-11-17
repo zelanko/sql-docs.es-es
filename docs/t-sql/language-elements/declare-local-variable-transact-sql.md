@@ -3,8 +3,11 @@ title: DECLARAR @local_variable (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARAR @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Las variables se declaran en el cuerpo de un proceso por lotes o un procedimiento con la instrucción DECLARE, y se les asignan valores con una instrucción SET o SELECT. Las variables de cursor pueden declararse con esta instrucción y utilizarse con otras instrucciones relacionadas con los cursores. Después de la declaración, todas las variables se inicializan como NULL, a menos que se proporcione un valor como parte de la declaración.  
   

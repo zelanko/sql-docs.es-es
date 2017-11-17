@@ -3,8 +3,11 @@ title: Crear ruta (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Agrega una ruta nueva a la tabla de enrutamiento para la base de datos actual. Para los mensajes salientes, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina el enrutamiento mediante la comprobación de la tabla de enrutamiento en la base de datos local. Para los mensajes en las conversaciones que se originan en otra instancia, incluidos los mensajes que se reenvían, [!INCLUDE[ssSB](../../includes/sssb-md.md)] comprueba las rutas en **msdb**.  
   

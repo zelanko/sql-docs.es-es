@@ -3,8 +3,11 @@ title: Marcas de seguimiento (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - marcas de seguimiento (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Las marcas de seguimiento se utilizan para establecer temporalmente características específicas del servidor o para desactivar un comportamiento determinado. Por ejemplo, si se establece la marca de seguimiento 3205 cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se deshabilita la compresión de hardware para controladores de cinta. Las marcas de seguimiento se suelen utilizar para diagnosticar problemas de rendimiento o para depurar procedimientos almacenados o sistemas complejos.
   

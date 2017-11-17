@@ -3,8 +3,11 @@ title: "Nodes() (método) (tipo de datos xml) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() (método del tipo de datos XML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   El **nodes()** método resulta útil cuando desea dividir una **xml** instancia de tipo de datos en datos relacionales. Permite identificar nodos que se asignarán a una fila nueva.  
   

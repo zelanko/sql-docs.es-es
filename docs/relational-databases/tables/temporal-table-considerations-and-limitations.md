@@ -1,27 +1,32 @@
 ---
 title: Limitaciones y consideraciones de las tablas temporales | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 16128088c6791803c1474ea4c755dd864ce81665
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Hay algunas consideraciones y limitaciones que deben tenerse en cuenta al trabajar con tablas temporales debido a la naturaleza de las versiones del sistema.  
   
@@ -112,3 +117,4 @@ ms.lasthandoff: 11/09/2017
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

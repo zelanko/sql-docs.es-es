@@ -3,8 +3,11 @@ title: PERCENTILE_DISC (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Calcula un percentil concreto para los valores ordenados de un conjunto de filas completo o dentro de particiones distintas de un conjunto de filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para un valor de percentil *P*, PERCENTILE_DISC ordena los valores de la expresión en la cláusula ORDER BY y devuelve el valor con el menor valor CUME_DIST (con respecto a la misma especificación de ordenación) que es mayor que o igual que *P*. Por ejemplo, PERCENTILE_DISC (0.5) calculará el cincuentavo percentil (es decir, la mediana) de una expresión. PERCENTILE_DISC calcula el percentil basándose en una distribución discreta de los valores de columna; el resultado es igual a un valor específico de la columna.  
   

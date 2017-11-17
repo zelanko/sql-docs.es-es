@@ -3,8 +3,11 @@ title: Cursores (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cursors-transact-sql"></a>Cursores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones generan un conjunto de resultados completo, pero hay ocasiones cuando los resultados procesan mejores una fila a la vez. Abrir un cursor sobre un conjunto de resultados permite procesar el conjunto de resultados de fila en fila. Puede asignar un cursor a una variable o parámetro con un **cursor** tipo de datos.  
   

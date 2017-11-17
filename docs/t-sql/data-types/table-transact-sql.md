@@ -3,8 +3,11 @@ title: tabla (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Es un tipo de datos especial que se puede utilizar para almacenar un conjunto de resultados para procesar en otro momento. **tabla** se utiliza principalmente para el almacenamiento temporal de un conjunto de filas devuelto como el conjunto de resultados de una función con valores de tabla. Las funciones y variables se pueden declarar como de tipo **tabla**. **tabla** las variables pueden usarse en las funciones, procedimientos almacenados y lotes. Para declarar las variables de tipo **tabla**, use [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   

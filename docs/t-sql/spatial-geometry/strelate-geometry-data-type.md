@@ -3,8 +3,11 @@ title: STRelate (tipo de datos geometry) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Devuelve 1 si una **geometry** está relacionada con otra instancia **geometry** instancia, donde la relación está definida por un valor de matriz de patrones de Dimensionally Extended 9 Intersection Model (DE-9IM); en caso contrario , devuelve 0.  
   

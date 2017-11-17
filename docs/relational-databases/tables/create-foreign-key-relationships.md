@@ -1,25 +1,31 @@
 ---
 title: "Creación de relaciones de claves externas | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: relationships [SQL Server], creating
+helpviewer_keywords:
+- relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dceb390b232c2c5b074770fbfa07f420a8248097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: f6d1acfc492d4d2c37bd4e7cfe66a2b95266a80a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +55,7 @@ ms.lasthandoff: 11/09/2017
     
     -   Una tabla con una referencia de clave externa a sí misma sigue estando limitada a 253 referencias de clave externa.    
     
-    -   Actualmente, no hay disponibles más de 253 referencias de clave externa para índices de almacén de columnas, tablas optimizadas para memoria o Stretch Database.    
+    -   Actualmente, no hay disponibles más de 253 referencias de clave externa para índices de almacén de columnas, tablas con optimización para memoria o Stretch Database.    
     
 -   Las restricciones FOREIGN KEY no se exigen en tablas temporales.    
     
@@ -137,3 +143,4 @@ ms.lasthandoff: 11/09/2017
      Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).    
     
   
+

@@ -3,8 +3,11 @@ title: STNumCurves (tipo de datos geometry) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Este método devuelve el número de curvas de una **geometry** instancia cuando la instancia es un tipo de datos espacial unidimensional. Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString**, y **CompoundCurve**. `STNumCurves`() funciona solo en tipos simples; no funciona con **geometry** colecciones como **MultiLineString**.
   

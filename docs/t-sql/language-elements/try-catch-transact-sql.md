@@ -3,8 +3,11 @@ title: TRY... CATCH (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Implementa un mecanismo de control de errores para [!INCLUDE[tsql](../../includes/tsql-md.md)] que es similar al control de excepciones en los lenguajes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Se puede incluir un grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque TRY. Si se produce un error en el bloque TRY, el control se transfiere a otro grupo de instrucciones que está incluido en un bloque CATCH.  
   

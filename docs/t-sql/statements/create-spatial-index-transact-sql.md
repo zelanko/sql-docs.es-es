@@ -3,8 +3,11 @@ title: "Crear índice espacial (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un índice espacial en la tabla y la columna especificadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede crear un índice antes de que la tabla posea datos. Los índices se pueden crear en tablas o vistas de otra base de datos especificando un nombre completo de base de datos. Los índices espaciales requieren que la tabla tenga una clave principal clúster. Para obtener información acerca de los índices espaciales, vea [información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   

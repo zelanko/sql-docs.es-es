@@ -3,8 +3,11 @@ title: '@@SERVICENAME (Transact-SQL) | Documentos de Microsoft'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40servicename-transact-sql"></a>& #x 40; & #x 40; SERVICENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el nombre de la clave del Registro bajo la cual se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. @@SERVICENAME devuelve 'MSSQLSERVER' Si la instancia actual es la instancia predeterminada, esta función devuelve el nombre de instancia si la instancia actual es una instancia con nombre.  
   

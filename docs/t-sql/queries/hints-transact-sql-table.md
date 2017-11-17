@@ -3,8 +3,11 @@ title: Sugerencias (Transact-SQL) de tabla | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Transact-SQL) - tabla
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Las sugerencias de tabla invalidan el comportamiento predeterminado del optimizador de consultas mientras dura la instrucción del lenguaje de manipulación de datos (DML) especificando un método de bloqueo, uno o varios índices, una operación de procesamiento de la consulta como un recorrido de tabla o una búsqueda de índice, u otras opciones. Las sugerencias de tabla se especifican en la cláusula FROM de la instrucción DML y solo afectan a la tabla o a la vista a la que se hace referencia en esa cláusula.  
   

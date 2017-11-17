@@ -3,8 +3,11 @@ title: "Sugerencias (Transact-SQL) de combinación | Documentos de Microsoft"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---join"></a>Combinación de sugerencias (Transact-SQL):
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Las sugerencias de combinación especifican que el optimizador de consultas aplique una estrategia de combinación entre dos tablas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información general sobre las combinaciones y la sintaxis de combinación, vea [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
   

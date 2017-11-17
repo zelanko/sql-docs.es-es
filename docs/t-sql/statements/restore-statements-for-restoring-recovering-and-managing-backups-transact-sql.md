@@ -3,8 +3,11 @@ title: Las instrucciones RESTORE para restaurar, recuperar, administrar las copi
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instrucciones RESTORE para restaurar, recuperar y administrar copias de seguridad (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   En esta sección se describen las instrucciones RESTORE relacionadas con las copias de seguridad. Además de la instrucción RESTORE {DATABASE | LOG} principal para restaurar y recuperar copias de seguridad, hay una serie de instrucciones RESTORE auxiliares que le ayudan a administrar las copias de seguridad y a planear las secuencias de restauración. Los comandos RESTORE auxiliares son: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY y RESTORE VERIFYONLY.  
   

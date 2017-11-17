@@ -2,27 +2,33 @@
 title: "Creación de tablas (motor de base de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: table creation [SQL Server], Visual Database Tools
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e5f5d3b826bbac8f4cd7553ca503b2fe276bd73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/29/2017
+
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede crear una tabla, asignarle un nombre y agregarla a una base de datos existente mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -97,3 +103,4 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
  Para obtener más ejemplos, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
   
+

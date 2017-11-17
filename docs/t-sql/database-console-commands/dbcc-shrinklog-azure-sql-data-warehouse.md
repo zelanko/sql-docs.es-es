@@ -3,8 +3,11 @@ title: DBCC SHRINKLOG (almacenamiento de datos SQL Azure) | Documentos de Micros
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (almacenamiento de datos SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Reduce el tamaño del registro de transacciones *en el dispositivo* actuales [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] base de datos. Los datos se desfragmentan con el fin de reducir el registro de transacciones. Con el tiempo, el registro de transacciones de base de datos puede ser ineficaz y fragmentado. Use DBCC SHRINKLOG para reducir la fragmentación y el tamaño del registro.
   

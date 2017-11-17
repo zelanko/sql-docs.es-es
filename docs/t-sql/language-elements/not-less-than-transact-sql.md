@@ -3,8 +3,11 @@ title: '!&lt; (No menor que) (Transact-SQL) | Documentos de Microsoft'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt; (No menor que) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compara dos expresiones (es un operador de comparación). Cuando se comparan expresiones no NULL, el resultado es TRUE si el operando de la izquierda no tiene un valor menor que el de la derecha; de lo contrario, el resultado es FALSE. Si uno o ambos operandos son NULL, vea el tema [SET ANSI_NULLS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   

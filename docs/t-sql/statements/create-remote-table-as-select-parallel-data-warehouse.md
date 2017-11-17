@@ -3,9 +3,11 @@ title: CREAR remoto tabla como SELECT (almacenamiento de datos en paralelo) | Do
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREAR remoto tabla como SELECT (almacenamiento de datos en paralelo)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Selecciona los datos de un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] la base de datos y copia los datos en una nueva tabla en un SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos en un servidor remoto. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]usa el dispositivo, con todas las ventajas del procesamiento, para seleccionar los datos para la copia remota de las consultas MPP. Utilice esto para escenarios que requieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionalidad.  
   

@@ -3,8 +3,11 @@ title: Operadores (Transact-SQL) compuesta | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="compound-operators-transact-sql"></a>Operadores compuestos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Los operadores compuestos ejecutan operaciones y establecen un valor original en el resultado de dichas operaciones. Por ejemplo, si una variable @x es igual a 35, a continuación, @x += 2 toma el valor original de @x, agregar 2 y establece @x en el nuevo valor (37).  
   

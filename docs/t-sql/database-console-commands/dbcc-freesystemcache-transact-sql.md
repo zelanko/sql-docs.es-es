@@ -3,8 +3,11 @@ title: DBCC FREESYSTEMCACHE (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Libera todas las entradas de caché no utilizadas de todas las memorias caché. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] limpia automáticamente y en segundo plano todas las entradas de caché no utilizadas para permitir que haya memoria disponible para las entradas actuales. Sin embargo, puede utilizar este comando para quitar de forma manual las entradas no usadas de todas las memorias caché o de la memoria caché especificada de un grupo del regulador de recursos.
   

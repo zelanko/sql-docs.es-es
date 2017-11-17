@@ -3,8 +3,11 @@ title: "CREATE (función) (almacenamiento de datos SQL) | Documentos de Microsof
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE (función) (almacenamiento de datos SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Crea una función definida por el usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Una función definida por el usuario es un [!INCLUDE[tsql](../../includes/tsql-md.md)] rutina que acepta parámetros, realiza una acción, como un cálculo complejo y devuelve el resultado de esa acción como un valor. El valor devuelto debe ser un valor escalar (único). Utilice esta instrucción para crear una rutina reutilizable que se pueda utilizar de estas formas:  
   

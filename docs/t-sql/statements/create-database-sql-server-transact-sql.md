@@ -3,8 +3,11 @@ title: Crear base de datos (SQL Server Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL de SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una nueva base de datos y los archivos que se usan para almacenar la base de datos, una instantánea de base de datos, o adjunta una base de datos a partir de los archivos separados de una base de datos creada anteriormente.  
   

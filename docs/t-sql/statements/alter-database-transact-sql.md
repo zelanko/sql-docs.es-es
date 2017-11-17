@@ -3,8 +3,11 @@ title: ALTER DATABASE (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica una base de datos o los archivos y grupos de archivos asociados a la base de datos. Agrega o quita archivos y grupos de archivos en una base de datos, cambia los atributos de una base de datos o de sus archivos y grupos de archivos, cambia la intercalación de base de datos y establece las opciones de base de datos. Las instantáneas de base de datos no se pueden modificar. Para modificar opciones de base de datos asociados con la replicación, utilice [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    

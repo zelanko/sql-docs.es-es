@@ -3,8 +3,11 @@ title: Consultar sugerencias (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -67,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL) - consulta
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sugerencias de consulta especifica que en toda la consulta se deben utilizar las sugerencias especificadas. Afectan a todos los operadores de la instrucción. Si hay un argumento UNION implicado en la consulta principal, solo la última consulta que implique una operación UNION puede contener la cláusula OPTION. Sugerencias de consulta se especifican como parte de la [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). Si una o varias sugerencias de consulta provocan que el optimizador de consultas no genere un plan válido, se produce el error 8622.  
   

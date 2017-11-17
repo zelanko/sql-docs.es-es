@@ -3,8 +3,11 @@ title: "Crear índice XML (índices XML selectivos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (índices XML selectivos)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Crea un nuevo índice XML selectivo secundario en una única ruta de acceso que ya está indizada por un índice XML selectivo existente. También puede crear índices XML selectivos principales. Para obtener información, consulte [Create, Alter y Drop los índices XML selectivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   

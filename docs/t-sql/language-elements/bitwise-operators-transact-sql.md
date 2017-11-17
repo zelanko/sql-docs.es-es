@@ -3,8 +3,11 @@ title: Operadores bit a bit (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 09/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operadores bit a bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Los operadores bit a bit realizan manipulaciones de bits entre dos expresiones de cualquiera de los tipos de datos de la categoría del tipo de datos entero.  
   Operadores bit a bit convertir dos valores enteros en bits binarios, lleve a cabo la operación AND, OR, o la operación NOT en cada bit, generar un resultado. A continuación, convierte el resultado en un entero.  

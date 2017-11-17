@@ -3,8 +3,11 @@ title: '!&gt; (No mayor que) (Transact-SQL) | Documentos de Microsoft'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (No mayor que) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compara dos expresiones (es un operador de comparación). Cuando se comparan expresiones no NULL, el resultado es TRUE si el operando de la izquierda no tiene un valor mayor que el operando de la derecha; en caso contrario, el resultado es FALSE. A diferencia del operador de igualdad =, el resultado de la comparación !> de dos valores NULL no depende del valor de ANSI_NULLS.  
   

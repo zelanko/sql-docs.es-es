@@ -3,8 +3,11 @@ title: Parte superior (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Limita las filas devueltas en un conjunto de resultados de la consulta a un número o porcentaje de filas especificado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cuando se usa TOP junto con la cláusula ORDER BY, el conjunto de resultados se limita al primer *N* número de filas ordenadas; en caso contrario, devuelve el primer *N* número de filas en un orden indefinido. Utilice esta cláusula para especificar el número de filas devueltas de una instrucción SELECT o afectadas por una instrucción INSERT, UPDATE, MERGE o DELETE.  
   

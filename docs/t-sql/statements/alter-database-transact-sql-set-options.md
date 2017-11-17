@@ -1,12 +1,14 @@
 ---
 title: MODIFICAR opciones de SET de base de datos (Transact-SQL) | Documentos de Microsoft
 description: "Obtenga información acerca de cómo establecer opciones de base de datos como el cifrado de optimización, automática, el almacén de consultas en un SQL Server y la base de datos de SQL Azure"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   En este tema se describe la sintaxis de ALTER DATABASE, relacionada con la configuración de las opciones de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para otros elementos de sintaxis ALTER DATABASE, vea los temas siguientes.  
   

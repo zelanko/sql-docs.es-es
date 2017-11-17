@@ -3,8 +3,11 @@ title: Referencia de Transact-SQL (motor de base de datos) | Documentos de Micro
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referencia de Transact-SQL (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Este tema proporciona los conceptos básicos sobre cómo buscar y usar los temas de referencia de Transact-SQL (T-SQL) de Microsoft. T-SQL es fundamental para trabajar con servicios y productos de Microsoft SQL. Todas las herramientas y aplicaciones que se comunican con una base de datos SQL hacerlo mediante el envío de comandos de T-SQL.  
 

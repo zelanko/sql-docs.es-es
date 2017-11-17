@@ -1,11 +1,13 @@
 ---
 title: Crear clave de cifrado de columna (Transact-SQL) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Crea una clave de cifrado de columna con el conjunto inicial de valores, cifrados con las claves maestras de columna especificada. Se trata de una operación de metadatos. Una CEK puede tener hasta dos valores que permite una rotación de claves maestras de columna. Es necesario crear una CEK antes de cualquier columna de la base de datos se puede cifrar mediante el [Always Encrypted &#40; motor de base de datos &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) característica. También puede crearse mediante el uso del CEK [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de crear una CEK, debe definir una CMK mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrucción.  
   

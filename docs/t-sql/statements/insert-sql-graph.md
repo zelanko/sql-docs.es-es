@@ -2,9 +2,13 @@
 title: "INSERT (gráfico SQL) | Documentos de Microsoft"
 description: "Inserte la sintaxis para las tablas de borde o nodo de gráfico de SQL."
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,9 +31,8 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="insert-sql-graph"></a>INSERT (gráfico SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Agrega una o más filas a un `node` o `edge` tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 

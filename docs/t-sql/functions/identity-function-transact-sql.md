@@ -3,8 +3,11 @@ title: "IDENTITY (función) (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (Función) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Solo se usa en una instrucción SELECT con una INTO *tabla* cláusula para insertar una columna de identidad en una nueva tabla. Aunque es similar, la función IDENTITY no es la propiedad IDENTITY que se utiliza con CREATE TABLE y ALTER TABLE.  
   

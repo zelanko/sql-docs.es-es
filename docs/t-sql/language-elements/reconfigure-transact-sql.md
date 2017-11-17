@@ -3,8 +3,11 @@ title: RECONFIGURE (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Actualiza el valor configurado actualmente (la **config_value** columna en el **sp_configure** conjunto de resultados) de una opción de configuración se modifica con el **sp_configure** sistema procedimiento almacenado. Dado que algunas opciones de configuración es necesario server detener y reiniciar para actualizar el valor que se está ejecutando, RECONFIGURE no siempre actualiza el valor que se está ejecutando (la **run_value** columna en el **sp_configure**  conjunto de resultados) para un valor de configuración modificado.    
     

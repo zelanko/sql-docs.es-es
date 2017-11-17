@@ -3,8 +3,11 @@ title: MODIFICAR el archivo de base de datos y las opciones de grupo de archivos
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -54,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>MODIFICAR el archivo de base de datos (Transact-SQL) y las opciones de grupo de archivos 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica los archivos y los grupos de archivos asociados a la base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Agrega o quita archivos y grupos de archivos de una base de datos y cambia los atributos de una base de datos o sus archivos y grupos de archivos. Para ver otras opciones de ALTER DATABASE, consulte [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   

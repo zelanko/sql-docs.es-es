@@ -3,28 +3,33 @@ title: Determinar los permisos efectivos del motor de base de datos | Microsoft 
 ms.custom: 
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 70359d3c8b34fabec496ad9fbc165bcc7d1707c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 En este tema se describe cómo determinar quién tiene permisos para varios objetos en el motor de base de datos de SQL Server. SQL Server implementa dos sistemas de permisos para el motor de base de datos. Un sistema anterior de roles fijos tiene permisos preconfigurados. A partir de SQL Server 2005 está disponible un sistema más flexible y preciso. (La información de este tema también es aplicable a SQL Server, a partir de la versión 2005. Ciertos tipos de permisos no están disponibles en algunas versiones de SQL Server).
 
@@ -87,7 +92,7 @@ Para comprender los permisos concedidos a cada rol, vea las descripciones de rol
 
 Este sistema es muy flexible, lo que significa que puede ser complicado si los usuarios que lo configuran quieren que sea muy preciso. Eso no es necesariamente algo negativo; espero que mi entidad financiera sea precisa. Para simplificar las cosas, ayuda a crear roles, asignar permisos a roles y, después, agregar los grupos de usuarios a los roles. Y es más fácil si el equipo de desarrollo de base de datos separa la actividad por esquemas y, después, concede permisos de rol a un esquema completo en lugar de a procedimientos o tablas individuales. Pero la realidad es compleja y hay que asumir que las necesidades empresariales crean requisitos de seguridad inesperados.   
 
-El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
+El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **Póster de permisos del motor de base de datos** en formato pdf.  
   
  [![Permisos de motor de base de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
@@ -160,4 +165,5 @@ Para obtener detalles de la sintaxis, vea [HAS_PERMS_BY_NAME](../../../t-sql/fun
 
 [Introducción a los permisos de los motores de bases de datos](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [Tutorial: Introducción al motor de base de datos](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+
 

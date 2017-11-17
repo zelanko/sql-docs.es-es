@@ -1,11 +1,15 @@
 ---
 title: Roles de nivel de base de datos | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,19 +40,20 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.openlocfilehash: 79d5d634cfeb240c096d9ed6d92f16c2e7401e46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Para administrar con facilidad los permisos en las bases de datos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona varios *roles* , que son las entidades de seguridad que agrupan a otras entidades de seguridad. Son como los ***grupos*** del sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Los roles de nivel de base de datos se aplican a toda la base de datos en lo que respecta a su ámbito de permisos.  
 
@@ -163,3 +168,4 @@ Si R Services está instalado, hay roles de base de datos adicionales disponible
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
   
   
+

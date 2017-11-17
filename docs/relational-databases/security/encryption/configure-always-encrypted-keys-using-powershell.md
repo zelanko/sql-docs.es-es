@@ -2,26 +2,31 @@
 title: Configurar claves Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fd7e5c31b5a89795ba4f359641c53847031d504
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 0d112912b35e05e5e96ec43cf6bc5f7caee21bf4
+ms.contentlocale: es-es
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
     
 En este artículo se proporcionan los pasos necesarios para aprovisionar claves de Always Encrypted con el [módulo SqlServer PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md). Puede usar PowerShell para aprovisionar claves de Always Encrypted [con y sin separación de roles](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles), lo que proporciona control sobre quién tiene acceso a las claves de cifrado reales del almacén de claves y quién tiene acceso a la base de datos. 
@@ -289,4 +294,5 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (desarrollo de clientes)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Blog de Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
 

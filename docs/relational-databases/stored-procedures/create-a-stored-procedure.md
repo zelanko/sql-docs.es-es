@@ -2,10 +2,14 @@
 title: "Creación de un procedimiento almacenado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -13,27 +17,28 @@ helpviewer_keywords:
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b22866ca7bba2d8e39765febe76183a81e2f3831
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-a-stored-procedure"></a>Crear un procedimiento almacenado
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear un procedimiento almacenado](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
 
   En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y la instrucción CREATE PROCEDURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##  <a name="Top"></a>   
--   **Antes de empezar:**  [Permisos](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **Para crear un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permisos  
  Requiere el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento.  
@@ -139,3 +144,4 @@ ms.lasthandoff: 11/09/2017
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+

@@ -2,27 +2,33 @@
 title: "Introducción a los permisos de los motores de bases de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: permissions [SQL Server], getting started
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 21d6f4a4434b90561216edc72fb25d5f305fa43d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/11/2017
+
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Los permisos de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] se administran en el nivel de servidor mediante inicios de sesión y roles de servidor, y en el nivel de base de datos mediante usuarios de base de datos y roles base de datos. El modelo para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] expone el mismo sistema en cada base de datos, pero los permisos de nivel de servidor no están disponibles. En este tema se tratan algunos conceptos básicos de seguridad y, a continuación, se describe una implementación típica de los permisos.  
   
@@ -244,3 +250,4 @@ JOIN sys.database_principals AS dRole
  [Determinar los permisos efectivos del motor de base de datos](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

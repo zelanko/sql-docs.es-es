@@ -3,8 +3,11 @@ title: "setAutoCommit (método) (SQLServerConnection) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit (método) (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit (método) (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Establece el modo de confirmación automática para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto en el estado determinado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *value*  
   
  **True** para habilitar el modo de confirmación automática para la conexión, **false** para deshabilitarlo.  
   
-## Excepciones  
+## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Este método setAutoCommit especificado por el método setAutoCommit en la interfaz java.sql.Connection.  
   
  Si una conexión está en modo de confirmación automática, todas sus instrucciones SQL se ejecutan y confirman como transacciones individuales. De lo contrario, sus instrucciones SQL se agrupan en transacciones que finalizan con una llamada a la [confirmación](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) método o la [reversión](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) método. De forma predeterminada, las nuevas conexiones están en modo de confirmación automática.  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  Si se llama a este método durante una transacción, esta se confirma.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Miembros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

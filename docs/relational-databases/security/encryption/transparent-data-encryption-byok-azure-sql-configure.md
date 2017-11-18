@@ -16,15 +16,15 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 122dfa3b81f526ac5433b3c88dc27637007464df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/05/2017
+
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: Habilitar el Cifrado de datos transparente con su propia clave desde Azure Key Vault
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 En esta guía de procedimientos aprenderá a usar una clave desde Azure Key Vault para el Cifrado de datos transparente (TDE) en un almacén de datos o una base de datos SQL. Para obtener más información sobre la compatibilidad del TDE con Bring Your Own Key (BYOK), vea [TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md) (TDE con Bring Your Own Key en Azure SQL). 
 
@@ -190,5 +190,6 @@ Compruebe lo siguiente si se produce un problema:
 
 - Aprenda a girar el protector del TDE de un servidor para cumplir los requisitos de seguridad: [Girar el protector de Cifrado de datos transparente con PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - En el caso de que detecte un riesgo de seguridad, aprenda a quitar un protector del TDE que pueda estar en peligro: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) (Quitar una clave que pueda estar en peligro). 
+
 
 

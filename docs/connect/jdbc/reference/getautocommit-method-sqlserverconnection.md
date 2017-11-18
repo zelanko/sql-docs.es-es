@@ -3,8 +3,11 @@ title: "Método (SQLServerConnection) getAutoCommit | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,28 +30,28 @@ ms.contentlocale: es-es
 ms.lasthandoff: 09/09/2017
 
 ---
-# getAutoCommit (método) (SQLServerConnection)
+# <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit (método) (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Devuelve el modo de confirmación automática actual de este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 public boolean getAutoCommit()  
 ```  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  **True** si está habilitado el modo de confirmación automática, **false** si no lo está.  
   
-## Excepciones  
+## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Este método getAutoCommit especificado por el método getAutoCommit en la interfaz java.sql.Connection.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Miembros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

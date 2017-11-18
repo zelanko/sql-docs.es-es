@@ -3,8 +3,11 @@ title: "Leer datos de gran tamaño ejemplo | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -51,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  [Trabajar con datos de gran tamaño](../../../connect/jdbc/working-with-large-data.md)  
   
   
+

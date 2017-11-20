@@ -12,7 +12,7 @@
 # [REFERENTIAL_CONSTRAINTS](referential-constraints-transact-sql.md)  
 # [ROUTINE_COLUMNS](routine-columns-transact-sql.md)  
 # [RUTINAS](routines-transact-sql.md)  
-# [ESQUEMA DE DATOS](schemata-transact-sql.md)  
+# [ESQUEMAS](schemata-transact-sql.md)  
 # [TABLE_CONSTRAINTS](table-constraints-transact-sql.md)  
 # [TABLE_PRIVILEGES](table-privileges-transact-sql.md)  
 # [TABLAS](tables-transact-sql.md)  

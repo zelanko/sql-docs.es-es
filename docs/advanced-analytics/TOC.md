@@ -153,12 +153,11 @@
 ### [Opciones de configuración avanzada de Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Consideraciones de seguridad para el tiempo de ejecución de R en SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modificar el grupo de cuentas de usuario de SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configurar y administrar las extensiones del aprendizaje automático](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Implementar y usar modelos mediante servicios web](operationalization-with-mrsdeploy.md)
 ### [Administración y supervisión de soluciones de aprendizaje automático](r/managing-and-monitoring-r-solutions.md)
 ### [Regulación de recursos para Machine Learning Services](r/resource-governance-for-r-services.md)
-### [Crear un grupo de recursos para R](r/how-to-create-a-resource-pool-for-r.md)
+### [Creación de grupos de recursos para el aprendizaje automático](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventos extendidos de Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
 
 ### [DMV de Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [Agregar R a una máquina virtual existente de Azure](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Usar sqlBindR.exe para actualizar una instancia](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Instalar R Server desde la línea de comandos](r/install-microsoft-r-server-from-the-command-line.md)
-### [Aprovisionar la máquina virtual de ciencia de datos](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Aprovisionamiento de máquinas virtuales de ciencia de datos de empresa](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Configurar las herramientas de ciencia de datos](r/setup-or-configure-r-tools.md)
 ### [Configurar un cliente de ciencia de datos](r/set-up-a-data-science-client.md)
 

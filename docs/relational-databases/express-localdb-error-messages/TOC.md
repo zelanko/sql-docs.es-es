@@ -1,6 +1,6 @@
-# [Mensajes de Error de SQL Server Express LocalDB referencia:](sql-server-express-localdb-reference-error-messages.md)
+# [Referencia de SQL Server Express LocalDB: mensajes de error](sql-server-express-localdb-reference-error-messages.md)
 
-# Errores LOCALDB_ERROR_
+# LOCALDB_ERROR_ errors
 ## [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](localdb-error-admin-rights-required.md)
 ## [LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED](localdb-error-auto-instance-create-failed.md)
 ## [LOCALDB_ERROR_CALLER_IS_NOT_OWNER](localdb-error-caller-is-not-owner.md)

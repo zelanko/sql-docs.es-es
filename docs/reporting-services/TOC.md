@@ -3,6 +3,7 @@
 # Información general
 ## [Novedades de Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Artículos nuevos y recientemente actualizados](new-updated-reporting-services.md)
+## [Registro de cambios](change-log-sql-server-reporting-services.md)
 ## [Conceptos de Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Características y tareas de Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
 ## [Compatibilidad con versiones anteriores](reporting-services-backward-compatibility.md)  
@@ -87,7 +88,8 @@
 ### [Configuración de la información del dispositivo CSV](csv-device-information-settings.md)  
 ### [Configuración de la información del dispositivo Excel](excel-device-information-settings.md)  
 ### [Configuración de la información del dispositivo HTML](html-device-information-settings.md)  
-### [Configuración de la información de dispositivo de imagen](image-device-information-settings.md)  ### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
+### [Configuración de la información del dispositivo de imagen](image-device-information-settings.md)  
+### [Configuración de la información del dispositivo MHTML](mhtml-device-information-settings.md)  
 ### [Configuración de la información del dispositivo PDF](pdf-device-information-settings.md)  
 ### [Configuración de la información del dispositivo PPTX](pptx-device-information-settings.md)  
 ### [Configuración de la información del dispositivo XML](xml-device-information-settings.md)  

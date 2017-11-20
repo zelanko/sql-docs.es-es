@@ -1,11 +1,15 @@
 ---
 title: "Características desusadas del motor de base de datos de SQL Server 2016 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: "215"
+caps.latest.revision: 215
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e6a58910370ab694918578fbced16f856d34c8e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
 
@@ -50,7 +55,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Objetos de base de datos|Capacidad de devolver conjuntos de resultados de los desencadenadores|Ninguno|Devolver resultados del desencadenador|12|  
 |Cifrado|El cifrado mediante RC4 o RC4_128 está en desuso y se quitará en la próxima versión. El descifrado con RC4 y RC4_128 no está en desuso.|Utilice otro algoritmo de cifrado como AES.|Algoritmo de cifrado desusado|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Reemplace los servidores remotos con servidores vinculados. sp_addserver solo se puede usar con la opción local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Servidores remotos|@@remserver|Reemplace los servidores remotos con servidores vinculados.|Ninguno|Ninguno|  
+|Servidores remotos|@@remserver |Reemplace los servidores remotos con servidores vinculados.|Ninguno|Ninguno|  
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Reemplace los servidores remotos con servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opciones de Set|**SET ROWCOUNT** para las instrucciones de **INSERT**, **UPDATE**y **DELETE**|Palabra clave TOP|SET ROWCOUNT|109|  
 |Sugerencias de tabla|Sugerencia de tabla HOLDLOCK sin paréntesis.|Usar HOLDLOCK con paréntesis.|Sugerencia de tabla HOLDLOCK sin paréntesis|167|  
@@ -154,7 +159,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL como nombre de columna en las instrucciones DML.|Use $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL como nombre de columna en las instrucciones DML.|Use $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de #, ## como nombres de procedimientos almacenados temporales y tablas temporales.|Utilice al menos un carácter adicional.|'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @, @@ o @@ como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)] .|No utilice @ o @@, o nombres que comiencen por @@ como identificadores.|'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @, @@ o @@ como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)] .|No utilice @ o @@, o nombres que comiencen por @@ como identificadores.|' @ ' y nombres que comiencen por ' @@ ' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use la palabra clave DEFAULT como valor predeterminado.|No utilice la palabra DEFAULT como un valor predeterminado.|Palabra clave DEFAULT como valor predeterminado|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de un espacio como un separador entre las sugerencias de la tabla.|Use una coma para separar las sugerencias de tabla.|Varias sugerencias de tabla sin coma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (*) en el modo de compatibilidad 90|Use COUNT_BIG (*).|Lista de selección de índice de la vista sin COUNT_BIG(*)|2|  
@@ -173,4 +178,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
 

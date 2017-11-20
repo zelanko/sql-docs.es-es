@@ -2,23 +2,28 @@
 title: "Tareas de instalación de Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61b6d74e87435b28cda2cc2eb52fc290192babea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffeb77252907d7b2dfae4c60491ee6d9b239e641
+ms.contentlocale: es-es
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Tareas de instalación de Master Data Services
   En este artículo se proporciona información general de las tareas de instalación, con vínculos a las instrucciones. Para ver un tutorial de instalación y configuración de Master Data Services, vea [Instalación y configuración de Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md). 
@@ -64,3 +69,4 @@ ms.lasthandoff: 11/09/2017
  [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

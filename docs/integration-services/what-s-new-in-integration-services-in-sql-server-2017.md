@@ -2,9 +2,12 @@
 title: "¿Qué &#39; s de Integration Services en SQL Server de 2017 | Documentos de Microsoft"
 ms.custom: 
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 

@@ -2,9 +2,12 @@
 title: Configurar la tarea de secuencia de comandos en el Editor de la tarea de secuencia de comandos | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 

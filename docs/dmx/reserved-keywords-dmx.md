@@ -2,9 +2,12 @@
 title: (DMX) de palabras clave reservadas | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>Palabras clave reservadas (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserva ciertas palabras clave para su uso exclusivo. Estas palabras clave no se pueden usar en ninguna parte de las instrucciones DMX (Extensiones de minería de datos), excepto en las posiciones que define [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la referencia del lenguaje DMX. Estas palabras clave DMX restringidas incluyen los miembros siguientes:  
   

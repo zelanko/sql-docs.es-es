@@ -2,9 +2,12 @@
 title: "Referencia de función de extensiones de minería de datos (DMX) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referencia de funciones de Extensiones de minería de datos (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite varias funciones en lenguaje DMX (Extensiones de minería de datos). Las funciones expanden los resultados de una consulta de predicción a fin de incluir información que permita describir la predicción con mayor nivel de detalle. Las funciones también brindan mayor control sobre la manera en la que se devuelven los resultados de la predicción. En la tabla siguiente se proporcionan vínculos a recursos para ayudarle a entender cómo utilizar las funciones en DMX.  
   

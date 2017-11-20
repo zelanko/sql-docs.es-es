@@ -1,24 +1,29 @@
 ---
 title: "Aplicación web de Master Data Manager | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 12/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5352e1eeabd5050d0a7d1e28fe324b96be6ebb9d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 269fbc636345b0313c07812cb8475afb6d1ab238
+ms.contentlocale: es-es
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="master-data-manager-web-application"></a>Aplicación web Master Data Services
   La aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] la usan principalmente los administradores para realizar tareas administrativas. Por ejemplo, solo los administradores pueden crear modelos, reglas de negocios o versiones de datos. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -43,3 +48,4 @@ ms.lasthandoff: 11/09/2017
  [Área funcional de Permisos de usuario y grupo &#40;Master Data Manager&#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   
+

@@ -2,23 +2,28 @@
 title: Seguimiento (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fc078effad6e15ad3671fff35727da809fcfb517
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 599231a2b064e9b6c1185d3662f81f24cb7245db
+ms.contentlocale: es-es
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="tracing-master-data-services"></a>Seguimiento (Master Data Services)
   El archivo Web.config contiene una sección de seguimiento, como se muestra a continuación. Esta sección es nueva en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
@@ -71,3 +76,4 @@ ms.lasthandoff: 11/09/2017
  Entrada de blog [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377)(Solución de problemas de mejora del registro), en msdn.com.  
   
   
+

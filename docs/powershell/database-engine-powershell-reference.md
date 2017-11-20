@@ -2,23 +2,28 @@
 title: Referencia del motor de base de datos de PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c1d105c439e17f3ac3c241e9fccf6c5cfa066f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc3df1d697b05201ac48520c1e344c28648cdfaf
+ms.contentlocale: es-es
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="database-engine-powershell-reference"></a>Referencia del motor de base de datos de PowerShell
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluye un conjunto de cmdlets de Windows PowerShell 2.0 para realizar acciones comunes en [!INCLUDE[ssDE](../includes/ssde-md.md)]. Además, las expresiones de consulta y los nombres de recursos uniformes (URN) pueden convertirse en rutas acceso de SQL Server PowerShell o usarse para especificar uno o más objetos en [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -48,3 +53,4 @@ ms.lasthandoff: 11/09/2017
  [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

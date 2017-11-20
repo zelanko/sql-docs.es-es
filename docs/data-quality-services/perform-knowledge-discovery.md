@@ -2,10 +2,14 @@
 title: "Realizar la detección de conocimiento | Microsoft Docs"
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +18,17 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e69395604574832a56c1b1e778b756b9dca0f200
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
   En este tema se describe cómo crear una base de conocimiento mediante la detección de conocimiento. Durante el proceso de detección, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analiza los datos de un origen de datos de ejemplo mediante un proceso asistido por PC, y agrega el conocimiento adquirido a la base de conocimiento. Este conocimiento se puede modificar y mejorar en el paso **Administrar valores del dominio** de la actividad de detección de conocimiento, o en la actividad de administración de dominios.  
@@ -69,12 +74,12 @@ ms.lasthandoff: 11/09/2017
   
 4.  En la tabla **Asignaciones** , asigne cada una de las columnas de origen en las que desea realizar la detección de conocimiento a un dominio de la base de conocimiento, de la manera siguiente:  
   
-    1.  Para crear una asignación, seleccione una columna de origen en la lista desplegable de la columna **Columna de origen** de una fila vacía y, a continuación, seleccione un dominio (si lo hay) en la lista desplegable de la columna **Dominio** de la misma fila. Si no existe ningún dominio, haga clic en **Crear un dominio** o en **Crear un dominio compuesto** para crear uno. Para obtener más información, consulte [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) o [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+    1.  Para crear una asignación, seleccione una columna de origen en la lista desplegable de la columna **Columna de origen** de una fila vacía y, a continuación, seleccione un dominio (si lo hay) en la lista desplegable de la columna **Dominio** de la misma fila. Si no existe ningún dominio, haga clic en **Crear un dominio** o en **Crear un dominio compuesto** para crear uno. Para obtener más información, consulte [Cree una regla de dominio](../data-quality-services/create-a-domain-rule.md) o [Crear un dominio compuesto](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Repita el paso anterior para cada asignación. Para cambiar el número de filas de la tabla, haga clic en **Agregar una asignación de columna**, o seleccione una fila y haga clic en **Quitar la asignación de columna seleccionada**. Si hace clic en **Quitar la asignación de columna seleccionada** cuando está seleccionada una fila rellena, la fila seleccionada se eliminará aunque haya una fila vacía.  
   
         > [!NOTE]  
-        >  Solo puede asignar los datos de origen para un dominio DQS a fin de realizar la detección de conocimiento si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener más información acerca de los tipos de datos admitidos, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Solo puede asignar los datos de origen para un dominio DQS a fin de realizar la detección de conocimiento si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener más información acerca de los tipos de datos admitidos, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Haga clic en **Ver o seleccionar dominios compuestos** para mostrar los dominios compuestos definidos. Si no se ha definido ningún dominio compuesto, el control no estará disponible.  
   
@@ -289,6 +294,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Hay un nivel bajo de valores válidos en el campo; debe comprobar la asignación y la pertinencia de las reglas de dominio para el contenido del campo.  
   
- Para obtener más información sobre la generación de perfiles, vea [Generación de perfiles de datos y notificaciones de DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Para obtener más información sobre la generación de perfiles, vea [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
+

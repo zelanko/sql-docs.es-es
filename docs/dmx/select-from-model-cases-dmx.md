@@ -2,9 +2,12 @@
 title: SELECT FROM &lt;modelo&gt;. CASOS (DMX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modelo&gt;. CASOS (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Admite la obtención de detalles y devuelve los casos que se emplearon para el aprendizaje del modelo. También puede devolver columnas de la estructura que no están incluidas en el modelo, si la obtención de detalles se ha habilitado en la estructura de minería de datos y en el modelo de minería de datos, y si se tienen los permisos adecuados.  
   

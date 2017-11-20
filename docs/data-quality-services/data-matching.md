@@ -2,23 +2,28 @@
 title: Coincidencia de datos | Microsoft Docs
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f6902b25f18905ce55dbd30e12917a4af858c139
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-matching"></a>Coincidencia de datos
   El proceso de búsqueda de coincidencias de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite reducir la duplicación de datos y mejorar la precisión de estos en un origen de datos. Este proceso analiza el grado de duplicación de todos los registros de un único origen de datos, y devuelve las probabilidades ponderadas de una coincidencia entre cada conjunto de registros comparados. A continuación, puede decidir qué registros son coincidencias y tomar las medidas apropiadas en los datos de origen.  
@@ -80,3 +85,4 @@ ms.lasthandoff: 11/09/2017
 |Ejecutar la búsqueda de coincidencias en un proyecto de calidad de datos|[Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)|  
   
   
+

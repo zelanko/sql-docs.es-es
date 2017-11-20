@@ -2,24 +2,30 @@
 title: "Administración de dominios: Lista de dominios | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.dm.domainlist.f1
+f1_keywords:
+- sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffb0cd1bbb37aeb7c551e9d71612507aad1a3724
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="domain-management-domain-list"></a>Administración de dominios: lista de dominios
   En este tema se describen los controles de la lista de dominios de la página **Administración de dominios** de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilice este panel para seleccionar el dominio en el que va a realizar las operaciones de administración. Este mismo panel se utiliza en todas las páginas con pestañas de la página **Administración de dominios** .  
@@ -57,3 +63,4 @@ ms.lasthandoff: 11/09/2017
  Exporta el dominio a un archivo .dqs. Este comando muestra el cuadro de diálogo **Exportar a un archivo de datos** . Este comando está disponible en el menú **Exportar** de la barra de menús situada en la parte superior de la página, o cuando se hace clic con el botón secundario en el panel de la lista de dominios. Para más información, consulte [Exportar un dominio a un archivo .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
+

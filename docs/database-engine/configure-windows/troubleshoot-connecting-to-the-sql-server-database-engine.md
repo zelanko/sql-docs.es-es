@@ -2,29 +2,34 @@
 title: "Solucionar problemas de conexión al Motor de base de datos de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 02/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas de conexión al motor de base de datos de SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Aquí se proporciona una lista exhaustiva de técnicas de solución de problemas que se pueden usar cuando no es posible conectarse al motor de base de datos de SQL Server. Los problemas no están ordenados de más habituales a menos, sino de más básicos a más complejos. Se da por sentado que se está conectando a SQL Server desde otro equipo mediante el protocolo TCP/IP, que es la situación más habitual. Estos pasos están escritos para SQL Server 2016 con SQL Server y las aplicaciones cliente con Windows 10, pero normalmente se aplican a otras versiones de SQL Server y otros sistemas operativos con solo ligeras modificaciones.
 
@@ -155,4 +160,5 @@ Ambos problemas están relacionados con el servicio SQL Server Browser, que prop
     1. En el equipo cliente, en el panel izquierdo del Administrador de configuración de SQL Server, expanda **Configuración** *version* **Configuration**, and then select **Client Protocols**.
     2. En el panel derecho, asegúrese de que TCP/IP esté habilitado. Si TCP/IP está deshabilitado, haga clic con el botón derecho en **TCP/IP** y luego haga clic en **Habilitar**.
     3. Asegúrese de que el orden de protocolo de TCP/IP sea un número menor que el de los protocolos de canalizaciones con nombre (o VIA en versiones anteriores). Por lo general, debería dejar la memoria compartida como orden 1 y TCP/IP como orden 2. La memoria compartida solo se usa cuando el cliente y SQL Server se están ejecutando en el mismo equipo. Todos los protocolos habilitados se prueban por orden hasta que se establece la conexión, aunque la memoria compartida se omite cuando la conexión no está en el mismo equipo. 
+
 

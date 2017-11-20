@@ -3,8 +3,11 @@ title: "Orígenes de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ A *origen de datos* es simplemente el origen de los datos. Puede ser un archivo,
 -   [Usar orígenes de datos](../../odbc/reference/using-data-sources.md)  
   
 -   [Ejemplo de origen de datos](../../odbc/reference/data-source-example.md)
+

@@ -2,9 +2,12 @@
 title: "Marco de trabajo de la aplicación de capa de datos: Términos de la licencia | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssdt
 ms.tgt_pltfrm: 
@@ -23,6 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - License Terms (Marco de trabajo de la aplicación de capa de datos: Términos de la licencia)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT  
   
 **MARCO DE TRABAJO DE LA APLICACIÓN DE CAPA DE DATOS DE MICROSOFT SQL SERVER**  

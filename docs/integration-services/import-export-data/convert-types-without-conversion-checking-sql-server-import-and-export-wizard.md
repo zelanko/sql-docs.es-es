@@ -2,9 +2,12 @@
 title: "Convertir no tipos comprobar (Asistente de importación y exportación SQL Server) de conversión | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 

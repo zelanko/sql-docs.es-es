@@ -2,7 +2,12 @@
 title: "Implementar un proyecto de SSIS con el código de .NET (C#) | Documentos de Microsoft"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS

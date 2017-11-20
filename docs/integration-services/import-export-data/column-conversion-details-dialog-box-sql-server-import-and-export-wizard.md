@@ -2,9 +2,12 @@
 title: "Cuadro de diálogo (importación de SQL Server y el Asistente para exportación) de detalles de conversión de columna | Documentos de Microsoft"
 ms.custom: 
 ms.date: 02/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 

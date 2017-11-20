@@ -2,9 +2,12 @@
 title: "MODIFICAR LA ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crea un nuevo modelo de minería de datos basado en una estructura de minería de datos existente.  Cuando se usa el **ALTER MINING STRUCTURE** instrucción para crear un nuevo modelo de minería de datos, la estructura ya debe existir. En cambio, cuando se utiliza la instrucción, [crear el modelo de minería de datos &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), crea un modelo y generar automáticamente su estructura de minería de datos subyacente al mismo tiempo.  
   

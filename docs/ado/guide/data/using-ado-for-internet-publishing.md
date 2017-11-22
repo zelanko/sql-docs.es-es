@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1cf73843e742254e9fcbc71299fa1494a669164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9b26261c83932005ba0852b67e4f246cea47b8e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-for-internet-publishing"></a>Utilizar ADO para publicación en Internet
 [El proveedor OLE DB para Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) muestra un ejemplo concreto de obtener acceso a datos heterogéneos con ADO. Aunque los ejemplos de esta sección va a ser específicos para utilizar el proveedor de publicación en Internet, los principios que muestran deberían ser similares al usar ADO con otros proveedores de datos heterogéneos, tales como un proveedor a un almacén de correo electrónico.  
@@ -63,5 +61,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Vea también  
  [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Historial de ADO](../../../ado/guide/ado-history.md)
-
+ [Características de ADO para cada versión](../../../ado/guide/ado-history.md)

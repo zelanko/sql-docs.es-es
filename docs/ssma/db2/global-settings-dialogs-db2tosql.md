@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5efe251737d87f7a14855ce3c3497f8e0ba09e15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aa1b4229a37eb55076a30542d8b8ffaa0fd045a1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>Configuración global (cuadros de diálogo) (DB2ToSQL)
 Use la página de los cuadros de diálogo de la **configuración Global** cuadro de diálogo para especificar la acción predeterminada del usuario y la configuración de advertencia de SSMA.  
@@ -49,4 +47,3 @@ Utilice esta opción para especificar el comportamiento de sobrescritura de obje
   
 -   Si selecciona **False**, SSMA no sobrescribe los metadatos del objeto durante la conversión.  
   
-

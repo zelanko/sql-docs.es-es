@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 688f17b4f133dbbd47e9930e812bf20459f153e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 765696847ddb1abd44dfac3463fdfd75f9a5c97a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Eliminación de SSMA para los componentes de MySQL (MySQLToSql)
 Cuando termine de migrar bases de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe desinstalar los componentes SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, si se desinstala el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , a continuación, SSMA dejará de admitir la migración de datos de MySQL a la base de datos de destino (SQL Server o SQL Azure) utilizando el motor de migración de datos de servidor.  
@@ -67,6 +65,5 @@ Una vez completado el proceso de desinstalación, puede confirmar que los objeto
   
 ## <a name="see-also"></a>Vea también  
 [Instalación de SSMA para cliente de MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Instalar componentes SSMA en SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+[Instalación de componentes de SSMA en SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7903 (Database Engine error)
+helpviewer_keywords: 7903 (Database Engine error)
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fc17f9ff2f87167d5399f377922307521a1e5fb3
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b65f596cdd5dcc60f26981836a2b1222bdd950ad
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver7903"></a>MSSQLSERVER_7903
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,4 +56,3 @@ Si el problema no está relacionado con el hardware y tiene una copia de segurid
 ### <a name="run-dbcc-checkdb"></a>Ejecute DBCC CHECKDB  
 No aplicable. Este error no se puede reparar. Si no puede restaurar la base de datos a partir de una copia de seguridad, póngase en contacto con el servicio de soporte técnico y atención al cliente (CSS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-

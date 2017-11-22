@@ -2,9 +2,12 @@
 title: Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b395a8d3a828b107d9b3ba2f1c41e449a8b7a67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2732f2074bb144c5ae0357ef23127e6eba454bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene un conjunto de bases de datos de nivel de sistema,*bases de datos del sistema*, esenciales para el funcionamiento de una instancia del servidor. Varias de las bases de datos del sistema requieren que se hagan copias de seguridad tras cualquier actualización de importancia. Las bases de datos del sistema de las que siempre debe realizar copias de seguridad son **msdb**, **maestra**y **model**. Si alguna base de datos utiliza la replicación en la instancia de servidor, existe la base de datos del sistema **distribution** de la que también debe hacer una copia de seguridad. La copia de seguridad de estas bases de datos del sistema le permite restaurar y recuperar el sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el caso de producirse un error del sistema, por ejemplo una pérdida del disco duro.  
   

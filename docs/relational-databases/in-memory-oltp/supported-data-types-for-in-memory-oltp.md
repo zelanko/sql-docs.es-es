@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b959d2dd76d312b64b4a2379a99d04fd5d164aff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipos de datos admitidos para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,18 +52,18 @@ ms.lasthandoff: 07/31/2017
   
 A partir de SQL Server 2016, cabe destacar lo siguiente en relación con los tipos de datos binarios y de cadena anteriores:  
   
-- Cada tabla individual con optimización para memoria puede tener varias columnas long como `nvarchar(4000)`, aunque sus longitudes agregarían más que el tamaño de fila físico de 8060 bytes.  
+- Cada tabla individual optimizada para memoria puede tener varias columnas long como `nvarchar(4000)`, aunque sus longitudes agregarían más que el tamaño de fila físico de 8060 bytes.  
   
-- Una tabla con optimización para memoria puede tener columnas de tipos de datos de cadena y binarias de longitud máxima, como `varchar(max)`.  
+- Una tabla optimizada para memoria puede tener columnas de tipos de datos de cadena y binarias de longitud máxima, como `varchar(max)`.  
 
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificar las columnas de LOB y otras columnas no consecutivas
 
-A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas con optimización para memoria. Tenga en cuenta lo siguiente:
+A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas optimizadas para memoria. Tenga en cuenta lo siguiente:
 
 - Todas las columnas de clave de índice se almacenan en filas consecutivas.
-  - Las claves de índice no únicas ahora pueden incluir columnas que aceptan valores NULL en tablas con optimización para memoria.
-  - Los índices se pueden declarar como UNIQUE en una tabla con optimización para memoria.
+  - Las claves de índice no únicas ahora pueden incluir columnas que aceptan valores NULL en tablas optimizadas para memoria.
+  - Los índices se pueden declarar como UNIQUE en una tabla optimizada para memoria.
 - Todas las columnas de LOB se almacenan en filas no consecutivas.
 - Un valor en max_length de -1 indica una columna de objetos grandes (LOB).
 
@@ -98,4 +96,3 @@ SELECT
  [Tamaño de tabla y fila de tabla optimizada para memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-

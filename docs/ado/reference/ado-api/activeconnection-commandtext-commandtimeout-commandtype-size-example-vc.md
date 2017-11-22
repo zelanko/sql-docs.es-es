@@ -4,16 +4,14 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CommandTimeout property [ADO], VC++ example
 - CommandText property [ADO], VC++ example
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - Direction property [ADO], VC++ example
 - ActiveConnection property [ADO], VC++ example
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9eb20f62248456248aad4a12468ad6e48575170
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4d9ede231a0b6d9a4c326385850202f81fe78a9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, tamaño y ejemplo de propiedades de dirección (VC ++)
 Este ejemplo se utiliza la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md), y [dirección](../../../ado/reference/ado-api/direction-property.md) propiedades para ejecutar un procedimiento almacenado.  
@@ -225,4 +222,3 @@ Authors With  25  Percent Royalty
  [Propiedad CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Propiedad Direction](../../../ado/reference/ado-api/direction-property.md)   
  [Propiedad Size (parámetro de ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-

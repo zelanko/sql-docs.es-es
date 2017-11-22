@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 433c5767590c6ab68d7aea26f973eb258e464977
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ca9dbb38d0a7c79a6a749542c5b8b1be77afd27
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-editor-mysqltosql"></a>Configuración global (Editor) (MySQLToSQL)
 Utilice la página del Editor de la **configuración Global** cuadro de diálogo para especificar la configuración de ventanas del editor de código.  
@@ -36,4 +34,3 @@ Para mostrar números de línea en las ventanas del editor de código, seleccion
   
 Si se selecciona una ventana del editor de código cuando se cambia esta configuración, debe volver a seleccionar el objeto actual que se va a actualizar la pantalla.  
   
-

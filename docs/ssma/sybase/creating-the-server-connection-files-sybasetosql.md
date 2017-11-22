@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Sybase Console,Creating Server Connection Files
 - Sybase Console,Server Connection File Validation
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3560921debc16ed2752b27cfe174e68958496b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f7cea05ac113d752a67202cebb6a072876666315
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Crear los archivos de conexión de servidor (SybaseToSQL)
 Información del servidor puede especificarse en la sección de servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>`. Si el mismo identificador de servidor se encuentra en el archivo de script y el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
@@ -117,6 +115,5 @@ El usuario puede validar fácilmente su archivo de conexión de servidor con el 
 El siguiente paso en la utilización de la consola es [ejecutar la consola SSMA &#40; SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecutar la consola SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Ejecución de la consola de SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

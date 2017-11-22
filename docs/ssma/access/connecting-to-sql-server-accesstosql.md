@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f282c03b5492ea05fefe3d65b968d42ce146333c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9f2633151345d57fbba2fe7c40b3ca52b492e68
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conectarse a SQL Server (AccessToSQL)
 Para migrar bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe conectarse a la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Cuando se conecta, SSMA obtiene metadatos acerca de las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y muestra los metadatos de la base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos. SSMA almacena información acerca de qué instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que están conectados a, pero no almacena las contraseñas.  
@@ -73,7 +71,7 @@ Al definir las propiedades de conexión, también se especifique la base de dato
   
     -   Si se conecta a una instancia con nombre, escriba el nombre del equipo, una barra diagonal inversa y el nombre de instancia. Por ejemplo: MyServer\MyInstance.  
   
-    -   Para conectarse a una instancia de usuario activas de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], conectarse mediante canalizaciones con nombre de protocolo y especifica el nombre de canalización, como \\ \\.\pipe\sql\query. Para obtener más información, consulte el [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentación.  
+    -   Para conectarse a una instancia de usuario activas de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], conectarse mediante canalizaciones con nombre de protocolo y especifica el nombre de canalización, como \\ \\.\pipe\sql\query. Para obtener más información, consulte la documentación de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] .  
   
 3.  Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está configurado para aceptar conexiones en un puerto no predeterminado, escriba el número de puerto que se utiliza para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conexiones en el **puerto del servidor** cuadro. Para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], el número de puerto predeterminado es 1433. Para las instancias con nombre, SSMA intentará obtener el número de puerto desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] servicio Browser.  
   
@@ -134,4 +132,3 @@ Si desea personalizar la asignación entre las bases de datos de origen y de des
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

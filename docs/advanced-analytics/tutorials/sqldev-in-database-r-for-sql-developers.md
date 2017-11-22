@@ -5,27 +5,24 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f77ac9e6b57d4b904f67cfd5e6bb9d5760c0a3d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 149cafe2595c176bcb3d1f162d1455aa7c4c6616
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Análisis de R en bases de datos para desarrolladores de SQL (tutorial)
 
@@ -88,4 +85,3 @@ Sin embargo, antes de iniciar el tutorial, debe completar estos preparativos:
 ## <a name="next-lesson"></a>Lección siguiente
 
 [Lección 1: Descargar los datos de ejemplo](../tutorials/sqldev-download-the-sample-data.md)
-

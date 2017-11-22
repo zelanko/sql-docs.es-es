@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62b77eec9c166f2a26930e9ffec0e7edbfd11a5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 167fb6b82df1a5ed944c84424d5a9b05e7713097
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-fundamentals"></a>Conceptos básicos de RDS
 > [!IMPORTANT]
@@ -36,9 +34,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Soluciones de acceso a datos remotos](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
   
--   [Modelo de programación de RDS básica](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [Modelo básico de programación de RDS](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
   
--   [Modelo de programación de RDS en detalle](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [Modelo detallado de programación de RDS](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
   
 -   [Modelo de programación de RDS con objetos](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
   
@@ -48,7 +46,6 @@ ms.lasthandoff: 09/09/2017
  [Soluciones de acceso a datos remotos](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [Escenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Seguridad y el uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
+ [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

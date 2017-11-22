@@ -8,24 +8,21 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- JSON, FAQ
+helpviewer_keywords: JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ff6b969cec3da6f3bb6f25e0071f24ed2c68539c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Resolver problemas comunes con JSON en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +101,7 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Entrada de OPENJSON y JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Devolución de un subobjeto JSON anidado a partir de texto JSON con OPENJSON  
- **Pregunta.** No puedo abrir una matriz de objetos JSON complejos que contiene matrices, objetos y valores escalares empleando OPENJSON con un esquema explícito. Cuando hago referencia a una clave en la cláusula WITH, se devuelven solo los valores escalares. Los objetos y las matrices se devuelven como valores NULL. ¿Cómo puedo extraer objetos o matrices como objetos JSON?  
+ **Pregunta.** No puedo abrir una matriz de objetos complejos JSON que contiene matrices, objetos y valores escalares empleando OPENJSON con un esquema explícito. Cuando hago referencia a una clave en la cláusula WITH, se devuelven solo los valores escalares. Los objetos y las matrices se devuelven como valores NULL. ¿Cómo puedo extraer objetos o matrices como objetos JSON?  
   
  **Respuesta.** Si quiere devolver un objeto o matriz como una columna, use la opción AS JSON en la definición de columna, tal y como se muestra en el ejemplo siguiente.  
   
@@ -153,4 +150,3 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
 Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.
-

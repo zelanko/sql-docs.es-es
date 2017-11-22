@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5509f22c53e1c285175969964abc4b977f8d9bc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
   Una vez que la característica de reproducción distribuida de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay**. Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -82,10 +80,9 @@ ms.lasthandoff: 08/02/2017
 |ApplicationName|**nvarchar**|El nombre de la aplicación cliente que creó la conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la captura.|17|  
   
 ## <a name="see-also"></a>Vea también  
- [Reproducción distribuida de SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40; utilidad Distributed Replay &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

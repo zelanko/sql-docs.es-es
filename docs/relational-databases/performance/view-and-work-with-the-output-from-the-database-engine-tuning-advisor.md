@@ -2,9 +2,12 @@
 title: "Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb34918a06fe49195766fbcdd22e8f762c9e4faf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85b344cdd5149c332d3cfd34638db668d49e88d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cuando el Asistente para la optimización de motor de base de datos optimiza bases de datos, crea resúmenes, recomendaciones, informes y registros de optimización. Puede utilizar la salida de registro de optimización para solucionar problemas de las sesiones de optimización del Asistente para la optimización de motor de base de datos. Puede usar los resúmenes, recomendaciones e informes para determinar si desea implementar las recomendaciones de optimización o continuar con la optimización hasta alcanzar las mejoras de rendimiento de consultas que necesita para la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener información acerca de cómo usar el Asistente para la optimización de bases de datos para crear cargas de trabajo y optimizar una base de datos, vea [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Tutorial de ciencia de datos to-end para R y SQL Server
 
@@ -45,7 +41,7 @@ Estimado tiempos no incluyen el programa de instalación. Para obtener más info
 |Lista de temas|Tiempo estimado|
 |-|------------------------------|
 |[Preparar los datos del tutorial de R](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Obtener los datos usados para generar un modelo. Descargar un conjunto de datos público y cargarlo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|30 minutos|
-|[Explorar los datos mediante SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Comprender los datos con resúmenes y herramientas de SQL.|10 minutos|
+|[Explorar los datos con SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Comprender los datos con resúmenes y herramientas de SQL.|10 minutos|
 |[Resumir los datos con R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Usar R para explorar los datos y generar resúmenes.|10 minutos|
 |[Crear gráficos de uso de R en SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Crear gráficos en contextos de proceso local y remoto mezclando R y SQL.|10 minutos|
 |[Crear características de datos mediante R y T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Realizar el diseño de las características con las funciones personalizadas en R y [!INCLUDE[tsql](../../includes/tsql-md.md)]. Comparar el rendimiento de R y T-SQL para las tareas de características. |10 minutos|
@@ -71,4 +67,3 @@ Para obtener más información acerca de cómo configurar estos entornos de clie
 ## <a name="next-lesson"></a>Lección siguiente
 
 [Preparar los datos del tutorial de R](../tutorials/walkthrough-prepare-the-data.md)
-

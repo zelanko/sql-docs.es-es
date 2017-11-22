@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d46cb8e801f39cf8b87c0c3187667247e3da9d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f2804e2662e15c993fb3c5de7e1278a623ffcd47
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adding-records-to-a-recordset"></a>Agregar registros a un conjunto de registros
 Use la **AddNew** método para crear e inicializar un nuevo registro en una existente **conjunto de registros**. Puede usar el **admite** método con un **CursorOptionEnum** valo **adAddNew** para comprobar si puede agregar registros al actual **delconjuntoderegistros** objeto.
@@ -39,11 +37,10 @@ Use la **AddNew** método para crear e inicializar un nuevo registro en una exis
 
  Esta sección contiene los temas siguientes.
 
--   [Agregar registros mediante AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Agregar registros mediante AddNew (método)](../../../ado/guide/data/adding-records-using-addnew.md)
 
--   [Al agregar varios campos](../../../ado/guide/data/adding-multiple-fields.md)
+-   [Agregar varios campos y valores](../../../ado/guide/data/adding-multiple-fields.md)
 
 -   [Determinar el modo de edición](../../../ado/guide/data/determining-edit-mode.md)
 
 -   [Uso de AddNew de inmediato y modos de lote](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
-

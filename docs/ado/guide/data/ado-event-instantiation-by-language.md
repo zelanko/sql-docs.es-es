@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - events [ADO], instantiation by language
 - event handlers [ADO], instantiation by language
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17d7b4a0e32cdf4890f742323c9e55f637725212
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4d365dcba4175c154d61a79e0831b993ac8b4dc3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-event-instantiation-by-language"></a>Creación de instancias de eventos de ADO según el lenguaje
 Cada lenguaje de programación crea instancias de eventos de ADO de forma diferente. Todos los ejemplos siguientes, se crea un **ConnectComplete** controlador de eventos.  
@@ -40,4 +38,3 @@ Cada lenguaje de programación crea instancias de eventos de ADO de forma difere
 -   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
   
 -   [ADO/WFC](../../../ado/guide/data/ado-event-instantiation-ado-and-wfc.md)
-

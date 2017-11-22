@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c27c5db00165b0664e9d3d42fbfe104264cde147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6533ce1774dec4967c9d43ea27902281d5bf756
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Configuración del proyecto (la sincronización) (SybaseToSQL)
 La página de sincronización de la **configuración del proyecto** cuadro de diálogo contiene opciones que personalizan la forma en que SSMA carga los objetos de base de datos, como tablas y procedimientos almacenados, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
@@ -67,4 +65,3 @@ Si selecciona **escribir en la base de datos**, SSMA eliminará el objeto de la 
 Si selecciona **omitir**, SSMA no llevará a cabo las acciones de actualización.   
 Conjunto de opciones de forma predeterminada es **actualizar desde la base de datos**.  
   
-

@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Test Case Settings
+helpviewer_keywords: Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0eec311acd9250b8bc5224e7bba46a4035f3f98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7568e7a78e0129204a23797cbc589139816ac13e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Finalizar la preparación del caso de prueba (SybaseToSQL)
 Página final del asistente muestra la descripción del caso de prueba y obtener información acerca de los objetos implicados en la prueba. Además, en esta página se pueden establecer la prueba de opciones de ejecución.  
@@ -71,4 +68,3 @@ Haga clic en el **finalizar** botón para guardar el caso de prueba preparada en
 [Ejecutar casos de prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

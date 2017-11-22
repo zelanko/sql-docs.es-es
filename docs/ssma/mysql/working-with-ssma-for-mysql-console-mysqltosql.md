@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77eab5b93bdbf5de9866f16de49267db1490d6dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6212ff417a112687332129597b2a442f87d46da1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Trabajar con SSMA para la consola de MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) para MySQL ahora es accesible a través de una aplicación de consola en línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como una aplicación de consola, SSMA permite crear una interfaz de nivel de script, reduce el ciclo de migración y pasa el esfuerzo de migración.  
@@ -49,4 +47,3 @@ Entre los temas tratados en esta sección se incluyen:
 ## <a name="see-also"></a>Vea también  
 [Introducción a SSMA para la consola de MySQL](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   
-

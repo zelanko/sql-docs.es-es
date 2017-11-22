@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1dbfd36d6761c539176165653bd2e3484c07d5c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 766c1292435eb11dcff94f7353d49478f554c6a7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
   La utilidad **SQLdiag** es una herramienta de recopilación de diagnósticos de uso general que se puede ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -53,11 +51,11 @@ ms.lasthandoff: 08/02/2017
   
 -   Registros de eventos de Windows  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]seguimientos  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] seguimientos  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]información de bloqueo  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] información de bloqueo  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]información de configuración  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] información de configuración  
   
  Puede especificar los tipos de información que quiere que **SQLdiag** recopile si modifica el archivo de configuración SQLDiag.xml, que se describe en la siguiente sección.  
   
@@ -235,7 +233,7 @@ sqldiag
  **SQLDIAG START /A** *SQLdiag_application_name*  
   
 ## <a name="security-requirements"></a>Requisitos de seguridad  
- A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** . De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  Los efectos sobre el rendimiento de la ejecución de **SQLdiag** dependen del tipo de datos de diagnóstico cuya recopilación se haya configurado. Por ejemplo, si ha configurado **SQLdiag** para recopilar la información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , cuanto mayor sea el número de clases de eventos de las que decida realizar un seguimiento, más se verá afectado el rendimiento del servidor.  
@@ -363,15 +361,14 @@ SQLDIAG START /A Instance1
  Para ejecutar varias instancias de **SQLdiag** en el mismo equipo, especifique **/A***SQLdiag_application_name* en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Recopilar datos de diagnóstico de instancias de SQL Server en clúster  
- **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar los diagnósticos de clúster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias, asegúrese de que **"."**  se especifica para el **nombre** atributo de la  **\<máquina >** en la configuración del archivo SQLDiag.Xml y no se especifica la **/G** argumento en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G**. Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
+ **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar los diagnósticos de clúster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias, asegúrese de que **"."**  se especifica para el **nombre** atributo de la  **\<máquina >** en la configuración del archivo SQLDiag.Xml y no se especifica la **/G** argumento en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G** . Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
   
  Si se especifica **"."** como nombre de equipo, **SQLdiag** detecta que se está ejecutando en un clúster y recupera simultáneamente la información de diagnóstico de todas las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en el clúster. Si desea recopilar información de diagnóstico de solo una instancia virtual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se ejecuta en un equipo, especifique ese servidor virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para el **nombre** atributo de la  **\<máquina >** elemento en SQLDiag.Xml.  
   
 > [!NOTE]  
->  Para recopilar información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] desde instancias agrupadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], deben habilitarse los recursos compartidos con fines administrativos (ADMIN$) en el clúster.  
+>  Para recopilar información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] desde instancias agrupadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , deben habilitarse los recursos compartidos con fines administrativos (ADMIN$) en el clúster.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

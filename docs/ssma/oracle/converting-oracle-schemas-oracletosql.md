@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Conversion Results
+helpviewer_keywords: Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 87a15ad693bb183c6a82e0d094b5de4fb189bfc0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50294e2048a3fb494e683cfdb20b5eecd8662ca4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Convertir esquemas de Oracle (OracleToSQL)
 Después de haberse conectado a Oracle, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], y el proyecto de conjunto y las opciones de asignación de datos, puede convertir objetos de base de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de base de datos.  
@@ -124,4 +121,3 @@ El siguiente paso del proceso de migración consiste en [cargar los objetos conv
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

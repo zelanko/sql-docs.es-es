@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87b232709f63a1a4041a057cb5a6c275bc9835b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fbc02b1b8d89972cfd25739f4055842e303450c1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilidad)
   La utilidad**sqlmaint** realiza un conjunto especificado de operaciones de mantenimiento en una o varias bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -279,4 +277,3 @@ sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   
   
-

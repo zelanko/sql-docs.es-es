@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - write-enabled partitions [Analysis Services]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>Particiones: particiones habilitadas para escritura
   Los datos de un cubo son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una partición para escritura. Las particiones habilitadas para escritura se usan para que los usuarios corporativos puedan explorar escenarios si cambian los valores de las celdas y analizan los efectos de los cambios en los datos del cubo. Si habilita una partición para escritura, las aplicaciones cliente podrán registrar los cambios en los datos de la partición. Estos cambios, conocidos como datos de reescritura, se almacenan en una tabla independiente y no sobrescriben los datos existentes en un grupo de medida. Sin embargo, se incorporan a los resultados de la consulta como si formasen parte de los datos del cubo.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +90,7 @@ Para comprender los permisos concedidos a cada rol, vea las descripciones de rol
 
 Este sistema es muy flexible, lo que significa que puede ser complicado si los usuarios que lo configuran quieren que sea muy preciso. Eso no es necesariamente algo negativo; espero que mi entidad financiera sea precisa. Para simplificar las cosas, ayuda a crear roles, asignar permisos a roles y, después, agregar los grupos de usuarios a los roles. Y es más fácil si el equipo de desarrollo de base de datos separa la actividad por esquemas y, después, concede permisos de rol a un esquema completo en lugar de a procedimientos o tablas individuales. Pero la realidad es compleja y hay que asumir que las necesidades empresariales crean requisitos de seguridad inesperados.   
 
-El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **Póster de permisos del motor de base de datos** en formato pdf.  
+El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
   
  [![Permisos de motor de base de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
@@ -165,5 +163,4 @@ Para obtener detalles de la sintaxis, vea [HAS_PERMS_BY_NAME](../../../t-sql/fun
 
 [Introducción a los permisos de los motores de bases de datos](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [Tutorial: Introducción al motor de base de datos](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
-
 

@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3ad6fe841597c1621cc7280ba06711a9dd22832
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc975fbbdb4118158e4beacef63f45a63c479d38
-ms.contentlocale: es-es
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Compatibilidad de Transact-SQL con OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +45,8 @@ ms.lasthandoff: 08/18/2017
 -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
     En un procedimiento almacenado compilado de forma nativa, puede declarar una variable como **NOT NULL**. No puede hacerlo en un procedimiento almacenado normal.  
   
- **AUTO_UPDATE_STATISTICS** puede ser **ON** para tablas con optimización para memoria a partir de SQL Server 2016. Para obtener más información, vea [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md).  
+ 
+            **AUTO_UPDATE_STATISTICS** puede ser **ON** para tablas optimizadas para memoria a partir de SQL Server 2016. Para obtener más información, vea [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md).  
   
  No se admite [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md) ON para procedimientos almacenados compilados de forma nativa.  
   
@@ -62,4 +61,3 @@ ms.lasthandoff: 08/18/2017
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

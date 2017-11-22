@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactions [ADO]
+helpviewer_keywords: transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1535ff20e7dbc40b8f478902512d068fd5501b27
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="controlling-transactions-ado"></a>Control de transacciones (ADO)
 ADO admite el procesamiento de transacciones en una conexión con la Ayuda de la **BeginTrans**, **CommitTrans**, y **RollbackTrans** métodos en un  **Conexión** objeto. La idea general de la implementación del procesamiento de transacciones en ADO se ilustra en el siguiente fragmento de código sencillo.  
@@ -88,4 +85,3 @@ oConn.Close
  Aquí se utiliza el procesamiento de transacciones para asegurarse de que los dos registros se actualizan como una unidad de operación y que los nombres de dos productos son intercambian o no cambian en absoluto.  
   
  Para explicaciones detalladas de procesamiento de transacciones, vea [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).
-

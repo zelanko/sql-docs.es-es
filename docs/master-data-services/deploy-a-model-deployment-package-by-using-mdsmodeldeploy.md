@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7f6941c1ea7901e8a89eebc64c5c519931cb1c05
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: acf07e21b7d55db10f640ea1086501ed4deadd53
-ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilice la herramienta MDSModelDeploy para implementar un paquete que contiene:  
@@ -126,4 +124,3 @@ ms.lasthandoff: 09/07/2017
  [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   
-

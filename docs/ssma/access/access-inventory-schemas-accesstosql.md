@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de acceso (AccessToSQL)
 En las siguientes secciones se describen las tablas que se crean de SSMA al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -189,6 +187,5 @@ Los metadatos del módulo se exportan a la **SSMA_Access_InventoryModules** tabl
 |**ModuleName**|**nvarchar(4000)**|El nombre del módulo.|  
   
 ## <a name="see-also"></a>Vea también  
-[Exportar un inventario de acceso](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Exportación de un inventario de Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

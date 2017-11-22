@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- permissions [Master Data Services], determining permissions
+helpviewer_keywords: permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 59c25f34bb01f4d3767f01d5912322e3c33f9ba9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 8348c6102a9c683da3c8ec1e453fb579daf94ef2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Cómo se determinan los permisos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la manera más sencilla de configurar la seguridad es asignar permisos del objeto de modelo a un grupo al que pertenece el usuario.  
@@ -88,4 +85,3 @@ ms.lasthandoff: 09/07/2017
  [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   
-

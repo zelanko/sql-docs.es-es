@@ -25,17 +25,16 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85f1333bc1f9674dcdb5274e0b2768c401fd2d7c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmos de minería de datos (Analysis Services: Minería de datos)
   Un *algoritmo* en minería de datos (o aprendizaje automático) es un conjunto de heurísticas y cálculos que permiten crear un modelo a partir de datos. Para crear un modelo, el algoritmo analiza primero los datos proporcionados, en busca de tipos específicos de patrones o tendencias. El algoritmo usa los resultados de este análisis en un gran número de iteraciones para determinar los parámetros óptimos para crear el modelo de minería de datos. A continuación, estos parámetros se aplican en todo el conjunto de datos para extraer patrones procesables y estadísticas detalladas.  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

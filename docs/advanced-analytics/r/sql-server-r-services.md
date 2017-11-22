@@ -1,27 +1,23 @@
 ---
 title: "Servicios de aprendizaje de máquina SQL Server | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c384b7fba553175767aaf7c439207771b31e6b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>Machine Learning Services en SQL Server
 
@@ -39,7 +35,7 @@ La instalación de SQL Server le permite instalar componentes de servidor y de c
   
     Cuando se selecciona esta característica, las extensiones se instalan en el motor de base de datos para admitir la ejecución del código escrito de R o Python. Se crea un nuevo servicio, el [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], para administrar las comunicaciones entre los tiempos de ejecución externos y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.
   
-+ Instalar **aprendizaje de máquina de Microsoft Server (independiente)** en un equipo independiente si no necesita usar SQL Server como el contexto de proceso. Servidor de aprendizaje de máquina incluye el mismo equipo componentes, más el paquete mrsdeploy para la ejecución de trabajos de aprendizaje de máquina escalable y distribuida como un servicio web de aprendizaje.
++ Instalar **aprendizaje de máquina de Microsoft Server (independiente)** en un equipo independiente si no necesita usar SQL Server como el contexto de proceso. Servidor de aprendizaje de máquina incluye los mismos componentes de aprendizaje de máquina, así como la capacidad de ejecutar trabajos de aprendizaje automático escalable y distribuida como un servicio web.
   
 +    Instalar [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client) en equipos remotos para desarrollar soluciones que se pueden implementar en SQL Server o al servidor de aprendizaje de máquina en Windows, Linux o Hadoop.
 
@@ -49,7 +45,7 @@ La instalación de SQL Server le permite instalar componentes de servidor y de c
   
     Cuando se selecciona esta característica, obtendrá la capacidad para ejecutar script de R mediante SQL Server como el contexto de proceso, o para ejecutar un script de R en un procedimiento almacenado.
   
-+   Instalar **Microsoft R Server (independiente)** del programa de instalación de SQL Server 2016 para configurar los componentes de R en un equipo independiente que usa para soluciones de developin R.
++   Instalar **Microsoft R Server (independiente)** del programa de instalación de SQL Server 2016, para instalar los componentes de R en un equipo independiente que puede usar para desarrollar o implementar soluciones en R.
 
 
 ## <a name="which-type-of-machine-learning-service-do-i-need"></a>¿Qué tipo de servicio de aprendizaje de máquina es necesario?
@@ -75,4 +71,3 @@ La instalación de SQL Server le permite instalar componentes de servidor y de c
 + [Tutoriales de SQL Server R](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     Aprenda a crear orígenes de datos de SQL Server en su código R y a usar contextos de computación remotos. Otros tutoriales dirigidos a desarrolladores de SQL muestran cómo entrenar e implementar un modelo de R en SQL Server.
-

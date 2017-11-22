@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 A menudo resulta útil volver directamente a un registro específico después de haberse movido por el **Recordset** sin tener que desplazarse a través de cada registro y comparar valores. Por ejemplo, si se intenta buscar un registro mediante el **buscar** método, pero la búsqueda no devuelve ningún registro, se colocan automáticamente en cualquier extremo de la **conjunto de registros**. Si el proveedor es compatible con ellos, se pueden utilizar marcadores para marcar su lugar antes de usar el **buscar** método para que pueda volver a su ubicación. Un marcador es un **Variant** escriba el valor que identifica de forma única un registro en un **Recordset** objeto.  
@@ -57,4 +55,3 @@ End If
  El [admite](../../../ado/reference/ado-api/supports-method.md) método se trata con más detalle más adelante.  
   
  Excepto en el caso de clonado **conjuntos de registros**, los marcadores son únicos para la **Recordset** en que se crearon, incluso si se utiliza el mismo comando. Esto significa que no se puede utilizar un **marcador** obtenido de una **Recordset** para mover con el mismo registro en un segundo **Recordset** abierto con el mismo comando.
-

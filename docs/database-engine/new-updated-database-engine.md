@@ -19,12 +19,11 @@ ms.date: 09/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: genemi
+ms.openlocfilehash: a367634760aba2b3293df230a427f10bc49feffa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Documentos nuevos y actualizados recientemente sobre el motor de base de datos
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -165,6 +164,5 @@ En esta sección se enumeran artículos muy similares a los artículos actualiza
 - [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
-
 
 

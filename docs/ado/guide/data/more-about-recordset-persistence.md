@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 03208e45eb04540befeae3e8e86ec0100e1f9831
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8baac18c8d27face9438a85a2c35db57348836a3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
 El objeto de conjunto de registros ADO admite almacenar el contenido de un **Recordset** objeto en un archivo mediante su [guardar](../../../ado/reference/ado-api/save-method.md) método. El archivo almacenado persistentemente exista en una variable local de unidad, server, o como una dirección URL en un servidor Web del sitio. Más adelante, se puede restaurar el archivo con cualquiera el [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de la **Recordset** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -90,4 +88,3 @@ dc.Refresh
  [Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Secuencias y persistencia](../../../ado/guide/data/streams-and-persistence.md)
-

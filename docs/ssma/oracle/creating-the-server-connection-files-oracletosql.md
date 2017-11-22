@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Server Connection File Creation
 - Server Connection File, Server Connection File Validation
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d5b54fe081977e85f75cf751b3822761a05bc7ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a205ce938b9f527a0181951f80fe425ee4172588
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Crear los archivos de conexión de servidor (OracleToSQL)
 Información del servidor puede especificarse en la sección de servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>`. Si el mismo identificador de servidor se encuentra en el archivo de script y el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
@@ -111,6 +109,5 @@ Información del servidor puede especificarse en la sección de servidores del a
 El siguiente paso en la utilización de la consola es [ejecutar la consola SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecutar la consola SSMA](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Ejecución de la consola de SSMA](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-

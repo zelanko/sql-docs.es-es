@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a19b939b0b0eb33d436a3924a04562473b4c06a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
 Para los comandos sin parámetros, se ejecutan todos los comandos de proveedor y el **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todos los **conjuntos de registros** se llenará totalmente. Si se ha seleccionado un modo de llenado asincrónico, el estado relleno de la **conjuntos de registros** dependerá del modo de llenado y el tamaño de la **conjuntos de registros**.  
@@ -53,4 +51,3 @@ SHAPE {SELECT * FROM Customers}
  [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
-

@@ -1,26 +1,24 @@
 ---
 title: Rendimiento de los servicios de R - resultados y los recursos | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de los servicios de R: resultados y recursos
 
@@ -31,7 +29,7 @@ Los dos casos prácticos tenía distintos objetivos:
 + El primer caso práctico, el equipo de desarrollo de R Services busca medir el impacto de técnicas de optimización específica
 + El segundo caso práctico, por un equipo de científicos de datos experimentado con varios métodos para determinar las mejores optimizaciones para un escenario concreto de puntuación de gran volumen.
 
-Este tema enumeran los resultados detallados del primer caso práctico. Para el segundo caso práctico, un resumen describe las conclusiones generales. Al final de este tema, encontrará vínculos a todos los scripts y los datos de ejemplo y los recursos usados por los autores originales.
+Este tema enumeran los resultados detallados del primer caso práctico. Para el segundo caso práctico, un resumen describe las conclusiones generales. Al final de este tema son vínculos a todos los scripts y los datos de ejemplo y los recursos usados por los autores originales.
 
 ## <a name="performance-case-study-airline-dataset"></a>Caso práctico de rendimiento: conjunto de datos Airline
 
@@ -280,13 +278,13 @@ Los resultados de pruebas muestran el momento de guardar el modelo y el tiempo n
 
 Cargar un modelo entrenado desde una tabla es claramente un modo más rápido realizar la predicción. Se recomienda que evite crear el modelo y la realización de puntuación en la misma secuencia de comandos.
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>Caso práctico: optimización para reanudar la tarea de búsqueda de coincidencias
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Caso práctico: optimización de la tarea de búsqueda de coincidencias de reanudación
 
-El modelo de coincidencia de reanudación fue desarrollado por científicos de datos de Microsoft Ke Huang para probar el rendimiento del código R en SQL Server y habilitar los científicos de datos admitir soluciones escalables y de nivel de empresa.
+El modelo de coincidencia de reanudación fue desarrollado por científicos de datos de Microsoft Ke Huang para probar el rendimiento del código de R en SQL Server y datos de ayuda así científicos crear escalables, soluciones de nivel de empresa.
 
 ### <a name="methods"></a>Métodos
 
-Los paquetes RevoScaleR y de MicrosoftML se usaron para entrenar un modelo de predicción en una solución de R complejo que implican grandes conjuntos de datos. Las consultas SQL y código de R son idénticos. Todas las pruebas se realizaron en una sola máquina virtual de Azure con SQL Server instalado. El autor, a continuación, en comparación con tiempos de puntuación con y sin estas optimizaciones proporcionadas por SQL Server:
+Los paquetes RevoScaleR y de MicrosoftML se usaron para entrenar un modelo de predicción en una solución de R complejo que implican grandes conjuntos de datos. Las consultas SQL y código de R son idénticos en todas las pruebas. Las pruebas se realizaron en una sola máquina virtual de Azure con SQL Server instalado. El autor, a continuación, en comparación con tiempos de puntuación con y sin las siguientes optimizaciones de SQL Server:
 
 - Tablas en memoria
 - Soft-NUMA
@@ -328,12 +326,9 @@ La configuración que tenía el mejor rendimiento en la coincidencia de reanudac
 
 -   Cantidad máxima de memoria para su uso en las sesiones de R = 70%
 
-Para el modelo de coincidencia de reanudación, el uso de script externo fue elevado y no hay ninguna otra base de datos servicios del motor de ejecución. Por lo tanto, los recursos asignados a los scripts externos se incrementó al 70%, lo que era la mejor configuración para el rendimiento de la secuencia de comandos.
+Para el modelo de coincidencia de reanudación, el uso de script externo fue elevado y no hay ninguna otra base de datos servicios del motor de ejecución. Por lo tanto, los recursos asignados a los scripts externos se aumentaran al 70%, lo que resultó la mejor configuración para el rendimiento de la secuencia de comandos.
 
-Esta configuración se ha llegado a experimentar con valores diferentes. Si usa hardware diferente o una solución distinta, la configuración óptima podría ser diferente.
-
-> [!IMPORTANT]
-> Experimento para determinar la mejor configuración para su caso.
+Esta configuración se ha llegado a experimentar con valores diferentes. Si usa hardware diferente o una solución distinta, la configuración óptima podría ser diferente. Siempre experimentar para encontrar la mejor configuración para su caso.
 
 En la solución optimizada, se puntúan 1.1 millones de filas de datos (con 100 características) en menos de 8,5 segundos en un equipo de 20 núcleos. Optimizaciones de mejorar considerablemente el rendimiento en términos de tiempo de puntuación.
 
@@ -342,6 +337,16 @@ Los resultados también sugieren que la **número de características** tenido u
 Le recomendamos que lea este artículo de blog y el tutorial que lo acompañan para obtener información detallada.
 
 -   [Sugerencias de optimización y trucos para el aprendizaje automático en SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+Muchos usuarios han tomado nota que hay una pausa pequeña como en tiempo de ejecución de R (o Python) se carga por primera vez. Por esta razón, tal como se describe en estas pruebas, la hora de la primera ejecución es a menudo se mide pero más adelante se descartan. Posterior almacenamiento en caché puede dar lugar a diferencias de rendimiento importantes entre el primero y segundo se ejecuta. También hay cierta sobrecarga cuando se mueven datos entre SQL Server y el tiempo de ejecución externo, especialmente si los datos se pasan a través de la red, en lugar de cargarse directamente desde SQL Server.
+
+Por todas estas razones, no hay ninguna solución única para mitigar este tiempo de carga inicial, como el impacto de rendimiento varía significativamente en función de la tarea. Por ejemplo, el almacenamiento en caché se realiza para varias filas de puntuación en lotes; por lo tanto, las operaciones sucesivas de puntuación son mucho más rápidas y se vuelve a cargar el modelo ni el runtime de R. También puede usar [puntuación nativo](../sql-native-scoring.md) para evitar cargar el runtime de R completamente.
+
+Para entrenar modelos grandes, o la puntuación de lotes de gran tamaño, la sobrecarga puede ser mínima en comparación con las mejoras de evitar el movimiento de datos o de transmisión por secuencias y procesamiento en paralelo. Vea estos ejemplos para obtener instrucciones adicionales en el rendimiento y blogs recientes:
+
++ [Clasificación de préstamo mediante SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Las experiencias de cliente temprano con R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Uso de R para detectar fraudes en 1 millón de transacciones por segundo](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Recursos
 
@@ -407,4 +412,3 @@ Los siguientes son vínculos a información, herramientas y scripts usados en el
 [Ajuste del rendimiento de R - R optimización del código y los datos](r-and-data-optimization-r-services.md)
 
 [Ajuste del rendimiento: resultados del estudio de caso](performance-case-study-r-services.md)
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a51272e2fba20b4c336cf4a21cce0cf4a83f4726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbc17b15d552f9b7afeeb4841febdd7d08e54808
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 El método preferido de programación ADO con Visual C++ utiliza el **#import** directiva, como se describe en [programación ADO en Microsoft Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md). Sin embargo, se incluyen las versiones anteriores de ADO con un método alternativo de la programación con Visual C++: extensiones de Visual C++. Esta sección documenta esa característica para aquéllos que deben mantener código de extensiones de Visual C++, pero debería escribir el nuevo código de ADO con #**importar**.
@@ -49,4 +46,3 @@ El método preferido de programación ADO con Visual C++ utiliza el **#import** 
 
 ## <a name="see-also"></a>Vea también
  [ADO para el índice de sintaxis de Visual C++ para COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [ejemplo de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [mediante extensiones de Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md) [encabezado de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

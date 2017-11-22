@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1462 (Database Engine error)
+helpviewer_keywords: 1462 (Database Engine error)
 ms.assetid: 680e9c1c-a9d6-4765-b601-956d0a83324c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 354280b813e73ec3090ae3c5ce5459eb008191d3
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9465f1c9eef03f1fc1ffa0070cc960cfa05bc657
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver1462"></a>MSSQLSERVER_1462
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,4 +50,3 @@ Busque la causa de este error en el registro de errores de [!INCLUDE[ssNoVersion
 ## <a name="see-also"></a>Vea también  
 [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-

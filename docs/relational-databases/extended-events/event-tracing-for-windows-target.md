@@ -2,9 +2,12 @@
 title: Seguimiento de eventos para Windows como destino | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -20,14 +23,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ed354a90550c14525873955d0b8652d5066ad2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a3902085accac37a3649d407ff1504e01e0ac16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Antes de utilizar el Seguimiento de eventos para Windows (ETW) como destino, se recomienda tener conocimientos prácticos de ETW. El Seguimiento de eventos para Windows (ETW) se utiliza junto a Extended Events o como un consumidor de eventos de Extended Events. Los vínculos externos siguientes proporcionan un punto de inicio para obtener información general sobre ETW:  
   

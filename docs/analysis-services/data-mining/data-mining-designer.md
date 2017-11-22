@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4020ae2dd9bd8fa07a97f5817a0f06969fc0bb73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f173bca2b294cb839e542d1bc5e8a650b6d7afb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-designer"></a>Diseñador de minería de datos
   El Diseñador de minería de datos es el entorno principal en el que se trabaja con modelos de minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede obtener acceso al diseñador seleccionando una estructura de minería de datos existente o utilizando el Asistente para minería de datos para crear una nueva estructura y un nuevo modelo de minería de datos. Puede usar el Diseñador de minería de datos para realizar las tareas siguientes:  
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

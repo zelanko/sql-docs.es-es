@@ -8,22 +8,20 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 43a8e4d946a7d5943c8edb1d07a7e6c85cea2fde
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 47262b65d2909974fcf801b62dc4baddbfbac0be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Supervisar instancias de SQL Server en la utilidad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,4 +38,3 @@ ms.lasthandoff: 06/22/2017
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

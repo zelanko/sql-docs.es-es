@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01f87e1b71b2ce7364080f4f10523f99ab4386de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3c5003a7a1dc8737a27e92ac8408d40715134e21
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-output-window-accesstosql"></a>Configuración global (ventana de salida) (AccessToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración de SSMA.  
@@ -37,4 +35,3 @@ Seleccione **True** si desea SSMA para mostrar el panel de la lista de errores c
 **Mostrar panel de resultados**  
 Seleccione **True** si desea SSMA para mostrar el panel de resultados cuando hay mensajes.  
   
-

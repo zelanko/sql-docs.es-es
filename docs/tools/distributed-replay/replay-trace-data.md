@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7b49bfa52216022fdc65ccb8f9c34ea82b0efcd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 723159aa8d6662e98eb2e25a733b6e43184bcb30
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-trace-data"></a>Reproducir datos de seguimiento
   Puede iniciar una reproducción distribuida con la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] después de haber preparado los datos de seguimiento de entrada. Para obtener más información, vea [Preparar los datos de seguimiento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
@@ -71,9 +69,8 @@ ms.lasthandoff: 08/02/2017
 3.  Una vez finalizada la reproducción distribuida, la herramienta de administración devuelve información de resumen. Si se especificó la opción **-o** , la actividad de reproducción se ha guardado en los archivos de seguimiento de resultados en cada cliente. Para obtener más información sobre los archivos de seguimiento de resultados, vea [Revisar los resultados de la reproducción](../../tools/distributed-replay/review-the-replay-results.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40; utilidad Distributed Replay &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

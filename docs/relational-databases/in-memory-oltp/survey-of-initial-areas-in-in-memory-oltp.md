@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +143,7 @@ La palabra clave NATIVE_COMPILATION de T-SQL, en la instrucción CREATE PROCEDUR
 - Hemos visto el resultado de compilación nativa en duraciones de 1/100 de la duración interpretada.  
   
   
-Un módulo nativo solamente puede hacer referencia a tablas con optimización para memoria, y no a tablas basadas en disco.  
+Un módulo nativo solamente puede hacer referencia a tablas optimizadas para memoria, y no a tablas basadas en disco.  
   
 Hay tres tipos de módulos compilados de forma nativa:  
   
@@ -196,9 +194,9 @@ A continuación figura el código de T-SQL para actualizar el nivel, si es neces
 ## <a name="2-elevate-to-snapshot"></a>2. Elevar a SNAPSHOT  
   
   
-Cuando una transacción implica una tabla basada en disco y una tabla con optimización para memoria, la llamamos *transacción entre contenedores*. En una transacción de este tipo es esencial que la parte con optimización para memoria de la transacción funcione en el nivel de aislamiento de la transacción llamado SNAPSHOT.  
+Cuando una transacción implica una tabla basada en disco y una tabla optimizada para memoria, la llamamos *transacción entre contenedores*. En una transacción de este tipo es esencial que la parte optimizada para memoria de la transacción funcione en el nivel de aislamiento de la transacción llamado SNAPSHOT.  
   
-Para exigir de forma confiable este nivel para tablas con optimización para memoria en una transacción entre contenedores, [modifique la configuración de la base de datos](../../t-sql/statements/alter-database-transact-sql-set-options.md) ejecutando el siguiente código T-SQL.  
+Para exigir de forma confiable este nivel para tablas optimizadas para memoria en una transacción entre contenedores, [modifique la configuración de la base de datos](../../t-sql/statements/alter-database-transact-sql-set-options.md) ejecutando el siguiente código T-SQL.  
   
   
   
@@ -214,7 +212,7 @@ Para exigir de forma confiable este nivel para tablas con optimización para mem
 ## <a name="3-create-an-optimized-filegroup"></a>3. Crear un grupo de archivos optimizado  
   
   
-En Microsoft SQL Server, antes de poder crear una tabla con optimización para memoria debe crear un grupo de archivos que declara CONTAINS MEMORY_OPTIMIZED_DATA. El grupo de archivos se asigna a la base de datos. Para obtener detalles, vea:  
+En Microsoft SQL Server, antes de poder crear una tabla optimizada para memoria debe crear un grupo de archivos que declara CONTAINS MEMORY_OPTIMIZED_DATA. El grupo de archivos se asigna a la base de datos. Para obtener detalles, vea:  
   
 - [FILEGROUP con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
@@ -227,7 +225,7 @@ Tenga en cuenta que no todas las características de SQL Server son compatibles 
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
-## <a name="4-create-a-memory-optimized-table"></a>4. Crear una tabla con optimización para memoria  
+## <a name="4-create-a-memory-optimized-table"></a>4. Crear una tabla optimizada para memoria  
   
 La palabra clave de Transact-SQL fundamental es la palabra clave MEMORY_OPTIMIZED.  
   
@@ -248,17 +246,17 @@ La palabra clave de Transact-SQL fundamental es la palabra clave MEMORY_OPTIMIZE
   
   
   
-Las instrucciones INSERT y SELECT de Transact-SQL en una tabla con optimización para memoria son las mismos que para una tabla normal.  
+Las instrucciones INSERT y SELECT de Transact-SQL en una tabla optimizada para memoria son las mismos que para una tabla normal.  
   
 #### <a name="alter-table-for-memory-optimized-tables"></a>ALTER TABLE para tablas con optimización para memoria  
   
-ALTER TABLE... ADD/DROP puede agregar o quitar una columna de una tabla con optimización para memoria o un índice.  
+ALTER TABLE... ADD/DROP puede agregar o quitar una columna de una tabla optimizada para memoria o un índice.  
   
-- CREATE INDEX y DROP INDEX no se pueden ejecutar en una tabla con optimización para memoria, use ALTER TABLE ... ADD/DROP INDEX en su lugar.  
+- CREATE INDEX y DROP INDEX no se pueden ejecutar en una tabla optimizada para memoria, use ALTER TABLE ... ADD/DROP INDEX en su lugar.  
 - Para obtener detalles, vea [Modificar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).  
   
   
-#### <a name="plan-your-memory-optimized-tables-and-indexes"></a>Planear sus índices y tablas con optimización para memoria  
+#### <a name="plan-your-memory-optimized-tables-and-indexes"></a>Planear sus índices y tablas optimizadas para memoria  
   
   
 - [Índices de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -364,21 +362,25 @@ Las siguientes subsecciones describen brevemente cómo funcionan las caracterís
   
 <a name="how-do-memory-optimized-tables-perform-faster-34q"></a>  
   
-### <a name="how-memory-optimized-tables-perform-faster"></a>¿Cómo funcionan las tablas con optimización para memoria más rápido?  
+### <a name="how-memory-optimized-tables-perform-faster"></a>¿Cómo funcionan las tablas optimizadas para memoria más rápido?  
   
   
-**Doble naturaleza:** Una tabla con optimización para memoria tiene una doble naturaleza: una representación en memoria activa y la otra en el disco duro. Cada transacción se confirma con ambas representaciones de la tabla. Las transacciones funcionan en la representación memoria activa mucho más rápida. Las tablas con optimización para memoria se benefician de la mayor velocidad de la memoria activa en comparación con el disco. Además, la mayor agilidad de la memoria activa hace práctica una estructura de tabla más avanzada que se optimiza para velocidad. La estructura avanzada tampoco tiene páginas, por lo que evita la sobrecarga y la contención de bloqueos temporales y bloqueos por subproceso.  
+
+            **Doble naturaleza:** Una tabla optimizada para memoria tiene una doble naturaleza: una representación en memoria activa y la otra en el disco duro. Cada transacción se confirma con ambas representaciones de la tabla. Las transacciones funcionan en la representación memoria activa mucho más rápida. Las tablas con optimización para memoria se benefician de la mayor velocidad de la memoria activa en comparación con el disco. Además, la mayor agilidad de la memoria activa hace práctica una estructura de tabla más avanzada que se optimiza para velocidad. La estructura avanzada tampoco tiene páginas, por lo que evita la sobrecarga y la contención de bloqueos temporales y bloqueos por subproceso.  
   
   
-**No hay bloqueos:** La tabla con optimización para memoria se basa en un enfoque *optimista* de los objetivos de la competencia de integridad de datos frente a la simultaneidad y el alto rendimiento. Durante la transacción, la tabla no coloca bloqueos en ninguna versión de las filas de datos actualizadas. Esto puede reducir considerablemente la contención en algunos sistemas de gran volumen.  
+
+            **No hay bloqueos:** La tabla optimizada para memoria se basa en un enfoque *optimista* de los objetivos de la competencia de integridad de datos frente a la simultaneidad y el alto rendimiento. Durante la transacción, la tabla no coloca bloqueos en ninguna versión de las filas de datos actualizadas. Esto puede reducir considerablemente la contención en algunos sistemas de gran volumen.  
   
   
-**Versiones de fila:** En lugar de bloqueos, la tabla con optimización para memoria agrega una nueva versión de una fila actualizada en la propia tabla, no en tempdb. La fila original se mantiene hasta que se confirma la transacción. Durante la transacción, otros procesos pueden leer la versión original de la fila.  
+
+            **Versiones de fila:** En lugar de bloqueos, la tabla optimizada para memoria agrega una nueva versión de una fila actualizada en la propia tabla, no en tempdb. La fila original se mantiene hasta que se confirma la transacción. Durante la transacción, otros procesos pueden leer la versión original de la fila.  
   
 - Cuando se crean varias versiones de una fila para una tabla basada en disco, las versiones de fila se almacenan temporalmente en tempdb.  
   
   
-**Menos tareas de registro:** Las versiones anterior y posterior de las filas actualizadas se mantienen en la tabla con optimización para memoria. El par de filas proporciona gran parte de la información que tradicionalmente se escribe en el archivo de registro. Esto permite al sistema escribir menos información y con menos frecuencia en el registro. Aún así, la integridad transaccional está garantizada.  
+
+            **Menos tareas de registro:** Las versiones anterior y posterior de las filas actualizadas se mantienen en la tabla optimizada para memoria. El par de filas proporciona gran parte de la información que tradicionalmente se escribe en el archivo de registro. Esto permite al sistema escribir menos información y con menos frecuencia en el registro. Aún así, la integridad transaccional está garantizada.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -401,10 +403,11 @@ En el resto de esta sección se enumeran algunas de las consideraciones principa
   
 <a name="trade-offs-of-memory-optimized-tables-37d"></a>  
   
-### <a name="trade-offs-of-memory-optimized-tables"></a>Ventajas e inconvenientes de las tablas con optimización para memoria  
+### <a name="trade-offs-of-memory-optimized-tables"></a>Ventajas e inconvenientes de las tablas optimizadas para memoria  
   
   
-**Calcular la memoria:** Debe calcular la cantidad de memoria activa que consumirá la tabla con optimización para memoria. El equipo debe tener la capacidad de memoria suficiente para hospedar una tabla con optimización para memoria. Para obtener detalles, vea:  
+
+            **Calcular la memoria:** Debe calcular la cantidad de memoria activa que consumirá la tabla optimizada para memoria. El equipo debe tener la capacidad de memoria suficiente para hospedar una tabla optimizada para memoria. Para obtener detalles, vea:  
   
 - [Supervisar y solucionar problemas de uso de memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
@@ -428,27 +431,27 @@ En el resto de esta sección se enumeran algunas de las consideraciones principa
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
-## <a name="advanced-considerations-for-memory-optimized-tables"></a>Consideraciones avanzadas sobre tablas con optimización para memoria  
+## <a name="advanced-considerations-for-memory-optimized-tables"></a>Consideraciones avanzadas sobre tablas optimizadas para memoria  
   
   
 Los[índices de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) difieren en algunos aspectos de los índices de las tablas en disco tradicionales.  
   
-- Los[índices de hash](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) solo están disponibles en las tablas con optimización para memoria.  
+- Los[índices de hash](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) solo están disponibles en las tablas optimizadas para memoria.  
   
   
-Debe tener un plan para asegurarse de que haya suficiente memoria activa para la tabla con optimización para memoria planeada y sus índices. Vea:  
+Debe tener un plan para asegurarse de que haya suficiente memoria activa para la tabla optimizada para memoria planeada y sus índices. Vea:  
   
 - [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
-Es posible declarar una tabla con optimización para memoria con DURABILITY = SCHEMA_ONLY:  
+Es posible declarar una tabla optimizada para memoria con DURABILITY = SCHEMA_ONLY:  
   
-- Esta sintaxis indica al sistema que descarte todos los datos de la tabla con optimización para memoria cuando la base de datos se desconecta. Solo se conserva la definición de tabla.  
-- Cuando la base de datos vuelva a estar en línea, la tabla con optimización para memoria se vuelve a cargar en la memoria activa, vacía de datos.  
+- Esta sintaxis indica al sistema que descarte todos los datos de la tabla optimizada para memoria cuando la base de datos se desconecta. Solo se conserva la definición de tabla.  
+- Cuando la base de datos vuelva a estar en línea, la tabla optimizada para memoria se vuelve a cargar en la memoria activa, vacía de datos.  
 - Las tablas SCHEMA_ONLY pueden ser una mejor [alternativa a las tablas temporales](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) en tempdb, cuando hay implicados varios miles de filas.  
   
   
-Las variables de tabla también pueden declararse con optimización para memoria. Vea:  
+Las variables de tabla también pueden declararse como optimizadas para memoria. Vea:  
   
 - [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -464,7 +467,7 @@ Los tipos de módulos compilados de forma nativa disponibles a través de Transa
 - Procedimientos almacenados compilados de forma nativa (procedimientos nativos).  
 - [Funciones escalares definidas por el usuario](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)compiladas de forma nativa.  
 - Desencadenadores compilados de forma nativa (desencadenadores nativos).  
-  - Solo los desencadenadores compilados de forma nativa se permiten en tablas con optimización para memoria.  
+  - Solo los desencadenadores compilados de forma nativa se permiten en tablas optimizadas para memoria.  
 - [Funciones con valores de tabla](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)compiladas de forma nativa.  
   - [Mejora del rendimiento de la tabla temporal y de variable de tabla mediante optimización de memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
   
@@ -484,21 +487,21 @@ Para obtener datos de prueba y una explicación del rendimiento de UDF nativas, 
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
-## <a name="documentation-guide-for-memory-optimized-tables"></a>Guía de documentación para tablas con optimización para memoria  
+## <a name="documentation-guide-for-memory-optimized-tables"></a>Guía de documentación para tablas optimizadas para memoria  
   
   
-Estos son vínculos a otros artículos que tratan consideraciones especiales para tablas con optimización para memoria:  
+Estos son vínculos a otros artículos que tratan consideraciones especiales para tablas optimizadas para memoria:  
   
 - [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - El informe de análisis rendimiento de transacciones de SQL Server Management Studio ayuda a evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos.  
   - Utilice el [Asesor de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) que le ayudarán a migrar la tabla de base de datos basada en disco a OLTP en memoria.   
 - [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  - El almacenamiento usado por las tablas con optimización para memoria puede ser mucho mayor que el tamaño de la memoria y eso afecta al tamaño de la copia de seguridad de la base de datos.  
+  - El almacenamiento usado por las tablas optimizadas para memoria puede ser mucho mayor que el tamaño de la memoria y eso afecta al tamaño de la copia de seguridad de la base de datos.  
 - [Transacciones con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
-  - Incluye información sobre la lógica de reintento en T-SQL para las transacciones en tablas con optimización para memoria.  
+  - Incluye información sobre la lógica de reintento en T-SQL para las transacciones en tablas optimizadas para memoria.  
 - [Compatibilidad de Transact-SQL con OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
-  - Los tipos de datos y T-SQL admitidos y no admitidos, para tablas con optimización para memoria y procedimientos nativos.  
+  - Los tipos de datos y T-SQL admitidos y no admitidos, para tablas optimizadas para memoria y procedimientos nativos.  
 - [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), que analiza una consideración avanzada opcional.  
   
   
@@ -522,4 +525,3 @@ Los artículos siguientes incluyen código para demostrar las mejoras de rendimi
   
 - [Demostración: mejora de rendimiento de OLTP en memoria](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) ofrece una demostración a pequeña escala de las posibles mejoras de rendimiento más grandes.  
 - [Sample Database for In-Memory OLTP (Base de datos de ejemplo para OLTP en memoria)](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) ofrece una demostración de escala mayor.  
-

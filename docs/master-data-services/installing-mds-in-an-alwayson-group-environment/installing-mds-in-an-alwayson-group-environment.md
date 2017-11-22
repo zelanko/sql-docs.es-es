@@ -8,8 +8,7 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,16 +17,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
 **Resumen:** en este artículo se describe una solución para la configuración de Master Data Service (MDS) hospedado en un grupo de disponibilidad AlwaysOn. En el artículo se describe cómo instalar y configurar SQL 2016 Master Data Services en un grupo de disponibilidad (AG) AlwaysOn de SQL 2016. El propósito principal de esta solución es mejorar la alta disponibilidad y la recuperación ante desastres de datos de back-end MDS hospedados en una base de datos de SQL Server.
@@ -410,5 +405,4 @@ En estas notas del producto hemos visto cómo instalar y configurar la base de d
 ¿Le ha resultado útil este documento? Envíenos sus comentarios haciendo clic en **Comentarios** en la parte superior del artículo. 
 
 Sus comentarios nos ayudarán a mejorar la calidad de las notas del producto que publiquemos. 
-
 

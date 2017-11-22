@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0aad2b5602026908e165fa2b74b032ba09e6da7d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para utilizar datos de referencia
   En este tema se describe cómo configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) con el fin de utilizar datos de referencia para limpiar los datos. Puede utilizar datos de referencia tanto de Windows Azure Marketplace como de proveedores directos de datos de referencia de terceros en línea.  
@@ -88,4 +86,3 @@ ms.lasthandoff: 09/09/2017
  A continuación, debe asignar los dominios de la base de conocimiento necesarios a los datos de referencia disponibles en los proveedores de datos que acaba de configurar. Para ello, vea [Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   
-

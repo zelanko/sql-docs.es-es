@@ -8,33 +8,31 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  En el ejemplo de código de este tema se muestra el rápido funcionamiento de las tablas con optimización para memoria. La mejora del rendimiento es evidente cuando el acceso a los datos de una tabla con optimización para memoria se realiza desde [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional interpretado. Esta mejora del rendimiento es incluso mayor cuando el acceso a los datos de una tabla con optimización para memoria se realiza a través de un procedimiento almacenado compilado de forma nativa (NCSProc).  
+  En el ejemplo de código de este tema se muestra el rápido funcionamiento de las tablas optimizadas para memoria. La mejora del rendimiento es evidente cuando el acceso a los datos de una tabla optimizada para memoria se realiza desde [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional interpretado. Esta mejora del rendimiento es incluso mayor cuando el acceso a los datos de una tabla optimizada para memoria se realiza a través de un procedimiento almacenado compilado de forma nativa (NCSProc).  
  
 Para una demostración más completa de las posibles mejoras de rendimiento de OLTP en memoria, consulte [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)(Demostración de rendimiento de OLTP en memoria v1.0). 
   
  El ejemplo de código del presente artículo es de un solo subproceso y no aprovecha las ventajas de simultaneidad de OLTP en memoria. Una carga de trabajo que utiliza simultaneidad verá mayor mejora de rendimiento. El ejemplo de código muestra solo un aspecto de mejora del rendimiento, la eficacia de acceso a datos para la operación INSERT.  
   
- La mejora del rendimiento que ofrecen las tablas con optimización para memoria se percibe totalmente cuando el acceso a los datos de una tabla con optimización para memoria se realiza a través de un NCSProc.  
+ La mejora del rendimiento que ofrecen las tablas optimizadas para memoria se percibe totalmente cuando el acceso a los datos de una tabla optimizada para memoria se realiza a través de un NCSProc.  
   
 ## <a name="code-example"></a>Ejemplo de código  
  En las siguientes subsecciones se describe cada paso.  
@@ -46,7 +44,7 @@ Para una demostración más completa de las posibles mejoras de rendimiento de O
   
 2.  Cree manualmente un directorio denominado **C:\data\\**. El código de ejemplo de Transact-SQL espera que el directorio ya exista.  
   
-3.  Ejecute el T-SQL corto para crear la base de datos y su grupo de archivos con optimización para memoria.  
+3.  Ejecute el T-SQL corto para crear la base de datos y su grupo de archivos optimizados para memoria.  
   
 ```tsql  
 go  
@@ -75,7 +73,7 @@ go
  Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas con optimización para memoria y un NCSProc.  
- En este paso se crean tablas con optimización para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Realice lo siguiente:  
+ En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Realice lo siguiente:  
   
 1.  Use SSMS.exe para conectarse a la nueva base de datos.  
   
@@ -125,7 +123,7 @@ go
 ```  
   
 ### <a name="step-3-run-the-code"></a>Paso 3: ejecutar el código  
- Ahora se pueden ejecutar las consultas que mostrarán el rendimiento de las tablas con optimización para memoria. Realice lo siguiente:  
+ Ahora se pueden ejecutar las consultas que mostrarán el rendimiento de las tablas optimizadas para memoria. Realice lo siguiente:  
   
 1.  Use SSMS.exe para ejecutar el siguiente T-SQL en la base de datos.  
   
@@ -206,4 +204,3 @@ go
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

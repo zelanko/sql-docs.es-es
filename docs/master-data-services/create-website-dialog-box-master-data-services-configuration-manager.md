@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.createsite.f1
+f1_keywords: sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4e828a16a51b3a5744703fc08cf79abaeb489d2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 72b03df097b9951384674abbb984636b8999abf7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear sitio web (Administrador de configuración de Master Data Services)
   Utilice el cuadro de diálogo **Crear sitio web** para crear un sitio web nuevo en el equipo local. Cuando crea un sitio web en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], el sitio se agrega a Internet Information Services (IIS) en el equipo local con una aplicación raíz que se configura como la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . También se crea un nuevo grupo de aplicaciones y la aplicación web se coloca en ese grupo de aplicaciones.  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/07/2017
  [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
-

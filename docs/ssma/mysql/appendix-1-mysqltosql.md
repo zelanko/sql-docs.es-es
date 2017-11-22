@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf179f29f6e747dfefdf2ac046afc7ab25ff8805
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 42367162a6420688252a45801aa759fc1fbfd6e7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-mysqltosql"></a>Apéndice - 1 (MySQLToSQL)
 Vista rápida de las opciones de línea de comandos de consola SSMA:  
@@ -42,4 +40,3 @@ Vista rápida de las opciones de línea de comandos de consola SSMA:
 ## <a name="see-also"></a>Vea también  
 [Ejecutar la consola SSMA (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 088943be06c8c544f57bc68d9593d8175ff2995c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7123aabd58c58446c289490dd3b03edda1367dce
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Crear archivos de valor de la Variable (DB2ToSQL)
 Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos como el nombre del servidor de origen o de destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, varios archivos de variable para almacenar el valor de cada servidor de origen se creará y se hace referencia en un archivo de script maestra con la **– v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
@@ -96,6 +94,5 @@ Archivo de valores de variable es un archivo XML que contiene los valores de par
 El siguiente paso en la utilización de la consola es [crear los archivos de conexión de servidor &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Crear los archivos de conexión de servidor](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[Creación de archivos de conexión del servidor](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   
-

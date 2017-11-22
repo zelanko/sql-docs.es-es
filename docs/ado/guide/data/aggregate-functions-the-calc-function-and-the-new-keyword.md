@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 284a672a725e5627d0b9be61c12f0c95d565ae09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f24280f155fd5ec6bd86b8486b0f8f77338d8eb6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las funciones siguientes: Es el nombre asignado al capítulo que contiene la columna que se trabajará en el *alias de capítulo*.  
@@ -75,7 +73,7 @@ La forma de datos admite las funciones siguientes: Es el nombre asignado al cap�
 |DBTYPE_DBTIME|adDBTime|  
 |DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
 |DBTYPE_VARNUMERIC|adVarNumeric|  
-|DBTYPE_FILETIME|adFileTime|  
+|DBTYPE_FILETIME|AdFileTime|  
 |DBTYPE_ERROR|adError|  
   
  Cuando el nuevo campo es de tipo decimal (en OLE DB, DBTYPE_DECIMAL, o en ADO, adDecimal), debe especificar los valores de precisión y escala.  
@@ -84,4 +82,3 @@ La forma de datos admite las funciones siguientes: Es el nombre asignado al cap�
  [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
-

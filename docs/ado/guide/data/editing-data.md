@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editing-data"></a>Edición de datos
 Ya se explicó cómo utilizar ADO para conectarse a un origen de datos, ejecutar un comando, obtener los resultados en un **Recordset** de objetos y navegar dentro de la **conjunto de registros**. En esta sección se centra en la siguiente operación fundamental de ADO: edición de datos.  
@@ -93,11 +91,10 @@ End Function
   
 -   [Editar los registros existentes](../../../ado/guide/data/editing-existing-records.md)  
   
--   [Agregar registros](../../../ado/guide/data/adding-records.md)  
+-   [Agregar registros a un conjunto de registros](../../../ado/guide/data/adding-records.md)  
   
 -   [Determinar qué se admite](../../../ado/guide/data/determining-what-is-supported.md)  
   
 -   [Eliminar registros mediante el método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
 -   [Alternativas: Utilizar instrucciones SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
-

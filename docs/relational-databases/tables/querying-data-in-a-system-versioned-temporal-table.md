@@ -1,10 +1,13 @@
 ---
 title: Consulta de los datos de una tabla temporal con control de versiones del sistema | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9b9e126587a2c3a6beb34b74f234375de5a4469b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consulta de los datos de una tabla temporal con control de versiones del sistema
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Cuando quiera obtener el último estado de datos (actual) de una tabla temporal, puede consultarlo de la misma manera que lo haría en una tabla no temporal. Si no se ocultan las columnas PERIOD, sus valores se mostrarán en una consulta SELECT \* . Si especificó las columnas **PERIOD** como ocultas, sus valores no se mostrarán en una consulta SELECT \* . Cuando las columnas de **PERIOD** están ocultas, haga referencia a las columnas de **PERIOD** específicamente en la cláusula SELECT para devolver los valores de estas columnas.  
   

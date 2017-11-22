@@ -2,9 +2,12 @@
 title: "Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3b254dd4fa4b664a0787898a61cc94ca050a097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   De forma predeterminada, la copia de seguridad con compresión aumenta significativamente el uso de CPU, y la CPU adicional consumida por el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría querer crear una copia de seguridad comprimida de prioridad baja en una sesión en la que el uso de CPU esté limitado por el[regulador de recursos](../../relational-databases/resource-governor/resource-governor.md) cuando se produce la contención por la CPU. En este tema se presenta un escenario en el que se clasifican las sesiones de un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinado asignándolas a un grupo de cargas de trabajo del regulador de recursos que limita el uso de CPU en tales casos.  
   

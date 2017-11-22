@@ -8,22 +8,20 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96b8e884-8244-425f-b856-72a8ff6895a6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 835e3acd76972eef01b4d286cbc1f6ecf6fac605
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 64914f8620c848cf7505253c3b517486a53ad14e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-indexes---architecture"></a>Diseño de los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,4 +137,3 @@ Tenga en cuenta que todas las columnas de un índice de almacén de columnas se 
 
 ## <a name="next-steps"></a>Pasos siguientes
  Para obtener instrucciones sobre cómo diseñar los índices de almacén de columnas, consulte [Guía de diseño de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
-

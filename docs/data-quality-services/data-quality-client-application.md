@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0e15b684c3bce4b0f4c0b08f915077c68afb05e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f40568ff94ac2e2a026f2538fa2cb9e6fb9f7c3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-client-application"></a>Aplicación cliente de calidad de datos
   La aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite realizar operaciones de calidad de datos mediante una herramienta independiente. Con esta aplicación podrá crear bases de conocimiento, crear y ejecutar proyectos de calidad de datos y realizar tareas administrativas.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  [Pantalla de inicio de Data Quality Client](../data-quality-services/data-quality-client-home-screen.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 19c5b3d78399908472a7cd97f0dbbd2e0708ecc4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-filtered-indexes"></a>Crear índices filtrados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +121,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
   
-7.  En el cuadro de diálogo **Seleccionar columnas de***table_name* , active las casillas de las columnas de tabla que se van a agregar al índice único.  
+7.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla* , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
 8.  Haga clic en **Aceptar**.  
   
@@ -195,4 +193,3 @@ ms.lasthandoff: 06/22/2017
  Para obtener más información, vea [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
-

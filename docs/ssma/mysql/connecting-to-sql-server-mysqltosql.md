@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 556b9ceec47aeb78fb534b5cac9e87c15adfae7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8a00088252b6cab4971b7574f6f3e840c326d2f8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conectarse a SQL Server (MySQLToSQL)
 Para migrar las bases de datos de MySQL a SQL Server, debe conectarse a la instancia de destino de SQL Server. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en la instancia de SQL Server y muestra los metadatos de la base de datos en el Explorador de metadatos de SQL Server. SSMA almacena la información de la instancia de SQL Server están conectados a, pero no almacena las contraseñas.  
@@ -126,4 +124,3 @@ El siguiente paso de la migración depende de las necesidades del proyecto:
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de MySQL a SQL Server: base de datos de SQL Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

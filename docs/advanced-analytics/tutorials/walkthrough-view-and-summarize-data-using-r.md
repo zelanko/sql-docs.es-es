@@ -1,31 +1,25 @@
 ---
 title: Ver y resumir los datos con R (tutorial) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 90afd69ca0d447a92b557255fae93cd899eddc1b
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 8d94b671e88eb512cd763dc7660df6d3ac986370
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="view-and-summarize-data-using-r"></a>Ver y resumir datos mediante R
 
@@ -72,7 +66,7 @@ Los pasos siguientes forman parte del código R y deben ejecutarse en un entorno
     Para la autenticación de Windows, la sintaxis es un poco diferente:
     
     ```R
-    connStrWin <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
+    connStr <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
     ```
 
     El script de R disponible para la descarga solo usa inicios de sesión de SQL. Por lo general, se recomienda que utilice la autenticación de Windows siempre que sea posible, para evitar que se guarden las contraseñas en el código de R. Sin embargo, para asegurarse de que el código de este tutorial coincide con el código descargado de Github, vamos a usar un inicio de sesión SQL para el resto del tutorial.
@@ -118,8 +112,10 @@ Anterior define una cadena de conexión y esa información guardada en una varia
 1. Guardar una consulta SQL como una variable de cadena. La consulta define los datos para entrenar el modelo.
 
     ```R
-    sampleDataQuery <- "SELECT TOP 1000 tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
+    sampleDataQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
+
+    Hemos usado aquí una cláusula TOP para facilitar su ejecutarse con mayor rapidez, pero las filas reales devueltas por la consulta pueden variar según el orden. Por lo tanto, el resumen de resultados también puede ser diferente de los que aparecen a continuación. No dude en quitar la cláusula TOP.
 
 2. Pase la definición de consulta como argumento a la función [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata).
 
@@ -190,31 +186,13 @@ En esta sección, probará algunas de las funciones proporcionadas en [!INCLUDE[
   
     **Resultado**
 
+    Si la función rxSummary se ejecuta correctamente, debería ver los resultados como estos, seguido por una lista de las estadísticas por categoría. 
+
     ```
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
-    Name  Mean    StdDev   Min Max ValidObs MissingObs
-    fare_amount:F_passenger_count 12.4875 9.682605 2.5 64  1000     0
-    Statistics by category (6 categories):*
-    Category                             F_passenger_count Means    StdDev    Min
-    fare_amount for F(passenger_count)=1 1                 12.00901  9.219458  2.5
-    fare_amount for F(passenger_count)=2 2                 11.61893  8.858739  3.0
-    fare_amount for F(passenger_count)=3 3                 14.40196 10.673340  3.5
-    fare_amount for F(passenger_count)=4 4                 13.69048  8.647942  4.5
-    fare_amount for F(passenger_count)=5 5                 19.30909 14.122969  3.5
-    fare_amount for F(passenger_count)=6 6                 12.00000        NA 12.0
-    Max ValidObs
-    55  666
-    52  206
-    52   51
-    39   21
-    64   55
-    12    1
-    "It takes CPU Time=0.5 seconds, Elapsed Time=4.59 seconds to summarize the inDataSource."
     ```
-
-¿Obtener resultados diferentes? Eso es porque no se garantiza que la consulta más pequeña mediante la palabra clave TOP poner de nuevo los mismos resultados cada vez.
 
 ### <a name="bonus-exercise-on-big-data"></a>Ejercicio bonificación en grandes cantidades de datos
 
@@ -251,4 +229,3 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ## <a name="previous-lesson"></a>Lección anterior
 
 [Explorar los datos con SQL](walkthrough-view-and-explore-the-data.md)
-

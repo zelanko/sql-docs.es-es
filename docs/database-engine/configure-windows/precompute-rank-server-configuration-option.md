@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - precompute rank option
 - FREETEXTTABLE function (Transact-SQL)
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15d2da2f50ed8527a1fe89daa2ad180c58e671b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6c197bd3e81be4e250677d3b885d3dac33f6816e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,4 +32,3 @@ ms.lasthandoff: 08/02/2017
   Esta opción no se implementa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Éste es un cambio importante. Modifique las aplicaciones que actualmente utilizan esta característica lo antes posible.  
   
   
-

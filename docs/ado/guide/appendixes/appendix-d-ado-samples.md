@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff7338cdb0b935eac3c227d45d1f0f0083e442a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9c5f5d827900e2ff7ecf68320bd2b1165785d46a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Apéndice D: ejemplos de ADO en el SDK de Windows
 El SDK de Windows contiene varias aplicaciones de ejemplo que muestran el uso de código ADO y RDS. Estos ejemplos están diseñados para ayudarle a aprender cómo usar ADO y RDS, pero no están diseñados para implementarse en servidores de producción.
@@ -42,4 +40,3 @@ El SDK de Windows contiene varias aplicaciones de ejemplo que muestran el uso de
 
 ## <a name="see-also"></a>Vea también
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md) [ejemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples.md) [ejemplos de código ADO en Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [código ADO Ejemplos VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [ejemplos de código ADO en Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md) [configurar RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Apéndice C: Programar con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [historial de ADO](../../../ado/guide/ado-history.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9fffe98d01164f8af7ebe5c59153eb7c0b06c79a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-projects-dqs"></a>Proyectos de calidad de datos (DQS)
   Un proyecto de calidad de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) utiliza una base de conocimiento para mejorar la calidad de los datos de origen mediante la realización de actividades de *limpieza de datos* y *búsqueda de coincidencias de datos* , y la posterior exportación de los datos resultantes a una base de datos de SQL Server o a un archivo .csv. Puede crear un proyecto de calidad de datos como un proyecto de limpieza o como un proyecto de búsqueda de coincidencias para realizar las actividades respectivas. Los proyectos de limpieza y de búsqueda de coincidencias se pueden ejecutar usando la misma base de conocimiento, ya que el conocimiento de estos procesos se puede generar en la misma base de conocimiento.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/27/2017
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
-

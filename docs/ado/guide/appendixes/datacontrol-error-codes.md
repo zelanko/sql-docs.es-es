@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa52b8ec38ce23c8916bb885714d45b0fe6c374e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de Error de objeto DataControl
 La siguiente tabla se recogen los [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) códigos de error del objeto. La conversión decimal positiva de los dos bytes bajos, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.
@@ -56,4 +54,3 @@ La siguiente tabla se recogen los [RDS. DataControl](../../../ado/reference/rds-
 
 ## <a name="see-also"></a>Vea también
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-

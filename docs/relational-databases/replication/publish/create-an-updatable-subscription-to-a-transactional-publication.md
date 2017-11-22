@@ -8,25 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updatable transactional subscriptions
 - updateable transactional subscriptions, SSMS
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94a6afee0fbc828b7c3036cfc4d1282b71674384
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 162acf48372b31833fac37915a42a210dc4f8aa7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Crear una suscripción actualizable en una publicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,5 +107,4 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
 
 [Crear una suscripción actualizable en una publicación transaccional con Transact-SQL](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) 
-
 

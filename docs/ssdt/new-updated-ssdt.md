@@ -19,12 +19,11 @@ ms.prod: ssdt
 ms.prod_service: sql-non-specified
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools
+ms.openlocfilehash: 0fc91a0b886b0acf0ebfa6770fa968a998368340
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3051fd04a8e3377ff93ad560e9bb600d80527d23
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>Nuevos y actualizados recientemente: SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -127,6 +126,5 @@ En esta sección se enumeran artículos muy similares a los artículos actualiza
 - [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
-
 
 

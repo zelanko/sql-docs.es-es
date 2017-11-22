@@ -8,22 +8,19 @@ ms.service:
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,5 +95,4 @@ Obtenga más información sobre el asistente.
 - **Obtenga más información sobre cómo importar otros orígenes**. Si quiere importar otros recursos además de archivos planos, consulte [Asistente para importación y exportación de SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Obtenga más información sobre cómo conectar con orígenes de archivos planos**. Si quiere más información sobre cómo conectar con orígenes de archivos planos, consulte [Connect to a Flat File Data Source](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard) (Conexión con orígenes de datos de archivos planos).
 - **Obtenga más información sobre PROSE**. Si quiere información general sobre el marco inteligente que usa este asistente, consulte [PROSE SDK](https://microsoft.github.io/prose/) (SDK de PROSE).
-
 

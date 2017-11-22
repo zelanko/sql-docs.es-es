@@ -19,12 +19,11 @@ ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.author: genemi
 ms.workload: master-data-services-mds
+ms.openlocfilehash: fe69d30b4d75169c7769fb640d0d2b47153d08a7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fd51e78e4643a99df4ef88659f08ca5267ac2b11
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Nuevo y actualizado recientemente: Master Data Services para SQL Server
 
@@ -127,6 +126,5 @@ En esta sección se enumeran artículos muy similares a los artículos actualiza
 - [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
-
 
 

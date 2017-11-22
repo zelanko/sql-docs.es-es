@@ -8,8 +8,7 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b06de61335e318438f4e75e694de7c0eb3521bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   **Invoke-PolicyEvaluation** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que notifica si un conjunto de destino de objetos de SQL Server cumple las condiciones especificadas en una o más directivas de administración basada en directivas.  
@@ -92,9 +90,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Especificar el conjunto de destino  
  Use tres parámetros para especificar el conjunto de objetos de destino:  
   
--   **-TargetServerName** especifica la instancia de SQL Server que contiene los objetos de destino. Puede especificar la información en una cadena con el formato definido para la propiedad ConnectionString de la clase <xref:System.Data.SqlClient.SqlConnection>. Puede usar la clase <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para generar una cadena de conexión con el formato correcto. También puede crear un objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> y pasarlo a **-TargetServer**. Si proporciona una cadena que solo contiene el nombre del servidor, **Invoke-PolicyEvaluation** usa autenticación de Windows para conectar con el servidor.  
+-   **-TargetServerName** especifica la instancia de SQL Server que contiene los objetos de destino. Puede especificar la información en una cadena con el formato definido para la propiedad ConnectionString de la clase <xref:System.Data.SqlClient.SqlConnection> . Puede usar la clase <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para generar una cadena de conexión con el formato correcto. También puede crear un objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> y pasarlo a **-TargetServer**. Si proporciona una cadena que solo contiene el nombre del servidor, **Invoke-PolicyEvaluation** usa autenticación de Windows para conectar con el servidor.  
   
--   **-TargetObjects** toma un objeto o una matriz de objetos que representa a los objetos de SQL Server del conjunto de destino. Por ejemplo, puede crear una matriz de objetos de la clase <xref:Microsoft.SqlServer.Management.Smo.Database> para pasarlos a **-TargetObjects**.  
+-   **-TargetObjects** toma un objeto o una matriz de objetos que representa a los objetos de SQL Server del conjunto de destino. Por ejemplo, podría crear una matriz de objetos de la clase <xref:Microsoft.SqlServer.Management.Smo.Database> para pasarlos a **-TargetObjects**.  
   
 -   **-TargetExpressions** toma una cadena que contiene una expresión de consulta que especifica los objetos del conjunto de destino. La expresión de consulta tiene el formato de los nodos separados por el carácter '/'. Cada nodo tiene el formato ObjectType[Filter]. El tipo de objeto es uno de los objetos de una jerarquía de objetos de los Objetos de administración de SQL Server (SMO). Filter es una expresión que filtra los objetos de ese nodo. Para más información, consulte [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
@@ -148,4 +146,3 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [Utilizar los cmdlets del motor de base de datos](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
-

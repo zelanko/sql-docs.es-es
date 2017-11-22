@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f952e8d2fbc1eb41d65cd4d30fa2f13c991d264
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-procedures"></a>Ejecución de procedimientos
 ODBC define una secuencia de escape estándar para la ejecución de procedimientos. Para obtener la sintaxis de esta secuencia y un ejemplo de código que lo usa, consulte [las llamadas a procedimiento](../../../odbc/reference/develop-app/procedure-calls.md).  
@@ -44,4 +42,3 @@ ODBC define una secuencia de escape estándar para la ejecución de procedimient
     -   Llama al procedimiento en el origen de datos y envía los valores de parámetro convertido. Cómo el controlador llama al procedimiento es específico del controlador. Por ejemplo, puede modificar la instrucción SQL para usar la gramática SQL del origen de datos y envía esta instrucción para su ejecución, o podría llamar al procedimiento directamente mediante un mecanismo de llamada a procedimiento remoto (RPC) que se define en el protocolo de flujo de datos del DBMS.  
   
     -   Devuelve los valores de parámetros de salida o de cualquier entrada/salida o el valor devuelto del procedimiento, suponiendo que el procedimiento se realiza correctamente. Estos valores no estén disponibles hasta que se han procesado todos los demás resultados (número de filas y conjuntos de resultados) generados por el procedimiento. Si se produce un error en el procedimiento, el controlador devuelve los errores.
-

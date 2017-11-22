@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f6aac543377e321be8db38f7dd95fad16efbac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel 1 (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Recupera el conjunto óptimo de columnas que identifica de forma única una fila de la tabla.|  
 |**SQLStatistics**|Recupera una lista de las estadísticas sobre una sola tabla y los índices o los nombres de etiqueta, asociados a la tabla. El controlador devuelve la información como un conjunto de resultados.|  
 |**SQLTables**|Devuelve la lista de nombres de tabla especificado por el parámetro en el **SQLTables** instrucción. Si no se especifica ningún parámetro, devuelve los nombres de tabla que se almacenan en el origen de datos actual. El controlador devuelve la información como un conjunto de resultados.<br /><br /> Llamadas de tipo de enumeración no reciben una entrada de conjunto de resultados para las vistas remotas ni vistas con parámetros locales. Sin embargo, una llamada a **SQLTables** con una tabla única especificador de nombre encuentra ninguna coincidencia para esta vista, si está presente, con ese nombre, lo que permite la API para comprobar si hay conflictos de nombre antes de la creación de una nueva tabla.<br /><br /> Sinónimos públicos se devuelven con un valor TABLE_OWNER de "".<br /><br /> VISTAS que pertenecen a SYS o el sistema se identifican como vista del sistema.|
-

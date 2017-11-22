@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.kbtermsbased.f1
+f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55f89b361e4c210c252a0fc629f7b5664390c056
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
   En este tema se describe cómo crear relaciones basadas en términos para un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relación basada en términos (TBR) permite corregir términos que forman parte de los valores de un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, podría configurar una relación basada en términos que cambiara el término “Inc.” por “Incorporated”. El término “Inc.” se cambiará cada vez que aparezca en el dominio. Las instancias de “Contoso, Inc.” se cambiarán por “Contoso, Incorporated”, y ambos valores se considerarán sinónimos exactos.  
@@ -72,12 +69,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/create-a-knowledge-base.md) o [Abrir una base de conocimiento](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  La administración de dominios se realiza en una página del cliente de Data Quality Services que contiene cinco pestañas para distintas operaciones de administración de dominios. No se trata de un proceso controlado mediante asistentes; cada una de las operaciones de administración se puede realizar por separado.  
   
-3.  En la **Lista de dominios** de la página **Administración de dominios** , seleccione el dominio para el que desea crear una regla de dominio, o cree uno nuevo. Si necesita crear un nuevo dominio, vea [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  En la **Lista de dominios** de la página **Administración de dominios** , seleccione el dominio para el que desea crear una regla de dominio, o cree uno nuevo. Si necesita crear un nuevo dominio, vea [Crear un dominio](../data-quality-services/create-a-domain.md).  
   
 4.  Haga clic en la pestaña **Relaciones basadas en términos** .  
   
@@ -111,4 +108,3 @@ ms.lasthandoff: 09/09/2017
  Una vez creadas las relaciones basadas en términos, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
   
-

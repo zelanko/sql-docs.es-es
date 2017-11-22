@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6bdda6d24e2f1437eb251315d5b91efc7ab1016d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a56f74ecd59fbe11c60bfef48a5750f18fd52b72
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Paso 3: Prueba de concepto que se conecta a SQL con Java
   
@@ -191,5 +189,4 @@ En este ejemplo, ejecutar una instrucción INSERT, pasar parámetros y recuperar
 ```  
   
 ## <a name="additional-samples"></a>Ejemplos adicionales  
-[Aplicaciones de controlador JDBC de ejemplo](../../connect/jdbc/sample-jdbc-driver-applications.md)
-
+[Aplicaciones del controlador JDBC de ejemplo](../../connect/jdbc/sample-jdbc-driver-applications.md)

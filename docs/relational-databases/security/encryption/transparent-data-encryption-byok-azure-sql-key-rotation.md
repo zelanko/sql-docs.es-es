@@ -16,15 +16,14 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: c0751b8bfca5bbcae4a4802fecb3cf06e8182d05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Girar el protector del Cifrado de datos transparente (TDE) mediante PowerShell 
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 En esta guía de procedimientos se describe la rotación de claves para un servidor de Azure SQL mediante un protector del TDE desde Azure Key Vault. La rotación del protector del TDE de un servidor de Azure SQL TDE implica cambiar a una nueva clave asimétrica que proteja las bases de datos del servidor. La rotación de claves es una operación en línea que solo debería tardar unos segundos, ya que solo descifra y vuelve a cifrar la clave de cifrado de datos de la base de datos, no toda la base de datos.
 

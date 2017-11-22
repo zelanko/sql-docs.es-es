@@ -8,28 +8,26 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e9fc5c574cc4fee841cfc6598623ec20ae26c504
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Índices de hash de tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
-En este artículo se describen los tipos de índice de *hash* disponibles para una tabla con optimización para memoria. El artículo:  
+En este artículo se describen los tipos de índice de *hash* disponibles para una tabla optimizada para memoria. El artículo:  
   
 - Ofrece ejemplos de código corto que muestran la sintaxis de Transact-SQL.  
 - Describe los aspectos básicos de los índices de hash.  
@@ -45,12 +43,12 @@ Encontrará información de contexto importante para comprender este artículo e
   
   
   
-## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxis de índices con optimización para memoria  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxis de índices optimizados para memoria  
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Ejemplo de código para sintaxis  
   
-En este apartado se incluye un bloque de código de Transact-SQL que muestra las sintaxis disponibles para crear varios índices de hash en una tabla con optimización para memoria:  
+En este apartado se incluye un bloque de código de Transact-SQL que muestra las sintaxis disponibles para crear varios índices de hash en una tabla optimizada para memoria:  
   
 - En el ejemplo se muestra que el índice de hash se declara dentro de la instrucción CREATE TABLE.  
   - En su lugar, puede declararlo en otra instrucción [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations) .  
@@ -97,7 +95,7 @@ El rendimiento de un índice de hash es:
   
 ### <a name="b2-declaration-limitations"></a>B.2 Limitaciones de declaración  
   
-Solo puede existir un índice de hash en una tabla con optimización para memoria. No puede existir en una tabla basada en disco.  
+Solo puede existir un índice de hash en una tabla optimizada para memoria. No puede existir en una tabla basada en disco.  
   
 Un índice de hash se puede declarar como:  
   
@@ -119,7 +117,7 @@ Aquí se muestra una sintaxis de ejemplo para crear un índice de hash fuera de 
 Un índice de hash delimita sus valores de clave en lo que llamamos una matriz de *depósitos* :  
   
 - Cada depósito tiene 8 bytes, que se usan para almacenar la dirección de memoria de una lista de vínculos de entradas de índice.  
-- Cada entrada es un valor correspondiente a una clave de índice, además de la dirección de su fila correspondiente en la tabla subyacente con optimización para memoria.  
+- Cada entrada es un valor correspondiente a una clave de índice, además de la dirección de su fila correspondiente en la tabla subyacente optimizada para memoria.  
   - Cada entrada apunta a la siguiente entrada en una lista de vínculos de entradas, todas ellas encadenadas al depósito actual.  
   
   
@@ -151,7 +149,7 @@ La interacción del índice de hash y los cubos se resume en la siguiente imagen
 ### <a name="b4-row-versions-and-garbage-collection"></a>B.4 Versiones de fila y recolección de elementos no utilizados  
   
   
-En una tabla con optimización para memoria, cuando una fila se ve afectada por una instrucción UPDATE de SQL, la tabla crea una versión actualizada de la fila. Durante la transacción de actualización, es posible que otras sesiones puedan leer la versión anterior de la fila y, por tanto, evitar la degradación del rendimiento asociada a un bloqueo de fila.  
+En una tabla optimizada para memoria, cuando una fila se ve afectada por una instrucción UPDATE de SQL, la tabla crea una versión actualizada de la fila. Durante la transacción de actualización, es posible que otras sesiones puedan leer la versión anterior de la fila y, por tanto, evitar la degradación del rendimiento asociada a un bloqueo de fila.  
   
 Puede que el índice de hash también tenga versiones diferentes de las entradas para dar cabida a la actualización.  
   
@@ -189,7 +187,7 @@ Un número muy *alto* de cubos tiene las siguientes desventajas::
   
 Aunque el **BUCKET_COUNT** esté moderadamente por debajo o por encima del rango preferido, es probable que el rendimiento del índice de hash sea tolerable o aceptable. No se crea ninguna crisis.  
   
-Asigne al índice de hash un **BUCKET_COUNT** aproximadamente igual al número de filas que prevé que terminará teniendo la tabla con optimización para memoria.  
+Asigne al índice de hash un **BUCKET_COUNT** aproximadamente igual al número de filas que prevé que terminará teniendo la tabla optimizada para memoria.  
   
 Suponga que la tabla en aumento tiene 2 000 000 filas, pero prevé que dicha cantidad crecerá 10 veces hasta 20 000 000 filas. Comience por un número de depósitos que sea 10 veces el número de filas de la tabla. Esto deja espacio para una mayor cantidad de filas.  
   
@@ -273,7 +271,7 @@ Compare los resultados de SELECT con las siguientes directrices estadísticas:
 El siguiente bloque de código de T-SQL constituye un sencillo método de comprobar una instrucción `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`. El bloque de código se completa en 1 minuto. Estas son las fases del código de bloque en cuestión:  
   
   
-1. Crea una tabla con optimización para memoria que tiene algunos índices hash.  
+1. Crea una tabla optimizada para memoria que tiene algunos índices hash.  
 2. Rellena la tabla con miles de filas.  
     A. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
     B. Con INSERT el bucle inserta 262 144 filas en aproximadamente 1 minuto.  
@@ -440,4 +438,3 @@ Nuestro índice de dos columnas puede ser un índice no agrupado o un índice de
 El índice de hash requiere que la cláusula WHERE contenga una prueba de igualdad para cada una de las columnas en la clave. De lo contrario, dicho índice no tendrá ninguna utilidad para el optimizador.  
   
 Ningún tipo de índice resultará útil si solo se especifica la segunda columna de la clave de índice en la cláusula WHERE.  
-

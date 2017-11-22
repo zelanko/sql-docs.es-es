@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Command::Dialect
-helpviewer_keywords:
-- Dialect property
+f1_keywords: _Command::Dialect
+helpviewer_keywords: Dialect property
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a57fa4b9acd97cd2bfe96545680e3bd8ffc6f35b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73c7dfd6fe5aec706d5e27ce6d55f489285748c4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dialect-property"></a>Propiedad Dialect
 Indica el dialecto de la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedades. El dialecto define la sintaxis y reglas generales que el proveedor utiliza para analizar la cadena o secuencia.  
@@ -42,8 +38,7 @@ Indica el dialecto de la [CommandText](../../../ado/reference/ado-api/commandtex
  Cuando el usuario establece el **dialecto** valida el GUID de propiedad, ADO y genera un error si el valor proporcionado no es un GUID válido. Consulte la documentación de su proveedor para determinar los valores GUID admitidos por el **dialecto** propiedad.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Método Execute (Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)
-

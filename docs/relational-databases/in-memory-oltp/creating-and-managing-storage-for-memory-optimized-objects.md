@@ -8,27 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b955ffcf895f5356b77e0d772b3f1ac0cd9780e
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 58fd1de82d61ae008059237ad3f630a3e112c259
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Crear y administrar el almacenamiento de objetos con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  El motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] está integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le permite tener las tablas con optimización para memoria y las tablas basadas en disco (tradicionales) en la misma base de datos. Sin embargo, la estructura de almacenamiento para tablas con optimización para memoria es diferente de las tablas basadas en disco.  
+  El motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] está integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le permite tener las tablas optimizadas para memoria y las tablas basadas en disco (tradicionales) en la misma base de datos. Sin embargo, la estructura de almacenamiento para tablas optimizadas para memoria es diferente de las tablas basadas en disco.  
   
  El almacenamiento para tablas basadas en disco tiene los siguientes atributos clave:  
   
@@ -40,21 +38,21 @@ ms.lasthandoff: 06/22/2017
   
 -   Los datos se mueven a la memoria (el grupo de búferes) según sea necesario y las páginas modificadas o recién creadas se escriben asincrónicamente en el disco que genera la E/S principalmente aleatoria.  
   
- El almacenamiento de tablas con optimización para memoria tiene los siguientes atributos clave:  
+ El almacenamiento de tablas optimizadas para memoria tiene los siguientes atributos clave:  
   
--   Todas las tablas con optimización para memoria se asignan a un grupo de archivos de datos con optimización para memoria. Este grupo de archivos utiliza una sintaxis y semántica similar a Filestream.  
+-   Todas las tablas optimizadas para memoria se asignan a un grupo de archivos de datos optimizados para memoria. Este grupo de archivos utiliza una sintaxis y semántica similar a Filestream.  
   
 -   No existen páginas y los datos se guardan como una fila.  
   
--   Todos los cambios realizados en las tablas con optimización para memoria se almacenan anexándolos a los archivos activos. Tanto la lectura como la escritura en los archivos son secuenciales.  
+-   Todos los cambios realizados en las tablas optimizadas para memoria se almacenan anexándolos a los archivos activos. Tanto la lectura como la escritura en los archivos son secuenciales.  
   
 -   Una actualización se implementa como una eliminación seguida de una inserción. Las filas eliminadas no se quitan inmediatamente del almacenamiento. Las filas eliminadas se quitan mediante un proceso en segundo plano, denominado MERGE, según una directiva como se describe en [Durabilidad de las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md).  
   
--   A diferencia de las tablas basadas en disco, el almacenamiento de tablas con optimización para memoria no se comprime. Al migrar una tabla basada en disco (ROW o PAGE) comprimida tabla a una tabla con optimización para memoria, debe tener en cuenta el cambio del tamaño.  
+-   A diferencia de las tablas basadas en disco, el almacenamiento de tablas optimizadas para memoria no se comprime. Al migrar una tabla basada en disco (ROW o PAGE) comprimida tabla a una tabla optimizada para memoria, debe tener en cuenta el cambio del tamaño.  
   
--   Una tabla con optimización para memoria puede ser durable o no durable. Solo tiene que configurar el almacenamiento para las tablas con optimización para memoria durables.  
+-   Una tabla optimizada para memoria puede ser durable o no durable. Solo tiene que configurar el almacenamiento para las tablas optimizadas para memoria durables.  
   
- En esta sección se describen los pares de archivos de punto de comprobación y otros aspectos de cómo se almacenan los datos en tablas con optimización para memoria.  
+ En esta sección se describen los pares de archivos de punto de comprobación y otros aspectos de cómo se almacenan los datos en tablas optimizadas para memoria.  
   
  Temas de esta sección:  
   
@@ -74,4 +72,3 @@ ms.lasthandoff: 06/22/2017
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

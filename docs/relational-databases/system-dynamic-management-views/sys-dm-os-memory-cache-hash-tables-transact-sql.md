@@ -1,0 +1,69 @@
+---
+title: Sys.dm_os_memory_cache_hash_tables (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: dmv's
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sys.dm_os_memory_cache_hash_tables_TSQL
+- sys.dm_os_memory_cache_hash_tables
+- dm_os_memory_cache_hash_tables
+- dm_os_memory_cache_hash_tables_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sys.dm_os_memory_cache_hash_tables dynamic management view
+ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
+caps.latest.revision: "25"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 887ff777b24fd130692368352e05396659a60b12
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sysdmosmemorycachehashtables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Devuelve una fila para cada caché activa en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+> [!NOTE]  
+>  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_memory_cache_hash_tables**.  
+  
+|Nombre de columna|Tipo de datos|Description|  
+|-----------------|---------------|-----------------|  
+|**cache_address**|**varbinary (8)**|Dirección (clave principal) de la entrada de caché. No admite valores NULL.|  
+|**Nombre**|**nvarchar(256)**|Nombre de la caché. No admite valores NULL.|  
+|**tipo**|**nvarchar (60)**|Tipo de caché. No admite valores NULL.|  
+|**table_level**|**int**|Número de tabla de hash. Una caché concreta puede tener varias tablas hash que corresponden a diferentes funciones de hash. No admite valores NULL.|  
+|**buckets_count**|**int**|Número de depósitos en la tabla de hash. No admite valores NULL.|  
+|**buckets_in_use_count**|**int**|Número de depósitos que se utilizan actualmente. No admite valores NULL.|  
+|**buckets_min_length**|**int**|Número mínimo de entradas de caché en un depósito. No admite valores NULL.|  
+|**buckets_max_length**|**int**|Número máximo de entradas de caché en un depósito. No admite valores NULL.|  
+|**buckets_avg_length**|**int**|Número promedio de entradas de caché en cada depósito. No admite valores NULL.|  
+|**buckets_max_length_ever**|**int**|Número máximo de entradas de caché en un depósito de hash en esta tabla de hash desde que se inició el servidor. No admite valores NULL.|  
+|**hits_count**|**bigint**|Proporción de aciertos de la caché. No admite valores NULL.|  
+|**misses_count**|**bigint**|Número de errores de la caché. No admite valores NULL.|  
+|**buckets_avg_scan_hit_length**|**int**|Número promedio de entradas examinadas en un depósito antes de haber encontrado la búsqueda de un elemento. No admite valores NULL.|  
+|**buckets_avg_scan_miss_length**|**int**|Número promedio de entradas examinadas en un depósito antes de haber finalizado la búsqueda sin éxito. No admite valores NULL.|  
+|**pdw_node_id**|**int**|El identificador para el nodo que se encuentra en esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+  
+## <a name="permissions"></a>Permissions  
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.  
+  
+## <a name="see-also"></a>Vea también  
+ 
+  [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  
+  
+
+

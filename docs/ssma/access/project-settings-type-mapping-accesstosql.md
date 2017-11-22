@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43b1e632293658300a3ca8c242a57507e31ffb5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f1fbca03968ed7257cd7b65a42a6fff5180dbedc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>(Asignación de tipos) de la configuración del proyecto (AccessToSQL)
 La configuración del proyecto de asignación de tipo permite definir asignaciones de tipos de valor predeterminado para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos individuales de la base de datos. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -66,7 +64,7 @@ En la tabla siguiente muestra las asignaciones predeterminadas entre tipos de da
 |**Memorando**|**nvarchar(max)**|  
 |**memorando** : para Access 97|**varchar(max)**|  
 |**único**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
+|**text[\*.. \*]**|**nvarchar [\*]**|  
 |**text[\*.. \*]** : para Access 97|**varchar [\*]**|  
   
 **Agregar**  
@@ -82,7 +80,6 @@ Haga clic para quitar la asignación de tipos de datos seleccionados de la lista
 Haga clic para restablecer todas las asignaciones de tipo de datos a los valores predeterminados SSMA.  
   
 ## <a name="see-also"></a>Vea también  
-[Tipos de datos de destino y origen de asignación](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Asignación de tipos de datos de origen y de destino](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
 [Reference(Access) de interfaz de usuario](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

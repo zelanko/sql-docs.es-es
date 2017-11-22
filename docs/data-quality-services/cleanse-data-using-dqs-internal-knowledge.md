@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8aa5b0fdf2771d83310e503f2fdd8770bf9cf324
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpiar datos mediante el conocimiento de DQS (interno)
   En este tema se describe cómo limpiar los datos mediante un proyecto de calidad de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La limpieza de datos se realiza en los datos de origen utilizando una base de conocimiento generada en DQS a partir de un conjunto de datos de alta calidad. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md).  
@@ -235,4 +233,3 @@ ms.lasthandoff: 09/09/2017
  Para obtener más información sobre la generación de perfiles, vea [Generación de perfiles de datos y notificaciones de DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Installing client,Licensing
+helpviewer_keywords: Installing client,Licensing
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ceca393e8c7dc37d181364129d64d5f69bf0791
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eafef1f4a4f16f704b76b31aa77d3c93f84d5821
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalación de SSMA para cliente de MySQL (MySQLToSQL)
 SSMA para cliente de MySQL consta de los archivos de programa que llevan a cabo las siguientes tareas:  
@@ -90,4 +87,3 @@ En el equipo de Windows de 64 bits se instala el producto en C:\Microsoft SQL Se
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de MySQL a SQL Server: base de datos de SQL Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

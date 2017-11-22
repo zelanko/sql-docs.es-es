@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server en el cliente de Linux VDI especificación de SDK
 
@@ -200,7 +199,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 | |**pCmd** |Se trata de la dirección de un comando devuelto anteriormente desde ClientVirtualDevice::GetCommand.
 | |**completionCode** |Se trata de un código de estado que indica el estado de finalización. Este parámetro se debe devolver para todos los comandos. El código devuelto debe ser adecuado para el comando que se está realizando. ERROR_SUCCESS se utiliza en todos los casos para denotar un comando ejecutado correctamente. Para obtener la lista completa de los posibles códigos, vea el archivo vdierror.h. Aparece una lista de códigos de estado típico para cada comando en "Comandos" más adelante en este documento.
 | |**bytesTransferred** |Este es el número de bytes transferidos correctamente. Esto solo se devuelve para transferencia de datos de comandos de lectura y escritura.
-| |**position** |Se trata de una respuesta al comando GetPosition solo.
+| |**posición** |Se trata de una respuesta al comando GetPosition solo.
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |
@@ -223,7 +222,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |None | No aplicable
+| |Ninguno | No aplicable
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |
@@ -243,7 +242,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |None |No aplicable
+| |Ninguno |No aplicable
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |
@@ -330,6 +329,5 @@ Notas del proceso que invoca la función GetBufferHandle es responsable de invoc
 | |**VD_E_INVALID** |El ppBuffer es un identificador no válido.
 
 **Comentarios** debe tener cuidado para comunicar los controladores correctamente. Identificadores son locales a un conjunto único de dispositivo virtual. Los procesos de socios comerciales compartir un identificador deben asegurarse de dicho búfer identificadores se usan solo dentro del ámbito de la configuración del que se obtuvo originalmente el búfer del dispositivo virtual.
-
 
 

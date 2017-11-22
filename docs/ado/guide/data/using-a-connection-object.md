@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [ADO]
+helpviewer_keywords: connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 38454d8edc91715f5a3e3d5ee55f045d0e55e581
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da71dc67a1fd6a17f75c5aceaf7a88dce7d328ab
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-a-connection-object"></a>Uso de un objeto de conexión
 Antes de abrir un **conexión** objeto, debe definir cierta información sobre el origen de datos y el tipo de conexión. La mayor parte de esta información se mantiene en el *ConnectionString* parámetro de la [Open (método)](../../../ado/reference/ado-api/open-method-ado-connection.md) en el **conexión** objeto, o por el [ConnectionString propiedad](../../../ado/reference/ado-api/connectionstring-property-ado.md) en el **conexión** objeto. Una cadena de conexión consta de una lista de pares de argumento y valor separados por punto y coma, con los valores encerrados entre comillas simples. Por ejemplo:  
@@ -72,4 +69,3 @@ oRs.MarshalOptions = adMarshalModifiedOnly
 ' Disconnect the Recordset.  
 Set oRs.ActiveConnection = Nothing  
 ```
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -161,7 +159,8 @@ ms.lasthandoff: 09/27/2017
   
 -   **Polybase:** RLS no es compatible con Polybase.  
   
--   **Tablas con optimización para memoria**la función con valores de tabla insertados que se usa como predicado de seguridad en una tabla con optimización para memoria debe definirse mediante la opción `WITH NATIVE_COMPILATION` . Con esta opción, se prohibirán las características del lenguaje incompatibles con las tablas con optimización para memoria y se emitirá el error adecuado en tiempo de creación. Para obtener más información, vea la sección **Seguridad de nivel de fila en tablas con optimización para memoria** en [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   
+            **tablas optimizadas para memoria**la función con valores de tabla insertados que se usa como predicado de seguridad en una tabla optimizada para memoria debe definirse mediante la opción `WITH NATIVE_COMPILATION` . Con esta opción, se prohibirán las características del lenguaje incompatibles con las tablas optimizadas para memoria y se emitirá el error adecuado en tiempo de creación. Para obtener más información, vea la sección **Seguridad de nivel de fila en tablas con optimización para memoria** en [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Vistas indizadas:** en general, se pueden crear directivas de seguridad sobre las vistas y se pueden crear vistas sobre las tablas que están enlazadas mediante directivas de seguridad. Sin embargo, no se pueden crear vistas indexadas sobre las tablas que tienen una directiva de seguridad, ya que las búsquedas de filas mediante el índice podrían omitir la directiva.  
   
@@ -375,4 +374,3 @@ GO
  [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
-

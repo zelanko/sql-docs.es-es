@@ -8,24 +8,21 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- INCLUDE_NULL_VALUES (FOR JSON)
+helpviewer_keywords: INCLUDE_NULL_VALUES (FOR JSON)
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 70f50dc60738cc80379626d2a00d471e481906ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 732fd945099a13d1e6f319db3e0f5ac48e370346
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="include-null-values-in-json---includenullvalues-option"></a>Inclusión de valores Null en JSON - Opción INCLUDE_NULL_VALUES
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,4 +67,3 @@ Para obtener una gran cantidad de soluciones específicas, casos de uso y recome
  [Cláusula FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   
   
-

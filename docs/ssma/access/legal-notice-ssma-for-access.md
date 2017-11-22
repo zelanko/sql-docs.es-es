@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97f73d8397077a64fb9a5de6f7947dec42e716fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6f8e7504860b1502a4b3de0859cc9c4b9ddb1ea
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  
@@ -55,4 +53,3 @@ Asimismo, los clientes no deberán usar las siguientes API sin documentar, entre
   
 Es posible que las actualizaciones de servidor y de base de datos a versiones futuras de SQL Server no funcionen como es debido en aplicaciones y bases de datos que se aprovechan de o usan puntos de entrada no documentados. Debe limitar el uso de las características y funcionalidades de SQL Server a aquellas que se incluyen en la documentación de Microsoft SQL Server. Si una característica no está documentada en la documentación de Microsoft SQL Server, no será un elemento compatible de SQL Server.  
   
-

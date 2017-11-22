@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - WillConnect
 - Connection::WillConnect
-helpviewer_keywords:
-- WillConnect event [ADO]
+helpviewer_keywords: WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa5a610913124e1e21a228622cd7eb7a088be9df
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 El **WillConnect** eventos se llama antes de iniciar una conexión.  
@@ -73,5 +70,4 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)

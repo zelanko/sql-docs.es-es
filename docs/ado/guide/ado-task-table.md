@@ -15,17 +15,16 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f6c8bb37a6fcf52d6fbdcaba02e21cd7013ae18
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-programming-task-table"></a>Tabla de tareas de programación de ADO
 En la tabla siguiente se enumera las tareas de programación contenidas en el *Guía del programador de ADO* y proporciona referencias para cada tarea. Estas referencias pueden ser descripciones textuales o ejemplos de código en el que puede encontrar información sobre la característica de ADO que realiza la tarea.
@@ -40,13 +39,13 @@ En la tabla siguiente se enumera las tareas de programación contenidas en el *G
 |Acceso a los valores de columna|[Fields (colección)](../../ado/guide/data/the-fields-collection.md)|
 |Buscar datos|[Trabajar con conjuntos de registros](../../ado/guide/data/working-with-recordsets.md)|
 |Modificar datos y cambiar valores|[Editar los registros existentes](../../ado/guide/data/editing-existing-records.md)|
-|Agregar datos nuevos|[Agregar registros](../../ado/guide/data/adding-records.md)|
+|Agregar datos nuevos|[Agregar registros a un conjunto de registros](../../ado/guide/data/adding-records.md)|
 |Eliminar o quitar datos|[Eliminar registros mediante el método Delete](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
 |Enviar cambios al origen de datos|[Actualización de datos](../../ado/guide/data/updating-data.md)|
 |Iniciar, confirmar y revertir las transacciones|[Procesamiento de transacciones](../../ado/guide/data/transaction-processing.md)|
 |Guardar registros en un archivo (XML o binario)|[Conservar los datos](../../ado/guide/data/persisting-data.md)|
-|Control de errores|[Errores de ADO](../../ado/guide/data/ado-errors.md)|
-|Control de eventos, programación asincrónico|[Resumen del controlador de eventos de ADO](../../ado/guide/data/ado-event-handler-summary.md)|
+|Control de errores|[Errores de tiempo de ejecución de ADO](../../ado/guide/data/ado-errors.md)|
+|Control de eventos, programación asincrónico|[Conexión ADO y los eventos de conjunto de registros](../../ado/guide/data/ado-event-handler-summary.md)|
 |Elección de tipo y ubicación del cursor|[Tipos de cursores](../../ado/guide/data/types-of-cursors-ado.md)|
 |Elegir tipos de bloqueo|[Tipos de bloqueos](../../ado/guide/data/types-of-locks.md)|
 |Devolver los registros relacionados en un **conjunto de registros**|[Resumen de la forma de datos](../../ado/guide/data/data-shaping-overview.md)|
@@ -54,4 +53,3 @@ En la tabla siguiente se enumera las tareas de programación contenidas en el *G
 |Uso de XML para las consultas o para la entrada de comando|[Secuencias de comandos](../../ado/guide/data/command-streams.md)|
 |Devolver datos XML desde un proveedor|[Recuperar conjuntos de resultados en secuencias](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
 |Publicar en IIS|[Utilizar ADO para publicación en Internet](../../ado/guide/data/using-ado-for-internet-publishing.md)|
-

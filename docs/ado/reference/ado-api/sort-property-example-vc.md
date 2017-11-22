@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Sort property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dda70721ad495502a56928e101de193148c0be8f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24c8c70d0e09614df2ce7811c1e2a1f20ff50a16
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-property-example-vc"></a>Ejemplo de la propiedad de ordenación (VC ++)
 Este ejemplo se utiliza el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [ordenación](../../../ado/reference/ado-api/sort-property.md) propiedad para volver a ordenar las filas de un **Recordset** derivado de la ***autores*** tabla de el **Pubs** base de datos. Una rutina de la utilidad secundaria imprime cada fila.  
@@ -143,4 +139,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Vea también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad de ordenación](../../../ado/reference/ado-api/sort-property.md)
-

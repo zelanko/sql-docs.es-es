@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 27db4b8c5ee5ca748ab02f03b10c9bfd6455b105
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96053eaff28d6c9c7954786c65e53ade429aa92c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-browser-service"></a>Servicio SQL Server Browser
-  El programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se ejecuta como un servicio de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información acerca de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser permite efectuar las siguientes acciones:  
+  El programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se ejecuta como un servicio de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información acerca de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser permite efectuar las siguientes acciones:  
   
 -   Examinar una lista de los servidores disponibles  
   
@@ -39,9 +37,9 @@ ms.lasthandoff: 08/02/2017
   
 -   Conectarse a los extremos de la conexión de administrador dedicada (DAC)  
   
- Para cada instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssAS](../../includes/ssas-md.md)], el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser (sqlbrowser) proporciona el nombre de la instancia y el número de versión. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se instala con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para cada instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssAS](../../includes/ssas-md.md)], el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser (sqlbrowser) proporciona el nombre de la instancia y el número de versión. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se instala con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se puede configurar durante la instalación o mediante el uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. De manera predeterminada, el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se inicia automáticamente:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se puede configurar durante la instalación o utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se inicia automáticamente:  
   
 -   Cuando se actualiza una instalación.  
   
@@ -52,14 +50,14 @@ ms.lasthandoff: 08/02/2017
 -   Cuando se instala una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="background"></a>Información previa  
- En versiones anteriores a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], se podía instalar solo una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]escuchaba las solicitudes entrantes en el puerto 1433, asignado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por el organismo Internet asignados números Authority (IANA). Solo una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede utilizar un puerto, de modo que cuando [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] introdujo la compatibilidad con varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se desarrolló el Protocolo de resolución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) para escuchar en el puerto UDP 1434. Este servicio de escucha respondía a las solicitudes del cliente con los nombres de las instancias instaladas y los puertos o canalizaciones con nombre utilizadas por la instancia. Para solucionar estas limitaciones del sistema SSRP, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluyó el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser como sustituto de SSRP.  
+ En versiones anteriores a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], se podía instalar solo una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuchaba las solicitudes de entrada en el puerto 1433, que es el puerto asignado oficialmente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por el organismo Internet Assigned Numbers Authority (IANA). Solo una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede utilizar un puerto, de modo que cuando [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] introdujo la compatibilidad con varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se desarrolló el Protocolo de resolución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) para escuchar en el puerto UDP 1434. Este servicio de escucha respondía a las solicitudes del cliente con los nombres de las instancias instaladas y los puertos o canalizaciones con nombre utilizadas por la instancia. Para solucionar estas limitaciones del sistema SSRP, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluyó el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser como sustituto de SSRP.  
   
 ## <a name="how-sql-server-browser-works"></a>Funcionamiento de SQL Server Browser  
  Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se asigna un puerto TCP/IP al servidor si el protocolo TCP/IP está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el protocolo de canalizaciones con nombre está habilitado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en una canalización con nombre específica. Esa instancia específica utiliza dicho puerto, o "canalización", para intercambiar datos con las aplicaciones cliente. Durante la instalación, el puerto TCP 1433 y la canalización `\sql\query` se asignan a la instancia predeterminada, pero el administrador del servidor puede cambiar estos valores más tarde mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puesto que solo una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede utilizar un puerto o una canalización, se asignan números de puerto y nombres de canalizaciones diferentes para las instancias con nombre, incluido [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. De forma predeterminada, cuando están habilitados, las instancias con nombre y [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] están configurados para utilizar puertos dinámicos, por lo que se asigna un puerto disponible cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si lo desea, puede asignarse un puerto determinado a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al conectarse, los clientes pueden especificar un puerto concreto, pero, si el puerto se asigna dinámicamente, el número de puerto puede cambiar siempre que se reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , por lo que el cliente desconoce el número de puerto correcto.  
   
  En el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se inicia y reclama el puerto UDP 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser lee el Registro, identifica todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo y registra los puertos y las canalizaciones con nombre que utilizan. Cuando un servidor tiene dos o más tarjetas de red, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser devuelve el primer puerto habilitado que encuentra para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser es compatible con Ipv6 e Ipv4.  
   
- Cuando los clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitan los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la biblioteca de red del cliente envía un mensaje UDP al servidor utilizando el puerto 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser responde con el puerto TCP/IP o canalización con nombre de la instancia solicitada. Entonces, la biblioteca de red en la aplicación cliente completa la conexión enviando una solicitud al servidor mediante el puerto o la canalización con nombre de la instancia deseada.  
+ Cuando los clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitan los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la biblioteca de red del cliente envía un mensaje UDP al servidor utilizando el puerto 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser responde con el puerto TCP/IP o con la canalización con nombre de la instancia solicitada. Entonces, la biblioteca de red en la aplicación cliente completa la conexión enviando una solicitud al servidor mediante el puerto o la canalización con nombre de la instancia deseada.  
   
  Para obtener información sobre cómo iniciar y detener el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 08/02/2017
 -   Otro servicio o aplicación del servidor puede utilizar el puerto que elija para cada instancia, lo que hará que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no esté disponible.  
   
 ## <a name="clustering"></a>Agrupación en clústeres  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser no es un recurso en clúster y no admite la conmutación por error de un nodo de clúster a otro. Por tanto, en el caso de un clúster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser debe instalarse y activarse para cada nodo del clúster. En los clústeres, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha en IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no es un recurso agrupado y no admite la conmutación por error de un nodo del clúster al otro. Por tanto, en el caso de un clúster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser debe instalarse y activarse para cada nodo del clúster. En los clústeres, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha en IP_ANY.  
   
 > [!NOTE]  
 >  Cuando se escucha en IP_ANY y se habilita la escucha en unas direcciones IP específicas, el usuario debe configurar el mismo puerto TCP en cada IP porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el primer par de IP/puerto que detecta.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 08/02/2017
   
  El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se desinstala cuando se quita la última instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser puede iniciarse desde el símbolo del sistema para solucionar problemas mediante la **- c** cambiar:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser puede iniciarse desde el símbolo del sistema para solucionar problemas mediante el modificador **-c** :  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="security"></a>Seguridad  
   
 ### <a name="account-privileges"></a>Privilegios de cuenta  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha en un puerto UDP y acepta solicitudes no autenticadas mediante el protocolo de resolución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser debe ejecutarse en el contexto de seguridad de un usuario con pocos privilegios para minimizar el riesgo de sufrir un ataque malintencionado. La cuenta de inicio de sesión puede cambiarse mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los derechos mínimos de usuario para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser son:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha en un puerto UDP y acepta solicitudes no autenticadas mediante el protocolo de resolución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser debe ejecutarse en el contexto de seguridad de un usuario con pocos privilegios para minimizar el riesgo de sufrir un ataque malintencionado. La cuenta de inicio de sesión puede cambiarse mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los derechos mínimos de usuario para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser son:  
   
 -   Denegar el acceso desde la red a este equipo  
   
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/02/2017
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   
-

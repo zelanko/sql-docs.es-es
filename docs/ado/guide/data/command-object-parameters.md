@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], parameters
+helpviewer_keywords: Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e72e3f17a661d64602c1ede26e8fbaf77d4d6b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-object-parameters"></a>Parámetros del objeto Command
 El tema anterior descrito [crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Un uso más interesante para el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto se muestra en el ejemplo siguiente, en el que ya se incluyó el comando SQL. Esta modificación permite volver a usar el comando, pasando un valor diferente para el parámetro cada vez. Dado que la [propiedad preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propiedad en el **comando** objeto se establece en **true**, ADO requerirá que el proveedor compilar el comando especificado en [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) antes de ejecutar por primera vez. También se conservan el comando compilado en la memoria. Esto ralentiza la ejecución del comando ligeramente la primera vez que se ejecute debido a la sobrecarga necesaria para preparar la base de datos pero da como resultado una mejora del rendimiento cada vez que se llamó el comando a partir de ahí. Por lo tanto, se deben preparar comandos solo si se van a utilizar más de una vez.  
@@ -127,4 +124,3 @@ End Function
 ```  
   
  No todos los proveedores admiten comandos preparados. Si el proveedor no admite la preparación de comandos, podría devolver un error en cuanto esta propiedad se establece en **True**. Si no se devuelve un error, omite la solicitud para preparar el comando y establece la **Prepared** propiedad **false**.
-

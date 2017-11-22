@@ -1,28 +1,24 @@
 ---
 title: R Server (independiente) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1812dc6b60e5f5ee4547810a591b37643be17096
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
 
@@ -105,5 +101,4 @@ Ejemplos, tutoriales y obtener más información acerca de Microsoft R Server, v
 ## <a name="see-also"></a>Vea también
 
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)
-
 

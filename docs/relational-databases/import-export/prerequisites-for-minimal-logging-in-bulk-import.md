@@ -1,10 +1,13 @@
 ---
 title: "Requisitos previos para el registro mínimo durante la importación masiva | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 50e42a9267199f6e7e00b221a548b216625f5f91
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a9e6acfbb01944f13ebdb0ed132ac931500edd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Requisitos previos para el registro mínimo durante la importación masiva
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En el caso de las bases de datos que utilizan el modelo de recuperación completa, todas las operaciones de inserción de filas que se efectúan durante la importación masiva se registran por completo en el registro de transacciones. Las importaciones de datos de gran volumen pueden hacer que el registro de transacciones se llene rápidamente si se utiliza el modelo de recuperación completa. En cambio, bajo el modelo de recuperación simple o el modelo de recuperación optimizado para cargas masivas de registros, el registro mínimo de operaciones de importaciones masivas reduce la posibilidad de que una de estas operaciones acabe con el espacio del registro. Además, el registro mínimo es más eficaz que el completo.  
   

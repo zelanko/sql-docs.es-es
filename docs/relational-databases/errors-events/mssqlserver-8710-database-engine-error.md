@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 8710 (Database Engine error)
+helpviewer_keywords: 8710 (Database Engine error)
 ms.assetid: 78b9f9da-5489-4be0-94df-f065d86ed18c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4444dc2ed1b239670c75321ec3a0e1401122a0
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f96172d7cb0ae2eddd1da57fd3caebf527270fae
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver8710"></a>MSSQLSERVER_8710
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ Se ha usado una función de agregado con CUBE, ROLLUP o GROUPING SETS que no pro
 ## <a name="user-action"></a>Acción del usuario  
 Para solucionar este problema, quite la función de agregado o escriba la consulta utilizando UNION ALL en cláusulas GROUP BY.  
   
-

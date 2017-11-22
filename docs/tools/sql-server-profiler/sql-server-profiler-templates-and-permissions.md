@@ -5,28 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 34db0eb7ea67123931a67a26e81da37f38bfeb63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d55a2aaf43865897995dea95fd900bf9f6eee422
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Plantillas y permisos de SQL Server Profiler
-  El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resuelve las consultas internamente. Esto permite a los administradores ver exactamente las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o las Expresiones multidimensionales que se envían al servidor y cómo el servidor tiene acceso a la base de datos o al cubo para devolver los conjuntos de resultados.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resuelve las consultas internamente. Esto permite a los administradores ver exactamente las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o las Expresiones multidimensionales que se envían al servidor y cómo el servidor tiene acceso a la base de datos o al cubo para devolver los conjuntos de resultados.  
   
  Mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]puede hacer lo siguiente:  
   
@@ -49,12 +47,12 @@ ms.lasthandoff: 08/02/2017
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Plantillas SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|Contiene información acerca de las plantillas de seguimiento predefinidas que se incluyen en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
-|[Permisos necesarios para ejecutar el Analizador SQL Server](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Contiene información acerca de los permisos necesarios para ejecutar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Plantillas de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|Contiene información acerca de las plantillas de seguimiento predefinidas que se incluyen en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Permisos necesarios para ejecutar SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Contiene información acerca de los permisos necesarios para ejecutar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Guardar seguimientos y plantillas de seguimiento](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|Contiene información acerca de cómo guardar la salida del seguimiento y las definiciones de seguimiento en una plantilla.|  
 |[Modificar plantillas de seguimiento](../../tools/sql-server-profiler/modify-trace-templates.md)|Contiene información acerca de cómo modificar plantillas de seguimiento mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Iniciar un seguimiento](../../tools/sql-server-profiler/start-a-trace.md)|Contiene información acerca de lo que ocurre cuando se inicia, pausa o detiene un seguimiento.|  
-|[Correlacionar un seguimiento con datos del registro de rendimiento de Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|Contiene información acerca de la correlación de los datos del registro del rendimiento de Windows con un seguimiento mediante el Analizador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Correlacionar un seguimiento con los datos del registro de rendimiento de Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|Contiene información acerca de la correlación de los datos del registro del rendimiento de Windows con un seguimiento mediante el Analizador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Ver y analizar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|Contiene información acerca del uso de seguimientos para solucionar problemas de datos, mostrando los nombres de los objetos de un seguimiento y localizando los eventos de un seguimiento.|  
 |[Analizar interbloqueos con SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|Contiene información acerca del uso del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar la causa de un interbloqueo.|  
 |[Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|Contiene información acerca del uso del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para recopilar y mostrar el resultado del plan de presentación y de las estadísticas del plan de presentación.|  
@@ -66,4 +64,3 @@ ms.lasthandoff: 08/02/2017
  [Iniciar SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   
-

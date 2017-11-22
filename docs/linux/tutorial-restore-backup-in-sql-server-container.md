@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
-ms.contentlocale: es-es
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar una base de datos de SQL Server en un contenedor Linux Docker
 
@@ -411,4 +410,3 @@ A continuación, revise otra configuración de Docker y escenarios de solución 
 
 > [!div class="nextstepaction"]
 >[Guía de configuración de SQL Server 2017 en Docker](sql-server-linux-configure-docker.md)
-

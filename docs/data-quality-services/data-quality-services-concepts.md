@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ba02d945babd10cca11d07f6aa9e6ac01545661
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
@@ -85,7 +83,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Configurar los valores de servicio de datos de referencia. Para obtener más información, consulte [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
--   Configurar los valores de umbral para las actividades de limpieza y búsqueda de coincidencias. Para obtener más información, consulte [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Configurar los valores de umbral para las actividades de limpieza y búsqueda de coincidencias. Para obtener más información, consulte [Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Habilitar o deshabilitar las notificaciones de generación de perfiles. Para más información, vea [Habilitar o deshabilitar notificaciones de generación de perfiles en DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
@@ -101,4 +99,3 @@ ms.lasthandoff: 09/09/2017
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
-

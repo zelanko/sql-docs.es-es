@@ -1,0 +1,94 @@
+---
+title: sp_dbmmonitordropalert (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_dbmmonitordropalert_TSQL
+- sp_dbmmonitordropalert
+dev_langs: TSQL
+helpviewer_keywords:
+- database mirroring [SQL Server], monitoring
+- sp_dbmmonitordropalert
+ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
+caps.latest.revision: "38"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: f45644eb7c55b42c8f71109a9547afa2ffb5d1fa
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
+---
+# <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Quita la advertencia para una métrica de rendimiento especificada, estableciendo el umbral en NULL.  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+sp_dbmmonitordropalert database_name   
+    [ , alert_id ]   
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *database_name*  
+ Especifica la base de datos para la que se debe quitar el umbral de advertencia especificado.  
+  
+ *alert_id*  
+ Valor entero que identifica la advertencia que se va a quitar. Si se omite este argumento, se quitan todas las advertencias de la base de datos. Para quitar la advertencia para una métrica de rendimiento específica, debe especificar uno de los valores siguientes:  
+  
+|Valor|Métrica de rendimiento|Umbral de advertencia|  
+|-----------|------------------------|-----------------------|  
+|1|Transacción sin enviar más antigua|Especifica el número de minutos con transacciones que se puede acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de tiempo y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
+|2|Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de KB y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
+|3|Registro sin restaurar|Especifica cuántos KB de registro sin restaurar generan una advertencia en la instancia del servidor reflejado. Esta advertencia ayuda a medir el tiempo de conmutación por error. El*tiempo de la conmutación por error* se compone principalmente del tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha, más un breve tiempo adicional.|  
+|4|Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
+|5|Período de retención|Metadatos que controlan cómo se conservan las filas largas en la tabla de estado de la creación de reflejo de la base de datos.|  
+  
+> [!NOTE]  
+>  Este procedimiento quita los umbrales de advertencia, independientemente de si se especificaron mediante **sp_dbmmonitorchangealert** o el Monitor de creación de reflejo de base de datos.  
+  
+ Para obtener información acerca de los identificadores de evento correspondientes a las advertencias, consulte [alertas y umbrales de advertencia de uso de las métricas de rendimiento de creación de reflejo &#40; SQL Server &#41; ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+  
+## <a name="return-code-values"></a>Valores de código de retorno  
+ Ninguno  
+  
+## <a name="result-sets"></a>Conjuntos de resultados  
+ Ninguno  
+  
+## <a name="permissions"></a>Permissions  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
+  
+## <a name="examples"></a>Ejemplos  
+ En el ejemplo siguiente se quita la configuración del período de retención de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+  
+```  
+EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;  
+```  
+  
+ En el ejemplo siguiente se quitan todos los umbrales de advertencia y el período de retención de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+  
+```  
+EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
+  
+  

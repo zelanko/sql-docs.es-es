@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f1d2b9fa1bd4cfd574a1bec992dd060937289963
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e1393007372900c4480fa6ee8ae5311edd59feee
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuevas características de interfaz gráfica de usuario de SSMA para Access a SQL
 Este capítulo describe nuevas características de interfaz de usuario de SSMA  
@@ -132,4 +130,3 @@ Puede realizar búsquedas de texto rápidas con las siguientes características:
 ### <a name="advanced-search"></a>Búsqueda avanzada  
 Para abrir el cuadro de diálogo de búsqueda avanzada, en la búsqueda de punto del menú Edición, a continuación, haga clic en búsqueda avanzada. En el cuadro de diálogo podrá buscar cualquier objeto con el patrón. En la parte superior del cuadro de diálogo puede elegir categorías de área y el objeto de búsqueda.  
   
-

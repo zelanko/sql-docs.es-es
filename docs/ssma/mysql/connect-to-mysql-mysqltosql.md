@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5c5dba74939ac94e9ce87477ec0952e56c4439c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb5ded86bf30a942aaece3f7d1404df781c24112
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectarse a MySQL (MySQLToSQL)
 Use la **conectar con MySQL** cuadro de diálogo para conectarse a la base de datos de MySQL que se va a migrar.  
@@ -78,4 +76,3 @@ Al hacer clic en el botón "Configurar", aparece un cuadro de diálogo. Para uti
 > -   El **Aceptar** botón se habilita cuando se ha proporcionado la información necesaria. Si cualquiera de las rutas de acceso de archivo son válido, el botón "Aceptar" permanecerá deshabilitado.  
 > -   El **cancelar** botón cierra el cuadro de diálogo y **desactiva** la opción SSL desde el formulario de conexión principal.  
   
-

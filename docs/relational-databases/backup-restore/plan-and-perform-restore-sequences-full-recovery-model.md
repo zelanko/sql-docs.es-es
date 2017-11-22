@@ -2,9 +2,12 @@
 title: "Planeación y realización de secuencias de restauración (modelo de recuperación completa) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da3e2c8873fbc1b44ab45698d08c27edfdaf27a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planear y realizar secuencias de restauración (modelo de recuperación completa)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se explica cómo planear y realizar una secuencia de restauración para bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa normalmente el modelo de recuperación completa. Una *secuencia de restauración* es una secuencia formada por una o varias instrucciones [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . Por lo general, una secuencia de restauración inicializa el contenido de la base de datos, archivos y/o páginas que se van a restaurar (la fase de copia de datos), pone al día las transacciones registradas (fase de rehacer) y revierte las transacciones no confirmadas (fase de deshacer).  
   

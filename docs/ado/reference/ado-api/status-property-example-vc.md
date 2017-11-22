@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Status property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4d94baa3a1de7a84ce6997577b6f1c820d2698fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 850e4087e9937a2031f8761a1d6573a9747199f1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="status-property-example-vc"></a>Ejemplo de la propiedad de estado (VC ++)
 Este ejemplo se utiliza la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad que se va a mostrar los registros que se han modificado en una operación por lotes antes de que se ha producido una actualización por lotes.  
@@ -196,4 +192,3 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Vea también  
  [Propiedad Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-

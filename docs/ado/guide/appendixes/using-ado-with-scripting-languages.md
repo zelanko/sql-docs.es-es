@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 Dentro de un entorno de scripting, ADO permite exponer datos mediante secuencias de comandos de servidor. En este escenario, ADO, el proveedor OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado está instalado en un servidor que ejecuta Internet Information Services (IIS). Utilizando páginas Active Server (ASP), ADO es un componente al que hace referencia en una secuencia de comandos que puede generar código HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP en un explorador Web del cliente. Mediante el uso de secuencias de comandos, la página Web puede enviar acciones a la secuencia de comandos de servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
@@ -77,4 +75,3 @@ Dentro de un entorno de scripting, ADO permite exponer datos mediante secuencias
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Usar ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Usar ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-

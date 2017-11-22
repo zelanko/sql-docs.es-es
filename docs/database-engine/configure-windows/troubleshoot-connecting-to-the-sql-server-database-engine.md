@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas de conexión al motor de base de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,5 +158,4 @@ Ambos problemas están relacionados con el servicio SQL Server Browser, que prop
     1. En el equipo cliente, en el panel izquierdo del Administrador de configuración de SQL Server, expanda **Configuración** *version* **Configuration**, and then select **Client Protocols**.
     2. En el panel derecho, asegúrese de que TCP/IP esté habilitado. Si TCP/IP está deshabilitado, haga clic con el botón derecho en **TCP/IP** y luego haga clic en **Habilitar**.
     3. Asegúrese de que el orden de protocolo de TCP/IP sea un número menor que el de los protocolos de canalizaciones con nombre (o VIA en versiones anteriores). Por lo general, debería dejar la memoria compartida como orden 1 y TCP/IP como orden 2. La memoria compartida solo se usa cuando el cliente y SQL Server se están ejecutando en el mismo equipo. Todos los protocolos habilitados se prueban por orden hasta que se establece la conexión, aunque la memoria compartida se omite cuando la conexión no está en el mismo equipo. 
-
 

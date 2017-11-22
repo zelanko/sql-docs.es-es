@@ -5,27 +5,24 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - expressions [MDX], empty values
 - empty values [MDX]
 ms.assetid: 6338fb85-f513-4c3e-a774-4fd7c6986a91
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 977f5378647d306ce14bc01709b6229bead48929
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aef26d6b575ca340111054824fe024e81c6f7115
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-empty-values"></a>Trabajar con valores vacíos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +137,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  En la siguiente tabla se muestra el resultado de aplicar un operador OR a dos operandos booleanos.  
   
-|O BIEN|TRUE|FALSE|  
+|o|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**ES TRUE**|TRUE|TRUE|  
 |**VACÍA**|TRUE|TRUE|  
@@ -160,4 +157,3 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
  [Expresiones &#40; MDX &#41;](../mdx/expressions-mdx.md)  
   
   
-

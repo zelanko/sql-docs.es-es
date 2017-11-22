@@ -1,13 +1,14 @@
 ---
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/16/2017
+ms.custom: 
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKFILEGROUP_TSQL
 - DBCC CHECKFILEGROUP
 - CHECKFILEGROUP
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DBCC CHECKFILEGROUP statement
 - database objects [SQL Server], checking
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6e5335bd6685e1c547361d931938134becaac84
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Comprueba la asignación y la integridad estructural de todas las tablas y vistas indizadas en el grupo de archivos especificado de la base de datos actual.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Comprueba la asignación y la integridad estructural de todas las tablas y vistas indizadas en el grupo de archivos especificado de la base de datos actual.
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
@@ -99,7 +98,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Invalida el **grado máximo de paralelismo** opción de configuración de **sp_configure** para la instrucción. El MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con el regulador de recursos, el motor de base de datos usa el valor de MAXDOP regulador de recursos, que se describe en ALTER WORKLOAD GROUP (Transact-SQL). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Invalida el **grado máximo de paralelismo** opción de configuración de **sp_configure** para la instrucción. El MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con el regulador de recursos, el motor de base de datos usa el valor de MAXDOP regulador de recursos, que se describe en ALTER WORKLOAD GROUP (Transact-SQL). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
@@ -120,7 +119,7 @@ Si no se puede crear una instantánea o se especifica la opción TABLOCK, DBCC C
 >  Al ejecutar DBCC CHECKFILEGROUP en tempdb no se realiza ninguna comprobación de asignación y debe adquirir bloqueos de tabla compartidos para realizar las comprobaciones de tablas. Esto es debido a que, por motivos de rendimiento, las instantáneas de base de datos no están disponibles en tempdb. Eso significa que no es posible obtener la coherencia transaccional necesaria.  
   
 ## <a name="checking-objects-in-parallel"></a>Comprobar objetos en paralelo  
-De forma predeterminada, DBCC CHECKFILEGROUP realiza comprobaciones paralelas de los objetos. El grado de paralelismo se determina automáticamente mediante el procesador de consultas. El grado máximo de paralelismo se configura igual que las consultas paralelas. Para restringir el número máximo de procesadores disponibles para las comprobaciones DBCC, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+De forma predeterminada, DBCC CHECKFILEGROUP realiza comprobaciones paralelas de los objetos. El grado de paralelismo se determina automáticamente mediante el procesador de consultas. El grado máximo de paralelismo se configura igual que las consultas paralelas. Para restringir el número máximo de procesadores disponibles para las comprobaciones DBCC, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 La comprobación del paralelismo se puede deshabilitar utilizando el marcador de seguimiento 2528. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>Índices no clúster en grupos de archivos independientes  
@@ -241,4 +240,3 @@ WITH ESTIMATEONLY;
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
   
   
-

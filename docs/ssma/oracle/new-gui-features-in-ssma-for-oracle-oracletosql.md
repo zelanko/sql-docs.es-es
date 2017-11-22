@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 051a60047bc6d8485d6bd82f6f661962e8deb192
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6edfe4c2058b840f8757c49a0b3f2df80122553c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nuevas características de interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL)
 Este capítulo describe nuevas características de interfaz de usuario de SSMA.  
@@ -129,4 +127,3 @@ Puede realizar búsquedas de texto rápidas con las siguientes características:
 ### <a name="advanced-search"></a>Búsqueda avanzada  
 Para abrir el cuadro de diálogo de búsqueda avanzada, en la búsqueda de punto del menú Edición, a continuación, haga clic en búsqueda avanzada. En el cuadro de diálogo podrá buscar cualquier objeto con el patrón. En la parte superior del cuadro de diálogo puede elegir categorías de área y el objeto de búsqueda.  
   
-

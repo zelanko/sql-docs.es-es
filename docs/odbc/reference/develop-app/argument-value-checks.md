@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5269d810e91187b8c57ce6b2fbd1043d1df3a89d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="argument-value-checks"></a>Comprobaciones de valores de argumento
 El Administrador de controladores comprueba los siguientes tipos de argumentos. A menos que se indique lo contrario, el Administrador de controladores devuelve SQL_ERROR si hay errores en los valores de argumento.  
@@ -43,4 +41,3 @@ El Administrador de controladores comprueba los siguientes tipos de argumentos. 
 -   Números de columna y el parámetro deben ser mayor que 0 o mayor o igual a 0, dependiendo de la función. El controlador debe comprobar el límite superior de estos valores de argumento basándose en el conjunto de resultados actual o la instrucción SQL.  
   
 -   Argumentos de longitud/indicador como argumentos de longitud de búfer de datos deben contener los valores adecuados. Por ejemplo, el argumento que especifica la longitud de un nombre de tabla en **SQLColumns** (*NameLength3*) debe ser SQL_NTS o un valor mayor que 0; *BufferLength* en **SQLDescribeCol** debe ser mayor o igual que 0. El controlador también deba comprobar estos argumentos. Por ejemplo, podría comprobar que *NameLength3* es menor o igual que la longitud máxima de un nombre de tabla del origen de datos.
-

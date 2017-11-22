@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Count property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 665541a111e8117a9a96b0788ac837a50ed79eaf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20fdfff410f2b36e8974aa7073ad287e6f4a74d4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="count-property-example-vb"></a>Ejemplo de la propiedad de recuento (VB)
 Este ejemplo se muestra la [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad con dos colecciones en la ***empleado*** base de datos. La propiedad obtiene el número de objetos de cada colección y establece el límite superior para los bucles que enumeran estas colecciones. Otra manera de enumerar estas colecciones sin utilizar la **recuento** propiedad sería utilizar `For Each...Next` instrucciones.  
@@ -106,4 +102,3 @@ End Sub
   
 ## <a name="see-also"></a>Vea también  
  [Count (propiedad, ADO)](../../../ado/reference/ado-api/count-property-ado.md)
-

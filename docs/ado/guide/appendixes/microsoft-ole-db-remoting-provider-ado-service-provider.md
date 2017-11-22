@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6d969ae607f15876c21271d2721ed3f33c6949f3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Introducción al proveedor Microsoft OLE DB comunicación remota
 El proveedor de servicios remotos de Microsoft OLE DB permite a un usuario local en un equipo cliente invocar proveedores de datos en un equipo remoto. Especifique los parámetros de proveedor de datos para el equipo remoto tal y como lo haría si fuese un usuario local en el equipo remoto. A continuación, especifique los parámetros utilizados por el proveedor de servicios remotos para tener acceso a la máquina remota. A continuación, puede tener acceso a la máquina remota como si fuera un usuario local.
@@ -100,4 +98,3 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 
 ## <a name="see-also"></a>Vea también
  [Información general sobre el proveedor de servicios remotos OLE DB](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
-

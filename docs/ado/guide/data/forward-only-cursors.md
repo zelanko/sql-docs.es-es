@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 496e62ece05a14a5b64eae797d546af7ba4a1ede
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 121e8eec0b95f66b6e034f1f77d78c7d88fd5184
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="forward-only-cursors"></a>Cursores de solo avance
 El tipo de cursor predeterminado típico, llamado a un cursor de solo avance (o no desplazable), sólo puede avanzar a través del conjunto de resultados. Un cursor de solo avance no admite el desplazamiento (la capacidad de mover hacia delante y hacia atrás en el conjunto de resultados); solo es compatible con la obtención de filas desde el principio hasta el final del conjunto de resultados. Con algunos cursores de solo avance (como con la biblioteca de cursores de SQL Server), todos los insert, update y las instrucciones delete realizadas por el usuario actual (o confirmados por otros usuarios) que afectan a las filas del conjunto de resultados son visibles cuando se capturan las filas. Dado que el cursor no se puede desplazar hacia atrás, sin embargo, los cambios realizados en las filas de la base de datos tras captura la fila no son visibles a través del cursor.  
@@ -41,4 +39,3 @@ El tipo de cursor predeterminado típico, llamado a un cursor de solo avance (o 
  [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
  [Cursores KEYSET](../../../ado/guide/data/keyset-cursors.md)   
  [Cursores dinámicos](../../../ado/guide/data/dynamic-cursors.md)
-

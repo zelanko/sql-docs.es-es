@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67a300e30522a5f02bb6c33409a062a3c2434643
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="boundaries-of-a-recordset"></a>Límites de un conjunto de registros
 **Conjunto de registros** es compatible con la **BOF** y **EOF** propiedades para delinear el principio y al final, respectivamente, del conjunto de datos. Puede pensar en **BOF** y **EOF** como "registros"fantasma situados al principio y al final de"la **conjunto de registros**. Recuento de **BOF** y **EOF**, nuestro ejemplo **Recordset** ahora sería similar al siguiente:  
@@ -78,4 +76,3 @@ else
  Este esquema funciona con todos los tipos de cursor y es independiente de los proveedores subyacentes. Si intenta determinar la está vacía de un **Recordset** objeto comprobando si su **RecordCount** valor de la propiedad es cero (0) o no, debe tomar precauciones para usar un cursor adecuado y un proveedor que compatible con la devolución del número de registros en el resultado.  
   
  Si elimina el último registro que queda en el **Recordset** de objeto, el cursor se deja en un estado indeterminado. El **BOF** y **EOF** propiedades pueden permanecer **False** hasta que se intente volver a colocar el registro actual, dependiendo del proveedor. Para obtener más información, consulte [registros de eliminación mediante el método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
-

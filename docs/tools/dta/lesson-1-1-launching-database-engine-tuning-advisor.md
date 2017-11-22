@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 427cfbba4191f70541e47d3082c34fa185d92598
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf2e8cae039c323c9eb8ebd03a0370d171b789f0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Lección 1: 1: iniciar el Asistente para la optimización de motor de base de datos
 Para empezar, abra la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos. La primera vez que se usa, un miembro del rol fijo de servidor **sysadmin** debe iniciar el Asistente para la optimización de motor de base de datos para inicializar la aplicación. Tras la inicialización, los miembros del rol fijo de base de datos **db_owner** pueden usar el asistente para optimizar bases de datos de su propiedad. Para obtener más información sobre cómo inicializar el Asistente para la optimización de motor de base de datos, consulte [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -50,11 +47,10 @@ Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del A
 -   El panel derecho contiene las pestañas **General** y **Opciones de optimización** . Aquí es donde puede definir la sesión de optimización del motor de base de datos. En la pestaña **General** , escriba el nombre de la sesión de optimización, especifique la tabla o el archivo de carga de trabajo que se va a usar y seleccione las bases de datos y tablas que quiere optimizar en esta sesión. Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en una o varias bases de datos que se desean optimizar. El Asistente para la optimización de motor de base de datos utiliza archivos de seguimiento, tablas de seguimiento, scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] o archivos XML como entrada de carga de trabajo a la hora de optimizar bases de datos. En la pestaña **Opciones de optimización** , puede seleccionar las estructuras de diseño físico de base de datos (índices o vistas indizadas) y la estrategia de partición que quiere que el asistente tenga en cuenta durante el análisis. En esta pestaña, también puede especificar el tiempo máximo que el Asistente para la optimización de motor de base de datos empleará en optimizar una carga de trabajo. De forma predeterminada, el asistente emplea una hora en optimizar una carga de trabajo.  
   
 > [!NOTE]  
-> Asistente para la optimización de motor de base de datos admite archivos XML como entrada cuando un [!INCLUDE[tsql](../../includes/tsql-md.md)] se importa el script de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas. Para obtener más información, consulte la sección sobre cómo iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+> El Asistente para la optimización de motor de base de datos admite archivos XML como entrada cuando se importa un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el Editor de consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obtener más información, consulte la sección sobre cómo iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Diseño y opciones de la herramienta de configuración](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
+[Configurar las opciones de herramienta y el diseño](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
   
   
   
-

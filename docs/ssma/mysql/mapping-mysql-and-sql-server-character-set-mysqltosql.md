@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de caracteres de SQL Server y MySQL establece (MySQLToSQL)
 Juego de caracteres (juego de caracteres) se puede especificar para tipos de datos de caracteres, expresiones y literales de MySQL.  
@@ -143,4 +141,3 @@ Asignación de conjunto de caracteres varía en los niveles de otro nodo, a sabe
 > -   En la asignación de conjunto de caracteres entre la base de datos MySQL y base de datos de destino en la base de datos, categoría y niveles de nodos de objeto, los valores predeterminados de una codificación de caracteres determinada en cada nivel que no sea raíz para la columna **tipo de datos de destino** debe ser 'heredado'.  
 > -   En la cuadrícula, el valor **Inherited** se utiliza como sufijo con cualquiera '(CHAR/VARCHAR)' o '(NCHAR/NVARCHAR)' dependiendo de qué valor se heredó de primario por este conjunto de caracteres determinado.  
   
-

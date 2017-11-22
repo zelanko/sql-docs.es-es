@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 89fa77ec8e95bfc1f6ea2b796e07a1a2266bbab4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configuración de SQL Server para enviar comentarios a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,4 +170,3 @@ Durante la instalación, SQL Server 2016 Analysis Services agrega una cuenta esp
 Puede configurar su servicio para que no se envíen datos de uso, tal como se describe en la sección "Establecer subclaves del Registro en el servidor". Sin embargo, al hacer esto no se quita la cuenta de servicio. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

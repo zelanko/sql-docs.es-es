@@ -8,8 +8,7 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server]
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eb8267d4e8549f377da83d48e0c6b27ac71379f3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Una tabla con una referencia de clave externa a sí misma sigue estando limitada a 253 referencias de clave externa.  
   
--   Mayor que 253 referencias de clave externa no está actualmente disponible para índices de almacén de columnas, tablas con optimización para memoria, Stretch Database o tablas de clave externa particionadas.  
+-   Mayor que 253 referencias de clave externa no está actualmente disponible para índices de almacén de columnas, tablas optimizadas para memoria, Stretch Database o tablas de clave externa particionadas.  
   
 ### <a name="indexes-on-foreign-key-constraints"></a>Índices de restricciones de clave externa  
  A diferencia de las restricciones de clave principal, la creación una restricción de clave externa no crea automáticamente el índice correspondiente. No obstante, la creación manual de un índice en una clave externa suele ser útil por los siguientes motivos:  
@@ -141,4 +139,3 @@ ms.lasthandoff: 06/22/2017
 |Describe cómo deshabilitar las restricciones de clave externa durante una instrucción INSERT o UPDATE.|[Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
-

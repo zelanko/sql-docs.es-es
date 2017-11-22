@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Parameter::NumericScale
 - Field20::NumericScale
-helpviewer_keywords:
-- NumericScale property [ADO]
+helpviewer_keywords: NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d768c96b97a80a024eb007ed8ed59d4cb7df9b23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 98f5c141f0cf9483ab7d527f46911a36257ced47
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-property-ado"></a>NumericScale (propiedad, ADO)
 Indica la escala de valores numéricos en un [parámetro](../../../ado/reference/ado-api/parameter-object.md) o [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -48,10 +45,9 @@ Indica la escala de valores numéricos en un [parámetro](../../../ado/reference
   
 |||  
 |-|-|  
-|[Objeto de parámetro](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|  
+|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [NumericScale y ejemplo de las propiedades Precision (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale y ejemplo de las propiedades Precision (VC ++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Propiedad Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-

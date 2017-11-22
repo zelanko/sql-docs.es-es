@@ -3,37 +3,37 @@ title: COALESCE (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COALESCE
 - COALESCE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], nonnull
 - COALESCE function
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9cb11cb46ab14ab7b1efee597371799882f0e55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Evalúa los argumentos en orden y devuelve el valor actual de la primera expresión que inicialmente no se evalúa como `NULL`. Por ejemplo, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` devuelve el tercer valor porque el tercer valor es el primer valor que no sea null. 
   
@@ -69,7 +69,7 @@ COALESCE ( expression [ ,...n ] )
   
  Esto significa que los valores de entrada (*expression1*, *expression2*, *expresiónn*, etc.) se evalúan varias veces. Además, de acuerdo con el estándar SQL, si una expresión de valor contiene una subconsulta se considera no determinista, y la subconsulta se evalúa dos veces. En cualquier caso, se pueden devolver resultados diferentes entre la primera evaluación y las evaluaciones posteriores.  
   
- Por ejemplo, cuando se ejecuta el código `COALESCE((subquery), 1)`, la subconsulta se evalúa dos veces. En consecuencia, podrá obtener resultados diferentes en función del nivel de aislamiento de la consulta. Por ejemplo, puede devolver el código `NULL` en el `READ COMMITTED` nivel de aislamiento en un entorno multiusuario. Para asegurarse de que se devuelven resultados estables, use la `SNAPSHOT ISOLATION` nivel de aislamiento o reemplazar `COALESE` con el `ISNULL` función. Como alternativa, puede volver a escribir la consulta para insertar la subconsulta en una subselección como se muestra en el ejemplo siguiente:  
+ Por ejemplo, cuando se ejecuta el código `COALESCE((subquery), 1)`, la subconsulta se evalúa dos veces. En consecuencia, podrá obtener resultados diferentes en función del nivel de aislamiento de la consulta. Por ejemplo, puede devolver el código `NULL` en el `READ COMMITTED` nivel de aislamiento en un entorno multiusuario. Para asegurarse de que se devuelven resultados estables, use la `SNAPSHOT ISOLATION` nivel de aislamiento o reemplazar `COALESCE` con el `ISNULL` función. Como alternativa, puede volver a escribir la consulta para insertar la subconsulta en una subselección como se muestra en el ejemplo siguiente:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -302,4 +302,3 @@ ORDER BY TotalSalary;
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

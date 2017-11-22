@@ -5,22 +5,20 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 817c05a5f677e1466d4e573c3af3d66145ce0ca9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b494e320bf52a98ea02cae6dc3c7feb41aea4217
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilidad de R en SQL Server
 
@@ -73,10 +71,9 @@ También le recomendamos que intente [MicrosoftML](https://docs.microsoft.com/r-
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Introducción a la arquitectura](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
+[Información general sobre la arquitectura](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
 
 [Componentes de SQL Server al soporte técnico de R](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
 
 [Información general sobre seguridad](../../advanced-analytics/r/security-overview-sql-server-r.md)
-
 

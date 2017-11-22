@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getIndexInfo
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getIndexInfo
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 028937d023b6cf899eb5fa47354cb0c5d21545bc
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -89,10 +85,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**corto**|El tipo del índice. Puede ser uno de los siguientes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**corto**|Posición ordinal de la columna en el índice. La primera columna del índice es 1.|  
 |COLUMN_NAME|**String**|Nombre de la columna.|  
-|ASC_OR_DESC|**String**|Orden utilizado en la intercalación del índice: Puede ser uno de los siguientes valores:<br /><br /> A (ascendente)<br /><br /> D (descendente)<br /><br /> NULL (no aplicable)<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve "A".  |  
+|ASC_OR_DESC|**String**|Orden utilizado en la intercalación del índice: Puede ser uno de los siguientes valores:<br /><br /> A (ascendente)<br /><br /> D (descendente)<br /><br /> NULL (no aplicable)<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve "A".|  
 |CARDINALITY|**int**|Número de filas de la tabla o de valores únicos del índice.|  
 |PAGES|**int**|El número de páginas utilizadas para almacenar el índice o tabla.|  
-|FILTER_CONDITION|**String**|Condición del filtro.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve null.  |  
+|FILTER_CONDITION|**String**|Condición del filtro.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve null.|  
   
 > [!NOTE]  
 >  Para obtener más información acerca de los datos devueltos por el método getIndexInfo, vea "sp_indexes (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
@@ -129,4 +125,3 @@ public static void executeGetIndexInfo(Connection con) {
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

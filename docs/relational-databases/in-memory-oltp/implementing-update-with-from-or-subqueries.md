@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5de86bfa68d281e79f77b9578eff2385f20c0958
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementación de UPDATE con FROM o subconsultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ Esta es la instrucción UPDATE de T-SQL original:
 
 El código de T-SQL de ejemplo de esta sección muestra una solución alternativa que proporciona un buen rendimiento. Dicha solución se implementa en un desencadenador compilado de forma nativa. Es fundamental que se fije en lo siguiente en el código:  
   
-- El tipo denominado dbo.Type1, que es un tipo de tabla con optimización para memoria.  
+- El tipo denominado dbo.Type1, que es un tipo de tabla optimizada para memoria.  
 - El bucle WHILE en el desencadenador.  
   - El bucle recupera las filas de Inserted una de cada vez.  
   
@@ -165,4 +163,3 @@ El código de T-SQL de ejemplo de esta sección muestra una solución alternativ
   
   
   
-

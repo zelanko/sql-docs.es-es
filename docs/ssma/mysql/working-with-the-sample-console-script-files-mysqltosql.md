@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sample console script files
+helpviewer_keywords: Sample console script files
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c79b522672035f45acccd85ec4c1321904b7478
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84a1bddb2cb42011d5150257e5dd28ebab1a9ade
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (MySQLToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -135,4 +132,3 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
 [Crear los archivos de conexión de servidor &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Generación de informes &#40; MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   
-

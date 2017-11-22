@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Recommendation element
+dev_langs: XML
+helpviewer_keywords: Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88ee6ad381638147b1b19a515fb3c55cdf0a7447
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d3402eb2554aa2342335b2901206dac1fbcf7a5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recommendation-element-dta"></a>Recommendation (DTA, elemento)
   Contiene información sobre los índices hipotéticos que forman parte de una configuración especificada por el usuario.  
@@ -54,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento de tabla de esquema &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Elemento primario**|[Table &#40;DTA, elemento de Schema&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Elementos secundarios**|[Create &#40;DTA, elemento&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](http://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -67,4 +63,3 @@ ms.lasthandoff: 08/02/2017
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

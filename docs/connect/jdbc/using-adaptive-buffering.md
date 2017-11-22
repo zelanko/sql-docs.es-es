@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-adaptive-buffering"></a>Usar el almacenamiento en búfer adaptable
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **La consulta genera un conjunto de resultados muy grande:** la aplicación puede ejecutar una instrucción SELECT que genera más filas de la aplicación puede almacenar en memoria. En versiones anteriores, la aplicación tenía que utilizar un cursor de servidor para evitar un OutOfMemoryError. El almacenamiento en búfer adaptable permite hacer un paso de solo lectura y solo avance de un conjunto de resultados arbitrariamente grande sin requerir un cursor de servidor.  
   
--   **La consulta genera gran**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**columnas o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**los valores de parámetro:**  La aplicación puede recuperar un valor único (columna o parámetro OUT) que es demasiado grande para caber completamente en memoria de la aplicación.         Almacenamiento en búfer adaptable permite a la aplicación cliente recuperar este valor como una secuencia, utilizando el getAsciiStream, el getBinaryStream o los métodos de getCharacterStream. La aplicación recupera el valor de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tal y como lee de la secuencia.  
+-   **La consulta genera gran**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**columnas o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**los valores de parámetro:**  La aplicación puede recuperar un valor único (columna o parámetro OUT) que es demasiado grande para caber completamente en memoria de la aplicación. Almacenamiento en búfer adaptable permite a la aplicación cliente recuperar este valor como una secuencia, utilizando el getAsciiStream, el getBinaryStream o los métodos de getCharacterStream. La aplicación recupera el valor de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tal y como lee de la secuencia.  
   
 > [!NOTE]  
 >  Con el almacenamiento en búfer adaptable, el controlador JDBC solamente almacena en búfer las cantidad de datos que debe almacenar. El controlador no proporciona un método público para controlar o limitar el tamaño del búfer.  
@@ -96,7 +94,6 @@ ms.lasthandoff: 09/09/2017
 -   Para los conjuntos de resultados adaptables de solo avance, cuando se captura un bloque de filas el controlador normalmente lee en la memoria el número de filas indicado por la [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) método de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) objeto, incluso cuando el búfer adaptable esté habilitado en la conexión. Si llama a la [siguiente](../../connect/jdbc/reference/next-method-sqlserverresultset.md) método de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) los resultados de objetos en un OutOfMemoryError, puede reducir el número de filas recuperadas mediante una llamada a la [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) método de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) objeto para establecer el tamaño de captura en un menor número de filas, incluso una sola 1 fila, si es necesario. También puede forzar el controlador no almacene en búfer todas las filas mediante una llamada a la [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método de la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) objeto con "**adaptable**" parámetro antes de ejecutar la instrucción. Dado que el conjunto de resultados no es desplazable, si la aplicación obtiene acceso a un valor de columna grande utilizando uno de get\<tipo > métodos de secuencia, el controlador descarta el valor en cuanto la aplicación lo lee igual que lo hace para solo avance de solo lectura conjuntos de resultados.  
   
 ## <a name="see-also"></a>Vea también  
- [Mejora del rendimiento y confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

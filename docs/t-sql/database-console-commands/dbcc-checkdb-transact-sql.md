@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -37,26 +35,25 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
+caps.latest.revision: "144"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0960e000c4ba1d798228445720e39db0f627f9b1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Comprueba la integridad física y lógica de todos los objetos de la base de datos especificada mediante la realización de las siguientes operaciones:    
     
-> **Nota:** DBCC CHECKDB se admite en bases de datos que contienen tablas optimizadas en memoria, pero solo se produce la validación en las tablas basadas en disco. Sin embargo, como parte de la copia de seguridad y la recuperación de bases de datos, la validación de CHECKSUM se realiza para los archivos de grupos de archivos con optimización para memoria.    
+> **Nota:** DBCC CHECKDB se admite en bases de datos que contienen tablas optimizadas en memoria, pero solo se produce la validación en las tablas basadas en disco. Sin embargo, como parte de la copia de seguridad y la recuperación de bases de datos, la validación de CHECKSUM se realiza para los archivos de grupos de archivos optimizados para memoria.    
 >     
->  Puesto que las opciones de reparación de DBCC no están disponibles para las tablas con optimización para memoria, debe hacer periódicamente copia de seguridad de las bases de datos y probar dichas copias. Si se producen problemas de integridad de datos en una tabla con optimización para memoria, debe restaurar desde la última copia de seguridad válida conocida.    
+>  Puesto que las opciones de reparación de DBCC no están disponibles para las tablas optimizadas para memoria, debe hacer periódicamente copia de seguridad de las bases de datos y probar dichas copias. Si se producen problemas de integridad de datos en una tabla optimizada para memoria, debe restaurar desde la última copia de seguridad válida conocida.    
     
 -   Se ejecuta [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) en la base de datos.    
     
@@ -180,7 +177,7 @@ Este argment siempre implica NO_INFOMSGS y no se permite con cualquiera de las o
  MAXDOP  
  **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
     
- Invalida el **grado máximo de paralelismo** opción de configuración de **sp_configure** para la instrucción. El MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con el regulador de recursos, el [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] utiliza el valor de MAXDOP del regulador de recursos, se describe en [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Invalida el **grado máximo de paralelismo** opción de configuración de **sp_configure** para la instrucción. El MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con el regulador de recursos, el [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] utiliza el valor de MAXDOP del regulador de recursos, se describe en [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
 > [!WARNING] 
 > Si MAXDOP se establece en cero, a continuación, SQL Server elige el grado máximo de paralelismo para usar.    
@@ -219,7 +216,7 @@ Por ejemplo, si una tabla contiene una **varbinary (max)** columna que utiliza e
 Se recomienda utilizar la opción PHYSICAL_ONLY si se usa con frecuencia en sistemas de producción. El uso de PHYSICAL_ONLY puede reducir mucho el tiempo de ejecución de DBCC CHECKDB en bases de datos grandes. También se recomienda ejecutar DBCC CHECKDB sin opciones de forma periódica. La frecuencia con que se deben realizar estas ejecuciones varía en función de la empresa y su entorno de producción.
     
 ## <a name="checking-objects-in-parallel"></a>Comprobar objetos en paralelo    
-De forma predeterminada, DBCC CHECKDB realiza comprobaciones paralelas de los objetos. El grado de paralelismo se determina automáticamente mediante el procesador de consultas. El grado máximo de paralelismo se configura igual que las consultas paralelas. Para restringir el número máximo de procesadores disponibles para las comprobaciones DBCC, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). La comprobación del paralelismo se puede deshabilitar utilizando el marcador de seguimiento 2528. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+De forma predeterminada, DBCC CHECKDB realiza comprobaciones paralelas de los objetos. El grado de paralelismo se determina automáticamente mediante el procesador de consultas. El grado máximo de paralelismo se configura igual que las consultas paralelas. Para restringir el número máximo de procesadores disponibles para las comprobaciones DBCC, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). La comprobación del paralelismo se puede deshabilitar utilizando el marcador de seguimiento 2528. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]
 > Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, ver coherencia en paralelo, consulte en la sección de facilidad de uso de RDBMS de [características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
@@ -406,5 +403,4 @@ GO
 [Ver el tamaño del archivo disperso de una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
 [Tablas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-
 

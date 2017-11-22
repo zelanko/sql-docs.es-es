@@ -1,0 +1,149 @@
+---
+title: sp_create_removable (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_create_removable
+- sp_create_removable_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sp_create_removable
+ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
+caps.latest.revision: "31"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: d16ba597797bb5a89265856e9ced307e9801ce46
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
+---
+# <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Crea una base de datos de medios extraíbles. Genera tres archivos o más (uno para las tablas de catálogo del sistema, otro para el registro de transacciones y uno o más archivos para las tablas de datos) y coloca la base de datos en esos archivos.  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Se recomienda que use [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) en su lugar.  
+  
+||  
+|-|  
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+sp_create_removable   
+   [ @dbname = ] 'dbname',   
+   [ @syslogical= ] 'syslogical',   
+   [ @sysphysical = ] 'sysphysical',   
+   [ @syssize = ] syssize,   
+   [ @loglogical = ] 'loglogical',   
+   [ @logphysical = ] 'logphysical',   
+   [ @logsize = ] logsize,   
+   [ @datalogical1 = ] 'datalogical1',   
+   [ @dataphysical1 = ] 'dataphysical1',   
+   [ @datasize1 = ] datasize1 ,   
+   [ @datalogical16 = ] 'datalogical16',   
+   [ @dataphysical16 = ] 'dataphysical16',   
+   [ @datasize16 = ] datasize16 ]  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ [  **@dbname=** ] **'***dbname***'**  
+ Es el nombre de la base de datos que se creará para usarla en medios extraíbles. *dbname* es **sysname**.  
+  
+ [  **@syslogical=** ] **'***syslogical***'**  
+ Es el nombre lógico del archivo que contiene las tablas del catálogo del sistema. *syslogical* es **sysname**.  
+  
+ [  **@sysphysical=** ] **'***sysphysical***'**  
+ Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene las tablas del catálogo del sistema. *sysphysical* es **nvarchar (260)**.  
+  
+ [  **@syssize=** ] *syssize*  
+ Es el tamaño, en megabytes, del archivo que contiene las tablas del catálogo del sistema. *syssize* es **int**. El mínimo *syssize* es 1.  
+  
+ [  **@loglogical=** ] **'***loglogical***'**  
+ Es el nombre lógico del archivo que contiene el registro de transacciones. *loglogical* es **sysname**.  
+  
+ [  **@logphysical=** ] **'***logphysical***'**  
+ Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene el registro de transacciones. *logphysical* es **nvarchar (260)**.  
+  
+ [  **@logsize=** ] *logsize*  
+ Es el tamaño, en megabytes, del archivo que contiene el registro de transacciones. *logsize* es **int**. El mínimo *logsize* es 1.  
+  
+ [  **@datalogical1=** ] **'***datalogical***'**  
+ Es el nombre lógico de un archivo que contiene las tablas de datos. *datalogical* es **sysname**.  
+  
+ Debe ser un número de archivos de datos comprendido entre 1 y 16. Normalmente, se crea más de un archivo de datos cuando se espera que la base de datos tenga un gran tamaño y deba distribuirse en varios discos.  
+  
+ [  **@dataphysical1=** ] **'***dataphysical***'**  
+ Es el nombre físico. Se incluye la ruta de acceso completa a un archivo que contiene tablas de datos. *dataphysical* es **nvarchar (260)**.  
+  
+ [  **@datasize1=** ] **'***datasize***'**  
+ Es el tamaño, en megabytes, de un archivo que contiene tablas de datos. *DataSize* es **int**. El mínimo *datasize* es 1.  
+  
+## <a name="return-code-values"></a>Valores de código de retorno  
+ 0 (correcto) o 1 (error)  
+  
+## <a name="result-sets"></a>Conjuntos de resultados  
+ Ninguno  
+  
+## <a name="remarks"></a>Comentarios  
+ Utilice este procedimiento almacenado si desea realizar una copia de la base de datos en un medio extraíble (como un disco compacto) y distribuir la base de datos a otros usuarios.  
+  
+## <a name="permissions"></a>Permissions  
+ Requiere el permiso CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
+  
+ Para mantener el control del uso del disco en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el permiso para crear bases de datos suele limitarse a un número reducido de cuentas de inicio de sesión.  
+  
+### <a name="permissions-on-data-and-log-files"></a>Permisos en archivos de datos y de registro  
+ Siempre que se realizan ciertas operaciones en una base de datos, los permisos correspondientes se establecen en sus datos y archivos de registro. Los permisos evitan que los archivos se modifiquen accidentalmente si residen en un directorio sin restricción de permisos.  
+  
+|Operación en base de datos|Permisos establecidos en archivos|  
+|---------------------------|------------------------------|  
+|Modificada para agregar un nuevo archivo|Creado|  
+|Copia de seguridad|Adjuntada|  
+|Restaurada|Separada|  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no establece permisos en archivos de datos y de registro.  
+  
+## <a name="examples"></a>Ejemplos  
+ En el ejemplo siguiente se crea la base de datos `inventory` como una base de datos extraíble.  
+  
+```  
+EXEC sp_create_removable 'inventory',   
+   'invsys',  
+   'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\invsys.mdf'  
+, 2,   
+   'invlog',  
+   'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\invlog.ldf', 4,  
+   'invdata',  
+   'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\invdata.ndf',   
+10;  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [sp_certify_removable &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sp_dbremove &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

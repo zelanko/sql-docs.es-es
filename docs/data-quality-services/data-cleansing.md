@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 48ab1d80a01cbcaf74f5ba11850ab61f358b24fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-cleansing"></a>Limpieza de datos
   La limpieza de datos es el proceso de analizar la calidad de los datos en un origen de datos; para ello, se aprueban o rechazan manualmente las sugerencias del sistema y, de esta manera, se hacen modificaciones en los datos. La limpieza de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) incluye un proceso asistido por PC que analiza cómo se ajustan los datos al conocimiento de una base de conocimiento y un proceso interactivo que permite al administrador de datos revisar y modificar los resultados obtenidos en los procesos asistidos por PC con el fin de garantizar que la limpieza de datos resulta exactamente como se deseaba efectuar.  
@@ -62,9 +60,9 @@ ms.lasthandoff: 09/09/2017
   
  El proceso asistido por PC muestra información sobre la calidad de los datos en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] durante el proceso de limpieza interactiva. Además de tener en cuenta las reglas de error de sintaxis, DQS también utiliza datos de referencia y algoritmos avanzados para clasificar los datos mediante el *nivel de confianza*. El nivel de confianza indica el grado de certeza de DQS para la corrección o sugerencia. El nivel de confianza se basa en los umbrales siguientes:  
   
--   Un *umbral de corrección automática* superado el cual DQS sugerirá un cambio y lo realizará a menos que el administrador de datos lo rechace Puede especificar el valor de umbral de corrección automática en la pestaña **Configuración general** de la pantalla **Configuración** . Para obtener más información, vea [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Un *umbral de corrección automática* superado el cual DQS sugerirá un cambio y lo realizará a menos que el administrador de datos lo rechace Puede especificar el valor de umbral de corrección automática en la pestaña **Configuración general** de la pantalla **Configuración** . Para obtener más información, consulte [Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Un *umbral de sugerencia automática* , situado por debajo del umbral de corrección automática, superado el cual DQS sugerirá un cambio y lo realizará si el administrador de datos lo aprueba. Puede especificar el valor de umbral de sugerencia automática en la pestaña **Configuración general** de la pantalla **Configuración** . Para obtener más información, vea [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Un *umbral de sugerencia automática* , situado por debajo del umbral de corrección automática, superado el cual DQS sugerirá un cambio y lo realizará si el administrador de datos lo aprueba. Puede especificar el valor de umbral de sugerencia automática en la pestaña **Configuración general** de la pantalla **Configuración** . Para obtener más información, consulte [Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
  DQS deja cualquier valor con un nivel de confianza inferior al umbral de sugerencia automática tal como esté a menos que el administrador de datos especifique un cambio.  
   
@@ -116,4 +114,3 @@ ms.lasthandoff: 09/09/2017
  [Coincidencia de datos](../data-quality-services/data-matching.md)  
   
   
-

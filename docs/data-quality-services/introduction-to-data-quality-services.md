@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domains
+helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bfe4bfd1accf4291a2e8a6cc5974c81bc669f46d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="introduction-to-data-quality-services"></a>Introducción a Data Quality Services
   La solución de calidad de datos que aporta [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite al administrador de datos o al profesional de TI mantener la calidad de los datos y asegurarse de que los datos son apropiados para su uso empresarial. DQS es una solución controlada por conocimiento que proporciona métodos asistidos por PC e interactivos para administrar la integridad y la calidad de los orígenes de datos. DQS permite detectar, compilar y administrar conocimientos sobre sus datos. Puede utilizar ese conocimiento para limpiar datos, buscar coincidencias y generar perfiles de los datos. Asimismo, puede aprovechar los servicios basados en la nube de proveedores de datos de referencia en un proyecto de calidad de datos DQS.  
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  La funcionalidad de Data Quality Services se ha integrado en Master Data Services (MDS), de modo que puede realizar la desduplicación de los datos de origen y los datos maestros del complemento Master Data Services de Microsoft SQL Server 2014 para Microsoft Excel. Para efectuar la coincidencia y la carga de datos administrados por MDS en una hoja de cálculo de Excel, combínelos con los datos no administrados por MDS y después realice la coincidencia en Excel. Los componentes de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se deben instalar con MDS. Para obtener más información, consulte  [Coincidencia de calidad de datos en el Complemento MDS para Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
-

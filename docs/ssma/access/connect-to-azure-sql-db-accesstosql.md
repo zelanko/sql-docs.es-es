@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Connect to SQL Azure dialog box
+helpviewer_keywords: Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 25d1e2190223f8f7728518701fbbf1a3590ab5f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 86a145cd23f40e41ef63b166e7536f91ee2129d9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Conectarse a la base de datos de SQL Azure (AccessToSQL)
 Use el cuadro de diálogo de SQL Azure para conectarse a la base de datos de SQL Azure que se va a migrar.  
@@ -73,4 +70,3 @@ Para crear una nueva base de datos de azure, siga los pasos siguientes
   
     2.  **Tamaño de base de datos:** seleccione el tamaño de base de datos que se debe crear en la cuenta de SQL Azure.  
   
-

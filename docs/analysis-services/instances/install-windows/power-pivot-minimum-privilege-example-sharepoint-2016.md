@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae8b2b882204fa6940a5e4827ca3a5a0b1344dbd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9c151cf24a3f91bf5a9502e024d431b868e086e3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot con privilegios mínimos ejemplo - SharePoint 2016
   En este tema se describe un ejemplo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para la configuración de SharePoint 2016 con privilegios mínimos. La configuración emplea una cuenta diferente para cada uno de los tres componentes y cada cuenta tiene el nivel mínimo de privilegios.  
@@ -89,4 +87,3 @@ ms.lasthandoff: 09/01/2017
     ```  
   
   
-

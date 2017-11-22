@@ -21,17 +21,16 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d71fe57dc5fcd59453d470f92b3dd900d5bde544
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Minería de datos)
   Controlar los  *valores ausentes* correctamente constituye una parte importante del modelado eficiente. En esta sección se explica qué son los valores ausentes, y se describen las características proporcionadas en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabajar con valores ausentes al generar estructuras y modelos de minería de datos.  
@@ -127,4 +126,3 @@ El algoritmo de árboles de decisión proporciona un ajuste adicional que ayuda 
  [Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   
-

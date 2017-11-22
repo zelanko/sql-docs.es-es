@@ -18,17 +18,16 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión lineal de Microsoft
   El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una versión especial del algoritmo de árboles de decisión de Microsoft que está optimizado para modelar pares de atributos continuos. Este tema explica la implementación del algoritmo, describe cómo personalizar su comportamiento y proporciona vínculos a información adicional sobre cómo consultar los modelos.  
@@ -99,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

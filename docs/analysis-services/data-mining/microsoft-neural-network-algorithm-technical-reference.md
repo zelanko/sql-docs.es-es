@@ -32,17 +32,16 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Referencia técnica del algoritmo de red neuronal de Microsoft
   La red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa una red de tipo *perceptrón multinivel* , que también se denomina *red de tipo regla delta de propagación hacia atrás*, compuesta por tres niveles de neuronas o *perceptrones*. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
@@ -215,4 +214,3 @@ ms.lasthandoff: 09/01/2017
  [Ejemplos de consultas de modelos de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
-

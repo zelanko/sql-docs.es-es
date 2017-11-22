@@ -20,17 +20,16 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec958a3d197bec1574d1264ff78c886cf746d3a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -207,4 +206,3 @@ ms.lasthandoff: 09/01/2017
  [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

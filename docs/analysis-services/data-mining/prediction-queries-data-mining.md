@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Consultas de predicción (minería de datos)
   El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
@@ -161,4 +160,3 @@ FROM
  [Consultas de definición de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   
-

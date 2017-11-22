@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- DeleteRule property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4445d5c7eb8097b1a3871b389527d3e11f53de9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41c740653886e95a8ee8cc949b5b2fe7190ddb85
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterule-property-example-vc"></a>Ejemplo de propiedad DeleteRule (VC ++)
 Este ejemplo se muestra la [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propiedad de un [clave](../../../ado/reference/adox-api/key-object-adox.md) objeto. El código anexa una nueva [tabla](../../../ado/reference/adox-api/table-object-adox.md) y, a continuación, define una nueva clave principal, estableciendo **DeleteRule** a **adRICascade**.  
@@ -118,4 +114,3 @@ int main() {
 ## <a name="see-also"></a>Vea también  
  [DeleteRule (propiedad, ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-

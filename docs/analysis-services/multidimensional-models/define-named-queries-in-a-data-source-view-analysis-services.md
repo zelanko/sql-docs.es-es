@@ -19,17 +19,16 @@ helpviewer_keywords:
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas con nombre en una vista del origen de datos (Analysis Services)
   Una consulta con nombre es una expresión SQL representada como una tabla. En una consulta con nombre, puede especificar una expresión SQL para seleccionar las filas y columnas que devuelven una o más tablas de uno o más orígenes de datos. Una consulta con nombre es similar a cualquier otra tabla de una vista del origen de datos (DSV), con filas y relaciones, con la excepción de que la consulta con nombre se basa en una expresión.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   
-

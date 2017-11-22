@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, defining projects [Analysis Services]
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b26af390b901d6f23eacd409d919a6d1c656ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25b3c2bf3c86f69e9333b5e62541bbcfbbc877ea
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
   Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
@@ -175,4 +174,3 @@ ms.lasthandoff: 09/01/2017
  [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   
-

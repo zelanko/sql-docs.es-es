@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>Constantes enumeradas de ADO
 Para ayudar en la depuración, las enumeraciones ADO muestran un valor para cada constante. Sin embargo, este valor es puramente informativo y puede cambiar de una versión de ADO a otro. El código sólo debería depender del nombre, no el valor real, de cada constante enumerada.  
@@ -66,7 +63,7 @@ Para ayudar en la depuración, las enumeraciones ADO muestran un valor para cada
 |[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)|Especifica si un objeto está abierto o cerrado, conectando a un origen de datos, ejecutar un comando o capturar los datos.|  
 |[ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md)|Especifica los atributos de un **parámetro** objeto.|  
 |[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)|Especifica si el **parámetro** representa un parámetro de entrada, un parámetro de salida o ambos, o si el parámetro es el valor devuelto de un procedimiento almacenado.|  
-|[Más](../../../ado/reference/ado-api/persistformatenum.md)|Especifica el formato en el que se va a guardar una **conjunto de registros**.|  
+|[PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)|Especifica el formato en el que se va a guardar una **conjunto de registros**.|  
 |[PositionEnum](../../../ado/reference/ado-api/positionenum.md)|Especifica la posición actual del puntero de registro dentro de un **conjunto de registros**.|  
 |[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)|Especifica los atributos de un **propiedad** objeto.|  
 |[RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)|Especifica para la **registro** objeto **abiertos** método si existente **registro** debe ser abierto, o un nuevo **registro** debe crearse.|  
@@ -95,4 +92,3 @@ Para ayudar en la depuración, las enumeraciones ADO muestran un valor para cada
  [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Interfaces y los objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propiedades de ADO](../../../ado/reference/ado-api/ado-properties.md)
-

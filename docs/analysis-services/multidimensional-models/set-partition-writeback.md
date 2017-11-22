@@ -20,17 +20,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
   Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Habilitación y seguridad de entrada de datos con reescritura de Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

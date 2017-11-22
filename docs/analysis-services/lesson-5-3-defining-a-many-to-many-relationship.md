@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5943b62c11c717ce9e3ccf29b4b1c3fe98489cc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3872befe63b01c0de21efa14c5b4fdbaa9fbed89
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lección 5: 3: definir una relación de varios a varios
 Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
@@ -189,4 +186,3 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
   
   
-

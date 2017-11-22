@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 31c115688a0c29b61ce6eb3a9daf783b1fe9e248
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelado multidimensional (SSAS)
   Una solución multidimensional de Analysis Services usa estructuras de cubierta para analizar datos de negocio en varias dimensiones. El modo multidimensional es el modo de servidor predeterminado de Analysis Services. Incluye un motor de cálculo y consulta de datos OLAP, con los modos de almacenamiento MOLAP, ROLAP y ROLAP para equilibrar el rendimiento con los requisitos de datos escalables. El motor OLAP de Analysis Services es un servidor OLAP principal del sector que funciona con una amplia variedad de herramientas de BI. La mayoría de las implementaciones de Analysis Services se instalan como servidores OLAP clásicos.  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Administración de ensamblados de modelos multidimensionales](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   
-

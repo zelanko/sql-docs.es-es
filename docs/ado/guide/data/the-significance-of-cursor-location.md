@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>La importancia de la ubicación del Cursor
 Cada cursor utiliza recursos temporales para almacenar sus datos. Estos recursos pueden ser memoria, un archivo de paginación de disco, archivos de disco temporal o incluso almacenamiento temporal en la base de datos. El cursor se denomina un *cliente* cursor cuando estos recursos están ubicados en el equipo cliente. El cursor se denomina un *servidor* cursor cuando estos recursos están ubicados en el servidor.  
@@ -46,4 +44,3 @@ Cada cursor utiliza recursos temporales para almacenar sus datos. Estos recursos
  Sin embargo, es importante señalar que es un cursor de servidor, por lo menos temporalmente: consumir valiosos recursos del servidor para cada cliente activo. Debe planear en consecuencia para asegurarse de que el hardware del servidor es capaz de administrar todos los cursores de servidor solicitados por clientes activos. Además, un cursor de servidor puede ser lento porque proporciona solo acceso a una fila, no hay ningún cursor lote disponible.  
   
  Cursores de servidor son útiles al insertar, actualizar o eliminar registros. Con cursores de servidor, puede tener varias instrucciones activas en la misma conexión.
-

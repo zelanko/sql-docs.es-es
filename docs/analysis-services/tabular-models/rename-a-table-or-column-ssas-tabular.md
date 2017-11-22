@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.renametableorcolumn.f1
+f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edfd1fe4e353f74f9729325b40865905a1907dc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a560b70416ed73945db053249a51508635b50ac
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Cambiar el nombre de una tabla o una columna (SSAS tabular)
   Puede cambiar el nombre de una tabla durante el proceso de importación si escribe un **Nombre descriptivo** en la página **Seleccionar tablas y vistas** del **Asistente para importación de tablas**. También puede cambiar los nombres de tabla y de columna si importa los datos especificando una consulta en la página **Especificar una consulta SQL** del **Asistente para la importación de tablas**.  
@@ -68,7 +66,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Vea también  
  [Tablas y columnas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Importación desde PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
- [Importar desde Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
+ [Importación desde Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
+helpviewer_keywords: stored procedures [Analysis Services], data mining
 ms.assetid: a751856d-33bd-4788-9593-317b2826132d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1d73a02535eb55e16de7058fa9f24dc335763f45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67e09ad757b0433a4db09187492cdbe58dbe94ff
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>Procedimientos almacenados de minería de datos (Analysis Services - Minería de datos)
   A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite procedimientos almacenados escritos en cualquier lenguaje administrado. Entre los lenguajes administrados admitidos se incluyen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, C# y C++ administrado. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede llamar a los procedimientos almacenados directamente mediante la instrucción **CALL** o como parte de una consulta DMX (Extensiones de minería de datos).  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [Llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
   
-

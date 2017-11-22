@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Viewer [Analysis Services], types
+helpviewer_keywords: Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13296651eb2fd572106c52014ce0a42ac81c9781
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Seleccionar un modelo de minería de datos y un visor de minería de datos
   Para explorar un modelo de minería de datos puede utilizar uno de los visores de la pestaña **Visor de modelos de minería de datos** en el Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

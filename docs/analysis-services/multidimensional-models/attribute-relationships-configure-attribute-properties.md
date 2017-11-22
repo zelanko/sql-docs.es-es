@@ -21,17 +21,16 @@ helpviewer_keywords:
 - properties [Analysis Services], attribute relationships
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d925529956009a97832235808466c16598a1d344
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---configure-attribute-properties"></a>Relaciones de atributo: configurar las propiedades de atributo
   En la siguiente tabla se muestran y describen las propiedades de una relación de atributo.  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
 |Visible|Determina la visibilidad de la relación de los atributos. Los valores son True o False. El valor predeterminado es True.|  
   
   
-

@@ -28,17 +28,16 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-concepts"></a>Conceptos de minería de datos
   La minería de datos es el proceso de detectar la información procesable de los conjuntos grandes de datos. Utiliza el análisis matemático para deducir los patrones y tendencias que existen en los datos. Normalmente, estos patrones no se pueden detectar mediante la exploración tradicional de los datos porque las relaciones son demasiado complejas o porque hay demasiado datos.  
@@ -190,4 +189,3 @@ ms.lasthandoff: 09/01/2017
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

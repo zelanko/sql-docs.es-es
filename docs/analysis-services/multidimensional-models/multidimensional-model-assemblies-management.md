@@ -26,17 +26,16 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona gran cantidad de funciones intrínsecas que se pueden usar con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos), y que están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
@@ -124,7 +123,6 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la seguridad para procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
- [Definir procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definición de procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

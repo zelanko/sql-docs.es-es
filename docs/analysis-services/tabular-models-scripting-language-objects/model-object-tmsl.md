@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>Objeto de modelo (TMSL)
 
@@ -44,10 +43,10 @@ ms.lasthandoff: 09/01/2017
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Modelo** objetos también tienen las siguientes propiedades.  
   
  storageLocation  
- La ubicación en disco que se va a colocar el modelo.  
+ La ubicación en disco donde se va a colocar el modelo.  
   
  defaultMode  
- El método predeterminado para hacer que los datos disponibles en la partición.  
+ El método predeterminado para hacer que los datos estén disponibles en la partición.  
   
  defaultDataView  
  Para los modelos en el modo DirectQuery, esta propiedad determina qué particiones se utilizan para ejecutar consultas en el modelo.  Los valores válidos son Full y ejemplo.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

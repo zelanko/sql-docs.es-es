@@ -26,17 +26,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0dd79b27089f73b537969889cf78f1d86ba57526
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec5fa6be2358366b181b0608025d3d3a4b94a321
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Examinar un modelo usando el visor Bayes naive de Microsoft
   El Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] incluido en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clasificación que se adapta muy bien a las tareas de modelado de predicción. Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

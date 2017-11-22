@@ -19,17 +19,16 @@ helpviewer_keywords:
 - moving databases
 - operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e43e1cb11224884cf5c068c91beb3a606b51d8e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
   Con frecuencia, se producen situaciones en las que un administrador de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere mover una base de datos modelo multidimensional o tabular a otra ubicación. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto.  
@@ -161,4 +160,3 @@ ms.lasthandoff: 09/01/2017
  [Elemento DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   
-

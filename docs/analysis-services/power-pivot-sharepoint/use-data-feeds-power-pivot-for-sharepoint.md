@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb5bc547eead5e8dc2d765f56861dacbd8af64e6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Uso de fuentes de distribución de datos (PowerPivot para SharePoint)
   Las fuentes de distribución de datos son una o varias secuencias de datos que se generan en un origen de datos en línea y se difunden en un documento o aplicación de destino. Si está usando [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [Compartir las fuentes de distribución de datos mediante una biblioteca de fuentes de distribución de datos &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

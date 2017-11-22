@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e1e10612e9e0f93206299e07271b3795c92962a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8da5ac35a5e9f46fbaedf831555d6b1475b41234
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización constituyen el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
@@ -157,4 +154,3 @@ ms.lasthandoff: 09/01/2017
  En MDSCHEMA_KPIS se agrega la columna scope. Los valores de scope son los siguientes: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
   
   
-

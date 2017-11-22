@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0dc4f526fa88d678305afdf5c21623b19aaa5190
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tablas: representación de indicadores clave de rendimiento
   Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino.  
@@ -235,4 +233,3 @@ private void addStaticKPI(object sender, EventArgs e)
  Para obtener una descripción de cómo usar AMO para crear y manipular el indicador clave de rendimiento representaciones, vea el código fuente del ejemplo AMO a Tabular; concreto, revise el siguiente archivo fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
   
   
-

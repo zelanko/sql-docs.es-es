@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 061b37f5b0e8209f896ded915f0259c3253a1439
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>Conectarse a la base de datos y servidor Tabular de Analysis Services existente
 
@@ -122,4 +121,3 @@ Después de establecer una conexión, el siguiente paso lógico es cualquier enu
 
 - [Crear e implementar una base de datos vacía](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 - [Lista de bases de datos existentes](../../analysis-services/tabular-model-programming-compatibility-level-1200/list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
-

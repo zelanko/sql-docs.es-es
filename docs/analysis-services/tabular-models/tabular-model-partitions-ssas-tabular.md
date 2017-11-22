@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
+f1_keywords: sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9a72ff2ba4080c2d3a9797d805c94bc01472c545
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Particiones de modelos tabulares (SSAS tabular)
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las particiones definidas para un modelo durante la creación de modelos se duplican en un modelo implementado. Una vez realizada la implementación, puede administrar esas particiones y crear algunas nuevas mediante el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o mediante un script. La información proporcionada en este tema describe las particiones de una base de datos de modelos tabulares implementada. Para más información sobre cómo crear y administrar particiones durante la creación de modelos, vea [Particiones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
@@ -102,4 +100,3 @@ Analysis Services incluye el procesamiento en paralelo para tablas con dos o má
 |[Procesar particiones de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Describe cómo procesar particiones en un modelo tabular implementado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   
-

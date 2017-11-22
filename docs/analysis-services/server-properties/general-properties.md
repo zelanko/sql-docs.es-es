@@ -8,8 +8,7 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - StatisticsStoreSize property
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f855fdbc56dee39c971448dd5e764c5490fb176e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="general-properties"></a>Propiedades generales
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. En este tema se documentan las propiedades de servidor en el archivo msmdsrv.ini que no se incluyen de otro modo en una sección concreta, como Seguridad, Red o ThreadPool. Para más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -165,7 +163,7 @@ ms.lasthandoff: 09/01/2017
  **Puerto**  
  Propiedad de entero que define el número de puerto en el que el servidor escuchará las conexiones de los clientes. Si no está establecida, el servidor encontrará de forma dinámica el primer puerto no usado.  
   
- El valor predeterminado para esta propiedad es cero (0), que a su vez establece el valor predeterminado en el puerto 2383. Para obtener más información acerca de la configuración de puertos, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ El valor predeterminado para esta propiedad es cero (0), que a su vez establece el valor predeterminado en el puerto 2383. Para obtener más información acerca de la configuración de puertos, vea [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
  Entero que define el tiempo de espera, en segundos, para las consultas. El valor predeterminado es de 3600 segundos (o 60 minutos). El valor cero (0) especifica que no se agotará el tiempo de espera de las consultas.  
@@ -185,4 +183,3 @@ ms.lasthandoff: 09/01/2017
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

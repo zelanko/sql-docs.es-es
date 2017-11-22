@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory handler in RDS [ADO]
+helpviewer_keywords: DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 152d3fdee15d8696be60f1575ac1dc785d5420c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af8a08dc14a675e705d55d41382dd1c9e920dfe0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="required-client-settings"></a>Opciones de cliente necesarias
 > [!IMPORTANT]
@@ -90,8 +87,7 @@ rs.CursorLocation = adUseClient
  [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Opciones de cliente necesarias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Descripción de los archivos de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escribir su propio controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 
 

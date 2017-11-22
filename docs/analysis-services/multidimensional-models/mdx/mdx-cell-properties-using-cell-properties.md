@@ -20,17 +20,16 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 52ef98613eceec0356317f1cd578ac63506d6815
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d66dddc93eb3293ea79d306095aa21bf78f4ea58
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propiedades de celda MDX: con propiedades de celda
   Las propiedades de celda de las expresiones multidimensionales (MDX) contienen información sobre el contenido y el formato de las celdas de un origen de datos multidimensional, como un cubo.  
@@ -119,4 +118,3 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Table object [ADOX], members
+helpviewer_keywords: Table object [ADOX], members
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 531119cc42b4f02f6b6a6e4dc5e09c75cf101c94
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd8cc780e9f1152c48f8fb24877d17356433d0d3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de tabla
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
@@ -45,7 +42,7 @@ ms.lasthandoff: 09/09/2017
   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Propiedad de tipo (tabla) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type (propiedad, tabla, ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -54,5 +51,4 @@ ms.lasthandoff: 09/09/2017
  Ninguno.  
   
 ## <a name="see-also"></a>Vea también  
- [Objeto de tabla (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-
+ [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

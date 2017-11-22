@@ -18,17 +18,16 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Consulta MDX y ejes de segmentación de datos - especificar el contenido de un eje segmentador
   El eje segmentador filtra los datos devueltos por la instrucción SELECT de Expresiones multidimensionales (MDX) y restringe los datos devueltos de forma que solamente se devuelvan los datos de intersección entre los miembros especificados. Puede considerarse como eje adicional no visible en una consulta. El eje segmentador se define en la cláusula WHERE de la instrucción SELECT de MDX.  
@@ -92,4 +91,3 @@ WHERE(
  Como se mencionó anteriormente, con un conjunto en la cláusula WHERE agregará implícitamente los valores de todos los miembros del conjunto. En este caso, la consulta muestra los valores agregados para Estados Unidos y Reino Unido en cada celda.  
   
   
-

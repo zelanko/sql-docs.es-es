@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instalación de Analysis Services en el modo PowerPivot
   Los procedimientos de este tema explican cómo realizar una instalación en un solo servidor de un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en el modo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para realizar una implementación de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **Nivel intermedio:** mejoras en las experiencias de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en SharePoint, incluidas la galería de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la programación de actualización de datos, el panel de administración y proveedores de datos. Para obtener información acerca de la instalación y la configuración de nivel intermedio, vea lo siguiente:  
   
-    -   [Instalar o desinstalar el PowerPivot para SharePoint complemento (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+    -   [Instalación o desinstalación del complemento PowerPivot para SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
     -   [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 09/01/2017
  [Actualizar libros y actualización de datos programada &#40; SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   
-

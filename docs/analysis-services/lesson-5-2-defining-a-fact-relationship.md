@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c36c15a75929b0c758ab32fdf952c1e0aa034508
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lección 5-2: definir una relación de hechos
 A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos o realizar consultas en la tabla de hechos sobre determinada información relacionada adicional, como números de factura o números de pedidos de compra relacionados con hechos de venta específicos. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  
@@ -136,4 +133,3 @@ En las tareas de este tema, debe agregar una nueva dimensión de cubo basada en 
   
   
   
-

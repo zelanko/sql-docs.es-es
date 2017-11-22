@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 421606292e30977064f96bf5e77efca396b90032
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Almacenamiento e intercalación de cadenas en modelos tabulares
   Las cadenas (valores de texto) se almacenan en los modelos tabulares utilizando un formato muy comprimido; debido a esta compresión, puede obtener resultados inesperados al recuperar cadenas completas o parciales. Además, dado que la configuración regional y las intercalaciones de las cadenas se heredan jerárquicamente del objeto primario más próximo, si no se define explícitamente el idioma de las cadenas, la configuración regional y la intercalación del elemento primario pueden afectar a la forma de almacenamiento de cada una de las cadenas y determinar si la cadena es única o se combina con cadenas similares tal como se define en la intercalación primaria.  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  Es importante resaltar que, normalmente, el identificador de idioma y la intercalación de la base de datos de origen apenas influyen en la forma en la que se almacenan los valores en la columna del modelo tabular. La excepción es cuando la base de datos de origen transforma o filtra los valores solicitados.  
   
   
-

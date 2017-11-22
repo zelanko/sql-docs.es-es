@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- XMLA, concepts
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3defefc1088b24e386f797ba4b97b4eacb5cee33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xmla-concepts"></a>Conceptos de XMLA
   El estándar abierto XML for Analysis admite el acceso a datos a orígenes de datos que residen en World Wide Web. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implementa XMLA de acuerdo con la especificación XMLA 1.1.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  XMLA es el protocolo que utilizan las aplicaciones de Business Intelligence que emplean la metodología del modelo UDM (Unified Dimensional Model).  
   
   
-

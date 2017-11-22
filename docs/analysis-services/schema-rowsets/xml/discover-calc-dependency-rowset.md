@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY, conjunto de filas
   Informa sobre las dependencias entre los cálculos y sobre los objetos a los que se hace referencia en dichos cálculos. Puede utilizar esta información en una aplicación cliente para informar sobre los problemas con fórmulas complejas o para avisar cuándo se eliminan o modifican objetos relacionados. También puede utilizar el conjunto de filas para extraer las expresiones de DAX que se utilizan en medidas o columnas calculadas.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sí|Especifica el nombre de la base de datos que contiene el objeto cuyo análisis de dependencia se solicita. Si se omite, se utiliza la base de datos actual.<br /><br /> El conjunto de filas **DISCOVER_DEPENDENCY_CALC** puede restringirse mediante esta columna.|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|Sí|Indica el tipo de objeto cuyo análisis de dependencia se solicita. El objeto debe ser de uno de los tipos siguientes:<br /><br /> **ACTIVE_RELATIONSHIP**: una relación activa<br /><br /> **CALC_COLUMN**: una columna calculada<br /><br /> **HIERARCHY**: una jerarquía<br /><br /> **MEASURE**: una medida<br /><br /> **RELATIONSHIP**: una relación<br /><br /> **KPI**: un KPI (indicador clave de rendimiento)<br /><br /> <br /><br /> Tenga en cuenta que la **DISCOVER_DEPENDENCY_CALC** conjunto de filas puede restringirse mediante esta columna.|  
 |**CONSULTA**|**DBTYPE_WSTR**|Sí|En los modelos tabulares creados en [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], puede incluir una expresión o consulta DAX para mostrar el gráfico de dependencias de esa consulta o expresión. La restricción QUERY proporciona a las aplicaciones cliente un modo de determinar qué objetos usa una consulta DAX.<br /><br /> La restricción **QUERY** puede especificarse en una cláusula XMLA o WHERE de una consulta DMV. Vea la sección de ejemplos para obtener más información.|  
-|**TABLA**|**DBTYPE_WSTR**||El nombre de la tabla que contiene el objeto para el que se genera la información de dependencia.|  
+|**TABLE**|**DBTYPE_WSTR**||El nombre de la tabla que contiene el objeto para el que se genera la información de dependencia.|  
 |**OBJETO**|**DBTYPE_WSTR**||El nombre del objeto para el que se genera la información de dependencias. Si el objeto es una medida o una columna calculada, utilice el nombre de la medida. Si el objeto es una relación, el nombre de la tabla (o la dimensión de cubo) que contiene la columna que participa en la relación.|  
 |**EXPRESIÓN**|**DBTYPE_WSTR**||La fórmula que contiene el objeto cuyas dependencias se buscan.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||Devuelve el tipo de objeto que tiene una dependencia en el objeto al que se hace referencia. Los objetos devueltos pueden ser de alguno de los tipos siguientes:<br /><br /> **CALC_COLUMN**: una columna calculada<br /><br /> **COLUMN**: una columna de datos<br /><br /> **MEASURE**: una medida<br /><br /> **RELATIONSHIP**: una relación<br /><br /> **KPI**: un KPI (indicador clave de rendimiento)|  
@@ -139,4 +136,3 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
  [Usar dinámica vistas de administración &#40; DMV &#41; para supervisar Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-

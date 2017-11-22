@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 811735d222f76b910d75e87505f075c83bba902c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
   Analysis Services almacena los datos en memoria caché para mejorar el rendimiento de las consultas. En este tema se proporcionan recomendaciones para usar el comando ClearCache de XMLA con el fin de borrar las memorias caché creadas en respuesta a una consulta MDX. Los efectos de ejecutar ClearCache varían dependiendo de que se use un modelo tabular o multidimensional.  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

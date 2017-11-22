@@ -23,17 +23,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c4302e55bd6b91daf8d3d1073be96fe35501af
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Crear una dimensión de tiempo generando una tabla de tiempos
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando ninguna tabla de tiempos está disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
@@ -68,7 +67,6 @@ ms.lasthandoff: 09/01/2017
  [Crear una dimensión de tipo de fecha](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [Propiedades de la dimensión de base de datos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relaciones de dimensión](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Crear una dimensión generando una tabla no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

@@ -24,17 +24,16 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Cómo autorizar el acceso a objetos y operaciones (Analysis Services)
   El acceso de los usuarios que no sean administradores a los cubos, dimensiones y modelos de minería de datos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se obtiene mediante la pertenencia a uno o varios roles de base de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Los administradores crean estos roles de base de datos, conceden permisos de Lectura o de Lectura y escritura en objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego asignan usuarios y grupos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a cada rol.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Metodologías de autenticación admitidas por Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   
-

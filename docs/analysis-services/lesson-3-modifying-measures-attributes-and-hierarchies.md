@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 776acb877537233ffc25378d53160eb19a19038f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
 Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
@@ -56,4 +53,3 @@ En esta tarea, debe explorar los datos del cubo usando el explorador del Diseña
   
   
   
-

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vistas del origen de datos en modelos multidimensionales
   Una vista del origen de datos (DSV) es una abstracción de un origen de datos relacional que se convierte en la base de los cubos y dimensiones creadas en un proyecto multidimensional. La finalidad de una DSV es proporcionar el control sobre las estructuras de datos utilizadas en el proyecto, y trabajar independientemente de los orígenes de datos subyacentes (por ejemplo, la capacidad de cambiar de nombre o concatenar columnas sin modificar directamente el origen de datos original).  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Orígenes de datos admitidos &#40;SSAS - Multidimensionales&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], data modifications
 - data modifications [MDX]
 ms.assetid: 363b662c-b839-4971-bbd7-1842f73ce141
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63268d2f905d91833ad1ec542d0db78ab7b921cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2f703f4f86c7c16118026ff2209bf0a1e35c8d3a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-modification---modifying-data"></a>Modificación de datos MDX: modificar datos
   Además de usar las expresiones multidimensionales (MDX) para recuperar y administrar los datos de las dimensiones y los cubos, MDX también permite actualizar o *reescribir* los datos de las dimensiones y los cubos. Dichas actualizaciones pueden ser temporales, como los análisis especulativos o de escenarios condicionales, o permanentes (cuando los cambios se producen a partir del análisis de los datos).  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

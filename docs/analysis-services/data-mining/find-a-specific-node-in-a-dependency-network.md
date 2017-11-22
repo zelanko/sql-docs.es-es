@@ -18,17 +18,16 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Buscar un nodo determinado en una red de dependencias
   Una red de dependencias de un modelo de minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede contener muchos nodos, por lo que puede resultar difícil localizar los datos en los que está interesado. Para buscar un nodo específico, puede usar el cuadro de diálogo **Buscar nodo** en la pestaña **Red de dependencias** del Diseñador de minería de datos.  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

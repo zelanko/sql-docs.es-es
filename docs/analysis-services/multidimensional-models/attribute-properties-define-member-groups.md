@@ -19,17 +19,16 @@ helpviewer_keywords:
 - grouping members
 - DiscretizationMethod property
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 70a192c25c9271824bcf1ea74c7de68ce0b44651
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f527aef051d304dc9cc89a953888c8b41090789d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---define-member-groups"></a>Propiedades de atributo: definir los grupos de miembros
   Si un atributo contiene muchos miembros, puede elegir agruparlos en cubos, reduciendo así el número de miembros que los usuarios ven cuando exploran los datos en una jerarquía. También puede determinar el número de cubos en los que se agrupan los miembros y establecer un esquema de nomenclatura para los cubos. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  En la lista desplegable junto a **DiscretizationMethod**, seleccione un método para agrupar los miembros. Para más información sobre la configuración de **DiscretizationMethod**, vea [Agrupar miembros de atributos &#40;Discretización&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
   
-

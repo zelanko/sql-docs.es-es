@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection15::CursorLocation
 - Recordset15::CursorLocation
-helpviewer_keywords:
-- CursorLocation property [ADO]
+helpviewer_keywords: CursorLocation property [ADO]
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dd17fab34b0534e87eb63de88bee6a113563ebbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6679a7a8a83f954039587776e5e668bd5ed05365
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorlocation-property-ado"></a>Propiedad CursorLocation (ADO)
 Indica la ubicación del servicio de cursor.  
@@ -56,5 +53,4 @@ Indica la ubicación del servicio de cursor.
 |[Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52470e4818d24aeb2288d41f60114f040e669cd6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Dimensiones de base de datos: crear una dimensión de tipo de fecha
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una dimensión de tiempo es un tipo de dimensión cuyos atributos representan periodos de tiempo, como horas, semestres, trimestres, meses y días. Los periodos en una dimensión de tiempo proporcionan niveles de granularidad basados en tiempo para la elaboración de análisis e informes. Los atributos se organizan en jerarquías y la granularidad de la dimensión de tiempo se determina en gran parte según los requisitos empresariales y de informes de los datos históricos. Por ejemplo, la mayoría de datos financieros y de ventas en las aplicaciones de Business Intelligence utilizan una granularidad mensual o trimestral.  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Tipos de dimensión](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   
-

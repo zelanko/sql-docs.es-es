@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eb06cb663a0a94a0611d95532e80f15e5df2da7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b9d92a7620ed165d661fe4c48726a8049d33500
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="features-off-by-default-analysis-services"></a>Características desactivadas de manera predeterminada (Analysis Services)
   Una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] está diseñada para que sea segura de forma predeterminada. Por lo tanto, las características que comprometen la seguridad se deshabilitan de forma predeterminada. Las siguientes características están instaladas en estado deshabilitado y deben habilitarse específicamente si se desean utilizar.  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
 -   Afinidad del grupo. Para obtener información detallada, vea [Thread Pool Properties](../../analysis-services/server-properties/thread-pool-properties.md) .  
   
   
-

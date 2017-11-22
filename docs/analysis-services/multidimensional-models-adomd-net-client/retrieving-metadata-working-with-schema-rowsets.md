@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 37a9b92672496c6eebc50a99b2ea0cacee55372a
-ms.contentlocale: es-es
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Recuperar metadatos: trabajar con conjuntos de filas de esquema
   Si necesita más metadatos de los que hay disponibles en el modelo de objetos ADOMD.NET, ADOMD.NET proporciona la capacidad de recuperar toda la variedad disponible de conjuntos de filas de esquema de XML for Analysis (XMLA), OLE DB, OLE DB para OLAP y OLE DB para minería de datos:  
@@ -89,4 +87,3 @@ ms.lasthandoff: 10/24/2017
  [Recuperación de metadatos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

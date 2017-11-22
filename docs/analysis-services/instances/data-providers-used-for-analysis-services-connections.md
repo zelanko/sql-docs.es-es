@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 51b41114385321e84511c188077e48455d1678a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d6cd6ad8d29ba92b2da6149874b998f54c32a4af
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Proveedores de datos usados para conexiones de Analysis Services
   Analysis Services proporciona tres proveedores de datos para el acceso al servidor y a datos. Todas las aplicaciones que se conectan a Analysis Services lo hacen mediante uno de estos proveedores. Dos de los proveedores, ADOMD.NET y Objetos de administración de Analysis Services (AMO), son proveedores de datos administrados. El proveedor OLE DB de Analysis Services (MSOLAP DLL) es un proveedor de datos nativo.  
@@ -119,4 +118,3 @@ ms.lasthandoff: 09/01/2017
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

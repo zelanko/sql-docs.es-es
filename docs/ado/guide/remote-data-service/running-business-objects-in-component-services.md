@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- component services in RDS [ADO]
+helpviewer_keywords: component services in RDS [ADO]
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df0d9faf78e4e63053e96f5513d38a31af0ca827
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a4c05f997a09e2a3368c47ce5038c17421867172
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="running-business-objects-in-component-services"></a>Ejecutar objetos de negocio en servicios de componentes
 > [!IMPORTANT]
@@ -41,7 +38,6 @@ ms.lasthandoff: 09/09/2017
 >  Cuando se implementan los objetos de negocios en el nivel intermedio como componentes de servicios de componentes mediante **GetObjectContext**, **SetComplete**, y **SetAbort**, la empresa pueden utilizar objetos de servicios de componentes (o MTS, si está utilizando Windows NT) objetos en el contexto para mantener su estado entre diferentes llamadas de cliente. Este escenario es posible con DCOM, que normalmente está implementado entre clientes de confianza y servidores en una intranet. En este caso, el [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto y [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método en el lado del cliente se reemplazan por el objeto de contexto de transacción y **CreateInstance** método, que se proporcionan con el **ITransactionContext** interfaz e implementada por servicios de componentes.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
+ [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7ef8b35a810411ed5f035e8cc7ba69d737bf8df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6913e8639e482442c1af4da942ddae8a4089c877
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services)
   En el Diseñador de vistas del origen de datos, puede reemplazar una tabla, una vista o una consulta con nombre de una vista del origen de datos (DSV) por una vista o tabla diferente del mismo origen de datos o de otro, o por una consulta con nombre definida en la DSV. Cuando se reemplaza una tabla, los demás objetos de la base de datos o proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contienen referencias a dicha tabla continúan haciendo referencia a ella, ya que el identificador de objeto de la tabla no cambia en la DSV. Se conservan todas las relaciones que siguen siendo pertinentes (basadas en la coincidencia de nombre y tipo de columna). Por el contrario, si elimina y luego agrega una tabla, las referencias y relaciones se pierden y se tienen que volver a crear.  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

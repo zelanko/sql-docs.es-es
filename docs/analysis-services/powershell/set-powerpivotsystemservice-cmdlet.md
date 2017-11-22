@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a3d63834fe9322f45d0524de5434154f1257056
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6157a4fc3b43c1a7dad7805c3efa5677d85b4d66
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Cmdlet Set-PowerPivotSystemService
   
@@ -126,4 +124,3 @@ C:\PS>Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true
  Habilita la actualización automática de los libros de la versión anterior de modo que la actualización de datos programada pueda continuar.  
   
   
-

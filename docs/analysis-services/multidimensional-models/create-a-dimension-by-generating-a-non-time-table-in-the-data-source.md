@@ -20,17 +20,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], creating without data source
 - standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83c9ceffb0bf846992b020722a2a47ebd7106634
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión sin utilizar un origen de datos existente. Para ello, debe seleccionar la opción **Generar una tabla que no sea de tiempos en el origen de datos** en la página **Seleccionar método de creación** del asistente. Para crear una tabla de dimensiones en el origen de datos subyacente, debe tener permisos para crear objetos en ese origen de datos subyacente. Al definir una dimensión sin una vista del origen de datos predefinida, puede definirla desde cero o usando una plantilla de dimensiones.  
@@ -118,4 +117,3 @@ ms.lasthandoff: 09/01/2017
  [Crear una dimensión de tiempo generando una tabla de tiempos](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   
-

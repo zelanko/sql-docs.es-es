@@ -17,17 +17,16 @@ helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b423036644bdb4811aec4fcf7fb720b2f783944
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b329e0883ef165a01577cd536a8030640c99d2e7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="logistic-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión logística
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones con los nuevos datos.  
@@ -220,4 +219,3 @@ NATURAL PREDICTION JOIN
  [Lección 5: Generar neuronal red y los modelos de regresión logística &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
-

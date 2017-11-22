@@ -22,17 +22,16 @@ helpviewer_keywords:
 - ordering dimensions [Analysis Services]
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0224266d87494010d6009a619085b67f76b035a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 879c7266c06551aa040a075e4af4ed537e58cab9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>Asistente de BI - definir la ordenación en una dimensión
   Agregar la mejora de orden de los atributos a un cubo o una dimensión para especificar de qué manera se ordenan los miembros de un atributo. Los miembros pueden ordenarse por el nombre o la clave del atributo, o bien por el nombre o la clave de otro atributo (en función de la relación de atributo). De forma predeterminada, los miembros se ordenan por nombre. Esta mejora cambia la configuración de las propiedades **OrderBy** y **OrderByAttributeID** de los atributos para una dimensión.  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  En la columna **Criterios** , puede seleccionar si ordena los miembros del atributo por **Clave** o **Nombre**.  
   
   
-

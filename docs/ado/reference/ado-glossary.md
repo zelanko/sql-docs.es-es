@@ -11,19 +11,17 @@ ms.service:
 ms.component: reference
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2be20e46a7ddbf25d0d694618f996a9be8919e0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary"></a>Glosario de ADO
 En este tema define los términos relacionados con ADO.  
@@ -299,4 +297,3 @@ En este tema define los términos relacionados con ADO.
   
  Servidor Web  
  Un equipo que proporciona servicios Web y páginas de la intranet y los usuarios de Internet.
-

@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_DATASOURCES
+apiname: DISCOVER_DATASOURCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DATASOURCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9c91d5b1d3e0fb7ec972e47079a1bf36d8f9b87
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverdatasources-rowset"></a>Conjunto de filas DISCOVER_DATASOURCES
   Devuelve una lista de los orígenes de datos del proveedor XML for Analysis (XMLA) que están disponibles en el servidor o servicio web. Los orígenes de datos publicados se devuelven desde una dirección URL del servidor web de la aplicación. El cliente puede conectarse a uno de los orígenes de datos de esta lista.  
@@ -71,7 +67,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|DataSources|  
   
 ## <a name="see-also"></a>Vea también  
- [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

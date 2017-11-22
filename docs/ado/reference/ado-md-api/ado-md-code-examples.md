@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO MD code examples
+helpviewer_keywords: ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 040fff4e37e2e8f8baec3cef717ab1b9b738079a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ecbd9009cabfa7a9cdcccb152af52f59e3c01ce9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-md-code-examples"></a>Ejemplos de código ADO MD
 Utilice los siguientes ejemplos de código para obtener información sobre cómo usar los objetos, métodos y propiedades de ADO MD. Estos ejemplos son un subconjunto de las aplicaciones de ejemplo que se instala con Microsoft SQL Server OLAP Services para SQL Server 7.0.  
@@ -44,4 +41,3 @@ Utilice los siguientes ejemplos de código para obtener información sobre cómo
  [Modelo de objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [Objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [Propiedades de ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye una característica de sincronización de bases de datos hace que dos bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sean equivalentes; para ello, copia los datos y los metadatos de una base de datos de un servidor de origen en una base de datos de un servidor de destino. Use la característica Sincronizar base de datos para realizar cualquiera de las tareas siguientes:  
@@ -202,4 +201,3 @@ ms.lasthandoff: 09/01/2017
  [Implementar soluciones con el Asistente para la implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   
-

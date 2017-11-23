@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- traces [SQL Server], defaults
+helpviewer_keywords: traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3a8d5677ce67c60caf910104cf30144bfde3950
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ef7efda96c725e38ebb3f5d63f93c33816e790a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Configurar los valores predeterminados de definición de seguimiento (SQL Server Profiler)
   El valor predeterminado de definición de seguimiento es la plantilla de seguimiento predeterminada que se utiliza para cada proveedor o servidor. Puede configurar las plantillas de seguimiento predeterminadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -42,8 +39,7 @@ ms.lasthandoff: 08/02/2017
 6.  Haga clic en **Guardar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
+ [Plantillas de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

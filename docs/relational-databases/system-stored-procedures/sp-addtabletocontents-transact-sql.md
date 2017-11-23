@@ -1,0 +1,71 @@
+---
+title: sp_addtabletocontents (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: replication
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to: SQL Server
+f1_keywords:
+- sp_addtabletocontents_TSQL
+- sp_addtabletocontents
+helpviewer_keywords: sp_addtabletocontents
+ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
+caps.latest.revision: "23"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a16b89e4d2567a24b8c61fdb5ce6830e2205f824
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Inserta en las tablas de seguimiento de mezcla las referencias para las filas de una tabla de origen que no están incluidas actualmente en las tablas de seguimiento. Use esta opción si carga de forma masiva una gran cantidad de datos mediante **bcp**, que no activará desencadenadores de seguimiento de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+sp_addtabletocontents [ @table_name = ] 'table_name'  
+    [ , [ @owner_name = ] 'owner_name' ]  
+    [ , [ @filter_clause = ] 'filter_clause' ]  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ [  **@table_name=**] **'***table_name***'**  
+ Es el nombre de la tabla. *table_name* es **sysname**, no tiene ningún valor predeterminado.  
+  
+ [  **@owner_name=**] **'***owner_name***'**  
+ Es el nombre del propietario de la tabla. *owner_name* es **sysname**, su valor predeterminado es null.  
+  
+ [  **@filter_clause=** ] **'***filter_clause***'**  
+ Especifica una cláusula de filtro que controla qué filas de datos recientemente cargados deben agregarse a las tablas de seguimiento de mezcla. *filter_clause* es **nvarchar (4000)**, su valor predeterminado es null. Si *filter_clause* es **null**, masiva todas las filas cargadas se agregan.  
+  
+## <a name="return-code-values"></a>Valores de código de retorno  
+ **0** (correcto) o **1** (error)  
+  
+## <a name="remarks"></a>Comentarios  
+ **sp_addtabletocontents** solo se usa en la replicación de mezcla.  
+  
+ Las filas de la *table_name* se denominan mediante sus **rowguidcol** y las referencias se agregan a las tablas de seguimiento de mezcla. **sp_addtabletocontents** debe utilizarse después de la copia masiva de datos en una tabla que se publica mediante replicación de mezcla. El procedimiento almacenado inicia el seguimiento de las filas copiadas y garantiza que las nuevas filas se incluirán en la siguiente sincronización.  
+  
+## <a name="permissions"></a>Permissions  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_addtabletocontents**.  
+  
+## <a name="see-also"></a>Vea también  
+ [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

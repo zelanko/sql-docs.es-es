@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetStmtAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetStmtAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetStmtAttr
-helpviewer_keywords:
-- SQLSetStmtAttr function [ODBC]
+f1_keywords: SQLSetStmtAttr
+helpviewer_keywords: SQLSetStmtAttr function [ODBC]
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6fb9cd848463d0315d42b49f42e690f1bd7e47b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d652d9e028cb9eb8edd2ec2865449a4b379c4c64
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>Función SQLSetStmtAttr
 **Conformidad**  
@@ -214,13 +208,12 @@ SQLRETURN SQLSetStmtAttr(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Devolver el valor de un atributo de conexión|[Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Devolver el valor de un atributo de instrucción|[SQLGetStmtAttr, función](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
-|Establecer un atributo de conexión|[SQLSetConnectAttr, función](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|Establecer un campo único del descriptor|[Sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Devolver el valor de un atributo de instrucción|[Función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Establecer un campo único del descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

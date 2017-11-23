@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - CREATE SPATIAL INDEX
 - CREATE_SPATIAL_INDEX_TSQL
 - SPATIAL_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], creating
 - index creation [SQL Server], spatial indexes
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8b1b92761aa72e4d001ddfb2845c593c3d99f79a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8fc44c4e52900f6aea611575773e3c439f3dec7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -545,10 +542,10 @@ BOUNDING_BOX = ( {
 ## <a name="catalog-views-for-spatial-indexes"></a>Vistas de catálogo para los índices espaciales  
  Las vistas de catálogo siguientes son específicas de los índices espaciales:  
   
- [Sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
+ [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  Representa la información del índice principal de los índices espaciales.  
   
- [Sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
+ [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Representa la información acerca del esquema de teselación y los parámetros de cada uno de los índices espaciales.  
   
 ## <a name="additional-remarks-about-creating-indexes"></a>Comentarios adicionales sobre la creación de índices  
@@ -657,4 +654,3 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   
-

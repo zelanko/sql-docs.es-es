@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53024c6d7ba7933ae6bcc425455b262b176fed80
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="administration-program"></a>Programa de administración
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **Agregar, modificar o eliminar orígenes de datos en modo silencioso.** El programa de administración llame **SQLConfigDataSource** en la DLL del instalador y pasa que una ventana null controlar, el nombre de un origen de datos para agregar, modificar o eliminar y una lista de valores para el registro. Las llamadas DLL de instalador **ConfigDSN** en el programa de instalación de controlador DLL para agregar, modificar o eliminar el origen de datos.  
   
 -   **Agregar, modificar o eliminar un origen de datos predeterminado.** El origen de datos predeterminado es igual que cualquier otro origen de datos, salvo que su nombre es el valor predeterminado. Se agrega, modifica o elimina de la misma forma que cualquier otro origen de datos.
-

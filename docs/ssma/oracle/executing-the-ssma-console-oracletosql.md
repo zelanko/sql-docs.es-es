@@ -5,28 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 16f646303766e8e249e2bd76a336bc5c3ee59049
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Ejecutar la consola SSMA (OracleToSQL)
 Microsoft proporciona un conjunto robusto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. La aplicación de consola utiliza ciertos comandos del archivo de secuencia de comandos estándar como enumerados en esta sección.  
@@ -761,4 +758,3 @@ El paso siguiente depende de los requisitos del proyecto:
   
 -   Para solucionar problemas en la consola, consulte [Troubleshooting &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
   
-

@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 Opcionalmente, puede habilitar los eventos extendidos de los grupos de disponibilidad AlwaysOn para ayudar con el diagnóstico de la causa raíz cuando solucione los problemas de un grupo de disponibilidad. Ejecute el comando siguiente en cada instancia de SQL Server. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ Para obtener más información sobre esta sesión de XE, vea [Eventos extendidos
 
 El siguiente script de Transact-SQL crea un inicio de sesión denominado `dbm_login` y un usuario denominado `dbm_user`. Actualice el script con una contraseña segura. Ejecute el comando siguiente en todas las instancias de SQL Server para crear el usuario de punto de conexión de la creación de reflejo de la base de datos.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ El servicio SQL Server en Linux usa certificados para autenticar la comunicació
 
 El siguiente script de Transact-SQL crea una clave maestra y un certificado. Después, realiza una copia de seguridad del certificado y protege el archivo con una clave privada. Actualice el script con contraseñas seguras. Conéctese a la instancia de SQL Server principal y ejecute el siguiente comando de Transact-SQL para crear el certificado:
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 El siguiente script de Transact-SQL crea una clave maestra y un certificado de la copia de seguridad creada en la réplica principal de SQL Server. El comando también autoriza al usuario para que obtenga acceso al certificado. Actualice el script con contraseñas seguras. La contraseña de descifrado es la misma que ha usado para crear el archivo .pvk en un paso anterior. Ejecute el siguiente script en todos los servidores secundarios para crear el certificado.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Crear los puntos de conexión de creación de reflejo de la base de datos en todas las réplicas
 
-Los extremos de creación de reflejo de la base de datos utilizan el Protocolo de control de transporte (TCP) para enviar y recibir mensajes entre las instancias del servidor que participan en sesiones de creación de reflejo de la base de datos u hospedan réplicas de disponibilidad. El extremo de creación de reflejo de la base de datos escucha en un número de puerto TCP exclusivo. 
+Los extremos de creación de reflejo de la base de datos utilizan el Protocolo de control de transporte (TCP) para enviar y recibir mensajes entre las instancias del servidor que participan en sesiones de creación de reflejo de la base de datos u hospedan réplicas de disponibilidad. El extremo de creación de reflejo de la base de datos escucha en un número de puerto TCP exclusivo. El agente de escucha TCP requiere una dirección IP de escucha. La dirección IP de escucha debe ser una dirección IPv4. También puede utilizar `0.0.0.0`. 
 
 El código de Transact-SQL siguiente crea un punto de conexión de escucha denominado `Hadr_endpoint` para el grupo de disponibilidad. Se inicia el punto de conexión y concede permiso de conexión al usuario que ha creado. Antes de ejecutar el script, reemplace los valores entre `**< ... >**`.
 
->[!NOTE]
->En esta versión, no use una dirección IP diferente para la dirección IP del agente de escucha. Estamos trabajando en una solución a este problema, pero el único valor aceptable por ahora es "0.0.0.0".
+Actualice el siguiente Transact-SQL para su entorno en todas las instancias de SQL Server: 
 
-Actualice el siguiente código de Transact-SQL para su entorno en todas las instancias de SQL Server: 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->El puerto TCP en el firewall debe estar abierto para el puerto de escucha.
+>[!NOTE]
+>Si está utilizando SQL Server Express Edition en un nodo para hospedar una única réplica de configuración, es el único valor válido para la función `WITNESS`. Ejecute el siguiente script en SQL Server Express Edition.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->Para la versión de SQL Server 2017, el único método de autenticación que se admite para el punto de conexión de creación de reflejo de la base de datos es `CERTIFICATE`. La opción `WINDOWS` se habilitará en una futura versión.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-Para obtener toda la información, vea [El extremo de creación de reflejo de la base de datos (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

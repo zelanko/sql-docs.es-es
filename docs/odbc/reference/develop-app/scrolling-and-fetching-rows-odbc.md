@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bf6624c5c5a814c1b290fec1d4f717e66dd5e46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Desplazamiento y captura filas (ODBC)
 Cuando se utiliza un cursor desplazable, las aplicaciones llaman a **SQLFetchScroll** para colocar las filas del cursor y fetch. **SQLFetchScroll** permite el desplazamiento relativo (siguiente, anterior y relative  *n*  filas), desplazamiento absoluto (, apellidos y fila  *n* ), y posicionamiento por marcador. El *FetchOrientation* y *FetchOffset* argumentos en **SQLFetchScroll** especificar qué filas que se va a capturar, como se muestra en los diagramas siguientes.  
@@ -49,4 +47,3 @@ Cuando se utiliza un cursor desplazable, las aplicaciones llaman a **SQLFetchScr
   
 > [!NOTE]  
 >  Se admite el desplazamiento en 2 de ODBC. *x* controladores por **SQLExtendedFetch**. Para obtener más información, consulte [compatibilidad con versiones anteriores, los cursores desplazables y cursores de bloque](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.
-

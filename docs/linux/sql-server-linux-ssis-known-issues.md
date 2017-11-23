@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
 
@@ -130,5 +129,4 @@ El proveedor de registro de SQL Server admite únicamente la autenticación de S
 Los proveedores de registro SSIS para archivos de texto, para los archivos XML y de SQL Server Profiler escriben sus resultados a un archivo que especifique. Las consideraciones siguientes se aplican a la ruta de acceso de archivo:
 -   Si no proporciona una ruta de acceso, el proveedor de registro se escribe en el directorio actual del host. Si el usuario actual no tiene permiso para escribir en el directorio actual del host, el proveedor de registro genera un error.
 -   No se puede usar una variable de entorno en una ruta de acceso de archivo. Si especifica una variable de entorno, aparece el texto literal que se especifique en la ruta de acceso de archivo. Por ejemplo, si especifica `%TMP%/log.txt`, el proveedor de registro anexa el texto literal `/%TMP%/log.txt` en el directorio actual del host.
-
 

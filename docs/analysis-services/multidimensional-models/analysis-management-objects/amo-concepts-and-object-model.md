@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>Modelo de objetos y conceptos de AMO
   Este tema proporciona una definición de Analysis Management Objects (AMO), cómo AMO está relacionada con otras herramientas y bibliotecas suministradas en la arquitectura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y una explicación conceptual de todos los objetos principales de AMO.  
@@ -85,9 +83,9 @@ ms.lasthandoff: 09/01/2017
 |---------------|-------------|  
 |[Clases fundamentales de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Clases necesarias para trabajar con cualquier otro conjunto de clases.|  
 |[Clases de OLAP en AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Clases que permiten administrar objetos OLAP en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Clases de minería de datos AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Clases que permiten administrar objetos de minería de datos en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Clases Security de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Clases que permiten controlar el acceso a otros objetos y mantener la seguridad.|  
-|[AMO otras clases y métodos](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Clases y métodos que sirven de ayuda a los administradores de OLAP o de la minería de datos para completar sus tareas cotidianas.|  
+|[Clases de minería de datos de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Clases que permiten administrar objetos de minería de datos en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Clases de seguridad de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Clases que permiten controlar el acceso a otros objetos y mantener la seguridad.|  
+|[Otras clases y métodos de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Clases y métodos que sirven de ayuda a los administradores de OLAP o de la minería de datos para completar sus tareas cotidianas.|  
   
 ##  <a name="bkmk_UsingAMO"></a>A través de AMO  
  AMO es especialmente útil a la hora de automatizar tareas repetitivas, por ejemplo al crear nuevas particiones en un grupo de medida basado en nuevos datos de la tabla de hechos, o al volver a entrenar un modelo de minería de datos basado en nuevos datos. Normalmente, estas tareas que crean nuevos objetos se realizan por meses, semanas o trimestres y la aplicación puede denominar a los nuevos objetos con facilidad, a partir de los nuevos datos.  
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  AMO no se puede usar para consultar datos. Para consultar datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], incluidos cubos y modelos de minería de datos, use ADOMD.NET de una aplicación de usuario. Para obtener más información, consulte [desarrollar con ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
-

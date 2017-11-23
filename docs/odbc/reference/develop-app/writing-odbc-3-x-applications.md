@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b0c0701ce83e4d1d30bd8f69f94ddc90e7a60a8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3941a679210a18b39ed201dd564b9613b48a2a58
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-applications"></a>Escribir ODBC 3.x aplicaciones
 Cuando un ODBC 2. *x* aplicación se actualiza a ODBC 3. *x*, deben escribirse tal que funciona con ODBC 2. *x* y 3. *x* controladores. La aplicación debe incorporar código condicional para aprovechar al máximo de ODBC 3. *x* características.  
@@ -105,4 +103,3 @@ Cuando un ODBC 2. *x* aplicación se actualiza a ODBC 3. *x*, deben escribirse t
 -   [Asignar los tipos de información de Cursor Attributes1](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)
-

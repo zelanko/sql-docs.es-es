@@ -24,17 +24,16 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4097a5ab62a6e30f2056216ec83eb0c568547479
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenido del modelo de minería de datos (Analysis Services - Minería de datos)
   Después de diseñar y procesar un modelo de minería de datos utilizando los datos de la estructura de minería de datos subyacente, el modelo está completo con su *contenido*. Puede utilizar este contenido para realizar predicciones o analizar los datos.  
@@ -316,4 +315,3 @@ SELECT * FROM [<mining model name>].CONTENT
  [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   
-

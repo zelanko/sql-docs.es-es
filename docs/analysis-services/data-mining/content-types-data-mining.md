@@ -30,17 +30,16 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdf7e955c5c4dd36d604bffa5dce1602f93788d2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
@@ -128,4 +127,3 @@ ms.lasthandoff: 09/01/2017
  [Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

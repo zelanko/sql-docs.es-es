@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e939bafc911fd5d8b09b28754aeb6c8f028de6b2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propiedades de cadena de conexión (Analysis Services)
   En este tema se documentan las propiedades de cadena de conexión que puede establecer en una de las herramientas de diseñador o de administración, o ver en las cadenas de conexión generadas por las aplicaciones cliente que se conectan a Analysis Services y consultan datos. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
@@ -207,4 +206,3 @@ ms.lasthandoff: 09/01/2017
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

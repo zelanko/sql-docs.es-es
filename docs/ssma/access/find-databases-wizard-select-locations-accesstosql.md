@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Find Databases Wizard
+helpviewer_keywords: Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f23fb0084b9fc0570b5dbc9d551833be171251c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c254ca94d75abd78acabc6c008c5d8350ba30cd2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL)
 En la página Seleccionar ubicaciones del Asistente para buscar las bases de datos, escriba los parámetros búsqueda para buscar las bases de datos de Access.  
@@ -70,4 +67,3 @@ Escriba el nombre de usuario de Windows completo del propietario. Esto podría t
 [Agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [Reference(Access) de interfaz de usuario](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

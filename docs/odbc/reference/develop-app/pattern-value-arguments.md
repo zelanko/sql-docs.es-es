@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de patrón
 Algunos argumentos en el catálogo de funciones, como la *TableName* argumento en **SQLTables**, acepta patrones de búsqueda. Estos argumentos aceptan patrones de búsqueda si se establece el atributo de instrucción de SQL_ATTR_METADATA_ID en SQL_FALSE; son los argumentos de identificador que no aceptan un patrón de búsqueda si este atributo está establecido en SQL_TRUE.  
@@ -55,4 +53,3 @@ Algunos argumentos en el catálogo de funciones, como la *TableName* argumento e
 >  ODBC 2. *x* controladores no son compatibles con los patrones de búsqueda en el *CatalogName* argumento en **SQLTables**. ODBC 3*.x* controladores aceptan patrones de búsqueda en este argumento si el atributo de entorno SQL_ATTR_ ODBC_VERSION está establecido en SQL_OV_ODBC3; no acepta patrones de búsqueda en este argumento si se establece en SQL_OV_ODBC2.  
   
  Se pasa un puntero null a un argumento de patrón de búsqueda no limite la búsqueda para dicho argumento; es decir, un puntero nulo y el porcentaje de patrón de búsqueda (en caracteres) son equivalentes. Sin embargo, una longitud de cero Buscar patrón, es decir, un puntero válido a una cadena de longitud cero, coincide con la cadena vacía ("").
-

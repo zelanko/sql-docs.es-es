@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc3b2fa0e72329300f4fb6aa52c274a0ce0f9b83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x
 La existencia de ambos **SQLFetchScroll** y **SQLExtendedFetch** representa el primer clear divide en ODBC entre la aplicación de interfaz de programación (API), que es el conjunto de funciones de la las llamadas de la aplicación y la interfaz de proveedor de servicio (SPI), que es el conjunto de funciones el controlador implementa. Esta división es necesario para equilibrar el requisito en ODBC 3. *x*, que usa **SQLFetchScroll**, para alinear con los estándares y ser compatible con ODBC 2. *x*, que usa **SQLExtendedFetch**.  
@@ -52,4 +50,3 @@ La existencia de ambos **SQLFetchScroll** y **SQLExtendedFetch** representa el p
   
 > [!NOTE]  
 >  ODBC 3. *x* aplicaciones no deben utilizar **SQLExtendedFetch** o el atributo de instrucción SQL_ROWSET_SIZE. En su lugar, deben usar **SQLFetchScroll** y el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE. ODBC 3. *x* aplicaciones no deben utilizar **SQLSetPos** con una *operación* de SQL_ADD sino que debe utilizar **SQLBulkOperations** con un *Operación* de SQL_ADD.
-

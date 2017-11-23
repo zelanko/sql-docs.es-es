@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADOX]
+helpviewer_keywords: enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a43048c4ea1dff730c6be4d1f755bfa96bec34dd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas de ADOX
 Para facilitar la depuración, las constantes enumeradas de ADOX muestran un valor para cada constante. Sin embargo, este valor es puramente informativo y puede cambiar de una versión de ADOX a otra. El código sólo debería depender del nombre, no el valor real, de constantes enumeradas.  
@@ -48,4 +45,3 @@ Para facilitar la depuración, las constantes enumeradas de ADOX muestran un val
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

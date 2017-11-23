@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d63e2b7e07c01d0f937618cfc521921e9d16dc43
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
   Puede usar el [suscribir](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El **suscribir** comando devuelve los resultados de un seguimiento como un conjunto de filas.  
@@ -83,7 +81,6 @@ ms.lasthandoff: 09/01/2017
 |RequestProperties|String|Propiedades del método XMLA para el que se produjo el evento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

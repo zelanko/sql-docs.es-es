@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e9ad8d068a578b856312418dc6c5e3e6c0f192a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88706988a0f9d2d338b9b50e10fdfab9a727329b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Configuración del proyecto (GUI) (MySQLToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si desea incluir datos de informes con informes de evaluación.  
@@ -50,4 +48,3 @@ Para mostrar un informe después de convertir esquemas, seleccione True. El info
   
 **Predeterminado**: False  
   
-

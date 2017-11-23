@@ -24,17 +24,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], modifying
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 015ecb28286589516d78476caf0f12938980ad5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5ca1ff1e48da8fb464ffe9d2e8c7a4427980030
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>Asistente de BI - Habilitar reescritura en la dimensión
   Agregar la mejora de reescritura de dimensiones a un cubo o dimensión para permitir que los usuarios modifiquen manualmente la estructura y los miembros de la dimensión. Las actualizaciones de una dimensión habilitada para escritura se registran directamente en la tabla de dimensiones. Esta mejora cambia la configuración de la propiedad **WriteEnabled** para una dimensión.  
@@ -66,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

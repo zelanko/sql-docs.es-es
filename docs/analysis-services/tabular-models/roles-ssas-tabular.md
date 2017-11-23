@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5a80e46a15037dbc3c96b107dd06e567ae3eeb9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="roles"></a>Roles
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
@@ -130,7 +129,7 @@ ms.lasthandoff: 09/01/2017
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Crear y administrar Roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|Las tareas de este tema explican cómo crear y administrar roles mediante el cuadro de diálogo **Administrador de roles** del diseñador de modelos.|  
+|[Crear y administrar roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|Las tareas de este tema explican cómo crear y administrar roles mediante el cuadro de diálogo **Administrador de roles** del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
@@ -140,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  [Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   
-

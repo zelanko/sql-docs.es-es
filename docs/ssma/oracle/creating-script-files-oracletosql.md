@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 29a445d0392c77b0773f612636eeca08597c47c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7fb3f2390d27d89877ed57b50da5e40da95e2c3b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-oracletosql"></a>Crear archivos de Script (OracleToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
@@ -407,4 +405,3 @@ El siguiente paso en la utilización de la consola es [crear archivos de valores
 ## <a name="see-also"></a>Vea también  
 [Crear archivos de valor de la Variable &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-

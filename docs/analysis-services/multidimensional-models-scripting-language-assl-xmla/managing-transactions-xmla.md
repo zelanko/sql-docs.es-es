@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, transactions
 - XMLA, transactions
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - committing transactions
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c4b233ccffbebbec0fd059b069f79ab62bdbf71
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b5e9a8976614439ebfabc736052e7458d4e8aa9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="managing-transactions-xmla"></a>Administrar transacciones (XMLA)
   Cada comando XML for Analysis (XMLA) enviado a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta en el contexto de una transacción en la sesión implícita o explícita actual. Para administrar cada una de estas transacciones, utilice la [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), y [RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandos. Mediante estos comandos puede crear transacciones implícitas o explícitas, cambiar el recuento de referencias de transacción, así como iniciar, confirmar o revertir transacciones.  
@@ -69,7 +67,6 @@ ms.lasthandoff: 09/01/2017
  El **RollbackTransaction** comando revierte los resultados de los comandos que se ejecutan tras el **BeginTransaction** comando se ejecutó en la sesión actual. El **RollbackTransaction** comando revierte la transacción activa, independientemente del recuento de referencias de transacción actual y establece el recuento de referencias de transacción en cero. Si no hay ninguna transacción activa (es decir, el recuento de referencias de transacción para la sesión actual se ha establecido en cero), un **RollbackTransaction** comando produce un error.  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

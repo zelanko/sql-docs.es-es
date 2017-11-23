@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subselects-in-queries"></a>Subselecciones en las consultas
   Las expresiones de subselección son expresiones SELECT anidadas que se utilizan para restringir el espacio del cubo donde se evalúa la instrucción SELECT externa exterior. Las subselecciones permiten definir un nuevo espacio en el que se evalúan todos los cálculos.  
@@ -362,4 +361,3 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   De forma predeterminada, los miembros calculados no se permiten en subselecciones; Sin embargo, esta restricción se puede cambiar, en una base por cada sesión, asignando un valor a la **subconsultas** propiedad de cadena de conexión en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** propiedad en [ Propiedades XMLA compatibles &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vea [Miembros calculados en subselecciones y subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de **SubQueries** o **DBPROP_MSMD_SUBQUERIES**.  
   
   
-

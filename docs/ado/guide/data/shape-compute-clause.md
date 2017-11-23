@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al formulario secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar funciones de agregado en el elemento secundario **Recordset** o una forma anteriormente **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -151,4 +149,3 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value (propiedad) (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic para las funciones de aplicaciones](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

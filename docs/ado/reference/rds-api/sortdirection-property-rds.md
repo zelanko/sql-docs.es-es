@@ -1,8 +1,7 @@
 ---
 title: Propiedad SortDirection (RDS) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SortDirection property [RDS]
+helpviewer_keywords: SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d1b07bebfd6b047e13c394a070757b26bd0c354
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d0395c390da04314dad0bc886f71333baac7b7a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sortdirection-property-rds"></a>Propiedad SortDirection (RDS)
 Indica si un criterio de ordenación es ascendente o descendente.  
@@ -55,6 +52,5 @@ DataControl.SortDirection = value
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection y propiedades ejemplo del método Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Propiedad de ordenación](../../../ado/reference/ado-api/sort-property.md)   
  [Propiedad SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)
-
 
 

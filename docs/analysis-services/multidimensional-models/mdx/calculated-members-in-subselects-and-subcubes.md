@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
   Un miembro calculado es un miembro de dimensión cuyo valor se calcula a partir de una expresión en tiempo de ejecución, y se puede usar en las subselecciones y los subcubos para definir con mayor precisión el espacio del cubo de una consulta.  
@@ -138,4 +137,3 @@ Where [Measures].[Reseller Sales Amount]
  [Propiedades XMLA compatibles &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   
-

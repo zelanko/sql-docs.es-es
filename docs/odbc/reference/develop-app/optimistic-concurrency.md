@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 *Simultaneidad optimista* deriva su nombre de la suposición optimista que no se suele producir colisiones entre transacciones; una colisión han producido durante la otra transacción actualiza o elimina una fila de datos entre el momento en se leyó por la transacción actual y la hora se actualiza o elimina. Es lo contrario de *simultaneidad pesimista,* o bloqueo, en que el programador de aplicaciones cree que tales conflictos son comunes.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  Si la propia aplicación implementa simultaneidad optimista, Establece el atributo de instrucción SQL_ATTR_CONCURRENCY en SQL_CONCUR_READ_ONLY para leer una fila. Si compara las versiones de fila y no sabe la columna de versión de fila, llama a **SQLSpecialColumns** con la opción SQL_ROWVER para determinar el nombre de esta columna.  
   
  La aplicación actualiza o elimina la fila aumentando la simultaneidad SQL_CONCUR_LOCK (para obtener acceso de escritura a la fila) y ejecutar un **actualización** o **eliminar** instrucción con un **donde**  cláusula que especifica la versión o los valores de la fila tenía cuando la aplicación que lo lee. Si la fila ha cambiado desde entonces, se producirá un error en la instrucción. Si el **donde** cláusula no identifica la fila, la instrucción también puede actualizar o eliminar otras filas; las versiones de fila siempre identifican de filas, pero los valores de fila identifican filas solo si se incluyen la clave principal.
-

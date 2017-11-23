@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Rowset Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Rowset Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Rowset
 - http://schemas.microsoft.com/analysisservices/2003/engine#Rowset
 - Rowset
-helpviewer_keywords:
-- Rowset data type
+helpviewer_keywords: Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf941f9e6231174bd0288bf71aa3055570d1c74a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 352dc0e626e3214b37f5047957f8fa1f68aace55
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo de datos Rowset (XMLA)
   Define un tipo de datos derivado que representa un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que devuelve datos tabulares de un [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
@@ -239,4 +234,3 @@ ms.lasthandoff: 09/01/2017
  [Tipos de datos XML &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
-

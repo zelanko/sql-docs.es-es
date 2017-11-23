@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eafec33754d2c1dd0c7a79ddfae627006e31f493
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f89c867cb836ec69fd5fe59adf16d93f4708d0f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-programming-model-with-objects"></a>Modelo de programación de RDS con objetos
 El objetivo de RDS es obtener acceso y actualizar orígenes de datos a través de un intermediario como IIS. El modelo de programación especifica la secuencia de actividades necesarias para lograr este objetivo. El modelo de objetos especifica los objetos cuyos métodos y propiedades afectan al modelo de programación.  
@@ -56,7 +54,6 @@ El objetivo de RDS es obtener acceso y actualizar orígenes de datos a través d
  [Escenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seguridad y el uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
+ [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

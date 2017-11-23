@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 07e244c89cc130619f1464427a0f8e31dbafa162
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ad52f9a99b7f68e8d416c3df1dfa9690faa161d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lección 9-1: definir y examinar perspectivas
 Una perspectiva puede simplificar la vista de un cubo para fines específicos. De manera predeterminada, los usuarios pueden ver todos los elementos de un cubo para los que tengan permisos. Lo que observan los usuarios cuando ven un cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entero es la perspectiva predeterminada del cubo. Una vista de todo el cubo puede resultar muy compleja para que los usuarios naveguen por ella, en especial aquellos usuarios que solo necesitan interactuar con una pequeña parte del cubo a fin de satisfacer sus requisitos de informes e inteligencia empresarial.  
@@ -209,4 +206,3 @@ En las tareas de este tema, definirá varias perspectivas diferentes y, a contin
   
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions"></a>Funciones numéricas
 La tabla siguiente describen las funciones numéricas que se incluyen en el conjunto de funciones escalares de ODBC. Mediante una llamada a **SQLGetInfo** con una *tipo de información* de SQL_NUMERIC_FUNCTIONS, una aplicación puede determinar qué funciones numéricas son compatibles con un controlador.  
@@ -67,4 +65,3 @@ La tabla siguiente describen las funciones numéricas que se incluyen en el conj
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Devuelve la raíz cuadrada de *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Devuelve la tangente de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
 |**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* truncado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se trunca a &#124; *integer_exp*&#124; posiciones a la izquierda del separador decimal.|
-

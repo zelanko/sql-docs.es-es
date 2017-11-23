@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX provider support [ADO]
+helpviewer_keywords: ADOX provider support [ADO]
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b28d606dc96df94845f95d8f26e21b1a83461f0f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b15df02c70e2dcdc2efb2ba468b76219a233d65a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-support-for-adox-ado"></a>Compatibilidad del proveedor con ADOX (ADO)
 Algunas características de ADOX no son compatibles, en función del proveedor de datos OLE DB. ADOX es totalmente compatible con la [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Las características no compatibles con el [proveedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), [proveedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), o la [proveedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) son se enumeran en las tablas siguientes. ADOX no es compatible con cualquier otro proveedor de Microsoft OLE DB.  
@@ -69,4 +66,3 @@ Algunas características de ADOX no son compatibles, en función del proveedor d
 |**Las claves** colección|El **anexado** y **eliminar** métodos no son compatibles.|  
 |**Los usuarios** colección|**Los usuarios** no se admite.|  
 |**Grupos de** colección|**Grupos** no se admite.|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 051a94e77b5a53d2a87b3310048da9f8d67260fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="call-level-interfaces"></a>Interfaces de nivel de llamada
 La técnica final para enviar instrucciones SQL en el DBMS es a través de una interfaz de nivel de llamada (CLI). Una interfaz de nivel de llamada proporciona una biblioteca de funciones DBMS que puede llamarse mediante el programa de aplicación. Por lo tanto, en lugar de intentar SQL se combinen con otro lenguaje de programación, una interfaz de nivel de llamada es similar a las bibliotecas de rutina que los programadores están acostumbrados a utilizar, por ejemplo, la cadena, E/S o bibliotecas de matemáticas en C. tenga en cuenta que los DBMS que admiten SQL incrustado ya tiene una interfaz de nivel de llamada, las llamadas a la que se generan por el precompilador. Sin embargo, estas llamadas son no documentado y sujeto a cambios sin previo aviso.  
@@ -47,4 +45,3 @@ La técnica final para enviar instrucciones SQL en el DBMS es a través de una i
 3.  Si la instrucción es una instrucción SELECT, la aplicación llama a una función CLI para devolver los resultados de los búferes de la aplicación. Normalmente, esta función devuelve una fila o una columna de datos a la vez.  
   
 4.  La aplicación llama a una función CLI para desconectarse del DBMS.
-

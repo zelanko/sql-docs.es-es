@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>Uso de longitud y valores de indicador
 El búfer de longitud/indicador se usa para pasar la longitud de bytes de los datos en el búfer de datos o un indicador especial como SQL_NULL_DATA, lo que indica que los datos son NULL. Dependiendo de la función en el que se utiliza, un búfer de longitud/indicador se define como un SQLINTEGER o un SQLSMALLINT. Por lo tanto, es necesario un único argumento para describirlo. Si el búfer de datos es un búfer de entrada nondeferred, este argumento contiene la longitud de bytes de los propios datos o un valor de indicador. A menudo se denomina *StrLen_or_Ind* o un nombre similar. Por ejemplo, el código siguiente llama **SQLPutData** para pasar un búfer completo de datos; la longitud de bytes (*ValueLen*) se pasa directamente porque el búfer de datos (*ValuePtr*) es un búfer de entrada.  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Un procedimiento consiste en usar el valor predeterminado de un parámetro de entrada en un procedimiento en lugar del valor en el búfer de datos correspondiente.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** o **SQLSetPos** consiste en pasar por alto el valor en el búfer de datos. Al actualizar una fila de datos mediante una llamada a **SQLBulkOperations** o **SQLSetPos,** no se cambia el valor de columna. Cuando se inserta una nueva fila de datos mediante una llamada a **SQLBulkOperations**, el valor de columna se establece en su valor predeterminado o, si la columna no tiene un valor predeterminado, NULL.
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - expressions [MDX], scripts
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f5c97c821496ed4d81539c7b6f3659734f70ab21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3f42d92332116ff94f0175619cc42face9a8b36
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX básico (MDX)
   Un script MDX (Expresiones multidimensionales) define el proceso de cálculo de un cubo en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Hay dos tipos de scripts MDX:  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   
-

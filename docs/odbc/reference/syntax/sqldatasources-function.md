@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDataSources
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDataSources
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDataSources
-helpviewer_keywords:
-- SQLDataSources function [ODBC]
+f1_keywords: SQLDataSources
+helpviewer_keywords: SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09c64ec707be4d99bb66547f8583f707dd281277
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc056c3877b76bebdb0402248b6fe6cb9a919d49
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources (función)
 **Conformidad**  
@@ -120,12 +114,11 @@ SQLRETURN SQLDataSources(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Detectar y enumerar los valores necesarios para conectarse a un origen de datos|[SQLBrowseConnect, función](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Conectar a un origen de datos|[SQLConnect, función](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Conectarse a un origen de datos mediante un cuadro de diálogo o la cadena de conexión|[SQLDriverConnect, función](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Devuelve la descripción de los controladores y atributos|[Sqldrivers, función](../../../odbc/reference/syntax/sqldrivers-function.md)|  
+|Detectar y enumerar los valores necesarios para conectarse a un origen de datos|[Función SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Conectar a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Conectarse a un origen de datos mediante un cuadro de diálogo o la cadena de conexión|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Devuelve la descripción de los controladores y atributos|[Función SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

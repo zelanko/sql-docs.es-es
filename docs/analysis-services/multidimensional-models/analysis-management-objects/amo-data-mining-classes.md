@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 14895a6d8ac42c49902a7315ae2afc53ce24902f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4eeb92697ce1a6a8475fa973a51ee6bdf9536b0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-data-mining-classes"></a>Clases de minería de datos de AMO
   Las clases de minería de datos ayudan a crear, modificar, eliminar y procesar objetos de minería de datos. Trabajar con objetos de minería de datos incluye crear estructuras y modelos de minería de datos y procesar los modelos.  
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

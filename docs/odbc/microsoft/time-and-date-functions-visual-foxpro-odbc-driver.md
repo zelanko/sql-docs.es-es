@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a64206cf57944933ae6c8e98633500444e273fca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab52b29d54416dca84d18cb0cd2b832da1b4d63
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Hora y funciones de fecha (el controlador ODBC de Visual FoxPro)
 En la tabla siguiente se enumera funciones de fecha y hora ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
@@ -89,4 +87,3 @@ UPDATE alltypes
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información acerca de las secuencias de escape, vea [secuencias de Escape de ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) en el *referencia del programador de ODBC*.
-

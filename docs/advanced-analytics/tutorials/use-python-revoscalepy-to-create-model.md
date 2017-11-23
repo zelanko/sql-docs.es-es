@@ -1,25 +1,22 @@
 ---
 title: Usar Python con revoscalepy para crear un modelo | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Usar Python con revoscalepy para crear un modelo
 
@@ -143,4 +140,3 @@ Vea estos ejemplos de Python y tutoriales para obtener sugerencias avanzadas y d
 + [En bases de datos de Python para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md)
 + [Crear un modelo de predicción mediante Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [Implementar y utilizar modelos de Python](../python/publish-consume-python-code.md)
-

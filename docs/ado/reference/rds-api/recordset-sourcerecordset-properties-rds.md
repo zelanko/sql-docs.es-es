@@ -1,8 +1,7 @@
 ---
 title: Propiedades Recordset y SourceRecordset (RDS) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Recordset property [ADO]
+helpviewer_keywords: Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: feb657674ff4d2d8c17b11246407eaf3fba142d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c5ce9fc2ef297c44f4bcfb3868168d0cb1dda15
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Propiedades Recordset y SourceRecordset (RDS)
 Indica el **Recordset** objeto devuelto desde un objeto comercial personalizado.  
@@ -64,6 +61,5 @@ Recordset = DataControl.Recordset
  [Ejemplo de propiedades de SourceRecordset (VBScript) y el conjunto de registros](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [Ejemplo del método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
-
 
 

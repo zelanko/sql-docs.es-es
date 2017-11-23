@@ -1,30 +1,26 @@
 ---
 title: Preparar los datos de uso de PowerShell (tutorial) | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar los datos de uso de PowerShell (tutorial)
 
@@ -111,7 +107,7 @@ Hay muchas maneras diferentes que puede instalar paquetes en SQL Server. Por eje
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Este ejemplo usa la función grep de R para buscar el vector de rutas de acceso disponibles y buscarlo en "Archivos de programa". Para obtener más información, consulte [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Este ejemplo utiliza la función de R grep para buscar el vector de rutas de acceso disponibles y encontrar la ruta de acceso que incluya "Archivos de programa". Para obtener más información, consulte [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Si cree que ya están instalados los paquetes, compruebe la lista de paquetes instalados ejecutando `installed.packages()`.
 
@@ -129,7 +125,7 @@ Junto con los archivos de datos, scripts de R y scripts de T-SQL, la descarga in
 
 - Vuelve a escribir los argumentos en el archivo de script de R para usar el nombre de la base de datos que especifique.
 
-Debe ejecutar este script en el equipo donde se compila la solución: por ejemplo, el equipo portátil donde desarrollar y probar el código de R. Este equipo, que denominaremos el cliente de ciencia de datos, debe poder conectarse al equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el protocolo de canalizaciones con nombre.
+Ejecute este script en el equipo donde se compila la solución: por ejemplo, el equipo portátil donde desarrollar y probar el código de R. Este equipo, que denominaremos el cliente de ciencia de datos, debe poder conectarse al equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el protocolo de canalizaciones con nombre.
 
 1. Abra una línea de comandos de PowerShell **como administrador**.
   
@@ -156,7 +152,7 @@ Debe ejecutar este script en el equipo donde se compila la solución: por ejempl
       > [!WARNING]
       > Cuando utiliza el símbolo del sistema en el script de PowerShell para proporcionar sus credenciales, se escribe la contraseña en el archivo de script actualizado en texto sin formato. Edite el archivo para quitar las credenciales inmediatamente después de crear los objetos de R necesarios.
       
-    **Ruta de acceso al archivo .csv**: proporcione la ruta de acceso completa al archivo de datos. La ruta de acceso y el nombre de archivo predeterminados son `C:\tempR\nyctaxi1pct.csv1`.
+    **Ruta de acceso al archivo .csv**: proporcione la ruta de acceso completa al archivo de datos. La ruta de acceso y el nombre de archivo predeterminados son `C:\tempR\nyctaxi1pct.csv`.
   
 4.  Pulse ENTRAR para ejecutar el script.
 
@@ -260,7 +256,7 @@ En el ejemplo siguiente se ejecuta el script mediante un inicio de sesión de SQ
 
 Si la base de datos contiene una tabla existente del mismo nombre y el mismo esquema, **bcp** inserta una nueva copia de los datos en lugar de sobrescritura de los datos existentes.
 
-Para evitar la duplicación de datos, asegúrese de truncar las tablas existentes antes de volver a ejecutar el script.
+Para evitar datos duplicados, truncar las tablas existentes antes de ejecutar el script de nuevo.
 
 ## <a name="whats-included-in-the-sample"></a>¿Qué se incluye en el ejemplo
 
@@ -274,7 +270,7 @@ Al descargar los archivos desde el repositorio de GitHub, obtendrá el siguiente
 
 ### <a name="bkmk_data"></a>Entrenamiento y de datos de puntuación
 
-Los datos son una muestra representativa del conjunto de datos de taxis de Nueva York, que contiene los registros de más de 173 millones de carreras individuales en 2013, incluidas las tarifas y las propinas pagadas por cada carrera. Para que sea más fácil trabajar con los datos, el equipo de ciencia de datos de Microsoft redujo el tamaño del muestreo para obtener solo un 1 % de los datos.  Estos datos se han compartido en un contenedor de almacenamiento de blobs público en Azure, en formato .CSV. Los datos de origen están un archivo sin comprimir, ligeramente por debajo de 350MB.
+Los datos son una muestra representativa del conjunto de datos de taxis de Nueva York, que contiene los registros de más de 173 millones de carreras individuales en 2013, incluidas las tarifas y las propinas pagadas por cada carrera. Para que sea más fácil trabajar con los datos, el equipo de ciencia de datos de Microsoft redujo el tamaño del muestreo para obtener solo un 1 % de los datos.  Estos datos se han compartido en un contenedor de almacenamiento de blobs público en Azure, en formato .CSV. Los datos de origen están un archivo sin comprimir, justo debajo de 350 MB.
 
 + Conjunto de datos público: [NYC Taxi y Limousine Comisión] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ El script de PowerShell ejecuta varias [!INCLUDE[tsql](../../includes/tsql-md.md
 
 |Nombre de archivo del script de SQL|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|Crea la base de datos y dos tablas:<br /><br /> *nyctaxi_sample*: la tabla que almacena los datos de entrenamiento, la muestra de un 1 % del conjunto de datos NYC Taxi. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta.<br /><br /> *nyc_taxi_models*: una tabla vacía que se va a usar más adelante para guardar el modelo de clasificación entrenado.|
+|create-db-tb-upload-data.sql|Crea la base de datos y dos tablas:<br /><br /> *nyctaxi_sample*: la tabla que almacena los datos de entrenamiento, la muestra de un 1 % del conjunto de datos NYC Taxi. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta.<br /><br /> *nyc_taxi_models*: una tabla que se utiliza para almacenar modelos entrenados en formato binario.|
 |PredictTipBatchMode.sql|Crea un procedimiento almacenado que llama a un modelo entrenado para predecir las etiquetas para las nuevas observaciones. Acepta una consulta como su parámetro de entrada.|
 |PredictTipSingleMode.sql|Crea un procedimiento almacenado que llama a un modelo de clasificación entrenado para predecir las etiquetas para las nuevas observaciones. Las variables de las nuevas observaciones se pasan como parámetros en línea.|
 |PersistModel.sql|Crea un procedimiento almacenado que ayuda a almacenar la representación binaria del modelo de clasificación en una tabla en la base de datos.|
@@ -314,5 +310,4 @@ Las consultas de T-SQL que se utilizan en este tutorial se han comprobado y se p
 
 [Tutorial de ciencia de datos to-end para R y SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[Requisitos previos para el tutorial de ciencia de datos](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-
+[Requisitos previos del tutorial de ciencia de datos](walkthrough-prerequisites-for-data-science-walkthroughs.md)

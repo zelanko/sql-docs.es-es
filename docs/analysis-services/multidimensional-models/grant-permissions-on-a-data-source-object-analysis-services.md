@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.datasources.f1
+f1_keywords: sql13.asvs.roledesignerdialog.datasources.f1
 helpviewer_keywords:
 - read/write permissions
 - user access rights [Analysis Services], data sources
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - connection strings [Analysis Services]
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c774f7711a32eb512c28914146b05f2db52f4b2c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e64c0b5496352e1336046c4066de1f0cf625462
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Otorgar permisos para un objeto de origen de datos (Analysis Services)
   Normalmente, la mayoría de los usuarios de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no necesitan acceso a los orígenes de datos subyacentes de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los usuarios normalmente solo consultan los datos en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No obstante, en el contexto de minería de datos, como en el de realizar predicciones basadas en un modelo de minería de datos, un usuario tiene que combinar los datos obtenidos de un modelo de minería de datos con los datos proporcionados por el usuario. Para conectar con el origen de datos que contiene los datos proporcionados por el usuario, el usuario emplea una consulta de Extensiones de minería de datos (DMX) que contiene la cláusula [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) y [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md).  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
 - Connection15::raw_OpenSchema
-helpviewer_keywords:
-- OpenSchema method [ADO]
+helpviewer_keywords: OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c547eb8a6c1208bedffb988096f45b4c871d09
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtiene información de esquema de base de datos del proveedor.  
@@ -84,5 +81,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open (método) (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

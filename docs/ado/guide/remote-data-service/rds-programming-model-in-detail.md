@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS programming model [ADO], details
+helpviewer_keywords: RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b471eb6a057e0669bd628089886cb6465598f697
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db8a1222c560b54629baa34da595e0f5c49835b0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo de programación de RDS en detalle
 Éstos son los elementos clave del modelo de programación de RDS:  
@@ -85,8 +82,7 @@ ms.lasthandoff: 09/09/2017
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Escenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Seguridad y el uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
+ [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 
 

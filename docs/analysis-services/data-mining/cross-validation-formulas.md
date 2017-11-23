@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validación cruzada
   Cuando se genera un informe de validación cruzada, contiene medidas de precisión para cada modelo según el tipo de modelo de minería de datos (es decir, el algoritmo utilizado para crear el modelo), el tipo de datos del atributo de predicción y el valor de atributo de predicción, si existe.  
@@ -58,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   
-

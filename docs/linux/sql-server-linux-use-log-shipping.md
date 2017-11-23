@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 443330a48628e17f7dfa9688e57bb58b118605b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc8c8094c6701af90aa9f645dc24fff8a70394b9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Empezar a trabajar con el trasvase de registros en Linux
 
@@ -315,6 +314,5 @@ Como se describe en la figura anterior, una sesión de trasvase de registros imp
     GO  
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
 
 

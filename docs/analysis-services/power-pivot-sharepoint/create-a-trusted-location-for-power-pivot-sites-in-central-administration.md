@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
   Servicios de Excel permite especificar qué ubicaciones son repositorios válidos para los libros que se abren en un servidor de SharePoint. Estas ubicaciones se denominan 'ubicaciones de confianza' y puede utilizar opciones de configuración diferentes para cada ubicación de confianza que cree. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, podría considerar crear una ubicación de confianza para los sitios que contienen libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de modo que pueda aplicar la configuración que funcione mejor para acceder a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , al tiempo que conserva la configuración predeterminada para el resto de la granja.  
@@ -73,7 +72,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Vea también  
  [Galería de PowerPivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [Crear y personalizar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Use la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
+ [Uso de la Galería de Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   
-

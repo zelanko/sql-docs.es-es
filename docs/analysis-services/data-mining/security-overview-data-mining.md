@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services - data mining], about security
+helpviewer_keywords: security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e41132d9c98186073c67799bea6e9d677f5b3c82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-overview-data-mining"></a>Información general de Seguridad (minería de datos)
   El proceso de protección de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene lugar a varios niveles. Debe proteger cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y sus orígenes de datos para asegurarse de que solo los usuarios autorizados tengan permisos de lectura o lectura/escritura para las dimensiones, los modelos de minería de datos y los orígenes de datos seleccionados. También debe proteger los orígenes de datos subyacentes para evitar que usuarios no autorizados puedan poner en riesgo información empresarial confidencial. El proceso de protección de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se describe en los temas siguientes.  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
-

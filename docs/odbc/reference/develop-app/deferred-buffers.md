@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - buffers [ODBC], deferred
 - deferred buffers [ODBC]
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3af1222c7404a5b05246026edbbc37149780de8c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deferred-buffers"></a>Búferes diferidos
 A *búfer diferida* es uno cuyo valor se utiliza en algún momento *después* se especifica en una llamada de función. Por ejemplo, **SQLBindParameter** se usa para asociar, o *enlazar,* un búfer de datos con un parámetro en una instrucción SQL. La aplicación especifica el número del parámetro y pasa la dirección, la longitud de bytes y el tipo de búfer. El controlador guarda esta información pero no examina el contenido del búfer. Más adelante, cuando la aplicación ejecuta la instrucción, el controlador recupera la información y lo utiliza para recuperar los datos del parámetro y enviarlo al origen de datos. Por lo tanto, se pospone la entrada de datos en el búfer. Porque búferes diferidos se especificado en una función y se usa en el otro, es un error de programación de aplicaciones para liberar un búfer aplazado mientras el controlador de espera que todavía que exista; Para obtener más información, consulte [asignar y liberar búferes](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), más adelante en esta sección.  
@@ -39,4 +37,3 @@ A *búfer diferida* es uno cuyo valor se utiliza en algún momento *después* se
 |Envía datos al actualizar o insertar una fila en un resultado de conjunto|Entrada diferida|**SQLBindCol**|**SQLSetPos**|  
 |Devolver datos de salida y los parámetros de entrada/salida|Salida de diferida|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |Devolver resultados establece datos|Salida de diferida|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
-

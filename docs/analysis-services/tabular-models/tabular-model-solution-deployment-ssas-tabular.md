@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5766323ffd6f50fff6f6b73bddf52e665f9bcab8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implementación de soluciones de modelos tabulares (SSAS tabular)
   Después de crear un proyecto de modelo tabular, deberá implementarlo para que los usuarios examinen el modelo usando una aplicación cliente de informes. Este tema describe las diferentes propiedades y métodos que puede utilizar al implementar soluciones de modelo tabular en el entorno.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [Conectar a una base de datos de modelo tabular &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   
-

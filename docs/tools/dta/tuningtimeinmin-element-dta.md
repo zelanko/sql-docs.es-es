@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- TuningTimeInMin element
+dev_langs: XML
+helpviewer_keywords: TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23fac9738c7d20d1d3a95ad8319c4444974426f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 534f7868de00a0e102ba6f80c8663f0aaa7bf279
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin (DTA, elemento)
   Especifica la duración máxima de una sesión de optimización en minutos.  
@@ -51,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Tuningoptions, elemento &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|Ninguno|  
   
 ## <a name="example"></a>Ejemplo  
@@ -75,4 +71,3 @@ ms.lasthandoff: 08/02/2017
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.miningmodels.f1
+f1_keywords: sql13.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
 - data mining [Analysis Services], security
 - permissions [Analysis Services], mining models
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining structures
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 148b66a74967d773837720d377257ad6624c03f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 12b69f08e0c56b614c2e181ca3cb62a24496e2b9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Otorgar permisos para estructuras y modelos de minería de datos (Analysis Services)
   De forma predeterminada, solamente el administrador de servidor dispone de permisos para ver las estructuras de minería de datos o modelos de minería de datos en la base de datos. Siga las instrucciones de más abajo para conceder permisos a usuarios que no sean administradores.  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   
-

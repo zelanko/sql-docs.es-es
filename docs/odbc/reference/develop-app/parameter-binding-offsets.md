@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a604c64f16e63e326b9973129b502450869b797
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b3fea1397710c5a65a03b3f829972f04cc63f5a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parameter-binding-offsets"></a>Desplazamientos de enlace de parámetros
 Una aplicación puede especificar que se ha agregado un desplazamiento a direcciones de búfer de parámetro y el indicador de longitud correspondiente enlazados búfer direcciones cuando **SQLExecDirect** o **SQLExecute** se llama. El resultado de estas adiciones determina las direcciones usadas en estas operaciones.  
@@ -37,4 +35,3 @@ Una aplicación puede especificar que se ha agregado un desplazamiento a direcci
   
 > [!NOTE]  
 >  Desplazamientos de enlace no son compatibles con ODBC 2. *x* controladores.
-

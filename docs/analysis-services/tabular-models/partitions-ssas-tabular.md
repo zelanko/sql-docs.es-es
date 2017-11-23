@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions"></a>Particiones
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las particiones creadas mediante el cuadro de diálogo de las particiones en SSDT durante la creación de modelos se aplican a la base de datos del área de trabajo de modelo. Una vez implementado el modelo, las particiones definidas para la base de datos del área de trabajo del modelo se duplican en la base de datos del modelo implementada. Además puede crear y administrar particiones en una base de datos de modelo implementado mediante el cuadro de diálogo de las particiones en SSMS.  En este tema se describen las particiones creadas durante la creación del modelo mediante el cuadro de diálogo Administrador de particiones en SSDT. Para obtener información sobre cómo crear y administrar particiones para un modelo implementado, vea [crear y administrar particiones de modelos tabulares](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -57,7 +56,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Vea también  
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Procesamiento de datos](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
+ [Procesar datos](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

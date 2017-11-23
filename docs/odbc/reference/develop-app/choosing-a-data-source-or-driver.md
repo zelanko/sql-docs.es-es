@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Elegir datos de un origen o el controlador
 El origen de datos o el controlador utilizado por una aplicación a veces es codificado de forma rígida en la aplicación. Por ejemplo, una aplicación personalizada creada por el departamento de un MIS para transferir datos de un origen de datos a otro contendría los nombres de los orígenes de datos, la aplicación simplemente no funciona con cualquier otro origen de datos. Otro ejemplo es una aplicación vertical, como uno utilizado para la entrada de pedido. Este tipo de aplicación siempre utiliza el mismo origen de datos, que tiene un esquema predefinido conocido por la aplicación.  
@@ -50,4 +48,3 @@ El origen de datos o el controlador utilizado por una aplicación a veces es cod
 -   **Obtener acceso a un DBMS determinado una sola vez.** Por ejemplo, podría contener una hoja de cálculo que recupera los datos mediante una llamada a funciones ODBC el **controlador** palabra clave para identificar un controlador en particular. Dado que el nombre del controlador es significativo para los usuarios que tienen ese controlador, la hoja de cálculo podría pasarse entre los usuarios. Si la hoja de cálculo contiene un nombre de origen de datos, cada usuario tendría que crear el mismo origen de datos para usar la hoja de cálculo.  
   
 -   **Examinando el sistema para todas las bases de datos puede tener acceso a un controlador específico.** Para obtener más información, consulte [conectarse con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), más adelante en esta sección.
-

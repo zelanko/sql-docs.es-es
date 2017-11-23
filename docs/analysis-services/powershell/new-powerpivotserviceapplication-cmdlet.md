@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec99b8511d512c068130ed7bc521f447b57d20d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Cmdlet New-PowerPivotServiceApplication
 
@@ -115,4 +113,3 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  Este ejemplo crea una nueva aplicación de servicio. La base de datos de aplicación de servicio se crea en un servidor de bases de datos denominado AdvWorks-SRV01 que se instaló como una instancia con nombre de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , una configuración común para muchas instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para crear la base de datos, debe tener permisos dbcreator en la instancia de SQL Server. Debe ser db_owner en la base de datos de configuración de SharePoint. Dado que se trata de la primera aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja, debe ser un miembro del grupo predeterminado de servidores proxy.  
   
   
-

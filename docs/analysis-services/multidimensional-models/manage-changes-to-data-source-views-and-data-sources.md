@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d7e5aebbe0777d35918c8c68cd23767a8f02c0c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b1913d392467f4ba78976d9ab73919e7ac06051
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Administrar los cambios de las vistas del origen de datos y los orígenes de datos
   Si se vuelve a ejecutar el Asistente para generar esquemas, éste volverá a utilizar el mismo origen de datos y vista del origen de datos que en la generación original. Si se agrega un origen de datos o una vista de origen de datos, el asistente no los utilizará. Si se elimina el origen de datos o la vista de origen de datos originales tras la generación inicial, debe ejecutarse el asistente desde el principio. También se eliminará la configuración anterior del asistente. Los objetos existentes en una base de datos subyacente enlazados a un origen de datos o vista de origen de datos eliminados se tratarán como objetos creados por el usuario la próxima vez que se ejecute el Asistente para generar esquemas.  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [Descripción de la generación incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   
-

@@ -1,31 +1,28 @@
 ---
 title: "Código de ejemplo en Visual C++ de RDS | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 99b101e1a85e4e9cde858aacd409b2234735dba8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e673aa989aeee23f6bc748888b0ce1b67e154ef2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Ejemplos de código RDS en Visual C++
 Utilice los siguientes ejemplos de código para obtener información sobre cómo usar las propiedades de RDS al escribir en Microsoft Visual C++.  
@@ -39,6 +36,5 @@ Utilice los siguientes ejemplos de código para obtener información sobre cómo
 -   [Ejemplo de la propiedad de controlador](../../../ado/reference/rds-api/handler-property-example-vc.md)  
   
 -   [Ejemplo de la propiedad InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
 
 

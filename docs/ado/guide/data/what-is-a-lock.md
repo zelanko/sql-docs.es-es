@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 133cd38feed1b55557112abe45872d333cc08c2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4975dd903c6d012976f9288b9758e1acab52f1f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-a-lock"></a>¿Qué es un bloqueo?
 El bloqueo es el proceso mediante el cual un DBMS restringe el acceso a una fila en un entorno multiusuario. Cuando una fila o columna está bloqueada en modo exclusivo, no se permiten otros usuarios para tener acceso a los datos bloqueados hasta que se libere el bloqueo. Esto garantiza que dos usuarios no puedan actualizar simultáneamente la misma columna de una fila.  
@@ -46,4 +44,3 @@ El bloqueo es el proceso mediante el cual un DBMS restringe el acceso a una fila
  Esta sección contiene los temas siguientes.  
   
 -   [Tipos de bloqueos](../../../ado/guide/data/types-of-locks.md)
-

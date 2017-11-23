@@ -23,17 +23,16 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX - descripción paso ordenar y el orden de resolución
   Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
@@ -229,4 +228,3 @@ FROM [Adventure Works]
  [Manipular datos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

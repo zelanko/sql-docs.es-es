@@ -21,17 +21,16 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 69f1519d6b3c03294469707a7e1485955f864a2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 173ba9ef24e1f05dcd3500ad8fecbad0dba98241
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Orígenes de datos admitidos (SSAS - Multidimensionales)
   En este tema se describen los tipos de orígenes de datos que puede usar en un modelo multidimensional.  
@@ -64,4 +63,3 @@ ms.lasthandoff: 09/01/2017
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

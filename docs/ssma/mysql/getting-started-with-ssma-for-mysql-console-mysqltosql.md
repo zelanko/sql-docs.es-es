@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44facbd07cbc9690d374e3f6ab6ae1bc12f6934f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b41087aeaa65c87269a34f3208a4b63d91971e7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introducción a SSMA para la consola de MySQL (MySQLToSQL)
 Esta sección describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de MySQL. También se muestran en este documento, se utilizan las convenciones en una ventana de salida de consola SSMA típica.  
@@ -76,4 +74,3 @@ Interpretación de color de la salida de la consola en la tabla siguiente:
 ## <a name="see-also"></a>Vea también  
 [Instalación de SSMA para MySQL](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
   
-

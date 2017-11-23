@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>Desplazamiento relativas y absolutas
 La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el cursor en relación con la posición actual o a una posición absoluta. **SQLFetchScroll** admite la captura de la siguiente, anterior, primero y último conjuntos de filas, como una captura así como relativa (capturar el conjunto de filas  *n*  filas desde el principio del conjunto de filas actual) y una captura absoluta (fetch el conjunto de filas a partir de fila  *n* ). Si  *n*  es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Por lo tanto, una captura absoluta de fila -1 significa que se capturará el conjunto de filas que comienza por la última fila del conjunto de resultados.  
@@ -52,4 +50,3 @@ La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el c
  El número de filas del cursor, que es el tamaño del resultado se establece, está disponible como el campo SQL_DIAG_CURSOR_ROW_COUNT del encabezado del diagnóstico. El valor de este campo está definido sólo después **SQLExecute**, **SQLExecDirect**, o **SQLMoreResult** se ha llamado. Este número puede ser un recuento aproximado o un recuento exacto, dependiendo de las capacidades del controlador. Se puede determinar la compatibilidad del controlador mediante una llamada a **SQLGetInfo** con los tipos de información de atributos de cursor y la comprobación de si el bit SQL_CA2_CRC_APPROXIMATE o SQL_CA2_CRC_EXACT se devuelve en el tipo de cursor.  
   
  Nunca se admite un recuento exacto de filas de un cursor dinámico. Para otros tipos de cursores, el controlador puede admitir recuentos de filas exacto o aproximado, pero no ambos. Si el controlador admite exacto ni aproximado recuentos de filas para un tipo de cursor específico, el campo SQL_DIAG_CURSOR_ROW_COUNT contiene el número de filas que se han capturado hasta ahora. Independientemente de qué el controlador admite, **SQLFetchScroll** con una *operación* de SQL_FETCH_LAST hará que el campo SQL_DIAG_CURSOR_ROW_COUNT contener el número exacto de filas.
-

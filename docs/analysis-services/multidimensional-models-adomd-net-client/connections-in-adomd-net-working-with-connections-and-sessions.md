@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - sessions [ADOMD.NET]
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 061a51539b40630874e36096cc59557ac375c671
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6926a8cd71983a98d68f59e0dbe30a1b0e78ece8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Conexiones en ADOMD.NET: trabajar con conexiones y sesiones
   En XML for Analysis (XMLA), las sesiones proporcionan compatibilidad para las operaciones con estado durante el acceso a datos analíticos. Las sesiones enmarcan el ámbito y contexto de comandos y transacciones para un origen de datos analíticos. Los elementos XMLA utilizados para administrar sesiones son [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)y [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
@@ -117,4 +115,3 @@ static string CreateSession(string connectionString)
  [Para establecer conexiones en ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   
-

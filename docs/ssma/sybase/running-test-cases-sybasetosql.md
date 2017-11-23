@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Execution Steps
+helpviewer_keywords: Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80c335253aef5dd676ece990cb34feb5d67da829
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecutar casos de prueba (SybaseToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se determina según la configuración de la asignación de esquema para el proyecto SSMA actual.  
@@ -56,8 +53,8 @@ Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o
 |Nombre|Tipo|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
-|USER_TABLE$ Aud|Table|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
-|USER_TABLE$ AudID|Table|Tabla donde se guardan las filas nuevas y modificadas.|  
+|USER_TABLE$ Aud|Tabla|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
+|USER_TABLE$ AudID|Tabla|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|Ver|Representación simplificada de las modificaciones de tablas.|  
 |USER_TABLE$ nueva|Ver|Representación simplificada de filas insertadas y sobrescribir.|  
 |USER_TABLE$ new_id|Ver|Identificación de filas insertadas y los cambios.|  
@@ -83,4 +80,3 @@ Durante la finalización de la herramienta de comprobación de SSMA limpia los o
 [Seleccionar y configurar los objetos afectados &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

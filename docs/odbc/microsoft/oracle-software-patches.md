@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], Oraclesoftware patches
 - Oracle software patches [ODBC]
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ebea69c7769cf2d841c500c623915c1e5ed01627
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="oracle-software-patches"></a>Revisiones de Software de Oracle
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Dado que Oracle corrige los errores en las versiones actuales y, a continuación, los retrofits a las versiones anteriores con revisiones de software, se recomienda descargar la revisión más reciente disponible. Esto es especialmente cierto para los componentes de cliente de servidor de Oracle. Si tiene preguntas acerca de cómo instalar estas revisiones, póngase en contacto con el soporte técnico de Oracle.
-

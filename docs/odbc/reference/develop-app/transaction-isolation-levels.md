@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transaction-isolation-levels"></a>Niveles de aislamiento de transacción
 *Niveles de aislamiento de transacción* son una medida de la extensión para las transacciones aislamiento se realizó correctamente. En concreto, los niveles de aislamiento de transacción se definen por la presencia o ausencia fenómenos siguientes:  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |Serializable|La transacción espera hasta que se ha desbloqueado; filas escritura bloqueadas por otras transacciones Esto evita que se pueda leer los datos de "sucios".<br /><br /> La transacción mantiene un bloqueo de lectura (si solo lee filas) o bloqueo de escritura (si puede actualizar o eliminar filas) en el intervalo de filas afecta a. Por ejemplo, si la transacción incluye la instrucción SQL **seleccione \* FROM Orders**, el intervalo es toda la tabla Orders; la transacción lectura bloqueos de la tabla y no no permitir nuevas filas va a insertar en él. Si la transacción incluye la instrucción SQL **eliminar de pedidos donde estado = 'Cerrado'**, el intervalo es todas las filas con un estado de "Cerrado"; los bloqueos de escritura de transacciones todas las filas de los pedidos de la tabla con un estado de "Cerrado" y no no permitir que ninguna fila para insertar o actualizar de forma que la fila resultante tiene un estado de "Cerrado".<br /><br /> Dado que otras transacciones no se pueden actualizar o eliminar las filas en el intervalo, la transacción actual evita las lecturas no repetibles. Dado que otras transacciones no pueden insertar las filas en el intervalo, la transacción actual evita cualquier fantasmas. La transacción libera el bloqueo cuando se confirma o revierte.|  
   
  Es importante tener en cuenta que el nivel de aislamiento de transacción no afecta la capacidad de una transacción para ver sus propios cambios; las transacciones siempre pueden ver los cambios realizados. Por ejemplo, una transacción puede constar de dos **actualización** instrucciones, el primero de los cuales genera el pago de todos los empleados 10 por ciento y el segundo de los cuales establece el sueldo de los empleados sobre algunos cantidad máxima de esa cantidad. Esto se realiza como una sola transacción correctamente solo porque el segundo **actualización** instrucción puede ver los resultados de la primera.
-

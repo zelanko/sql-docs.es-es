@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDriverConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDriverConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDriverConnect
-helpviewer_keywords:
-- SQLDriverConnect function [ODBC]
+f1_keywords: SQLDriverConnect
+helpviewer_keywords: SQLDriverConnect function [ODBC]
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6c5eaaa0580d718ecfa3b57c2c4b0aa7da5cda41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b9576bf21c922c1e8d223710210a1703f1cbec3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
@@ -366,15 +360,14 @@ int main() {
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Asignar un identificador|[SQLAllocHandle, función](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Detectar y enumerar los valores necesarios para conectarse a un origen de datos|[SQLBrowseConnect, función](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Conectar a un origen de datos|[SQLConnect, función](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Desconectarse de un origen de datos|[SQLDisconnect, función](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Devuelve la descripción de los controladores y atributos|[Sqldrivers, función](../../../odbc/reference/syntax/sqldrivers-function.md)|  
-|Liberar un identificador|[SQLFreeHandle, función](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|Establecer un atributo de conexión|[SQLSetConnectAttr, función](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Asignar un identificador|[Función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Detectar y enumerar los valores necesarios para conectarse a un origen de datos|[Función SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Conectar a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Desconectarse de un origen de datos|[Función SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|Devuelve la descripción de los controladores y atributos|[Función SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
+|Liberar un identificador|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

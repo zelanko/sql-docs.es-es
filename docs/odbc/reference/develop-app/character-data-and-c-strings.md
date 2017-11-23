@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54f9d438571b1535d16f5fc3b333e9a9cede42eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="character-data-and-c-strings"></a>Datos de caracteres y cadenas de c.
 Parámetros de entrada que hacen referencia a datos de caracteres de longitud variable (como nombres de columna, los parámetros dinámicos y los valores de atributo de cadena) tienen un parámetro de longitud asociada. Si la aplicación termina cadenas con el carácter null, tal y como es habitual en C, proporciona como argumento a la longitud en bytes de la cadena (sin incluir el terminador null) o SQL_NTS (String Null-Terminated). Un argumento de longitud no negativo especifica la longitud real de la cadena asociada. El argumento de longitud puede ser 0 para especificar una cadena de longitud cero, que es distinta de un valor NULL. El valor negativo SQL_NTS indica al controlador para determinar la longitud de la cadena, localizando el carácter de terminación null.  
@@ -49,4 +47,3 @@ Parámetros de entrada que hacen referencia a datos de caracteres de longitud va
  Aunque las aplicaciones y controladores normalmente utilizan cadenas de C (matrices de caracteres terminada en null) para almacenar datos de caracteres, no hay ningún requisito para hacerlo. En C, los datos de caracteres también se pueden tratar como una matriz de caracteres (sin terminación null) y su longitud de bytes que se pasa por separado en el búfer de longitud/indicador.  
   
  Dado que se pueden contener datos de caracteres en una matriz no terminada null y su longitud de bytes pasa por separado, es posible incrustar caracteres nulos en los datos de caracteres. Sin embargo, el comportamiento de las funciones ODBC en este caso no está definido y es específico del controlador si un controlador encarga de ello correctamente. Por lo tanto, aplicaciones interoperables siempre deben administrar los datos de caracteres que pueden contener los caracteres nulos incrustados como datos binarios.
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 786633c9ef5ff8c1814b1622b1349734286b2312
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22e04c21256b7c21c31c87557b201fc802ca3847
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lección 7-1: definir y examinar KPI
 Para definir indicadores clave de rendimiento (KPI), deberá primero definir un nombre de KPI y el grupo de medida con el que desea asociar el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  
@@ -280,4 +277,3 @@ En las tareas de esta lección definirá los KPI del proyecto Tutorial de [!INCL
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 8: definir acciones](../analysis-services/lesson-8-defining-actions.md)  
   
-

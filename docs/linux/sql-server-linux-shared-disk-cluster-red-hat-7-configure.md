@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: es-es
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -108,7 +113,10 @@ En la siguiente sección configurará el almacenamiento compartido y mover los a
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Configurar el almacenamiento compartido y mover archivos de base de datos 
 
-Hay una variedad de soluciones para proporcionar almacenamiento compartido. Este tutorial muestra cómo configurar almacenamiento compartido con NFS. Se recomienda seguir las prácticas recomendadas y usar Kerberos para proteger NFS (encontrará un ejemplo aquí: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). Si no lo hace, a continuación, cualquier persona que tenga acceso a la red y suplantar la identidad de la dirección IP de un nodo SQL podrá acceder a los archivos de datos. Como siempre, asegúrese de que el sistema de modelo de amenaza antes de usarlo en producción. Otra opción de almacenamiento es usar el recurso compartido de archivos SMB.
+Hay una variedad de soluciones para proporcionar almacenamiento compartido. Este tutorial muestra cómo configurar almacenamiento compartido con NFS. Se recomienda seguir las prácticas recomendadas y usar Kerberos para proteger NFS (encontrará un ejemplo aquí: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>Si no se protege NFS, a continuación, cualquier persona que tenga acceso a la red y suplantar la identidad de la dirección IP de un nodo SQL podrá acceder a los archivos de datos. Como siempre, asegúrese de que el sistema de modelo de amenaza antes de usarlo en producción. Otra opción de almacenamiento es usar el recurso compartido de archivos SMB.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Configurar el almacenamiento compartido con NFS
 
@@ -391,4 +399,3 @@ En este momento, ambas instancias de SQL Server se configuran para ejecutarse co
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Usar SQL Server en clúster de disco compartido de Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

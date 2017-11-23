@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78e525f5b156183e59dfd6df71ef499d96d07e18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3faaf19a1c591628ef97c4fe33fa0a54d4b077d5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configuración del proyecto (migración) (AccessToSQL)
 La configuración del proyecto de migración le permite configurar la forma en que se migren los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
@@ -98,4 +96,3 @@ Tamaño de lote utilizado durante la migración de datos. Se registra una transa
 ## <a name="see-also"></a>Vea también  
 [Reference(Access) de interfaz de usuario](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

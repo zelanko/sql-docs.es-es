@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- CacheSize property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7bc9aa494fed72b37d1147d2ee82d1308cb95c50
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a0cf574cdeda2f914c9a53d782c1871d5a9fa24
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cachesize-property-example-vc"></a>Ejemplo de la propiedad CacheSize (VC ++)
 Este ejemplo se utiliza la [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad que se va a mostrar la diferencia de rendimiento para una operación se realiza con y sin una caché del registro de 30.  
@@ -171,4 +167,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Vea también  
  [Propiedad CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

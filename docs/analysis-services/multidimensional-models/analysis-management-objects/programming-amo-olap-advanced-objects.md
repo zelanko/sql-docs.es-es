@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b58d475dfab97de8076bf058bfdd1171ddb37f35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dedfe7e17d6f8fd0be0bb769b9891880a83b2eba
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programar objetos avanzados OLAP en AMO
   En este tema se explican los detalles de la programación de objetos avanzados OLAP en Objetos de administración de análisis (AMO). Este tema contiene las siguientes secciones:  
@@ -502,4 +500,3 @@ static public void CreateTranslations(Database db)
  [Instalar datos de ejemplo y proyectos para el Tutorial de modelado Multidimensional de Analysis Services](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

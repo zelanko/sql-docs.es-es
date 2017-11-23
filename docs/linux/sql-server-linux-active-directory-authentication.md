@@ -6,16 +6,20 @@ ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords:
-- Linux, AAD authentication
+helpviewer_keywords: Linux, AAD authentication
+ms.workload: On Demand
+ms.openlocfilehash: ab9be968e11688a960e4306f82cf7ca47666f688
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticación de Active Directory con SQL Server en Linux
 
@@ -144,8 +148,13 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
    > Si ve un error, "paquetes necesarios no están instalados", debe instalar los paquetes mediante el Administrador de paquetes de la distribución de Linux antes de ejecutar el `realm join` comando nuevo.
    >
    > Si recibe un error, "Permisos insuficientes para unirse al dominio," necesitará póngase en contacto con un administrador de dominio que tiene los permisos necesarios para unir máquinas virtuales Linux a su dominio.
+   
+   > SQL Server usa SSSD y NSS para asignar cuentas de usuario y grupos a los identificadores de seguridad (SID). SSSD debe estar configurado y ejecutándose en orden para SQL Server crear los inicios de sesión de AD correctamente. Realmd normalmente hacen esto automáticamente como parte de unirse al dominio, pero en algunos casos necesitará hacer esto por separado.
+   >
+   > Consulte los siguientes procedimientos para configurar [SSSD manualmente](https://access.redhat.com/articles/3023951), y [configurar NSS para trabajar con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
-1. Compruebe que ahora puede recopilar información sobre un usuario del dominio y que puede adquirir un vale de Kerberos como dicho usuario.
+  
+5. Compruebe que ahora puede recopilar información sobre un usuario del dominio y que puede adquirir un vale de Kerberos como dicho usuario.
 
    We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
@@ -297,4 +306,3 @@ A continuación, explorar otros escenarios de seguridad para SQL Server en Linux
 
 > [!div class="nextstepaction"]
 >[Cifrado de las conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md)
-

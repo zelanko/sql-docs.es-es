@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - gateway diagnostic [ODBC]
 - error messages [ODBC], diagnostic messages
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4565deae5872986e0c0d5060499a34f9701b1180
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f31f5f97bafc7cd53972f83fa39ac10ea2554de5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="gateways-diagnostic-example"></a>Ejemplo de diagnóstico de las puertas de enlace
 En una arquitectura de puerta de enlace, un controlador envía solicitudes a una puerta de enlace que admita ODBC. La puerta de enlace envía las solicitudes a un DBMS. Dado que es el componente que interactúa con el Administrador de controladores, el controlador da formato y devuelve los argumentos para **SQLGetDiagRec**.  
@@ -49,4 +47,3 @@ Native Error:      -1
 Diagnostic Msg:   "[DEC][ODS Gateway][Rdb]%SQL-F-RELNOTDEF, Table EMPLOYEE is not "  
                   "defined in schema."  
 ```
-

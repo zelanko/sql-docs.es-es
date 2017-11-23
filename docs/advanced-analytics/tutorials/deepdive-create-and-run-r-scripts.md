@@ -1,31 +1,26 @@
 ---
 title: Crear y ejecutar Scripts de R | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff840a886e281fcb1f86fa7f79db6c187538766d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08549ecffb6877fd160db62bb54c70dbe9347ce3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-run-r-scripts"></a>Crear y ejecutar Scripts de R
 
@@ -178,5 +173,4 @@ Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.m
 ## <a name="previous-step"></a>Paso anterior
 
 [Definir y utilizar los contextos de proceso](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
 

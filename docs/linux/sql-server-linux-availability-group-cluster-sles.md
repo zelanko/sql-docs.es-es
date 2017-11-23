@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: d8ebecb0d6ff5892bdee8cf4cf98287f1ace33e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para grupo de disponibilidad de SQL Server
 
@@ -123,9 +122,9 @@ En servidores Linux configurar el grupo de disponibilidad y, a continuación, co
 
 3. Para configurar el nivel de comunicación de clúster (Corosync): 
 
-   A. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propondrá la dirección de red de eth0. O bien, escriba una dirección de red diferente, por ejemplo la dirección de bond0. 
+   a. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propondrá la dirección de red de eth0. O bien, escriba una dirección de red diferente, por ejemplo la dirección de bond0. 
 
-   B. Escriba una dirección de multidifusión. La secuencia de comandos propone una dirección aleatoria que puede usar como valor predeterminado. 
+   b. Escriba una dirección de multidifusión. La secuencia de comandos propone una dirección aleatoria que puede usar como valor predeterminado. 
 
    c. Escriba un puerto de multidifusión. La secuencia de comandos propone 5405 como valor predeterminado. 
 
@@ -313,4 +312,3 @@ Para obtener más información, vea:
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Operar el grupo de disponibilidad de alta disponibilidad](sql-server-linux-availability-group-failover-ha.md)
-

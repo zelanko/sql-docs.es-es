@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 04237bba7622a7b6745ff8768ea7a1bc5feda2b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a42d980837958ff2b605eeaac01dd61739bc1078
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definición de datos (minería de datos)
   Para la minería de datos, la categoría *consulta de definición de datos* significa instrucciones DMX o comandos XMLA que hacen lo siguiente:  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   
-

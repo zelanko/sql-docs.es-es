@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multidimensional data [ADO]
+helpviewer_keywords: multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2f0cdb5d3cad2bda529ff2abf5393701c7221a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e14c59fd0620129486408d33339e80624743f02
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajar con datos multidimensionales
 A *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o más dimensiones, que se utiliza para localizar o filtrar valores específicos de un cubo.  
@@ -90,5 +87,4 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programar con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Usar ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
-
+ [Uso de ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)

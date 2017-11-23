@@ -16,17 +16,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuración posterior a la instalación (Analysis Services)
   Después de instalar Analysis Services, se necesita cierta configuración adicional para que el servidor sea totalmente operativo y esté disponible para su uso general. En esta sección se presentan las tareas adicionales que completan la instalación. Según los requisitos de conexión, puede ser necesario configurar también la autenticación (vea [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
@@ -58,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [Instalación de Analysis Services en el modo PowerPivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
-

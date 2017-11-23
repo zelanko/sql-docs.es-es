@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tablas anidadas (Analysis Services - Minería de datos)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los datos se deben incluir en un algoritmo de minería de datos como una serie de casos contenidos dentro de una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un método único para tratar estos casos, mediante *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
-

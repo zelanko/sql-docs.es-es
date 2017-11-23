@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- customization file in RDS [ADO]
+helpviewer_keywords: customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cadf89ac579b11ab829ecd288fec77df81eb0603
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-customization-file"></a>Descripción de los archivos de personalización
 Cada encabezado de sección en el archivo de personalización consta de corchetes (**[]**) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
@@ -81,8 +78,7 @@ identifier
  [Sección UserList del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Opciones de cliente necesarias](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Escribir su propio controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 
 

@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_KPIS
+apiname: MDSCHEMA_KPIS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_KPIS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5eae9579701d6f3c2bea0235994cce3325c93130
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a347540894ee0dad15f2c5217bfd93d33d36cc98
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemakpis-rowset"></a>Conjunto de filas MDSCHEMA_KPIS
   Describe los indicadores clave de rendimiento (KPI) incluidos en una base de datos.  
@@ -75,7 +71,6 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) La restricción predeterminada es un valor de **1**. Un mapa de bits con uno de los siguientes valores válidos:<br /><br /> **1** CUBO<br /><br /> **2** DIMENSIÓN|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

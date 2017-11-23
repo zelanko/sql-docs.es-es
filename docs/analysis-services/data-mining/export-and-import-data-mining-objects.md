@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining structures [DMX], exporting
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38e6bf21897abd9d53fad57003e7f166e8605463
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exportar e importar objetos de minería de datos
   Además de la funcionalidad incluida en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear copias de seguridad, restaurar y migrar soluciones, la minería de datos de SQL Server proporciona la capacidad de transferir rápidamente estructuras y modelos de minería de datos entre servidores diferentes usando Extensiones de minería de datos (DMX).  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [Administración de las soluciones y los objetos de minería de datos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
-

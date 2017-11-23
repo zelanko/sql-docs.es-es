@@ -19,17 +19,16 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09d9c1909f093547dedd79823a06d9647f0bd6a8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo de clústeres de secuencia de Microsoft
   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo único que combina el análisis secuencial con la agrupación en clústeres. Puede usar este algoritmo para explorar datos que contienen eventos que pueden vincularse con rutas o *secuencias*. El algoritmo encuentra las secuencias más comunes y realiza una agrupación en clústeres para buscar secuencias que sean similares. En los ejemplos siguientes se muestran los tipos de secuencia que se pueden capturar como datos para el aprendizaje automático con el fin de proporcionar información sobre problemas comunes o escenarios empresariales:  
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
-

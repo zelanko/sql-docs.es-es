@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 338956898cd000448d547d23f18b649ee36cfe7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d67a595c97547934b04794f036d58445e8c282
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Habilitar una biblioteca DLL para que se ejecute en DCOM
 > [!IMPORTANT]
@@ -50,6 +48,5 @@ ms.lasthandoff: 09/09/2017
      Para que el archivo .dll sea accesible a través de DCOM e IIS en el mismo equipo, debe establecer los atributos de activación del componente en el complemento MMC Servicios de componentes. Después de establecer el atributo en **en el proceso del creador**, observará que un **Inproc** clave de servidor en el registro se ha agregado que apunta a los servicios de componente .dll sustituta.  
   
  Para obtener más información acerca de servicios de componentes (o Microsoft Transaction Service, si está utilizando Windows NT) y cómo realizar estos pasos, visite el sitio Web de Microsoft Transaction Server.
-
 
 

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCancel
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCancel
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCancel
-helpviewer_keywords:
-- SQLCancel function [ODBC]
+f1_keywords: SQLCancel
+helpviewer_keywords: SQLCancel function [ODBC]
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f6b3ba9320a577e636ac682912a6fb226ad04431
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 079a1ac7467348472c501c4dcb055d2cef8e9306
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcancel-function"></a>SQLCancel, función
 **Conformidad**  
@@ -112,19 +106,18 @@ SQLRETURN SQLCancel(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con un parámetro|[SQLBindParameter, función](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|Enlazar un búfer con un parámetro|[Función SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Rendimiento masiva insertar o actualizar las operaciones|[Función SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|Cancela una función que se ejecuta asincrónicamente en un identificador de conexión, por otra parte a la funcionalidad de **SQLCancel**.|[SQLCancelHandle (función)](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
-|Ejecutar una instrucción SQL|[SQLExecDirect, función](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Ejecutar una instrucción SQL preparada|[SQLExecute, función](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Cancela una función que se ejecuta asincrónicamente en un identificador de conexión, por otra parte a la funcionalidad de **SQLCancel**.|[Función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
+|Ejecutar una instrucción SQL|[Función SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Liberar un identificador de instrucción|[SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|Obtención de un campo de un registro de diagnóstico o un campo del encabezado del diagnóstico|[SQLGetDiagField, función](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
-|Obtener varios campos de una estructura de datos de diagnóstico|[SQLGetDiagRec, función](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
-|Devuelve el siguiente parámetro para enviar datos|[SQLParamData, función](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
-|Envío de datos de parámetro en tiempo de ejecución|[SQLPutData, función](../../../odbc/reference/syntax/sqlputdata-function.md)|  
-|Coloque el cursor en un conjunto de filas, actualizar los datos en el conjunto de filas, o actualizar o eliminar datos en el conjunto de resultados|[SQLSetPos, función](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
+|Obtención de un campo de un registro de diagnóstico o un campo del encabezado del diagnóstico|[Función SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|Obtener varios campos de una estructura de datos de diagnóstico|[Función SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|Devuelve el siguiente parámetro para enviar datos|[Función SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
+|Envío de datos de parámetro en tiempo de ejecución|[Función SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
+|Coloque el cursor en un conjunto de filas, actualizar los datos en el conjunto de filas, o actualizar o eliminar datos en el conjunto de resultados|[Función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

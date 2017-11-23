@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetConnectOption
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetConnectOption
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetConnectAttr
-helpviewer_keywords:
-- SQLGetConnectAttr function [ODBC]
+f1_keywords: SQLGetConnectAttr
+helpviewer_keywords: SQLGetConnectAttr function [ODBC]
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1162bf771e9a3d757986c0b6a94d1a36dd4892f4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc8f754301b5b0c0d5259cd7613bacdf302a06e7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetconnectattr-function"></a>Función SQLGetConnectAttr
 **Conformidad**  
@@ -128,12 +122,11 @@ SQLRETURN SQLGetConnectAttr(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Devolver el valor de un atributo de instrucción|[SQLGetStmtAttr, función](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
-|Establecer un atributo de conexión|[SQLSetConnectAttr, función](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|Establecer un atributo de entorno|[SQLSetEnvAttr, función](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
-|Establecer un atributo de instrucción|[SQLSetStmtAttr, función](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Devolver el valor de un atributo de instrucción|[Función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Establecer un atributo de entorno|[Función SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
+|Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-processing"></a>Procesamiento de transacciones
 A *transacciones* delimita el principio y al final de una serie de operaciones de acceso de datos ejecutadas a través de una conexión. Sujeto a las capacidades transaccionales del origen de datos, el **conexión** objeto también le permite crear y administrar las transacciones. Por ejemplo, mediante el proveedor Microsoft OLE DB para SQL Server para tener acceso a una base de datos en Microsoft SQL Server, puede crear varias transacciones anidadas para los comandos que se ejecuta.  
@@ -53,4 +51,3 @@ A *transacciones* delimita el principio y al final de una serie de operaciones d
   
 ## <a name="nested-transactions"></a>Transacciones anidadas  
  Para los proveedores que admiten transacciones anidadas, al llamar a la **BeginTrans** método dentro de una transacción abierta inicia una nueva transacción anidada. El valor devuelto indica el nivel de anidamiento: un valor devuelto de "1" indica que ha abierto una transacción de nivel superior (es decir, la transacción no está anidada dentro de otra transacción), "2" indica que ha abierto una transacción de segundo nivel (una transacción anidada dentro de una transacción de nivel superior), y así sucesivamente. Al llamar a **CommitTrans** o **RollbackTrans** afecta a solo más abierto recientemente la transacción; debe cerrar o revertir la transacción actual antes de que puede resolver las transacciones de nivel superiores.
-

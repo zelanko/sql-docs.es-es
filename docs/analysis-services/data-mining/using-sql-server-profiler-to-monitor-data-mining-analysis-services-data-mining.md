@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], Analysis Services
+helpviewer_keywords: Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f3a8a59a9bea7f2e11d4ec3d68d5ad2dcd28ec6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96b5485ebddba8823f262ba6a2229018d82a72fd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usar SQL Server Profiler para supervisar la minería de datos (Analysis Services - Minería de datos)
   Si dispone de los permisos necesarios, puede utilizar SQL Server Profiler para supervisar las actividades de minería de datos que se emiten como solicitudes que se envían a una instancia de SQL Server Analysis Services. La actividad de minería de datos puede incluir el procesamiento de modelos o estructuras, consultas de predicción o consultas de contenido, o la creación de nuevos modelos o estructuras.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Supervisar Analysis Services con SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   
-

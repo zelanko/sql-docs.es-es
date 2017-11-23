@@ -8,8 +8,7 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - attribute translations [Analysis Services]
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27715bc2c9333955931a1bc500a8267c0b1aa954
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Compatibilidad con traducción en Analysis Services
   En un modelo de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede incrustar varias traducciones de un título o descripción para proporcionar cadenas específicas de la configuración regional que coincidan con cada LCID. En el caso de los modelos multidimensionales, se pueden agregar traducciones del nombre de la base de datos, los objetos del cubo y los objetos de dimensión de la base de datos. En el caso de los modelos tabulares, puede traducir las descripciones y títulos de tabla y columna.  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [Sugerencias de globalización y mejores prácticas &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   
-

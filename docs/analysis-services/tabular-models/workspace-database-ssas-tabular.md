@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f9a2bcb97d74089651e4c9d1df92561fa298d397
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="workspace-database-ssas-tabular"></a>Base de datos del área de trabajo (SSAS tabular)
   La base de datos del área del trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
@@ -102,4 +101,3 @@ Mediante las propiedades de la Base de datos del área de trabajo y del Servidor
 [Propiedades del modelo &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Crear un cubo usando una vista del origen de datos
   Emplee este método para generar un nuevo cubo si piensa usar una vista del origen de datos existente. Este método le permite especificar la vista del origen de datos y seleccionar las tablas de hechos y de dimensiones que desea usar en dicha vista. A continuación, podrá elegir las dimensiones y las medidas que desea incluir en el cubo.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  En la página **Finalización del asistente** , puede ver los grupos de medida, las medidas y las dimensiones del nuevo cubo. En el cuadro **Nombre del cubo** , escriba un nombre para el cubo. A continuación, si está satisfecho con el cubo, haga clic en **Finalizar**. Haga clic en **Atrás** si desea volver a cualquier página anterior del asistente y realizar cambios.  
   
   
-

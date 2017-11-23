@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto está abierto, su origen puede ser la fila actual de un formato de archivo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), una dirección URL absoluta o una dirección URL relativa junto con un formato de archivo [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -73,7 +71,7 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indica el uso probable del documento, por ejemplo, de un abogado. Esto puede corresponder a la plantilla de Office que se usó para crear el documento.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica el tipo MIME del documento, que indica el formato como "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica el idioma en el que se almacena el contenido.|  
-|RESOURCE_CREATIONTIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se creó el recurso. El tiempo se expresa en formato de hora Universal coordinada (UTC).|  
+|RESOURCE_CREATIONTIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se creó el recurso. El tiempo se expresa en formato de hora Universal coordinada (UTC).|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora de último acceso a los recursos. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite a este miembro de hora.|  
 |RESOURCE_LASTWRITETIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se escribió por última vez el recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite a este miembro de hora.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Solo lectura. Indica el tamaño de secuencia de forma predeterminada del recurso, en bytes.|  
@@ -86,5 +84,4 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
   
 ## <a name="see-also"></a>Vea también  
  [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,24 +1,22 @@
 ---
 title: "Componentes de integración de Python con SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componentes de SQL Server para admitir la integración de Python
 
@@ -104,7 +102,7 @@ La licencia satélite de SQL se puede supervisar mediante el uso de windows (xEv
   + Escribir datos en tablas: por ejemplo, al guardar los resultados en una tabla
   + Crear objetos de base de datos: por ejemplo, si se guarda el script externo como parte de un nuevo procedimiento almacenado.
 
-  Cuando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] es utiliza como el contexto de proceso para ejecuta el script de Python desde un cliente remoto y el ejecutable de Python debe recuperar datos desde un origen externo, se usa para la reescritura de ODBC. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]se asigne la identidad del usuario que emite el comando remoto a la identidad del usuario en la instancia actual y ejecute el comando ODBC con las credenciales del usuario. La cadena de conexión necesaria para realizar esta llamada ODBC se obtiene del código de cliente.
+  Cuando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] es utiliza como el contexto de proceso para ejecuta el script de Python desde un cliente remoto y el ejecutable de Python debe recuperar datos desde un origen externo, se usa para la reescritura de ODBC. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]asigna la identidad del usuario que emite el comando remoto a la identidad del usuario en la instancia actual y se ejecuta el comando ODBC con las credenciales del usuario. La cadena de conexión necesaria para realizar esta llamada ODBC se obtiene del código de cliente.
 
 ## <a name="interaction-of-components"></a>Interacción de componentes
 
@@ -116,9 +114,9 @@ Al ejecutar Python "en" [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.
 
 Después de la secuencia de comandos se han incrustado en el procedimiento almacenado, cualquier aplicación que puede realizar un procedimiento almacenado llamada puede iniciar la ejecución del código Python.  A partir de ahí [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] administra la ejecución de código como se resume en el diagrama siguiente.
 
-![script de python de base de datos](../../advanced-analytics/python/media/script-in-db-python.png)
+![script de python de base de datos](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Una solicitud para el tiempo de ejecución de Python se indica mediante el parámetro  _@language= 'Python'_ pasa al procedimiento almacenado. SQL Server envía esta solicitud para el servicio Launchpad.
+1. Una solicitud para el tiempo de ejecución de Python se indica mediante el parámetro `@language='Python'` pasa al procedimiento almacenado. SQL Server envía esta solicitud para el servicio Launchpad.
 2. El servicio Launchpad inicia el selector adecuado; en este caso, PythonLauncher.
 3. PythonLauncher inicia el proceso de Python35 externo.
 4. BxlServer se coordina con el tiempo de ejecución de Python para administrar el intercambio de datos y el almacenamiento de resultados de trabajo.
@@ -131,11 +129,11 @@ Después de la secuencia de comandos se han incrustado en el procedimiento almac
 Puede ejecutar scripts de Python desde un equipo remoto, como un equipo portátil y hacer que se ejecutan en el contexto del equipo de SQl Server, si se cumplen estas condiciones:
 
 + Diseñar las secuencias de comandos correctamente
-+ El equipo remoto instala las bibliotecas de extensibilidad que usan servicios de aprendizaje de máquina
++ El equipo remoto ha instalado las bibliotecas de extensibilidad que usan servicios de aprendizaje de máquina. El [revoscalepy](what-is-revoscalepy.md) paquete es necesario para usar contextos de proceso remoto.
 
 En el diagrama siguiente se resume el flujo de trabajo global cuando las secuencias de comandos se envían desde un equipo remoto.
 
-![sqlcc remoto de python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![sqlcc remoto de python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Para las funciones que se admiten en **revoscalepy**, el tiempo de ejecución de Python llama a una función de enlace, que a su vez llama BxlServer.
 2. BxlServer se incluye con servicios de aprendizaje de máquina (en bases de datos) y se ejecuta en un proceso independiente del tiempo de ejecución de Python.
@@ -150,4 +148,3 @@ En el diagrama siguiente se resume el flujo de trabajo global cuando las secuenc
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Introducción a la arquitectura de Python en SQL Server](architecture-overview-sql-server-python.md)
-

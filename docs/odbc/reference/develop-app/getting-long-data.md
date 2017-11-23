@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>Obtener datos de tipo Long
 Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, por ejemplo, 255 caracteres. Estos datos pueden ser lo suficientemente pequeños como para almacenarse en un único búfer, como una descripción de la parte de varios miles de caracteres. Sin embargo, puede ser demasiado largo para almacenar en memoria, como documentos de texto largos o mapas de bits. Dado que estos datos no se puede almacenar en un único búfer, se recuperan desde el controlador en partes con **SQLGetData** después de que se hayan extraído los demás datos de la fila.  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  Algunos controladores no aplicar estas restricciones. Aplicaciones interoperables deben asumir que existen o para determinan qué restricciones no se aplican mediante una llamada a **SQLGetInfo** con la opción SQL_GETDATA_EXTENSIONS.  
   
  Si la aplicación no necesita todos los datos de un carácter o una columna de datos binarios, puede reducir el tráfico de red en los controladores basados en DBMS estableciendo el atributo de instrucción SQL_ATTR_MAX_LENGTH antes de ejecutar la instrucción. Así restringe el número de bytes de datos que se devolverán para cualquier carácter o columna binaria. Por ejemplo, suponga que una columna contiene texto largo documentos. Podría tener una aplicación que examina la tabla que contiene esta columna Mostrar solo la primera página de cada documento. Aunque puede simular este atributo de instrucción en el controlador, no hay ninguna razón para hacerlo. En concreto, si una aplicación desea truncar caracteres o datos binarios, se debe enlazar un búfer pequeño para la columna con **SQLBindCol** y dejar que el controlador truncar los datos.
-

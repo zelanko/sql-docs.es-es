@@ -1,29 +1,25 @@
 ---
 title: "Convertir código de R para usarlo en R Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d403b716d6be6c571f4de76a25ba3f6f7f5c4e8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed5f9052467492fe4bbbfb4ac0682c08a7ba8062
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-r-code-for-use-in-r-services"></a>Convertir código de R para usarlo en R Services
 
@@ -113,4 +109,3 @@ Para obtener más información, consulte [tipos de datos y bibliotecas de R](../
  + Evite la instalación de paquetes desde el código de R. En SQL Server, deben instalarse paquetes de antemano.
  
   Asegúrese de instalar paquetes en la biblioteca de paquete predeterminado utilizada por servicios de aprendizaje de máquina. Para obtener más información, vea [administración de paquetes de R para SQL Server](../r/r-package-management-for-sql-server-r-services.md)
-

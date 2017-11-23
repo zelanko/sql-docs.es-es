@@ -3,36 +3,36 @@ title: Crear origen de datos externo (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-data-source-transact-sql"></a>Crear origen de datos externo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Crea un origen de datos externo para PolyBase, las consultas de base de datos elástica o almacenamiento de blobs de Azure. Según el escenario, la sintaxis difiere significativamente. No se puede usar un origen de datos creado para PolyBase para las consultas de base de datos elástica.  De forma similar, no se puede usar un origen de datos creado para las consultas de bases de datos elásticas de PolyBase, etcetera. 
   
@@ -418,31 +418,7 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>Ejemplos: Almacenamiento de datos SQL Azure
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>G. Crear origen de datos externo para hacer referencia a almacenamiento de blobs de Azure
-Para crear un origen de datos externo para hacer referencia a su contenedor de almacenamiento de blobs de Azure, especifique el URI de almacenamiento de blobs de Azure y una credencial de ámbito de la base de datos que contiene la clave de cuenta de almacenamiento de Azure.
-
-En este ejemplo, el origen de datos externo es un contenedor de almacenamiento de blobs de Azure denominado dailylogs bajo la cuenta de almacenamiento de Azure denominada myaccount. El origen de datos externos de almacenamiento de Azure es para la transferencia de datos solo y no es compatible con la aplicación del predicado.
-
-En este ejemplo se muestra cómo crear la credencial de ámbito de la base de datos para la autenticación al almacenamiento de Azure. Especifique la clave de cuenta de almacenamiento de Azure en el secreto de credencial de base de datos. Especifique cualquier cadena en base de datos con ámbito de nombre de la identidad, no se utiliza para la autenticación al almacenamiento de Azure. A continuación, se utiliza la credencial en la instrucción que crea un origen de datos externo.
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>H. Crear origen de datos externo para la referencia de almacén de Azure Data Lake
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Crear origen de datos externo para la referencia de almacén de Azure Data Lake
 Conectividad de almacén de Data lake de Azure se basa en el URI de ADLS y entidad de seguridad de servicio de la aplicación Azure Active directory. Documentación para crear esta aplicación puede encontrarse en[autenticación de almacén de datos lake mediante Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```tsql
@@ -465,18 +441,7 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>Ejemplos: Almacenamiento de datos paralelos
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>I. Crear origen de datos externo para referencia Hadoop
-Para crear un origen de datos externo para hacer referencia a su clúster Hortonworks o Cloudera Hadoop, especifique el nombre de equipo o dirección IP del puerto y Hadoop Namenode.
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>J. Crear origen de datos externos en Hadoop de referencia con la aplicación habilitada
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Crear origen de datos externos en Hadoop de referencia con la aplicación habilitada
 Especifique la opción JOB_TRACKER_LOCATION para habilitar el cálculo de inserción a Hadoop para las consultas de PolyBase. Una vez habilitada, PolyBase usa una decisión basada en costos para determinar si el cálculo de la consulta se debe aplicar en Hadoop o se deben mover todos los datos para procesar la consulta en SQL Server. 
 
 ```tsql
@@ -488,7 +453,7 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>K. Crear origen de datos externo para hacer referencia a almacenamiento de blobs de Azure
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Crear origen de datos externo para hacer referencia a almacenamiento de blobs de Azure
 Para crear una referencia externa ubicación de origen de origen de datos para hacer referencia a su contenedor de almacenamiento de blobs de Azure, especifique el URI de almacenamiento de blobs de Azure como los datos externos. Agrega tu clave de cuenta de almacenamiento de Azure al archivo de core-site.xml PDW para la autenticación.
 
 En este ejemplo, el origen de datos externo es un contenedor de almacenamiento de blobs de Azure denominado dailylogs bajo la cuenta de almacenamiento de Azure denominada myaccount. El origen de datos externos de almacenamiento de Azure es para la transferencia de datos solo y no es compatible con la aplicación del predicado.
@@ -501,7 +466,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>Ejemplos: Las operaciones masivas   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>L. Crear un origen de datos externo para operaciones masivas recuperar datos desde almacenamiento de blobs de Azure.   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Crear un origen de datos externo para operaciones masivas recuperar datos desde almacenamiento de blobs de Azure.   
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Utilice el siguiente origen de datos para operaciones masivas utilizando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). La credencial usada, debe crearse con `SHARED ACCESS SIGNATURE` como la identidad. Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```tsql
@@ -523,5 +488,4 @@ Para ver este ejemplo en uso, consulte [BULK INSERT](../../t-sql/statements/bulk
 [Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

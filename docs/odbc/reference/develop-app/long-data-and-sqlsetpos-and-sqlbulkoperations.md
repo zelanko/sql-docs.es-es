@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51662d6540fb8db0eed5456e918313a71ccbccc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Datos de tipo Long y SQLSetPos y SQLBulkOperations
 Como sucede con los parámetros en instrucciones SQL, se pueden enviar datos largos cuando actualizar filas con **SQLBulkOperations** o **SQLSetPos** o al insertar filas con **SQLBulkOperations**. Los datos se envían en partes, con varias llamadas a **SQLPutData**. Columnas para que se envían los datos en tiempo de ejecución se conocen como *columnas de datos en ejecución*.  
@@ -54,4 +52,3 @@ Como sucede con los parámetros en instrucciones SQL, se pueden enviar datos lar
 6.  Llamadas **SQLParamData** nuevo para indicar que ha enviado todos los datos de la columna. Si no hay ninguna columna de datos en ejecución para el que no se han enviado datos, el controlador devuelve SQL_NEED_DATA y el valor único de la columna de datos en ejecución siguiente: la aplicación vuelve al paso 5. Si se han enviado datos para todas las columnas de datos en ejecución, los datos de la fila se envían al origen de datos. **SQLParamData** , a continuación, devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO y puede devolver cualquier SQLSTATE **SQLBulkOperations** o **SQLSetPos** puede devolver.  
   
  Después de **SQLBulkOperations** o **SQLSetPos** devuelve SQL_NEED_DATA y antes de que se han enviado datos completamente para la última columna de datos en ejecución, la instrucción se encuentra en un estado de datos necesita. En este estado, la aplicación puede llamar a solo **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, o **SQLGetDiagRec**; todas las demás funciones devuelven SQLSTATE HY010 (error de secuencia de función). Al llamar a **SQLCancel** cancela la ejecución de la instrucción y lo devuelve a su estado anterior. Para obtener más información, consulte [tablas de transición de estado de apéndice B: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
-

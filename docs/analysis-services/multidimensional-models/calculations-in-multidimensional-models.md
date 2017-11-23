@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>Cálculos en modelos multidimensionales
   Use la pestaña **Cálculos** del Diseñador de cubos para crear miembros calculados, conjuntos con nombre y otros cálculos de expresiones multidimensionales (MDX).  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  Para eliminar un cálculo existente, en la pestaña **Cálculos** , en el panel **Organizador de script** , seleccione el cálculo que desee eliminar y haga clic en **Eliminar** en el menú **Editar** o haga clic en el icono de **Eliminar** de la barra de herramientas. También puede hacer clic con el botón derecho en el cálculo en el panel **Organizador de scripts** y seleccionar **Eliminar** en el menú contextual.  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS security [ADO]
+helpviewer_keywords: RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a84a52dc353d11a391ff79c5f0975d71540cd08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72a46915beed5bb65953788b2b1b7283d90cb8e5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="securing-rds-applications"></a>Proteger aplicaciones RDS
 Este tema proporciona información de seguridad de RDS.  
@@ -50,6 +47,5 @@ Este tema proporciona información de seguridad de RDS.
   
 ## <a name="password-authentication"></a>Autenticación de contraseña  
  RDS se puede comunicar con un servidor Web de IIS que se ejecuta en uno de los tres modos de autenticación de contraseña: anónimo, básico o autenticación de desafío/respuesta de NT (denominado autenticación integrada de Windows en Windows 2000). Esta configuración define cómo un servidor Web controla el acceso a través de él, como requerir que un equipo cliente tenga privilegios de acceso explícito en el servidor Web de NT.
-
 
 

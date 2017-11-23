@@ -23,17 +23,16 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93df14efa013e5f8768db94184aaf2f4203a62ef
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo de serie temporal de Microsoft
   El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona varios algoritmos optimizados para la previsión en el tiempo de valores continuos, tales como las ventas de productos. Mientras que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como por ejemplo los árboles de decisión, requieren columnas adicionales de nueva información como entrada para predecir una tendencia, los modelos de serie temporal no las necesitan. Un modelo de serie temporal puede predecir tendencias basadas únicamente en el conjunto de datos original utilizado para crear el modelo. Es posible también agregar nuevos datos al modelo al realizar una predicción e incorporar automáticamente los nuevos datos en el análisis de tendencias.  
@@ -169,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

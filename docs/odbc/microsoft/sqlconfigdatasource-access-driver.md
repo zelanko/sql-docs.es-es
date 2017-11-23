@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ffa0ff5fe4f788a3ec72ee003db166514f132db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (controlador de Access)
 > [!NOTE]  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |SUBPROCESOS|El número de subprocesos en segundo plano para el motor para usar. Este valor predeterminado es 3, pero puede cambiarse.<br /><br /> Esto establece la misma opción como **subprocesos** en el cuadro de diálogo de instalación.|  
 |UID|Para el controlador de Microsoft Access, usa el nombre de Id. de usuario de inicio de sesión.|  
 |USERCOMMITSYNC|Determina si el controlador de Microsoft Access llevará a cabo transacciones definidas por el usuario de forma asincrónica. Este valor está establecido inicialmente en "Sí", lo que significa que el controlador de Microsoft Access esperará confirmaciones en una transacción definida por el usuario se complete.<br /><br /> El valor de esta opción no debe cambiarse sin considerar atentamente las consecuencias. Para obtener más información acerca de la opción, vea el *Guía del programador del motor de base de datos Jet de Microsoft*.<br /><br /> Esto establece la misma opción como **UserCommitSync** en el cuadro de diálogo de instalación.|
-

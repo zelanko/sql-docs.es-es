@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinámicos de ODBC
 Un cursor dinámico es justamente eso: dinámica. Puede detectar los cambios realizados en la pertenencia, el orden y los valores del conjunto una vez abierto el cursor de resultados. Por ejemplo, suponga que un cursor dinámico obtiene dos filas y otra aplicación, a continuación, actualiza una de esas filas y elimina la otra. Si el cursor dinámico, a continuación, intenta capturar estas filas, no encontrará la fila eliminada pero devolverá los nuevos valores de la fila actualizada.  
@@ -51,4 +49,3 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Esta instrucción crea un segundo conjunto de resultados, el primer conjunto de filas de los cuales es el siguiente conjunto de filas en el conjunto de resultados original: en este caso, el conjunto de filas de la tabla Customers. El cursor, devuelve este conjunto de filas a la aplicación.  
   
  Es interesante tener en cuenta que un cursor dinámico que se implementa de esta manera realmente crea muchos conjuntos de resultados, que permite que se detectan los cambios en el conjunto de resultados original. La aplicación nunca se entera de la existencia de estos conjuntos de resultados auxiliar; simplemente aparece como si el cursor es capaz de detectar cambios en el conjunto de resultados original.
-

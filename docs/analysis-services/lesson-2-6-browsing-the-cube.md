@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 00dee701e3bea7e30924352e136c6202d6a10ced
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ceaf229bb81771fe2b839f77858d0f41d2bd28ba
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Lección 2-6-examinar el cubo
 Una vez implementado un cubo, los datos de este pueden verse en la pestaña **Explorador** del Diseñador de cubos y los datos de dimensión pueden verse en la pestaña **Explorador** del Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
@@ -56,4 +53,3 @@ Excel suele ofrecer una mejor experiencia de exploración porque puede explorar 
   
   
   
-

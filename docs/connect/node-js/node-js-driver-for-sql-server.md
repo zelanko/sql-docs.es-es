@@ -8,22 +8,20 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c3f3203af56f39a4f9beffc8a7a616c0cde64270
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049852043326d39188592b19077276cf04f98764
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Controlador Node.js para SQL Server
 
@@ -35,8 +33,8 @@ Puede conectarse a una base de datos de SQL con Node.js en Windows, Linux o Mac.
   
 ## <a name="getting-started"></a>Introducción  
 * [Paso 1: Configurar el entorno de desarrollo para la implementación de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
-* [Paso 2: Crear una base de datos SQL para el desarrollo de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
-* [Paso 3: Prueba de concepto que se conecta a SQL con Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
+* [Paso 2: crear una instancia de SQL Database para el desarrollo de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
+* [Paso 3: prueba de concepto de la conexión a SQL mediante Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   
 ## <a name="documentation"></a>Documentación  
   
@@ -52,4 +50,3 @@ Puede conectarse a una base de datos de SQL con Node.js en Windows, Linux o Mac.
 * [Introducción a Node.js en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
 * [Introducción a Node.js en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
 * [Introducción a Node.js en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
-

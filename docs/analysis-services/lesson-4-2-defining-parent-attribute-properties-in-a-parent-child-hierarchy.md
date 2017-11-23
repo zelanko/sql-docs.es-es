@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e742a280ac4828cd708a3702545e9168cf8b0f73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e369924d45fe9cc718103cf1e763340e2c03c018
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lección 4: 2: definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios
 Una jerarquía de elementos primarios y secundarios es una jerarquía de una dimensión que está basada en dos columnas de tabla. La combinación de estas columnas define las relaciones jerárquicas entre los miembros de dimensión. La primera columna, denominada *columna de claves de miembro*, identifica a cada miembro de dimensión. La otra columna, denominada *columna principal*, identifica al elemento principal de cada miembro de dimensión. La propiedad **NamingTemplate** de un atributo primario determina el nombre de cada nivel en la jerarquía de elementos primarios y secundarios, y la propiedad **MembersWithData** determina si deben mostrarse los datos de los miembros primarios.  
@@ -122,4 +119,3 @@ En las tareas de este tema, creará una plantilla de asignación de nombres que 
   
   
   
-

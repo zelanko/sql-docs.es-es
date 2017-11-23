@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-parameter-values"></a>Establecer valores de parámetro
 Para establecer el valor de un parámetro, la aplicación simplemente establece el valor de la variable enlazado al parámetro. No es importante cuando se establece este valor, siempre y cuando se establece antes de que se ejecuta la instrucción. La aplicación puede establecer el valor antes o después de enlazar la variable y puede cambiar el valor tantas veces como desee. Cuando se ejecuta la instrucción, el controlador simplemente recupera el valor actual de la variable. Esto es especialmente útil cuando se ejecuta una instrucción preparada varias veces; la aplicación establece nuevos valores para algunas o todas las variables de cada vez que se ejecuta la instrucción. Para obtener un ejemplo de esto, consulte [ejecución preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md), anteriormente en esta sección.  
@@ -60,4 +57,3 @@ Para establecer el valor de un parámetro, la aplicación simplemente establece 
  [d] controladores siempre deben comprobar este valor para ver si se trata de un valor especial, como SQL_NULL_DATA.  
   
  Lo que hace un controlador con un valor de parámetro en tiempo de ejecución depende del controlador. Si es necesario, el controlador convierte el valor de la longitud de bytes y de tipo de datos de C de la variable enlazada al tipo de datos SQL, precisión y escala del parámetro. En la mayoría de los casos, el controlador, a continuación, envía el valor al origen de datos. En algunos casos, se da formato al valor como texto y se inserta en la instrucción SQL antes de enviar la instrucción al origen de datos.
-

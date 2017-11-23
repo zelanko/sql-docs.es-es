@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70bef5a2817b0a7bbdd24b01ca07f357b9c5237d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a la marca de tiempo C:
 El identificador de la marca de tiempo de tipo de datos SQL de ODBC es:  
@@ -58,4 +56,3 @@ _C_TYPE_TIMESTAMP|No se trunca la parte de las fracciones de segundo de marca de
  [f] es el tamaño del tipo de datos C correspondiente.  
   
  Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres C, la cadena resultante es en el "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[. *f...* ] "formato, donde puede usarse hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por el valor de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)
-

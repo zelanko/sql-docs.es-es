@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: 1dcdaeae29d69823c296e6336e4bc4ee90b43968
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 5f5a567fba47be944dcf02f2facd2253d7852e88
-ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Migrar bases de datos de Access a SQL Server: base de datos de SQL de Azure (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) es una herramienta que proporciona un entorno completo que le ayuda a migrar rápidamente bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Mediante el uso de SSMA, puede revisar el acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure objetos de base de datos, evaluar la base de datos de Access para la migración, convierte los objetos de base de datos de Access, cargarlos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, y, a continuación, migrar los datos.  
@@ -69,4 +67,3 @@ También puede usar al Asistente para migración para guiarle a través de este 
 ## <a name="see-also"></a>Vea también  
 [Introducción a SQL Server Migration Assistant para Access](http://msdn.microsoft.com/462a731f-08f1-44e1-9eeb-4deac6d2f6c5)  
 [Preparar las bases de datos de acceso para la migración](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)
-

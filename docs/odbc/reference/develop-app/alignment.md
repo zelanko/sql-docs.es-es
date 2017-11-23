@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Alignment
 Los problemas de alineación en una aplicación ODBC generalmente no son diferentes de están en cualquier otra aplicación. Es decir, la mayoría de las aplicaciones de ODBC tiene problemas de pocos o ningún con alineación. Las penalizaciones por no alinear direcciones varían según el hardware y el sistema operativo y podrían ser como secundaria como una ligera disminución del rendimiento o tan grave como un error irrecuperable de tiempo de ejecución. Por lo tanto, las aplicaciones ODBC y las aplicaciones ODBC portables en concreto, deberían tener precaución alinear los datos correctamente.  
@@ -55,4 +52,3 @@ Los problemas de alineación en una aplicación ODBC generalmente no son diferen
  ![Enlace por límite de alineación mayor](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Aunque esta solución deja agujeros mayor, el código para implementarlo es relativamente sencillo y rápido. En la mayoría de los casos, Esto desplaza la penalización de pago en memoria no utilizada. Para obtener un ejemplo que utiliza este método, consulte [utilizando SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).
-

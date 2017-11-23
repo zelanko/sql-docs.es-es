@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-sql"></a>SQL dinámico
 Aunque SQL estático funciona bien en muchas situaciones, hay una clase de aplicaciones en el que el acceso a datos no se puede determinar de antemano. Por ejemplo, suponga que una hoja de cálculo permite al usuario especificar una consulta, que la hoja de cálculo, a continuación, se envía al DBMS para recuperar los datos. El contenido de esta consulta obviamente no puede conocerse al programador cuando se escribe el programa de hoja de cálculo.  
@@ -48,4 +46,3 @@ Aunque SQL estático funciona bien en muchas situaciones, hay una clase de aplic
 3.  El programa puede usar la instrucción EXECUTE repetidamente, proporcionar valores de parámetro diferente cada vez que se ejecuta la instrucción dinámica.  
   
  Ejecución preparada todavía no es igual que SQL estático. En SQL estático, los cuatro primeros pasos de procesamiento de una instrucción SQL tienen lugar en tiempo de compilación. En una ejecución preparada, estos pasos siguen realizando en tiempo de ejecución, pero se realizan una sola vez; ejecución del plan tiene lugar cuando se llama a EXECUTE. Esto ayuda a eliminar algunas de las desventajas de rendimiento inherentes a la arquitectura de SQL dinámico. La ilustración siguiente muestra las diferencias entre SQL estáticos, SQL dinámico con la ejecución inmediata y SQL dinámico con la ejecución preparada.
-

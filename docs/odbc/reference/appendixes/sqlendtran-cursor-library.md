@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLEndTran function [ODBC], Cursor Library
+helpviewer_keywords: SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7ca0f1299933293990fc2c977a4a6602f9d4400
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (biblioteca de cursores)
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 -   Para orígenes de datos que cierra los cursores en los límites de transacción, la biblioteca de cursores cierra los cursores y elimina las memorias caché para todas las instrucciones de la conexión.  
   
 -   Para los orígenes de datos que se eliminan mediante instrucciones preparadas en límites de la transacción, la aplicación debe reprepare en la conexión antes de volver a ejecutar ellos todas las instrucciones preparadas.
-

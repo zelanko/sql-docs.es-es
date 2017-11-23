@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9bb3e255d24b989fa4d4e9217f16b7aacbbf0697
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b1af93e52bc1a2fbd95059c86f73a0481572399
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty, elemento (CSDLBI)
   El elemento NavigationProperty es un tipo complejo que extiende el tipo Member de CSDL para poder navegar en modelos de datos de Business Intelligence.  
@@ -78,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Descripción del modelo de objetos tabulares en compatibilidad 1050 1103 a través de niveles](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   
-

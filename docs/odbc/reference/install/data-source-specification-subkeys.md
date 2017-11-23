@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5a33c92d5762702f7e309d70ef48f076ecc0b2b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61b485f55be504e894754f74c4ab779b9ebbaf5a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-source-specification-subkeys"></a>Subclaves de especificación del origen de datos
 Cada origen de datos aparece en la subclave de orígenes de datos ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de orígenes de datos ODBC. Los valores bajo esta subclave deben la DLL del controlador en la lista y pueden mostrar una descripción del origen de datos. Si el controlador admite traductores, los valores pueden enumerar el nombre de un traductor de manera predeterminada, el archivo DLL de traducción predeterminado y la opción de traducción predeterminado. Los valores también pueden mostrar otra información requerida por el controlador para conectarse al origen de datos. Por ejemplo, el controlador podría requerir un nombre de servidor, el nombre de base de datos o el nombre del esquema.  
@@ -54,4 +52,3 @@ TranslationDLL : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL
 TranslationName : REG_SZ : MS Code Page Translator  
 TranslationOption : REG_SZ : 12500850  
 ```
-

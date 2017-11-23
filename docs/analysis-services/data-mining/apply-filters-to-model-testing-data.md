@@ -18,17 +18,16 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a los datos de prueba del modelo
   Al especificar un origen de datos externo que se va a utilizar para probar un modelo, opcionalmente puede aplicar un filtro para restringir los datos de entrada. Por ejemplo, es posible que desee probar el modelo específicamente para realizar predicciones para los clientes con a un intervalo de ingresos determinado.  
@@ -101,7 +100,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Vea también  
  [Elegir y asignar datos de prueba para el modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Uso de datos de tabla anidada como entrada para un gráfico de precisión](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Elegir un tipo de gráfico de precisión y establecer opciones del gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
-

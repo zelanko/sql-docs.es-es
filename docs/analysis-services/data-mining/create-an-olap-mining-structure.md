@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
   La creación de un modelo de minería de datos basado en un cubo OLAP o en otro almacén de datos multidimensionales presenta numerosas ventajas. Una solución OLAP ya contiene enormes cantidades de datos que han sido bien organizados, limpiados y con un formato correcto; sin embargo, su complejidad es tal que es poco probable que los usuarios encuentren patrones significativos para la exploración ad hoc. La minería de datos permite detectar nuevas correlaciones y proporcionar una visión general práctica.  
@@ -172,7 +171,6 @@ ms.lasthandoff: 09/01/2017
  [Columnas de estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propiedades de la estructura de minería de datos y columnas de estructura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Propiedades de estructuras de minería de datos y columnas de estructuras](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
-

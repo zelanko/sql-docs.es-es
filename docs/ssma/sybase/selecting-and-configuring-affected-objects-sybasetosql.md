@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Affected Objects
+helpviewer_keywords: Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97bb6a73aa744a6471a48ba16fc3ee9b52dea67e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e5f4fcb5af81da2b78520542e2b57bd66bc4fd1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Seleccionar y configurar afectados objetos (SybaseToSQL)
 En esta página puede seleccionar tablas y claves externas, cambios en el que se deben comparar SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -35,7 +32,7 @@ En el árbol de objetos de Sybase situado en el lado izquierdo de la ventana, co
   
 Si no se puede comprobar el evaluador de SSMA cualquiera de estos objetos, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se pueden comparar estos objetos y anule la selección de objetos incorrectos.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabla  
 La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionada. La cuadrícula contiene la siguiente información acerca de la tabla seleccionada:  
   
 -   Nombre de la columna  
@@ -57,7 +54,7 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
 ## <a name="sql"></a>SQL  
 Pestaña SQL contiene la "crear una tabla" SQL de la tabla seleccionada.  
   
-## <a name="data"></a>Datos  
+## <a name="data"></a>data  
 Ficha de datos muestra los datos presentes en la tabla seleccionada.  
   
 ## <a name="properties"></a>Propiedades  
@@ -130,4 +127,3 @@ Puede editar las instrucciones SELECT para proporcionar comprobación personaliz
 [Ejecutar casos de prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Si lo desea, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro encontrado; en caso contrario, se establece la posición al final (o inicio) de la **conjunto de registros**.  
@@ -79,4 +76,3 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  [Propiedad Index](../../../ado/reference/ado-api/index-property.md)   
  [Optimizar la propiedad dinámica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [El método de búsqueda](../../../ado/reference/ado-api/seek-method.md)
-

@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
+ms.openlocfilehash: 5b901062920165f1ffcbaf7e77cb50e3b7d9cabf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 83f6e12a38d5fef4ab27cc39257906c4263aa846
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Instalar el Agente SQL Server en Linux
 
@@ -99,4 +98,3 @@ Si tiene una instalación sin conexión, busque la descarga del paquete del Agen
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información sobre cómo usar el Agente SQL Server para crear, programar y ejecutar trabajos, consulte [ejecutar un trabajo de agente SQL Server en Linux](sql-server-linux-run-sql-server-agent-job.md).
-

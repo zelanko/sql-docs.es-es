@@ -34,17 +34,16 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24dda88f2855c4b5a83814203092e12d645a1e84
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo de asociación de Microsoft
   El algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo que suele usarse para los motores de recomendación. Un motor de recomendación recomienda elementos a los clientes basándose en los elementos que ya han adquirido o en los que tienen interés. El algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también resulta útil para el análisis de la cesta de compra.   
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

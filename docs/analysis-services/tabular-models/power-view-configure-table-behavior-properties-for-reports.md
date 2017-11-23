@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurar las propiedades de comportamiento de tablas para informes
   Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
@@ -147,4 +145,3 @@ ms.lasthandoff: 09/01/2017
  Después de haber evaluado las tablas del modelo y establecer las propiedades del comportamiento de las tablas para que las que contengan filas de detalles aparezcan siempre como elementos individuales, puede optimizar aún más el modelo mediante propiedades o configuraciones adicionales.  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b487f4e00d8ae1aa3dd644eadef07516fcbfb45b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c24c6ad5bbfba2f93039bd53609ddd86010e10ee
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxis y ejemplos del filtro de modelos (Analysis Services: Minería de datos)
   En esta sección se proporciona información detallada sobre la sintaxis para los filtros de modelo, junto con expresiones de ejemplo.  
@@ -325,4 +324,3 @@ FILTER (EXISTS (Products))
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar el modo DirectQuery en SSMS
 
@@ -139,7 +137,6 @@ ms.lasthandoff: 09/01/2017
  [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Orígenes de datos compatibles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
- [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [Supervisión de una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

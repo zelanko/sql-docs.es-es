@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], guid
 - GUID data type [ODBC]
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45310bcea2a98d4c1dcb4c4ca782a84c7107ed6d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36aadcf415fcf447f87f5952f6b6d32c921b07c2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-guid"></a>C a SQL: GUID
 El identificador para el tipo de datos C de ODBC de GUID es:  
@@ -49,4 +47,3 @@ El identificador para el tipo de datos C de ODBC de GUID es:
  [a] todos los valores hexadecimales son válidos como un GUID.  
   
  El controlador omite el valor de longitud/indicador al convertir datos del tipo de datos GUID C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos GUID C. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
-

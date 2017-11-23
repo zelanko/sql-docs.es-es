@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Columns::raw_Append
 - Columns::Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab08924023bb1179a4f3b5dbbd7000fc1c337f09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c6c9323dbc1e3c69445dc09ad06373856fb67bc
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-columns"></a>Append (método) (columnas ADOX)
 Agrega un nuevo [columna](../../../ado/reference/adox-api/column-object-adox.md) el objeto a la [columnas](../../../ado/reference/adox-api/columns-collection-adox.md) colección.  
@@ -68,4 +65,3 @@ Columns.Append Column [,Type] [,DefinedSize]
  [Append (método) (tablas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append (método) (usuarios ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Append (método) (vistas ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
-

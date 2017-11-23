@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- access denied error in RDS [ADO]
+helpviewer_keywords: access denied error in RDS [ADO]
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad54a40b51084bbf17c754521d914e08222408bb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0338761d1fbd9991185959cfcac4d54746fb6ebb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="internet-server-error-access-denied"></a>Error de servidor de Internet: Acceso denegado
 Si recibe este error, normalmente significa que Microsoft Internet Information Services (IIS) devolvió el estado siguiente:  
@@ -39,7 +36,6 @@ Si recibe este error, normalmente significa que Microsoft Internet Information S
   
 ## <a name="see-also"></a>Vea también  
  [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

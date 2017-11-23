@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - locking [XML for Analysis]
 - XML for Analysis, locking
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7c47c9c9b1b875cd7290df53ab27c59251a56783
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8924b6a21a0bb815ec377072615db2efb4fa2f07
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Bloquear y desbloquear bases de datos (XMLA)
   Puede bloquear y desbloquear bases de datos utilizando, respectivamente, el [bloqueo](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) y [Unlock](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) comandos de XML for Analysis (XMLA). Normalmente, otros comandos XMLA bloquean y desbloquean objetos automáticamente según sea necesario para completar el comando durante la ejecución. Se puede bloquear o desbloquear una base de datos para llevar a cabo varios comandos en una única transacción, como explícitamente un [lote](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando, evitando que otras aplicaciones confirmen una transacción de escritura a la base de datos.  
@@ -57,7 +55,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Vea también  
  [Bloquear elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
  [Desbloquear elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

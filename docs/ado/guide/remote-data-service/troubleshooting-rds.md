@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- troubleshooting RDS [ADO]
+helpviewer_keywords: troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 255f3ad49d72da92b8ba0bc8091110fac92749a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 961b010d2dc2ecf2e22e36346420f110c4dff8f8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-rds"></a>Solución de problemas de RDS
 > [!IMPORTANT]
@@ -33,20 +30,19 @@ ms.lasthandoff: 09/09/2017
   
  Consulte esta sección para conocer soluciones a errores específicos o problemas con RDS. Esta sección contiene los temas siguientes.  
   
--   [Configurar RDS en Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Configuración de RDS en Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
 -   ["Error de servidor de Internet: acceso denegado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
--   [RDS devuelve el Error "Objeto Stream no leído"](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS devuelve el error "Stream Not Read" (Objeto Stream no leído)](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   
 -   [Interbloqueos con nivel de aislamiento Repeatable de lectura](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [Garantizar espacio suficiente en TempDB](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [Garantía de espacio suficiente de TempDB](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
   
--   [Minimizar el uso de espacio de archivo de registro](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [Minimización del uso de espacio de archivo de registro](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
+ [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

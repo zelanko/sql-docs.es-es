@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6e9f4cb753a7849e87c8b4725e7e0fad0e953ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="multiple-results"></a>Varios resultados
 A *resultado* algo devuelto por el origen de datos después de ejecutar una instrucción. ODBC tiene dos tipos de resultados: conjuntos de resultados y recuento de filas. *Recuento de filas* son el número de filas afectadas por una instrucción update, delete o insert instrucción. Lotes, se describe en [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), puede generar varios resultados.  
@@ -61,4 +59,3 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  Es específica del controlador si se ejecuta la instrucción del lote completo antes de que todos los resultados estén disponibles. En algunas implementaciones, este es el caso; en otros casos, al llamar a **SQLMoreResults** desencadena la ejecución de la siguiente instrucción del lote.  
   
  Si se produce un error en una de las instrucciones en un lote, **SQLMoreResults** devolverá SQL_ERROR o SQL_SUCCESS_WITH_INFO. Si se anula el lote al error de la instrucción o la instrucción con errores era la última instrucción del lote, **SQLMoreResults** devolverá SQL_ERROR. Si no se anula el lote al error de la instrucción y la instrucción con errores no era la última instrucción del lote, **SQLMoreResults** devuelve SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO indica que se generó al menos un conjunto de resultados o recuento y que no se anuló el lote.
-

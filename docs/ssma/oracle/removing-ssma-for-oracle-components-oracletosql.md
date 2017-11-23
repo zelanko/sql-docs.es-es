@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Uninstalling the Extension Pack
+helpviewer_keywords: Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: e0dea581d93f996f710a64bf35c8d208740b1d17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0a8ea64d46ae878e9e40e98a0b302ceb0850d90
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Eliminación de SSMA para los componentes de Oracle (OracleToSQL)
 Cuando termine de migrar bases de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe desinstalar los componentes SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, no debe desinstalar el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a menos que las bases de datos migrados ya no use las funciones de la **ssma_oracle** esquema de la **sysdb** base de datos.  
@@ -65,4 +62,3 @@ Después de la desinstalación, puede confirmar que los objetos en el **sysdb.ss
 [Instalación de SSMA para cliente de Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Instalación de componentes SSMA en SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 741ccfc8e9a096b60eca94b125890d48f65eb764
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-program"></a>Programa de instalación
 > **Nota:** a partir de Windows XP y Windows Server 2003, **ODBC se incluye en el sistema operativo Windows**. Solo explícitamente debe instalar ODBC en versiones anteriores de Windows.  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  La cantidad de la instalación se haya realizado realmente por el programa de instalación depende de qué funciones llamadas en el archivo DLL del instalador. El archivo DLL del instalador contiene funciones para instalar los componentes individuales de ODBC. El programa de instalación simplemente llama **SQLInstallDriverManager**, **SQLInstallDriverEx**, o **SQLInstallTranslatorEx** en el instalador de DLL para recuperar la ruta de acceso de la directorio en el que el componente está instalarse y para agregar información sobre el componente en el registro. Estas funciones no realmente copiar los archivos; el programa de instalación hace con la información de los argumentos de estas funciones.  
   
  El archivo DLL del programa de instalación también contiene las funciones para quitar los componentes ODBC. El programa de instalación llame **SQLRemoveDriverManager**, **SQLRemoveDriver**, o **SQLRemoveTranslator** en el instalador de número de DLL para reducir el uso de un componente en el registro y, si el nuevo recuento de uso del componente cae a 0, se quitará toda la información sobre el componente desde el registro. Estas funciones no quitan realmente los archivos de componente; el programa de instalación hace esto si el nuevo recuento de uso cae a 0.
-

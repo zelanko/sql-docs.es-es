@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - time data type [ODBC]
 - converting data from c to SQL types [ODBC], time
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2bdc4c764afc7574fe5898bdf9e356b25d2954b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f1a59c15d2ebf1866d4543fa89662888154d4da
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-time"></a>C a SQL: hora
 El identificador para el tipo de datos de hora ODBC C es:  
@@ -50,4 +48,3 @@ El identificador para el tipo de datos de hora ODBC C es:
  Cuando los datos en tiempo de C se convierten en datos de SQL de caracteres, los datos de caracteres resultante están en la "*hh*:*mm*:*ss*" formato.  
   
  El controlador omite el valor de longitud/indicador al convertir datos desde el momento en el tipo de datos de C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos C de tiempo. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
-

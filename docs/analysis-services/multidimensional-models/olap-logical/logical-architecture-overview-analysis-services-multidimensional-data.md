@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 125422ba5479f56a2659f1fc609359741d63b7e3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
   Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** es compatible con los modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, que se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
@@ -138,4 +136,3 @@ ms.lasthandoff: 09/01/2017
  [Bases de datos de modelo multidimensional &#40; SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

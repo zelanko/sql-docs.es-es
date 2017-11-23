@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8330ed3cc913042b7cf9f6e6b92a8318f78a3765
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84737c6b747174f993765a6d86081759cfedd4bb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Configuración (cargar objetos) del proyecto (AccessToSQL)
 La configuración del proyecto cargar objetos permite configurar cómo se sincronizan los objetos de base de datos de Access con objetos de base de datos de SQL Server.  
@@ -83,4 +81,3 @@ Especifica la configuración predeterminada en el cuadro de diálogo sincronizac
   
 -   Si selecciona **omitir**, SSMA no llevará a cabo las acciones de actualización.  
   
-

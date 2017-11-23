@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referencia de funciones de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |Función|Description|  
 |--------------|-----------------|  
 |[Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|Se muestran las funciones que se pueden utilizar con todos los tipos de modelo y se proporcionan vínculos a más información sobre cómo consultar tipos específicos de modelos de minería de datos.|  
-|[Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Se proporciona información general de cómo construir una consulta de predicción utilizando DMX.|  
+|[Estructura y uso de las consultas de predicción de DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Se proporciona información general de cómo construir una consulta de predicción utilizando DMX.|  
 |[BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)|Devuelve una tabla que contiene un número especificado de filas del nivel más bajo, en orden ascendente de rango en función de una expresión de rango.|  
   
  En la siguiente tabla se enumeran las funciones admitidas por DMX.  
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

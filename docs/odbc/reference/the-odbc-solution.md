@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 806bc94a3807dbdd658cf710c0d22e2b6116d27b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-odbc-solution"></a>La solución ODBC
 ¿A continuación, la pregunta es cómo normalizar ODBC acceso de base de datos? Hay dos requisitos de arquitectura:  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/09/2017
      Para que una aplicación puede determinar qué características de un controlador y admitir DBMS, ODBC proporciona dos funciones (**SQLGetInfo** y **SQLGetFunctions**) que devuelven información general sobre el controlador y el DBMS el controlador es compatible con capacidades y una lista de funciones. ODBC también define API y SQL gramática niveles, que especifican intervalos amplios de las características admitidas por el controlador. Para obtener más información, consulte [niveles](../../odbc/reference/develop-app/conformance-levels.md).  
   
      Es importante recordar que ODBC define una interfaz común para todas las características que expone. Por este motivo, las aplicaciones contienen código específico de la característica, no el código de DBMS específico y pueden usar los controladores que exponen las características. Una ventaja de esto es que las aplicaciones no necesitan actualizarse cuando se han mejorado las características admitidas por un DBMS; en su lugar, cuando se instala un controlador actualizado, la aplicación utiliza automáticamente las características porque su código específico de la característica, no es específico del controlador o específicos del DBMS.
-

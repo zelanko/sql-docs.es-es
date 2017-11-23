@@ -1,42 +1,40 @@
 ---
 title: "Instalación de componentes de aprendizaje de máquina sin acceso a internet | Documentos de Microsoft"
 ms.custom: 
-ms.date: 10/0522/2017
-ms.prod: sql-server-2016
+ms.date: 11/30/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Instalación de componentes de aprendizaje de máquina sin acceso a internet
 
-Dado que los componentes de R y Python proporcionados con SQL Server 2016 y SQL Server 2017 son código abierto, Microsoft no instala los componentes de R o Python de forma predeterminada.
-
-En su lugar, se proporcionan a los instaladores relacionados e incluirse paquetes como una comodidad en Microsoft Download Center y otros sitios de confianza. Debe dar su consentimiento a la licencia apropiada y, a continuación, el programa de instalación de SQL Server instala los componentes de R o Python.
+Dado que los componentes de R y Python proporcionados con SQL Server 2016 y SQL Server 2017 son código abierto, Microsoft no instala los componentes de R o Python de forma predeterminada. En su lugar, se proporcionan a los instaladores relacionados e incluirse paquetes como una comodidad en Microsoft Download Center y otros sitios de confianza. Debe dar su consentimiento a la licencia apropiada y, a continuación, el programa de instalación de SQL Server instala los componentes de R o Python.
 
 Este tema proporciona las ubicaciones de descarga para los instaladores y una visión general del proceso de instalación sin conexión.
 
-## <a name="installation-process"></a>Proceso de instalación
+## <a name="overview-of-the-offline-installation-process"></a>Información general del proceso de instalación sin conexión
 
 Normalmente, el programa de instalación de los componentes de máquina usado en SQL Server 2016 y SQL Server 2017 requiere una conexión a internet. Cuando se ejecuta el programa de instalación de SQL Server, si ha seleccionado alguna del opciones de aprendizaje automático, el programa de instalación comprueba la Python o R instaladores, como así como cualquier otras componentes necesarios.
 
 + **Si el equipo tiene una conexión a internet**
 
-    SQL Server busca y descargar los componentes para, a continuación, se instala durante la instalación. Debe aceptar los términos de licencia por separado para cada componente de código abierto (R o Python) que se instala.
+    SQL Server busca y descarga los componentes automáticamente y, a continuación, se instala durante la instalación. Acepte los términos de licencia por separado para cada componente de código abierto (R o Python) que se instala.
 
 + **Si el equipo no tiene acceso a internet**
 
@@ -48,12 +46,21 @@ Normalmente, el programa de instalación de los componentes de máquina usado en
 
 ### <a name="step-1-obtain-additional-installers"></a>Paso 1. Obtener a instaladores adicionales
 
-Para **R** en SQL Server 2016 y 2017 de SQL Server, debe obtener dos instaladores diferentes. El Asistente para la instalación de SQL Server se asegura de que se instalan en el orden correcto.
+**Para R**
+
+Se admite el lenguaje R en SQL Server 2016 y 2017 de SQL Server. Dos instaladores diferentes son necesarios, para código abierto y componentes de propietarios. El Asistente para la instalación de SQL Server se asegura de que se instalan en el orden correcto.
 
 + Instaladores con **SRO** en el nombre proporcionan los componentes de código abierto.
 + Instaladores con **SRS** en el nombre contienen componentes proporcionados por Microsoft, los de integración de base de datos incluidos.
 
-Para **Python** en SQL Server 2017, descargue el archivo CAB único y los requisitos previos.
+**Para Python**
+
+El lenguaje de Python solo se admite en SQL Server 2017. De nuevo, hay dos instaladores independientes que se deben descargar.
+
++ Instaladores con **SPO** en el nombre para abrir de Python de Microsoft y proporcionan los componentes de código abierto.
++ Instaladores con **SPS** en el nombre son para el servidor de Python de Microsoft y contener componentes proporcionados por Microsoft, los de integración de base de datos incluidos.
+
+**Cómo descargar**
 
 1. Descargar los instaladores de la [sitios de Microsoft Download Center](#installerlocs) en un equipo con acceso a internet y guarde el programa de instalación en lugar de ejecutarlo.
 2. Copie los archivos del instalador (CAB) en el equipo donde desea instalar los componentes de aprendizaje de máquina.
@@ -119,10 +126,15 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Abra Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Servidor de Python de Microsoft    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server de 2017 CU1** |
-Microsoft R Open     |usar prervious|
+Microsoft R Open     |Use anterior|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Abra Microsoft Python     |Use anterior |
 Servidor de Python de Microsoft    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**SQL Server de 2017 CU2** |
+Microsoft R Open     |Use anterior|
+Microsoft R Server      |Use anterior|
+Abra Microsoft Python     |Use anterior |
+Servidor de Python de Microsoft    |Use anterior|
 
 ### <a name="bkmk_2016Installers"></a>Descargas de SQL Server 2016
 
@@ -189,7 +201,6 @@ Componente  |Versión
 [Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
 [Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
 
-
 ## <a name="modslocales"></a>Instalar para diferentes idiomas.
 
 Si descargó el. Archivos CAB como parte del programa de instalación de SQL Server en un equipo con acceso a internet, el Asistente para instalación se detecta el idioma local y se cambia automáticamente el idioma del instalador.
@@ -204,7 +215,7 @@ Sin embargo, dependiendo de la versión de SQL Server, deberá realizar pasos ad
 
     > [!IMPORTANT]
     > Este problema aplica a las versiones anteriores sólo a y se ha solucionado en versiones posteriores.
-    > Utilice esta solución solamente si el programa de instalación devuelve un mensaje que no se puede instalar el idioma correcto.
+    > **Utilice esta solución solamente si el programa de instalación devuelve un mensaje que no se puede instalar el idioma correcto.**
 
 + **Para SQL Server de 2017**
 
@@ -220,14 +231,15 @@ Por instalación integrada se entiende la capacidad de aplicar una revisión o a
 
 + Si está *agregar* estos componentes a un *existente* instalación, utilice la versión actualizada del instalador de SQL Server y la correspondiente versión actualizada de los componentes adicionales. Cuando se especifica que la característica de R es esté instalado, el programa de instalación busca la versión correspondiente de los instaladores para los componentes de aprendizaje automático.
 
-## <a name="command-line-arguments-for-setup"></a>Argumentos de línea de comandos para el programa de instalación
+## <a name="command-line-arguments-for-specifying-component-locations"></a>Argumentos de línea de comandos para especificar ubicaciones de componente
 
-Al realizar una instalación desatendida, debe proporcionar los siguientes argumentos de línea de comandos. Sin embargo, no es necesario establecer las marcas adicionales para instalar los componentes adicionales necesarios; requisitos previos como .NET core se instalan automáticamente de forma predeterminada.
+Al realizar una instalación sin conexión desde la línea de comandos, debe proporcionar los argumentos de línea de comandos siguientes para especificar la ubicación de los componentes que ha descargado de antemano. Sin embargo, no es necesario establecer las marcas adicionales para instalar los componentes adicionales necesarios; requisitos previos como .NET core se instalan automáticamente de forma predeterminada.
 
 **Ubicación de instaladores**
 
 - `/UPDATESOURCE`para especificar la ubicación del archivo local que contiene el programa de instalación de actualización de SQL Server
 - `/MRCACHEDIRECTORY`para especificar la carpeta que contiene los archivos CAB de componentes de R
+- `/MPYCACHEDIRECTORY`para especificar la carpeta que contiene los archivos CAB de componentes de Python
 
 **Componentes de R en SQL Server 2016**
 
@@ -244,7 +256,7 @@ Al realizar una instalación desatendida, debe proporcionar los siguientes argum
 
 - `/ADVANCEDANALYTICS`Para obtener compatibilidad con el motor de scripts externos
 - `/SQL_INST_MPY`Para usar Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`para aceptar el contrato de licencia de R independiente
+- `/IACCEPTPYTHONLICENSETERMS="True"`para aceptar el contrato de licencia de Python independiente
 
 
 > [!NOTE]
@@ -255,4 +267,3 @@ Al realizar una instalación desatendida, debe proporcionar los siguientes argum
 [Instalar Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 En este artículo, el equipo de soporte técnico de servicios de R muestra cómo realizar una instalación desatendida o la actualización de servicios de R en SQL Server 2016: [implementar R Services en equipos sin acceso a Internet](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
-

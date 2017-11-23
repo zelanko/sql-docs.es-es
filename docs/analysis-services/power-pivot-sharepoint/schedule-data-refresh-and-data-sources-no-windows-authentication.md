@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64cd9d5e1b628da9f4ceff1ac75663fb558238f4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Programación de actualización de datos y orígenes de datos, sin autenticación de Windows
   En este tema se describe un flujo de trabajo de nuevos datos de programación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
@@ -180,4 +179,3 @@ ms.lasthandoff: 09/01/2017
 -   Vea la sección "Actualización de datos programada" de [Actualización de datos de Power Pivot con SharePoint 2013 y SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   
-

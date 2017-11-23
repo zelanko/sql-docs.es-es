@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: tablas de transición de estado de ODBC
 Las tablas de este apéndice muestran cómo hacen que las transiciones del entorno, conexión, instrucción y Estados de descriptor funciones ODBC. Normalmente, el estado del entorno, conexión, instrucción o descriptor dicta cuando puede llamar a funciones que usan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados de entorno, conexión, instrucción y descriptor se superponen aproximadamente tal como se muestra en la siguiente ilustración. Por ejemplo, la superposición de conexión exacta Estados C5 y C6 y Estados de instrucción que s1 a través de S12 es, depende del origen de datos, ya que las transacciones empiezan en momentos diferentes en distintos orígenes de datos, y depende del estado de descriptor D1i (implícitamente asignado descriptor) en el estado de la instrucción que está asociado el descriptor, mientras que el estado D1e (asignado explícitamente descriptor) es independiente del estado de cualquier instrucción. Para obtener una descripción de cada estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [conexión transiciones](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md), y [Descriptor transiciones ](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -105,4 +103,3 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
 -   [Transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md)  
   
 -   [Transiciones de descriptor](../../../odbc/reference/appendixes/descriptor-transitions.md)
-

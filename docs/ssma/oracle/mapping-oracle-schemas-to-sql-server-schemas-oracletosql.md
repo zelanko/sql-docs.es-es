@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 8ab69b6f55033e8d6687c0bc0b5e6cf9bfdf1417
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ca4fbcf3a49ccaf289bab39e3dbd15493fe08bb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Asignación de esquemas de Oracle a esquemas SQL Server (OracleToSQL)
 En Oracle, cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de Oracle para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el nombre para el esquema de la base de datos. Sin embargo, puede personalizar la asignación entre esquemas de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] las bases de datos.  
@@ -71,4 +69,3 @@ Si desea analizar la conversión de objetos de Oracle en [!INCLUDE[ssNoVersion](
 [Conectarse a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
 [Migrar bases de datos de Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

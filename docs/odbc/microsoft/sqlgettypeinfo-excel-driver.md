@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLGetTypeInfo
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db1eff513778d3c6df834bf42c4cf6c288380510
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cbcc75d7a527104ced19727797e282b63af2a6ae
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo (controlador de Excel)
 > [!NOTE]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE se devolverán en la columna de búsqueda para el Byte, contador, Double, tipos de datos único, larga y corta. (La capacidad de LIKE se consigue convertir el valor a un carácter mediante las funciones de conversión canónica de ODBC, a continuación, realizar la comparación.)  
   
  Cuando se utiliza el controlador de Microsoft Excel, los nombres de tipo ODBC se devuelven en la columna TYPE_NAME devuelto por **SQLGetTypeInfo**.
-

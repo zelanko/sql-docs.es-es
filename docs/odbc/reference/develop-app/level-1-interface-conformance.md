@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>Cumplimiento de la interfaz de nivel 1
 El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel de conformidad de interfaz de núcleo más características adicionales, como las transacciones, que suelen estar disponibles en un DBMS relacional OLTP. Un controlador compatible con interfaz de nivel 1 permite que la aplicación haga lo siguiente, además de las características en el nivel de conformidad de interfaz principales:  
@@ -43,4 +41,3 @@ El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel
 |107|Usar funciones ODBC en lugar de instrucciones SQL para realizar determinadas operaciones de base de datos: **SQLSetPos** con SQL_POSITION y SQL_REFRESH.|  
 |108|Obtener acceso al contenido de varios conjuntos de resultados generados por lotes y procedimientos almacenados, mediante una llamada a **SQLMoreResults**.|  
 |109|Delimitar transacciones distribuidas en varias funciones ODBC, con atomicidad true y la capacidad de especificar SQL_ROLLBACK en **SQLEndTran**.|
-

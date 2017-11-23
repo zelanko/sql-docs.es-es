@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_CUBES
+apiname: MDSCHEMA_CUBES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_CUBES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3ff85f0461a9ca0abc7c9acdfdd4cb2b23722c41
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a3fa75f9ea6bcab54d123d6e914d5d77077b44e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemacubes-rowset"></a>Conjunto de filas MDSCHEMA_CUBES
   Describe la estructura de cubos dentro de una base de datos.  
@@ -74,7 +70,6 @@ ms.lasthandoff: 09/01/2017
 |**Base restricciones obligatorias Cube_Name**|**DBTYPE_WSTR**|Opcional.|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

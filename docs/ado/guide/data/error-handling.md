@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8434e598deba57bf72dfdb8df1c31990113b304c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-handling"></a>Tratamiento de errores
 ADO utiliza varios métodos diferentes para notificar a una aplicación de errores que se producen. Esta sección describen los tipos de errores que pueden producirse cuando se utiliza ADO y cómo se notifica a la aplicación. Se termina con unas sugerencias sobre cómo controlar los errores.  
@@ -49,7 +47,7 @@ ADO utiliza varios métodos diferentes para notificar a una aplicación de error
   
  Esta sección contiene los temas siguientes.  
   
--   [Errores de ADO](../../../ado/guide/data/ado-errors.md)  
+-   [Errores de tiempo de ejecución de ADO](../../../ado/guide/data/ado-errors.md)  
   
 -   [Errores del proveedor](../../../ado/guide/data/provider-errors.md)  
   
@@ -60,4 +58,3 @@ ADO utiliza varios métodos diferentes para notificar a una aplicación de error
 -   [Control de errores en otros lenguajes](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [Anticipación de errores](../../../ado/guide/data/anticipating-errors.md)
-

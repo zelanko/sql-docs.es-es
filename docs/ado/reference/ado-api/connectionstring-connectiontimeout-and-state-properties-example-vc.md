@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ConnectionString property [ADO], VC++ example
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0727d4aa613771872d175ca3909499df5c2c35b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 036913baf18e836412b9d9fadea3b7eff0c33d74
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VC ++)
 Este ejemplo muestra maneras diferentes de utilizar la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad para abrir un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) propiedad para establecer un período de tiempo de espera de conexión y el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad que se va a comprobar el estado de las conexiones. La función GetState es necesaria ejecutar este procedimiento.  
@@ -179,4 +176,3 @@ void PrintComError(_com_error &e) {
  [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Propiedad ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [Propiedad State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
-

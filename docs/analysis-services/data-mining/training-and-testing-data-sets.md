@@ -19,17 +19,16 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9465d0eda4b15827cf20c4b9579a5eff672ce1d1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de datos de entrenamiento y de prueba
   Separar los datos en conjuntos de entrenamiento y de prueba es una parte importante de la evaluación de los modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
@@ -123,4 +122,3 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

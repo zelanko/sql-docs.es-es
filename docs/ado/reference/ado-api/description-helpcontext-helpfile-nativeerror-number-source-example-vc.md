@@ -4,16 +4,14 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Number property [ADO], VC++ example
 - HelpContext property [ADO], VC++ example
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - HelpFile property [ADO], VC++ example
 - Description property [ADO], VC++ example
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9714f4dd5118453efff2fdde040ec76a9f98e8c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99f335ba08109973dcab4be118903588b7c9fdca
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Descripción, HelpContext, HelpFile, NativeError, número, origen y ejemplo de las propiedades SQLState (VC ++)
 En este ejemplo se genera un error, se captura y se muestra la [descripción](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Número](../../../ado/reference/ado-api/number-property-ado.md), [origen](../../../ado/reference/ado-api/source-property-ado-error.md), y [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) propiedades del resultante [Error](../../../ado/reference/ado-api/error-object.md) objeto.  
@@ -140,4 +137,3 @@ void PrintComError(_com_error &e) {
  [Propiedad Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Propiedad Source (Error de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propiedad SQLState](../../../ado/reference/ado-api/sqlstate-property.md)
-

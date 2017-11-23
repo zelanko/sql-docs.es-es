@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- TempDB space in RDS [ADO]
+helpviewer_keywords: TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b604ad466cd4bb304252806be75c9f722c6ee803
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32f05f84953b09f4d727fe6bcba7b4230825faa2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantizar espacio suficiente en TempDB
 Si se producen errores mientras se procesan [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos que requieren espacio en Microsoft SQL Server 6.5 de procesamiento, deberá aumentar el tamaño de TempDB. (Algunas consultas requieren espacio de procesamiento temporal; por ejemplo, una consulta con una cláusula ORDER BY requiere un criterio de ordenación de la **Recordset**, lo que requiere espacio temporal.)  
@@ -64,7 +61,6 @@ Si se producen errores mientras se procesan [Recordset](../../../ado/reference/a
  Para obtener más información acerca de este tema, busque el archivo de Ayuda de Microsoft SQL Server Enterprise Manager de "Cuadro de diálogo base de datos de expansión".  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
+ [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-ado-events"></a>Control de eventos de ADO
 El modelo de eventos de ADO admite operaciones ciertas operaciones sincrónicas y asincrónicas de ADO que emiten *eventos*, o notificaciones, antes de iniciar la operación o después de que se complete. Un evento es realmente una llamada a una rutina de controlador de eventos que define en la aplicación.  
@@ -43,7 +41,7 @@ El modelo de eventos de ADO admite operaciones ciertas operaciones sincrónicas 
   
  Esta sección contiene los temas siguientes.  
   
--   [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
+-   [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)  
   
 -   [Tipos de eventos](../../../ado/guide/data/types-of-events.md)  
   
@@ -59,4 +57,3 @@ El modelo de eventos de ADO admite operaciones ciertas operaciones sincrónicas 
  [Eventos de ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Parámetros de eventos](../../../ado/guide/data/event-parameters.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
-

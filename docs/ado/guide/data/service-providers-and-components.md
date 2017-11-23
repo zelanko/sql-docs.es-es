@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61232bd2d028c9beb1b5471bb6db0b1c28b7b7e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="service-providers-and-components"></a>Proveedores de servicios y componentes
 Proveedores de servicios son componentes que extienden la funcionalidad de los proveedores de datos mediante la implementación de interfaces extendidas que no son compatibles de forma nativa con el almacén de datos.  
@@ -37,4 +35,3 @@ Proveedores de servicios son componentes que extienden la funcionalidad de los p
  Por ejemplo, un cursor motor, como [el servicio de Cursor para OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), es un componente de servicio que puede consumir datos desde un almacén de datos secuencial, de sólo avance para generar datos desplazables. Otros proveedores de servicio suele usadas ADO son el [proveedor Microsoft OLE DB persistencia (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (para guardar datos en un archivo), el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (para jerárquica **conjuntos de registros**) y el [proveedor Microsoft OLE DB Remoting (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (para llamar a proveedores de datos en un equipo remoto).  
   
  Para obtener más información acerca de los proveedores de servicio y los datos, vea [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md).
-

@@ -4,39 +4,35 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- ADO, using with Visual C++
+dev_langs: C++
+helpviewer_keywords: ADO, using with Visual C++
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92c62b26c3eb349390f56a6d485af543947eeccc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2298a403bcee09e5ea8854cdc1527c1e3c804ad3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Usar ADO con Microsoft Visual C++
 Para obtener información sobre cómo usar ADO con Visual C++, vea las secciones siguientes:  
   
 -   [Programación ADO en Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
   
--   [Extensiones de Visual C++ para ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)  
+-   [Extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)  
   
--   [Uso de extensiones de Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
+-   [Extensiones de Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
   
 -   [Encabezado de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)  
   
@@ -48,5 +44,4 @@ Para obtener información sobre cómo usar ADO con Visual C++, vea las secciones
  [ADO para el índice de sintaxis de Visual C++ con #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Usar ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Usar ADO con lenguajes de Scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
- [Extensiones de Visual C++ para ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)
-
+ [Extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

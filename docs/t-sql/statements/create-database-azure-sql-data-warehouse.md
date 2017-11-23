@@ -1,33 +1,28 @@
 ---
 title: Crear base de datos (almacenamiento de datos SQL Azure) | Documentos de Microsoft
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 03/14/2017
+ms.custom: 
+ms.date: 10/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-ms.assetid: 42819b93-b757-4b2c-8179-d4be3c512c19
-caps.latest.revision: 20
+dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a178756610f0d0e463c21a2a62a287ada6c863a1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>Crear base de datos (almacenamiento de datos SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Crea una nueva base de datos.  
   
@@ -36,9 +31,19 @@ Crea una nueva base de datos.
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
-    [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  
+    [ MAXSIZE = { 
+          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 
+        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 
+        | 153600 | 204800 | 245760 
+      } GB ,
+    ]  
     EDITION = 'datawarehouse',  
-    SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' }  
+    SERVICE_OBJECTIVE = { 
+         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
+        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
+        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
+    }  
 )  
 [;]  
 ```  
@@ -56,10 +61,18 @@ Para obtener más información acerca de los nombres de intercalación de Window
 Especifica el nivel de servicio de la base de datos. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usar 'almacenamiento de datos'.  
   
 *MAXSIZE*  
-El tamaño máximo que puede alcanzar la base de datos. Este valor evita que el crecimiento del tamaño de base de datos más allá del conjunto de tamaño. El valor predeterminado *MAXSIZE* cuando no se especifica es 10240 GB (10 TB).  Otros valores posibles oscilan entre 250 GB hasta 240 TB.  
+El valor predeterminado es 10240 GB (10 TB).  
+
+**Se aplica a:** optimizado para el nivel de rendimiento de elasticidad
+
+El tamaño máximo permitido para la base de datos. La base de datos no puede crecer más allá de MAXSIZE. 
+
+**Se aplica a:** optimizado para el nivel de rendimiento de proceso
+
+El tamaño máximo permitido para los datos del almacén de la base de datos. Datos almacenados en tablas de almacén de filas, el almacén delta del índice de almacén de columnas o un índice no agrupado en un índice de almacén de columnas agrupado no pueden crecer más allá de MAXSIZE.  Los datos comprimidos en formato de almacén de columnas no tiene un límite de tamaño y no está limitados por MAXSIZE.
   
 SERVICE_OBJECTIVE  
-Especifica el nivel de rendimiento. Para obtener más información acerca de los objetivos de servicio para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [rendimiento de escala en almacenamiento de datos de SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/).  
+Especifica el nivel de rendimiento. Para obtener más información acerca de los objetivos de servicio para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [niveles de rendimiento](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="general-remarks"></a>Notas generales  
 Use [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md) para ver las propiedades de la base de datos.  
@@ -108,5 +121,4 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
  [Crear una tabla &#40; Almacenamiento de datos SQL de Azure &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
  [Eliminar base de datos &#40; Transact-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
-
 

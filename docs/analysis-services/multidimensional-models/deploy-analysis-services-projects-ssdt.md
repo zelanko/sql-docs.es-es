@@ -19,17 +19,16 @@ helpviewer_keywords:
 - projects [Analysis Services], deploying
 - Business Intelligence Development Studio, deploying projects [Analysis Services]
 ms.assetid: 29490a5b-1573-4a35-9277-10c6a6e4ef0e
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7f84ef36d858da491beb9b3d4f1130a7ef66eafd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d115e6a40d8954641d0cfc39636748de15636cf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Implementar proyectos de Analysis Services (SSDT)
   Durante el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a menudo implementará el proyecto en un servidor de desarrollo para crear la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que el proyecto define. Esto es necesario para probar el proyecto, por ejemplo para examinar las celdas del cubo, examinar los miembros de dimensión o comprobar las fórmulas de los indicadores clave de rendimiento (KPI).  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [Crear un proyecto de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
-

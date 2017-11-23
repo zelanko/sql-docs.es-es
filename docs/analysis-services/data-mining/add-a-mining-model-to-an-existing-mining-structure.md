@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 07a1f5deb7fc82fbe6021691417addf00414b3a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b3d91f5684a43202ea83ed6f7a4728bad53c98
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Agregar un modelo de minería de datos a una estructura de minería de datos existente
   Una vez agregado el modelo de minería de datos inicial, podrá agregar más modelos a una estructura de minería de datos. Los modelos deben incluir columnas que estén presentes en la estructura, pero se puede definir el uso de las columnas de un modo distinto para cada modelo de minería de datos. Para obtener más información sobre la forma de definir columnas del modelo de minería de datos, vea [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

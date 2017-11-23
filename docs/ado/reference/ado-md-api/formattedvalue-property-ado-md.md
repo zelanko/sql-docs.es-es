@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Cell::FormattedValue
 - FormattedValue
-helpviewer_keywords:
-- FormattedValue property [ADO MD]
+helpviewer_keywords: FormattedValue property [ADO MD]
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cbf0c7a5fc9fc88cc1962ec3414b293c03a41a25
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 151e3018fa12d3f61cb06f12692f28fa9e5b7a91
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue (propiedad, ADO MD)
 Indica la presentación con formato de un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valor.  
@@ -46,4 +43,3 @@ Indica la presentación con formato de un [celda](../../../ado/reference/ado-md-
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de conjunto de celdas (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value (propiedad) (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)
-

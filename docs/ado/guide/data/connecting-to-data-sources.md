@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [ADO]
+helpviewer_keywords: connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a05c4da49edef0635e95cc5aaf43976ff0753af
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47aa7f058db324c7388801ae6a391b6c0c24ae1d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connecting-to-data-sources"></a>Conectarse a orígenes de datos
 ADO **conexión** objeto representa una sesión única con un origen de datos, incluido un DBMS, un almacén de archivos o un archivo de texto delimitado por comas. En el caso de un sistema de base de datos cliente/servidor, la conexión de ADO puede ser una conexión de red real en el servidor.  
@@ -40,9 +37,8 @@ ADO **conexión** objeto representa una sesión única con un origen de datos, i
   
 -   [Mediante un objeto de conjunto de registros](../../../ado/guide/data/using-a-recordset-object.md)  
   
--   [Crear una cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md)  
+-   [Creación de una cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md)  
   
 -   [Especificar propiedades de conexión](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [Control de transacciones](../../../ado/guide/data/controlling-transactions-ado.md)
-

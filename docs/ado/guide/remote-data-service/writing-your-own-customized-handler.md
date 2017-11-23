@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9301a871c5b2c55b66c13ccb57888d6e4e37ac47
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 445f0d8d7a870ceda6cf4028b0cebe9264ed8358
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="writing-your-own-customized-handler"></a>Escribir su propio controlador personalizado
 Puede que desee escribir su propio controlador si es un administrador del servidor IIS que desea que el valor predeterminado RDS admite, pero tener más control sobre las solicitudes de usuario y los derechos de acceso.  
@@ -114,7 +112,6 @@ HRESULT _stdcall GetRecordset(
  [Sección UserList del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Opciones de cliente necesarias](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Descripción de los archivos de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
+ [Descripción del archivo de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
 
 

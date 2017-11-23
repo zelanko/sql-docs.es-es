@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Referencia de las reglas de estado (PowerPivot para SharePoint)
   En este tema de referencia se describen las reglas de estado de SharePoint que agrega una instalación de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint. Estas reglas se usan para notificar problemas con el mantenimiento, la disponibilidad o la configuración del servidor de una aplicación de servicio [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o su instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociada.  
@@ -65,4 +64,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET no está instalado en un WFE independiente que esté configurado para la administración central.|No|No|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET es una biblioteca de cliente de Analysis Services que admite las conexiones a una base de datos de Analysis Services. En una implementación de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint, ADOMD.NET proporciona acceso a los informes integrados en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en Administración central. Los informes integrados son realmente libros [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que contienen datos incrustados de Analysis Services. El panel de administración utiliza ADOMD.NET para enviar una solicitud de conexión al servidor que carga los datos incluidos en el libro.<br /><br /> En las topologías que incluyen la Administración central ejecutándose en un servidor front-end web independiente, debe instalar ADOMD.NET de forma manual si desea ver estos informes en el panel de administración. Para obtener más información, vea [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
-

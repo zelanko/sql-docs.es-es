@@ -1,35 +1,34 @@
 ---
 title: "Actualizar los componentes de aprendizaje de máquina en una instancia de SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
+applies_to: SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: es-es
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Actualizar los componentes de aprendizaje de máquina en una instancia de SQL Server
 
-Este artículo explica el proceso de _enlace_, que puede usar para actualizar los componentes que se usan en SQL Server de aprendizaje automático. El proceso de enlace, bloquea el servidor a un ritmo de actualización basado en versiones de servidor de aprendizaje de máquina en lugar de SQL Server.
+Este artículo explica el proceso de _enlace_, que puede usar para actualizar los componentes que se usan en SQL Server de aprendizaje automático. El proceso de enlace bloquea el servidor a un ritmo de actualización basado en versiones de servidor de aprendizaje de máquina, en lugar de usar el servidor SQL Server de la versión y actualizar la programación.
 
 > [!IMPORTANT]
-> No es necesario utilizar el proceso de actualización si desea obtener las actualizaciones como parte de las actualizaciones de SQL Server. Siempre que se instala un nuevo service pack o una versión de servicio, componentes de aprendizaje de máquina se actualizan automáticamente siempre a la versión más reciente. Utilice este proceso si desea actualizar los componentes a un ritmo más rápido que concedidos por las versiones de servicio de SQL Server.
+> No es necesario utilizar el proceso de actualización si desea obtener las actualizaciones como parte de las actualizaciones de SQL Server. Siempre que se instala un nuevo service pack o una versión de servicio, componentes de aprendizaje de máquina se actualizan automáticamente siempre a la versión más reciente. Utilice únicamente la _enlace_ procesar si desea actualizar los componentes a un ritmo más rápido que concedidos por las versiones de servicio de SQL Server.
 
 Si en cualquier momento en que desea detener la actualización en la programación del servidor de aprendizaje de máquina, debe _desenlace_ la instancia como se describe en [en esta sección](#bkmk_Unbind)y desinstalar el servidor de aprendizaje de máquina.
 
@@ -39,22 +38,22 @@ Si en cualquier momento en que desea detener la actualización en la programaci�
 
 El proceso de actualización de los componentes de aprendizaje automático se conoce como **enlace**, debido a que cambia el modelo de soporte técnico para componentes de aprendizaje de máquina de SQL Server usar la nueva directiva de ciclo de vida de Software modernas. 
 
-En general, al cambiar al nuevo modelo de licencias se garantiza que los científicos de datos pueden usar siempre la versión más reciente de R o Python. Para obtener más información acerca de los términos de la directiva de ciclo de vida moderno, consulte [escala de tiempo del soporte técnico de Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+En general, al cambiar al nuevo modelo de licencias se garantiza que los científicos de datos pueden usar siempre la versión más reciente de R o Python. Para obtener más información acerca de los términos de la directiva de ciclo de vida moderno, consulte [escala de tiempo del soporte técnico de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > La actualización no cambia el modelo de compatibilidad para la base de datos de SQL Server y no cambia la versión de SQL Server.
 
-Al enlazar una instancia, pueden ocurrir varias cosas, que puede incluir una actualización a los componentes de aprendizaje automático:
+Al enlazar una instancia, ocurren varias cosas:
 
 + Se cambia el modelo de soporte técnico. En lugar de confiar en las versiones de servicio de SQL Server, soporte técnico se basa en la nueva directiva de ciclo de vida moderna.
 + Los componentes de aprendizaje de máquina asociados a la instancia se actualizan automáticamente con cada versión, en el paso de bloqueo con la versión actual en la nueva directiva de ciclo de vida moderna. 
-+ Pueden agregar nuevos paquetes de R o Python. Por ejemplo, las actualizaciones anteriores de Microsoft R Server agregan nuevos paquetes de R, como [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), y [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
++ Pueden agregar nuevos paquetes de R o Python. Por ejemplo, las actualizaciones anteriores en función de Microsoft R Server 9.1 agregarán nuevos paquetes de R, como [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), y [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + La instancia ya no se puede actualizar manualmente, excepto para agregar paquetes nuevos.
-+ Obtiene la opción para agregar modelos previamente entrenados proporcionados por Microsoft.
++ Obtiene la opción para instalar previamente entrenados modelos proporcionados por Microsoft.
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-Comience por identificar instancias que son candidatos para realizar una actualización. Si ejecuta el programa de instalación y seleccione la opción de enlace, devuelve una lista de instancias que son compatibles con la actualización. 
+Comience por identificar instancias que son candidatos para realizar una actualización. Si ejecuta el programa de instalación y seleccione la opción de enlace, devuelve una lista de instancias que son compatibles con la actualización.
 
 Consulte la tabla siguiente para obtener una lista de actualizaciones admitidas y requisitos.
 
@@ -65,7 +64,7 @@ Consulte la tabla siguiente para obtener una lista de actualizaciones admitidas 
 
 ## <a name="bind-or-upgrade-an-instance"></a>Enlazar o actualizar una instancia
 
-Microsoft máquina de aprendizaje para Windows del servidor incluye una herramienta que puede usar para actualizar los lenguajes y herramientas asociados a una instancia de SQL Server de aprendizaje automático. Hay dos versiones de la herramienta: un asistente y una utilidad de línea de comandos.
+Aprendizaje de máquina Server para Windows incluye una herramienta que puede usar para actualizar los lenguajes y herramientas asociados a una instancia de SQL Server de aprendizaje automático. Hay dos versiones de la herramienta: un asistente y una utilidad de línea de comandos.
 
 Antes de poder ejecutar el asistente o la herramienta de línea de comandos, debe descargar la versión más reciente del instalador independiente para componentes de aprendizaje automático.
 
@@ -89,13 +88,13 @@ Antes de poder ejecutar el asistente o la herramienta de línea de comandos, deb
 
 4. En las páginas sucesivas, dar su consentimiento a las condiciones de licencias adicionales para ningún componente de código abierto que ha seleccionado, como Microsoft R Open o la distribución de Anaconda de Python.
 
-5. En el **casi** página, tome nota de la carpeta de instalación. La carpeta predeterminada es `~\Program Files\Microsoft\ML Server`. 
+5. En el **casi** página, tome nota de la carpeta de instalación. La carpeta predeterminada es `~\Program Files\Microsoft\ML Server`.
 
-    Si desea cambiar la carpeta de instalación, haga clic en **avanzadas** para volver a la primera página del asistente. Sin embargo, debe repetir todas las selecciones anteriores. 
+    Si desea cambiar la carpeta de instalación, haga clic en **avanzadas** para volver a la primera página del asistente. Sin embargo, debe repetir todas las selecciones anteriores.
 
 6. Si va a instalar los componentes sin conexión, puede se le pedirán la ubicación de los componentes de aprendizaje necesaria del equipo, como Microsoft R Open, servidor de Python y Python abierta.
-    
-Durante la instalación, se reemplazan las bibliotecas de R o Python utilizadas por SQL Server y Launchpad se actualiza para usar los componentes más recientes. Es decir, si la instancia había utilizado previamente bibliotecas en la carpeta R_SERVICES de manera predeterminada, después de la actualización se quitan estas bibliotecas y se cambian las propiedades para el servicio Launchpad, para usar las bibliotecas en la ubicación especificada.
+
+Durante el proceso de instalación, se reemplazan las bibliotecas de R o Python utilizadas por SQL Server y Launchpad se actualiza para usar los componentes más recientes. Como resultado, si la instancia había utilizado previamente bibliotecas en la carpeta R_SERVICES de manera predeterminada, después de la actualización se quitan estas bibliotecas y se cambian las propiedades para el servicio Launchpad, para usar las bibliotecas en la nueva ubicación.
 
 ### <a name="bkmk_BindCmd"></a>Actualizar mediante la línea de comandos
 
@@ -219,4 +218,3 @@ Para obtener más información, vea las notas de la versión para Microsoft R Se
 + [Anuncios de características de la versión anterior del servidor de R](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [Características desusadas, discontinuos o modificadas](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-

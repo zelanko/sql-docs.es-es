@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para el diseño de informes
 
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/01/2017
 |**Oculto**|Boolean|Indica si se debe mostrar el campo. El valor predeterminado es **false**, es decir, aparece el nombre del campo.|  
 |**DisplayFolder**|Texto|El nombre (ruta de acceso completa) de la carpeta en la cual se muestra este campo. Si se omite, el campo se muestra en la raíz del modelo.|  
 |**ContextualNameRule**|Enum|Valor que indica si se debe modificar el nombre de la propiedad basándose en el contexto en el que se usa, y cómo debe hacerse. Los valores posibles son:  **None**,  **Role**o  **Merge**.|  
-|**Alineación**|Enum|Valor que indica cómo los valores del campo se deben alinear en una presentación tabular. Los valores posibles son: **Default**, **Center**, **Left**o **Right**. Si se omite, se determina la alineación basándose en el tipo de datos del campo de forma predeterminada.|  
+|**Alignment**|Enum|Valor que indica cómo los valores del campo se deben alinear en una presentación tabular. Los valores posibles son: **Default**, **Center**, **Left**o **Right**. Si se omite, se determina la alineación basándose en el tipo de datos del campo de forma predeterminada.|  
 |**FormatString**|Texto|Cadena de formato de .NET Framework que indica cómo se debe dar formato al valor del campo de forma predeterminada. Si se omite, se supone que se usa el formato siguiente:<br /><br /> Campos - fecha y hora: fecha corta regional o "d"<br /><br /> -Función de agregado campos punto flotante y campos enteros con un valor predeterminado: número regional o "n"<br /><br /> -Función de agregado de enteros no tiene ningún valor predeterminado: número decimal regional o "d"<br /><br /> Para todos los demás tipos de campos, no se aplica ninguna cadena de formato.|  
 |**Unidades**|Texto|Símbolo que se aplica a los valores de los campos para expresar unidades. Si se omite, se supone que las unidades son desconocidas.|  
 |**Ancho**|Integer|Anchura preferida en caracteres que debe reservar para mostrar los valores del campo en una presentación tabular. Si se omite, la anchura predeterminada se basa en el tipo de datos del campo.|  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
 |**KPI**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Subelemento|Indica que el elemento de medida debe usarse como un KPI. El subelemento KPI utiliza los elementos KpiGoal y KpiStatus para definir la imagen y los rangos de destino asociados.|  
   
   
-

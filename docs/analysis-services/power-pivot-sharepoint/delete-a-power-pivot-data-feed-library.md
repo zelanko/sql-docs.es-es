@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f1151f0b20e0da5fbdacc6ea0a025245430405ec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 759522b9708946298a7266f06359fe07a0dcdfb1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Eliminar una biblioteca de fuente de distribución de datos Power Pivot
   Debe ser el propietario del sitio para eliminar una biblioteca de fuentes de distribución de datos. Si la biblioteca contiene elementos, se eliminarán junto con ella.  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [Fuentes de distribución de datos de PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

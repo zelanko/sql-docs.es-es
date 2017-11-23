@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RegularMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RegularMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RegularMeasureGroupDimension
-helpviewer_keywords:
-- RegularMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: RegularMeasureGroupDimension
+helpviewer_keywords: RegularMeasureGroupDimension data type
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b144c665c26a56e6ad7042f066753450fd90e798
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cddeb31e37a4c9f1877df58a81ef4985398b487
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>Tipo de datos RegularMeasureGroupDimension (ASSL)
   Define un tipo de datos derivado que representa una relación normal entre una dimensión y un grupo de medida.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language tipos de datos XML &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

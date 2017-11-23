@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- 'Command collection [ADO], Visual C++ syntax index with #import'
+dev_langs: C++
+helpviewer_keywords: 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f4009eaa33cb1e91fbc9f687f86fc304aa447e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 212c4698286fccb4baf6764f26af263419f7078d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Comandos (Visual C++ índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  
@@ -68,5 +64,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
-
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

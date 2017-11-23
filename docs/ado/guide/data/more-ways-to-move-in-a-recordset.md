@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Otras formas de mover en un conjunto de registros
 Los cuatro métodos siguientes sirven para moverse o desplazarse, en la **Recordset**: [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Algunos de estos métodos no están disponibles en los cursores de solo avance).  
@@ -63,4 +61,3 @@ If oRs.BOF Then oRs.MoveFirst
  Otro ejemplo, si se colocan en una fila determinada en el medio de un **Recordset** y se llama a **eliminar** y, a continuación, llame a **MoveNext**, se encuentra ahora en el registro inmediatamente después del registro eliminado. Pero la llamada a **MovePrevious** hace que el registro anterior al eliminar el registro actual, dado que el registro eliminado ya no se enumeran en la pertenencia de active el **conjunto de registros**.  
   
  Es especialmente difícil definir la semántica de movimiento coherente entre todos los proveedores para los métodos que se mueven en relación con el registro actual: **MovePrevious**, **MoveNext**, y **mover** : frente a cambiar datos en el registro actual. Por ejemplo, si está trabajando con un ordenado, filtrar **Recordset**y cambiar los datos en el registro actual para que preceda a todos los demás registros, pero también, los datos modificados ya no coincide con el filtro, no está claro dónde una **MoveNext** operación debería tardar. La conclusión más segura es ese movimiento relativo dentro de un **Recordset** es más arriesgado que el movimiento absoluto (como el uso de **MoveFirst** o **MoveLast**) cuando los datos son cambiar mientras se editan registros, agrega o elimina. Para ordenar y filtrar deben basarse en una clave principal o un identificador, porque este tipo de valor no debería cambiar.
-

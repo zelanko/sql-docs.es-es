@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Value property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9dec056e56809d7dc874e858930997238268ae7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2a17b5e2ee2f8f206ec924ae898d0bcb702a16f0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="value-property-example-vb"></a>Ejemplo de la propiedad de valor (VB)
 Este ejemplo se muestra la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad con [campo](../../../ado/reference/ado-api/field-object.md) y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos y mostrar valores de campo y propiedad para el ***empleados*** tabla.  
@@ -112,4 +108,3 @@ End Sub
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value (propiedad) (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
-

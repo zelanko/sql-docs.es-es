@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Version property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 96ec6f8b7a30831b9150cdc63d7a21fb9eac8b8b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2200db6931d9cd37513e0b216c1d3545e6d09cd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="version-property-example-vc"></a>Ejemplo de la propiedad de versión (VC ++)
 Este ejemplo se utiliza la [versión](../../../ado/reference/ado-api/version-property-ado.md) propiedad de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto que se mostrará la versión actual de ADO. También se utilizan varias propiedades dinámicas para mostrar:  
@@ -145,4 +141,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Vea también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propiedad Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
-

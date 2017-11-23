@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- CompareBookmarks method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 034f5a7a6773e0109b7760ce058a2deee13056de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5752afa9af088848a0f33e3cda8baf259cb05e3c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Ejemplo del método CompareBookmarks (VC ++)
 Este ejemplo se muestra la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado es de algún modo especial.  
@@ -180,4 +176,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Vea también  
  [Método CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

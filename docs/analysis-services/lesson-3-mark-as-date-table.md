@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 32bb6e8ff5f6910c08ee766e57415cab47b8bc62
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5bef08da2c79aa1b17241300d1b9b31e7b977781
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-mark-as-date-table"></a>Lección 3: Marcar como tabla de fechas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -64,4 +61,3 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
 ## <a name="whats-next"></a>¿Qué debe hacer a continuación?
 Vaya a la siguiente lección: [lección 4: crear relaciones](../analysis-services/lesson-4-create-relationships.md).
   
-

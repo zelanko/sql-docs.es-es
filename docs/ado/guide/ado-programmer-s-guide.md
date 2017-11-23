@@ -11,20 +11,18 @@ ms.component: guide
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, programmer's guide
+helpviewer_keywords: ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7b57ed86ba638945fb811bd146f3a2a6cf6b731e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7346493adf913ede3190be9dbd3e1e94e824b25a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>Programador de ADO &#39; s guía para el uso de objetos ADO
 Esta documentación proporciona información general sobre cómo usar objetos de ADO para trabajar con datos procedentes de varios orígenes de datos. En primer lugar, la introducción resume las nuevas características y los requisitos para instalar, usar y redistribuir el componente de ADO. Las secciones siguientes describen el uso de los distintos tipos de objetos de ADO. Por último, los apéndices tratan diversos datos suministrados por Microsoft y proveedores de servicios, los mensajes de error y sugerencias sobre cómo usar ADO en varios lenguajes de programación, además de ejemplos y obtener un glosario.
@@ -42,4 +40,3 @@ Esta documentación proporciona información general sobre cómo usar objetos de
 -   [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
 -   [Apéndices](../../ado/guide/appendixes/ado-appendixes.md)
-

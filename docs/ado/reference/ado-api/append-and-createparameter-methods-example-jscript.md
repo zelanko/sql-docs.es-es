@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7048719f14ed0841fba3b221f1bbb7314d16ad2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7650748a6bbddcbc65311cc03b6b52aa86e0d0d9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Anexar y ejemplo de los métodos CreateParameter (JScript)
 Este ejemplo se utiliza la [anexado](../../../ado/reference/ado-api/append-method-ado.md) y [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para ejecutar un procedimiento almacenado con un parámetro de entrada. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **AppendJS.asp**.  
@@ -154,5 +151,4 @@ body {
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objeto de parámetro](../../../ado/reference/ado-api/parameter-object.md)
-
+ [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

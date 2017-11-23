@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
+f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Cambiar los colores usados en los visores de minería de datos
   Puede cambiar los colores que se utilizan en los visores de minería de datos para mostrar series de datos, nodos o clústeres. Para ello, se establecen las opciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Después de haber cambiado los valores, las selecciones de color se aplican a todos los modelos que se ven con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; sin embargo, debe cerrar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y volver a abrir el modelo en el visor para ver los nuevos colores.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/01/2017
     >  Si utiliza un color personalizado, se representa mediante un icono de color y los valores RBG del color. Si utiliza un color de sistema o web, se representa mediante un icono de color y el nombre del color.  
   
   
-

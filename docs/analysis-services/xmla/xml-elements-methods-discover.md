@@ -13,33 +13,28 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Discover Method
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Discover Method
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#
 - http://schemas.microsoft.com/analysisservices/2003/engine#
 - microsoft.xml.analysis.discover
 - urn:schemas-microsoft-com:xml-analysis#Discover
 - Discover
-helpviewer_keywords:
-- Discover method
+helpviewer_keywords: Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b7878e526fbeadc11efda25e9ca35ff34cf2d0fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 60a101afa2953d62e2910b4523a0213e4e786490
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---methods---discover"></a>Detección elementos XML - métodos:
   Recupera información, como la lista de bases de datos disponibles o los detalles sobre un objeto concreto, desde una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los datos recuperados con el método **Discover** dependen de los valores de los parámetros que se le pasan.  
@@ -109,4 +104,3 @@ ms.lasthandoff: 09/01/2017
  [Conjuntos de filas de esquema de Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

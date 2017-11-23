@@ -14,24 +14,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 001f9bcf731212b98070a6fb09e5f46206094394
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d66a5c0ccaccf6480e0e82053b1ca6f22c5fcc0f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-command-tmsl"></a>Actualización de comandos (TMSL)
 
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Procesa los objetos en la base de datos actual.   
-**Actualizar** siempre se ejecuta en paralelo, a menos que limitar con [de secuencia de comandos & #40; TMSL & #41; ](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
+**Actualizar** siempre se ejecuta en paralelo, a menos que limitar con [de secuencia de comandos &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
   
  Puede invalidar algunas de las propiedades de algunos objetos durante una operación de actualización de datos:  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/01/2017
   
  Puede actualizar los objetos siguientes:  
   
- [Objeto de base de datos & #40; TMSL & #41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Procesar una base de datos.  
+ [Objeto de base de datos &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Procesar una base de datos.  
   
 ```  
 {  
@@ -98,7 +97,7 @@ ms.lasthandoff: 09/01/2017
 }  
 ```  
   
- [Objeto de tablas & #40; TMSL & #41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Procesar una única tabla.  
+ [Objeto de tablas &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Procesar una única tabla.  
   
 ```  
 {  
@@ -114,7 +113,7 @@ ms.lasthandoff: 09/01/2017
 }  
 ```  
   
- [Objeto de particiones & #40; TMSL & #41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Procesar una partición única dentro de una tabla.  
+ [Objeto de particiones &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Procesar una partición única dentro de una tabla.  
   
 ```  
 {  
@@ -228,7 +227,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="usage-endpoints"></a>Uso (extremos)  
- Este elemento de comando se utiliza en una instrucción de la [Execute Method & #40; XMLA & #41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada a través de un punto de conexión XMLA, expuesto de las maneras siguientes:  
+ Este elemento de comando se utiliza en una instrucción de la [Execute Method &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada a través de un punto de conexión XMLA, expuesto de las maneras siguientes:  
   
 -   Como una ventana XMLA en SQL Server Management Studio (SSMS)  
   
@@ -238,11 +237,10 @@ ms.lasthandoff: 09/01/2017
   
  Puede generar un script listos para su uso para este comando de SSMS.  Por ejemplo, puede hacer clic en el **Script** en un cuadro de diálogo de procesamiento.  
   
- El [ \[MS-SSAS-T\]: QL Server Tabular de Analysis Services (protocolo técnica de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento incluye sección 3.1.5.2.2 que describe la estructura de comandos de metadatos tabulares de JSON y objetos. Actualmente, dicho documento tratan comandos y las funciones que aún no implementados en el script de TMSL. Consulte el tema ([Tabular Model Scripting Language & #40; TMSL & #41; Hacer referencia a](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para obtener información sobre lo que es compatible.  
+ El [ \[MS-SSAS-T\]: QL Server Tabular de Analysis Services (protocolo técnica de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento incluye sección 3.1.5.2.2 que describe la estructura de comandos de metadatos tabulares de JSON y objetos. Actualmente, dicho documento tratan comandos y las funciones que aún no implementados en el script de TMSL. Consulte el tema ([Tabular Model Scripting Language &#40; TMSL &#41; Hacer referencia a](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para obtener información sobre lo que es compatible.  
   
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Opciones de procesamiento y configuración de & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
+ [Opciones de procesamiento y configuración de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   
   
-

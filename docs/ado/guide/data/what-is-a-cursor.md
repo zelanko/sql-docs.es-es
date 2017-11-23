@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cursors [ADO], about cursors
+helpviewer_keywords: cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61fb503b5b183f1147e2297a76045876c254a8e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-a-cursor"></a>¿Qué es un Cursor?
 Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. El conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Aplicaciones, especialmente aquellas que son interactivos y en línea, no siempre pueden trabajar eficazmente con el resultado completo como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
@@ -80,4 +77,3 @@ Las operaciones de una base de datos relacional actúan en un conjunto completo 
   
 ## <a name="scrollability"></a>Desplazamiento  
  El tipo de cursor que usa la aplicación también afecta a la capacidad para desplazarse hacia delante y hacia atrás por las filas de un conjunto de resultados; Esto se conoce a veces como posibilidades de desplazamiento. La capacidad de avanzar *y* con versiones anteriores a través de un resultado conjunto aumenta la complejidad del cursor y, por tanto, es más costoso de implementar. Por este motivo, deberá solicitar un cursor con esta funcionalidad solo cuando sea necesario.
-

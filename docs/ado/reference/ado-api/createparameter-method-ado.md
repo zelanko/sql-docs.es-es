@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords:
-- CreateParameter method [RDS]
+helpviewer_keywords: CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7fc09313bffacefd2d9eff86c9176222c094ebe
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto con las propiedades especificadas.  
@@ -70,7 +67,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Si especifica un tipo de datos numéricos (**adNumeric** o **adDecimal**) en el *tipo* argumento; a continuación, debe establecer también la [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [Precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Anexar y ejemplo de los métodos CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
@@ -78,4 +75,3 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  [Append (método) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Objeto de parámetro](../../../ado/reference/ado-api/parameter-object.md)   
  [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-

@@ -14,23 +14,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [Analysis Services], OLE DB for Data Mining
 - OLE DB for Data Mining
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 936073519a4b05780e611b89b7e1ee7f66f8c3cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 390e6beb9b1fb258e0b06ed3498dd2e69fa562af
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-programming---ole-db"></a>Programación de minería de datos - OLE DB
   Las características de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cumplir con la [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos 1.0 publicada en junio de 2000.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

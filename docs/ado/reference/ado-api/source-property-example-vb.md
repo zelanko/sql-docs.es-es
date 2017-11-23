@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Source property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 953cd75d0924ef2dafdcfda11e8e111411a533f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95fa9497ce4a8efea8e8b361ade7f484fa01d42c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-example-vb"></a>Ejemplo de la propiedad de origen (VB)
 Este ejemplo se muestra la [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad abriendo tres [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos basados en orígenes de datos diferentes.  
@@ -137,4 +133,3 @@ End Sub
 ## <a name="see-also"></a>Vea también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad Source (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-

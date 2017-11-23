@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Remote Data Service (RDS)
 - RDS
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4fcaa4455373ac30a39b114dc3adbe3c13fe840a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f828952d89e6d93023f891a27150d38d44ef81e5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-data-service-rds"></a>Servicio de datos remotos (RDS)
 Servicio de datos remoto (RDS) es una característica de ADO, con la que puede mover datos desde un servidor a una aplicación cliente o una página Web, manipular los datos en el cliente y devolver actualizaciones al servidor en un viaje de ida y.  
@@ -36,12 +34,11 @@ Servicio de datos remoto (RDS) es una característica de ADO, con la que puede m
   
  Guía del programador de RDS contiene los capítulos siguientes:  
   
--   [Conceptos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
   
--   [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)  
   
--   [Seguridad y el uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
+-   [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 
 

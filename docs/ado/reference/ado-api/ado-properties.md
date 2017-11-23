@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |[SOBRECARGAS ELÉCTRICAS](../../../ado/reference/ado-api/eos-property.md)|Indica si la actual posición está al final de la secuencia.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro para los datos en un **conjunto de registros**.|  
 |[HelpContext y HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica el archivo de ayuda y el tema asociados con un **Error** objeto.<br /><br /> **HelpContextID** devuelve un identificador de contexto, como un **largo** valor para un tema en un archivo de ayuda.<br /><br /> **HelpFile** devuelve un **cadena** valor que se evalúa como una ruta de acceso resuelta totalmente de un archivo de ayuda.|  
-|[Índice](../../../ado/reference/ado-api/index-property.md)|Indica el nombre del índice actualmente en vigor para un **Recordset** objeto.|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|Indica el nombre del índice actualmente en vigor para un **Recordset** objeto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica el nivel de aislamiento para una **conexión** objeto.|  
 |[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica a un miembro específico de una colección, por nombre o número ordinal.|  
 |[Separador de línea](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Indica el carácter binario que se usará como separador de línea en texto **flujo** objetos.|  
@@ -112,5 +110,4 @@ ms.lasthandoff: 09/09/2017
  [Eventos de ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Métodos de ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Interfaces y los objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-
+ [Interfaces y objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-errors"></a>Errores de ADO
 El **ErrorValueEnum** constante describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluyendo sus valores, vea [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). En esta sección se examine algunos de los errores más interesantes y se explican algunas situaciones específicas que pueden provocar, o soluciones para corregir el problema. Tanto el **ErrorValueEnum** se enumeran las constante y el número decimal positivo corto.
@@ -88,4 +86,3 @@ El **ErrorValueEnum** constante describe los valores de error de ADO. Para obten
 |**3749**|**adErrFieldsUpdateFailed**|Error de actualización de campos. Para obtener más información, examine la **estado** propiedad de objetos de campo individuales. Este error puede producirse en dos situaciones: al cambiar un **campo** valor del objeto en el proceso de cambio o adición de un registro a la base de datos y al cambiar las propiedades de la **campo** propio objeto.<br /><br /> El **registro** o **Recordset** error al actualizar debido a un problema con uno de los campos en el registro actual. Enumerar la **campos** colección y compruebe el **estado** propiedad de cada campo para determinar la causa del problema.|
 |**3750**|**adErrDenyNotSupported**|Proveedor no admite restricciones de uso compartido. Se realiza un intento de restringir el uso compartido de archivos y el proveedor no admite el concepto.|
 |**3751**|**adErrDenyTypeNotSupported**|Proveedor no admite el tipo solicitado de restricción de uso compartido. Se intentó establecer un tipo concreto de uso compartido de archivos restricción que no es compatible con el proveedor. Consulte la documentación del proveedor para determinar qué restricciones de uso compartido de archivos se admiten.|
-

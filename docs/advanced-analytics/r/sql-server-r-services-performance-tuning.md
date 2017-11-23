@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ajuste del rendimiento de R en SQL Server
 
@@ -92,7 +90,7 @@ Configuración y optimización del rendimiento requiere la creación de una base
 
 + [Ajuste del rendimiento de R en SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Proporciona instrucciones para configurar el hardware que [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado en y para configurar la instancia de SQL Server para admitir mejor scripts externos. Es especialmente útil para **los administradores de base de datos**.
+    Proporciona instrucciones para configurar el hardware que [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado en y para configurar la instancia de SQL Server para admitir mejor scripts externos. Es especialmente útil para **los administradores de base de datos**.
 
 + [Ajuste del rendimiento de R en SQL Server: código y datos de optimización](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +102,3 @@ Configuración y optimización del rendimiento requiere la creación de una base
 + [Ajuste del rendimiento de R en SQL Server: métodos y resultados](..\r\performance-case-study-r-services.md)
 
     Resume los datos que se usó los dos casos prácticos, cómo se prueba el rendimiento y cómo afectan las optimizaciones de los resultados.
-

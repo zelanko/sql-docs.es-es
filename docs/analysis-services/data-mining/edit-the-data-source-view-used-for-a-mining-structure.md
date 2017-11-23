@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], data source views
 - data source views [Analysis Services], modifying
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ce91b871387f8f289dc3f95ca1eb2b18acaa2d57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd9773e587e6be994283ddb064479d5185b1b62f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modifique la vista del origen de datos utilizada para una estructura de minería de datos
   Puede abrir una vista del origen de datos desde el Diseñador de minería de datos de manera que pueda modificarla.  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

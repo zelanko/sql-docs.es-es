@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
   Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
  Para quitar un parámetro, selecciónelo y haga clic en **Quitar**.  
   
 ## <a name="parameter-format"></a>Formato de parámetros  
- No incluya un separador entre parámetros. El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Aplica los siguientes requisitos de parámetro.  
+ No incluya un separador entre parámetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica los requisitos de parámetro siguientes.  
   
 -   Los espacios iniciales y finales se recortan de los parámetros de inicio.  
   
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  Para más información sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea "Cómo configurar opciones de inicio del servidor (Administrador de configuración de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-

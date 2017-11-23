@@ -1,100 +1,123 @@
 ---
-title: "Instalar Microsoft R Server desde la línea de comandos | Microsoft Docs"
+title: "Instalar servidor de aprendizaje de máquina (independiente) o Microsoft R Server (independiente) desde la línea de comandos | Documentos de Microsoft"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b9f6ceba4d3609a7e7ff816d31446a77c4fea64c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="install-microsoft-r-server-from-the-command-line"></a>Instalar Microsoft R Server desde la línea de comandos
-    
-En este tema se describe cómo usar argumentos de línea de comandos de SQL Server para instalar a Microsoft R Server en SQL Server 2016 o instalar el servidor de aprendizaje de máquina (independiente) en SQL Server 2017. 
+# <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Instalar servidor de aprendizaje de máquina (independiente) o Microsoft R Server (independiente) desde la línea de comandos
 
-> [!NOTE]
-También puede instalar a Microsoft R Server mediante un instalador independiente de Windows. Para obtener más información, consulte [instalar R Server 9.0.1 para Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows). 
+Este artículo describe cómo usar argumentos de línea de comandos de SQL Server para instalar las siguientes características de SQL Server mediante la línea de comandos:
+
++ [Server (independiente) de aprendizaje automático de SQL Server de 2017](#bkmk_mls2017) 
++ [Microsoft R Server (independiente), en SQL Server 2016](#bkmk_mrs2016)
+
+Un **desatendida** instalación requiere que especifique la ubicación de la utilidad de instalación y usan argumentos para indicar las características que desea instalar.
+
+Para efectuar una instalación **silenciosa** , proporcione los mismos argumentos y agregue el conmutador **/q** . No se proporciona ningún mensaje y se requiere ninguna interacción. Sin embargo, el programa de instalación produce un error si se omiten los argumentos necesarios.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Este método de instalación requiere que sepa cómo realizar una instalación de línea de comandos de SQL Server y está familiarizado con los argumentos de secuencias de comandos.
+Debe saber cómo realizar una instalación de línea de comandos de SQL Server y estar familiarizado con los argumentos de secuencias de comandos.
 
-- Para efectuar una instalación**desatendida** , debe especificar la ubicación de la utilidad de instalación y usar argumentos para indicar las características que quiere instalar. 
-- Para efectuar una instalación **silenciosa** , proporcione los mismos argumentos y agregue el conmutador **/q** . No se proporcionará ningún mensaje y no se requiere ninguna interacción, pero se producirá un error en el programa de instalación si se omite alguno de los argumentos obligatorios.
+Para obtener más información, consulte [instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
-Para obtener más información, vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+Si instala el servidor de aprendizaje de máquina o Microsoft R Server (independiente) en un equipo que no tenga acceso a Internet, debe descargar los componentes necesarios de R (o Python) de antemano y cópielos en una carpeta local. Para ubicaciones de descarga, vea [instalación de componentes de aprendizaje de máquina sin acceso a internet](installing-ml-components-without-internet-access.md).
 
-## <a name="sql-server-2017-microsoft-machine-learning-server-standalone"></a>SQL Server de 2017: Equipo con Microsoft aprendizaje Server (independiente)
 
-Ejecute el comando siguiente desde un símbolo del sistema con privilegios elevados para instalar solo servidor de aprendizaje de Microsoft máquina (independiente) y sus requisitos previos.  El ejemplo muestra los argumentos usados para instalar R.
+## <a name="bkmk_mls2017"></a>Instalar Microsoft Machine Learning Server (independiente)
+
+**Se aplica a: SQL Server de 2017**
+
+Ejecute el comando siguiente desde un símbolo del sistema con privilegios elevados para instalar solo servidor de aprendizaje de máquina (independiente) y sus requisitos previos.
+
++ Se requiere, el argumento de características que los términos de licencia de SQL Server.
++ Puede instalar un idioma, o tanto R y Python, pero tiene una licencia independiente para cada uno.
+
+Este ejemplo muestra los argumentos usados para instalar R.
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MR  /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS 
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MR  /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
-Para ver el progreso y los mensajes, quite el argumento _/q_.
+Este ejemplo muestra los argumentos usados para instalar Python.
 
-- **CARACTERÍSTICAS = SQL_SHARED_MR** obtiene únicamente los componentes de servidor de aprendizaje de máquina. Esto incluye los requisitos previos, que se instalan en modo silencioso, de forma predeterminada.
-- **SQL_INST_MR** es necesario para admitir installl para el lenguaje R.
-- **SQL_INST_MPY** es necesario para instalar la compatibilidad con Python.
-- **IACCEPTROPENLICENSETERMS** indica que ha aceptado los términos de la licencia para usar los componentes de R de código abierto.
-- **IACCEPTPYTHONLICENSETERMS** indica han aceptado los términos de licencia para el uso de los componentes de Python.
-- **IACCEPTSQLSERVERLICENSETERMS** es obligatorio para ejecutar el Asistente para la instalación.
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MPY  /IACCEPTPYTHONOPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+```
 
-**Notas**
++ Para ver el progreso y los mensajes, quite el argumento _/q_.
++ Si utiliza el argumento **características = SQL_SHARED_MR**, se instalan sólo los componentes de servidor de aprendizaje de máquina, con R ni Python. Esta instalación incluye todos los requisitos previos, que se instalan en modo silencioso, de forma predeterminada. Sin embargo, se recomienda que agregue al menos un idioma al instalar por primera vez.
++ Agregar **SQL_INST_MR** para instalar la compatibilidad con R.
++ Agregar **SQL_INST_MPY** para instalar la compatibilidad con Python.
++ **IACCEPTROPENLICENSETERMS** indica que ha aceptado los términos de la licencia para usar los componentes de R de código abierto.
++ **IACCEPTPYTHONLICENSETERMS** indica han aceptado los términos de licencia para el uso de los componentes de Python.
++ **IACCEPTSQLSERVERLICENSETERMS** es obligatorio para ejecutar el Asistente para la instalación.
 
-1. Se requiere, el argumento de características que los términos de licencia de SQL Server.
-2. Especifique al menos un idioma, junto con la marca de contrato de licencia.
-3. Puede instalar un idioma, o tanto R y Python, pero tiene una licencia independiente para cada uno.
 
-## <a name="sql-server-2016-microsoft-r-server-standalone"></a>SQL Server 2016: Microsoft R Server (independiente)
+## <a name="bkmk_mrs2016"></a> Instalar Microsoft R Server (independiente)
 
-Ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados para instalar solo Microsoft R Server (independiente) y sus requisitos previos.  El ejemplo muestra los argumentos usados con el programa de instalación de SQL Server 2016.
+**Se aplica a: SQL Server 2016**
+
+Ejecute el comando siguiente desde un símbolo del sistema con privilegios elevados para instalar **sólo** Microsoft R Server (independiente) y sus requisitos previos. 
 
 ```
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
-## <a name="offline-installation"></a>Instalación sin conexión
+> [!TIP]
+> Se recomienda que no instale este en el mismo equipo que hospeda una instancia de SQL Server R Services.
 
-Si instala el servidor de aprendizaje de máquina o Microsoft R Server (independiente) en un equipo que no tenga acceso a Internet, debe descargar los componentes de R necesarios de antemano y cópielos en una carpeta local. Para consultar las ubicaciones de descarga, consulte [Instalación de componentes de R sin acceso a Internet](../r/installing-ml-components-without-internet-access.md).
+## <a name="post-installation-tasks"></a>Tareas posteriores a la instalación
 
-## <a name="what-is-installed"></a>Lo que está instalado
+Para configurar la otra instancia de Microsoft R Server con los mismos parámetros, puede reutilizar el archivo de configuración que se crea durante la instalación. Para obtener más información, consulte [instalar SQL Server con un archivo de configuración](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
+
+### <a name="review-installed-components"></a>Componentes de revisión instalada
 
 Una vez concluida la instalación, puede revisar el archivo de configuración creado por el programa de instalación de SQL Server, junto con un resumen de las acciones de instalación.
 
 De forma predeterminada, todo el programa de instalación registros y resúmenes para SQL Server y características relacionadas se crean en las siguientes carpetas:
 
-- SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
-- 2017 de SQL Server:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ 2017 de SQL Server:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
-Se crea una subcarpeta independiente para cada característica instalada.
+Se crea una subcarpeta independiente para cada característica que se ha instalado.
 
-Para configurar la otra instancia de Microsoft R Server con los mismos parámetros, puede reutilizar el archivo de configuración que se crea durante la instalación. Para obtener más información, vea [instalar SQL Server mediante un archivo de configuración](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)
+### <a name="customize-the-r-or-python-environment"></a>Personalizar el entorno de R o Python
 
+Después de la instalación, puede instalar paquetes de R o Python adicionales. El proceso varía ligeramente en función de si usas SQL Server 2016 o 2017 de SQL Server.
 
-## <a name="customize-your-r-environment"></a>Personalizar el entorno de R
+En SQl Server 2017, puede instalar y administrar paquetes de R mediante T-SQL. Para obtener más información, consulte [instalar y administrar paquetes de R](../r/install-additional-r-packages-on-sql-server.md).
 
-Después de la instalación, puede instalar más paquetes de R. Para obtener más información, consulte [Installing and Managing R Packages](../r/install-additional-r-packages-on-sql-server.md)(Instalar y administrar paquetes de R).
+Para Python y en SQL Server 2016, un administrador debe instalar las bibliotecas adicionales que podrían ser necesarias.
 
 > [!IMPORTANT]
 > Si va a ejecutar el código de R en SQL Server, asegúrese de que instale los mismos paquetes en el equipo que desee utilizar para desarrollar la solución y la instancia de SQL Server en la que ejecutar o implementar la solución.
 
-Después de instalar servicios de aprendizaje de máquina para R (In-Database), puede usar al instalador independiente de Windows para actualizar la versión de R que está asociado a una instancia de SQL Server especificada. Para obtener más información, consulte [SqlBindR de uso para actualizar R](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+### <a name="upgrading-r-server-or-sql-server-machine-learning"></a>Actualizar el aprendizaje automático de R Server o SQL Server
 
+Si no piensa usar SQL Server, puede instalar Microsoft R Server o servidor de aprendizaje de máquina mediante un instalador independiente de Windows. Para ubicaciones de descarga e instrucciones, vea los siguientes vínculos:
 
++ [Instalar para Windows Server de aprendizaje automático](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
++ [Instalar a R Server 9.0.1 para Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) 
 
+También se puede usar el instalador independiente de windows para el servidor de aprendizaje de máquina para actualizar los componentes asociados con la instancia de aprendizaje automático.  Para obtener más información, vea estos vínculos:
+
++ [Utilice SqlBindR para actualizar R](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)

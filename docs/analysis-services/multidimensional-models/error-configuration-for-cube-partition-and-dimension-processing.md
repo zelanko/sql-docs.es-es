@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuración de errores de procesamiento de dimensiones, particiones y cubos
   Las propiedades de configuración de errores de objetos de cubo, partición o dimensión determinan cómo responde el servidor cuando se producen errores de integridad de datos durante el procesamiento. Claves duplicadas, claves que faltan y valores NULL en una columna de clave suelen desencadenar esos errores, y mientras el registro que produce el error no se agregue a la base de datos, puede establecer las propiedades que determinan qué ocurre después. De forma predeterminada, el procesamiento se detiene. Sin embargo, durante el desarrollo de un cubo, puede ser conveniente que el procesamiento continúe cuando se produzcan errores para que pueda probar los comportamientos del cubo con datos importados, aunque sean incompletos.  
@@ -188,11 +187,10 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> Paso siguiente  
  Decida si los errores detendrán el procesamiento o se omitirán. Recuerde que solo se omite el error. El registro que produjo el error no se pasa por alto; se descarta o se convierte al miembro desconocido. Los registros que infringen las reglas de integridad de datos nunca se agregan a la base de datos. De forma predeterminada, el procesamiento se detiene cuando se produce el primer error, pero puede cambiar este comportamiento si aumenta el límite de errores. En el desarrollo de un cubo, puede ser útil relajar las reglas de configuración de errores, permitiendo que el procesamiento continúe, de modo que haya datos para probar.  
   
- Decida si desea cambiar los comportamientos predeterminados de procesamiento de valores NULL. De forma predeterminada, los valores NULL de una columna de cadenas se procesan como valores vacíos, mientras que los valores NULL de una columna numérica se procesan como ceros. Vea [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obtener instrucciones sobre cómo establecer el procesamiento de valores NULL en un atributo.  
+ Decida si desea cambiar los comportamientos predeterminados de procesamiento de valores NULL. De forma predeterminada, los valores NULL de una columna de cadenas se procesan como valores vacíos, mientras que los valores NULL de una columna numérica se procesan como ceros. Vea [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obtener instrucciones sobre cómo establecer el procesamiento de valores NULL en un atributo.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades de registro](../../analysis-services/server-properties/log-properties.md)   
  [Definir el miembro desconocido y propiedades de procesamiento de valores Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

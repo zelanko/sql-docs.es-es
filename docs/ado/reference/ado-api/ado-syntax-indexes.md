@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- syntax indexes [ADO]
+helpviewer_keywords: syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7adcbadefe3af5939679b6e6ce8bfe44667f95be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e0ff03541851ac39c2904cde2f809e196cbd2c40
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-syntax-indexes"></a>Índices de sintaxis de ADO
 La sintaxis para llamar a métodos y propiedades ADO varía según el entorno de desarrollo. El resto de la referencia del lenguaje ADO utiliza el lenguaje de programación Microsoft Visual Basic para ilustrar la sintaxis de método y propiedad de ADO. Sin embargo, consulte las secciones siguientes para obtener ejemplos más específicos sintaxis según el lenguaje de programación y la misma metodología:  
@@ -39,4 +36,3 @@ La sintaxis para llamar a métodos y propiedades ADO varía según el entorno de
  [Usar ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Usar ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [Usar ADO con lenguajes de Scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: efb844dd4888a93bf805a7b22a278366bdf5d388
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-ssas-tabular"></a>Propiedades (SSAS tabular)
   Los proyectos de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tienen varias propiedades que definen el comportamiento del proyecto, el modelo, los informes y la implementación. Los valores de las propiedades se almacenan en formato XML en el archivo Model.bim; sin embargo, todas las propiedades descritas en esta sección se pueden configurar en las ventanas **Propiedades** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/01/2017
 |[Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración de las propiedades predeterminadas de implementación y de modelado de datos. Las propiedades predeterminadas se aplican a los proyectos de modelos tabulares nuevos. Después de crear un proyecto, estas propiedades se pueden cambiar para un proyecto de modelos determinado en función de sus necesidades.|  
   
   
-

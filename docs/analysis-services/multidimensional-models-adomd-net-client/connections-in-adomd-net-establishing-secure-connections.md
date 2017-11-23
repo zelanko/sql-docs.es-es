@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2cf974a0cc74127203b24b2e94acabec1e4339a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Conexiones en ADOMD.NET - establecer conexiones seguras
   Cuando se usa una conexión en ADOMD.NET, el método de seguridad que se usa para la conexión depende del valor de la **ProtectionLevel** propiedad de cadena de conexión utilizada cuando se llama a la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -127,4 +125,3 @@ End Function
  [Para establecer conexiones en ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   
-

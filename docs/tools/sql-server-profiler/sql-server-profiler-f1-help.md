@@ -5,8 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
 El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una herramienta que captura eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y las opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -216,7 +214,7 @@ Para ver esta ventana, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlp
 |---|---
 |**Servidor de reproducción**|Muestra la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se establece la conexión para la reproducción.  
 |**Cambiar...**|Inicia el cuadro de diálogo **Conectar al servidor** para conectarse a otro servidor.  
-|**Guardar en el archivo** |Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Muestra el cuadro de diálogo de archivo estándar, donde puede especificar la ubicación para guardar el archivo.  
+|**Guardar en el archivo** |Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
 |**Guardar en la tabla**|Guarda los resultados de la reproducción en una tabla. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  
 |**Número de subprocesos de reproducción**|Especifique el número de subprocesos de reproducción que se utilizarán simultáneamente. Un número mayor consume más recursos durante la reproducción, pero ésta es más rápida y simultánea.  
 |**Reproducir eventos en el orden del seguimiento**|Reproduce los eventos de forma secuencial. Utilice esta opción si reproduce un seguimiento para depuración.  
@@ -242,7 +240,7 @@ Utilice el cuadro de diálogo **Buscar** para buscar un seguimiento para palabra
  Para abrir este cuadro de diálogo en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], en el menú **Editar** , haga clic en **Buscar**.  
 |Elemento|Description
 |---|---
-|**Find what**|Escriba el texto que desea buscar. La búsqueda mostrará cualquier cadena que contenga la cadena especificada. Por ejemplo, la búsqueda de "Completed" devolverá "SQL:BatchCompleted". No se admiten caracteres comodín (*, ?, etc.).  
+|**Buscar**|Escriba el texto que desea buscar. La búsqueda mostrará cualquier cadena que contenga la cadena especificada. Por ejemplo, la búsqueda de "Completed" devolverá "SQL:BatchCompleted". No se admiten caracteres comodín (*, ?, etc.).  
 |**Buscar en columna**|Haga clic en una columna de datos para buscar o hacer clic  **\<todas las columnas >** para buscar todas las columnas de datos en el seguimiento.  
 |**Coincidir mayúsculas y minúsculas**|Busca texto en el que se usen las mismas mayúsculas y minúsculas que en el cuadro **Buscar** . Desactive esta casilla para buscar ejemplos del seguimiento que tengan caracteres tanto en mayúscula como en minúscula.  
 |**Solo palabras completas**|Limita la búsqueda a palabras completas. Desactive la casilla **Solo palabras completas** si desea realizar la búsqueda de algunos caracteres de una palabra.  
@@ -278,7 +276,6 @@ Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccion
 
 ## <a name="see-also"></a>Vea también 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
-[Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+[Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

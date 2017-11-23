@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8cccef2b-bdd0-415a-bb53-bda14165d1e4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f00bc626476aaf6be77feb1fe825e7766271d8b9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 35467656ca049a2d81e0322dd4f938f09ccea943
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="folderposition-element-xml"></a>Elemento FolderPosition (XML)
   Contiene información sobre la posición del elemento en una colección de elementos.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  Para **RelationshipEndVisualizationProperties** elementos, el **FolderPosition** elemento contiene la posición del elemento de carpeta predeterminado de una colección de carpetas. El valor predeterminado de **false** indica que no hay ninguna carpeta predeterminada que se usará.  
   
   
-

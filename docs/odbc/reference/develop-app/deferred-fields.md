@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deferred-fields"></a>Campos aplazados
 Los valores de *diferidas campos* no se usan cuando se establecen, pero el controlador guarda las direcciones de las variables de un efecto diferida. Para un descriptor de parámetros de la aplicación, el controlador utiliza el contenido de las variables en el momento de la llamada a **SQLExecDirect** o **SQLExecute**. Para un descriptor de fila de la aplicación, el controlador utiliza el contenido de las variables en el momento de la captura.  
@@ -50,4 +48,3 @@ Los valores de *diferidas campos* no se usan cuando se establecen, pero el contr
 -   Si el campo SQL_DESC_OCTET_LENGTH_PTR de un APD tiene un valor null y el parámetro es una cadena de caracteres, el controlador supone que cadena terminada en null. Para los parámetros dinámicos de salida, un valor null en este campo evita que el controlador devuelve información sobre la longitud. (Si el campo SQL_DESC_TYPE no indica un parámetro de cadena de caracteres, se omite el campo SQL_DESC_OCTET_LENGTH_PTR.)  
   
  La aplicación no debe cancelar la asignación o descartar las variables utilizadas para campos aplazados entre el momento en que asocia a los campos y el momento en el controlador lee o escribe.
-

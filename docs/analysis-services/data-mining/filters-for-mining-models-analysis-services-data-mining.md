@@ -20,17 +20,16 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8bf35c6bd8086ba6fc61dce76853308c9cb34e2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db42f50eca097c58afac1ded71d143f8230fd42d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de minería (Analysis Services - Minería de datos)
   El filtrado de modelos basado en datos ayuda a crear modelos de minería de datos que usan subconjuntos de datos en una estructura de minería de datos. El filtrado proporciona flexibilidad a la hora de diseñar orígenes de datos y estructuras de minería de datos propios, porque se puede crear una estructura de minería de datos única basándose en una vista del origen de datos completa. A continuación, puede crear filtros para usar solo una parte de esos datos para aprendizaje y probar una variedad de modelos, en lugar de generar una estructura diferente y un modelo relacionado para cada subconjunto de datos.  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

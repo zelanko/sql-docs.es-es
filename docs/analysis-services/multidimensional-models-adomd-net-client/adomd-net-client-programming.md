@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8a7debab516c8f48b4184c66028c42f44d5bdd2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adomdnet-client-programming"></a>Programación del cliente ADOMD.NET
   Los componentes de cliente ADOMD.NET residen dentro de la **Microsoft.AnalysisServices.AdomdClient** espacio de nombres (en microsoft.analysisservices.adomdclient.dll). Estos componentes de cliente proporcionan la funcionalidad de cliente y las aplicaciones de nivel intermedio para consultar fácilmente los datos y metadatos desde un almacén de datos analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -40,9 +38,9 @@ ms.lasthandoff: 09/01/2017
 |Tarea|Description|  
 |----------|-----------------|  
 |[Para establecer conexiones en ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|En ADOMD.NET, se usa un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> para establecer conexiones con orígenes de datos analíticos, como las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede usar el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> para ejecutar comandos, recuperar datos y recuperar metadatos del origen de datos analíticos.|  
-|[Al recuperar los metadatos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|Una vez establecida una conexión, puede usar una gran variedad de objetos para recuperar información del origen de datos subyacente. Esta funcionalidad permite a las aplicaciones adaptarse al origen de datos al que se han conectado.|  
-|[Ejecutar comandos en un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> proporciona las interfaces necesarias para ejecutar comandos en el origen de datos analíticos subyacente.|  
-|[Recuperar datos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|Después de ejecuta un comando, los datos se pudo recuperar y analizar mediante el <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, o **System.XmlReader** objetos.|  
+|[Recuperación de metadatos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|Una vez establecida una conexión, puede usar una gran variedad de objetos para recuperar información del origen de datos subyacente. Esta funcionalidad permite a las aplicaciones adaptarse al origen de datos al que se han conectado.|  
+|[Ejecución de comandos en un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> proporciona las interfaces necesarias para ejecutar comandos en el origen de datos analíticos subyacente.|  
+|[Recuperación de datos de un origen de datos analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|Después de ejecuta un comando, los datos se pudo recuperar y analizar mediante el <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, o **System.XmlReader** objetos.|  
 |[Realizar transacciones en ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md)|Todas las acciones enumeradas en las filas anteriores de esta tabla pueden tener lugar dentro de una transacción de lectura confirmada, que contiene los bloqueos compartidos mientras los datos se leen para evitar lecturas no actualizadas. Los datos se pueden cambiar antes de que finalice la transacción, lo que da como resultado lecturas no repetibles o datos fantasma. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> proporciona la funcionalidad de la transacción en ADOMD.NET.|  
   
  La interacción con la jerarquía de objetos ADOMD.NET suele comenzar con uno o más de los objetos del nivel superior, como se describe en la tabla siguiente.  
@@ -59,7 +57,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Vea también  
  [Programación del servidor ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
- [Desarrollar con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Desarrollo con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   
-

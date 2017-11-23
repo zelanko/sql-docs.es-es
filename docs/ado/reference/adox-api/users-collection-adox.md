@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Group::Users
 - Users
 - Catalog::Users
-helpviewer_keywords:
-- Users collection [ADOX]
+helpviewer_keywords: Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab2952445a0e73b090ab963945f5c3560f6ed2cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9c19df96e66927c6dc5092cd0584f071a3d3b40
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="users-collection-adox"></a>Colección Users (ADOX)
 Todos los contiene almacenados [usuario](../../../ado/reference/adox-api/user-object-adox.md) objetos de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) o [grupo](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -62,5 +59,4 @@ Todos los contiene almacenados [usuario](../../../ado/reference/adox-api/user-ob
 ## <a name="see-also"></a>Vea también  
  [Ejemplo GetPermissions y SetPermissions métodos (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto de usuario (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
-
+ [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

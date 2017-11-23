@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0f80fa93733c9e9fc4541617d45bd1f266434ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 909721266982cdfbaf6a3a58b00b120c47cf736e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-errors-in-vbscript"></a>Control de errores en VBScript
 Hay pocas diferencias entre los métodos usados en Visual Basic y los empleados con VBScript. La principal diferencia es que VBScript no admite el concepto de puede continuar la ejecución en una etiqueta de control de errores. En otras palabras, no puede usar `On Error GoTo` en VBScript. En su lugar, use `On Error Resume Next` y, a continuación, compruebe las **Err.Number** y **recuento** propiedad de la **errores** colección, como se muestra en el ejemplo siguiente:  
@@ -86,4 +83,3 @@ Hay pocas diferencias entre los métodos usados en Visual Basic y los empleados 
 </HTML>  
 <!-- EndErrorExampleVBS -->  
 ```
-

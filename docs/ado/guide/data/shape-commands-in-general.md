@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 245f842883ec0be1ac92ad58ea75b4cdef7d9cb3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 Dar forma a datos define las columnas de una forma **Recordset**, las relaciones entre las entidades representadas por las columnas y la forma en que la **Recordset** se rellena con datos.  
@@ -64,4 +62,3 @@ Dar forma a datos define las columnas de una forma **Recordset**, las relaciones
 -   [Las funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   
 -   [Emitir comandos al proveedor de datos subyacente](../../../ado/guide/data/issuing-commands-to-the-underlying-data-provider.md)
-

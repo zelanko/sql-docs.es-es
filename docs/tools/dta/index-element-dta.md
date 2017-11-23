@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Index element (DTA)
+dev_langs: XML
+helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3da89d41eeb2c2ce6c859e3e5e93a76eb9e5ab1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
   Contiene información acerca de un índice de una configuración especificada por el usuario que se desea crear o quitar.  
@@ -71,7 +67,7 @@ ms.lasthandoff: 08/02/2017
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Create &#40;DTA, elemento&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
-|**Elementos secundarios**|[Name, elemento de Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column &#40;DTA, elemento de Index&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PartitionColumn** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Filegroup &#40;DTA. elemento de Index&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PercentUsage** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
+|**Elementos secundarios**|[Name &#40;DTA, elemento de Index&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column &#40;DTA, elemento de Index&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PartitionColumn** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Filegroup &#40;DTA. elemento de Index&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PercentUsage** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
@@ -80,4 +76,3 @@ ms.lasthandoff: 08/02/2017
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

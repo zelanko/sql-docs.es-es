@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: e4deba6c238773322eddd9d01676e36579addf4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d84fc757b72e702736eab9aec2a7930474497a87
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Instalación de SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) para Oracle está formada por una aplicación de cliente que usa para realizar una migración desde Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y base de datos de SQL Azure. También contiene un módulo de extensión que admite la migración de datos y el uso de funciones de sistema de Oracle en las bases de datos migrados.  
@@ -41,4 +39,3 @@ Si desea actualizar a una versión posterior de SSMA para Oracle, debe desinstal
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

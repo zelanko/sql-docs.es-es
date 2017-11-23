@@ -1,35 +1,29 @@
 ---
 title: "Crear gráficos y los gráficos con SQL y R (tutorial) | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Crear gráficos y los gráficos con SQL y R (tutorial)
 
-En esta parte del tutorial, obtendrá información sobre las técnicas para generar gráficos y mapas mediante R con datos de SQL Server. Creará un histograma simple para practicar y, después, desarrollará un trazado de mapa más complejo.
+En esta parte del tutorial, aprenderá técnicas para generar gráficos y mapas mediante R con datos de SQL Server. Crear un histograma simple, para practicar y, a continuación, desarrolle un gráfico de mapa más complejo.
 
 ### <a name="create-a-histogram"></a>Crear un histograma
 
@@ -56,8 +50,6 @@ En esta parte del tutorial, obtendrá información sobre las técnicas para gene
 ### <a name="create-a-map-plot"></a>Crear un gráfico de mapa
 
 Normalmente, los servidores de base de datos bloquean el acceso a Internet. Esto puede ser un problema al usar paquetes de R que necesitan descargar mapas u otras imágenes para generar gráficos. Sin embargo, hay una solución que le resultarán útiles al desarrollar sus propias aplicaciones. Básicamente, generar la representación de mapa en el cliente y luego superponer los puntos que se almacenan como atributos de la tabla de SQL Server en el mapa.
-
-Te guiaremos a través de él en esta lección.
 
 1. Definir la función que crea el objeto de trazado de R. La función personalizada *mapPlot* crea un gráfico de dispersión que usa las ubicaciones de recogida de taxi y se representa el número de llevar a que se inició desde cada ubicación. Usa los paquetes **ggplot2** y  **ggmap** , que ya deberían estar instalados y cargados.
 
@@ -117,4 +109,3 @@ Te guiaremos a través de él en esta lección.
 ## <a name="previous-lesson"></a>Lección anterior
 
 [Resumir datos mediante R](/walkthrough-view-and-summarize-data-using-r.md)
-

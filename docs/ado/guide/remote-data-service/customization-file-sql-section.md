@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e596d2c1ae90e86931e5656ac7ccdbdeb95e4d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 766e734626f650bccca3a48a5f2dcf7942612053
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-sql-section"></a>Sección SQL del archivo de personalización
 El **sql** sección puede contener una nueva cadena SQL que reemplaza la cadena de comandos de cliente. Si no hay ninguna cadena de SQL en la sección, se omitirá la sección.  
@@ -65,7 +63,6 @@ SQL = " "
  [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Opciones de cliente necesarias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Descripción de los archivos de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escribir su propio controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

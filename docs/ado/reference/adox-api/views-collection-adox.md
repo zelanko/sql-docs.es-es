@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Catalog::Views
 - Views
-helpviewer_keywords:
-- Views collection [ADOX]
+helpviewer_keywords: Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 11a8bad0bb61e0f0256b31a24eaf3f283d645a45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-collection-adox"></a>Colección de vistas (ADOX)
 Todos los contiene [vista](../../../ado/reference/adox-api/view-object-adox.md) objetos de un catálogo.  
@@ -51,7 +48,7 @@ Todos los contiene [vista](../../../ado/reference/adox-api/view-object-adox.md) 
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades de la colección de vistas, métodos y eventos](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
+-   [Eventos, métodos y propiedades de la colección de vistas](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas y ejemplo de colecciones de campos (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
@@ -60,5 +57,4 @@ Todos los contiene [vista](../../../ado/reference/adox-api/view-object-adox.md) 
  [Vistas de eliminar el ejemplo del método (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Vistas de actualización de ejemplo del método (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto de vista (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
-
+ [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

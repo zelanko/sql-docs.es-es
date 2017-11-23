@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Field object [ADO]
+helpviewer_keywords: Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ecd2382d15536a5c2ebd2b2098c89c41c78ba1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-field-object"></a>El objeto de campo
 Cada **campo** objeto suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también se puede representar un puntero a otro **Recordset**, que se denomina capítulo. Excepciones, como columnas de capítulo, se explicará más adelante en esta guía.  
@@ -126,4 +123,3 @@ Cada **campo** objeto suele corresponder a una columna de una tabla de base de d
  Si no hay ningún registro actual cuando se usa el **GetChunk** o **AppendChunk** método en un **campo** del objeto, se produce el error 3021 (no hay registro actual).  
   
  Para obtener un ejemplo del uso de estos métodos para manipular datos binarios, consulte el [método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [método GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) en los ejemplos de la *referencia del programador de ADO*.
-

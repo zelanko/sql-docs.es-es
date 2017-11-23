@@ -8,26 +8,22 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriales de minería de datos (Analysis Services)
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilita la creación de soluciones de minería de datos mediante asistentes y visualizaciones integradas. Especialmente si no está familiarizado con el aprendizaje automático, las herramientas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] son una forma fácil de diseñar, entrenar y explorar los modelos de minería de datos. Los datos de los modelos pueden almacenarse en un cubo, base de datos relacional o cualquier otro origen compatible con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Después de crear un modelo, puede ponerlo en producción; para ello, acceda al modelo para crear predicciones mediante varios clientes de predicción, incluidos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y ASP.NET.  
@@ -50,5 +46,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 

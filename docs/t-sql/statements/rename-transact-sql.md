@@ -1,29 +1,27 @@
 ---
 title: RENAME (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
   Cambia el nombre de una tabla creada por el usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Cambia el nombre de una tabla creada por el usuario o una base de datos en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] utilice el procedimiento almacenado [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Para cambiar el nombre de una base de datos en la base de datos de SQL Azure, use la [ALTER DATABASE (base de datos de SQL Azure)](/statements/alter-database-azure-sql-database.md) instrucción. 
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -112,7 +110,7 @@ No se puede cambiar el nombre de una tabla externa, índices o vistas. En lugar 
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-rename-a-database"></a>A. Cambiar el nombre de una base de datos  
- **Se aplica a:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sólo    
+ **Se aplica a:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sólo  
   
  Este ejemplo cambia el nombre de la base de datos definido por el usuario AdWorks a AdWorks2.  
   
@@ -164,4 +162,3 @@ KILL 'SID1234';
 ```  
   
   
-

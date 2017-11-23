@@ -3,17 +3,18 @@ title: "Instrucción ALTER INDEX (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica un índice existente de una tabla o una vista (relacional o XML) mediante su deshabilitación, regeneración o reorganización, o mediante el establecimiento de sus opciones.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |PARTICIÓN REORGANIZAR = *número_de_partición*|Índice sin particiones, índice XML, índice espacial o índice deshabilitado|  
 |IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** (a partir de SQL Server 2012) de SQL Server y base de datos de SQL Azure.|  
 |ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** (a partir de SQL Server 2012) de SQL Server y base de datos de SQL Azure.|
-| REANUDABLES = ON  | Índices reanudables no compatibles con **todos los** palabra clave. <br /><br /> **Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública) |   
+| REANUDABLES = ON  | Índices reanudables no compatibles con **todos los** palabra clave. <br /><br /> **Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL |   
   
 > [!WARNING]
 >  Para obtener más información sobre las operaciones de índice que se pueden realizar en línea, consulte [directrices para operaciones de índice en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -436,7 +436,7 @@ Valor de FILLFACTOR = *fillfactor*
 
 REANUDABLES  **=**  {ON | **OFF**}
 
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)  
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL   
 
  Especifica si una operación de índice en línea es reanudable.
 
@@ -446,7 +446,7 @@ REANUDABLES  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *tiempo* [**minutos**] usa con **REANUDABLE = ON** (requiere **ONLINE = ON**).
  
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)  
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
 
 Indica el tiempo (valor entero especificado en minutos) que un reanudables en línea operación de índice se ejecuta antes de que se está en pausa. 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Se aplica a**: a partir de SQL Server 2017 (característica está en versión preliminar pública)
+**Se aplica a**: a partir de SQL Server de 2017  
 
 Reanudar una operación de índice que se pausó manualmente o debido a un error.
 
 MAX_DURATION se utiliza con **REANUDABLE = ON**
 
  
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL
 
 La hora (un valor entero especificado en minutos) se ejecuta después de que se va a reanudar la operación de índice en línea reanudables. Una vez que expire el tiempo, la operación reanudable está en pausa si todavía se está ejecutando.
 
 Utilizar WAIT_AT_LOW_PRIORITY con **REANUDABLE = ON** y **ONLINE = ON**.  
   
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
   
  Reanudar una regeneración de índice en línea después de una pausa tiene que esperar para operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea esperará bloqueos de prioridad baja, lo que permite a otras operaciones podrán continuar mientras está esperando la operación de generación de índice en línea. Si se omite la **WAIT AT LOW PRIORITY** opción es equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obtener más información, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE
  
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
   
 Pausar una operación de regeneración del índice en línea reanudables.
 
 ANULACIÓN
 
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)   
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL   
 
 Anular una operación de índice en pausa o en ejecución que se ha declarado como reanudable. Tendrá que ejecutar explícitamente un **anular** operación de regeneración de un índice reanudable cancelación del comando. Error o interrumpir una operación de índice reanudables no termina su ejecución; en su lugar, la operación deja en un estado de pausa indefinido.
   
@@ -712,7 +712,7 @@ Anular una operación de índice en pausa o en ejecución que se ha declarado co
 
 ### <a name="resumable-index-operations"></a>Operaciones de índice reanudables
 
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
 
 ONLINE INDEX REBUILD se especifica como reanudables mediante el REANUDABLE = opción. 
 -  La opción REANUDABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por lo tanto, el REANUDABLE = ON cláusula debe especificarse explícitamente para habilitar resumability.
@@ -786,7 +786,7 @@ La siguiente funcionalidad está deshabilitada para las operaciones de regenerac
   
 -   Índices de almacén de columnas no están disponibles antes de SQL Server 2012. 
 
--  Operaciones de índices reanudables están disponibles desde SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública) |   
+-  Operaciones de índices reanudables están disponibles a partir 2017 de SQL Server y base de datos de SQL Azure   
   
 ## <a name="basic-syntax-example"></a>Ejemplo de sintaxis básica:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Reconstrucción de índices reanudables en línea
 
-**Se aplica a**: a partir de SQL Server 2017 y Azure SQL Database (característica está en versión preliminar pública)    
+**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL   
 
  Los ejemplos siguientes muestran cómo usar la reconstrucción de índices reanudables en línea. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>Teniendo en cuenta las características de base de datos que se utilizan
 Después de que se conoce el nivel básico de interoperabilidad, deben tener en cuenta las características de base de datos usadas por la aplicación. Por ejemplo, ¿qué instrucciones SQL ejecutará la aplicación? ¿La aplicación usará los cursores desplazables? ¿Transacciones? ¿Procedimientos? ¿Datos de tipo Long? Para una idea de qué características podría no admitir todos los DBMS, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) ydescripcionesdefunción[ Apéndice C: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Las características requeridas por una aplicación podrían eliminar algunos de los DBMS en la lista de DBMS de destino. También podría mostrar que la aplicación puede fácilmente tener como destino muchos DBMS.  
@@ -55,4 +52,3 @@ Después de que se conoce el nivel básico de interoperabilidad, deben tener en 
 -   **Admite varias consultas solo si el controlador hace.** Después de conectarse a un controlador, la aplicación comprueba el número de instrucciones activas. La aplicación permite al usuario iniciar una nueva instrucción cuando uno ya está activa sólo si el controlador es compatible con varias instrucciones activas. La aplicación tiene mayor funcionalidad y la interoperabilidad, pero es más difícil de implementar.  
   
 -   **Siempre admite varias consultas y emular ellos cuando sea necesario.** Después de conectarse a un controlador, la aplicación comprueba el número de instrucciones activas. La aplicación siempre permite al usuario iniciar una nueva instrucción cuando uno ya está activa. Si el controlador admite solo una instrucción activa, la aplicación abre una conexión adicional a ese controlador y ejecuta la instrucción nuevo en esa conexión. La aplicación tiene una funcionalidad completa y la interoperabilidad alta, pero es más difícil de implementar.
-

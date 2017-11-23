@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b27da2aac2c42987f6eeaba4f104b647912df0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="duplicated-features"></a>Características duplicados
 Las siguientes 2 de ODBC. *x* funciones se han duplicado por ODBC 3. *x* funciones. Como resultado, la API ODBC 2. *x* funciones están desusadas en ODBC 3. *x*. ODBC 3. *x* funciones se conocen como funciones de reemplazo.  
@@ -60,4 +58,3 @@ Las siguientes 2 de ODBC. *x* funciones se han duplicado por ODBC 3. *x* funcion
   
 > [!NOTE]  
 >  La función **SQLBindParam** es un caso especial. **SQLBindParam** funcionalidad duplicada. Esto no es una API ODBC 2*.x* función, pero las funciones que se encuentra en los estándares Open Group e ISO. La funcionalidad proporcionada por esta función es incluir completamente de **SQLBindParameter**. Como resultado, el Administrador de controladores se asigna una llamada a **SQLBindParam** a **SQLBindParameter** cuando el controlador subyacente es una aplicación ODBC 3. *x* controlador. Sin embargo, cuando el controlador subyacente es una API ODBC 2*.x* controlador, el Administrador de controladores no realiza esta asignación.
-

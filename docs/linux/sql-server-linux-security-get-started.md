@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: 
 ms.workload: Inactive
+ms.openlocfilehash: faf7903fc945fc1ce966d6bf6560f55c8d494314
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 254df7047188570cbf766efb29b486d77d095a98
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Tutorial sobre las características de seguridad de SQL Server en Linux
 
@@ -291,4 +290,3 @@ Para obtener más información, consulte [cifrado de copia de seguridad](../rela
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información acerca de las características de seguridad de SQL Server, vea [centro de seguridad para el motor de base de datos de SQL Server y base de datos de SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
-

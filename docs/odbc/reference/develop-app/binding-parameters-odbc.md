@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-odbc"></a>Enlazar parámetros ODBC
 Cada parámetro en una instrucción SQL debe estar asociado, o *enlazado,* a una variable en la aplicación antes de que se ejecuta la instrucción. Cuando la aplicación enlaza una variable a un parámetro, se describe esa variable: dirección, tipo de datos de C y así sucesivamente, para el controlador. También se describe el propio parámetro: datos de SQL tipo, precisión y así sucesivamente. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  
@@ -57,4 +54,3 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
 -   [Desplazamientos de enlace de parámetros](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
 -   [Descripciones de parámetros](../../../odbc/reference/develop-app/describing-parameters.md)
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetCursorName
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetCursorName
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetCursorName
-helpviewer_keywords:
-- SQLGetCursorName function [ODBC]
+f1_keywords: SQLGetCursorName
+helpviewer_keywords: SQLGetCursorName function [ODBC]
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 64d42cd4869a1d9f8d8762f0eeefd74ed59a14e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e1f3d6fe6d80c54d136c89f1048b846ba557d4a1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetcursorname-function"></a>Función SQLGetCursorName
 **Conformidad**  
@@ -101,12 +95,11 @@ SQLRETURN SQLGetCursorName(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Ejecutar una instrucción SQL|[SQLExecDirect, función](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Ejecutar una instrucción SQL preparada|[SQLExecute, función](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Ejecutar una instrucción SQL|[Función SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Preparar una instrucción de ejecución|[Función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|Establecer un nombre de cursor|[SQLSetCursorName, función](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
+|Establecer un nombre de cursor|[Función SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d6ecf921672a9708bbbdf10109bdeea435295891
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindparameter-visual-foxpro-odbc-driver"></a>SQLBindParameter (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  Asocia un búfer con un marcador de parámetro en una instrucción SQL. El controlador ODBC de Visual FoxPro admite parámetros de entrada según lo especificado por el *fParamType* argumento.  
   
  Para obtener más información, consulte [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) en el *referencia del programador de ODBC*.
-

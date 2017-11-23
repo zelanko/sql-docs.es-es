@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7b6c72d350b718a7676bffd72c261b7cfa72667
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Controlador ODBC en Linux y macOS compatibilidad con alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -121,14 +119,13 @@ Una aplicación ODBC que usa [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 
   
 |Función|Description|  
 |------------|---------------|  
-|[SQLConnect, función](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** admite tanto **ApplicationIntent** y **MultiSubnetFailover** a través de un nombre de origen de datos (DSN) o el atributo de conexión.|  
-|[SQLDriverConnect, función](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** admite **ApplicationIntent** y **MultiSubnetFailover** a través del atributo de conexión, palabra clave de cadena de conexión o DSN.|
+|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** admite tanto **ApplicationIntent** y **MultiSubnetFailover** a través de un nombre de origen de datos (DSN) o el atributo de conexión.|  
+|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** admite **ApplicationIntent** y **MultiSubnetFailover** a través del atributo de conexión, palabra clave de cadena de conexión o DSN.|
   
 ## <a name="see-also"></a>Vea también  
 
-[Palabras clave de cadena de conexión y nombres de origen de datos (DSN)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
+[Palabras clave de cadena de conexión y nombres de orígenes de datos (DSN)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 
 [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Notas de la versión](../../../connect/odbc/linux-mac/release-notes.md)  
-

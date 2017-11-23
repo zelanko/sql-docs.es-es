@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET REPROCESS command [ODBC]
+helpviewer_keywords: SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8e907d01b79c314603ba87c8195e56c8710bd10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-reprocess-command"></a>CONJUNTO de comandos de volver a procesar
 Especifica cuántas horas o durante largos para bloquear un archivo o un registro después de un intento fallido de bloqueo.  
@@ -62,4 +59,3 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Comentarios  
  El primer intento de bloquear un registro o el archivo no siempre es correcta. Con frecuencia, un registro o el archivo está bloqueado por otro usuario en la red. Establezca volver a procesar determina si Visual FoxPro hace intentos adicionales para bloquear el archivo o el registro cuando el intento inicial no tiene éxito. Puede especificar cuántas veces se realizan de intentos adicionales o para los intentos de cuánto tiempo se realizan. Una rutina ON ERROR afecta a cómo incorrecta bloqueo se controlan los intentos.
-

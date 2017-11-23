@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3fc19dd4b6553362705b7cc57c9431a29aa91ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="other-driver-architectures"></a>Otras arquitecturas de controlador
 Algunos controladores ODBC no cumplir estrictamente la arquitectura que se ha descrito anteriormente. Esto podría deberse a que los controladores de llevar a cabo tareas distintas de las de un controlador ODBC tradicional o no son controladores en el sentido normal.  
@@ -58,4 +56,3 @@ Algunos controladores ODBC no cumplir estrictamente la arquitectura que se ha de
  Una ventaja de esta arquitectura es la configuración y mantenimiento de software eficaz. Controladores sólo necesitan actualizarse en un único lugar: en el servidor. Mediante el uso de orígenes de datos del sistema, los orígenes de datos se pueden definir en el servidor para su uso por todos los clientes. No es necesario definir los orígenes de datos en el cliente. Agrupación de conexiones se puede utilizar para optimizar el proceso mediante el cual los clientes se conectan a orígenes de datos.  
   
  El controlador en el cliente suele ser un controlador muy pequeño que se transfiere la llamada del Administrador de controladores al servidor. Su superficie puede ser mucho menor que los controladores ODBC totalmente funcionales en el servidor. En esta arquitectura, se pueden liberar los recursos del cliente si el servidor tiene más capacidad de proceso. Además, se pueden mejorar la eficacia y la seguridad de todo el sistema mediante la instalación de servidores de copia de seguridad y realizar el equilibrio de carga para optimizar el uso del servidor.
-

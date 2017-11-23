@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 814d148b6e542e94254ddd13eebfc7974c4a3ac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a0bb497044e9800461b60021fc9a6c8db4e9cca
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arrays-of-parameter-values"></a>Matrices de valores de parámetro
 A menudo resulta útil para las aplicaciones pasar matrices de parámetros. Por ejemplo, con las matrices de parámetros y una con parámetros **insertar** instrucción, una aplicación puede insertar un número de filas a la vez. Hay varias ventajas con respecto al uso de matrices. En primer lugar, se reduce el tráfico de red porque los datos para muchas de las instrucciones se envían en un único paquete (si el origen de datos admite matrices de parámetros de forma nativa). En segundo lugar, algunos orígenes de datos pueden ejecutar instrucciones SQL con matrices más rápido que ejecutar el mismo número de instrucciones independientes de SQL. Por último, cuando los datos se almacenan en una matriz, como suele ser el caso de datos de pantalla, la aplicación puede enlazar todas las filas de una columna en particular con una sola llamada a **SQLBindParameter** y actualizarlos mediante la ejecución de una sola instrucción.  
@@ -38,4 +36,3 @@ A menudo resulta útil para las aplicaciones pasar matrices de parámetros. Por 
 -   [Las matrices de parámetros de enlace](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
   
 -   [Utilizar matrices de parámetros](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)
-

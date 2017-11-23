@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77c4e0fdf2d0306b678337959a11716d952877dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f907cf8700a683988277e84b93f9fc3bdae11317
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="procedure-calls"></a>Llamadas a procedimientos
 A *procedimiento* es un objeto ejecutable almacenado en el origen de datos. Normalmente, se trata de una o varias instrucciones SQL compiladas. La secuencia de escape para llamar a un procedimiento es  
@@ -71,4 +69,3 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
  Para determinar si un origen de datos admite procedimientos, llama a una aplicación **SQLGetInfo** con la opción SQL_PROCEDURES.  
   
  Para obtener más información acerca de los procedimientos, consulte [procedimientos](../../../odbc/reference/develop-app/procedures-odbc.md).
-

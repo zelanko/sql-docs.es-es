@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 588166b41e7a66a442b1b5b49fbdcaf0d6d13320
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a69727d252d2e8d51d462a691f65379432096eb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="securing-connection-strings"></a>Proteger las cadenas de conexión
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +35,6 @@ ms.lasthandoff: 09/09/2017
  Si obtiene la información de cadena de conexión de una fuente externa (por ejemplo, si un usuario proporciona un Id. de usuario y una contraseña), debe validar las entradas desde el origen para asegurarse de que presentan el formato correcto y no contienen parámetros adicionales que afecten a la conexión.  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

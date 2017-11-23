@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4a878a9ff6c0d1a00f5e551b1810ab3d6f20d44a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="automatic-population-of-the-ipd"></a>Rellenado automático de la IPD
 Algunos controladores son capaces de establecer los campos de la IPD después de que se ha preparado una consulta parametrizada. Los campos del descriptor se rellenan automáticamente con la información sobre el parámetro, incluidos el tipo de datos, precisión, escala y otras características. Esto es equivalente a admitir **SQLDescribeParam**. Esta información puede ser especialmente útil para una aplicación cuando no tiene ninguna otra manera de detectar, por ejemplo, cuando se realiza una consulta ad hoc con parámetros que la aplicación no conozca.  
@@ -39,4 +37,3 @@ Algunos controladores son capaces de establecer los campos de la IPD después de
  Cuándo el rellenado automático se admite y se habilita, el controlador rellena los campos de la IPD después de una instrucción SQL que contiene marcadores de parámetros se ha preparado mediante una llamada a **SQLPrepare**. Una aplicación puede recuperar esta información mediante una llamada a **SQLGetDescField** o **SQLGetDescRec**, o **SQLDescribeParam**. La aplicación puede utilizar la información para enlazar el búfer de aplicación más adecuado para un parámetro o para especificar una conversión de datos para él.  
   
  El rellenado automático de la IPD podría producir una reducción del rendimiento. Una aplicación puede desactivarlo al restablecer el atributo de instrucción de SQL_ATTR_ENABLE_AUTO_IPD SQL_FALSE (el valor predeterminado).
-

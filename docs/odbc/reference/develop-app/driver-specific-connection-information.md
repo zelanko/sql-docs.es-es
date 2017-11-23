@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specific-connection-information"></a>Información de conexión específicos del controlador
 **SQLConnect** se da por supuesto que un nombre de origen de datos, el Id. de usuario y la contraseña son suficientes para conectarse a un origen de datos y que todos los demás información de conexión se puede almacenar en el sistema. Esto sucede con frecuencia no. Por ejemplo, un controlador que tenga un identificador de usuario y contraseña para iniciar sesión en un servidor y un identificador de usuario diferente y una contraseña para iniciar sesión en un DBMS. Dado que **SQLConnect** acepta un Id. de usuario único y una contraseña, esto significa que el otro Id. de usuario y la contraseña deben almacenarse con la información de origen de datos en el sistema si **SQLConnect** va a usar. Esto es una posible infracción de seguridad y debe evitarse, a menos que la contraseña se cifra.  
@@ -50,4 +48,3 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Pares de palabra clave y valor en **SQLDriverConnect** deben seguir ciertas reglas de sintaxis. ¿Las palabras clave y sus valores no deben contener el **[] {} (),? \*=! @** caracteres. El valor de la **DSN** palabra clave no puede constar únicamente de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática del registro, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. No se permiten espacios alrededor del signo igual en el par de palabra clave y valor.  
   
  El **FILEDSN** palabra clave puede utilizarse en una llamada a **SQLDriverConnect** para especificar el nombre de un archivo que contiene información de origen de datos (vea [conectarse utilizando archivo orígenes de datos](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), más adelante en esta sección). El **SAVEFILE** palabra clave puede utilizarse para especificar el nombre de un archivo .dsn en los que los pares de palabra clave y valor de una conexión correcta realizan por la llamada a **SQLDriverConnect** se guardarán. Para obtener más información acerca de los orígenes de datos de archivo, consulte la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.
-

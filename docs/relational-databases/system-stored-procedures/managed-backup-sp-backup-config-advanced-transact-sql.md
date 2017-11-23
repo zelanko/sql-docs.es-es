@@ -1,0 +1,108 @@
+---
+title: managed_backup.sp_backup_config_advanced (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_backup_config_optional
+- sp_backup_config_optional_TSQL
+- managed_backup.sp_backup_config_optional_TSQL
+- managed_backup.sp_backup_config_optional
+dev_langs: TSQL
+helpviewer_keywords:
+- sp_backup_config_optional
+- managed_backup.sp_backup_config_optional
+ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 0ecf35947918b9ff982640047fba3a74eb1c9250
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
+---
+# <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Configura las opciones avanzadas [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```vb  
+EXEC managed_backup.sp_backup_config_advanced   
+    [@database_name = ] 'database_name'  
+    ,[@encryption_algorithm = ] 'name of the encryption algorithm'  
+    ,[@encryptor_type = ] {'CERTIFICATE' | 'ASYMMETRIC_KEY'}  
+    ,[@encryptor_name = ] 'name of the certificate or asymmetric key'  
+    ,[@local_cache_path = ] 'NOT AVAILABLE'  
+```  
+  
+##  <a name="Arguments"></a> Argumentos  
+ @database_name  
+ El nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos. Si es NULL o *, esta copia de seguridad administrada se aplica a todas las bases de datos en el servidor.  
+  
+ @encryption_algorithm  
+ El nombre del algoritmo de cifrado utilizado durante la copia de seguridad para cifrar el archivo de copia de seguridad. El @encryption_algorithm es **SYSNAME**. Es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez para la base de datos. Especifique **NO_ENCRYPTION** si no desea cifrar el archivo de copia de seguridad. Al cambiar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], este parámetro es opcional, si se conserva el parámetro y no se especifica, los valores de configuración existentes se conservan. Los valores permitidos para este parámetro son:  
+  
+-   AES_128  
+  
+-   AES_192  
+  
+-   AES_256  
+  
+-   TRIPLE_DES_3KEY  
+  
+-   NO_ENCRYPTION  
+  
+ Para obtener más información sobre algoritmos de cifrado, vea [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
+  
+ @encryptor_type  
+ El tipo de sistema de cifrado, que puede ser 'Certificado' o ' ASYMMETRIC_KEY ". El @encryptor_type es **nvarchar (32)**. Este parámetro es opcional si especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
+  
+ @encryptor_name  
+ Nombre de un certificado existente o clave asimétrica que se usa para cifrar la copia de seguridad. El @encryptor_name es **SYSNAME**. Si utiliza una clave asimétrica, debe configurarse con la administración de claves extendida (EKM). Este parámetro es opcional si especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
+  
+ Para obtener más información, vea [administración Extensible de claves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+  
+ @local_cache_path  
+ Este parámetro no se admite todavía.  
+  
+## <a name="return-code-value"></a>Valor de código de retorno  
+ 0 (correcto) o 1 (error)  
+  
+## <a name="security"></a>Seguridad  
+  
+### <a name="permissions"></a>Permissions  
+ Requiere la pertenencia a **db_backupoperator** rol, la base de datos con **ALTER ANY CREDENTIAL** permisos, y **EXECUTE** permisos **sp_delete_ backuphistory** procedimiento almacenado.  
+  
+## <a name="examples"></a>Ejemplos  
+ En el ejemplo siguiente se establece opciones de configuración avanzada para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia de SQL Server.  
+  
+```  
+Use msdb;  
+Go  
+   EXEC managed_backup.sp_backup_config_advanced  
+                @encryption_algorithm ='AES_128'  
+                ,@encryptor_type = 'CERTIFICATE'  
+                ,@encryptor_name = 'MyTestDBBackupEncryptCert'  
+GO  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+  
+  

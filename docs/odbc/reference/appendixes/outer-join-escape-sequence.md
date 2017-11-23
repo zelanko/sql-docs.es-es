@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 947a3ad16efa1b34176311b6ad70b36635dda6f6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d208b7de815f090e5f61d3d807912c53c4253e31
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="outer-join-escape-sequence"></a>Secuencia de Escape de combinación externa
 ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis de esta secuencia de escape es como sigue:  
@@ -58,4 +56,3 @@ ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis d
  *Terminador de esc de ODBC* :: =}  
   
  Para determinar qué partes de esta instrucción son compatibles, llama a una aplicación **SQLGetInfo** con el tipo de información de SQL_OJ_CAPABILITIES. Para las combinaciones externas, *condición de búsqueda* debe contener la condición de combinación entre especificado *nombres de tabla*.
-

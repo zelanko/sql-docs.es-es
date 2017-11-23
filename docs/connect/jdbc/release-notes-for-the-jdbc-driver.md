@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de la versión para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -133,7 +131,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Compatibilidad con conexiones de recuperación ante desastres de alta disponibilidad y a los grupos de disponibilidad AlwaysOn en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Vea [compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) para obtener más información.  
   
- **Mediante la autenticación integrada de Kerberos para conectarse a SQL Server**  
+ **Usar la autenticación integrada de Kerberos para conectar con SQL Server**  
   
  Compatibilidad con autenticación integrada de Kerberos de tipo 4 para las aplicaciones se conecten a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos. Para obtener más información, consulte [utilizando la autenticación integrada Kerberos para conectarse a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Kerberos de tipo 2 está disponible en la autenticación integrada de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] las versiones anteriores a 4.0.)  
   
@@ -154,7 +152,6 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  No se admiten Microsoft JDBC Drivers 6.0, 4.2, 4.1 y 4.0 para las aplicaciones de SQL Server para ejecutarse en un equipo Itanium.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

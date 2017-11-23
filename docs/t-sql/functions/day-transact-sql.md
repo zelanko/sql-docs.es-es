@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DAY_TSQL
 - DAY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - date and time [SQL Server], DAY
 - dates [SQL Server], functions
@@ -25,24 +23,23 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 444df60a2cfe3adae045020b3db8d673946dccb1
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 9edfdc46ede4c090080c09253e2bb213a384816c
-ms.contentlocale: es-es
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Devuelve un entero que representa el día (día del mes) del elemento especificado *fecha*.
   
-Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha & #40; Transact-SQL & #41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -81,6 +78,5 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-
 
 

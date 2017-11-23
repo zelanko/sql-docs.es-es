@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f5291dc17a1109a7f734ec302eae9db2fac2a1e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: Script de instalación desatendida de SQL Server para Ubuntu
 
@@ -229,4 +228,3 @@ A continuación, ejecute la secuencia de comandos de Bash como sigue:
 ```
 
 Para obtener más información acerca de SQL Server en Linux, consulte [SQL Server en la introducción a Linux](sql-server-linux-overview.md).
-

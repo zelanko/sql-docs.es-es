@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- IntermediateGranularityAttributeID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: IntermediateGranularityAttributeID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- IntermediateGranularityAttributeID
-helpviewer_keywords:
-- IntermediateGranularityAttributeID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: IntermediateGranularityAttributeID
+helpviewer_keywords: IntermediateGranularityAttributeID element
 ms.assetid: 49895ff0-cb0d-4bcc-ab73-8cb3d5961e12
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: abc20aa4225846d039346f56b762875efcc5cfae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 163c4c19455034b2e58a0652f19f584d0f08fc91
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>Elemento IntermediateGranularityAttributeID (ASSL)
   Contiene el identificador (Id.) del atributo de granularidad en la dimensión del cubo intermedia que se utiliza para relacionar una dimensión de referencia con una dimensión intermedia.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

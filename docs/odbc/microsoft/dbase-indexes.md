@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase indexes [ODBC]
 - DBase driver [ODBC], indexes
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8681b981bfeb5f13d6fe10869b1556aecfde9311
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dbase-indexes"></a>Índices de dBASE
 El controlador ODBC dBASE automáticamente abre y actualiza los archivos de índice de dBASE IV. Debe utilizar el **Seleccionar índices** cuadro de diálogo mediante el Administrador de orígenes de datos de ODBC para asociar archivos dBASE III .ndx con archivos dBASE.  
@@ -48,4 +46,3 @@ El controlador ODBC dBASE automáticamente abre y actualiza los archivos de índ
 -   El nombre del índice debe coincidir con la convención de nomenclatura de índice de dBASE. dBASE III requiere que cada índice esté en un archivo independiente, cada uno con una extensión .ndx. En dBASE IV, los índices se crean como nombres de etiqueta que se almacenan en un archivo único .mdx. El archivo .mdx tiene el mismo nombre base que el archivo de base de datos (por ejemplo, Emp.mdx es el archivo de índice para la base de datos de Emp.dbf).  
   
 -   dBASE define un índice único como uno donde se agrega un solo registro de un conjunto de valores clave idénticos al índice.
-

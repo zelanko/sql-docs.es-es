@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Establecer el nivel de aislamiento de la transacción
 Para establecer el nivel de aislamiento de transacción, una aplicación usa el atributo de conexión SQL_ATTR_TXN_ISOLATION. Si el origen de datos no admite el nivel de aislamiento solicitado, el controlador o el origen de datos puede establecer un nivel más alto. Para determinar qué aislamiento de transacción de los niveles de un origen de datos admite y cuál es el nivel de aislamiento predeterminado es, llama a una aplicación **SQLGetInfo** con las opciones SQL_TXN_ISOLATION_OPTION y SQL_DEFAULT_TXN_ISOLATION, respectivamente.  
@@ -41,4 +39,3 @@ Para establecer el nivel de aislamiento de transacción, una aplicación usa el 
 -   Cuando la velocidad es más importante que la precisión y los errores suelen ser pequeños. Por ejemplo, suponga que una compañía pone a su número de ventas pequeño y que sales grandes son poco frecuentes. Una transacción que calcula el valor total de todas las ventas podría utilizar de forma segura el nivel de aislamiento Read Uncommitted. Aunque la transacción incluiría pedidos que sean se abre o se cierra y posteriormente revierte, estos se generalmente se cancelan entre sí y la transacción sería mucho más rápida porque no se bloquea cada vez que TI encuentra un pedido de este tipo.  
   
  Para obtener más información, consulte [simultaneidad optimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).
-

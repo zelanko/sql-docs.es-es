@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fdd0c7da1074a5f6a1d86a941fd29330145f07c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-long-data"></a>Enviar datos de tipo Long
 Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, como 254 caracteres. No sería posible almacenar un elemento de datos largos en memoria, como cuando el elemento representa un mapa de bits o un documento de texto largo. Porque no se puede almacenar estos datos en un único búfer, el origen de datos lo envía al controlador en partes con **SQLPutData** cuando se ejecuta la instrucción. Parámetros para la que se envían los datos en tiempo de ejecución se conocen como *parámetros de datos en ejecución*.  
@@ -53,4 +51,3 @@ Definen DBMS *datos long* como cualquier carácter o datos binarios a través de
  Después de **SQLExecute** o **SQLExecDirect** devuelve SQL_NEED_DATA y antes de que se han enviado datos completamente para el último parámetro de datos en ejecución, la instrucción se encuentra en un estado de datos necesita. Mientras una instrucción está en un estado de datos necesita, la aplicación puede llamar a solo **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, o **SQLGetDiagRec**; todas las demás funciones devuelven SQLSTATE HY010 (error de secuencia de función). Al llamar a **SQLCancel** cancela la ejecución de la instrucción y lo devuelve a su estado anterior. Para obtener más información, consulte [tablas de transición de estado de apéndice B: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obtener un ejemplo de envío de datos en tiempo de ejecución, consulte el [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) descripción de la función.
-

@@ -1,0 +1,1 @@
+<Token>Microsoft SQL operaciones Studio (versión preliminar)</Token>

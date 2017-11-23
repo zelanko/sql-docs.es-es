@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 17ae2b4d9ceb1518a0c2e455c93c124df6954f3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de lenguaje de programación de C que hace posible que las aplicaciones tener acceso a datos desde una variedad de sistemas de administración de bases de datos (DBMS). ODBC es una interfaz de bajo nivel y de alto rendimiento que está diseñada específicamente para almacenes de datos relacionales.  
@@ -43,11 +41,11 @@ La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de le
   
  Documentación para los controladores de escritorio de la base de datos ODBC, el controlador ODBC para Oracle y el controlador ODBC FoxPro® Visual.  
   
- [Prueba ODBC](../odbc/odbc-test.md)  
+ [Prueba de ODBC](../odbc/odbc-test.md)  
   
  Microsoft ha probado ODBC es una aplicación habilitada para ODBC que puede utilizar para probar controladores ODBC.  
   
- [Glosario ODBC](../odbc/odbc-glossary.md)  
+ [Glosario de ODBC](../odbc/odbc-glossary.md)  
   
  Define los términos relacionados con ODBC.  
   
@@ -57,4 +55,3 @@ La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de le
   
 ## <a name="support"></a>Soporte técnico  
  Puede encontrar información sobre las opciones de soporte técnico en el [Microsoft Help and Support](http://go.microsoft.com/fwlink?linkid=5521) sitio Web.
-

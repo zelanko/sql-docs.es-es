@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b3fe5506d1bcaa644ba1a1b60ef06c5fe9b9ac4e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
 Conexiones ODBC tienen los siguientes estados.  
@@ -308,4 +306,3 @@ Conexiones ODBC tienen los siguientes estados.
 |C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> Asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--|--|
-

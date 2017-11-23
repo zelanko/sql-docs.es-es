@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 840bf63c87a6f6b91e1be3afb690ca62906dc703
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4940b42078d0a89a7c9c3fd5834d8a5c707dfba
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-result-sets"></a>Trabajar con conjuntos de resultados
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +38,11 @@ ms.lasthandoff: 09/09/2017
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Recuperar conjunto de resultados muestra de datos](../../../connect/jdbc/retrieving-result-set-data-sample.md)|Describe cómo usar un conjunto de resultados para recuperar los datos de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] la base de datos y mostrarlos.|  
-|[Modificar conjunto de resultados muestra de datos](../../../connect/jdbc/modifying-result-set-data-sample.md)|Describe cómo usar un conjunto de resultados para insertar, recuperar y modificar datos en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos.|  
-|[Ejemplos de datos de conjunto de almacenamiento en caché de resultados](../../../connect/jdbc/caching-result-set-data-sample.md)|Describe cómo usar un conjunto de resultados para recuperar grandes cantidades de datos de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos y para controlar cómo se almacena en caché los datos en el cliente.|  
+|[Recuperación de ejemplos de datos de conjunto de resultados](../../../connect/jdbc/retrieving-result-set-data-sample.md)|Describe cómo usar un conjunto de resultados para recuperar los datos de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] la base de datos y mostrarlos.|  
+|[Modificación de ejemplos de datos de conjunto de resultados](../../../connect/jdbc/modifying-result-set-data-sample.md)|Describe cómo usar un conjunto de resultados para insertar, recuperar y modificar datos en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos.|  
+|[Almacenamiento en caché de ejemplos de datos de conjunto de resultados](../../../connect/jdbc/caching-result-set-data-sample.md)|Describe cómo usar un conjunto de resultados para recuperar grandes cantidades de datos de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos y para controlar cómo se almacena en caché los datos en el cliente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicaciones de controlador JDBC de ejemplo](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
+ [Aplicaciones del controlador JDBC de ejemplo](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   
-

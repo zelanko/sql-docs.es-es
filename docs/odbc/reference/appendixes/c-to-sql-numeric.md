@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], numeric
 - converting data from c to SQL types [ODBC], numeric
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7f754d17ef64213a0d608e2502f7a65545b2076
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-numeric"></a>C a SQL: numérico
 Los identificadores para los tipos de datos ODBC C numéricos son:  
@@ -76,4 +74,3 @@ Los identificadores para los tipos de datos ODBC C numéricos son:
  [b] en el caso de "n/a", un controlador puede opcionalmente devuelve SQL_SUCCESS_WITH_INFO y 01S07 cuando se produce un truncamiento fraccionario.  
   
  El controlador omite el valor de longitud/indicador al convertir datos de los tipos de datos numéricos de C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos C numérico. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
-

@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abb371783474c7a0580d5694e7ad2afeabce3a4c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer, elemento (CSDLBI)
   El elemento EntityContainer es un tipo complejo, basado en el tipo EntityContainer de CSDL, que define una colección de entidades en un único modelo de datos. En una aplicación de Business Intelligence, un EntityContainer representa un modelo de datos que puede contener varias tablas con columnas vinculadas mediante relaciones, así como cálculos, medidas y KPI. Conceptualmente, es similar a una base de datos o un origen de datos.  
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [EntitySet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   
-

@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - REGRESSOR flag
 - DMX [Analysis Services], modeling flags
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - flags [DMX]
 - NOT NULL flag
 ms.assetid: 498d25f7-9597-47ae-8717-61ddd1d2fd15
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8db8cd9de8d614c3b44bb2012dfbc5b33448807c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce032085f10db22608aee69b886724309e83506b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="modeling-flags-dmx"></a>Marcas de modelado (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite las siguientes marcas de modelado:  
   
- **NO ES NULL**  
+ **NOT NULL**  
  Los valores de la columna de atributos nunca deben incluir un valor NULL. Se producirá un error si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encuentra un valor NULL para esta columna de atributos durante el proceso de entrenamiento de modelos. Esta marca se define en una columna de estructura de minería de datos.  
   
  **REGRESSOR**  
@@ -84,4 +82,3 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

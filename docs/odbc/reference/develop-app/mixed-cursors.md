@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 638cd5288073fa374f81a73273ed999a4697c8b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mixed-cursors"></a>Cursores mixtos
 Un cursor mixto es una combinación de un cursor controlado por conjunto de claves y un cursor dinámico. Se utiliza cuando el conjunto de resultados es demasiado grande para guardar razonablemente claves para el conjunto de resultados completo. Cursores mixtos se implementan mediante la creación de un conjunto de claves que es menor que el conjunto de resultados completo pero mayor que el conjunto de filas.  
@@ -42,4 +40,3 @@ Un cursor mixto es una combinación de un cursor controlado por conjunto de clav
  Ahora suponga que otra aplicación elimina las filas 11 y 101. Si el cursor se intenta recuperar la fila 11, producirá un "agujero" porque tiene una clave para esta fila, pero no hay ninguna fila; se trata de comportamiento de cursor dinámico. Si el cursor se intenta recuperar la fila 101, el cursor no detectará que la fila es que faltan porque no tiene una clave para la fila. En su lugar, se recuperarán que anteriormente era fila 102. Éste es el comportamiento de cursor dinámico.  
   
  Un cursor mixto es equivalente a un cursor controlado por conjunto de claves cuando el tamaño del conjunto de claves es igual que el tamaño del conjunto de resultados. Un cursor mixto es equivalente a un cursor dinámico cuando el tamaño del conjunto de claves es igual a 1.
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>Objeto de relaciones (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Relación** objetos también tienen las siguientes propiedades.  
   
  isActive  
- Un valor booleano que indica si la relación se marca como activo o inactivo. Una relación activa automáticamente se usa para filtrar entre tablas. Una relación inactiva se puede utilizar explícitamente en los cálculos de DAX con la función USERELATIONSHIP.  
+ Un valor booleano que indica si la relación se marca como activo o inactivo. Se usa automáticamente una relación activa para filtrar entre tablas. Las relaciones inactivas se pueden usar expresamente en los cálculos de DAX con la función USERELATIONSHIP.  
   
  crossFilteringBehavior  
  Indica cómo influyen las relaciones en el filtrado de datos. Vea [bidireccional entre los filtros para los modelos tabulares en SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obtener más información. Los valores válidos son los siguientes:  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   DatePartOnly (2): al unir dos columnas fecha y hora, combine solo la parte de fecha.  
   
  relyOnReferentialIntegrity  
- No utilizadas; reservado para uso futuro.  
+ Unused: reservado para uso futuro.  
   
  securityFilteringBehavior  
  Una enumeración que indica cómo influyen las relaciones en el filtrado de datos al evaluar expresiones de seguridad de nivel de fila. Los valores válidos son los siguientes:  
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [Creación de relaciones](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

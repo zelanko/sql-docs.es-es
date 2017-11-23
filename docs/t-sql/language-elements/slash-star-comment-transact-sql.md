@@ -1,5 +1,5 @@
 ---
-title: Barra diagonal comentario estrella (Transact-SQL) | Documentos de Microsoft
+title: Barra diagonal estrella (bloque de comentario) (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,34 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /*...*/_TSQL
 - Comment
 - /*...*/
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - /*...*/ (comment)
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 60ae52af725a065a8319a2fde1e87e1b8bb52e02
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e617c6f0108906046d6c6ea983d1bbc26082709
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="slash-star-comment-transact-sql"></a>Comentario de estrella de barra diagonal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="slash-star-block-comment-transact-sql"></a>Barra diagonal estrella (bloque de comentario) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Indica texto proporcionado por el usuario. El texto situado entre el / * y \*/ no se evalúa por el servidor.  
   
@@ -113,5 +111,4 @@ GO
  [Lenguaje de control de flujo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
-
 

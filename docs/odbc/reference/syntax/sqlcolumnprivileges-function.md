@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColumnPrivileges
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColumnPrivileges
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColumnPrivileges
-helpviewer_keywords:
-- SQLColumnPrivileges function [ODBC]
+f1_keywords: SQLColumnPrivileges
+helpviewer_keywords: SQLColumnPrivileges function [ODBC]
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1142c70054eca7d9a67f1544fe84c72cb209c44c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9fa1af8ad7cc84b69f3e54e7f1f7f911880bb25
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolumnprivileges-function"></a>Función SQLColumnPrivileges
 **Conformidad**  
@@ -160,15 +154,14 @@ SQLRETURN SQLColumnPrivileges(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Devolver las columnas de una o varias tablas|[SQLColumns, función](../../../odbc/reference/syntax/sqlcolumns-function.md)|  
-|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[SQLFetchScroll, función](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Recopilación de varias filas de datos|[SQLFetch, función](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Devuelve privilegios para una o varias tablas|[SQLTablePrivileges, función](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
-|Devolver una lista de tablas en un origen de datos|[SQLTables, función](../../../odbc/reference/syntax/sqltables-function.md)|  
+|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Devolver las columnas de una o varias tablas|[Función SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|  
+|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Recopilación de varias filas de datos|[Función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Devuelve privilegios para una o varias tablas|[Función SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
+|Devolver una lista de tablas en un origen de datos|[Función SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y las características admitidas de SQL Server 2017 en Linux
 
@@ -49,7 +48,7 @@ Este artículo proporciona detalles de las características admitidas por las di
 Los requisitos de instalación varían según las necesidades de las aplicaciones. Las distintas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] han sido diseñadas para satisfacer los requisitos de rendimiento, tiempo de ejecución y precio propios de cada organización y cada persona. Los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que instale también dependen de sus necesidades concretas. Las secciones siguientes le servirán de ayuda para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Para leer las notas de la versión más reciente e información sobre las novedades, vea lo siguiente:
-- [SQL Server en las notas de la versión de Linux](sql-server-linux-release-notes.md)
+- [Notas de la versión de SQL Server en Linux](sql-server-linux-release-notes.md)
 - [Novedades de SQL Server en Linux](sql-server-linux-whats-new.md)
 
 Para obtener una lista de características de SQL Server no está disponibles en Linux, consulte [no admite servicios y características](sql-server-linux-release-notes.md#Unsupported).
@@ -94,7 +93,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Capacidad máxima de cálculo que usa una sola instancia: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|
 |Memoria máxima para el grupo de búferes por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Sistema operativo máximo|128 GB|64 GB|1410 MB|
 |Cantidad máxima de memoria para la caché de segmento del almacén de columnas por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|  
-|Tamaño máximo de datos con optimización para memoria por base de datos en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|
+|Tamaño máximo de datos optimizados para memoria por base de datos en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|
 |Tamaño máximo de la base de datos relacional|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por instancia de SQL Server. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, consulte [límites de capacidad de cálculo de cada edición de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
@@ -121,11 +120,11 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Copia de seguridad cifrada|Sí|Sí|No|No|
 |Copia de seguridad híbrida en Windows Azure (copia de seguridad en dirección URL)|Sí|Sí|No|No|
   
-<sup>1</sup> en Enterprise edition, el número de nodos es el máximo del sistema operativo. En Standard edition es compatible con dos nodos. 
+<sup>1</sup> en Enterprise edition, el número de nodos es el máximo del sistema operativo. En Standard Edition hay compatibilidad con dos nodos. 
 
 <sup>2</sup> en Enterprise edition, proporciona compatibilidad para hasta 8 réplicas secundarias - incluidas 2 réplicas secundarias sincrónicas. 
 
-<sup>3</sup> standard edition admite grupos de disponibilidad básica. Un grupo de disponibilidad básica admite dos réplicas, con una base de datos. Para obtener más información acerca de los grupos de disponibilidad básica, consulte [grupos de disponibilidad básica](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard edition admite grupos de disponibilidad básica. Un grupo de disponibilidad básica admite dos réplicas, con una base de datos. Para más información sobre los grupos de disponibilidad básica, vea [Grupos de disponibilidad básica](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS  
   
@@ -229,4 +228,3 @@ Para obtener información acerca de las características de Integration Services
 
   
   
-

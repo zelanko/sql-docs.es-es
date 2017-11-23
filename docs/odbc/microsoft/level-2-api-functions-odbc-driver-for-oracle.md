@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel 2 (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Devuelve una lista de procedimientos en el origen de datos. Para ver los procedimientos empaquetados, es la columna de nombre del procedimiento en *packagename.procedurename* formato.<br /><br /> Dado que Oracle no proporciona una manera de distinguir procedimientos empaquetados de funciones empaquetadas, el controlador devuelve SQL_PT_UNKNOWN para la columna PROCEDURE_TYPE.|  
 |**SQLSetPos**|Establece la posición del cursor en un conjunto de filas. Puede usar **SQLSetPos** con **SQLGetData** para recuperar filas de columnas sin enlazar después de colocar el cursor a una fila específica en el conjunto de filas. Filas agregadas en el conjunto de resultados mediante *fOption* SQL_ADD se agregan después de la última fila del conjunto de resultados.|  
 |**SQLSetScrollOptions**|Establece las opciones que controlan el comportamiento de los cursores asociado con un identificador de instrucción, hstmt. Para obtener más información, consulte [combinaciones de simultaneidad y el tipo de Cursor](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
-

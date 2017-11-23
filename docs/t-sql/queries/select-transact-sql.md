@@ -1,19 +1,20 @@
 ---
 title: SELECT (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Recupera filas de la base de datos y habilita la selección de una o varias filas o columnas de una o varias tablas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sintaxis completa de la instrucción SELECT es compleja, aunque las cláusulas principales se pueden resumir del modo siguiente:  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. ARRIBA  
-  
+
+> [!WARNING]
+> La secuencia anterior es generalmente true. Sin embargo, hay casos poco comunes que puede diferir la secuencia.
+>
+> Por ejemplo, suponga que tiene un índice agrupado en una vista, la vista excluye algunas filas de la tabla y la lista de columnas SELECT de la vista utiliza una conversión que cambia un tipo de datos de *varchar* a *entero*. En esta situación, puede ejecutar la función CONVERT antes de la cláusula WHERE se ejecuta. De hecho raro. Suele haber una manera de modificar la vista para evitar la secuencia diferente, si es importante en su caso. 
+
 ## <a name="permissions"></a>Permissions  
  La selección de datos necesita el permiso **SELECT** en la tabla o en la vista, que se puede heredar de un ámbito superior como el permiso **SELECT** en el esquema o el permiso **CONTROL** en la tabla. O debe pertenecer a la **db_datareader** o **db_owner** funciones fijas de base de datos, o la **sysadmin** rol fijo de servidor. Crear una nueva tabla mediante **SELECTINTO** también necesita tanto el **CREATETABLE** permiso y el **ALTERSCHEMA** permiso en el esquema al que pertenece la nueva tabla.  
   
@@ -266,5 +271,4 @@ ORDER BY OrderDateKey;
  [Ejemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Sugerencias de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

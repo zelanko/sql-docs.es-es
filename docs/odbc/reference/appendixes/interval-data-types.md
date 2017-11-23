@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-types"></a>Tipos de datos Interval
 Un intervalo se define como la diferencia entre dos fechas y horas. Intervalos se expresan en uno de dos maneras diferentes. Uno es un *-mes y año* intervalo que expresa intervalos en años y un número entero de meses. El otro es un *hora diurna* intervalo que expresa intervalos en días, minutos y segundos. Estos dos tipos de intervalos son distintos y no se pueden mezclar, porque meses pueden tener un número variable de días.  
@@ -76,4 +74,3 @@ Un intervalo se define como la diferencia entre dos fechas y horas. Intervalos s
 -   [Literales de intervalo](../../../odbc/reference/appendixes/interval-literals.md)  
   
 -   [Reemplazar predeterminado inicial y la precisión de segundos para los tipos de datos Interval](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-

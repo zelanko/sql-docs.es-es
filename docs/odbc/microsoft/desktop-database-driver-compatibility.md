@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c8d888771c1173d93d5ca44cdab28c10645bb60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34b9221b117819988e44196cee0f04578e85d436
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilidad con controladores de escritorio de la base de datos
 Unicode es un método de software de codificación de caracteres que trata todos los caracteres que tienen un ancho fijo de dos bytes. Este método se usa como alternativa a la codificación de caracteres ANSI de Windows, que, dado que representa los caracteres de un byte, está limitada a 256 caracteres. Puesto que Unicode puede representar más de 65.000 caracteres, se adapta a muchos idiomas cuyos caracteres no se representan en la codificación ANSI.  
@@ -42,4 +40,3 @@ Unicode es un método de software de codificación de caracteres que trata todos
  Cuando una aplicación ANSI usa el controlador de base de datos ODBC Desktop 4.0 y tiene acceso a Microsoft Access 4.0 o versiones posteriores, el controlador expone el tipo de datos como SQL_CHAR, SQL_VARCHAR o SQL_LONGVARCHAR Aunque Jet 4.0 es compatible con la versión de ancho. Las versiones anteriores de Jet no admiten SQL_WCHAR, SQL_WVARCHAR y SQL_WLONGVARCHAR. Esta restricción también se aplica en los casos donde se use el formato antiguo con el motor de base de datos de Jet 4.0.  
   
  Para obtener más información sobre los problemas de Unicode con ODBC, consulte [Unicode](../../odbc/reference/develop-app/unicode.md) en consideraciones sobre la programación.
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54298b1c08235452f5717888754569d55442a47a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3047d17ff1e9785e203b6be0ab48c7c27fd88d1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Enlazar parámetros por nombre (parámetros con nombre)
 Ciertos DBMS permiten que una aplicación especificar los parámetros a un procedimiento almacenado por su nombre en lugar de por posición en la llamada a procedimiento. Estos parámetros se denominan *parámetros con nombre*. ODBC admite el uso de parámetros con nombre. En ODBC, los parámetros con nombre solo se usan en llamadas a procedimientos almacenados y no se puede usar en otras instrucciones SQL.  
@@ -65,4 +63,3 @@ SQLSetDescField(hIpd, 1, SQL_DESC_NAME, "@quote", SQL_NTS);
 // execute.  
 SQLExecute(hstmt);  
 ```
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 989f573a68fb818ca7f09d90ae0160d65e7a39c1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 234da7bb8519149c78779f7920333338737b394b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursor-types"></a>Tipos de Cursor desplazable
 Los cuatro tipos de cursores desplazables son estáticos, dinámicos, cursores controlados por y mixto. Los cursores estáticos detectan pocos o ningún cambio pero son relativamente baratos implementar. Los cursores dinámicos detectan todos los cambios, pero son caros de implementar. Los cursores controlados por conjunto de claves y mixtos se encuentran entre los dos anteriores, pero con un consumo menor que los cursores dinámicos.  
@@ -54,4 +52,3 @@ Los cuatro tipos de cursores desplazables son estáticos, dinámicos, cursores c
 -   [Cursores controlados por conjunto de claves](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   
 -   [Cursores mixtos](../../../odbc/reference/develop-app/mixed-cursors.md)
-

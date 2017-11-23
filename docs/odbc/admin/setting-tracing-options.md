@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1a62a03d3bb9e9876ed152bb4ac2cb8fb56ce66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-tracing-options"></a>Establecer las opciones de traza
 El **seguimiento** pestaña de la **Administrador de orígenes de datos ODBC** cuadro de diálogo le permite configurar la forma en que se realice un seguimiento de llamadas a funciones ODBC.  
@@ -72,4 +70,3 @@ El **seguimiento** pestaña de la **Administrador de orígenes de datos ODBC** c
 >  Se quitó la compatibilidad con Visual Studio Analyzer a partir de Windows 8 (Visual Studio Analyzer sólo se incluyó en versiones anteriores de Visual Studio.). Para una solución de problemas de mecanismo de forma alternativa, utilizar el seguimiento de BID.  
   
  Seguimiento del analizador de Visual Studio® ofrece rendimiento y la información de depuración sobre la capa de ODBC. Todos los eventos de salida se activarán en la interfaz de nivel superior para presentar una imagen tan precisa como sea posible en cuanto a tiempo invertido en componentes de ODBC. Seguimiento del analizador de Visual Studio requiere cualquier origen de eventos para registrar cuando se configura el origen. Para obtener más información sobre este tipo de seguimiento, consulte la documentación de Visual Studio.
-

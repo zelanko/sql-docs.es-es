@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from C to SQL types [ODBC], bit
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a3d5291538d2f37b037888935be7f93bec8a7865
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e7232773b97a66fc0b1b047e3fb8cc4212754f0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-bit"></a>C a SQL: bits
 El identificador para el tipo de datos de bit C de ODBC es:  
@@ -43,4 +41,3 @@ El identificador para el tipo de datos de bit C de ODBC es:
 |SQL_BIT|Ninguno|n/d|  
   
  El controlador omite el valor de longitud/indicador al convertir datos desde el tipo de datos de bit C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos de bit C. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
-

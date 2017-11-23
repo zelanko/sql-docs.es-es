@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05e115df47cb916bceafab871d475e98d5074b00
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Crear etiquetas postales en Microsoft Word usando datos de Visual FoxPro
 Puede usar datos de Visual FoxPro en Microsoft Word para documentos de Windows 95 o Windows 98. Por ejemplo, puede crear etiquetas postales a partir de la información de cliente almacenada en una tabla de Visual FoxPro.  
@@ -65,4 +63,3 @@ Puede usar datos de Visual FoxPro en Microsoft Word para documentos de Windows 9
 14. En la aplicación auxiliar de combinación de correspondencia, la mezcla los datos con el documento, haga clic en combinación.  
   
 15. En el cuadro de diálogo Combinar, seleccione las opciones que desee y, a continuación, haga clic en combinación.
-

@@ -3,17 +3,18 @@ title: USER_NAME (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_NAME
 - USER_NAME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - usernames [SQL Server]
 - IDs [SQL Server], databases
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: es-es
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve un nombre de usuario de base de datos a partir de un número de identificación especificado.  
   
@@ -50,13 +50,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>Argumentos  
  *id*  
- Es el número de identificación asociado a un usuario de la base de datos. *Id. de*es **int**. Es obligatorio utilizar paréntesis.  
+ Es el número de identificación asociado a un usuario de la base de datos. *Id. de* es **int**. Es obligatorio utilizar paréntesis.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando *identificador* es se omite, se supone que el usuario actual en el contexto actual. Si el parámetro contiene la palabra que null, devolverá NULL. Cuando se llama a USER_NAME sin especificar un *identificador* después de una ejecución como instrucción, USER_NAME devuelve el nombre del usuario suplantado. Si una entidad de seguridad de Windows ha tenido acceso a la base de datos en forma de miembro de un grupo, USER_NAME devuelve el nombre de la entidad de seguridad de Windows en vez del nombre del grupo.  
+ Cuando *identificador* es se omite, se supone que el usuario actual en el contexto actual. Si el parámetro contiene la palabra NULL, se devolverá NULL. Cuando se llama a USER_NAME sin especificar un *identificador* después de una ejecución como instrucción, USER_NAME devuelve el nombre del usuario suplantado. Si una entidad de seguridad de Windows ha tenido acceso a la base de datos en forma de miembro de un grupo, USER_NAME devuelve el nombre de la entidad de seguridad de Windows en vez del nombre del grupo.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -168,5 +168,4 @@ User7
  [SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alter table [ODBC]
+helpviewer_keywords: alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 79fbb4e4f6c143d693e1b41cc1660938bc61cde1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bafb2f2a11b7108d550dae66db0b5d8e158086a3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-table---sql-command"></a>Modificar tabla - comando SQL
 Mediante programación, modifica la estructura de una tabla.  
@@ -202,4 +199,3 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ## <a name="see-also"></a>Vea también  
  [Crear tabla - comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Comando de índice](../../odbc/microsoft/index-command.md)
-

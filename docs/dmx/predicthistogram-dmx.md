@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
+f1_keywords: PredictHistogram
+dev_langs: DMX
+helpviewer_keywords: PredictHistogram function
 ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 37e2d03cebd214a7c36074666cd0dcdc9cb32887
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2e0d45b8169d567bbdc69a916f242b2707f6570
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -101,17 +97,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Clúster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40; DMX &#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40; DMX &#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40; DMX &#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40; DMX &#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40; DMX &#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Clúster & #40; DMX & #41;](../dmx/cluster-dmx.md)   
+ [ClusterProbability & #40; DMX & #41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability & #40; DMX & #41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability & #40; DMX & #41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev & #40; DMX & #41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport & #40; DMX & #41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance & #40; DMX & #41;](../dmx/predictvariance-dmx.md)   
+ [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones & #40; DMX & #41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales & #40; DMX & #41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

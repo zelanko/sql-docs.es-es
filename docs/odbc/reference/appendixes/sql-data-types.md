@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Obtener información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo SQL definidas por ODBC y cómo asigna un controlador de tipos de DBMS SQL a sus propios identificadores de tipo específicos del controlador SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL para describir los tipos de datos de columnas y parámetros a través de llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
@@ -104,4 +102,3 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTO de intervalo (*p*) al segundo (*preguntas*
  Esta sección proporciona en el ejemplo siguiente.  
   
 -   [Conjunto de resultados de SQLGetTypeInfo de ejemplo](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
-

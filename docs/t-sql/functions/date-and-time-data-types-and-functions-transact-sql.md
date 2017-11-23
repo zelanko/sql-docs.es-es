@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Tipos de datos y funciones de fecha y hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +91,9 @@ Todos los valores de fecha y hora del sistema se derivan del sistema operativo d
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *fecha* )|Devuelve una cadena de caracteres que representa el parámetro *datepart* de la fecha especificada.|**nvarchar**|No determinista|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *fecha* )|Devuelve un entero que representa el parámetro *datepart* del elemento especificado *fecha*.|**int**|No determinista|  
-|[DÍA](../../t-sql/functions/day-transact-sql.md)|DÍA ( *fecha* )|Devuelve un entero que representa la parte del día del elemento especificado *fecha*.|**int**|Determinista|  
-|[MES](../../t-sql/functions/month-transact-sql.md)|MES ( *fecha* )|Devuelve un entero que representa la parte del mes de un determinado *fecha*.|**int**|Determinista|  
-|[AÑO](../../t-sql/functions/year-transact-sql.md)|AÑO ( *fecha* )|Devuelve un entero que representa la parte del año de un *fecha*.|**int**|Determinista|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DÍA ( *fecha* )|Devuelve un entero que representa la parte del día del elemento especificado *fecha*.|**int**|Determinista|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MES ( *fecha* )|Devuelve un entero que representa la parte del mes de un determinado *fecha*.|**int**|Determinista|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|AÑO ( *fecha* )|Devuelve un entero que representa la parte del año de un *fecha*.|**int**|Determinista|  
   
 ###  <a name="fromParts"></a>Funciones que obtienen valores de fecha y hora de sus partes
   
@@ -129,10 +126,10 @@ Todos los valores de fecha y hora del sistema se derivan del sistema operativo d
   
 |Función|Sintaxis|Valor devuelto|Tipo de datos devuelto|Determinismo|  
 |---|---|---|---|---|
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Devuelve el valor actual, para la sesión, de SET DATEFIRST.|**tinyint**|No determinista|  
+|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST |Devuelve el valor actual, para la sesión, de SET DATEFIRST.|**tinyint**|No determinista|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *número* &#124;  **@**  *number_var* }|Establece el primer día de la semana en un número del 1 al 7.|No aplicable|No aplicable|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *formato* &#124;  **@**  *format_var* }|Establece el orden de la fecha (mes/día/año) para escribir **datetime** o **smalldatetime** datos.|No aplicable|No aplicable|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Devuelve el nombre del idioma que se está utilizando actualmente. @@LANGUAGE no es una función de fecha u hora. Sin embargo, la configuración de idioma puede afectar a la salida de las funciones de fecha.|No aplicable|No aplicable|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE |Devuelve el nombre del idioma que se está utilizando actualmente. @@LANGUAGE no es una función de fecha u hora. Sin embargo, la configuración de idioma puede afectar a la salida de las funciones de fecha.|No aplicable|No aplicable|  
 |[DEFINIR IDIOMA](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE {[N] **'***lenguaje***'** &#124;  **@**  *language_var* }|Establece el entorno del idioma de la sesión y los mensajes del sistema. SET LANGUAGE no es ninguna función de fecha u hora. Sin embargo, la configuración de idioma afecta a la salida de las funciones de fecha.|No aplicable|No aplicable|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [[  **@language =** ] **'***lenguaje***'** ]|Devuelve información sobre los formatos de fecha de todos los idiomas compatibles. **sp_helplanguage** no es una fecha u hora procedimiento almacenado. Sin embargo, la configuración de idioma afecta a la salida de las funciones de fecha.|No aplicable|No aplicable|  
   
@@ -156,4 +153,3 @@ Todos los valores de fecha y hora del sistema se derivan del sistema operativo d
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

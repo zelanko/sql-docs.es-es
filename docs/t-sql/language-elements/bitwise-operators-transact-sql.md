@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], bitwise
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 5d04924a82578040f801864bb68905feebc53e94
-ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operadores bit a bit (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,13 +44,13 @@ El 75 de entero se convierte en 0100 1011 binario.
 |NOT  <br> Invierte el valor de bit en cada ubicación de bits. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 Vea los temas siguientes:   
-* [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = (AND bit a bit igual)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124; (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = (OR bit a bit igual)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ (Bit a bit OR exclusivo)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = (Igual a OR exclusivo bit a bit)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ (NOT bit a bit)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [& &#40; AND bit a bit &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [& = &#40; Asignación AND bit a bit &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124; &#40; OR bit a bit &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124; = &#40; OR bit a bit asignación &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40; Bit a bit OR exclusivo &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^ = &#40; Bit a bit OR exclusivo asignación &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40; NOT bit a bit &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
  Los operandos de operadores bit a bit pueden tener uno de los tipos de datos de los enteros o categorías de tipos de datos de cadena binaria (excepto para la **imagen** tipo de datos), excepto que ambos operandos no pueden ser cualquiera de los tipos de datos de la cadena binaria categoría de tipo de datos. La siguiente tabla muestra los tipos de datos de operando admitidos.  
   
@@ -68,7 +65,6 @@ Vea los temas siguientes:
   
 ## <a name="see-also"></a>Vea también  
  [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+ [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
-  
-

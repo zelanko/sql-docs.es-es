@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8a4439d9682435baca0867dfc9d8bd96d0fcd7c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-data-type-conversions"></a>Descripción de las conversiones de tipos de datos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -125,7 +123,6 @@ ms.lasthandoff: 09/09/2017
  Tenga en cuenta que se necesita una marca de orden de bytes (BOM) si los caracteres XML están en codificaciones de caracteres específicos.  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

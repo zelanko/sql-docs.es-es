@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e11b18afb96c7e5c1dc6ef6c23fc56cd3a75548e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se puede crear reglas de Visual FoxPro, desencadenadores, valores predeterminados o procedimientos almacenados con el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación puede interactuar con los procedimientos almacenados, desencadenadores, valores predeterminados o reglas existentes tal y como inserta, actualiza o eliminan datos de Visual FoxPro almacenados en una base de datos.  
@@ -292,4 +290,3 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
 ||||  
 |-|-|-|  
 |Comando ZAP|||
-

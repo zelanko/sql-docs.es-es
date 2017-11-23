@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetDescRec
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetDescRec
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetDescRec
-helpviewer_keywords:
-- SQLSetDescRec function [ODBC]
+f1_keywords: SQLSetDescRec
+helpviewer_keywords: SQLSetDescRec function [ODBC]
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dda8ecdee1830805c51b5e795f91ff4025218260
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0702448c1252db57d47dfaf265c2f0b83192b3d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetdescrec-function"></a>Sqlsetdescrec, función
 **Conformidad**  
@@ -102,9 +96,9 @@ SQLRETURN SQLSetDescRec(
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07009|Índice de descriptor no válido|El *RecNumber* argumento se establece en 0 y el *DescriptorHandle* hace referencia a un identificador de IPD.<br /><br /> El *RecNumber* argumento era menor que 0.<br /><br /> El *RecNumber* argumento era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir, y el *DescriptorHandle* argumento era un APD, IPD o descartar.<br /><br /> El *RecNumber* argumento era igual a 0 y el *DescriptorHandle* argumento hace referencia a un APD implícitamente asignado. (Este error no se produce con un descriptor de aplicación asignado explícitamente porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o descartar hasta el tiempo de ejecución.)|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
-|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY010|Error de secuencia de función|(DM) la *DescriptorHandle* se asoció una *StatementHandle* para que se llamó a una función que se ejecuta asincrónicamente (no esta uno) y aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** se llamó para el  *StatementHandle* con la que el *DescriptorHandle* se ha asociado y devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron los datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) se llamó a una función ejecuta de forma asincrónica para el identificador de conexión que está asociado el *DescriptorHandle*. Esta función asincrónicas aún estaba ejecutando cuando el **SQLSetDescRec** se llamó la función.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llama para uno de los identificadores de instrucción asociados a la *DescriptorHandle* y devuelve SQL_PARAM_DATA_AVAILABLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
+|HY010|Error de secuencia de función|(DM) la *DescriptorHandle* se asoció una *StatementHandle* para que se llamó a una función que se ejecuta asincrónicamente (no esta uno) y aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** se llamó para el * StatementHandle* con la que el *DescriptorHandle* se ha asociado y devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron los datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) se llamó a una función ejecuta de forma asincrónica para el identificador de conexión que está asociado el *DescriptorHandle*. Esta función asincrónicas aún estaba ejecutando cuando el **SQLSetDescRec** se llamó la función.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llama para uno de los identificadores de instrucción asociados a la *DescriptorHandle* y devuelve SQL_PARAM_DATA_AVAILABLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  
 |HY016|No se puede modificar un descriptor de fila de implementación|El *DescriptorHandle* argumento estaba asociado con un IRD.|  
 |HY021|Información de descriptor incoherente|El *tipo* campo o cualquier otro campo asociado con el campo SQL_DESC_TYPE en el descriptor, no era válido o coherente.<br /><br /> Información del descriptor de comprobarse durante una comprobación de coherencia no era coherente. (Vea "Comprobaciones de coherencia," más adelante en esta sección).|  
@@ -161,13 +155,12 @@ SQLRETURN SQLSetDescRec(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar una columna|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Enlazar un parámetro|[SQLBindParameter, función](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|Obtención de un campo único descriptor|[Sqlgetdescfield, función](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|Obtener varios campos de descriptor|[Sqlgetdescrec, función](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Establecer campos de descriptor único|[Sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Enlazar una columna|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Enlazar un parámetro|[Función SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|Obtención de un campo único descriptor|[Función SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Obtener varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Establecer campos de descriptor único|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

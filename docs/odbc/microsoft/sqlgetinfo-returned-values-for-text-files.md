@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3d4e0223638d616370929a5e685f3a2212aae9df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0728ff396ad3b9f87382bfd22ba171afac046720
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo devuelve valores para los archivos de texto
 La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el lenguaje c. enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el [referencia del programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
@@ -176,4 +174,3 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|Varios valores|  
 |SQL_USER_NAME|""|
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC data source administrator [ODBC], concepts
+helpviewer_keywords: ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f62308694c54a62d2cc83669e49e9983bcec4a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-drivers-and-data-sources"></a>Acerca de controladores y orígenes de datos
 *Controladores* son los componentes que procesan las solicitudes ODBC y devuelven datos a la aplicación. Si es necesario, controladores de modificar la solicitud de la aplicación en un formulario que se entiende por el origen de datos. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador desde su equipo.  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  Orígenes de datos de usuario y del sistema se conocen colectivamente como *máquina* porque son locales respecto al equipo de los orígenes de datos.  
   
  Cada uno de estos orígenes de datos tiene una pestaña la **Administrador de orígenes de datos ODBC** cuadro de diálogo. Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../../odbc/reference/data-sources.md).
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f1a8cc488ab3e34fe39ec213c86f77bb10899b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a02f6896a6c618614a01def439fcbd8a5d2e1aa8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo devuelve valores para Paradox
 La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el lenguaje c. enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el *referencia del programador de ODBC*.  
@@ -176,4 +174,3 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|Varios valores|  
 |SQL_USER_NAME|""|
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColumns
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColumns
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColumns
-helpviewer_keywords:
-- SQLColumns function [ODBC]
+f1_keywords: SQLColumns
+helpviewer_keywords: SQLColumns function [ODBC]
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62d91e0a8fdccfe55b077fb52014a3ccc92e92ae
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad949b4c4454915cfddec71c611e8cc67336a0ec
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolumns-function"></a>Función SQLColumns
 **Conformidad**  
@@ -295,17 +289,16 @@ int main() {
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Devuelve privilegios para una o varias columnas|[Sqlcolumnprivileges, función](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[SQLFetchScroll, función](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Recopilación de varias filas de datos|[SQLFetch, función](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Devolver columnas que identifican de forma única una fila o que se actualiza automáticamente con una transacción|[SQLSpecialColumns, función](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
+|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Devuelve privilegios para una o varias columnas|[Función SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
+|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Recopilación de varias filas de datos|[Función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Devolver columnas que identifican de forma única una fila o que se actualiza automáticamente con una transacción|[Función SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
 |Devolver estadísticas de las tablas e índices|[Función SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
-|Devolver una lista de tablas en un origen de datos|[SQLTables, función](../../../odbc/reference/syntax/sqltables-function.md)|  
-|Devuelve privilegios para una o varias tablas|[SQLTablePrivileges, función](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
+|Devolver una lista de tablas en un origen de datos|[Función SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
+|Devuelve privilegios para una o varias tablas|[Función SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

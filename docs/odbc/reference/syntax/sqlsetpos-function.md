@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetPos
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetPos
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetPos
-helpviewer_keywords:
-- SQLSetPos function [ODBC]
+f1_keywords: SQLSetPos
+helpviewer_keywords: SQLSetPos function [ODBC]
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45c46ec84d6f5a431521589a506b4028e406ac09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6140625da489bcb573b3beb4ca2be0838805f8d5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, función
 **Conformidad**  
@@ -376,17 +370,16 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Realizar operaciones masivas que no hacen referencia a la posición del cursor de bloque|[Función SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[SQLFetchScroll, función](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Obtener un único campo de un descriptor de|[Sqlgetdescfield, función](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|Obtener varios campos de un descriptor de|[Sqlgetdescrec, función](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Configuración de un único campo de un descriptor de|[Sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Configuración de varios campos de un descriptor de|[Sqlsetdescrec, función](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
-|Establecer un atributo de instrucción|[SQLSetStmtAttr, función](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Obtener un único campo de un descriptor de|[Función SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Obtener varios campos de un descriptor de|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Configuración de un único campo de un descriptor de|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Configuración de varios campos de un descriptor de|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

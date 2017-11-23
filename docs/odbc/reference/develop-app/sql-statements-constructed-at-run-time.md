@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76c05e6d7148ac11e25783caca575bee034dd872
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Instrucciones SQL creadas en tiempo de ejecución
 Las aplicaciones que realizan análisis ad hoc suele generación instrucciones SQL en tiempo de ejecución. Por ejemplo, una hoja de cálculo puede permitir al usuario seleccionar columnas de la que se va a recuperar los datos:  
@@ -81,4 +79,3 @@ int main() {
  Las aplicaciones que construcción instrucciones SQL en tiempo de ejecución pueden proporcionar una gran flexibilidad al usuario. Tal y como se puede ver en el ejemplo anterior, que no admitía incluso operaciones comunes como **donde** cláusulas, **ORDER BY** cláusulas o combinaciones, crear instrucciones SQL en tiempo de ejecución es considerablemente más complejo que las instrucciones de codificar de forma rígida. Además, la prueba estas aplicaciones es problemática, ya puede construir un número arbitrario de instrucciones SQL.  
   
  Una posible desventaja de crear instrucciones SQL en tiempo de ejecución es que se tarda mucho más tiempo para construir una instrucción que usa una instrucción codificado de forma rígida. Afortunadamente, rara vez es una preocupación. Estas aplicaciones tienden a ser de uso intensivo de la interfaz de usuario y el tiempo que la aplicación invierte crear instrucciones SQL es normalmente pequeño en comparación con el tiempo que el usuario invierte criterios de entrada.
-

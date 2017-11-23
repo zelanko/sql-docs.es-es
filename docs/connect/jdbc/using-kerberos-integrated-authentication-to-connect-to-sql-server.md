@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4ddd65d18a4a335ac7ad5d416d87afccf1748fbb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f26a429563aaf5c079c45b064b4723cb19cada90
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Mediante la autenticación integrada de Kerberos para conectarse a SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -193,7 +191,6 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 La propiedad de nombre de usuario no requiere el dominio KERBEROS si el usuario pertenece a la default_realm establecido en el archivo krb5.conf. Cuando `userName` y `password` establecer junto con `integratedSecurity=true;` y `authenticationScheme=JavaKerberos;` propiedad, la conexión se establece con el valor del nombre de usuario como el Principal de Kerberos junto con la contraseña proporcionada.
  
 ## <a name="see-also"></a>Vea también  
- [Conectarse a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDescribeParam
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDescribeParam
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDescribeParam
-helpviewer_keywords:
-- SQLDescribeParam function [ODBC]
+f1_keywords: SQLDescribeParam
+helpviewer_keywords: SQLDescribeParam function [ODBC]
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e17df1233e49700b9089961ff3648b73d2f6ca3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fe2d46f0a8e27b6e20673fc04615598469bc9aa
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldescribeparam-function"></a>Función SQLDescribeParam
 **Conformidad**  
@@ -180,12 +174,11 @@ free(LenOrIndArray);
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con un parámetro|[SQLBindParameter, función](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Ejecutar una instrucción SQL preparada|[SQLExecute, función](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Enlazar un búfer con un parámetro|[Función SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Preparar una instrucción de ejecución|[Función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

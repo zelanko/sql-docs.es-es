@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación que utilice una conexión de un grupo de conexiones que no es necesario volver a establecer para cada usuario. Una vez creada y coloca en un grupo de una conexión, una aplicación puede reutilizar la conexión sin realizar el proceso de conexión completo.  
@@ -93,4 +91,3 @@ Agrupación de conexiones permite a una aplicación que utilice una conexión de
  [Conectarse a datos de un origen o el controlador](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación en Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
-

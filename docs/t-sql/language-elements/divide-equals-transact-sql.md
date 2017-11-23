@@ -1,5 +1,5 @@
 ---
-title: (Dividir a igual) (Transact-SQL) | Documentos de Microsoft
+title: "(Asignación de división) (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /=_TSQL
 - /=
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, /=
+- assignment operators, /=
+- augmented operators, /=
 - /= (divide equals)
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4041db57fb61838982dc087e2de079a30e387967
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 796aa8801ebfff9d1bb3ef6e194eadaa907601d6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="divide-equals-transact-sql"></a>(Dividir a igual) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-division-assignment-transact-sql"></a>/ = (Asignación y división) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Divide un número entre otro y establece un valor en el resultado de la operación. Por ejemplo, si una variable @x es igual a 34, a continuación, `@x /= 2` toma el valor original de @x, divide entre 2 y establece @x en el nuevo valor (17).  
   
@@ -76,4 +75,3 @@ SELECT @myVariable AS ResultVariable;
  [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

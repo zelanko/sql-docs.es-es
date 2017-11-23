@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 91ab1a812b55c84e3b55c439290d247df91eea40
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
-ms.contentlocale: es-es
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Usar Visual Studio para crear bases de datos de SQL Server en Linux
 
@@ -121,4 +120,3 @@ Para obtener más información sobre el desarrollo de una base de datos con las 
 [documentos de MSDN de SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Tutorial: escribir instrucciones de Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [referencia de Transact-SQL (motor de base de datos)]:https://msdn.microsoft.com/library/bb510741.aspx
-

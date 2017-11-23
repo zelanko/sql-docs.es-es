@@ -1,30 +1,31 @@
 ---
 title: "Uso de características de SQL Server y capacidades | Documentos de Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: f2feaaa999a6010ab493e9f4f73f6ffdef576e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de las capacidades y características de SQL Server
-WideWorldImporters el uso de características de SQL Server y capacidades de la base de datos OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters el uso de características de SQL Server y capacidades de la base de datos OLTP.
 
 WideWorldImporters está diseñado para mostrar muchas de las características claves de SQL Server, incluidas las características más recientes que se introdujo en SQL Server 2016. La siguiente es una lista de características de SQL Server y las capacidades y una descripción de cómo se utilizan en WideWorldImporters.
 
@@ -51,4 +52,3 @@ WideWorldImporters está diseñado para mostrar muchas de las características c
 |Almacén de consultas|Almacén de consultas está habilitado en la base de datos. Después de ejecutar algunas consultas, abra la base de datos en Management Studio, abra el nodo de almacén de consultas, que se encuentra en la base de datos, y abrir el informe principales consultas que consumen recursos para ver las ejecuciones de consulta y los planes para las consultas que se ha ejecutado.|
 |STRING_SPLIT|La columna `DeliveryInstructions` en la tabla `Sales.Invoices`tiene un valor delimitado por comas que puede usarse para mostrar STRING_SPLIT.|
 |Auditar|SQL Server Audit pueden habilitarse para esta base de datos de ejemplo mediante la ejecución de la siguiente instrucción en la base de datos:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>En la base de datos de SQL Azure, se habilita la auditoría a través de la [portal de Azure](https://portal.azure.com/).<br/><br/>Operaciones de seguridad que implican los inicios de sesión, roles y permisos se registran en todos los sistemas donde está habilitada la auditoría (incluidos los sistemas de edición estándar). Auditoría se dirige al registro de aplicación ya está disponible en todos los sistemas y no requiere permisos adicionales. Una advertencia es dado que para una mayor seguridad, se deben redirigir al registro de seguridad o a un archivo en una carpeta segura. Se proporciona un vínculo para describir la configuración adicional necesaria.<br/><br/>Para los sistemas de evaluación/developer o enterprise edition, se audita el acceso a todos los datos transaccionales financieros.|
-

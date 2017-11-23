@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e73a559545a870d83e3d8e2e94dd20f6731f72eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-drivers"></a>Controladores de Unicode
 Si un controlador debe ser un controlador de Unicode o ANSI depende por completo la naturaleza del origen de datos. Si el origen de datos es compatible con datos Unicode, el controlador debe ser un controlador de Unicode. Si el origen de datos solo admite datos ANSI, el controlador debe permanecer un controlador de ANSI.  
@@ -40,4 +38,3 @@ Si un controlador debe ser un controlador de Unicode o ANSI depende por completo
   
 > [!NOTE]  
 >  Al determinar el tipo de controlador, el Administrador de controladores llamará **SQLSetConnectAttr** y establezca el atributo SQL_ATTR_ANSI_APP en tiempo de conexión. Si la aplicación utiliza las API de ANSI, SQL_ATTR_ANSI_APP se establecerá en SQL_AA_TRUE y, si utiliza Unicode, se establecerá en un valor de SQL_AA_FALSE. Este atributo se utiliza para que el controlador puede mostrar un comportamiento diferente en función del tipo de aplicación. El atributo no se puede establecer directamente por la aplicación y no es compatible con **SQLGetConnectAttr**. Si un controlador presenta el mismo comportamiento para las aplicaciones ANSI y Unicode, debe devolver SQL_ERROR para este atributo. Si el controlador devuelve SQL_SUCCESS, el Administrador de controladores separará conexiones ANSI y Unicode cuando se utiliza la agrupación de conexiones.
-

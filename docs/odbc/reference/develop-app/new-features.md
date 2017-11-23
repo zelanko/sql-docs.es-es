@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-features"></a>Nuevas características
 Se ha introducido la nueva funcionalidad siguiente en ODBC 3. *x*. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2*.x* controlador no podrá utilizar esta funcionalidad. ODBC 3. *x* el Administrador de controladores no se asigna estas características cuando se trabaja con una API ODBC 2*.x* controlador.  
@@ -117,4 +115,3 @@ Se ha introducido la nueva funcionalidad siguiente en ODBC 3. *x*. Un ODBC 3. *x
  Esta sección contiene el siguiente tema.  
   
 -   [Cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
-

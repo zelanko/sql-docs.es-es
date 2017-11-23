@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 544f4aa32119b0fde5971f76e46a382b92dbd3ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-is-odbc"></a>¿Qué es ODBC?
 Existen muchos conceptos erróneos acerca de ODBC en el mundo informático. Para el usuario final, es un icono en el Panel de Control de Microsoft® Windows®. Para el programador de aplicaciones, es una biblioteca que contiene rutinas de acceso a datos. Para muchos otros, es la respuesta a todos los problemas de acceso de base de datos nunca imaginado.  
@@ -41,4 +38,3 @@ Existen muchos conceptos erróneos acerca de ODBC en el mundo informático. Para
  Es importante comprender que ODBC está diseñado para exponer las capacidades de la base de datos, no completarlas. Por lo tanto, los escritores de aplicaciones no deben esperar que usa ODBC repentinamente transforma una base de datos simple en un motor de base de datos relacional completo. Tampoco se esperan los escritores de controladores para implementar la funcionalidad que no se encuentra en la base de datos subyacente. Una excepción a esto es que los desarrolladores que escriben controladores que acceda directamente a los datos de archivo (por ejemplo, los datos en un archivo Xbase) necesarios para escribir un motor de base de datos que admite la funcionalidad SQL al menos mínima. Otro tipo de excepción es el componente ODBC del SDK de Windows, anteriormente incluida en Microsoft Data Access Components (MDAC) SDK, proporciona una biblioteca de cursores que simula los cursores desplazables para controladores que implementan un cierto nivel de funcionalidad.  
   
  Las aplicaciones que usan ODBC son responsables de cualquier funcionalidad entre bases de datos. Por ejemplo, ODBC no es un motor de combinación heterogéneo ni es un procesador de transacción distribuida. Sin embargo, dado que es independiente del DBMS, se puede utilizar para generar dichas herramientas entre bases de datos.
-

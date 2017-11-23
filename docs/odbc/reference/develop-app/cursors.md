@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursors"></a>Cursores
 Una aplicación captura los datos con un *cursor*. Un cursor es diferente de un conjunto de resultados: un conjunto de resultados es el conjunto de filas que coincide con los criterios de búsqueda determinada, mientras que un cursor es el software que devuelve las filas a la aplicación. El nombre *cursor,* tal como se aplica a las bases de datos, probablemente se ha originado el cursor parpadeante en un equipo de terminal. Igual que ese cursor indica la posición actual en la pantalla y donde las palabras con tipo aparecerá siguientes, un cursor en un conjunto de resultados indica la posición actual en el conjunto de resultados y qué filas se devolverán a continuación.  
@@ -46,4 +44,3 @@ Una aplicación captura los datos con un *cursor*. Un cursor es diferente de un 
   
 > [!IMPORTANT]  
 >  Confirmar o revertir una transacción, ya sea llamando explícitamente a **SQLEndTran** o funcionando en modo de confirmación automática, hace que algunos orígenes de datos cerrar todos los cursores en todas las instrucciones en una conexión. Para obtener más información, vea los atributos SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR en el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción de la función.
-

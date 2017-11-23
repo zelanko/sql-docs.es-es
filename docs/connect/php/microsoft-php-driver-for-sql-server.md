@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 79cd8f0b943c9382d4287369ec9cd21f28976172
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52efa662a131ba78654cf12cac33bafb2dae1d4c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-php-driver-for-sql-server"></a>Controladores de Microsoft para PHP para SQL Server
 
@@ -32,10 +30,10 @@ ms.lasthandoff: 09/09/2017
 El controlador de SQL Server para PHP habilita la integración con SQL Server para las aplicaciones PHP. El controlador es una extensión PHP que permite leer y escribir datos de SQL Server desde scripts PHP. El controlador proporciona interfaces para tener acceso a datos de base de datos de SQL Azure y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). El controlador hace uso de PHP características, incluidas las secuencias PHP para leer y escribir objetos grandes.  
   
 ## <a name="getting-started"></a>Introducción  
-* [Paso 1: Configurar el entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  
+* [Paso 1: configurar el entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Paso 2: Crear una base de datos para el desarrollo de PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Paso 3: Prueba de concepto que se conecta a SQL con PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Paso 4: Conectar de forma resistente a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Paso 3: prueba de concepto de la conexión a SQL con PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Paso 4: conectarse con resistencia a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentación  
 * [Introducción](getting-started-with-the-php-sql-driver.md)
@@ -56,4 +54,3 @@ El controlador de SQL Server para PHP habilita la integración con SQL Server pa
 * [Getting Started with PHP en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
 * [Getting Started with PHP en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
 * [Getting Started with PHP en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
-

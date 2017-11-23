@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLAllocStmt function [ODBC], Cursor Library
+helpviewer_keywords: SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf80a3dfd02c2871267cfe57f1b95ae246094bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (biblioteca de cursores)
 > [!IMPORTANT]  
@@ -42,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  La biblioteca de cursores admite las llamadas a **SQLBindCol** para enlazar la columna de marcador.  
   
  Cuando se trabaja con una API ODBC 2. *x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) al **SQLBindCol** se llama para establecer la longitud del búfer para una columna de marcador a un valor no es igual a 4. Cuando se trabaja con una aplicación ODBC 3*.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.
-

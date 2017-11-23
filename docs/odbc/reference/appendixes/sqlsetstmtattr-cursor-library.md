@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetStmtAttr function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 603a01d46e83b98622b7d143ef162fd5cfbc6518
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d03483adc4a566d4691bb7687f231b41ca0b41bd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (biblioteca de cursores)
 > [!IMPORTANT]  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  La biblioteca de cursores es compatible con el establecimiento del atributo de instrucción SQL_ATTR_PARAM_BIND_OFFSET_PTR o SQL_ATTR_ROW_BIND_OFFSET_PTR para habilitar los desplazamientos de enlace. El desplazamiento de enlace no se usará para las llamadas a **SQLFetch** cuando se utiliza la biblioteca de cursores con una API ODBC 2. *x* controlador.  
   
  La biblioteca de cursores admite establecer el atributo de instrucción de SQL_ATTR_USE_BOOKMARKS como SQL_UB_VARIABLE.
-

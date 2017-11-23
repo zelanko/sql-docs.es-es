@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
 - IDENTITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - IDENTITY property
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: c8ed5f2b2dd8daaf244f9e12ea17a69ff489ae3b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1eb7f960210ec89a66f1307d8476e6d47494861f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREAR la identidad de la tabla (Transact-SQL) (propiedad)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -84,7 +81,7 @@ IDENTITY [ (seed , increment) ]
   
  Solo se puede crear una columna de identidad para cada tabla.  
   
- En las tablas con optimización para memoria, el valor de inicialización y el valor de incremento debe establecerse en 1,1. Si se establece el valor de inicialización o el incremento en un valor distinto de 1 da como resultado el siguiente error: el uso de inicialización e incremento de otros valores de 1 no es compatible con tablas optimizadas en memoria.  
+ En las tablas optimizadas para memoria, el valor de inicialización y el valor de incremento debe establecerse en 1,1. Si se establece el valor de inicialización o el incremento en un valor distinto de 1 da como resultado el siguiente error: el uso de inicialización e incremento de otros valores de 1 no es compatible con tablas optimizadas en memoria.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -187,4 +184,3 @@ SET IDENTITY_INSERT img OFF;
  [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   
-

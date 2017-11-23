@@ -4,17 +4,22 @@ description: "Instalar, actualizar y desinstalar SQL Server en Linux. En este te
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: Active
+ms.openlocfilehash: 8d61ba8334d81c46643d15b38173b6b2dd2e1a93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
-ms.contentlocale: es-es
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
@@ -94,31 +99,82 @@ Para revertir o degradación de SQL Server a una versión anterior, siga estos p
 > [!NOTE]
 > Solo se admite para degradar a una versión dentro de la misma versión principal, como SQL Server 2017.
 
-> [!IMPORTANT]
-> Degradación solo se admite entre RC1, RC2 y RTM en este momento.
+## <a id="versioncheck"></a>Comprobar la versión instalada de SQL Server
+
+Para comprobar la versión actual y la edición de SQL Server en Linux, utilice el procedimiento siguiente:
+
+1. Si aún no está instalado, instale el [herramientas de línea de comandos de SQL Server](sql-server-linux-setup-tools.md).
+
+1. Use **sqlcmd** para ejecutar un comando de Transact-SQL que muestra la versión de SQL Server y la edición.
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
+## <a id="uninstall"></a>Desinstalar SQL Server
+
+Para quitar el **mssql server** el paquete en Linux, utilice uno de los siguientes comandos en función de la plataforma:
+
+| Plataforma | Comandos de eliminación de paquetes |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES GRANDE | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+Quitar el paquete no eliminan los archivos de base de datos generada. Si desea eliminar los archivos de base de datos, use el comando siguiente:
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
 
 ## <a id="repositories"></a>Configurar repositorios de origen
 
-Al instalar o actualizar SQL Server, obtendrá la versión más reciente de SQL Server desde el repositorio de Microsoft configurado. Es importante tener en cuenta que hay dos tipos principales de repositorios para cada distribución:
+Al instalar o actualizar SQL Server, obtendrá la versión más reciente de SQL Server desde el repositorio de Microsoft configurado.
+
+### <a name="repository-options"></a>Opciones de repositorio
+
+Hay dos tipos principales de repositorios para cada distribución:
 
 - **Las actualizaciones acumulativas (CU)**: repositorio de actualización acumulativa The (CU) contiene los paquetes para la versión de SQL Server base y cualquier correcciones o mejoras desde esa versión. Las actualizaciones acumulativas son específicas de una versión de lanzamiento, por ejemplo, SQL Server 2017. Se publican a un ritmo regular.
 
 - **GDR**: repositorio el GDR contiene paquetes para la versión de SQL Server base y solo correcciones críticas y actualizaciones de seguridad desde esa versión. Estas actualizaciones también se agregan a la próxima versión CU.
 
-Cada versión CU y GDR contiene el paquete completo de SQL Server y todas las actualizaciones anteriores para ese repositorio. Se admite la actualización desde una versión GDR a una versión CU cambiando su repositorio configurado para SQL Server. También puede [degradar](#rollback) a cualquier versión dentro de la versión principal (por ejemplo: 2017).
+Cada versión CU y GDR contiene el paquete completo de SQL Server y todas las actualizaciones anteriores para ese repositorio. Se admite la actualización desde una versión GDR a una versión CU cambiando su repositorio configurado para SQL Server. También puede [degradar](#rollback) a cualquier versión dentro de la versión principal (por ejemplo: 2017). Actualizar desde una CU no se admite la versión a una versión GDR.
 
-> [!NOTE]
-> Actualizar desde una CU no se admite la versión a una versión GDR.
+### <a name="check-your-configured-repository"></a>Compruebe su repositorio configurado
+
+Si desea comprobar qué repositorio está configurada, utilice las siguientes técnicas depende de la plataforma.
+
+| Plataforma | Procedimiento |
+|-----|-----|
+| RHEL | 1. Ver los archivos en el **/etc/yum.repos.d** directorio:`sudo ls /etc/yum.repos.d`<br/>2. Busque un archivo que configura el directorio de SQL Server, como **server.repo mssql**.<br/>3. Imprimir el contenido del archivo:`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. El **nombre** propiedad es el repositorio configurado.|
+| SLES GRANDE | 1. Ejecute el siguiente comando: `sudo zypper info mssql-server`<br/>2. El **repositorio** propiedad es el repositorio configurado. |
+| Ubuntu | 1. Ejecute el siguiente comando: `sudo cat /etc/apt/sources.list`<br/>2. Examine la dirección URL del paquete para servidor mssql. |
+
+Al final de la dirección URL de repositorio confirma que el tipo de repositorio:
+
+- **MSSQL server**: repositorio de vista previa.
+- **MSSQL-server-2017**: repositorio CU.
+- **MSSQL-server-2017-gdr**: repositorio GDR.
+
+### <a name="change-the-source-repository"></a>Cambiar el repositorio de origen
 
 Para configurar los repositorios de CU o GDR, siga estos pasos:
 
+> [!NOTE]
+> El [tutoriales de inicio rápido de](#platforms) configurar el repositorio de CU. Si sigue estos tutoriales, no es necesario realizar los pasos siguientes para continuar usando el repositorio de CU. Estos pasos sólo son necesarios para cambiar el repositorio configurado.
+
 1. Si es necesario, quite el repositorio configurado previamente.
 
-   | Plataforma | Comando de eliminación de repositorio |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES GRANDE | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | Plataforma | Repositorio | Comando de eliminación de repositorio |
+   |---|---|---|
+   | RHEL | **Todos** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES GRANDE | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. Para **Ubuntu solo**, importe las claves GPG repositorio público.
 
@@ -137,26 +193,10 @@ Para configurar los repositorios de CU o GDR, siga estos pasos:
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [Instalar](#platforms) o [actualizar](#upgrade) SQL Server desde el repositorio de nuevo.
+1. [Instalar](#platforms) o [actualizar](#upgrade) SQL Server y los relacionados con los paquetes desde el repositorio de nuevo.
 
    > [!IMPORTANT]
-   > En este punto, si decide realizar una instalación completa con la [tutoriales](#platforms), recuerde que acaba de configurar el repositorio de destino. No repita este paso en los tutoriales. Esto es especialmente cierto si configura el repositorio GDR, ya que los tutoriales usan el repositorio de CU.
-
-## <a id="uninstall"></a>Desinstalar SQL Server
-
-Para quitar el **mssql server** el paquete en Linux, utilice uno de los siguientes comandos en función de la plataforma:
-
-| Plataforma | Comandos de eliminación de paquetes |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES GRANDE | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-Quitar el paquete no eliminan los archivos de base de datos generada. Si desea eliminar los archivos de base de datos, use el comando siguiente:
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
+   > En este punto, si opta por utilizar uno de los tutoriales de la instalación, como el [tutoriales](#platforms), recuerde que acaba de configurar el repositorio de destino. No repita este paso en los tutoriales. Esto es especialmente cierto si configura el repositorio GDR, ya que los tutoriales usan el repositorio de CU.
 
 ## <a id="unattended"></a>Instalación desatendida
 
@@ -232,4 +272,3 @@ Conectarse a la instancia de SQL Server para empezar a crear y administrar bases
 - [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Ejecutar en Docker](quickstart-install-connect-ubuntu.md)
-

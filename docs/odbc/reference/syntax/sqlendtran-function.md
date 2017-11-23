@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLEndTran
-apilocation:
-- sqlsrv32.dll
+apiname: SQLEndTran
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLEndTran
-helpviewer_keywords:
-- SQLEndTran function [ODBC]
+f1_keywords: SQLEndTran
+helpviewer_keywords: SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c85e1102eb259f9ab1df342ab2ca0402fd68fa73
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcae4699f6effbc0e6605701560dad11acff5281
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlendtran-function"></a>Función SQLEndTran
 **Conformidad**  
@@ -155,13 +149,12 @@ SQLRETURN SQLEndTran(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Cancelar una función que se ejecuta de forma asincrónica en un identificador de conexión.|[SQLCancelHandle (función)](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
+|Cancelar una función que se ejecuta de forma asincrónica en un identificador de conexión.|[Función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |Devolver información acerca de un controlador o un origen de datos|[Función SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
-|Liberar un identificador|[SQLFreeHandle, función](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|Liberar un identificador de instrucción|[SQLFreeStmt, función](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|Liberar un identificador|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Liberar un identificador de instrucción|[Función SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Ejecución asincrónica (método de sondeo)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

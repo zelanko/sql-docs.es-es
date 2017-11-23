@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], binary
 - binary data transfers [ODBC]
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf5191b9fa41af5c0e180f9ad605f9563cbcf8bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ccb6114eab57030d6555931f0bfcdbe469326442
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-binary"></a>SQL a binario C:
 Los identificadores para los tipos de datos SQL de ODBC binarios son:  
@@ -53,4 +51,3 @@ Los identificadores para los tipos de datos SQL de ODBC binarios son:
   
 > [!NOTE]  
 >  Se desaconseja datos binarios de SQL de enlace a un tipo de datos de carácter C a los desarrolladores de aplicaciones. Esta conversión suele ser ineficaz y lento.
-

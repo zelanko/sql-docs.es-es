@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2af7ec87b34ba6b2a8482d9321905f409dd9dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-interval-structure"></a>Estructura de intervalo de C
 Cada uno de los tipos de datos del intervalo de C enumerados en la [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) sección usa la misma estructura para contener los datos de intervalo. Cuando **SQLFetch**, **SQLFetchScroll**, o **SQLGetData** es llama, el controlador devuelve datos acerca de la estructura SQL_INTERVAL_STRUCT, utiliza el valor que se especificó en el aplicación para los tipos de datos de C (en la llamada a **SQLBindCol**, **SQLGetData**, o **SQLBindParameter**) para interpretar el contenido de SQL_INTERVAL_STRUCT y rellena la *interval_type* campo de la estructura con la *enum* valor corresponde al tipo de C. Tenga en cuenta que los controladores no leen la *interval_type* campo para determinar el tipo del intervalo; recuperará el valor del campo de descriptor SQL_DESC_CONCISE_TYPE. Cuando se utiliza la estructura de datos de parámetro, el controlador utiliza el valor especificado por la aplicación en el campo SQL_DESC_CONCISE_TYPE de la APD para interpretar el contenido de SQL_INTERVAL_STRUCT, incluso si la aplicación establece el valor de la  *interval_type* campo en un valor diferente.  
@@ -78,4 +76,3 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  El *interval_type* campo de la SQL_INTERVAL_STRUCT indica a la aplicación qué estructura se mantiene en la unión y también qué miembros de la estructura son relevantes. El *interval_sign* campo tiene el valor SQL_FALSE si el intervalo a la izquierda campo es sin signo; si es SQL_TRUE, el campo inicial es negativo. El valor en el propio campo inicial siempre es sin signo, independientemente del valor de *interval_sign*. El *interval_sign* campo actúa como un bit de signo.
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Driver Manager, installing
+helpviewer_keywords: Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ca46eb4fbb6203191a7aace3946daad8361b224
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-driver-manager"></a>Instalación del Administrador de controladores
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -59,7 +56,7 @@ Siga estos pasos para instalar el Administrador de controladores:
   
 5.  Cuando esté listo para instalar, y si el equipo puede tener acceso a un sitio externo a través de FTP, ejecute el siguiente comando: **./build_dm.sh**.
 
-Si el equipo no puede obtener acceso a un sitio externo a través de FTP, obtener `unixODBC-2.3.0.tar.gz`. Puede obtener `unixODBC-2.3.0.tar.gz` de [http://www.unixodbc.org](http://www.unixodbc.org/). Haga clic en el **descargar** vínculo en el lado izquierdo de la página para ir a la página de descarga. Después, haga clic en el vínculo correspondiente para descargar unixODBC-2.3.0 (no unixODBC-2.3.1). unixODBC-2.3.1 no es compatible con esta versión de la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Ejecute el siguiente comando para iniciar la instalación del Administrador de controladores unixODBC: **./build_dm.sh--dirección url de descarga = file://unixODBC-2.3.0.tar.gz**.  
+Si el equipo no puede obtener acceso a un sitio externo a través de FTP, obtener `unixODBC-2.3.0.tar.gz`. Puede obtener `unixODBC-2.3.0.tar.gz` de [http://www.unixodbc.org](http://www.unixodbc.org/). Haga clic en el **descargar** vínculo en el lado izquierdo de la página para ir a la página de descarga. Después, haga clic en el vínculo correspondiente para descargar unixODBC-2.3.0 (no unixODBC-2.3.1). UnixODBC-2.3.1 no es compatible con esta versión de la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Ejecute el siguiente comando para iniciar la instalación del Administrador de controladores unixODBC: **./build_dm.sh--dirección url de descarga = file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Tipo de **Sí** para continuar con el desempaquetado de los archivos. Esta parte del proceso puede tardar hasta 5 minutos en completarse.  
 
@@ -97,4 +94,3 @@ De esta forma, estará preparado para instalar el controlador. Vea [instalar Mic
 [Problemas conocidos en esta versión del controlador](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Notas de la versión](../../../connect/odbc/linux-mac/release-notes.md)
-

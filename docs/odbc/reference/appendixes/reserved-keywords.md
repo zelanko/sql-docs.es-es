@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb3cd6b0bcb1d159e3c32a672b8b9f1038057b51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d829e53d2ab774ce248d0c89ef6267111c66334
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
 Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no limitan la gramática mínima de SQL; Sin embargo, para garantizar la compatibilidad con controladores que admiten la gramática principal de SQL, las aplicaciones deben evitar mediante cualquiera de estas palabras clave. El signo #**definir** valor SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
@@ -151,4 +149,3 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |INTERSECT|YEAR|  
 |INTERVAL|ZONE|  
 |INTO||
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBulkOperations
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBulkOperations
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBulkOperations
-helpviewer_keywords:
-- SQLBulkOperations function [ODBC]
+f1_keywords: SQLBulkOperations
+helpviewer_keywords: SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 74934fb9edbcea316b4acb09f4b8e63c08236b1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea439a41a6a3d42c9266bbccfe53aace1c0f37f4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbulkoperations-function"></a>Función SQLBulkOperations
 **Conformidad**  
@@ -458,17 +452,16 @@ int main() {
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[SQLFetchScroll, función](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Obtener un único campo de un descriptor de|[Sqlgetdescfield, función](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|Obtener varios campos de un descriptor de|[Sqlgetdescrec, función](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Configuración de un único campo de un descriptor de|[Sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Configuración de varios campos de un descriptor de|[Sqlsetdescrec, función](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
-|Coloque el cursor, actualizar los datos en el conjunto de filas, o actualizar o eliminar datos en el conjunto de filas|[SQLSetPos, función](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
-|Establecer un atributo de instrucción|[SQLSetStmtAttr, función](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Obtener un único campo de un descriptor de|[Función SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Obtener varios campos de un descriptor de|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Configuración de un único campo de un descriptor de|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Configuración de varios campos de un descriptor de|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Coloque el cursor, actualizar los datos en el conjunto de filas, o actualizar o eliminar datos en el conjunto de filas|[Función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
+|Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

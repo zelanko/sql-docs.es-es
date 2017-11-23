@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-a-sql-statement"></a>Procesar una instrucción SQL
 Antes de hablar sobre las técnicas para usar SQL mediante programación, es necesario describir cómo se procesa una instrucción SQL. Los pasos implicados son comunes a todas las técnicas de tres, aunque cada una de ellas las realiza en momentos diferentes. En la siguiente ilustración muestra los pasos implicados en el procesamiento de una instrucción SQL, que se describen en el resto de esta sección.  
@@ -50,4 +48,3 @@ Antes de hablar sobre las técnicas para usar SQL mediante programación, es nec
 5.  El DBMS ejecuta la instrucción mediante la ejecución del plan de acceso.  
   
  Varían en la cantidad de acceso de la base de datos que necesitan y la cantidad de tiempo que tardan en los pasos utilizados para procesar una instrucción SQL. El análisis de una instrucción SQL no requiere acceso a la base de datos y se puede realizar muy rápidamente. La optimización, por otro lado, es una CPU de muchos procesar y requiere acceso para el catálogo del sistema. Para una consulta compleja, varias tablas, el optimizador puede explorar miles de distintas formas de llevar a cabo la misma consulta. Sin embargo, el costo de ejecutar la consulta de forma ineficaz suele ser tan alto que el tiempo empleado en la optimización se recupere el más de velocidad de ejecución de consulta. Esto es incluso más importante si el mismo plan de acceso optimizado puede utilizarse una y otra vez para realizar consultas repetitivas.
-

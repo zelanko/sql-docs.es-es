@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Tipos de datos de Microsoft Excel
 En la tabla siguiente se muestra cómo se asignan los tipos de datos del controlador de Microsoft Excel a los tipos de datos SQL de ODBC. El controlador de Microsoft Excel asigna a estos tipos de datos a columnas de tablas de Microsoft Excel basadas en los datos de la columna.  
@@ -57,4 +55,3 @@ En la tabla siguiente se muestra cómo se asignan los tipos de datos del control
 |TEXT|Cuando las filas de una columna contienen más de un tipo de datos de Microsoft Excel, el controlador ODBC de Microsoft Excel asigna al tipo de datos SQL_VARCHAR a la columna. Hay una excepción a esto: si la columna contiene solo dos o tres de los tipos de datos de fecha y hora (fecha, hora y fecha y hora), el controlador ODBC de Microsoft Excel asigna el tipo de datos SQL_TIMESTAMP a la columna.<br /><br /> Creación de una columna de texto de cero o sin especificar longitud realmente devuelve una columna de 255 bytes.<br /><br /> Un literal de cadena de caracteres puede contener cualquier carácter ANSI (1-255 decimal). Utilice dos consecutivos comillas (") para representar una comilla simple (').<br /><br /> Insertar un valor NULL en una columna con un tipo de datos distinto SQL_VARCHAR hará que el tipo de datos de la columna que se va a cambiar a SQL_VARCHAR.|  
   
  Para conocer más limitaciones en los tipos de datos pueden encontrarse en [limitaciones del tipo de datos](../../odbc/microsoft/data-type-limitations.md).
-

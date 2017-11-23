@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 478c7c00205a161d366a1052b52604047f9755dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Asignación de SQLGetStmtOption
 Cuando una aplicación llama **SQLGetStmtOption** a una aplicación ODBC 3*.x* controlador que no lo admite, la llamada a  
@@ -62,4 +60,3 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  La opción de instrucción SQL_GET_BOOKMARK está en desuso en ODBC 3*.x*. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2. *x* las aplicaciones que utilizan SQL_GET_BOOKMARK, debe admitir SQL_GET_BOOKMARK. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2. *x* de las aplicaciones, deben admitir establecer SQL_USE_BOOKMARKS en SQL_UB_ON y debe exponer los marcadores de longitud fija. Si una aplicación ODBC 3*.x* controlador admite solamente los marcadores de longitud variable, marcadores de longitud no fija, debe devolver HYC00 SQLSTATE (característica opcional no implementada) si una API ODBC 2. *x* aplicación intenta establecer SQL_USE_BOOKMARKS a SQL_UB_ON.  
   
  Para una aplicación ODBC 3*.x* controlador, el Administrador de controladores ya no se comprueba para ver si *opción* es entre SQL_STMT_OPT_MIN y SQL_STMT_OPT_MAX o es mayor que SQL_CONNECT_OPT_DRVR_START. El controlador debe comprobarlo.
-

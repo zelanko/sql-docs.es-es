@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c0bbe08b13b45b47fecda5143ca419c31dfe82d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-the-environment-handle"></a>Asignar el identificador de entorno
 La primera tarea para cualquier aplicación ODBC es cargar el Administrador de controladores; cómo llevarlo a cabo depende del sistema operativo. Por ejemplo, en un equipo que ejecuta Microsoft® Windows NT® Server o Windows 2000 Server, Windows NT Workstation o Windows 2000 Professional o Microsoft Windows® 95 ó 98, la aplicación o se vincula a la biblioteca del Administrador de controladores o llamadas  **LoadLibrary** para cargar la DLL del Administrador de controladores.  
@@ -55,4 +53,3 @@ La primera tarea para cualquier aplicación ODBC es cargar el Administrador de c
  Cuando **SQLFreeHandle** se llama, las versiones de controlador la estructura que se utiliza para almacenar información acerca del entorno. Tenga en cuenta que **SQLFreeHandle** no se puede llamar para un identificador de entorno hasta después de que se haya liberado todos los identificadores de conexión de ese identificador de entorno.  
   
  Para obtener más información sobre el identificador de entorno, consulte [entorno controla](../../../odbc/reference/develop-app/environment-handles.md).
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
   Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ya que todo el contenido relacionado con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]está almacenado en bases de datos de contenido de SharePoint y todas las operaciones relacionadas con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]las realizan los servicios compartidos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Los usuarios que solicitan un libro que contenga los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se autentican con una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Arquitectura de seguridad de Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b319e0fe0972b236c03694899c5d4361dbcc473
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Características internacionales del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -71,7 +69,6 @@ ms.lasthandoff: 09/09/2017
 >  La mayoría del software de resolver escrito para plataformas distintas de Windows se basa en los estándares DNS de Internet y, por tanto, es probable que use el formato Punycode para los IDN, mientras que un servidor de DNS basado en Windows en una red privada se puede configurar para permitir el uso de caracteres UTF-8 según el servidor.  Para obtener más información, consulte [compatibilidad con caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

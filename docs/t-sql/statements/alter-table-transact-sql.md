@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -61,17 +59,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
+caps.latest.revision: "281"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cee79406283aa3b75d41b968370f490cb454ea5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -540,7 +537,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Invalida el **grado máximo de paralelismo** opción de configuración durante la operación. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Invalida el **grado máximo de paralelismo** opción de configuración durante la operación. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
  Utilice la opción MAXDOP para limitar el número de procesadores utilizados en la ejecución de planes paralelos. El máximo es 64 procesadores.  
   
@@ -871,7 +868,7 @@ IF EXISTE
  Las columnas de tipo **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **texto**, **ntext**, **imagen**, **hierarchyid**, **geometry**, **geography**, o no puede UDTS de CLR Agregar una operación en línea. Una columna no se puede agregar en línea si al hacerlo provoca que el tamaño máximo posible de fila supere el límite de 8.060 bytes. En este caso, la columna se agrega como una operación sin conexión.  
   
 ## <a name="parallel-plan-execution"></a>Ejecutar planes paralelos  
- En [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] y versiones posteriores, el número de procesadores que se emplea para ejecutar una sola ALTER TABLE ADD (basada en índices) CONSTRAINT o DROP (índice clúster) CONSTRAINT instrucción viene determinada por la **grado máximo de paralelismo** configuración opción y la carga de trabajo actual. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación se reduce automáticamente antes de comenzar la ejecución de la instrucción. Puede configurar manualmente el número de procesadores que se utilizan para ejecutar la instrucción si especifica la opción MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ En [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] y versiones posteriores, el número de procesadores que se emplea para ejecutar una sola ALTER TABLE ADD (basada en índices) CONSTRAINT o DROP (índice clúster) CONSTRAINT instrucción viene determinada por la **grado máximo de paralelismo** configuración opción y la carga de trabajo actual. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación se reduce automáticamente antes de comenzar la ejecución de la instrucción. Puede configurar manualmente el número de procesadores que se utilizan para ejecutar la instrucción si especifica la opción MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 ## <a name="partitioned-tables"></a>Tablas con particiones  
  Además de realizar operaciones SWITCH que implican a tablas con particiones, ALTER TABLE puede utilizarse para cambiar el estado de las columnas, restricciones y desencadenadores de una tabla con particiones, de la misma forma que se utiliza para las tablas sin particiones. Sin embargo, esta sentencia no puede utilizarse para cambiar la forma en que se realizan las particiones de la tabla misma. Para volver a particionar una tabla con particiones, utilice [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) y [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Además, no puede cambiar el tipo de datos de una columna de una tabla con particiones.  
@@ -1859,5 +1856,4 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

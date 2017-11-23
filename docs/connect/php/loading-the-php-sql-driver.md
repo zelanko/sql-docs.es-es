@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- loading the driver
+helpviewer_keywords: loading the driver
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 90ba63857ea38481577083d2a85999e789dfcb84
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cb2200b2c5d151981e9dcdf8322dd7c43b91c6ee
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="loading-the-php-sql-driver"></a>Carga del controlador SQL para PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -100,4 +97,3 @@ Para obtener más información sobre las funciones PHP relacionadas con la carga
 [Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

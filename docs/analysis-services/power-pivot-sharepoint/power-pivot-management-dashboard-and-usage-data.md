@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5833c1dae2cc6b5cf8f85a52bec088d96e609537
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Panel de administración de Power Pivot y datos de uso
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] es una colección de informes predefinidos y elementos web de Administración central de SharePoint que ayudan a administrar una implementación de SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint. El Panel de administración proporciona información relacionada con el estado del servidor, la actividad de los libros y la actualización de datos. El panel usa datos de la recopilación de datos de uso de SharePoint.  
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

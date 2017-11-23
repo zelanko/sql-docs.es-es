@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de claves
 Un cursor controlado por conjunto de claves está comprendida entre una variable static y un cursor dinámico en su capacidad para detectar los cambios. Al igual que un cursor estático, no siempre detecta cambios en la pertenencia y el orden del conjunto de resultados. Al igual que un cursor dinámico, que detectar cambios en los valores de filas del conjunto de resultados (de acuerdo con el nivel de aislamiento de la transacción, según lo establecido por el atributo de conexión SQL_ATTR_TXN_ISOLATION).  
@@ -42,4 +40,3 @@ Un cursor controlado por conjunto de claves está comprendida entre una variable
  Los cursores dinámicos se implementan normalmente mediante la creación de una tabla temporal que contiene las claves para cada fila del conjunto de resultados. Dado que el cursor también debe determinar que si se ha actualizado la fila, esta tabla también contiene una columna con la información de control de versiones de fila.  
   
  Para desplazarse por el conjunto de resultados original, el cursor controlado por conjunto de claves abre un cursor estático a través de la tabla temporal. Para recuperar una fila en el conjunto de resultados original, el cursor primero recupera la clave adecuada de la tabla temporal y, a continuación, recupera los valores actuales de la fila. Si se utilizan cursores de bloque, el cursor debe recuperar varias claves y filas.
-

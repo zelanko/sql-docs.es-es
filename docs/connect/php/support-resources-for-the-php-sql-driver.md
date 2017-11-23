@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- support
+helpviewer_keywords: support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2b2225256554828dfd749280ed5b401fb181972
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b2bda9171fe1aafdcf94bb0601e9a505b0a67341
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="support-resources-for-the-php-sql-driver"></a>Recursos de soporte técnico para el controlador SQL para PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,4 +61,3 @@ Si tiene preguntas relacionadas con los [!INCLUDE[ssDriverPHP](../../includes/ss
 ## <a name="see-also"></a>Vea también  
 [Información general sobre el controlador SQL para PHP](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

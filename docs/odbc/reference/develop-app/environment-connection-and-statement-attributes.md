@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - statement attributes [ODBC]
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 933e51d6ae61f734f2e849e91837dcf5404728f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfe477bf0ca518d4f4e83d141a24bcb4c2640ed2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="environment-connection-and-statement-attributes"></a>Entorno, conexión y los atributos de instrucción
 ODBC define el número de atributos que están asociados con los entornos, las conexiones o las instrucciones.  
@@ -41,4 +39,3 @@ ODBC define el número de atributos que están asociados con los entornos, las c
  Además de los atributos definidos por ODBC, un controlador puede definir su propia conexión y los atributos de instrucción. Atributos definidos por el controlador deben estar registrados con Open Group para asegurarse de que dos proveedores de controlador no asignan el mismo valor de entero a atributos diferentes, propietarios. Para obtener más información, consulte [tipos de datos específicos del controlador, Descriptor de tipos, información de tipos, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Para obtener una lista completa de atributos, vea [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md). También se describe la mayoría de los atributos en la descripción de la función ODBC que afectan a.
-

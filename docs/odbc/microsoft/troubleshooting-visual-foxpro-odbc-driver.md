@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea6c45c362047d45275b6895d58faafe0250d26f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3db2f795910c0ee331ad77903b12201f365784e6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Solución de problemas (controlador ODBC de Visual FoxPro)
 Las secciones siguientes describen cómo mejorar el rendimiento y resolver los problemas que podrían surgir al usar el controlador ODBC de Visual FoxPro.  
@@ -72,4 +70,3 @@ Las secciones siguientes describen cómo mejorar el rendimiento y resolver los p
   
 ## <a name="using-the-set-ansi-command"></a>Utiliza el comando de ANSI SET.  
  Si es un desarrollador de Visual FoxPro, debe tener en cuenta que el valor predeterminado de SET ANSI está activado para el controlador, a diferencia de un valor predeterminado de OFF de Visual FoxPro. El valor predeterminado en la configuración de SET ANSI permite orígenes de datos de Visual FoxPro para comportarse de forma coherente con otros orígenes de datos ODBC que normalmente se realizan las comparaciones exactas. Puede cambiar la configuración predeterminada. Para obtener más información, consulte [SET ANSI](../../odbc/microsoft/set-ansi-command.md).
-

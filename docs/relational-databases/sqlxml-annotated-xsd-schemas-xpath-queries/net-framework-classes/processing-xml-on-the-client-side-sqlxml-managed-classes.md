@@ -1,0 +1,104 @@
+---
+title: Procesar XML en el lado cliente (clases administradas de SQLXML) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sqlxml
+ms.reviewer: 
+ms.suite: sql
+ms.technology: dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- processing XML on client side [SQLXML]
+- client-side XML formatting
+- Managed Classes [SQLXML], client-side XML formatting
+- SQLXML Managed Classes, client-side XML formatting
+- ClientSideXml property
+ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
+caps.latest.revision: "21"
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 742da499fa4d3e7e8d9334af51a0a616c48a7c55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
+---
+# <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Procesar XML en el cliente (clases administradas de SQLXML)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]En este ejemplo se muestra el uso de clientsidexml, propiedad. La aplicación ejecuta un procedimiento almacenado en el servidor. El resultado del procedimiento almacenado (un conjunto de filas de dos columnas) se procesa en el cliente para generar un documento XML.  
+  
+ El siguiente GetContacts procedimiento almacenado devuelve **FirstName** y **LastName** de los empleados de la tabla Person.Contact en la base de datos de AdventureWorks.  
+  
+```  
+USE AdventureWorks  
+CREATE PROCEDURE GetContacts @LastName varchar(20)  
+AS  
+SELECT FirstName, LastName  
+FROM   Person.Contact  
+WHERE LastName = @LastName  
+Go  
+```  
+  
+ Esta aplicación de C# ejecuta el procedimiento almacenado y especifica la opción FOR XML AUTO al especificar el valor CommandText. En la aplicación, la clientsidexml, propiedad del objeto SqlXmlCommand se establece en true. Esto le permite ejecutar procedimientos almacenados preexistentes que devuelven un conjunto de filas y aplican a este último una transformación XML en el cliente.  
+  
+> [!NOTE]  
+>  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  
+  
+```  
+using System;  
+using Microsoft.Data.SqlXml;  
+using System.IO;  
+class Test  
+{  
+    static string ConnString = "Provider=SQLOLEDB;Server=(local);database=AdventureWorks;Integrated Security=SSPI";  
+      public static int testParams()  
+      {  
+         //Stream strm;  
+         SqlXmlParameter p;  
+         SqlXmlCommand cmd = new SqlXmlCommand(ConnString);  
+         cmd.ClientSideXml = true;  
+         cmd.CommandText = "EXEC GetContacts ? FOR XML NESTED";  
+         p = cmd.CreateParameter();  
+         p.Value = "Achong";  
+         using (Stream strm = cmd.ExecuteStream())   
+         {  
+            using (StreamReader sr = new StreamReader(strm))  
+                  {  
+               Console.WriteLine(sr.ReadToEnd());  
+            }  
+         }  
+         return 0;  
+      }  
+  
+public static int Main(String[] args)  
+{  
+    testParams();  
+    return 0;  
+}  
+}  
+```  
+  
+ Para probar este ejemplo, debe tener instalado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework en el equipo.  
+  
+### <a name="to-test-the-application"></a>Para probar la aplicación  
+  
+1.  Cree el procedimiento almacenado.  
+  
+2.  Guarde el código (DocSample.cs) de C# que se proporciona en este ejemplo en una carpeta. Modifique el código para especificar la información adecuada de inicio de sesión y contraseña.  
+  
+3.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
+  
+    ```  
+    csc /reference:Microsoft.Data.SqlXML.dll DocSample.cs  
+    ```  
+  
+     Esto crea una aplicación ejecutable (DocSample.exe).  
+  
+4.  En el símbolo del sistema, ejecute DocSample.exe.  
+  
+  

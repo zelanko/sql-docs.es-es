@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Actualizar las filas por marcador con SQLBulkOperations
 Al actualizar una fila por marcador, **SQLBulkOperations** hace que el origen de datos actualizar uno o más filas de la tabla. Las filas se identifican mediante el marcador en una columna de marcador enlazado. La fila se actualiza con los datos en los búferes de la aplicación para cada columna enlazada (excepto cuando el valor en el búfer de longitud/indicador para una columna es SQL_COLUMN_IGNORE). No se actualizará las columnas sin enlazar.  
@@ -50,4 +48,3 @@ Al actualizar una fila por marcador, **SQLBulkOperations** hace que el origen de
 6.  Llamadas **SQLBulkOperations** con el *operación* establecido en SQL_UPDATE_BY_BOOKMARK.  
   
  Para cada fila que se envía al origen de datos como una actualización, los búferes de la aplicación deben tener datos de fila válidas. Si los búferes de la aplicación se rellenaron, si se ha mantenido una matriz de Estados de fila, y si el valor de estado para una fila es SQL_ROW_DELETED, SQL_ROW_ERROR ni SQL_ROW_NOROW, inadvertidamente se pudieron enviar datos no válidos al origen de datos.
-

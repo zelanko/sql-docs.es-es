@@ -14,15 +14,13 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: es-es
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrado de las conexiones a SQL Server en Linux
 
@@ -138,4 +136,3 @@ TLS se utiliza para cifrar las conexiones desde una aplicación cliente para [!I
 |El nombre principal de destino es incorrecto.  |Asegúrese de que el campo de nombre común en el certificado del servidor de SQL coincide con el nombre del servidor especificado en la cadena de conexión del cliente. |  
 |El host remoto forzó el cierre una conexión existente. |Este error puede producirse cuando el cliente no es compatible con la versión del protocolo TLS requerida SQL Server. Por ejemplo, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para requerir TLS 1.2, asegúrese de que los clientes también admiten el protocolo TLS 1.2. |
 | | |   
-

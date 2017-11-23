@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: es-es
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -41,7 +39,7 @@ Las siguientes secciones de la [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 -   [Ejecutar consultas (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
 -   [Controlar errores y mensajes](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Autenticación Kerberos](http://msdn.microsoft.com/library/cc280459.aspx)  
--   [Tipos definidos por el usuario CLR grandes (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Tipos CLR grandes definidos por el usuario (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Realizar transacciones (ODBC) (excepto las transacciones distribuidas)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Procesar resultados (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Ejecutar procedimientos almacenados](http://msdn.microsoft.com/library/ms131440.aspx)
@@ -49,7 +47,7 @@ Las siguientes secciones de la [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 -   [Cifrado SSL](http://msdn.microsoft.com/library/ms131691.aspx)
 -   [Parámetros con valores de tabla](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 y UTF-16 para datos y comandos de API](http://msdn.microsoft.com/library/ff878241.aspx)
--   [Uso de funciones de catálogo](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [Utilizar funciones de catálogo](http://msdn.microsoft.com/library/ms131490.aspx)  
 
 ## <a name="unsupported-features"></a>Características no admitidas
 
@@ -118,4 +116,3 @@ Cuando los caracteres multibyte UTF-8 o UTF-16 suplentes se dividen en búferes 
 [Problemas conocidos en esta versión del controlador](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Notas de la versión](../../../connect/odbc/linux-mac/release-notes.md)
-

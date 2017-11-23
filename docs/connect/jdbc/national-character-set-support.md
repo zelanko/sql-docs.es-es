@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9be09b40e72a19a498913bf824e73b52db6596a2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f143d37911a1375a1eebe9de04c8b509817575ec
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="national-character-set-support"></a>Compatibilidad con juego de caracteres nacionales
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +42,6 @@ ms.lasthandoff: 09/09/2017
  Para enviar formatos String al servidor en formato Unicode, las aplicaciones deben usar los nuevos métodos de caracteres nacionales de JDBC 4.0; o establezca la **sendStringParametersAsUnicode** propiedad de conexión en "**true**" al utilizar los métodos de caracteres nacionales. Lo recomendable es usar los nuevos métodos de caracteres nacionales de JDBC 4.0 cuando sea posible. Para obtener más información sobre la **sendStringParametersAsUnicode** propiedad de conexión, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

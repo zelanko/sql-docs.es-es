@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55ce7a5604bac4871942a281313a853d9477a974
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-usage-data-collection"></a>Recopilación de datos de uso de Power Pivot
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que muestran cómo se usan los datos y servicios de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

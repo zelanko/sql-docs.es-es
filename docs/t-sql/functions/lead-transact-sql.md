@@ -1,39 +1,39 @@
 ---
 title: Cliente potencial (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 10/20/2015
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LEAD_TSQL
 - LEAD
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - LEAD function
 - analytic functions, LEAD
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 67b5d9300d4be84d16b2a650265e812eba1988a9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5ec17dc2c38f040d6877cb69ac484ad56225a37
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Tiene acceso a datos de una fila posterior en el mismo conjunto de resultados sin el uso de una autocombinación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. LEAD proporciona acceso a una fila en un desplazamiento físico especificado que hay después de la fila actual. Use esta función analítica en una instrucción SELECT para comparar valores de la fila actual con valores de una fila posterior.  
+  Tiene acceso a datos de una fila posterior en el mismo conjunto de resultados sin el uso de una autocombinación a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD proporciona acceso a una fila en un desplazamiento físico especificado que hay después de la fila actual. Use esta función analítica en una instrucción SELECT para comparar valores de la fila actual con valores de una fila posterior.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### <a name="a-compare-values-between-years"></a>A. Comparar valores entre años  
  La consulta usa la función LEAD para devolver la diferencia en cuotas de venta para un empleado específico durante años posteriores. Observe que como no hay ningún valor inicial disponible para la última fila, se devuelve el valor predeterminado de cero (0).  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -79,7 +79,6 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 BusinessEntityID SalesYear   CurrentQuota          NextQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             556000.00  
@@ -93,7 +92,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de particiones  
  En el ejemplo siguiente se usa la función LEAD para comparar las ventas anuales hasta la fecha entre los empleados. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por territorio de ventas. La función LEAD se aplica a cada partición por separado y el cálculo se reinicia para cada partición. La cláusula ORDER BY especificada en la cláusula OVER ordena las filas de cada partición antes de que se aplique la función. La cláusula ORDER BY de la instrucción SELECT ordena las filas del conjunto de resultados completo. Observe que como no hay ningún valor inicial disponible para la última fila de cada partición, se devuelve el valor predeterminado de cero (0).  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -105,8 +104,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```   
 TerritoryName            BusinessEntityID SalesYTD              NextRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          1453719.4653  
@@ -120,7 +118,7 @@ Northwest                280              1352577.1325          0.00
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Especificar expresiones arbitrarias  
  En el ejemplo siguiente se muestra cómo especificar una serie de expresiones arbitrarias en la sintaxis de la función LEAD.  
   
-```  
+```t-sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -148,7 +146,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: comparar valores entre los trimestres  
  En el ejemplo siguiente se muestra la función LEAD. La consulta obtiene la diferencia en los valores de cuota de ventas para un determinado empleado por trimestres naturales posteriores. Tenga en cuenta que, dado que no hay ningún valor inicial disponible después de la última fila, se utiliza el valor predeterminado de cero (0).  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  
@@ -176,6 +174,5 @@ Year Quarter  SalesQuota  NextQuota  Diff
  [LAG &#40; Transact-SQL &#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
-
 
 

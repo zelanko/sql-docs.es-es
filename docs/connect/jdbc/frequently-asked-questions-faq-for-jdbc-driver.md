@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68c34ad2b9e444b39bf3ce8a5cfa33ad2dcd00c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508f8526ed13af3f7f92aa500b182e077f5bb23d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F para el controlador JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -119,4 +117,3 @@ El controlador se ha probado con los principales servidores de aplicaciones, inc
 **¿El controlador, que puede comunicarse mediante algoritmos aprobados en FIPS?** Microsoft JDBC Driver no contiene algoritmos criptográficos. Si un cliente utiliza algoritmos de sistemas operativos, aplicaciones y JVM que el estándar federal de procesamiento de información (FIPS) considera aceptables y configura el controlador para usar esos algoritmos, el controlador utilizará solo los designados para la comunicación.  
   
   
-

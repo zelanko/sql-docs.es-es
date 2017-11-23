@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 472afd8fa958dd4602510a04c14a1268fe713194
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bbb6396dc1a49d984834ec6f105b3a9ba42d95c4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-timestamp"></a>C a SQL: marca de tiempo
 El identificador para el tipo de datos ODBC C de marca de tiempo es:  
@@ -51,4 +49,3 @@ El identificador para el tipo de datos ODBC C de marca de tiempo es:
  Cuando los datos de marca de tiempo C se convierte en datos de SQL de caracteres, los datos de caracteres resultante están en la "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[. *f...* ] "formato.  
   
  El controlador omite el valor de longitud/indicador al convertir datos del tipo de datos C de la marca de tiempo y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos C de la marca de tiempo. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.
-

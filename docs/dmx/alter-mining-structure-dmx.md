@@ -16,8 +16,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1e835c27541ab59fc6913b31600cd5804ea99f6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +141,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDECIR**|Esta columna puede predecirla el modelo y sus valores se pueden usar como entrada para predecir el valor de otras columnas de predicción.|  
+|**PREDICT**|Esta columna puede predecirla el modelo y sus valores se pueden usar como entrada para predecir el valor de otras columnas de predicción.|  
 |**PREDICT_ONLY**|Esta columna puede predecirla el modelo, pero sus valores no se pueden utilizar en escenarios de entrada para predecir el valor de otras columnas de predicción.|  
   
 ## <a name="filter-criteria-expressions"></a>Expresiones de criterios de filtro  
@@ -228,4 +226,3 @@ USING Microsoft_Decision Trees
  [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

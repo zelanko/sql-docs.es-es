@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions-odbc"></a>Transacciones ODBC
 A *transacciones* es una unidad de trabajo que se realiza como una única operación atómica; es decir, la operación se realiza correctamente o se produce un error como un todo. Por ejemplo, considere la posibilidad de transferir dinero de una cuenta bancaria a otra. Esto implica dos pasos: retirar el dinero de la primera cuenta y depositar en el segundo. Es importante que ambos pasos se realizan correctamente; no es aceptable para un solo paso, lleve a cabo correctamente y el otro no. Una base de datos que admite transacciones es capaz de garantizar esto.  
@@ -46,4 +44,3 @@ A *transacciones* es una unidad de trabajo que se realiza como una única operac
 -   [Aislamiento de transacción](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [Control de simultaneidad](../../../odbc/reference/develop-app/concurrency-control.md)
-

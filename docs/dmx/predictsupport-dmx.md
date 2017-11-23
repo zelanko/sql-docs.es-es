@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictSupport
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSupport function
+f1_keywords: PredictSupport
+dev_langs: DMX
+helpviewer_keywords: PredictSupport function
 ms.assetid: 325437d6-7cb5-4ae0-8abe-edb58fe5e90d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ddd3d03e677edf30434535809202bb022ef1bd41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9bf17c59bfc4f2ef548d695bb5a5710ba5ad249c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +52,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Para devolver la compatibilidad con los Estados que faltan, establezca el \<estado de predicción > en NULL.  
   
 > [!NOTE]  
->  Los valores de compatibilidad se calculan de manera diferente o pueden tener una interpretación distinta en función del tipo de modelo que se está consultando. Para obtener más información sobre cómo se calcula el soporte técnico para cualquier tipo de modelo determinado, vea el algoritmo individual escriba [contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Los valores de compatibilidad se calculan de manera diferente o pueden tener una interpretación distinta en función del tipo de modelo que se está consultando. Para obtener más información sobre cómo se calcula el soporte técnico para cualquier tipo de modelo determinado, vea el algoritmo individual escriba [contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza una consulta singleton para predecir si un individuo comprará una bicicleta, y también determina el soporte para la predicción en función del modelo de minería de datos TM Decision Tree.  
@@ -76,9 +72,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

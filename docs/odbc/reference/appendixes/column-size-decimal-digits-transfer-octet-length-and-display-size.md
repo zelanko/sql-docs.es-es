@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b80fdf874fe7ddb7306824ac4aedb7332cf3d6c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Tamaño de la columna, dígitos decimales, transferir la longitud en octetos y mostrar tamaño - ODBC
 Tipos de datos se caracterizan por su tamaño de columna (o parámetro), dígitos decimales, longitud y tamaño de presentación. Las siguientes funciones ODBC devuelven estos atributos para un parámetro en una instrucción SQL o para un tipo de datos SQL en un origen de datos. Cada función ODBC devuelve un conjunto diferente de estos atributos, como se indica a continuación:  
@@ -59,6 +57,5 @@ Tipos de datos se caracterizan por su tamaño de columna (o parámetro), dígito
   
 -   [Tamaño de columna](../../../odbc/reference/appendixes/column-size.md)  
 -   [Dígitos decimales](../../../odbc/reference/appendixes/decimal-digits.md)  
--   [Longitud de bytes de transferencia](../../../odbc/reference/appendixes/transfer-octet-length.md)  
+-   [Transferir la longitud en octetos](../../../odbc/reference/appendixes/transfer-octet-length.md)  
 -   [Tamaño de presentación](../../../odbc/reference/appendixes/display-size.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7747f421fe4a7356086cf27ecf62739f34acdd17
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors"></a>Cursores de bloque
 Muchas aplicaciones dedican una cantidad considerable de tiempo que lleva los datos a través de la red. Parte de este tiempo se invierte realmente volver a poner los datos a través de la red, y parte de ella se dedica a la sobrecarga, de la red, como la llamada realizada por el controlador para solicitar una fila de datos. Si la aplicación realiza un uso eficaz de la última vez que se puede reducir *bloque,* o *fat,* *cursores,* que puede devolver más de una fila a la vez.  
@@ -49,4 +47,3 @@ Muchas aplicaciones dedican una cantidad considerable de tiempo que lleva los da
 -   [Usar cursores de bloque](../../../odbc/reference/develop-app/using-block-cursors.md)  
   
 -   [Matriz de Estados de fila](../../../odbc/reference/develop-app/row-status-array.md)
-

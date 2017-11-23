@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>Literales de intervalo
 ODBC requiere que todos los controladores sean compatibles con la conversión del tipo de datos SQL_CHAR o SQL_VARCHAR a todos los tipos de datos interval de C. Si el origen de datos subyacente no admite tipos de datos interval, sin embargo, el controlador debe conocer el formato correcto del valor en el campo SQL_CHAR para admitir estas conversiones. De forma similar, ODBC requiere que debe tener cualquier tipo de ser convertible a SQL_CHAR o SQL_VARCHAR, por lo que un controlador necesita saber qué formato de un intervalo que se almacena en el campo de carácter de C de ODBC. Esta sección describe la sintaxis de literales de intervalo, que se debe usar para validar los campos SQL_CHAR durante la conversión a o desde tipos de datos de intervalo de C el escritor de controlador.  
@@ -102,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{INTERVALO '223.16' SEGUNDO}<br /><br /> {INTERVALO '223' YEAR}|Dado que la precisión inicial no se especifica, el valor predeterminado es 2, que es demasiado pequeño para contener el literal especificado.|  
 |{INTERVALO '22.1234567' SEGUNDO}|La precisión de segundos no está especificada, por lo que el valor predeterminado es 6. El literal tiene siete dígitos después del separador decimal.|  
 |{INTERVALO ' 163-13' AÑO (3) AL MES}<br /><br /> {INTERVALO ' 163 DAY(3) A LA HORA DE 65'}<br /><br /> {INTERVALO '163 62:39' DAY(3) MINUTO}<br /><br /> {INTERVALO '163 12:125:59.163' DAY(3) A SECOND(3)}<br /><br /> {INTERVALO '163:144' HOUR(3) MINUTO}<br /><br /> {INTERVALO '163:567:234.163' HOUR(3) A SECOND(4)}<br /><br /> {INTERVALO '163:591.163' MINUTE(3) A SECOND(5)}|El campo final no sigue las reglas del calendario gregoriano.|
-

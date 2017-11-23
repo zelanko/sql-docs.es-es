@@ -8,26 +8,22 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- BufferWithCurves method (geometry)
+dev_langs: TSQL
+helpviewer_keywords: BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a88ea4010ec1cfd48661b34e990634fe371141f3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de datos Geometry)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -164,6 +160,5 @@ Tipo de valor devuelto de SQL Server: **geometry**
  Las dos primeras **seleccione** instrucciones devuelven un `GeometryCollection` instancia porque el parámetro *distancia* es menor o igual a 1/2, la distancia entre los dos puntos (1 1) y (1 4). La tercera **seleccione** instrucción devuelve un `CurvePolygon` instancia porque las instancias almacenadas en búfer de los dos puntos (1 1) y (1 4) se superponen.  
   
 ## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  
-

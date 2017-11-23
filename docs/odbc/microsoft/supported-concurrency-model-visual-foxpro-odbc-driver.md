@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - concurrency models [ODBC]
 - FoxPro ODBC driver [ODBC], concurrency
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e06adec755df6c412d13fd8c2b892db8977b3a53
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f3348850a76bb831c236fd1c1ee49fb89b97504
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>Modelo de simultaneidad compatibles (el controlador ODBC de Visual FoxPro)
 Es compatible con el controlador ODBC de Visual FoxPro *simultaneidad de solo lectura*. La aplicación puede llamar a [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) con una opción SQL_CONCURRENCY de SQL_CONCUR_READ_ONLY.  
@@ -39,4 +37,3 @@ Es compatible con el controlador ODBC de Visual FoxPro *simultaneidad de solo le
   
 ## <a name="row-versioning"></a>versiones de fila  
  Básicamente marca de tiempo soporte técnico, en qué fila se comparan versiones durante la actualización.
-

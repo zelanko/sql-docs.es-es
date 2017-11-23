@@ -1,0 +1,60 @@
+---
+title: Sys.spatial_indexes (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-catalog-views
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sys.spatial_indexes_TSQL
+- spatial_indexes
+- spatial_indexes_TSQL
+- sys.spatial_indexes
+dev_langs: TSQL
+helpviewer_keywords: sys.spatial_indexes catalog view
+ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
+caps.latest.revision: "27"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 9aa8bf414f20f96060c913a2cfacd994dc675e17
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sysspatialindexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Representa la información del índice principal de los índices espaciales.  
+  
+||  
+|-|  
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+  
+|Nombre de columna|Tipo de datos|Description|  
+|-----------------|---------------|-----------------|  
+|\<hereda columnas >||Hereda columnas de [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
+|spatial_index_type|**tinyint**|Tipo de índice espacial:<br /><br /> 1 = índice espacial geométrico<br /><br /> 2 = índice espacial geográfico|  
+|spatial_index_type_desc|**nvarchar (60)**|Descripción del tipo del índice espacial:<br /><br /> GEOMETRY = índice espacial geométrico<br /><br /> GEOGRAPHY = índice espacial geográfico|  
+|tessellation_scheme|**sysname**|Nombre del esquema de teselación:<br /><br /> GEOMETRY_GRID, GEOMETRY_AUTO_GRID,<br /><br /> GEOGRAPHY_GRID, GEOGRAPHY_AUTO_GRID<br /><br /> Nota: Para obtener información sobre esquemas de teselación, vea [información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).|  
+|\<hereda columnas >||Hereda columnas de [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).<br /><br /> Las definiciones has_filter y filter_definition de las columnas heredadas aparecen después de las columnas específicas de los índices espaciales.|  
+  
+## <a name="permissions"></a>Permissions  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
+  
+## <a name="see-also"></a>Vea también  
+ [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys.spatial_index_tessellations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
+  
+  

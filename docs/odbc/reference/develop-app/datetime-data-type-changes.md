@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40d432cd25752c88b6c82209269c1d37a6bf5f63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-type-changes"></a>Cambia el tipo de datos de fecha y hora
 En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca de tiempo han cambiado desde SQL_DATE, SQL_TIME y SQL_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 9, 10 y 11) a SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 91, 92 y 93), respectivamente. Los identificadores de tipo C correspondientes han cambiado desde SQL_C_DATE, SQL_C_TIME y SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME y SQL_C_TYPE_TIMESTAMP, respectivamente.  
@@ -68,4 +66,3 @@ En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca
  [1] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
   
  [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.
-

@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COL_NAME
 - COL_NAME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - column properties [SQL Server]
 - COL_NAME function
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c69e738d69be578b92becba95e70534061286f43
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
-ms.contentlocale: es-es
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +63,7 @@ Un usuario solo puede ver los metadatos de elementos protegibles que posea o par
 ## <a name="remarks"></a>Comentarios  
 El *table_id* y *column_id* parámetros juntos generan una cadena de nombre de columna.
   
-Para obtener más información acerca de cómo obtener los números de identificación de tablas y columnas, vea [OBJECT_ID & #40; Transact-SQL & #41; ](../../t-sql/functions/object-id-transact-sql.md).
+Para obtener más información acerca de cómo obtener los números de identificación de tablas y columnas, vea [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
 En el ejemplo siguiente se devuelve el nombre de la primera columna de un ejemplo `Employee` tabla.
@@ -88,10 +85,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>Vea también
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funciones de metadatos & #40; Transact-SQL & #41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH & #40; Transact-SQL & #41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
-
 

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c359bd9c80317302288b56b1a5216b68f30e34ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4fdb56715660ca32f8c41ff6356be3ec3c6a64af
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-with-ssl-encryption"></a>Conectar con el cifrado SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -75,7 +73,6 @@ String connectionUrl =
   
 ## <a name="see-also"></a>Vea también  
  [Está utilizando cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Proteger aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

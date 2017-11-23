@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 443466ae5bb7199556641fca39361ce79bf7d2a4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  Determina si hay más resultados pendientes en un identificador de instrucción, *hstmt*, que contiene las instrucciones SELECT, UPDATE, INSERT o DELETE y si es así, inicializa el procesamiento de esos resultados.  
   
  Para obtener más información, consulte [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) en el *referencia del programador de ODBC*.
-

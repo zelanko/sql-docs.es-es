@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b878069cb0ddf04d4c8c743795f876b00fef23dc
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -71,7 +69,6 @@ Connection c = ds.getConnection("user", "pwd");
  Para obtener más información acerca de las propiedades del origen de datos, vea [establecer las propiedades de origen de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

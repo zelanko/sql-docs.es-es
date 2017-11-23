@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColAttribute
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColAttribute
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColAttribute
-helpviewer_keywords:
-- SQLColAttribute function [ODBC]
+f1_keywords: SQLColAttribute
+helpviewer_keywords: SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4248444c3b8908266a587ce3cb208a1d492fe1d9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolattribute-function"></a>Función SQLColAttribute
 **Conformidad**  
@@ -190,11 +184,11 @@ SQLRETURN SQLColAttribute (
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Devolver información acerca de una columna en un conjunto de resultados|[SQLDescribeCol (función)](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[SQLFetchScroll, función](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Recopilación de varias filas de datos|[SQLFetch, función](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Devolver información acerca de una columna en un conjunto de resultados|[Función SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Recopilación de varias filas de datos|[Función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código de ejemplo no libera identificadores y conexiones. Vea [SQLFreeHandle, función](../../../odbc/reference/syntax/sqlfreehandle-function.md), [ejemplo ODBC programa](../../../odbc/reference/sample-odbc-program.md), y [SQLFreeStmt, función](../../../odbc/reference/syntax/sqlfreestmt-function.md) para obtener ejemplos de código liberar los identificadores y las instrucciones.  
@@ -316,4 +310,3 @@ int main() {
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa de ejemplo de ODBC](../../../odbc/reference/sample-odbc-program.md)
-

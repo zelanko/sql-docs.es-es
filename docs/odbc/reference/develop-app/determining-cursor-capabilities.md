@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], capabilities
 - cursors [ODBC], scrollable
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 490369663aaaee6f9dbb70504b61087ad96191d8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-cursor-capabilities"></a>Determinar las capacidades del Cursor
 Las siguientes cuatro opciones en **SQLGetInfo** describen qué tipos de cursores se admiten y cuáles son sus capacidades:  
@@ -41,4 +39,3 @@ Las siguientes cuatro opciones en **SQLGetInfo** describen qué tipos de cursore
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (dependiendo del tipo del cursor). Indica si pueden detectar los cursores estáticos y cursores controlados por sus propias actualizaciones, eliminaciones e inserciones.  
   
  Una aplicación puede determinar las capacidades de cursor en tiempo de ejecución mediante una llamada a **SQLGetInfo** con estas opciones. Esto se suele hacer por aplicaciones genéricas. Funciones de cursor también se pueden determinar durante el desarrollo de aplicaciones y su uso codificado de forma rígida en la aplicación. Esto se realiza normalmente por las aplicaciones verticales y personalizadas pero también puede realizarse mediante aplicaciones genéricas que utiliza una implementación de cursor de cliente, como la biblioteca de cursores ODBC.
-

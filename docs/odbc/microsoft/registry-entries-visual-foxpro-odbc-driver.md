@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entradas del registro (el controlador ODBC de Visual FoxPro)
 Cuando se instala el controlador ODBC de Visual FoxPro, el programa de instalación actualiza el registro del sistema, en la clave del registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, para agregar una nueva clave denominada Microsoft Visual FoxPro Driver. Bajo esa clave, se agregan los valores descritos en la tabla siguiente.  
@@ -65,4 +63,3 @@ Cuando se instala el controlador ODBC de Visual FoxPro, el programa de instalaci
  No debe tener acceso a esta información directamente; cualquier administración del registro se controla mediante el Administrador de ODBC al agregar, modificar o eliminar un origen de datos.  
   
  Se pueden utilizar algunas de estas palabras clave y los valores como parámetros en la [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) función de la API de ODBC.
-

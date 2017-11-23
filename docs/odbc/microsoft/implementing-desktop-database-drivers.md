@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementación de controladores de escritorio de la base de datos
 Instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio de Microsoft ODBC pueden encontrarse en la Ayuda en pantalla de administrador de orígenes de datos ODBC. Puede tener acceso a este archivo durante rutinas de instalación de controlador de la [Administrador de orígenes de datos de Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -57,4 +55,3 @@ Instrucciones y notas técnicas sobre cómo implementar y configurar los control
 -   [Compatibilidad con controladores de escritorio de la base de datos](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [Problemas de rendimiento del controlador de base de datos de escritorio](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
-

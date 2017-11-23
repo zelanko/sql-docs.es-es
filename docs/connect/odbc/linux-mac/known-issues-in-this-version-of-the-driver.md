@@ -8,23 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- known issues
-caps.latest.revision: 30
+helpviewer_keywords: known issues
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd6fedeed8955634abfab002bab887c230731707
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 62fd9dd8bf2e11fe39ffaa2e893ded55b214b09c
-ms.contentlocale: es-es
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problemas conocidos en esta versión del controlador
 
@@ -45,5 +42,4 @@ Por ejemplo, si la codificación es UTF-8 y especifique 1 para ambos *BufferLeng
 ## <a name="see-also"></a>Vea también  
 [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md)  
 [Notas de la versión](../../../connect/odbc/linux-mac/release-notes.md)  
-
 

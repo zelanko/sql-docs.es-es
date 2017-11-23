@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLStatistics
-apilocation:
-- sqlsrv32.dll
+apiname: SQLStatistics
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLStatistics
-helpviewer_keywords:
-- SQLStatistics function [ODBC]
+f1_keywords: SQLStatistics
+helpviewer_keywords: SQLStatistics function [ODBC]
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f0e4b82221c78572d24c28717edb0f3209f29ea6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 664c3c439eacc7bfa5b5b1d59b8421f8067c3376
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstatistics-function"></a>Función SQLStatistics
 **Conformidad**  
@@ -169,14 +163,13 @@ SQLRETURN SQLStatistics(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Cancelar el procesamiento de una instrucción|[SQLCancel, función](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Capturar una sola fila o un bloque de datos en una dirección de solo avance.|[SQLFetch, función](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[SQLFetchScroll, función](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Devuelve las columnas de claves externas|[SQLForeignKeys, función](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|  
-|Devuelve las columnas de una clave principal|[SQLPrimaryKeys, función](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
+|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Cancelar el procesamiento de una instrucción|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Capturar una sola fila o un bloque de datos en una dirección de solo avance.|[Función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Captura un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Devuelve las columnas de claves externas|[Función SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|  
+|Devuelve las columnas de una clave principal|[Función SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

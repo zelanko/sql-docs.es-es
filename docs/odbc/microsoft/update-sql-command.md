@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- update [ODBC]
+helpviewer_keywords: update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 054ce76fcc4637d60bc220a559792330b0a5e665
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4aaf4c9d8e44108888c2c440fba506cf9b2874c8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="update---sql-command"></a>Comando de SQL de actualización:
 Actualiza los registros en una tabla con nuevos valores.  
@@ -67,4 +64,3 @@ SET Column_Name1 = eExpression1
 ## <a name="see-also"></a>Vea también  
  [ELIMINAR, comando SQL](../../odbc/microsoft/delete-sql-command.md)   
  [Insertar: comando SQL](../../odbc/microsoft/insert-sql-command.md)
-

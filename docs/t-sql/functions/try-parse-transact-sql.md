@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TRY_PARSE_TSQL
 - TRY_PARSE
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- TRY_PARSE function
+dev_langs: TSQL
+helpviewer_keywords: TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0b26f46431909dd4fbfaa820db8c3869333f555d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 735d1e38b81a08da50cba340b0e5663d6e6d5755
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -86,12 +82,12 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Numérico|real|Único|NumberStyles.Float|  
 |Numérico|smallmoney|Decimal|NumberStyles.Currency|  
 |Numérico|money|Decimal|NumberStyles.Currency|  
-|Fecha y hora|date|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|time|Timespan|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|time|Timespan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **Para obtener más información acerca del parámetro de referencia cultural**  
   
@@ -191,10 +187,9 @@ False
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [PARSE & #40; Transact-SQL & #41;](../../t-sql/functions/parse-transact-sql.md)   
- [Funciones de conversión & #40; Transact-SQL & #41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT & #40; Transact-SQL & #41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)   
+ [Funciones de conversión &#40; Transact-SQL &#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
+ [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

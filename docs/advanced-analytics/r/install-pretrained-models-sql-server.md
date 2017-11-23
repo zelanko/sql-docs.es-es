@@ -1,47 +1,41 @@
 ---
 title: "Instalar modelos de aprendizaje automático previamente entrenado en SQL Server | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
+ms.date: 11/16/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ed5616b66ffdad10f0e2794eb5ab0109a0979d2e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
-ms.contentlocale: es-es
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Instalar previamente entrenado máquina aprendizaje de los modelos en SQL Server
 
 En este artículo se describe cómo agregar modelos previamente entrenados a una instancia de SQL Server que ya tiene servicios de R o instalado servicios de aprendizaje de máquina.
 
-Modelos previamente entrenados se proporcionan como una opción al instalar Microsoft R Server o servidor de aprendizaje de máquina mediante el instalador independiente. Puede usar a este instalador para obtener solo los modelos previamente entrenados, o puede usar para actualizar los componentes en una instancia de SQL Server 2016 o SQl Server 2017 de aprendizaje automático.
+La opción para instalar modelos previamente entrenados está disponible cuando se utiliza el instalador independiente de Windows para Microsoft R Server o servidor de aprendizaje de máquina. Puede usar este instalador para obtener solo los modelos previamente entrenados, o puede utilizarlo para [actualizar los componentes de aprendizaje automático](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) en una instancia de SQL Server 2016 o 2017 de SQL Server.
 
 Después de haber descargado los modelos previamente entrenados ejecutando el programa de instalación, hay algunos pasos adicionales para configurar los modelos para su uso con SQL Server. En este artículo se describe el proceso.
 
-Para más información, vea estos artículos:
+Para obtener un ejemplo de cómo usar los modelos previamente entrenados con datos de SQL Server, consulte este blog del equipo de aprendizaje automático de SQL Server: 
 
-+ [Modelos para la detección de análisis y la imagen de opinión de aprendizaje de automático previamente entrenado](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
-
-+ [Actualizar los componentes de R en una instancia de R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
++ [Análisis de opiniones con Python en servicios de aprendizaje de máquina de SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
 ## <a name="benefits-of-using-pretrained-models"></a>Ventajas del uso de modelos previamente entrenados
 
-Estos modelos previamente entrenados se crearon para ayudar a los clientes que necesitan realizar tareas como el análisis de opiniones o características de la imagen, pero no dispone de recursos para obtener los conjuntos de datos grandes o entrenar un modelo complejo. El uso de modelos previamente entrenados le permite empezar a trabajar en text e image procesar de forma más eficaz.
+Estos modelos previamente entrenados se crearon para ayudar a los clientes que necesitan realizar tareas como las características de análisis o imagen de opinión, pero no disponen de los recursos para obtener los conjuntos de datos grandes o entrenar un modelo complejo. El uso de modelos previamente entrenados le permite empezar a trabajar en text e image procesar eficazmente.
 
-Actualmente, los modelos que están disponibles son modelos de redes neurales profundas (DNN) para las opiniones de análisis y la imagen. Todos los modelos previamente entrenados se entrenó mediante el uso de Microsoft [Kit de herramientas de cálculo de la red](https://cntk.ai/Features/Index.html), o **CNTK**. 
+Actualmente, los modelos que están disponibles son modelos de redes neurales profundas (DNN) para las opiniones de análisis y la imagen. Todos los modelos previamente entrenados se entrenó mediante el uso de Microsoft [Kit de herramientas de cálculo de la red](https://cntk.ai/Features/Index.html), o **CNTK**.
 
 La configuración de cada red se basa en las implementaciones de referencia siguientes:
 
@@ -49,6 +43,8 @@ La configuración de cada red se basa en las implementaciones de referencia sigu
 + ResNet-50
 + ResNet-101
 + AlexNet
+
+Para obtener más información acerca de estos modelos, vea [modelos para la detección de análisis y la imagen de opinión de aprendizaje de automático previamente entrenado](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
 
 Para obtener más información acerca de redes de aprendizaje profundo y su implementación con CNTK, vea estos artículos:
 
@@ -69,17 +65,17 @@ Para obtener más información acerca de redes de aprendizaje profundo y su impl
 
     + Para actualizar los componentes de R o Python al mismo tiempo, seleccione el idioma (R, Python o ambos) que desea actualizar y seleccione la opción de modelos previamente entrenado. Seleccione una o varias instancias para aplicar estos cambios.
 
-    + Si anteriormente ha instalado servidor de aprendizaje de máquina y actualizar los componentes de R o Python mediante la opción de enlace, deje todas las selecciones anteriores **sea**y seleccione las opciones de modelos previamente entrenado. No anule la selección de las opciones seleccionadas previamente o se va a quitar.
+    + Si anteriormente ha instalado servidor de aprendizaje de máquina y actualizar los componentes de R o Python mediante la opción de enlace, deje todas las selecciones anteriores **sea**y seleccione las opciones de modelos previamente entrenado. No anule la selección de las opciones seleccionadas previamente; Si lo hace, el programa de instalación quita los componentes.
 
 3. Cuando una vez completada la instalación, abra un símbolo del sistema de Windows **como administrador**y navegue hasta la carpeta de arranque en el programa de instalación de SQL Server, que también contiene el programa de instalación de Microsoft R. En una instancia predeterminada de SQL Server 2017, la carpeta sería:
     
     `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-4. Especifique el componente para instalar, la versión y la carpeta que contiene los archivos de origen del modelo, utilizando los argumentos a RSetup.exe, como se muestra en estos ejemplos:
+4. Ejecutar RSetup.exe e indicar el componente para instalar, la versión y la carpeta que contiene los archivos de origen del modelo, utilizando los argumentos de línea de comandos que se muestra en estos ejemplos:
 
-  + Usar modelos con **R_SERVICES**, use la sintaxis y las rutas de acceso siguientes:
+    + Usar modelos con **R_SERVICES**:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     Por ejemplo, para habilitar el uso de la versión más reciente de los modelos previamente entrenados para R, en una instancia predeterminada de SQL Server de 2017 se ejecute esta instrucción:
 
@@ -89,19 +85,35 @@ Para obtener más información acerca de redes de aprendizaje profundo y su impl
 
     `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + Usar modelos con **PYTHON_SERVICES**, use la sintaxis y las rutas de acceso siguientes:
+    + Usar modelos previamente entrenados con R Server (independiente) o servidor de aprendizaje de máquina (independiente):
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
+
+    Por ejemplo, para habilitar el uso de la versión más reciente de los modelos previamente entrenados para R, en una instalación predeterminada de R Server con SQL Server 2016, se ejecute esta instrucción:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir ‘C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
+    
+    + Usar modelos previamente entrenados con **PYTHON_SERVICES**:
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     Por ejemplo, para habilitar el uso de la versión más reciente de los modelos previamente entrenados para Python, en una instancia predeterminada de SQL Server de 2017 se ejecute esta instrucción:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     En una instancia con nombre, el comando sería algo parecido a esto:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-5. Para el parámetro de versión, se admiten los siguientes valores:
+    + Para usar Python previamente entrenada modelos con el servidor de aprendizaje de máquina (independiente):
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
+
+    Por ejemplo, suponiendo que una instalación predeterminada del servidor de aprendizaje de máquina (independiente) utilizando el programa de instalación de SQL Server 2017, ejecute esta instrucción:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
+
+5. Se admiten los siguientes valores para el parámetro de versión:
 
     + Candidato de versión comercial 0: **9.1.0.0**
     + Versión Release candidate 1: **9.2.0.22**
@@ -116,6 +128,11 @@ Para obtener más información acerca de redes de aprendizaje profundo y su impl
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model
+
+
+> [!NOTE]
+> 
+> Si la ruta de acceso al archivo de modelo es demasiado largo, podría obtener un error al llamar al archivo de modelo de código de Python. Esto es debido a una limitación en la implementación actual de Python. Este problema se corregirá en una versión de próximos servicios.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -149,10 +166,8 @@ La imagen debe cambiarse de tamaño para cumplir los requisitos del modelo entre
 > [!NOTE]
 > No es posible leer o modificar los modelos previamente entrenados, ya que se comprimen con un formato nativo, para mejorar el rendimiento.
 
-
 ### <a name="text-analysis-example"></a>Ejemplo de análisis de texto
 
 Vea el ejemplo siguiente para ver una demostración de cómo utilizar el modelo de características de texto previamente entrenado de clasificación del texto:
 
 [Análisis de opiniones con Caracterizador texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
-

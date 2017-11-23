@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors"></a>Cursores desplazables
 En las aplicaciones modernas basado en pantalla, el usuario se desplaza hacia atrás y hacia delante a través de los datos. Para estas aplicaciones, volver a una fila recopilada previamente es un problema. Una posibilidad es cerrar y volver a abrir el cursor y, a continuación, capturar las filas hasta que el cursor alcanza la fila necesaria. Otra posibilidad consiste en leer el conjunto de resultados, almacenarla en la caché local e implementar el desplazamiento en la aplicación. Ambas posibilidades también solo funcionan con conjuntos de resultados pequeños, y la posibilidad de este última es difícil de implementar. Una solución mejor es usar un *un cursor desplazable,* que puede avanzar y retroceder en el conjunto de resultados.  
@@ -50,4 +48,3 @@ En las aplicaciones modernas basado en pantalla, el usuario se desplaza hacia at
 -   [Desplazamiento relativas y absolutas](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [Marcadores](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

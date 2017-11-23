@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3de186cec4b3299bbdc43cf2fe63c806c228cb66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Conjunto de filas DBSCHEMA_PROVIDER_TYPES
   Identifica los tipos de datos (básicos) admitidos por el proveedor de datos.  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|Si el indicador de tipo es **DBTYPE_VARNUMERIC**, **DBTYPE_DECIMAL**, o **DBTYPE_NUMERIC**; en caso contrario, es N**U**LL.|  
 |**GUID**|**DBTYPE_GUID**|(Se piensa para el uso futuro) **GUID** del tipo, si el tipo se describe en una biblioteca de tipos. En caso contrario, es **NULL**.|  
 |**BIBLIOTECA DE TIPOS**|**DBTYPE_WSTR**|(Se piensa para el uso futuro) La biblioteca de tipos que contiene la descripción del tipo, si el tipo se describe en una biblioteca de tipos. En caso contrario, NULL.|  
-|**VERSIÓN**|**DBTYPE_WSTR**|(Se piensa para el uso futuro) La versión de la definición de tipo. Los proveedores podrían desear controlar las versiones de las definiciones de tipo. Proveedores diferentes podrían utilizar esquemas de versiones diferentes, como una marca de tiempo o número (entero o flotante). **NULL** si no se admite.|  
+|**VERSION**|**DBTYPE_WSTR**|(Se piensa para el uso futuro) La versión de la definición de tipo. Los proveedores podrían desear controlar las versiones de las definiciones de tipo. Proveedores diferentes podrían utilizar esquemas de versiones diferentes, como una marca de tiempo o número (entero o flotante). **NULL** si no se admite.|  
 |**IS_LONG**|**DBTYPE_BOOL**|Un booleano que indica si el tipo de datos es un objeto binario grande (BLOB) y tiene los datos muy largos.<br /><br /> **VARIANT_TRUE** indica que el tipo de datos es un **BLOB** que contiene datos muy largos; la definición de datos muy largos depende del proveedor.<br /><br /> **VARIANT_FALSE** indica que el tipo de datos es un **BLOB** que no contiene los datos muy largos o no es un **BLOB**.<br /><br /> Este valor determina el valor de la marca **DBCOLUMNFLAGS_ISLONG** devuelto por **GetColumnInfo** en **IColumnsInfo** y **GetParameterInfo** en **ICommandWithParameters**.|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|Un booleano que indica si el tipo de datos es una coincidencia mejor.<br /><br /> **VARIANT_TRUE** indica que el tipo de datos es la mejor coincidencia de entre todos los tipos de datos del almacén de datos y el tipo de datos de OLE DB indicado por el valor de la columna **DATA_TYPE** .<br /><br /> **VARIANT_FALSE** indica que el tipo de datos no es la coincidencia mejor.<br /><br /> Para cada conjunto de filas en que el valor de la columna **DATA_TYPE** es el mismo, la columna **BEST_MATCH** se define en **VARIANT_TRUE** en una sola fila.|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|Un booleano que indica si la columna es fija en longitud.<br /><br /> **VARIANT_TRUE** indica que las columnas de este tipo creadas por el lenguaje de definición de datos (DDL) serán de la longitud fija.<br /><br /> **VARIANT_FALSE** indica que las columnas de este tipo creadas por el DDL serán de longitud variable.<br /><br /> Si el campo es **NULL**, no se conoce si el proveedor asignará este campo con una columna de longitud fija o de longitud variable.|  
@@ -77,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Conjuntos de filas de esquema OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

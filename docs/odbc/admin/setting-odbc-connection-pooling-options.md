@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Establecer opciones de agrupación de conexiones ODBC
 Agrupación de conexiones permite a una aplicación que utilice una conexión de un grupo de conexiones que no es necesario que restablecerse para cada usuario. Puede usar el **agrupación de conexiones** pestaña de la **Administrador de orígenes de datos ODBC** cuadro de diálogo para habilitar y deshabilitar la supervisión de rendimiento. Haga doble clic en un nombre de controlador para establecer el período de tiempo de espera de conexión.  
@@ -51,4 +49,3 @@ Agrupación de conexiones permite a una aplicación que utilice una conexión de
 |Grupos creados|El número de activos, incluidos los grupos de activos y se quitan de grupos. Este contador se agregó en Windows 8, para controladores que administran las conexiones del grupo de conexiones. Para obtener más información, consulte [agrupación de conexiones dependientes del controlador](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Debe especificar sus propios parámetros de supervisión. Ejemplos de supervisión del rendimiento se han incluido con esta versión de ODBC.
-

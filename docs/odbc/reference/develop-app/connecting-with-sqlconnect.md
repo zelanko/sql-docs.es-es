@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31ade565f2294d00a297671cbf745c038db6d475
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e3ebe247996127ca1aae6559ece4bdd3f281efc
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-with-sqlconnect"></a>Conexión con SQLConnect
 **SQLConnect** es la función de conexión más sencilla. Se requiere un nombre de origen de datos y acepta un Id. de usuario opcionales y una contraseña. Funciona bien para las aplicaciones que codifica un origen de datos nombre y no requieren un Id. de usuario o una contraseña. También funciona bien para las aplicaciones que desean controlan su propias "apariencia" o que no tienen ninguna interfaz de usuario. Estas aplicaciones pueden generar una lista de orígenes de datos mediante **SQLDataSources**, pedir al usuario para el origen de datos, el Id. de usuario y la contraseña y, a continuación, llame a **SQLConnect**.  
@@ -144,4 +142,3 @@ int main () {
    x.sqldisconn();   // Free handles and disconnect  
 }  
 ```
-

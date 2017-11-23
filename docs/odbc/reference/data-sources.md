@@ -8,24 +8,22 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Orígenes de datos
 A *origen de datos* es simplemente el origen de los datos. Puede ser un archivo, una base de datos determinada en un DBMS, o incluso una fuente de datos en directo. Los datos podrían ser ubicados en el mismo equipo que el programa o en otro equipo en algún punto de una red. Por ejemplo, un origen de datos podría ser un DBMS de Oracle que se ejecuta en un sistema de operativo OS/2®, acceso Novell® Netware; un DBMS de DB2 de IBM que tiene acceso a través de una puerta de enlace; una colección de archivos de Xbase en un directorio del servidor; o un archivo de base de datos local de Microsoft® Access.  
@@ -41,4 +39,3 @@ A *origen de datos* es simplemente el origen de los datos. Puede ser un archivo,
 -   [Usar orígenes de datos](../../odbc/reference/using-data-sources.md)  
   
 -   [Ejemplo de origen de datos](../../odbc/reference/data-source-example.md)
-

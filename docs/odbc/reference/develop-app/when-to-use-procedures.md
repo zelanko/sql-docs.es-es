@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>Cuándo se debe utilizar procedimientos
 Hay una serie de ventajas de utilizar procedimientos, todos basada en el hecho de que con los procedimientos mueve instrucciones SQL desde la aplicación al origen de datos. Lo que queda en la aplicación es una llamada a procedimiento interoperable. Estas ventajas incluyen:  
@@ -54,4 +52,3 @@ Hay una serie de ventajas de utilizar procedimientos, todos basada en el hecho d
  El segundo inconveniente es que muchos DBMS no admiten procedimientos. De nuevo, esto es más probable que sea un problema para las aplicaciones verticales diseñados para ejecutarse con un número de DBMS. Para determinar si se admiten procedimientos, llama a una aplicación **SQLGetInfo** con la opción SQL_PROCEDURES.  
   
  La desventaja terceros, que es especialmente aplicable a entornos de desarrollo de aplicaciones, es que ODBC no define ninguna gramática estándar para crear procedimientos. Es decir, aunque las aplicaciones pueden llamar a procedimientos de manera interoperacional, no pueden crearlos manera interoperacional.
-

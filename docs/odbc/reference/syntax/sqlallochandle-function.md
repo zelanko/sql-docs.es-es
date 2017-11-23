@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLAllocHandle
-apilocation:
-- sqlsrv32.dll
+apiname: SQLAllocHandle
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLAllocHandle
-helpviewer_keywords:
-- SQLAllocHandle function [ODBC]
+f1_keywords: SQLAllocHandle
+helpviewer_keywords: SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 434b3b42c4e48724b42bdb1ed517b11b25e10db7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle, función
 **Conformidad**  
@@ -187,16 +181,15 @@ SQLRETURN SQLAllocHandle(
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Ejecutar una instrucción SQL|[SQLExecDirect, función](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Ejecutar una instrucción SQL preparada|[SQLExecute, función](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|Liberar un identificador de entorno, conexión, instrucción o descriptor|[SQLFreeHandle, función](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Ejecutar una instrucción SQL|[Función SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Liberar un identificador de entorno, conexión, instrucción o descriptor|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Preparar una instrucción de ejecución|[Función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|Establecer un atributo de conexión|[SQLSetConnectAttr, función](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|Establecer un campo descriptor|[Sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Establecer un atributo de entorno|[SQLSetEnvAttr, función](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
-|Establecer un atributo de instrucción|[SQLSetStmtAttr, función](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Establecer un campo descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Establecer un atributo de entorno|[Función SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
+|Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

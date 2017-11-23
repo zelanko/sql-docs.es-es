@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>Elegir una gramática SQL
 La primera decisión que debe tomar al crear instrucciones SQL es qué gramática para usar. Además de las gramáticas disponibles en los diferentes organismos de estándares, como Open Group, ANSI e ISO, prácticamente todos los proveedores de DBMS define su propia gramática, cada uno de los cuales varía ligeramente del estándar.  
@@ -41,4 +39,3 @@ La primera decisión que debe tomar al crear instrucciones SQL es qué gramátic
  Por lo tanto, realmente hay dos opciones de gramática para usar: la gramática de SQL-92 (y la secuencias de escape de ODBC) y una gramática específicos del DBMS. De los dos, solo la gramática de SQL-92 es interoperable, por lo que todas las aplicaciones interoperables deberían utilizarlo. Las aplicaciones que no son interoperables pueden usar la gramática de SQL-92 o una gramática específicos del DBMS. Específicos de DBMS gramáticas tienen dos ventajas: pueden aprovechar las características no cubiertas por SQL-92 y son ligeramente más rápidos porque el controlador no tienen que modificarse. La última característica se puede aplicar parcialmente estableciendo el atributo de instrucción SQL_ATTR_NOSCAN, que detiene el controlador de buscar y reemplazar las secuencias de escape.  
   
  Si se utiliza la gramática de SQL-92, la aplicación puede detectar cómo se modifica el controlador mediante una llamada a **SQLNativeSql**. A menudo resulta útil al depurar las aplicaciones. **SQLNativeSql** acepta una instrucción SQL y devuelve después de que el controlador lo ha modificado. Dado que esta función está en el nivel de conformidad de interfaz de núcleo, es compatible con todos los controladores.
-

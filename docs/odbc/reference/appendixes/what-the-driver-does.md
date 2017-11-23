@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 352c4adb445b670f0a236e16954e6dd85a63de7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e94046370f8140fdacec2cf708de0a62311a27
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-does"></a>Lo que hace el controlador
 En la tabla siguiente se resume las funciones y los atributos de instrucción una aplicación ODBC 3*.x* controlador debe implementar para bloqueo y los cursores desplazables.  
@@ -45,4 +43,3 @@ En la tabla siguiente se resume las funciones y los atributos de instrucción un
 |**SQLFetch**|Devuelve el siguiente conjunto de filas. Éstos son los detalles de implementación:<br /><br /> -El controlador recupera el tamaño de conjunto de filas desde el valor del atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE.<br />-El controlador recupera la dirección de la matriz de Estados de fila del atributo de instrucción SQL_ATTR_ROW_STATUS_PTR.<br />-El controlador recupera la dirección de las filas recuperadas búfer desde el atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR.<br />-La aplicación puede mezclar llamadas entre **SQLFetchScroll** y **SQLFetch**.<br />-   **SQLFetch** devuelve marcadores si está enlazada la columna 0.<br />-   **SQLFetch** puede llamarse para devolver más de una fila.<br />-El controlador no devuelve SQLSTATE 01S01 (Error en la fila) para indicar que se ha producido un error mientras se capturan filas mediante una llamada a **SQLFetch**.|  
 |**SQLFetchScroll**|Devuelve el conjunto de filas especificado. Éstos son los detalles de implementación:<br /><br /> -El controlador recupera el tamaño de conjunto de filas desde el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE.<br />-El controlador recupera la dirección de la matriz de Estados de fila del atributo de instrucción SQL_ATTR_ROW_STATUS_PTR.<br />-El controlador recupera la dirección de las filas recuperadas búfer desde el atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR.<br />-La aplicación puede mezclar llamadas entre **SQLFetchScroll** y **SQLFetch**.<br />-El controlador no devuelve SQLSTATE 01S01 (Error en la fila) para indicar que se ha producido un error mientras se capturan filas mediante una llamada a **SQLFetchScroll**.|  
 |**SQLSetPos**|Lleva a cabo diversas operaciones por posición. Éstos son los detalles de implementación:<br /><br /> -Se puede llamar en Estados de instrucción S6 o S7. Para obtener más información, consulte [instrucción transiciones](../../../odbc/reference/appendixes/statement-transitions.md) en tablas de transición de estado de apéndice B: ODBC.<br />-Si esto se llama en un estado de instrucción S5 o S6, el controlador recupera el tamaño de conjunto de filas desde el atributo de instrucción de SQL_ATTR_ROWS_FETCHED_PTR y la dirección de la matriz de Estados de fila del atributo de instrucción SQL_ATTR_ROW_STATUS_PTR.<br />-Si esto se denomina en estado de instrucción S7, el controlador recupera el tamaño de conjunto de filas desde el atributo de instrucción de SQL_ROWSET_SIZE y la dirección de la matriz de Estados de fila de la *RowStatusArray* argumento de  **SQLExtendedFetch**.<br />-El controlador devuelve SQLSTATE 01S01 (Error en la fila) solo para indicar que se ha producido un error mientras se capturan filas mediante una llamada a **SQLSetPos** para realizar una operación masiva cuando se llama a la función en estado S7. Para conservar la compatibilidad con versiones anteriores, si SQLSTATE 01S01 (Error en la fila) se devuelve por **SQLSetPos**, el Administrador de controladores no ordena los registros de estado en la cola de error según las reglas descritas en la "secuencia de registros de estado" sección de [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).<br />-Si el controlador debe trabajar con ODBC 2. *x* aplicaciones que llaman a **SQLSetPos** con una *operación* argumento de SQL_ADD, el controlador debe admitir **SQLSetPos** con un  *Operación* argumento de SQL_ADD.|
-

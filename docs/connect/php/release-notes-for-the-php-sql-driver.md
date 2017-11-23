@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- what's new in version 1.1
+helpviewer_keywords: what's new in version 1.1
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7614ac9453d6021503ac6f5c86ef852269df30fd
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c63079bda91844995540aade94bac397be6b94c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-php-sql-driver"></a>Notas de la versión del controlador SQL para PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,4 +74,3 @@ En la versión 2.0, se ha agregado la compatibilidad con el controlador PDO_SQLS
 ## <a name="see-also"></a>Vea también  
 [Información general sobre el controlador SQL para PHP](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

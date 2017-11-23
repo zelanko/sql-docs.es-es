@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - FREEPROCCACHE
 - DBCC_FREEPROCCACHE_TSQL
 - DBCC FREEPROCCACHE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - freeing procedure cache
 - removing procedure cache elements
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ae416ab23f27a7f71951ac05a6c69d0abb00a90d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
-ms.contentlocale: es-es
-ms.lasthandoff: 10/16/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 10/16/2017
 Quita todos los elementos de la memoria caché del plan, quita un plan concreto de la misma especificando un identificador de plan o un identificador SQL, o quita todas las entradas de caché asociadas a un grupo de recursos de servidor especificado.
 
 >[!NOTE]
->DBCC FREEPROCCACHE no borra las estadísticas de ejecución para los procedimientos almacenados compilados de forma nativa. La memoria caché de procedimientos no contiene información sobre los procedimientos almacenados compilados de forma nativa. Las estadísticas de ejecución recopiladas de ejecuciones de procedimientos aparecerán en las DMV de estadísticas de ejecución: [sys.dm_exec_procedure_stats & #40; Transact-SQL & #41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) y [sys.dm_exec_query_plan & #40; Transact-SQL & #41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>DBCC FREEPROCCACHE no borra las estadísticas de ejecución para los procedimientos almacenados compilados de forma nativa. La memoria caché de procedimientos no contiene información sobre los procedimientos almacenados compilados de forma nativa. Las estadísticas de ejecución recopiladas de ejecuciones de procedimientos aparecerán en las DMV de estadísticas de ejecución: [sys.dm_exec_procedure_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) y [sys.dm_exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -67,17 +64,17 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="arguments"></a>Argumentos  
  ({ *plan_handle* | *sql_handle* | *pool_name* })  
 *plan_handle* identifica de forma única un plan de consulta de un lote que se ha ejecutado y cuyo plan reside en la caché del plan. *plan_handle* es **varbinary(64)** y puede obtenerse de los siguientes objetos de administración dinámica:  
- -   [Sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
- -   [Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
- -   [Sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
- -   [Sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+ -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+ -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
 *sql_handle* es el identificador SQL del lote se va a borrar. *sql_handle* es **varbinary(64)** y puede obtenerse de los siguientes objetos de administración dinámica:  
- -   [Sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
- -   [Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
- -   [Sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
- -   [Sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
- -   [Sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+ -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
+ -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
+ -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
 *pool_name* es el nombre de un grupo de recursos regulador de recursos. *pool_name* es **sysname** y puede obtenerse consultando la [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) vista de administración dinámica.  
  Para asociar un grupo de cargas de trabajo del regulador de recursos a un grupo de recursos, consultar la [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) vista de administración dinámica. Para obtener información acerca del grupo de cargas de trabajo para una sesión, consulte el [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) vista de administración dinámica.  
@@ -224,7 +221,6 @@ GO
 ## <a name="see-also"></a>Vea también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  
-[MODIFICAR la configuración en el ámbito de base de datos & #40; Transact-SQL & #41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[MODIFICAR la configuración en el ámbito de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4cb55109261fee419af8bd0773ed8e85956e8ca9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5668f03e785c0d27133965f16af40ce69c2a2567
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="like-predicate-limitations"></a>Al igual que las limitaciones de predicado
 Si los datos de una columna tiene más de 255 caracteres, la comparación LIKE se basará en los primeros 255 caracteres.  
@@ -36,4 +34,3 @@ Si los datos de una columna tiene más de 255 caracteres, la comparación LIKE s
  No se admite el uso de una cláusula de escape en un predicado LIKE.  
   
  No se debe realizar una comparación LIKE en una columna que contiene los datos de un tipo de datos numérico o float. Los resultados pueden ser impredecibles. Para obtener más información, consulte el *Guía del programador del motor de base de datos Jet de Microsoft*.
-

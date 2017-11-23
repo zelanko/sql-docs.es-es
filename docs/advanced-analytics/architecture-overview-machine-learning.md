@@ -1,27 +1,24 @@
 ---
-title: "Información general y arquitectura | Documentos de Microsoft"
+title: "Introducción a la arquitectura de servicios de aprendizaje de máquina de SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>Información general de servicios de aprendizaje de máquina y arquitectura
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Introducción a la arquitectura de servicios de aprendizaje de máquina de SQL Server 
 
 En este tema se describe los objetivos de la biblioteca extensibility framework que admite la ejecución del script de Python y R en SQL Server.
 
@@ -70,7 +67,6 @@ Para cumplir estos objetivos, la arquitectura de SQL Server 2016 R Services y se
 
   Optimización del rendimiento se basa en dos aspectos igualmente eficaces de la plataforma: la regulación de recursos y paralelo procesamiento con SQL Server e informática proporcionada por los algoritmos de **RevoScaleR** y **revoscalepy**.
 
-
 ## <a name="solution-development-and-deployment"></a>Implementación y desarrollo de soluciones
 
 Además de estos objetivos de núcleo para la plataforma de extensibilidad, los servicios de aprendizaje de máquina en SQL Server están diseñados para proporcionar una integración segura con el motor de base de datos y la pila de BI, con estas ventajas:
@@ -93,7 +89,7 @@ Vamos a ver cómo funciona en la práctica.
 
 ¿No sabe con seguridad qué solución de aprendizaje automático satisface sus necesidades? Además de análisis incrustado en SQL Server 2016 y 2017 de SQL Server, Microsoft proporciona los siguiente servicios y plataformas de aprendizaje de automático:
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R Server y servidor de aprendizaje de máquina](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   Un entorno multiplataforma para desarrollar, distribuir y administrar los trabajos de aprendizaje de máquina
 + [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,6 +97,7 @@ Vamos a ver cómo funciona en la práctica.
   Todas las herramientas que necesita para el aprendizaje automático, preinstalado. Utilizar blocs de notas Jupyter, Python o R.
   
   Probar el nuevo [edition de la vista previa de Windows 2016](http://aka.ms/dsvm/win2016), incluidas las versiones GPU de marcos de trabajo de aprendizaje profundo populares como CNTK y mxNet, así como compatibilidad con contenedores de Windows.
+
 + [Servicios de Azure cognitivos](https://azure.microsoft.com/services/cognitive-services/)
 
   Una variedad de servicios en la nube para agregar AI y aprendizaje automático en las aplicaciones, incluidos la indización de lenguaje natural de reconocimiento facial, vídeo, detección de emociones, análisis de texto, traducción, equipo y mucho más
@@ -110,5 +107,4 @@ Vamos a ver cómo funciona en la práctica.
 
 ## <a name="see-also"></a>Vea también
 
-[R Server independiente](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[Comparar productos de servidor de aprendizaje de máquina y Microsoft R](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

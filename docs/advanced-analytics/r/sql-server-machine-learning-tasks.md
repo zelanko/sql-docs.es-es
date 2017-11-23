@@ -1,72 +1,72 @@
 ---
-title: "Tareas de aprendizaje de máquina SQL Server | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 04/16/2017
-ms.prod: sql-server-2016
+title: Equipos de aprendizaje del ciclo de vida y el proceso del equipo | Documentos de Microsoft
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: bfe2fb19481c78e982d69303af1dec8041283324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: c0e7a0929d5caa84df1a1fb02894db08313a36bd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-machine-learning-tasks"></a>Tareas de aprendizaje automático SQL Server
+# <a name="machine-learning-lifecycle-and-personas"></a>Ciclo de vida de aprendizaje de máquina y roles
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] combina la eficacia y flexibilidad del lenguaje R de código abierto con herramientas de nivel empresarial para ofrecer características de administración y almacenamiento de datos, de desarrollo de flujos de trabajo, y de generación y visualización de informes. Este tema describe el ciclo de vida y cómo SQL Server es compatible con las necesidades de cuatro profesionales de datos diferentes que sean enagged en aprendizaje automático de aprendizaje de automático.
+Proyectos de aprendizaje de máquina pueden ser complejos, ya que requieren los conocimientos teóricos y colaboración de un conjunto dispares de profesionales de TI. Este artículo describen las tareas principales en el ciclo de vida de aprendizaje de máquina, el tipo de profesionales de datos que actúan en aprendizaje automático y cómo SQL Server es compatible con las necesidades.
 
-## <a name="machine-learning-life-cycle"></a>Ciclo de vida de aprendizaje automático
+> [!TIP]
+> 
+> Antes de empezar a trabajar en un proyecto de aprendizaje automático, se recomienda que revise las herramientas y procedimientos recomendados proporcionados por el [proceso de ciencia de datos de equipo de Microsoft](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), o TDSP. Este proceso se creó con consultores de TI de Microsoft para consolidar las prácticas recomendadas en planeación y efectuar una iteración en los proyectos de aprendizaje automático de aprendizaje automático. El TDSP tiene sus raíces en estándares del sector como CRISP-DM, pero incorpora las prácticas recientes como DevOps y visualización.
 
-Aprendizaje automático no es una tarea a corto plazo, pero en su lugar un proceso a largo plazo que entra en contacto con todos los aspectos de los datos de la empresa. Aprendizaje automático comienza con la identificación de los objetivos empresariales y las reglas y recopilación de datos de sensores y aplicaciones empresariales. Aprendizaje automático dependen en gran medida en procesos de extracción, el procesamiento y almacenamiento de datos y es cada vez más importante al considerar las directivas para almacenar, extraer y datos de auditoría. Por último, el aprendizaje automático ahora es un importante Component de estrategias para informes y análisis, así como compromiso del cliente y comentarios.
+## <a name="machine-learning-life-cycle"></a>Ciclo de vida de aprendizaje de máquina
 
+Aprendizaje automático es un proceso complejo que toca todos los aspectos de los datos de la empresa, y muchos proyectos de aprendizaje de máquina terminan tarda más tiempo y son más complejos de lo esperado. Estas son algunas de las formas que aprendizaje automático requiere la compatibilidad con los profesionales de datos de la empresa:
 
++ Aprendizaje automático comienza con la identificación de los objetivos y las reglas de negocios.
++ Los profesionales de aprendizaje de máquina deben tener en cuenta las directivas para almacenar, extraer y datos de auditoría.
++ Recopilación de datos potencialmente aplicables es el siguiente.  Se deben identificar los orígenes de datos, y ha extraen los datos apropiados de sensores y aplicaciones empresariales. 
++ La calidad de los esfuerzos de aprendizaje de máquina depende en gran no solo el tipo de datos que están disponibles, pero los procesos muy utilizados para extraer, procesamiento y almacenamiento de datos. 
++ Ningún proyecto de aprendizaje automático estaría completa sin una estrategia para informes y análisis y posiblemente compromiso del cliente y comentarios.
 
-SQL Server es ideal para encajar en aprendizaje automático, ya que une muchos de los espacios en el proceso de aprendizaje automático:
+SQL Server ayuda a salvar muchos de los espacios entre los expertos de aprendizaje de máquina y profesionales de datos de empresa:
 
-+ Funciona en local o en la nube
-+ Integrado en cada fase de procesamiento de datos de enterprise, incluida la inteligencia empresarial
-+ Admite la seguridad de datos mejoradas
-+ Proporciona la regulación de recursos y auditoría
++ Los datos pueden ser almacenada localmente o en la nube
++ SQL Server se integra en cada fase de procesamiento de datos de empresa, incluidos los informes y ETL
++ SQL Server admite la seguridad de los datos, la redundancia de los datos y la auditoría
++ Proporciona la regulación de recursos
 
-## <a name="data-professionals-and-how-they-use-machine-learning"></a>Datos profesionales y cómo se aprendizaje automático de uso
+## <a name="data-scientists"></a>Científicos de datos
 
-### <a name="data-scientists"></a>Científicos de datos
+Científicos de datos utilizar diversas herramientas de análisis de datos y aprendizaje automático, desde Excel o plataformas de código abierto gratuitas, a los conjuntos de estadísticos costosos que requieren vastos conocimientos técnicos. Sin embargo, el uso de R o Python con SQL Server proporciona algunas ventajas exclusivas en comparación con estas herramientas tradicionales:
 
-Los científicos de datos tienen acceso a una variedad de herramientas de análisis de datos y aprendizaje automático, desde Excel o plataformas de código abierto gratuitas, a los conjuntos de estadísticos costosos que requieren vastos conocimientos técnicos. Sin embargo, la integración con SQL Server proporciona ventajas exclusivas:
-
-+ Desarrolle y pruebe sus soluciones con el entorno de desarrollo de R que prefiera.
-+ Insertar cálculos en la base de datos evita el movimiento de datos mientras se respetan las directivas de seguridad empresariales.
++ Se puede desarrollar y probar una solución mediante el entorno de desarrollo de su elección, a continuación, implementar el código de R o Python como parte del código de T-SQL.
++ Mover cálculos complejos portátil de los científicos de datos y en el servidor, lo que evita el movimiento de datos para cumplir con las directivas de seguridad corporativas.
 + Rendimiento y escalabilidad se han mejorado mediante API y paquetes de R especial. Ya no están restringidas por la arquitectura de un único subproceso, el límite de memoria de R y poder trabajar con grandes conjuntos de datos y cálculos multiproceso, varios núcleos, varios procesos.
-+ Código R puede ser implementado en producción y llama a paneles, aplicaciones, otras bases de datos y herramientas empresariales fácilmente.
-+ Pueden implementar y actualizar una solución de análisis al tiempo que satisface los requisitos de los estándares para la administración de datos empresariales, incluida la seguridad y auditoría de acceso a los científicos de datos
-+ Portabilidad del código: fácilmente volver a usar el código de R con otros orígenes de datos, como Hadoop
++ Portabilidad del código: pueden ejecutar soluciones en SQL Server, o en Hadoop o en Linux, con [servidor de aprendizaje de máquina](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). Una vez el código, implementar en cualquier lugar.
 
-### <a name="application-and-database-developers"></a>Los programadores de la base de datos y aplicaciones
+## <a name="application-and-database-developers"></a>Desarrolladores de aplicaciones y bases de datos
 
-A los desarrolladores de bases de datos se les encarga integrar diversas tecnologías y aunar los resultados para que se puedan compartir en toda la empresa. Estos profesionales trabajan con desarrolladores de aplicaciones, programadores de SQL y científicos de datos para diseñar soluciones, recomendar métodos de administración de datos, así como idear e implementar soluciones. 
+A los desarrolladores de bases de datos se les encarga integrar diversas tecnologías y aunar los resultados para que se puedan compartir en toda la empresa. El desarrollador de la base de datos funciona con los desarrolladores de aplicaciones, los desarrolladores de SQL y científicos de datos para diseñar soluciones, recomendar métodos de administración de datos y diseñar o implementar soluciones.
 
-Integración con SQL Server ofrece estas ventajas para desarrolladores de datos que trabajen con aprendizaje automático:
+Integración con SQL Server ofrece numerosas ventajas para desarrolladores de datos:
 
-+ Utilice herramientas conocidas para interactuar con scripts de R. Permitir que los científicos de datos trabajen en RStudio mientras el programador de datos implementa la solución con SQL Server Management Studio. Volver a codificar no más de las soluciones de R o Python.
-+ Optimizar al mezclar y hacer coincidir SQL y R, o SQL y Python. Muchas veces, las operaciones complejas en grandes conjuntos de datos se pueden ejecutar mucho más eficaz con características de SQL Server, como columnstoreindexes en memoria, o muy rápidos agregados en T-SQL. Utilice un lenguaje de aprendizaje automático siempre que tenga sentido y SQL para mover y procesar los datos.
-+ Sin esfuerzo automatizar las tareas que deben ejecutarse varias veces en grandes cantidades de datos, como generar puntuaciones de predicción de datos de producción.
-+ Ejecutar script de R o Python desde cualquier aplicación que usa [!INCLUDE[tsql](../../includes/tsql-md.md)]. Llame a un procedimiento almacenado para crear un modelo con parámetros, generar un gráfico complejo o generar predicciones.
-+ El **RevoScaleR** y **revoscalepy** pueden operar en conjuntos de datos grandes y aprovechar los cálculos en bases de datos de varios subprocesos, de varios núcleos, varios procesos de API.
++ Los científicos de datos pueden trabajar en RStudio, mientras que el programador de datos implementa la solución con SQL Server Management Studio. Volver a codificar no más de las soluciones de R o Python.
++ Optimizar sus soluciones mediante lo mejor de T-SQL, R y Python. Se pueden ejecutar operaciones complejas en grandes conjuntos de datos mucho más eficaz usar SQL Server que en R. aprovechar el conocimiento de los profesionales de la base de datos para mejorar el rendimiento de las soluciones de aprendizaje de máquina, mediante el uso de índices columnstore en memoria, y agregaciones mediante operaciones basadas en conjuntos SQL. 
++ Sin esfuerzo automatizar las tareas que deben ejecutarse varias veces en grandes cantidades de datos, como generar puntuaciones de predicción de datos de producción. 
++ Acceso con parámetros de script de R o Python desde cualquier aplicación que usa [!INCLUDE[tsql](../../includes/tsql-md.md)]. Llame a un procedimiento almacenado para entrenar un modelo, generar un gráfico o generar predicciones.
++ Pueden transmitir grandes conjuntos de datos y aprovechar los cálculos en bases de datos de varios subprocesos, de varios núcleos, varios procesos de API.
 
 Para obtener información sobre las tareas relacionadas, vea:
-+ [Operacionalización del código R](../../advanced-analytics/r-services/operationalizing-your-r-code.md)
++ [El código de R en marcha](../../advanced-analytics/r/operationalizing-your-r-code.md)
 
 ### <a name="database-administrators"></a>Administradores de base de datos
 
@@ -74,27 +74,26 @@ Los administradores de bases de datos deben integrar prioridades y proyectos opu
 
 SQL Server proporciona características únicas para el Administrador de base de datos que debe admitir las iniciativas de ciencias de datos:
 
-+ Seguridad de SQL Server: la arquitectura de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] protege las bases de datos y aísla la ejecución de las sesiones de script externo desde el funcionamiento de la instancia de base de datos. Puede especificar quién tiene permiso para ejecutar scripts de aprendizaje de máquina y quién puede instalar nuevos paquetes de R, mediante roles de base de datos.
++ Seguridad de SQL Server: la arquitectura de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] protege las bases de datos y aísla la ejecución de las sesiones de script externo desde el funcionamiento de la instancia de base de datos. Puede especificar quién tiene permiso para ejecutar scripts de aprendizaje de máquina y usar roles de base de datos para administrar paquetes.
 
 + Sesiones de R y Python se ejecutan en un proceso independiente para asegurarse de que el servidor sigue ejecutándose como de costumbre, incluso si el script externo encuentra problemas.
 
 + La regulación de recursos mediante SQL Server le permite controlar la memoria y los procesos asignados a los tiempos de ejecución externos, para evitar que unos cálculos masivos pongan en peligro el rendimiento general del servidor.
 
 Para obtener información sobre las tareas relacionadas, vea:
-+ [Managing and Monitoring R Solutions](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)
++ [Administración y supervisión de soluciones de aprendizaje automático](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 
-### <a name="architects-and-etl-designers"></a>Arquitectos y diseñadores ETL
+## <a name="architects-and-data-engineers"></a>Ingenieros de arquitectos y datos
 
-Los arquitectos diseñan flujos de trabajo integrados que abarcan todos los aspectos del ciclo de vida de aprendizaje de máquina. Ingenieros de datos diseñar y crear soluciones ETL y determinar cómo optimizar la ingeniería de característica empleado tareas forman parte del proceso de aprendizaje automático. A menudo, la plataforma de datos global debe diseñarse para equilibrar las necesidades empresariales rivales y complementarias.
+Los arquitectos diseñan flujos de trabajo integrados que abarcan todos los aspectos del ciclo de vida de aprendizaje de máquina. Ingenieros de datos diseñan y crear soluciones ETL y determinan cómo optimizar las tareas de ingeniería de característica para el aprendizaje automático. La plataforma de datos global debe diseñarse para equilibrar las necesidades del negocio competencia.
 
 Como [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] mantiene una estrecha integración con otras herramientas de Microsoft (como la pila de almacenamiento de datos e inteligencia empresarial), con herramientas de movilidad y de nube empresarial y con Hadoop, ofrece un amplio abanico de ventajas a los ingenieros de datos o arquitectos del sistema que quieran promover los análisis avanzados.
 
-+ Herramientas de desarrollo conocidas para desarrollar soluciones de R y Python. Se puede llamar a cualquier script de Python o R mediante procedimientos almacenados del sistema, para rellenar conjuntos de datos, generar gráficos u obtener predicciones. No hay más diseñar flujos de trabajo paralelos en herramientas ETL y la ciencia de datos. Compatibilidad con Data Factory de Azure y base de datos de SQL Azure resulta más fácil transformar y administrar datos y usar orígenes de datos en la nube en los flujos de trabajo de aprendizaje automático.
++ Llamar a cualquier script de Python o R utilizando procedimientos almacenados del sistema, para rellenar conjuntos de datos, generar gráficos u obtener predicciones. No hay más diseñar flujos de trabajo paralelos en herramientas ETL y la ciencia de datos. Compatibilidad para Data Factory de Azure y base de datos de SQL Azure hace más fácil de usar orígenes de datos en la nube en los flujos de trabajo de aprendizaje automático.
 
-+ La programación y administración usando las características de puesta en marcha de Microsoft R Server.
++ Para programar y administración de las tareas de aprendizaje automático, usar flujos de trabajo de automatización estándar en SQL Server, en función de Integration Services, Agente SQL o Data Factory de Azure. O bien, use la [características de puesta en marcha](https://docs.microsoft.com/machine-learning-server/operationalize/how-to-deploy-web-service-publish-manage-in-r) en el servidor de aprendizaje de máquina.
 
 Para obtener información sobre las tareas relacionadas, vea:
 
-+ [Crear flujos de trabajo que usan R en SQL Server](../../advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md)
-
++ [Crear flujos de trabajo de aprendizaje de máquina en SQL Server](../../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md)
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4b219fe2f008c6e7f0e289211665a1dcf6f1bd1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dd67618a952e189a1ce7b3596f68dddd16977ae3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalog-position"></a>Posición del catálogo
 La posición de un nombre de catálogo en un identificador y cómo está separada del resto del identificador varía en función del origen de datos al origen de datos. Por ejemplo, en un origen de datos Xbase, el nombre del catálogo es un directorio y, en Microsoft® Windows®, se separa del nombre de tabla (que es un nombre de archivo) por una barra diagonal inversa (\\). En la siguiente ilustración se muestra esta condición.  
@@ -57,4 +55,3 @@ SELECT * FROM "Corporate"."Parts"@"Sales"
 ```  
   
  Para obtener información acerca de los identificadores de comillas, vea la sección siguiente, [identificadores entrecomillados](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

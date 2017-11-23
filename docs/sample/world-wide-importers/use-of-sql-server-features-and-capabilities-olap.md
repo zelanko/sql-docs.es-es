@@ -1,30 +1,31 @@
 ---
 title: "Uso de características de SQL Server y capacidades | Documentos de Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Uso de WideWorldImportersDW de capacidades y características de SQL Server
-WideWorldImportersDW se ha diseñado para mostrar muchas de las características claves de SQL Server que son adecuadas para el almacenamiento de datos y análisis. La siguiente es una lista de características de SQL Server y las capacidades y una descripción de cómo se utilizan en WideWorldImportersDW.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW se ha diseñado para mostrar muchas de las características claves de SQL Server que son adecuadas para el almacenamiento de datos y análisis. La siguiente es una lista de características de SQL Server y las capacidades y una descripción de cómo se utilizan en WideWorldImportersDW.
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ La función de partición usada para tablas con todas las particiones es `PF_Dat
 WideWorldImportersDW utiliza las tablas optimizadas en memoria para las tablas de ensayo. Todos los `Integration.` * `_Staging` tablas son las tablas optimizadas en memoria.
 
 La ventaja de las tablas es que no se ha iniciado y no requieren ningún acceso al disco. Esto mejora el rendimiento del proceso ETL. Puesto que estas tablas no se ha iniciado sesión, su contenido se pierden si se produce un error. Sin embargo, el origen de datos sigue estando disponible, por lo que simplemente se puede reiniciar el proceso ETL si se produce un error.
-

@@ -1,26 +1,24 @@
 ---
 title: Evitar errores en paquetes de R instalados en bibliotecas de usuario | Documentos de Microsoft
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Evitar errores en paquetes de R instalados en bibliotecas de usuario
 
@@ -35,7 +33,7 @@ Los desarrolladores de R que necesitan para instalar nuevos paquetes de R están
 Por ejemplo, en un entorno de desarrollo de R típico, el usuario podría agregar la ubicación del paquete a la variable de entorno de R `libPath`, o hacer referencia a la ruta de acceso de paquete completo, similar al siguiente:
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 Sin embargo, esto nunca funcionará al ejecutar soluciones en R en SQL Server, porque los paquetes de R deben instalarse en una biblioteca de datos específica que está asociada a la instancia.
@@ -68,7 +66,6 @@ Si toma el enfoque de administración del paquete basado en roles de base de dat
 
     + Modifique el código para asegurarse de que los paquetes se cargan desde la biblioteca de forma predeterminada, no desde directorios ad hoc o bibliotecas de usuario.
 
-+ Evite la instalación del paquete ad hoc como parte de una solución. Compruebe el código para asegurarse de que no hay ninguna llamada a paquetes instalados, o el código que instala paquetes dinámicamente. Si no tiene permisos, se producirá un error en el código y, si dispone de permisos, debe instalar los paquetes de forma independiente del resto del código que desea ejecutar.
++ Evite la instalación del paquete ad hoc como parte de una solución. Compruebe el código para asegurarse de que no hay ninguna llamada a paquetes instalados, o el código que instala paquetes dinámicamente. Si no tiene permisos para instalar paquetes, se producirá un error en el código. Incluso si tiene permisos para instalar paquetes, debe hacerlo por separado desde otro código que desea ejecutar.
 
-+ Modificar las rutas de acceso directos a las bibliotecas de paquete de R. Si un paquete está instalado en la biblioteca predeterminada, el tiempo de ejecución de R lo cargará desde la biblioteca predeterminada, aunque se haya especificado otra biblioteca en el código de R.
-
++ Actualice el código para quitar las referencias directas a las rutas de acceso de paquetes de R o bibliotecas de R. Si un paquete está instalado en la biblioteca predeterminada, el tiempo de ejecución de R lo cargará desde la biblioteca predeterminada, aunque se haya especificado otra biblioteca en el código de R.

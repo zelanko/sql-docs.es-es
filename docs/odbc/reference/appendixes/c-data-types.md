@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e2933ac739ff3772d3d0ad223f4c2a3041256777
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe266052c52b46b7f206869bdf89ff5377daf3b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-data-types"></a>Tipos de datos C
 Tipos de datos ODBC C indican el tipo de datos de búferes de C que se usa para almacenar datos en la aplicación.  
@@ -165,4 +163,3 @@ struct tagSQLGUID {
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos C en ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)
-

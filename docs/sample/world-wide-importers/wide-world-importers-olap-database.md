@@ -1,30 +1,31 @@
 ---
 title: Base de datos de Wide World Importers OLAP | Documentos de Microsoft
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee64562b-a6d7-420c-b9da-75b5223cf8ab
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: e86540aca2f4db314a7c28e1d8f68f71e951a514
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de0880b7c16e2e54a45d7d138a727c3d6b696d15
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-data-warehousing-and-analytics-database"></a>Wide World Importers análisis y almacenamiento de datos
-Documentación de la base de análisis y almacenamiento de datos de Wide World Importers.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Documentación de la base de análisis y almacenamiento de datos de Wide World Importers.
 
 **Configuración e instalación de WideWorldImportersDW**
 
@@ -45,4 +46,3 @@ Describe cómo el WideWorldImportersDW aprovecha las características de SQL Ser
 **Consultas de ejemplo OLAP WideWorldImportersDW**
 
 Consultas de análisis de ejemplo que aprovecha la base de datos de WideWorldImportersDW.
-

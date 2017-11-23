@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizar matrices de parámetros
 Usar matrices de parámetros, la aplicación llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar el número de conjuntos de parámetros. Llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar la dirección de una variable en el que el controlador puede devolver el número de conjuntos de parámetros procesados, establece el error incluida. Llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para que apunte a una matriz en la que se va a devolver información de estado para cada fila de valores de parámetro. El controlador almacena estas direcciones en la estructura que se mantiene para la instrucción.  
@@ -61,4 +59,3 @@ Usar matrices de parámetros, la aplicación llama **SQLSetStmtAttr** con una *a
 -   Dado que el controlador no interpreta el valor de la *ParameterValuePtr* argumento de **SQLBindParameter** para los parámetros de datos en ejecución, si la aplicación proporciona un puntero a una matriz,  **SQLParamData** no extraer y devolver un elemento de esta matriz a la aplicación. En su lugar, devuelve que el valor escalar la aplicación tenía proporcionado. Esto significa que el valor devuelto por **SQLParamData** es no son suficientes para especificar el parámetro para el que la aplicación necesita para enviar datos; la aplicación también debe tener en cuenta el número de fila actual.  
   
      Cuando solo algunos de los elementos de una matriz de parámetros son parámetros de datos en ejecución, la aplicación debe pasar la dirección de una matriz en *ParameterValuePtr* que contiene elementos para todos los parámetros. Esta matriz se interpreta normalmente para los parámetros que no son parámetros de datos en ejecución. Para los parámetros de datos en ejecución, el valor que **SQLParamData** proporciona a la aplicación, que normalmente podría usarse para identificar los datos que está solicitando el controlador en esta ocasión, siempre es la dirección de la matriz.
-

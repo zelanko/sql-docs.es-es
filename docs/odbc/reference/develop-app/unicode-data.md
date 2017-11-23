@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31122122cdb7a6f940dd1ba91eeb8caef8ac9d0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-data"></a>Datos Unicode
 Tipos de datos Unicode de SQL se proporcionan para describir los datos que se encuentra en formato Unicode de forma nativa en el DBMS. Un tipo de datos Unicode C se proporciona para permitir que una aplicación enlazar datos a un búfer de Unicode. El Administrador de controladores puede convertir los datos de un tipo de Unicode C (SQL_C_WCHAR) para que sea la función con un controlador de ANSI.  
@@ -56,4 +54,3 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Controladores de Unicode aún deben admitir tipos de datos de ANSI, incluidos SQL_CHAR. Si enlaza SQL_CHAR una aplicación trabaja con un controlador de Unicode, el Administrador de controladores no se asignarán los datos SQL_CHAR a SQL_WCHAR. El controlador de Unicode debe aceptar los datos SQL_CHAR.  
   
  El Administrador de controladores se almacena los nombres DSN y el controlador en Unicode y se asignan a ANSI según sea necesario. Si un carácter Unicode no se puede asignar a un carácter ANSI (ya que puede ocurrir si se utilizan caracteres de una página de códigos que no es la página de código nativo del equipo en el controlador y los nombres de DSN), los caracteres que no se pudieron convertir se representan mediante un sup de carácter predeterminado plied por el sistema.
-

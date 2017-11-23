@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLAllocEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocEnv
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1061472d46a49ca105fb970b19a2f2d950470a12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66261c8fd8236a4abc35ac70e29f63b49f646daf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlallocenv-mapping"></a>Asignación de SQLAllocEnv
 Cuando una aplicación llama **SQLAllocEnv** a través de una aplicación ODBC 3*.x* controlador, la llamada a **SQLAllocEnv**(*phenv*) se asigna a **SQLAllocHandle** como se indica a continuación:  
@@ -40,4 +38,3 @@ Cuando una aplicación llama **SQLAllocEnv** a través de una aplicación ODBC 3
     ```  
   
      en el controlador con *OutputHandlePtr* establecido en *phenv*.
-

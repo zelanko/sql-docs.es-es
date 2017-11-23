@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: c8195decee231a628599e42d2f44109ff0452ed8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 11a8f89d8e61a656f9328d83c8fd154351981718
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-large-data"></a>Trabajar con datos grandes
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +37,11 @@ ms.lasthandoff: 09/09/2017
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Ejemplo de lectura de datos de gran tamaño](../../../connect/jdbc/reading-large-data-sample.md)|Describe cómo usar una instrucción SQL para recuperar datos de valores grandes.|  
-|[Leer datos de gran tamaño con un ejemplo de procedimientos almacenados](../../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|Describe cómo recuperar un valor de parámetro CallableStatement OUT grande.|  
-|[Actualización de datos de gran tamaño de ejemplo](../../../connect/jdbc/updating-large-data-sample.md)|Describe cómo actualizar datos de valor grande en una base de datos.|  
+|[Lectura de un ejemplo de datos grandes](../../../connect/jdbc/reading-large-data-sample.md)|Describe cómo usar una instrucción SQL para recuperar datos de valores grandes.|  
+|[Lectura de datos grandes con un ejemplo de procedimientos almacenados](../../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|Describe cómo recuperar un valor de parámetro CallableStatement OUT grande.|  
+|[Actualización de un ejemplo de datos grandes](../../../connect/jdbc/updating-large-data-sample.md)|Describe cómo actualizar datos de valor grande en una base de datos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicaciones de controlador JDBC de ejemplo](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
+ [Aplicaciones del controlador JDBC de ejemplo](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>Dígitos decimales
 El *dígitos decimales* de datos decimal y numeric tipos se define como el número máximo de dígitos a la derecha del separador decimal o la escala de los datos. Para columnas de número de punto flotante aproximadas o los parámetros, la escala no está definida porque el número de dígitos a la derecha del separador decimal no es fijo. Para los datos de fecha y hora o intervalo que contiene un componente de segundos, los dígitos decimales se define como el número de dígitos a la derecha del separador decimal en el componente de segundos de los datos.  
@@ -37,7 +35,7 @@ El *dígitos decimales* de datos decimal y numeric tipos se define como el núme
   
  Los dígitos decimales que se define para cada tipo de datos SQL concisa se muestra en la tabla siguiente.  
   
-|Tipo SQL|Dígitos decimales|  
+|Tipo SQL|dígitos decimales|  
 |--------------|--------------------|  
 |Todos los tipos de caracteres y binarios [a]|n/d|  
 |SQL_DECIMAL<br />SQL_NUMERIC|El número definido de dígitos a la derecha del separador decimal. Por ejemplo, la escala de una columna definida como NUMERIC(10,3) es 3. Esto puede ser un número negativo para admitir el almacenamiento de números muy grandes sin utilizar la notación exponencial; Por ejemplo, "12000" se puede almacenar como "12" con una escala de -3.|  
@@ -60,4 +58,3 @@ El *dígitos decimales* de datos decimal y numeric tipos se define como el núme
 |Todos los tipos de fecha y hora|PRECISION|  
 |Todos los tipos de intervalo con un componente de segundos|PRECISION|  
 |Todos los tipos de intervalo con ningún componente de segundos|n/d|
-

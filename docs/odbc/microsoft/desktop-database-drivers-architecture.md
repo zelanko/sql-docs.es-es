@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitectura de controladores de escritorio de la base de datos
 Estos controladores están diseñados para uso en Microsoft Windows 95 o una versión posterior, o Windows NT 4.0 y Windows 2000. Solo las aplicaciones de 32 bits se admiten en Windows 95 o versiones posteriores; se admiten las aplicaciones de 16 bits y 32 bits en Windows NT 4.0 y Windows 2000.  
@@ -58,4 +56,3 @@ Estos controladores están diseñados para uso en Microsoft Windows 95 o una ver
  Odbcjt32.dll implementa funciones ODBC encima de la API de Microsoft Jet. No hay ninguna asignación directa entre las funciones ODBC y Jet de Microsoft, sin embargo. Muchos factores, como los modelos de cursor y la asignación de SQL, evitar que una correlación directa de las funciones.  
   
  El controlador ODBC se encuentra entre el motor de Microsoft Jet y el Administrador de controladores ODBC. Algunas funciones ODBC llamadas a una aplicación se controla por el Administrador de controladores y no pasan al controlador. Para estas funciones, Microsoft Jet nunca ve la función llama a porque no tiene una conexión directa al administrador de controladores.
-

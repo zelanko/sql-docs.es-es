@@ -1,5 +1,5 @@
 ---
-title: '* = (Multiplicar igual a) (Transact-SQL) | Documentos de Microsoft'
+title: "* = (Asignación de multiplicación) (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '*=_TSQL'
 - '*='
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, *=
+- assignment operators, *=
+- augmented operators, *=
 - '*= (multiply equals)'
+- '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d430048203348e4f249d9866d76a5e02964deac5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb629e9f025a96a8f4272c97557dd2637bd3422a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-multiply-equals-transact-sql"></a>*= (Multiplicar igual a) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-multiplication-assignment-transact-sql"></a>* = (Asignación de multiplicación) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Multiplica dos números y establece un valor como resultado de la operación. Por ejemplo, si una variable @x es igual a 35, a continuación, @x * = 2 toma el valor original de @x, multiplica por 2 y establece @x en el nuevo valor (70).  
   
@@ -54,7 +54,7 @@ expression *= expression
  Devuelve el tipo de datos del argumento con mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, vea [&#42; &#40; Multiplicar &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/multiply-transact-sql.md).  
+ Para obtener más información, vea [&#42; &#40; Multiplicación &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/multiply-transact-sql.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
@@ -62,4 +62,3 @@ expression *= expression
  [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

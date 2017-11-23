@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinar el DBMS de destino y los controladores
 La siguiente pregunta a tener en cuenta es, ¿cuáles son el DBMS de destino para la aplicación y los controladores estén disponibles que admiten los DBMS? Dado que las aplicaciones genéricas tienden a ser muy interoperable, la pregunta del DBMS de destino es más apropiada para aplicaciones personalizadas y verticales. Sin embargo, la pregunta de controladores de destino se aplica a todas las aplicaciones, porque los controladores varían ampliamente en velocidad, la calidad, la compatibilidad con las características y la disponibilidad. Además, si hay controladores para redistribuir con la aplicación, el costo y la disponibilidad de planes de licencias deben tenerse en cuenta.  
@@ -40,4 +38,3 @@ La siguiente pregunta a tener en cuenta es, ¿cuáles son el DBMS de destino par
  Las bases de datos de servidor, como Oracle, DB2 y SQL Server proporcionan total compatibilidad con transacciones, admiten muchos usuarios simultáneos y tienen SQL enriquecido. Son mucho más caros y tienen una base instalada más pequeña. Por otro lado, los precios de software tienden a ser superior, un poco el desplazamiento de un mercado más pequeño posible.  
   
  Por lo tanto, el destino de los DBMS a veces puede elegir en función de las características requeridas por la aplicación y mercado de destino de la aplicación. Por ejemplo, un sistema de entrada de pedidos para las grandes organizaciones podría destinarse bases de datos de escritorio porque estos no tienen compatibilidad con transacciones adecuados. Un sistema similar diseñado para las pequeñas empresas puede excluir mayoría bases de datos de servidor basándose en el costo. Y los desarrolladores de aplicaciones genéricas podrían tener como destino ambos pero evite el uso de las características avanzadas que se encuentran en las bases de datos de servidor.
-

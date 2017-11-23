@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetInfo
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetInfo
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetInfo
-helpviewer_keywords:
-- SQLGetInfo function [ODBC]
+f1_keywords: SQLGetInfo
+helpviewer_keywords: SQLGetInfo function [ODBC]
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 36682d5e3da85928a02a1315f8268b12630f31f0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57ba22ee8645f1d3548be91adc9aafb4fc016c79
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-function"></a>Función SQLGetInfo
 **Conformidad**  
@@ -1835,15 +1829,14 @@ else
  [Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
  Determinar si un controlador es compatible con una función  
- [SQLGetFunctions, función](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
+ [Función SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
   
  Devolver el valor de un atributo de instrucción  
- [SQLGetStmtAttr, función](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
+ [Función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
   
  Devolver información acerca de los tipos de datos de un origen de datos  
- [SQLGetTypeInfo, función](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+ [Función SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

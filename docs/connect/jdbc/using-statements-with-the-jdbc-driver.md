@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Usar instrucciones con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,14 +44,13 @@ ms.lasthandoff: 09/09/2017
 |-----------|-----------------|  
 |[Usar instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)|Describe cómo usar instrucciones SQL con el controlador JDBC para trabajar con datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.|  
 |[Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)|Describe cómo utilizar procedimientos almacenados con el controlador JDBC para trabajar con datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.|  
-|[Utilizar varios conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md)|Describe cómo usar el controlador JDBC para recuperar datos de varios conjuntos de resultados.|  
-|[Usar secuencias de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Describe cómo usar secuencias de escape de SQL, como literales y funciones de fecha y hora.|  
+|[Usar varios conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md)|Describe cómo usar el controlador JDBC para recuperar datos de varios conjuntos de resultados.|  
+|[Usar secuencias de escape SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Describe cómo usar secuencias de escape de SQL, como literales y funciones de fecha y hora.|  
 |[Usar claves generadas automáticamente](../../connect/jdbc/using-auto-generated-keys.md)|Describe cómo usar claves generadas automáticamente.|  
 |[Realizar operaciones por lotes](../../connect/jdbc/performing-batch-operations.md)|Describe cómo usar el controlador JDBC para llevar a cabo operaciones en lote.|  
 |[Controlar instrucciones complejas](../../connect/jdbc/handling-complex-statements.md)|Describe cómo usar el controlador JDBC para ejecutar instrucciones complejas que realizan diversas tareas y pueden devolver tipos diferentes de datos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

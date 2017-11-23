@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>Introducción a revoscalepy
 
@@ -125,7 +123,7 @@ Puede ejecutar código que incluya **revoscalepy** funciona localmente o en un c
 
 Cuando se ejecuta localmente, normalmente ejecutar un script de Python desde la línea de comandos o desde un entorno de desarrollo de Python y especificar un contexto de proceso de SQL Server mediante uno de los **revoscalepy** funciones. Puede usar el contexto de proceso remoto para todo el código, o para las funciones individuales. Por ejemplo, puede descargar el entrenamiento del modelo en el servidor para usar los datos más recientes y evita los movimientos de datos.
 
-Si desea colocar un script de Python completo dentro del procedimiento almacenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), se recomienda que vuelva a escribir el código como una única función que haya definido claramente entradas y salidas. Entradas y salidas deben estar **pandas** tramas de datos. Cuando esto sucede, puede llamar al procedimiento almacenado desde cualquier cliente que admita T-SQL, fácilmente pasar consultas SQL como entradas y guardar los resultados en las tablas SQL. Para obtener un ejemplo, vea [en bases de datos de análisis de Python para desarrolladores de L](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Si desea colocar un script de Python completo dentro del procedimiento almacenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), se recomienda que vuelva a escribir el código como una única función que haya definido claramente entradas y salidas. Entradas y salidas deben estar **pandas** tramas de datos. Cuando esto sucede, puede llamar al procedimiento almacenado desde cualquier cliente que admita T-SQL, fácilmente pasar consultas SQL como entradas y guardar los resultados en las tablas SQL. Para obtener un ejemplo, vea [en bases de datos de análisis de Python para desarrolladores de SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-remote-compute-contexts"></a>Uso de contextos de proceso remoto
 

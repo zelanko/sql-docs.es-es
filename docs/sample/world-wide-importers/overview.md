@@ -1,30 +1,31 @@
 ---
 title: "Información general sobre | Documentos de Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: ff91724bead3e6b1aa96962bd5bb801afe3af950
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-overview"></a>Información general de Wide World Importers
-Se trata de una visión general de la empresa ficticia Wide World Importers y los flujos de trabajo que se mencionan en las bases de datos de ejemplo de WideWorldImporters para SQL Server y base de datos de SQL Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Se trata de una visión general de la empresa ficticia Wide World Importers y los flujos de trabajo que se mencionan en las bases de datos de ejemplo de WideWorldImporters para SQL Server y base de datos de SQL Azure.  
 
 Wide World Importers (WWI) es un importador de mercancías novedad por mayor y un distribuidor que opere desde el área de la bahía de San Francisco.
 
@@ -71,4 +72,3 @@ La empresa funciona con un ejercicio que comienza el 1 de noviembre.
 La licencia para la base de datos de ejemplo y el código de ejemplo se describe aquí: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 La base de datos de ejemplo incluye datos públicos que se ha cargado desde data.gov y EarthData Natural. Los términos de uso se encuentran aquí: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

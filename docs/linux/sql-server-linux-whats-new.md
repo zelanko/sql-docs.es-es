@@ -1,163 +1,77 @@
 ---
 title: "' S New for SQL Server 2017 en Linux | Documentos de Microsoft"
-description: "Este tema destacan cuáles son las novedades de la versión actual de SQL Server 2017 en Linux."
+description: Este tema destacan Novedades de SQL Server 2017 en Linux.
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/24/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
+ms.workload: On Demand
+ms.openlocfilehash: 49381b5980d5114f7d22e53ef70542bd03ecf289
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novedades de SQL Server 2017 en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este tema describe lo que es una novedad de SQL Server 2017 ejecutando en Linux.
+Este artículo describen las principales características y servicios disponibles para SQL Server 2017 ejecutando en Linux.
 
-## <a name="ga"></a>GA
+> [!NOTE]
+> Además de estas capacidades en este artículo, las actualizaciones acumulativas se publican a intervalos regulares después de la versión de GA. Estas actualizaciones acumulativas proporcionan numerosas mejoras y correcciones. Para obtener información acerca de la versión CU más reciente, consulte [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Para descargar los paquetes y los problemas conocidos, consulte el [notas de la versión](sql-server-linux-release-notes.md).
 
-La versión Availaiblity General (GA) contiene las siguientes mejoras y correcciones:
+## <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server
 
-- Archivos de base de datos ahora se pueden hospedar en NFS. Esto corrige los problemas de escenarios de disco compartido NFS, montaje almacenamiento remoto para plataformas de contenedor y montar carpetas Docker para Windows.
-- Otros varias correcciones de errores y mejoras.
-
-## <a name="rc2"></a>RC2
-
-La versión de RC2 contiene varias correcciones de errores y mejoras.
-
-## <a name="rc1"></a>RC1
-
-La versión RC1 contiene las siguientes mejoras y correcciones:
-
-- Habilitar capa transparente (TLS) para las conexiones cifradas. Para obtener más información, consulte [cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md).
+- Habilita las capacidades básicas de motor de base de datos de SQL Server.
+- Compatibilidad con las rutas de acceso de Linux nativo.
+- Compatibilidad con IPv6.
+- Compatibilidad con archivos de base de datos en NFS.
+- Habilitado [transparente en seguridad de la capa](sql-server-linux-encrypted-connections.md) cifrado (TLS).
 - Habilitado [autenticación de Active Directory](sql-server-linux-active-directory-authentication.md).
-- Habilitado [correo electrónico de base de datos](../relational-databases/database-mail/database-mail.md).
-- Se agregó compatibilidad de IPV6.
-- Variables de entorno agregada para la instalación inicial de SQL Server. Para obtener más información, consulte [configuración configurar SQL Server con las variables de entorno en Linux](sql-server-linux-configure-environment-variables.md).
-- Quitar **sqlpackage** de instalar los archivos binarios. SqlPackage puede seguir ejecutando en Linux remotamente desde Windows.
-- Compartir conjuntos del recurso Agente de discos clúster que el nombre del recurso como lo hace en una instancia de clúster de conmutación por error de SQL Server de Windows. `@@ServerName`Devuelve el nombre de recursos de clúster de disco compartido de SQL Server; antes de RC1, devuelve el nombre del nodo del clúster al que pertenece el recurso.
+- [Funcionalidad de grupos de disponibilidad](sql-server-linux-availability-group-overview.md) para lograr alta disponibilidad.
+- [Búsqueda de texto completo](sql-server-linux-setup-full-text-search.md) admite.
 
-## <a name="ctp-21"></a>CTP 2.1
+## <a name="sql-server-agent"></a>Agente SQL Server
 
-La versión de CTP 2.1 contiene las siguientes mejoras y correcciones:
+- Habilitado [Agente SQL Server](sql-server-linux-setup-sql-agent.md) admite para las siguientes tareas:
+  - [Trabajos de Transact-SQL](sql-server-linux-run-sql-server-agent-job.md)
+  - [Correo electrónico de base de datos](sql-server-linux-db-mail-sql-agent.md)
+  - [Trasvase de registros](sql-server-linux-use-log-shipping.md)
 
-- Agregar [variables de entorno para configurar el servicio de SQL Server](sql-server-linux-configure-environment-variables.md).
-- [MSSQL-conf](sql-server-linux-configure-mssql-conf.md) requiere ahora la convención de nomenclatura de dos partes para la configuración.
-- El [scripter mssql](https://github.com/Microsoft/sql-xplat-cli) herramienta. Esta utilidad permite a los desarrolladores, administradores y administradores del sistema generar `CREATE` y `INSERT` scripts de Transact-SQL de objetos de base de datos en las bases de datos de SQL Server, base de datos de SQL Azure y almacenamiento de datos de SQL Azure desde la línea de comandos.
-- El [herramienta DBFS](https://github.com/Microsoft/dbfs). Se trata de una herramienta de código abierto que permite que los DBA y administradores del sistema supervisar SQL Server más fácilmente mediante la exposición de datos en directo de vistas de administración dinámica (DMV) de SQL Server como archivos virtuales en un directorio virtual en sistemas operativos Linux.
-- SQL Server Integration Services (SSIS) se ejecuta ahora en Linux. Además, hay un nuevo paquete que le permite ejecutar paquetes SSIS en Linux desde la línea de comandos. Para obtener más información, consulte el [blog post anunciar la compatibilidad con SSIS para Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Con SSIS en Linux CTP 2.1 actualizar, los paquetes SSIS pueden usar conexiones de ODBC en Linux. Para obtener más información, consulte el [entrada del blog del anuncio de compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
 
-## <a name="ctp-20"></a>EN CTP 2.0
+- Capacidad de ejecutar paquetes SSIS en Linux. Para obtener más información, consulte [configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md).
 
-La versión de CTP 2.0 contiene las siguientes mejoras y correcciones:
+## <a name="other-improvements"></a>Otras mejoras
 
-- Agregar **trasvase de registros** funcionalidad de agente SQL Server.
-- Mensajes en otros idiomas de mssql-conf.
-- Formato de ruta de acceso de Linux ahora son compatibles en el motor de SQL Server. Pero es compatible con para "C:\\" las rutas de acceso con prefijo continuará.
-- Habilitado DMV **sys.dm_os_file_exists**.
-- Habilitado DMV **sys.fn_trace_gettable**.
-- Agregar [modo de seguridad estricta de CLR](/sql/database-engine/configure-windows/clr-strict-security).
-- Gráfico SQL.
-- Regeneraciones de índice en línea reanudables.
-- Procesamiento de consultas adaptable.
-- Ha agregado codificación UTF-8 para los archivos de sistema, incluidos los archivos de registro.
-- Se ha corregido bases de datos en memoria limitación de ubicación. 
-- Agregar nuevo tipo de clúster `CLUSTER_TYPE = EXTERNAL` para configurar un grupo de disponibilidad para lograr alta disponibilidad.
-- Corrija el agente de escucha del grupo de disponibilidad para el enrutamiento de solo lectura.
-- Soporte técnico de producción para los clientes del programa de adopción temprana (EAP). Suscríbase [aquí](http://aka.ms/eapsignup).
+- Herramienta de configuración de línea de comandos, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
+- Compatibilidad con la instalación desatendida con [variables de entorno](sql-server-linux-configure-environment-variables.md).
+- Multiplataforma [extensión de Visual Studio Code mssql server](sql-server-linux-develop-use-vscode.md).
+- Generador de secuencias de comandos entre plataformas, [scripter mssql](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
+- Monitor de vista de administración dinámica (DMV) multiplataforma, [herramienta DBFS](https://github.com/Microsoft/dbfs).
 
-## <a name="ctp-14"></a>CTP 1.4
+## <a name="next-steps"></a>Pasos siguientes
 
-La versión 1.4 de CTP contiene las siguientes mejoras y correcciones:
+Para instalar a SQL Server en Linux, utilice uno de los siguientes tutoriales:
 
-- Habilita la [Agente SQL Server](sql-server-linux-setup-sql-agent.md).
-  - Habilitar la funcionalidad de trabajos de T-SQL.
-- Errores de zona horaria fijo:
-  - Compatibilidad con la zona horaria Asia o Kolkhata.
-  - Función GETDATE() fija.
-- Red Async I / 0 mejoras:
-  - Mejoras importantes de rendimiento de la carga de trabajo de OLTP en memoria.
-- Imagen de docker ahora incluye utilidades de línea de comandos de SQL Server. (sqlcmd y bcp).
-- Habilitar compatibilidad de interfaz de dispositivo Virtual (VDI) para las copias de seguridad.
-- Ubicación de TempDB ahora puede modificarse después de la instalación con `ALTER DATABASE`.
+- [Instalar en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Ejecutar en Docker](quickstart-install-connect-docker.md)
+- [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a name="ctp-13"></a>CTP 1.3
+Por otra información con respecto a SQL Server en Linux, consulte la [Introducción](sql-server-linux-overview.md). Para descargar los paquetes y una lista de características no admitidas y los problemas conocidos, consulte el [notas de la versión](sql-server-linux-release-notes.md).
 
-La versión 1.3 de CTP contiene las siguientes mejoras y correcciones:
+Para ver otras mejoras introducidas en SQL Server 2017, consulte [What's New en SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
-- Habilitado [búsqueda de texto completo](sql-server-linux-setup-full-text-search.md) característica.
-- Habilitar Always On [funcionalidad de grupos de disponibilidad](sql-server-linux-availability-group-overview.md) para lograr alta disponibilidad.
-- Funcionalidad adicional de **mssql-conf**:
-  - Primera instalación de tiempo mediante **mssql-conf**. Consulte el uso de mssql-conf en el [guías de instalación](sql-server-linux-setup.md#platforms).
-  - Habilitar los grupos de disponibilidad. Consulte la [tema de los grupos de disponibilidad](sql-server-linux-availability-group-overview.md).
-- Ruta de acceso de Linux nativo fija la compatibilidad para grupos de archivos OLTP en memoria.
-- Habilitar la funcionalidad de dm_os_host_info DMV.
-
-## <a name="ctp-12"></a>CTP 1.2
-
-La versión 1.2 de CTP contiene las siguientes mejoras y correcciones:
-
-- Compatibilidad con [SUSE Linux Enterprise Server v12 SP2](quickstart-install-connect-suse.md).
-- Correcciones de errores principales mejoras del motor y la estabilidad.
-- Imagen de docker: 
-  - Fijo [emitir #1](https://github.com/Microsoft/mssql-docker/issues/1) mediante la adición de Python para la imagen.
-  - Quitar `/opt/mssql/data` como el volumen de manera predeterminada.
-- Actualiza a .NET 4.6.2.
-
-## <a name="ctp-11"></a>CTP 1.1
-
-La versión de CTP 1.1 contiene las siguientes mejoras y correcciones:
-
-- Compatibilidad con Red Hat Enterprise Linux versión 7.3.
-- Compatibilidad con Ubuntu 16,10.
-- Capa de Docker SO actualizado para Ubuntu 16.04.
-- Se corrigieron problemas de telemetría en imagen de Docker.
-- Secuencia de comandos de instalación de SQL Server fijo relacionados con errores.
-- Mejora el rendimiento de módulos compilados de forma nativa de T-SQL, incluidos:
-  - **OPENJSON**, **FOR JSON**, **JSON** elementos integrados.
-  - Columnas calculadas (solo se permiten índices en columnas calculadas persistentes, pero no en las columnas calculadas no persistentes para tablas en memoria).
-  - **CROSS APPLY** operaciones.
-- Nuevas características del lenguaje:
-  - Funciones de cadena: **recortar**, **CONCAT_WS**, **TRANSLATE** y **STRING_AGG** con compatibilidad para **WITHIN GROUP (ORDER BY)**.
-  - **La importación masiva** ahora es compatible con formato CSV y el almacenamiento de blobs de Azure como origen de archivo.
-
-En el modo de compatibilidad 140:
-
-- Mejora el rendimiento de las actualizaciones de índices de almacén de columnas no agrupado en el caso cuando la fila se encuentra en el almacén delta. Cambió de eliminación e inserción de operaciones para actualizar. Cambiar también las formas de plan de todo para restringir.
-- Las consultas en modo por lotes admiten ahora "bucles de comentarios de concesiones de memoria". Esto mejorará la simultaneidad y el rendimiento en sistemas que ejecutan consultas repetidas que utilizan el modo por lotes. Esto puede permitir que se ejecuten en sistemas que están bloqueando de otro modo en memoria antes de iniciar las consultas más consultas.
-- Mejorar el rendimiento en el paralelismo de modo por lotes sin tener en cuenta planes triviales para planes de modo por lotes permitir a los planes paralelos que pueden seleccionar en su lugar en columnstores. 
-
-[Mejoras del Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) en esta versión CTP1.1:
-- Clonación de CLR, Filestream o Filetable, los objetos en memoria y almacén de consultas de base de datos.
-  - **ACTUALIZAR el 18/10/2017**: en otras pruebas, Filestream no se admite actualmente en la versión de GA de 2017 de SQL Server en Linux  
-- **CREAR** o **ALTER** operadores para los objetos de programación.
-- Nueva **sugerencia USE** opción para proporcionar sugerencias para el procesador de consultas de consulta. Obtenga más información aquí: [sugerencias de consulta](../t-sql/queries/hints-transact-sql-query.md).
-- Cuenta de servicio SQL ahora puede identificar mediante programación habilitar Bloquear páginas en memoria y la inicialización instantánea de archivos de permisos.
-- Compatibilidad con el número de archivos de TempDB, tamaño de archivo y configuración de crecimiento de archivo.
-- Diagnóstico extendido en el plan de presentación XML.
-- Por cada operador ligera consulta ejecución de generación de perfiles.
-- Nueva función de administración dinámica **sys.dm_exec_query_statistics_xml**.
-- Nueva función de administración dinámica para las estadísticas incrementales.
-- Quitado en memoria con ruido relacionados con mensajes de registro de registro de errores.
-- Diagnóstico de latencia de AlwaysOn mejorado.
-- Limpiar el seguimiento de cambios Manual.
-- **DROP TABLE** admite para la replicación.
-- **BULK INSERT** en montones con **automática TABLOCK** en TF 715.
-- Paralelo **INSERT... Seleccione** cambios para tablas temporales locales.
-
-Obtener más información sobre estas correcciones en el [descripción de la versión de Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/).
-
-Muchas mejoras del motor de base de datos se aplican a Windows y Linux. La única excepción sería de características del motor de base de datos que no se admiten en Linux. Para obtener más información, consulte [What's New en SQL Server 2017 (motor de base de datos)](https://msdn.microsoft.com/library/mt775028).
-
-## <a name="see-also"></a>Vea también
-
-Para los requisitos de instalación, áreas de características no compatibles y problemas conocidos, consulte [notas de la versión de SQL Server 2017 en Linux](sql-server-linux-release-notes.md).
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

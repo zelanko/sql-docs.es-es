@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55ccf421e9db76c570608b4bfc380e0c48dc1f2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Asignación de SQLSetConnectOption
 Cuando un ODBC 2. *x* aplicación llama **SQLSetConnectOption** a través de una aplicación ODBC 3*.x* controlador, la llamada a  
@@ -67,4 +65,3 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  En ODBC 2. *x*, una aplicación puede llamar a **SQLSetConnectOption** para establecer una opción de instrucción. Cuando sucede esto, el controlador establece la opción de instrucción como valor predeterminado para cualquier instrucción posterior asignado para esa conexión. Se está definido por controlador si el controlador establece la opción de instrucción para cualquier instrucción existente asociado a la conexión especificada.  
   
  Esta capacidad está en desuso en ODBC 3*.x*. ODBC 3*.x* controladores sólo necesitan admitir configuración ODBC 2. *x* atributos de instrucción en el nivel de conexión si desean trabajar con ODBC 2. *x* las aplicaciones que hacen esto. ODBC 3*.x* aplicaciones nunca deben establecer los atributos de instrucción en el nivel de conexión. ODBC 3*.x* atributos de instrucción no se puede establecer en el nivel de conexión, a excepción de los atributos SQL_ATTR_METADATA_ID y SQL_ATTR_ASYNC_ENABLE, que son atributos de conexión y los atributos de instrucción y puede ser Establezca en el nivel de conexión o en el nivel de instrucción.
-

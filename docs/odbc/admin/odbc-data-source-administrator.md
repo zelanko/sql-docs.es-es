@@ -8,25 +8,23 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de orígenes de datos ODBC
 Administrador de orígenes de datos ODBC de Microsoft® administra los orígenes de datos y controladores de base de datos. Esta aplicación se encuentra en el Panel de Control de Windows en **herramientas administrativas**. A partir de Windows 8, el icono se denomina **orígenes de datos ODBC**, y en sistemas operativos de 64 bits, hay una versión de 32 bits y 64 bits.  
@@ -41,9 +39,8 @@ Administrador de orígenes de datos ODBC de Microsoft® administra los orígenes
   
 -   [Administrar orígenes de datos](../../odbc/admin/managing-data-sources.md)  
   
--   [Establecer las opciones de traza](../../odbc/admin/setting-tracing-options.md)  
+-   [Establecer las opciones de seguimiento](../../odbc/admin/setting-tracing-options.md)  
   
 -   [Establecer opciones de agrupación de conexiones ODBC](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [Visualización de controladores](../../odbc/admin/viewing-drivers.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 664aa8855e78709d3409016499b67f6d52c93eb3
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4341d85ceced60ed2d108eb4e9f95251e6fdd33d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="reading-large-data-sample"></a>Leer un ejemplo de datos grandes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +50,6 @@ ms.lasthandoff: 09/09/2017
  [!code[JDBC#UsingAdaptiveBuffering1](../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con datos de gran tamaño](../../connect/jdbc/working-with-large-data.md)  
+ [Trabajo con datos grandes](../../connect/jdbc/working-with-large-data.md)  
   
   
-

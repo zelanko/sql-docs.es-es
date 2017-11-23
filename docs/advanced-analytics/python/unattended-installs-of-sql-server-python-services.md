@@ -5,22 +5,20 @@ ms.date: 07/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d7cba7c74eaef9e627b75972d3b6dd34ee5a6f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Instalación desatendida de servicios de aprendizaje de máquina de Python (In-Database)
 
@@ -74,4 +72,3 @@ El siguiente ejemplo se muestra la **mínimo** requiere características para es
 3.  Reinicie el servicio de SQL Server para la instancia ha vuelto a configurar. Si lo hace, se reiniciará automáticamente relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] también el servicio.
 
 3. Es posible que se requieran pasos adicionales si tiene una configuración de seguridad personalizada o si va a usar SQL Server para admitir contextos de cálculo remotos. Para obtener más información, consulte [solucionar problemas de instalación de aprendizaje de máquina](../machine-learning-troubleshooting-faq.md).
-

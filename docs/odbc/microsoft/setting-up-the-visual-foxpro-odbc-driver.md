@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e623e7aee2942ce2f105c54bad3f3fced859709
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Cómo configurar el controlador ODBC de Visual FoxPro
 Para obtener información sobre cómo descargar e instalar el controlador ODBC de Visual FoxPro, consulte [controlador ODBC de Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) en descargas de MSDN.  
@@ -43,4 +41,3 @@ Para obtener información sobre cómo descargar e instalar el controlador ODBC d
 -   Quitar todos los componentes instalados anteriormente.  
   
  Después de instalar al controlador en el sistema, el programa de instalación reconoce los componentes del controlador instalado y presenta los cuadros de diálogo adicionales que le permiten cambiar la configuración de su controlador.
-

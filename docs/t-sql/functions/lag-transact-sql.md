@@ -1,39 +1,39 @@
 ---
 title: LAG (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 10/20/2015
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LAG_TSQL
 - LAG
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77598feb87f6766f6c24c454dace2c138315e69b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Tiene acceso a datos de una fila anterior en el mismo conjunto de resultados sin el uso de una autocombinación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. LAG proporciona acceso a una fila en un desplazamiento físico especificado que hay antes de la fila actual. Use esta función analítica en una instrucción SELECT para comparar valores de la fila actual con valores de una fila anterior.  
+  Tiene acceso a datos de una fila anterior en el mismo conjunto de resultados sin el uso de una autocombinación a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG proporciona acceso a una fila en un desplazamiento físico especificado que hay antes de la fila actual. Use esta función analítica en una instrucción SELECT para comparar valores de la fila actual con valores de una fila anterior.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Comparar valores entre años  
  En el ejemplo siguiente se usa la función LAG para devolver la diferencia en cuotas de venta para un empleado concreto en años anteriores. Observe que como no hay ningún valor de intervalo disponible para la primera fila, se devuelve el valor predeterminado de cero (0).  
   
-```  
+```t-sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -79,8 +79,7 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 BusinessEntityID SalesYear   CurrentQuota          PreviousQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             0.00  
@@ -95,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de particiones  
  En el ejemplo siguiente se usa la función LAG para comparar las ventas anuales hasta la fecha entre los empleados. La cláusula PARTITION BY se especifica para dividir las filas del conjunto de resultados por territorio de ventas. La función LAG se aplica a cada partición por separado y el cálculo se reinicia para cada partición. La cláusula ORDER BY de la cláusula OVER ordena las filas de cada partición. La cláusula ORDER BY en la instrucción SELECT ordena las filas del conjunto de resultados completo. Observe que como no hay ningún valor de intervalo disponible para la primera fila de cada partición, se devuelve el valor predeterminado de cero (0).  
   
-```  
+```t-sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -107,8 +106,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 TerritoryName            BusinessEntityID SalesYTD              PrevRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          0.00  
@@ -122,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Especificar expresiones arbitrarias  
  En el ejemplo siguiente se muestra cómo especificar una serie de expresiones arbitrarias en la sintaxis de la función LAG.  
   
-```  
+```t-sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -150,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: comparar valores entre los trimestres  
  En el ejemplo siguiente se muestra la función LAG. La consulta usa la función LAG para devolver la diferencia en cuotas de venta para un empleado concreto por trimestres anteriores. Observe que como no hay ningún valor de intervalo disponible para la primera fila, se devuelve el valor predeterminado de cero (0).  
   
-```  
+```t-sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -178,6 +176,5 @@ Year Quarter  SalesQuota  PrevQuota  Diff
  [RESPONSABLE de &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
-
 
 

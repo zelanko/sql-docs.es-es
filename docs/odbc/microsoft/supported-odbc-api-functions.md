@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-odbc-api-functions"></a>Funciones de la API de ODBC compatibles
 El propósito de la redistribución es informar a la aplicación qué características están disponibles a él desde el controlador. Los controladores de base de datos de escritorio de Microsoft ODBC admiten todas las funciones de nivel 1 y los núcleos.  
@@ -45,7 +43,7 @@ El propósito de la redistribución es informar a la aplicación qué caracterí
 |[SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md)||||||[Todos los controladores](../../odbc/microsoft/sqlgetcursorname-desktop-database-drivers.md)|  
 |[SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)||||||[Todos los controladores](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)|  
 |[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)|[Acceso](../../odbc/microsoft/sqlgetinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgetinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgetinfo-paradox-driver.md)|[Archivo de texto](../../odbc/microsoft/sqlgetinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgetinfo-excel-driver.md)||  
-GetStmtOption] (../ Topic/SQLGetStmtOption%20Function.md)|[Todos los controladores](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)||||||  
+GetStmtOption] (.. / Topic/SQLGetStmtOption%20Function.md)|[Todos los controladores](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)||||||  
 |[SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[Acceso](../../odbc/microsoft/sqlgettypeinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgettypeinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgettypeinfo-paradox-driver.md)|[Archivo de texto](../../odbc/microsoft/sqlgettypeinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgettypeinfo-excel-driver.md)||  
 |[SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)||||||[Todos los controladores](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)|  
 |[SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)||||||[Todos los controladores](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)|  
@@ -59,7 +57,7 @@ GetStmtOption] (../ Topic/SQLGetStmtOption%20Function.md)|[Todos los controlador
 |[SQLSpecialColumns](../../odbc/reference/syntax/sqlspecialcolumns-function.md)||||||[Todos los controladores](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)|  
 |[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)|[Acceso](../../odbc/microsoft/sqlstatistics-access-driver.md)|[dBASE](../../odbc/microsoft/sqlstatistics-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlstatistics-paradox-driver.md)|[Archivo de texto](../../odbc/microsoft/sqlstatistics-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlstatistics-excel-driver.md)||  
 |[SQLTables](../../odbc/reference/syntax/sqltables-function.md)|[Acceso](../../odbc/microsoft/sqltables-access-driver.md)|[dBASE](../../odbc/microsoft/sqltables-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltables-paradox-driver.md)|[Archivo de texto](../../odbc/microsoft/sqltables-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltables-excel-driver.md)||  
-Transact] (../ Topic/SQLTransact%20Function.md)|[Acceso](../../odbc/microsoft/sqltransact-access-driver.md)|[dBASE](../../odbc/microsoft/sqltransact-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltransact-paradox-driver.md)|[Archivo de texto](../../odbc/microsoft/sqltransact-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltransact-excel-driver.md)||  
+Transact] (.. / Topic/SQLTransact%20Function.md)|[Acceso](../../odbc/microsoft/sqltransact-access-driver.md)|[dBASE](../../odbc/microsoft/sqltransact-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltransact-paradox-driver.md)|[Archivo de texto](../../odbc/microsoft/sqltransact-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltransact-excel-driver.md)||  
   
  Los temas siguientes proporcionan comentarios acerca de las funciones ODBC. Estas notas se aplican a todos los controladores de base de datos de escritorio de ODBC.  
   
@@ -82,4 +80,3 @@ Transact] (../ Topic/SQLTransact%20Function.md)|[Acceso](../../odbc/microsoft/sq
 -   [SQLSetStmtOption (controladores de escritorio de la base de datos)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
 -   [SQLSpecialColumns (controladores de escritorio de la base de datos)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-

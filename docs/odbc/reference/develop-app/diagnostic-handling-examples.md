@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55160c421694b8e5de51b07e72271f09186867a8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 345bd008268be6781a5f778a603d60e0a584fcd6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-handling-examples"></a>Ejemplos de control de diagnóstico
 Los ejemplos siguientes muestran cómo los distintos componentes en una conexión ODBC pueden generar mensajes de diagnóstico y cómo los distintos controladores podrían devolver diagnóstico a la aplicación con **SQLGetDiagRec**.  
@@ -39,4 +37,3 @@ Los ejemplos siguientes muestran cómo los distintos componentes en una conexió
 -   [Ejemplo de diagnóstico de las puertas de enlace](../../../odbc/reference/develop-app/gateways-diagnostic-example.md)  
   
 -   [Ejemplo de diagnóstico del Administrador de controladores](../../../odbc/reference/develop-app/driver-manager-diagnostic-example.md)
-

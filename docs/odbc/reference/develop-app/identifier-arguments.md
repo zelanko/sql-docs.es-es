@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>Argumentos de identificador
 Si se definen una cadena dentro de un argumento de identificador, el controlador quita iniciales y finales de los espacios en blanco y literalmente trata la cadena entre comillas. Si la cadena no está entre comillas, el controlador quita subconjuntos y espacios en blanco finales a la cadena a mayúsculas. Si se establece un argumento de identificador a un puntero null devuelve SQL_ERROR y SQLSTATE HY009 (uso no válido del puntero null), a menos que el argumento es un nombre de catálogo y no se admiten los catálogos.  
@@ -44,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Los identificadores entre comillas se usan para distinguir un nombre de columna true desde una pseudocolumna del mismo nombre, como ROWID en Oracle. Si se pasa un argumento de una función de catálogo "ROWID", la función funcionará con la pseudocolumna ROWID si existe. Si no existe la pseudocolumna, la función funcionará con la columna "ROWID". Si ROWID se pasa un argumento de entrada de una función de catálogo, la función funcionará con la columna ROWID.  
   
  Para obtener más información acerca de los identificadores entre comillas, vea [identificadores entrecomillados](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

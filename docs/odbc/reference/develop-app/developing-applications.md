@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2e38d349a45bece0fa9c637d18ee6a3c41a5f4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e64c33ea666d3df06b220a8c31f67e3606df7ffa
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-applications"></a>Desarrollo de aplicaciones
 Esta sección contiene información sobre cómo desarrollar aplicaciones que utilizan la interfaz ODBC y controladores que lo implementan.  
@@ -60,8 +58,7 @@ Esta sección contiene información sobre cómo desarrollar aplicaciones que uti
   
 -   [Interoperabilidad](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Consideraciones sobre la programación](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Consideraciones de programación](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del programador de ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)
-

@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- tuple functions
+dev_langs: kbMDX
+helpviewer_keywords: tuple functions
 ms.assetid: fe41e3e5-a675-4169-a966-b42c18e8d741
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4fdb557918f60f19eef47b79796e6f1f49ff1316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b92f048f50f26d6ba5c98e28193a44a68e3ceb39
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-tuple-functions"></a>Usar funciones de tupla
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +56,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>Vea también  
  [Funciones &#40; La sintaxis de MDX &#41;](../mdx/functions-mdx-syntax.md)   
  [Usar funciones de miembro](../mdx/using-member-functions.md)   
- [Uso de funciones de conjunto](../mdx/using-set-functions.md)  
+ [Uso de funciones de conjuntos](../mdx/using-set-functions.md)  
   
   
-

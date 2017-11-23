@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 40499191233e8b3eb32f6a255c0dfe6e47864681
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc420275f9d88108e22beae1264ad61050cca2c4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Controladores ODBC proporcionados por Microsoft
 *Controladores* son bibliotecas que implementan las funciones de la API de ODBC. Cada controlador es específico de un sistema de administración concreto de la base de datos (DBMS). En la mayoría de los casos, los controladores de exponen las capacidades del DBMS subyacente; que no son necesarias para implementar funciones no admitidas por el DBMS. Los controladores realizan tareas específicas y pueden clasificarse en dos categorías: basados en DBMS y archivo. Para obtener más información acerca de controladores y arquitectura de controladores, consulte [controladores](../../odbc/reference/drivers.md).  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   [Controlador ODBC para Oracle](../../odbc/microsoft/odbc-driver-for-oracle.md)  
   
 -   [Controlador ODBC de Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md)
-

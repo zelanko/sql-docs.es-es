@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="state-transitions"></a>Transiciones de estado
 ODBC define discretos *estados* para cada entorno, cada conexión y cada instrucción. Por ejemplo, el entorno tiene tres posibles estados: sin asignar (en la que no se asigna ningún entorno), asignado (en el que se asigna un entorno pero no se asigna a ninguna conexión) y conexión (en el que un entorno y una o varias conexiones son asignado). Las conexiones tienen siete estados posibles; las instrucciones tienen 13 estados posibles.  
@@ -45,4 +43,3 @@ ODBC define discretos *estados* para cada entorno, cada conexión y cada instruc
  Desde el punto de vista de la aplicación, las transiciones de estado son suele ser bastante sencillas: las transiciones de estado Legal tienden a van de la mano con el flujo de una aplicación bien escrita. Las transiciones de estado son más complejas para el Administrador de controladores y los controladores porque debe realizar un seguimiento del estado del entorno, cada conexión y cada instrucción. Realiza la mayor parte de este trabajo por el Administrador de controladores; la mayoría del trabajo que se debe realizar mediante controladores se produce con las instrucciones con resultados pendientes.  
   
  Partes 1 y 2 de este manual ("Introducción a ODBC" y "Desarrollo de aplicaciones y controladores") no tienden a Mencione las transiciones de estado. En su lugar, se describe el orden en el que se deben llamar a funciones. Por ejemplo, "Ejecutando instrucciones" indica que una instrucción debe estar preparada con **SQLPrepare** antes de que se pueda ejecutar con **SQLExecute**. Para obtener una descripción completa de los Estados y transiciones de estado, como establecer qué transiciones se comprueban mediante el Administrador de controladores y que debe comprobarse controladores, consulte [tablas de transición de estado de apéndice B: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
-

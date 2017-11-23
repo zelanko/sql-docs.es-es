@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>Aplicaciones
 Un *aplicación* es un programa que llama a la API de ODBC para acceder a los datos. Aunque muchos tipos de aplicaciones son posibles, la mayoría se dividen en tres categorías, que se utilizan como ejemplos a lo largo de esta guía.  
@@ -63,4 +61,3 @@ Un *aplicación* es un programa que llama a la API de ODBC para acceder a los da
 -   Desconectando el origen de datos.  
   
  Dado que se hace la mayor parte del trabajo acceso a datos con SQL, es la tarea principal para que las aplicaciones utilizan ODBC enviar instrucciones SQL y recuperar los resultados (si existe) generados por esas instrucciones. Otras tareas para que las aplicaciones utilizan ODBC incluyen determinar y ajustar a las capacidades de controlador y examinar el catálogo de base de datos.
-

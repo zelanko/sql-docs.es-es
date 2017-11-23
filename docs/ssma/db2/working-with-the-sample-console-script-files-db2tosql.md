@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20583ed71781b093b3195d8dc1f192258a5b569a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (DB2ToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -78,7 +76,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
 5.  **ConversionAndDataMigrationSample.xml:** este ejemplo permite al usuario realizar una migración de extremo a extremo de la conversión a la migración de datos. La lista de valores de atributo obligatorio que será necesario cambiar se menciona a continuación:  
   
-    |Nombre de comando|Description|Atributo|  
+    |Nombre de comando|Description|Attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Asignación de esquema de base de datos de origen al esquema de destino.|`source-schema:`Especifica la base de datos de origen que requiere que para se va a convertir.<br /><br />`sql-server-schema`: Especifica la base de datos de destino que se pueden migrar a|  
     |`convert-schema`|Realiza la conversión de esquema de origen al esquema de destino.<br /><br />Si el usuario tiene que evaluar varios objetos / bases de datos puede especificar varios `metabase-object` nodos como se muestra en el `convert-schema` de ejemplo 4 del comando del archivo de comandos de consola de ejemplo.|`object-name`: Especifique la base de datos de origen / objeto nombre que requiere que para se va a convertir. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el`object-name`|  
@@ -90,4 +88,3 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
 [Crear los archivos de conexión de servidor &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [Generación de informes &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   
-

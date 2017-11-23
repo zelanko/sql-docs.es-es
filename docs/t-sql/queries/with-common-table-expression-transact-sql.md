@@ -3,10 +3,12 @@ title: CON common_table_expression (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Se deriva de una consulta simple y se define en el ámbito de ejecución de una sola instrucción SELECT, INSERT, UPDATE o DELETE. Esta cláusula también se puede utilizar en una instrucción CREATE VIEW como parte de la instrucción SELECT que la define. Una expresión de tabla común puede incluir referencias a ella misma. Esto se conoce como expresión de tabla común recursiva.  
   
@@ -601,48 +601,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>L. Crear una expresión de tabla común simple  
- En el siguiente ejemplo se muestra el número total de pedidos de venta por año para cada representante de ventas en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>M. Usar una expresión de tabla común para limitar recuentos y promedios de informes  
- En el siguiente ejemplo se muestra el número medio de pedidos de venta correspondiente a todos los años para los representantes de ventas.  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>N. Usar una expresión de tabla común dentro de una instrucción CTAS  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Usar una expresión de tabla común dentro de una instrucción CTAS  
  En el ejemplo siguiente se crea una nueva tabla que contiene el número total de pedidos de ventas por año para cada representante de ventas en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -671,7 +630,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>O. Usar una expresión de tabla común dentro de una instrucción de CETAS  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Usar una expresión de tabla común dentro de una instrucción de CETAS  
  En el ejemplo siguiente se crea una nueva tabla externa que contiene el número total de pedidos de ventas por año para cada representante de ventas en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -701,7 +660,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>P. Con coma varios separados CTE en una instrucción  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Con coma varios separados CTE en una instrucción  
  En el ejemplo siguiente se muestra cómo incluir dos CTE en una sola instrucción. No pueden ser la CTE anidadas (sin recursión).  
   
 ```  
@@ -728,4 +687,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-

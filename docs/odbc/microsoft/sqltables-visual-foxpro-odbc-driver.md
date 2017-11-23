@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLTables function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLTables function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0414d6d4bc61cc114d4bce83220e2f20c25def40
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd3e59437eae02a94353a6205e567fde208f4b97
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -43,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  Marca la diferencia entre el controlador ODBC de Visual FoxPro [tablas de base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) y [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md), incluso cuando ambos tipos de tablas se almacenan en el mismo directorio en el sistema. Si el origen de datos es un directorio de tablas libres, el controlador ODBC de Visual FoxPro no catálogo o devolver los nombres de las tablas que están asociados a una base de datos.  
   
  Para obtener más información, consulte [SQLTables](../../odbc/reference/syntax/sqltables-function.md) en el *referencia del programador de ODBC*.
-

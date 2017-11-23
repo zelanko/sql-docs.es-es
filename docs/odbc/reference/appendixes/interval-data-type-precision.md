@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ba46b5cc82fd2ac36e9a3cf920b81bc48b0d9baa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc397e2aade6d016a647f1caf00a91fad48ad8e1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-type-precision"></a>Precisión del tipo de datos de intervalo
 Precisión para un tipo de datos de intervalo incluye intervalo a la precisión, la precisión de intervalo y la precisión de segundos.  
@@ -43,4 +41,3 @@ Precisión para un tipo de datos de intervalo incluye intervalo a la precisión,
  Cualquier tipo de datos de intervalo que tiene un segundo campo tiene un *precisión de segundos*. Este es el número de dígitos decimales que se permiten en la parte fraccionaria del valor de los segundos. Esto es diferente de otros tipos de datos, donde la precisión indica el número de dígitos que hay delante del separador decimal. La precisión de segundos de un tipo de datos de intervalo es el número de dígitos después del separador decimal. Por ejemplo, si se establece la precisión de segundos en 6, el número 123456 en el campo de fracción se interpretaría como.123456 y el número 1230 se interpretaría como.001230. Para otros tipos de datos, esto se conoce como escala. Precisión de segundos de intervalo se encuentra en el campo SQL_DESC_PRECISION del descriptor. Si la precisión del componente de fracciones de segundo del valor de intervalo SQL es mayor que lo que se pueden guardar en la estructura de intervalo de C, se está definido por controlador si el valor de fracciones de segundo en el intervalo SQL se redondean o truncan cuando se convierten a C estructura de intervalo.  
   
  Cuando el campo SQL_DESC_CONCISE_TYPE se establece en un tipo de datos de intervalo, el campo SQL_DESC_TYPE se establece en SQL_INTERVAL y el SQL_DESC_DATETIME_INTERVAL_CODE se establece en el código para el tipo de datos de intervalo. El campo SQL_DESC_DATETIME_INTERVAL_PRECISION se establece automáticamente en la precisión iniciales de intervalo predeterminado de 2 y el campo SQL_DESC_PRECISION se establece automáticamente en la precisión de segundos de intervalo predeterminado de 6. Si alguno de estos valores no es adecuado, la aplicación debe establecer explícitamente el campo descriptor a través de una llamada a **SQLSetDescField**.
-

@@ -3,28 +3,29 @@ title: "Generación de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos WideWorldImporters
-Las versiones publicadas de las bases de datos WideWorldImporters y WideWorldImportersDW contiene los datos a partir del 1 de enero de 2013, hasta el día en que se generaron estas bases de datos.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Las versiones publicadas de las bases de datos WideWorldImporters y WideWorldImportersDW contiene los datos a partir del 1 de enero de 2013, hasta el día en que se generaron estas bases de datos.
 
 Si se utilizan las bases de datos de ejemplo en una fecha posterior, para fines de demostración o ilustración, puede ser beneficioso incluir datos de ejemplo más recientes en la base de datos.
 
@@ -85,4 +86,3 @@ El procedimiento `Application.Configuration_PopulateLargeSaleTable` puede utiliz
 Aproximadamente el número necesario de filas se inserta en la `Fact.Sale` tabla en el año 2012. El procedimiento limita artificialmente el número de filas por día a 50000. Esto podría cambiarse pero no existe evitar overinflations a las medidas de la tabla.
 
 Además, el procedimiento aplica indización de almacén de columnas agrupado, si ya no se han aplicado.
-

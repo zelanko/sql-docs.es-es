@@ -3,17 +3,18 @@ title: hora (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: es-es
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Define una hora de un día. La hora no distingue la zona horaria y está basada en un reloj de 24 horas.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/05/2017
 |Sintaxis|**tiempo** [(*escala fracciones de segundo*)]|  
 |Uso|DECLARAR @MyTime **Time (7)**<br /><br /> Crear tabla Table1 (Column1 **Time (7)** )|  
 |*escala de fracciones de segundo*|Especifica el número de dígitos de la parte fraccionaria de los segundos.<br /><br /> Este valor puede ser un entero de 0 a 7. Para Informatica, esto puede ser un entero de 0 a 3.<br /><br /> La escala de fracciones predeterminada es 7 (100 NS).|  
-|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh [.nnnnnnn] (hh [.nnn] para Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
+|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh [.nnnnnnn] para Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
 |Intervalo|00:00:00.0000000 a través de 23:59:59.9999999 (00:00:00.000 a través de 23:59:59.999 de Informatica)|  
 |Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n\*es de cero a siete dígitos, comprendida entre 0 y 9999999 que representa las fracciones de segundo. Para Informatica, n\* es de cero a tres dígitos, comprendida entre 0 y 999.|  
 |Longitud en caracteres|de 8 posiciones como mínimo (HH) a 16 como máximo (. nnnnnnn). Para Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
@@ -277,4 +277,3 @@ SELECT
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

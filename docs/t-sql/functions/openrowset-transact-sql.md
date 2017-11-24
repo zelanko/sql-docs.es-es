@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENROWSET function
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
+caps.latest.revision: "130"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c23ec85299af595305a5f6d5141dbbf3ffab96d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +171,7 @@ Un origen de datos externo con nombre apunta a la ubicación de almacenamiento d
   
  De forma predeterminada, el valor de ROWS_PER_BATCH es desconocido. Especificar ROWS_PER_BATCH = 0 es lo mismo que omitir ROWS_PER_BATCH.  
   
- ORDEN ({ *columna* [ASC | DESC]} [,... *n*  ] [UNIQUE])  
+ ORDEN ({ *columna* [ASC | DESC]} [,...  *n*  ] [UNIQUE])  
  Sugerencia opcional que especifica la forma en que están ordenados los datos en el archivo. De forma predeterminada, la operación masiva presupone que los datos del archivo no están ordenados. El rendimiento podría mejorar si el optimizador de consultas puede aprovechar el orden especificado para generar un plan de consulta más eficaz. A continuación se citan algunos ejemplos en los que especificar una ordenación puede ser beneficioso:  
   
 -   La inserción de filas en una tabla que tiene un índice clúster, donde los datos del conjunto de filas están ordenados en la clave del índice clúster.  
@@ -438,4 +435,3 @@ Para completar `OPENROWSET` ejemplos, incluida la configuración de la credencia
  [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

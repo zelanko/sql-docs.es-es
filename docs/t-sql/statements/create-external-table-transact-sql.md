@@ -3,37 +3,37 @@ title: Crear tabla externa (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
 - CREATE EXTERNAL TABLE
 - PolyBase, T-SQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abb5affb76f0caac24e973928561939280ba40
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-transact-sql"></a>Crear tabla externa (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Crea una tabla externa de PolyBase que hace referencia a los datos almacenados en un clúster de Hadoop o almacenamiento de blobs de Azure. También puede utilizarse para crear una tabla externa para [consulta de base de datos elástica](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
@@ -138,7 +138,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [nombre_esquema]. | schema_name. ] *table_name*  
  Uno a tres - parte nombre de la tabla que se va a crear. Para una tabla externa, solo los metadatos de tabla se almacenan en SQL junto con estadísticas básicas sobre el archivo y o carpeta que se hace referencia en el almacenamiento de blobs de Azure o Hadoop. Ningún dato real que se mueve o se almacenan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<definición_de_columna > [,... *n*  ] Crear tabla externa permite una o varias definiciones de columna. Crear tabla externa y CREATE TABLE utilizan la misma sintaxis para definir una columna. Una excepción a esto, no puede utilizar la restricción DEFAULT en las tablas externas. Para obtener los detalles completos acerca de las definiciones de columna y sus tipos de datos, vea [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) y [crear una tabla de base de datos SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<definición_de_columna > [ ,... *n*  ] Crear tabla externa permite una o varias definiciones de columna. Crear tabla externa y CREATE TABLE utilizan la misma sintaxis para definir una columna. Una excepción a esto, no puede utilizar la restricción DEFAULT en las tablas externas. Para obtener los detalles completos acerca de las definiciones de columna y sus tipos de datos, vea [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) y [crear una tabla de base de datos SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Las definiciones de columna, incluidos los tipos de datos y el número de columnas deben coincidir con los datos de los archivos externos. Si se produce un error de coincidencia, se rechazarán las filas del archivo cuando se consultan los datos reales.  
   
@@ -469,102 +469,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-create-an-external-table-with-data-in-text-delimited-format"></a>H. Crear una tabla externa con datos en formato delimitado por el texto.  
- Este ejemplo muestra todos los pasos necesarios para crear una tabla externa que tiene datos con formato en archivos de texto delimitado. Define un mydatasource de origen de datos externo y un myfileformat de formato de archivo externo. Estos objetos de nivel de servidor, a continuación, se hace referencia en la instrucción CREATE TABLE externo. Para obtener más información, vea [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) y [el formato de archivo externo de CREATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat  
-WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT,   
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')  
-);  
-  
-CREATE EXTERNAL TABLE ClickStream (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee.tbl',  
-        DATA_SOURCE = mydatasource,  
-        FILE_FORMAT = myfileformat  
-    )  
-;  
-  
-```  
-  
-### <a name="i-create-an-external-table-with-data-in-rcfile-format"></a>I. Crear una tabla externa con datos en formato RCFile.  
- Este ejemplo muestra todos los pasos necesarios para crear una tabla externa que tiene datos con formato RCFiles. Define un mydatasource_rc de origen de datos externo y un myfileformat_rc de formato de archivo externo. Estos objetos de nivel de servidor, a continuación, se hace referencia en la instrucción CREATE TABLE externo. Para obtener más información, vea [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) y [el formato de archivo externo de CREATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_rc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_rc  
-WITH (  
-    FORMAT = RCFILE,  
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_rc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee_rc.tbl',  
-        DATA_SOURCE = mydatasource_rc,  
-        FILE_FORMAT = myfileformat_rc  
-    )  
-;  
-  
-```  
-  
-### <a name="j-create-an-external-table-with-data-in-orc-format"></a>J. Crear una tabla externa con datos en formato ORC.  
- Este ejemplo muestra todos los pasos necesarios para crear una tabla externa que tiene el formato de datos como archivos ORC. Define un mydatasource_orc de origen de datos externo y un myfileformat_orc de formato de archivo externo. Estos objetos de nivel de servidor, a continuación, se hace referencia en la instrucción CREATE TABLE externo. Para obtener más información, vea [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) y [el formato de archivo externo de CREATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_orc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_orc  
-WITH (  
-    FORMAT = ORC,  
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_orc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/',  
-        DATA_SOURCE = mydatasource_orc,  
-        FILE_FORMAT = myfileformat_orc  
-    )  
-;  
-  
-```  
-  
-### <a name="k-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>K. Importación de datos de ADLS en Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. Importación de datos de ADLS en Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -610,7 +515,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="l-join-external-tables"></a>L. JOIN tablas externas  
+### <a name="i-join-external-tables"></a>I. JOIN tablas externas  
   
 ```  
 SELECT url.description  
@@ -620,7 +525,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="m-join-hdfs-data-with-pdw-data"></a>M. Combinar datos HDFS con datos PDW  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>J. Combinar datos HDFS con datos PDW  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -630,7 +535,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="n-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>N. Importar datos de las filas de HDFS en una tabla de PDW distribuida  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. Importar datos de las filas de HDFS en una tabla de PDW distribuida  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -639,7 +544,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="o-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>O. Importar datos de las filas de HDFS en una tabla replicada de PDW  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. Importar datos de las filas de HDFS en una tabla replicada de PDW  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -657,7 +562,6 @@ FROM ClickStream
  [Crear tabla como SELECT &#40; Almacenamiento de datos SQL de Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
-
 
 
 

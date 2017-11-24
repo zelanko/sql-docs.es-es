@@ -1,13 +1,14 @@
 ---
 title: Crear tabla (Transact-SQL) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -513,7 +512,7 @@ Especifica que debe crear un índice en la tabla. Puede tratarse de un índice a
   
  Si se especifica para almacenar toda la tabla en formato de columnas con un índice de almacén de columnas agrupado. Esto siempre incluye todas las columnas de la tabla. Los datos no está ordenados en orden alfabético o numérico, ya que las filas se organizan obtener beneficios de compresión de almacén de columnas.  
   
- ÍNDICE *index_name* almacén de columnas [NONCLUSTERED] (*column_name* [,...*n* ] )  
+ ÍNDICE *index_name* almacén de columnas [NONCLUSTERED] (*column_name* [ ,...*n* ] )  
    
   
 **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -979,7 +978,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Indica que se ha creado un índice HASH.  
   
- Los índices hash solo se admiten en las tablas con optimización para memoria.  
+ Los índices hash solo se admiten en las tablas optimizadas para memoria.  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener información sobre el número de tablas permitidas, columnas, restricciones e índices, vea [especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ La base de datos de SQL Azure es compatible con las tablas temporales globales q
 Las tablas temporales globales para la base de datos de SQL Azure siguen la misma sintaxis y semántica de SQL Server se utiliza para las tablas temporales.  De forma similar, los procedimientos almacenados temporales globales también se centran en el nivel de base de datos en la base de datos de SQL Azure. Las tablas temporales locales (que se inicia con el nombre de la tabla de #) también se admiten para la base de datos de SQL Azure y siguen la misma sintaxis y semántica que usa SQL Server.  Vea la sección anterior sobre [tablas temporales](#temporary-tables).  
 
 > [!IMPORTANT]
-> Esta característica está en versión preliminar pública y está disponible para la base de datos de SQL Azure.
+> Esta característica solo está disponible para la base de datos de SQL Azure.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Solución de problemas de las tablas temporales globales para la base de datos de SQL Azure 
@@ -1660,6 +1659,5 @@ GO
  [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

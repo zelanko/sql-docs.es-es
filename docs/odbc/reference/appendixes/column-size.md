@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size"></a>Tamaño de columna
 El tamaño de columna (o parámetro) de los tipos de datos numéricos se define como el número máximo de dígitos que se usan por el tipo de datos de la columna o del parámetro o la precisión de los datos. Para los tipos de carácter, ésta es la longitud en caracteres de los datos; para los tipos de datos binarios, el tamaño de la columna se define como la longitud en bytes de los datos. Para la hora, marca de tiempo y todos los tipos de datos de intervalo, este es el número de caracteres en la representación de caracteres de estos datos. El tamaño de columna definido para cada tipo de datos SQL concisa se muestra en la tabla siguiente.  
@@ -75,4 +73,3 @@ El tamaño de columna (o parámetro) de los tipos de datos numéricos se define 
 |Todos los tipos numéricos|PRECISION|  
 |Todos los tipos datetime e interval|LENGTH|  
 |SQL_BIT|LENGTH|
-

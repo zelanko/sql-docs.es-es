@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh [.nnnnnnn] para Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
 |Intervalo|00:00:00.0000000 a través de 23:59:59.9999999 (00:00:00.000 a través de 23:59:59.999 de Informatica)|  
 |Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n\*es de cero a siete dígitos, comprendida entre 0 y 9999999 que representa las fracciones de segundo. Para Informatica, n\* es de cero a tres dígitos, comprendida entre 0 y 999.|  
-|Longitud en caracteres|de 8 posiciones como mínimo (HH) a 16 como máximo (. nnnnnnn). Para Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
+|Longitud en caracteres|De 8 posiciones como mínimo (hh:mm:ss) a 16 como máximo (hh:mm:ss.nnnnnnn) Para Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
 |Precisión, escala<br /><br /> (el usuario especifica solo la escala)|Vea la siguiente tabla.|  
 |Tamaño de almacenamiento|5 bytes (fijo) es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo. En informática, el valor predeterminado es 4 bytes, fijo, con el valor predeterminado de 1 ms fracciones precisión de segundos.|  
 |Precisión|100 nanosegundos (1 milisegundo en Informatica)|  

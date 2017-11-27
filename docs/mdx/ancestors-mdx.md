@@ -2,29 +2,37 @@
 title: Antecesores (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: ANCESTORS
-dev_langs: kbMDX
-helpviewer_keywords: Ancestors function
+f1_keywords:
+- ANCESTORS
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Ancestors function
 ms.assetid: abdf2e9c-72c8-4f2e-a823-d42efc4cc7d5
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1258a09acc7c2459742f5670a3ab0bd1a770cafe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b2d6304b9a87bcdb87a98a8351d4e60074ebb4d8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Función que devuelve el conjunto de todos los antecesores de un miembro especificado en un nivel especificado o a una distancia especificada del miembro. Con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el conjunto devuelto siempre constará de un solo miembro - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no es compatible con varios elementos primarios para un solo miembro.  
   
@@ -109,3 +117,4 @@ FROM [Adventure Works]
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

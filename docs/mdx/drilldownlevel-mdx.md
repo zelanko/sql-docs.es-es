@@ -2,29 +2,37 @@
 title: DrilldownLevel (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DRILLDOWNLEVEL
-dev_langs: kbMDX
-helpviewer_keywords: DrilldownLevel function
+f1_keywords:
+- DRILLDOWNLEVEL
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DrilldownLevel function
 ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1728b5db38b97209768a69450780588c3d226e95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6f90b918cbb817154e699ac8e25bdcaf4119875
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Aumenta los detalles de los miembros de un conjunto a un nivel por debajo del nivel más bajo representado en el conjunto.  
   
@@ -43,7 +51,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (Opcional). Expresión MDX que identifica de forma explícita el nivel en el que aumentar los detalles. Si especifica una expresión de nivel, omita el siguiente argumento de índice.  
   
- *Index*  
+ *Índice*  
  (Opcional). Expresión numérica válida que especifica el número de jerarquía para aumentar el nivel de detalle dentro del conjunto. Se puede usar el nivel del índice en lugar de Level_Expression para identificar de forma explícita el nivel en el que aumentar los detalles.  
   
  *Include_Calc_Members*  
@@ -128,3 +136,4 @@ FROM [Adventure Works]
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

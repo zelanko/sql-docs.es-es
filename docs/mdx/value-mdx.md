@@ -2,29 +2,37 @@
 title: Valor (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: Value
-dev_langs: kbMDX
-helpviewer_keywords: Value function
+f1_keywords:
+- Value
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Value function
 ms.assetid: ff76628e-2d49-49f6-a6cb-f6da07d83d65
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ac0f17b4afd4205c2173ff756c736e44d8d0d3d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 63e24e0f701332747e3129a57768bfe1b6fbb45d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="value-mdx"></a>Value (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve el valor del miembro actual de la dimensión de medidas que forma intersección con el miembro actual de las jerarquías de atributo en el contexto de la consulta.  
   
@@ -68,3 +76,4 @@ from [Adventure Works]
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

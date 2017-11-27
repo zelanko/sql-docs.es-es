@@ -2,30 +2,36 @@
 title: Referencia del lenguaje MDX (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], language reference
 - MDX [Analysis Services], language reference
 ms.assetid: 8ceaedd3-7679-4300-83a5-4809243cdc5d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b6e6fdd3bad6d9a52a6ee8aac8b44a69ef65b374
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 58ad155ae3cf4e7c4490bb355554deba0f6f622c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-language-reference-mdx"></a>Referencia del lenguaje MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   La documentación de referencia para las Expresiones multidimensionales (MDX) se agrupa en secciones, como se describe en la tabla siguiente.  
   
@@ -43,3 +49,4 @@ ms.lasthandoff: 11/09/2017
  [Expresiones multidimensionales &#40; MDX &#41; Referencia](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
+

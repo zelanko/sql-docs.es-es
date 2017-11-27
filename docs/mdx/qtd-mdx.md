@@ -2,29 +2,37 @@
 title: Qtd (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: QTD
-dev_langs: kbMDX
-helpviewer_keywords: Qtd function
+f1_keywords:
+- QTD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Qtd function
 ms.assetid: c1fe47e0-9c2b-466f-8d6d-e2b1c16a69cb
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cabe908f3d78082d6af113a60f105ba4f4e4f5c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4fcbfa3ac5c02dc04181bb32c8baca10a56fa0e
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve un conjunto de miembros del mismo nivel que un miembro determinado, empezando por el primer miembro del mismo nivel y terminando con el miembro en cuestión, como restringida por la *trimestre* nivel en la dimensión de tiempo.  
   
@@ -65,3 +73,4 @@ WHERE
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

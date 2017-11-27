@@ -2,30 +2,36 @@
 title: Usar expresiones de dimensiones | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - expressions [MDX], dimensions
 - dimensions [Analysis Services], MDX
 ms.assetid: 1d40cffb-e88f-4284-93cf-d62ab4f08395
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c48cf34963f4fb496537cf1573cd4974949a672e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 66a955b547f5760ae1193b541fde5f3dc13d323f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-dimension-expressions"></a>Usar expresiones de dimensiones
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Las expresiones de dimensiones y jerarquía se usan normalmente al pasar parámetros a funciones MDX (Expresiones multidimensionales) para devolver miembros, conjuntos o tuplas de una jerarquía.  
   
@@ -73,3 +79,4 @@ ms.lasthandoff: 11/09/2017
  [Expresiones &#40; MDX &#41;](../mdx/expressions-mdx.md)  
   
   
+

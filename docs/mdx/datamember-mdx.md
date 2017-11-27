@@ -2,29 +2,37 @@
 title: DataMember (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DATAMEMBER
-dev_langs: kbMDX
-helpviewer_keywords: DataMember function
+f1_keywords:
+- DATAMEMBER
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DataMember function
 ms.assetid: 65bf21e8-1cb2-4ae8-bfbe-bb4d72589557
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f002e188055f7643d75e63506a95387198e99b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b6be9e31f666eafaba1ec7ad346a7e5bb28da9b0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve el miembro de datos generados por el sistema asociado a un miembro no hoja de una dimensión.  
   
@@ -62,3 +70,4 @@ FROM [Adventure Works]
  [Conceptos clave de MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   
+

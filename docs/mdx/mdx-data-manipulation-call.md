@@ -2,32 +2,39 @@
 title: "Instrucción CALL (MDX) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: CALL
-dev_langs: kbMDX
+f1_keywords:
+- CALL
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - voids [MDX]
 - stored procedures [MDX]
 - CALL statement
 ms.assetid: b534a20b-924c-43b8-832d-24e57d50425c
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bc48a8e036e5a2385a1df6b1be9f8662f8fa4cb9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3d5bc0d9875d602135fd92722b73c07176a1df59
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipulación de datos MDX - llamada
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Ejecuta un procedimiento almacenado que no devuelve ningún valor en el ámbito actual u, opcionalmente, en un cubo especificado.  
   
@@ -65,3 +72,4 @@ CALL SP_Name
  [Mediante los procedimientos almacenados &#40; MDX &#41;](../mdx/using-stored-procedures-mdx.md)  
   
   
+

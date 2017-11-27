@@ -2,30 +2,36 @@
 title: Usar expresiones de miembros | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - members [MDX], expressions
 - expressions [MDX], members
 ms.assetid: 63c7af49-8bea-47c5-9566-a961f77d2a3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a7483fbc5174fd94f70d1e95c701615df12b5344
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 62e206fa7c32a077089f328d55f0358b86ff3021
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-member-expressions"></a>Usar expresiones de miembro
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Una expresión de miembro contiene un identificador de miembro, una función de miembro o una expresión que puede convertirse en un miembro.  
   
@@ -74,3 +80,4 @@ Dimension_Name
  [Expresiones &#40; MDX &#41;](../mdx/expressions-mdx.md)  
   
   
+

@@ -2,28 +2,35 @@
 title: Usar funciones de cadena | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: string functions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- string functions
 ms.assetid: 962e820a-a1f9-49b5-90f0-a05261e6682b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5838cb18091adab8ee4e8b2c0a43042001c530dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 12fc2dca6c7a0eb1c7d126ef0cfdc87df869c878
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-string-functions"></a>Usar funciones de cadena
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Las funciones de cadena se pueden usar en casi todos los objetos de las expresiones multidimensionales (MDX). En los procedimientos almacenados, las funciones de cadena se usan principalmente para convertir el objeto en una representación de cadena. También sirven para evaluar una expresión de cadena con relación a un objeto para devolver un valor.  
   
@@ -117,3 +124,4 @@ ms.lasthandoff: 11/09/2017
  [StrToSet &#40; MDX &#41;](../mdx/strtoset-mdx.md)  
   
   
+

@@ -2,31 +2,37 @@
 title: Referencia de instrucciones MDX (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - statements [MDX]
 - Multidimensional Expressions [Analysis Services], statements
 - MDX [Analysis Services], statements
 ms.assetid: 812d2647-587d-4fcb-8db8-64a5e4b23aec
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 60982f4002cfb760ae9aa24f51358dbd5cdff593
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3058511ab523787a9e6a6fb4a774e36247ad8b50
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-statement-reference-mdx"></a>Referencia de instrucciones MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Las instrucciones de Expresiones multidimensionales (MDX) están separadas en tres grupos, según se describe en la siguiente tabla.  
   
@@ -42,3 +48,4 @@ ms.lasthandoff: 11/09/2017
  [Referencia del lenguaje MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+

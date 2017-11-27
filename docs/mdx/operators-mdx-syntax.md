@@ -2,32 +2,38 @@
 title: Operadores (sintaxis de MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fd52d724dc1b51943019339bacdc56ea334492cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   En las expresiones multidimensionales (MDX), los operadores permiten llevar a cabo las siguientes acciones:  
   
@@ -86,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
 -   XOR  
   
--   o  
+-   O BIEN  
   
  Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -102,7 +108,7 @@ ms.lasthandoff: 11/09/2017
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
-|Nivel|Establecer|\<nivel > .members|  
+|Nivel|Establezca|\<nivel > .members|  
 |Jerarquía|Miembro|\<jerarquía > .defaultmember|  
 |Miembro|Tuple|(\<Miembro >)|  
 |Tuple|Miembro|\<tupla > .item(0)|  
@@ -113,3 +119,4 @@ ms.lasthandoff: 11/09/2017
  [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
+

@@ -2,29 +2,37 @@
 title: Elemento primario (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: PARENT
-dev_langs: kbMDX
-helpviewer_keywords: Parent function
+f1_keywords:
+- PARENT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Parent function
 ms.assetid: 7be9b172-4241-4618-bdba-53cde8badd9b
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 95c6ee8d33dfe77ec53f07166a85c7ce7a4776ae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 50a7c9b5df87a716db1ca5f64b1351e882d7a05d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="parent-mdx"></a>Parent (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve el elemento primario de un miembro.  
   
@@ -61,3 +69,4 @@ FROM [Adventure Works]
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

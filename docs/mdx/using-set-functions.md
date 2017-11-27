@@ -2,28 +2,35 @@
 title: Uso de funciones de conjunto | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: set functions [MDX]
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- set functions [MDX]
 ms.assetid: b08ddc9d-38f8-41aa-b791-b5352f1a8783
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c1e001fed64bfd0ffff5d45637147dc3eca40d97
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5478e5eacc6f99fc2dba889ce5bc189e1a9d63b4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-set-functions"></a>Usar funciones de conjuntos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Una función de conjuntos recupera un conjunto a partir de una dimensión, jerarquía o nivel, o bien recorriendo las ubicaciones absolutas y relativas de los miembros de dichos objetos, para generar luego conjuntos de varias maneras.  
   
@@ -224,6 +231,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>Vea también  
  [Funciones &#40; La sintaxis de MDX &#41;](../mdx/functions-mdx-syntax.md)   
  [Usar funciones de miembro](../mdx/using-member-functions.md)   
- [Uso de funciones de tupla](../mdx/using-tuple-functions.md)  
+ [Usar funciones de tupla](../mdx/using-tuple-functions.md)  
   
   
+

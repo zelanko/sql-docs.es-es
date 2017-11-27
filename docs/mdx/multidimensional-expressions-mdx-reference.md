@@ -2,14 +2,20 @@
 title: Referencia de expresiones multidimensionales (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: sql13.asvs.sqlserverstudio.startpage.mdx.f1
-dev_langs: kbMDX
+f1_keywords:
+- sql13.asvs.sqlserverstudio.startpage.mdx.f1
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services]
 - MDX [Analysis Services], reference
@@ -17,19 +23,20 @@ helpviewer_keywords:
 - MDX [Analysis Services]
 - Analysis Services Multidimensional Expressions
 ms.assetid: 7e1cb1fb-2a50-41c2-9c70-b853ad6b6c3f
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a7fbf376b5fd02bf0e8fc690377411a7c05cce86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 46bd5c421fbf697c7ab0525006fa14dc2510d27a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Referencia de expresiones multidimensionales (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
     
 ## <a name="in-this-section"></a>En esta sección  
@@ -43,6 +50,7 @@ ms.lasthandoff: 11/09/2017
  [Consultar datos multidimensionales con MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Recuperar datos de un origen de datos analíticos](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
- [Definir asignaciones y otros comandos de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
+ [Definir asignaciones y otros comandos de Script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   
+

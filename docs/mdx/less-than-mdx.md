@@ -2,31 +2,38 @@
 title: '&lt;(Menor que) (MDX) | Documentos de Microsoft'
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: <
-dev_langs: kbMDX
+f1_keywords:
+- <
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 53d86151-230b-4061-916f-ca8bb172d21e
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f84dc5f964b5ae49240969f23deb80f66e4fc981
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b552b5edfbd799f7e2f50a2e066cebc162daad39
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="lt-less-than-mdx"></a>&lt;(Menor que) (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Realiza una operación de comparación que determina si el valor de una expresión multidimensional (MDX) es menor que el valor de otra expresión MDX.  
   
@@ -74,3 +81,4 @@ WHERE
  [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
+

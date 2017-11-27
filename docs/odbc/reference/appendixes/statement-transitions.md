@@ -476,7 +476,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 |S8<br /><br /> Necesita los datos|S9<br /><br /> Debe colocar|S10<br /><br /> Puede colocar|  
 |----------------------|---------------------|---------------------|  
-|S1 [e] y [1] S2 [e], [n] y S3 de [2] [e], [r] y [2] S5 [e] y [4] S6 [e] y [5] S7 [e] y S9 [3] [d] S11 [x]|HY010|S1 [e] y S2 [1] [e], [n] y S3 de [2] [e] [r] y [2] S4 [s], [n], y ([1] o [2]) S5 [s], [r] y ([1] o [2]) S5 ([s] o [e]) y S6 [4] ([s] o [e]) y [5] S7 ([s] o [e]) y S9 [3] [d] S11 [x]|  
+|S1 [e] y [1] S2 [e], [n] y S3 de [2] [e], [r] y [2] S5 [e] y [4] S6 [e] y [5] S7 [e] y S9 [3] [d] S11 [x]|HY010|S1 [e] y S2 [1] [e], [n] y S3 de [2] [e] [r] y [2] S4 [s], [n], y ([1] o [2]) S5 [s], [r] y ([1] o [2]) S5 ([s] o [e]) y S6 [4]\([s] o [e]) y [5] S7 ([s] o [e]) y S9 [3] [d] S11 [x]|  
   
  [1] **SQLExecDirect** devuelve SQL_NEED_DATA.  
   

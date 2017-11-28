@@ -27,6 +27,7 @@
 ## [Tutorial: implementar, ejecutar y supervisar un paquete en Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Conectar con el Catálogo de SSIS en Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Programar la ejecución de paquetes en Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Validación de paquetes implementados en Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Conectarse a orígenes de datos con la autenticación de Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Conectarse a archivos y recursos compartidos de archivos](lift-shift/ssis-azure-files-file-shares.md)
 

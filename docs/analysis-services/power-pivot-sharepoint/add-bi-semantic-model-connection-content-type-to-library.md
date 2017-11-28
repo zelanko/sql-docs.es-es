@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_addtype"></a> Agregar el tipo de contenido a una biblioteca de documentos  
  Para agregar y configurar un tipo de contenido, debe tener al menos el permiso Administrar listas. Este permiso se integra en el nivel de permisos de diseño y superiores.  
   
- El sitio que contiene la biblioteca de documentos debe tener la activación de características para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para más información, consulte [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ El sitio que contiene la biblioteca de documentos debe tener la activación de características para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para más información, consulte [Activar la integración de características de PowerPivot para colecciones de sitios en Administración central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Abra la biblioteca de documentos para la que desee habilitar el tipo de contenido Conexión de modelo semántico de BI.  
   

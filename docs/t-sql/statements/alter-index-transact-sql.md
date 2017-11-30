@@ -1,11 +1,11 @@
 ---
 title: "Instrucción ALTER INDEX (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
-ms.component: t-sql|statements
+ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: TSQL
+dev_langs: t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,17 +43,19 @@ helpviewer_keywords:
 - indexes [SQL Server], options
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
+- index rebuild [SQL Server]
+- index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ef1bc9e0e99288cb739f53eb42a8e19691a04601
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
--- Syntax for SQL Server and SQL Database
+-- Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  
@@ -150,7 +152,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```  
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -185,13 +187,13 @@ ALTER INDEX { index_name | ALL }
   
 |Utiliza la palabra clave ALL con esta operación|Se produce un error si la tabla tiene uno o más|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** (a partir de SQL Server 2012) de SQL Server y base de datos de SQL Azure.|  
+|REBUILD WITH ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |REBUILD PARTITION = *número_de_partición*|Índice sin particiones, índice XML, índice espacial o índice deshabilitado|  
 |REORGANIZE|Índices que tienen ALLOW_PAGE_LOCKS establecido en OFF|  
 |PARTICIÓN REORGANIZAR = *número_de_partición*|Índice sin particiones, índice XML, índice espacial o índice deshabilitado|  
-|IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** (a partir de SQL Server 2012) de SQL Server y base de datos de SQL Azure.|  
-|ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** (a partir de SQL Server 2012) de SQL Server y base de datos de SQL Azure.|
-| REANUDABLES = ON  | Índices reanudables no compatibles con **todos los** palabra clave. <br /><br /> **Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL |   
+|IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+| REANUDABLES = ON  | Índices reanudables no compatibles con **todos los** palabra clave. <br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  Para obtener más información sobre las operaciones de índice que se pueden realizar en línea, consulte [directrices para operaciones de índice en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -207,7 +209,7 @@ ALTER INDEX { index_name | ALL }
  *nombre_tabla_o_vista*  
  Es el nombre de la tabla o vista asociada al índice. Para mostrar un informe de los índices en un objeto, utilice la [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista de catálogo.  
   
- Base de datos SQL admite nombre_basedeDatos de formato de nombre de tres partes. [nombre_esquema]. nombre_tabla_o_vista cuando nombre_basedeDatos es la base de datos actual o nombre_basedeDatos es tempdb y nombre_tabla_o_vista comienza con #.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]admite nombre_basedeDatos de formato de nombre de tres partes. [nombre_esquema]. nombre_tabla_o_vista cuando nombre_basedeDatos es la base de datos actual o nombre_basedeDatos es tempdb y nombre_tabla_o_vista comienza con #.  
   
  Volver a generar [WITH **(**\<rebuild_index_option > [ **,**... *n*]**)** ]  
  Especifica que el índice se volverá a generar con unas columnas, un tipo de índice, un atributo de unicidad y un criterio de ordenación idénticos. Esta cláusula es equivalente a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD habilita un índice deshabilitado. Cuando se regenera un índice clúster, no se vuelven a generar los índices no clúster asociados, a menos que se especifique la palabra clave ALL. Si no se especifican opciones de índice, el índice existente los valores almacenados en las opciones [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) se aplican. Para las opciones del índice cuyo valor no se almacena en **sys.indexes**, se aplica el valor predeterminado indicado en la definición del argumento de la opción.  
@@ -219,7 +221,7 @@ ALTER INDEX { index_name | ALL }
 > [!NOTE]
 >  Cuando se regenera un índice XML principal, la tabla de usuario subyacente no está disponible mientras dura esta operación.  
   
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2012).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Para los índices de almacén de columnas, la operación de regeneración:  
   
@@ -233,7 +235,7 @@ ALTER INDEX { index_name | ALL }
   
 PARTITION  
 
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica que solamente se va a volver a generar o a reorganizar una partición de un índice. No se puede especificar la partición si *index_name* no es un índice con particiones.  
   
@@ -244,13 +246,13 @@ PARTITION
   
  *número_de_partición*  
    
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Es el número de partición de un índice con particiones que se va a volver a generar o a reorganizar. *número_de_partición* es una expresión constante que puede hacer referencia a variables. Estas incluyen variables o funciones de tipo definido por el usuario y funciones definidas por el usuario, pero no pueden hacer referencia a una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *número_de_partición* debe existir o se produce un error en la instrucción.  
   
  CON **(**\<single_partition_rebuild_index_option >**)**  
    
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  SORT_IN_TEMPDB, MAXDOP y DATA_COMPRESSION son las opciones que se pueden especificar cuando se vuelve a generar una sola partición (partición =  *n* ). No es posible especificar índices XML en una operación para volver a generar una partición única.  
   
@@ -296,7 +298,7 @@ Para los índices de almacén de columnas, REORGANIZAR comprime cada grupo de fi
   
 -   Para comprimir todos los grupos de filas abierto y cerrado, vea la opción REORGANIZE con (COMPRESS_ALL_ROW_GROUPS) en esta sección.  
   
-Para los índices de almacén de columnas de base de datos de SQL y SQL Server (a partir de 2016), REORGANIZE realiza las siguientes optimizaciones adicionales de desfragmentación:  
+Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2016) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], REORGANIZE realiza las siguientes optimizaciones adicionales de desfragmentación:  
   
 -   Quita físicamente las filas de un grupo de filas al 10% o más de las filas se han eliminado lógicamente. Los bytes eliminados se reclaman en los medios físicos. Por ejemplo, si un grupo de filas comprimidos de 1 millón de filas tiene filas de 100 KB eliminadas, SQL Server quita las filas eliminadas y volver a comprimir el grupo de filas con 900 filas k. Guarda en el almacenamiento mediante la eliminación de filas eliminadas.  
   
@@ -305,7 +307,7 @@ Para los índices de almacén de columnas de base de datos de SQL y SQL Server (
 -   Grupos de filas en el que el 10% o más de las filas se han eliminado lógicamente, SQL Server intentará combinar este grupo de filas con uno o varios grupos de filas.    Por ejemplo, 1 del grupo de filas se comprimió con 500.000 filas y 21 de grupo de filas se comprimió con el máximo de 1.048.576 filas.  21 de grupo de filas tiene 60% de las filas eliminadas que deja 409,830 filas. SQL Server, se favorece combinar estos dos grupos de filas para comprimir un nuevo grupo de filas que tiene 909,830 filas.  
   
 REORGANIZAR CON (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- En SQL Server (a partir de 2016) y la base de datos SQL, el COMPRESS_ALL_ROW_GROUPS proporciona una manera para obligar a los grupos de filas delta abierto o cerrado en el almacén de columnas. Con esta opción, no es necesario volver a generar el índice de almacén de columnas para vaciar los grupos de filas delta.  Esto, combinado con lo otro remove y mezcla desfragmentación características hace que ya no es necesario volver a generar el índice en la mayoría de los casos.    
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2016) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], el COMPRESS_ALL_ROW_GROUPS proporciona una manera de obligar a los grupos de filas delta abierto o cerrado en el almacén de columnas. Con esta opción, no es necesario volver a generar el índice de almacén de columnas para vaciar los grupos de filas delta.  Esto, combinado con lo otro remove y mezcla desfragmentación características hace que ya no es necesario volver a generar el índice en la mayoría de los casos.    
 -   ON obliga a todos los grupos de filas en el almacén de columnas, independientemente del tamaño y el estado (cerrados o abiertos).  
   
 -   DESACTIVAR obliga a todos los grupos de filas CLOSED en el almacén de columnas.  
@@ -315,7 +317,7 @@ ESTABLECER **(** \<set_index opción > [ **,**... *n*] **)**
   
 PAD_INDEX = { ON | OFF }  
    
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica el relleno del índice. El valor predeterminado es OFF.  
   
@@ -329,7 +331,7 @@ PAD_INDEX = { ON | OFF }
   
 Valor de FILLFACTOR = *fillfactor*  
  
- **Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. *valor de FILLFACTOR* debe ser un valor entero entre 1 y 100. El valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.  
   
@@ -342,8 +344,7 @@ Valor de FILLFACTOR = *fillfactor*
   
  SORT_IN_TEMPDB = {ON | **OFF** }  
  
-
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica si se deben almacenar los resultados de ordenación en **tempdb**. El valor predeterminado es OFF.  
   
@@ -384,7 +385,7 @@ Valor de FILLFACTOR = *fillfactor*
  Para restaurar la actualización automática de estadísticas, establezca STATISTICS_NORECOMPUTE en OFF o ejecute UPDATE STATISTICS sin la cláusula NORECOMPUTE.  
   
 > [!IMPORTANT]
->  La deshabilitación del cálculo automático de estadísticas de distribución puede impedir que el optimizador de consultas elija los planes de ejecución óptimos para las consultas relativas a la tabla.  
+> La deshabilitación del cálculo automático de estadísticas de distribución puede impedir que el optimizador de consultas elija los planes de ejecución óptimos para las consultas relativas a la tabla.  
   
  STATISTICS_INCREMENTAL = {ON | **OFF** }  
  Cuando **ON**, son las estadísticas creadas por cada partición. Cuando **OFF**, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a calcular las estadísticas. El valor predeterminado es **OFF**.  
@@ -404,9 +405,8 @@ Valor de FILLFACTOR = *fillfactor*
 -   Estadísticas creadas sobre tablas internas.  
   
 -   Estadísticas creadas con índices espaciales o índices XML.  
-  
  
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  En línea  **=**  {ON | **OFF** } \<tal como se aplica a rebuild_index_option >  
  Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF.  
@@ -414,7 +414,7 @@ Valor de FILLFACTOR = *fillfactor*
  Para un índice XML o un índice espacial, solo se admite ONLINE = OFF y, si ONLINE se establece en ON, se produce un error.  
   
 > [!NOTE]
->  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de características que son compatibles con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [ediciones y características admitidas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. De esta forma, las consultas o actualizaciones realizadas en la tabla y los índices subyacentes pueden continuar. Al principio de la operación, se mantiene un bloqueo compartido (S) sobre el objeto de origen durante un breve período. Al final de la operación, durante un breve período, se adquiere un bloqueo S sobre el origen si se está creando un índice no clúster; o se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se quita un índice clúster en línea o cuando se regenera un índice clúster o no clúster. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local.  
@@ -432,11 +432,11 @@ Valor de FILLFACTOR = *fillfactor*
   
 -   Un subconjunto de un índice con particiones (un índice entero con particiones se puede regenerar en línea).  
 
--  Base de datos de SQL antes de V12 y SQL Server anteriores a SQL Server 2012, no permiten la `ONLINE` opción de generación de índice en clúster o volver a generar las operaciones cuando la tabla base contiene **varchar (max)** o **varbinary (max)**  columnas.
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]antes de V12 y SQL Server anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], no permiten la `ONLINE` opción de generación de índice en clúster o volver a generar las operaciones cuando la tabla base contiene **varchar (max)** o **varbinary (max)** columnas.
 
 REANUDABLES  **=**  {ON | **OFF**}
 
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL   
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  Especifica si una operación de índice en línea es reanudable.
 
@@ -446,13 +446,13 @@ REANUDABLES  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *tiempo* [**minutos**] usa con **REANUDABLE = ON** (requiere **ONLINE = ON**).
  
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Indica el tiempo (valor entero especificado en minutos) que un reanudables en línea operación de índice se ejecuta antes de que se está en pausa. 
 
 ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
  
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
@@ -464,7 +464,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}
   
 ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
   
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
@@ -479,7 +479,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
   
  MAXDOP  **=**  max_degree_of_parallelism  
  
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Invalida el **grado máximo de paralelismo** opción de configuración para la duración de la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -500,10 +500,10 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
  Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Operaciones de índice en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Operaciones de índice en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de características que son compatibles con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [ediciones y características admitidas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  COMPRESSION_DELAY  **=**  { **0** |*duración [minutos]* }  
- Esta característica está disponible a partir de SQL Server 2016  
+ Esta característica está disponible a partir con[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
  Para una tabla basada en disco, retraso especifica el número mínimo de minutos que debe permanecer un grupo de filas delta en estado cerrado en el grupo de filas delta antes de que SQL Server puede comprimir en el grupo de filas comprimido. Puesto que las tablas basadas en disco no realizar el seguimiento de insertar y actualizar horas en filas individuales, SQL Server aplica el retraso a grupos de filas delta en estado cerrado.  
 El valor predeterminado es 0 minutos.  
@@ -526,13 +526,13 @@ El valor predeterminado es 0 minutos.
   
  COLUMNSTORE  
    
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE especifica que se descomprima el índice o las particiones especificadas comprimidas con la opción COLUMNSTORE_ARCHIVE. Cuando se restablecen los datos, seguirán estando comprimidos con la compresión de almacén de columnas que se usa para todos los índices de almacén de columnas.  
   
  COLUMNSTORE_ARCHIVE  
   
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE_ARCHIVE comprimirá aún más la partición especificada a un tamaño mínimo. Esto se puede usar para el archivado o para otras situaciones que requieran un tamaño de almacenamiento mínimo y pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
@@ -540,7 +540,7 @@ El valor predeterminado es 0 minutos.
   
  EN las particiones **(** { \<partition_number_expression > | \<intervalo >} [**,**... n] **)**  
     
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
  Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.  
   
@@ -556,7 +556,7 @@ El valor predeterminado es 0 minutos.
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
   
-```tsql  
+```t-sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -569,7 +569,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Especifica si se puede regenerar un índice o una partición de índice de una tabla subyacente en línea o sin conexión. Si **volver a generar** se realiza en línea (**ON**) los datos en esta tabla están disponibles para las consultas y modificar datos durante la operación de índice.  El valor predeterminado es **OFF**.  
   
  ON  
- Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. Se requiere un bloqueo S en la tabla al principio de la regeneración de índice y un bloqueo Sch-M en la tabla al final de la regeneración de índices en línea. Aunque ambos bloqueos son bloqueos de metadatos cortos, especialmente el bloqueo Sch-M debe esperar a que todas las transacciones de bloqueo se completen. Durante el tiempo de espera, bloqueo Sch-M bloquea las demás transacciones que esperen a este bloqueo al tener acceso a la misma tabla.  
+ Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. Se requiere un bloqueo S en la tabla en el inicio de la regeneración de índice y un bloqueo Sch-M en la tabla al final de la regeneración de índices en línea. Aunque ambos bloqueos son bloqueos de metadatos cortos, especialmente el bloqueo Sch-M debe esperar a que todas las transacciones de bloqueo se completen. Durante el tiempo de espera, bloqueo Sch-M bloquea las demás transacciones que esperen a este bloqueo al tener acceso a la misma tabla.  
   
 > [!NOTE]
 >  La reconstrucción de índices en línea puede establecer el *low_priority_lock_wait* opciones descritas más adelante en esta sección.  
@@ -579,19 +579,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Utilizar WAIT_AT_LOW_PRIORITY con **ONLINE = ON** solo.  
  
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Una recompilación de índices en línea tiene que esperar a las operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea esperará bloqueos de prioridad baja, lo que permite a otras operaciones podrán continuar mientras está esperando la operación de generación de índice en línea. Si se omite la **WAIT AT LOW PRIORITY** opción es equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obtener más información, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *tiempo* [**minutos**]  
   
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  El tiempo de espera (valor entero especificado en minutos) que esperarán con prioridad baja los bloqueos de la operación de recompilación de índices en línea cuando se ejecuta el comando DDL. Si la operación se bloquea durante la **MAX_DURATION** tiempo, uno de los **ABORT_AFTER_WAIT** acciones se ejecutarán. **MAX_DURATION** hora es siempre en minutos y la palabra **minutos** puede omitirse.  
  
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOQUEADORES** }]  
    
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Ninguno  
  Se continúa esperando al bloqueo con prioridad normal.  
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Se aplica a**: a partir de SQL Server de 2017  
+**Se aplica a**: a partir de[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 Reanudar una operación de índice que se pausó manualmente o debido a un error.
 
 MAX_DURATION se utiliza con **REANUDABLE = ON**
 
  
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 La hora (un valor entero especificado en minutos) se ejecuta después de que se va a reanudar la operación de índice en línea reanudables. Una vez que expire el tiempo, la operación reanudable está en pausa si todavía se está ejecutando.
 
 Utilizar WAIT_AT_LOW_PRIORITY con **REANUDABLE = ON** y **ONLINE = ON**.  
   
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  Reanudar una regeneración de índice en línea después de una pausa tiene que esperar para operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea esperará bloqueos de prioridad baja, lo que permite a otras operaciones podrán continuar mientras está esperando la operación de generación de índice en línea. Si se omite la **WAIT AT LOW PRIORITY** opción es equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obtener más información, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE
  
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
 Pausar una operación de regeneración del índice en línea reanudables.
 
 ANULACIÓN
 
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL   
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
 Anular una operación de índice en pausa o en ejecución que se ha declarado como reanudable. Tendrá que ejecutar explícitamente un **anular** operación de regeneración de un índice reanudable cancelación del comando. Error o interrumpir una operación de índice reanudables no termina su ejecución; en su lugar, la operación deja en un estado de pausa indefinido.
   
@@ -640,7 +640,7 @@ Anular una operación de índice en pausa o en ejecución que se ha declarado co
  Cuando no se especifica una opción de forma explícita, se aplica el valor actual. Por ejemplo, si no se especifica un valor FILLFACTOR en la cláusula REBUILD, se utilizará el valor de factor de relleno almacenado en el catálogo del sistema durante el proceso de regeneración. Para ver la configuración de opción de índice actual, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 > [!NOTE]
->  Los valores de ONLINE, MAXDOP y SORT_IN_TEMPDB no se almacenan en el catálogo del sistema. A menos que se especifiquen en la instrucción de índice, se utiliza el valor predeterminado de la opción.
+> Los valores de ONLINE, MAXDOP y SORT_IN_TEMPDB no se almacenan en el catálogo del sistema. A menos que se especifiquen en la instrucción de índice, se utiliza el valor predeterminado de la opción.
   
  En los equipos con varios procesadores, ALTER INDEX REBUILD, al igual que otras consultas, utiliza automáticamente más procesadores para realizar las operaciones de examen y orden asociadas a la modificación del índice. Al ejecutar ALTER INDEX REORGANIZE, con o sin LOB_COMPACTION, el **grado máximo de paralelismo** valor será una operación de subproceso única. Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -710,9 +710,9 @@ Anular una operación de índice en pausa o en ejecución que se ha declarado co
   
  Se producirá un error en todas las operaciones de índice en línea que se realizan al mismo momento. Por ejemplo, no es posible volver a generar dos o más índices en la misma tabla de forma simultánea ni crear un índice nuevo mientras se regenera un índice existente en la misma tabla.  
 
-### <a name="resumable-index-operations"></a>Operaciones de índice reanudables
+### <a name="resumable-indexes"></a>Operaciones de índice reanudables
 
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 ONLINE INDEX REBUILD se especifica como reanudables mediante el REANUDABLE = opción. 
 -  La opción REANUDABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por lo tanto, el REANUDABLE = ON cláusula debe especificarse explícitamente para habilitar resumability.
@@ -739,13 +739,12 @@ La siguiente funcionalidad está deshabilitada para las operaciones de regenerac
    -    ALTER TABLE con la reconstrucción de índices  
    -    Comando DDL con "RESUMEABLE = ON" no se puede ejecutar dentro de una transacción explícita (no pueden formar parte de begin tran... bloque de confirmación)
    -    Volver a generar un índice que tiene calculadas o columnas de marca de tiempo como columnas de clave.
--   En caso de la tabla base contiene columnas LOB reanudables en clúster regeneración de índice requiere un bloqueo Sch-M al principio de esta operación
+-   En caso de la tabla base contiene columnas LOB reanudables en clúster regeneración de índice requiere un bloqueo Sch-M en el inicio de esta operación
    -    La opción SORT_IN_TEMPDB = ON no se admite la opción de índice reanudable 
 
 > [!NOTE]
 > El comando DDL se ejecuta hasta que se complete, pausa o se produce un error. En caso de que el comando pausa, se emitirá un error que indica que se pausó la operación y que no se completó la creación del índice. Para obtener más información sobre el estado actual del índice puede obtenerse de [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Como antes si se produce un error error se emitirán así. 
 
-  
  Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operaciones de índice en línea  
@@ -782,15 +781,15 @@ La siguiente funcionalidad está deshabilitada para las operaciones de regenerac
   
 ## <a name="version-notes"></a>Notas de la versión  
   
--   Base de datos SQL no usar opciones de grupo de archivos y filestream.  
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]no utiliza las opciones de grupo de archivos y filestream.  
   
--   Índices de almacén de columnas no están disponibles antes de SQL Server 2012. 
+-  Índices de almacén de columnas no están disponibles versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
 
--  Operaciones de índices reanudables están disponibles a partir 2017 de SQL Server y base de datos de SQL Azure   
+-  Operaciones de índices reanudables están disponibles a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
 ## <a name="basic-syntax-example"></a>Ejemplo de sintaxis básica:   
   
-```tsql 
+```t-sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -849,20 +848,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```tsql
+```t-sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- Utilice la opción TABLOCK para insertar filas en paralelo. A partir de SQL Server 2016, la operación INSERT INTO puede ejecutar en paralelo cuando se utiliza TABLOCK.  
+ Utilice la opción TABLOCK para insertar filas en paralelo. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede ejecutar la operación INSERT INTO en paralelo cuando se utiliza TABLOCK.  
   
-```tsql  
+```t-sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  Ejecute este comando para ver los grupos de filas delta abierto. El número de grupos de filas depende del grado de paralelismo.  
   
-```tsql  
+```t-sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -870,20 +869,20 @@ WHERE object_id  = object_id('cci_target');
   
  Ejecute este comando para forzar a todos los cerrado y grupos de filas OPEN en el almacén de columnas.  
   
-```tsql  
+```t-sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  Vuelva a ejecutar este comando y verá que los grupos de filas más pequeños se combinan en un grupo de filas comprimido.  
   
-```tsql  
+```t-sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Comprimir los grupos de filas delta cerrados en el almacén de columnas  
  En este ejemplo se utiliza la REORGANIZACIÓN opción comprime cada grupo de filas delta cerrados en el almacén de columnas como un grupo de filas comprimido.   Esto no es necesario, pero es útil cuando el motor de tupla no comprime los grupos de filas CLOSED lo suficientemente rápido.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -893,13 +892,13 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimir todos abierto y cerrado grupos de filas delta al almacén de columnas  
- No se aplica a: SQL Server 2012 y 2014  
+ No se aplica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- A partir de SQL Server 2016, puede ejecutar REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) para comprimir cada grupo de filas delta abierto y cerrado en el almacén de columnas como un grupo de filas comprimido.    Esto vacía lo almacenes delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción porque estas operaciones almacenan las filas de uno o varios almacenes delta.  
+ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede ejecutar REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) para comprimir cada grupo de filas delta abierto y cerrado en el almacén de columnas como un grupo de filas comprimido. Esto vacía lo almacenes delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción porque estas operaciones almacenan las filas de uno o varios almacenes delta.  
   
  REORGANIZE combina grupos de filas para rellenar los grupos de filas hasta un número máximo de filas \<= 1,024,576. Por lo tanto, al comprimir todos los grupos de filas abierto y cerrado no terminará con una gran cantidad de grupos de filas comprimidos que solo tienen algunas filas en ellos. Desea que grupos de filas sea tan completa como sea posible reducir el tamaño comprimido y mejorar el rendimiento de las consultas.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -909,30 +908,31 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. Desfragmentar un índice de almacén de columnas en línea  
- No se aplica a: SQL Server 2012 y 2014.  
+ No se aplica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- A partir de SQL Server 2016, REORGANIZE comprimir más de grupos de filas delta al almacén de columnas. También realiza la desfragmentación en línea. En primer lugar, reduce el tamaño de las vistas por quitar físicamente las filas eliminadas al 10% o más de las filas de un grupo de filas que se han eliminado.  A continuación, combina grupos de filas para formar grupos de filas mayor que tienen hasta el número máximo de 1,024,576 filas por grupos de filas.  Todos los grupos de filas que se cambian volver a obtengan comprimidos.  
+ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], REORGANIZE comprimir más de los grupos de filas delta al almacén de columnas. También realiza la desfragmentación en línea. En primer lugar, reduce el tamaño de las vistas por quitar físicamente las filas eliminadas al 10% o más de las filas de un grupo de filas que se han eliminado.  A continuación, combina grupos de filas para formar grupos de filas mayor que tienen hasta el número máximo de 1,024,576 filas por grupos de filas.  Todos los grupos de filas que se cambian volver a obtengan comprimidos.  
   
 > [!NOTE]
->  A partir de SQL Server 2016, volver a generar un índice de almacén de columnas ya no es necesario en la mayoría de los casos ya que REORGANIZE físicamente quita filas eliminadas y combina los grupos de filas. La opción COMPRESS_ALL_ROW_GROUPS obliga a grupos de filas delta abierto o cerrado todos en el almacén de columnas que anteriormente solo puede realizarse con una recompilación.   REORGANIZAR está en línea y se produce en segundo plano, por lo que las consultas pueden continuar mientras la realiza la operación.  
+>  A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], volver a generar un índice de almacén de columnas ya no es necesario en la mayoría de los casos ya que REORGANIZE físicamente quita filas eliminadas y combina los grupos de filas. La opción COMPRESS_ALL_ROW_GROUPS obliga a grupos de filas delta abierto o cerrado todos en el almacén de columnas que anteriormente solo puede realizarse con una recompilación.   REORGANIZAR está en línea y se produce en segundo plano, por lo que las consultas pueden continuar mientras la realiza la operación.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
 ```  
   
 ### <a name="e-rebuild-a-clustered-columnstore-index-offline"></a>E. Volver a generar un índice de almacén de columnas en clúster sin conexión  
- Se aplica a: SQL Server 2012, SQL Server 2014  
+Se aplica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
- A partir de SQL Server 2016 y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], se recomienda usar ALTER INDEX REORGANIZE en lugar de ALTER INDEX REBUILD.  
+> [!TIP]
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], se recomienda usar ALTER INDEX REORGANIZE en lugar de ALTER INDEX REBUILD.  
   
 > [!NOTE]
->  En SQL Server 2012 y 2014, REORGANIZE solo se usa para comprimir los grupos de filas CLOSED al almacén de columnas. La única manera de realizar operaciones de desfragmentación y para forzar a todos los grupos de filas delta al almacén de columnas es volver a generar el índice.  
+> En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], REORGANIZE solo se usa para comprimir los grupos de filas CLOSED al almacén de columnas. La única manera de realizar operaciones de desfragmentación y para forzar a todos los grupos de filas delta al almacén de columnas es volver a generar el índice.  
   
  Este ejemplo muestra cómo volver a generar un índice de almacén de columnas agrupado y forzar a todos los grupos de filas delta al almacén de columnas. Este primer paso prepara una tabla FactInternetSales2 con un índice de almacén de columnas clúster e inserta los datos de las primeras cuatro columnas.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -953,7 +953,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  Los resultados muestran que hay un grupo de filas abierto, lo que significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esperará a que se agreguen antes de que cierra el grupo de filas y mueve los datos en el almacén de columnas más filas. Esta instrucción siguiente vuelve a generar el índice de almacén de columnas agrupado, lo que obliga a todas las filas en el almacén de columnas.  
   
-```tsql  
+```t-sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -961,24 +961,24 @@ SELECT * FROM sys.column_store_row_groups;
  Los resultados de la instrucción SELECT muestran que el grupo de filas es COMPRESSED, lo que significa que los segmentos de la columna del grupo de filas ahora están comprimidos y .almacenados en el almacén de columnas.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Generar una partición de un índice de almacén de columnas en clúster sin conexión  
- Utilice este formulario: SQL Server 2012, SQL Server 2014  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ 
+ Para volver a crear una partición de un índice de almacén de columnas agrupado grandes, utilice ALTER INDEX REBUILD con la opción de partición. En este ejemplo se vuelve a generar la partición 12. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se recomienda reemplazar REBUILD con REORGANIZE.  
   
- Para volver a crear una partición de un índice de almacén de columnas agrupado grandes, utilice ALTER INDEX REBUILD con la opción de partición. En este ejemplo se vuelve a generar la partición 12. A partir de SQL Server 2016, se recomienda reemplazar REBUILD con REORGANIZE.  
-  
-```tsql  
+```t-sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
 ```  
   
 ### <a name="g-change-a-clustered-columstore-index-to-use-archival-compression"></a>G. Cambiar un índice agrupado de almacenamiento en clúster para usar la compresión de archivo  
- No se aplica a: SQL Server 2012  
+ No se aplica a:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
  Puede reducir el tamaño de un índice de almacén de columnas agrupado aún más mediante la opción de compresión de datos COLUMNSTORE_ARCHIVE. Esto resulta práctico para los datos más antiguos que desea mantener en el almacenamiento más económico. Se recomienda usar solo en datos que no se accede con frecuencia como descomprimir es más lento que con la compresión de almacén de columnas normal.  
   
  En el ejemplo siguiente se vuelve a generar un índice de almacén de columnas clúster para usar la compresión archivada y, a continuación, se muestra cómo quitar la compresión de archivo. El resultado final usará solo la compresión de almacén de columnas.  
   
-```tsql  
+```t-sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1010,25 +1010,25 @@ GO
 ### <a name="a-rebuilding-an-index"></a>A. Volver a generar un índice  
  En el siguiente ejemplo se regenera un único índice en la tabla `Employee` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Volver a generar todos los índices de una tabla y especificar opciones  
  En el siguiente ejemplo se especifica la palabra clave `ALL`. Esto vuelve a generar todos los índices asociados a la tabla Production.Product en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Se especifican tres opciones.  
   
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
   
  El ejemplo siguiente agrega la opción ONLINE, incluida la opción de bloqueo de prioridad baja, y agrega la opción de compresión de fila.  
   
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1043,16 +1043,16 @@ REBUILD WITH
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. Reorganizar un índice con compactación LOB  
  En el siguiente ejemplo se reorganiza un único índice clúster en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Dado que el índice contiene un tipo de datos LOB en el nivel hoja, la instrucción también compacta todas las páginas que contienen datos de objetos grandes. Observe que no es necesario especificar la opción WITH (LOB_COMPACTION) dado que el valor predeterminado es ON.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. Establecer opciones en un índice  
  En el siguiente ejemplo se establecen varias opciones en el índice `AK_SalesOrderHeader_SalesOrderNumber` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Se aplica a**: base de datos de SQL Azure y SQL Server (a partir de SQL Server 2008).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1066,20 +1066,20 @@ GO
 ### <a name="e-disabling-an-index"></a>E. Deshabilitar un índice  
  En el siguiente ejemplo se deshabilita un índice no clúster de la tabla `Employee` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### <a name="f-disabling-constraints"></a>F. Deshabilitar restricciones  
  En el ejemplo siguiente se deshabilita una restricción PRIMARY KEY al deshabilitar el índice de clave principal en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos. La restricción FOREIGN KEY de la tabla subyacente se deshabilita automáticamente y aparece un mensaje de advertencia.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
  El conjunto de resultados devuelve este mensaje de advertencia.  
   
- ```tsql  
+ ```t-sql  
  Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
  on table 'EmployeeDepartmentHistory' referencing table 'Department'  
  was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
@@ -1090,13 +1090,13 @@ ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
   
  La restricción PRIMARY KEY se habilita al volver a generar el índice PRIMARY KEY.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
  A continuación, se habilita la restricción FOREIGN KEY.  
   
-```tsql  
+```t-sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1105,9 +1105,9 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. Volver a generar un índice con particiones  
  En el siguiente ejemplo se vuelve a generar una única partición, el número de partición `5`, del índice con particiones `IX_TransactionHistory_TransactionDate` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La partición 5 se vuelve a generar en línea y el tiempo de espera de 10 minutos para el bloqueo de prioridad baja se aplica independientemente a cada bloqueo adquirido por la operación de regeneración de índice. Si, durante este tiempo, el bloqueo no se puede obtener para completar la regeneración del índice, la instrucción de operación de la regeneración se anula.  
   
-**Se aplica a**: (a partir de SQL Server 2014) de SQL Server y base de datos de SQL Azure.  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1123,7 +1123,7 @@ GO
 ### <a name="i-changing-the-compression-setting-of-an-index"></a>I. Cambiar la configuración de compresión de un índice  
  En el ejemplo siguiente se vuelve a generar un índice en una tabla de almacén de filas sin particiones.  
   
-```tsql
+```t-sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1135,13 +1135,13 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Reconstrucción de índices reanudables en línea
 
-**Se aplica a**: a partir de SQL Server de 2017 y Azure base de datos SQL   
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  Los ejemplos siguientes muestran cómo usar la reconstrucción de índices reanudables en línea. 
 
 1. Ejecutar una regeneración de índice en línea como operación reanudable con MAXDOP = 1.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1149,29 +1149,29 @@ GO
 
 3. Ejecutar una regeneración de índice en línea como reanudable operación con el conjunto MAX_DURATION y 240 minutos.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. Pausar una recompilación de funcionamiento reanudables índice en línea.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. Reanudar una regeneración de índice en línea para una regeneración de índice que se ejecutó como reanudable operación especifica un nuevo valor de MAXDOP se establece en 4.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. Reanudar una operación de regeneración de índice en línea para una regeneración de índice en línea que se ejecutó como reanudables. Establecer MAXDOP a 2, el tiempo de ejecución para el índice que se está ejecutando como resmumable y 240 minutos y en el caso de un índice que se está bloqueado en espera de bloqueo 10 minutos y después eliminar todos los bloqueadores de elementos. 
 
-   ```tsql
+   ```t-sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. Anular la operación de regeneración del índice reanudables que se está ejecutando o en pausa.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   

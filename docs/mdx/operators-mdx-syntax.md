@@ -8,29 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f7d13bdd9c8d5abd19e6b64d92e45bcd688feeef
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,7 +89,7 @@ ms.lasthandoff: 08/02/2017
   
 -   XOR  
   
--   O BIEN  
+-   o  
   
  Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -108,7 +105,7 @@ ms.lasthandoff: 08/02/2017
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
-|Nivel|Establezca|\<nivel > .members|  
+|Nivel|Establecer|\<nivel > .members|  
 |Jerarquía|Miembro|\<jerarquía > .defaultmember|  
 |Miembro|Tuple|(\<Miembro >)|  
 |Tuple|Miembro|\<tupla > .item(0)|  
@@ -119,4 +116,3 @@ ms.lasthandoff: 08/02/2017
  [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

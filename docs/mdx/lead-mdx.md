@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LEAD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Lead function
+f1_keywords: LEAD
+dev_langs: kbMDX
+helpviewer_keywords: Lead function
 ms.assetid: f3250092-7b98-40b5-8dca-77e3b50734a0
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 03512a3e07e9b041f794bbdc75ba067539a28e24
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 127c84f38fe85453fa3da7ae2b1c9752b05b6ba7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +42,7 @@ Member_Expression.Lead( Index )
  *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
- *Índice*  
+ *Index*  
  Expresión numérica válida que especifica el número de posiciones de los miembros.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -82,4 +77,3 @@ FROM [Adventure Works]
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

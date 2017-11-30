@@ -8,12 +8,10 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 77f06bad91fb9b7aa60f2f4725dd79cf36f41d77
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 608cba1c2819136f5bafa71be8ac5a347c5939cd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="expressions-mdx"></a>Expresiones (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -93,12 +90,12 @@ WHERE [Product].[Category].[Bikes]
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Uso de cubo y expresiones de subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define expresiones de cubo y subcubo.|  
-|[Usar expresiones de dimensiones](../mdx/using-dimension-expressions.md)|Define expresiones de dimensión.|  
-|[Usar expresiones de miembros](../mdx/using-member-expressions.md)|Define expresiones de miembro.|  
-|[Usar expresiones de tupla](../mdx/using-tuple-expressions.md)|Define expresiones de tupla.|  
-|[Usar expresiones de conjunto](../mdx/using-set-expressions.md)|Define expresiones de conjunto.|  
-|[Usar expresiones escalares](../mdx/using-scalar-expressions.md)|Define expresiones escalares.|  
+|[Uso de expresiones de cubo y de subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define expresiones de cubo y subcubo.|  
+|[Uso de expresiones de dimensiones](../mdx/using-dimension-expressions.md)|Define expresiones de dimensión.|  
+|[Uso de expresiones de miembro](../mdx/using-member-expressions.md)|Define expresiones de miembro.|  
+|[Uso de expresiones de tupla](../mdx/using-tuple-expressions.md)|Define expresiones de tupla.|  
+|[Uso de expresiones de conjunto](../mdx/using-set-expressions.md)|Define expresiones de conjunto.|  
+|[Uso de expresiones escalares](../mdx/using-scalar-expressions.md)|Define expresiones escalares.|  
 |[Trabajar con valores vacíos](../mdx/working-with-empty-values.md)|Describe un valor vacío y cómo se administran estos valores.|  
   
 ## <a name="see-also"></a>Vea también  
@@ -106,4 +103,3 @@ WHERE [Product].[Category].[Bikes]
  [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

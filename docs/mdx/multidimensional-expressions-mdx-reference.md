@@ -8,14 +8,11 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sql13.asvs.sqlserverstudio.startpage.mdx.f1
-dev_langs:
-- kbMDX
+f1_keywords: sql13.asvs.sqlserverstudio.startpage.mdx.f1
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services]
 - MDX [Analysis Services], reference
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - MDX [Analysis Services]
 - Analysis Services Multidimensional Expressions
 ms.assetid: 7e1cb1fb-2a50-41c2-9c70-b853ad6b6c3f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: aa471c4f2896cacd319cd4f6c1dd8a3bf6d2518a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 46bd5c421fbf697c7ab0525006fa14dc2510d27a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Referencia de expresiones multidimensionales (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +46,6 @@ ms.lasthandoff: 08/02/2017
  [Consultar datos multidimensionales con MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Recuperar datos de un origen de datos analíticos](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
- [Definir asignaciones y otros comandos de Script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
+ [Definir asignaciones y otros comandos de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   
-

@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523d6a9be5164ad77b32b9c012aefa7b1038217d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 111fab345e7679745e72ebe874dabcca3bed62fb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>CDC.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/17/2017
   Devuelve una fila para cada cambio aplicado a la tabla de origen dentro del intervalo del número de secuencia de registro (LSN) especificado. Si una fila de origen ha tenido muchos cambios durante el intervalo, cada cambio se representa en el conjunto de resultados devuelto. Además de devolver los datos del cambio, cuatro columnas de metadatos proporcionan la información que necesita aplicar los cambios a otro origen de datos. Las opciones de filtrado de filas rigen el contenido de las columnas de metadatos y de las filas devueltas en el conjunto de resultados. Cuando se especifica la opción de filtro de filas 'all', cada cambio tiene exactamente una fila para identificar el cambio. Cuando se especifica la opción 'all update old', las operaciones de actualización se representan como dos filas: una que contiene los valores de las columnas capturadas antes de la actualización y otra que contiene los valores de las columnas capturadas después de la actualización.  
   
  Esta función de enumeración se crea cuando se habilita una tabla de origen para la captura de datos modificados. El nombre de la función se deriva y utiliza el formato **cdc.fn_cdc_get_all_changes_***capture_instance* donde *capture_instance* es el valor especificado para la captura instancia de la tabla de origen está habilitada para la captura de datos modificados.  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

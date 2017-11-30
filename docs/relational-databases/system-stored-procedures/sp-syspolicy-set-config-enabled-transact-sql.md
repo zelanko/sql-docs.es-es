@@ -22,20 +22,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49f9096fb8cfa3786d1264d2a16e1d6347ac7bc3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 36f354cf0fd5bcb8f6d42f6df5b59f52dacede3b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Habilita o deshabilita la administración basada en directivas.  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +43,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ ** @value=** ] *valor*  
+ [  **@value=** ] *valor*  
  Determina si la administración basada en directivas está habilitada. *valor* es **sqlvariant**, y puede tener uno de los siguientes valores:  
   
 -   0 (o 'false') = Deshabilitado  
@@ -76,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Administración basada en directivas almacenados procedimientos & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [Administración basada en directivas almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_configure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

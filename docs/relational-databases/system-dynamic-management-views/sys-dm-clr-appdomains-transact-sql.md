@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  Existen varios tipos de objetos de base de datos administrados de integración CLR. Para obtener información general acerca de estos objetos, consulte [creación de objetos de base de datos con la integración de Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Cada vez que se ejecuten estos objetos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un **AppDomain** donde puede cargar y ejecutar el código necesario. El nivel de aislamiento para una **AppDomain** es una **AppDomain** por base de datos por el propietario. Es decir, todos los objetos CLR que pertenecen a un usuario siempre se ejecutan en el mismo **AppDomain** por base de datos (si un usuario registra objetos de base de datos CLR en diferentes bases de datos, la base de datos CLR que se ejecutarán objetos en distintos dominios de aplicación). Un **AppDomain** se destruye cuando el código finaliza la ejecución. sino que se almacena en la memoria caché de cara a futuras ejecuciones. Esto mejora el rendimiento.  
   
  Para obtener más información, consulte [dominios de aplicación](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funciones de VBA en MDX y DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referencia de funciones de Visual Basic para Aplicaciones  
   
-|Nombre de la función|Compatible|Notas|  
+|Nombre de la función|Admitida|Notas|  
 |-------------------|---------------|-----------|  
 |[ABS](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007544&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[Matriz](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007545&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible||  
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible||  
-|[Filtro](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible|**\*\*Advertencia \* \***  MDX implementa otra función con el mismo nombre; la función FILTER (función, Filter) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos proporcionados<br /><br /> **\*\*Advertencia \* \***  DAX implementa otra función con el mismo nombre; el filtro (\<tabla >,\<filtro >) función devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos proporcionados|  
+|[Filter](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible|**\*\*Advertencia \* \***  MDX implementa otra función con el mismo nombre; la función FILTER (función, Filter) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos proporcionados<br /><br /> **\*\*Advertencia \* \***  DAX implementa otra función con el mismo nombre; el filtro (\<tabla >,\<filtro >) función devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos proporcionados|  
 |[Corrección](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Solo MDX||  
 |[Formato (Visual Basic para aplicaciones)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|No compatible||  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/02/2017
 |[Año](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
   
   
-

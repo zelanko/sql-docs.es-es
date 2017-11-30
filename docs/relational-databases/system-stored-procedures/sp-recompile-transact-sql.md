@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e802de07e5113d9cf12ba65df56153646361f715
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5cd98a22d086fac88ad523fb2fdded5bc38d9d70
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Hace que se vuelvan a compilar los procedimientos almacenados, los desencadenadores y las funciones definidas por el usuario la próxima vez que se ejecuten. Para ello, quita el plan existente de la memoria cache de procedimientos que fuerza la creación de un nuevo plan la próxima vez que se ejecuten el procedimiento o el desencadenador. En una colección de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se registra el evento SP:CacheInsert en lugar del evento SP:Recompile.  
-  
-||  
-|-|  
-|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

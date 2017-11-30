@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90caaef639485fd44f9f715935c1eb5f08540fa0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e1ad511e008e2d2c1d975f54a03db8290b26e527
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   Devuelve los metadatos para el primer posible conjunto de resultados de la [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes. Devuelve un conjunto de resultados vacío si el lote no devuelve resultados. Genera un error si la [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se puede determinar los metadatos de la primera consulta que se ejecutará mediante la realización de un análisis estático. La vista de administración dinámica [sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) devuelve la misma información.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la [versión actual](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Sintaxis  
   

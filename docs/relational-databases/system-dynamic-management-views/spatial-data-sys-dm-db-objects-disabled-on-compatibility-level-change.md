@@ -24,20 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f80f567756374edf0c348296d9b1197c6f828a76
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Los datos espaciales: sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Muestra los índices y las restricciones que se deshabilitarán como resultado de cambiar el nivel de compatibilidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los índices y las restricciones que contienen columnas calculadas persistentes cuyas expresiones usan UDT espaciales se deshabilitarán después de actualizar o cambiar el nivel de compatibilidad. Use esta función de administración dinámica para determinar el impacto de un cambio en el nivel de compatibilidad.  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b9811ca7824426900f77fc625bfa50732d7ba69
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7c89f3aed714fba775e2271425fb86949e3f26ac
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
  sp_createstats es útil para aplicaciones como las pruebas comparativas cuando los tiempos de ejecución de la consulta resultan críticos y no se puede esperar a que el optimizador de consultas genere estadísticas de columna única. En la mayoría de los casos, no es necesario utilizar sp_createstats; el optimizador de consultas genera estadísticas de columna única según sea necesario para mejorar los planes cuando la **AUTO_CREATE_STATISTICS** opción está activada.  
   
  Para obtener más información acerca de las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información acerca de cómo generar estadísticas de columna única, consulte la **AUTO_CREATE_STATISTICS** opción [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
-  
-||  
-|-|  
-|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,10 +62,6 @@ sp_createstats
   
  [  **@incremental=** ] **"incremental"**  
  Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **INCREMENTAL = ON** opción. **Incremental** es **char(12)**.  El valor predeterminado es NO.  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

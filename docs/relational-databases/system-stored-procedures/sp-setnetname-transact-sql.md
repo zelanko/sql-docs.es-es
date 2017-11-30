@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88f8dfe5bb290ae04602d2cd87b588f48270385f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e9f439854cc1d3af3ca5db09981f2eba2af7a4f
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Establece los nombres de red **sys.servers** a sus nombres de red del equipo actuales para las instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este procedimiento puede utilizarse para habilitar la ejecución de llamadas a procedimientos almacenados remotos a equipos cuyos nombres de red contienen identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no válidos.  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

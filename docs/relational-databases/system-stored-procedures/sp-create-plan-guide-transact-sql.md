@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6495b63730087e53450d286d575af6261a07b770
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una guía de plan para asociar sugerencias de consulta o planes de consulta actuales a las consultas de una base de datos. Para obtener más información acerca de las guías de plan, vea [Plan Guides](../../relational-databases/performance/plan-guides.md).  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -128,7 +124,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   Los caracteres de espacio en blanco (tabulaciones, espacios, retornos de carro o avances de línea) dentro de una cadena.  
   
--   Comentarios ( **--**  o  **/ \* \* /** ).     
+-   Comentarios ( **--**  o  **/ \* \* /** ).  
   
 -   Los signos de punto y coma al final.  
   

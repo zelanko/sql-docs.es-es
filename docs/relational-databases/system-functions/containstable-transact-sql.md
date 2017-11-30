@@ -38,11 +38,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5efcf8fb5b5169bbf03390b02ddc068bf6a30d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,6 @@ ms.lasthandoff: 11/17/2017
  CONTAINSTABLE es útil para los mismos tipos de coincidencias que la [predicado CONTAINS](../../t-sql/queries/contains-transact-sql.md) y utiliza las mismas condiciones de búsqueda como CONTAINS.  
   
  A diferencia de CONTAINS, las consultas que usan CONTAINSTABLE devuelven un valor de clasificación por relevancia (RANK) y un valor de clave de texto completo (KEY) por cada fila.  Para obtener información acerca de las formas de búsquedas de texto completo que son compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([vista previa en algunas regiones](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b6b77613f01605d693d9e2c3961c3278f8d26b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define el nombre de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando el equipo que hospeda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es cambiar el nombre, utilice **sp_addserver** para informar a la instancia de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] del nuevo nombre de equipo. Este procedimiento debe ejecutarse en todas las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedado en el equipo. El nombre de instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se puede cambiar. Para cambiar el nombre de instancia de una instancia con nombre, instale una instancia nueva con el nombre deseado, desasocie los archivos de base de datos de la instancia antigua, asocie las bases de datos a la nueva instancia y quite la antigua instancia. Como alternativa, puede crear un nombre de alias de cliente en el equipo cliente, redirigir la conexión a un servidor y nombre de instancia diferentes o a la combinación **servidor:puerto** sin cambiar el nombre de la instancia en el equipo servidor.  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

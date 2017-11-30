@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- subset
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Subset function
+f1_keywords: subset
+dev_langs: kbMDX
+helpviewer_keywords: Subset function
 ms.assetid: 49a7cd28-cd6f-4ae7-8c91-94a8652a97a5
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 820ab5f42f8956ccf454fbed6c60600516c36a67
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0496a6481cebf95e67a6f41a95ed37c522e44a13
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,10 +42,10 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Iniciar*  
+ *Inicio*  
  Expresión numérica válida que especifica la posición de la primera tupla que será devuelta.  
   
- *Count*  
+ *Recuento*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -78,4 +73,3 @@ FROM [Adventure Works]
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

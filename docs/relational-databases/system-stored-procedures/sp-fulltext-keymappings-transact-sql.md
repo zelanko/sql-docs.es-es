@@ -25,20 +25,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33d2cc30ca46ab172e1a9db4fceb639709e06779
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Devuelve las asignaciones entre los identificadores de documento (DocIds) y los valores de clave de texto completo. La columna DocId contiene valores para un **bigint** entero que se asigna a un determinado valor de clave de texto completo en una tabla indizada de texto completo. Los valores de DocId que cumplen una condición de búsqueda se pasan desde el motor de búsqueda de texto completo al motor de base de datos, donde se asignan a valores de clave de texto completo de la tabla base en la que se realizan las consultas. La columna de clave de texto completo es un índice único requerido en una columna de la tabla.  
-  
-||  
-|-|  
-|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Informe de elementos (generador de informes y SSRS) | Documentos de Microsoft
+title: Elementos de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10543"
+f1_keywords: "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4b2b6d82d897af5f41163257bd129df1ef538ecd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Los elementos de informe tienen una extensión de archivo .rsc.  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="what-comes-with-a-report-part"></a>Componentes de un elemento de informe  
  Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier objeto que muestre datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. También puede tener uno o varios parámetros. Todos los elementos de los que depende son sus *dependencias*y todos ellos, o punteros que los señalan, se incluyen con el elemento de informe al agregarlo a un informe. El conjunto de datos y los parámetros se enumeran en el panel Datos de informe en el informe.  
   
- El conjunto de datos para el elemento de informe se puede incrustar en el elemento de informe, o puede ser un conjunto de datos independiente y compartido al que el elemento de informe señala. Si se incrusta en el elemento de informe, quizá puede modificarlo. Si es un conjunto de datos compartido, es un objeto independiente para el que necesitaría permisos. Para obtener más información sobre compartidos y conjuntos de datos incrustados, vea [conjuntos de datos de informes &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ El conjunto de datos para el elemento de informe se puede incrustar en el elemento de informe, o puede ser un conjunto de datos independiente y compartido al que el elemento de informe señala. Si se incrusta en el elemento de informe, quizá puede modificarlo. Si es un conjunto de datos compartido, es un objeto independiente para el que necesitaría permisos. Para más información sobre los conjuntos de datos insertados y compartidos, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Solucionar conflictos de nomenclatura  
  Cuando agrega un elemento de informe, el Generador de informes corrige los conflictos de nombre. Por ejemplo, si ya tiene Chart1 en un informe y agrega un elemento de informe denominado Chart1, el Generador de informes cambia el nombre del nuevo elemento de informe a Chart2 automáticamente. Si ya tiene Dataset1 en un informe y agrega un elemento de informe que hace referencia a otro conjunto de datos que también se llama Dataset1, el Generador de informes cambia el nombre del nuevo a Dataset2 y actualiza las referencias.  
@@ -137,7 +135,7 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="RptPartsRptDesigner"></a> Trabajar con elementos de informe en el Diseñador de informes  
- Los elementos de informe funcionan de forma algo diferente en el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Diseñador de informes, la publicación es unidireccional: puede publicar un elemento de informe del Diseñador de informes, pero no puede reutilizar un elemento de informe existente en el Diseñador de informes. Para más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+ Los elementos de informe funcionan de forma algo diferente en el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Diseñador de informes, la publicación es unidireccional: puede publicar un elemento de informe del Diseñador de informes, pero no puede reutilizar un elemento de informe existente en el Diseñador de informes. Para obtener más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
  [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
@@ -152,4 +150,3 @@ ms.lasthandoff: 08/09/2017
  [Administración de elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
   
   
-

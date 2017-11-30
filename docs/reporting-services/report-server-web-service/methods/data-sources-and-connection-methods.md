@@ -1,5 +1,5 @@
 ---
-title: "Orígenes de datos y métodos de conexión | Documentos de Microsoft"
+title: "Orígenes de datos y métodos de conexión | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 922c7fbd680a9d82713db30d8df5f0ae5a40401a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0160a520275477f829cc0e0d742fd1300c3c9261
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-sources-and-connection-methods"></a>Orígenes de datos y métodos de conexión
   Puede utilizar estos métodos para establecer y administrar las credenciales y las conexiones a un origen de datos.  
@@ -48,10 +46,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Prueba la conexión para un origen de datos. Este método admite las pruebas de los orígenes de datos publicados que son utilizados por los informes o modelos, y por orígenes de datos compartidos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Métodos de servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [Referencia técnica de &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Compilación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
+ [Referencia técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

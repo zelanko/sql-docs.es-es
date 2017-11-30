@@ -1,5 +1,5 @@
 ---
-title: "Método ReserveURL (MSReportServer_ConfigurationSetting WMI) | Documentos de Microsoft"
+title: "Método ReserveURL (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ReservedURL method
+helpviewer_keywords: ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 01bfda1933bc12672c4959eafd7c95ef9a389139
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f03d8e793c20b0332630779837836c936ed93b69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---reserveurl"></a>Método ConfigurationSetting - ReserveURL
   Agrega una reserva URL para una aplicación determinada.  
@@ -74,4 +72,3 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

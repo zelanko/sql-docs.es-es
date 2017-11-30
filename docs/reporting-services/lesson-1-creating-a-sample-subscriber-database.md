@@ -1,35 +1,31 @@
 ---
-title: "Lección 1: Crear una base de datos de suscriptor de ejemplo | Documentos de Microsoft"
+title: "Lección 1: Crear una base de datos de suscriptor de ejemplo | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a65cf856e571a25f985846c185c207e59375cc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
 
 En esta lección del tutorial de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , creará una pequeña base de datos "suscriptor" para almacenar los datos de suscripción que usados por una suscripción controlada por datos. Cuando la suscripción se haya procesado, el servidor de informes recupera estos datos y los usa para personalizar los resultados del informe. Por ejemplo, las filas de datos incluyen números de pedido específicos para usar como filtros y qué formato de archivo tendrán los informes generados cuando se creen.  
   
-Esta lección se supone que usa [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] para crear una base de datos de SQL Server.  
+En esta lección se da por hecho que está usando [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] para crear una base de datos de SQL Server.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Para crear una base de datos de suscriptor de ejemplo  
   
@@ -65,7 +61,7 @@ Esta lección se supone que usa [!INCLUDE[ssManStudioFull_md](../includes/ssmans
     GO  
     ```  
   
-7.  Haga clic en **! en Ejecutar** en la barra de herramientas.  
+7.  Haga clic en **! Ejecutar** en la barra de herramientas.  
   
 8.  Use una instrucción SELECT para comprobar que tiene tres filas de datos. Por ejemplo: `select * from OrderInfo`  
   
@@ -80,5 +76,4 @@ Esta lección se supone que usa [!INCLUDE[ssManStudioFull_md](../includes/ssmans
 [Crear una base de datos](../relational-databases/databases/create-a-database.md)  
 [Crear un informe de tabla básico](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

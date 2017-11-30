@@ -1,5 +1,5 @@
 ---
-title: "Tipo de conexión XML (SSRS) | Documentos de Microsoft"
+title: "Tipo de conexión XML (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a95a6e93bb34674003530e094e9d4544a8aabfec
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ff81c239e4d585678887245afa822059b8ae47e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
 |Documento XML|`http://localhost/XML/Customers.xml`|  
 |Documento XML incrustado|*Vacía*|  
   
- Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Usuario actual de Windows (lo que se conoce también como seguridad integrada).  
   
--   No se necesitan credenciales. Si no especifica credenciales, se utilizará el acceso anónimo. Asegúrese de haber definido la cuenta de ejecución desatendida para que el servidor de informes se conecte a un origen de datos externo. La extensión de procesamiento de datos XML no pasa credenciales a la dirección URL de destino ni al servicio web; la conexión no se realizará correctamente a menos que haya definido la cuenta de ejecución desatendida. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
+-   No se necesitan credenciales. Si no especifica credenciales, se utilizará el acceso anónimo. Asegúrese de haber definido la cuenta de ejecución desatendida para que el servidor de informes se conecte a un origen de datos externo. La extensión de procesamiento de datos XML no pasa credenciales a la dirección URL de destino ni al servicio web; la conexión no se realizará correctamente a menos que haya definido la cuenta de ejecución desatendida. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
   
  Las credenciales almacenadas o solicitadas no están admitidas. Recuerde que si deshabilita la seguridad integrada de Windows, no podrá usarla para recuperar datos. Si especifica credenciales almacenadas o solicitadas, se producirá un error en tiempo de ejecución.  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
  Debe usar el diseñador de consultas basado en texto para crear la consulta. La consulta debe devolver datos XML.  
   
- Para obtener más información sobre el diseñador de consultas basado en texto, vea [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Para más información sobre el diseñador de consultas basado en texto, vea [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
  A continuación se muestran los posibles valores de una consulta de conjunto de datos para un origen de datos de tipo XML.  
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar datos del servicio web XML  
  La extensión de procesamiento de datos XML no detecta el esquema de forma automática. Por tanto, debe tener alguna manera de determinar los métodos SOAP que recuperarán los datos que desea. También debe comprender el esquema de direcciones o el espacio de nombres que utiliza el servicio web para sus datos.  
   
- Para un servicio Web, puede proporcionar un \< **consulta**> elemento que especifica un método a llamada o acción SOAP. Es posible dejar la consulta vacía y utilizar la consulta predeterminada si el origen de datos XML tiene una estructura jerárquica que genera los datos que se desea utilizar en el informe. Los valores y los atributos de los nodos de elemento XML recuperados cuando se ejecuta la consulta se asignan a los campos de conjunto de datos que se usan en el informe.  
+ Para un servicio web, se puede proporcionar un elemento \<**Consulta**> que especifique un método al que se debe llamar o una acción SOAP. Es posible dejar la consulta vacía y utilizar la consulta predeterminada si el origen de datos XML tiene una estructura jerárquica que genera los datos que se desea utilizar en el informe. Los valores y los atributos de los nodos de elemento XML recuperados cuando se ejecuta la consulta se asignan a los campos de conjunto de datos que se usan en el informe.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisitos para recuperar datos de un documento XML  
  El servidor debe devolver los datos XML mediante el protocolo HTTP o los datos XML deben estar incrustados en el elemento XML **Query** . Si se hace referencia directa a un documento XML mediante el protocolo HTTP, la extensión debe ser .xml.  
@@ -145,9 +144,9 @@ ms.lasthandoff: 08/09/2017
  Para agregar parámetros, deberá crearlos manualmente en el cuadro de diálogo **Propiedades del conjunto de datos** de la página [Parámetro](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
   
 ##  <a name="Remarks"></a> Comentarios  
- La extensión de datos XML admite la creación de informes a partir de datos XML tabulares y no jerárquicos. Para obtener más información, vea [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+ La extensión de datos XML admite la creación de informes a partir de datos XML tabulares y no jerárquicos. Para más información, vea [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
- No hay compatibilidad integrada para recuperar documentos XML desde una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ No hay compatibilidad integrada para recuperar documentos XML desde una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
@@ -156,7 +155,7 @@ ms.lasthandoff: 08/09/2017
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Agregar un filtro a un conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
@@ -164,22 +163,21 @@ ms.lasthandoff: 08/09/2017
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
- [Informe incrusta los conjuntos de datos y conjuntos de datos compartidos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Proporciona información sobre conjuntos de datos compartidos e incrustados.  
   
- [Colección de campos de conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

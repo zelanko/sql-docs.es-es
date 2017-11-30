@@ -1,5 +1,5 @@
 ---
-title: "Establecer parámetros en un informe publicado: el modo integrado de SharePoint | Documentos de Microsoft"
+title: "Establecer parámetros en un informe publicado - Modo integrado de SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,18 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57f464054989a20b56b729624d711b6520466d13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Establecer parámetros en un informe publicado: el modo integrado de SharePoint
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Establecer parámetros en un informe publicado - Modo integrado de SharePoint
   Un informe con parámetros es un informe que acepta valores de entrada usados para filtrar datos al ejecutar el informe. Los parámetros se definen al crear el informe. En función de cómo se defina un parámetro del informe en la definición del informe, puede aceptar un solo valor, varios valores o valores dinámicos, que cambian en respuesta a una selección previa (por ejemplo, si selecciona una categoría del producto, la siguiente selección podría ser un producto concreto de esa categoría). Un parámetro puede tener un valor predeterminado, que se puede usar para ejecutar una versión filtrada del informe de manera automática o posiblemente sustituirlo por otro valor.  
   
  Estas propiedades se pueden establecer en la definición de informe o una vez publicado el informe. Aunque puede modificar algunas propiedades de parámetros en un informe publicado para cambiar el valor y mostrar las propiedades, no puede cambiar el nombre de un parámetro o el tipo de datos. El nombre y el tipo de datos del parámetro solamente los puede cambiar el creador del informe en la definición de informe.  
@@ -91,4 +90,3 @@ ms.lasthandoff: 08/09/2017
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

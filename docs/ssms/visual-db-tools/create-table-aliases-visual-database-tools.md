@@ -5,24 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - table aliases [SQL Server]
 - aliases [SQL Server], tables
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 2e7c4230e0e72e3de7a636e822a6f89b94b379fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d76ede0538ac5fb723e35fb32f045f3b14cd86ca
-ms.contentlocale: es-es
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Crear alias de tabla (Visual Database Tools)
 Los alias facilitan el trabajo con nombres de tabla. El uso de alias es útil cuando:  
@@ -33,7 +32,7 @@ Los alias facilitan el trabajo con nombres de tabla. El uso de alias es útil cu
   
 -   Trabaja con varias instancias de la misma tabla (como en el caso de una autocombinación) y necesita una forma de hacer referencia a cada instancia.  
   
-Por ejemplo, puede crear un alias `"e"` para el nombre de tabla `employee`_`information`y, a continuación, hacer referencia a la tabla como `"e"` en el resto de la consulta.  
+Por ejemplo, puede crear un alias `"e"` para un nombre de tabla `employee_information` y luego hacer referencia a la tabla como `"e"` en el resto de la consulta.  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>Para crear un alias para una tabla o un objeto con valores de tabla  
   
@@ -49,4 +48,3 @@ Por ejemplo, puede crear un alias `"e"` para el nombre de tabla `employee`_`info
 [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

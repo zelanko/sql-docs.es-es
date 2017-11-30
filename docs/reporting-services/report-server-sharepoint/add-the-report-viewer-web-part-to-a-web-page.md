@@ -1,5 +1,5 @@
 ---
-title: "Agregar el elemento web Visor de informes a una página web | Documentos de Microsoft"
+title: "Agregar el elemento web Visor de informes a una página web | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 26080938c9849d6021f30d970ab2262f405df00c
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 44bad69bf78e628806a25455dd4ff240e9ca0a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Agregar el elemento web Visor de informes a una página web
 
@@ -27,33 +26,33 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Puede usar el elemento web Visor de informes para ver los informes que ejecutan servidor de informes que está configurado para ejecutarse en SharePoint el modo integrado. Puede usar el elemento web para mostrar los archivos de definición (.rdl) de informe que ha creado en el generador de informes o el Diseñador de informes y cargado en una biblioteca.
+Puede usar el elemento web Visor de informes para ver informes que se ejecutan en un servidor de informes configurado para ejecutarse en el modo integrado de SharePoint. Puede usar el elemento web para mostrar archivos de definición de informe (.rdl) que haya creado en el Generador de informes o el Diseñador de informes y cargado en una biblioteca.
 
-Puede agregar el elemento web Visor de informes a una página web si desea incrustar un informe en la página.
+Puede agregar el elemento web Visor de informes a una página web si quiere incrustar un informe en esa página.
 
 > [!NOTE]
-> Este artículo es específico para el elemento web Visor de informes que se incluye con el complemento de Reporting Services para productos de SharePoint. Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> Este artículo es específico del elemento web Visor de informes incluido en el complemento Reporting Services para productos de SharePoint. La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
 Para agregar un elemento web a una página web, debe tener el permiso Agregar y personalizar páginas en el nivel de sitio. Si va a usar la configuración de seguridad predeterminada, este permiso se concede a los miembros del grupo **Propietarios** que tienen el nivel de permiso Control total.
 
 ## <a name="to-embed-a-report-in-a-web-page"></a>Para incrustar un informe en una página web
 
-1.  Abra o cree un panel o página de elementos web.  
+1.  Abra o cree el panel o la página de elementos web.  
   
 2.  En el menú **Acciones del sitio**, haga clic en **Editar página**.  
   
-3.  Haga clic en **agregar un elemento web**.  
+3.  Haga clic en **Agregar elemento web**.  
   
 4.  En la lista de categorías de elementos web, seleccione la categoría **Varios** y, a continuación, seleccione **Visor de informes de SQL Server Reporting Services**.  
   
-5.  Haga clic en **Agregar**. El elemento web se agrega en la parte superior de la zona. Puede arrastrarlo a otra ubicación en la zona.  
+5.  Haga clic en **Agregar**. El elemento web se agrega a la parte superior de la zona. Puede arrastrarlo a otra ubicación en la zona.  
   
 6.  Dentro del visor, haga clic en **Haga clic aquí para abrir el panel de herramientas**.  
   
 7.  Para seleccionar un informe desde cualquier biblioteca de la colección de sitios actual, haga clic en el botón Examinar (**...**). Además, puede escribir la dirección URL del informe. Para determinar la dirección URL de cualquier informe, haga clic con el botón derecho en el informe y seleccione **Propiedades**. No haga clic en la flecha hacia abajo junto al informe; la dirección URL del informe no se indica en la página Ver propiedades del elemento. Si copia y pega la dirección URL del cuadro de diálogo **Propiedades** , reemplace la codificación "%20" de la dirección URL por un espacio (por ejemplo, "Company%20Sales" debe ser "Company Sales").  
   
     > [!NOTE]  
-    >  Cada elemento web Visor de informes contiene un único informe. La dirección URL debe ser una ruta de acceso completa a un informe que esté en el sitio de SharePoint actual o en un sitio dentro de la misma aplicación o granja de servidores web. La dirección URL debe resolverse como una biblioteca de documentos o una carpeta dentro de una biblioteca de documentos que contenga el informe. La dirección URL del informe debe incluir la extensión de archivo .rdl. Si el informe depende de un modelo o de archivos de orígenes de datos compartidos, no necesita especificar esos archivos en la dirección URL. El informe contiene referencias a los archivos que necesita.  
+    >  Cada elemento web Visor de informes contiene un solo informe. La dirección URL debe ser una ruta de acceso completa a un informe que esté en el sitio de SharePoint actual o en un sitio dentro de la misma aplicación o granja de servidores web. La dirección URL debe resolverse como una biblioteca de documentos o una carpeta dentro de una biblioteca de documentos que contenga el informe. La dirección URL del informe debe incluir la extensión de archivo .rdl. Si el informe depende de un modelo o de archivos de orígenes de datos compartidos, no necesita especificar esos archivos en la dirección URL. El informe contiene referencias a los archivos que necesita.  
   
 8.  Cuando el panel de herramientas está abierto, puede establecer propiedades para modificar la apariencia y el diseño predeterminados.  
   
@@ -65,4 +64,3 @@ Para agregar un elemento web a una página web, debe tener el permiso Agregar y 
  [Personalizar el elemento web Visor de informes](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-

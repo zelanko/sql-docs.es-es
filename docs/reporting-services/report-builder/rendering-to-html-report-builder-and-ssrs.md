@@ -1,5 +1,5 @@
 ---
-title: "Representación en HTML (generador de informes y SSRS) | Documentos de Microsoft"
+title: Representar en HTML (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe paginado en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  Para representar y navegar por las etiquetas de mapa de documento, use el mapa del documento del control de visor. Para los encabezados de región de datos omitidos, las etiquetas se representan en la primera celda secundaria. Si no hay ninguna celda secundaria, la etiqueta se representa en el elemento secundario que la precede.  
   
 ### <a name="bookmarks"></a>Marcadores  
- Los vínculos de marcador se representan y aparecen como hipervínculos. Para representar y navegar por los destinos de marcador, debe hacer clic en los vínculos de marcador. Cuando se hace clic en un vínculo de marcador, el informe va a la primera repetición de la etiqueta del marcador de destino y, si es posible, el explorador se desplaza para que el vínculo de marcador aparezca en la parte superior de la ventana. Delimitador HTML (\<un >) se usan etiquetas para marcar destinos de marcador.  
+ Los vínculos de marcador se representan y aparecen como hipervínculos. Para representar y navegar por los destinos de marcador, debe hacer clic en los vínculos de marcador. Cuando se hace clic en un vínculo de marcador, el informe va a la primera repetición de la etiqueta del marcador de destino y, si es posible, el explorador se desplaza para que el vínculo de marcador aparezca en la parte superior de la ventana. Las etiquetas de delimitador HTML (\<a>) se usan para marcar destinos de marcador.  
   
 ### <a name="interactive-sorting"></a>Ordenación interactiva  
  Si un cuadro de texto tiene definida la ordenación de usuario, la extensión de representación en HTML representa los iconos de ordenación en el cuadro de texto situado a la derecha de su contenido. Si un informe contiene cualquier cuadro de texto con la ordenación de usuario definida, se representa JavaScript que provoca una devolución de datos al servidor cuando se hace clic en la imagen de ordenación.  
   
 ### <a name="hyperlinks-and-drillthrough"></a>Hipervínculos y obtención de detalles  
- Los hipervínculos y vínculos de obtención de detalles se representan como hipervínculos en elementos de informe mediante el delimitador HTML (\<un >) alrededor del elemento en el que se definen las etiquetas.  
+ Los hipervínculos y los vínculos de obtención de detalles se representan como hipervínculos en los elementos de informe que usan las etiquetas de delimitador HTML (\<a>) alrededor del elemento en el que están definidas.  
   
 ### <a name="search"></a>Buscar  
  La característica Buscar permite a los usuarios buscar una cadena de texto dentro del informe.  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Vea también  
- [Paginación en Reporting Services &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes informes representar extensiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Representar elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Entrega de correo electrónico en Reporting Services | Documentos de Microsoft"
+title: "Entrega por correo electrónico en Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. Para distribuir un informe por correo electrónico, debe 1) configurar el servidor de informes para la entrega de correo electrónico y 2) definir una suscripción estándar o una suscripción controlada por datos. Una suscripción única no puede entregar varios informes en un solo mensaje de correo electrónico. Sin embargo, se pueden crear varias suscripciones.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  Para un servidor de informes en modo nativo, la extensión de entrega de correo electrónico se configura con el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo y editando los archivos de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En el caso de un servidor de informes en modo SharePoint, la extensión de entrega de correo electrónico en páginas de administración de SharePoint y scripts de PowerShell.  
   
  
- Para obtener información sobre cómo configurar un servidor de informes de modo nativo, vea [mensajes de correo electrónico: modo nativo de Reporting Services (SSRS)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ Para obtener información sobre cómo configurar un servidor de informes en modo nativo, vea [Configuración de correo electrónico: modo nativo de Reporting Services (Administrador de configuración)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Para obtener información sobre cómo configurar un servidor de informes en modo de SharePoint, vea lo siguiente:  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [Asignaciones de roles](../../reporting-services/security/role-assignments.md)  
   
   
-

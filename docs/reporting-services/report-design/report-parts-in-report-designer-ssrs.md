@@ -1,5 +1,5 @@
 ---
-title: "Elementos de informes en el Diseñador de informes (SSRS) | Documentos de Microsoft"
+title: "Elementos de informe en el Diseñador de informes (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>Elementos de informe en el Diseñador de informes (SSRS)
 
   En el Diseñador de informes, después de crear tablas, gráficos y otros elementos de informe paginado en un proyecto, puede publicarlos como *elementos de informe* en un servidor de informes o en el sitio de SharePoint integrado con un servidor de informes para que su usuario y otros usuarios puedan reutilizarlos en otros informes.  
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Implemente el informe.  
   
- Al implementar el informe, el elemento de informe se publica en un sitio de SharePoint o servidor de informes, y otros pueden reutilizarla. Para publicar un elemento de informe, debe tener una conexión y los permisos necesarios en un servidor de informes al implementar el informe.  
+ Al implementar el informe, el elemento de informe se publica en un sitio de SharePoint o servidor de informes, y otros pueden reutilizarla. Para publicar un elemento de informe, debe disponer de una conexión y de los permisos necesarios en un servidor de informes al implementar el informe.  
   
   
 ##  <a name="SearchReuseComponents"></a> Reutilizar elementos de informe  
@@ -99,7 +96,6 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Administrar elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
+[Administración de elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

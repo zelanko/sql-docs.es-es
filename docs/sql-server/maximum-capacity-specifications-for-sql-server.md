@@ -1,11 +1,10 @@
 ---
 title: "Especificaciones de capacidad máxima para SQL Server | Microsoft Docs"
-ms.date: 03/09/2017
+ms.date: 11/6/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c56b0a570f295896e76c5d0b3441042543445178
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 
@@ -55,11 +53,11 @@ ms.lasthandoff: 08/11/2017
 |Bytes por columna de cadenas cortas||8,000||  
 |Bytes por GROUP BY y ORDER BY||8,060||  
 |Bytes por clave de índice||900 bytes para un índice agrupado. 1700 para un índice no agrupado.|El número máximo de bytes de una clave de índice agrupado no puede superar los 900 en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para una clave de índice no agrupado, el máximo es 1700 bytes.<br /><br /> Puede definir una clave usando columnas de longitud variable cuyos tamaños máximos sumen más del límite. Pero los tamaños combinados de los datos de dichas columnas no pueden superar el límite.<br /><br /> En un índice no agrupado, puede incluir más columnas sin clave. Estas no contarán para el límite de tamaño de la clave. Las columnas sin clave pueden ayudar a que algunas consultas den mejores resultados.|  
-|Bytes por clave de índice en tablas con optimización para memoria||2500 bytes para un índice no agrupado. No hay límite para un índice de hash, siempre y cuando todas claves de índice quepan en la fila.|En una tabla con optimización para memoria, un índice no agrupado no puede tener columnas de clave cuyos tamaños máximos declarados superen los 2500 bytes. No importa si los datos reales de las columnas de clave son más cortos que los tamaños máximos declarados.<br /><br /> Las clave de índice de hash no tienen límite máximo de tamaño.<br /><br /> En el caso de los índices de tablas con optimización para memoria no existe el concepto de columnas incluidas, ya que todos los índices cubren de forma inherente todas las columnas.<br /><br /> En el caso de las tablas con optimización para memoria, aunque el tamaño de fila sea de 8060 bytes, algunas columnas de longitud variable pueden almacenarse físicamente fuera de esos 8060 bytes. Pero los tamaños máximos declarados de todas las columnas de clave para todos los índices de una tabla, más las columnas adicionales de longitud fija de la tabla, deben caber en dichos 8060 bytes.|  
+|Bytes por clave de índice en tablas optimizadas para memoria||2500 bytes para un índice no agrupado. No hay límite para un índice de hash, siempre y cuando todas claves de índice quepan en la fila.|En una tabla optimizada para memoria, un índice no agrupado no puede tener columnas de clave cuyos tamaños máximos declarados superen los 2500 bytes. No importa si los datos reales de las columnas de clave son más cortos que los tamaños máximos declarados.<br /><br /> Las clave de índice de hash no tienen límite máximo de tamaño.<br /><br /> En el caso de los índices de tablas optimizadas para memoria no existe el concepto de columnas incluidas, ya que todos los índices cubren de forma inherente todas las columnas.<br /><br /> En el caso de las tablas optimizadas para memoria, aunque el tamaño de fila sea de 8060 bytes, algunas columnas de longitud variable pueden almacenarse físicamente fuera de esos 8060 bytes. Pero los tamaños máximos declarados de todas las columnas de clave para todos los índices de una tabla, más las columnas adicionales de longitud fija de la tabla, deben caber en dichos 8060 bytes.|  
 |Bytes por clave externa||900||  
 |Bytes por clave principal||900||  
 |Bytes por fila||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite el almacenamiento de desbordamiento de fila, lo que habilita la inserción de columnas de longitud variable de manera no consecutiva. Solo se almacena una raíz de 24 bytes en el registro principal para las columnas de longitud variable que se insertan de manera no consecutiva; por ello, el límite real por fila es más alto que en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea el tema "Datos de desbordamiento de fila superiores a 8 kB" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|Bytes por fila en tablas con optimización para memoria||8,060|A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , las tablas con optimización para memoria admiten el almacenamiento no consecutivo. Las columnas de longitud variable se insertan de manera no consecutiva si el tamaño máximo de todas las columnas de la tabla supera los 8060 bytes; se trata de una decisión en tiempo de compilación. Solo se almacena una referencia de 8 bytes de forma consecutiva para las columnas almacenadas de forma no consecutiva. Para obtener más información, vea [Tamaño de tabla y fila de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
+|Bytes por fila en tablas optimizadas para memoria||8,060|A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , las tablas optimizadas para memoria admiten el almacenamiento no consecutivo. Las columnas de longitud variable se insertan de manera no consecutiva si el tamaño máximo de todas las columnas de la tabla supera los 8060 bytes; se trata de una decisión en tiempo de compilación. Solo se almacena una referencia de 8 bytes de forma consecutiva para las columnas almacenadas de forma no consecutiva. Para obtener más información, vea [Tamaño de tabla y fila de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes en texto de origen de un procedimiento almacenado||El menor del tamaño del lote o 250 MB||  
 |Bytes por columna **varchar(max)**, **varbinary(max)**, **xml**, **text**o **image**||2^31-1||  
 |Caracteres por columna **ntext** o **nvarchar(max)**||2^30-1||  
@@ -77,16 +75,16 @@ ms.lasthandoff: 08/11/2017
 |Tamaño de la base de datos||524 272 terabytes||  
 |Bases de datos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |Grupos de archivos por base de datos||32,767||  
-|Grupos de archivo por base de datos para datos con optimización para memoria.||1||  
+|Grupos de archivo por base de datos para datos optimizados para memoria.||1||  
 |Archivos por base de datos||32,767||  
 |Tamaño de archivo (datos)||16 terabytes||  
 |Tamaño de archivo (registro)||2 terabytes||  
-|Archivos de datos para datos con optimización para memoria por base de datos||4.096||  
-|Archivo delta por archivo de datos para datos con optimización para memoria||1||  
+|Archivos de datos para datos optimizados para memoria por base de datos||4.096 en [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Las versiones posteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no imponen un límite tan estricto.||  
+|Archivo delta por archivo de datos para datos optimizados para memoria||1||  
 |Referencias de tabla de claves externas por tabla||Saliente = 253. Entrante = 10 000.|Para ver las restricciones, vea [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Longitud del identificador (en caracteres)||128||  
 |Instancias por equipo||50 instancias en un servidor independiente.<br /><br /> 25 instancias en un clúster de conmutación por error cuando se usa un disco de clúster compartido como opción de almacenamiento para la instalación del clúster; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite 50 instancias en un clúster de conmutación por error si elige recursos compartidos de archivos SMB como opción de almacenamiento para la instalación del clúster.||  
-|Índices por tabla con optimización para memoria||8||  
+|Índices por tabla optimizada para memoria||999 a partir de [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] y en [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 en [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] y [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Longitud de una cadena que contiene instrucciones SQL (tamaño de lote)||65.536 * Tamaño de paquete de red|El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS usados para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|  
 |Bloqueos por conexión||Máximo de bloqueos por servidor||  
 |Bloqueos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limitado solo por la memoria|Este valor sirve para asignaciones de bloqueo estático. Los bloqueos dinámicos están limitados solo por la memoria.|  
@@ -159,4 +157,3 @@ ms.lasthandoff: 08/11/2017
  [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

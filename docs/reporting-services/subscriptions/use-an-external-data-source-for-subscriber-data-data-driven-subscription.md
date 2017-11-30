@@ -1,5 +1,5 @@
 ---
-title: "Usar un origen de datos externo para datos del suscriptor (suscripción controlada por datos) | Documentos de Microsoft"
+title: "Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
   En una suscripción controlada por datos, los datos de suscripción dinámica se proporcionan mediante una consulta o un comando que recupera los datos desde un origen de datos externo. Los datos de suscripción se pueden recuperar desde cualquier origen de datos compatible que satisfaga los requisitos del procesamiento de suscripciones controladas por datos. La sintaxis de la consulta o el comando debe ser válida para una extensión de procesamiento de datos instalada en el servidor de informes.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Pasar valores de parámetro desde la base de datos de suscriptores al informe  
  Si se va a crear una suscripción controlada por datos para un informe con parámetros, se pueden utilizar valores de parámetro variables para personalizar los resultados de cada informe. Por ejemplo, la base de datos de suscriptores puede contener información sobre los números de identificación de los empleados, las fechas de contratación, los puestos de trabajo y la ubicación en la oficina que puede utilizarse para filtrar datos del informe. Si el informe acepta parámetros basados en estos u otros datos de columnas disponibles, puede asignar el parámetro a la columna adecuada.  
   
- Cuando asigne campos de suscriptor a parámetros de informe, asegúrese de que los tipos de datos sean compatibles con la longitud de las columnas. Si hay discrepancias, se producirán errores al procesar las suscripciones. Para obtener información adicional acerca del uso de los datos del suscriptor en un informe con parámetros, vea [crear una suscripción controlada por datos &#40; Tutorial de SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Cuando asigne campos de suscriptor a parámetros de informe, asegúrese de que los tipos de datos sean compatibles con la longitud de las columnas. Si hay discrepancias, se producirán errores al procesar las suscripciones. Para más información sobre cómo usar los datos de suscriptor en un informe con parámetros, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modificar el origen de datos de suscriptores  
  Las siguientes modificaciones en el origen de datos de suscriptores pueden impedir que se ejecute la suscripción:  
@@ -87,7 +86,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vea también  
  [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

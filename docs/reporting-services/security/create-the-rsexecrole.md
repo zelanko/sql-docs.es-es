@@ -1,5 +1,5 @@
 ---
-title: Crear el RSExecRole | Documentos de Microsoft
+title: Crear RSExecRole | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado **RSExecRole** para conceder permisos de servidor de informes a la base de datos del servidor de informes. El rol **RSExecRole** se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
@@ -101,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 20. Repita este paso con cada uno de los procedimientos almacenados restantes. **RSExecRole** debe tener concedidos permisos de ejecución para los tres procedimientos almacenados.  
   
- ![Página de propiedades del rol de base de datos](../../reporting-services/security/media/rsexecroledbproperties.gif "página de propiedades de la función de base de datos")  
+ ![Página Propiedades del rol de la base de datos](../../reporting-services/security/media/rsexecroledbproperties.gif "Página Propiedades del rol de la base de datos")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>Crear el rol RSExecRole en la base de datos MSDB  
  Reporting Services utiliza procedimientos almacenados para el servicio Agente SQL Server y recupera información de los trabajos en las tablas del sistema para admitir las operaciones programadas. En los pasos siguientes se explica cómo conceder al rol RSExecRole permisos de ejecución para los procedimientos y permisos de selección en las tablas.  
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. Repita este procedimiento con la tabla sysjobs. Se deben conceder al rol RSExecRole permisos de selección para ambas tablas.  
   
 ## <a name="move-the-report-server-database"></a>Mover la base de datos del servidor de informes  
- Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para obtener más información, consulte [mover las bases de datos del servidor de informes a otro equipo](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Mover las bases de datos del servidor de informes a otro equipo](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- Si va a actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] a SQL Server 2016, puede actualizarlo antes o después de mover la base de datos.  
+ Si va a actualizar [!INCLUDE[ssDE](../../includes/ssde-md.md)] a SQL Server 2016, puede hacerlo antes o después de mover la base de datos.  
   
- La base de datos del servidor de informes se actualizará automáticamente cuando el servidor de informes se conecta a él. No hay ningún paso concreto requerido para actualizar la base de datos.  
+ La base de datos del servidor de informes se actualiza automáticamente cuando el servidor de informes se conecta a ella. No hay ningún paso concreto requerido para actualizar la base de datos.  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>Restaurar las claves de cifrado y comprobar el trabajo  
  Si ha adjuntado las bases de datos del servidor de informes, ahora debe poder completar los pasos siguientes para comprobar el trabajo.  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Haga clic en **Elija una base de datos del servidor de informes existente**.  
   
-5.  Escriba el nombre del servidor del motor de base de datos. Si se ha adjuntado las bases de datos del servidor de informes a una instancia con nombre, debe escribir el nombre de instancia en este formato: \<servername >\\< instancename\>.  
+5.  Escriba el nombre del servidor del motor de base de datos. Si ha adjuntado las bases de datos del servidor de informes a una instancia con nombre, debe escribir el nombre de la instancia con este formato: \<nombreDeServidor>\\<nombreDeInstancia\>.  
   
 6.  Haga clic en **Probar conexión**.  
   
@@ -239,6 +236,6 @@ ms.lasthandoff: 08/09/2017
 [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
 [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+[Copia de seguridad y restauración de claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,5 @@
 ---
-title: Usar el Control ReportViewer de WinForms | Documentos de Microsoft
+title: Usar el control ReportViewer de WinForms | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,49 +10,46 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usar el control ReportViewer de WinForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WinForms para representarlos en una aplicación Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Para agregar el control ReportViewer a una aplicación Windows  
   
-1.  Cree una nueva aplicación de Windows mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Cree una aplicación de Windows usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-O bien -  
+     \- O bien -  
   
      Abra un proyecto de aplicación Windows existente y agregue un nuevo formulario.  
   
-2.  Busque el control ReportViewer en el **cuadro de herramientas**. Si el **cuadro de herramientas** es no está visible, se puede obtener acceso a él desde el **vista** menú seleccionando **cuadro de herramientas**.  
+2.  Busque el control ReportViewer en **Cuadro de herramientas**. Si el **cuadro de herramientas** no es visible, puede obtener acceso a él desde el menú **Ver** si selecciona **Cuadro de herramientas**.  
   
-     ![Seleccionar control ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "control ReportViewer de selección")  
+     ![Seleccionar control ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Seleccionar control ReportViewer")  
   
 3.  Arrastre el control ReportViewer a la superficie de diseño de Windows Form.  
   
-     Un control ReportViewer denominado reportViewer1 se agrega al formulario.  
+     Se agrega al formulario un control ReportViewer denominado reportViewer1.  
   
- Después de agregar el control al formulario, el **tareas de ReportViewer** etiqueta inteligente aparece y le pide que seleccione un informe.  
+ Una vez agregado el control al formulario, aparecerá la etiqueta inteligente **ReportViewer Tasks** y le solicitará que seleccione un informe.  
   
- Si el informe que desea ver se ha implementado en un servidor de informes, seleccione la  **\<informe de servidor >** opción desde el **elegir informe** lista desplegable. Después de la  **\<informe de servidor >** opción está seleccionada, aparecen dos propiedades adicionales: **dirección Url del servidor de informes** y **ruta de acceso del informe**. El **dirección Url del servidor de informes** es la dirección al servidor de informes y el **ruta de acceso del informe** es la ruta de acceso completa del informe que representar.  
+ Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>**, aparecerán dos propiedades adicionales: **Dirección URL del servidor de informes** y **Ruta de acceso del informe**. **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
   
- ![Seleccionar informe de servidor](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Seleccionar informe de servidor")  
+ ![Seleccionar informe del servidor](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Seleccionar informe del servidor")  
   
- Si el informe que desea ver un informe en modo local, seleccione la **diseñar un nuevo informe** opción para iniciar el Diseñador de informes o seleccione un informe que ya forme parte del proyecto existente.  
+ Si quiere ver un informe en modo local, seleccione la opción **Diseñar nuevo informe** para iniciar el diseñador de informes o seleccione un informe que ya forme parte del proyecto existente.  
   
  ![Seleccionar informe local](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Seleccionar informe local")  
   
@@ -157,30 +154,30 @@ End Class
   
 1.  Abra el proyecto Windows al que se agregará el informe.  
   
-2.  Desde el **proyecto** menú, seleccione **Agregar elemento existente**.  
+2.  En el menú **Proyecto**, seleccione **Agregar elemento existente**.  
   
 3.  Vaya a la ubicación donde instaló el proyecto [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples.  
   
-     La descarga de los ejemplos de informes, vaya a [ejemplos de informes de AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Para descargar los ejemplos de informe, vaya a [Ejemplos de informes de AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
   
-4.  Seleccione el archivo Sales Order Detail.rdl y haga clic en el **agregar** botón.  
+4.  Seleccione el archivo Sales Order Detail.rdl y haga clic en el botón **Agregar**.  
   
      El archivo Sales Order Detail.rdl debe formar parte del proyecto.  
   
-     ![Informe de detalle de pedido de ventas](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "informe de detalle de pedido de ventas")  
+     ![Informe de detalles de pedido de ventas](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Informe de detalles de pedido de ventas")  
   
-5.  Haga clic en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **cambiar el nombre de**. Cambiar el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
+5.  Haga clic con el botón secundario en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **Cambiar nombre**. Cambie el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
   
-     Si el Explorador de soluciones no está visible, puede abrirlo en el **vista** menú seleccionando **el Explorador de soluciones**.  
+     Si el Explorador de soluciones no está visible, puede abrirlo en el menú **Ver** seleccionando **Explorador de soluciones**.  
   
     > [!NOTE]  
-    >  Cambiar el nombre de la extensión de archivo de rdl a rdlc le permitirá modificar el informe utilizando el Diseñador de informes para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
+    >  El cambio del nombre de la extensión de archivo de rdl a rdlc le permitirá modificar el informe utilizando el diseñador de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
   
-6.  Una vez cambiado el nombre del informe, seleccione el archivo y busque la ventana Propiedades. Cambiar el **copiar en el directorio de salida** propiedad **copiar si es posterior**.  
+6.  Una vez cambiado el nombre del informe, seleccione el archivo y busque la ventana Propiedades. Cambie la propiedad **Copiar en el directorio de salida** a **Copiar si es posterior**.  
   
-     ![Configuración de copia para salida](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "configuración de configuración de copia a la salida")  
+     ![Configurar los valores de Copiar en el directorio de salida](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configurar los valores de Copiar en el directorio de salida")  
   
-     Si el **propiedades** ventana no está visible, puede abrirlo desde la **vista** menú seleccionando **ventana propiedades**.  
+     Si la ventana **Propiedades** no está visible, ábrala desde el menú **Ver** eligiendo **Ventana Propiedades**.  
   
  El ejemplo de código siguiente creará un conjunto de datos para los datos del pedido de ventas y, a continuación, representará el informe Sales Order Detail en modo local.  
 
@@ -515,4 +512,3 @@ End Class
  [Integrar Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

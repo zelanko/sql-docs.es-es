@@ -1,28 +1,25 @@
 ---
-title: Trabajar con informes paginados (portal web) | Documentos de Microsoft
+title: Trabajar con informes paginados (portal web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>Trabajar con informes paginados (portal web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +47,7 @@ Para administrar un informe paginado existente, puede hacer lo siguiente.
 > [!NOTE]
 > Si no ve informes paginados en la carpeta, asegúrese de que está viendo informes paginados. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Procure que **Informes paginados** esté activado.  
   
-1.  Seleccione el **puntos suspensivos (...)**  del conjunto de datos que desea administrar.  
+1.  Haga clic en los **puntos suspensivos (…)** del conjunto de datos que quiere administrar.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +124,12 @@ Esto hace que no sea necesario proporcionar las credenciales del origen de datos
 Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para el servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para más información sobre esta cuenta, vea [Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Suscripciones  
-Una suscripción de Reporting Services es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes. Para obtener más información, consulte [trabajar con suscripciones](working-with-subscriptions-web-portal.md).
+Una suscripción de Reporting Services es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes. Para más información, vea [Trabajar con suscripciones](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Elementos dependientes  
-Use la página Elementos dependientes para ver una lista de los elementos que hacen referencia a este informe. El icono de cada tipo de elemento indica en qué consiste. A continuación, puede seleccionar la **puntos suspensivos (...)**  en cada elemento para administrar los elementos más adelante.  
+Use la página Elementos dependientes para ver una lista de los elementos que hacen referencia a este informe. El icono de cada tipo de elemento indica en qué consiste. Después, puede hacer clic en el botón de **puntos suspensivos (...)** de cada elemento para seguir administrándolo.  
   
 ## <a name="caching"></a>Almacenamiento en memoria caché  
 Dispone de varias opciones para almacenar en memoria caché los datos de un informe paginado. Puede empezar con una selección simple.  
@@ -149,7 +146,7 @@ Si selecciona **Cache Copies of this report and use them when available** (Almac
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-Para obtener más información, consulte [trabajar con instantáneas](working-with-snapshots-web-portal.md).
+Para más información, vea [Trabajar con instantáneas](working-with-snapshots-web-portal.md).
   
 ### <a name="cache-expiration"></a>Expiración de la caché  
   
@@ -198,8 +195,7 @@ Seleccione para cambiar la manera en la que se define la seguridad para el eleme
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Portal web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

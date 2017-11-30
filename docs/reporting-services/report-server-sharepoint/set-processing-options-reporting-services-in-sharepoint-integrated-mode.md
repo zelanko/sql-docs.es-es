@@ -1,5 +1,5 @@
 ---
-title: Establecer opciones de procesamiento (Reporting Services en modo integrado de SharePoint) | Documentos de Microsoft
+title: Establecer opciones de procesamiento (Reporting Services en el modo integrado de SharePoint)| Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,20 +14,19 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 645e4258f9185f748af496aa37aff13af08ce2a7
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be09d11f5a9fcdddc49a092c37be720dad0581c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Establecer opciones de procesamiento (Reporting Services en modo integrado de SharePoint)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Establecer opciones de procesamiento (Reporting Services en el modo integrado de SharePoint)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Puede establecer opciones de procesamiento en un informe de Reporting Services para determinar cuándo se produce el procesamiento de datos. También puede establecer un valor de tiempo de espera para el procesamiento de informes, así como opciones que determinen si debe habilitarse el historial de informes para el informe actual.  
+  Puede establecer opciones de procesamiento en un informe de Reporting Services para determinar cuándo debe tener lugar el procesamiento de datos. También puede establecer un valor de tiempo de espera para el procesamiento de informes, así como opciones que determinen si debe habilitarse el historial de informes para el informe actual.  
   
 -   Los informes pueden ejecutarse como una instantánea de informe si se desea evitar que el informe se ejecute de forma arbitraria (durante una copia de seguridad programada, por ejemplo). Una instantánea de informe suele crearse y actualizarse posteriormente según una programación, lo que permite controlar con exactitud el momento en que se producirá el procesamiento del informe y los datos. Si un informe se basa en consultas que tardan demasiado en ejecutarse o en consultas que usan datos desde un origen de datos al que prefiere que nadie tenga acceso durante determinadas horas, debe ejecutar el informe como instantánea.  
   
@@ -35,12 +34,12 @@ ms.lasthandoff: 10/06/2017
   
 -   El historial del informe es un conjunto de copias de un informe ejecutadas con anterioridad. Puede usar el historial de informe para conservar un registro de un informe a lo largo del tiempo. El historial del informe no se ha diseñado para informes que contienen datos confidenciales o personales. Por este motivo, el historial solamente puede incluir aquellos informes que realizan una consulta a un origen de datos mediante un único conjunto de credenciales (sean credenciales almacenadas o credenciales usadas para la ejecución de informes desatendida) disponible para todos los usuarios que ejecutan un informe.  
 
-    Integración de Reporting Services con SharePoint usa el proceso de pago y compruebe en las características de administración de contenido de SharePoint para guardar las actualizaciones a los tipos de contenido de Reporting Services. Esto incluye la creación de instantáneas de informe. Por consiguiente si ha habilitado la versión en una biblioteca de documentos, verá la versión del informe actualizada cuando se crea una nueva instantánea del historial de informes. Este es un efecto secundario de actualizar las instantáneas. Cuando una instantánea está actualizada hace que la propiedad LastExecution del informe cambie y eso producirá un cambio en la versión del informe.  
+    La integración de Reporting Services con SharePoint usa las características de mantenimiento de entrada y salida de SharePoint para guardar las actualizaciones en los tipos de contenido de Reporting Services. Esto incluye la creación de instantáneas de informe. Por consiguiente si ha habilitado la versión en una biblioteca de documentos, verá la versión del informe actualizada cuando se crea una nueva instantánea del historial de informes. Este es un efecto secundario de actualizar las instantáneas. Cuando una instantánea está actualizada hace que la propiedad LastExecution del informe cambie y eso producirá un cambio en la versión del informe.  
 
 -   La especificación de valores de tiempo de espera permite establecer límites relativos al empleo de los recursos del sistema.  
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
 ## <a name="set-data-refresh-options"></a>Establecer opciones de actualización de datos
   
@@ -100,7 +99,6 @@ ms.lasthandoff: 10/06/2017
 
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Especifique los valores de tiempo de espera de procesamiento de informes y conjunto de datos compartido](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

@@ -1,5 +1,5 @@
 ---
-title: Especifique un intervalo de eje (generador de informes y SSRS) | Documentos de Microsoft
+title: Especificar un intervalo de eje (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e86de97e19273c282f6cfe8d845eb11a20b98a5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar un intervalo de eje (Generador de informes y SSRS)
 Aprenda a cambiar el número de etiquetas y las marcas de graduación en el eje de categorías (X) de un gráfico; para ello, establezca el intervalo de eje de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -29,7 +29,7 @@ En el eje de valores (normalmente el eje Y), los intervalos de eje proporcionan 
 
 Pero en el eje de categorías (normalmente el eje X), a veces un intervalo de eje automático genera categorías sin etiquetas de eje. Puede especificar el número de intervalos que quiere en la propiedad Intervalo del eje. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula el número de intervalos en tiempo de ejecución, según los datos del conjunto de resultados. Para más información sobre cómo se calculan los intervalos de eje, consulte [Aplicar formato a las etiquetas de los ejes de un gráfico](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Para intentar establecer el intervalo de eje con datos de ejemplo, vea [Tutorial: agregar un gráfico de columnas al informe (generador de informes)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Para probar la configuración del intervalo de eje con datos de ejemplo, vea [Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
 > [!NOTE]  
 >  El eje de categorías normalmente es el eje horizontal o eje X. Sin embargo, en el caso de los gráficos de barras, el eje de categorías es el eje vertical o eje Y.  
@@ -48,7 +48,7 @@ En este gráfico de columnas, el intervalo de etiqueta horizontal está definido
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  En el **propiedades del eje Horizontal** cuadro de diálogo > **opciones del eje** pestaña, establezca **intervalo** a **1** para mostrar cada etiqueta de grupo de categorías. Para mostrar cualquier otra etiqueta de grupo de categorías en el eje X, escriba **2**. 
+2.  En el cuadro de diálogo **Propiedades del eje horizontal** > pestaña **Opciones del eje**, establezca **Intervalo** en **1** para mostrar cada etiqueta de grupo de categorías. Para mostrar cualquier otra etiqueta de grupo de categorías en el eje X, escriba **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -83,19 +83,18 @@ También puede establecer el intervalo de etiqueta en el panel Propiedades.
 
 De manera predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] establece el intervalo de eje en automático. Este procedimiento explica cómo puede volver a establecerlo en el valor predeterminado. 
   
-1.  Haga clic con el botón secundario en el eje del gráfico que desea cambiar y, a continuación, haga clic en **Propiedades del eje**. 
+1.  Haga clic con el botón derecho en el eje del gráfico que quiera cambiar y, después, haga clic en **Propiedades del eje**. 
   
-2.  En el **propiedades del eje Horizontal** cuadro de diálogo > **opciones del eje** pestaña, establezca **intervalo** a **automática**. El gráfico mostrará el número óptimo de etiquetas de categoría que quepan a lo largo del eje.  
+2.  En el cuadro de diálogo **Propiedades del eje horizontal** > pestaña **Opciones del eje**, establezca **Intervalo** en **Automático**. El gráfico mostrará el número óptimo de etiquetas de categoría que quepan a lo largo del eje.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a los puntos de datos de un gráfico (generador de informes y SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Ordenar datos en una región de datos (generador de informes y SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Cuadro de diálogo de propiedades de eje, opciones del eje &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Especificar una escala logarítmica &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Trazar datos en un eje secundario &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Ordenar datos en una región de datos (Generador de informes y SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Especificar una escala logarítmica &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Trazar datos en un eje secundario &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
-

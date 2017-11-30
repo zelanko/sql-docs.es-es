@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar suscripciones para servidores de informes en modo de SharePoint | Documentos de Microsoft
+title: Crear y administrar suscripciones para servidores de informes en modo de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b34e48d7cda4b55a4162c2229f99e2bcdbcbb90e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  Al crear una suscripción, puede seleccionar un formato de archivo de salida. No todos los informes funcionan bien en todos los formatos. Antes de seleccionar un formato en una suscripción, abra el informe y expórtelo a otros formatos para asegurarse de que aparece de la manera esperada.  
   
- Los usuarios necesitan el permiso de lista **Editar elementos** en SharePoint si desean poder crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, consulte [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Los usuarios necesitan el permiso de lista **Editar elementos** en SharePoint si desean poder crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, consulte [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 > [!IMPORTANT]  
 >  Una suscripción que entrega un informe a una biblioteca o a una carpeta compartida crea un nuevo archivo estático basado en el informe original, pero no se trata de una verdadera definición de informe que se ejecute en el elemento web Visor de informes. Si el informe original cuenta con funciones interactivas (como vínculos de obtención de detalles) o contenido dinámico, estas características no estarán disponibles en el archivo estático que se entregue en la ubicación de destino. Si selecciona una "Página web", puede mantener parte de esta interactividad pero, dado que el documento no es un archivo .rdl que se ejecute en el Visor de informes, al hacer varias veces clic en un informe se crearán nuevas páginas en la sesión de explorador por las que tendrá que desplazarse para regresar al sitio.  
@@ -92,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  En **Opciones de sobrescritura**, especifique una opción que determine si las entregas posteriores sobrescribirán un archivo. Si desea mantener las entregas anteriores, puede seleccionar **Crear archivo con nombre único**. Se anexará un número a los nuevos archivos para crear un nombre de archivo único.  
   
-9. En **Evento de entrega**, especifique una programación o evento que provoque la ejecución de la suscripción. Puede crear una programación personalizada, seleccionar una programación compartida si hay alguna disponible o ejecutar la suscripción cada vez que se actualicen los datos de un informe que se ejecute con datos de instantáneas. Para obtener más información acerca de las programaciones y procesamiento de datos, vea [establecer opciones de procesamiento &#40; Reporting Services en SharePoint integrado modo &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. En **Evento de entrega**, especifique una programación o evento que provoque la ejecución de la suscripción. Puede crear una programación personalizada, seleccionar una programación compartida si hay alguna disponible o ejecutar la suscripción cada vez que se actualicen los datos de un informe que se ejecute con datos de instantáneas. Para más información sobre programaciones y procesamiento de datos, vea [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. La sección de parámetros no está visible en esta página si el informe que selecciona no contiene parámetros. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
   
 10. En **Nombre de usuario** y **Contraseña**, especifique las credenciales que tienen permisos de escritura en la carpeta compartida.  
   
-11. En **Evento de entrega**, especifique una programación o evento que provoque la ejecución de la suscripción. Puede crear una programación personalizada, seleccionar una programación compartida si hay alguna disponible o ejecutar la suscripción cada vez que se actualicen los datos de un informe que se ejecute con datos de instantáneas. Para obtener más información acerca de las programaciones y procesamiento de datos, vea [establecer opciones de procesamiento &#40; Reporting Services en SharePoint integrado modo &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. En **Evento de entrega**, especifique una programación o evento que provoque la ejecución de la suscripción. Puede crear una programación personalizada, seleccionar una programación compartida si hay alguna disponible o ejecutar la suscripción cada vez que se actualicen los datos de un informe que se ejecute con datos de instantáneas. Para más información sobre programaciones y procesamiento de datos, vea [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 12. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 08/09/2017
   
      El formato de representación y el explorador determinan si el informe se incrusta o se adjunta. Si el explorador es compatible con HTML 4.0 y MHTML, y se selecciona el formato de representación Archivo web, el informe se incrusta como parte del mensaje. Los demás formatos de representación (CSV, PDF, etc.) entregan los informes como datos adjuntos. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no comprueba el tamaño de los datos adjuntos ni del mensaje antes de enviar el informe. Si los datos adjuntos o el mensaje superan el límite máximo permitido por el servidor de correo, no se entregará el informe. Elija una de las otras opciones de entrega (como dirección URL o notificación) para informes de gran tamaño.  
   
-9. En **Evento de entrega**, especifique una programación o evento que provoque la ejecución de la suscripción. Puede crear una programación personalizada, seleccionar una programación compartida si hay alguna disponible o ejecutar la suscripción cada vez que se actualicen los datos de un informe que se ejecute con datos de instantáneas. Para obtener más información acerca de las programaciones y procesamiento de datos, vea [establecer opciones de procesamiento &#40; Reporting Services en SharePoint integrado modo &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. En **Evento de entrega**, especifique una programación o evento que provoque la ejecución de la suscripción. Puede crear una programación personalizada, seleccionar una programación compartida si hay alguna disponible o ejecutar la suscripción cada vez que se actualicen los datos de un informe que se ejecute con datos de instantáneas. Para más información sobre programaciones y procesamiento de datos, vea [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -164,10 +163,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Entrega de correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Entrega a recursos compartidos de archivos en Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Entrega de la biblioteca de SharePoint en Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
  [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

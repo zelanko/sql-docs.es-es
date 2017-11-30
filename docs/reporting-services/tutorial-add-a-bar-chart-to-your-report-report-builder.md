@@ -1,27 +1,25 @@
 ---
-title: "Tutorial: Agregar un gráfico de barras a un informe (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Agregar un gráfico de barras a un informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
 En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Después, agregará un filtro y mejorará el gráfico. 
@@ -38,7 +36,7 @@ La siguiente ilustración muestra el gráfico de barras que creará, con ventas 
   
  
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -55,7 +53,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
   
      Aparecerá el cuadro de diálogo **Introducción** .  
   
-     ![El generador de informes Introducción](../reporting-services/media/rb-getstarted.png "empezar a trabajar el generador de informes")  
+     ![Introducción al Generador de informes](../reporting-services/media/rb-getstarted.png "Introducción al Generador de informes")  
   
      Si no ve el cuadro de diálogo **Introducción** , haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** . 
       
@@ -220,7 +218,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 2.  Haga clic en el eje horizontal a lo largo de la parte inferior del gráfico para seleccionarlo.  
   
-3.  En el **inicio** ficha > **número** grupo > **moneda**. Las etiquetas del eje horizontal cambian al formato de moneda.  
+3.  En la pestaña **Inicio** > grupo **Número** > **Moneda**. Las etiquetas del eje horizontal cambian al formato de moneda.  
   
 3.  (Opcional) Quite los dígitos decimales. Cerca del botón **Moneda** , haga clic dos veces en el botón **Disminuir decimales** .  
   
@@ -308,5 +306,4 @@ Ha completado correctamente el tutorial Agregar un gráfico de barras al informe
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Funcionalidad interactiva - diferentes extensiones de representación de informes | Documentos de Microsoft"
+title: "Funcionalidad interactiva para diferentes extensiones de representación de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva - diferentes extensiones de representación de informes
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características para interactuar con un informe paginado en tiempo de ejecución. No todos los formatos de representación de informes son compatibles con todas las características interactivas. Use la tabla siguiente para comprender el funcionamiento de las características interactivas en los diferentes formatos.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |Vista previa/Visor de informes, HTML|Los usuarios hacen clic en iconos de expansión y contracción para ver las secciones de un informe.|  
 |PDF|El servidor de informes exporta el estado de mostrar u ocultar actual del informe a formato PDF. No se admite la alternancia interactiva.|  
-|Excel|Los vínculos y los elementos de obtención de detalles que pueden alternarse se representan como esquemas contraíbles en Excel. Excel permite expandir y contraer secciones del informe. Para obtener más información acerca de las limitaciones impuestas por Excel, vea [exportar a Microsoft Excel &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Los vínculos y los elementos de obtención de detalles que pueden alternarse se representan como esquemas contraíbles en Excel. Excel permite expandir y contraer secciones del informe. Para más información sobre las limitaciones impuestas por Excel, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|El servidor de informes exporta el estado de mostrar u ocultar actual del informe a formato PDF. No se admite la alternancia interactiva.|  
 |Otro|No disponible en MHTML, XML ni CSV. Al exportar a un formato Imagen, el servidor de informes exporta el estado de mostrar u ocultar actual del informe al formato PDF. No se admite la alternancia interactiva.|  
   
@@ -115,10 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Ordenación interactiva, mapas de documento y vínculos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

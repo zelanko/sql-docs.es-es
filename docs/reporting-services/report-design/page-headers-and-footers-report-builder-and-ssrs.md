@@ -1,5 +1,5 @@
 ---
-title: "Página encabezados y pies de página (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Encabezados y pies de página (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
   Un informe puede contener un encabezado y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Los encabezados y pies de página pueden contener texto estático, imágenes, líneas, rectángulos, bordes, color de fondo, imágenes de fondo y expresiones. Las expresiones incluyen referencias a campos de conjunto de datos para informes que tienen un conjunto de datos y llamadas a funciones de agregado que incluyen el conjunto de datos como ámbito.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Cada extensión de representación procesa las páginas de forma diferente. Para más información sobre las extensiones de representación y paginación de informes, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
- De forma predeterminada, los informes tienen pies de página, pero no encabezados de página. Para más información sobre cómo agregarlas o quitarlas, vea [Agregar o quitar un encabezado o un pie de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
+ De forma predeterminada, los informes tienen pies de página, pero no encabezados de página. Para más información sobre cómo agregarlos o quitarlos, vea [Agregar o quitar un encabezado o un pie de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
  Normalmente, los encabezados y pies contienen números de página, títulos de informe y otras propiedades de informe. Para más información sobre cómo agregar estos elementos al encabezado o pie de página del informe, vea [Mostrar números de página u otras propiedades del informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
 |Colección de campos para los elementos de la página|Indirectamente. Por ejemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sí. Por ejemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagen enlazada a datos|Indirectamente. Por ejemplo, `=ReportItems!TXT_Photo.Value`|Sí. Por ejemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
- Las secciones siguientes de este tema muestran expresiones listas para usar que generan datos variables usados habitualmente en los encabezados y pies de página. También hay una sección en la que se explica la forma en que la extensión de representación en Excel procesa encabezados y pies de página. Para más información sobre las expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Las secciones siguientes de este tema muestran expresiones listas para usar que generan datos variables usados habitualmente en los encabezados y pies de página. También hay una sección en la que se explica la forma en que la extensión de representación en Excel procesa encabezados y pies de página. Para obtener más información sobre las expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ### <a name="adding-calculated-page-totals-to-a-header-or-footer"></a>Agregar un total de páginas calculado a un encabezado o pie de página  
  En algunos informes, resulta útil incluir un valor calculado en el encabezado o pie de página; por ejemplo, una suma total por página si la página incluye valores numéricos. Dado que no se puede hacer referencia a los campos directamente, la expresión que use en el encabezado o pie de página debe hacer referencia al nombre del elemento del informe (por ejemplo, un cuadro de texto), en lugar de a un campo de datos:  
@@ -130,11 +129,10 @@ ms.lasthandoff: 08/09/2017
   
  Un recuento de páginas más preciso se basa en páginas lógicas que guardan correlación con las dimensiones de una página impresa. En Excel, el pie de página utiliza números de página lógica de forma automática. Para colocar el recuento de páginas lógicas en el encabezado de página, debe configurar los valores de información de dispositivo para que utilice encabezados simples. Tenga en cuenta que, cuando utilice encabezados simples, eliminará la capacidad de administrar el diseño de informes complejos en la región del encabezado.  
   
- Para más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Incrustar una imagen en un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rectángulos y líneas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

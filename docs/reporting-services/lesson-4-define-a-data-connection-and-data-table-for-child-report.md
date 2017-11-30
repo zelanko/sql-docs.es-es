@@ -1,28 +1,25 @@
 ---
-title: "Lección 4: Definir una conexión de datos y la tabla de datos para el informe secundario | Documentos de Microsoft"
+title: "Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c717fecbc14933bdfaac30e64faa2b8a9ff2940
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario
 Después de diseñar el informe primario, el paso siguiente es crear una conexión de datos y una tabla de datos para el informe secundario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
@@ -63,7 +60,7 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    También puede crear la consulta si hace clic en **Generador de consultas**y, después, comprobar la consulta al hacer clic en **Ejecutar consulta** . Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para obtener más información sobre cómo obtener la base de datos de ejemplo **AdventureWorks2014** , consulte [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/)(Ejemplos de productos de bases de datos de Microsoft SQL Server).  
+    También puede crear la consulta si hace clic en **Generador de consultas**y, después, comprobar la consulta al hacer clic en **Ejecutar consulta** . Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para más información sobre cómo obtener la base de datos de ejemplo **AdventureWorks2014**, vea [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 10. En la página **Elegir los métodos que se van a generar** , desactive **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**y seleccione **Finalizar**.  
   
@@ -79,5 +76,4 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
 ## <a name="next-task"></a>Tarea siguiente  
 Ha creado correctamente una conexión de datos y una tabla de datos para el informe secundario. Después, diseñará el informe secundario usando el Asistente para informes. Consulte [Lección 5: Diseñar el informe secundario usando el Asistente para informes](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
-
 

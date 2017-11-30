@@ -1,5 +1,5 @@
 ---
-title: "Acceso del código en Reporting Services | Documentos de Microsoft"
+title: "Seguridad de acceso del código en Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,23 +19,23 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: d34c2136e148bcd5297160f1776b13b86c343a7f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Seguridad de acceso del código en Reporting Services
-  La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para obtener más información sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentación del SDK.  
+  La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para obtener información detallada sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la documentación del SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa seguridad de acceso del código porque, aunque el servidor de informes está generado sobre tecnología [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], hay una diferencia sustancial entre una aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típica y el servidor de informes. Una aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típica no ejecuta código de usuario. En cambio, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una arquitectura abierta y extensible que permite a los usuarios programar con los archivos de definición de informe mediante el **código** elemento del lenguaje de definición de informe y a desarrollar la funcionalidad especializada en un ensamblado personalizado para su uso en informes. Además, los programadores pueden diseñar e implementar extensiones eficaces que mejoran las capacidades del servidor de informes. Con esta eficacia y flexibilidad se hace necesario proporcionar tanta protección y seguridad como sea posible.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa seguridad de acceso del código porque, aunque el servidor de informes está generado sobre tecnología [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], hay una diferencia sustancial entre una aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típica y el servidor de informes. Una aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típica no ejecuta código de usuario. Por el contrario, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa una arquitectura abierta y extensible que permite a los usuarios programar con los archivos de definición de informes mediante el elemento **Code** del lenguaje RDL (Report Definition Language) y desarrollar funciones especializadas en un ensamblado personalizado para su uso en informes. Además, los programadores pueden diseñar e implementar extensiones eficaces que mejoran las capacidades del servidor de informes. Con esta eficacia y flexibilidad se hace necesario proporcionar tanta protección y seguridad como sea posible.  
   
- Los programadores de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pueden usar cualquier ensamblado de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] en sus informes y llamar en modo nativo a toda la funcionalidad de ensamblados implementados en la memoria caché de ensamblados global. La única cosa que el servidor de informes puede controlar es qué permisos se proporcionan para las expresiones de informe y los ensamblados personalizados cargados. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ensamblados personalizados reciben **Execute**-únicamente permisos de forma predeterminada.  
+ Los programadores de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pueden usar cualquier ensamblado de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] en sus informes y llamar en modo nativo a toda la funcionalidad de ensamblados implementados en la memoria caché de ensamblados global. La única cosa que el servidor de informes puede controlar es qué permisos se proporcionan para las expresiones de informe y los ensamblados personalizados cargados. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los ensamblados personalizados reciben permisos de solo **Ejecución** de forma predeterminada.  
   
 ## <a name="evidence"></a>Evidencia  
  La evidencia es la información que usa Common Language Runtime (CLR) para determinar una directiva de seguridad para ensamblados de código. La evidencia indica al motor en tiempo de ejecución que el código tiene una característica concreta. Entre los tipos de evidencia normales están las firmas digitales y la ubicación de un ensamblado. La evidencia también puede tener un diseño personalizado para representar otra información que sea significativa para la aplicación.  
@@ -64,10 +63,10 @@ ms.lasthandoff: 08/12/2017
  Debería trabajar con su administrador del sistema o su experto de implementación de aplicaciones para determinar el tipo de seguridad de acceso del código y los grupos de código que requieren sus extensiones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o ensamblados personalizados.  
   
 ## <a name="named-permission-sets"></a>Conjuntos de permisos con nombre  
- Un conjunto de permisos con nombre es un conjunto de permisos que los administradores pueden asociar a un grupo de código. La mayoría de los conjuntos de permisos con nombre están formados al menos por un permiso, un nombre y una descripción para el conjunto de permisos. Los administradores pueden usar los conjuntos de permisos con nombre para establecer o modificar la directiva de seguridad para grupos de código. Con un conjunto de permisos con nombre se pueden asociar varios grupos de código. El CLR proporciona conjuntos de permisos con nombre integrados; entre éstos se encuentran **nada**, **ejecución**, **Internet**, **intranet local**, **todo**, y **FullTrust**.  
+ Un conjunto de permisos con nombre es un conjunto de permisos que los administradores pueden asociar a un grupo de código. La mayoría de los conjuntos de permisos con nombre están formados al menos por un permiso, un nombre y una descripción para el conjunto de permisos. Los administradores pueden usar los conjuntos de permisos con nombre para establecer o modificar la directiva de seguridad para grupos de código. Con un conjunto de permisos con nombre se pueden asociar varios grupos de código. El CLR proporciona conjuntos de permisos con nombre integrados; entre estos se encuentran **Nada**, **Ejecución**, **Internet**, **Intranet local**, **Todo** y **Plena confianza**.  
   
 > [!NOTE]  
->  Las extensiones personalizadas de datos, entrega, representación y seguridad en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] debe ejecutarse en el **FullTrust** conjunto de permisos. Trabaje con su administrador del sistema para agregar el grupo de código y las condiciones de pertenencia adecuados para sus extensiones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+>  Las extensiones de datos personalizados, entrega, representación y seguridad en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se deben ejecutar con el conjunto de permisos **Plena confianza**. Trabaje con su administrador del sistema para agregar el grupo de código y las condiciones de pertenencia adecuados para sus extensiones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Puede asociar sus propios niveles personalizados de permisos para los ensamblados personalizados que usa con informes. Por ejemplo, si desea permitir a un ensamblado el acceso a un archivo concreto, puede crear un nuevo conjunto de permisos con acceso de E/S de archivo concreto y, a continuación, asignar el conjunto de permisos a su grupo de código. El conjunto de permisos siguiente permite el acceso de solo lectura al archivo MyFile.xml:  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger desarrollo &#40; Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ [Desarrollo seguro &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

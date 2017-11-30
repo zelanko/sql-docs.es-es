@@ -1,5 +1,5 @@
 ---
-title: "Agregar elemento web de Visor de informes de SQL Server Reporting Services a una página de SharePoint | Documentos de Microsoft"
+title: "Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint | Microsoft Docs"
 ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
 ms.date: 09/26/2017
 ms.prod: sql-server-2016
@@ -14,73 +14,70 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: e60dfd8a296c84701dfc30588aba49220c130d9f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar elemento web de Visor de informes de SQL Server Reporting Services a una página de SharePoint
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Mostrar un informe de SQL Server Reporting Services o el servidor de informes de Power BI, mediante la adición de un elemento web Visor de informes a una página de SharePoint.
+Muestre un informe, en SQL Server Reporting Services o en Power BI Report Server, agregando un elemento web Visor de informes a una página de SharePoint.
 
 ![Elemento web Visor de informes en una página de SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Para que los informes cargar correctamente, las notificaciones del servicio de Token de Windows (C2WTS) debe estar configurada para Kerberos delegación restringida. Para obtener más información sobre cómo configurar C2WTS, vea [notificaciones del servicio de Token de Windows (C2WTS) y Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
+* Para que los informes se carguen correctamente, las notificaciones del servicio de token de Windows (C2WTS) deben estar configuradas para la delegación restringida de Kerberos. Para más información sobre cómo configurar C2WTS, vea [Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 
-* El elemento web Visor de informes se debe implementar en la granja de servidores de SharePoint. Para obtener información sobre cómo implementar el proyecto de solución de elementos de web de Visor de informes, consulte [implementar el elemento web Visor de informes en un sitio de SharePoint](deploy-report-viewer-web-part.md).
+* El elemento web Visor de informes se debe implementar en la granja de SharePoint. Para información sobre cómo implementar el proyecto de la solución del elemento web Visor de informes, vea [Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md) (Implementar el elemento web Visor de informes en un sitio de SharePoint).
 
 * Para agregar un elemento web a una página web, debe tener el permiso Agregar y personalizar páginas en el nivel de sitio. Si va a usar la configuración de seguridad predeterminada, este permiso se concede a los miembros del grupo **Propietarios** que tienen el nivel de permiso Control total.
 
-## <a name="add-web-part"></a>Agregar elemento web
+## <a name="add-web-part"></a>Agregar el elemento web
 
-1. En el sitio de SharePoint, seleccione la **engranaje** icono en la parte superior izquierda y seleccione **agregar una página**.
+1. En su sitio de SharePoint, seleccione el icono del **engranaje**, situado en la esquina superior izquierda, y seleccione **Agregar una página**.
 
-    ![Agregar una página a un sitio de sharepoint desde el icono de engranaje.](media/sharepoint-add-a-page.png)
+    ![Agregue una página a un sitio de SharePoint desde el icono del engranaje.](media/sharepoint-add-a-page.png)
 
-2. Asigne un nombre y seleccione a la página **crear**.
+2. Asigne un nombre a la página y seleccione **Crear**.
 
-3. En el Diseñador de la página, seleccione la **insertar** ficha en la cinta de opciones. A continuación, seleccione **elemento web** dentro de la **elementos** sección.
+3. En el diseñador de páginas, seleccione la pestaña **Insertar** de la cinta de opciones. Luego, seleccione **Elemento web** en la sección **Elementos**.
 
-    ![Insertar un elemento web de la cinta de opciones de office.](media/sharepoint-insert-web-part.png)
+    ![Inserte un elemento web desde la cinta de opciones de Office.](media/sharepoint-insert-web-part.png)
 
-4. En **categorías**, seleccione **SQL Server Reporting Services (modo nativo). En **elementos**, seleccione **Visor de informes**. A continuación, seleccione **agregar**.
+4. En **Categorías**, seleccione **SQL Server Reporting Services (modo nativo). En **Elementos**, seleccione **Visor de informes**. Luego, seleccione **Agregar**.
 
-    ![Agregar elemento web Visor de informes.](media/sharepoint-report-viewer-web-part.png)
+    ![Agregue el elemento web Visor de informes.](media/sharepoint-report-viewer-web-part.png)
 
-    Inicialmente, esto puede aparecer un error. El error es porque la URL del servidor de informes de forma predeterminada está establecida en *http://localhost* y puede no estar disponible en esa ubicación.
+    Es posible que al principio aparezca con un error. El error se debe a que la dirección URL predeterminada del servidor de informes está establecida en *http://localhost* y puede que no esté disponible en esa ubicación.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurar el elemento web Visor de informes
 
 Para configurar el elemento web para que señale a un informe específico, haga lo siguiente.
 
-1. Al editar la página de SharePoint, seleccione la flecha hacia abajo en la esquina superior derecha del elemento web y seleccione **Editar elemento web**.
+1. Al editar la página de SharePoint, seleccione la flecha hacia abajo, situada en la esquina superior derecha del elemento web, y seleccione **Editar elemento web**.
 
-    ![Modificar una página web de web parte desplegable.](media/sharepoint-edit-web-part.png)
+    ![Edite la página web desde el desplegable del elemento web.](media/sharepoint-edit-web-part.png)
 
-2. Escriba el **dirección URL del servidor de informes** para el servidor de informes que hospeda el informe. Esto debe ser similar a *http://myrsserver/reportserver*.
+2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. Debe parecerse a *http://miServidorRS/reportserver*.
 
-3. Escriba la ruta de acceso y el nombre del informe que desea mostrar en el elemento web. Esto tendrá un aspecto similar a *AdventureWorks Sample Reports/Company Sales*. En este ejemplo, el informe *Company Sales* está en una carpeta denominada *AdventureWorks Sample Reports*.
+3. Escriba la ruta de acceso y el nombre del informe que quiere mostrar en el elemento web. Será algo similar a */AdventureWorks Sample Reports/Company Sales*. En este ejemplo, el informe *Company Sales* (Ventas de la empresa) se encuentra en una carpeta denominada *AdventureWorks Sample Reports* (Informes de muestra de AdventureWorks).
 
-4. Si el informe requiere parámetros, una vez que ha proporcionado la URL del servidor de informes y el nombre del informe, seleccione **cargar parámetros** dentro de la **parámetros** sección.
+4. Si el informe necesita parámetros, una vez proporcionada la dirección URL del servidor de informes y el nombre del informe, seleccione **Cargar parámetros** en la sección **Parámetros**.
 
 5. Seleccione **Aceptar** para guardar los cambios en la configuración del elemento web.
 
-6. Seleccione **guardar**, dentro de la cinta de opciones de Office, para guardar los cambios en la página de SharePoint.
+6. Seleccione **Guardar** en la cinta de opciones de Office para guardar los cambios en la página de SharePoint.
 
 ![Elemento web Visor de informes en una página de SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
 ## <a name="considerations-and-limitations"></a>Consideraciones y limitaciones
 
-* No se puede usar el elemento web Visor de informes en páginas modernas dentro de SharePoint.
-* Informes de Power BI no se puede usar con el elemento web Visor de informes.
-* Si no ve el elemento web Visor de informes, agregar a la página, asegúrese de que tiene [implementa el elemento web Visor de informes](deploy-report-viewer-web-part.md).
+* El elemento web Visor de informes no se puede usar en páginas modernas en SharePoint.
+* Los informes de Power BI no se pueden usar con el elemento web Visor de informes.
+* Si no ve el elemento web Visor de informes, para agregarlo a la página, asegúrese de que tiene [implementado el elemento web Visor de informes](deploy-report-viewer-web-part.md).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

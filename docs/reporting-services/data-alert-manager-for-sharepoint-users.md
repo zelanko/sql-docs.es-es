@@ -1,5 +1,5 @@
 ---
-title: Administrador para los usuarios de SharePoint de alertas de datos | Documentos de Microsoft
+title: Administrador de alertas de datos para los usuarios de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,29 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]proporciona el Administrador de alertas de datos para los trabajadores de información de SharePoint administrar las alertas de datos. Pueden ver la información sobre las alertas que crearon, eliminar alertas, abrir definiciones de alertas para su edición y ejecutar alertas a petición. Pueden optar por ver las alertas de un único informe o de todos los informes. La imagen siguiente muestra las características disponibles para los trabajadores de la información en el Administrador de alertas de datos.
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona el Administrador de alertas de datos para que los trabajadores de la información administren las alertas de datos. Pueden ver la información sobre las alertas que crearon, eliminar alertas, abrir definiciones de alertas para su edición y ejecutar alertas a petición. Pueden optar por ver las alertas de un único informe o de todos los informes. La imagen siguiente muestra las características disponibles para los trabajadores de la información en el Administrador de alertas de datos.
 
-![Características del administrador para los usuarios de SharePoint de alerta](../reporting-services/media/rs-alertmanageriw.gif "características del Administrador de alertas para los usuarios de SharePoint")  
+![Características del Administrador de alertas para los usuarios de SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Características del Administrador de alertas para los usuarios de SharePoint")  
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
 Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean dos páginas de SharePoint, MyDataAlerts.aspx y SiteDataAlerts.aspx, que se agregan al sitio de SharePoint. MyDataAlerts.aspx es el Administrador de alertas de datos para los trabajadores de la información de SharePoint. Los trabajadores de la información abren el Administrador de alertas de datos desde el menú contextual de los informes para los que han creado alertas.  
 
@@ -52,7 +50,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
 ##  <a name="ViewingAlerts"></a> Ver información de alertas de datos  
  Puede ver una lista de las alertas de datos que creó en el Diseñador de alertas de datos. Para abrir el Administrador de alertas de datos, haga clic con el botón secundario en un informe publicado en una biblioteca de SharePoint. En la imagen siguiente se muestra la opción **Administrar alertas de datos** del menú contextual del informe.  
   
- ![Abra el Administrador de alertas desde el menú contextual del informe](../reporting-services/media/rs-openalertmanager.gif "abrir el Administrador de alertas desde el menú contextual del informe")  
+ ![Abrir el Administrador de alertas desde el menú contextual del informe](../reporting-services/media/rs-openalertmanager.gif "Abrir el Administrador de alertas desde el menú contextual del informe")  
   
  El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
@@ -68,7 +66,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
 ##  <a name="DeleteAlerts"></a> Eliminar alertas de datos  
  Las definiciones de alertas se eliminan desde el Administrador de alertas de datos. Como trabajador de la información puede eliminar las definiciones de alerta que haya creado. No puede eliminar las definiciones de alerta creadas por otras personas. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
- Cuando elimina una definición alerta, esta se elimina permanentemente. Si solo desea pausar los mensajes de alerta, debe cambiar el patrón de periodicidad o la fecha de inicio o finalización en la definición de la alerta. Para obtener más información, vea [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
+ Cuando elimina una definición alerta, esta se elimina permanentemente. Si solo desea pausar los mensajes de alerta, debe cambiar el patrón de periodicidad o la fecha de inicio o finalización en la definición de la alerta. Para más información, vea [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
 ##  <a name="EditAlerts"></a> Editar alertas de datos  
@@ -87,7 +85,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
   
 -   [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Editar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
 ## <a name="see-also"></a>Vea también
@@ -96,5 +94,4 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
 [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

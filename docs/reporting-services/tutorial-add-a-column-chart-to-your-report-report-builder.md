@@ -1,28 +1,25 @@
 ---
-title: "Tutorial: Agregar un gráfico de columnas al informe (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
 En este tutorial, creará un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un gráfico de columnas que muestra una serie como un conjunto de barras verticales agrupadas por categoría. 
@@ -54,7 +51,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -69,7 +66,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
     > [!NOTE]  
     > El origen de datos que elija no importa, con tal de que tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  En la página **Diseñar una consulta**, haga clic en **Editar como texto**.  
+6.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
 7.  Pegue la siguiente consulta en el panel de consulta:  
   
@@ -130,7 +127,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 2.  Haga clic con el botón derecho en el eje horizontal > **Propiedades del eje horizontal**.  
   
-3.  En la pestaña **Número**, en **Categoría**, seleccione **fecha**.  
+3.  En la pestaña **Número** , en **Categoría**, seleccione **fecha**.  
   
 5.  En el cuadro **Tipo** , seleccione **31 Ene 2000**.  
   
@@ -144,7 +141,7 @@ La fecha se mostrará en el formato de fecha que haya seleccionado. El gráfico 
   
 Puede personalizar la presentación de las etiquetas girándolas y especificando el intervalo.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas de eje en el eje horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas del eje en el eje horizontal  
   
 1.  Cambie a la vista de diseño del informe.  
   
@@ -152,7 +149,7 @@ Puede personalizar la presentación de las etiquetas girándolas y especificando
   
 3.  Haga clic con el botón derecho en el eje horizontal > **Propiedades del eje horizontal**.  
   
-5.  En la pestaña **Etiquetas**, bajo **Cambiar opciones de ajuste automát. de etiquetas de eje**, seleccione **Deshabilitar el ajuste automático**.  
+5.  En la pestaña **Etiquetas** , bajo **Cambiar opciones de ajuste automát. de etiquetas de eje**, seleccione **Deshabilitar el ajuste automático**.  
   
 7.  En **Ángulo de giro de etiqueta**, seleccione **-90**.  
   
@@ -173,7 +170,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga clic con el botón derecho en la leyenda en el gráfico > **Propiedades de la leyenda**.  
+2.  Haga clic con el botón derecho en la leyenda del gráfico > **Propiedades de la leyenda**.  
   
 3.  En **Diseño y posición**, seleccione una posición diferente. Por ejemplo, seleccione la opción centrada en la parte inferior.  
   
@@ -206,7 +203,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
   
 5.  Haga clic con el botón derecho en el eje vertical > **Propiedades del eje vertical**.  
   
-6.  En la pestaña **Número**, observe que **Moneda** ya está seleccionado en el cuadro **Categoría** y **Posiciones decimales** ya tiene el valor **0** (cero).  
+6.  En la pestaña **Número** , observe que **Moneda** ya está seleccionado en el cuadro **Categoría** y **Posiciones decimales** ya tiene el valor **0** (cero).  
   
 7.  Active **Mostrar valores en**. **Miles** ya está seleccionado.  
   
@@ -214,9 +211,9 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
   
 9. Haga clic con el botón derecho en el eje vertical > **Mostrar título del eje**. 
 
-10. Haga clic con el botón derecho en el eje vertical > **Propiedades del título del eje**.  
+10. Haga clic con el botón derecho en el título del eje vertical > **Propiedades del título del eje**.  
   
-10. Reemplace el texto del campo **Texto del título**  con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
+10. Reemplace el texto del campo **Texto del título** con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -307,11 +304,10 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
 4.  Haga clic en **Guardar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, consulte [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
 -    [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 
 -    [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

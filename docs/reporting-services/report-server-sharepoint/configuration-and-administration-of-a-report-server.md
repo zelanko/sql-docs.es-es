@@ -1,5 +1,5 @@
 ---
-title: "Configuración y administración de un servidor de informes de SQL Server Reporting Services | Documentos de Microsoft"
+title: "Configuración y administración de un servidor de informes de SQL Server Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe898a9401340f80884fa15f3ea1ce45108fbbc6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>Configuración y administración de un servidor de informes de SQL Server Reporting Services
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 10/06/2017
 SQL Server Reporting Services es una plataforma de generación de informes basada en servidor que proporciona una gama completa de herramientas y servicios listos para usar que le ayudarán a crear, implementar y administrar informes para la organización, además de características de programación que le permitirán ampliar y personalizar la funcionalidad de los informes. Puede integrar su entorno de informes con un producto o tecnología de SharePoint para experimentar las ventajas de usar el entorno colaborativo proporcionado por los sitios de SharePoint.
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
-Utilice las secciones siguientes para ayudarle a entender los conceptos, escenarios de implementación, procedimientos y otras cuestiones para integrar el entorno de Reporting Services con una tecnología o producto de SharePoint:  
+Use las siguientes secciones como ayuda para entender los conceptos, los escenarios de implementación, los procedimientos y otras cuestiones para integrar el entorno de Reporting Services con un producto o tecnología de SharePoint:  
   
 -   Opciones de menú en una biblioteca de documentos de SharePoint  
   
@@ -66,7 +65,6 @@ Utilice las secciones siguientes para ayudarle a entender los conceptos, escenar
   
 -   [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Para obtener más información acerca de Reporting Services, consulte [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../../sql-server/sql-server-technical-documentation.md).  
+ Para más información general sobre Reporting Services, vea [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../../sql-server/sql-server-technical-documentation.md).  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

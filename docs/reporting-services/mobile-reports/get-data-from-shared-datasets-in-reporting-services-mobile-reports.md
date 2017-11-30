@@ -1,32 +1,29 @@
 ---
-title: "Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services
-Además [cargar datos desde archivos de Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), SQL Server Mobile Report Publisher también puede acceder a datos desde prácticamente cualquier origen. Acceso a datos, requiere un origen de datos compartido, configurado en un portal web de Reporting Services. Más información sobre la [creación de orígenes de datos compartidos](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) y la [creación de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md).  
+Además de [cargar datos de archivos de Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), el Publicador de informes móviles de Microsoft SQL Server también puede obtener acceso a los datos de prácticamente cualquier origen. El acceso a los datos requiere un origen de datos compartido, configurado en un portal web de Reporting Services. Más información sobre la [creación de orígenes de datos compartidos](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) y la [creación de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-Después de orígenes de datos compartidos y compartidos, conjuntos de datos se configuran en el servidor de Reporting Services, puede utilizarlos en informes móviles creados en [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].   
+Después de que los orígenes de datos compartidos y los conjuntos de datos compartidos están configurados en el servidor de Reporting Services, puede usarlos en informes móviles creados en [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].   
   
 Después de conectarse a un servidor de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] desde [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], conectar un informe móvil a un conjunto de datos compartidos es algo sencillo.   
   
@@ -36,7 +33,7 @@ Después de conectarse a un servidor de [!INCLUDE[PRODUCT_NAME](../../includes/s
   
 3.  Si esta es la primera vez que se conecta al servidor, rellene la información del nombre del servidor y su nombre y contraseña. Escriba el nombre del servidor en el cuadro Dirección del servidor en este formato:  
   
-    \<"servername" > /reports/  
+    \<"nombreServidor">/reports/  
   
     En este ejemplo:  
        
@@ -67,12 +64,11 @@ Si ya ha establecido una conexión a un servidor de informes, al seleccionar **A
   
 ### <a name="see-also"></a>Vea también  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [Portal Web (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  [Portal web (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  
   
   
   
   
-
 

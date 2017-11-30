@@ -1,5 +1,5 @@
 ---
-title: "Configurar la autenticación de formularios o personalizada en el servidor de informes | Documentos de Microsoft"
+title: "Configurar la autenticación de formularios o personalizada en el servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar la autenticación de formularios o personalizada en el servidor de informes
 
@@ -34,7 +33,7 @@ En la práctica, implementar una extensión de autenticación personalizada requ
 > [!NOTE]
 >  La creación de una extensión de autenticación personalizada requiere código personalizado y conocimientos sobre la seguridad de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Si no desea crear una extensión de autenticación personalizada, puede utilizar grupos y cuentas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, pero tendrá que reducir en gran parte el ámbito de implementación de un servidor de informes. Para obtener más información sobre la autenticación personalizada, vea [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-Además, si desea utilizar una extensión de autenticación personalizada o autenticación de formularios en un entorno de SQL Server Reporting Services que está integrado con un producto de SharePoint, debe configurar el sitio de SharePoint para utilizar el método de autenticación que elija. Para obtener más información sobre cómo configurar la autenticación en SharePoint, vea [Ejemplos de autenticación](http://go.microsoft.com/fwlink/?LinkId=115575) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
+Además, si quiere usar una extensión de autenticación personalizada o de autenticación de formularios en un entorno de SQL Server Reporting Services que esté integrado con un producto de SharePoint, debe configurar el sitio de SharePoint para usar el método de autenticación que elija. Para obtener más información sobre cómo configurar la autenticación en SharePoint, vea [Ejemplos de autenticación](http://go.microsoft.com/fwlink/?LinkId=115575) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
 
 
 
@@ -42,7 +41,7 @@ Además, si desea utilizar una extensión de autenticación personalizada o aute
 
 1.  Abra RSReportServer.config en un editor de texto.
 
-2.  Buscar \< **autenticación**>.
+2.  Busque \<**Authentication**>.
 
 3.  Copie la estructura XML siguiente:
 
@@ -55,7 +54,7 @@ Además, si desea utilizar una extensión de autenticación personalizada o aute
     </Authentication>
     ```
 
-4.  Péguela sobre las entradas existentes para \< **autenticación**>.
+4.  Péguela sobre las entradas existentes de \<**Authentication**>.
 
      Observe que no puede utilizar **Custom** con otros tipos de autenticación.
 
@@ -74,7 +73,7 @@ Además, si desea utilizar una extensión de autenticación personalizada o aute
     ```
     <identity impersonate = "false" />  
     ```
-9. Agregue la estructura del elemento **PassThroughCookies** al archivo de configuración. Para obtener más información, vea [configurar el Portal Web para pasar Cookies de autenticación personalizada](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. Agregue la estructura del elemento **PassThroughCookies** al archivo de configuración. Para más información, vea [Configurar el portal web para pasar cookies de autenticación personalizadas](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
   
 10. Guarde el archivo.  
   
@@ -85,9 +84,9 @@ Además, si desea utilizar una extensión de autenticación personalizada o aute
 ## <a name="see-also"></a>Vea también
 
 [Implementación de una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-[Ejemplo de seguridad personalizada de Reporting Services (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
+[Reporting Services Custom Security Sample (GitHub) (Ejemplo de seguridad personalizada de Reporting Services en GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
 [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
 [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[Configurar la autenticación de Windows en el servidor de informes](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-¿Más preguntas? [Pruebe el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+[Configuración de la autenticación de Windows en el servidor de informes](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,27 +1,25 @@
 ---
-title: "Tutorial: Agregar un gráfico circular al informe (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Agregar un gráfico circular a un informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f48e91fcf3ea24bacaf71649db1cb4d92c7f6962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
 En este tutorial, creará un gráfico circular en un informe paginado de Reporting Services. Agregue porcentajes y combine segmentos pequeños en un único segmento.
@@ -35,7 +33,7 @@ En la siguiente ilustración se muestra el gráfico circular que creará.
 Si hay demasiados puntos de datos en un gráfico circular, es posible que las etiquetas de los puntos de datos estén demasiado amontonadas y no puedan leerse. En ese caso, considere la posibilidad de combinar varios segmentos pequeños en un segmento mayor. Los gráficos circulares son más legibles al agregar los datos en algunos puntos de datos.  
  
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 10 minutos  
   
@@ -143,7 +141,7 @@ Tres de los sectores del gráfico son bastante pequeños. Puede combinar varios 
 
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Si no aparece el panel de propiedades, en la **vista** ficha > **mostrar/ocultar** grupo > seleccione **propiedades**.  
+2.  Si no ve el panel Propiedades, en la pestaña **Vista** > en el grupo **Mostrar u ocultar**, seleccione **Propiedades**.  
   
 3.  En la superficie de diseño, haga clic en cualquier sector del gráfico circular. Las propiedades de la serie se muestran en el panel de propiedades.  
   
@@ -197,7 +195,7 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
   
 3.  Seleccione **Ventas de cámaras y cámaras de vídeo** y en la pestaña **Inicio** > en la sección **Fuente** > haga clic en **Negrita**.  
   
-4.  Seleccione **como porcentaje de ventas totales**y en el **inicio** ficha > **fuente** sección > establecer el tamaño de fuente en **10**.  
+4.  Seleccione **Como porcentaje de ventas totales** y en la pestaña **Inicio** > en la sección **Fuente** > establezca el tamaño de fuente en **10**.  
   
 5.  (Opcional) Es posible que necesite hacer más alto el cuadro de texto Título para que quepan las dos líneas de texto.  
   
@@ -220,11 +218,10 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
 El informe se guardará en el servidor de informes.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Ha completado correctamente el tutorial Agregar un gráfico circular al informe. Para más información acerca de los gráficos, consulte [gráficos &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [minigráficos y barras de datos &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Ha completado correctamente el tutorial Agregar un gráfico circular al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

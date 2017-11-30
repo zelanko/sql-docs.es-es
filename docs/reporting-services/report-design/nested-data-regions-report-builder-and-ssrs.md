@@ -1,5 +1,5 @@
 ---
-title: Anidar regiones de datos (generador de informes y SSRS) | Documentos de Microsoft
+title: Regiones de datos anidadas (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c8c0ce2fe9fcbdeb417770aba60e356ef889b667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Anidar regiones de datos (Generador de informes y SSRS)
   Normalmente, una región de datos, como un gráfico, se anida dentro de otra, como una matriz, para mostrar resúmenes de los datos de una manera concisa o para mostrar los datos de forma gráfica, además de hacerlo en una tabla o una matriz.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="understanding-scope-for-a-nested-data-region"></a>Descripción del ámbito de una región de datos anidada  
- El ámbito de los datos de una región de datos anidada se define automáticamente mediante su posición en la región de datos primaria. Por ejemplo, el ámbito correspondiente a los datos de un gráfico que está anidado en la celda de la esquina de Tablix son los datos procedentes del conjunto de datos enlazado a la región de datos Tablix una vez aplicados los filtros para el conjunto de datos, la región de datos Tablix y la región de datos de gráfico. El ámbito de un Tablix anidado en una celda de Tablix es el mismo que el ámbito de la celda de la esquina pero, además, se sitúa en el ámbito de la pertenencia al grupo de filas y columnas de la celda en la que está anidado, con los correspondientes filtros de grupo aplicados. Para obtener más información sobre el ámbito, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ El ámbito de los datos de una región de datos anidada se define automáticamente mediante su posición en la región de datos primaria. Por ejemplo, el ámbito correspondiente a los datos de un gráfico que está anidado en la celda de la esquina de Tablix son los datos procedentes del conjunto de datos enlazado a la región de datos Tablix una vez aplicados los filtros para el conjunto de datos, la región de datos Tablix y la región de datos de gráfico. El ámbito de un Tablix anidado en una celda de Tablix es el mismo que el ámbito de la celda de la esquina pero, además, se sitúa en el ámbito de la pertenencia al grupo de filas y columnas de la celda en la que está anidado, con los correspondientes filtros de grupo aplicados. Para más información sobre el ámbito, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  En la lista siguiente, se describe el ámbito para las celdas de las áreas de Tablix siguientes:  
   
@@ -57,10 +57,10 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Para tener un mayor control sobre el tamaño de un gráfico de una celda de Tablix, agregue primero el gráfico a un rectángulo y, a continuación, agregue el rectángulo a la celda de Tablix.  
   
- De forma predeterminada, los colores de los puntos de datos de la serie del gráfico determinan los colores de la leyenda. Si desea tener un mayor control sobre los colores a fin de que todas las regiones de datos anidadas del gráfico usen el mismo color para la misma categoría de datos, deberá usar colores personalizados y establecer expresiones de ordenación en los datos. Para obtener más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) y [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ De forma predeterminada, los colores de los puntos de datos de la serie del gráfico determinan los colores de la leyenda. Si desea tener un mayor control sobre los colores a fin de que todas las regiones de datos anidadas del gráfico usen el mismo color para la misma categoría de datos, deberá usar colores personalizados y establecer expresiones de ordenación en los datos. Para más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) y [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>Anidar un medidor o un indicador en un Tablix  
- Puede anidar un medidor o un indicador dentro de una tabla, una matriz o una lista para mostrar un indicador clave de rendimiento (KPI). Cuando se sitúa un medidor o un indicador en una tabla, se representará para cada fila del Tablix. Para obtener más información sobre cómo agregar indicadores a un Tablix, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Puede anidar un medidor o un indicador dentro de una tabla, una matriz o una lista para mostrar un indicador clave de rendimiento (KPI). Cuando se sitúa un medidor o un indicador en una tabla, se representará para cada fila del Tablix. Para más información sobre cómo agregar indicadores a un Tablix, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="adding-a-gauge-to-a-tablix"></a>Agregar un medidor a un Tablix  
  Hay dos maneras de agregar un medidor a una región de datos Tablix:  
@@ -71,9 +71,9 @@ ms.lasthandoff: 08/09/2017
   
  Al igual que con el gráfico, el conjunto de datos que se pasa al medidor pertenece al ámbito del subconjunto de datos de esa celda. Cuando se coloca un medidor dentro de una celda de Tablix, el medidor siempre agrega una única fila de datos.  
   
- Si los datos de Tablix contienen grupos, la región de datos de medidor que está anidada en Tablix no los hereda de forma automática. Para mostrar la misma información que se muestra en el Tablix, deberá agregar al medidor una expresión de grupo coincidente. Por ejemplo, si los datos del Tablix están agrupados por producto, deberá agregar una expresión de grupo de producto al medidor para mostrar los mismos datos. Para obtener más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md) y [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Si los datos de Tablix contienen grupos, la región de datos de medidor que está anidada en Tablix no los hereda de forma automática. Para mostrar la misma información que se muestra en el Tablix, deberá agregar al medidor una expresión de grupo coincidente. Por ejemplo, si los datos del Tablix están agrupados por producto, deberá agregar una expresión de grupo de producto al medidor para mostrar los mismos datos. Para más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md) y [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
- Debe establecer los valores máximo y mínimo que se mostrarán en la escala del medidor. Para especificar el valor máximo del medidor, puede usar una expresión, como `=Max!MyField.Value`. Sin embargo, dado que esta expresión solo se evaluará dentro del ámbito de los datos de la celda, el valor máximo de cada medidor no será el mismo para todas las filas de Tablix. Esto puede dificultar la comprensión de las comparaciones entre los medidores de Tablix. Como alternativa, puede especificar un valor estático para el valor máximo. Todas las filas de Tablix mostrarán un medidor con este valor máximo. Para obtener más información, vea [Establecer un valor mínimo o máximo en un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
+ Debe establecer los valores máximo y mínimo que se mostrarán en la escala del medidor. Para especificar el valor máximo del medidor, puede usar una expresión, como `=Max!MyField.Value`. Sin embargo, dado que esta expresión solo se evaluará dentro del ámbito de los datos de la celda, el valor máximo de cada medidor no será el mismo para todas las filas de Tablix. Esto puede dificultar la comprensión de las comparaciones entre los medidores de Tablix. Como alternativa, puede especificar un valor estático para el valor máximo. Todas las filas de Tablix mostrarán un medidor con este valor máximo. Para más información, vea [Establecer un valor mínimo o máximo en un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
  Si los datos se vuelven demasiado grandes en el medidor, plantéese la posibilidad de usar un multiplicador de escala para reducir el número de dígitos mostrados. Para especificar un multiplicador, puede hacer clic con el botón derecho en la escala y seleccionar **Propiedades de escala**. Cuando se abra el cuadro de diálogo **Propiedades de escala** , especifique un valor para **Multiplicador**.  
   
@@ -85,16 +85,16 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  De forma predeterminada, al agregar una región de datos de lista a la superficie de diseño, la lista incluye una fila de detalles. Para cambiar este valor predeterminado, agregue una fila de grupos y quite la fila de detalles. Para obtener más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
- Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) y [Agregar, mover o eliminar una tabla, una matriz o una lista &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
+ Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) y [Agregar, mover o eliminar una tabla, matriz o lista &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Aplicar formato a elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un KPI a un informe &#40; El generador de informes &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [Aplicar formato a las escalas en un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tutorial: Agregar un KPI al informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

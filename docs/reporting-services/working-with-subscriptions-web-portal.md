@@ -1,28 +1,25 @@
 ---
-title: Trabajar con suscripciones (portal web) | Documentos de Microsoft
+title: Trabajar con suscripciones (portal web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 131c3a86efc1e3fe2c0e896f726f292ab5e0db55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>Trabajar con suscripciones (portal web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +33,7 @@ Para poder crear una suscripción nueva, debe comprobar primero si el origen de 
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Puede llegar a la página de suscripciones seleccionando el **puntos suspensivos (...)**  de un informe, seleccione **administrar** y seleccionando **suscripciones**.  
+Para llegar a la página Suscripciones, haga clic en el botón de **puntos suspensivos (...)** de un informe, seleccione **Administrar** y seleccione **Suscripciones**.  
   
 Para crear suscripciones en la página Suscripciones, seleccione **+ Nueva suscripción**. También puede editar las suscripciones existentes o eliminar las suscripciones que haya seleccionado.  
   
@@ -92,9 +89,8 @@ Ya podemos pasar a validar la consulta. También se puede definir un **tiempo de
   
 Una vez creada la consulta, puede asignar valores a los campos obligatorios. Puede hacerlo escribiendo los datos manualmente o seleccionando un campo del conjunto de datos que ha creado.
 
-[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Trabajar con informes paginados](working-with-paginated-reports-web-portal.md)  
+[Portal web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Trabajo con informes paginados](working-with-paginated-reports-web-portal.md)  
 [Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

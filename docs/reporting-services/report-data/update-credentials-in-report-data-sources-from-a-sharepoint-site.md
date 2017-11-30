@@ -1,5 +1,5 @@
 ---
-title: "Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint | Documentos de Microsoft"
+title: "Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a51aa3ec7297ff2c183057f32e35a9012dddc6af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint
   En este tema se describe cómo actualizar los orígenes de datos incrustados en informes y los orígenes de datos compartidos en una biblioteca de documentos de SharePoint.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<dominio >\\< cuenta\>y, a continuación, seleccione **utilizar como credenciales de Windows al conectarse al origen de datos**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
   
     -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<dominio >\\< cuenta\>y, a continuación, seleccione **utilizar como credenciales de Windows al conectarse al origen de datos.**  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
   
     -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
   
@@ -94,4 +93,3 @@ ms.lasthandoff: 08/09/2017
  [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   
-

@@ -1,28 +1,25 @@
 ---
-title: "Maneras alternativas de obtener una conexión de datos (generador de informes) | Documentos de Microsoft"
+title: "Maneras alternativas de obtener una conexión de datos (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 81cebc286a8187b058ac1be3262f968fa6a69299
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Maneras alternativas de obtener una conexión de datos (Generador de informes)
 Una conexión de datos contiene la información para conectarse a un origen de datos externo, por ejemplo una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Normalmente, la información de conexión y el tipo de credenciales que se debe usar utilizar se obtienen del propietario del origen de datos.  
@@ -68,7 +65,7 @@ Para usar un origen de datos compartido, vaya a un servidor de informes y selecc
   
     Volverá a encontrarse en la página **Elegir una conexión a un origen de datos** .  
   
-6.  Para comprobar que se puede conectar al origen de datos, haga clic en **Prueba de conexión**.  
+6.  Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**.  
   
     Aparece un mensaje que indica que la conexión se ha creado correctamente. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -82,5 +79,4 @@ Para usar un origen de datos compartido, vaya a un servidor de informes y selecc
 [Conjuntos de datos de informe &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 
   
-
 

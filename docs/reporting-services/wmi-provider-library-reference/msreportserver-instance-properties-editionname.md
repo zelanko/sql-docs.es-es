@@ -1,5 +1,5 @@
 ---
-title: Propiedad EditionName (MSReportServer_Instance WMI) | Documentos de Microsoft
+title: Propiedad EditionName (MSReportServer_Instance de WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- EditionName property
+helpviewer_keywords: EditionName property
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2243faf86b6f9d2b3b2d70ceac29ad969d0a0daf
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dc9d86f66e78a40b5ee0b8d2f9c815315b33210f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="msreportserverinstance-properties---editionname"></a>Propiedades de MSReportServer_Instance - EditionName
+# <a name="msreportserverinstance-properties---editionname"></a>Propiedades MSReportServer_Instance - EditionName
   Devuelve el nombre legible de la edición del servidor de informes. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,4 +49,3 @@ public string EditionName;
  [Miembros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

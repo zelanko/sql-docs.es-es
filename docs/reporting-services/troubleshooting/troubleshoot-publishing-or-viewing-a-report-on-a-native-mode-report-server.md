@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de publicar o ver un informe en un servidor de informes de modo nativo | Documentos de Microsoft
+title: "Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo
   
@@ -42,7 +41,7 @@ Compruebe que la dirección URL del servidor de informes es adecuada (por ejempl
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>No ocurre nada cuando activo o desactivo elementos en el informe publicado.  
   Al ver un informe en la vista previa local, puede alternar los elementos en el informe y mostrarlos u ocultarlos. Al ver el mismo informe una vez publicado en el servidor de informes, ya no se puede alternar entre los elementos.   
   
-\<nombre del servidor de informes > incluye un carácter de subrayado (_)  
+\<nombre del servidor de informes> Incluye un carácter de subrayado (_)  
   
 Si un informe se ejecuta sin errores, pero los elementos de alternancia no funcionan, por ejemplo, hace clic en el icono de expandir (+) pero no sucede nada, compruebe el nombre del equipo que hospeda el servidor de informes. Si incluye un subrayado, los elementos de alternancia no funcionarán. Este es un problema conocido. No existe solución.   
   
@@ -66,5 +65,4 @@ Compruebe que dispone de permiso para tener acceso a las carpetas que contienen 
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

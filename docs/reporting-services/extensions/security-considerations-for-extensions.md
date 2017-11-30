@@ -1,5 +1,5 @@
 ---
-title: Consideraciones de seguridad para las extensiones | Documentos de Microsoft
+title: Consideraciones de seguridad para las extensiones | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,30 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 002356fd21ed4124c9bf49d915081bf0902d71f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-considerations-for-extensions"></a>Consideraciones de seguridad para las extensiones
   Cada aplicación que tenga como destino Common Language Runtime (CLR) debe interactuar con el sistema de seguridad de CLR. Cuando se ejecuta dicha aplicación, el CLR la evalúa automáticamente y le concede un conjunto de permisos. Según los permisos que reciba la aplicación, continúa ejecutándose o genera una excepción de seguridad. La configuración de seguridad local y las directivas de los archivos de configuración de la directiva de seguridad para un servidor de informes determinado definen los permisos de código que un ensamblado recibe.  
   
  Antes de solicitar los permisos, es necesario tener en cuenta los recursos y operaciones protegidas que se piensa usar en el código de la extensión y también saber qué permisos protegen esos recursos y operaciones. Además, se ha de realizar un seguimiento de los recursos a los que tienen acceso los métodos de bibliotecas de clases a los que llaman los componentes de la extensión. Para obtener más información, vea "Solicitar permisos" en la Guía del programador de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Las extensiones implementadas en un servidor de informes deben ejecutar como de plena confianza, lo que significa que la extensión debe formar parte de un grupo de código que se concede el **FullTrust** conjunto de permisos. Esto también significa que la extensión puede tener acceso a ciertos recursos del servidor y operaciones disponibles a través del CLR, en función del usuario que se esté autenticando para un informe determinado. Para obtener más información acerca de los grupos de código y extensiones, consulte [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
+ Las extensiones implementadas en un servidor de informes se deben ejecutar como de plena confianza, lo que significa que la extensión tiene que formar parte de un grupo de código al que se haya concedido el conjunto de permisos **FullTrust**. Esto también significa que la extensión puede tener acceso a ciertos recursos del servidor y operaciones disponibles a través del CLR, en función del usuario que se esté autenticando para un informe determinado. Para más información sobre grupos de código y extensiones, vea [Seguridad de acceso del código en Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplica la seguridad de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para todas sus extensiones.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
 -   Solo los usuarios con privilegios tienen el permiso para modificar los archivos de directiva de seguridad y habilitar la seguridad de acceso del código para una extensión.  
   
- Para obtener más información acerca de la seguridad de acceso del código en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [desarrollo seguro & #40; Reporting Services & #41; ](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+ Para más información sobre la seguridad de acceso del código en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
  Para obtener más información sobre la seguridad de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea "Seguridad de .NET Framework" en la Guía del programador de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
@@ -55,6 +54,6 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
- [Biblioteca de extensión de Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Biblioteca de extensiones de Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

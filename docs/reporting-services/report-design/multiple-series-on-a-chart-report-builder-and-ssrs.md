@@ -1,5 +1,5 @@
 ---
-title: "Mostrar varias Series en un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Mostrar varias series en un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd942ab8b1aee3047c693f40a99453cd79981dc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mostrar varias series en un gráfico (Generador de informes y SSRS)
   Cuando hay varias series en un gráfico, es necesario determinar la mejor manera de compararlas. Puede usar un gráfico apilado para mostrar las proporciones relativas de cada serie. Si está comparando únicamente dos series que comparten un eje de categoría común (X), use el eje secundario. Esto es útil cuando se muestran dos series de datos relacionadas, por ejemplo, el precio y el volumen, o los ingresos y los impuestos. Si el gráfico se vuelve ilegible, considere la posibilidad de usar varias áreas de gráfico para crear una mayor separación visual entre una serie y otra.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-chart-areas"></a>Usar áreas de gráfico  
  El gráfico es el contenedor de nivel superior que incluye el borde exterior, el título del gráfico y la leyenda. De forma predeterminada, el gráfico contiene un área de gráfico predeterminada. El área de gráfico no está visible en la superficie del gráfico, pero puede imaginarla como un contenedor que incluye únicamente las etiquetas del eje, el título del eje y el área de trazado de una o más series. En la ilustración siguiente se muestra el concepto de áreas de gráfico dentro de un único gráfico.  
   
- ![Muestra un diagrama de un área del gráfico](../../reporting-services/report-design/media/chartareasdiagram.gif "muestra un diagrama de un área del gráfico")  
+ ![Muestra un diagrama de un área de gráfico](../../reporting-services/report-design/media/chartareasdiagram.gif "Muestra un diagrama de un área de gráfico")  
   
  El cuadro de diálogo **Propiedades del área de gráfico** le permite especificar la orientación en 2D y 3D de todas las series incluidas en el área de gráfico, alinear varias áreas de gráfico dentro del mismo gráfico y dar formato a los colores del área de trazado. Cuando se define una nueva área de gráfico en un gráfico que solo contiene un área de gráfico predeterminada, el espacio disponible para ésta se divide horizontalmente en dos y la nueva área de gráfico se coloca debajo de la primera.  
   
@@ -57,12 +56,11 @@ ms.lasthandoff: 08/09/2017
  La característica que permite incluir varias áreas de gráfico en un único gráfico también resulta útil si intenta comparar datos que tienen distintas escalas de valores. Por ejemplo, si la primera serie contiene datos en el intervalo de 10 a 20 y la segunda contiene datos en el intervalo de 400 a 800, los valores de la primera serie pueden quedar ocultos. Considere la posibilidad de separar cada serie en un área de gráfico diferente. Para más información, vea [Especificar un área de gráfico para una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md).  
   
 ## <a name="using-range-charts"></a>Usar gráficos de intervalos  
- Los gráficos de intervalos tienen dos valores por cada punto de datos. Si el gráfico contiene dos series que comparten el mismo eje de categorías (X), puede usar un gráfico de intervalos para mostrar la diferencia entre ambas. Los gráficos de intervalos son los más adecuados para mostrar información en formato máximo-mínimo o superior-inferior. Por ejemplo, si la primera serie contiene la venta de mayor importe para cada día durante el mes de enero, y la segunda serie contiene la venta de menor importe para cada día durante el mismo período, puede usar un gráfico de intervalos para mostrar la diferencia entre ambas ventas para cada día. Para más información, vea [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
+ Los gráficos de intervalos tienen dos valores por cada punto de datos. Si el gráfico contiene dos series que comparten el mismo eje de categorías (X), puede usar un gráfico de intervalos para mostrar la diferencia entre ambas. Los gráficos de intervalos son los más adecuados para mostrar información en formato máximo-mínimo o superior-inferior. Por ejemplo, si la primera serie contiene la venta de mayor importe para cada día durante el mes de enero, y la segunda serie contiene la venta de menor importe para cada día durante el mismo período, puede usar un gráfico de intervalos para mostrar la diferencia entre ambas ventas para cada día. Para más información, vea [Gráficos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Mostrar una serie con varios intervalos de datos en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Tipos de gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Mostrar una serie con varios rangos de datos en un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   
-

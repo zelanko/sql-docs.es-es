@@ -1,5 +1,5 @@
 ---
-title: "Notificar la capacidad de programación de visor Web parte de la integración de SharePoint | Documentos de Microsoft"
+title: "Capacidad de programación del elemento web Visor de informes en la integración de SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fe234d83738bda4dd578d8be0a6d2c4619cd8b70
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9339b0f383efd757e9be49271f4a5bdd2d7a4d4f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Capacidad de programación del elemento web Visor de informes en la integración de SharePoint
-  El elemento Web de Visor de informes es un control de servidor, que contiene un conjunto de aplicaciones públicas (API) de interfaces de programación que permite a los desarrolladores crear aplicaciones personalizadas de SharePoint. Puede crear elementos web personalizados que proporcionan la ruta de acceso del informe y los parámetros al elemento web Visor de informes usando conexiones de elementos web. También puede incrustar el elemento web en una página personalizada de elemento web de SharePoint y personalizarlo usando la API pública.  
+  El elemento web Visor de informes es un control de servidor que contiene un conjunto de interfaces de programación de aplicaciones (API) públicas que permite a los desarrolladores crear aplicaciones de SharePoint personalizadas. Puede crear elementos web personalizados que proporcionan la ruta de acceso del informe y los parámetros al elemento web Visor de informes usando conexiones de elementos web. También puede incrustar el elemento web en una página personalizada de elemento web de SharePoint y personalizarlo usando la API pública.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Conectar con el elemento web Visor de informes con elementos webs personalizados  
- El elemento Web de Visor de informes es un consumidor de conexión para los elementos Web de SharePoint que implementan <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> o T:Microsoft.SharePoint.WebPartPages.IFilterValues. Un <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> elemento Web, como el **documentos** elemento Web puede proporcionar una ruta de acceso de informe a un elemento de Web del Visor de informes cuando se coloca en la misma página de elementos Web que el elemento Web de Visor de informes. Del mismo modo, la parte Web T:Microsoft.SharePoint.WebPartPages.IFilterValues, como el **filtro de texto** o **Choice Filter**, puede proporcionar un parámetro de informe a un elemento de Web del Visor de informes cuando se coloca en la misma página de elementos Web que el elemento Web de Visor de informes.  
+ El elemento web Visor de informes es un consumidor de conexión con elementos web de SharePoint que implementan <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> o T:Microsoft.SharePoint.WebPartPages.IFilterValues. Un elemento web <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, como **Documents**, puede proporcionar una ruta de informe a un elemento web Visor de informes cuando se coloca en la misma página de elementos web que el elemento web Visor de informes. Del mismo modo, un elemento web T:Microsoft.SharePoint.WebPartPages.IFilterValues, como **Filtro de texto** o **Filtro de opciones**, puede proporcionar un parámetro de informe a un elemento web Visor de informes cuando se coloca en la misma página de elementos web que el elemento web Visor de informes.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implementar un proveedor de ruta de acceso de informe con IWebPartRow  
  Para proporcionar una ruta de acceso del informe al elemento web Visor de informes a través de las conexiones del elemento, haga lo siguiente:  
@@ -40,9 +39,9 @@ ms.lasthandoff: 08/12/2017
 3.  Conecte el elemento web con el elemento web Visor de informes en la interfaz del usuario cuyo diseño de elemento web está basado en la Web.  
   
     > [!NOTE]  
-    >  Sólo se puede conectar una <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> elemento Web para el elemento Web de Visor de informes en un momento y no se puede conectar un <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web y un elemento Web de T:Microsoft.SharePoint.WebPartPages.IFilterValues para el elemento Web de Visor de informes al mismo tiempo.  
+    >  Solo puede conectar un elemento web <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> con el elemento web Visor de informes cada vez y no puede conectar al mismo tiempo un elemento web <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> y un elemento web T:Microsoft.SharePoint.WebPartPages.IFilterValues al elemento web Visor de informes.  
   
- Para su <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> elemento Web para funcionar correctamente con el T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, debe hacer lo siguiente en el <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> método:  
+ Para que el elemento web <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> funcione correctamente con T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, debe hacer lo siguiente en el método <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A>:  
   
 -   Invoque el método de devolución de llamada con un objeto <xref:System.Data.DataRowView> como parámetro de entrada.  
   
@@ -52,17 +51,17 @@ ms.lasthandoff: 08/12/2017
     >  El elemento web Visor de informes del complemento para [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2010 también permite recibir los datos de ruta de acceso de informe mediante la columna "FileRef".  
   
 ### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>Implementar un proveedor de parámetros de informe con IFilterValues  
- Un elemento Web que implementa T:Microsoft.SharePoint.WebPartPages.IFilterValues puede proporcionar un valor de parámetro para el elemento Web de Visor de informes. El valor de parámetro enviado al elemento web Visor de informes está sujeto a las mismas restricciones del parámetro de informe cuando se especificó la definición de informe, como tipo de datos, valores válidos, etc.  
+ Un elemento web que implementa T:Microsoft.SharePoint.WebPartPages.IFilterValues puede proporcionar un valor de parámetro al elemento web Visor de informes. El valor de parámetro enviado al elemento web Visor de informes está sujeto a las mismas restricciones del parámetro de informe cuando se especificó la definición de informe, como tipo de datos, valores válidos, etc.  
   
  Para proporcionar un parámetro de informe al elemento web Visor de informes, haga lo siguiente:  
   
-1.  Crear un elemento Web que implementa la interfaz T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
+1.  Cree un elemento Web que implemente la interfaz T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
   
-2.  Agregar el elemento Web a la misma página que el T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart.  
+2.  Agregue el elemento web a la misma página que T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart.  
   
-3.  Conecte el elemento de Web T:Microsoft.SharePoint.WebPartPages.IFilterValues para el elemento Web de Visor de informes en la interfaz de usuario de diseño de elemento Web basada en Web.  
+3.  Conecte el elemento web T:Microsoft.SharePoint.WebPartPages.IFilterValues con el elemento web Visor de informes en la interfaz de usuario de diseño de elementos web basada en web.  
   
     > [!NOTE]  
-    >  Puede conectar varios elementos Web de T:Microsoft.SharePoint.WebPartPages.IFilterValues para el elemento Web de Visor de informes a la vez. Sin embargo, no se puede conectar ambos un <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web y un elemento Web de T:Microsoft.SharePoint.WebPartPages.IFilterValues para el elemento Web de Visor de informes al mismo tiempo.  
+    >  Puede conectar varios elementos web T:Microsoft.SharePoint.WebPartPages.IFilterValues con el elemento web Visor de informes a la vez. Pero no puede conectar un elemento web <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> y un elemento web T:Microsoft.SharePoint.WebPartPages.IFilterValues con el elemento web Visor de informes a la vez.  
   
   

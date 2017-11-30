@@ -1,5 +1,5 @@
 ---
-title: Excel Device Information Settings | Documentos de Microsoft
+title: "Configuración de la información del dispositivo Excel | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - device information settings [Reporting Services], Excel rendering
 - Excel [Reporting Services], rendering
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2dda922c5ec2cd937960e20535096a186af56a6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 00f28175bf3e0bd868f9bb805de23f6cfc4d22d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="excel-device-information-settings"></a>Configuración de la información del dispositivo Excel
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -37,9 +36,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Pasar la configuración de información de dispositivo para las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Referencia técnica de &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Referencia técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

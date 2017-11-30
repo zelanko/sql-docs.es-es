@@ -1,31 +1,29 @@
 ---
-title: "Mapas personalizados en informes móviles de Reporting Services | Documentos de Microsoft"
+title: "Mapas personalizados en informes para dispositivos móviles de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados en informes para dispositivos móviles de Reporting Services
-Mapas geográficos en SQL Server Mobile Report Publisher se definen en un formato conocido como *archivos de forma ESRI*.  
+Los mapas geográficos del Publicador de informes móviles de Microsoft SQL Server se definen en un formato conocido como *archivos de forma ESRI*.  
   
-Este formato lo diseñó una empresa privada, pero actualmente se trata de un formato semiabierto extendido que se utiliza en una gran mayoría de las aplicaciones SIG. Según este formato, Mobile Report Publisher requiere dos archivos que se proporcione al definir una asignación:  
+Este formato lo diseñó una empresa privada, pero actualmente se trata de un formato semiabierto extendido que se utiliza en una gran mayoría de las aplicaciones SIG. Según este formato, el Publicador de informes móviles requiere que se proporcionen dos archivos al definir un mapa:  
   
 - Un archivo .SHP para geometrías de formas  
 - Un archivo .DBF para metadatos  
@@ -58,9 +56,8 @@ Muchos archivos de formas existentes se pueden descargar desde Internet, en siti
 - OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
   
 ### <a name="see-also"></a>Vea también  
-- [Mapas en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+- [Mapas de informes de Reporting Services móviles](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   
   
-

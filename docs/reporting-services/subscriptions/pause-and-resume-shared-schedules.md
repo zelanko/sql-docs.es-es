@@ -1,5 +1,5 @@
 ---
-title: Pausar y reanudar las programaciones comparten | Documentos de Microsoft
+title: Pausar y reanudar las programaciones compartidas| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71dcd66394cf96bd6994e40de76b10a519f32a74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pausar y reanudar las programaciones compartidas
   Existe la posibilidad de pausar y reanudar las programaciones compartidas en uso. Pausar una programación compartida es un modo de congelar temporalmente una programación que se emplea para desencadenar el procesamiento de los informes y las suscripciones. Solo es posible pausar y reanudar las programaciones compartidas. Las programaciones específicas del informe no admiten la operación de pausa.  
@@ -72,7 +71,6 @@ ms.lasthandoff: 08/09/2017
  [Programaciones](../../reporting-services/subscriptions/schedules.md)   
  [Crear, modificar y eliminar programaciones](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Cambiar las zonas horarias y la configuración del reloj en un servidor de informes](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Administración de un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

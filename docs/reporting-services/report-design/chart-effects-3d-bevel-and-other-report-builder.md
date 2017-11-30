@@ -1,5 +1,5 @@
 ---
-title: "3D, bisel y otros efectos a un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Aplicar 3D, bisel y otros efectos a un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10156"
+f1_keywords: "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90e2cfecc2090f5d09ac1a7a5fce1e6b4cbcca81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Efectos de gráfico - 3D, bisel y otros (generador de informes)
+# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Efectos de gráfico: 3D, bisel y otros (Generador de informes)
   Se pueden usar efectos tridimensionales (3D) para dar profundidad y agregar impacto visual a los gráficos de los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, si desea resaltar un sector específico de un gráfico circular seccionado, puede girar y cambiar la perspectiva del gráfico para que los usuarios se fijen primero en dicho sector. Cuando se aplican efectos 3D al gráfico, se deshabilitan todos los colores de degradado y los estilos de sombreado.  
   
  Los efectos tridimensionales se pueden aplicar a gráficos individuales; además, en el mismo informe se pueden mostrar gráficos bidimensionales y tridimensionales.  
   
- Si quiere agregar efectos tridimensionales a un área de gráfico de cualquier tipo de gráfico, solo tiene que seleccionar **Habilitar 3D** en el cuadro de diálogo **Propiedades del área de gráfico**. Para obtener más información, vea [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ Si quiere agregar efectos tridimensionales a un área de gráfico de cualquier tipo de gráfico, solo tiene que seleccionar **Habilitar 3D** en el cuadro de diálogo **Propiedades del área de gráfico**. Para obtener más información, vea [Agregar efectos 3D a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
- Otra manera de agregar impacto visual a los gráficos es mediante la incorporación de estilos de bisel, relieve y textura a los gráficos de barras, de columnas, circulares y de anillos. Para obtener más información, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+ Otra manera de agregar impacto visual a los gráficos es mediante la incorporación de estilos de bisel, relieve y textura a los gráficos de barras, de columnas, circulares y de anillos. Para más información, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,9 +64,8 @@ ms.lasthandoff: 08/09/2017
  Puede agregar estilos de resaltado a un gráfico 3D mediante la propiedad **Shading** , que aparece debajo de Area3DStyle en el panel Propiedades cuando se selecciona el área del gráfico. Un estilo de iluminación simple aplica el mismo matiz a los elementos del área del gráfico. Un estilo realista cambia los matices de los elementos del área del gráfico que dependen de un ángulo de iluminación especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a las etiquetas del eje en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Agregar efectos 3D a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Agregar efectos 3D a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   
-

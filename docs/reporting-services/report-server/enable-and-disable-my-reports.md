@@ -1,5 +1,5 @@
 ---
-title: Habilitar y deshabilitar Mis informes | Documentos de Microsoft
+title: Habilitar y deshabilitar Mis informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
   La característica Mis informes asigna espacio de almacenamiento personal en la base de datos del servidor de informes para que los usuarios puedan guardar sus propios informes en una carpeta privada. Los administradores de servidores de informes pueden habilitar o deshabilitar esta característica o cambiar su funcionamiento modificando la configuración de seguridad que controla las acciones que los usuarios llevan a cabo en esta área de trabajo.  
@@ -57,8 +56,7 @@ ms.lasthandoff: 08/09/2017
  Tenga en cuenta que, si activa Mis informes, el servidor de informes creará una carpeta Mis informes para cada usuario que tenga una cuenta de dominio y que haga clic en el vínculo Mis informes, incluso si el usuario no desea, o no necesita, una carpeta Mis informes. No existe ningún modo sistemático de determinar las carpetas que se utilizan. Es preciso revisar manualmente las carpetas para comprobar las que contienen algo.  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger mis informes](../../reporting-services/security/secure-my-reports.md)   
- [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

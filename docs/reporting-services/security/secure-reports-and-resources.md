@@ -1,5 +1,5 @@
 ---
-title: Proteger informes y recursos | Documentos de Microsoft
+title: Proteger informes y recursos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
   Puede establecer la seguridad para informes y recursos individuales a fin de controlar el grado de acceso de los usuarios a estos elementos. De manera predeterminada, solo los usuarios que pertenezcan al grupo integrado **Administradores** pueden ejecutar informes, ver recursos, modificar propiedades y eliminar elementos. Para los demás usuarios se deben crear asignaciones de roles que concedan acceso a un informe o recurso.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  El informe se publica en un servidor de informes o se hace disponible de cualquier otra forma de manera que el valor del parámetro del informe se puede controlar desde la URL de una página web.  
   
-3.  Un atacante crea un vínculo a la página web o el servidor de informes especifica el valor del parámetro con el formato "javascript:\<script malintencionado aquí >" y envía ese vínculo a una persona de un ataque por señuelo.  
+3.  Un atacante crea un vínculo a la página web o al servidor de informes que especifica el valor del parámetro con el formato "javascript:\<script malintencionado aquí>" y envía ese vínculo a alguien más en un ataque por señuelo.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Mitigar los ataques con inyección de scripts en hipervínculos en un informe publicado o documento  
  Los informes pueden contener hipervínculos incrustados en el valor de la propiedad Action en un elemento de informe o parte de un elemento de informe. Los hipervínculos se pueden enlazar a datos que se recuperan de un origen de datos externo cuando se procesa el informe. Si un usuario malintencionado modifica los datos subyacentes, el hipervínculo podría hacer peligroso el scripting. Si un usuario hace clic en el vínculo en el informe publicado o exportado, podrían ejecutarse scripts malintencionados.  
@@ -80,11 +79,10 @@ ms.lasthandoff: 08/09/2017
  Los informes que contienen información confidencial deberían protegerse en el nivel de acceso a datos requiriendo que los usuarios proporcionen credenciales para tener acceso a datos confidenciales. Para más información, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). También puede proteger una carpeta para que no resulte accesible a usuarios no autorizados. Para obtener más información, vea [Proteger carpetas](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurar el acceso del generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Proteger elementos de origen de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Almacenar credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Protección de elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

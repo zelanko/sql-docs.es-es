@@ -1,5 +1,5 @@
 ---
-title: Administrar elementos de informe | Documentos de Microsoft
+title: Administrar elementos de informe | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   Los elementos de informe se pueden reutilizar en informes paginados, por varios usuarios y en varios informes. Los usuarios pueden buscar elementos de informe en el servidor y agregarlos a un informe.  También pueden informarse de las actualizaciones del elemento de informe en el servidor y volver a publicar versiones nuevas de un elemento de informe. Esas acciones de creación de informes se pueden ver afectadas por los permisos de seguridad de los servicios de informe, que las controlan.  En este tema se revisan las propiedades de los elementos de informe y su comportamiento cuando se encuentran en el servidor.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  Cuando los elementos de informe se publican en una aplicación de creación de informes como el Generador de informes en un servidor de informes en modo integrado de SharePoint, el catálogo del servidor de informes se actualiza también y las búsquedas en la galería reflejan con precisión el elemento de informe, tanto si es nuevo como si se ha actualizado.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Elementos de informe que se cargan directamente en una carpeta de SharePoint  
- Si un elemento de informe se carga directamente en una carpeta de documentos de SharePoint (en lugar de publicarse desde una aplicación de creación de informes), el catálogo del servidor de informes no se actualiza. Las búsquedas de la Galería de elementos de informe no encontrarán el elemento de informe que se cargó. Para ayudar a mantener sincronizadas las carpetas de SharePoint y el catálogo del servidor de informes, puede activar la característica de sincronización de archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el servidor de SharePoint. Para más información, consulte [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Si un elemento de informe se carga directamente en una carpeta de documentos de SharePoint (en lugar de publicarse desde una aplicación de creación de informes), el catálogo del servidor de informes no se actualiza. Las búsquedas de la Galería de elementos de informe no encontrarán el elemento de informe que se cargó. Para ayudar a mantener sincronizadas las carpetas de SharePoint y el catálogo del servidor de informes, puede activar la característica de sincronización de archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el servidor de SharePoint. Para más información, consulte [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Los archivos se pueden sincronizar también utilizando las llamadas de algunas de las API de administración de servicios de informe de errores como GetProperties y SetProperties.  
   
@@ -96,9 +95,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Elementos de informe en el Diseñador de informes &#40; SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

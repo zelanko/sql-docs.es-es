@@ -1,5 +1,5 @@
 ---
-title: Desarrollar con las API de REST para Reporting Services | Documentos de Microsoft
+title: Desarrollo con las API de REST para Reporting Services| Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 ms.date: 10/19/2017
 ms.prod: sql-server-2017
@@ -13,60 +13,59 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 7c2c34047ac316045387b036cf10ee149175580a
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desarrollar con las API de REST para Reporting Services
+# <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desarrollo con las API de REST para Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-Microsoft SQL Server de 2017 Reporting Services admite Representational State Transfer (REST) API. Las API de REST son puntos de conexión de servicio que compatibilidad con un conjunto de operaciones de HTTP (métodos), logrando así crear, recuperar, actualizar o eliminar el acceso para los recursos dentro de un servidor de informes.
+Microsoft SQL Server 2017 Reporting Services admite las API de transferencia de estado representacional (REST). Las API de REST son puntos de conexión de servicio que admiten una serie de operaciones HTTP (métodos), que proporcionan acceso de creación, recuperación, actualización o eliminación para los recursos de un servidor de informes.
 
-La API de REST proporciona acceso mediante programación a los objetos en un catálogo del servidor de informes de Reporting Services de SQL Server de 2017. Ejemplos de objetos son carpetas, informes, KPI, orígenes de datos, conjuntos de datos, planes de actualización, suscripciones y mucho más. Con la API de REST, puede, por ejemplo, navegar por la jerarquía de carpetas, detectar el contenido de una carpeta o descargar una definición de informe. También puede crear, actualizar y eliminar los objetos. Ejemplos de cómo trabajar con objetos se cargue un informe, ejecutar un plan de actualización, eliminar una carpeta y así sucesivamente.
+La API de REST proporciona acceso mediante programación a los objetos de un catálogo del servidor de informes de SQL Server 2017 Reporting Services. Como ejemplos de objetos tenemos las carpetas, los informes, los KPI, los orígenes de datos, los conjuntos de datos, los planes de actualización, las suscripciones, etc. Con la API de REST puede, por ejemplo, navegar por la jerarquía de carpetas, detectar el contenido de una carpeta o descargar una definición de informe. También puede crear, actualizar y eliminar objetos. Como ejemplos de acciones de trabajo con los objetos tenemos la carga de un informe, la ejecución de un plan de actualización, la eliminación de una carpeta, etc.
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Componentes de una solicitud/respuesta de la API de REST
 
-Un par de solicitud/respuesta de la API de REST puede dividirse en cinco componentes:
+Un par de solicitud/respuesta de una API de REST puede dividirse en cinco componentes:
 
-* El **URI de solicitud**, que consta de: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Aunque el URI de solicitud se incluye en el encabezado del mensaje de solicitud, lo llamamos aquí por separado porque la mayoría de los idiomas o marcos de trabajo debe pasarla por separado desde el mensaje de solicitud.
+* El **URI de la solicitud**, que consta de: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Aunque el URI de solicitud se incluye en el encabezado del mensaje de solicitud, aquí lo mencionamos por separado porque la mayoría de los lenguajes o marcos de trabajo le exigen que lo pase por separado desde el mensaje de solicitud.
 
-    * Esquema de URI: indica el protocolo utilizado para transmitir la solicitud. Por ejemplo, `http` o `https`.
-    * Host del URI: especifica el nombre de dominio o la dirección IP del servidor donde se hospeda el punto de conexión de servicio REST, como `myserver.contoso.com`.
-    * Ruta de acceso de recursos: especifica el recurso o una colección de recursos, que puede incluir varios segmentos utilizados por el servicio para determinar la selección de esos recursos. Por ejemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` puede utilizarse para obtener las propiedades especificadas para el CatalogItem.
-    * (Opcional) de la cadena de consulta: proporciona los parámetros simples adicionales, como los criterios de selección de versión o un recurso de API.
+    * Esquema de URI: indica el protocolo usado para transmitir la solicitud. Por ejemplo, `http` o `https`.
+    * Host de URI: especifica el nombre de dominio o la dirección IP del servidor donde se hospeda el punto de conexión de servicio REST, como `myserver.contoso.com`.
+    * Ruta de acceso del recurso: especifica el recurso o una colección de recursos, que puede incluir varios segmentos usados por el servicio a la hora de determinar la selección de esos recursos. Por ejemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` se puede usar para obtener las propiedades especificadas de CatalogItem.
+    * (Opcional) Cadena de consulta: proporciona más parámetros simples, como los criterios de selección de recursos o la versión de la API.
 
 * Campos de encabezado de mensaje de solicitud HTTP:
 
-    * Obligatoria [método HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (también conocido como una operación o verbo), que indica al servicio qué tipo de operación que está solicitando. Informar de las API de REST de servicios compatible con DELETE, GET, HEAD, PUT, POST y aplicar revisiones a métodos.
-    * Campos de encabezado adicional opcional, según sea necesario mediante el método HTTP y el URI especificado.
+    * [Método HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) obligatorio (también denominado " operación" o "verbo"), que indica al servicio qué tipo de operación se está solicitando. Las API de REST de Reporting Services admiten los métodos DELETE, GET, HEAD, PUT, POST y PATCH.
+    * Campos de encabezado adicionales y opcionales, según necesite el método HTTP y el URI especificados.
 
-* HTTP opcional **cuerpo del mensaje de solicitud** campos para admitir la operación de URI y HTTP. Por ejemplo, operaciones POST contienen objetos codificado con MIME que se pasan como parámetros complejos. Para las operaciones POST o PUT, el tipo de codificación MIME para el cuerpo debe especificarse en el `Content-type` así el encabezado de solicitud. Algunos servicios requieren que se use un tipo MIME concreto, como `application/json`.
+* Campos de **cuerpo de mensaje de solicitudes** HTTP opcionales para admitir la operación HTTP y el URI. Por ejemplo, las operaciones POST contienen objetos codificados con MIME que se pasan como parámetros complejos. Para las operaciones POST o PUT, el tipo de codificación MIME para el cuerpo también debe especificarse en el encabezado de solicitud `Content-type`. Algunos servicios requieren que se use un tipo MIME concreto, como `application/json`.
 
-* HTTP **encabezado del mensaje de respuesta** campos:
+* Campos de **encabezado de mensaje de respuesta HTTP**:
 
-    * Un [código de estado HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), intervalo de códigos de éxito 2xx 4xx o 5xx códigos de error. Como alternativa, un código de estado definido por el servicio puede devolver, como se indica en la documentación de API.
-    * Campos de encabezado adicional opcional, según sea necesario para admitir la respuesta a la solicitud, como un `Content-type` encabezado de respuesta.
+    * Un [código de estado HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), que puede ser 2xx para los códigos correctos y 4xx o 5xx para los códigos de error. Como alternativa se puede devolver un código de estado definido por el servicio, como se indica en la documentación de la API.
+    * Campos de encabezado adicionales y opcionales, según sea necesario para admitir la respuesta a la solicitud, como un encabezado de respuesta `Content-type`.
 
-* HTTP opcional **cuerpo del mensaje de respuesta** campos:
+* Campos de **cuerpo del mensaje de respuesta** HTTP opcionales:
 
-    * Se devuelven los objetos de respuesta codificado con MIME en el cuerpo de respuesta HTTP, como una respuesta de un método GET que devuelve datos. Normalmente, estos objetos se devuelven en un formato estructurado como JSON o XML, tal y como indica la `Content-type` encabezado de respuesta.
+    * Se devuelven objetos de respuesta codificados con MIME en el cuerpo de respuesta HTTP, como una respuesta de un método GET que devuelve datos. Normalmente, estos objetos se devuelven en un formato estructurado como JSON o XML, tal y como se indica en el encabezado de respuesta `Content-type`.
 
 ## <a name="api-documentation"></a>Documentación de la API
 
-Llama a una API de REST modernos para obtener documentación API moderna. La API de REST se basa en la especificación de OpenAPI (conocido como) la especificación de swagger) y la documentación está disponible en [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Más allá de la documentación de la API SwaggerHub le ayuda a generar una biblioteca de cliente en el idioma que elija: JavaScript, TypeScript, C#, Java, Python, Ruby y mucho más.
+Una API de REST moderna exige una documentación de API moderna. La API de REST se basa en la especificación de OpenAPI (también denominada "especificación de Swagger") y la documentación está disponible en [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Además de documentar la API, SwaggerHub permite generar una biblioteca cliente en el lenguaje que quiera: JavaScript, TypeScript, C#, Java, Python, Ruby, etc.
 
-## <a name="testing-api-calls"></a>Llamadas a la API de pruebas
+## <a name="testing-api-calls"></a>Probar las llamadas API
 
-Es una herramienta para probar los mensajes de solicitud/respuesta HTTP [Fiddler](http://www.telerik.com/fiddler). Fiddler es un proxy que puede interceptar las solicitudes REST, lo que facilita a diagnosticar la solicitud HTTP de depuración de web gratuita / mensajes de respuesta.
+Una herramienta para probar los mensajes de solicitud/respuesta HTTP es [Fiddler](http://www.telerik.com/fiddler). Fiddler es un proxy de depuración web gratuito que puede interceptar las solicitudes REST, lo que facilita el diagnóstico de los mensajes de solicitud/respuesta HTTP.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Revise las API disponibles a través de [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0).
+Revise las API disponibles en [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0).
 
-Los ejemplos están disponibles en [GitHub](https://github.com/Microsoft/Reporting-Services). El ejemplo incluye una aplicación HTML5 compilada en TypeScript y reaccionar, webpack junto con un ejemplo de PowerShell.
+Los ejemplos están disponibles en [GitHub](https://github.com/Microsoft/Reporting-Services). El ejemplo incluye una aplicación HTML5 compilada en TypeScript, React y webpack, junto con un ejemplo de PowerShell.
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,5 @@
 ---
-title: "Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Documentos de Microsoft"
+title: "Método ListSSLCertificateBindings (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ListSSLCertificateBindings method
+helpviewer_keywords: ListSSLCertificateBindings method
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9ca4e600826d3bdcb5d55a431abebb46dc463c25
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ccd3c858ef55a00e8ee97dfa1d7c64aacd557716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>Método ConfigurationSetting - ListSSLCertificateBindings
   Devuelve una lista de los certificados SSL instalados en el equipo.  
@@ -81,4 +79,3 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

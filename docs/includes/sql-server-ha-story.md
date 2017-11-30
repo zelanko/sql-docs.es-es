@@ -77,7 +77,7 @@ El tipo de clúster Ninguno puede utilizarse con grupos de disponibilidad de Win
 > [!IMPORTANT] 
 > SQL Server 2017 no permite cambiar un tipo de clúster para un grupo de disponibilidad una vez que se ha creado. Esto significa que un grupo de disponibilidad no puede cambiarse de Ninguno a Externo o WSFC, o viceversa. 
 
-Para aquellos usuarios que simplemente desean agregar otras copias de solo lectura de una base de datos o desean disfrutar de la misma funcionalidad que proporciona un grupo de disponibilidad para migración/actualizaciones, pero sin la complejidad adicional que implica un clúster subyacente o incluso una replicación, un grupo de disponibilidad con un tipo de clúster Ninguno es una solución perfecta. Para obtener más información, consulte las secciones [Migraciones y actualizaciones](#Migrations) y [Escalado horizontal de lectura](#ReadScaleOut). 
+Para aquellos usuarios que simplemente desean agregar otras copias de solo lectura de una base de datos o desean disfrutar de la misma funcionalidad que proporciona un grupo de disponibilidad para migración/actualizaciones, pero sin la complejidad adicional que implica un clúster subyacente o incluso una replicación, un grupo de disponibilidad con un tipo de clúster Ninguno es una solución perfecta. Para más información, vea las secciones [Migraciones y actualizaciones](#Migrations) y [Escalado de lectura](#ReadScaleOut). 
 
 La captura de pantalla siguiente muestra la compatibilidad para los distintos tipos de tipos de clúster en SSMS. Debe ejecutar la versión 17.1 o una posterior. La captura de pantalla siguiente es de la versión 17.2.
 
@@ -226,7 +226,7 @@ Si se configura un grupo de disponibilidad con un clúster de tipo Ninguno, este
 
 Dado que el trasvase de registros se basa simplemente en la copia de seguridad y restauración, no existen diferencias en las bases de datos, las estructuras de archivos, etc., para SQL Server en Windows Server en comparación con SQL Server en Linux. Esto significa que se puede configurar el trasvase de registros entre una instalación de SQL Server basada en Windows Server y otra de Linux, así como entre distintas distribuciones de Linux. Todo lo demás permanece igual. La única advertencia es que el trasvase de registros, al igual que un grupo de disponibilidad, no puede funcionar cuando el origen se encuentra en una versión principal de SQL Server posterior en relación con un destino que está en una versión anterior de SQL Server. 
 
-## <a name = "ReadScaleOut"></a> Escalado horizontal de lectura
+## <a name = "ReadScaleOut"></a> Escalado de lectura
 
 Desde su introducción en SQL Server 2012, las réplicas secundarias han podido utilizarse para consultas de solo lectura. Hay dos maneras de hacerlo con un grupo de disponibilidad: permitiendo el acceso directo a la secundaria, así como [configurando el enrutamiento de solo lectura](http://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), lo que requiere el uso del agente de escucha.  SQL Server 2016 introdujo la posibilidad de equilibrar la carga de las conexiones de solo lectura a través del agente de escucha mediante un algoritmo round-robin, lo que permite a las solicitudes de solo lectura su expansión por todas las réplicas legibles. 
 
@@ -243,7 +243,7 @@ La única advertencia importante es que como no hay ningún clúster subyacente 
 
 Técnicamente, se puede configurar un estado de espera semiactiva de trasvase de registros para el uso legible mediante la restauración de la base de datos WITH STANDBY. Sin embargo, dado que los registros de transacciones requieren el uso exclusivo de la base de datos para la restauración, los usuarios no podrán acceder a la base de datos mientras esto ocurre. Por ello, el trasvase de registros es una solución menos idónea, especialmente si se necesitan datos casi en tiempo real. 
 
-Un aspecto que debe tenerse en cuenta para todos los escenarios de escalabilidad horizontal de lectura con grupos de disponibilidad es que, a diferencia de la replicación transaccional donde todos los datos están activos, cada réplica secundaria no está en un estado en el que se puedan aplicar los índices únicos: la réplica es una copia exacta de la principal. Esto significa que, en caso de que se requieran índices para la creación de informes o sea necesario manipular datos, debe hacerse en las bases de datos de la réplica principal. Si necesita esa flexibilidad, la replicación es una mejor solución para datos legibles.
+Un aspecto que debe tenerse en cuenta para todos los escenarios de escalado de lectura con grupos de disponibilidad es que, a diferencia de la replicación transaccional donde todos los datos están activos, cada réplica secundaria no está en un estado en el que se puedan aplicar los índices únicos: la réplica es una copia exacta de la principal. Esto significa que, en caso de que se requieran índices para la creación de informes o sea necesario manipular datos, debe hacerse en las bases de datos de la réplica principal. Si necesita esa flexibilidad, la replicación es una mejor solución para datos legibles.
 
 ## <a name="summary"></a>Resumen
 

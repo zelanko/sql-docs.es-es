@@ -1,28 +1,25 @@
 ---
-title: "Lección 2: Definir una conexión de datos y la tabla de datos para el informe primario | Documentos de Microsoft"
+title: "Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 29ff53a0c766ca791b2ca0e845fed7779e7c1e05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
 Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web ASP.NET para Visual C#, el paso siguiente consiste en crear una conexión de datos y una tabla de datos para el informe primario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
@@ -65,7 +62,7 @@ Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web A
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    También puede crear la consulta si hace clic en **Generador de consultas**y, después, compruebe la consulta al hacer clic en **Ejecutar consulta**. Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para obtener más información sobre cómo obtener la base de datos de ejemplo **AdventureWorks2014** , consulte [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/)(Ejemplos de productos de bases de datos de Microsoft SQL Server).  
+    También puede crear la consulta si hace clic en **Generador de consultas**y, después, compruebe la consulta al hacer clic en **Ejecutar consulta**. Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para más información sobre cómo obtener la base de datos de ejemplo **AdventureWorks2014**, vea [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 11. En la página **Elegir los métodos que se van a generar** , asegúrese de desactivar **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**y seleccione **Finalizar**.  
   
@@ -81,5 +78,4 @@ Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web A
 ## <a name="next-task"></a>Tarea siguiente  
 Ha creado correctamente una conexión de datos y una tabla de datos para el informe primario. Después, diseñará el informe primario usando el Asistente para informes. Consulte [Lección 3: Diseñar el informe primario usando el Asistente para informes](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
   
-
 

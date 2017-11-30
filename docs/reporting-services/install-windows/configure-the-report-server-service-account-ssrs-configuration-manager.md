@@ -1,26 +1,24 @@
 ---
-title: "Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS) | Documentos de Microsoft"
+title: "Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e68467845079107509d7cf259b06b8f5c52dbb06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se implementa como un servicio único que contiene el servicio web del servidor de informes, el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]y una aplicación de procesamiento en segundo plano que se usa para el procesamiento programado de informes y la entrega de suscripciones. En este tema se explica cómo se configura inicialmente la cuenta de servicio y cómo modificar la cuenta o la contraseña con la herramienta Configuración de Reporting Services.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Actualiza automáticamente los permisos de inicio de sesión en la instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se utiliza para hospedar la base de datos del servidor de informes. La cuenta nueva se agregará a **RSExecRole**.  
   
-     El inicio de sesión de la base de datos de la cuenta anterior no se quitará automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para obtener más información, vea [administrar una base de datos del servidor de informes &#40; Modo nativo de SSRS &#41; ](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) en libros en pantalla de SQL Server.  
+     El inicio de sesión de la base de datos de la cuenta anterior no se quitará automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para más información, vea [Administrar una base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
   
      Solo se conceden permisos de base de datos a una cuenta de servicio nueva si la conexión de base de datos del servidor de informes se configuró para usar la cuenta de servicio en primer lugar. Si la conexión de base de datos del servidor de informes se configuró para utilizar una cuenta de usuario de dominio o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la actualización de la cuenta de servicio no afecta a la información de conexión.  
   
@@ -58,13 +56,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  Si seleccionó una cuenta de usuario de Windows, especifique la nueva cuenta y la contraseña. La cuenta no puede tener más de 20 caracteres.  
   
-     Si el servidor de informes se implementa en una red que admite la autenticación Kerberos, debe registrar el Nombre principal de servicio (SPN) del servidor de informes con la cuenta de usuario de dominio recién especificada. Para obtener más información, vea [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) (Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes).  
+     Si el servidor de informes se implementa en una red que admite la autenticación Kerberos, debe registrar el Nombre principal de servicio (SPN) del servidor de informes con la cuenta de usuario de dominio recién especificada. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
 4.  Haga clic en **Aplicar**.  
   
 5.  Cuando el sistema pida que cree una copia de seguridad de la clave simétrica, escriba un nombre de archivo y una ubicación para la copia de seguridad, escriba una contraseña para bloquear y desbloquear el archivo y haga clic en **Aceptar**.  
   
-6.  Si el servidor de informes utiliza la cuenta de servicio para conectarse a su base de datos, la información de la conexión se actualizará para utilizar la nueva cuenta o contraseña. Para actualizar la información de la conexión se requiere que se conecte a la base de datos. Si aparece el cuadro de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Conexión de base de datos** de , escriba credenciales que tengan permiso para conectar con la base de datos y, a continuación, haga clic en **Aceptar**.  
+6.  Si el servidor de informes utiliza la cuenta de servicio para conectarse a su base de datos, la información de la conexión se actualizará para utilizar la nueva cuenta o contraseña. Para actualizar la información de la conexión se requiere que se conecte a la base de datos. Si aparece el cuadro de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
   
 7.  Cuando el sistema pida confirmación para restaurar la clave simétrica, escriba la contraseña que especificó en el paso 5 y haga clic en **Aceptar**.  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 |Cuenta|Explicación|  
 |-------------|-----------------|  
-|Cuentas de usuario de dominio|Si tiene una cuenta de usuario de dominio de Windows que tenga los permisos mínimos requeridos para las operaciones del servidor de informes, debería utilizarla.<br /><br /> Se recomienda emplear una cuenta de usuario de dominio porque aísla el servicio Servidor de informes de otras aplicaciones. Al ejecutar varias aplicaciones en una cuenta compartida, como Servicio de red, se aumenta el riesgo de que un usuario malintencionado tome el control del servidor de informes gracias a que una infracción de seguridad de una aplicación se pueda extender con facilidad a todas las aplicaciones que se ejecutan en la misma cuenta.<br /><br /> Tenga en cuenta que si usa una cuenta de usuario de dominio, tendrá que cambiar la contraseña periódicamente si la organización exige una directiva de expiración de las contraseñas. También es posible que tenga que registrar el servicio con la cuenta de usuario. Para obtener más información, vea [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) (Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes).<br /><br /> Evite utilizar una cuenta de usuario de Windows local. Las cuentas locales no suelen contar con los permisos suficientes para tener acceso a los recursos de otros equipos. Para obtener más información sobre el modo en que el uso de una cuenta local limita la funcionalidad del servidor de informes, vea [Consideraciones para usar cuentas locales](#localaccounts) en este tema.|  
+|Cuentas de usuario de dominio|Si tiene una cuenta de usuario de dominio de Windows que tenga los permisos mínimos requeridos para las operaciones del servidor de informes, debería utilizarla.<br /><br /> Se recomienda emplear una cuenta de usuario de dominio porque aísla el servicio Servidor de informes de otras aplicaciones. Al ejecutar varias aplicaciones en una cuenta compartida, como Servicio de red, se aumenta el riesgo de que un usuario malintencionado tome el control del servidor de informes gracias a que una infracción de seguridad de una aplicación se pueda extender con facilidad a todas las aplicaciones que se ejecutan en la misma cuenta.<br /><br /> Tenga en cuenta que si usa una cuenta de usuario de dominio, tendrá que cambiar la contraseña periódicamente si la organización exige una directiva de expiración de las contraseñas. También es posible que tenga que registrar el servicio con la cuenta de usuario. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evite utilizar una cuenta de usuario de Windows local. Las cuentas locales no suelen contar con los permisos suficientes para tener acceso a los recursos de otros equipos. Para obtener más información sobre el modo en que el uso de una cuenta local limita la funcionalidad del servidor de informes, vea [Consideraciones para usar cuentas locales](#localaccounts) en este tema.|  
 |**cuenta de servicio virtual**|**Cuenta de servicio virtual** representa el servicio de Windows. Se trata de una cuenta integrada con privilegios mínimos que tiene permisos de inicio de sesión en red. Esta cuenta se recomienda si no tiene una cuenta de usuario de dominio disponible o si desea evitar cualquier interrupción del servicio que podría producirse como resultado de las directivas de expiración de las contraseñas.|  
 |**Servicio de red**|**Servicio de red** es una cuenta integrada con privilegios mínimos que tiene permisos de inicio de sesión en red. <br /><br /> Si selecciona **Servicio de red**, intente reducir el número de servicios adicionales que se ejecutan en la misma cuenta. Una infracción de seguridad de cualquier aplicación pondrá en peligro la seguridad de todas las demás aplicaciones que se ejecuten en la misma cuenta.|  
 |**Servicio local**|**Servicio local** es una cuenta integrada similar a una cuenta de usuario de Windows local autenticada. Los servicios que se ejecutan como cuenta **Servicio local** tienen acceso a los recursos de red como una sesión nula sin credenciales. Esta cuenta no es adecuada para los escenarios de implementación con intranets en los que el servidor de informes deba conectarse a una base de datos del servidor de informes remota o a un controlador de dominio de la red para autenticar a un usuario antes de abrir un informe o procesar una suscripción.|  
@@ -114,5 +112,4 @@ Las siguientes directrices y los vínculos de esta sección pueden ayudarle a el
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40; Modo nativo &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-
+ [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

@@ -1,33 +1,30 @@
 ---
-title: "Trabajar con instantáneas (portal web) | Documentos de Microsoft"
+title: "Trabajo con instantáneas (portal web) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7498112d3822d18976ea6482c6014ce7bc69435f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>Trabajo con instantáneas (portal web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Puede controlar si las instantáneas se crean para un informe seleccionando el **puntos suspensivos (...)**  de un informe, seleccione **administrar** y seleccionando **Caching** o **instantáneas del historial de**.  
+Para controlar si se van a crear instantáneas para un informe, seleccione el botón de **puntos suspensivos (...)** de un informe, **Administrar** y **Almacenamiento en caché** o **Instantáneas del historial**.  
   
 > [!NOTE]
 > El servicio del Agente SQL Server debe estar iniciado.  
@@ -80,9 +77,8 @@ Si activa esta casilla, se copiará en el historial de un informe una instantán
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Trabajar con informes paginados](working-with-paginated-reports-web-portal.md)  
-[Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Portal web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Trabajo con informes paginados](working-with-paginated-reports-web-portal.md)  
+[Trabajo con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

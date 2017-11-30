@@ -1,37 +1,35 @@
 ---
-title: "Crear un informe móvil de Reporting Services | Documentos de Microsoft"
+title: "Creación de un informe móvil de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creación de un informe móvil de Reporting Services
-Con SQL Server Mobile Report Publisher, puede crear rápidamente informes móviles de SQL Server 2016 Reporting Services que se ajusta bien a cualquier tamaño de pantalla, en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles.  
+Con el Publicador de informes móviles de Microsoft SQL Server, puede crear informes móviles de SQL Server 2016 Reporting Services con un escalado adecuado hasta cualquier tamaño de pantalla en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles.  
   
-La primera vez que cree un informe móvil, puede instalar a SQL Server Mobile Report Publisher, en el equipo local desde el portal web de Reporting Services. También puede instalarlo desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Después de la primera ejecución, puede iniciarlo desde el portal web o localmente.   
+La primera vez que crea un informe móvil, puede instalar el Publicador de informes móviles de Microsoft SQL Server en la máquina local desde el portal web de Reporting Services. También puede instalarlo desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Después de la primera ejecución, puede iniciarlo desde el portal web o localmente.   
     
-1. En la barra superior del portal web de Reporting Services, seleccione **New** > **informe móvil**.  
+1. En la barra superior del portal web de Reporting Services, seleccione **Nuevo** > **Informe móvil**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. En el **diseño** ficha Mobile Report Publisher, seleccione navegador, medidor, gráfico, mapa o datagrid y arrástrelo a la cuadrícula de diseño.  
+2. En la pestaña **Diseño** del Publicador de informes móviles, seleccione un navegador, medidor, gráfico, mapa o cuadrícula de datos y arrástrela a la cuadrícula de diseño.  
   
 3. Agarre la esquina inferior derecha del elemento y arrástrelo hasta el tamaño que desee.  
   
@@ -69,7 +67,7 @@ La primera vez que cree un informe móvil, puede instalar a SQL Server Mobile Re
   
 11. Es el momento de guardar el informe. Seleccione el icono Guardar situado en la parte superior izquierda y elija **Save Locally (Guardar localmente)** o **Save to Server (Guardarlo en el servidor)**.  
   
-   Para guardarlo en un servidor, debe tener acceso a un servidor de informes de SQL Server 2016 Reporting Services.  
+   Para guardarlo en un servidor, necesita tener acceso a un servidor de informes de SQL Server 2016 Reporting Services.  
      
    ### <a name="see-also"></a>Vea también  
      
@@ -77,4 +75,3 @@ La primera vez que cree un informe móvil, puede instalar a SQL Server Mobile Re
 -   [Diseñar un informe de Reporting Services móvil para tableta o teléfono](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

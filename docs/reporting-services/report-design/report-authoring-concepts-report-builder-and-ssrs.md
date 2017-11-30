@@ -1,5 +1,5 @@
 ---
-title: "Conceptos (generador de informes y SSRS) de creación de informes | Documentos de Microsoft"
+title: "Conceptos de creación de informes (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 312291488481b09890f590db58ef416d5967c507
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
   En esta sección se definen brevemente algunos conceptos clave que se usan para describir informes paginados en la documentación del Generador de informes y del Diseñador de informes. Para obtener definiciones de términos o palabras específicas, vea el [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -42,11 +41,10 @@ ms.lasthandoff: 09/27/2017
  [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Describe los tipos de regiones de datos que se pueden agregar al diseño de un informe. Las regiones de datos determinan la apariencia de un informe: en forma de tabla, matriz, lista o gráfico.  
   
- [Concepto de parámetros de informe (generador de informes y SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Concepto de parámetros de informe (Generador de informes y SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Describe los modos de definir y usar los parámetros de informe, y el modo en que se administran independientemente de la definición de informe en el servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   
-

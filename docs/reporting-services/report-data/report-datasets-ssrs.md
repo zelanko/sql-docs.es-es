@@ -1,5 +1,5 @@
 ---
-title: Informe de conjuntos de datos (SSRS) | Documentos de Microsoft
+title: Conjuntos de datos de informe (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e55933fa73a87f99231eecb4d1520af4039829c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
  Además, puede agregar conjuntos de datos a un informe agregando elementos de informe que incluyan los conjuntos de datos de los que dependen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para obtener información sobre cómo crear un informe que muestra los datos de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de datos, vea [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para crear un informe que contenga sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para aprender a crear un informe donde se muestren datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para crear un informe que contenga sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 08/09/2017
 -   Agregar conjuntos de datos insertados basados en orígenes de datos insertados.  
   
 > [!NOTE]  
->  En un servidor de informes, los elementos compartidos se protegen individualmente o heredando los permisos de la carpeta donde se publican. Para permitir que otros usuarios tengan acceso a los conjuntos de datos compartidos que guarde, debe saber cómo se conceden los permisos. Para obtener más información, vea [seguridad &#40; El generador de informes &#41; ](../../reporting-services/report-builder/security-report-builder.md) o [proteger elementos de conjunto de datos compartidos](../../reporting-services/security/secure-shared-dataset-items.md).  
+>  En un servidor de informes, los elementos compartidos se protegen individualmente o heredando los permisos de la carpeta donde se publican. Para permitir que otros usuarios tengan acceso a los conjuntos de datos compartidos que guarde, debe saber cómo se conceden los permisos. Para más información, vea [Seguridad &#40;Generador de informes&#41;](../../reporting-services/report-builder/security-report-builder.md) o [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  Después de agregar datos a un informe, puede organizar los datos en la página del informe con regiones de datos, modificar los elementos de informe y compartir los cambios con otros usuarios. Además, puede permitir que los usuarios ordenen o limiten los datos que se ven en el informe. Para obtener más información, vea los siguientes temas relacionados:  
   
 -   [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [Los minigráficos y barras de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
  En el diseñador de consultas, puede ejecutar la consulta para ver datos de ejemplo y validar la sintaxis del comando de consulta. Los nombres de columna del conjunto de resultados se convierten en los nombres de campo que se ven en el panel Datos de informe. El conjunto de resultados debe ser un conjunto único de filas y columnas en el que existe el mismo número de valores para cada fila de datos. No se admiten varios conjuntos de resultados de una única consulta. Las jerarquías desiguales, que no tienen un número constante de columnas y pueden generar un número distinto de valores de datos para cada fila, no se admiten.  
   
- Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para obtener más información, consulte [especificar credenciales en el generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [las conexiones de datos, orígenes de datos y las cadenas de conexión &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para más información, vea [Especificar credenciales en el Generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Informes creación conceptos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

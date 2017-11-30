@@ -1,5 +1,5 @@
 ---
-title: Informes y agrupar las referencias de las colecciones de Variables (generador de informes y SSRS) | Documentos de Microsoft
+title: Referencias a las colecciones de variables de informe y de grupo (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,19 +20,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9bc443ac284afad9153f5f3196a8c9a4fc1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Colecciones integradas - informes y referencias de Variables de grupo (generador de informes)
+# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Colecciones integradas: referencias a variables de grupo e informe (Generador de informes)
   Si existe un cálculo complejo que se usa más de una vez en las expresiones de un informe, es probable que le interese crear una variable. Puede crear una variable de informe o una variable de grupo. Los nombres de variable deben ser únicos en un informe.  
   
 > [!NOTE]  
@@ -78,9 +77,8 @@ ms.lasthandoff: 08/09/2017
  Para hacer referencia a la variable en una expresión, use la sintaxis de colección global, por ejemplo, `=Variables!GroupDescription.Value`. En la superficie de diseño, el valor aparece en un cuadro de texto como `<<Expr>>`.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Colecciones integradas en expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

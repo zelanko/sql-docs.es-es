@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Active
+ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
 El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
@@ -77,7 +77,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**DisableSecureFormsAuthenticationCookie**|El valor predeterminado es False.<br /><br /> Especifica si se deshabilita el forzado de la cookie usada para que la autenticación mediante formularios y personalizada se marquen como seguras. A partir de SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] marcará automáticamente las cookies de autenticación de formularios usadas con extensiones de autenticación personalizada como cookies seguras cuando se envíen al cliente. Al cambiar esta propiedad, los administradores del servidor de informes y los autores de extensiones de seguridad personalizadas pueden revertir al comportamiento anterior que permitía al autor de una extensión de seguridad personalizada determinar si se debía marcar la cookie como segura. Se recomienda usar cookies seguras para la autenticación de formularios con el fin de ayudar a evitar ataques de examen de red y reproducción.|N|  
 |**CleanupCycleMinutes**|Especifica los minutos tras los que se eliminarán las sesiones antiguas y las instantáneas expiradas de las bases de datos del servidor de informes. El intervalo de valores válidos es de 0 al entero máximo. El valor predeterminado es 10. Si el valor se establece en 0, se deshabilita el proceso de limpieza de la base de datos.|N,S|  
 |**MaxActiveReqForOneUser**|Especifica el número máximo de informes que puede procesar a la vez un usuario. Una vez alcanzado el límite, se deniegan las demás solicitudes de procesamiento de informes. Los valores válidos son de 1 al entero máximo. El valor predeterminado es 20.<br /><br /> Tenga en cuenta que la mayoría de las solicitudes se procesan con mucha rapidez, por lo que no es probable que un solo usuario tenga más de 20 conexiones abiertas al mismo tiempo. Si los usuarios abren más de 15 informes con un uso intensivo de procesos al mismo tiempo, puede que sea necesario aumentar este valor.<br /><br /> Este parámetro se omite en el caso de los servidores de informes que se ejecutan en el modo integrado de SharePoint.|N,S|  
-|**MaxActiveReqForAnonymous**|Especifica el número máximo de solicitudes anónimas que pueden estar en proceso al mismo tiempo. Una vez que se alcanza el límite, posteriores se deniegan las solicitudes de procesamiento. Los valores válidos son de 1 al entero máximo. El valor predeterminado es 200.
+|**MaxActiveReqForAnonymous**|Especifica el número máximo de solicitudes anónimas que se pueden procesar al mismo tiempo. Una vez alcanzado el límite, se deniegan las demás solicitudes de procesamiento. Los valores válidos son de 1 al entero máximo. El valor predeterminado es 200.
 |**DatabaseQueryTimeout**|Especifica los segundos de tiempo de espera de la conexión con la base de datos del servidor de informes. Este valor se pasa a la propiedad System.Data.SQLClient.SQLCommand.CommandTimeout. Los valores válidos oscilan entre 0 y 2147483647. El valor predeterminado es 120. Un valor de 0 especifica un tiempo de espera ilimitado y, por consiguiente, no se recomienda.|N|  
 |**AlertingCleanupCycleMinutes**|El valor predeterminado es 20.<br /><br /> Determina la frecuencia con la que se limpian los datos temporales almacenados en la base de datos de alertas.|S|  
 |**AlertingDataCleanupMinutes**|El valor predeterminado es 360.<br /><br /> Determina durante cuánto tiempo se conservan los datos de sesión usados para crear o editar una definición de alerta dentro de la base de datos de alertas. El valor predeterminado es 6 horas.|S|  
@@ -847,7 +847,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- ¿Tiene alguna pregunta más? [Pruebe el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Mensajes de alerta de datos | Documentos de Microsoft
+title: Mensajes de alertas de datos | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea76fbe6f4b59874270d70efde68b3d3493d7f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-messages"></a>Mensajes de alertas de datos
 
@@ -29,23 +28,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Alertas de datos de SQL Server Reporting Services envían dos tipos de mensajes de alerta de datos por correo electrónico: mensajes con datos de resultados de alertas y mensajes con descripciones de errores. Los mensajes con resultados informan a todos los destinatarios de los cambios realizados en los datos del informe que sean de interés común e importantes para las decisiones empresariales. Si por alguna razón se produce un error y los resultados no están disponibles, se envía en su lugar el mensaje de error.
+Las alertas de datos de SQL Server Reporting Services envían dos tipos de mensajes de alertas de datos por correo electrónico: mensajes con resultados de alertas de datos y mensajes con descripciones de errores. Los mensajes con resultados informan a todos los destinatarios de los cambios realizados en los datos del informe que sean de interés común e importantes para las decisiones empresariales. Si por alguna razón se produce un error y los resultados no están disponibles, se envía en su lugar el mensaje de error.
 
 El propietario de la definición de la alerta de datos también puede ver la información sobre la instancia de la alerta de datos en el Administrador de alertas de datos. Para más información, consulte [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 ##  <a name="DataAlertMessages"></a> Mensajes de alertas de datos  
  En las imágenes siguientes se muestra un mensaje de alerta de datos con resultados y un mensaje de alerta con una descripción de error.  
   
  **Mensaje de resultados**  
   
- ![Mensaje de correo electrónico de alerta de datos con resultados](../reporting-services/media/rs-alertmessageresults.gif "mensaje de correo electrónico de alerta de datos con resultados")  
+ ![Mensaje de correo electrónico de alerta de datos con los resultados](../reporting-services/media/rs-alertmessageresults.gif "Mensaje de correo electrónico de alerta de datos con los resultados")  
   
  **Mensaje de error**  
   
- ![Mensaje de alerta de datos con el mensaje de error](../reporting-services/media/rs-alertmessageerrror.gif "mensaje de alerta de datos con el mensaje de error")  
+ ![Mensaje de alerta de datos con mensaje de error](../reporting-services/media/rs-alertmessageerrror.gif "Mensaje de alerta de datos con mensaje de error")  
   
  Los mensajes incluyen los mismos tipos de información.  
   
@@ -71,12 +70,11 @@ El propietario de la definición de la alerta de datos también puede ver la inf
   
 -   [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Editar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 ## <a name="see-also"></a>Vea también
 
 [Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

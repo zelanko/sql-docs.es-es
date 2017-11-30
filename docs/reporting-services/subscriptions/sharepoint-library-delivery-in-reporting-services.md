@@ -1,5 +1,5 @@
 ---
-title: Entrega de la biblioteca de SharePoint en Reporting Services | Documentos de Microsoft
+title: Entrega de la biblioteca de SharePoint en Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de la biblioteca de SharePoint en Reporting Services
   Un servidor de informes que se configura para la integración de SharePoint incluye una extensión de entrega que usted puede utilizar para enviar un informe a una biblioteca de SharePoint.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  Especifica una propiedad **Title** opcional para el informe en la biblioteca de destino. Es una propiedad estándar para todos los elementos almacenados en una biblioteca. Los usuarios pueden especificar si se va a mostrar u ocultar esta propiedad al ver el contenido de la biblioteca en un sitio de SharePoint.  
   
  Ruta de acceso  
- Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: `http://mySharePointWeb/MySite/MyDocLib`; donde `http://mySharePointWeb` indica la aplicación Web, "Misitio" es el sitio de SharePoint y "Mibibliotecadedocumentos" es la biblioteca de SharePoint donde se entregará el informe.  
+ Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: `http://mySharePointWeb/MySite/MyDocLib`, donde `http://mySharePointWeb` indica la aplicación web, "MySite" es el sitio de SharePoint y "MyDocLib" es la biblioteca de SharePoint en la que se entrega el informe.  
   
  No puede especificar una página, un sitio o una lista. El contenedor de destino debe ser una biblioteca en el mismo sitio o conjunto de servidores.  
   
@@ -92,8 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Especificar credenciales y la información de conexión para orígenes de datos de informe](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

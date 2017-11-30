@@ -1,5 +1,5 @@
 ---
-title: "Agregar o eliminar un grupo en un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar o eliminar un grupo en un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 5828189294b51d10f36c4d0250f6a7b5aa5f2151
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Agregar o eliminar un grupo en un gráfico (Generador de informes y SSRS)
 En los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , haga clic en la región de datos del gráfico para mostrar el panel **Datos del gráfico** . Cree grupos arrastrando los campos del conjunto de datos a las áreas **Grupos de categorías** y **Grupos de series** . Para agregar grupos anidados, agregue varios campos al área.  
@@ -61,6 +61,6 @@ En los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 2.  Haga clic con el botón derecho en el grupo en las áreas **Grupos de categorías** o **Grupos de series** y, después, haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

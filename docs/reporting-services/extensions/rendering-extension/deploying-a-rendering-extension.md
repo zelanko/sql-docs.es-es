@@ -1,5 +1,5 @@
 ---
-title: "Implementar una extensión de representación | Documentos de Microsoft"
+title: "Implementar una extensión de representación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,33 +10,31 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 396fe5513bb713b1d3296a7edfaff386708de052
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
-  Después de haber escrito y compilado la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] informe la extensión de representación en un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] biblioteca, debe hacerlo reconocible por el servidor de informes y el Diseñador de informes. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
+  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento Extension de representación de archivos de configuración  
- Una vez compilada una extensión de representación en una .DLL, agregue una entrada al archivo rsreportserver.config. De forma predeterminada, la ubicación es %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting. El elemento primario es \<representar >. Bajo el elemento Render hay un elemento Extension para cada extensión de representación. El elemento **Extension** contiene dos atributos, Name y Type.  
+ Una vez compilada una extensión de representación en una .DLL, agregue una entrada al archivo rsreportserver.config. De forma predeterminada, la ubicación es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer. El elemento primario es \<Render>. Bajo el elemento Render hay un elemento Extension para cada extensión de representación. El elemento **Extension** contiene dos atributos, Name y Type.  
   
  En la tabla siguiente se describen los atributos para el elemento **Extension** correspondientes a las extensiones de representación:  
   
-|Atributo|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**Nombre**|Nombre único de la extensión. La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas dentro del elemento **Extensions** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |**Tipo**|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
@@ -50,9 +48,9 @@ ms.lasthandoff: 08/12/2017
   
 ### <a name="to-deploy-the-assembly"></a>Para implementar el ensamblado  
   
-1.  Copie el ensamblado de la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de representación. La ubicación predeterminada del directorio de Bin del servidor de informes es %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting.  
+1.  Copie el ensamblado de la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de representación. La ubicación predeterminada del directorio Bin del servidor de informes es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer\Bin.  
   
-2.  Una vez copiado el archivo de ensamblado, abra el archivo rsreportserver.config. El archivo rsreportserver.config también se encuentra en el directorio bin del servidor de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión. Puede abrir el archivo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto simple.  
+2.  Una vez copiado el archivo de ensamblado, abra el archivo rsreportserver.config. El archivo rsreportserver.config también se encuentra en el directorio bin del servidor de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión. Puede abrir el archivo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un simple editor de texto.  
   
      Para más información, vea [El archivo de configuración RSReportServer.config](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
@@ -72,16 +70,15 @@ ms.lasthandoff: 08/12/2017
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     El valor de **Name** es el nombre único de la extensión de representación. El valor de **tipo** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de su <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> implementación, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo del Administrador de informes, agregue un atributo **Visible** al elemento **Extension** y establézcalo en **false**.  
+     El valor de **Name** es el nombre único de la extensión de representación. El valor de **Type** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la implementación de <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo del Administrador de informes, agregue un atributo **Visible** al elemento **Extension** y establézcalo en **false**.  
   
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede abrir también el Administrador de informes y comprobar que la extensión está incluida en la lista de tipos de exportación disponibles para un informe.  
   
 ## <a name="see-also"></a>Vea también  
  [Implementar una extensión de representación](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Introducción a las extensiones de representación](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
+ [Información general de las extensiones de representación](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
  [Implementar la interfaz IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
  [Consideraciones de seguridad para las extensiones](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   
-

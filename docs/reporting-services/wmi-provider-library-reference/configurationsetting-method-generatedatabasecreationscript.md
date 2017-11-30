@@ -1,5 +1,5 @@
 ---
-title: "Método ConfigurationSetting - GenerateDatabaseCreationScript | Documentos de Microsoft"
+title: "Método ConfigurationSetting - GenerateDatabaseCreationScript | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseCreationScript method
+helpviewer_keywords: GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6203ad120046f77ab68364f04bd93c56f9bd8cd3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d1977cf23aab843e5f71c4e6e275b13adf7eb8cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>Método ConfigurationSetting - GenerateDatabaseCreationScript
   Genera un script SQL que se puede utilizar para crear una base de datos del servidor de informes.  
@@ -86,4 +82,3 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

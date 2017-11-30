@@ -1,5 +1,5 @@
 ---
-title: Propiedad DatabaseQueryTimeout (MSReportServer_ConfigurationSetting WMI) | Documentos de Microsoft
+title: Propiedad DatabaseQueryTimeout (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseQueryTimeout Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseQueryTimeout Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseQueryTimeout property
+helpviewer_keywords: DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 67505da58ea80c15c6029d849af594e63340e863
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c56a5f4102236affc6860aea200857509d4e2af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---databasequerytimeout"></a>Propiedad ConfigurationSetting - DatabaseQueryTimeout
+# <a name="configurationsetting-property---databasequerytimeout"></a>Propiedad de ConfigurationSetting: DatabaseQueryTimeout
   Especifica el número de segundos que deben transcurrir antes de que el servidor de informes asuma un error del comando o que necesita demasiado tiempo para ejecutarse. El servidor de informes ajusta el tiempo de la consulta con respecto al catálogo de SQL, no a un origen de datos para el informe. Lectura/escritura  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -56,4 +52,3 @@ public UInt32 DatabaseQueryTimeout;
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

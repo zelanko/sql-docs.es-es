@@ -1,5 +1,5 @@
 ---
-title: Novedades de Reporting Services (SSRS) | Documentos de Microsoft
+title: Novedades de Reporting Services (SSRS) | Microsoft Docs
 ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
@@ -13,27 +13,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 65eb6720677fbb4e6f95086aefc162dc23563206
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Obtenga información acerca de cuáles son las novedades en SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Abarca las principales áreas de características y se actualiza a medida que se lanzan nuevos elementos.
+Obtenga información sobre las novedades de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Abarca las principales áreas de características y se actualiza a medida que se lanzan nuevos elementos.
 
-  Para obtener información sobre cuáles son las novedades en otras áreas de SQL Server, vea [What's New en SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) o [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+  Para más información sobre las novedades en otras áreas de SQL Server, vea [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) o [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
  **Descarga** ![download](../analysis-services/media/download.png "download")
 
-- Para descargar SQL Server 2017 Reporting Services, vaya a la  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
+- Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-Para obtener las notas de versión actual, vea [notas de la versión de SQL Server de 2017](../sql-server/sql-server-2017-release-notes.md) o [notas de la versión de servidor de informes de Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Para obtener información sobre el servidor de informes de Power BI, consulte [empezar a trabajar con el servidor de informes de Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Para las notas de la versión actual, vea [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md) o [Notas de la versión de Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Para obtener información sobre Power BI Report Server, vea [Introducción a Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ## <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 
@@ -43,7 +41,7 @@ Ahora hay comentarios disponibles para los informes a fin de agregar perspectiva
 
 ![Comentarios dentro de un servidor de informes](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
-Para obtener más información, consulte [agregar comentarios a un informe en un servidor de informes](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
+Para más información, vea [Agregar comentarios a un informe en un servidor de informes](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
 
 ### <a name="dax-queries-in-reporting-tools"></a>Consultas DAX en herramientas de informes
 
@@ -51,18 +49,18 @@ En las versiones más recientes del Generador de informes y SQL Server Data Tool
 
 ### <a name="rest-api-support"></a>Compatibilidad con la API de REST
 
-Para habilitar el desarrollo de aplicaciones modernas y personalización, SQL Server Reporting Services ahora admite totalmente OpenAPI compatible con API de REST. La especificación de API y la documentación completa se encuentra ahora en [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+Para habilitar el desarrollo y personalización de aplicaciones modernas, SQL Server Reporting Services admite ahora una API de RESTful totalmente compatible con OpenAPI. La especificación y la documentación completas de la API se pueden encontrar en [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Diseñador compatibilidad con consultas de DAX ahora en el generador de informes y las herramientas de datos de SQL Server
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Compatibilidad con el diseñador de consultas para DAX ahora en el Generador de informes y SQL Server Data Tools
 
-En las últimas versiones del generador de informes y SQL Server Data Tools – Release Candidate, ahora puede crear consultas nativas de DAX sobre los modelos de datos tabulares de Analysis Services de SQL Server admitidos. Puede utilizar el Diseñador de consultas en ambas herramientas para arrastrar y colocar los campos que desee y tener la consulta DAX generada automáticamente en lugar de escribir usted mismo.  
+En las versiones más recientes del Generador de informes y SQL Server Data Tools (versión candidata para lanzamiento) ahora se pueden crear consultas DAX nativas sobre los modelos de datos tabulares de SQL Server Analysis Services admitidos. Se puede usar el diseñador de consultas en ambas herramientas para arrastrar y colocar los campos que quiera y hacer que la consulta DAX se genere automáticamente en lugar de escribirla usted mismo.  
  
-Leer más sobre la [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-* Descargar [generador de informes SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
-* Descargar [herramientas de datos SQL Server: candidato de versión comercial](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
+* Descargue [Generador de informes de SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
+* Descargue [SQL Server Data Tools (versión candidata para lanzamiento)](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Tenga en cuenta**: solo se puede utilizar el Diseñador de consultas de DAX con orígenes de datos tabulares de SSAS integrados en SQL Server 2016 +.
+> **Nota**: Solo se puede usar el diseñador de consultas de DAX con orígenes de datos tabulares de SSAS integrados en SQL Server 2016+.
  
 ## <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
   
@@ -112,7 +110,7 @@ Los informes móviles de Reporting Services son informes dedicados optimizados p
  
 Para obtener más información, vea:  
   
--   [Combinaciones admitidas de SharePoint y Reporting Services Server y complemento &#40; SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -129,15 +127,15 @@ Para obtener más información, vea:
 
 **Informes paginados modernos** : diseñe informes paginados modernos y muy atractivos con nuevos estilos modernos para gráficos, medidores, mapas y otras visualizaciones de datos.
   
-**Rectángulos y proyección solar gráficos:** Mejore sus informes con rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") gráficos, formas estupendas para mostrar los datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos de rectángulos y proyección solar:** mejore sus informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con los parámetros de dirección URL.  
 
-**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede **(1)** seleccionar el grupo que contiene el panel que quiere anclar, **(2)** seleccionar el panel donde también quiere anclar el elemento y **(3)** seleccionar la frecuencia con la que quiere que se actualice el icono en el panel.   ![Tenga en cuenta](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Nota") administra la actualización [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suscripciones y después de ancla el elemento, puede editar la suscripción y configurar una programación de actualización diferentes.  
+**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede **(1)** seleccionar el grupo que contiene el panel que quiere anclar, **(2)** seleccionar el panel donde también quiere anclar el elemento y **(3)** seleccionar la frecuencia con la que quiere que se actualice el icono en el panel.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- Para obtener más información, vea [integración del servidor de informes de Power BI &#40; Administrador de configuración &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) y [elementos de Pin Reporting Services en panales de Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
+ Para más información, vea [Integración de Power BI Report Server &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) y [Anclado de elementos de Reporting Services en paneles de Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
  **Representación y exportación de PowerPoint:** el formato PPTX (Microsoft PowerPoint) es una nueva extensión de representación de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Puede exportar informes en formato PPTX desde las aplicaciones habituales, como el Generador de informes, el Diseñador de informes (en SSDT) y el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. A modo de ejemplo, en la imagen siguiente se muestra el menú Exportar en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
@@ -178,7 +176,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 **Panel de parámetros personalizado:** ahora puede personalizar el panel de parámetros. Al usar la superficie de diseño en el Generador de informes, puede arrastrar un parámetro a una columna y una fila específica en el panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel.   Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md) (Personalizar el panel de parámetros en un informe [Generador de informes]).  
   
- ![Lista de parámetros en el panel datos de informe y panel de parámetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "lista de parámetros en el panel datos de informe y panel de parámetros")  
+ ![Lista de parámetros en el panel Datos de informe y en el panel Parámetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parámetros en el panel Datos de informe y en el panel Parámetros")  
 
   
 **Compatibilidad con ppp elevado:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] es compatible con el escalado y los dispositivos con valores altos de PPP (puntos por pulgada).  Para obtener más información sobre los valores altos de PPP, consulte los artículos siguientes:  
@@ -199,4 +197,3 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Servidor de informes de Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

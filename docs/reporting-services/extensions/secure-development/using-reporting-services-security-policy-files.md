@@ -1,5 +1,5 @@
 ---
-title: Usar Reporting Services Security Policy Files | Documentos de Microsoft
+title: Usar los archivos de directivas de seguridad de Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,22 +20,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usar los archivos de directivas de seguridad de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] almacena la información de los componentes de directiva de seguridad en tres archivos de configuración que se copian en el sistema de archivos durante la instalación. Estos archivos de configuración pueden contener una combinación de uso interno y las directivas de seguridad definidas por el usuario para los ensamblados de código en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los tres archivos de configuración corresponden a tres componentes protegibles de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: el servidor de informes y el servicio de Windows, la aplicación web del Administrador de informes y la ventana de vista previa del Diseñador de Informes.  
   
 > [!NOTE]  
->  Hay dos modos de previsualización para el Diseñador de informes: la ficha Vista previa y la ventana de vista previa emergente que se inicia cuando se inicia el proyecto de informe en **DebugLocal** modo. El **vista previa** ficha no es un componente protegible y no aplica la configuración de directiva de seguridad. La ventana de vista previa está pensada para simular la funcionalidad del servidor de informes y por consiguiente, tiene un archivo de configuración de directiva que usted o un administrador debe modificar para utilizar ensamblados y extensiones personalizadas en el Diseñador de informes.  
+>  Hay dos modos de vista previa para el Diseñador de informes: la pestaña de vista previa y la ventana de vista previa emergente que se inician cuando se inicia su Proyecto de informe en modo **DebugLocal**. La pestaña **Vista previa** no es un componente protegible y no aplica la configuración de directiva de seguridad. La ventana de vista previa está pensada para simular la funcionalidad del servidor de informes y por consiguiente, tiene un archivo de configuración de directiva que usted o un administrador debe modificar para utilizar ensamblados y extensiones personalizadas en el Diseñador de informes.  
   
  Los archivos de configuración de directivas de seguridad contienen información de clase de seguridad, algunos conjuntos de permisos con nombre predeterminados y los grupos de código para los ensamblados en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los archivos de configuración de directivas de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] son similares al archivo Security.config que determina los conjuntos de permisos y la jerarquía de grupos de código asociados a las directivas de nivel de equipos y de empresas de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. La ubicación de este archivo es C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   
@@ -45,8 +44,8 @@ ms.lasthandoff: 08/12/2017
   
 |Nombre de archivo|Ubicación (instalación predeterminada)|Description|  
 |---------------|---------------------------------------|-----------------|  
-|rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|El archivo de configuración de directivas del servidor de informes. Estas directivas de seguridad afectan principalmente a las expresiones de informe y a los ensamblados personalizados una vez que se implementa un informe en un servidor de informes. Este archivo de directivas también afecta a los datos personalizados, entregas, representaciones y extensiones de seguridad que se implementan en el servidor de informes.|  
-|rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager.|Archivo de configuración de directivas del Administrador de informes. Estas directivas de seguridad afectan a todos los ensamblados que abarca el Administrador de informes; por ejemplo, extensiones de interfaz de usuario de suscripciones para entregas personalizadas.|  
+|rssrvpolicy.config|C:\Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|El archivo de configuración de directivas del servidor de informes. Estas directivas de seguridad afectan principalmente a las expresiones de informe y a los ensamblados personalizados una vez que se implementa un informe en un servidor de informes. Este archivo de directivas también afecta a los datos personalizados, entregas, representaciones y extensiones de seguridad que se implementan en el servidor de informes.|  
+|rsmgrpolicy.config|C:\Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Archivo de configuración de directivas del Administrador de informes. Estas directivas de seguridad afectan a todos los ensamblados que abarca el Administrador de informes; por ejemplo, extensiones de interfaz de usuario de suscripciones para entregas personalizadas.|  
 |rspreviewpolicy.config|C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies|El archivo de configuración de directivas de vista previa independiente del Diseñador de informes. Estas directivas de seguridad afectan a las expresiones de informe y a los ensamblados personalizados que se utilizan en los informes durante la vista previa y el desarrollo. Estas directivas afectan también a las extensiones personalizadas, como las extensiones de procesamiento de datos, que se implementan en el Diseñador de informes.|  
   
 ## <a name="modifying-configuration-files"></a>Modificación de los archivos de configuración  

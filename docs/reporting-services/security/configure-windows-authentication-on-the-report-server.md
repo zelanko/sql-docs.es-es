@@ -1,5 +1,5 @@
 ---
-title: "Configurar la autenticación de Windows en el servidor de informes | Documentos de Microsoft"
+title: "Configurar la autenticación de Windows en el servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -37,9 +36,9 @@ ms.lasthandoff: 08/09/2017
     > [!IMPORTANT]  
     >  Al usar **RSWindowsNegotiate** , se producirá un error de autenticación Kerberos si ha configurado el servicio del servidor de informes para ejecutarse en una cuenta de usuario de dominio y no ha registrado un nombre de entidad de seguridad de servicio (SPN) para la cuenta. Para obtener más información, vea [Resolver los errores de autenticación Kerberos al conectarse a un servidor de informes](#proxyfirewallRSWindowsNegotiate) en este tema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]debe configurarse para la autenticación de Windows. De forma predeterminada, los archivos Web.config para el servicio Web del servidor de informes incluyen el \<modo de autenticación = "Windows" > configuración. Si lo cambia a \<modo de autenticación = "Forms" >, la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se producirá un error.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, en los archivos Web.config del servicio web del servidor de informes se incluye el valor \<authentication mode="Windows">. Si lo cambia a \<authentication mode="Forms">, se producirá un error en la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   Los archivos Web.config para el servicio Web del servidor de informes debe tener \<identity impersonate = "true" / >.  
+-   Los archivos Web.config para el servicio web del servidor de informes deben tener \<identity impersonate= "true" />.  
   
 -   La aplicación cliente o el explorador deben admitir la seguridad integrada de Windows.  
 
@@ -52,13 +51,13 @@ ms.lasthandoff: 08/09/2017
  Las instrucciones siguientes están pensadas para un servidor de informes en modo nativo. Si el servidor de informes se implementa en modo integrado de SharePoint, se deben utilizar los valores de autenticación predeterminados que especifican la seguridad integrada de Windows. El servidor de informes utiliza las características internas de la extensión de autenticación de Windows predeterminada para admitir los servidores de informes en modo integrado de SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Protección ampliada para la autenticación  
- A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se admite la protección ampliada para autenticación. La característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso del enlace de canal y del enlace de servicio para mejorar la protección de la autenticación. Las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tienen que usarse con un sistema operativo que admita la protección ampliada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]configuración para la protección extendida viene determinada por la configuración en el archivo RSReportServer.config. El archivo puede actualizarse modificando el archivo o usando las API WMI. Para más información, consulte [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
+ A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se admite la protección ampliada para autenticación. La característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso del enlace de canal y del enlace de servicio para mejorar la protección de la autenticación. Las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tienen que usarse con un sistema operativo que admita la protección ampliada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la protección extendida viene determinada por la configuración del archivo RSReportServer.config. El archivo puede actualizarse modificando el archivo o usando las API WMI. Para más información, consulte [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Para configurar un servidor de informes para usar la seguridad integrada de Windows  
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-2.  Buscar \< **autenticación**>.  
+2.  Busque \<**Autenticación**>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. Puede especificar **RSWindowsNegotiate**, **RSWindowsNTLM**y **RSWindowsKerberos** en cualquier orden. Debe habilitar la persistencia de autenticación si desea autenticar la conexión en lugar de cada solicitud individual. Con la persistencia de autenticación, todas las solicitudes que requieran autenticación se permitirán mientras dure la conexión.  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</ Autenticación >  
+     \</Authentication>  
   
      La tercera estructura XML especifica todos los paquetes de seguridad que se utilizan en la seguridad integrada de Windows:  
   
@@ -103,7 +102,7 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  Péguela sobre las entradas existentes para \< **autenticación**>.  
+4.  Péguela sobre las entradas existentes para \<**Autenticación**>.  
   
      Observe que no puede utilizar **Custom** con los tipos **RSWindows** .  
   
@@ -131,11 +130,11 @@ ms.lasthandoff: 08/09/2017
   
  Puede detectar el error si habilitó el registro de Kerberos. Otro síntoma del error es que se solicitan varias veces las credenciales y, a continuación, aparece una ventana del explorador vacía.  
   
- Puede confirmar que se está produciendo un error de autenticación de Kerberos mediante la eliminación de < **RSWindowsNegotiate** / > desde el archivo de configuración y volver a intentar realizar la conexión.  
+ Para confirmar si hay un error de autenticación Kerberos, quite < **RSWindowsNegotiate** /> del archivo de configuración y vuelva a intentar establecer la conexión.  
   
  Después de confirmar el problema, puede abordarlo de las maneras siguientes:  
   
--   Registre un SPN para el servicio del servidor de informes en la cuenta de usuario de dominio. Para obtener más información, vea [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) (Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes).  
+-   Registre un SPN para el servicio del servidor de informes en la cuenta de usuario de dominio. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
 -   Cambie la cuenta de servicio para que se ejecute en una cuenta integrada como servicio de red. Las cuentas integradas asignan el SPN HTTP al SPN de host, que se define al unir un equipo a la red. Para más información, vea [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
@@ -173,7 +172,7 @@ ms.lasthandoff: 08/09/2017
     rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
     ```  
   
--   Los valores en \<Explicit > contendrán los SPN configurados en Active Directory para la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cuenta de servicio.  
+-   Los valores bajo \<Explicit> contendrán los SPN configurados en Active Directory para la cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Si no desea seguir utilizando la protección ampliada, establezca de nuevo los valores de configuración predeterminados y reinicie la cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -213,11 +212,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
- [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Configurar la autenticación de formularios o personalizada en el servidor de informes](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Protección ampliada para la autenticación con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
-

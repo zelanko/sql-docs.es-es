@@ -1,27 +1,25 @@
 ---
-title: 'Tutorial: Crear un informe de matriz (generador de informes) | Documentos de Microsoft'
+title: 'Tutorial: Crear un informe de matriz (Generador de informes) | Microsoft Docs'
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
 Este tutorial le enseña a crear un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matriz de datos de ventas de ejemplo en los grupos anidados de filas y columnas. 
@@ -57,7 +55,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener información acerca de cómo crear un origen de datos incrustados, vea [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para más información sobre cómo crear un origen de datos insertado, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -162,7 +160,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 2.  Presione la tecla CTRL y, a continuación, seleccione las nueve celdas que contienen `[Sum(Sales)]`.  
   
-3.  En el **inicio** ficha > **número** > **moneda**. Las celdas cambian para mostrar la moneda con formato.  
+3.  En la pestaña **Inicio** > **Número** > **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
   
     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
     
@@ -170,7 +168,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 4.  Haga clic en la celda que contiene `[SalesDate]`.  
   
-5.  En el **número** grupo > **fecha**.  
+5.  En el grupo **Número** > **Fecha**.  
   
     La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
@@ -203,7 +201,7 @@ En esta sección, agregará un grupo de columnas adyacente al grupo de columnas 
     =WeekdayName(DatePart("w",Fields!SalesDate.Value))  
     ```  
   
-    Esta expresión extrae el nombre del día de la semana de la fecha de ventas. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+    Esta expresión extrae el nombre del día de la semana de la fecha de ventas. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 6.  Haga clic con el botón derecho en la celda del grupo de columnas de Subcategory que contiene Total y luego haga clic en **Copiar**.  
   
@@ -268,7 +266,7 @@ El área de la esquina está en la esquina superior izquierda de la matriz Depen
   
 5.  Haga clic con el botón derecho en la nueva celda combinada y haga clic en **Propiedades de cuadro de texto**.  
   
-6.  En el **borde** ficha > **valores preestablecidos** > **ninguno**.
+6.  En la pestaña **Borde** > **Valores predeterminados** > **Ninguno**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +283,7 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 2.  Seleccione el cuadro de texto de la parte superior del cuerpo del informe que contiene **Haga clic para agregar un título**y, después, pulse la tecla Suprimir.  
   
-3.  En el **insertar** ficha > **encabezado** > **agregar encabezado**.  
+3.  En la pestaña **Insertar** > **Encabezado** > **Agregar encabezado**.  
   
     Se agrega un encabezado a la parte superior del cuerpo del informe.  
   
@@ -335,7 +333,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 ## <a name="RotateTextBox"></a>9. (Opcional) Girar 270 grados el cuadro de texto  
 Un informe con matrices se puede expandir horizontal y verticalmente cuando se ejecuta. Girando los cuadros de texto verticalmente o 270 grados, puede ahorrar espacio horizontal. El informe representado se hace más estrecho y, si se exporta a un formato como Microsoft Word, tendrá más posibilidades de ajustar en una página impresa.  
   
-Un cuadro de texto también puede mostrar el texto como horizontal o como, vertical (de arriba abajo). Para obtener más información, vea [cuadros de texto &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Un cuadro de texto también puede mostrar el texto como horizontal o como, vertical (de arriba abajo). Para más información, vea [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Para girar el cuadro de texto 270 grados  
   
@@ -371,5 +369,4 @@ Concluye así el tutorial para sobre el modo de crear un informe de matriz. Para
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

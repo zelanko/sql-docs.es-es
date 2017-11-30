@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de expresiones (generador de informes y SSRS) | Documentos de Microsoft
+title: Ejemplos de expresiones (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 04/06/2017
 ms.prod: sql-server-2016
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
-Las expresiones se usan con frecuencia en los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar el contenido y la apariencia del informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para obtener más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [expresión se utiliza en informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), y [agregar una expresión &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Las expresiones se usan con frecuencia en los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar el contenido y la apariencia del informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Cuando se habilita el espacio seguro para RDL, solo se pueden usar algunos tipos y miembros en el texto de la expresión en el tiempo de publicación del informe. Para más información, consulte [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -68,7 +67,7 @@ Para obtener ejemplos de expresiones para usos específicos, vea los siguientes 
   
 -   [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-Para más información sobre las expresiones simples y complejas, dónde se pueden usar las expresiones y los tipos de referencias que se pueden incluir en una expresión, vea los temas en [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Para obtener más información sobre el contexto en que se evalúan las expresiones para calcular agregados, vea [ámbito de expresión para totales, agregados y colecciones integradas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+Para más información sobre las expresiones simples y complejas, dónde se pueden usar las expresiones y los tipos de referencias que se pueden incluir en una expresión, vea los temas en [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Para más información sobre el contexto donde se evalúan las expresiones para calcular agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, vea [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
@@ -103,7 +102,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     =Today()  
     ```  
   
--   Use la **DateInterval** función para extraer una parte específica de una fecha. Estos son algunos válido **DateInterval** parámetros:
+-   Use la función **DateInterval** para extraer una parte específica de una fecha. Estos son algunos parámetros válidos de **DateInterval**:
 
     -   DateInterval.Second
     -   DateInterval.Minute
@@ -170,7 +169,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   La siguiente expresión genera los años de intervalo entre SellStartDate y LastReceiptDate. Estos campos están en dos conjuntos de datos distintos, DataSet1 y DataSet2. El [primera función &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), que es una función de agregado, devuelve el primer valor de SellStartDate en DataSet1 y el primer valor de LastReceiptDate en DataSet2.  
+-   La siguiente expresión genera los años de intervalo entre SellStartDate y LastReceiptDate. Estos campos están en dos conjuntos de datos distintos, DataSet1 y DataSet2. La [función First &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), que es una función de agregado, devuelve el primer valor de SellStartDate en ConjuntoDeDatos1 y el primer valor de LastReceiptDate en ConjuntoDeDatos2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -454,7 +453,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
 >  Los colores disponibles se obtienen de la enumeración KnownColor de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ### <a name="chart-colors"></a>Colores del gráfico  
- Para especificar los colores de un gráfico de formas, puede usar código personalizado que le permita controlar el orden en que los colores se asignan a los valores de los puntos de datos. Esto le permitirá usar colores coherentes para varios gráficos que tienen los mismos grupos de categorías. Para obtener más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
+ Para especificar los colores de un gráfico de formas, puede usar código personalizado que le permita controlar el orden en que los colores se asignan a los valores de los puntos de datos. Esto le permitirá usar colores coherentes para varios gráficos que tienen los mismos grupos de categorías. Para más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
 ###  <a name="Visibility"></a> Visibilidad  
  Es posible mostrar y ocultar los elementos de un informe mediante las propiedades de visibilidad del elemento de informe. En una región de datos, como una tabla, se pueden ocultar inicialmente las filas de detalles basándose en el valor de una expresión.  
@@ -486,7 +485,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     Para obtener más información, vea [agregar un hipervínculo a una dirección URL &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
+     Para más información, vea [Agregar un hipervínculo a una dirección URL &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   La expresión siguiente controla de forma condicional si debe agregarse una dirección URL a un cuadro de texto. Esta expresión depende de un parámetro denominado `IncludeURLs` que permite a un usuario decidir si deben incluirse direcciones URL activas en un informe. Esta expresión se establece como acción en un cuadro de texto. Si se establece el parámetro en FALSE y, a continuación, se visualiza el informe, puede exportar el informe a Microsoft Excel sin hipervínculos.  
   
@@ -519,7 +518,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     ```  
   
 ##  <a name="CustomCode"></a> Código personalizado  
- En un informe, puede utilizarse código personalizado. El código personalizado puede incrustarse en el informe o puede almacenarse en un ensamblado personalizado que se utilice en el informe. Para obtener más información acerca del código personalizado, vea [código personalizado y referencias de ensamblado de expresiones en el Diseñador de informes &#40; SSRS &#41; ](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ En un informe, puede utilizarse código personalizado. El código personalizado puede incrustarse en el informe o puede almacenarse en un ensamblado personalizado que se utilice en el informe. Para más información sobre código personalizado, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Usar variables de grupo para agregación personalizada  
  Puede inicializar el valor de una variable de grupo local en un ámbito de grupo determinado y, a continuación, incluir una referencia a esa variable en expresiones. Una forma de usar una variable de grupo con código personalizado es implementar un agregado personalizado. Para obtener más información, vea [Usar variables de grupo en Reporting Services 2008 para agregados personalizados (en inglés)](http://go.microsoft.com/fwlink/?LinkId=128714).  
@@ -561,10 +560,9 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones de grupo &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Usar expresiones en informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtros de uso frecuente &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
-

@@ -1,27 +1,25 @@
 ---
-title: "Tutorial: Crear informes principales (generador de informes) y obtención de detalles | Documentos de Microsoft"
+title: "Tutorial: Crear informes principales y de obtención de detalles (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b42806861fb551463894775d2bf3619ab10bd034
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -59,7 +57,7 @@ En el cuadro de diálogo Introducción, cree un informe de matriz usando el **As
 3.  En el panel derecho, compruebe que **Asistente para tabla o matriz** está seleccionado.  
   
 ## <a name="DConnection"></a>1a. Especificar una conexión de datos  
-Una conexión de datos contiene la información necesaria para conectarse a un origen de datos externo, por ejemplo un cubo de Analysis Services o una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe. En este tutorial, utilizará un origen del datos incrustado. Para más información sobre el uso de un origen de datos compartido, consulte [alternativa maneras para obtener una conexión de datos &#40; El generador de informes &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Una conexión de datos contiene la información necesaria para conectarse a un origen de datos externo, por ejemplo un cubo de Analysis Services o una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe. En este tutorial, utilizará un origen del datos incrustado. Para obtener más información sobre cómo usar orígenes de datos compartidos, vea [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
@@ -114,7 +112,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    > Si no desea compilar la consulta MDX manualmente, haga clic en el ![cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "cambiar al modo de diseño") icono, alterne el Diseñador de consultas en modo de consulta, pegue el MDX completado al diseñador de consultas y, a continuación, vaya al paso 6 de [para crear el conjunto de datos](#DSkip).  
+    > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 6 de [Crear el conjunto de datos](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -405,7 +403,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    > Si no desea compilar la consulta MDX manualmente, haga clic en el ![cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "cambiar al modo de diseño") icono, alterne el Diseñador de consultas en modo de consulta, pegue el MDX completado al diseñador de consultas y, a continuación, vaya al paso 5 de [para crear el conjunto de datos](#MSkip).  
+    > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -691,4 +689,3 @@ Ejecute el informe principal y, a continuación, haga clic en los valores de la 
 ## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
   
-

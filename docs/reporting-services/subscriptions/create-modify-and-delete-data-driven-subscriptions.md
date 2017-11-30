@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar suscripciones controladas por datos | Documentos de Microsoft
+title: Crear, modificar y eliminar suscripciones controladas por datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 0c9cdf45f989d471d7454914e7298bb504d20288
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Cómo crear, modificar y eliminar suscripciones controladas por datos
   Una suscripción controlada por datos es una suscripción basada en consultas que obtiene los valores de los datos que se utilizan para procesar la suscripción en tiempo de ejecución. Cuando se desencadena la suscripción, se procesa una consulta para obtener información actualizada sobre destinatarios, opciones de entrega del informe, formatos de representación y valores de los parámetros. Los resultados de la consulta se combinan con la definición de la suscripción para crear una suscripción dinámica que utiliza datos que se mantienen en una base de datos de empleados, de clientes o de cualquier otro tipo que contenga información que se pueda utilizar como datos de suscriptor.  
   
- Para crear una nueva suscripción controlada por datos o modificar una existente, use las páginas Crear suscripción controlada por datos del Administrador de informes. Estas páginas le guían por los pasos necesarios para crear o modificar una suscripción. Para tener acceso a una suscripción una vez creada, utilice la página Mis suscripciones y la lista Suscripciones de un informe. Para obtener información sobre cómo crear una suscripción controlada por datos, consulte [crear una suscripción controlada por datos &#40; Tutorial de SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Para crear una nueva suscripción controlada por datos o modificar una existente, use las páginas Crear suscripción controlada por datos del Administrador de informes. Estas páginas le guían por los pasos necesarios para crear o modificar una suscripción. Para tener acceso a una suscripción una vez creada, utilice la página Mis suscripciones y la lista Suscripciones de un informe. Para más información sobre cómo crear una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  En este tema:  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  En el Administrador de informes, navegue hasta la carpeta que contiene el informe, mantenga el mouse sobre el informe, abra el menú de opciones y haga clic en **Administrar**.  
   
-2.  Haga clic en la pestaña **Suscripciones** . O bien, haga clic en el vínculo **Mis suscripciones** en la parte superior del administrador de informes.  
+2.  Haga clic en la pestaña **Suscripciones** . También puede hacer clic en el vínculo **Mis suscripciones**, situado en la parte superior del administrador de informes.  
   
-3.  Seleccione la suscripción que desea modificar. El siguiente icono indica una suscripción controlada por datos: ![icono de suscripción controlada por datos](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "icono de suscripción controlada por datos")  
+3.  Seleccione la suscripción que desea modificar. El siguiente icono indica una suscripción controlada por datos: ![Icono de suscripción controlada por datos](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Icono de suscripción controlada por datos")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Para modificar una suscripción controlada por datos existente (modo de SharePoint)  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Página suscripciones &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Página Mis suscripciones &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Mis suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

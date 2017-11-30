@@ -1,5 +1,5 @@
 ---
-title: Exportar a Microsoft Word (generador de informes y SSRS) | Documentos de Microsoft
+title: Exportar a Microsoft Word (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: fa120c78f7b443eb0dc6078a5444b79b20bbda8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
   La extensión de representación de Word representa informes paginados en el formato de  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). El formato es Office Open XML.  
   
  El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.wordprocessingml.document** y la extensión de archivo es .docx.  
   
- Vea [exportar informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obtener más información sobre cómo exportar a Word.  
+ Vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obtener detalles sobre cómo exportar a Word.  
   
  Después de exportar el informe a un documento de Word, puede cambiar el contenido del informe y diseñar informes con estilo de documento, como etiquetas postales, pedidos de compra o circulares.  
   
@@ -161,13 +160,13 @@ ms.lasthandoff: 08/09/2017
   
  El nombre de la versión anterior de la extensión de representación de Word, solo compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, cambia a Word 2003. Solo la extensión de representación de Word está disponible de forma predeterminada. Debe actualizar los archivos de configuración de Reporting Services para que la extensión de representación de Word 2003 esté disponible. El tipo de contenido de los archivos generados por el representador de Word 2003 es **application/vnd.ms-word** y la extensión de nombre de archivo es .doc.  
   
- En SQL Server Reporting Services, el representador de Word predeterminado es la versión que se representa en el [!INCLUDE[ofprword](../../includes/ofprword-md.md)] formato (.docx). Es la opción **Word** que aparece en los menús **Exportar** del portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las listas de SharePoint. La versión anterior, compatible solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, se denomina a partir de ahora Word 2003 y aparece en los menús con ese nombre. La opción de menú **Word 2003** no es visible de forma predeterminada, pero el administrador puede hacer que lo esté actualizando el archivo de configuración RSReportServer. Si desea exportar informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con el representador de Word 2003, debe actualizar el archivo de configuración RSReportDesigner. Sin embargo, aunque se haga que el representador de Word 2003 esté visible, no está disponible en todos los escenarios. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración. Si usa herramientas o productos en modo sin conexión o local, hacer que el representador de Word 2003 esté visible no tiene ningún efecto. La opción de menú **Word 2003** sigue sin estar disponible. Si hace que el representador de Word 2003 esté visible en el archivo de configuración RSReportDesigner, la opción de menú **Word 2003** siempre está disponible en la vista previa de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ En SQL Server Reporting Services, el representador de Word predeterminado es la versión que representa en el formato de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Es la opción **Word** que aparece en los menús **Exportar** del portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las listas de SharePoint. La versión anterior, compatible solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, se denomina a partir de ahora Word 2003 y aparece en los menús con ese nombre. La opción de menú **Word 2003** no es visible de forma predeterminada, pero el administrador puede hacer que lo esté actualizando el archivo de configuración RSReportServer. Si desea exportar informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con el representador de Word 2003, debe actualizar el archivo de configuración RSReportDesigner. Sin embargo, aunque se haga que el representador de Word 2003 esté visible, no está disponible en todos los escenarios. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración. Si usa herramientas o productos en modo sin conexión o local, hacer que el representador de Word 2003 esté visible no tiene ningún efecto. La opción de menú **Word 2003** sigue sin estar disponible. Si hace que el representador de Word 2003 esté visible en el archivo de configuración RSReportDesigner, la opción de menú **Word 2003** siempre está disponible en la vista previa de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  La opción de menú **Word 2003** nunca está visible en los escenarios siguientes:  
   
 -   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes.  
   
--   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [modo Local frente. modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Si el representador **Word 2003** se configura para que esté visible, las opciones de menú **Word** y **Word 2003** estarán disponibles en los escenarios siguientes:  
   
@@ -200,7 +199,7 @@ ms.lasthandoff: 08/09/2017
 [Paginación en Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
 [Comportamientos de representación](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
 [Funcionalidad interactiva para diferentes extensiones de representación de informes](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
-[Representar elementos de informe](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+[Representación de elementos de informe](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Tablas, matrices y listas](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

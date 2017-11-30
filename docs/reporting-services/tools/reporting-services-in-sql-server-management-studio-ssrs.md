@@ -1,5 +1,5 @@
 ---
-title: Reporting Services en SQL Server Management Studio (SSRS) | Documentos de Microsoft
+title: Reporting Services en SQL Server Management Studio (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report servers [Reporting Services], how-to topics
+helpviewer_keywords: report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5c82bbd8c2ed4b53bba8afca05d0c439b3ff6be
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 11d0fdfbb1ae7848fc47d89915df8f783cefe370
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services en SQL Server Management Studio (SSRS)
   Los administradores del servidor de informes pueden usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para:  
   
 -   Habilitar características, establecer valores predeterminados y administrar trabajos en ejecución.  
   
--   Ver y crear informes personalizados. En el Explorador de objetos, muchos nodos muestran un conjunto de informes estándar que se instalan con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Debe contar con los siguientes permisos de administrador. El esquema de un informe personalizado debe coincidir con el esquema de los informes instalados. Para obtener más información, vea [Informes personalizados en Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) y [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Ver y crear informes personalizados. En el Explorador de objetos, muchos nodos muestran un conjunto de informes estándar que se instalan con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Debe contar con los siguientes permisos de administrador. El esquema de un informe personalizado debe coincidir con el esquema de los informes instalados. Para más información, vea [Informes personalizados en Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) y [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Los autores de informes pueden usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para:  
   
@@ -40,9 +38,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+-   [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
--   [Establecer propiedades del servidor de informes &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
+-   [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
 -   [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/09/2017
  [Introducción a SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint | Documentos de Microsoft
+title: Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe9ffe38667a07a647e5ed23f84cd7039c430f18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint
 
@@ -32,7 +31,7 @@ ms.lasthandoff: 10/06/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona tipos de contenido de SharePoint predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo.
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
  Para agregar tipos de contenido a una biblioteca, debe ser administrador del sitio o disponer del nivel de permiso Control total.  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  Vaya a **Configuración del sitio**.  
   
-    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint")  
+    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint")  
   
     -   En SharePoint 2010, haga clic en **Acciones del sitio**y, a continuación, haga clic en **Configuración del sitio**.  
   
@@ -162,7 +161,7 @@ ms.lasthandoff: 10/06/2017
   
 8.  Cuando termine de agregar tipos de contenido, haga clic en **Aceptar**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>Para habilitar los tipos de contenido y administración de contenido de varios sitios de BI  
+##  <a name="bkmk_enable_multiple_sites"></a> Para habilitar los tipos de contenido y la administración de contenido de varios sitios de BI  
   
 1.  En los servidores de informes de SQL Server Reporting Services 2008 y 2008 R2, puede habilitar los tipos de contenido y la administración de contenido para varios sitios de Centro de inteligencia empresarial:  
   
@@ -181,4 +180,3 @@ ms.lasthandoff: 10/06/2017
  [Inicio del Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

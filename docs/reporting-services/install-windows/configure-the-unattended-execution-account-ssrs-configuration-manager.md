@@ -1,12 +1,11 @@
 ---
-title: "Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS) | Documentos de Microsoft"
+title: "Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1a5f61d6a94b80b2745f386ab16ff32a4ce0d778
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
@@ -61,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  Escriba el siguiente comando para configurar la cuenta de una instancia de servidor de informes local:  
   
-     **rsconfig -e -u\<dominio/nombreUsuario > -p\<contraseña >**  
+     **rsconfig -e -u\<dominio/nombreDeUsuario> -p\<password>**  
   
- **rsconfig -e** admite argumentos adicionales. Para obtener más información sobre la sintaxis y para ver ejemplos de comandos, consulte [rsconfig utilidad &#40; SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) en libros en pantalla de SQL Server.  
+ **rsconfig -e** admite argumentos adicionales. Para más información sobre la sintaxis y para ver ejemplos de comandos, vea [rsconfig (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Cómo se almacena la información de la cuenta  
  Al establecer la cuenta, la configuración siguiente se especifica en forma de valores cifrados en el archivo RSreportserver.config de una instancia local o remota del servidor de informes:  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/09/2017
  [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
   
   
-

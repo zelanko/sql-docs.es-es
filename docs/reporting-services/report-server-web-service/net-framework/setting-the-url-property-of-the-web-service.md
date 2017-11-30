@@ -1,5 +1,5 @@
 ---
-title: "Establecer la propiedad de dirección Url del servicio Web | Documentos de Microsoft"
+title: Establecer la propiedad Url del servicio web | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Url property
 - Report Server Web service, proxies
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 3a367a9ca2d9a8c9b51d0b55a9fedc006a6fa621
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 9f48fb74d52fbea6aa0990bd1cb72354fa5dd0f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Establecer la propiedad Url del servicio web
-  En cualquier momento en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicaciones, puede modificar la dirección URL base del servicio Web del servidor de informes a la que se dirige la aplicación. Para ello, basta con establecer la **Url** propiedad del objeto de servicio. Por ejemplo:  
+  En las aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede modificar en cualquier momento la dirección URL base del servicio web del servidor de informes a la que se dirige la aplicación. Para ello, basta con establecer la propiedad **Url** del objeto de servicio. Por ejemplo:  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -112,13 +110,12 @@ class Sample
 }  
 ```  
   
- Para obtener más información acerca de cómo crear el proxy del servicio Web inicial, vea [crear el Proxy del servicio Web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
+ Para más información sobre cómo crear el proxy del servicio web inicial, vea [Crear el proxy del servicio web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

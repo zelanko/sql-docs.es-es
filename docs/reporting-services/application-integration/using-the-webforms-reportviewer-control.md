@@ -1,5 +1,5 @@
 ---
-title: Usar el Control ReportViewer de WebForms | Documentos de Microsoft
+title: Usar el control ReportViewer de WebForms | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -10,47 +10,44 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3b92dbd07d94a0e30c93d994c5eaaa28cb7627d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Para usar el control ReportViewer en una aplicación web  
   
-1.  Crear un nuevo [!INCLUDE[msCoName](../../includes/msconame-md.md)] sitio Web de ASP.NET mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Cree un nuevo sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-O bien -  
+     \- O bien  
   
      Abra un sitio web ASP.NET existente y agregue un nuevo formulario Web Forms.  
   
-2.  Busque la **ScriptManager** controlar en el **extensiones AJAX** grupo en el **cuadro de herramientas** ventana y arrástrelo hasta la superficie de diseño del formulario Web.  
+2.  Busque el control **ScriptManager** en el grupo **Extensiones AJAX** de la ventana **Cuadro de herramientas** y arrástrelo hasta la superficie de diseño del formulario web.  
   
-     Si el **cuadro de herramientas** es no está visible, se puede obtener acceso a él desde el **vista** menú seleccionando **cuadro de herramientas**.  
+     Si el **Cuadro de herramientas** no es visible, puede acceder a él desde el menú **Ver** si selecciona **Cuadro de herramientas**.  
   
-3.  Busque la **ReportViewer** controlar en el **cuadro de herramientas** y arrástrelo a la superficie de diseño debajo del **ScriptManager** control.  
+3.  Busque el control **ReportViewer** en el **Cuadro de herramientas** y arrástrelo hasta la superficie de diseño debajo del control **ScriptManager**.  
   
-     El **ReportViewer** control denominado reportViewer1 se agrega al formulario.  
+     El control **ReportViewer** denominado reportViewer1 se agrega al formulario.  
   
- Después de que el control se agrega al formulario el **tareas de ReportViewer** etiqueta inteligente aparecerá y solicitará que seleccione un informe. Si el informe que desea ver se ha implementado en un servidor de informes, seleccione la  **\<informe de servidor >** opción desde el **elegir informe** lista desplegable. Una vez el  **\<informe de servidor >** opción está seleccionada dos propiedades adicionales aparecerán, **dirección Url del servidor de informes** y **ruta de acceso del informe**. El **dirección Url del servidor de informes** es la dirección al servidor de informes y el **ruta de acceso del informe** es la ruta de acceso completa al informe que desea representar.  
+ Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>**, aparecen dos propiedades adicionales: **URL del servidor de informes** y **Ruta de acceso del informe**. **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
   
- Seleccione si desea ver un informe en modo local el **diseñar un nuevo informe** opción para iniciar el Diseñador de informes o seleccione un informe que ya forme parte del proyecto existente. Después de haber seleccionado un informe, asegúrese de escribir el nombre del archivo RDLC del informe en el **ReportPath** propiedad del control ReportViewer. Esta propiedad aparece en la **LocalReport** nodo en el **propiedades** panel.  
+ Si quiere ver un informe en modo local, seleccione la opción **Diseñar nuevo informe** para iniciar el diseñador de informes o seleccione un informe que ya forme parte del proyecto existente. Después de haber seleccionado un informe, asegúrese de especificar el nombre del archivo RDLC del informe en la propiedad **ReportPath** del control ReportViewer. Esta propiedad aparece en el nodo **LocalReport** del panel **Propiedades**.  
   
- Tiene la posibilidad de ocultar uno o varios elementos de la barra de herramientas ReportViewer cuando se representa el informe. Por ejemplo, puede ocultar el botón para imprimir. Para ocultar los elementos de la barra de herramientas, establezca las siguientes propiedades de ReportViewer **False** en el **propiedades** panel.  
+ Tiene la posibilidad de ocultar uno o varios elementos de la barra de herramientas ReportViewer cuando se representa el informe. Por ejemplo, puede ocultar el botón para imprimir. Para ocultar elementos de una barra de herramientas, establezca las siguientes propiedades de ReportViewer en **False** en el panel **Propiedades**.  
   
 -   **ShowBackButton**  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Ver los informes en modo de procesamiento remoto  
  En el ejemplo siguiente se muestra la forma de representar un informe que se ha implementado en un servidor de informes. En este ejemplo se utiliza el informe Sales Order Detail que se incluye con el proyecto de informes de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- En el ejemplo se utiliza la autenticación integrada de Windows, por lo que se debe habilitar primero la suplantación. Para ello, inserte la siguiente línea en el **web.config** archivo:  
+ En el ejemplo se utiliza la autenticación integrada de Windows, por lo que se debe habilitar primero la suplantación. Para ello, inserte la línea siguiente en el archivo **web.config**:  
   
 ```  
 <!-- Web.config file. -->  
@@ -155,19 +152,19 @@ End Class
   
 1.  Abra el sitio web al que se agregará el informe.  
   
-2.  Desde el **sitio Web** menú, seleccione **Agregar elemento existente**.  
+2.  En el menú **Sitio web**, seleccione **Agregar elemento existente**.  
   
 3.  Vaya a la ubicación donde esté instalado el proyecto AdventureWorks Report Samples.  
   
      La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports.  
   
-4.  Seleccione el archivo Sales Order Detail.rdl y haga clic en el **agregar** botón.  
+4.  Seleccione el archivo Sales Order Detail.rdl y haga clic en el botón **Agregar**.  
   
      El archivo Sales Order Detail.rdl debe formar parte del proyecto.  
   
-5.  Haga clic en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **cambiar el nombre de**. Cambiar el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
+5.  Haga clic con el botón derecho en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **Cambiar nombre**. Cambie el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
   
-     Si el Explorador de soluciones no está visible, puede abrirlo en el **vista** menú seleccionando el Explorador de soluciones.  
+     Si el Explorador de soluciones no está visible, puede abrirlo desde el menú **Ver** si selecciona Explorador de soluciones.  
   
  El ejemplo de código siguiente creará un conjunto de datos para los datos del pedido de ventas y, a continuación, representará el informe Sales Order Detail en modo local.  
 
@@ -490,8 +487,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integrar Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [Recopilación de datos de 2016 de Control de ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+ [Integración de Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Recopilación de datos del control ReportViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

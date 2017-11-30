@@ -1,5 +1,5 @@
 ---
-title: Crear una matriz (generador de informes y SSRS) | Documentos de Microsoft
+title: Crear una matriz (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 994d0d61ac4a591445285b4f967d5c3c74a820ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Crear una matriz (Generador de informes y SSRS)
   Use una matriz para mostrar datos agrupados e información de resumen. Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. Las matrices ofrecen funcionalidad similar a la de las tablas de referencias cruzadas (crosstab) y las tablas dinámicas. En tiempo de ejecución, a medida que se combinan los datos del informe y las regiones de datos, la matriz aumenta de tamaño horizontal y verticalmente en la página. Los valores de las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Puede dar formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. También puede incluir controles de alternancia de obtención de detalles que ocultan inicialmente los datos detallados; de esta forma, el usuario podrá hacer clic en dichos controles para mostrar más o menos detalles, según sea necesario.  
@@ -40,11 +40,11 @@ ms.lasthandoff: 08/09/2017
   
  Para describir cómo configurar una tabla de principio a fin, en este tema se utiliza la plantilla para matrices.  Inicialmente, la matriz tiene un grupo de filas, un grupo de columnas, una celda de la esquina y una celda de datos, como se muestra en la ilustración siguiente.  
   
- ![En blanco matriz con 1 fila y 1 grupo de columnas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "matriz en blanco con 1 fila y 1 grupo de columnas")  
+ ![Matriz en blanco con una fila y un grupo de columnas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matriz en blanco con una fila y un grupo de columnas")  
   
  Al seleccionar una matriz en la superficie de diseño, aparecerán los identificadores de fila y de columna, como se muestra en la ilustración siguiente.  
   
- ![Nueva matriz que agregó en cuadro de herramientas seleccionado](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nueva matriz que agregó en el cuadro de herramientas, seleccionada")  
+ ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
   
  Agregue grupos arrastrando campos de conjunto de datos hasta las áreas Grupos de filas y Grupos de columnas del panel Agrupación. El primer campo que arrastre hasta el panel de grupos de filas o de columnas reemplazará al grupo vacío predeterminado inicial. A continuación, podrá aplicar formato a las celdas, en función de los datos que contengan.  
   
@@ -72,33 +72,33 @@ ms.lasthandoff: 08/09/2017
   
  Al ejecutar el informe, los encabezados de las columnas dinámicas se expanden hacia la derecha (o hacia la izquierda si la propiedad Direction de la matriz se establece en RTL) tantas columnas como valores de grupo únicos haya. Las filas dinámicas se expanden hacia abajo. Los datos que aparecen en las celdas del cuerpo del Tablix son agregados basados en las intersecciones de los grupos de filas y de columnas, como se muestra en la ilustración siguiente.  
   
- ![Grupos de columnas con los totales y filas anidadas de matriz](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "matriz, anidar grupos de filas y columnas con totales")  
+ ![Grupos de columnas y filas anidadas de matriz con totales](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Grupos de columnas y filas anidadas de matriz con totales")  
   
  En la vista previa, el informe aparece como se muestra en la ilustración siguiente.  
   
- ![En la vista previa en los grupos anidados](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "en vista previa de los grupos anidados")  
+ ![Grupos anidados en vista previa](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "Grupos anidados en vista previa")  
   
  Para escribir expresiones que especifiquen un ámbito distinto del predeterminado, debe especificar el nombre de un conjunto de datos, una región de datos o un grupo en la llamada a la función de agregado. Para calcular el porcentaje con el que cada subcategoría contribuye a los valores del grupo de categorías Clothing, agregue una columna dentro del grupo de categorías junto a la columna Total, asigne formato de porcentaje al texto y, por último, agregue una expresión que use el ámbito predeterminado en el numerador y el ámbito del grupo de categorías en el denominador, tal y como se muestra en el ejemplo siguiente.  
   
  `=SUM(Fields!Linetotal.Value)/SUM(Fields! Linetotal.Value,"Category")`  
   
- Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
   
   
 ##  <a name="AddingAdjacentGroup"></a> Agregar un grupo adyacente a una matriz  
  Para agregar un grupo adyacente basado en un único campo de conjunto de datos, use el menú contextual del panel Agrupación. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). En la siguiente ilustración se muestra un grupo basado en la geografía y un grupo adyacente basado en el año.  
   
- ![Grupos de columnas anexas para Geography y Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "grupos de columnas anexas para Geography y Year")  
+ ![Grupos de columnas anexas para Geography y Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Grupos de columnas anexas para Geography y Year")  
   
  En este ejemplo, la consulta ha filtrado los valores de los datos para incluir solo los valores correspondientes a Europa durante los años 2003 y 2004. Sin embargo, es posible activar los filtros en cada uno de los grupos de forma independiente. En la vista previa, el informe aparece como se muestra en la ilustración siguiente.  
   
- ![Vista previa de los grupos de columnas anexas](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "vista previa de los grupos de columnas adyacente")  
+ ![Vista previa de los grupos de columnas adyacentes](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Vista previa de los grupos de columnas adyacentes")  
   
  Para agregar una columna de totales a un grupo de columnas adyacente, haga clic en la celda de definición de grupo de columnas y use el comando **Agregar total** . Se agrega una columna estática junto al grupo de columnas, con una suma agregada predeterminada para cada campo numérico de las filas existentes. Para cambiar la expresión, edite manualmente el agregado predeterminado; por ejemplo, `Avg([Sales])`. Para obtener más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones de agregado &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

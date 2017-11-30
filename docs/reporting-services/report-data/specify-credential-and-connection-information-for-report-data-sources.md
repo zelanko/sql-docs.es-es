@@ -1,5 +1,5 @@
 ---
-title: "Especificar credenciales y la información de conexión para orígenes de datos de informe | Documentos de Microsoft"
+title: "Especificar información de credenciales y conexión para los orígenes de datos de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: b16e0b6c380cfe47f2bc82ea0328d9386ada294c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c1c30915d5b9e78b9e8c33b33a2c66b91f47512
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -51,21 +51,21 @@ ms.lasthandoff: 08/09/2017
 ## <a name="when-credentials-are-used-in-report-builder"></a>Cuando se usan las credenciales en el Generador de informes  
  En el Generador de informes, se suelen usar credenciales al conectarse a un servidor de informes o para las tareas relacionadas con datos, como crear un origen de datos incrustado, ejecutar una consulta del conjunto de datos u ofrecer una vista previa de un informe. Las credenciales no se guardan en el informe. Se administran separadamente en el servidor de informes o en el cliente local. La siguiente lista describe los tipos de credenciales que podría necesitar proporcionar, donde están almacenadas y cómo se utilizan:  
   
--   Credenciales de servidor de informes que se especifiquen en la [cuadro de diálogo de inicio de sesión de servicios de informes &#40; El generador de informes &#41; ](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   Las credenciales del servidor de informes que escriba en el [cuadro de diálogo Inicio de sesión de Reporting Services &#40;Generador de informes&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
   
      La primera vez que guarda en, publica en o va a un servidor de informes o un sitio de SharePoint, es posible que necesite escribir sus credenciales. Las credenciales que escribe se utilizan hasta el final de la sesión en el Generador de informes. Si decide guardar las credenciales, se almacenan con seguridad en el equipo junto con su configuración de usuario. En las siguientes sesiones del Generador de informes, se usan las credenciales guardadas para conectar con el mismo servidor de informes o con el sitio de SharePoint. El administrador del servidor de informes o el administrador de SharePoint especifica qué tipo de credenciales hay que utilizar.  
   
--   Origen de datos de credenciales que se especifiquen en la [cuadro de diálogo de propiedades de origen de datos, credenciales &#40; El generador de informes &#41; ](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) página para un origen de datos incrustado.  
+-   Las credenciales del origen de datos que escriba en la página [Propiedades del origen de datos (cuadro de diálogo), Credenciales &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de un origen de datos incrustados.  
   
      El servidor de informes utiliza estas credenciales para realizar una conexión de datos al origen de datos externo. Para algunos tipos de orígenes de datos, las credenciales pueden estar almacenadas con seguridad en el servidor de informes. Estas credenciales permiten a otros usuarios ejecutar el informe sin proporcionar las credenciales para la conexión de datos subyacente.  
   
--   Origen de datos de credenciales que se especifiquen en el [escriba los cuadro de diálogo de credenciales de origen de datos &#40; El generador de informes &#41; ](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) al ejecutar una consulta de conjunto de datos, actualizar los campos de conjunto de datos o una vista previa del informe.  
+-   Las credenciales del origen de datos que escriba en el [cuadro de diálogo Escribir credenciales de origen de datos &#40;Generador de informes&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) al ejecutar una consulta de conjunto de datos, actualizar campos del conjunto de datos o generar una vista previa del informe.  
   
      Estas credenciales se utilizan para realizar una conexión de datos desde el Generador de informes al origen de datos externo o para ofrecer una vista previa de un informe que se configura para que pida las credenciales. Las credenciales que escribe en este cuadro de diálogo no están almacenadas en el servidor de informes y no están disponible para su uso por otros usuarios. El Generador de informes almacena en memoria caché las credenciales durante la sesión de edición del informe, para que no necesite escribirlas cada vez ejecuta la consulta u ofrece una vista previa del informe.  
   
      Para los orígenes de datos compartidos, utilice la opción **Guardar mi contraseña** para guardar localmente las credenciales con sus valores de usuario en su equipo. El Generador de informes utiliza las credenciales guardadas cada vez que se realiza una conexión al origen de datos externo correspondiente.  
   
- Para obtener más información, vea [cuadro de diálogo de propiedades de origen de datos, General &#40; El generador de informes &#41; ](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) y [vistas previas de informes en el generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) y [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Usar orígenes de datos remotos  
  Si el informe recupera datos de un servidor de bases de datos remoto, compruebe lo siguiente:  
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   El informe es un subinforme que utiliza las credenciales del informe primario.  
   
- En estas condiciones, el servidor de informes se conecta a un origen de datos remoto utilizando una cuenta de ejecución desatendida que debe definirse de antemano. Dado que el servidor de informes no se conecta a un servidor remoto mediante sus credenciales de servicio, debe especificar una cuenta para que el servidor pueda realizar la conexión. Para obtener más información acerca de cómo crear esta cuenta, consulte [configurar la cuenta de ejecución desatendida &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ En estas condiciones, el servidor de informes se conecta a un origen de datos remoto utilizando una cuenta de ejecución desatendida que debe definirse de antemano. Dado que el servidor de informes no se conecta a un servidor remoto mediante sus credenciales de servicio, debe especificar una cuenta para que el servidor pueda realizar la conexión. Para más información sobre cómo crear esta cuenta, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>Inicio de sesión con nombre de usuario y contraseña  
  Cuando se selecciona la opción **Usar este nombre de usuario y esta contraseña**, debe especificarse un nombre de usuario y una contraseña para obtener acceso al origen de datos. En el caso de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las credenciales podrían servir para iniciar sesión en la base de datos. Las credenciales se pasan al origen de datos externo para su autenticación.  
@@ -169,9 +169,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vea también  
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Administrar los orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
- [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Crear, eliminar o modificar un origen de datos compartido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propiedades de origen de datos para un informe &#40; El Administrador de informes &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

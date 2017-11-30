@@ -1,5 +1,5 @@
 ---
-title: Representar comportamientos (generador de informes y SSRS) | Documentos de Microsoft
+title: "Comportamientos de la representación (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamientos de la representación (Generador de informes y SSRS)
   Dependiendo del representador que seleccione, se aplican ciertas reglas al cuerpo del informe y a su contenido al representar un informe. La forma en la que los elementos de informe se ajustan en una página viene determinada por la combinación de estos factores:  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   La compatibilidad específica del representador con la paginación.  
   
- En este tema se analizan las reglas generales aplicadas por Reporting Services. Para obtener más información, vea [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md), [Representar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md) y [Representar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md).  
+ En este tema se analizan las reglas generales aplicadas por Reporting Services. Para más información, vea [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md), [Representar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md) y [Representar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/09/2017
  Las reglas siguientes se aplican a los encabezados y pies de página cuando se representan en el formato de representación HTML o MHTML:  
   
 > [!NOTE]  
->  Para obtener información sobre cómo representa Excel los encabezados y pies de página, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). Para obtener información sobre cómo representa Word los encabezados y pies de página, vea [Exportar a Microsoft Word &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
+>  Para más información sobre cómo representa Excel los encabezados y pies de página, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). Para más información sobre cómo representa Word los encabezados y pies de página, vea [Exportar a Microsoft Word &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
   
 -   Cuando se definen, el encabezado y el pie de página se representan en la parte superior e inferior de cada página dentro del área de página utilizable.  
   
@@ -134,9 +133,8 @@ ms.lasthandoff: 08/09/2017
 -   No se mantienen los saltos de página lógicos definidos en elementos en celdas de tablas o matriz. Esto no se aplica a los elementos en listas.  
   
 ## <a name="see-also"></a>Vea también  
- [Funcionalidad interactiva para diferentes informes representar extensiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Representación en HTML &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Diseño de página y representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Representar en HTML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

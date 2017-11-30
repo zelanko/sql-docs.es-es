@@ -1,5 +1,5 @@
 ---
-title: Informe de conjuntos de datos incrustados y compartidos (generador de informes y SSRS) | Documentos de Microsoft
+title: Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10420"
+f1_keywords: "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b58eb34183d3ec9c1aaafaacb802a4507395d262
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Metadatos del esquema** El proveedor de datos ejecuta un comando de consulta de esquema de forma independiente de la consulta para recuperar los metadatos para la colección de campos de conjunto de datos. Por ejemplo, una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. Utilice el panel Datos de informe para expandir el conjunto de datos y ver la colección de campos del conjunto de datos.  
   
- Los datos también pueden incluirse en un informe utilizando conjuntos de datos compartidos y elementos de informe predefinidos. Estos elementos ya tienen la información de la conexión de datos que necesita. Para obtener más información, vea [conjuntos de datos de informes &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md) y [informes partes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Los datos también pueden incluirse en un informe utilizando conjuntos de datos compartidos y elementos de informe predefinidos. Estos elementos ya tienen la información de la conexión de datos que necesita. Para más información, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) y [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  Para obtener más información sobre tipos de orígenes de datos integrados y extensiones de datos, vea [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
@@ -131,17 +130,17 @@ ms.lasthandoff: 08/09/2017
   
 |Description|Origen de datos<br /><br /> Origen de datos|Compartidos<br /><br /> Origen de datos|  
 |-----------------|------------------------------|----------------------------|  
-|La conexión de datos se incrusta en la definición de informe.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
-|El puntero a la conexión de datos en el servidor de informes se incrusta en la definición de informe.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
-|Se administra en el servidor de informes|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
-|Se requiere para los conjuntos de datos compartidos||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
-|Se requiere para los componentes||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
+|La conexión de datos se incrusta en la definición de informe.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")||  
+|El puntero a la conexión de datos en el servidor de informes se incrusta en la definición de informe.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
+|Se administra en el servidor de informes|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
+|Se requiere para los conjuntos de datos compartidos||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
+|Se requiere para los componentes||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
   
  En el Diseñador de informes, puede crear conjuntos de datos compartidos como parte de un proyecto de informe y controlar si se han de implementar en un servidor de informes. No puede desplazarse a un servidor de informes y seleccionar un conjunto de datos compartido para agregarlo a su informe.  
   
  En el Generador de informes se puede realizar lo siguiente:  
   
--   Para crear un conjunto de datos compartido, utilice la vista de diseño de conjunto de datos compartido. Puede guardarlo en un servidor de informes o un sitio de SharePoint para compartirlo con otros informes. También puede desplazarse al servidor de informes y editar un conjunto de datos existente. En esta vista, puede generar una consulta y establecer todas las opciones de conjunto de datos. Para obtener más información, vea [comparten la vista de diseño de conjunto de datos &#40; El generador de informes &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+-   Para crear un conjunto de datos compartido, utilice la vista de diseño de conjunto de datos compartido. Puede guardarlo en un servidor de informes o un sitio de SharePoint para compartirlo con otros informes. También puede desplazarse al servidor de informes y editar un conjunto de datos existente. En esta vista, puede generar una consulta y establecer todas las opciones de conjunto de datos. Para más información, vea [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 -   Para agregar un conjunto de datos compartido a un informe, abra el Generador de informes en la vista de diseño de informe. Desde un asistente o en el panel Datos de informe, vaya al servidor de informes y seleccione el conjunto de datos compartido que desea agregar al informe. En esta vista, no puede cambiar la consulta excepto para agregar los campos. Puede invalidar otras opciones de datos y agregar filtros. No puede quitar los filtros.  
   
@@ -161,27 +160,27 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="SortGroupFilter"></a> Filtrar, ordenar y agrupar los datos de un conjunto de datos  
  Los datos de un conjunto de datos proceden de la ejecución de un comando de consulta en un origen de datos externo. La sintaxis del comando de consulta para una extensión de datos determina si los datos se pueden ordenar o agrupar. Las acciones de ordenación y agrupación tienen lugar en la consulta antes de que los datos se recuperen para un informe. El filtrado tiene lugar después de que se han recuperado los datos para un informe.  
   
- Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### <a name="filtering-data-in-a-dataset"></a>Filtrar los datos de un conjunto de datos  
  Los filtros forman parte de  la definición del conjunto de datos de un informe. Use filtros de conjunto de datos para especificar qué datos de un conjunto de datos se deben incluir en un informe. Al especificar filtros en un conjunto de datos, todas las regiones de datos que se basan en el conjunto de datos muestran solo los datos que pasan los filtros del conjunto de datos.  
   
  Los filtros forman parte de la definición de un conjunto de datos compartido. Los filtros de conjunto de datos compartido afectan a todos los informes que contienen el conjunto de datos compartido. Después de agregar un conjunto de datos compartido a su informe, o después de agregar un componente con un conjunto de datos compartido dependiente, puede crear más filtros de conjunto de datos. Los filtros que cree solo se usan en su informe, no forman parte de la definición del conjunto de datos compartido del servidor de informes.  
   
- Puede establecer filtros adicionales en una región de datos o un grupo de regiones de datos. También puede utilizar una combinación de parámetros y filtros para que los usuarios puedan elegir los datos que desean ver en un informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Puede establecer filtros adicionales en una región de datos o un grupo de regiones de datos. También puede utilizar una combinación de parámetros y filtros para que los usuarios puedan elegir los datos que desean ver en un informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="sorting-data-in-a-dataset"></a>Ordenar datos en un conjunto de datos  
  En un conjunto de datos, el orden de los datos es el orden en que se recuperan desde el origen de datos externo. Es el mismo orden que se ve al ejecutar la consulta en el diseñador de consultas. Si la sintaxis del comando de consulta admite ordenación, puede editar la consulta para ordenar los datos en el origen, antes de ser devueltos como datos de informe. Por ejemplo, para una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la instrucción ORDER BY controla el criterio de ordenación.  
   
- Para ordenar los datos una vez devueltos al informe, defina expresiones de ordenación en las regiones de datos y los grupos de regiones de datos. Para obtener más información, vea el tema correspondiente al tipo específico de la región de datos, por ejemplo, [tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ Para ordenar los datos una vez devueltos al informe, defina expresiones de ordenación en las regiones de datos y los grupos de regiones de datos. Para más información, vea el tema relativo al tipo de región de datos concreto, por ejemplo, [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
- También puede utilizar una combinación de parámetros y expresiones de ordenación para que los usuarios puedan elegir el criterio de ordenación para los datos de un informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ También puede utilizar una combinación de parámetros y expresiones de ordenación para que los usuarios puedan elegir el criterio de ordenación para los datos de un informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="grouping-data-in-a-dataset"></a>Agrupar datos de un conjunto de datos  
  Los datos de un grupo de datos no se pueden agrupar. Para agregar los datos de un conjunto de datos, puede editar el comando de consulta para calcular los agregados antes de que los datos se recuperen para un informe. Estos se conocen como *agregados de servidor*. En las expresiones, para identificar estos valores como agregados precalculados, use la función de agregado. Para obtener más información, vea [Función de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Usar parámetros y conjuntos de datos  
- En el caso de una consulta de conjunto de datos incrustado que contiene variables, los parámetros de la consulta y los parámetros de informe correspondientes se crean automáticamente. Cuando se ejecuta el informe, el valor del parámetro de informe se vincula al parámetro de consulta de conjunto de datos. De esta manera, el comando de consulta que se ejecuta en el origen de datos externo incluye los valores que se especifican para los parámetros de informe. Los parámetros de informe permiten al usuario elegir los datos que desea ver en el informe. Puede ver cómo se vinculan los parámetros de consulta y parámetros de informe en la [cuadro de diálogo de propiedades de conjunto de datos, parámetros &#40; El generador de informes &#41; ](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) página.  
+ En el caso de una consulta de conjunto de datos incrustado que contiene variables, los parámetros de la consulta y los parámetros de informe correspondientes se crean automáticamente. Cuando se ejecuta el informe, el valor del parámetro de informe se vincula al parámetro de consulta de conjunto de datos. De esta manera, el comando de consulta que se ejecuta en el origen de datos externo incluye los valores que se especifican para los parámetros de informe. Los parámetros de informe permiten al usuario elegir los datos que desea ver en el informe. Puede ver cómo se vinculan los parámetros de consulta y los parámetros de informe en la página [Propiedades del conjunto de datos (cuadro de diálogo), Parámetros &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda).  
   
  En el caso de un conjunto de datos compartido, los parámetros de consulta forman parte de la definición del conjunto de datos compartido que se puede administrar en el servidor de informes independientemente de un informe. En la siguiente lista se describe la compatibilidad con los valores de parámetro de consulta:  
   
@@ -193,14 +192,14 @@ ms.lasthandoff: 08/09/2017
   
 -   No pueden contener referencias a la colección de parámetros integrada, que representa los parámetros de informe.  
   
- Para configurar los valores de parámetro de consulta para un conjunto de datos compartido, en modo de diseño de conjunto de datos, busque y abra un conjunto de datos compartido del servidor de informes y establecer las opciones de la [cuadro de diálogo de propiedades de conjunto de datos, parámetros &#40; El generador de informes &#41; ](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) página. Para obtener más información, vea [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ Para configurar los valores de parámetro de consulta para un conjunto de datos compartido, en el modo de diseño de conjunto de datos, vaya a un conjunto de datos compartido del servidor de informes, ábralo y establezca las opciones en la página [Propiedades del conjunto de datos (cuadro de diálogo), Parámetros &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda). Para obtener más información, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Para algunos orígenes del datos multidimensionales, por ejemplo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el diseñador gráfico de consultas le permite especificar filtros de consulta y seleccionar una opción para crear un parámetro de consulta correspondiente. Al seleccionar la opción de parámetro, la extensión de datos crea automáticamente un conjunto de datos de informe independiente para proporcionar los valores disponibles en una lista desplegable de ese parámetro. De forma predeterminada, estos conjuntos de datos ocultos no aparecen en el panel Datos de informe.  
   
- Los parámetros de informe vinculados a los parámetros de consulta ayudan a filtrar los datos antes de que los datos se devuelvan desde el origen de datos externo. También puede filtrar los datos en el informe creando filtros que formen parte de la definición de informe. Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Los parámetros de informe vinculados a los parámetros de consulta ayudan a filtrar los datos antes de que los datos se devuelvan desde el origen de datos externo. También puede filtrar los datos en el informe creando filtros que formen parte de la definición de informe. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### <a name="displaying-hidden-datasets"></a>Mostrar conjuntos de datos ocultos  
- Cuando se crea una consulta con parámetros para algunos orígenes de datos multidimensionales, se crean automáticamente conjuntos de datos que proporcionan valores válidos para el parámetro. En algunos diseñadores de consultas, esto se hace especificando filtros y, a continuación, seleccionando la opción para crear parámetros. De forma predeterminada, estos conjuntos de datos no aparecen en el panel Datos de informe, pero se pueden mostrar. Para más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+ Cuando se crea una consulta con parámetros para algunos orígenes de datos multidimensionales, se crean automáticamente conjuntos de datos que proporcionan valores válidos para el parámetro. En algunos diseñadores de consultas, esto se hace especificando filtros y, a continuación, seleccionando la opción para crear parámetros. De forma predeterminada, estos conjuntos de datos no aparecen en el panel Datos de informe, pero se pueden mostrar. Para obtener más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 ##  <a name="Maps"></a> Usar mapas y conjuntos de datos  
  Si incluye un mapa en el informe, debe proporcionar datos espaciales. Los datos espaciales pueden proceder de un conjunto de datos de informe, de un mapa de la galería de mapas o de archivos de forma ESRI. Los datos espaciales de un informe o un archivo de forma ESRI no aparecen como conjunto de datos en el panel de Datos de informe. Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
@@ -208,25 +207,25 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Multiple"></a> Mostrar datos de varios conjuntos de datos  
  Normalmente, un informe tiene más de un conjunto de datos. La lista siguiente describe cómo puede usar los conjuntos de datos en un informe:  
   
--   Muestre los datos de cada conjunto de datos usando una región de datos independiente. Para obtener más información, vea [regiones de datos y mapas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
+-   Muestre los datos de cada conjunto de datos usando una región de datos independiente. Para más información, vea [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
 -   Puede vincular más de una región de datos a un conjunto de datos y proporcionar varias vistas de los mismos datos. Para obtener más información, vea [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
--   Puede usar conjuntos de datos para proporcionar una lista desplegable de valores disponibles o valores predeterminados para un parámetro de informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+-   Puede usar conjuntos de datos para proporcionar una lista desplegable de valores disponibles o valores predeterminados para un parámetro de informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
--   Es posible vincular datos relacionados de varios conjuntos de datos usando parámetros con informes o subinformes detallados. Por ejemplo, un informe de ventas puede mostrar los datos de resumen para todas las tiendas, y un vínculo de obtención de detalles puede especificar el identificador de tienda como un parámetro para un informe con una consulta de conjunto de datos que recupera las ventas individuales para la tienda especificada. Para obtener más información, vea [obtención de detalles, obtención de detalles, subinformes y anidar regiones de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) y [subinformes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+-   Es posible vincular datos relacionados de varios conjuntos de datos usando parámetros con informes o subinformes detallados. Por ejemplo, un informe de ventas puede mostrar los datos de resumen para todas las tiendas, y un vínculo de obtención de detalles puede especificar el identificador de tienda como un parámetro para un informe con una consulta de conjunto de datos que recupera las ventas individuales para la tienda especificada. Para más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) y [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
--   No puede mostrar datos detallados de varios conjuntos de datos en una única región de datos. Sin embargo, puede mostrar valores de agregado o de función integrada para varios conjuntos de datos dentro de una región de datos. Para obtener más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). Si necesita combinar datos detallados de varios conjuntos de datos en una región de datos, debe volver a escribir la consulta para recuperar los datos como un único conjunto de datos.  
+-   No puede mostrar datos detallados de varios conjuntos de datos en una única región de datos. Sin embargo, puede mostrar valores de agregado o de función integrada para varios conjuntos de datos dentro de una región de datos. Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). Si necesita combinar datos detallados de varios conjuntos de datos en una región de datos, debe volver a escribir la consulta para recuperar los datos como un único conjunto de datos.  
   
 ##  <a name="NoRows"></a> Mostrar un mensaje cuando no hay filas de datos disponibles  
- Durante el procesamiento del informe, cuando se ejecuta la consulta para un conjunto de datos, es posible que el conjunto de resultados no contenga ninguna fila. En el informe representado, una región de datos vinculada a un conjunto de datos vacío aparece como una región de datos vacía. Puede especificar el texto que se debe mostrar en el informe representado en lugar de la región de datos vacía. También puede especificar un mensaje para los subinformes cuando las consultas para todos los conjuntos de datos no generan ningún dato en tiempo de ejecución. Para más información, vea [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
+ Durante el procesamiento del informe, cuando se ejecuta la consulta para un conjunto de datos, es posible que el conjunto de resultados no contenga ninguna fila. En el informe representado, una región de datos vinculada a un conjunto de datos vacío aparece como una región de datos vacía. Puede especificar el texto que se debe mostrar en el informe representado en lugar de la región de datos vacía. También puede especificar un mensaje para los subinformes cuando las consultas para todos los conjuntos de datos no generan ningún dato en tiempo de ejecución. Para obtener más información, vea [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Configurar opciones de conjunto de datos  
- En el caso de orígenes de datos que admiten datos internacionales, podría tener que ajustar las propiedades de un conjunto de datos que afectan al criterio de ordenación, las propiedades de caracteres internacionales y la distinción entre mayúsculas y minúsculas. Algunas de estas propiedades son mayúsculas y minúsculas, el tipo de kana, el ancho, el acento y la intercalación. Para obtener más información, vea "Consideraciones internacionales para bases de datos y aplicaciones con motor de base de datos" y "Trabajar con intercalaciones" en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Para obtener más información acerca de cómo establecer estas propiedades, vea [cuadro de diálogo de propiedades de conjunto de datos, opciones &#40; El generador de informes &#41; ](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ En el caso de orígenes de datos que admiten datos internacionales, podría tener que ajustar las propiedades de un conjunto de datos que afectan al criterio de ordenación, las propiedades de caracteres internacionales y la distinción entre mayúsculas y minúsculas. Algunas de estas propiedades son mayúsculas y minúsculas, el tipo de kana, el ancho, el acento y la intercalación. Para obtener más información, vea "Consideraciones internacionales para bases de datos y aplicaciones con motor de base de datos" y "Trabajar con intercalaciones" en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Para más información sobre cómo establecer estas propiedades, vea [Propiedades del conjunto de datos (cuadro de diálogo), Opciones &#40;Generador de informes&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

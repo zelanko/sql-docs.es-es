@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Crear un informe de gráfico rápido sin conexión (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,49 +15,47 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df0786cc4863f40a881f7061267eaed8345aca1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
 
   En este tutorial, use un asistente para crear un gráfico circular en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. A continuación, agregue porcentajes y modifique el gráfico circular un poco. 
   
 Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un gráfico circular semejante al de esta ilustración:  
   
- ![Gráfico circular rápido de generador de informes](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "gráfico circular rápido de generador de informes")  
+ ![Gráfico circular rápido del Generador de informes](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Gráfico circular rápido del Generador de informes")  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Si usa datos XML o una [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta, debe tener acceso al generador de informes. Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, o bien puede descargar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde Centro de descarga de Microsoft. Para obtener más información, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Si usa datos XML o una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], necesita tener acceso al Generador de informes. Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, o bien puede descargar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde Centro de descarga de Microsoft. Para obtener más información, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Dos maneras de hacer este tutorial  
   
 -   [Crear el gráfico circular con datos XML](#CreatePieChartXML)  
   
--   [Crear el gráfico circular con una consulta de Transact-SQL que contiene los datos](#CreatePieQueryData)  
+-   [Crear el gráfico circular con una consulta Transact-SQL que contenga datos](#CreatePieQueryData)  
   
 ### <a name="using-xml-data-for-this-tutorial"></a>Usar datos XML para este tutorial  
- Puede utilizar los datos XML que copia de este tema y pegarlos en el asistente. No es necesario estar conectado a un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] el modo integrado de servidor de informes en modo nativo o en SharePoint y no necesita acceso a una instancia de SQL Server.  
+ Puede utilizar los datos XML que copia de este tema y pegarlos en el asistente. No necesita estar conectado a un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, y no necesita acceso a una instancia de SQL Server.  
   
  [Crear el gráfico circular con datos XML](#CreatePieChartXML)  
   
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Usar una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] que contenga los datos de este tutorial  
- Puede copiar desde este tema una consulta con datos incluidos en él y pegarlos en el asistente. Necesitará el nombre de una instancia de SQL Server y las credenciales suficientes para el acceso de solo lectura a cualquier base de datos. La consulta de conjunto de datos en el tutorial usa datos literales, pero la consulta debe ser procesada por una instancia de SQL Server para devolver los metadatos que se requiere para un conjunto de datos de informe.  
+ Puede copiar desde este tema una consulta con datos incluidos en él y pegarlos en el asistente. Necesitará el nombre de una instancia de SQL Server y credenciales suficiente para el acceso de solo lectura a cualquier base de datos. La consulta del conjunto de datos en el tutorial usa datos literales, pero la consulta debe ser procesada por una instancia de SQL Server para que devuelva los metadatos requeridos por un conjunto de datos de informe.  
   
  La ventaja de usar la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] es que todos los demás tutoriales del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] usan el mismo método, de modo que cuando realice los otros tutoriales ya sabrá lo que debe hacer.  
   
  La consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] TSQL requiere otros requisitos previos. Para obtener más información, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
- [Crear el gráfico circular con una consulta de Transact-SQL que contiene los datos](#CreatePieQueryData)  
+ [Crear el gráfico circular con una consulta Transact-SQL que contenga datos](#CreatePieQueryData)  
   
 ##  <a name="CreatePieChartXML"></a> Crear el gráfico circular con datos XML  
   
@@ -65,9 +63,9 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
      Aparecerá el cuadro de diálogo **Introducción** .  
   
-     ![El generador de informes Introducción](../../reporting-services/media/rb-getstarted.png "empezar a trabajar el generador de informes")  
+     ![Introducción al Generador de informes](../../reporting-services/media/rb-getstarted.png "Introducción al Generador de informes")  
   
-     If the **Getting Started** dialog box does not appear, click **File** >**New**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
+     Si no aparece el cuadro de diálogo **Introducción** , haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -83,7 +81,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 7.  En el cuadro **Seleccionar tipo de conexión** , haga clic en **XML**.  
   
-8.  Haga clic en la pestaña **Credenciales** y seleccione **Usar usuario de Windows actual. Puede que se requiera la delegación Kerberos**, y haga clic en **Aceptar**.  
+8.  Haga clic en la pestaña **Credenciales** y seleccione **Usar usuario de Windows actual. Puede que se requiera la delegación Kerberos** y haga clic en **Aceptar**.  
   
 9. En la página **Elegir una conexión a un origen de datos** , haga clic en **miGráficoCircular**y, a continuación, haga clic en **Siguiente**.  
   
@@ -114,35 +112,35 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
     </Query>  
     ```  
   
-11. (Opcional) Haga clic en el **ejecutar** botón (**!**) para ver los datos que se basará su gráfico.  
+11. (Opcional) Haga clic en el botón **Ejecutar** (**!**) para ver los datos en los que se basará su gráfico.  
   
-     ![Consulta de diseño del generador de informes](../../reporting-services/report-builder/media/rb-designquery.png "consulta de diseño del generador de informes")  
+     ![Consulta de diseño del Generador de informes](../../reporting-services/report-builder/media/rb-designquery.png "Consulta de diseño del Generador de informes")  
   
 12. Haga clic en **Siguiente**.  
   
 13. En la página **Elegir un tipo de gráfico** , haga clic en **Circular**y, a continuación, haga clic en **Siguiente**.  
   
-14. En el **organizar campos del gráfico** página, haga doble clic en el **ventas** campo el **campos disponibles** cuadro.  
+14. En la página **Organizar campos del gráfico**, haga doble clic en el campo **Ventas** en el cuadro **Campos disponibles**.  
   
      Observe que se desplaza automáticamente al cuadro de diálogo **Valores** , porque es un valor numérico.  
   
-     ![Asistente del generador de organizar los campos de informe](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Asistente del generador de informes organizar campos")  
+     ![Opción Organizar campos del Asistente del Generador de informes](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Opción Organizar campos del Asistente del Generador de informes")  
   
-15. Arrastre el **FullName** arrastrándolo desde el **campos disponibles** cuadro a la **categorías** cuadro (o haga doble clic en él; se desplazará a la **categorías** cuadro) y, a continuación, haga clic en **siguiente**.  
+15. Arrastre el campo **FullName** desde el cuadro **Campos disponibles** hasta **Categorías** (o haga doble clic en él; se desplazará al cuadro **Categorías**) y, después, haga clic en **Siguiente**.  
   
      La página de vista previa muestra el nuevo gráfico circular con datos representacionales. La leyenda dice Full Name 1, Full Name 2, etc., en lugar de los nombres de los vendedores, y el tamaño de los sectores del gráfico circular no es preciso. Únicamente es para que se haga una idea de cómo será el informe.  
   
-     ![Informe de generador de vista previa del gráfico nuevo](../../reporting-services/report-builder/media/rb-newchartpreview.png "vista previa del gráfico nuevo generador de informes")  
+     ![Vista previa Nuevo gráfico del Generador de informes](../../reporting-services/report-builder/media/rb-newchartpreview.png "Vista previa Nuevo gráfico del Generador de informes")  
   
 16. Haga clic en **Finalizar**.  
   
      Ahora verá el nuevo informe de gráfico circular en la vista de diseño, todavía con datos representacionales.  
   
-     ![Generador nuevo circular en la vista Diseño de informe](../../reporting-services/report-builder/media/rb-newpiedesign.png "generador circular nueva en la vista Diseño de informe")  
+     ![Nuevo gráfico circular en la vista de diseño del Generador de informes](../../reporting-services/report-builder/media/rb-newpiedesign.png "Nuevo gráfico circular en la vista de diseño del Generador de informes")  
   
 17. Para ver el gráfico circular real, haga clic en **Ejecutar** en la pestaña **Inicio** de la cinta de opciones.  
   
-     ![Informe de generador nuevo gráfico ejecución](../../reporting-services/report-builder/media/rb-newchartrun.png "ejecución de gráfico nuevo generador de informes")  
+     ![Ejecución de Nuevo gráfico del Generador de informes](../../reporting-services/report-builder/media/rb-newchartrun.png "Ejecución de Nuevo gráfico del Generador de informes")  
   
 18. Para seguir modificando el gráfico circular, vaya a la sección [Después de ejecutar el asistente](#AfterWizard) de este artículo.  
   
@@ -153,7 +151,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
      Aparecerá el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
+    >  Si no aparece el cuadro de diálogo **Introducción** , haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** .  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -184,11 +182,11 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 10. En la página **Elegir un tipo de gráfico** , haga clic en **Circular**y, a continuación, haga clic en **Siguiente**.  
   
-11. En el **organizar campos del gráfico** página, haga doble clic en el **ventas** campo el **campos disponibles** cuadro.  
+11. En la página **Organizar campos del gráfico**, haga doble clic en el campo **Ventas** en el cuadro **Campos disponibles**.  
   
      Observe que se desplaza automáticamente al cuadro **Valores** , porque es un valor numérico.  
   
-12. Arrastre el **FullName** arrastrándolo desde el **campos disponibles** cuadro a la **categorías** cuadro (o haga doble clic en él; se desplazará a la **categorías** cuadro) y, a continuación, haga clic en **siguiente**.  
+12. Arrastre el campo **FullName** desde el cuadro **Campos disponibles** hasta **Categorías** (o haga doble clic en él; se desplazará al cuadro **Categorías**) y, después, haga clic en **Siguiente**.  
   
 13. Haga clic en **Finalizar**.  
   
@@ -208,17 +206,17 @@ Observe que la superficie de diseño aumenta a medida que realiza la acción de 
   
 ## <a name="add-a-report-title"></a>Agregar un título de informe  
 1. Seleccione las palabras **Título de gráfico** en la parte superior del gráfico y, a continuación, escriba un título, como **Gráfico circular de ventas**.  
-2. Con el título seleccionado, en el panel Propiedades, cambiar **Color** a **negro** y **FontSize** a **12pt**.
+2. Con el título seleccionado, en el panel Propiedades, cambie **Color** a **Negro** y **FontSize** a **12 pt**.
   
 ## <a name="add-percentages"></a>Agregar porcentajes  
  
-1.  Haga clic en el gráfico circular y seleccione **Mostrar etiquetas de datos**. Las etiquetas de datos aparecen dentro de cada sector del gráfico circular.  
+1.  Haga clic con el botón derecho en el gráfico circular y seleccione **Mostrar etiquetas de datos**. Las etiquetas de datos aparecen dentro de cada sector del gráfico circular.  
   
-2.  Haga clic en las etiquetas y seleccione **propiedades de la etiqueta de serie**. Aparece el cuadro de diálogo **Propiedades de la etiqueta de la serie** .  
+2.  Haga clic con el botón derecho en las etiquetas y seleccione **Propiedades de la etiqueta de la serie**. Aparece el cuadro de diálogo **Propiedades de la etiqueta de la serie** .  
   
-3.  En el **etiquetar los datos** , escriba **#PERCENT {P0}**.  
+3.  Escriba **#PERCENT{P0}** en el cuadro **Datos de etiqueta**.  
   
-     **{P0}** le da el porcentaje sin decimales. Si simplemente escribe **#PERCENT**, los números tendrán dos posiciones decimales. **#PERCENT** es una palabra clave que realiza un cálculo o función automáticamente; hay muchas otras.  
+     **{P0}** le da el porcentaje sin decimales. Si escribe **#PERCENT**, los números tendrán dos posiciones decimales. **#PERCENT** es una palabra clave que realiza un cálculo o función automáticamente; hay muchas otras.  
      
 4. Haga clic en **Sí** para confirmar que desea establecer **UseValueAsLabel** en **False**.
 
@@ -231,16 +229,15 @@ Observe que la superficie de diseño aumenta a medida que realiza la acción de 
 ##  <a name="WhatsNext"></a> ¿Qué debe hacer a continuación?  
  Ahora que ha creado su primer informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], necesitará permiso de acceso a los orígenes de datos, como las bases de datos, con una *cadena de conexión*, que le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.  
   
- Para trabajar con los otros tutoriales, necesita el nombre de una instancia de SQL Server y credenciales suficientes para el acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
+ Para trabajar con otros tutoriales, necesita el nombre de una instancia de SQL Server y credenciales suficientes para el acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
   
  Finalmente, para guardar los informes en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes, necesitará la dirección URL y los permisos necesarios. Puede ejecutar cualquier informe que cree directamente desde su equipo, pero los informes tienen más funcionalidad cuando se ejecutan desde el servidor de informes o desde el sitio de SharePoint. Necesita permisos para ejecutar sus informes u otros desde el servidor de informes o desde el sitio de SharePoint donde estén publicados. Hable con el administrador del sistema para obtener acceso.  
   
- Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Consulte [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Consulte [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Vea [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Consulte [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)   
 [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

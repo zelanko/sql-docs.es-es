@@ -1,28 +1,27 @@
 ---
 title: Tutoriales de SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 10/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
+
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] proporciona tutoriales para ayudarle a obtener más información sobre nuevas tecnologías y características. Normalmente se pueden usar los tutoriales de versiones anteriores con las versiones más recientes. Cuando un tutorial se dirige a una característica más reciente, se indicará la versión mínima necesaria para completarlo.  
      
 -   Si un tutorial usa una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], debe descargar y usar la versión más reciente de CodePlex. Para obtener más información, consulte [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Scripts y bases de datos de AdventureWorks para SQL Server 2016 CTP3).    
@@ -40,9 +39,9 @@ ms.lasthandoff: 07/31/2017
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales de replicación](../relational-databases/replication/replication-tutorials.md)|Aprenda a configurar y ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
-|[Tutoriales de SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Obtenga información sobre cómo trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el lenguaje R y cómo ejecutar scripts R de [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutoriales sobre aprendizaje automático de SQL Server](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
- ## <a name="previously-published-tutorials"></a>Tutoriales publicados anteriormente:  
+ ## <a name="previously-published-tutorials"></a>Tutoriales publicados anteriormente 
   
  - [Tutoriales de SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 07/31/2017
  - [Tutoriales de SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

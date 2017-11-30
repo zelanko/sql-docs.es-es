@@ -1,5 +1,5 @@
 ---
-title: Ocultar un elemento (generador de informes y SSRS) | Documentos de Microsoft
+title: Ocultar un elemento (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 285d84aaa0f73cb8e366b6c96fcf279883591667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar un elemento (Generador de informes y SSRS)
   Establezca la visibilidad de un elemento de informe cuando desee ocultar condicionalmente un elemento basándose en un parámetro de informe o en alguna otra expresión que especifique.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
         > [!NOTE]  
         >  Al especificar una expresión para la visibilidad, está estableciendo la propiedad Hidden del elemento de informe, tal como se muestra en la siguiente imagen. La expresión evaluada muestra el elemento de informe cuando el valor es False, y lo oculta cuando el valor es True.   
-        > ![Cuadro de diálogo Properties_Visibility y se oculta la propiedad](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "cuadro de diálogo Properties_Visibility y se oculta la propiedad")  
+        > ![Cuadro de diálogo Properties_Visibility y propiedad Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Cuadro de diálogo Properties_Visibility y propiedad Hidden")  
   
 4.  Haga clic en **Aceptar** dos veces.  
   
@@ -77,8 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Agregar acción de contraer o expandir a un elemento &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Agregar una acción de expandir y contraer a un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

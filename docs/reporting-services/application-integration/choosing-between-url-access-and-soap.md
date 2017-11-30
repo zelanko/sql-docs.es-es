@@ -1,5 +1,5 @@
 ---
-title: Al elegir entre acceso URL y SOAP de Reporting Services | Documentos de Microsoft
+title: Elegir entre acceso URL y SOAP en Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 10/19/2017
 ms.prod: sql-server-2016
@@ -14,44 +14,42 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 1d9b4df388cd1d6bb96d88b64bf319f5fd9866e9
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 8d09ebc398462e9a79a0a107600b147c748125a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Al elegir entre acceso URL y SOAP de Reporting Services
+# <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Elegir entre acceso URL y SOAP en Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas puede resultar complicado. El reto, sin embargo, no es la complejidad del modelo de programación o API, sino las muchas maneras posibles de integrarlo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se diseñó desde el principio como una plataforma para programadores y, como tal, se ha creado teniendo en mente la flexibilidad de la programación. Con la flexibilidad viene la necesidad de tomar decisiones importantes sobre cómo integrar la funcionalidad de la administración y navegación en informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales existentes.
 
 > [!NOTE]
-> A partir de SQL Server de 2017 Reporting Services, el acceso de API de REST está disponible para el desarrollo de soluciones. El acceso de API de SOAP está en desuso. Para obtener más información, consulte [desarrollar con las API de REST para Reporting Services](../developer/rest-api.md).
+> A partir de SQL Server 2017 Reporting Services, el acceso de API de REST está disponible para el desarrollo de soluciones. El acceso de API de SOAP está en desuso. Para más información, vea [Desarrollar con las API de REST para Reporting Services](../developer/rest-api.md).
   
- Hay dos maneras de integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas: el acceso URL y la API SOAP de Reporting Services. Cuál usar depende de varios factores. En algunos casos, integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sobre su empresa personalizado aplicaciones requiere el uso de acceso URL y SOAP. Debería formular las preguntas siguientes:  
+ Hay dos maneras de integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas: el acceso URL y la API SOAP de Reporting Services. Cuál usar depende de varios factores. En algunos casos, la integración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales personalizadas exige el uso de acceso URL y SOAP. Debería formular las preguntas siguientes:  
   
 -   ¿Qué tipo de funcionalidad de informes empresariales requieren usted o sus usuarios finales? ¿Necesita una manera simple de iniciar y navegar por los informes, o más características avanzadas de administración de servidores de informes con la solución empresarial personalizada?  
   
--   ¿En qué tipo de entorno trabajan los usuarios normalmente? ¿La aplicación empresarial está destinada a la Web o a Windows? ¿Con qué facilidad pueden cambiar los usuarios finales de un entorno Win32 a un entorno Web? ¿Qué tipo de control necesita sobre el entorno y qué informes se ejecutan y administran?  
+-   ¿En qué tipo de entorno trabajan los usuarios normalmente? ¿La aplicación empresarial está destinada a la Web o a Windows? ¿Les resulta fácil a los usuarios finales pasar de un entorno Win32 a un entorno web? ¿Qué tipo de control necesita sobre el entorno y qué informes se ejecutan y administran?  
   
  Cuando haya respondido las preguntas anteriores, podrá decidir cómo integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la infraestructura de IT. Normalmente, el acceso URL es más adecuado para ver informes individuales y navegar por ellos. El acceso URL permite navegar libre y rápidamente por los informes sin la sobrecarga del servicio web. Asimismo, el acceso URL es, en este momento, la única técnica de programación que utiliza el Visor HTML completo para la navegación por el informe, incluida su barra de herramientas. Además, el acceso URL proporciona mejor rendimiento que SOAP porque omite el cálculo de referencias de las solicitudes SOAP que proceden del servidor o se dirigen a él. En escenarios de integración que requieren un acceso rápido y fácil a los informes con herramientas integradas para la visualización y navegación, el acceso URL es la mejor opción.  
   
 > [!NOTE]  
-> El acceso URL del servidor de informes admite el Visor HTML y la funcionalidad extendida de la barra de herramientas del informe. La API SOAP no admite este tipo de informe representado. Si representa informes mediante la API de SOAP, diseñar y desarrollar su propia barra de herramientas de informes.
+> El acceso URL del servidor de informes admite el Visor HTML y la funcionalidad extendida de la barra de herramientas del informe. La API SOAP no admite este tipo de informe representado. Si representa informes mediante la API de SOAP, diseñe y desarrolle su propia barra de herramientas de informes.
   
- Para obtener más información acerca de la barra de herramientas de informe, vea [Visor HTML y la barra de herramientas de informe](../../reporting-services/html-viewer-and-the-report-toolbar.md).  
+ Para más información sobre la barra de herramientas de informes, vea [Visor HTML y la barra de herramientas del informe](../../reporting-services/html-viewer-and-the-report-toolbar.md).  
   
- Para obtener más información acerca del acceso URL, vea [acceso URL](../../reporting-services/url-access-ssrs.md).  
+ Para más información sobre el acceso URL, vea [Acceso URL](../../reporting-services/url-access-ssrs.md).  
   
- El acceso URL es útil para ver los informes, pero no proporciona la funcionalidad de administración de espacios de nombres e informes que puede ser esencial para cualquier escenario con informes empresariales. En este caso, se recomienda la variada y completa funcionalidad de la API SOAP de Reporting Services. Con la API SOAP, puede administrar e implementar informes, crear calendarios, configurar las propiedades del servidor, administrar el espacio de nombres del servidor de informes, crear suscripciones, etcétera. La API SOAP expone el conjunto completo de funcionalidad de administración en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La API SOAP también puede habilitar la visualización y navegación en los informes a través del método <xref:ReportExecution2005.ReportExecutionService.Render%2A> de la API. Sin embargo, la visualización de informes a través de la API SOAP de habilitar la funcionalidad de vista integrada de la barra de herramientas de informe, ni hace que controla automáticamente la interactividad de los informes que proporciona acceso de dirección URL.  
+ El acceso URL es útil para ver los informes, pero no proporciona la funcionalidad de administración de espacios de nombres e informes que puede ser esencial para cualquier escenario con informes empresariales. En este caso, se recomienda la variada y completa funcionalidad de la API SOAP de Reporting Services. Con la API SOAP, puede administrar e implementar informes, crear calendarios, configurar las propiedades del servidor, administrar el espacio de nombres del servidor de informes, crear suscripciones, etcétera. La API SOAP expone el conjunto completo de funcionalidad de administración en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La API SOAP también puede habilitar la visualización y navegación en los informes a través del método <xref:ReportExecution2005.ReportExecutionService.Render%2A> de la API. Pero al ver los informes a través de la API de SOAP, no se habilita la funcionalidad de vista integrada de la barra de herramientas de informes, ni se administra automáticamente la interactividad de los informes que proporciona el acceso URL.  
   
- Para obtener más información acerca de la API de SOAP de Reporting Services, consulte [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
+ Para más información sobre la API de SOAP de Reporting Services, vea [Servicio web del servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  En la mayoría de los casos, para satisfacer las necesidades de funcionalidad de informe se requieren tanto el acceso URL como las llamadas a SOAP. SOAP se usa al conectarse inicialmente a la base de datos del servidor de informes y presentar la lista disponible de informes en una interfaz de usuario, mientras que el acceso URL se utiliza para obtener realmente acceso y navegar por informes individuales.  
   
- Para obtener un ejemplo de cómo combinar el acceso URL y el servicio Web para proporcionar informes integrados, vea [muestras de producto de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).
+ Para obtener un ejemplo de cómo combinar el acceso URL y el servicio web para proporcionar informes integrados, vea [SQL Server Reporting Services Product Samples (Ejemplos del producto SQL Server Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=177889).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

@@ -1,5 +1,5 @@
 ---
-title: Buscar y ver informes con un explorador (generador de informes y SSRS) | Documentos de Microsoft
+title: Buscar y ver informes con un explorador (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Buscar y ver informes con un explorador (Generador de informes y SSRS)
   Puede utilizar cualquier explorador web compatible para ver un informe mediante una conexión directa a un servidor de informes. Cada informe dispone de una dirección URL en el servidor de informes. Puede escribir la dirección web de un informe para abrirlo por sí solo en una ventana del explorador de una aplicación web. El informe se abre en formato HTML e incluye la barra de herramientas de informe para que pueda navegar por las páginas o buscar valores de datos dentro del informe. Puede establecer parámetros en la dirección URL para ocultar la barra de herramientas o para seleccionar el formato de salida del informe.  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Si no conoce la dirección web de un informe, puede abrir la dirección web del servidor de informes y, a continuación, examinar la jerarquía de carpetas del servidor de informes para seleccionar el informe desea ver. El siguiente diagrama muestra una jerarquía de carpetas tal como aparecería en una ventana de explorador.  
   
- ![Carpetas en un explorador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Carpetas en un explorador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Carpetas en un explorador")  
 Carpetas en un explorador  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ Carpetas en un explorador
   
 -   Un vínculo sin ningún otro indicador es un informe o un modelo.  
   
--   La etiqueta \<ds > indica un origen de datos compartido.  
+-   La etiqueta \<ds> indica un origen de datos compartido.  
   
--   La etiqueta \<dir > indica un elemento de carpeta.  
+-   La etiqueta \<dir> indica un elemento de carpeta.  
   
 -   Una extensión de nombre de archivo indica que se trata de un recurso. La extensión del nombre del archivo identifica el tipo MIME del recurso. Por ejemplo, .jpg indica que se trata de una imagen en formato JPEG.  
   
@@ -64,4 +63,3 @@ Carpetas en un explorador
  Para obtener más información acerca de cómo obtener acceso a un informe a través de una URL, incluida la información acerca de cómo está construida una URL, vea el artículo sobre acceso a URL en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
   
-

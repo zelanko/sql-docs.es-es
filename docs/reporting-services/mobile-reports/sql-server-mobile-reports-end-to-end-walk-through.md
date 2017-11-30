@@ -1,29 +1,26 @@
 ---
-title: "Informes móviles de SQL Server: tutorial de extremo a extremo | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: "Informes móviles de SQL Server: tutorial completo | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial de extremo a extremo
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
 
 Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles. Conéctese a una variedad de orígenes de datos locales o cargue libros de Excel para crear informes móviles. A continuación, guarde los informes en un portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] y véalos en un explorador o en las aplicaciones móviles de Power BI.  
@@ -38,11 +35,11 @@ Este artículo le guiará para que pueda:
 ## <a name="before-we-start"></a>Antes de empezar  
 Para poder continuar, necesita estos productos:  
   
-* Para crear orígenes de datos y los KPI y publicar informes móviles y los conjuntos de datos, necesita tener acceso a una [! INCLUIR[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Para crear orígenes de datos y KPI, además de publicar informes móviles y conjuntos de datos, necesita tener acceso a un [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Para [crear conjuntos de datos compartidos](../install-windows/install-report-builder.md).  
 * Para crear informes móviles, [instale Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
-* [Scripts y bases de datos de ejemplo de AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OR: Datos de ejemplo de World Wide Importers, disponible en la [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) página.
+* [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+*  O BIEN: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para ver el resultado: 
   *   [Suscríbase al servicio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) y
   *  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
@@ -50,12 +47,12 @@ Para poder continuar, necesita estos productos:
   
 ## <a name="create-a-shared-data-source"></a>Crear un origen de datos compartido  
   
-Puede crear un origen de datos compartido para los informes móviles desde cualquiera de los orígenes de datos compatibles con Reporting Services. Consulte la [lista de orígenes de datos admitidos](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Puede crear un origen de datos compartido para los informes móviles desde cualquiera de los orígenes de datos compatibles con Reporting Services. Vea la [lista de orígenes de datos admitidos](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Origen de datos**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Escriba la información de origen de datos > **Aceptar**.  
+3. Escriba la información del origen de datos > **Aceptar**.  
   
     De forma predeterminada, los orígenes de datos no se muestran en el portal.    
    
@@ -236,7 +233,7 @@ Las listas de selección funcionan como segmentaciones en Power BI y Excel. Es p
   
 Ahora que creó objetos visuales en el diseño maestro, puede crear un informe móvil con un diseño específicamente optimizado para los usuarios con teléfono.    
   
-1. En la esquina superior derecha, haga clic en el icono de lienzo > **teléfono**.  
+1. En la esquina superior derecha, haga clic en el icono del lienzo > **Teléfono**.  
   
 2. En la pestaña Diseño, en **Instancias de control**, verá los dos gráficos que creó.   
   
@@ -313,5 +310,4 @@ Los KPI y los informes móviles se muestran en las mismas carpetas en las que es
 -  [Visualización de informes móviles y KPI de Reporting Services en la aplicación móvil de Power BI para Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Crear un componente de tiempo de diseño de elemento de informe personalizado | Documentos de Microsoft"
+title: "Crear un componente de tiempo de diseño de elemento de informe personalizado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
   Un componente de tiempo de diseño de elemento de informe personalizado es un control que se puede utilizar en el entorno de Visual Studio Report Designer. El componente de tiempo de diseño de elemento de informe personalizado proporciona una superficie de diseño activada que puede aceptar las operaciones de arrastrar y colocar, la integración con el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], y la capacidad de proporcionar los editores de propiedades personalizados.  
@@ -35,12 +32,12 @@ ms.lasthandoff: 08/12/2017
  Las propiedades que se establecen utilizando el componente de tiempo de diseño en el entorno de desarrollo se serializan y deserializan por el entorno de diseño del host y, a continuación, se guardan como elementos en el archivo de lenguaje RDL (Report Definition Language). Cuando el procesador de informes ejecuta el informe, pasa las propiedades que están establecidas utilizando el componente de tiempo de diseño a un componente de tiempo de ejecución del elemento de informe personalizado, que representa el elemento de informe personalizado y lo devuelve al procesador de informes.  
   
 > [!NOTE]  
->  El componente de tiempo de diseño de elemento de informe personalizado se implementa como un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] componente. En este documento se describirán los detalles de la implementación específicos al componente de tiempo de diseño del elemento de informe personalizado. Para obtener más información sobre cómo desarrollar componentes mediante la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consulte [componentes en Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) en MSDN library.  
+>  El componente de tiempo de diseño de elemento de informe personalizado se implementa como un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. En este documento se describirán los detalles de la implementación específicos al componente de tiempo de diseño del elemento de informe personalizado. Para más información sobre cómo desarrollar componentes mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea [Componentes en Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) en MSDN Library.  
   
- Para obtener un ejemplo de un elemento de informe personalizado implementado totalmente, vea [muestras de producto de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementar un componente de tiempo de diseño  
- La clase principal de un componente de tiempo de diseño de elemento de informe personalizado se hereda de la **Microsoft.ReportDesigner.CustomReportItemDesigner** clase. Además de los atributos estándares utilizados para un [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (control), debe definir la clase de componente un **CustomReportItem** atributo. Este atributo debe corresponder al nombre del elemento de informe personalizado como se define en el archivo reportserver.config. Para obtener una lista de atributos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea Atributos en la documentación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ La clase principal de un componente de tiempo de diseño de elemento de informe personalizado se hereda de la clase **Microsoft.ReportDesigner.CustomReportItemDesigner**. Además de los atributos estándar usados para un control [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], la clase de componente debería definir un atributo **CustomReportItem**. Este atributo debe corresponder al nombre del elemento de informe personalizado como se define en el archivo reportserver.config. Para obtener una lista de atributos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea Atributos en la documentación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
  El ejemplo de código siguiente muestra atributos que se aplican a un control de tiempo de diseño del elemento de informe personalizado:  
   
@@ -58,9 +55,9 @@ namespace PolygonsCRI
 ```  
   
 ### <a name="initializing-the-component"></a>Inicializar el componente  
- Las propiedades especificadas por el usuario para un elemento de informe personalizado se pasan utilizando una clase <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>. La implementación de la **CustomReportItemDesigner** clase debe reemplazar el **InitializeNewComponent** método para crear una nueva instancia de su componente <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> clase y establézcalo en valores predeterminados.  
+ Las propiedades especificadas por el usuario para un elemento de informe personalizado se pasan utilizando una clase <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>. La implementación de la clase **CustomReportItemDesigner** debería reemplazar el método **InitializeNewComponent** para crear una nueva instancia de la clase <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> del componente y establecerla en los valores predeterminados.  
   
- En el ejemplo de código siguiente se muestra un ejemplo de un componente de tiempo de diseño de elemento de informe personalizado durante la invalidación del clase la **CustomReportItemDesigner.InitializeNewComponent** método para inicializar el componente <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> clase:  
+ El ejemplo de código siguiente muestra un ejemplo de una clase de componente de tiempo de diseño de elemento de informe personalizado que reemplaza al método **CustomReportItemDesigner.InitializeNewComponent** para inicializar la clase <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> del componente:  
   
 ```csharp  
 public override void InitializeNewComponent()  
@@ -94,9 +91,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>Modificar propiedades de componentes  
- Puede modificar **CustomData** propiedades en el entorno de diseño de varias maneras. Puede modificar cualquier propiedad que expuesta por el componente de tiempo de diseño que esté marcada con el atributo <xref:System.ComponentModel.BrowsableAttribute> utilizando el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Además, puede modificar las propiedades arrastrando elementos en la superficie de diseño del elemento de informe personalizado o haciendo clic en el control en el entorno de diseño y seleccionando **propiedades** en el menú contextual para mostrar una ventana de propiedades personalizadas.  
+ Puede modificar las propiedades **CustomData** en el entorno de diseño de varias maneras. Puede modificar cualquier propiedad que expuesta por el componente de tiempo de diseño que esté marcada con el atributo <xref:System.ComponentModel.BrowsableAttribute> utilizando el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Además, puede modificar las propiedades si arrastra los elementos a la superficie de diseño del elemento de informe personalizado o si hace clic con el botón derecho en el control en el entorno de diseño y selecciona **Propiedades** en el menú contextual para mostrar una ventana de propiedades personalizada.  
   
- El siguiente ejemplo de código muestra un **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** propiedad que tiene el <xref:System.ComponentModel.BrowsableAttribute> atributo aplicado:  
+ El siguiente ejemplo de código muestra una propiedad **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** que tiene aplicado el atributo <xref:System.ComponentModel.BrowsableAttribute>:  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -160,7 +157,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>Utilizar los verbos de diseñador  
- Un verbo de diseñador es un comando de menú vinculado a un controlador de eventos. Puede agregar verbos de diseñador que aparecerán en el menú contextual de un componente cuando el control de tiempo de ejecución del elemento de informe personalizado se utiliza en el entorno de diseño. Puede devolver la lista de verbos de diseñador disponibles desde el componente de tiempo de ejecución mediante la **verbos** propiedad.  
+ Un verbo de diseñador es un comando de menú vinculado a un controlador de eventos. Puede agregar verbos de diseñador que aparecerán en el menú contextual de un componente cuando el control de tiempo de ejecución del elemento de informe personalizado se utiliza en el entorno de diseño. Puede devolver la lista de verbos de diseñador disponibles desde el componente de tiempo de ejecución con la propiedad **Verbs**.  
   
  El ejemplo de código siguiente muestra un verbo de diseñador y un controlador de eventos agregados a <xref:System.ComponentModel.Design.DesignerVerbCollection>, así como el código de controlador de eventos:  
   
@@ -192,21 +189,20 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizar las opciones gráficas  
- Clases de elemento de informe personalizado también pueden implementar un **Microsoft.ReportDesigner.Design.Adornment** clase. Una opción gráfica permite al control de elemento de informe personalizado proporcionar las áreas fuera del rectángulo principal de la superficie de diseño. Estas áreas pueden administrar los eventos de interfaz de usuario, como los clics del mouse y las operaciones de arrastrar y colocar. El **elementos gráficos** clase que se define en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** espacio de nombres es una implementación paso a través de la <xref:System.Windows.Forms.Design.Behavior.Adorner> encontrar la clase en formularios Windows Forms. Para obtener documentación completa sobre la **adorno** de clases, consulte [Introducción al servicio de comportamiento](http://go.microsoft.com/fwlink/?LinkId=116673) en MSDN library. Para el código de ejemplo que implementa un **Microsoft.ReportDesigner.Design.Adornment** de clases, consulte [muestras de producto de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Las clases de elemento de informe personalizado también pueden implementar una clase **Microsoft.ReportDesigner.Design.Adornment**. Una opción gráfica permite al control de elemento de informe personalizado proporcionar las áreas fuera del rectángulo principal de la superficie de diseño. Estas áreas pueden administrar los eventos de interfaz de usuario, como los clics del mouse y las operaciones de arrastrar y colocar. La clase **Adornment** que se define en el espacio de nombres **Microsoft.ReportDesigner** de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una implementación de paso a través de la clase <xref:System.Windows.Forms.Design.Behavior.Adorner> de Windows Forms. Para obtener la documentación completa de la clase **Adorner**, vea [Información general sobre servicios de comportamiento](http://go.microsoft.com/fwlink/?LinkId=116673) en MSDN Library. Para obtener el código de ejemplo que implementa una clase **Microsoft.ReportDesigner.Design.Adornment**, vea [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Para obtener más información acerca de cómo programar y usar Windows Forms en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea estos temas en MSDN Library:  
   
 -   Atributos de tiempo de diseño para componentes  
   
--   Componentes de[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   Componentes de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
 -   Tutorial: Crear un control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura de elementos de informe personalizado](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Crear un componente de tiempo de ejecución del elemento de informe personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Arquitectura de elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Bibliotecas de clases de elemento de informe personalizado](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Cómo: implementar un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Implementación de un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

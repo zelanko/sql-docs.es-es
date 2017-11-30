@@ -1,5 +1,5 @@
 ---
-title: "Informe de sugerencias de diseño (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Sugerencias para el diseño de informes (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eac6203e7210e24d8be8c3e11a1ea2263e8a7a67
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Sugerencias para el diseño de informes (Generador de informes y SSRS)
   Use las siguientes sugerencias para diseñar sus informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/09/2017
   
 ###  <a name="Expressions"></a> Trabajar con expresiones  
   
--   Descripción de los formatos de expresiones simples y complejas. Puede escribir directamente el formato de expresión simple en los cuadros de texto, las propiedades en el panel de propiedades, o en los lugares de los cuadros de diálogo que acepten una expresión. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+-   Descripción de los formatos de expresiones simples y complejas. Puede escribir directamente el formato de expresión simple en los cuadros de texto, las propiedades en el panel de propiedades, o en los lugares de los cuadros de diálogo que acepten una expresión. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 -   Al crear una expresión, ayuda a crear cada parte de forma independiente y a comprobar su valor. A continuación, puede combinar todas las partes en una expresión final. Una técnica útil es agregar un cuadro de texto en una celda de la matriz, mostrar cada parte de la expresión y establecer la visibilidad condicional en el cuadro de texto. Para controlar el estilo de borde y el color cuando se oculta el cuadro de texto, coloque primero el cuadro de texto en un rectángulo y, a continuación, establezca el estilo de borde y el color del rectángulo de modo que coincidan con la matriz.  
   
@@ -165,8 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)  
   
   
-

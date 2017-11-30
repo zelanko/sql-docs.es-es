@@ -1,5 +1,5 @@
 ---
-title: "Solucionar problemas de informes de Reporting Services problemas de representación | Documentos de Microsoft"
+title: "Solución de problemas de representación de informes de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5bd1f634ba25711137db413e2069cd7d9ae328cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solución de problemas de representación de informes de Reporting Services
 Una vez combinados los datos y la información de diseño, el informe compilado se envía a un representador de informes. Por ejemplo, al obtener una vista previa de un informe localmente, se utiliza el representador de HTML para ver el informe compilado. Utilice este tema para ayudar a solucionar problemas concretos de la representación de informes.   
@@ -80,5 +79,4 @@ Cuando el origen de datos se configura para un tipo de conexión de Lista de Mic
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

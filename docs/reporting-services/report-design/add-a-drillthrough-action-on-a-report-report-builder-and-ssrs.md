@@ -1,5 +1,5 @@
 ---
-title: "Agregar una acción de obtención de detalles en un informe (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar una acción de obtención de detalles en un informe (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aea97d13582353816693b5e1a2345001071c685b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Agregar una acción de obtención de detalles en un informe (Generador de informes y SSRS)
   El informe que se abre al hacer clic en el vínculo del informe principal se denomina *informe detallado*. Este vínculo de obtención de detalles habilita una acción de obtención de detalles.  
   
  Los informes detallados deben publicarse en el mismo servidor de informes que el informe principal, pero pueden estar en carpetas diferentes. Puede agregar un vínculo de obtención de detalles a cualquier elemento que tenga una propiedad **Action** , como un cuadro de texto, una imagen o los puntos de datos de un gráfico.  
   
- Para agregar un vínculo de obtención de detalles a un informe, debe crear primero el informe detallado al que se vinculará el informe principal. Un informe detallado contiene normalmente los detalles sobre un elemento que está incluido en el informe de resumen original y a menudo contiene los parámetros que filtran el informe detallado en función de los parámetros que han pasado a él desde el informe principal. Para obtener más información sobre cómo crear el informe detallado, vea [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
+ Para agregar un vínculo de obtención de detalles a un informe, debe crear primero el informe detallado al que se vinculará el informe principal. Un informe detallado contiene normalmente los detalles sobre un elemento que está incluido en el informe de resumen original y a menudo contiene los parámetros que filtran el informe detallado en función de los parámetros que han pasado a él desde el informe principal. Para más información sobre cómo crear el informe detallado, vea [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  En **Especificar un informe**, haga clic en **Examinar** para localizar el informe al que desea ir o escriba el nombre del informe. O bien, puede hacer clic en el botón de la expresión (**fx**) para crear una expresión para el nombre del informe.  
   
-     El formato de la ruta de acceso al informe detallado difiere para el modo nativo y para el modo integrado en SharePoint. Si busca el informe, se proporcionará una ruta de acceso con el formato correcto. Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+     El formato de la ruta de acceso al informe detallado difiere para el modo nativo y para el modo integrado en SharePoint. Si busca el informe, se proporcionará una ruta de acceso con el formato correcto. Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
      Si tiene que especificar parámetros para el informe detallado, siga el paso siguiente.  
   
@@ -59,16 +58,15 @@ ms.lasthandoff: 08/09/2017
         > [!NOTE]  
         >  Los valores pueden contener una expresión que se evalúe como un valor que se pasará al parámetro de informe. En la lista de valores, las expresiones incluyen la lista de campos del informe actual.  
   
-     Para obtener información sobre cómo ocultar parámetros en informes, vea [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md).  
+     Para información sobre cómo ocultar parámetros en informes, vea [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md).  
   
 6.  (Opcional) En los cuadros de texto, resulta útil cambiar el color y el efecto del texto en la pestaña **Inicio** de la cinta de opciones para indicar al usuario que el texto es un vínculo.  
   
 7.  Para probar el vínculo, ejecute el informe y haga clic en el elemento de informe en el que ha establecido este vínculo.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de propiedades de acción &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [Aplicar formato a los puntos de datos en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Mostrar información sobre herramientas en una serie &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   
-

@@ -1,33 +1,31 @@
 ---
-title: "Lección 3: Definir una suscripción controlada por datos | Documentos de Microsoft"
+title: "Lección 3: Definir una suscripción controlada por datos | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
   
 > [!NOTE]  
-> Antes de empezar, compruebe que  **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agente** servicio se está ejecutando. Si no es así, no podrá guardar la suscripción.  Un método para comprobarlo es abrir el [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md).
+> Antes de empezar, compruebe que el servicio del **Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** esté en ejecución. Si no es así, no podrá guardar la suscripción.  Un método para comprobarlo es abrir el [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md).
 En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, consulte [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
@@ -87,7 +85,7 @@ Parámetro  |Origen del valor  | Valor/campo
 **Formato de representación** | Obtener valor de conjunto de datos | Formato
 **Modo de escritura**| Escribir valor| Incremento automático    
 **Extensión de archivo** |Escribir valor |True
-**Nombre de usuario** | Escribir valor | Escriba su cuenta de usuario de dominio. Escriba en este formato: \<dominio >\\\<cuenta >. La cuenta de usuario tiene que disponer de permisos en la ruta de acceso que ha configurado. 
+**Nombre de usuario** | Escribir valor | Escriba su cuenta de usuario de dominio. Escríbalo con este formato: \<dominio>\\\<cuenta>. La cuenta de usuario tiene que disponer de permisos en la ruta de acceso que ha configurado. 
 **Contraseña** | Escribir valor | Escribir la contraseña
 
 ## <a name="report-parameters"></a>Parámetros de informe
@@ -97,12 +95,12 @@ Parámetro  |Origen del valor  | Valor/campo
 ## <a name="next-steps"></a>Pasos siguientes  
 Cuando se ejecute la suscripción, se entregarán cuatro archivos de informe al recurso compartido de archivos que ha especificado, uno por cada pedido del origen de datos *Subscribers* . Cada entrega debe ser única en cuanto a datos (los datos deben ser específicos de cada pedido), formato de representación y formato de archivo. Puede abrir cada informe desde la carpeta compartida para comprobar que todas las versiones se hayan personalizado en función de las opciones de suscripción que haya definido.  
   
-![Lista de archivos creados por la suscripción](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "lista de archivos creados por la suscripción")  
+![Lista de archivos creados por la suscripción](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de archivos creados por la suscripción")  
   
 La página de suscripción del portal web contendrá la fecha de **Última ejecución** y el **Estado** de la suscripción. 
 **Nota:** Actualice la página cuando la suscripción se ejecute para ver la información actualizada.  
     
-![En el Administrador de informes de resultados de suscripción](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "en el Administrador de informes de resultados de la suscripción")  
+![Resultados de suscripción en el administrador de informes](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados de suscripción en el administrador de informes")  
   
 Con este paso finaliza el tutorial "Definir una suscripción controlada por datos".   
   
@@ -114,5 +112,4 @@ Con este paso finaliza el tutorial "Definir una suscripción controlada por dato
   
   
   
-
 

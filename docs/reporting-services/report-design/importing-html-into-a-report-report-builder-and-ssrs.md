@@ -1,5 +1,5 @@
 ---
-title: Importar HTML en un informe (generador de informes y SSRS) | Documentos de Microsoft
+title: Importar HTML en un informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2c1cefaa2ece7d13882c7807fefd5aa54367d84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
   Se puede usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo de conjunto de datos. El texto puede proceder de cualquier expresión simple o compleja que se evalúe como HTML con un formato correcto. El texto con formato se puede representar en todos los formatos de salida compatibles, incluso PDF.  
@@ -41,15 +40,15 @@ ms.lasthandoff: 08/09/2017
 ## <a name="supported-html-tags"></a>Etiquetas HTML compatibles  
  La lista siguiente es una lista completa de las etiquetas que se representarán como HTML cuando se definan como texto de marcador de posición:  
   
--   Hipervínculos: \<un HREF >  
+-   Hipervínculos: \<A HREF>  
   
--   Fuentes: \<fuente >  
+-   Fuentes: \<FONT>  
   
--   Encabezado, estilo y elementos de bloque: \<H {n} >, \<DIV >, \<intervalo >,\<P >, \<DIV >, \<LI >, \<HN >  
+-   Encabezado, estilo y elementos de bloque: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Formato de texto: \<B >, \<I >, \<U >, \<S >  
+-   Formato del texto: \<B>, \<I>, \<U>, \<S>  
   
--   Control de listas: \<OL >, \<UL >, \<LI >  
+-   Control de listas: \<OL>, \<UL>, \<LI>  
   
  Cualquier otra etiqueta de marcado HTML se omitirá durante el procesamiento del informe. Si el HTML representado por la expresión en el texto del marcador de posición no está bien formado, el marcador de posición se representa como texto simple. Todas las etiquetas HTML distinguen entre mayúsculas y minúsculas.  
   
@@ -84,12 +83,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Los valores de CSS incorrectos se omiten de la misma manera que se omite el HTML incorrecto.  
   
--   Cuando en una misma etiqueta hay un atributo y atributos de estilo CSS, la propiedad de CSS tiene una prioridad más alta. Por ejemplo, si el texto es  **\<estilo p = "Alinear texto: derecha" align = "left" >**, se aplicarán únicamente el atributo Text-align y el texto estará alineado a la derecha.  
+-   Cuando en una misma etiqueta hay un atributo y atributos de estilo CSS, la propiedad de CSS tiene una prioridad más alta. Por ejemplo, si el texto es **\<p style="text-align: right" align="left">**, solo se aplicará el atributo text-align y el texto estará alineado a la derecha.  
   
--   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es  **\<p align = "left" align = "right" >**, el texto estará alineado a la derecha.  
+-   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es **\<p align="left" align="right">**, el texto estará alineado a la derecha.  
   
 ## <a name="see-also"></a>Vea también  
  [Representar en HTML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Almacenar en caché un informe (Administrador de informes) | Documentos de Microsoft"
+title: "Almacenar en caché un informe (Administrador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe7f91a706a0b65920b3f32bd4fabde48cba31fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cache-a-report-report-manager"></a>Almacenar en caché un informe (Administrador de informes)
   Una manera de mejorar el rendimiento es configurar las propiedades de almacenamiento en caché para un informe. Cuando un informe se almacena en memoria caché, se guarda una copia del informe representado durante un breve período de tiempo. El primer usuario que solicita el informe debe esperar para que se complete todo el procesamiento antes de ver el informe. Los usuarios posteriores que soliciten el informe dentro del período de almacenamiento en caché pueden verlo de forma inmediata porque el procesamiento ya se ha producido.  
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 6.  Seleccione una de las siguientes dos opciones de caché y configure la expiración como se indica a continuación:  
   
-    -   Para configurar que una copia en caché expire después de un período determinado, haga clic en **Almacenar en caché una copia temporal del informe. La copia expira transcurrido un número de minutos**. Escriba el número de minutos para la expiración del informe.  
+    -   Para configurar que una copia en caché expire después de un período determinado, haga clic en **Almacenar en caché una copia temporal del informe. La copia expira transcurrido un número determinado de minutos**. Escriba el número de minutos para la expiración del informe.  
   
-    -   Para configurar una copia en caché expire siguiendo una programación, haga clic en **guardar en caché una copia temporal del informe. La copia del informe en la siguiente programación expira.** Haga clic en **Configurar**, o seleccione una programación compartida para controlar la expiración del informe.  
+    -   Para configurar que una copia en caché expire de acuerdo con una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe expirar según la siguiente programación.** Haga clic en **Configurar**, o seleccione una programación compartida para controlar la expiración del informe.  
   
 7.  Haga clic en **Aplicar**.  
   
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
  [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

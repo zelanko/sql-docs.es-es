@@ -1,5 +1,5 @@
 ---
-title: "Preparación para implementar una extensión de procesamiento de datos | Documentos de Microsoft"
+title: "Preparación de la implementación de una extensión de procesamiento de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,32 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: cacd1a989748897d369d9e920a5b6e0410d7f063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Prepararse para implementar una extensión de procesamiento de datos
-  Antes de implementar su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensión de procesamiento de datos, debe definir las interfaces que se va a implementar. Puede que desee proporcionar implementaciones específicas de la extensión de todo el conjunto de interfaces, o puede que simplemente desee centrar la implementación en un subconjunto, como el <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> y <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces en el que los clientes interactuarían principalmente con un conjunto de resultados como un **DataReader** objeto y utilizarían su [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] extensión de procesamiento de datos como un puente entre el conjunto de resultados y el origen de datos.  
+  Antes de implementar la extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], debería definir las interfaces que se van a implementar. Puede que quiera proporcionar implementaciones específicas de la extensión del conjunto completo de interfaces o simplemente centrar la implementación en un subconjunto, como las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> y <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> en las que los clientes interactuarían principalmente con un conjunto de resultados como un objeto **DataReader** y usarían la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] como un puente entre el conjunto de resultados y el origen de datos.  
   
  Puede implementar las extensiones de procesamiento de datos de una de dos maneras:  
   
--   Las clases de extensión de procesamiento de datos pueden implementar la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] interfaces del proveedor de datos y, opcionalmente, las interfaces de extensión de procesamiento de datos extendidas proporcionadas por [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Las clases de extensión de procesamiento de datos pueden implementar las interfaces del proveedor de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] y, opcionalmente, las interfaces de extensión de procesamiento de datos extendidas que proporciona [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 -   Las clases de extensión de procesamiento de datos pueden implementar las interfaces de extensión de procesamiento de datos que proporciona [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y, opcionalmente, las interfaces de extensión de procesamiento de datos extendidas.  
   
- Si la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no va a admitir ninguna propiedad ni método concretos, implemente la propiedad o método como una no-operación. Si un cliente espera un comportamiento determinado, inicie una **NotSupportedException** excepción.  
+ Si la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no va a admitir ninguna propiedad ni método concretos, implemente la propiedad o método como una no-operación. Si un cliente espera un comportamiento determinado, inicie una excepción **NotSupportedException**.  
   
 > [!NOTE]  
 >  Una implementación no-operación de una propiedad o método solo se aplica a las propiedades y métodos de las interfaces que decida implementar. Las interfaces opcionales que decida no implementar se deberían omitir del ensamblado de extensión de procesamiento de datos. Para obtener más información sobre si se requiere una interfaz o es opcional, vea la tabla posteriormente en esta sección.  
@@ -74,24 +72,23 @@ ms.lasthandoff: 08/12/2017
   
 |Interfaz|Description|Implementación|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|Representa una sesión única con un origen de datos. En el caso de un sistema de bases de datos cliente/servidor, la sesión puede ser equivalente a una conexión de red al servidor.|Obligatorio|  
+|IDbConnection|Representa una sesión única con un origen de datos. En el caso de un sistema de bases de datos cliente/servidor, la sesión puede ser equivalente a una conexión de red al servidor.|Necesario|  
 |IDbConnectionExtension|Representa propiedades de conexión adicionales que pueden ser implementadas por extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] con respecto a la seguridad y autenticación.|Opcional|  
-|IDbTransaction|Representa una transacción local.|Obligatorio|  
+|IDbTransaction|Representa una transacción local.|Necesario|  
 |IDbTransactionExtension|Representa las propiedades de transacción adicionales que pueden ser implementadas por extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Opcional|  
-|IDbCommand|Representa una consulta o comando que se utiliza al conectarse a un origen de datos.|Obligatorio|  
+|IDbCommand|Representa una consulta o comando que se utiliza al conectarse a un origen de datos.|Necesario|  
 |IDbCommandAnalysis|Representa información del comando adicional para analizar una consulta y devolver una lista de los nombres de parámetros que se usan en la consulta.|Opcional|  
-|IDataParameter|Representa un parámetro o un par de nombre y valor que se pasa a un comando o consulta.|Obligatorio|  
-|IDataParameterCollection|Representa una colección de todos los parámetros pertinentes para un comando o consulta.|Obligatorio|  
-|IDataReader|Proporciona un método para leer un flujo de solo lectura y solo avance de datos del origen de datos.|Obligatorio|  
+|IDataParameter|Representa un parámetro o un par de nombre y valor que se pasa a un comando o consulta.|Necesario|  
+|IDataParameterCollection|Representa una colección de todos los parámetros pertinentes para un comando o consulta.|Necesario|  
+|IDataReader|Proporciona un método para leer un flujo de solo lectura y solo avance de datos del origen de datos.|Necesario|  
 |IDataReaderExtension|Proporciona un método para leer uno o varios flujos de solo avance de conjuntos de resultados, obtenidos al ejecutar un comando en un origen de datos. Esta interfaz proporciona compatibilidad adicional para los agregados de campo.|Opcional|  
-|IExtension|Proporciona la clase base para la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. También permite a un implementador incluir un nombre traducido para la extensión y pasar la configuración del archivo de configuración a la extensión.|Obligatorio|  
+|IExtension|Proporciona la clase base para la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. También permite a un implementador incluir un nombre traducido para la extensión y pasar la configuración del archivo de configuración a la extensión.|Necesario|  
   
  Las interfaces de extensión de procesamiento de datos son idénticas a un subconjunto de las interfaces, métodos y propiedades del proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], siempre que sea posible. Para obtener más información sobre cómo implementar un proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] completo, vea el tema sobre la implementación de un proveedor de datos de .NET Framework en la documentación del Kit de desarrollo de software (SDK) de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementar una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Biblioteca de extensión de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Implementación de una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

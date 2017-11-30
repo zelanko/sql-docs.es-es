@@ -1,28 +1,26 @@
 ---
-title: Trabajar con conjuntos de datos compartidos (portal web) | Documentos de Microsoft
+title: Trabajar con conjuntos de datos compartidos (portal web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c51b1f46f86980d2f756a2a2244c80468b5c28f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos - portal web
+# <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos: portal web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,7 +53,7 @@ Para administrar un conjunto de datos compartido existente, puede hacer lo sigui
 > [!NOTE]
 > Si no ve el conjunto de datos compartido en la carpeta, asegúrese de que está viendo conjuntos de datos. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Asegúrese de que la casilla **Conjuntos de datos** está activada.  
   
-1.  Seleccione el **puntos suspensivos (...)**  del conjunto de datos que desea administrar.  
+1.  Haga clic en los **puntos suspensivos (…)** del conjunto de datos que quiere administrar.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
@@ -111,5 +109,4 @@ Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan**(Crear pla
   
 A continuación, puede **editar** o **eliminar** los planes que se muestren. La opción **Nuevo a partir de existente** se habilita cuando solo está seleccionado un plan de actualización de caché. Esta opción creará un plan de actualización nuevo que se copia a partir del plan original. El plan de actualización de caché se abre rellenado de antemano con detalles del plan que se seleccionara. A continuación puede modificar las opciones del plan de actualización y guardar el plan con otra descripción.  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

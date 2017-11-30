@@ -1,5 +1,5 @@
 ---
-title: Exportar un informe mediante el acceso URL | Documentos de Microsoft
+title: Exportar un informe mediante el acceso URL | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 06eceea70e1268f874291fddc7c5d516995f34cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
   Opcionalmente, puede especificar el formato en el que se representará un informe mediante el parámetro de dirección URL *rs:Format* .  Los formatos HTML4.0 y HTM5 (extensión de representación) se representarán en el explorador y en otros formatos; el explorador le solicitará que guarde la salida del informe en un archivo local.  
@@ -51,8 +50,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  Si no incluye el parámetro *Format* como parte de la dirección URL, el servidor de informes detecta el explorador y representa el informe en el formato HTML adecuado.  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
   
   
-

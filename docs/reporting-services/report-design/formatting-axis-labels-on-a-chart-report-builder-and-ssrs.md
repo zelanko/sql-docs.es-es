@@ -1,5 +1,5 @@
 ---
-title: "Aplicar formato a las etiquetas del eje en un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -25,20 +25,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>Tipos de ejes  
  El gráfico tiene dos ejes principales: el eje de valores y el eje de categorías.  
   
- ![Categorías del gráfico y el valor ejes](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "categorías del gráfico y el valor de ejes")  
+ ![Ejes de valor y categoría de gráficos](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Ejes de valor y categoría de gráficos")  
   
  Cuando se arrastra un campo desde un conjunto de datos a la superficie del gráfico, el gráfico determinará si este campo pertenece al eje de categorías o al de valores.  
   
@@ -106,14 +104,14 @@ ms.lasthandoff: 08/09/2017
  El gráfico calcula aproximadamente cinco intervalos de etiquetas del eje sin tener en cuenta el tamaño del gráfico. En gráficos más anchos o más altos, si solo muestra cinco etiquetas en un eje, pueden aparecer grandes huecos entre las etiquetas. Esto hace que resulte más difícil identificar el valor de cada punto de datos con relación al eje. Para evitar este comportamiento en gráficos más anchos o más altos, puede establecer un intervalo de eje variable. El gráfico calculará el número óptimo de etiquetas que pueden aparecer en el eje basándose en el ancho o el alto del gráfico, dependiendo del eje correspondiente. Para más información, vea [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Ordenar los valores de los ejes  
- Las categorías aparecen a lo largo del eje X en el orden en que aparecen en el conjunto de resultados. Puede cambiar el orden del grupo agregando un comando SORT a la consulta u ordenando el conjunto de datos mediante una expresión. Las regiones de datos del gráfico se ordenan igual que todas las demás regiones de datos. Para obtener más información sobre cómo ordenar datos, vea [ordenar datos en una región de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Las categorías aparecen a lo largo del eje X en el orden en que aparecen en el conjunto de resultados. Puede cambiar el orden del grupo agregando un comando SORT a la consulta u ordenando el conjunto de datos mediante una expresión. Las regiones de datos del gráfico se ordenan igual que todas las demás regiones de datos. Para más información sobre cómo ordenar datos, vea [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>Especificar valores escalares en el eje de categorías  
  De forma predeterminada, el gráfico solamente mostrará etiquetas en el eje para los puntos de datos del conjunto de datos que contienen valores válidos. Por ejemplo, si tiene los valores 1, 2 y 6 en el eje de categorías, el gráfico solamente mostrará las categorías 1, 2 y 6. Para mantener la escala de los valores de las categorías, puede especificar que el gráfico use un eje escalar. En este escenario, el gráfico mostrará las etiquetas 1 a 6 en el eje X del gráfico, aunque el conjunto de datos no contenga valores para las etiquetas 3 a 5.  
   
  Hay dos maneras de establecer un eje escalar:  
   
--   Seleccione la opción **Eje escalar** en el cuadro de diálogo **Propiedades del eje** . Esto agregará valores numéricos o de fecha u hora al eje donde no existan valores de agrupación de datos. Para obtener más información, vea [cuadro de diálogo de propiedades de eje, opciones del eje &#40; El generador de informes y SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Seleccione la opción **Eje escalar** en el cuadro de diálogo **Propiedades del eje** . Esto agregará valores numéricos o de fecha u hora al eje donde no existan valores de agrupación de datos. Para más información, vea [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Seleccione un campo o escriba una expresión para la opción **Campo de categorías** en el cuadro de diálogo **Propiedades de la serie** . El gráfico agregará intervalos al eje para todos los valores del campo de categorías que especificó.  
   
@@ -133,8 +131,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Aplicar formato a los puntos de datos en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

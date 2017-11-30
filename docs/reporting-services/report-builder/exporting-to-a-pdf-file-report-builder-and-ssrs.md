@@ -1,5 +1,5 @@
 ---
-title: Exportar a un archivo PDF (generador de informes y SSRS) | Documentos de Microsoft
+title: Exportar a un archivo PDF (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eac7c54b7b0c610af123a0822de11ddcc931a854
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
   La extensión de representación en PDF representa informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de terceros compatibles con PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 11.0 o versiones posteriores. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.  
   
- La extensión de representación en PDF admite caracteres ANSI y puede traducir caracteres Unicode del japonés, coreano, chino tradicional, chino simplificado, cirílico, hebreo y árabe, con ciertas limitaciones. Para obtener más información acerca de las limitaciones, consulte [exportar informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ La extensión de representación en PDF admite caracteres ANSI y puede traducir caracteres Unicode del japonés, coreano, chino tradicional, chino simplificado, cirílico, hebreo y árabe, con ciertas limitaciones. Para más información sobre las limitaciones, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  El representador de PDF es un representador en página física y, por consiguiente, tiene un comportamiento de paginación que difiere del de otros representadores como HTML y Excel. En este tema se proporciona información específica del representador de PDF y se describen las excepciones a las reglas.  
   
@@ -109,11 +109,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Vea también  
- [Paginación en Reporting Services &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes informes representar extensiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Representar elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

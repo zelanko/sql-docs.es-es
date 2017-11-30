@@ -1,5 +1,5 @@
 ---
-title: "Almacenamiento en caché de informes (SSRS) | Documentos de Microsoft"
+title: "Informes almacenados en caché (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 79a60b96277352c51ce19d24d9504735e5fdb91f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
   Un servidor de informes puede almacenar en memoria caché una copia de un informe procesado y devolverla cuando el usuario abra el informe. Para un usuario, la única prueba visible que indica que el informe es una copia en caché es la fecha y la hora de ejecución. Si la fecha o la hora no son actuales y el informe no es una instantánea, significa que éste se ha obtenido de la caché.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  El almacenamiento en caché es una técnica de mejora del rendimiento. El contenido de la caché es volátil y puede cambiar conforme se agregan, reemplazan o eliminan informes. Si precisa una estrategia de almacenamiento en caché más predecible, se recomienda que cree una instantánea del informe. Para más información, vea [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]almacena los archivos temporales en una base de datos para admitir las sesiones de usuario y el procesamiento de informes. Estos archivos se almacenan en la caché para uso interno y para lograr coherencia en la visualización durante una sesión única del explorador. Para más información sobre cómo se almacenan en la memoria caché los archivos temporales de uso interno, vea [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena los archivos temporales en una base de datos para su uso en las sesiones de usuario y el procesamiento de informes. Estos archivos se almacenan en la caché para uso interno y para lograr coherencia en la visualización durante una sesión única del explorador. Para más información sobre cómo se almacenan en la memoria caché los archivos temporales de uso interno, vea [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Instancias almacenadas en caché  
  Una instancia de un informe almacenada en caché se basa en el formato intermedio del informe. Por lo general, el servidor de informes almacena en caché una instancia de un informe según el nombre del informe. Sin embargo, si un informe puede incluir datos diferentes basados en parámetros de consulta, es posible que se almacenen en caché varias versiones del informe. Por ejemplo, supongamos que dispone de un informe con parámetros que utiliza el código de región como un valor de parámetro. Si cuatro usuarios distintos especifican cuatro códigos de región diferentes, se crearán cuatro copias en la memoria caché.  
@@ -76,13 +75,12 @@ ms.lasthandoff: 08/09/2017
  Si un informe no puede representarse desde una instancia en caché por cualquier motivo (por ejemplo, si los valores de los parámetros que especifica un usuario son distintos de los que se utilizan para generar el informe en caché), el servidor de informes vuelve a ejecutar el informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer opciones de procesamiento &#40; Reporting Services en SharePoint integrado modo &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Establecer las propiedades de procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services conceptos &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Cargar previamente la memoria caché &#40; El Administrador de informes &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)   
- [Almacenar en caché conjuntos de datos compartidos &#40; SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Actualización de la caché opciones &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
-

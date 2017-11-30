@@ -1,30 +1,28 @@
 ---
-title: "Lección 1: Crear un proyecto de servidor de informes (Reporting Services) | Documentos de Microsoft"
+title: "Lección 1: Crear un proyecto de servidor de informes (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3968a5183de7cc1ee81c7ee09faba79d06990884
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [lección 1: crear un proyecto de servidor de informes (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Lección 1: Crear un proyecto de servidor de informes (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
 
 En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* en [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dentro de Visual Studio. 
 
@@ -38,7 +36,7 @@ En las siguientes lecciones, defina un origen de datos para el informe, un conju
   
 1.  Abra [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
   
-2.  En el **archivo** menú > **New** > **proyecto**.  
+2.  En el menú **Archivo** > **Nuevo** > **Proyecto**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +46,7 @@ En las siguientes lecciones, defina un origen de datos para el informe, un conju
 
 5. Haga clic en **Proyecto de servidor de informes** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Tenga en cuenta**: si no ve el **Business Intelligence** o **Report Server Project** opciones, debe actualizar SSDT con las plantillas de Business Intelligence. Consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
+   >**Nota**: Si no ve las opciones **Business Intelligence** o **Proyecto de servidor de informes**, tiene que actualizar SSDT con las plantillas de Business Intelligence. Consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  En **Nombre**, escriba **tutorial**.  
 
@@ -81,10 +79,9 @@ En las siguientes lecciones, defina un origen de datos para el informe, un conju
     Los datos se definen en el panel **Datos de informe** . El diseño del informe se define en la vista **Diseño** . Puede ejecutar el informe y ver su aspecto en la vista **Vista previa** .  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Vea [lección 2: especificar información de conexión &#40; Reporting Services &#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Vea [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

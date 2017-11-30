@@ -1,5 +1,5 @@
 ---
-title: "Agregar bisel, relieve y textura estilos a un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar estilos con bisel, relieve y textura a un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 204e67c4b1fb62e3e38188f155196d8edc095356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Efectos de gráfico - agregar bisel, relieve, o textura (generador de informes)
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Efectos de gráfico: agregar bisel, relieve o textura (Generador de informes)
   Cuando use determinados tipos de gráficos, puede especificar efectos de dibujo que aumenten el impacto visual del gráfico. Estos efectos de dibujo solamente se aplican a las series del gráfico. No afectan a ningún otro elemento del gráfico.  
   
  Cuando use cualquier variante de un gráfico circular o de anillos, puede especificar un estilo de dibujo de borde suave o cóncavo, similar a los efectos de bisel o de relieve que se pueden aplicar a una imagen.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  No puede tener estilos de relieve o bisel, y 3D en el mismo gráfico. Si ha habilitado 3D para el gráfico, no verá la propiedad PieDrawingStyle.  
   
- ![Gráfico circular con estilo de dibujo cóncavo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "gráfico circular con estilo de dibujo cóncavo")  
+ ![Gráfico circular con estilo de dibujo cóncavo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Gráfico circular con estilo de dibujo cóncavo")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>Para agregar estilos de textura a un gráfico de barras o de columnas  
   
@@ -63,13 +62,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  No puede tener estilos de relieve o bisel, y 3D en el mismo gráfico. Si ha habilitado 3D para el gráfico, no verá la propiedad PieDrawingStyle.  
   
- ![Gráfico de barras con efecto de dibujo LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "gráfico de barras con efecto de dibujo LightToDark")  
+ ![Gráfico de barras con efecto de dibujo LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Gráfico de barras con efecto de dibujo LightToDark")  
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos de barras &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Gráficos de columnas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Los gráficos circulares &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

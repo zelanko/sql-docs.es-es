@@ -1,5 +1,5 @@
 ---
-title: Implementar la interfaz IRenderingExtension | Documentos de Microsoft
+title: Implementar la interfaz IRenderingExtension | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 60eac755180faaba012c7fbd14001fcb66a37975
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 230c2e5ad4ffb61eb6d3b4d94db4e376b1f04d66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementar la interfaz IRenderingExtension
   La extensión de representación toma los resultados de una definición de informe que se combina con los datos reales y representa los datos resultantes en un formato que se puede usar. La transformación de los datos combinados y el formato se efectúan utilizando una clase de Common Language Runtime (CLR) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. De esta forma se transforma el modelo de objetos en un formato de salida que puede usar un visor, impresora u otro destino de salida.  
@@ -43,20 +42,20 @@ ms.lasthandoff: 08/12/2017
 ## <a name="render-method"></a>Método Render  
  El método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> contiene argumentos que representan los objetos siguientes:  
   
--   El *informe* que desea representar. Este objeto contiene propiedades, datos e información de presentación para el informe. El informe es la raíz del árbol del modelo de objetos de informe.  
+-   El elemento *report* que quiere representar. Este objeto contiene propiedades, datos e información de presentación para el informe. El informe es la raíz del árbol del modelo de objetos de informe.  
   
--   El *ServerParameters* que contienen el objeto de diccionario de cadena, con los parámetros del servidor de informes, si lo hay.  
+-   El parámetro *ServerParameters* que contiene el objeto de diccionario de cadena, con los parámetros para el servidor de informes, si los hubiera.  
   
--   El *deviceInfo* parámetro que contienen la configuración del dispositivo. Para obtener más información, consulte [pasar la configuración de información de dispositivo para las extensiones de representación](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+-   El parámetro *deviceInfo* que contiene la configuración del dispositivo. Para más información, vea [Pasar la configuración de información de dispositivo a las extensiones de representación](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
--   El *clientCapabilities* parámetro que contiene un <xref:System.Collections.Specialized.NameValueCollection> objeto de diccionario que tiene información sobre el cliente al que está representando.  
+-   El parámetro *clientCapabilities* que contiene un objeto de diccionario <xref:System.Collections.Specialized.NameValueCollection> que tiene información sobre el cliente al que está representando.  
   
--   El *RenderProperties* que contiene información sobre el resultado de la representación.  
+-   Parámetro *RenderProperties* que contiene información sobre el resultado de la representación.  
   
--   El *createAndRegisterStream* es una función de delegado que se llamará para obtener un flujo que se va a representar.  
+-   *createAndRegisterStream* es una función delegada a la que se va a llamar para obtener una secuencia en la que representar.  
   
 ### <a name="deviceinfo-parameter"></a>Parámetro de deviceInfo  
- El *deviceInfo* parámetro contiene parámetros de representación, no los parámetros de informe. Estos parámetros de representación se pasan a la extensión de representación. El *deviceInfo* valores se convierten en un <xref:System.Collections.Specialized.NameValueCollection> objeto por el servidor de informes. Los elementos de la *deviceInfo* parámetro se tratan como valores entre mayúsculas y minúsculas. Si la solicitud de representación se produjo como resultado de la dirección URL de acceso, los parámetros de dirección URL en el formulario `rc:key=value` se convierten en pares de clave/valor la *deviceInfo* objeto de diccionario. El código de detección de explorador también proporciona los siguientes elementos en el *clientCapabilities* diccionario: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, tipo y AcceptLanguage. Cualquier par de nombre y valor la *deviceInfo* se omite el parámetro que no entiende la extensión de representación. La muestra de código siguiente muestra un método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de muestra que recupera los iconos.  
+ El parámetro *deviceInfo* contiene los parámetros de representación, no los parámetros de informe. Estos parámetros de representación se pasan a la extensión de representación. El servidor de informes convierte los valores de *deviceInfo* en un objeto <xref:System.Collections.Specialized.NameValueCollection>. Los elementos del parámetro *deviceInfo* se tratan como valores que no distinguen mayúsculas y minúsculas. Si la solicitud de representación se ha producido como resultado de un acceso URL, los parámetros de dirección URL con el formato `rc:key=value` se convierten en pares de clave-valor en el objeto de diccionario *deviceInfo*. El código de detección de explorador también proporciona los elementos siguientes en el diccionario *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type y AcceptLanguage. Se omite cualquier par de nombre-valor del parámetro *deviceInfo* que la extensión de representación no entienda. La muestra de código siguiente muestra un método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de muestra que recupera los iconos.  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -79,7 +78,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  El método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> representa un flujo determinado del informe. Todos los flujos se crean durante la llamada de <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> inicial, pero los flujos no se devuelven inicialmente al cliente. Este método se utiliza para flujos secundarios (similares a las imágenes en la representación HTML) o páginas adicionales de una extensión de representación de varias páginas (similar a Image/EMF).  
   
 ## <a name="getrenderingresource-method"></a>Método GetRenderingResource  
- El método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera la información sin ejecutar una representación completa del informe. Hay ocasiones en que el informe requiere información que no requiere representar el propio informe. Por ejemplo, si necesita el icono asociado a la extensión de representación, utilice la *deviceInfo* parámetro que contiene la etiqueta única  **\<icono >**. En estos casos, puede usar el método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
+ El método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera la información sin ejecutar una representación completa del informe. Hay ocasiones en que el informe requiere información que no requiere representar el propio informe. Por ejemplo, si necesita el icono asociado a la extensión de representación, use el parámetro *deviceInfo* que contiene la etiqueta única **\<Icon>**. En estos casos, puede usar el método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
 ## <a name="see-also"></a>Vea también  
  [Implementar una extensión de representación](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

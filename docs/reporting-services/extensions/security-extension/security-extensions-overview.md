@@ -1,5 +1,5 @@
 ---
-title: "Información general de las extensiones de seguridad | Documentos de Microsoft"
+title: "Información general de extensiones de seguridad | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- security [Reporting Services], extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: d56cfaf647b8f54b7535416ead02fcfaa7c3fbac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-extensions-overview"></a>Información general de extensiones de seguridad
   Una extensión de seguridad [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite la autenticación y autorización de usuarios o grupos; es decir, les permite a usuarios diferentes iniciar sesión en un servidor de informes y, en función de sus identidades, realizar tareas u operaciones diferentes. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una extensión de autenticación basada en Windows que utiliza los protocolos de cuenta de Windows para comprobar las identidades de los usuarios que indican que tienen cuentas en el sistema. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un sistema de seguridad basada en roles para autorizar a los usuarios. El modelo de seguridad basado en roles [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es similar a los modelos de seguridad basados en roles de otras tecnologías.  
   
  Dado que las extensiones de seguridad están basadas en una API abierta y extensible, puede crear nuevas extensiones de autenticación y de autorización en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. El siguiente es un ejemplo de una implementación de extensión de seguridad típica que utiliza la autenticación y autorización basadas en formularios:  
   
- ![Proceso de extensión de seguridad de servicios de notificación](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "proceso de extensión de seguridad de Reporting Services")  
+ ![Proceso de extensión de seguridad de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Proceso de extensión de seguridad de Reporting Services")  
   
  Como se muestra en la ilustración, la autenticación y autorización se producen como sigue:  
   
@@ -63,15 +60,14 @@ ms.lasthandoff: 08/12/2017
 13. El usuario continúa solicitando las operaciones en el servidor de informes hasta que la sesión haya finalizado.  
   
 ## <a name="when-to-implement-a-security-extension"></a>Cuándo implementar una extensión de seguridad  
- Se recomienda que realice la autenticación de Windows si es posible. Sin embargo, la autenticación personalizada y autorización para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pueden ser adecuadas en los dos casos siguientes:  
+ Se recomienda que, siempre que sea posible, se use la autenticación de Windows. Sin embargo, la autenticación personalizada y autorización para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pueden ser adecuadas en los dos casos siguientes:  
   
 -   Tiene una aplicación de Internet o de extranet que no puede utilizar las cuentas de Windows.  
   
 -   Tiene usuarios y roles personalizados y necesita proporcionar un esquema de autorización correspondiente en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar una extensión de seguridad](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Configurar el Administrador de informes para pasar Cookies de autenticación personalizada](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
+ [Implementación de una extensión de seguridad](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+ [Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   
-

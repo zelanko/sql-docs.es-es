@@ -1,27 +1,24 @@
 ---
-title: Trabajar con los KPI en Reporting Services | Documentos de Microsoft
+title: Uso de los KPI en Reporting Services | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -75,7 +72,7 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Seleccione el **puntos suspensivos (...)**  en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
+2.  Seleccione **…** (los puntos suspensivos) en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
 Para quitar un KPI, puede hacer lo siguiente.  
   
-1.  Seleccione el **puntos suspensivos (...)**  del KPI que desea quitar. Seleccione **Administrar**.  
+1.  Seleccione **...** (los puntos suspensivos) del KPI que quiere quitar. Seleccione **Administrar**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ Para quitar un KPI, puede hacer lo siguiente.
   
 ## <a name="refreshing-a-kpi"></a>Actualización de un KPI  
   
-Para actualizar el KPI, debe configurar un almacenamiento en caché para el conjunto de datos compartido. Para obtener más información sobre la memoria caché de planes de actualización, vea [trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md).  
+Para actualizar el KPI, tendrá que configurar un almacenamiento en caché para el conjunto de datos compartido. Para más información sobre los planes de actualización de la memoria caché, vea [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md) (Trabajar con conjuntos de datos compartidos).  
   
 ## <a name="next-steps"></a>Pasos siguientes
   
-[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Portal web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

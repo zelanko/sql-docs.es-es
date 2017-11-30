@@ -1,5 +1,5 @@
 ---
-title: "Colección de campos del conjunto de datos (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Colección de campos de conjunto de datos (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Campos calculados de un conjunto de datos.** Campos adicionales que crea para el conjunto de datos. Cada campo calculado se crea evaluando una expresión que se define.  
   
--   **Campos integrados.** Metadatos que representan una colección de los campos que ofrece el Generador de informes y que proporcionan información como el nombre del informe o la hora en que se procesó. Para más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+-   **Campos integrados.** Metadatos que representan una colección de los campos que ofrece el Generador de informes y que proporcionan información como el nombre del informe o la hora en que se procesó. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
  Los nombres del campo de conjunto de datos se guardan como parte de la definición del conjunto de datos de informe. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  Los orígenes de datos que admiten consultas multidimensionales, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], admiten las propiedades de campo en los campos. Las propiedades de campo aparecen en el conjunto de resultados para una consulta, pero no están visibles en el panel **Datos de informe** . Sí que están disponibles para usarlas en el informe. Para hacer referencia a una propiedad de un campo, arrastre el campo al informe y cambie la propiedad predeterminada **Value** por el nombre de campo de la propiedad que desee. Por ejemplo, en un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede definir los formatos para los valores de las celdas del cubo. El valor con formato está disponible mediante la propiedad de campo **FormattedValue**. Para usar directamente el valor en lugar de usar un valor y establecer la propiedad de formato del cuadro de texto, arrastre el campo al cuadro de texto y cambie la expresión predeterminada `=Fields!FieldName.Value` a `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  No todas las propiedades **Field** pueden utilizarse para todos los orígenes de datos. Las propiedades **Value** y **IsMissing** se definen para todos los orígenes de datos. Otras propiedades predefinidas (como **Key**, **UniqueName**y **ParentUniqueName** para orígenes de datos multidimensionales) solo se admiten si el origen de datos las proporciona. Algunos proveedores de datos admiten las propiedades personalizadas. Para obtener más información, vea los temas sobre las propiedades de campo extendidas para cada tipo de origen de datos en [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Por ejemplo, para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origen de datos, vea [propiedades de campo extendidas para una base de datos de Analysis Services &#40; SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  No todas las propiedades **Field** pueden utilizarse para todos los orígenes de datos. Las propiedades **Value** y **IsMissing** se definen para todos los orígenes de datos. Otras propiedades predefinidas (como **Key**, **UniqueName**y **ParentUniqueName** para orígenes de datos multidimensionales) solo se admiten si el origen de datos las proporciona. Algunos proveedores de datos admiten las propiedades personalizadas. Para obtener más información, vea los temas sobre las propiedades de campo extendidas para cada tipo de origen de datos en [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Por ejemplo, para un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Descripción de las expresiones predeterminadas para campos  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
  En una región de datos Tablix, la expresión de campo predeterminada depende de la pertenencia a una fila o a un grupo del cuadro de texto al que se agrega el campo. La expresión de campo para el campo Sales, cuando se agrega a un cuadro de texto en la fila de detalles de una tabla, es `[Sales]`. Si agrega el mismo campo a un cuadro de texto de un encabezado de grupo, la expresión predeterminada es `(Sum[Sales])`, porque el encabezado de grupo muestra valores de resumen para el grupo, en lugar de valores detallados. Cuando se ejecuta el informe, el procesador de informes evalúa cada expresión y sustituye el resultado en el informe.  
   
- Para más información sobre las expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Para obtener más información sobre las expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
   
 ##  <a name="DataTypes"></a> Tipos de datos de campo  
@@ -110,13 +109,12 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="MissingFields"></a> Detectar los campos que faltan en tiempo de ejecución  
- Cuando se procesa el informe, es posible que el conjunto de resultados para un conjunto de datos no contenga valores para todas las columnas especificadas porque éstas ya no existen en el origen de datos. Puede usar la propiedad de campo IsMissing para detectar si se devolvieron valores para un campo en tiempo de ejecución. Para más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
+ Cuando se procesa el informe, es posible que el conjunto de resultados para un conjunto de datos no contenga valores para todas las columnas especificadas porque éstas ya no existen en el origen de datos. Puede usar la propiedad de campo IsMissing para detectar si se devolvieron valores para un campo en tiempo de ejecución. Para obtener más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Elementos de informe y conjuntos de datos en el generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Informe incrusta los conjuntos de datos y conjuntos de datos compartidos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

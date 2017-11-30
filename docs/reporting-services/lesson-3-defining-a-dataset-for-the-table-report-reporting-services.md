@@ -1,28 +1,25 @@
 ---
-title: "Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services) | Documentos de Microsoft"
+title: "Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8fc3a1ba59c5b795720813a6018c50672ef1d66e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
 Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, así como campos y variables calculados.  
@@ -77,7 +74,7 @@ Use el diseñador de consultas del Diseñador de informes para diseñar el conju
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Consulte [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Vea [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Herramientas de diseño de consulta &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  
@@ -86,5 +83,4 @@ Ha especificado correctamente una consulta que recupera datos para su informe. A
   
   
   
-
 

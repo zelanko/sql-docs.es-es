@@ -1,5 +1,5 @@
 ---
-title: "Modelo - métodos de servicio Web del servidor de informes | Documentos de Microsoft"
+title: "Métodos de modelo: servicio web del servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6f95a5e6d379d9f0a998cb58cbf32c00be980884
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: c9730c12ed92d1035238b6836016b0f62e03bba0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="model-methods---report-server-web-service"></a>Métodos del modelo - servicio de Web del servidor de informes
+# <a name="model-methods---report-server-web-service"></a>Métodos de modelo: servicio web del servidor de informes
   Puede utilizar estos métodos para administrar los modelos.  
   
 |Método|Acción|  
@@ -46,9 +44,8 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vea también  
  [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Métodos de servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [Referencia técnica de &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
+ [Referencia técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

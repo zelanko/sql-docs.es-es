@@ -1,5 +1,5 @@
 ---
-title: Proteger elementos de origen de datos compartidos | Documentos de Microsoft
+title: "Proteger elementos de orígenes de datos compartidos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2db280cc30739c09bf406e621cb4166391130b53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger elementos de orígenes de datos compartidos
   Puede establecer la seguridad en un origen de datos compartido para habilitar o deshabilitar el acceso a él.  
@@ -46,11 +45,10 @@ ms.lasthandoff: 08/09/2017
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al origen de datos compartido. Esta tarea debe utilizarse con las tareas "Ver orígenes de datos" o "Administrar orígenes de datos". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar los orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Carpetas protegidas](../../reporting-services/security/secure-folders.md)   
- [Proteger los informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Almacenar credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [Proteger carpetas](../../reporting-services/security/secure-folders.md)   
+ [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

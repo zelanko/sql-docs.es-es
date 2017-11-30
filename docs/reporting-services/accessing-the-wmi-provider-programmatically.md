@@ -1,5 +1,5 @@
 ---
-title: "Acceso al proveedor WMI mediante programación | Documentos de Microsoft"
+title: "Acceso al proveedor WMI mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 11/02/2016
 ms.prod: sql-server-2016
@@ -10,24 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 3164c9bb0a62d74b1a647bdf3c9e2f82110aaddf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a8608faf31e4132570de4e57e748d02057c3722d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Acceso al proveedor WMI mediante programación
 
 ## <a name="wmi-provider-overview"></a>Introducción al proveedor WMI  
- El espacio de nombres utilizado para obtener información sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en los ejemplos de código mostrados en este tema es **System.Management** , que se encuentra en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. El espacio de nombres **System.Management** proporciona un conjunto de clases de código administrado a través de las que las aplicaciones de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] pueden obtener acceso y tratar la información de administración. Para obtener más información sobre cómo utilizar las clases WMI de Reporting Services con el espacio de nombres **System.Management** , vea la sección sobre el acceso a la información de administración con System.Managment en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
+ El espacio de nombres usado para obtener información sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en los ejemplos de código mostrados en este tema es **System.Management**, que se encuentra en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. El espacio de nombres **System.Management** proporciona un conjunto de clases de código administrado a través de las que las aplicaciones de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] pueden obtener acceso y tratar la información de administración. Para más información sobre cómo usar las clases WMI de Reporting Services con el espacio de nombres **System.Management**, vea la sección sobre el acceso a la información de administración con System.Managment en el SDK de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
 ## <a name="finding-a-report-server-instance"></a>Buscar una instancia del servidor de informes  
  La mejor manera de buscar información sobre las instalaciones del servidor de informes es enumerar en la colección de instancias WMI. En el ejemplo siguiente se muestra cómo encontrar las propiedades en cada instancia del servidor de informes creando una colección y recorriéndola para mostrarlas.  
@@ -137,4 +136,3 @@ class Class1
  [Archivo de configuración RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

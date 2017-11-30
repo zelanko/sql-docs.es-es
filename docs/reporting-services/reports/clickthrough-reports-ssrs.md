@@ -1,5 +1,5 @@
 ---
-title: Informes Click-through (SSRS) | Documentos de Microsoft
+title: Informes click-through (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d38ad40a53843dbc1a1c636e37d3e4d9ada21b40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clickthrough-reports-ssrs"></a>Informes click-through (SSRS)
   Un informe click-through es aquel que proporciona información detallada sobre los datos incluidos en el informe principal. Un informe click-through se muestra cuando el usuario hace clic en los datos interactivos que aparecen en el informe principal. Estos informes son generados automáticamente por el servidor de informes. El usuario, como diseñador del modelo, determina lo que se ve en los informes click-through estableciendo las propiedades **DefaultDetailAttribute** y **DefaultAggregateAttribute** que se asignan a una entidad del modelo de informe.  
@@ -39,12 +38,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>Plantillas de una sola instancia  
  Una plantilla de una sola instancia muestra todos los atributos de la entidad de destino y los atributos de agregado predeterminados que se hayan especificado para las entidades relacionadas que tienen un relación de uno a varios desde la entidad de destino. Una plantilla de una sola instancia tiene un aspecto similar al de la siguiente imagen.  
   
- ![Una de varios a 1 informe de Click-through. ] (../../reporting-services/reports/media/manytooneclickthrough.gif "De varios a 1 informe de Click-through.")  
+ ![Informe click-through varios a uno.](../../reporting-services/reports/media/manytooneclickthrough.gif "Informe click-through varios a uno.")  
   
 #### <a name="multiple-instance-templates"></a>Plantillas de varias instancias  
  Una plantilla de varias instancias muestra solo los atributos de detalle predeterminados de la entidad de destino y todos los atributos de agregado predeterminados que se hayan especificado para las entidades relacionadas que tienen un relación de uno a varios desde la entidad de destino. Una plantilla de varias instancias tiene un aspecto similar al de la siguiente imagen.  
   
- ![Una de varios a 1 informe de Click-through. ] (../../reporting-services/reports/media/onetomanyclickthrough.gif "De varios a 1 informe de Click-through.")  
+ ![Informe click-through varios a uno.](../../reporting-services/reports/media/onetomanyclickthrough.gif "Informe click-through varios a uno.")  
   
 ## <a name="customizing-clickthrough-reports"></a>personalizar informes click-through  
  En lugar de usar las plantillas predeterminadas que genera el servidor de informes, puede crear un informe en el Generador de informes y utilizarlo como informe click-through personalizado. A continuación, puede vincular el informe al modelo como un informe detallado en el Administrador de informes.  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Vincular un informe a un modelo como informe click-through](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

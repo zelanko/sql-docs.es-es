@@ -1,5 +1,5 @@
 ---
-title: Establecer opciones predeterminadas para el generador de informes | Documentos de Microsoft
+title: Establecimiento de opciones predeterminadas para el Generador de informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10427"
+f1_keywords: "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94d44bd81cda6f1afb8c4e027137f7df4c5915d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-default-options-for-report-builder"></a>Establecimiento de opciones predeterminadas para el Generador de informes
   En Generador de informes, puede establecer un número de valores predeterminados útiles para que la creación de informes resulte más sencilla y más rápida.  Por ejemplo, si puede establecer o cambiar el servidor de informes predeterminado, Generador de informes guarda los informes en el mismo servidor de informes automáticamente, a menos que se especifique lo contrario.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/09/2017
  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

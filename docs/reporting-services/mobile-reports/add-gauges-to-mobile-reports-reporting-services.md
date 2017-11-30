@@ -1,26 +1,24 @@
 ---
-title: "Agregar medidores a informes móviles | Reporting Services | Documentos de Microsoft"
+title: "Agregar medidores a informes para dispositivos móviles | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
 Los medidores son los elementos visuales más básicos y más ampliamente usados en los informes para dispositivos móviles. Muestran un valor único de un conjunto de datos: solo el valor, o bien el valor comparado con un objetivo.
@@ -29,7 +27,7 @@ Los medidores son los elementos visuales más básicos y más ampliamente usados
   
 *Visualizaciones de medidores en la pestaña Diseño*  
   
-Todos los medidores en SQL Server Mobile Report Publisher tienen al menos una propiedad en común: un valor principal, que se establece en un campo numérico de una de las tablas de datos en el informe móvil.  
+Todos los medidores del Publicador de informes móviles de SQL Server tienen al menos una propiedad en común: un valor principal, establecido en un campo numérico de una de las tablas de datos del informe para dispositivos móviles.  
 
 Todos los medidores, excepto el medidor de número, pueden mostrar también una comparación (o *valor diferencial*), esto es, la relación entre el valor principal y un valor de comparación. El valor de comparación suele ser el objetivo, mientras que el indicador es un indicador visual del progreso hacia ese objetivo, o el valor diferencial entre el valor real y el objetivo.
 
@@ -95,4 +93,3 @@ Determina el formato de los números que aparecen en el medidor (por ejemplo, mo
 * [Navegadores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizaciones de informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Cuadrículas de datos en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

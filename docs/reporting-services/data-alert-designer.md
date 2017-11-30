@@ -1,5 +1,5 @@
 ---
-title: "Diseñador de alertas de datos | Documentos de Microsoft"
+title: "Diseñador de alertas de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 Las definiciones de alertas de datos se crean y editan en el Diseñador de alertas de datos. Una definición de alerta es una colección de metadatos, que incluye los datos del informe de su interés, las reglas que deben satisfacer los datos del informe para que se creen instancias de alertas de datos y se envíen mensajes de alertas de datos, los destinatarios del mensaje de alerta, etc.  
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
  Para crear una definición de alerta tiene que realizar varias tareas relacionadas:  
   
@@ -64,7 +64,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 ##  <a name="AlertDesigner"></a> Interfaz de usuario del Diseñador de alertas de datos  
  El Diseñador de alertas de datos se divide en varias áreas. El área donde se selecciona la fuente de distribución de datos de informe, el área donde se crean condiciones sencillas o complejas agregando reglas a las condiciones, etcétera. En la imagen siguiente se muestran las áreas del Diseñador de alertas de datos.  
   
- ![Las distintas áreas de la interfaz de usuario del Diseñador de alertas](../reporting-services/media/rs-alertdesigner.gif "áreas dentro de la interfaz de usuario del Diseñador de alertas")  
+ ![Áreas dentro de la interfaz de usuario del Diseñador de alertas](../reporting-services/media/rs-alertdesigner.gif "Áreas dentro de la interfaz de usuario del Diseñador de alertas")  
   
   
 ### <a name="alert-data"></a>Datos de la alerta  
@@ -74,7 +74,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
  Si el informe tiene parámetros y no ve los datos y columnas esperados en la fuente de distribución de datos, vuelva a ejecutar el informe con los valores de parámetro adecuados. Las columnas y los valores deben estar presentes en el informe que se incluirá en la fuente de distribución de datos.  
   
- Dependiendo del diseño del informe, puede que no sea intuitivo determinar el número de fuentes de distribución de datos que tiene, ni qué datos se incluyen en cada fuente de distribución de datos. La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]genera las fuentes de distribución de datos que se utilizan con las alertas. La extensión de representación de Atom proporciona los datos de informe como conjuntos de filas planas, un formato tabular en el que todas las columnas tienen el mismo número de filas. Estos conjuntos de filas son el contenido de las fuentes de distribución de datos. Dado que el diseño del informe suele ser complejo y contiene múltiples regiones de datos del mismo nivel o anidadas, es necesario que haya varias fuentes de distribución de datos para que estén disponibles todos los datos del informe. Para obtener más información sobre cómo se generan las fuentes de distribución de datos a partir de los informes, vea [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) y [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Dependiendo del diseño del informe, puede que no sea intuitivo determinar el número de fuentes de distribución de datos que tiene, ni qué datos se incluyen en cada fuente de distribución de datos. La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]genera las fuentes de distribución de datos que se utilizan con las alertas. La extensión de representación de Atom proporciona los datos de informe como conjuntos de filas planas, un formato tabular en el que todas las columnas tienen el mismo número de filas. Estos conjuntos de filas son el contenido de las fuentes de distribución de datos. Dado que el diseño del informe suele ser complejo y contiene múltiples regiones de datos del mismo nivel o anidadas, es necesario que haya varias fuentes de distribución de datos para que estén disponibles todos los datos del informe. Para más información sobre cómo se generan las fuentes de distribución de datos a partir de los informes, vea [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) y [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  Cuando se elige una fuente de distribución de datos, los datos de la fuente se muestran en una tabla con filas y columnas en el panel datos de alerta del Diseñador de alertas de datos. Los metadatos del origen de datos utilizado por el informe o el propio informe especifican los nombres de columna y las fuentes de distribución de datos que rellenan la lista de campos que se usa para definir las reglas de la condición de datos. La fuente de distribución de datos también proporciona metadatos como los tipos de datos de las columnas de la tabla que limitan los valores y los operadores de comparación que pueden utilizarse con los campos al crear las reglas.  
   
@@ -146,7 +146,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
 -   Las comparaciones de tipos de datos de cadena son: **es**, **no es**y **contiene**  
   
- Cuando se crea una regla, se especifica si se debe usar un valor o campo en la comparación eligiendo **Modo de entrada de valores** o **Modo de selección de campos**. Si elige **Modo de entrada de valores**, deberá proporcionar una lista de valores de comparación. Una comparación con varias cláusulas OR es muy similar a una comparación lógica IN en [!INCLUDE[tsql](../includes/tsql-md.md)], que es una lista de valores que se comprueba para buscar coincidencias. Para obtener más información, vea [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
+ Cuando se crea una regla, se especifica si se debe usar un valor o campo en la comparación eligiendo **Modo de entrada de valores** o **Modo de selección de campos**. Si elige **Modo de entrada de valores**, deberá proporcionar una lista de valores de comparación. Una comparación con varias cláusulas OR es muy similar a una comparación lógica IN en [!INCLUDE[tsql](../includes/tsql-md.md)], que es una lista de valores que se comprueba para buscar coincidencias. Para más información, vea [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
   
  Si elige **Modo de selección de campos**, la comparación es entre dos campos, fila por fila. Los dos campos deben tener tipos de datos compatibles (por ejemplo, dos campos numéricos) o la comparación no será válida. Una lista de campos se muestra automáticamente cuando se elige **Modo de selección de campos**.  
   
@@ -177,7 +177,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 ### <a name="email-settings"></a>Configuración de correo electrónico  
  Las direcciones de correo electrónico de los destinatarios que reciben mensajes de alertas de datos por correo electrónico se especifican en la opción **Destinatarios** . Si usa varias direcciones de correo electrónico, sepárelas mediante signos de punto y coma, tal como hace en los mensajes de correo electrónico de Microsoft Office Outlook. También puede especificar grupos de distribución como destinatarios, lo que permite administrar más fácil y eficazmente la lista de destinatarios. Si SharePoint puede determinar su dirección de correo electrónico mientras crea una definición de alerta, su dirección de correo electrónico se agrega automáticamente a la lista de destinatarios; en caso contrario, debe agregarse explícitamente como destinatario.  
   
- El asunto predeterminado del correo electrónico es **de alerta de datos para \<nombre de la alerta >**. Puede cambiar el asunto de acuerdo con sus necesidades.  
+ El asunto predeterminado del mensaje de correo electrónico es **Alerta de datos para \<nombre de alerta>**. Puede cambiar el asunto de acuerdo con sus necesidades.  
   
  Puede proporcionar también una descripción para incluirla en el mensaje de alerta de datos en la opción **Descripción** . Incluir una descripción, especialmente si tiene alertas de datos similares, le ayudará a diferenciar rápidamente los mensajes de alertas. Además del mensaje de alerta que se envía cuando los datos del informe satisfacen las reglas especificadas, se envía un mensaje de alerta a todos los destinatarios cuando se produce un error. Para más información, consulte [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
@@ -186,7 +186,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 ##  <a name="CreateAlert"></a> Crear una definición de alerta de datos  
  Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, puede que tenga que ejecutarlo con diferentes valores de parámetros para asegurarse de que los datos que le interesan aparecen en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
   
- ![Abra el Diseñador de alertas de biblioteca de SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "abrir Diseñador de alertas de biblioteca de SharePoint")  
+ ![Abrir el Diseñador de alertas desde la biblioteca de SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Abrir el Diseñador de alertas desde la biblioteca de SharePoint")  
   
  Para obtener más información, vea [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -205,7 +205,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
  Para editar una definición de alerta de datos, haga clic con el botón secundario en el Administrador de alertas de datos y haga clic en **Editar**. En la imagen siguiente se muestra el menú contextual de una alerta de datos en el Administrador de alertas de datos.  
   
- ![Abra el Diseñador de alertas de datos haciendo clic en Editar](../reporting-services/media/rs-alertmanageriwopendesigner.gif "abrir Diseñador de alertas de datos haciendo clic en Editar")  
+ ![Abrir el Diseñador de alertas de datos haciendo clic en Editar](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Abrir el Diseñador de alertas de datos haciendo clic en Editar")  
   
  Para obtener más información, vea [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
@@ -213,7 +213,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 ##  <a name="HowTo"></a> Tareas relacionadas  
  En esta sección se enumeran los procedimientos que muestran cómo crear y modificar alertas.  
   
--   [Editar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
@@ -222,4 +222,4 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

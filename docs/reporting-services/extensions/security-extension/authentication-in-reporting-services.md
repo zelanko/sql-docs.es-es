@@ -1,5 +1,5 @@
 ---
-title: "Autenticación en Reporting Services | Documentos de Microsoft"
+title: "Autenticación de Windows en Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a01267851f882bdafcfced0cee200ff3af01cdcf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
   La autenticación es el proceso de establecer el derecho de un usuario en una identidad. Hay muchas técnicas que puede utilizar para autenticar a un usuario. La manera más común es mediante contraseñas. Por ejemplo, al implementar la autenticación de formularios, desea una implementación que consulte las credenciales (normalmente con alguna interfaz que solicita un nombre de inicio de sesión y una contraseña) de los usuarios y, a continuación, valida los usuarios con un almacén de datos, como una tabla de base de datos o un archivo de configuración. Si no se pueden validar las credenciales, se produce un error en el proceso de autenticación y el usuario asumirá una identidad anónima.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="custom-authentication-in-reporting-services"></a>Autenticación personalizada en Reporting Services  
  En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], el sistema operativo Windows administra la autenticación de los usuarios a través de la seguridad integrada o de la recepción explícita y la validación de las credenciales del usuario. La autenticación personalizada se puede desarrollar en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para admitir esquemas de autenticación adicionales. Esto se posibilita a través de la interfaz de extensión de la seguridad <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>. Todas las extensiones heredan de la interfaz base <xref:Microsoft.ReportingServices.Interfaces.IExtension> para cualquier extensión que implemente y use el servidor de informes. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, así como <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>, son miembros del espacio de nombres <xref:Microsoft.ReportingServices.Interfaces>.  
   
- Para autenticar con un servidor de informes en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], se usa principalmente el método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Este miembro del servicio web de Reporting Services se puede utilizar con el objeto de pasar las credenciales del usuario a un servidor de informes para la validación. Implementa la extensión de seguridad subyacente **IAuthenticationExtension2.LogonUser** que contiene el código de autenticación personalizado. En el ejemplo de autenticación de formularios, **LogonUser**, que realiza una comprobación de autenticación con las credenciales proporcionadas y un almacén de usuario personalizado en una base de datos. Un ejemplo de una implementación de **LogonUser** tiene este aspecto:  
+ Para autenticar con un servidor de informes en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], se usa principalmente el método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Este miembro del servicio web de Reporting Services se puede utilizar con el objeto de pasar las credenciales del usuario a un servidor de informes para la validación. La extensión de seguridad subyacente implementa **IAuthenticationExtension2.LogonUser**, que contiene el código de autenticación personalizado. En el ejemplo de autenticación de formularios, **LogonUser**, que realiza una comprobación de la autenticación contra las credenciales proporcionadas y un almacén de usuario personalizado en una base de datos. Un ejemplo de implementación de **LogonUser** sería similar a:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -103,19 +102,19 @@ internal static bool VerifyPassword(string suppliedUserName,
 ```  
   
 ## <a name="authentication-flow"></a>Flujo de autenticación  
- El servicio Web de Reporting Services proporciona extensiones de autenticación personalizadas para habilitar la autenticación de formularios mediante el portal web y el servidor de informes.  
+ El servicio web de Reporting Services proporciona extensiones de autenticación personalizadas para habilitar la autenticación de formularios del portal web y el servidor de informes.  
   
  El método <xref:ReportService2010.ReportingService2010.LogonUser%2A> del servicio web de Reporting Services se utiliza para enviar las credenciales al servidor de informes para la autenticación. El servicio web utiliza los encabezados HTTP para pasar un vale de autenticación (conocido como "cookie") del servidor al cliente para las solicitudes de inicio de sesión validadas.  
   
  La ilustración siguiente describe el método para autenticar a los usuarios en el servicio web cuando la aplicación se implementa con un servidor de informes configurado para utilizar una extensión de autenticación personalizada.  
   
- ![Flujo de autenticación de seguridad de servicios de Reporting](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "flujo de autenticación de seguridad de Reporting Services")  
+ ![Flujo de autenticación de seguridad de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Flujo de autenticación de seguridad de Reporting Services")  
   
  Como se muestra en la figura 2, el proceso de autenticación es el siguiente:  
   
 1.  Una aplicación cliente llama al método <xref:ReportService2010.ReportingService2010.LogonUser%2A> del servicio web para autenticar a un usuario.  
   
-2.  El servicio Web realiza una llamada a la <xref:ReportService2010.ReportingService2010.LogonUser%2A> método de la extensión de seguridad, en concreto, la clase que implementa **IAuthenticationExtension2**.  
+2.  El servicio web realiza una llamada al método <xref:ReportService2010.ReportingService2010.LogonUser%2A> de su extensión de seguridad, específicamente, la clase que implementa **IAuthenticationExtension2**.  
   
 3.  La implementación de <xref:ReportService2010.ReportingService2010.LogonUser%2A> valida el nombre de usuario y la contraseña en el almacén del usuario o la entidad de seguridad.  
   

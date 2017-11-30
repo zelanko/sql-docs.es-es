@@ -1,25 +1,24 @@
 ---
-title: "Agrupar datos por columnas o filas de un informe móvil | Reporting Services | Documentos de Microsoft"
+title: "Agrupar datos por columnas o por filas en un informe para dispositivos móviles | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar datos por columnas o por filas en un informe para dispositivos móviles | Reporting Services
 Los datos se pueden organizar por columnas o por filas en muchos tipos de gráficos del [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Siga el procedimiento detallado de este tema.
@@ -32,7 +31,7 @@ En los siguientes pasos se usa una tabla de comparación de valores totales con 
 
 1. Arrastre un **gráfico de totales de comparación** desde la pestaña **Diseño** a la superficie de diseño y agrándelo.
 
-2. Seleccione la pestaña **Datos** . Vemos que la tabla SimulatedTable contiene una serie de columnas, de **Metric1** a **Metric5** y de **Comparison1** a **Comparison5**. 
+2. Seleccione la pestaña **Datos** . Verá que la tabla SimulatedTable contiene una serie de columnas, de **Metric1** a **Metric5** y de **Comparison1** a **Comparison5**. 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
@@ -52,7 +51,7 @@ En los siguientes pasos se usa una tabla de comparación de valores totales con 
 
 6. En la pestaña **Diseño** , en el panel **Propiedades de los elementos visuales** , cambie **Estructura de los datos** de **Por columnas** a **Por filas**.  
 
-7. Seleccione la pestaña **Datos** . Ahora, además de las columnas de **métricas** y de **comparaciones** , la tabla SimulatedTable tiene una columna **Categoría** , con las categorías de la A a la E. 
+7. Seleccione la pestaña **Datos** . Ahora la tabla SimulatedTable tiene una columna **Categoría** junto con las columnas **Métrica** y **Comparación** con las categorías de la A a la E. 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 

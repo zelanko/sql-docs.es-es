@@ -1,5 +1,5 @@
 ---
-title: Contadores de rendimiento de MSRS 2011 Web Service, objetos de rendimiento | Documentos de Microsoft
+title: Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d75a88f416a41812b2e4e6cd99b87c2a5279e985
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contadores de rendimiento de MSRS 2011 Web Service, objetos de rendimiento
+# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **MSRS 2011 Web Service** y **MSRS 2011 Windows Service** . Estos objetos son parte de una implementación de modo nativo de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
   
 > [!NOTE]  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 |**Total de actualizaciones de instantánea**|Número total de actualizaciones de instantánea de ejecución de informes.|  
   
 ##  <a name="bkmk_powershell"></a> Usar cmdlets de PowerShell para devolver listas  
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")el siguiente script de Windows PowerShell devuelve los conjuntos de contadores en los que CounterSetName comienza con "msr":  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")El siguiente script de Windows PowerShell devuelve los conjuntos de contadores en los que CounterSetName comienza con "msr":  
   
 ```  
 get-counter -listset msr*  
@@ -132,8 +131,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Contadores de rendimiento de MSRS 2011 Web Service SharePoint Mode y objetos de rendimiento del modo de SharePoint de MSRS 2011 Windows Service &#40; Modo de SharePoint &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

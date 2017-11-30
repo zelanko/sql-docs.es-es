@@ -1,5 +1,5 @@
 ---
-title: "Recopilar sectores pequeños en un gráfico circular (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,26 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a791e5bae17ab1259fb664d065a9a13fcde21aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
-Los gráficos circulares con demasiados segmentos pueden parecer desordenados. Proporciona información sobre cómo recopilar varios sectores pequeños en un gráfico circular en un único sector en [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] informes paginados.
+Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Aprenda a combinar muchos segmentos pequeños de un gráfico circular en un único segmento en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
  
  Para recopilar sectores pequeños en un solo sector, en primer lugar debe decidir si el umbral de recopilación de sectores pequeños será un porcentaje del gráfico circular o un valor fijo. 
  
- El [Tutorial: agregar un gráfico circular al informe (generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) le guía a través de la recopilación de sectores pequeños en un solo sector, si le gustaría pruebe esto con datos de ejemplo.
+ El [Tutorial: Agregar un gráfico circular a un informe (Generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) le guía a lo largo del proceso de combinación de segmentos pequeños en uno solo, si primero quiere probar esto con datos de ejemplo.
  
- ![Report-Builder-pie-Chart-Other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  También puede recopilar sectores pequeños en un segundo gráfico circular al que se llamará desde un sector recopilado del primer gráfico circular. El segundo gráfico circular se dibuja a la derecha del gráfico circular original.  
   
@@ -58,7 +57,7 @@ Los gráficos circulares con demasiados segmentos pueden parecer desordenados. P
          Establezca la propiedad CollectedThreshold en **10**.  
   
         > [!NOTE]  
-        >  Si establece CollectedStyle en **SingleSlice**, CollectedThreshold en un valor mayor que **100**y CollectedThresholdUsePercent a **True**, el gráfico iniciará una excepción porque no se puede calcular el porcentaje. Para resolver este problema, establezca CollectedThreshold en un valor inferior a **100**.  
+        >  Si establece CollectedStyle en **SingleSlice**, CollectedThreshold en un valor mayor que **100** y CollectedThresholdUsePercent en **True**, el gráfico inicia una excepción, porque no puede calcular un porcentaje. Para resolver este problema, establezca CollectedThreshold en un valor menor que **100**.  
   
     -   **Por valor de datos.** Por ejemplo, para recopilar en un solo sector cualquier sector del gráfico circular que esté por debajo de 5000:  
   
@@ -87,10 +86,9 @@ Los gráficos circulares con demasiados segmentos pueden parecer desordenados. P
 >  No puede dar formato al gráfico circular secundario. Por esta razón, a la hora de recopilar sectores del gráfico circular se recomienda el uso del primer enfoque.  
   
 ## <a name="see-also"></a>Vea también  
-* [Tutorial: Agregar un gráfico circular al informe (generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Tutorial: agregar un gráfico circular a un informe (Generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
-

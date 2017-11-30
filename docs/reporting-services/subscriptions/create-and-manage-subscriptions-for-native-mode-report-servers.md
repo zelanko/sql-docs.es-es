@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar suscripciones para servidores de informes en modo nativo | Documentos de Microsoft
+title: Crear y administrar suscripciones para servidores de informes en modo nativo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Agregar una extensión de archivo cuando se crea el archivo**: esta opción agrega una extensión de archivo de tres caracteres al nombre de archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
   
-8.  **Ruta de acceso**: escriba una ruta de acceso de convención de nomenclatura universal (UNC, Universal Naming Convention) a una carpeta existente en la que desea entregar los informes (por ejemplo, \\ \\< servername\>\\< misinformes\>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
+8.  **Ruta de acceso**: escriba una ruta UNC (convención de nomenclatura universal) para una carpeta existente en la que quiera entregar los informes (por ejemplo, \\\\<nombreDeServidor\>\\<misInformes\>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
   
-     ![suscripción a recursos compartidos de archivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "suscripción a recursos compartidos de archivos")  
+     ![Suscripción a un recurso compartido de archivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Suscripción a un recurso compartido de archivos")  
   
 9. **Formato de representación**: seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
-10. **Credenciales**: seleccione esta opción para usar la cuenta de recurso compartido de archivos o las credenciales de usuario específicas de Windows. La opción **Use file share account** (Usar la cuenta de recurso compartido de archivos) está deshabilitada si el administrador de informes no ha configurado una cuenta de recurso compartido de archivos. Para obtener más información, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). En el **nombre de usuario** y **contraseña** cuadros de texto, especifique las credenciales necesarias para tener acceso a recurso compartido de archivos, con el formato  *\<dominio >*\\*\<nombre de usuario >* del nombre de usuario.  
+10. **Credenciales**: seleccione esta opción para usar la cuenta de recurso compartido de archivos o las credenciales de usuario específicas de Windows. La opción **Use file share account** (Usar la cuenta de recurso compartido de archivos) está deshabilitada si el administrador de informes no ha configurado una cuenta de recurso compartido de archivos. Para obtener más información, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). En los cuadros de texto **Nombre de usuario** y **Contraseña**, especifique las credenciales necesarias para obtener acceso al recurso compartido de archivos. Use el formato *\<dominio>*\\*\<nombreDeUsuario>* para el nombre de usuario.  
   
 11. **Opciones de sobrescritura**:  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  
   
-7.  **Asunto**: valor predeterminado es "@ReportName se ha ejecutado a @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que la @ReportName y @ExecutionTime son las únicas variables globales admitidas en el **asunto** campo.  
+7.  **Asunto**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
   
 8.  Seleccione las opciones de entrega del siguiente modo:  
   
@@ -187,11 +186,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Use PowerShell para cambiar y enumerar propietarios de suscripciones de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Usar PowerShell para cambiar y enumerar los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Usar Mis suscripciones &#40; Servidor de informes de modo nativo &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Usar Mis suscripciones &#40;servidor de informes en modo nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

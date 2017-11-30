@@ -1,5 +1,5 @@
 ---
-title: "Modificar un archivo de configuración de Reporting Services (RSreportserver.config) | Documentos de Microsoft"
+title: "Modificar un archivo de configuración de Reporting Services (RSreportserver.config) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2cea3ba2d8e2a303a61a6af8bc4f7da4802cc88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de la aplicación en un conjunto de archivos de configuración. La instalación crea los archivos de configuración para cada instancia del servidor de informes que instala. Dentro de cada archivo, los valores se establecen durante la instalación o al usar herramientas y aplicaciones para configurar un servidor para la operación. En algunos casos, debe modificar directamente un archivo para agregar o configurar la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario.  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
     -   **RSReportServerServices.exe.config** se encuentra en la siguiente carpeta:  
     
         > [!NOTE] 
-        > Esto no está disponible con la de enero de 2017 los informes de vista previa técnica de Power BI de SQL Server Reporting Services.
+        > En la versión de enero de 2017 de los informes de Power BI (Technical Preview) en SQL Server Reporting Services, esto no está disponible.
   
         ```  
         C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
     -   [Configuración del portal web para pasar cookies de autenticación personalizada](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [Personalización de los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Guarde el archivo.  
   
@@ -111,10 +110,9 @@ ms.lasthandoff: 08/09/2017
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Archivo de configuración ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
- [Implementar una extensión de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
- [Implementar una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
+ [Implementación de una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Implementación de una extensión de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
+ [Implementación de una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
-

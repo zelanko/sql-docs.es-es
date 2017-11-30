@@ -1,5 +1,5 @@
 ---
-title: Cargar archivos a una carpeta | Documentos de Microsoft
+title: Cargar archivos a una carpeta | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6381fa38e39b7b8730a90eebcdd557f2e30da8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upload-files-to-a-folder"></a>Cargar archivos a una carpeta
   Puede cargar archivos desde el sistema de archivos y almacenarlos en una base de datos del servidor de informes como elementos administrados. Lo que sucede al cargar el archivo depende del tipo de archivo.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
  ![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "Icono de informe")  
 Icono de informe  
   
- ![Icono de modelo](../../reporting-services/report-server/media/model-icon.gif "icono de modelo")  
+ ![Icono de modelo](../../reporting-services/report-server/media/model-icon.gif "Icono de modelo")  
 Icono de modelo de informe  
   
  ![Icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "Icono de recurso genérico")  
@@ -65,10 +64,9 @@ Icono de recurso genérico
 |Ver el contenido de una carpeta|Ver recursos, Ver informes|  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   
- [Cargar un archivo o informe &#40; El Administrador de informes &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Vista de diseño (generador de informes) informes | Documentos de Microsoft"
+title: "Vista de diseño de informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes paginados que necesita. La superficie de diseño se encuentra en el centro de la ventana, con la cinta de opciones y los paneles a su alrededor. La superficie de diseño es donde agrega y organiza sus elementos de informe. En este artículo se describen los paneles que se usan para agregar, seleccionar y organizar los recursos de informe y para cambiar las propiedades de los elementos de informe.  
   
- ![Vista de diseño del generador de informes](../../reporting-services/report-builder/media/ssrb-designview.png "la vista de diseño de generador de informes")  
+ ![Vista de diseño del generador de informes](../../reporting-services/report-builder/media/ssrb-designview.png "Vista de diseño del Generador de informes")  
   
 1.  Cinta de opciones  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Las propiedades de los elementos de informe, haciendo clic con el botón derecho en ellos y, después, haciendo clic en **Propiedades**.  
   
- Para obtener información sobre cómo usar el teclado para manipular los elementos en la superficie de diseño, vea [métodos abreviados de teclado &#40; El generador de informes &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ Para información sobre cómo usar el teclado para manipular los elementos en la superficie de diseño, vea [Métodos abreviados de teclado &#40;Generador de informes&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md).  
   
 ### <a name="design-surface-size-and-print-area"></a>Tamaño de la superficie de diseño y del área de impresión  
  El tamaño de la superficie de diseño puede ser diferente del área de impresión del tamaño de página que especifique para imprimir el informe. El cambio del tamaño de la superficie de diseño no cambiará el área de impresión de su informe. Con independencia del tamaño que establezca para el área de impresión de su informe, el tamaño del área de diseño completa no cambia. Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
@@ -152,7 +152,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="GroupPane"></a> Panel Agrupación (Generador de informes)  
  Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El Panel de agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el Panel de agrupación muestra todos los grupos dentro de una región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos primarios.  
   
- ![Grupos de filas de generador de informes](../../reporting-services/report-builder/media/ssrb-rowgroups.png "grupos de filas de generador de informes")  
+ ![Grupos de filas del Generador de informes](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Grupos de filas del Generador de informes")  
   
  Para crear grupos, arrastre los campos desde el panel Datos de informe y suéltelos en la superficie de diseño o en el Panel de agrupación. En el Panel de agrupación, puede agregar grupos primarios, adyacentes o secundarios, cambiar propiedades de grupo y eliminar grupos.  
   

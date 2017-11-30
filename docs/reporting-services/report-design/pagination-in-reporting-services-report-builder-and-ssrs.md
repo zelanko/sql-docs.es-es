@@ -1,5 +1,5 @@
 ---
-title: "Paginación en Reporting Services (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Paginación en Reporting Services (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginación en Reporting Services (Generador de informes y SSRS)
   La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  El área de la página física que queda después de haber asignado el espacio correspondiente a los márgenes, el espaciado entre columnas, y el encabezado y pie de página, se denomina *área de página utilizable*. Los márgenes se aplican solo cuando se representan y se imprimen informes en formatos de representadores de saltos de página duros. La imagen siguiente muestra el margen y el área de página utilizable de una página física.  
   
- ![Página física con márgenes y área utilizable. ] (../../reporting-services/report-design/media/rspagemargins.gif "Página física con márgenes y área utilizable.")  
+ ![Página física con márgenes y área utilizable](../../reporting-services/report-design/media/rspagemargins.gif "Página física con márgenes y área utilizable")  
   
 ### <a name="newsletter-style-columns"></a>Columnas de estilo boletín  
  El informe se puede dividir en columnas, como las columnas de un periódico, que se tratan como páginas lógicas representadas en la misma página física. Las columnas se organizan de izquierda a derecha y de arriba abajo, y se separan mediante espacios en blanco. Si el informe se divide en más de una columna, cada página física se divide verticalmente en columnas, cada una de las cuales se considera una página lógica. Por ejemplo, imagine que tiene dos columnas en una página física. El contenido del informe rellena la primera columna y, a continuación, la segunda. Si las dos primeras columnas no son suficientes para la totalidad del informe, se rellena la primera columna de la página siguiente y, a continuación, la segunda. Las columnas continúan rellenándose, de izquierda a derecha y de arriba abajo, hasta que se han representado todos los elementos de informe. Si especifica tamaños de columna que hacen que el ancho horizontal o vertical sea cero, el espaciado entre columnas se establece en cero de forma predeterminada.  
   
  Las columnas se especifican en el panel **Propiedades del informe** , el cuadro de diálogo **Configurar página** o si cambia las propiedades TopMargin, BottomMargin, LeftMargin y RightMargin en el panel **Propiedades** . Si desea usar un tamaño de margen que no está definido, puede especificarlo usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Las columnas solo se aplican cuando se representan y se imprimen informes en formatos PDF o Imagen. La imagen siguiente muestra el área de página utilizable de una página que contiene columnas.  
   
- ![Página física con columnas descritas. ] (../../reporting-services/report-design/media/rspagecolumns.gif "Página física con columnas descritas.")  
+ ![Página física con columnas descritas](../../reporting-services/report-design/media/rspagecolumns.gif "Página física con columnas descritas")  
   
 ## <a name="page-breaks-and-page-names"></a>Saltos de página y nombres de página  
  Un informe podría ser más legible y sus datos más fáciles de auditar y exportar si tiene nombres de página. Reporting Services proporciona propiedades para las regiones de datos Tablix (tabla, matriz y lista) e informes, grupos y rectángulos del informe para controlar la paginación, restablecer los números de página y proporcionar nombres nuevos para las páginas del informe en los saltos de página. Estas características pueden mejorar los informes con independencia del formato en el que se representan los informes, pero son especialmente útiles al exportar los informes a los libros de Excel.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
  Puede usar constantes y expresiones simples o complejas para establecer el valor de las propiedades Disabled y ResetPageNumber. En cambio, no puede usar expresiones con la propiedad BreakLocation. Para más información sobre cómo escribir y usar expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
- En el informe puede escribir expresiones que hagan referencia a los nombres de página o números de página actuales utilizando la colección **Globals** . Para más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ En el informe puede escribir expresiones que hagan referencia a los nombres de página o números de página actuales utilizando la colección **Globals** . Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Denominación de las pestañas de las hojas de cálculo de Excel  
  Estas propiedades resultan útiles al exportar informes a libros de Excel. Use la propiedad InitialPage para especificar un nombre predeterminado para la pestaña de hoja de cálculo cuando exporte el informe, y use saltos de página y la propiedad PageName para proporcionar distintos nombres para cada hoja de cálculo. Cada nueva página del informe definida por un salto de página, se exporta a una hoja de cálculo distinta que recibe el nombre del valor de la propiedad PageName. Si PageName está en blanco, pero el informe tiene un nombre de página inicial, todas las hojas de cálculo del libro de Excel usan el nombre de página inicial.  
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  Para más información sobre cómo funcionan estas propiedades cuando se exportan informes a Excel, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Diseño de página y representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Solucionar problemas de conexión de base de datos con Reporting Services y servidor | Documentos de Microsoft"
+title: "Solución de problemas de conexión de base de datos y servidor con Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexión de base de datos con Reporting Services y servidor
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solución de problemas de conexión de base de datos y servidor con Reporting Services
 Utilice este tema para solucionar los problemas que surjan durante la conexión a un servidor de informes. Este tema también proporciona información sobre los mensajes de "Error inesperado". Para obtener más información sobre la configuración del origen de datos y cómo configurar la información de conexión del servidor de informes, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) y [Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>No se puede crear una conexión al origen de datos 'nombreDelOrigenDeDatos'. (rsErrorOpeningConnection)  
@@ -63,7 +62,7 @@ Para solucionar este error, puede modificar la cadena de conexión para que util
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Error de WMI al conectar con un servidor de informes en Management Studio  
 De manera predeterminada, Management Studio utiliza el proveedor del Instrumental de administración de Windows (WMI) de Reporting Services para establecer una conexión con el servidor de informes. Si el proveedor de WMI no se instala correctamente, al intentar conectarse al servidor de informes obtendrá el error siguiente:  
   
-No se puede conectar a \<el nombre del servidor >. El proveedor de WMI de Reporting Services no está instalado o no está configurado correctamente (Microsoft.SqlServer.Management.UI.RSClient).  
+No se puede conectar a \<nombre del servidor>. El proveedor de WMI de Reporting Services no está instalado o no está configurado correctamente (Microsoft.SqlServer.Management.UI.RSClient).  
   
 Para resolver este error, debe reinstalar el software. En todos los demás casos, como solución temporal, puede conectarse al servidor de informes a través del extremo SOAP:  
   
@@ -127,5 +126,4 @@ Al crear las bases de datos del servidor de informes, **ReportServer** y **Repor
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de informes: Asignar los informes (generador de informes y SSRS) | Documentos de Microsoft'
+title: 'Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2ed84682cda474d2cba6e7f0854e8cc1cde8d827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
  Para controlar el título y el contenido de cada leyenda, utilice las propiedades de Leyenda para la regla. Puede especificar cuántas divisiones crear, cambiar los cálculos que asignan valores a cada división, establecer los valores máximo y mínimo del intervalo, y cambiar el formato del texto de la leyenda.  
   
- Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ## <a name="the-rules-that-i-set-do-not-give-the-results-that-i-expect"></a>Las reglas que establecí no proporcionan los resultados que espero.  
  Las reglas se aplican a los datos analíticos que están asociados a los elementos de mapa en una capa. Utilice la lista siguiente para ayudar a identificar los problemas de todas las reglas de colores, reglas de tamaño, reglas de ancho y reglas de tipo de marcador:  
@@ -173,7 +172,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Problemas con los campos coincidentes. Los campos coincidentes habilitan el enlace de datos entre los elementos de mapa y los datos analíticos. Los campos de datos espaciales y de datos analíticos que se corresponden con los campos coincidentes deben tener el mismo tipo de datos y el mismo formato. Si el campo coincidente no coincide exactamente con los datos espaciales y los datos analíticos, la regla no tiene ningún efecto. Por ejemplo, si el campo coincidente para los datos espaciales tiene espacios en blanco adicionales o un signo de puntuación adicional en comparación con el campo coincidente para los datos analíticos, no se produce ninguna coincidencia.  
   
--   Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+-   Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="what-is-the-value-nan-on-the-color-scale"></a>¿Cuál es el valor NaN en la escala de colores?  
  **NaN** significa Not a number (no es un número). Se espera que los valores de las escalas de colores sean numéricos. Compruebe en la configuración de la distribución y el valor de texto de la leyenda las reglas asociadas a la escala de colores. Si creó los intervalos de distribución personalizados, compruebe que especificó el límite inferior en el primer intervalo y el límite superior en el último.  
@@ -181,7 +180,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Mi escala de colores no aparece cuando ejecuto el informe.  
  La escala de colores muestra información al usuario cuando una capa de mapa especifica reglas de colores para los polígonos, líneas o puntos de toda la capa o de los elementos de mapa incrustado. Si ningún elemento de mapa especifica una regla de colores o si las reglas de colores se especifican con una leyenda en lugar del mapa de colores, el mapa de colores no aparece en el informe representado.  
   
- Para mostrar la escala de colores, especifique las reglas de colores para una capa o un elemento de mapa incrustado. Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para mostrar la escala de colores, especifique las reglas de colores para una capa o un elemento de mapa incrustado. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Tile"></a> Problemas con el mosaico  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones del fondo de mosaico.  
@@ -213,8 +212,7 @@ ms.lasthandoff: 08/09/2017
  Para especificar los datos relacionados con los datos espaciales que no forman parte de un conjunto de datos de informe, debe utilizar el símbolo # seguido de una etiqueta que especifique el nombre de los datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Mapas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas del generador de informes](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Solucionar problemas del Generador de informes](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   
-

@@ -1,28 +1,25 @@
 ---
-title: "Configuración de la suscripción y un archivo compartan cuenta (Administrador de configuración) | Documentos de Microsoft"
+title: "Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.subscriptionsettings.F1
+f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f0f86350f35ccf9843328fc8f8795a0ed2215f7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración)
   En la página **Configuración de suscripción** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos. La cuenta de recurso compartido de archivos permite usar un único conjunto de credenciales en varias suscripciones que entregan informes a un recurso compartido de archivos. Cuando sea el momento de cambiar las credenciales, solamente deberá configurar el cambio en la cuenta de recurso compartido de archivos, con lo que no será necesario actualizar cada una de las suscripciones.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  La siguiente imagen es lo que los usuarios ven en las suscripciones que están configuradas para la entrega del recurso compartido de archivos. La opción **Use file share account** (Usar la cuenta de recurso compartido de archivos) está deshabilitada si no se ha configurado una cuenta de recurso compartido de archivos.  
   
- ![cuenta de recurso compartido de archivos de Configuration manager](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "cuenta de recurso compartido de archivos de configuration manager")  
+ ![cuenta de recurso compartido de archivos de Configuration manager](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "cuenta de recurso compartido de archivos de Configuration manager")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Evitar la escalación de privilegios o los privilegios elevados  
   
@@ -107,4 +104,3 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
  [Creación y administración de suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
-

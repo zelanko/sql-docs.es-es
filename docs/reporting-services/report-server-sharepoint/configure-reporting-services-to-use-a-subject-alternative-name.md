@@ -1,5 +1,5 @@
 ---
-title: Configurar Reporting Services para usar un nombre alternativo del sujeto | Documentos de Microsoft
+title: Configurar Reporting Services para usar un nombre alternativo del asunto | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar Reporting Services para usar un nombre alternativo del sujeto
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar Reporting Services para usar un nombre alternativo del asunto
 
-En este tema se explica cómo configurar Reporting Services (SSRS) para usar un nombre alternativo del sujeto (SAN) modificando el archivo rsreportserver.config y mediante la herramienta Netsh.exe.
+En este tema se explica cómo configurar Reporting Services (SSRS) para usar un nombre alternativo del asunto (SAN) modificando el archivo rsreportserver.config y usando la herramienta Netsh.exe.
 
 Las instrucciones son válidas para la dirección URL del servicio de generación de informes y para la dirección URL del servicio web.
 
 Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, firmado y tener la clave privada. No puede utilizar un certificado autofirmado  
   
- Las direcciones URL en Reporting Services pueden configurarse para utilizar un certificado SSL. Normalmente, un certificado solo tiene un nombre de asunto, lo que permite solo una dirección URL para una sesión SSL (Secure Sockets Layer). El SAN es un campo adicional en el certificado que permite que un servicio SSL que se va a realizar escuchas de varias direcciones URL como compartir el puerto SSL con otras aplicaciones. El SAN es algo parecido `www.s2.com`.  
+ Las direcciones URL en Reporting Services se pueden configurar para usar un certificado SSL. Normalmente, un certificado solo tiene un nombre de asunto, lo que permite solo una dirección URL para una sesión SSL (Secure Sockets Layer). El SAN es un campo adicional del certificado que permite a un servicio SSL escuchar varias direcciones URL y compartir el puerto SSL con otras aplicaciones. El SAN tiene un aspecto similar a `www.s2.com`.  
   
- Para obtener más información sobre la configuración de SSL para Reporting Services, consulte [configurar conexiones SSL en un servidor de informes de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para más información sobre la configuración de SSL para Reporting Services, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configure SSRS para utilizar un nombre alternativo del asunto para la dirección URL del servicio web
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar SSRS para usar un nombre alternativo del asunto para la dirección URL del servicio web
   
 1.  Inicie el Administrador de configuración de Reporting Services.  
   
@@ -47,7 +46,7 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
 3.  Abra el archivo rsreportserver.config.  
   
-     Para el modo nativo de SSRS, el archivo se encuentra de forma predeterminada en la siguiente carpeta:  
+     Para el modo nativo de SSRS, el archivo se encuentra de manera predeterminada en la carpeta siguiente:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +54,7 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
 4.  Copie la sección de la URL para la aplicación de servicios web del servidor de informes.  
   
-     Por ejemplo, la siguiente sección URL original es:  
+     Por ejemplo, la siguiente sección de dirección URL es:  
   
     ```  
         <URL>  
@@ -66,7 +65,7 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
     ```  
   
-     La siguiente sección URL modificada es:
+     La sección de dirección URL modificada siguiente es:
   
     ```  
     <URL>  
@@ -96,7 +95,7 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
     Netsh>http  
     ```  
   
-8.  Muestre las urlacls existentes escribiendo lo siguiente:
+8.  Muestre las urlacl existentes escribiendo lo siguiente:
   
     ```  
     Netsh http>show urlacl  
@@ -126,10 +125,9 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
 ## <a name="see-also"></a>Vea también
 
- [Archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modificar un archivo de configuración de Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configurar direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Configurar las direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

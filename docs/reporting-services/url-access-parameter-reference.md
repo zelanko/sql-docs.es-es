@@ -1,7 +1,6 @@
 ---
-title: "Dirección URL Access Parameter Reference | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Referencia de parámetros de acceso URL | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede usar los siguientes parámetros como parte de una dirección URL para configurar la apariencia de los informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -233,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
      El valor predeterminado es **HTML5**. Para obtener más información, consulte [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
   
-     Para obtener una lista completa, consulte la  **\<representar >** sección de extensión del archivo rsreportserver.config del servidor de informes.  Para obtener más información sobre dónde encontrar este archivo, consulte [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Para obtener una lista completa, vea la sección de la extensión **\<Render>** del archivo rsreportserver.config del servidor de informes.  Para obtener más información sobre dónde encontrar este archivo, consulte [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Por ejemplo, para obtener una copia en PDF de un informe directamente desde un servidor de informes en modo **Native** :  
   
@@ -381,7 +379,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Exportar un informe mediante el acceso URL](../reporting-services/export-a-report-using-url-access.md)  
+ [Exportación de un informe con el acceso URL](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

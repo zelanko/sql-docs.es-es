@@ -1,27 +1,25 @@
 ---
-title: 'Tutorial: Agregar un KPI a un informe (generador de informes) | Documentos de Microsoft'
+title: 'Tutorial: Agregar un KPI a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -59,7 +57,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para obtener más información, vea [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -163,7 +161,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 
 3. Presione la tecla CTRL y, después, seleccione las cuatro celdas que contienen [Sum(Sales)].
 
-4. En el **inicio** ficha > **número** > **moneda**. Las celdas cambian para mostrar la moneda con formato.
+4. En la pestaña **Inicio** > **Número** > **Moneda**. Las celdas cambian para mostrar la moneda con formato.
 
    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [$12,345.00]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.
     
@@ -173,7 +171,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 
 6. Haga clic en la celda que contiene [SalesDate].
 
-6. En el **número** grupo > **fecha**.
+6. En el grupo **Número** > **Fecha**.
 
    La celda muestra la fecha de ejemplo [1/31/2000]. 
 
@@ -213,13 +211,13 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
   
 1.  Cambie de nuevo a la vista Diseño.  
   
-2.  En la tabla, haga clic en el identificador de columna para la columna Ventas > **Insertar columna** > **derecha**. Se agregará una nueva columna a la tabla.  
+2.  En la tabla, haga clic con el botón derecho en el controlador de columna para la columna Ventas > **Insertar columna** > **Derecha**. Se agregará una nueva columna a la tabla.  
 
     ![generador-de-informes-kpi-insertar-columna](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Escriba **KPI lineal** en el encabezado de columna.  
   
-4.  En el **insertar** ficha > **visualizaciones de datos** > **medidor**y, a continuación, haga clic en la superficie de diseño fuera de la tabla.   
+4.  En la pestaña **Insertar** > **Visualizaciones de datos** > **Medidor** y, después, haga clic en la superficie de diseño fuera de la tabla.   
   
 5.  En el cuadro de diálogo **Seleccionar tipo de medidor** , seleccione el primer tipo de medidor lineal, **Horizontal**.  
   
@@ -235,13 +233,13 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
    
 9. En el panel **Datos del medidor** , haga clic en la flecha junto a **LinearPointer1** > **Propiedades de puntero**.  
   
-10. En el **propiedades del puntero lineal** cuadro de diálogo > **opciones de puntero** ficha > **tipo de puntero**, asegúrese de que **barra** está seleccionada. 
+10. En el cuadro de diálogo **Propiedades del puntero lineal** > **Opciones de puntero** > **Tipo de puntero**, asegúrese de que **Barra** está seleccionado. 
  
 11. Haga clic en **Aceptar**.  
   
 12. Haga clic con el botón derecho en la escala del medidor y haga clic en **Propiedades de escala**.  
   
-13. En el **propiedades de escala lineal** cuadro de diálogo > **General** pestaña, establezca **máximo** en 25000.  
+13. En el cuadro de diálogo **Propiedades de escala lineal** > pestaña **General**, establezca **Máximo** en 25 000.  
 
     > [!NOTE]  
     > En lugar de una constante como 25 000, puede usar una expresión para calcular dinámicamente el valor de la opción **Máximo** . La expresión usaría el agregado de la característica de agregados y es similar a la expresión `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -262,19 +260,19 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
 ![generador-de-informes-kpi-lineal](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5. Mostrar un KPI usando un indicador  
-Los indicadores son medidores pequeños y simples que comunican los valores de datos de un vistazo. Debido a su tamaño y simplicidad, los indicadores se utilizan a menudo en tablas y matrices. Para obtener más información, vea [indicadores &#40; El generador de informes y SSRS &#41; ](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+Los indicadores son medidores pequeños y simples que comunican los valores de datos de un vistazo. Debido a su tamaño y simplicidad, los indicadores se utilizan a menudo en tablas y matrices. Para más información, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Para mostrar el estado actual de un KPI usando un indicador  
   
 1.  Cambie a la vista de diseño.  
   
-2.  En la tabla, haga clic en el identificador de columna para la columna de KPI lineal que agregó en el último procedimiento > **Insertar columna** > **derecha**. Se agregará una nueva columna a la tabla.  
+2.  En la tabla, haga clic con el botón derecho en el controlador de columna de la columna KPI lineal que agregó en el último procedimiento > **Insertar columna** > **Derecha**. Se agregará una nueva columna a la tabla.  
   
 3.  Escriba **Luz KPI** en el encabezado de columna.  
   
 4.  Haga clic en la celda del subtotal de la subcategoría, junto al medidor lineal que ha agregado en el último procedimiento.  
   
-5.  En el **insertar** ficha > **visualizaciones de datos** > haga doble clic en **indicador.**  
+5.  En la pestaña **Insertar** > **Visualizaciones de datos** > haga doble clic en **Indicador**.  
   
 6.  En el cuadro de diálogo **Seleccionar tipo de indicador** , en **Formas**, seleccione el primer tipo de forma, **3 semáforos (sin marco)**.  
   
@@ -352,5 +350,4 @@ Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtene
 * [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)
 * [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

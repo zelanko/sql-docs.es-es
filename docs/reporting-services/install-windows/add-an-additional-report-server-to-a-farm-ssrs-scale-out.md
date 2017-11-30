@@ -1,28 +1,25 @@
 ---
-title: Agregar un servidor de informes adicional a una granja de servidores (escalado horizontal de SSRS) | Documentos de Microsoft
+title: Agregar un servidor de informes adicional a una granja de servidores (escalabilidad horizontal de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d1a4e4da2f35e6bea1acebb686c7395bfc12b25b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Agregar un servidor de informes adicional a una granja de servidores (escalado horizontal de SSRS)
 
   Agregar un segundo servidor de informes en modo de SharePoint o varios a una granja de servidores de SharePoint puede mejorar el rendimiento y el tiempo de respuesta de procesamiento del servidor de informes. Si ha detectado una disminución del rendimiento al agregar más usuarios, informes y otras aplicaciones al servidor de informes, agregar servidores adicionales puede mejorar el rendimiento. También se recomienda agregar un segundo servidor de informes para aumentar la disponibilidad de los servidores de informes cuando hay problemas de hardware o cuando se realiza el mantenimiento general en servidores individuales del entorno. A partir de la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , los pasos para escalar horizontalmente un entorno de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint siguen la implementación estándar de la granja de servidores de SharePoint y aprovechan las características de equilibrio de carga de SharePoint.  
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   (4) Representa una solución de equilibrio de carga de red (NLB) de software o hardware  
   
- ![Agregar un servidor de aplicaciones de Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "agregar un servidor de aplicaciones de Reporting Services")  
+ ![Adición de un servidor de aplicaciones de Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Adición de un servidor de aplicaciones de Reporting Services")  
   
  En los siguientes pasos se supone que un administrador va a instalar y configurar el servidor. El servidor se configurará como un nuevo servidor de aplicaciones de la granja de servidores y no se usa como front-end web (WFE).  
   
@@ -74,11 +71,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_additional"></a> Configuración adicional  
  Puede optimizar servidores individuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una implementación escalada horizontalmente para realizar el procesamiento en segundo plano únicamente ya que no compiten por los recursos con la ejecución de informes interactiva. El procesamiento en segundo plano incluye programaciones, suscripciones y alertas de datos.  
   
- Para cambiar el comportamiento de los servidores de informes individuales, establezca  **\<IsWebServiceEnable >** en false en la **RSreportServer.config** archivo de configuración.  
+ Para cambiar el comportamiento de servidores de informes individuales, establezca **\<IsWebServiceEnable>** en el archivo de configuración **RSreportServer.config**.  
   
- De forma predeterminada, los servidores de informes se configuran con \<IsWebServiceEnable > establecido en TRUE. Cuando todos los servidores están configurados en TRUE, los interactivos y los de reserva tendrán equilibrio de carga en todos los nodos de la granja.  
+ De forma predeterminada, los servidores están configurados con \<IsWebServiceEnable> establecido en TRUE. Cuando todos los servidores están configurados en TRUE, los interactivos y los de reserva tendrán equilibrio de carga en todos los nodos de la granja.  
   
- Si configura todos los servidores de informes con \<IsWebServiceEnable > establecido en False, verá un mensaje de error similar al siguiente al intentar usar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] características:  
+ Si configura todos los servidores de informes con \<IsWebServiceEnable> establecido en False, verá un mensaje de error similar al siguiente al intentar usar las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
@@ -89,5 +86,4 @@ ms.lasthandoff: 08/09/2017
 [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

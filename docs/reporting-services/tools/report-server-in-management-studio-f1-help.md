@@ -1,5 +1,5 @@
 ---
-title: Servidor en Management Studio ayuda F1 de informes | Documentos de Microsoft
+title: Servidor de informes en Management Studio (Ayuda F1) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Object Explorer, help
+helpviewer_keywords: Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a207d4741bd474639d88e54dbc5a5ab645e33781
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de informes en Management Studio ayuda F1
   En esta sección se incluyen temas acerca de los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que pueden usarse para administrar servidores de informes.  
@@ -38,33 +36,32 @@ ms.lasthandoff: 08/09/2017
   
 -   [Nueva programación compartida](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
   
--   [Nueva función del sistema](../../reporting-services/tools/new-system-role-management-studio.md)  
+-   [Nuevo rol del sistema](../../reporting-services/tools/new-system-role-management-studio.md)  
   
--   [Nueva función de usuario](../../reporting-services/tools/new-user-role-management-studio.md)  
+-   [Nuevo rol de usuario](../../reporting-services/tools/new-user-role-management-studio.md)  
   
--   [Propiedades de programación (página General)](../../reporting-services/tools/schedule-properties-general-page.md)  
+-   [Propiedades de la programación (página General)](../../reporting-services/tools/schedule-properties-general-page.md)  
   
--   [Propiedades de programación (página informes)](../../reporting-services/tools/schedule-properties-reports-page.md)  
+-   [Propiedades de la programación (página Informes)](../../reporting-services/tools/schedule-properties-reports-page.md)  
   
 -   [Propiedades del servidor (página General)](../../reporting-services/tools/report-server-properties-general-page.md)  
   
--   [Propiedades del servidor (página ejecución)](../../reporting-services/tools/server-properties-execution-page.md)  
+-   [Propiedades del servidor (página Ejecución)](../../reporting-services/tools/server-properties-execution-page.md)  
   
 -   [Propiedades del servidor (página Historial)](../../reporting-services/tools/server-properties-history-page.md)  
   
 -   [Propiedades del servidor (página Registro)](../../reporting-services/tools/server-properties-logging-page.md)  
   
--   [Propiedades del servidor (página seguridad)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
+-   [Propiedades del servidor (página Seguridad)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
--   [Propiedades del servidor (página avanzadas)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
+-   [Propiedades del servidor (página Opciones avanzadas)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
   
--   [Propiedades de la función de sistema](../../reporting-services/tools/system-role-properties-management-studio.md)  
+-   [Propiedades de rol del sistema](../../reporting-services/tools/system-role-properties-management-studio.md)  
   
--   [Propiedades de la función de usuario](../../reporting-services/tools/user-role-properties-management-studio.md)  
+-   [Propiedades de rol de usuario](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de características (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
  [Usar SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md) 
 
   
-

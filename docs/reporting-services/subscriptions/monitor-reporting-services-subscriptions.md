@@ -1,5 +1,5 @@
 ---
-title: Monitor de Reporting Services suscripciones | Documentos de Microsoft
+title: Supervisar suscripciones de Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d1d01e4c59bba393ddc713c24f7ba829b3420b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
   Puede supervisar las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la interfaz de usuario, Windows PowerShell o los archivos de registro. Las opciones disponibles para la supervisión dependen del modo de servidor de informes que esté ejecutando.  
@@ -55,17 +54,17 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |Nueva suscripción|Aparece cuando crea la suscripción.|  
 |Inactivo|Aparece cuando no se puede procesar una suscripción. Para obtener más información, vea "Administrar suscripciones inactivas" más adelante en este tema.|  
-|Hecho: \< *número*> procesados de \< *número*> total; \< *número*> errores.|Muestra el estado de la ejecución de una suscripción controlada por datos; este mensaje procede del Procesador de entrega y programación.|  
-|\<*número*> procesados|El número de notificaciones que el Procesador de entrega y programación ha entregado correctamente o que ya no intenta entregar. Cuando se completa una entrega controlada por datos, el número de notificaciones procesadas debe ser igual al número total de notificaciones generadas.|  
+|Hecho: \<*número*> procesados de un total de \<*número*>; \<*número*> errores.|Muestra el estado de la ejecución de una suscripción controlada por datos; este mensaje procede del Procesador de entrega y programación.|  
+|\<*número*> procesadas|El número de notificaciones que el Procesador de entrega y programación ha entregado correctamente o que ya no intenta entregar. Cuando se completa una entrega controlada por datos, el número de notificaciones procesadas debe ser igual al número total de notificaciones generadas.|  
 |\<*número*> total|El número total de notificaciones generadas para la última entrega de la suscripción.|  
 |\<*número*> error|El número de notificaciones que el Procesador de entrega y programación no ha podido entregar o que ya no intenta entregar.|  
 |Error al enviar correo: error de transporte en la conexión al servidor.|Indica que el servidor de informes no se ha conectado al servidor de correo; este mensaje procede de la extensión de entrega por correo electrónico.|  
-|Archivo \< *filename*> se escribió en \<ruta de acceso >.|Indica que se ha realizado correctamente la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|El archivo \<*nombreDeArchivo*> se ha escrito en \<ruta de acceso>.|Indica que se ha realizado correctamente la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
 |Error desconocido al escribir el archivo.|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|Error al conectar a la carpeta de destino, \<ruta de acceso >. Compruebe si existe la carpeta de destino o el recurso compartido.|Indica que no se puede encontrar la carpeta que ha especificado; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|El archivo \<nombre de archivo > no se pudo escribir en \<ruta de acceso >. Nuevo intento.|Indica que no se ha podido actualizar el archivo con una versión más reciente; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|Error al escribir el archivo \<filename >: \<mensaje >|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|\<mensajes de estado personalizado >|Los mensajes de estado sobre entregas correctas o no realizadas, procedentes de las extensiones de entrega. Si usa una extensión de entrega personalizada o de terceros, pueden proporcionarse mensajes de estado adicionales.|  
+|Error al conectar con la carpeta de destino, \<ruta de acceso>. Compruebe si existe la carpeta de destino o el recurso compartido.|Indica que no se puede encontrar la carpeta que ha especificado; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|No se ha podido escribir el archivo \<nombreDeArchivo> en \<ruta de acceso>. Nuevo intento.|Indica que no se ha podido actualizar el archivo con una versión más reciente; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|Error al escribir el archivo \<nombreDeArchivo>: \<mensaje>|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|\<mensajes de estado personalizados>|Los mensajes de estado sobre entregas correctas o no realizadas, procedentes de las extensiones de entrega. Si usa una extensión de entrega personalizada o de terceros, pueden proporcionarse mensajes de estado adicionales.|  
   
  Los administradores del servidor de informes también pueden supervisar las suscripciones estándar que se estén procesando. No es posible supervisar las suscripciones controladas por datos. Para más información, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 08/09/2017
 4.  Elija **Administrar suscripciones**  
   
 ### <a name="sharepoint-uls-log-files"></a>Archivos de registro de ULS de SharePoint  
- La información relacionada con la suscripción se escribe en el registro de ULS de SharePoint. Para más información sobre cómo configurar eventos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para el registro ULS, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  Este es un ejemplo de entrada de registro ULS relacionada con las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ La información relacionada con la suscripción se escribe en el registro de ULS de SharePoint. Para más información sobre cómo configurar eventos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para el registro de ULS, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  Este es un ejemplo de entrada de registro ULS relacionada con las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
@@ -127,7 +126,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

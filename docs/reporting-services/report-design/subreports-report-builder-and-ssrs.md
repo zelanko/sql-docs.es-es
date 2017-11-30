@@ -1,5 +1,5 @@
 ---
-title: Subinformes (generador de informes y SSRS) | Documentos de Microsoft
+title: Subinformes (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Subinformes (Generador de informes y SSRS)
   Un subinforme es un elemento de informe que muestra otro informe dentro del cuerpo del informe principal. Como concepto, un subinforme de un informe es como un marco en una página web. Se utiliza para incrustar un informe dentro de un informe. Cualquier informe puede utilizarse como subinforme. El informe que se muestra como el subinforme se almacena en un servidor de informes, normalmente en la misma carpeta que el informe primario. Es posible diseñar el informe primario para que pase sus parámetros al subinforme. Este tipo de informe puede repetirse dentro de las regiones de datos mediante un parámetro que filtre los datos de cada instancia del subinforme.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  Se puede colocar un subinforme en el cuerpo principal del informe o en una región de datos. Si se coloca un subinforme en una región de datos, éste se repetirá con cada instancia del grupo o de la fila de la región de datos. Para pasar un valor del grupo o de la fila al subinforme, en la propiedad de valor del subinforme, utilice una expresión de campo para el campo que contiene el valor que se desea pasar al parámetro del subinforme.  
   
- Para obtener más información sobre cómo trabajar con subinformes, vea [agregar un subinforme y parámetros &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Para más información sobre el trabajo con subinformes, vea [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Especificar nombres y ubicaciones de subinforme  
  Puede diseñar un informe principal que especifique un subinforme situado en una carpeta diferente del mismo servidor de informes.  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  En el Generador de informes, para obtener una vista previa de un subinforme en un informe principal, ambos informes se deben encontrar en el mismo servidor de informes o se debe especificar una ruta de acceso completa al subinforme.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, obtención de detalles, subinformes y regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

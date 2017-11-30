@@ -1,27 +1,25 @@
 ---
-title: "Lección 4: Agregar una tabla al informe (Reporting Services) | Documentos de Microsoft"
+title: "Lección 4: Agregar una tabla al informe (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: c073de93cfb1abee01a05e207fbce087ec44ade0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lección 4: Agregar una tabla al informe (Reporting Services)
 Después de definir un conjunto de datos, puede comenzar a diseñar el diseño. El diseño del informe se crea arrastrando y colocando en la superficie de diseño regiones de datos, cuadros de texto, imágenes y otros elementos que se desean incluir en el informe.  
@@ -30,7 +28,7 @@ Los elementos que contienen filas de datos repetidas procedentes de conjuntos de
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>Para agregar una región de datos de tabla y campos a un diseño de informe  
   
-1.  En el **Cuadro de herramientas**, haga clic en **Tabla**y, después, haga clic en la superficie de diseño y arrastre el mouse. El Diseñador de informes dibuja una región de datos de tabla con tres columnas en el centro de la superficie de diseño. El **Cuadro de herramientas** puede aparecer como una pestaña a la izquierda del panel **Datos de informe** . Para abrir el **Cuadro de herramientas**, pase el puntero por encima de la pestaña **Cuadro de herramientas** . Si el **Cuadro de herramientas** no está visible, en el menú **Ver** , haga clic en **Cuadro de herramientas**.
+1.  En el **Cuadro de herramientas**, haga clic en **Tabla**y, después, haga clic en la superficie de diseño y arrastre el mouse. El Diseñador de informes dibuja una región de datos de tabla con tres columnas en el centro de la superficie de diseño. El **Cuadro de herramientas** puede aparecer como una pestaña a la izquierda del panel **Datos de informe** . Para abrir el **Cuadro de herramientas**, pase el puntero por encima de la pestaña **Cuadro de herramientas** . Si el **Cuadro de herramientas** no está visible, en el menú **Ver**, haga clic en **Cuadro de herramientas**.
   
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
@@ -64,7 +62,7 @@ Al obtener una vista previa de un informe, se puede ver el informe representado 
   
     El diagrama siguiente muestra parte del informe en la Vista previa.  
   
-    ![Vista previa, las filas de detalles de tabla con 5 columnas](../reporting-services/media/rs-basictabledetailspreview.png "vista previa, las filas de detalles de tabla con 5 columnas")  
+    ![Vista previa, filas de detalle de la tabla con 5 columnas](../reporting-services/media/rs-basictabledetailspreview.png "Vista previa, filas de detalle de la tabla con 5 columnas")  
   
     Observe que la moneda (en la columna de Line Total) tiene seis posiciones decimales, y que la fecha incluye una marca de tiempo. En la lección siguiente corregirá ese formato.  
   
@@ -72,9 +70,8 @@ Al obtener una vista previa de un informe, se puede ver el informe representado 
 > En el menú **Archivo** , haga clic en **Guardar todo** para guardar el informe.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Ha agregado correctamente una región de datos de tabla al informe, ha agregado campos a la región de datos y ha obtenido una vista previa del informe. A continuación, dará formato a los encabezados de columna y a los valores de fecha y de moneda. Vea [lección 5: aplicar formato a un informe &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Ha agregado correctamente una región de datos de tabla al informe, ha agregado campos a la región de datos y ha obtenido una vista previa del informe. A continuación, dará formato a los encabezados de columna y a los valores de fecha y de moneda. Vea [Lección 5: Aplicar formato a un informe &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Tablas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

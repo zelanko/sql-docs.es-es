@@ -1,5 +1,5 @@
 ---
-title: "Método GetDatabaseVersionDisplayName (WMI) | Documentos de Microsoft"
+title: "Método GetDatabaseVersionDisplayName (WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetDatabaseVersionDisplayName method
+helpviewer_keywords: GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b4743439f2edf3f3cfb253aa981af83350f5aff7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 176a1c770ccd5025a35250c7bc18847b8105dad9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método ConfigurationSetting - GetDatabaseVersionDisplayName
+# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método de ConfigurationSetting: GetDatabaseVersionDisplayName
   Obtiene el nombre para mostrar para una cadena de versión de base de datos del servidor de informes determinada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -53,12 +51,12 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
   
 |**Versión**|**Versión**|**Nombre para mostrar**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|@DBVersion= 'C.0.8.54'|SQL Server 2005 SP2|  
-|RS 2005 SP1|@DBVersion= 'C.0.8.43'|SQL Server 2005 SP1|  
-|RS 2005 RTM|@DBVersion= 'C.0.8.40'|Resultado de|  
-|RS 2000 SP2|@DBVersion= 'C.0.6.54'|SQL Server 2000 SP2|  
-|RS 2000 SP1|@DBVersion= 'C.0.6.51'|SQL Server 2000 SP1|  
-|RS 2000 RTM|@DBVersion= 'C.0.6.43'|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = "C.0.8.54"|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = "C.0.8.43"|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = "C.0.8.40"|Resultado de|  
+|RS 2000 SP2|@DBVersion = "C.0.6.54"|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = "C.0.6.51"|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = "C.0.6.43"|SQL Server 2000|  
 |Revisión||Versión aplicable más cercana|  
   
  Para una *versión* anterior a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 se devuelve un valor de HRESULT de ACT_E_BAD_VERSION.  
@@ -73,4 +71,3 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

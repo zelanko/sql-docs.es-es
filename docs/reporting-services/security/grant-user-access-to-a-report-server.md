@@ -1,5 +1,5 @@
 ---
-title: Conceder acceso de usuario a un servidor de informes | Documentos de Microsoft
+title: Conceder a un usuario acceso a un servidor de informes | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder a un usuario acceso a un servidor de informes
 
@@ -36,13 +35,13 @@ ms.lasthandoff: 08/09/2017
 
  **Servidores de informes en modo de SharePoint** : para un servidor de informes que está configurado para el modo integrado de SharePoint, el acceso se configura desde un sitio de SharePoint mediante los permisos de SharePoint. Los niveles de permisos del sitio de SharePoint determinan el acceso a las operaciones y el contenido del servidor de informes. Debe ser un administrador de sitio para conceder permisos en un sitio de SharePoint. Para obtener más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Servidores de informes en modo nativo:** en este tema se centra en un servidor de informes que está configurado para modo nativo y el uso del portal web para asignar usuarios a un rol. Hay dos tipos de roles:
+ **Servidores de informes en modo nativo**: este tema se centra en un servidor de informes configurado para el modo nativo y en el uso del portal web para asignar un rol a los usuarios. Hay dos tipos de roles:
 
 - Los roles de nivel de elemento se usan para ver, agregar y administrar el contenido del servidor de informes, las suscripciones, el procesamiento de informes y el historial de informes. Las asignaciones de roles de nivel de elemento se definen en el nodo raíz (la carpeta Inicio) o en carpetas o elementos específicos en un nivel inferior de la jerarquía.
 
 - Los roles de nivel de sistema permiten el acceso a las operaciones de todo el sitio que no se enlazan a ningún elemento específico. Los ejemplos incluyen el uso del Generador de informes y el uso de las programaciones compartidas.
 
-    Los dos tipos de roles se complementan entre sí y deben usarse juntos. Por esta razón, agregar un usuario a un servidor de informes es una operación con dos partes implicadas. Si asigna un usuario a un rol de nivel de elemento, también deberá asignarlo a un rol de nivel de sistema. Al asignar un usuario a un rol, debe seleccionar un rol que ya esté definido. Para crear, modificar o eliminar roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para más información, vea [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+    Los dos tipos de roles se complementan entre sí y deben usarse juntos. Por esta razón, agregar un usuario a un servidor de informes es una operación con dos partes implicadas. Si asigna un usuario a un rol de nivel de elemento, también deberá asignarlo a un rol de nivel de sistema. Al asignar un usuario a un rol, debe seleccionar un rol que ya esté definido. Para crear, modificar o eliminar roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
 
 ## <a name="before-you-start"></a>Antes de empezar
 
@@ -52,15 +51,15 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 - Para delegar esta tarea en otros usuarios, cree asignaciones de roles que asignen cuentas de usuario a los roles de administrador de contenido y de sistema. Los usuarios con permisos de administrador de contenido y de sistema pueden agregar usuarios a un servidor de informes.
 
-- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vea los roles predefinidos para Roles del sistema y Roles del usuario para familiarizarse con los tipos de tareas de cada rol. Las descripciones de tareas no están visibles en el portal web, por lo que deberá estar familiarizado con los roles agregue los usuarios antes de empezar.
+- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vea los roles predefinidos para Roles del sistema y Roles del usuario para familiarizarse con los tipos de tareas de cada rol. Las descripciones de tareas no están visibles en el portal web, de modo que se recomienda familiarizarse con los roles antes de empezar a agregar usuarios.
 
 - Si lo desea, personalice los roles o defina roles adicionales para incluir la recopilación de tareas que necesita. Por ejemplo, si piensa usar la configuración de seguridad personalizada para los elementos individuales, quizá desee crear una nueva definición de roles que permita el acceso a la vista de carpetas.
 
 ### <a name="to-add-a-user-or-group-to-a-system-role"></a>Para agregar un usuario o un grupo al rol del sistema.
 
-1. Iniciar el [portal web](../web-portal-ssrs-native-mode.md).
+1. Inicie el [portal web](../web-portal-ssrs-native-mode.md).
 
-2. Seleccione el *icono de engranaje* en la esquina superior derecha.
+2. Seleccione el *icono de engranaje* de la esquina superior derecha.
 
 3. Seleccione **Configuración del sitio**.
 
@@ -68,12 +67,12 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 5. Seleccione **Agregar grupo o usuario**.
 
-6. En **grupo o usuario**, escriba un usuario de dominio de Windows o grupo cuenta con este formato: \<dominio >\\< cuenta\>. 
+6. En **Grupo o usuario**, especifique una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>. 
 
     > [!NOTE]
     > Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
 
-7. Seleccione un rol del sistema y, a continuación, seleccione **Aceptar**.
+7. Seleccione un rol del sistema y luego **Aceptar**.
 
     Los roles son acumulativos, de modo que si selecciona Administrador del sistema y Usuario del sistema, un usuario o grupo podrá realizar las tareas en ambos roles.
 
@@ -81,31 +80,31 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>Para agregar un usuario o grupo al rol del elemento
 
-1. Iniciar el **portal web** y busque el elemento de informe para el que desea agregar un usuario o grupo.
+1. Inicie el **portal web** y busque el elemento de informe para el que quiere agregar un usuario o un grupo.
 
-2. Seleccione el **...**  (puntos suspensivos) en un elemento.
+2. Seleccione el carácter **...** (puntos suspensivos) en un elemento.
 
-3. En el menú desplegable, seleccione **administrar**.
+3. En el menú desplegable, seleccione **Administrar**.
 
 4. Seleccione **Seguridad**.
 
 5. Seleccione **Agregar grupo o usuario**.
 
     > [!NOTE]
-    > Si un elemento hereda la seguridad de un elemento primario, seleccione **personalizar seguridad** en la barra de herramientas para cambiar la configuración de seguridad. A continuación, seleccione **Agregar grupo o usuario**.
+    > Si un elemento hereda la seguridad de un elemento primario, en la barra de herramientas, seleccione **Personalizar seguridad** para cambiar la configuración de seguridad. Luego seleccione **Agregar grupo o usuario**.
 
-6. En **grupo o usuario**, escriba un usuario de dominio de Windows o grupo cuenta con este formato: \<dominio >\\< cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
+6. En **Grupo o usuario**, especifique una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
 
-7. Seleccione una o varias definiciones de roles que describen cómo el usuario o grupo debe tener acceso al elemento y, a continuación, seleccione **Aceptar**.
+7. Seleccione una o varias definiciones de roles que describan la manera en que el usuario o el grupo debe acceder al elemento y luego seleccione **Aceptar**.
 
 8. Repita el proceso para crear asignaciones para usuarios o grupos adicionales.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Nueva asignación de roles: Editar página de asignación de roles &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Página de propiedades de seguridad, elementos &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[Nueva asignación de roles y Editar asignación de roles &#40;páginas del Administrador de informes&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Asignaciones de roles](../../reporting-services/security/role-assignments.md)   
 [Definiciones de roles](../../reporting-services/security/role-definitions.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

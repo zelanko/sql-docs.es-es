@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar los cambios realizados por varios usuarios (Visual Database Tools)
 En un entorno multiusuario, varios usuarios pueden realizar cambios en el mismo objeto al mismo tiempo. Esto puede ocurrir cuando se trabaja en la estructura del objeto en los diseñadores de diagramas de base de datos o tablas, o con los valores de los resultados que devuelve el panel Resultados del Diseñador de consultas y vistas. Esto puede ocasionar conflictos que es necesario solucionar.  
@@ -35,7 +34,7 @@ Este cuadro de diálogo también muestra una lista de objetos de base de datos q
   
 -   Elija **Sí** para guardar la tabla y actualizar la base de datos con todos los cambios de la lista.  
   
-    Esta acción puede afectar a las tablas que comparten los mismos objetos de base de datos. Por ejemplo, supongamos que edita la columna `au`_`id` de la tabla `titleauthors` mientras otro usuario trabaja con la tabla `authors` , que está relacionada con la tabla `titleauthors` mediante la columna `au`\_`id` . Si guarda la tabla, se verá afectada la tabla del otro usuario. De igual manera, supongamos que otro usuario ha definido una restricción CHECK para la columna `qty` de la tabla `sales` . Si elimina la columna `qty` y guarda la tabla `sales` , la restricción CHECK del otro usuario se verá afectada.  
+    Esta acción puede afectar a las tablas que comparten los mismos objetos de base de datos. Por ejemplo, imagine que edita la columna `au_id` de la tabla `titleauthors` mientras otro usuario trabaja en la tabla `authors`, que está relacionada con la tabla `titleauthors` mediante la columna `au_id`. Si guarda la tabla, se verá afectada la tabla del otro usuario. De igual manera, supongamos que otro usuario ha definido una restricción CHECK para la columna `qty` de la tabla `sales` . Si elimina la columna `qty` y guarda la tabla `sales` , la restricción CHECK del otro usuario se verá afectada.  
   
 -   Elija **No** para cancelar la acción de guardar.  
   
@@ -65,4 +64,3 @@ Por ejemplo, supongamos que usted y un colega ejecutan una consulta cada uno par
 ## <a name="see-also"></a>Vea también  
 [Cuadro de diálogo Se han detectado cambios en la base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

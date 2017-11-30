@@ -1,5 +1,5 @@
 ---
-title: Reporting Services (SSRS) Reports | Documentos de Microsoft
+title: Informes de Reporting Services (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- Reporting Services, report creation
+helpviewer_keywords: Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f640177e14ec4b8fd2435c49d7d003eb2b3489a2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Los informes paginados son definiciones de informes basados en XML donde se incluyen datos y elementos de diseño de informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe paginado, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes paginados son una parte de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También puede [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Exportación (opcional).** El informe se exporta a un formato de archivo diferente.  
   
- Para obtener más información, consulte [fases de los informes](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) en [conceptos de Reporting Services &#40; SSRS &#41; ](../../reporting-services/reporting-services-concepts-ssrs.md).  
+ Para más información, vea [Fases de los informes](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) en [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
 ## <a name="create-paginated-reports"></a>Creación de informes paginados  
  Para crear un informe paginado:  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Elija el tipo de consulta.** Determine si se va a usar una consulta de conjunto de datos generalizada y compartida o una consulta específica para el conjunto de informes. Un conjunto de datos compartido con una consulta generalizada resulta fácil de mantener y puede usarse en varios de informes, pero cada diseñador de informes debe filtrar los datos en función de las necesidades de su conjunto de informes particular. Para más información, vea [Datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-data-ssrs.md).  
   
--   **Planee las vistas de los datos relacionados.** Planee la experiencia de visualización de los lectores del informe. Los informes de resumen con capacidad para profundizar en los detalles constituyen un enfoque útil para administrar grandes volúmenes de datos. Para más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
+-   **Planee las vistas de los datos relacionados.** Planee la experiencia de visualización de los lectores del informe. Los informes de resumen con capacidad para profundizar en los detalles constituyen un enfoque útil para administrar grandes volúmenes de datos. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 -   **Configure los permisos.** Planee la estrategia de concesión de permisos del nivel adecuado. Una estrategia habitual consiste en crear una estructura de carpetas de servidor de informes y conceder acceso a los informes y a sus elementos relacionados en función de la seguridad de los roles y las carpetas. Para obtener más información, vea [Proteger informes](#bkmk_SecureReportsSummary).  
   
@@ -86,31 +85,31 @@ ms.lasthandoff: 08/09/2017
   
     -   **Elija una visualización de los datos.** En cada conjunto de datos, elija qué región de datos se va a usar para mostrar los datos. Elija en la lista de tablas, gráficos, medidores y mapas. Para obtener más información, consulte los temas siguientes:  
   
-        -   [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+        -   [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [Los minigráficos y barras de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
-        -   [Indicadores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+        -   [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-        -   [Mapas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+        -   [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
-        -   [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+        -   [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
     -   **Personalice los datos y el diseño.** Cree el diseño del informe. Una definición de informe tiene un cuerpo, orígenes de datos, conjuntos de datos, regiones de datos, cuadros de texto, líneas e imágenes de informe. Los rectángulos se usan como contenedores de diseño, además de como elementos visuales. Personalice cada región de datos escribiendo expresiones para controlar el filtrado, la agrupación, la ordenación, el formato y la visualización de los datos. Agregue los nombres, las ubicaciones y otra información de identificación del informe que ayude a administrar docenas o cientos de informes. Agregue los elementos visuales y los contenedores para organizar los elementos de diseño de la página. Para obtener más información, consulte los temas siguientes:  
   
-        -   [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
-        -   [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+        -   [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
-        -   [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+        -   [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
-        -   [Aplicar formato a elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+        -   [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
-        -   [Imágenes, cuadros de texto, rectángulos y líneas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+        -   [Imágenes, cuadros de texto rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Diseño de página y representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Configure las características de interactividad.** Agregue características de interactividad para los lectores del informe. Por ejemplo, agregue botones de ordenación o elementos de alternancia para ver las consultas. Para más información, vea [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -118,13 +117,13 @@ ms.lasthandoff: 08/09/2017
   
 -   **Revise una solución de generación de informes.** Compruebe que el conjunto de informes interactúa correctamente.  
   
--   **Considere qué componentes pueden reutilizarse.**  Determine si alguno de los orígenes de datos o consultas de conjuntos de datos pueden compartirse para su reutilización. Si es así, en el servidor de informes o en el sitio de SharePoint, cree orígenes de datos compartidos y conjuntos de datos compartidos. Determine si las regiones de datos son adecuadas para reutilizarlas como elementos de informe. Para más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+-   **Considere qué componentes pueden reutilizarse.**  Determine si alguno de los orígenes de datos o consultas de conjuntos de datos pueden compartirse para su reutilización. Si es así, en el servidor de informes o en el sitio de SharePoint, cree orígenes de datos compartidos y conjuntos de datos compartidos. Determine si las regiones de datos son adecuadas para reutilizarlas como elementos de informe. Para obtener más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Obtener una vista previa de los informes  
- Todas las herramientas de generación de informes admiten la vista previa de los informes. Para obtener más información, consulte el [vista previa](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) sección de [diseñar informes con el Diseñador de informes &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), y [vistas previas de informes en el generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Todas las herramientas de generación de informes admiten la vista previa de los informes. Para más información, vea la sección [Vista previa](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) de [Diseño informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) y [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="save-or-publish-reports"></a>Guardar o publicar informes  
- Todas las herramientas de generación de informes permiten guardar los informes localmente y publicarlos en un servidor de informes o en un sitio de SharePoint. Para obtener más información, consulte el [guardar e implementar](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) sección de [diseñar informes con el Diseñador de informes &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), y [guardar informes &#40; El generador de informes &#41; ](../../reporting-services/report-builder/saving-reports-report-builder.md).  
+ Todas las herramientas de generación de informes permiten guardar los informes localmente y publicarlos en un servidor de informes o en un sitio de SharePoint. Para más información, vea la sección [Guardar e implementar](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) de [Diseño de informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) y [Guardar informes &#40;Generador de informes&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 ## <a name="view-reports"></a>Ver informes  
  Además de mostrar una vista previa de un informe guardado localmente o publicado en un servidor de informes, puede proporcionar diversas experiencias de visualización a los lectores del informe. Para ver un informe:  
@@ -171,7 +170,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Actualice una instalación del servidor de informes. Los informes compilados que se almacenan en el servidor de informes se actualizan automáticamente al usarse por primera vez. La definición de informe (.rdl) no se modifica. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
--   Abra un informe en un entorno de creación de informes. La definición de informe se actualiza en la mayoría de los casos. Para más información, vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md) e [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+-   Abra un informe en un entorno de creación de informes. La definición de informe se actualiza en la mayoría de los casos. Para más información, vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md) e [Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ## <a name="troubleshoot-reports"></a>Solucionar problemas de informes  
  Para solucionar los problemas de un informe:  
@@ -182,8 +181,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Extensiones &#40; SSRS &#41;](../../reporting-services/extensions-ssrs.md)   
+ [Extensiones &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   
-

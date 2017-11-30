@@ -1,29 +1,26 @@
 ---
-title: "Configuración de correo: modo nativo (Administrador de configuración) | Documentos de Microsoft"
+title: "Configuración de correo electrónico: modo nativo de Reporting Services (Administrador de configuración) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)
 Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
@@ -73,7 +70,7 @@ Para configurar un servidor de informes para la entrega por correo electrónico,
      
      - **Nombre de usuario y contraseña (básico)** permite especificar un nombre de usuario y una contraseña para conectarse al servidor de correo. También puede seleccionar **Usar una conexión segura** para que tenga lugar una conexión cifrada con el servidor de correo.
      
-          Si selecciona esta opción, `<SendUsing>` se establecerá en un valor de **2** y `<SMTPAuthenticate>` , en un valor de **1** en el archivo rsreportserver.config. Si selecciona **Usar una conexión segura** , `SMTPUseSSL` se establecerá en **True**. **Nombre de usuario** se establecerá en `<SendUserName>` como un valor cifrado. **Contraseña** se establecerá en `<SendPassword>` como un valor cifrado.
+          Si selecciona esta opción, `<SendUsing>` se establecerá en un valor de **2** y `<SMTPAuthenticate>` , en un valor de **1** en el archivo rsreportserver.config. Si selecciona **Usar una conexión segura**, `SMTPUseSSL` se establecerá en **True**. **Nombre de usuario** se establecerá en `<SendUserName>` como un valor cifrado. **Contraseña** se establecerá en `<SendPassword>` como un valor cifrado.
      
      - **Cuenta de servicio del servidor de informes (NTLM)** usará la cuenta de servicio especificada para el servidor de informes. Si usa la cuenta de servicio del servidor de informes para la autenticación, confirme que la cuenta de servicio tiene permisos **Enviar como** en el servidor SMTP.
      
@@ -134,9 +131,9 @@ Para solucionar este problema, puede modificar la configuración para permitir a
 ## <a name="configuration-options-for-remote-smtp-service"></a>Opciones de configuración para un servicio SMTP remoto
 La conexión entre el servidor de informes y un servidor o reenviador SMTP viene determinada por las opciones de configuración siguientes:
 
-- `<SendUsing>`Especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.
-- `<SMTPServer>`Especifica el servidor SMTP remoto o un reenviador. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
-- `<From>`establece el valor que aparece en el **desde:** línea de un mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
+- `<SendUsing>` especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.
+- `<SMTPServer>` especifica el servidor o reenviador SMTP remoto. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
+- `<From>` establece el valor que se muestra en la línea **De:** del mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
 
 Entre los demás valores que se utilizan para un servicio SMTP remoto se incluyen los siguientes (tenga en cuenta que no es necesario especificarlos a menos que desee reemplazar los valores predeterminados).
 
@@ -232,4 +229,3 @@ La conexión entre el servidor de informes y un servidor o reenviador SMTP local
 [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

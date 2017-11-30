@@ -1,5 +1,5 @@
 ---
-title: Administrar mis alertas de datos en el Administrador de alertas de datos | Documentos de Microsoft
+title: Administrar mis alertas de datos en el Administrador de alertas de datos | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: de78105e53535a100792126ff762cdfab2f691c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Administrar mis alertas de datos en el Administrador de alertas de datos
 
@@ -32,10 +31,10 @@ ms.lasthandoff: 08/17/2017
 
 Los usuarios de SharePoint pueden ver una lista de las alertas de datos que han creado e información acerca de las alertas. También pueden eliminar sus alertas, abrir las definiciones de las alertas para modificarlas en el Diseñador de alertas de datos y ejecutar sus alertas. En la imagen siguiente se muestran las características disponibles en el Administrador de alertas de datos para los usuarios.
 
- ![Características del administrador para los usuarios de SharePoint de alerta](../reporting-services/media/rs-alertmanageriw.gif "características del Administrador de alertas para los usuarios de SharePoint")
+ ![Características del Administrador de alertas para los usuarios de SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Características del Administrador de alertas para los usuarios de SharePoint")
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
 ### <a name="to-view-a-list-of-your-alerts"></a>Para ver una lista de sus alertas  
   
@@ -43,7 +42,7 @@ Los usuarios de SharePoint pueden ver una lista de las alertas de datos que han 
   
 2.  Haga clic en el icono para expandir el menú desplegable de un informe y haga clic en **Administrar alertas de datos**. La imagen siguiente muestra el menú desplegable.  
   
-     ![Abra el Administrador de alertas desde el menú contextual del informe](../reporting-services/media/rs-openalertmanager.gif "abrir el Administrador de alertas desde el menú contextual del informe")  
+     ![Abrir el Administrador de alertas desde el menú contextual del informe](../reporting-services/media/rs-openalertmanager.gif "Abrir el Administrador de alertas desde el menú contextual del informe")  
   
      Se abre el Administrador de alertas de datos. De forma predeterminada, se muestran las alertas del informe que seleccionó en la biblioteca.  
   
@@ -83,5 +82,4 @@ Los usuarios de SharePoint pueden ver una lista de las alertas de datos que han 
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

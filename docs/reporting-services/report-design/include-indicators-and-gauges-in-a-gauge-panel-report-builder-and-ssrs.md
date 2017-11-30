@@ -1,5 +1,5 @@
 ---
-title: Incluir indicadores y medidores en un Panel de medidores (generador de informes y SSRS) | Documentos de Microsoft
+title: Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS)
   El panel de medidores es el contenedor de nivel superior que contiene uno o más medidores e indicadores. Los indicadores se pueden incrustar en los medidores o colocar a su lado en el panel de medidores.  
   
  Si el indicador y el medidor son adyacentes en el panel de medidores y muestran datos de campos distintos, podría desear agregar etiquetas para dejar claro qué datos comunican el medidor y el indicador.  
   
- Las opciones del medidor y el indicador se pueden establecer mediante expresiones. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Las opciones del medidor y el indicador se pueden establecer mediante expresiones. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Abra un informe existente o cree un informe que contenga una tabla y matriz con los datos que desea mostrar.   
   
-2.  Inserte una columna en la tabla o matriz. Para obtener más información, vea [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+2.  Inserte una columna en la tabla o matriz. Para más información, vea [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 3.  En la pestaña **Insertar** , en el grupo **Regiones de datos** , haga clic en **Medidor**y, a continuación, en una de las celdas de la nueva columna. Aparece el cuadro de diálogo **Seleccionar tipo de medidor** .  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Abra un informe existente o cree un informe que contenga una tabla y matriz con los datos que desea mostrar.  
   
-2.  Inserte una columna en la tabla o matriz. Para obtener más información, vea [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+2.  Inserte una columna en la tabla o matriz. Para más información, vea [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 3.  En la pestaña **Insertar** , en el grupo **Regiones de datos** , haga clic en **Medidor**y, a continuación, en una de las celdas de la columna que ha insertado. Aparecerá el cuadro de diálogo **Seleccionar tipo de medidor** .  
   
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/09/2017
  [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

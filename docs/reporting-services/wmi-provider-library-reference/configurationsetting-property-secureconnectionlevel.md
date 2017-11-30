@@ -1,5 +1,5 @@
 ---
-title: Propiedad SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting) | Documentos de Microsoft
+title: Propiedad SecureConnectionLevel (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SecureConnectionLevel
-apilocation:
-- reportingservices.mof
+apiname: SecureConnectionLevel
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SecureConnectionLevel property
+helpviewer_keywords: SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 926be7ba1e11f82f6306b8828b84823a91b3d515
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be620ce014ce7357a23e20b0cbb61df79775a3b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---secureconnectionlevel"></a>Propiedad ConfigurationSetting - SecureConnectionLevel
+# <a name="configurationsetting-property---secureconnectionlevel"></a>Propiedad de ConfigurationSetting: SecureConnectionLevel
   Devuelve el nivel de conexión segura especificado en el archivo RSReportServer.config. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -56,4 +52,3 @@ public Integer SecureConnectionLevel;
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

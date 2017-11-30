@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de suscripciones y entrega de Reporting Services | Documentos de Microsoft
+title: "Solución de problemas de suscripciones y entrega de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Solución de problemas de suscripciones y entrega de Reporting Services
   
@@ -52,7 +51,7 @@ Los registros de ejecución son vistas en la base de datos SQL del servidor de i
 Si ejecuta una aplicación de correo electrónico con Protocolo de oficina de correo 3 (POP3) en Microsoft Windows Server 2003, es posible que no pueda enviar informes utilizando el servidor POP3 local. Si configura el servidor de informes para que envíe correo electrónico con el servidor POP3 local y crea una suscripción que envía un informe, puede recibir el siguiente mensaje de error:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-donde \<mensaje de error > se reemplaza por información de mensaje de error adicional devuelta de Collaboration Data Objects (CDO).  
+donde \<mensaje de error> se reemplaza por información de mensaje de error adicional procedente de Objetos para colaboración de datos (CDO).  
   
 ### <a name="to-resolve-this-problem"></a>Para resolver este problema:  
 * Defina el valor del elemento `SendUsing` del archivo **Rsreportserver.config** en 1.  
@@ -84,5 +83,4 @@ Para más información, vea [Solucionar problemas y errores con Reporting Servic
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

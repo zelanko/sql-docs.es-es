@@ -1,5 +1,5 @@
 ---
-title: "Identificar el estado de ejecución | Documentos de Microsoft"
+title: "Identificar el estado de ejecución | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>Identificar el estado de ejecución
   El Protocolo de transferencia de hipertexto (HTTP) es un protocolo sin estado y sin conexión, lo que significa que no indica de manera automática si las diferentes solicitudes provienen del mismo cliente o si una instancia del explorador todavía está viendo una página o un sitio. Las sesiones crean una conexión lógica para mantener el estado entre el servidor y el cliente sobre HTTP. La información específica del usuario pertinente para una sesión determinada se conoce como estado de sesión.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  El diagrama siguiente muestra el procesamiento y la representación de la ruta de acceso para los informes.  
   
- ![Ruta de acceso de procesamiento o representación de informes](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "ruta de acceso de procesamiento o representación de informes")  
+ ![Ruta de representación/procesamiento de informe](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Ruta de representación/procesamiento de informe")  
   
  Para admitir las funciones descritas antes, el método SOAP Render actual se ha dividido en varios métodos que abarcan las fases de inicialización de la ejecución, procesamiento y representación.  
   
@@ -67,8 +65,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vea también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Referencia técnica de &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Usar Reporting Services encabezados SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Referencia técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Uso de encabezados SOAP de Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

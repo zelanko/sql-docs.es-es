@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de direcciones URL para los elementos de un servidor de informes - modo de SharePoint | Documentos de Microsoft
+title: Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d2dc3f1680651e6bcd0f4e4b714f567d1347e0c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - modo de SharePoint
+# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  
   
  Los sitios de SharePoint usan direcciones web distintas de las del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. La jerarquía web de un sitio de SharePoint incluye la aplicación web de SharePoint, un sitio de nivel superior, subsitios opcionales y bibliotecas. Debe saber cómo crear una dirección URL que especifique el servidor de SharePoint y la ubicación en la jerarquía de sitios de SharePoint en la que desea publicar un informe o los elementos relacionados.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 |Objeto|Description|  
 |------------|-----------------|  
-|Aplicación web de SharePoint|Una aplicación web de SharePoint puede instalarse como un servidor independiente o en un grupo de servidores que contenga una colección de servidores virtuales. Una aplicación Web tiene una dirección URL (por ejemplo, `http:*//servername*`) y puede contener varios sitios.|  
+|Aplicación web de SharePoint|Una aplicación web de SharePoint puede instalarse como un servidor independiente o en un grupo de servidores que contenga una colección de servidores virtuales. Una aplicación web tiene una dirección URL (por ejemplo, `http:*//servername*`) y puede contener varios sitios.|  
 |Sitio|Un sitio es un sitio primario para una aplicación web o un subsitio.|  
 |Biblioteca de SharePoint|Una biblioteca contiene documentos o carpetas. Una biblioteca o una carpeta de una biblioteca es el único objeto del sitio que puede almacenar informes, modelos de informe, orígenes de datos compartidos e imágenes externas.|  
 |Elemento|Entre los elementos del servidor de informes a los que se puede hacer referencia en una dirección URL, figuran una definición de informe para un informe o subinforme, un modelo de informe, un origen de datos compartido o una imagen externa.|  
@@ -50,26 +49,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="url-for-a-sharepoint-server"></a>Dirección URL para un servidor de SharePoint  
  Debe usar una dirección URL para el servidor de SharePoint al implementar un servidor de informes o un proyecto de modelos de informe desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en el servidor de informes.  
   
- Para buscar el nombre del servidor que se va usar, abra un explorador y busque la biblioteca de SharePoint en que desea publicar el informe. El nombre del servidor aparece inmediatamente después del prefijo de protocolo, por ejemplo, `http:*//servername*`.  
+ Para buscar el nombre del servidor que se va usar, abra un explorador y busque la biblioteca de SharePoint en que desea publicar el informe. El nombre del servidor aparece justo después del prefijo de protocolo (por ejemplo, `http:*//servername*`).  
   
- No se admite el uso del extremo proxy de dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un extremo proxy incluye un número de puerto, por ejemplo, `http:*//servername:8080/reportserver*`.  
+ No se admite el uso del extremo proxy de dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un punto de conexión proxy incluye un número de puerto (por ejemplo, `http:*//servername:8080/reportserver*`).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>Dirección URL para un sitio o subsitio del servidor de SharePoint  
- Al implementar un informe o un origen de datos de informe, debe usar una dirección URL para el sitio y el subsitio de SharePoint, si lo hay. En la dirección URL, el nombre del sitio aparece inmediatamente después del nombre del servidor., por ejemplo, `http://*servername/site*` o `http://*servername/site/subsite*`.  
+ Al implementar un informe o un origen de datos de informe, debe usar una dirección URL para el sitio y el subsitio de SharePoint, si lo hay. En la dirección URL, el nombre del sitio aparece justo después del nombre de servidor (por ejemplo, `http://*servername/site*` o `http://*servername/site/subsite*`).  
   
  En una aplicación web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , el sitio y el subsitio suelen corresponderse con las pestañas del sitio principal. Para buscar el nombre del sitio o el subsitio, haga clic en **Inicio**y, a continuación, en **Todo el contenido del sitio**. Desplácese hasta la parte inferior y busque **Áreas de trabajo y sitios**. Aparece la lista de sitios en esta sección.  
   
 ### <a name="url-for-a-sharepoint-library"></a>Dirección URL para una biblioteca de SharePoint  
  Al implementar un informe o un elemento relacionado en una biblioteca de SharePoint, debe usar una dirección URL para la biblioteca de SharePoint. La dirección URL que se usa para la biblioteca varía según la versión de SharePoint usada.  
   
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la biblioteca aparece después del nombre del servidor, por ejemplo, `http://*servername/*Shared Documents`.  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la biblioteca aparece después del nombre del servidor (por ejemplo, `http://*servername/*Shared Documents`).  
   
  En [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la biblioteca aparece después del sitio y el subsitio. Por ejemplo, `http://*servername/site/*Documents`.  
   
  Para buscar la información de ruta de acceso para una biblioteca de SharePoint nueva o para un sitio no conocido, abra un explorador y busque la biblioteca de SharePoint en la que desea publicar los informes. Si la biblioteca está vacía, cargue cualquier archivo. Haga clic con el botón derecho en el archivo y seleccione **Propiedades** para abrir la ventana **Propiedades** . La dirección del archivo contiene los valores de dirección URL necesarios para una operación de publicación.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>Direcciones URL completas para los elementos de un sitio de SharePoint  
- Elementos que se almacenan en una biblioteca de SharePoint siempre se obtiene acceso a través de una dirección URL completa que comienza por la aplicación Web (`http://*server*`) como el nodo raíz y termina con el nombre del archivo al que hace referencia.  
+ Siempre se obtiene acceso a los elementos almacenados en una biblioteca de SharePoint mediante una dirección URL completa que comienza por la aplicación web (`http://*server*`) como nodo raíz y termina por el nombre del archivo al que se hace referencia.  
   
  Los nombres de archivo de la dirección URL deben incluir una extensión de nombre de archivo.  
   
@@ -142,8 +141,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publicar un origen de datos compartido en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Cuadro de diálogo de páginas de propiedades de proyecto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Publicación de un origen de datos compartido en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Cuadro Páginas de propiedades del proyecto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
-

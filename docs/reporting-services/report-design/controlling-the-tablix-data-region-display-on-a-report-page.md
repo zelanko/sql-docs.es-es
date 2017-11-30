@@ -1,5 +1,5 @@
 ---
-title: "Controlar la presentación de la región de datos Tablix en una página del informe | Documentos de Microsoft"
+title: "Controlar la presentación de la región de datos Tablix en una página de informe | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlar la presentación de la región de datos Tablix en una página de informe
 Obtenga información sobre las propiedades que puede establecer en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para una región de datos de tabla, matriz o lista, a fin de cambiar su aspecto cuando se visualiza el informe.  
@@ -35,7 +34,7 @@ Las regiones de datos de tabla, matriz y lista son ejemplos de regiones de datos
   
 -   **Controlar el criterio de ordenación**: Para controlar el criterio de ordenación, debe definir expresiones de ordenación en la región de datos. Para controlar el criterio de ordenación para las filas y columnas asociadas a un grupo, debe definir expresiones de ordenación en el grupo, incluyendo los grupos de detalles. También puede agregar botones de ordenación interactiva para permitir que el usuario ordene una región de datos Tablix o sus grupos. Para más información, vea [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Mostrar un mensaje cuando no hay datos**: cuando no existen datos para un conjunto de datos de informe en tiempo de ejecución, puede escribir su propio mensaje para que se muestre en lugar de la región de datos. Para más información, vea [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
+-   **Mostrar un mensaje cuando no hay datos**: cuando no existen datos para un conjunto de datos de informe en tiempo de ejecución, puede escribir su propio mensaje para que se muestre en lugar de la región de datos. Para obtener más información, vea [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Ocultar condicionalmente los datos**: Para controlar de manera condicional si se debe mostrar u ocultar una región de datos o partes de esta, se puede establecer la propiedad Hidden en **True** o en una expresión. Las expresiones pueden incluir referencias a parámetros de informe. También puede especificar un elemento de alternancia, para que el usuario pueda decidir si se deben mostrar los datos detallados. Para más información, vea [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md).  
   
@@ -68,22 +67,21 @@ Las regiones de datos de tabla, matriz y lista son ejemplos de regiones de datos
   
  En la lista siguiente se describen las formas en que puede ayudar a controlar cómo se muestra en un informe una región de datos Tablix:  
   
--   **Repetir los encabezados de fila y de columna en varias páginas**. Puede mostrar los encabezados de fila y de columna en cada página de una región de datos Tablix. Para más información, vea [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
+-   **Repetir los encabezados de fila y de columna en varias páginas**. Puede mostrar los encabezados de fila y de columna en cada página de una región de datos Tablix. Para obtener más información, vea [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
 -   **Mantener visibles los encabezados de fila y de columna al desplazarse por un informe**: puede controlar si deben mantenerse visibles los encabezados de columna y de fila al desplazarse por un informe mediante un explorador. Para más información, vea [Mantener visibles los encabezados al desplazarse a través de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
  Para más información sobre cómo el hecho de exportar un informe a formatos diferentes afecta al modo de representación de una región de datos Tablix en una página, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Vincular varias regiones de datos al mismo conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Controlar los saltos de página, encabezados, columnas y filas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tablas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Crear una matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Crear facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controlar saltos de página, encabezados, columnas y filas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Creación de una matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Creación de facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

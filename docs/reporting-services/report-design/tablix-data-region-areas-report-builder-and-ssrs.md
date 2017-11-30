@@ -1,5 +1,5 @@
 ---
-title: "Las áreas de la región de datos Tablix (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Áreas de la región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 61ec2adb507793813554c1ec8c07418354f9e549
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una región de datos Tablix tiene cuatro áreas que contienen celdas de Tablix:   
@@ -50,17 +49,16 @@ En la superficie de diseño, las líneas de puntos representan las cuatro áreas
   
  En la ilustración siguiente, se muestra la región de datos Tablix en Vista previa.  
   
- ![Grupos de vista previa, esquina Tablix, filas y columnas, cuerpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "grupos de vista previa, esquina Tablix, filas y columnas, cuerpo")  
+ ![Vista previa, esquina Tablix, grupos de filas y columnas, cuerpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Vista previa, esquina Tablix, grupos de filas y columnas, cuerpo")  
   
  El área de grupo de filas muestra dos instancias de grupo de categorías para Clothing y Components. El grupo de columnas muestra una instancia de grupo de geografía para América del Norte, con dos instancias de grupo anidado de país o región para Canadá (CA) y los Estados Unidos (US). Además, la columna adyacente muestra dos instancias de grupo de dos años para 2003 y 2004. La fila de columnas Total muestra los totales de fila; la fila de totales que se repite con el grupo de categorías muestra los totales de subcategoría, y la fila de total general muestra los totales de categoría una vez para la región de datos.  
   
 ## <a name="see-also"></a>Vea también  
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)   
- [Tablas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Crear una matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Crear facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Creación de una matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Creación de facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Desinstalar el generador de informes | Documentos de Microsoft
+title: Desinstalar el Generador de informes | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>Desinstalar el Generador de informes
 
 Podrá desinstalar la versión independiente del Generador de informes desde el panel de control o la línea de comandos.
@@ -37,7 +36,7 @@ Si las carpetas utilizadas por el Generador de informes incluyen archivos person
   
 2.  En el Panel de control, haga clic en **Programas y características**.  
   
-3.  Busque [!INCLUDE[msCoName](../../includes/msconame-md.md)] generador de informes de SQL Server 2016 en el **nombre** lista y haga clic en él.  
+3.  Busque Generador de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 en la lista **Nombre** y haga clic en él.  
   
 4.  Haga clic en **Desinstalar**.  
   
@@ -63,6 +62,6 @@ Si las carpetas utilizadas por el Generador de informes incluyen archivos person
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Instalar el Generador de informes](../../reporting-services/install-windows/install-report-builder.md)  
+[Instalación del Generador de informes](../../reporting-services/install-windows/install-report-builder.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

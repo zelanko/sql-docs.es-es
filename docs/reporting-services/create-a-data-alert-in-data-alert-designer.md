@@ -1,5 +1,5 @@
 ---
-title: "Crear una alerta de datos en el Diseñador de alertas de datos | Documentos de Microsoft"
+title: "Crear una alerta de datos en el Diseñador de alertas de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
 ## <a name="create-a-data-alert-definition"></a>Crear una definición de alerta de datos
  
@@ -47,7 +46,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
      La imagen siguiente muestra el menú **Acciones** .  
   
-     ![Abra el Diseñador de alertas de biblioteca de SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "abrir Diseñador de alertas de biblioteca de SharePoint")  
+     ![Abrir el Diseñador de alertas desde la biblioteca de SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Abrir el Diseñador de alertas desde la biblioteca de SharePoint")  
   
      Se abre el Diseñador de alertas de datos y en él se muestra una tabla con las 100 primeras filas de la primera fuente de distribución de datos generada por el informe.  
   
@@ -121,7 +120,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
 20. Si lo desea, en el cuadro de texto **Asunto** , actualice la línea de asunto del mensaje de alerta.  
   
-     El valor predeterminado es asunto **de alerta de datos para \<nombredealertadedatos >**.  
+     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>**.  
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   
@@ -133,5 +132,4 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

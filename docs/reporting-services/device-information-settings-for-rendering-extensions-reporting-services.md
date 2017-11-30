@@ -1,7 +1,6 @@
 ---
-title: "Configuración de información de dispositivo para extensiones de representación (Reporting Services) | Documentos de Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Configuración de información de dispositivos para las extensiones de representación (Reporting Services) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/15/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -12,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a5618026c0a8e3714eb33725195f5d891c3e467
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configuración de información de dispositivos para las extensiones de representación (Reporting Services)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la configuración de información de dispositivos se utiliza para pasar los parámetros de representación a una extensión de representación. Cada extensión de representación acepta un conjunto de valores específico.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/09/2017
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
-

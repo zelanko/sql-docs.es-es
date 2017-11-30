@@ -1,5 +1,5 @@
 ---
-title: Aplicar formato a las escalas en un medidor (generador de informes y SSRS) | Documentos de Microsoft
+title: Aplicar formato a las escalas de un medidor (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b35ef78ab099933bd7d86bab2818734d1f93836
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a las escalas de un medidor (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la escala del medidor es el intervalo de números, comprendidos entre un mínimo y un máximo, que se muestran en un medidor. Normalmente, una escala del medidor contiene las etiquetas del medidor y las marcas de graduación que proporcionan una lectura precisa de lo que representa el puntero del medidor. Una escala del medidor generalmente está asociada a uno o más punteros del medidor. Puede haber más de una escala en el mismo medidor.  
   
- ![Información general de elementos en una escala del medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "información general de elementos en una escala del medidor")  
+ ![Información general de los elementos en una escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Información general de los elementos en una escala de medidor")  
   
  A diferencia del gráfico, donde se definen varios grupos, el medidor solo muestra un valor. Debe definir los valores mínimo y máximo de la escala. Los números del intervalo se calculan automáticamente en función de los valores mínimo y máximo especificados.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  El radio de la escala es la distancia desde el centro del medidor a la mitad de la barra de escala. El valor del radio de la escala se mide como un porcentaje del diámetro del medidor. Es aconsejable mantener el radio de la escala por debajo de un valor de 35. Si especifica un valor mayor que 35, es posible que la escala se dibuje fuera de los límites del medidor. En la ilustración siguiente se muestra cómo se mide el radio de la escala, con relación al diámetro del medidor, en la barra de escala.  
   
- ![Radio de escala en relación con el diámetro del medidor](../../reporting-services/report-design/media/scaleradiusdiagram.gif "radio de escala en relación con el diámetro del medidor")  
+ ![Radio de la escala en relación con el diámetro del medidor](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Radio de la escala en relación con el diámetro del medidor")  
   
  El ángulo inicial es el ángulo de giro, entre 0 y 360, en que comenzará la escala. La posición cero (0) se encuentra en la parte inferior del medidor y el ángulo inicial gira en el sentido de las agujas del reloj. Por ejemplo, un ángulo inicial de 90 grados inicia la escala en la posición de las 9 en punto.  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/09/2017
 -   1% del alto o del ancho del medidor, el que sea más pequeño, en un medidor lineal.  
   
 ## <a name="see-also"></a>Vea también  
- [Intervalos de formato de un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Aplicar formato a punteros de un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Etiquetas del eje de formato como fechas o monedas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Aplicar formato a las etiquetas del eje en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Aplicar formato a los rangos de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

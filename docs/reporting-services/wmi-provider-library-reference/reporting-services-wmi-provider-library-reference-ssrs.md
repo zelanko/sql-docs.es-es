@@ -1,5 +1,5 @@
 ---
-title: Referencia (SSRS) de la biblioteca de proveedor WMI de Reporting Services | Documentos de Microsoft
+title: Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- Reporting Services WMI Provider Library
-apilocation:
-- reportingservices.mof
-helpviewer_keywords:
-- WMI provider [Reporting Services], library
+apiname: Reporting Services WMI Provider Library
+apilocation: reportingservices.mof
+helpviewer_keywords: WMI provider [Reporting Services], library
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce7657f048154ab0cf68c8e160bf1e5e6d15c210
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5f95187b454a9ed4546a237847146346b1e34e2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS)
   El proveedor de Instrumental de administración de Windows (WMI) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite operaciones de WMI que le permiten escribir scripts y código para modificar la configuración del servidor de informes y del Administrador de informes.  
@@ -44,8 +40,7 @@ ms.lasthandoff: 08/09/2017
  Para obtener más información acerca de las operaciones WMI, vea la documentación de SDK WMI que se incluye con el SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [Referencia técnica de &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+ [Referencia técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   
-

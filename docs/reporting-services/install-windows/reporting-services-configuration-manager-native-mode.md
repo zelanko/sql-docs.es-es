@@ -1,12 +1,11 @@
 ---
-title: "Administrador de configuración (modo nativo) de Reporting Services | Documentos de Microsoft"
+title: "Administrador de configuración de Reporting Services (modo nativo) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -54,7 +51,7 @@ Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../inc
   
 -   Configurar el correo electrónico del servidor de informes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega por correo electrónico del servidor de informes que usa un protocolo simple de transferencia de correo (SMTP) para entregar informes o notificaciones de procesamiento de informes a un buzón electrónico. Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar qué puerta de enlace o servidor SMTP de la red se debe usar para la entrega de correo electrónico.  
   
- El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no ayuda a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor. Implementación completa requiere que también utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características adicionales o modificar los valores predeterminados y el portal web para conceder acceso de usuario al servidor.
+ El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no ayuda a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor. La implementación completa requiere que también se use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características adicionales o modificar los valores predeterminados, y el portal web para conceder a los usuarios acceso al servidor.
 
 ##  <a name="bkmk_requirements"></a> Requisitos
 
@@ -76,7 +73,7 @@ El Administrador de configuración de Reporting Services se instala automáticam
 
 1.  Use el paso siguiente correspondiente a su versión de Microsoft Windows:
 
-    - En la pantalla de inicio de Windows, escriba **informes** y seleccione **Reporting Services Configuration Manager** de los resultados de buscar.
+    - En la pantalla de inicio de Windows, escriba **Administrador** y seleccione **Administrador de configuración de Reporting Services** en los resultados de búsqueda.
 
     - Haga clic en **Iniciar**, seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y después **Herramientas de configuración**.
 
@@ -96,11 +93,10 @@ El Administrador de configuración de Reporting Services se instala automáticam
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Portal Web](../../reporting-services/web-portal-ssrs-native-mode.md)   
+[Portal web](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
-[Configurar una conexión de base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurar una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
 [Configurar y administrar un servidor de informes](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

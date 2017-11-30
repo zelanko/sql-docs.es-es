@@ -1,31 +1,29 @@
 ---
-title: Instalar el generador de informes | Documentos de Microsoft
+title: Instalar el Generador de informes | Microsoft Docs
 ms.custom: 
 ms.date: 09/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03ea560675e5b89228ab3faa99a9d2c37586b4b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-report-builder"></a>Instalar el Generador de informes
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es una aplicación independiente que el usuario o un administrador pueden instalar en el equipo. Puede instalarlo desde el Centro de descarga de Microsoft, desde un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o desde un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permiso para descargar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde el portal web y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para obtener más información acerca de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administración, consulte [servidor de informes de Reporting Services &#40; Modo nativo &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permiso para descargar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde el portal web y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para más información sobre la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un portal web o una biblioteca de SharePoint 
   
@@ -111,7 +109,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)   
- [Desinstalar el Generador de informes](../../reporting-services/install-windows/uninstall-report-builder.md)  
+ [Desinstalación del Generador de informes](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
-

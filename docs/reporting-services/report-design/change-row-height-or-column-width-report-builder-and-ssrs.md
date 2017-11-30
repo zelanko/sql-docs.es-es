@@ -1,5 +1,5 @@
 ---
-title: Cambiar el alto de fila o el ancho de columna (generador de informes y SSRS) | Documentos de Microsoft
+title: Cambiar el alto de fila o el ancho de columna (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Cambiar el alto de fila o el ancho de columna (Generador de informes y SSRS)
   Cuando se establece un alto de fila, se está especificando el alto máximo para la fila en el informe representado. Sin embargo, de forma predeterminada, los cuadros de texto de la fila están configurados para crecer verticalmente con objeto de dar cabida a sus datos en tiempo de ejecución, y esto puede ocasionar que una fila crezca más allá del alto especificado. Para establecer un alto de fila fijo, debe cambiar las propiedades del cuadro de texto de modo que no se expandan automáticamente.  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  En la vista Diseño, haga clic en una celda de la fila de la tabla.  
   
-     ![La celda seleccionada en una tabla](../../reporting-services/report-design/media/table-selectcell.png "la celda seleccionada en una tabla")  
+     ![Celda seleccionada en una tabla](../../reporting-services/report-design/media/table-selectcell.png "Celda seleccionada en una tabla")  
   
 2.  En el panel **Propiedades** que aparece, modifique la propiedad **Alto** y, después, haga clic en cualquier parte que no sea el panel **Propiedades** .  
   
-     ![Panel Propiedades de celda de la tabla seleccionada](../../reporting-services/report-design/media/cell-propertiespane.png "panel Propiedades de celda de la tabla seleccionada")  
+     ![Panel Propiedades para la celda de la tabla seleccionada](../../reporting-services/report-design/media/cell-propertiespane.png "Panel Propiedades para la celda de la tabla seleccionada")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>Para evitar que una fila se expanda verticalmente de forma automática  
   
@@ -71,12 +70,11 @@ ms.lasthandoff: 09/27/2017
 3.  Haga clic para arrastrar el borde de la columna y muévalo hacia la derecha o hacia la izquierda para ajustar el ancho de columna.  
   
 ## <a name="see-also"></a>Vea también  
- [Región de datos Tablix (generador de informes y SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Celdas de la región de datos Tablix, filas y columnas (generador de informes) y SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tablas (generador de informes y SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices (generador de informes y SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Listas (generador de informes y SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas (generador de informes y SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Región de datos Tablix (Generador de informes y SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tablas (Generador de informes y SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrices (Generador de informes y SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Listas (Generador de informes y SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas (Generador de informes y SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

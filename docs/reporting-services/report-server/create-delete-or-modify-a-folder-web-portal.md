@@ -1,32 +1,31 @@
 ---
-title: Crear, eliminar o modificar una carpeta (portal web) | Documentos de Microsoft
+title: Crear, eliminar o modificar una carpeta (portal web) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 278a3b929f798352c0431aa34f142c9b4a8b3042
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Crear, eliminar o modificar una carpeta (portal web)
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  
   
 #### <a name="to-create-a-folder"></a>Para crear una carpeta  
   
-1.  Iniciar el [el Administrador de informes &#40; Modo nativo de SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el portal web, seleccione **Carpeta** en el menú desplegable **Nuevo** . O, si quiere crear una carpeta en una carpeta existente, vaya a la carpeta en cuestión y seleccione **Carpeta** en el menú desplegable **Nuevo** .  
   
@@ -55,7 +54,6 @@ ms.lasthandoff: 08/09/2017
 6.  Haga clic en **Aplicar** para guardar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

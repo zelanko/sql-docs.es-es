@@ -1,12 +1,11 @@
 ---
-title: "Configurar una implementación de ampliación horizontal del servidor de informes de modo nativo | Documentos de Microsoft"
+title: "Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,23 +13,22 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 39de4778d781c1d98c93b3ab802c0ca09d39eeb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
 
   Reporting Services en modo nativo admite un modelo de implementación de ampliación horizontal que permite ejecutar varias instancias del servidor de informes que comparten una única base de datos del servidor de informes. Las implementaciones escaladas se utilizan para aumentar la escalabilidad de los servidores de informes para administrar más usuarios con acceso simultáneo y mayores cargas de ejecución de informes. También se pueden utilizar para dedicar servidores concretos en el procesamiento de informes interactivos o programados.  
   
- Los servidores de informes en modo de SharePoint utilizan la infraestructura de los Productos de SharePoint para la implementación escalada. La ampliación del modo de SharePoint se logra al agregar más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para obtener más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+ Los servidores de informes en modo de SharePoint utilizan la infraestructura de los Productos de SharePoint para la implementación escalada. La ampliación del modo de SharePoint se logra al agregar más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Una *implementación escalada* se usa en los escenarios siguientes:  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
  **Para planear, instalar y configurar una implementación escalada, siga estos pasos:**  
   
--   Revisión [instalar SQL Server 2016 desde el Asistente para instalación &#40; El programa de instalación &#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
+-   Vea [Instalación de SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
   
 -   Si tiene previsto hospedar la implementación escalada en un clúster con equilibrio de carga de red (NLB), deberá configurar el clúster NLB antes de configurar la implementación escalada. Para más información, consulte [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Use el programa de instalación para instalar cada instancia del servidor de informes que se vaya a unir a la implementación escalada.  
   
-         Para evitar que se produzcan errores de compatibilidad de base de datos al conectar las instancias del servidor a la base de datos compartida, asegúrese de que la versión de todas las instancias sea la misma. Por ejemplo, si crea la base de datos del servidor de informes con una instancia de servidor de informes de SQL Server 2016, todas las demás instancias de la misma implementación también deben ser SQL Server 2016.  
+         Para evitar que se produzcan errores de compatibilidad de base de datos al conectar las instancias del servidor a la base de datos compartida, asegúrese de que la versión de todas las instancias sea la misma. Por ejemplo, si crea la base de datos del servidor de informes con una instancia del servidor de informes de SQL Server 2016, todas las demás instancias de la misma implementación también deben ser de SQL Server 2016.  
   
     -   Use el Administrador de configuración de Reporting Services con el fin de conectarse a cada uno de los servidores de informes para la base de datos compartida. Solo puede configurar y conectarse a un servidor de informes a la vez.  
   
@@ -74,19 +72,19 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="service-accounts"></a>Cuentas de servicio
 
-Las cuentas de servicio para la instancia de Reporting Services son importantes cuando se trabaja con una implementación escalada. Debe realizar una de las acciones siguientes al implementar las instancias de Reporting Services.
+Las cuentas de servicio de la instancia de Reporting Services son importantes cuando se trabaja con una implementación escalada. Debe llevar a cabo una de las siguientes acciones al implementar las instancias de Reporting Services.
 
 **Opción 1:** todas las instancias de Reporting Services deben configurarse con la misma cuenta de usuario de dominio para la cuenta de servicio.
 
-**Opción 2:** cada cuenta de servicio, cuenta de dominio o no, es necesario conceder permisos dbadmin dentro de la instancia de base de datos de SQL Server que hospeda la base de datos del catálogo ReportServer.
+**Opción 2:** se deben conceder permisos dbadmin a todas las cuentas de servicio (sean cuentas de dominio o no) dentro de la instancia de base de datos de SQL Server que hospeda la base de datos de catálogos ReportServer.
 
-Si ha configurado una configuración diferente de cualquiera de las opciones anteriores, se pueden producir errores intermitentes de modificar las tareas con el Agente SQL. Esto se mostrará como un error en ambos servicios de informes de registro y en el portal web al editar una suscripción de informe.
+Si definió una configuración diferente de cualquiera de las opciones anteriores, es posible que se produzcan errores intermitentes a la hora de modificar las tareas con el Agente SQL. Aparecerá como un error en el registro de Reporting Services y en el portal web al editar una suscripción de informe.
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-El problema será intermitente es que solo el servidor que creó la tarea de agente SQL tendrá derechos para ver, eliminar o editar el elemento. Si no hace una de las opciones anteriores, las operaciones sólo surtirán efecto cuando el equilibrador de carga todas las solicitudes de dicha suscripción envía al servidor que creó la tarea de agente SQL. 
+El problema será intermitente; es decir, solo el servidor que creó la tarea del Agente SQL tendrá derechos para ver, eliminar o editar el elemento. Si no sigue una de las opciones anteriores, las operaciones solo surtirán efecto cuando el equilibrador de carga envíe todas las solicitudes de dicha suscripción al servidor que creó la tarea del Agente SQL. 
   
 ## <a name="to-install-the-first-report-server-instance"></a>Para instalar la primera instancia del servidor de informes  
   
@@ -94,7 +92,7 @@ El problema será intermitente es que solo el servidor que creó la tarea de age
   
 2.  Inicie la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configure la dirección URL del servicio Web del servidor de informes, la dirección URL del Portal Web y la base de datos del servidor de informes. Para obtener más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del portal web y la base de datos del servidor de informes. Para más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Compruebe que el servidor de informes está operativo. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -132,7 +130,7 @@ El problema será intermitente es que solo el servidor que creó la tarea de age
   
 2.  Haga clic en **Implementación escalada** para abrir la página implementación escalada. Debería ver dos entradas, una para cada instancia del servidor de informes que esté conectada a la base de datos del servidor de informes. La primera instancia del servidor de informes debería estar unida. El segundo servidor de informes debería estar "Esperando para unirse". Si no ve entradas similares en su implementación, compruebe que está conectado al primer servidor de informes que ya está configurado e inicializado para utilizar la base de datos del servidor de informes.  
   
-     ![Captura de pantalla parcial de página implementación escalada](../../reporting-services/install-windows/media/scaloutscreen.gif "captura de pantalla parcial de página de la implementación de ampliación horizontal")  
+     ![Captura de pantalla parcial de la página Implementación escalada](../../reporting-services/install-windows/media/scaloutscreen.gif "Captura de pantalla parcial de la página Implementación escalada")  
   
 3.  En la página implementación escalada, seleccione la instancia de servidor de informes que está esperando para unirse a la implementación y seleccione **Agregar servidor**.  
   
@@ -150,9 +148,9 @@ El problema será intermitente es que solo el servidor que creó la tarea de age
 [Configurar una cuenta de servicio](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Configurar una dirección URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Crear una base de datos del servidor de informes de modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Configurar direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configurar una conexión de base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Agregar y quitar claves de cifrado para la implementación de ampliación horizontal](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Administrar un servidor de informes de modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Configurar las direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configuración de una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Agregar y quitar claves de cifrado para implementaciones escaladas](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+[Administración de un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

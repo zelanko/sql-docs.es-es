@@ -1,5 +1,5 @@
 ---
-title: "Imprimir informes desde un explorador con el Control de impresión (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Imprimir informes desde un explorador con el control de impresión (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 99405d9622cc89a1605c6aa9ee821f15844bc9ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir informes desde un explorador usando el control de impresión (Generador de informes y SSRS)
   Aunque los exploradores son las aplicaciones cliente habitualmente más usadas para ver un informe, la funcionalidad de impresión que incluyen no es la ideal para imprimir informes. La funcionalidad de impresión de un explorador está diseñada para imprimir páginas web. Normalmente, las páginas que imprime desde un explorador incluyen todos los elementos visuales de una página web, además de la información del encabezado y del pie de página que identifica la página o el sitio web. Al imprimir desde un explorador, se imprime el contenido de la ventana actual. En el caso de un informe compuesto por varias páginas, el explorador imprime como máximo la primera página y posiblemente incluso menos si la página del informe tiene unas dimensiones superiores a las de una página impresa.  
@@ -43,11 +42,10 @@ ms.lasthandoff: 08/09/2017
  Para mostrar una vista previa de un informe, en el cuadro de diálogo **Imprimir** , haga clic en el botón **Vista previa** . Al hacer clic en la opción de vista previa se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado.  
   
 ### <a name="adjusting-print-margins"></a>Ajustar los márgenes de impresión  
- Puede modificar los márgenes de impresión en el informe EMF representado antes de imprimir el informe. Para ello, en el cuadro de diálogo **Imprimir** , haga clic en el botón **Vista previa** . En la parte superior de la página de vista previa, haga clic en el botón **Márgenes** . A continuación se muestra el cuadro de diálogo Márgenes. Configure los márgenes superior, inferior, izquierdo y derecho según sea necesario. [!INCLUDE[clickOK](../../includes/clickok-md.md)]El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
+ Puede modificar los márgenes de impresión en el informe EMF representado antes de imprimir el informe. Para ello, en el cuadro de diálogo **Imprimir** , haga clic en el botón **Vista previa** . En la parte superior de la página de vista previa, haga clic en el botón **Márgenes** . A continuación se muestra el cuadro de diálogo Márgenes. Configure los márgenes superior, inferior, izquierdo y derecho según sea necesario. [!INCLUDE[clickOK](../../includes/clickok-md.md)] El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
   
 ## <a name="see-also"></a>Vea también  
- [Imprimir informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Imprimir un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Imprimir un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   
-

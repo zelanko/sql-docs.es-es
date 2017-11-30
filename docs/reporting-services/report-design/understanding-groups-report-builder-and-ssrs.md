@@ -1,5 +1,5 @@
 ---
-title: "Descripción de los grupos (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Descripción de los grupos (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un grupo es un conjunto de datos con nombre del conjunto de datos de informe que está enlazado a una región de datos. Básicamente, un grupo organiza una vista de un conjunto de datos de informe. Todos los grupos de una región de datos especifican vistas diferentes del mismo conjunto de datos de informe.  
@@ -45,9 +44,9 @@ ms.lasthandoff: 08/09/2017
  En la mayoría de los casos, el Generador de informes y el Diseñador de informes crean automáticamente un grupo al diseñar una región de datos. En una tabla, matriz o lista, se crean grupos al colocar campos en el panel Agrupación. En un gráfico, se crean grupos al colocar campos en las zonas de colocación del gráfico. En un medidor, debe usar el cuadro de diálogo de propiedades de medidor. En una tabla, matriz o lista, también es posible crear un grupo manualmente. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para obtener un ejemplo de cómo agregar grupos al crear un informe, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>¿Cómo puedo modificar un grupo?  
- Después de crear un grupo, puede establecer propiedades específicas de las regiones de datos, como expresiones de filtro y de ordenación, saltos de página y variables de grupo que contengan datos específicos del ámbito. Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Después de crear un grupo, puede establecer propiedades específicas de las regiones de datos, como expresiones de filtro y de ordenación, saltos de página y variables de grupo que contengan datos específicos del ámbito. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
- Para modificar un grupo existente, abra el cuadro de diálogo de propiedades de grupo correspondiente. Puede cambiar el nombre del grupo. Asimismo, puede especificar expresiones de grupo basadas en un campo único o en varios campos, o en un parámetro de informe que especifique un valor en tiempo de ejecución. También puede basar un grupo en un conjunto de expresiones, como el conjunto de expresiones que especifican los intervalos de edad para los datos demográficos. Para más información, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+ Para modificar un grupo existente, abra el cuadro de diálogo de propiedades de grupo correspondiente. Puede cambiar el nombre del grupo. Asimismo, puede especificar expresiones de grupo basadas en un campo único o en varios campos, o en un parámetro de informe que especifique un valor en tiempo de ejecución. También puede basar un grupo en un conjunto de expresiones, como el conjunto de expresiones que especifican los intervalos de edad para los datos demográficos. Para obtener más información, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Si cambia el nombre de un grupo, debe actualizar manualmente las expresiones de grupo que hagan referencia al nombre anterior del grupo.  
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
      Al crear un grupo para una región de datos, el Generador de informes y el Diseñador de informes agregan automáticamente filas o columnas a dicha región de datos y usan estas filas o columnas para mostrar los datos del grupo.  
   
--   **Grupos de jerarquía recursiva** : un grupo de jerarquía recursiva organiza los datos de un único conjunto de datos de informe que incluye varios niveles. Por ejemplo, un grupo de jerarquía recursiva podría mostrar la jerarquía de una organización: [Empleado] que depende de [Empleado]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona propiedades de grupo y funciones integradas para permitirle crear grupos para este tipo de datos de informe. Para más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Grupos de jerarquía recursiva** : un grupo de jerarquía recursiva organiza los datos de un único conjunto de datos de informe que incluye varios niveles. Por ejemplo, un grupo de jerarquía recursiva podría mostrar la jerarquía de una organización: [Empleado] que depende de [Empleado]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona propiedades de grupo y funciones integradas para permitirle crear grupos para este tipo de datos de informe. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  La lista siguiente resume la forma de trabajar con grupos para cada región de datos:  
   
@@ -97,19 +96,18 @@ ms.lasthandoff: 08/09/2017
   
  Después de agregar un grupo, los identificadores de columna y de fila de la región de datos cambian para reflejar la pertenencia al grupo. Al eliminar un grupo, puede elegir entre eliminar únicamente la definición de grupo o eliminar el grupo y todas sus filas y columnas asociadas. Para más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
- Para limitar los datos que se deben mostrar o usar en los cálculos para los datos detallados o de grupo, establezca filtros en el grupo. Para más información, vea [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Para limitar los datos que se deben mostrar o usar en los cálculos para los datos detallados o de grupo, establezca filtros en el grupo. Para obtener más información, vea [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
- De forma predeterminada, al crear un grupo, la expresión de ordenación para éste es igual que la expresión de grupo. Para cambiar el criterio de ordenación, cambie la expresión de ordenación. Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ De forma predeterminada, al crear un grupo, la expresión de ordenación para éste es igual que la expresión de grupo. Para cambiar el criterio de ordenación, cambie la expresión de ordenación. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Descripción de la pertenencia a grupo para las celdas de Tablix  
  Las celdas de una fila o columna de una región de datos de Tablix pueden pertenecer a varios grupos de filas y de columnas. Al definir una expresión en el cuadro de texto de una celda que usa una función de agregado (por ejemplo, `=Sum(Fields!FieldName.Value`), el ámbito de grupo predeterminado para una celda es el grupo secundario más interior al que pertenece. Cuando una celda pertenece a grupos de filas y de columnas, el ámbito lo forman los dos grupos más interiores. También puede escribir expresiones que calculen subtotales agregados en el ámbito de un grupo relativo a otro conjunto de datos. Por ejemplo, puede calcular el porcentaje de un grupo relativo al grupo de columnas o a todos los datos de la región de datos (como `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Para más información, vea [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar o eliminar un grupo en una región de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Agregar un Total a un grupo o región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Ordenar datos en una región de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Acción de obtención de detalles &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

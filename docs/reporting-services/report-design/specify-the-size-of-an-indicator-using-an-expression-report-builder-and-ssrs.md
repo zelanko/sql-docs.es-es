@@ -1,5 +1,5 @@
 ---
-title: "Especifique el tamaño de un indicador utilizando una expresión (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Especificar el tamaño de un indicador mediante una expresión (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eecb47d77b7e8b484071ea33e5111b0326f6fed2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Especificar el tamaño de un indicador utilizando una expresión (Generador de informes y SSRS)
   Además del color, dirección y forma, puede usar el tamaño para maximizar el impacto visual de los indicadores.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilice la ventana **Propiedades** para establecer las propiedades de miembro. Si la ventana **Propiedades** no está abierta, presione la tecla F4.  
   
- El panel **Propiedades** proporciona acceso a las propiedades de la colección IndicatorStates de un indicador. Para configurar los iconos de forma que tengan tamaños distintos, debe establecer la propiedad ScaleFactor de los miembros de la colección IndicatorStates mediante una expresión. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ El panel **Propiedades** proporciona acceso a las propiedades de la colección IndicatorStates de un indicador. Para configurar los iconos de forma que tengan tamaños distintos, debe establecer la propiedad ScaleFactor de los miembros de la colección IndicatorStates mediante una expresión. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
  La expresión usada en este procedimiento se usó también para generar el informe con distintos tamaños de indicadores, como se muestra en [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
      `=IIF(Fields!SalesYTD.value = 0,0,Fields!SalesYTD.value/Max(Fields!SalesYTD.value,"Indicator"))`  
   
-     Para obtener más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
+     Para más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,4 +69,3 @@ ms.lasthandoff: 08/09/2017
  [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

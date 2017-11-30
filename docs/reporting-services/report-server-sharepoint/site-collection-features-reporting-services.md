@@ -1,5 +1,5 @@
 ---
-title: "Características de Reporting Services sitio colección | Documentos de Microsoft"
+title: "Características de la colección de sitios de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,32 +14,31 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 7c86f9ecdbbf4955ba224e40c245fc412742fc30
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: ace5a7334018a78c2dfbe0326eb21773836355cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="reporting-services-site-collection-features"></a>Características de colección de sitios de Reporting Services
+# <a name="reporting-services-site-collection-features"></a>Características de la colección de sitios de Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Modo de Reporting Services y SharePoint proporciona tres características de colección de sitios de SharePoint. Las características admiten el entorno de informes de modo de SharePoint de Reporting Services general [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del SQL Server 2016 Reporting Services Add-de y las operaciones de administración de Reporting Services en Administración Central de SharePoint.
+El modo de SharePoint de Reporting Services proporciona tres características de la colección de sitios de SharePoint. Las características admiten el entorno de informes del modo de SharePoint de Reporting Services general, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del Complemento SQL Server 2016 Reporting Services y las operaciones de administración para Reporting Services en Administración central de SharePoint.
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
   
 ## <a name="site-collection-features"></a>Características de la colección de sitios
 
- La tabla siguiente describen las características de colección de informes de Reporting Services.  
+ En la tabla siguiente se describen las características de la colección de sitios de Reporting Services.  
   
 |Característica|Description|  
 |-------------|-----------------|  
-|**Característica Administración central del servidor de informes**|Habilita las características para administrar la integración con un servidor de informes de Reporting Services. Esta característica solo se instala y se puede usar en la colección de sitios de Administración central de SharePoint.<br /><br /> La característica de integración del servidor de informes se activa de forma automática en la colección de sitios Administración central de SharePoint tras instalar el Complemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] para los productos de SharePoint. En algunas situaciones, debe activar manualmente la característica. Para activar la característica de servidor de informes, use las páginas de Reporting Services en la página de configuración del sitio de Administración Central de SharePoint.<br /><br /> El [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versión de Reporting Services y posterior del complemento para SharePoint productos activar la característica de integración del servidor de informes para todas las colecciones de sitios existentes cuando se instala el complemento. Además, la característica está activa automáticamente para las nuevas colecciones de sitios.|  
-|**Característica de integración del servidor de informes**|Permite el uso de informes enriquecidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Esta característica está activa de forma predeterminada.|  
+|**Característica Administración central del servidor de informes**|Habilita las características para administrar la integración con un servidor de informes de Reporting Services. Esta característica solo se instala y se puede usar en la colección de sitios de Administración central de SharePoint.<br /><br /> La característica de integración del servidor de informes se activa de forma automática en la colección de sitios Administración central de SharePoint tras instalar el Complemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] para los productos de SharePoint. En algunas situaciones, tendrá que activar la característica de forma manual. Para activar la característica del servidor de informes, use las páginas de Reporting Services de la página Configuración del sitio de Administración central de SharePoint.<br /><br /> La versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services y posterior del complemento para productos de SharePoint activa la característica de integración del servidor de informes para todas las colecciones de sitios existentes cuando se instala el complemento. Además, la característica se activa automáticamente para las nuevas colecciones de sitios.|  
+|**Característica de integración del servidor de informes**|Permite la creación de informes avanzados mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Esta característica está activa de forma predeterminada.|  
 |**Característica Power View Integration**|Habilita la exploración interactiva de los datos y la presentación visual de los libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las bases de datos tabulares de Analysis Services.<br /><br /> Se puede tener acceso a la característica en los menús contextuales de los siguientes orígenes de datos:<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> archivo de conexión**.bism** <br /><br /> <br /><br /> Si [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] no aparece en los menús contextuales, compruebe que la **característica Power View Integration** está activada.<br /><br /> Esta característica está desactivada de forma predeterminada.|  
 
 ## <a name="next-steps"></a>Pasos siguientes
@@ -49,4 +48,3 @@ Modo de Reporting Services y SharePoint proporciona tres características de col
 [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

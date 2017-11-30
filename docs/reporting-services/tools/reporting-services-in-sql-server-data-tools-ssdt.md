@@ -1,5 +1,5 @@
 ---
-title: Reporting Services en SQL Server Data Tools (SSDT) | Documentos de Microsoft
+title: Reporting Services en SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Business Intelligence Development Studio, Reporting Services in
+helpviewer_keywords: Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 31c39f4619f96163338986619f5e27804ac555ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es un entorno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para crear soluciones de inteligencia empresarial. SSDT cuenta con un Diseñador de informes para crear el entorno, donde puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe paginadas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no se incluye con SQL Server. Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
@@ -43,11 +41,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerProjects"></a> Proyectos de servidor de informes  
  Cuando se instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], pasan a estar disponibles las siguientes plantillas de proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que se encuentra disponible en el cuadro de diálogo **Nuevo proyecto** . Para obtener más información, vea [agregar un informe existente o nuevo a un proyecto de informe &#40; SSRS &#41; ](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Propiedades del proyecto de servidor de informes que se aplican a todos los informes y todos los archivos orígenes de datos en un [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proyecto. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el menú **Proyecto** , haga clic en **Propiedades**.  
+-   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que se encuentra disponible en el cuadro de diálogo **Nuevo proyecto** . Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el menú **Proyecto** , haga clic en **Propiedades**.  
   
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   
- ![Nuevas plantillas de proyecto SSDT](../../analysis-services/media/ssdt-biprojects.png "plantillas de proyecto nuevo en SSDT")  
+ ![Nuevas plantillas de proyecto de SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuevas plantillas de proyecto de SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Ventanas y paneles del Diseñador de informes  
@@ -64,20 +62,20 @@ ms.lasthandoff: 08/09/2017
   
 -   **Conjuntos de datos** Cada conjunto de datos incluye una consulta que especifica qué datos deben recuperarse del origen de datos. Expanda el conjunto de datos para ver la colección de campos especificada por la consulta del conjunto de datos.  
   
-     En algunos diseñadores de consultas para los conjuntos de datos multidimensionales, se pueden especificar filtros en el panel Filtros e indicar si se van a crear parámetros de informe. Si especifica la opción de parámetro de informe, se crea un conjunto de datos especial automáticamente para rellenar la lista de valores válidos del parámetro.  El conjunto de datos no aparece en el panel Datos de informe de forma predeterminada. Para más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+     En algunos diseñadores de consultas para los conjuntos de datos multidimensionales, se pueden especificar filtros en el panel Filtros e indicar si se van a crear parámetros de informe. Si especifica la opción de parámetro de informe, se crea un conjunto de datos especial automáticamente para rellenar la lista de valores válidos del parámetro.  El conjunto de datos no aparece en el panel Datos de informe de forma predeterminada. Para obtener más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Parámetros de informe** La lista de parámetros de informe. Los parámetros se pueden crear manual o automáticamente cuando una consulta de conjunto de datos incluye parámetros de consulta.  
   
 -   **Imágenes** La lista de imágenes disponibles para incluir como elemento del informe Imagen en un informe.  
   
- Los orígenes de datos y conjuntos de datos del panel Datos de informe representan los elementos en la definición de informe. El panel Datos de informe es una característica compatible con varios entornos de creación de informes. En el Generador de informes, es el único panel disponible para administrar los orígenes de datos y conjuntos de datos. En el Diseñador de informes, el panel Datos de informe trabaja con el Explorador de soluciones, que incluye orígenes de datos compartidos y conjuntos de datos compartidos como archivos. Los orígenes de datos compartidos y los conjuntos de datos compartidos del panel Datos de informe deben apuntar a los orígenes de datos compartidos y los conjuntos de datos compartidos del Explorador de soluciones. Los elementos del panel Datos de informe contienen después una referencia a los archivos de datos en el Explorador de soluciones. Las propiedades del proyecto determinan si los orígenes de datos compartidos y los conjuntos de datos compartidos se implementan en el servidor de informes o en el sitio de SharePoint. Para obtener más información, vea [convertir orígenes de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ Los orígenes de datos y conjuntos de datos del panel Datos de informe representan los elementos en la definición de informe. El panel Datos de informe es una característica compatible con varios entornos de creación de informes. En el Generador de informes, es el único panel disponible para administrar los orígenes de datos y conjuntos de datos. En el Diseñador de informes, el panel Datos de informe trabaja con el Explorador de soluciones, que incluye orígenes de datos compartidos y conjuntos de datos compartidos como archivos. Los orígenes de datos compartidos y los conjuntos de datos compartidos del panel Datos de informe deben apuntar a los orígenes de datos compartidos y los conjuntos de datos compartidos del Explorador de soluciones. Los elementos del panel Datos de informe contienen después una referencia a los archivos de datos en el Explorador de soluciones. Las propiedades del proyecto determinan si los orígenes de datos compartidos y los conjuntos de datos compartidos se implementan en el servidor de informes o en el sitio de SharePoint. Para más información, vea [Conversión de orígenes de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Si no ve el panel Datos de informe, haga clic en el área de diseño y, luego, en el menú **Ver** , haga clic en **Datos de informe**. Si el panel Datos de informe está flotando, puede anclarlo. Para más información, vea [Acoplar el panel Datos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
   
 ###  <a name="bkmk_GroupingPane"></a> Panel de agrupación  
- Use el panel de agrupación para definir los grupos para una región de datos Tablix. Puede definir grupos de filas y grupos de detalles para las tablas, y grupos de filas y columnas para las matrices. No puede usar el panel de agrupación para definir grupos para los gráficos u otras regiones de datos. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Use el panel de agrupación para definir los grupos para una región de datos Tablix. Puede definir grupos de filas y grupos de detalles para las tablas, y grupos de filas y columnas para las matrices. No puede usar el panel de agrupación para definir grupos para los gráficos u otras regiones de datos. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  El panel de agrupación tiene dos modos:  
   
@@ -101,11 +99,11 @@ ms.lasthandoff: 08/09/2017
   
  Use el panel de propiedades para:  
   
--   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades puede aceptar una expresión; expresiones complejas se indican mediante el valor  **\<expresión >**. Haga clic en  **\<expresión >** para abrir el **expresión** cuadro de diálogo. Para obtener más información, vea [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expression>**). Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use los botones de la barra de herramientas del panel de propiedades para cambiar la cuadrícula de la vista por categorías a la vista alfabética. En la vista por categorías, es probable que tenga que expandir una categoría para ver todas las propiedades de la misma. Para abrir el cuadro de diálogo Propiedades de un elemento, haga clic en el botón **Páginas de propiedades** en la barra de herramientas, o bien haga clic con el botón derecho en el elemento y seleccione **Propiedades**.  
   
--   Establecer propiedades para el miembro del grupo seleccionado en el panel de agrupación. Las propiedades de miembro del grupo ayudan a controlar la forma en que las filas de encabezado y pie de grupo se repiten para cada grupo instancias. Para obtener más información, vea [mostrar encabezados y pies de página con un grupo de &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
+-   Establecer propiedades para el miembro del grupo seleccionado en el panel de agrupación. Las propiedades de miembro del grupo ayudan a controlar la forma en que las filas de encabezado y pie de grupo se repiten para cada grupo instancias. Para más información, vea [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Para mostrar el panel de propiedades, haga clic en **Ventana de propiedades** en el menú **Ver**. Puede desacoplar este panel y moverlo a otra área de la ventana de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o mostrarlo como una vista con pestañas en la superficie de diseño.  
   
@@ -248,7 +246,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
- Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en la siguiente ubicación: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
+ Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en la ubicación siguiente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
   
  También puede agregar estilos personalizados al Asistente para informes.  
   
@@ -316,7 +314,7 @@ ms.lasthandoff: 08/09/2017
 [Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
 [Explorador de soluciones](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
 [Informes de Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
-[Lenguaje de definición de informe](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Lenguaje RDL (Report Definition Language)](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Implementación y compatibilidad de versiones en SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

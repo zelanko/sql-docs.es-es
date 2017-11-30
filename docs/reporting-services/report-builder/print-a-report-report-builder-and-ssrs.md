@@ -1,5 +1,5 @@
 ---
-title: Imprimir un informe (generador de informes y SSRS) | Documentos de Microsoft
+title: Imprimir un informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 98680d72888f7c5bea47a6b1d7bf8e81d90bc06c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir un informe (Generador de informes y SSRS)
-  Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el portal web de Reporting Services o cualquier aplicación que utilice para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
+  Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el portal web de Reporting Services o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
   
  Cuando imprime un informe, puede especificar el tamaño del papel que se va a usar. El tamaño del papel determina el número de páginas de un informe y los datos del informe que caben en cada página. El tamaño del papel solamente afecta a los informes representados con representadores de saltos de página forzados: PDF, Imagen e Imprimir. El establecimiento del tamaño del papel no tiene ningún efecto en otros representadores. Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
- De la barra de Visor de informes en el portal web de Reporting Services o en vista previa en el generador de informes, puede exportar un informe a un representador de saltos de página duros o haga clic en el botón Imprimir para imprimir una copia del informe. Es posible que necesite establecer el tamaño del papel u otras propiedades de configuración de página. Use el cuadro de diálogo **Propiedades del informe** para cambiar las propiedades de configuración de página, incluyendo el tamaño del papel.  
+ Desde la barra de herramientas del visor de informes del portal web de Reporting Services o en la vista previa del Generador de informes, puede exportar un informe a un representador de saltos de página manuales o hacer clic en el botón Imprimir para imprimir una copia del informe. Es posible que necesite establecer el tamaño del papel u otras propiedades de configuración de página. Use el cuadro de diálogo **Propiedades del informe** para cambiar las propiedades de configuración de página, incluyendo el tamaño del papel.  
   
  Puede especificar los márgenes de impresión de la página en dos ubicaciones diferentes: en modo de diseño y en modo de ejecución.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Los márgenes de impresión no se muestran en los modos de diseño o de ejecución. No hay ninguna relación entre el área expuesta de diseño y el área de impresión de su informe. Para ver los márgenes de impresión, en modo de ejecución haga clic en Diseño de impresión en la pestaña **Ejecutar** de la Cinta de opciones.  
   
- Para obtener más información acerca de la paginación de informes, consulte [paginación en Reporting Services &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Para más información sobre la paginación de informes, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>Para imprimir un informe desde una aplicación de explorador web  
   
-1.  En el portal web de Reporting Services, navegue hasta el informe que se va a imprimir. Abra el informe.  
+1.  En el portal web de Reporting Services, vaya al informe que quiere imprimir. Abra el informe.  
   
 3.  En la barra de herramientas que se encuentra en la parte superior del informe, haga clic en **Imprimir**.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-other-applications"></a>Para imprimir un informe desde otras aplicaciones  
   
-1.  En el portal web de Reporting Services, navegue hasta el informe que se va a imprimir. Abra el informe.  
+1.  En el portal web de Reporting Services, vaya al informe que quiere imprimir. Abra el informe.  
   
 2.  En la barra de herramientas situada en la parte superior del informe, seleccione un formato de representación y, a continuación, haga clic en **Exportar**. El informe se abre en la aplicación de visor correspondiente al formato de representación.  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vea también  
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Cuadro de diálogo de propiedades de informe, el programa de instalación de la página &#40; El generador de informes &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [Propiedades del informe (cuadro de diálogo), Configurar página &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

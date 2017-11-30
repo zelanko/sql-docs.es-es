@@ -1,30 +1,28 @@
 ---
-title: "Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS) | Documentos de Microsoft"
+title: "Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>Crear una base de datos del servidor de informes de modo nativo
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -87,7 +85,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 4.  Conéctese a la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que va a usar para crear y hospedar la base de datos del servidor de informes:  
   
-    1.  Escriba la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que desea utilizar. El asistente mostrará un [!INCLUDE[ssDE](../../includes/ssde-md.md)] local que se ejecuta como instancia predeterminada, si está disponible. De lo contrario, debe escribir el servidor y la instancia que va a utilizar. Las instancias con nombre se especifican en este formato: \<servername >\\< instancename\>.  
+    1.  Escriba la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que desea utilizar. El asistente mostrará un [!INCLUDE[ssDE](../../includes/ssde-md.md)] local que se ejecuta como instancia predeterminada, si está disponible. De lo contrario, debe escribir el servidor y la instancia que va a utilizar. Las instancias con nombre se especifican en este formato: \<servername>\\<instancename\>.  
   
     2.  Escriba las credenciales que se usan para una conexión esporádica al [!INCLUDE[ssDE](../../includes/ssde-md.md)] con el propósito de crear las bases de datos del servidor de informes. Para obtener más información sobre cómo se utilizan estas credenciales, vea [Antes de empezar](#rsdbrequirements) en este tema.  
   
@@ -155,8 +153,8 @@ El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ss
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configurar una conexión de base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Administrar un servidor de informes de modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Configurar una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,5 @@
 ---
-title: "Mediante el acceso URL en una aplicación de Windows | Documentos de Microsoft"
+title: "Usar el acceso URL en una aplicación de Windows | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Windows applications [Reporting Services]
 - Web Browser controls [Reporting Services]
@@ -19,19 +18,18 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: bd579f1ce1b2f44de76c41b2e6f3c8062589f0c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integración de Reporting Services mediante el acceso URL - aplicación de Windows
+# <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integración de Reporting Services con el acceso URL: aplicación de Windows
   Aunque el acceso URL a un servidor de informes se optimiza para un entorno web, también puede utilizar el acceso URL para incrustar informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una aplicación para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sin embargo, el acceso URL que implica formularios Windows Forms todavía requiere que use la tecnología del explorador web. Puede utilizar los escenarios de integración siguientes con el acceso URL y los formularios Windows Forms:  
   
 -   Mostrar un informe de una aplicación de formulario Windows Forms iniciando mediante programación un explorador web.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/12/2017
 -   Usar el control <xref:System.Windows.Forms.WebBrowser> en un formulario Windows Forms para mostrar un informe.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Iniciar Internet Explorer desde un formulario Windows Forms  
- Puede utilizar la clase <xref:System.Diagnostics.Process> para tener acceso a un proceso que se está ejecutando en un equipo. El <xref:System.Diagnostics.Process> clase es útil [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] construcción para iniciar, detener, controlar y supervisar aplicaciones. Para ver un informe específico en la base de datos del servidor de informes, puede iniciar el **IExplore** proceso, pasando la dirección URL para el informe. El ejemplo de código siguiente se puede utilizar para iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer y una dirección URL de un informe concreto cuando el usuario hace clic en un botón de un formulario Windows Forms.  
+ Puede utilizar la clase <xref:System.Diagnostics.Process> para tener acceso a un proceso que se está ejecutando en un equipo. La clase <xref:System.Diagnostics.Process> es una construcción de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que sirve de utilidad para iniciar, detener, controlar y supervisar las aplicaciones. Para ver un informe concreto en la base de datos del servidor de informes, puede iniciar el proceso **IExplore** y pasarle la dirección URL al informe. El ejemplo de código siguiente se puede utilizar para iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer y una dirección URL de un informe concreto cuando el usuario hace clic en un botón de un formulario Windows Forms.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -95,17 +93,17 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Para agregar el control WebBrowser al formulario Windows Forms  
   
-1.  Cree una nueva aplicación de Windows en la vista [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Cree una aplicación para Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-2.  Busque la <xref:System.Windows.Forms.WebBrowser> controlar en el **cuadro de herramientas** cuadro de diálogo.  
+2.  Busque el control <xref:System.Windows.Forms.WebBrowser> en el cuadro de diálogo **Cuadro de herramientas**.  
   
-     Si el **cuadro de herramientas** es no es visible puede obtener acceso a él haciendo clic en el **vista** elemento de menú y seleccionando **cuadro de herramientas**.  
+     Si el **cuadro de herramientas** no está visible, puede obtener acceso a él haciendo clic en el elemento del menú **Ver** y seleccionando **Cuadro de herramientas**.  
   
-3.  Arrastre el <xref:System.Windows.Forms.WebBrowser>control en la superficie de diseño del formulario Windows Forms.  
+3.  Arrastre el control <xref:System.Windows.Forms.WebBrowser> a la superficie de diseño del formulario Windows Forms.  
   
-     El <xref:System.Windows.Forms.WebBrowser>control denominado webBrowser1 se agrega al formulario  
+     El control <xref:System.Windows.Forms.WebBrowser> denominado webBrowser1 se agrega al formulario  
   
- Usted nos los <xref:System.Windows.Forms.WebBrowser> control a una dirección URL mediante una llamada a su **Navigate** método. Puede asignar una cadena de acceso URL concreta al control <xref:System.Windows.Forms.WebBrowser> en tiempo de ejecución como se muestra en el ejemplo siguiente.  
+ Al llamar al método del control <xref:System.Windows.Forms.WebBrowser> **Navigate**, dirige el control a una dirección URL. Puede asignar una cadena de acceso URL concreta al control <xref:System.Windows.Forms.WebBrowser> en tiempo de ejecución como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim url As String = "http://localhost/reportserver?/" & _  
@@ -122,11 +120,10 @@ webBrowser1.Navigate(url);
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integración de Reporting Services en aplicaciones](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integración de Reporting Services mediante el acceso URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Integrar Reporting Services con SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
- [Integrar Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
- [Acceso URL &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [Integración de Reporting Services en las aplicaciones](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [Integración de Reporting Services con el acceso URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Integración de Reporting Services con SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
+ [Integración de Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
+ [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

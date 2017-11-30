@@ -1,5 +1,5 @@
 ---
-title: En SQL Server 2016 del generador de informes | Documentos de Microsoft
+title: Generador de informes en SQL Server 2016 | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- "10428"
+f1_keywords: "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc8ac3d0ed00a6fda642ab09bf2a28e705a6b419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Generador de informes en SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio.  Al diseñar un informe paginado, crea una definición de informe que especifica dónde obtener los datos, qué datos obtener y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] o publicarlo en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vea también  
   [Inicio del Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
-  [Instalar el Generador de informes](../../reporting-services/install-windows/install-report-builder.md)
+  [Instalación del Generador de informes](../../reporting-services/install-windows/install-report-builder.md)
 
   [Novedades en Reporting Services y el Generador de informes de SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
@@ -99,5 +97,4 @@ ms.lasthandoff: 08/09/2017
  [Métodos abreviados de teclado &#40;Generador de informes&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Se describen las teclas de método abreviado disponibles para navegar y diseñar informes en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-
 

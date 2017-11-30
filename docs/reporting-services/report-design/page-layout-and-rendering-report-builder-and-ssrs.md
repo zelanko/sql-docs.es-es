@@ -1,5 +1,5 @@
 ---
-title: "Representación y diseño de página (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Representación y diseño de páginas (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c68aa21a9134e0d964c4728182141ad61937dfca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
 Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los informes paginados, de forma que esté seguro de que su informe tiene el aspecto que quiere, incluidos el diseño y los saltos de página, y el tamaño del papel. 
@@ -124,4 +123,3 @@ Un informe también puede contener subinformes.
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

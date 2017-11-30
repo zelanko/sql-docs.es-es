@@ -1,5 +1,5 @@
 ---
-title: Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS) | Documentos de Microsoft
+title: Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be2f1f7acebd93946e4319b81f4a23b436808702
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
 
   A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], los servidores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint pueden escribir los eventos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el registro de seguimiento del Servicio de creación de registros unificado (ULS). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] están disponibles en la página Supervisión de Administración central de SharePoint.  
@@ -117,7 +115,7 @@ Get-SPDiagnosticConfig
 |Catálogo del servidor de informes||  
 |Fragmento del servidor de informes||  
 |Limpieza del servidor de informes||  
-|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección url interna del servidor de informes mediumusing http://localhost `http://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
+|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección URL interna del servidor de informes MediumUsing `http://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
 |Criptografía del servidor de informes||  
 |Extensión de datos del servidor de informes||  
 |Sondeo de base de datos del servidor de informes||  
@@ -147,13 +145,13 @@ Get-SPDiagnosticConfig
 |Servicio compartido|Entradas de ejemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acceso de MediumGranting a las bases de datos de contenido.<br /><br /> Instancias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Cambio de la cuenta de servicio de MediumProcessing para ReportingWebServiceApplication<br /><br /> Permisos de base de datos de MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Ver un archivo de registro con PowerShell  
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")puede usar PowerShell para devolver una lista de los [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] relacionados con eventos de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")Puede usar PowerShell para devolver una lista de los eventos relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- Hay también muchas herramientas que puede descargar para leer registros ULS. Por ejemplo, el [visor de registros de SharePoint](http://sharepointlogviewer.codeplex.com/) o el [visor de registros ULS de SharePoint](http://ulsviewer.codeplex.com/workitem/list/basic). Ambos están disponibles en CodePlex.  
+ También hay herramientas que puede descargar para leer registros ULS. Por ejemplo, [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponible en GitHub. 
   
  Para más información sobre cómo usar PowerShell para ver datos de registro, vea [Visualización de registros de diagnóstico (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
   
@@ -162,5 +160,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Para más información y conocer los pasos para configurar el registro de diagnóstico en un servidor de SharePoint en Administración Central de SharePoint 2010, vea [Configuración de las opciones del registro de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
-ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 80f962efa995f8f6a5d422f8b470826acddbab58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 Use esta página para establecer las propiedades del sistema en el servidor de informes. Hay varias maneras de establecer las propiedades del sistema. Esta herramienta proporciona una interfaz de usuario gráfica para que pueda establecer propiedades sin tener que escribir código.
 
-Para abrir esta página, inicie SQL Server Management Studio, conéctese a una instancia de servidor de informes, haga clic en el nombre del servidor de informes y seleccione **propiedades**. Seleccione **avanzadas** para abrir esta página.
+Para abrir esta página, inicie SQL Server Management Studio, conéctese a una instancia del servidor de informes, haga clic con el botón derecho en el nombre del servidor de informes y seleccione **Propiedades**. Seleccione **Opciones avanzadas** para abrir esta página.
 
 ## <a name="options"></a>Opciones
 
@@ -81,7 +78,7 @@ Define la manera en la que se comprimen las instantáneas. El valor predetermina
 |Valores|Description|
 |---------|---------|
 |**SQL**|Las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.|
-|**Ninguno**|No se comprimen las instantáneas.|
+|**Ninguno**|Las instantáneas no se comprimen.|
 |**Todos**|Las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|
 
 **SystemReportTimeout**  
@@ -95,8 +92,8 @@ Determina si se admite la seguridad integrada de Windows para las conexiones de 
 
 |Valores|Description|
 |---------|---------|
-|**True**|Seguridad integrada de Windows está habilitada.|
-|**False**|Seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.|
+|**True**|La seguridad integrada de Windows está habilitada.|
+|**False**|La seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.|
 
 **EnableLoadReportDefinition**  
 Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción, se determina el valor de la propiedad **EnableLoadReportDefinition** en el servidor de informes.  
@@ -117,31 +114,34 @@ Especifica el número de entradas de datos en memoria caché que pueden estar ac
 **EditSessionTimeout**  
 Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es de 7200 segundos (2 horas).  
 
-**EnableCustomVisuals** ***(solo servidor de informes de BI de energía)***  
-Debe habilitar PowerBI ReportServer la visualización de objetos visuales personalizados de Power BI. Los valores son True, False.  El valor predeterminado es True.  
+**EnableCustomVisuals** ***(solo Power BI Report Server)***  
+Si Power BI Report Server debe habilitar la visualización de objetos visuales personalizados de Power BI. Los valores son True o False.  El valor predeterminado es True.  
 
-**EnablePowerBIReportExportData** ***(solo servidor de informes de BI de energía)***  
-Debe habilitar PowerBI ReportServer la exportación de datos desde los objetos visuales de Power BI. Los valores son True, False.  El valor predeterminado es True.  
+**EnablePowerBIReportExportData** ***(solo Power BI Report Server)***  
+Si Power BI Report Server debe habilitar la exportación de datos desde objetos visuales de Power BI. Los valores son True o False.  El valor predeterminado es True.  
+
+**ScheduleRefreshTimeoutMinutes** ***(solo Power BI Report Server)***  
+Tiempo de espera de actualización de datos en minutos para la actualización programada en informes de Power BI con modelos de AS incrustados. El valor predeterminado es 120 minutos.
 
 **EnableTestConnectionDetailedErrors**  
 Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es **true**. Si la opción se establece en **false**, solo se enviarán mensajes de error genéricos.
 
 **AccessControlAllowCredentials**  
-Indica si la respuesta a la solicitud de cliente puede estar expuesta cuando la marca 'credenciales' está establecida en true. El valor predeterminado es **false**.
+Indica si la respuesta a la solicitud del cliente puede exponerse cuando la marca 'credentials' está establecida en true. El valor predeterminado es **false**.
 
-**AccessControlAllowHeaders** una lista de separados por comas de encabezados que el servidor permitirá cuando un cliente realiza una solicitud. Esta propiedad puede ser una cadena vacía, especificar * permitirá todos los encabezados.
+**AccessControlAllowHeaders** Lista separada por comas de encabezados que el servidor permite cuando un cliente realiza una solicitud. Esta propiedad puede ser una cadena vacía; si se especifica *, se permiten todos los encabezados.
 
-**AccessControlAllowMethods** una lista de separados por comas de los métodos HTTP que el servidor permitirá cuando un cliente realiza una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE), especificar * permitirá todos los métodos.
+**AccessControlAllowMethods** Lista separada por comas de métodos HTTP que el servidor permite cuando un cliente realiza una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE); si se especifica *, se permiten todos los métodos.
 
-**AccessControlAllowOrigin** una lista de separados por comas de orígenes que el servidor permitirá cuando un cliente realiza una solicitud. El valor predeterminado es en blanco, lo que impide que todas las solicitudes, especificar * permitirá todos los orígenes cuando no se establecen las credenciales; Si se especifican las credenciales, se debe especificar una lista explícita de orígenes.
+**AccessControlAllowOrigin** Lista separada por comas de orígenes que el servidor permite cuando un cliente realiza una solicitud. El valor predeterminado es en blanco, lo que evita todas las solicitudes; si se especifica *, se permiten todos los orígenes siempre que no haya credenciales establecidas; si hay credenciales especificadas, se debe especificar una lista explícita de orígenes.
 
-**AccessControlExposeHeaders** una lista de separados por comas de encabezados que el servidor va a exponer a los clientes. Está en blanco de forma predeterminada.
+**AccessControlExposeHeaders** Lista separada por comas de encabezados que el servidor va a exponer a los clientes. Está en blanco de forma predeterminada.
 
-**AccessControlMaxAge** especifica el número de segundos que pueden almacenarse en caché los resultados de la solicitud preparatoria. El valor predeterminado es 600 (10 minutos).
+**AccessControlMaxAge** Especifica el número de segundos durante los que se pueden almacenar en caché los resultados de la solicitud preparatoria. El valor predeterminado es 600 (10 minutos).
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer propiedades del servidor de informes &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+[Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
 [Propiedades de Reporting Services](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
 [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
@@ -149,5 +149,4 @@ Indica si la respuesta a la solicitud de cliente puede estar expuesta cuando la 
 [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Habilitar y deshabilitar Mis informes](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

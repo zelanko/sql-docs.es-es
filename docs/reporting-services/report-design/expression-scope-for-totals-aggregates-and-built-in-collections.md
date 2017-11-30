@@ -1,5 +1,5 @@
 ---
-title: "Ámbito de expresión para totales, agregados y colecciones integradas | Documentos de Microsoft"
+title: "Ámbito de expresión para los totales, agregados y colecciones integradas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 238c0537821da0ab64a6eb27121a9f98d29ad9bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ámbito de expresión para los totales, agregados y colecciones integradas
   Al escribir expresiones, encontrará que el término *ámbito* se utiliza en varios contextos. El ámbito puede especificar los datos que se deben utilizar para evaluar una expresión, el conjunto de cuadros de texto de una página representada o el conjunto de elementos de informe que se pueden mostrar u ocultar mediante un comando de alternancia. Verá el término *ámbito* en temas relacionados con la evaluación de expresiones, la sintaxis de funciones de agregado, la visibilidad condicional, y también en mensajes de error relacionados con estas áreas. Las siguientes descripciones le ayudarán a diferenciar el significado de *ámbito* que corresponda:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Ámbito con nombre** El nombre de un conjunto de datos, una región de datos o un grupo de regiones de datos que está en el ámbito de la expresión. En el caso de cálculos agregados, puede especificar un ámbito contenedor. No puede especificar un ámbito con nombre para un grupo de filas y un grupo de columnas en una única expresión. No puede especificar un ámbito contenido a menos que la expresión sea para un agregado de un agregado.  
   
-     La siguiente expresión genera los años de intervalo entre SellStartDate y LastReceiptDate. Estos campos están en dos conjuntos de datos distintos, DataSet1 y DataSet2. El [primera función &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), que es una función de agregado, devuelve el primer valor de SellStartDate en DataSet1 y el primer valor de LastReceiptDate en DataSet2.  
+     La siguiente expresión genera los años de intervalo entre SellStartDate y LastReceiptDate. Estos campos están en dos conjuntos de datos distintos, DataSet1 y DataSet2. La [función First &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), que es una función de agregado, devuelve el primer valor de SellStartDate en DataSet1 y el primer valor de LastReceiptDate en DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  En algunas ubicaciones de un informe se debe especificar un ámbito. Por ejemplo, en el caso de un cuadro de texto en la superficie de diseño, debe especificar el nombre del conjunto de datos que se va a usar: `=Max(Fields!Sales.Value,"Dataset1")`. En otras ubicaciones, hay un ámbito predeterminado implícito. Por ejemplo, si no especifica un agregado para un cuadro de texto en un ámbito de grupo, se utiliza el agregado predeterminado Primero.  
   
- En cada tema de función de agregado se ofrece una lista de los ámbitos válidos para su uso. Para obtener más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ En cada tema de función de agregado se ofrece una lista de los ámbitos válidos para su uso. Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ##  <a name="Examples"></a> Ejemplo de expresiones de agregado para una región de datos de tabla  
  La escritura de expresiones que especifiquen ámbitos no predeterminado requiere cierta práctica. Como ayuda para entender los distintos ámbitos, estudie la siguiente figura y tabla. En la figura, tiene una etiqueta cada celda de una tabla de información de ventas que muestra la cantidad de elementos vendida por año y trimestre, y también por territorio de ventas. Observe las indicaciones visuales en los identificadores de fila e identificadores de columna que muestran la estructura de grupos de filas y columnas, para indicar los grupos anidados. La tabla tiene la siguiente estructura:  
@@ -114,14 +114,14 @@ ms.lasthandoff: 08/09/2017
 |C07|Grupo de filas externo "Cat"|[Cat]<br /><br /> [Sum(Qty)]|`=Fields!Cat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C08|Igual que C07|||  
 |C09|Grupo de filas externo "Cat" y grupo de columnas interno "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C10|Igual que C07|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
-|C11|Grupo de filas externo "Cat" y grupo de columnas interno "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
+|C10|Igual que C07|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
+|C11|Grupo de filas externo "Cat" y grupo de columnas interno "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
 |C12|Grupo de filas interno "Subcat"|[Subcat]<br /><br /> [Sum(Qty)]|`=Fields!SubCat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C13|Grupo de filas interno "Cat" y grupo de columnas interno "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C14|Grupo de filas interno "Subcat"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
-|C15|Grupo de filas interno "SubCat" y grupo de columnas interno "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C14|Grupo de filas interno "Subcat"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C15|Grupo de filas interno "SubCat" y grupo de columnas interno "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- Para obtener más información sobre la forma de interpretar las indicaciones visuales en las regiones de datos Tablix, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para obtener más información acerca de la región de datos tablix, vea [celdas de región de datos Tablix, filas y columnas &#40; El generador de informes &#41; y SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para obtener más información sobre las expresiones y los agregados, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Para obtener más información sobre la forma de interpretar las indicaciones visuales en las regiones de datos Tablix, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para más información sobre la región de datos Tablix, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para obtener más información sobre las expresiones y los agregados, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
 ##  <a name="Sparklines"></a> Sincronizar las escalas de los minigráficos  
@@ -157,7 +157,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Sort"></a> Especificar una expresión de orden para sincronizar el criterio de ordenación  
  Al agregar un botón de orden interactivo a una columna de la tabla, puede sincronizar la ordenación para varios elementos que tengan un ámbito contenedor común. Por ejemplo, puede agregar un botón de ordenación a un encabezado de columna en una matriz y especificar el ámbito contenedor como nombre del conjunto de datos enlazado a la matriz. Cuando un usuario hace clic en el botón de ordenación, no solo se ordenan las filas de la matriz, sino que también se ordenan los grupos de series de gráfico de los gráficos que estén enlazados al mismo conjunto de datos. De esta manera, todas las regiones de datos que dependen de ese conjunto de datos se pueden sincronizar para que muestren el mismo criterio de ordenación.  
   
- Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Nulls"></a> Suprimir valores NULL o cero en una celda  
@@ -166,9 +166,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones de grupo &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Crear grupos de jerarquía recursiva &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Aplicar formato a texto y marcadores de posición &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

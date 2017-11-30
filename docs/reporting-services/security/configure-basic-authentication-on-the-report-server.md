@@ -1,5 +1,5 @@
 ---
-title: "Configurar la autenticación básica en el servidor de informes | Documentos de Microsoft"
+title: "Configurar la autenticación básica en el servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  
@@ -43,9 +42,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-     El archivo se encuentra en  *\<unidad >:*\Program Server\MSRS13 de SQL. MSSQLSERVER\Reporting Services\ReportServer.  
+     El archivo se encuentra en *\<unidad>:*\Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Buscar \< **autenticación**>.  
+2.  Busque \<**Autenticación**>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. La primera estructura XML proporciona marcadores de posición para especificar todos los elementos, que se describen en la sección siguiente:  
   
@@ -70,13 +69,13 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  Péguela sobre las entradas existentes para \< **autenticación**>.  
+4.  Péguela sobre las entradas existentes para \<**Autenticación**>.  
   
      Si usa varios tipos de autenticación, basta con que agregue el elemento **RSWindowsBasic** , pero no elimine las entradas correspondientes a **RSWindowsNegotiate**, **RSWindowsNTLM**o **RSWindowsKerberos**.  
   
      Observe que no puede utilizar **Custom** con otros tipos de autenticación.  
   
-5.  Reemplace los valores vacíos para \< **territorio**> o \< **DefaultDomain**> con valores que son válidos para su entorno.  
+5.  Reemplace los valores vacíos de \<**Dominio**> o \<**DominioPredeterminado**> por valores que sean válidos para su entorno.  
   
 6.  Guarde el archivo.  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 08/09/2017
  [Seguridad y protección de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
-

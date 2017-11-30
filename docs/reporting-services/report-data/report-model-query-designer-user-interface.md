@@ -1,5 +1,5 @@
 ---
-title: "Interfaz de usuario del Diseñador de consultas de modelo de informe | Documentos de Microsoft"
+title: "Interfaz de usuario del Diseñador de consultas de modelo de informe| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a7fd4f315f8fe171a6b5e8df47c5e5be5b01fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas de modelo de informe
   El Diseñador de informes proporciona dos diseñadores de consultas; éstos le ayudan a especificar los datos de un origen de datos del modelo de servidor de informes que desea usar en un informe. Utilice el diseñador gráfico de consultas para explorar y elegir las entidades de modelo y los campos de entidad. Use el diseñador de consultas basado en texto para trabajar directamente con una especificación del Lenguaje de definición de modelos semánticos (SMDL) en formato XML.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  En la siguiente ilustración se indica el nombre de cada panel.  
   
- ![IU del Diseñador de consultas de modelo semántico](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "IU del Diseñador de consultas de modelo semántico")  
+ ![Interfaz de usuario del Diseñador de consultas de modelos semánticos](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Interfaz de usuario del Diseñador de consultas de modelos semánticos")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |Panel Explorador|Muestra representaciones gráficas de las entidades y los campos de entidad del modelo. Utilice este panel para explorar entidades, sus entidades relacionadas y campos.|  
 |Área de diseño|Contiene una lista de campos del modelo. Utilice este panel para organizar el diseño de los campos seleccionados.|  
-|Panel Resultados|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic en cualquier panel y, a continuación, haga clic en **ejecutar**, o haga clic en el **ejecutar** (![ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")) en la barra de herramientas.|  
+|Panel Resultados|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y, después, haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** (![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")) en la barra de herramientas.|  
   
  Si efectúa cambios en la información de los paneles Explorador o Área de diseño, se verá afectado el contenido del panel Resultado al hacer clic en **Ejecutar**.  
   
@@ -62,10 +61,10 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. La consulta para un origen de datos del modelo del servidor de informes es una especificación del Lenguaje de consulta de modelos semánticos (SMQL) en XML.|  
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Deshacer la acción](../../reporting-services/report-data/media/rsqdicon-undo.gif "deshacer acción")|Deshace la última acción.|  
-|![Rehacer una acción](../../reporting-services/report-data/media/rsqdicon-redo.gif "rehacer una acción")|Rehace la última acción.|  
+|![Deshacer una acción](../../reporting-services/report-data/media/rsqdicon-undo.gif "Deshacer una acción")|Deshace la última acción.|  
+|![Rehacer una acción](../../reporting-services/report-data/media/rsqdicon-redo.gif "Rehacer una acción")|Rehace la última acción.|  
 |![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra las filas resultantes en el panel Resultado.|  
-|![Gráfico de filtro junto a columna de filtro seleccionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "gráfico de filtro junto a columna de filtro seleccionada")|Abre el cuadro de diálogo **Filtrar datos** , que permite especificar los datos que desea filtrar. Puede especificar filtros independientemente de los datos actuales del Área de diseño.|  
+|![Gráfico de filtro junto a la columna de filtro seleccionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "Gráfico de filtro junto a la columna de filtro seleccionada")|Abre el cuadro de diálogo **Filtrar datos** , que permite especificar los datos que desea filtrar. Puede especificar filtros independientemente de los datos actuales del Área de diseño.|  
   
 ## <a name="text-based-query-designer"></a>Diseñador de consultas basado en texto  
  Para crear consultas de conjunto de datos del modelo de servidor de informes, de forma predeterminada se usa el diseñador gráfico de consultas. Para cambiar al diseñador de consultas basado en texto, haga clic en el botón de alternancia **Editar como texto** de la barra de herramientas.  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
  En la siguiente ilustración se indica el nombre de cada panel.  
   
- ![Diseñador de consultas de lenguaje de definición de modelos semánticos](../../reporting-services/report-data/media/rsqd-dsawmodel-smql-generic.gif "Diseñador de consultas de lenguaje de definición de modelos semánticos")  
+ ![Diseñador de consultas del Lenguaje de definición de modelos semánticos](../../reporting-services/report-data/media/rsqd-dsawmodel-smql-generic.gif "Diseñador de consultas del Lenguaje de definición de modelos semánticos")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -95,8 +94,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vea también  
  [Herramientas de diseño de consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Conexión de modelo de informe &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Conexión de modelo de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

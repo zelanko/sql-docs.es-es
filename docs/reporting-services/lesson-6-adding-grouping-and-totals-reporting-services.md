@@ -1,27 +1,25 @@
 ---
-title: "Lección 6: Agregar grupos y totales (Reporting Services) | Documentos de Microsoft"
+title: "Lección 6: Agregar grupos y totales (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 742ebc4024e30ca7f18020ef6d4ffc29e3a3c635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar y resumir los datos.  
@@ -37,7 +35,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
     Observe que el identificador de fila ahora tiene un corchete para mostrar un grupo. Ahora, la tabla también tiene dos columnas Date, una de ellas en uno de los dos extremos de una línea de puntos vertical.  
   
-    ![grupo de fecha agregado](../reporting-services/media/rs-basictablegroups1design.png "fecha grupo agregado")  
+    ![Grupo de fecha agregado](../reporting-services/media/rs-basictablegroups1design.png "Grupo de fecha agregado")  
   
 4.  En el panel **Datos de informe** , arrastre el campo **Order** hasta el panel **Grupos de filas** . Sitúelo debajo de Date y encima de **(Details)**.
 
@@ -47,7 +45,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 5.  Elimine las columnas **Date** y **Order** originales situadas a la **derecha** de la línea doble. Esta acción quita los valores de este registro para que solo se muestre el valor de grupo. Seleccione los identificadores de las dos columnas y haga clic con el botón derecho en **Eliminar columnas**.  
   
-    ![Seleccionar columnas para eliminar](../reporting-services/media/rs-basictablegroupsdeletecols.gif "seleccionar columnas para eliminar")  
+    ![Seleccionar columnas para eliminar](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Seleccionar columnas para eliminar")  
   
 6.  Para dar formato a la nueva columna de fecha, haga clic con el botón derecho en la celda con la expresión de campo `[Date]` y, después, haga clic en **Propiedades de cuadro de texto**.  
   
@@ -78,7 +76,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 6.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Gris claro**y en **Aceptar**.  
   
-    ![Vista de diseño: tabla básica con total del pedido](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "vista de diseño: tabla básica con total del pedido")  
+    ![Vista Diseño: tabla básica con total de pedidos](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Vista Diseño: tabla básica con total de pedidos")  
   
 ## <a name="bkmk_adddailytotal"></a>Para agregar un total diario a un informe  
   
@@ -106,13 +104,13 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 4.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Azul claro**y en **Aceptar**.  
   
-    ![Vista de diseño: total general en tabla básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "vista de diseño: total general en tabla básica")  
+    ![Vista Diseño: total general en tabla básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Vista Diseño: total general en tabla básica")  
   
 5.  Haga clic en **Vista previa**.  
   
     El aspecto de la última página deberá ser parecido al de la imagen siguiente. En la barra de herramientas, haga clic en Última página ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Vista previa: Tabla básica con total general](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "vista previa: tabla básica con total general")  
+    ![Vista previa: tabla básica con total general](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Vista previa: tabla básica con total general")  
   
 ## <a name="bkmk_publishreport"></a>Para publicar el informe en el servidor de informes (opcional)  
   
@@ -159,12 +157,11 @@ Haga clic en el nombre del informe **Sales Orders** para verlo representado en e
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Ha completado correctamente el crear un informe de tabla básico tutorial.* *  
+** Ha completado correctamente el tutorial Crear un informe de tabla básico.**  
   
 ## <a name="see-also"></a>Vea también  
 [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

@@ -1,12 +1,11 @@
 ---
-title: Copia de seguridad y restaurar claves de cifrado Reporting Services | Documentos de Microsoft
+title: "Copia de seguridad y restauración de claves de cifrado de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,23 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a4344a31ac18bc128845935fa2dce6223dab5710
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Claves de cifrado de SSRS: copia de seguridad y restaurar claves de cifrado
+# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Una parte importante de la configuración del servidor de informes es la creación de una copia de seguridad de la clave simétrica utilizada para cifrar información confidencial. La copia de seguridad de la clave se necesita para varias operaciones rutinarias y, además, permite volver a utilizar una base de datos del servidor de informes existente en una nueva instalación.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
  Es necesario restaurar la copia de seguridad de la clave de cifrado cuando se produce alguno de los siguientes eventos:  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Se eliminan los datos de la clave simétrica anteriormente almacenada (por ejemplo, la información de la clave que se encontraba en la base de datos del servidor de informes desde una implementación anterior).  
   
- Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para obtener más información, vea [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obtener más información sobre la creación de claves simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para más información, vea [Claves de cifrado de SSRS: eliminar y volver a crear las claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obtener más información sobre la creación de claves simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ###  <a name="bkmk_restore_configuration_manager"></a> Restaurar las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
   
@@ -115,4 +113,3 @@ ms.lasthandoff: 08/09/2017
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Administrador de alertas de datos para los administradores de alertas | Documentos de Microsoft
+title: Administrador de alertas de datos para administradores de alertas | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9df65141967b8e9e0ab4e1f7115986b19674d341
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Administrador de alertas de datos para administradores de alertas
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services proporciona el Administrador de alertas de datos para los administradores de alertas de SharePoint administrar las alertas de datos. Los administradores de alertas pueden ver información sobre todas las alertas guardadas en el sitio y eliminarlas. En la imagen siguiente se muestran las características disponibles en el Administrador de alertas de datos para los administradores de alertas de SharePoint.
+SQL Server Reporting Services proporciona el Administrador de alertas de datos para SharePoint, que permite a los administradores de alertas administrar las alertas de datos. Los administradores de alertas pueden ver información sobre todas las alertas guardadas en el sitio y eliminarlas. En la imagen siguiente se muestran las características disponibles en el Administrador de alertas de datos para los administradores de alertas de SharePoint.
 
-![Administrador de alertas para los administradores de sitios de SharePoint de SharePoin](../reporting-services/media/rs-alertmanagersite.gif "Administrador de alertas para los administradores del sitio de SharePoint")
+![Administrador de alertas para administradores de sitios de SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Administrador de alertas para administradores de sitios de SharePoint")
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
  Cuando se habilita el sitio para las alertas de datos, se crean dos páginas de SharePoint, MyDataAlerts.aspx y SiteDataAlerts.aspx, que se agregan al sitio de SharePoint. SiteDataAlerts.aspx es el Administrador de alertas de datos para los administradores de alertas. Los administradores de alertas pueden abrir el Administrador de alertas de datos desde la página Configuración del sitio de SharePoint. Los administradores de alertas deben tener el permiso Administrar alertas de SharePoint para abrir el Administrador de alertas de datos.  
   
@@ -51,7 +50,7 @@ SQL Server Reporting Services proporciona el Administrador de alertas de datos p
 ##  <a name="ViewingAlerts"></a> Ver información de alertas de datos  
  Cuando se instala y se configura Reporting Services en SharePoint, la página Configuración del sitio de SharePoint incluye las opciones de **Reporting Services** . Los administradores de alertas hacen clic en la opción **Administrar alertas de datos** en Reporting Services para abrir el Administrador de alertas de datos. En la imagen siguiente se muestra en qué lugar de la página Configuración del sitio se abre el Administrador de alertas de datos.  
   
- ![Sección Reporting Services de la página Configuración del sitio](../reporting-services/media/rs-sitesettings.gif "sección Reporting Services de la página Configuración del sitio")  
+ ![Sección Reporting Services de la página Configuración del sitio](../reporting-services/media/rs-sitesettings.gif "Sección Reporting Services de la página Configuración del sitio")  
   
  El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del propietario de la alerta, el número de veces que se envió la alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado del mensaje de alerta. Si la alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información, consulte [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -61,7 +60,7 @@ SQL Server Reporting Services proporciona el Administrador de alertas de datos p
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|La última alerta se ejecutó correctamente y se envió.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|La última alerta se ejecutó correctamente, pero los datos no se modificaron y no se envió la alerta.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<mensaje de error > el archivo de registro contiene información detallada sobre el error. Consulte la entrada de registro con el identificador: \<GUID >.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<mensaje de error>El archivo de registro contiene información detallada acerca del error. Consulte la entrada del registro con el identificador: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Alerta creada.|  
   
  Para obtener más información, vea [Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
@@ -86,5 +85,4 @@ SQL Server Reporting Services proporciona el Administrador de alertas de datos p
 
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

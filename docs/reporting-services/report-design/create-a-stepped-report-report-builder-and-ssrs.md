@@ -1,5 +1,5 @@
 ---
-title: Crear un informe escalonado (generador de informes y SSRS) | Documentos de Microsoft
+title: Crear un informe escalonado (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c78e1a3998673851e9860a6e6a6e295cde2d7f3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
 Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] donde se muestran filas de detalles o grupos secundarios con una sangría debajo de un grupo primario en la misma columna, como se muestra en el ejemplo siguiente:  
   
- ![Informe escalonado representado](../../reporting-services/report-design/media/steppedreportrendered.gif "procesado escalonadas informes")  
+ ![Informe escalonado representado](../../reporting-services/report-design/media/steppedreportrendered.gif "Informe escalonado representado")  
   
  Los informes de tabla tradicionales sitúan el grupo primario en una columna adyacente del informe. La nueva región de datos tablix permite agregar un grupo y filas de detalles o grupos secundarios a la misma columna. Para diferenciar las filas de grupos de las filas de detalles o grupos secundarios, puede aplicar un formato, como el color de fuente, o puede aplicar una sangría a las filas de detalles.  
   
@@ -54,15 +53,15 @@ Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion
   
      Ahora ya tiene un informe tabular básico. Cuando se represente, verá una columna con el valor de instancia de grupo y una o varias columnas con datos de detalles agrupados. En la siguiente ilustración se muestra el aspecto que podría tener la región de datos en la superficie de diseño.  
   
-     ![Región de datos de tabla con grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "región de datos de tabla con grupo")  
+     ![Región de datos de tabla con grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Región de datos de tabla con grupo")  
   
      En la siguiente ilustración se muestra el aspecto que podría tener la región de datos representada al visualizar el informe.  
   
-     ![Informe agrupado representado](../../reporting-services/report-design/media/tablereportrendered.gif "procesado informe agrupado")  
+     ![Informe agrupado representado](../../reporting-services/report-design/media/tablereportrendered.gif "Informe agrupado representado")  
   
 3.  En un informe escalonado, no es necesaria la primera columna que muestra la instancia de grupo. En su lugar, copie el valor en la celda de encabezado de grupo, elimine la columna de grupo y pegue el primer cuadro de texto en la fila de encabezado de grupo. Para quitar la columna de grupo, haga clic con el botón derecho en la columna o celda de grupo y, después, haga clic en **Eliminar columnas**. En la siguiente ilustración se muestra el aspecto que podría tener la región de datos en la superficie de diseño.  
   
-     ![Región de datos con la fila de encabezado de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "región de datos con la fila de encabezado de grupo")  
+     ![Región de datos con fila de encabezado de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Región de datos con fila de encabezado de grupo")  
   
 4.  Para aplicar una sangría a las filas de detalles situadas debajo de la fila de encabezado de grupo en la misma columna, cambie el relleno de la celda de datos de detalles.  
   
@@ -84,7 +83,7 @@ Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion
   
      La región de datos tendrá un aspecto similar al siguiente:  
   
-     ![Región de datos de informe escalonado](../../reporting-services/report-design/media/steppedreportdataregion.gif "región de datos de informe escalonado")  
+     ![Región de datos para informe escalonado](../../reporting-services/report-design/media/steppedreportdataregion.gif "Región de datos para informe escalonado")  
   
      **Región de datos para el diseño del informe escalonado**  
   
@@ -110,13 +109,12 @@ Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion
 3.  Cambie el relleno para la celda que muestra los datos del grupo.  
   
 ## <a name="see-also"></a>Vea también  
- [Encabezados de página y pies de página &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Aplicar formato a elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tablas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrices &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

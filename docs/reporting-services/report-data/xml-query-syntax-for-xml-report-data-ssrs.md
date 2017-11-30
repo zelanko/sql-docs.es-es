@@ -1,5 +1,5 @@
 ---
-title: Sintaxis de consulta XML para datos de informe XML (SSRS) | Documentos de Microsoft
+title: Sintaxis de consulta XML para los datos de informe XML (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2505ed537c92255f1291e4f800a49bb070f1149
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
-  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un documento XML **consulta** comienza con un  **\<consulta >** etiqueta e incluye espacios de nombres y elementos XML que varían según el origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para obtener más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
+  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento XML **Query** empieza con una etiqueta **\<Consulta>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
  Se pueden crear orígenes de datos XML para los siguientes tipos de datos XML:  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 |Documento XML que usa los valores predeterminados.|*No query*.<br /><br /> La ruta de acceso de elemento se deriva del propio documento XML y es independiente del espacio de nombres.|  
   
 > [!NOTE]  
->  El primer ejemplo de servicio web muestra el contenido del servidor de informes que usa el método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para ejecutar esta consulta, debe crear un nuevo origen de datos y establece la cadena de conexión en `http://localhost/reportserver/reportservice2006.asmx`. El método <xref:ReportService2006.ReportingService2006.ListChildren%2A> toma dos parámetros: **Item** y **Recursive**. Establezca el valor predeterminado de **Item** en **/** y de **Recursive** en **1**.  
+>  El primer ejemplo de servicio web muestra el contenido del servidor de informes que usa el método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para ejecutar esta consulta, es necesario crear un nuevo origen de datos y establecer la cadena de conexión en `http://localhost/reportserver/reportservice2006.asmx`. El método <xref:ReportService2006.ReportingService2006.ListChildren%2A> toma dos parámetros: **Item** y **Recursive**. Establezca el valor predeterminado de **Item** en **/** y de **Recursive** en **1**.  
   
 ## <a name="specifying-namespaces"></a>Especificar espacios de nombres  
  Use el elemento XML **Query** para especificar los espacios de nombres que se usan en los datos XML del origen de datos. En la siguiente consulta XML se utiliza el espacio de nombres **sales**. Los nodos de elemento XML **ElementPath** para `sales:LineItems` y `sales:LineItem` usan el espacio de nombres **sales**.  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 |Elemento de consulta XML|Campos resultantes en el conjunto de datos|  
 |-----------------------|-------------------------------------|  
-|\<Consulta / >|Valor r:`http://schemas.microsoft.com/...`<br /><br /> Valor B:`http://schemas.microsoft.com/...`<br /><br /> Valor de C:`http://schemas.microsoft.com/...`|  
+|\<Query/>|Valor A: `http://schemas.microsoft.com/...`<br /><br /> Valor B: `http://schemas.microsoft.com/...`<br /><br /> Valor C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de conexión XML &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Tipo de conexión XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

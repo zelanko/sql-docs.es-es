@@ -1,5 +1,5 @@
 ---
-title: "Método SetServiceState (WMI MSReportServer_ConfigurationSetting) | Documentos de Microsoft"
+title: "Método SetServiceState (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetServiceState method
+helpviewer_keywords: SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 85e26f683c03e9b411ae3dc7d17f1b326981740d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setservicestate"></a>Método ConfigurationSetting - SetServiceState
+# <a name="configurationsetting-method---setservicestate"></a>Método de ConfigurationSetting: SetServiceState
   Activa y desactiva los servicios web y los servicios del Servidor de informes de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -57,7 +53,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  Valor **booleano** que indica el estado deseado del Administrador de informes.
  
  > [!NOTE] 
- > Esta opción está en desuso a partir de SQL Server 2016 Reporting Services actualización acumulativa 2. Siempre se habilitará el portal web. El valor se omitirá.
+ > Esta opción está en desuso desde la actualización acumulativa 2 de SQL Server 2016 Reporting Services. El portal web siempre estará habilitado. El valor se omitirá.
   
  *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
@@ -74,4 +70,3 @@ public void SetServiceState(Boolean EnableWindowsService,
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

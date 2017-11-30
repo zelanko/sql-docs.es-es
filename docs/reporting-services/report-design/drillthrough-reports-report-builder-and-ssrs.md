@@ -1,5 +1,5 @@
 ---
-title: "Informes de obtención de detalles (generador de informes y SSRS) | Documentos de Microsoft"
+title: Informes detallados (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7fd9e9c78c6e77fe740f21d109f5444c0ff8fd14
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd7b2f812481abbe3bf541322582804a6a415236
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Informes detallados (Generador de informes y SSRS)
   Un informe detallado es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Por ejemplo, en esta ilustración, el informe de resumen de ventas enumera los pedidos de ventas y los totales. Cuando el usuario hace clic en un número de pedido de la lista resumida, se abre otro informe con los detalles del pedido en cuestión.  
   
  ![rs_DrillThru](../../reporting-services/report-design/media/rs-drillthru.gif "rs_DrillThru")  
   
- Los datos del informe detallado no se recuperan hasta que el usuario hace clic en el vínculo del informe principal que abre el informe detallado. Si los datos para el informe principal y el informe detallado se deben recuperar al mismo tiempo, considere la posibilidad de usar un subinforme. Para obtener más información, vea [subinformes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+ Los datos del informe detallado no se recuperan hasta que el usuario hace clic en el vínculo del informe principal que abre el informe detallado. Si los datos para el informe principal y el informe detallado se deben recuperar al mismo tiempo, considere la posibilidad de usar un subinforme. Para más información, vea [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Cuando trabaja con el Generador de informes, para ver el informe detallado que se abre al hacer clic en el vínculo de obtención de detalles del informe principal, debe estar conectado a un servidor de informes.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
  Para empezar a usar rápidamente los informes detallados, vea [Tutorial: Crear informes principales y de obtención de detalles &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parámetros de los informes detallados  
- Un informe detallado suele incluir parámetros que le ha pasado el informe de resumen. En el ejemplo de informe de resumen de ventas, el informe incluye el campo [OrderNumber] en un cuadro de texto de una celda de la tabla. El informe detallado contiene un parámetro que toma como valor el número de pedido. Al establecer el vínculo de informe detallado en el cuadro de texto para [OrderNumber], también establece el parámetro para el informe de destino en [OrderNumber]. Cuando el usuario hace clic en el número de pedido del informe de resumen, se abre el informe detallado de destino, que muestra la información relativa a ese número de pedido. Para obtener instrucciones acerca de cómo personalizar informes detallados basados en valores de parámetros, vea [parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) y [función InScope &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
+ Un informe detallado suele incluir parámetros que le ha pasado el informe de resumen. En el ejemplo de informe de resumen de ventas, el informe incluye el campo [OrderNumber] en un cuadro de texto de una celda de la tabla. El informe detallado contiene un parámetro que toma como valor el número de pedido. Al establecer el vínculo de informe detallado en el cuadro de texto para [OrderNumber], también establece el parámetro para el informe de destino en [OrderNumber]. Cuando el usuario hace clic en el número de pedido del informe de resumen, se abre el informe detallado de destino, que muestra la información relativa a ese número de pedido. Para ver instrucciones sobre cómo personalizar informes detallados basados en valores de parámetros, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) y [Función InScope &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
   
 ## <a name="designing-the-drillthrough-report"></a>Diseñar el informe detallado  
  Para crear un informe detallado, primero debe diseñarlo, antes de crear una acción de obtención de detalles en el informe principal.  
@@ -53,6 +53,6 @@ ms.lasthandoff: 08/09/2017
  Para ver un informe de resumen con vínculos de obtención de detalles una vez publicado, debe asegurarse de que los informes detallados residan en el mismo servidor de informes que el informe de resumen. En todos los casos, los usuarios deben tener permisos sobre el informe detallado para poder verlo.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, obtención de detalles, subinformes y regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -1,7 +1,6 @@
 ---
-title: Compatibilidad del explorador de Reporting Services y Power View | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Compatibilidad del explorador de Reporting Services y Power View | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,30 +20,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Compatibilidad del explorador de Reporting Services y Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Obtenga información sobre qué explorador versiones son compatibles para la administración y visualización de SQL Server Reporting Services, los controles ReportViewer y Power View.
+Obtenga información sobre las versiones del explorador que son compatibles para administrar y ver SQL Server Reporting Services, los controles ReportViewer y Power View.
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
 ## <a name="browser-requirements-for-the-web-portal"></a>Requisitos del explorador para el portal web
 
-La siguiente es la lista actual de los exploradores admitidos para el portal web.
+Esta es la lista actual de exploradores admitidos para el portal web.
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -155,12 +153,11 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Buscar y ver informes en el portal web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Búsqueda y visualización de informes en el portal web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portal web (modo nativo de SSRS)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
 

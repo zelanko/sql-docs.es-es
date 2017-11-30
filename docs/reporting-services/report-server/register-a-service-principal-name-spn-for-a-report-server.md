@@ -1,5 +1,5 @@
 ---
-title: Registrar un nombre Principal de servicio (SPN) para un servidor de informes | Documentos de Microsoft
+title: Registrar un nombre de entidad de seguridad de servicio (SPN) para un servidor de informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9518d1bd3ee166a0f21292ca08130214afc841be
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0eec8e959d9b91c126f97d5c2d32e8ab35804ab1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
   Si está implementando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una red que usa el protocolo Kerberos para la autenticación mutua, debe crear un nombre principal de servicio (SPN) para el servicio Servidor de informes si lo configura para que se ejecute como una cuenta de usuario de dominio.  
@@ -48,7 +47,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **HTTP** es la clase de servicio. El servicio web del servidor de informes se ejecuta en HTTP.SYS. Una consecuencia de la creación de un SPN para HTTP es que a todas las aplicaciones web del mismo equipo que se ejecutan en HTTP.SYS (incluidas las que se hospedan en IIS) se les concederán vales en función de la cuenta de usuario de dominio. Si esos servicios se ejecutan en una cuenta diferente, se producirá un error en las solicitudes de autenticación. Para evitar este problema, asegúrese de configurar todas las aplicaciones HTTP para ejecutarse en la misma cuenta, o considere la posibilidad de crear los encabezados de host para cada aplicación y crear después SPN independientes para cada encabezado de host. Al configurar los encabezados de host, se requieren cambios de DNS con independencia de la configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Los valores que especifique para \< *computername*>, \< *domainname*>, y \< *puerto*> identifican la dirección de red única del equipo que hospeda el servidor de informes. Puede ser un nombre de host local o un nombre de dominio completo (FQDN). Si sólo tiene un dominio y usa el puerto 80, puede omitir \< *domainname*> y \< *puerto*> desde la línea de comandos. \<*cuenta de usuario de dominio*> es la cuenta de usuario en la que se ejecuta el servicio servidor de informes y para que se debe registrar el SPN.  
+ Los valores que especifique para \<*nombreDeEquipo*>, \<*nombreDeDominio*> y \<*puerto*> identifican la dirección de red única del equipo que hospeda el servidor de informes. Puede ser un nombre de host local o un nombre de dominio completo (FQDN). Si solo tiene un dominio y usa el puerto 80, puede omitir \<*nombreDeDominio*> y \<*puerto*> de la línea de comandos. \<*cuenta-de-usuario-de-dominio*> es la cuenta de usuario con la que se ejecuta el servicio del servidor de informes y para la que es necesario registrar el SPN.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Registrar un nombre principal de servicio para la cuenta de usuario de dominio  
   
@@ -75,9 +74,8 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  Agregue `<RSWindowsNegotiate/>` como primera entrada en esta sección para habilitar NTLM.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una cuenta de servicio &#40; Administrador de configuración de SSRS &#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
- [Configurar la cuenta de servicio del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Administrar un servidor de informes de modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Administración de un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
-

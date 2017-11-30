@@ -1,5 +1,5 @@
 ---
-title: Las asignaciones de roles | Documentos de Microsoft
+title: Asignaciones de roles | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d848092b028ce827c1c2c56c5216f6ba3b1f4c45
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-assignments"></a>Asignaciones de roles
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las *asignaciones de roles* determinan el acceso a los elementos almacenados y al propio servidor de informes. Una asignación de roles consta de las siguientes partes:  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  El siguiente diagrama muestra una asignación de roles que asigna un grupo y un usuario específico al rol **Publicador** para la carpeta B.  
   
- ![Diagrama de asignaciones de roles](../../reporting-services/security/media/report-securityarch.gif "diagrama de asignaciones de roles")  
+ ![Diagrama de asignaciones de roles](../../reporting-services/security/media/report-securityarch.gif "Diagrama de asignaciones de roles")  
 Diagrama de asignaciones de roles  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Asignaciones de roles de nivel de sistema y de nivel de elemento  
@@ -67,11 +66,10 @@ Diagrama de asignaciones de roles
  Para obtener más información sobre las asignaciones de roles predefinidos que proporcionan la seguridad predeterminada, vea [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear, eliminar o modificar un rol &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Conceder acceso de usuario a un servidor de informes &#40; El Administrador de informes &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar o eliminar una asignación de roles &#40; El Administrador de informes &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40; Reporting Services en SharePoint integrado modo &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

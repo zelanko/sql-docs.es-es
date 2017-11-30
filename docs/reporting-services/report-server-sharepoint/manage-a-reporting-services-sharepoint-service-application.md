@@ -1,5 +1,5 @@
 ---
-title: "Administrar una aplicación de servicio de SharePoint de Reporting Services | Documentos de Microsoft"
+title: "Administrar una aplicación de servicio de SharePoint de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint de Reporting Services
 
@@ -27,12 +26,12 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]las aplicaciones de servicio se administran desde Administración Central de SharePoint. Las páginas Administración y Propiedades permiten actualizar la configuración de la aplicación de servicio así como las tareas de administración comunes.  
+  Las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se administran desde Administración central de SharePoint. Las páginas Administración y Propiedades permiten actualizar la configuración de la aplicación de servicio así como las tareas de administración comunes.  
 
 > [!NOTE]
-> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
-## <a name="open-service-application-properties-page"></a>Página de propiedades de la aplicación de servicio abiertas
+## <a name="open-service-application-properties-page"></a>Abrir la página de propiedades de la aplicación de servicio
 
  Para abrir la página de propiedades de una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , haga lo siguiente:  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  Para obtener más información acerca de las propiedades de la aplicación del servicio, vea [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-## <a name="open-service-application-management-pages"></a>Páginas de administración de aplicaciones de servicio abiertas
+## <a name="open-service-application-management-pages"></a>Abrir las páginas de administración de aplicaciones de servicio
 
  Para abrir las páginas de administración de una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , haga lo siguiente:  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 10/06/2017
 
  La página de configuración del sistema le permite configurar el comportamiento y la experiencia del usuario de la aplicación de servicio, incluidos diversos tiempos de espera.
   
-### <a name="report-settings"></a>Configuración de informes
+### <a name="report-settings"></a>Configuración del informe
   
 |Configuración|Comentarios|  
 |-------------|--------------|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |Configuración|Comentarios|  
 |-------------|--------------|  
 |Habilitar la descarga del Generador de informes|El valor predeterminado es TRUE.<br /><br /> Especifica si los clientes pueden ver el botón para descargar la aplicación del Generador de informes.|  
-|URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el generador de informes 3.0 como un clic-aplicación, escriba el siguiente valor: http://\<nombreDeEquipo > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el Generador de informes 3.0 como aplicación ClickOnce, especifique el valor siguiente: http://\<nombreDeEquipo>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Habilitar la impresión de cliente|El valor predeterminado es TRUE.<br /><br /> Especifica si los usuarios pueden descargar el control del lado cliente, que proporciona opciones de impresión.|  
 |Tiempo de espera de sesión de edición|El valor predeterminado es 7200 segundos.|  
 |Límite de caché de sesión de edición|El valor predeterminado es 5.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  Puede ver y eliminar los trabajos en ejecución, por ejemplo, los que las suscripciones de informe y las suscripciones controladas por datos crean. La página no se usa para administrar suscripciones sino los trabajos que una suscripción desencadena. Para obtener un ejemplo de suscripción programada para ejecutarse una vez a la hora, generará un trabajo una vez a la hora que aparece en la página **Administrar trabajos** .  
   
- ![Administrar trabajos en ejecución](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "administrar trabajos en ejecución")  
+ ![Administrar trabajos en ejecución](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "Administrar trabajos en ejecución")  
   
 ## <a name="key-management"></a>Administración de claves
  En la tabla siguiente se muestran las páginas de administración de claves.  
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Seleccione para especificar una cuenta.  
   
  **Cuenta**  
- Especifique una cuenta de usuario de dominio de Windows. Utilice este formato:  *\<dominio >\\< cuenta de usuario\>*.  
+ Especifique una cuenta de usuario de dominio de Windows. Use este formato: *\<dominio>\\<cuenta de usuario\>*.  
   
  **Contraseña**  
  Escriba la contraseña.  
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  Active la casilla correspondiente al proxy y haga clic en **Aceptar**.  
   
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

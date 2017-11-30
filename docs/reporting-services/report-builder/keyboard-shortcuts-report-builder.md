@@ -1,5 +1,5 @@
 ---
-title: "(Generador de informes) de métodos abreviados de teclado | Documentos de Microsoft"
+title: "Métodos abreviados de teclado (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f8a493830a49bbd083fdea72aa215bd2d084c9a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Al crear y editar informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Generador de informes, tendrá acceso a todas las teclas de método abreviado para la navegación que se proporcionan para el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [La vista de diseño de informes &#40; El generador de informes &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glosario de &#40; El generador de informes &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

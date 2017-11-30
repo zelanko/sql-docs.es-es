@@ -1,5 +1,5 @@
 ---
-title: Expresiones (generador de informes y SSRS) | Documentos de Microsoft
+title: Expresiones (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 326b542108214956c9ef51bc370d7ee36212a40d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Simple** : las expresiones simples contienen una referencia a un solo elemento de una colección integrada, como un campo de conjunto de datos, un parámetro o un campo integrado. En la superficie de diseño, una expresión simple aparece entre corchetes. Por ejemplo, `[FieldName]` corresponde a la expresión `=Fields!FieldName.Value`subyacente. Las expresiones simples se crean automáticamente al crear el diseño del informe y arrastrar los elementos del panel Datos de informe a la superficie de diseño. Para obtener más información sobre los símbolos que representan diferentes colecciones integradas, vea [Descripción de los símbolos de prefijo en expresiones simples](#DisplayText).  
   
--   **Compleja** : las expresiones complejas contienen referencias a varias referencias, operadores y llamadas a función integradas. Una expresión compleja aparece como <\<Expr >> cuando el valor de la expresión incluye más de una referencia simple. Para ver la expresión, mantenga el mouse sobre ella y use la información sobre herramientas. Para modificar la expresión, ábrala en el cuadro de diálogo **Expresión** .  
+-   **Compleja** : las expresiones complejas contienen referencias a varias referencias, operadores y llamadas a función integradas. Una expresión compleja aparece como <\<Expr>> cuando el valor de expresión incluye más de una referencia simple. Para ver la expresión, mantenga el mouse sobre ella y use la información sobre herramientas. Para modificar la expresión, ábrala en el cuadro de diálogo **Expresión** .  
   
  La siguiente figura muestra expresiones simples y complejas típicas para cuadros de texto y el texto de los marcadores de posición.  
   
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/09/2017
 -   [Tutorial: Introducción a las expresiones](Tutorial:%20Introducing%20Expressions.md)
 -   [Ejemplos de informes (Generador de informes y SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
-

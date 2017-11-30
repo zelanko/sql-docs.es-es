@@ -1,5 +1,5 @@
 ---
-title: "Solucionar la limitación de filas de Excel 2003 | Documentos de Microsoft"
+title: "Solución alternativa a la limitación de filas de Excel 2003 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   En este tema se explica cómo resolver la limitación de filas de Excel 2003 al exportar informes paginados a Excel. La solución alternativa es para un informe que solo contiene una tabla.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Haga clic con el botón derecho en la fila Datos de la tabla y, después, haga clic en **Agregar grupo** > **Grupo primario** para agregar un grupo de tablas externo.  
   
-     ![Seleccione el grupo primario](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "seleccione el grupo primario")  
+     ![Seleccionar el grupo primario](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Seleccionar el grupo primario")  
   
 3.  Escriba la fórmula siguiente en el cuadro de expresión **Agrupar por** y, a continuación, haga clic en **Aceptar** para agregar el grupo primario.  
   
@@ -49,21 +48,20 @@ ms.lasthandoff: 08/09/2017
   
 4.  Elimine la columna de grupo; para ello, haga clic con el botón derecho en el encabezado de columna, haga clic en **Eliminar columnas**, seleccione **Eliminar solo columnas**y, después, haga clic en **Aceptar**.  
   
-     ![Eliminar una columna de grupo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "eliminar una columna de grupo")  
+     ![Eliminar un grupo de columnas](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Eliminar un grupo de columnas")  
   
 5.  Haga clic con el botón secundario en **Grupo 1** en la sección **Grupos de filas** y, a continuación, haga clic en **Propiedades de grupo**.  
   
-     ![Ver las propiedades del grupo](../../reporting-services/report-builder/media/groupproperties-updated.png "ver las propiedades de grupo")  
+     ![Ver propiedades de grupo](../../reporting-services/report-builder/media/groupproperties-updated.png "Ver propiedades de grupo")  
   
 6.  En la página **Ordenación** del cuadro de diálogo **Propiedades de grupo** , seleccione la opción de ordenación predeterminada y haga clic en **Eliminar**.  
   
-     ![Eliminar la ordenación predeterminada](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "eliminar la ordenación predeterminada")  
+     ![Eliminar la ordenación predeterminada](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Eliminar la ordenación predeterminada")  
   
 7.  En la página **Saltos de página** , haga clic en **Entre cada instancia de un grupo** y, a continuación, haga clic en **Aceptar**.  
   
-     ![Establecer saltos de página](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "establecer saltos de página")  
+     ![Establecer saltos de página](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Establecer saltos de página")  
   
 8.  Guarde el informe. Cuando lo exporta a Excel, se exporta a varias hojas de cálculo y cada hoja de cálculo contiene un máximo de 65000 filas.  
   
   
-

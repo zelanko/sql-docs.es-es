@@ -1,5 +1,5 @@
 ---
-title: "Información general de las extensiones de procesamiento de datos | Documentos de Microsoft"
+title: "Introducción a las extensiones de procesamiento de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,31 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 11e8c43eb7b717227cf5a624f6a18a424b598967
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-overview"></a>Introducción a las extensiones de procesamiento de datos
-  Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permiten conectarse a los orígenes de datos y recuperar los datos. También actúan como puente entre un origen de datos y un conjunto de datos. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]las extensiones de procesamiento de datos se modelan con un subconjunto de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] interfaces del proveedor de datos.  
+  Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permiten conectarse a los orígenes de datos y recuperar los datos. También actúan como puente entre un origen de datos y un conjunto de datos. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se modelan con un subconjunto de las interfaces del proveedor de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  En la tabla siguiente se enumeran las extensiones de procesamiento de datos incluidas con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 |Extensión de procesamiento de datos|Description|  
 |-------------------------------|-----------------|  
-|Extensión de procesamiento de datos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Usa el proveedor de datos de .NET Framework para SQL Server para conectarse y recuperar datos de la [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
-|Extensión de procesamiento de datos para OLE DB|Usa el proveedor de datos de .NET Framework para OLE DB. Con esta extensión, el servidor de informes puede consultar cualquier origen de datos que tenga un proveedor OLE DB.|  
-|Extensión de procesamiento de datos para Oracle|Utiliza el proveedor de datos de .NET Framework para Oracle. Con esta extensión, el servidor de informes puede tener acceso a los orígenes de datos de Oracle a través del software de conectividad de cliente de Oracle.|  
-|Extensión de procesamiento de datos para ODBC|Usa el proveedor de datos de .NET Framework para ODBC. Con esta extensión, el servidor de informes puede tener acceso a los datos de cualquier base de datos para la que haya un controlador ODBC.|  
+|Extensión de procesamiento de datos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Usa el Proveedor de datos de .NET Framework para SQL Server con el fin de conectarse a [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] y recuperar los datos.|  
+|Extensión de procesamiento de datos para OLE DB|Usa el Proveedor de datos de .NET Framework para OLE DB. Con esta extensión, el servidor de informes puede consultar cualquier origen de datos que tenga un proveedor OLE DB.|  
+|Extensión de procesamiento de datos para Oracle|Usa el Proveedor de datos de .NET Framework para Oracle. Con esta extensión, el servidor de informes puede tener acceso a los orígenes de datos de Oracle a través del software de conectividad de cliente de Oracle.|  
+|Extensión de procesamiento de datos para ODBC|Usa el Proveedor de datos de .NET Framework para ODBC. Con esta extensión, el servidor de informes puede tener acceso a los datos de cualquier base de datos para la que haya un controlador ODBC.|  
   
  Puede utilizar la API de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] para agregar un procesamiento de datos personalizado al servidor de informes.  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  Puede desarrollar extensiones de procesamiento de datos para sus propios orígenes de datos o puede utilizar las interfaces con el fin de agregar un nivel adicional de procesamiento de datos a las infraestructuras de base de datos comunes. Puede implementar extensiones de procesamiento de datos personalizadas para habilitar la integración sin problemas de los datos en los servidores de informes existentes en una organización. También puede utilizarlas como parte de un conjunto de informes de errores personalizado que se proporciona a los consumidores.  
   
- ![Arquitectura de extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "arquitectura de extensión de procesamiento de datos")  
+ ![Arquitectura de extensiones de procesamiento de datos](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Arquitectura de extensiones de procesamiento de datos")  
 Arquitectura de extensión de procesamiento de datos de Reporting Services  
   
  Entre las ventajas de implementar una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] personalizada se incluyen las siguientes:  
@@ -62,7 +59,7 @@ Arquitectura de extensión de procesamiento de datos de Reporting Services
 ## <a name="data-extension-process-flow"></a>Flujo del proceso de la extensión de datos  
  Antes de desarrollar la extensión de datos personalizada, debería entender cómo usa el servidor de informes las extensiones de datos para procesar los datos. También debería saber los constructores y los métodos a los que el servidor de informes llama.  
   
- ![Flujo de extensión de procesamiento de datos del proceso de](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "flujo para la extensión de procesamiento de datos del proceso")  
+ ![Flujo del proceso para extensiones de procesamiento de datos](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Flujo del proceso para extensiones de procesamiento de datos")  
 El flujo del proceso paso a paso de una extensión de datos a la que el servidor de informes llama  
   
  En esta ilustración se muestra el siguiente flujo de eventos:  
@@ -78,17 +75,16 @@ El flujo del proceso paso a paso de una extensión de datos a la que el servidor
   
 -   Un equipo de implementación con el Diseñador de informes o un servidor de informes instalado.  
   
--   Un equipo de desarrollo con [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] o superior, o la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kit de desarrollo de Software (SDK) instalado.  
+-   Un equipo de desarrollo con [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] o superior, o bien el Kit de desarrollo de software (SDK) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] instalado.  
   
 -   Una comprensión detallada de las características y capacidades de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
--   Una comprensión detallada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] arquitectura, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proveedores de datos, objetos DataSet de ADO.NET y common [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] interfaces.  
+-   Una comprensión detallada de la arquitectura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], proveedores de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], objetos DataSet de ADO.NET y las interfaces de [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] comunes.  
   
--   Experiencia de desarrollo de un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lenguaje como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] . NET.  
+-   Experiencia de desarrollo en un lenguaje de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Biblioteca de extensión de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

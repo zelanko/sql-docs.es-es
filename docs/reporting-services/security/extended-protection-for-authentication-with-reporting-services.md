@@ -1,5 +1,5 @@
 ---
-title: "Protección ampliada para la autenticación con Reporting Services | Documentos de Microsoft"
+title: "Protección ampliada para la autenticación con Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,32 +11,30 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
   En versiones recientes del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, la protección ampliada es un conjunto de mejoras. La protección ampliada mejora cómo protegen las aplicaciones las credenciales y la autenticación. La propia característica no proporciona directamente protección contra ataques específicos como el reenvío de credenciales, sino que proporciona una infraestructura para aplicaciones como [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el fin de aplicar la protección ampliada para la autenticación.  
   
  Las principales mejoras de autenticación que forman parte de la protección ampliada son los enlaces de servicio y de canal. El enlace de canal usa un token de enlace de canal (CBT) para comprobar que no se ha puesto en peligro el canal establecido entre dos extremos. El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. Para obtener información general sobre la protección ampliada, vea [Autenticación de Windows integrada con protección ampliada](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
-SQL Server Reporting Services (SSRS) admite y aplica la protección ampliada que se ha habilitado en el sistema operativo y configurado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación Negotiate o NTLM y, por tanto, pueden beneficiarse de la compatibilidad de la protección ampliada del sistema operativo y de las características de la protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+SQL Server Reporting Services (SSRS) admite y aplica la protección ampliada que se ha habilitado en el sistema operativo y se ha configurado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación Negotiate o NTLM y, por tanto, pueden beneficiarse de la compatibilidad de la protección ampliada del sistema operativo y de las características de la protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  De forma predeterminada, Windows no habilita la protección ampliada. Para obtener información sobre cómo habilitar la protección ampliada de Windows, vea [Protección ampliada para la autenticación](http://go.microsoft.com/fwlink/?LinkID=178431). Tanto el sistema operativo como la pila de autenticación de cliente deben ser compatibles con la protección ampliada para la autenticación se realice correctamente. En sistemas operativos más antiguos, quizá deba instalar varias actualizaciones para disponer de un equipo totalmente preparado para la protección ampliada. Para obtener información sobre los desarrollos recientes con la protección ampliada, vea [Actualizar información con protección ampliada](http://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Información general sobre la protección ampliada de Reporting Services
 
-SSRS admite y aplica la protección extendida que se ha habilitado en el sistema operativo. Si el sistema operativo no admite la protección ampliada o no se ha habilitado la característica en él, se producirá un error de autenticación de la característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también requiere un certificado SSL. Para más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema operativo. Si el sistema operativo no admite la protección ampliada o no se ha habilitado la característica en él, se producirá un error de autenticación de la característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también requiere un certificado SSL. Para más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 > [!IMPORTANT]  
 >  De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no habilita la protección ampliada. La característica se puede habilitar si se modifica el archivo de configuración **rsreportserver.config** o mediante las API de WMI para actualizar el archivo de configuración. SSRS no proporciona una interfaz de usuario para modificar o ver la configuración de protección ampliada. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.  
@@ -53,7 +51,7 @@ SSRS admite y aplica la protección extendida que se ha habilitado en el sistema
   
 ### <a name="upgrade"></a>Actualización  
   
--   Actualizar una [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server a SQL Server 2016 agrega valores de configuración con valores predeterminados para la **rsreportserver.config** archivo. Si ya se encontraba disponible en la configuración, la instalación de SQL Server 2016 conservará en la **rsreportserver.config** archivo.  
+-   La actualización de un servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SQL Server 2016 agrega opciones de configuración con valores predeterminados al archivo **rsreportserver.config**. Si la configuración ya se ha realizado, la instalación de SQL Server 2016 la conservará en el archivo **rsreportserver.config**.  
   
 -   Cuando se agregan parámetros de configuración al archivo de configuración **rsreportserver.config** , el comportamiento predeterminado es desactivar la característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y el usuario debe habilitarla de la forma descrita en este tema. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.  
   
@@ -179,4 +177,4 @@ SSRS admite y aplica la protección extendida que se ha habilitado en el sistema
 [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

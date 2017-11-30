@@ -1,34 +1,31 @@
 ---
-title: "Crear informes móviles con SQL Server Mobile Report Publisher | Documentos de Microsoft"
-description: "Obtenga información acerca de Reporting Services informes móviles para dispositivos móviles, conectados a datos locales, con una gran variedad de visualizaciones de datos."
-ms.custom:
-- SQL2016_New_Updated
+title: "Crear informes móviles con el Publicador de informes móviles de SQL Server | Microsoft Docs"
+description: "Más información sobre los informes móviles de Reporting Services para dispositivos móviles, conectados a datos locales, con una gran variedad de visualizaciones de datos."
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3214b23fb77338df8594268fe51f0e10fb6a71b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server
 Obtenga información sobre los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , que están optimizados para dispositivos móviles y conectados a datos locales y disponen de una gran variedad de visualizaciones de datos. 
 
 >[!NOTE]
->  ¿Necesita migrar el contenido del servidor de Datazen como paneles y KPI a un SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  ¿Necesita migrar el contenido de un servidor Datazen, como paneles y KPI, a un servidor de SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -36,7 +33,7 @@ Con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], puede cre
 
 * Conecte los informes móviles a diversos orígenes de datos, incluidos los datos locales de SQL Server y Analysis Services. 
 * Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles que se escalan correctamente para cualquier tamaño de pantalla. 
-* A continuación, guardar estos informes móviles en un servidor de Reporting Services y ver e interactuar con ellos en un explorador o en la aplicación móvil de Power BI en iPad, iPhone, Android teléfonos y tabletas y dispositivos Windows 10.
+* Después, guarde estos informes móviles en un servidor de Reporting Services y visualice e interactúe con ellos en un explorador o en la aplicación móvil de Power BI en dispositivos iPad, iPhone, teléfonos y tabletas Android y dispositivos Windows 10.
   
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Crear informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
@@ -54,8 +51,8 @@ Estos artículos le ayudarán a empezar a trabajar.
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Informes móviles de SSRS en las aplicaciones móviles de Power BI
 
--  Vista [informes móviles de Reporting Services y KPI en la aplicación móvil de iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  Vista [informes móviles de Reporting Services y KPI en la aplicación de Power BI para dispositivos Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  Vea [Reporting Services mobile reports and KPIs in the iOS mobile app (Informes móviles y KPI de Reporting Services en la aplicación móvil iOS)](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  Vea [Reporting Services mobile reports and KPIs in the Power BI app for Android devices (Informes móviles y KPI de Reporting Services en la aplicación Power BI para dispositivos Android)](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  [Visualización de informes móviles y KPI de Reporting Services en la aplicación móvil de Power BI para Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
 ## <a name="see-also"></a>Vea también  
@@ -67,5 +64,4 @@ Estos artículos le ayudarán a empezar a trabajar.
 
   
   
-
 

@@ -13,17 +13,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>Visor de Ayuda y contenido sin conexión para SQL Server
   
@@ -66,7 +65,7 @@ En la tabla siguiente se indican las herramientas que instalan el Visor de Ayuda
   
    >[!IMPORTANT] 
    >En SQL Server Management Studio y Visual Studio, la aplicación del Visor de Ayuda puede bloquearse mientras se agrega la documentación. Haga lo siguiente para solucionar este problema. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx)(El Visor de Ayuda de Visual Studio se bloquea).  
-   >>Abra el archivo %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings en el Bloc de notas y cambie la fecha en el siguiente código a una fecha en el futuro. Este archivo solo está disponible en el equipo local si se tiene instalado Visual Studio. 
+   >>Abra el archivo %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings en el Bloc de notas y cambie la fecha del siguiente código por una fecha futura. Este archivo solo está disponible en el equipo local si se tiene instalado Visual Studio. 
    >>>Última actualización de la caché="31/12/2017 00:00:00"  
   
     La tabla de contenido del panel izquierdo se actualiza automáticamente para incluir la documentación que se ha agregado.  
@@ -139,7 +138,5 @@ Cuando se presiona F1, aparece en pantalla el tema correspondiente. El tema no s
 Además, el Visor de Ayuda no admite la configuración del proxy ni tampoco el formato ISO. 
 
 ## <a name="additional-information"></a>Información adicional
-[Visor de Ayuda de Microsoft (Visual Studio 2015)](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Visor de Ayuda de Microsoft (Visual Studio)](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

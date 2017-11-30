@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  [Agregar el tipo de contenido de la fuente de distribución de datos a una biblioteca](#addtolib)  
   
 ##  <a name="prereq"></a> Requisitos previos  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe activar para los sitios para los que vaya a crear la biblioteca de fuentes de distribución de datos. Si el tipo de plantilla de biblioteca de fuentes de distribución de datos no está disponible, probablemente se deba a que no se ha cumplido este requisito previo. Para más información, consulte [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe activar para los sitios para los que vaya a crear la biblioteca de fuentes de distribución de datos. Si el tipo de plantilla de biblioteca de fuentes de distribución de datos no está disponible, probablemente se deba a que no se ha cumplido este requisito previo. Para más información, consulte [Activar la integración de características de PowerPivot para colecciones de sitios en Administración central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Debe ser propietario del sitio para crear la biblioteca.  
   

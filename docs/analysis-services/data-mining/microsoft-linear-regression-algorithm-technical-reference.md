@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Atributo de predicción|Continuo, cíclico y ordenado|  
   
 > [!NOTE]  
->  Se admiten los tipos de contenido**Cyclical** y **Ordered** content types are supported, but the algorithm treats them as discrete values y does not perform special processing.  
+>  Se admiten los tipos de contenido**Cyclical** y **Ordered**, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión lineal de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

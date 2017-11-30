@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Establecer permisos de procesamiento en una estructura de minería de datos  
  Puede crear un rol que otorgue permisos para procesar estructuras de minería de datos. Esto incluye el procesamiento de todos los modelos de minería.  
   
- Los permisos**Obtener detalles** y **Leer definición** permissions used for browsing a mining model y structure are atomic y can be added to the same role, or separated out into a different role.  
+ Los permisos **Obtener detalles** y **Leer definición** que se usan para examinar modelos y estructuras de minería de datos son atómicos y se pueden agregar al mismo rol o separarse en un rol diferente.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra la carpeta Base de datos y seleccione una base de datos.  
   

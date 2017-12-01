@@ -2,11 +2,13 @@
 title: "Agregar conmutación por error de base de datos mejorada a un grupo de disponibilidad (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
+ms.reviewer: mikeray
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Agregar conmutación por error de base de datos mejorada a un grupo de disponibilidad (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En SQL Server 2012 y 2014, si una base de datos que participa en un grupo de disponibilidad en la réplica principal pierde la capacidad para escribir transacciones, no desencadenará una conmutación por error, aun cuando las réplicas estén sincronizadas y configuradas para la conmutación automática por error.
 
@@ -44,7 +45,7 @@ Tenemos la misma configuración de grupos de disponibilidad que en el escenario 
 
 Hay un grupo de disponibilidad configurado entre la instancia A y la instancia B que contiene dos bases de datos: DB1 y DB2. El modo de disponibilidad está establecido en confirmación sincrónica y el modo de conmutación por error, en automático. La conmutación por error de base de datos mejorada está habilitada. Se pierde el acceso al disco que contiene los archivos de registro de transacciones y los datos de DB2. Cuando el problema se detecte, el grupo de disponibilidad conmutará por error automáticamente a la instancia B.
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>Configurar y ver la opción de conmutación por error de base de datos mejorada
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurar y ver la opción de conmutación por error de base de datos mejorada
 
 La conmutación por error de base de datos mejorada se puede configurar a través de SQL Server Management Studio o de Transact-SQL. Actualmente, esto no se puede realizar con cmdlets de PowerShell. La conmutación por error de base de datos mejorada está deshabilitada de forma predeterminada.
 
@@ -63,17 +64,18 @@ Use las instrucciones que encontrará en el tema [Usar el Asistente para grupo d
 ### <a name="transact-sql"></a>Transact-SQL
 
 Para configurar el comportamiento de la conmutación por error de base de datos mejorada durante la creación de un grupo de disponibilidad, DB_FAILOVER debe establecerse en ON como se indica a continuación:
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 Para agregar este comportamiento después de configurar un grupo de disponibilidad, use el comando ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 Para deshabilitar este comportamiento, emita el siguiente comando ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Vista de administración dinámica
@@ -88,5 +90,4 @@ Para saber si un grupo de disponibilidad tiene habilitada la conmutación por er
 - [Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Crear un grupo de disponibilidad (Transact-SQL)](create-an-availability-group-transact-sql.md)
-
 

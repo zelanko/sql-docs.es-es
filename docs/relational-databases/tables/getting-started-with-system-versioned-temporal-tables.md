@@ -1,36 +1,37 @@
 ---
 title: "Introducción a las tablas temporales con versión del sistema | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0318f2a574bcdb2f02016fc6d865252deb6fef4a
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fd2178542c6f193986377a5a7dacd42420e7a86c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>Introducción a las tablas temporales con versión del sistema
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Según el escenario, puede crear nuevas tablas temporales con versión del sistema o modificar las existentes incorporando atributos temporales al esquema de tabla existente.   
 Cuando se modifican los datos de la tabla temporal, el sistema crea un historial de versiones de forma transparente para las aplicaciones y los usuarios finales. Por ello, trabajar con tablas temporales con versión del sistema no requiere ningún cambio en la forma en la que tabla se modifica o cómo se consulta el estado más reciente (real) de los datos.   
 Además de DML y consultas convencionales, las tablas temporales también proporcionan formas sencillas y prácticas de obtener detalles a través de la sintaxis de Transact-SQL extendida.   
 Todas las tablas con versión del sistema tienen una tabla de historial asignada pero es completamente transparente para los usuarios a menos que desean optimizar el rendimiento de la carga de trabajo o el espacio de almacenamiento creando índices adicionales o eligiendo distintas opciones de almacenamiento.    
 El siguiente diagrama muestra el flujo de trabajo típico con tablas temporales con versión del sistema:   
-![Introducción a las tablas temporales](../../relational-databases/tables/media/getting-started-with-temporal.png "Getting Started with Temporal")  
+![Introducción a las tablas temporales](../../relational-databases/tables/media/getting-started-with-temporal.png "Introducción a las tablas temporales")  
   
  Este tema se divide en los siguientes 5 temas secundarios:  
   
@@ -58,4 +59,3 @@ El siguiente diagrama muestra el flujo de trabajo típico con tablas temporales 
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

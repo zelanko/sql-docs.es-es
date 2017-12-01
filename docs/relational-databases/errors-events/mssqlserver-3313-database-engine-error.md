@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3313 (Database Engine error)
+helpviewer_keywords: 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e8b07b5a12de6b011ee581e0d869c4ec30427e3
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: de26c9d0961ebcbe5494a1d31006a14f8d7a308a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver3313"></a>MSSQLSERVER_3313
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ Tenga en cuenta que si este error se produce para **tempdb**, la instancia de [!
 ## <a name="user-action"></a>Acción del usuario  
 Una condición transitoria que se dio en el sistema durante un intento determinado de iniciar la instancia del servidor o recuperar una base de datos puede producir este error. También puede deberse a un error permanente que se produce cada vez que se intenta iniciar la base de datos. Para obtener información acerca de la causa, examine el registro de eventos de Windows para ver si contiene un error anterior que indique el error concreto.  
   
-Tenga en cuenta que cuando se encuentra esta condición de error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente genera tres archivos en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. El archivo SQLDump*nnnn*.txt contiene información de diagnóstico avanzada relacionada con los errores, incluidos detalles sobre la transacción y la página en las que se encontró el problema. El equipo de soporte técnico de productos suele usar esta información para analizar el motivo del error.  
+Tenga en cuenta que cuando se encuentra esta condición de error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente genera tres archivos en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. El archivo SQLDump*nnnn*.txt contiene información de diagnóstico avanzada relacionada con los errores, incluidos los detalles sobre la transacción y la página en las que se ha detectado el problema. El equipo de soporte técnico de productos suele usar esta información para analizar el motivo del error.  
   
 Para obtener información sobre la causa de esta repetición del error 3313, busque en el registro de eventos de Windows un error anterior que indique el error específico. La acción del usuario adecuada depende de si la información del registro de eventos de Windows indica que el error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo causó una condición transitoria o un error permanente. Para obtener información sobre las acciones del usuario para solucionar el error 3313, consulte los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -60,4 +57,3 @@ Para obtener información sobre la causa de esta repetición del error 3313, bus
 [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
 [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
-

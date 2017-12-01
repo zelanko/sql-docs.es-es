@@ -1,29 +1,30 @@
 ---
 title: "Características admitidas en los módulos T-SQL compilados de forma nativa | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   En este tema se incluye una lista de áreas expuestas y características admitidas de T-SQL en el cuerpo de los módulos T-SQL compilados de forma nativa, como procedimientos almacenados ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), funciones escalares definidas por el usuario, funciones con valores de tabla insertadas y desencadenadores.  
@@ -54,7 +55,7 @@ Se admiten las siguientes construcciones de consulta:
 
 Expresión CASE: se puede usar CASE en cualquier instrucción o cláusula que permita una expresión válida.
    - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
+    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], ahora se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
 
 Cláusula SELECT:  
 
@@ -62,7 +63,7 @@ Cláusula SELECT:
 
 -   Subconsultas escalares
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las subconsultas escalares en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas escalares en módulos compilados de forma nativa.
 
 -   TOP*  
 
@@ -86,11 +87,11 @@ Cláusula FROM:
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las operaciones JOIN en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las operaciones JOIN en módulos compilados de forma nativa.
 
 -   Subconsultas `[AS] table_alias`. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las subconsultas en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas en módulos compilados de forma nativa.
 
 Cláusula WHERE:  
 
@@ -99,7 +100,7 @@ Cláusula WHERE:
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
 
 
 Cláusula[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
@@ -143,7 +144,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 Sin embargo, una constante en la cláusula **TOP** produce un rendimiento mejor en comparación con el uso de una variable.  
 
-Estas restricciones en [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado de forma nativa no se aplican al acceso mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria.  
+Estas restricciones en [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado de forma nativa no se aplican al acceso mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria.  
 
 
 ##  <a name="dml"></a> Modificación de datos  
@@ -167,7 +168,8 @@ Se admiten las siguientes instrucciones DML.
 
 -   [RETURN &#40;Transact-SQL&#41;](../../t-sql/language-elements/return-transact-sql.md)  
 
--   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md) puede usar todos los [tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md), así como los tipos de tablas con optimización para memoria. Las variables se pueden declarar como NULL o NOT NULL.  
+-   
+            [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md) puede usar todos los [tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md), así como los tipos de tablas optimizadas para memoria. Las variables se pueden declarar como NULL o NOT NULL.  
 
 -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 
@@ -195,19 +197,19 @@ Se admiten las siguientes instrucciones DML.
 -   Operadores ~, &, | y ^ bit a bit  
 
 -   APPLY, operador
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, el operador APPLY se admite en los módulos compilados de forma nativa.
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], el operador APPLY se admite en los módulos compilados de forma nativa.
 
 ##  <a name="bfncsp"></a> Funciones integradas en módulos compilados de forma nativa  
- Las funciones siguientes se admiten en restricciones de tablas con optimización de memoria y en módulos T-SQL compilados de forma nativa.  
+ Las funciones siguientes se admiten en restricciones de tablas optimizadas para memoria y en módulos T-SQL compilados de forma nativa.  
 
 -   Todas las [funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 
 -   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
 
 -   Funciones de cadena: LEN, LTRIM, RTRIM y SUBSTRING.  
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, también se admiten las siguientes funciones integradas: TRIM, TRANSLATE y CONCAT_WS.  
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], también se admiten las siguientes funciones integradas: TRIM, TRANSLATE y CONCAT_WS.  
 
 -   Funciones de identidad: SCOPE_IDENTITY  
 
@@ -216,8 +218,8 @@ Se admiten las siguientes instrucciones DML.
 -   Funciones uniqueidentifier: NEWID y NEWSEQUENTIALID  
 
 -   Funciones JSON  
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, las funciones JSON se admiten en los módulos compilados de forma nativa.
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], las funciones JSON se admiten en los módulos compilados de forma nativa.
 
 -   Funciones de error: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY y ERROR_STATE  
 
@@ -307,6 +309,5 @@ GO
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbb539201ac8566005913d9b45574aa7f261b089
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2508882839da6ad6aef9fef6e5bd44db4d49ae06
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
  El valor 1 bit en el patrón de afinidad de E/S especifica que la CPU correspondiente se puede seleccionar para realizar operaciones de E/S del disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; El valor 0 bit especifica que no se debería programar ninguna operación de E/S del disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la CPU correspondiente. Cuando todos los bits se establecen como cero, o bien no se especifica **affinity I/O mask** , la E/S del disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se programa en cualquiera de las CPU que se pueden seleccionar para procesar subprocesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Dado que establecer la opción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** es una operación especializada, solo debería usarse en caso necesario. En la mayoría de los casos, la afinidad predeterminada de Windows 2000 o Windows Server 2003 proporciona el mejor rendimiento.  
+ Dado que establecer la opción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Máscara de afinidad de E/S** es una operación especializada, solo debería usarse en caso necesario. En la mayoría de los casos, la afinidad predeterminada de Windows 2000 o Windows Server 2003 proporciona el mejor rendimiento.  
   
  Al especificar la opción **affinity I/O mask** , hay que usarla junto con la opción de configuración **affinity mask** . No habilite la misma CPU en el modificador **affinity I/O mask** y la opción **affinity mask** . Los bits correspondientes a cada CPU deberían estar en uno de los tres estados siguientes:  
   
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/02/2017
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

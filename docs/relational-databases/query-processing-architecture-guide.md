@@ -1,32 +1,33 @@
 ---
 title: "Guía de arquitectura de procesamiento de consultas | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: es-es
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas en varias arquitecturas de almacenamiento de datos como tablas locales, tablas con particiones y tablas distribuidas en varios servidores. En los temas siguientes se trata el modo en que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesa las consultas y optimiza la reutilización de consultas a través del almacenamiento en caché de los planes de ejecución.
 
@@ -38,7 +39,9 @@ El procesamiento de una única instrucción SQL es el método más básico de ej
 
 Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan. El contenido de un plan de consulta se describe con más detalle posteriormente en este tema.
 
-En el siguiente diagrama se ilustran las entradas y salidas del Optimizador de consultas durante la optimización de una única instrucción `SELECT`: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+En el siguiente diagrama se muestran las entradas y salidas del optimizador de consultas durante la optimización de una única instrucción `SELECT`:
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Una instrucción `SELECT` define únicamente los siguientes elementos:  
 * El formato del conjunto de resultados. Este elemento se especifica principalmente en la lista de selección. Sin embargo, también afectan a la forma final del conjunto de resultados otras cláusulas como `ORDER BY` y `GROUP BY` .
@@ -619,7 +622,7 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
   Cada operación de consulta o índice requiere que se ejecute un determinado número de subprocesos de trabajo. La ejecución de un plan en paralelo requiere más subprocesos de trabajo que un plan en serie, y el número de subprocesos de trabajo aumenta con el grado de paralelismo. Si no es posible cumplir el requisito de subprocesos de trabajo del plan en paralelo para un grado de paralelismo específico, el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] reduce automáticamente el grado de paralelismo o abandona por completo el plan en paralelo en el contexto de carga de trabajo especificado. Es entonces cuando ejecuta un plan en serie (un subproceso de trabajo). 
 
 3. El tipo de operación de consulta o índice ejecutado.  
-  Las operaciones de índice que crean o vuelven a crear un índice, o que eliminan un índice clúster o las consultas que utilizan constantemente los ciclos de la CPU, son los candidatos idóneos para un plan de paralelismo. Por ejemplo, las combinaciones de tablas grandes, agregaciones importantes y la ordenación de grandes conjuntos de resultados son buenos candidatos. En las consultas simples, que suelen encontrarse en aplicaciones de procesamiento de transacciones, la coordinación adicional necesaria para ejecutar una consulta en paralelo es más importante que el aumento potencial del rendimiento. Para distinguir entre las consultas que se benefician del paralelismo y las que no, el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara el costo estimado de ejecutar la operación de consulta o índice con el valor del [umbral de costo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Aunque no se recomienda, los usuarios pueden cambiar el valor predeterminado de 5 mediante [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  Las operaciones de índice que crean o vuelven a crear un índice, o que eliminan un índice clúster o las consultas que utilizan constantemente los ciclos de la CPU, son los candidatos idóneos para un plan de paralelismo. Por ejemplo, las combinaciones de tablas grandes, agregaciones importantes y la ordenación de grandes conjuntos de resultados son buenos candidatos. En las consultas simples, que suelen encontrarse en aplicaciones de procesamiento de transacciones, la coordinación adicional necesaria para ejecutar una consulta en paralelo es más importante que el aumento potencial del rendimiento. Para distinguir entre las consultas que se benefician del paralelismo y las que no, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara el costo estimado de ejecutar la operación de consulta o índice con el valor [Umbral de costo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Los usuarios pueden cambiar el valor predeterminado de 5 mediante [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) si unas pruebas correctas han detectado que otro valor es más adecuado para la carga de trabajo en ejecución. 
 
 4. Si hay un número suficiente de filas para procesar.  
   Si el optimizador de consultas determina que el número de filas es demasiado bajo, no proporciona operadores de intercambio para distribuir las filas. En consecuencia, los operadores se ejecutan en serie. Ejecutar los operadores en un plan en serie evita los escenarios en que el costo del inicio, distribución y coordinación excede las ganancias logradas mediante la ejecución del operador en paralelo.
@@ -716,9 +719,9 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Plan de consulta con DOP 4. Implica una combinación de dos tablas.
+En la ilustración siguiente se muestra un plan de consultas ejecutado con un grado de paralelismo igual a 4 y que implica una combinación de dos tablas.
 
-En la ilustración se muestra un plan del Optimizador de consultas que se ejecuta con un grado de paralelismo igual a 4 y que implica una combinación de dos tablas.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 El plan en paralelo contiene tres operadores Parallelism. Tanto el operador Index Seek del índice `o_datkey_ptr` como el operador Index Scan del índice `l_order_dates_idx` se realizan en paralelo. Esto produce varios flujos exclusivos. Esto puede determinarse a partir de los operadores Parallelism más cercanos que están encima de los operadores Index Scan e Index Seek, respectivamente. Ambos reparten el tipo de intercambio. Es decir, solo reconstruyen los datos de los flujos que producen el mismo número de flujos en la salida que en la entrada. Este número de flujos equivale al grado de paralelismo.
 
@@ -727,6 +730,8 @@ El operador Parallelism situado encima del operador Index Scan `l_order_dates_id
 El operador Parallelism situado encima del operador Index Seek reparte sus flujos de entrada con el valor de `O_ORDERKEY`. Como su entrada no está ordenada en los valores de la columna `O_ORDERKEY` y esta es la columna de combinación del operador `Merge Join`, el operador Sort que está entre los operadores Parallelism y Merge Join asegura que la entrada esté ordenada para el operador `Merge Join` en las columnas de combinación. El operador `Sort`, al igual que el operador Merge Join, se ejecuta en paralelo.
 
 El primer operador Parallelism recopila los resultados de varios flujos en un solo flujo. Las agregaciones parciales que realiza el operador Stream Aggregate que está situado debajo del operador Parallelism se acumulan en un solo valor `SUM` para cada valor diferente de `O_ORDERPRIORITY` en el operador Stream Aggregate situado encima del operador Parallelism. Como este plan tiene dos segmentos de intercambio y un grado de paralelismo igual a 4, usa ocho subprocesos de trabajo.
+
+Para más información sobre los operadores usados en este ejemplo, vea [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 
 ### <a name="parallel-index-operations"></a>Operaciones de índice en paralelo
 
@@ -1040,4 +1045,3 @@ GO
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Procesamiento de consultas adaptable](../relational-databases/performance/adaptive-query-processing.md)
-

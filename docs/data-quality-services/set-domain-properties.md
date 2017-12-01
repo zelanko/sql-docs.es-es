@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21943e484d690d0ff26cf9a93e0688e0804dd02c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-domain-properties"></a>Establecer las propiedades de dominio
   En este tema se describe cómo establecer las propiedades del dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/09/2017
  Una vez creado un dominio, no se puede cambiar ni su nombre ni su descripción. El nombre del dominio debe ser único para la base de conocimiento. La descripción puede contener un máximo de 256 caracteres.  
   
 ###  <a name="Type"></a> Tipo de datos  
- Al crear el dominio, seleccione uno de los siguientes tipos de datos para los valores del dominio: **Cadena** (valor predeterminado), **Fecha**, **Entero**o **Decimal**. Después de crear el dominio, podrá ver el tipo de datos, pero no cambiarlo. El tipo de datos seleccionado para un dominio define el tipo de datos de origen que se puede asignar al dominio. Para obtener más información acerca de los tipos de datos admitidos para cada uno de los tipos de datos de dominio en DQS, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Al crear el dominio, seleccione uno de los siguientes tipos de datos para los valores del dominio: **Cadena** (valor predeterminado), **Fecha**, **Entero**o **Decimal**. Después de crear el dominio, podrá ver el tipo de datos, pero no cambiarlo. El tipo de datos seleccionado para un dominio define el tipo de datos de origen que se puede asignar al dominio. Para más información sobre los tipos de datos admitidos para cada uno de los tipos de datos de dominio en DQS, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Usar valores iniciales  
  Seleccione esta casilla para especificar que se mostrará el valor inicial de un grupo de sinónimos en lugar de un valor que sea un sinónimo de aquel. Anule la selección **Usar valores iniciales** para especificar que cada valor de sinónimo se mostrará en su forma correcta o corregida, y que no será reemplazado por el valor inicial de su grupo.  
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  Si el tipo de datos es **Cadena**, seleccione esta opción para que DQS no identifique los errores de sintaxis en el dominio durante el proceso de limpieza. Active esta casilla si la identificación de los errores de sintaxis en el dominio es irrelevante. Por ejemplo, la identificación de los errores de sintaxis puede no afectar a un número de serie. Este control solo está disponible para el tipo de datos de cadena. DQS no comprobará los errores de sintaxis en los tipos de datos que no son de cadena.  
   
   
-

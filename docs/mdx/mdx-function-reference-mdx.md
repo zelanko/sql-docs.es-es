@@ -8,12 +8,10 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - member functions [MDX]
 - level functions [MDX]
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - logical functions [MDX]
 - set functions [MDX]
 ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: c9e43eacb0fe9b5c5af98cfe54b557af93af7d1c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30cd14ab8d2725f559e317f92071a289ab047268
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-function-reference-mdx"></a>Referencia de funciones MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -125,11 +122,11 @@ ms.lasthandoff: 08/02/2017
 |[CovarianceN &#40; MDX &#41;](../mdx/covariancen-mdx.md)|Devuelve la covarianza de muestra de dos series evaluadas en un conjunto utilizando la fórmula de población no sesgada.|  
 |[DistinctCount &#40; MDX &#41;](../mdx/distinctcount-mdx.md)|Devuelve el número de tuplas distintas y no vacías de un conjunto.|  
 |[IIf &#40; MDX &#41;](../mdx/iif-mdx.md)|Devuelve uno de los dos valores determinados por una prueba lógica.|  
-|[LinRegIntercept &#40; MDX &#41;](../mdx/linregintercept-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la intersección de la recta de regresión y = ax + b.|  
-|[LinRegPoint &#40; MDX &#41;](../mdx/linregpoint-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de *y* en la recta de regresión y = ax + b.|  
+|[LinRegIntercept &#40; MDX &#41;](../mdx/linregintercept-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la intersección de la recta de regresión y = ax + b..|  
+|[LinRegPoint &#40; MDX &#41;](../mdx/linregpoint-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de *y* en la recta de regresión y = ax + b..|  
 |[LinRegR2 &#40; MDX &#41;](../mdx/linregr2-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el coeficiente de determinación, R2.|  
-|[LinRegSlope &#40; MDX &#41;](../mdx/linregslope-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la pendiente de la recta de regresión y = ax + b.|  
-|[LinRegVariance &#40; MDX &#41;](../mdx/linregvariance-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve la varianza asociada a la recta de regresión y = ax + b.|  
+|[LinRegSlope &#40; MDX &#41;](../mdx/linregslope-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la pendiente de la recta de regresión y = ax + b..|  
+|[LinRegVariance &#40; MDX &#41;](../mdx/linregvariance-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve la varianza asociada a la recta de regresión y = ax + b..|  
 |[LookupCube &#40; MDX &#41;](../mdx/lookupcube-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre otro cubo especificado en la misma base de datos.|  
 |[Max &#40; MDX &#41;](../mdx/max-mdx.md)|Devuelve el valor máximo de una expresión numérica evaluada sobre un conjunto.|  
 |[Mediana &#40; MDX &#41;](../mdx/median-mdx.md)|Devuelve el valor medio de una expresión numérica evaluada sobre un conjunto.|  
@@ -249,4 +246,3 @@ ms.lasthandoff: 08/02/2017
  [Referencia del lenguaje MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-

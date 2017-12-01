@@ -1,13 +1,14 @@
 ---
 title: Always Encrypted (motor de base de datos) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -61,7 +61,7 @@ Para acceder a los datos almacenados en una columna cifrada en texto no cifrado,
 
 Después, el controlador se pone en contacto con el almacén de claves, que contiene la clave maestra de columna, para descifrar el valor de clave de cifrado de columna cifrado y, luego, usa la clave de cifrado de columna de texto no cifrado para cifrar el parámetro. La clave de cifrado de columna de texto no cifrado resultante se almacena en la memoria caché para reducir el número de viajes de ida y vuelta al almacén de claves en usos posteriores de la misma clave de cifrado de columna. El controlador sustituye los valores de texto no cifrado de los parámetros que se dirigen a columnas cifradas por sus valores cifrados y envía la consulta al servidor para su procesamiento.
 
-El servidor calcula el conjunto de resultados y, por cualquier cifrado incluido en el conjunto de resultados, el controlador adjunta los metadatos de cifrado de la columna, incluida la información sobre el algoritmo de cifrado y las claves correspondientes. El controlador primero intenta buscar la clave de cifrado de columna de texto no cifrado en la memoria caché local y, si no encuentra la clave en la memoria caché, solo realiza una ronda en la clave maestra de columna. Luego, el controlador descifra los resultados y devuelve valores de texto no cifrado a la aplicación.
+El servidor calcula el conjunto de resultados y, para cualquier columna cifrada incluida en el conjunto de resultados, el controlador adjunta los metadatos de cifrado de la columna, incluida la información sobre el algoritmo de cifrado y las claves correspondientes. El controlador primero intenta buscar la clave de cifrado de columna de texto no cifrado en la memoria caché local y, si no encuentra la clave en la memoria caché, solo realiza una ronda en la clave maestra de columna. Luego, el controlador descifra los resultados y devuelve valores de texto no cifrado a la aplicación.
 
  Un controlador cliente interactúa con un almacén de claves, que contiene una clave maestra de columna, mediante un proveedor de almacén de claves maestras de columna, que es un componente de software de cliente que encapsula un almacén de claves que contiene la clave maestra de columna. Los proveedores de los tipos comunes de almacenes de claves están disponibles en bibliotecas de controladores de cliente de Microsoft o como descargas independientes. También puede implementar su propio proveedor. Las funciones de Always Encrypted, incluidos los proveedores de almacenes de claves maestras de columna integrados, varían según la biblioteca de controladores y su versión. 
 
@@ -254,4 +254,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

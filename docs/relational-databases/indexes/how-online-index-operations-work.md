@@ -4,45 +4,45 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>Cómo funcionan las operaciones de índice en línea
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   En este tema se definen las estructuras que existen durante una operación de índice en línea y se muestran las actividades asociadas a ellas.  
   
 ## <a name="online-index-structures"></a>Estructuras de índice en línea  
- Para que se puedan llevar a cabo actividades de usuario simultáneas durante una operación de lenguaje de definición de datos (DDL) de índice, se usan las siguientes estructuras en la operación de índice en línea: índices preexistentes y de origen, destino y, para volver a compilar un montón o quitar un índice en línea clúster, un índice de asignación temporal.  
+ Para que se puedan llevar a cabo actividades de usuario simultáneas durante una operación de lenguaje de definición de datos (DDL) de índice, se usan las siguientes estructuras en la operación de índice en línea: índices preexistentes y de origen, destino y, para volver a compilar un montón o quitar un índice en línea agrupado, un índice de asignación temporal.  
   
--   **Origen e índices preexistentes**  
+-   **Índices preexistentes y de origen**  
   
-     El origen es la tabla original o los datos del índice clúster. Los índices preexistentes son los índices no clúster asociados con la estructura de origen. Por ejemplo, si la operación de índice en línea regenera un índice clúster que dispone de cuatro índices no clúster asociados, el origen es el índice clúster existente y los índices preexistentes son los índices no clúster.  
+     El origen es la tabla original o los datos del índice clúster. Los índices preexistentes son los índices no agrupados asociados con la estructura de origen. Por ejemplo, si la operación de índice en línea vuelve a crear un índice agrupado que dispone de cuatro índices no agrupados asociados, el origen es el índice agrupado existente y los índices preexistentes son los índices no agrupados.  
   
-     Los índices preexistentes están disponibles para que los usuarios simultáneos realicen operaciones de selección, inserción, actualización y eliminación. Entre dichas operaciones se incluyen las inserciones masivas (que se admiten pero no se recomiendan) y las actualizaciones implícitas realizadas mediante desencadenadores y restricciones de integridad referencial. Los índices preexistentes están disponibles para las consultas y las búsquedas. Esto significa que se pueden seleccionar en el optimizador de consultas y, si es necesario, se pueden especificar en sugerencias de índice.  
+     Los índices preexistentes están disponibles para que los usuarios simultáneos realicen operaciones de selección, inserción, actualización y eliminación. Entre dichas operaciones se incluyen las inserciones masivas (que se admiten pero no se recomiendan) y las actualizaciones implícitas realizadas mediante desencadenadores y restricciones de integridad referencial. Todos los índices preexistentes están disponibles para las consultas y las búsquedas. Esto significa que se pueden seleccionar en el optimizador de consultas y, si es necesario, se pueden especificar en sugerencias de índice.  
   
 -   **Destino**  
   
@@ -66,13 +66,13 @@ ms.lasthandoff: 06/22/2017
   
 |Fase|Actividad de origen|Bloqueos de origen|  
 |-----------|---------------------|------------------|  
-|Preparación<br /><br /> Fase muy breve|Preparación de los metadatos del sistema para crear la nueva estructura de índice vacía.<br /><br /> Se define una instantánea de base de datos. Es decir, se utilizan las versiones de fila para proporcionar coherencia de lectura en la transacción.<br /><br /> Las operaciones de usuario simultáneas de escritura se bloquean durante un período muy breve.<br /><br /> No se admiten las operaciones DDL simultáneas, excepto la creación de varios índices no clúster.|S (Compartido) en la tabla*<br /><br /> IS (Intención compartida)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilar<br /><br /> Fase principal|Los datos se recorren, ordenan, combinan e insertan en el destino en operaciones de carga masiva.<br /><br /> Las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación se aplican a los índices preexistentes y a los nuevos índices que se generan.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|Final<br /><br /> Fase muy breve|Antes de iniciar esta fase deben completarse todas las transacciones de actualización no confirmadas. Según el bloqueo aplicado, se bloquean brevemente las nuevas transacciones de lectura y escritura de usuario hasta que finaliza esta fase.<br /><br /> Se actualizan los metadatos del sistema para reemplazar el origen con el destino.<br /><br /> Si es preciso, el origen se quita. Por ejemplo, después de regenerar o quitar un índice clúster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S en la tabla si se crea un índice no agrupado.\*<br /><br /> SCH-M (Modificación del esquema) si se quita alguna estructura de origen (índice o tabla).\*|  
+|Preparación<br /><br /> Fase breve|Preparación de los metadatos del sistema para crear la nueva estructura de índice vacía.<br /><br /> Se define una instantánea de base de datos. Es decir, se utilizan las versiones de fila para proporcionar coherencia de lectura en la transacción.<br /><br /> Las operaciones de usuario simultáneas de escritura se bloquean durante un período breve.<br /><br /> No se admiten las operaciones DDL simultáneas, excepto la creación de varios índices no clúster.|S (Compartido) en la tabla*<br /><br /> IS (Intención compartida)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|Compilar<br /><br /> Fase principal|Los datos se recorren, ordenan, combinan e insertan en el destino en operaciones de carga masiva.<br /><br /> Las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación se aplican a los índices preexistentes y a los nuevos índices que se compilan.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Final<br /><br /> Fase breve|Antes de iniciar esta fase deben completarse todas las transacciones de actualización no confirmadas. Según el bloqueo aplicado, se bloquean brevemente las nuevas transacciones de lectura y escritura de usuario hasta que finaliza esta fase.<br /><br /> Se actualizan los metadatos del sistema para reemplazar el origen con el destino.<br /><br /> Si es preciso, el origen se quita. Por ejemplo, después de regenerar o quitar un índice clúster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S en la tabla si se crea un índice no agrupado.\*<br /><br /> SCH-M (Modificación del esquema) si se quita alguna estructura de origen (índice o tabla).\*|  
   
- \* La operación de índice esperará a que se completen las transacciones de actualización no confirmadas antes de aplicar un bloqueo S o SCH-M a la tabla.  
+ \* La operación de índice espera a que se completen las transacciones de actualización no confirmadas antes de aplicar el bloqueo S o SCH-M a la tabla.  
   
- ** El bloqueo de recurso INDEX_BUILD_INTERNAL_RESOURCE impide la ejecución de operaciones de lenguaje de definición de datos (DDL) simultáneas en las estructuras preexistentes y de origen mientras la operación de índice está en proceso. Por ejemplo, este bloqueo impide la regeneración simultánea de dos índices en la misma tabla. Este bloqueo de recurso está asociado con el bloqueo Sch-M; sin embargo, no impide las instrucciones de manipulación de datos.  
+ ** El bloqueo de recurso INDEX_BUILD_INTERNAL_RESOURCE evita la ejecución de operaciones de lenguaje de definición de datos (DDL) simultáneas en las estructuras preexistentes y de origen mientras la operación de índice está en curso. Por ejemplo, este bloqueo impide la regeneración simultánea de dos índices en la misma tabla. Este bloqueo de recurso está asociado con el bloqueo Sch-M; sin embargo, no impide las instrucciones de manipulación de datos.  
   
  En la tabla anterior se muestra un solo bloqueo compartido (S) adquirido en la fase de generación de una operación de índice en línea que únicamente utiliza un índice. Cuando se generan o se vuelven a generar índices clúster y no clúster en una sola operación de índice en línea (por ejemplo, durante la creación del índice clúster inicial en una tabla que contiene uno o varios índices no clúster) se aplican dos bloqueos S a corto plazo durante la fase de generación, seguidos de bloqueos de intención compartida (IS) a largo plazo. En primer lugar, se aplica un bloqueo S para la creación del índice clúster; cuando esta operación finaliza, se aplica un segundo bloqueo S breve para crear los índices no clúster. Después de crear los índices no clúster, el bloqueo S se reduce a un bloqueo IS hasta la fase final de la operación de índice en línea.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
  Las instrucciones SELECT del usuario no tienen acceso al destino hasta que finaliza la operación de índice.  
   
- Una vez finalizadas las fases de preparación y final, los planes de consulta y actualización almacenados en la memoria caché del procedimiento dejan de ser válidos. Las consultas posteriores utilizarán el nuevo índice.  
+ Una vez finalizadas las fases de preparación y final, los planes de consulta y actualización almacenados en la memoria caché del procedimiento dejan de ser válidos. Las consultas posteriores usan el nuevo índice.  
   
  La duración de un cursor declarado en una tabla implicada en una operación de índice en línea está limitada por las fases de dicho índice. Los cursores de actualización dejan de ser válidos en cada fase. Los cursores de solo lectura dejan de ser válidos después de la fase final.  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

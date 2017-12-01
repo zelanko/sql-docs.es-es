@@ -1,33 +1,33 @@
 ---
 title: Validar, consultar y cambiar datos JSON con funciones integradas (SQL Server) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-json
+ms.suite: sql
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e3a398f0ab3fec7da5ef914fe1a94f949bc71942
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: d8c99e842ceaa2351c98583238cbba28e2a152c7
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar y cambiar datos JSON con funciones integradas (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La compatibilidad integrada con JSON incluye las siguientes funciones integradas que se describen brevemente en este tema.  
   
@@ -120,7 +120,7 @@ En este ejemplo de texto JSON, los miembros de datos "a" y "c" son valores de ca
 |**$.c**|hi|NULL o error|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Probar JSON_VALUE y JSON_QUERY con la base de datos de ejemplo AdventureWorks  
-Pruebe las funciones integradas que se describen en este tema ejecutando los ejemplos siguientes con la base de datos de ejemplo AdventureWorks, que contiene datos JSON. Para obtener la base de datos de ejemplo AdventureWorks, [haga clic aquí](http://www.microsoft.com/en-us/download/details.aspx?id=49502).  
+Pruebe las funciones integradas que se describen en este tema al ejecutar los ejemplos siguientes con la base de datos de ejemplo AdventureWorks. Para obtener información sobre dónde obtener AdventureWorks y sobre cómo agregar datos JSON para pruebas mediante la ejecución de un script, vea [Test drive built-in JSON support](json-data-sql-server.md#test-drive-built-in-json-support) (Probar la compatibilidad integrada de JSON).
   
 En los ejemplos siguientes, la columna `Info` de la tabla `SalesOrder_json` contiene texto JSON.  
   
@@ -181,4 +181,3 @@ Para obtener una gran cantidad de soluciones específicas, casos de uso y recome
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)  
   
   
-

@@ -8,37 +8,35 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los procedimientos almacenados compilados de forma nativa y las tablas con optimización para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas con optimización para memoria como para los procedimientos almacenados compilados de forma nativa.  
+  OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
   
- En el documento se explica cómo se compilan y ejecutan las consultas en tablas con optimización para memoria, incluido:  
+ En el documento se explica cómo se compilan y ejecutan las consultas en tablas optimizadas para memoria, incluido:  
   
 -   La canalización de procesamiento de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las tablas basadas en disco.  
   
--   Optimización de consultas; el rol de las estadísticas en las tablas con optimización para memoria así como instrucciones para solucionar problemas de planes de consulta no válidos.  
+-   Optimización de consultas; el rol de las estadísticas en las tablas optimizadas para memoria así como instrucciones para solucionar problemas de planes de consulta no válidos.  
   
--   El uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado para tener acceso a tablas con optimización para memoria.  
+-   El uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado para tener acceso a tablas optimizadas para memoria.  
   
--   Consideraciones sobre la optimización de consultas para el acceso a tablas con optimización para memoria.  
+-   Consideraciones sobre la optimización de consultas para el acceso a tablas optimizadas para memoria.  
   
 -   Compilación y procesamiento de procedimientos almacenados de forma nativa.  
   
@@ -80,7 +78,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  El plan de ejecución estimado como se muestra en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es el siguiente:  
   
- ![Plan de consulta para una combinación de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![Plan de consulta para una combinación de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Plan de consulta para una combinación de tablas basadas en disco.")  
 Plan de consulta para una combinación de tablas basadas en disco.  
   
  Acerca de este plan de consulta:  
@@ -99,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  El plan estimado de esta consulta es:  
   
- ![Plan de consulta para una combinación hash de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![Plan de consulta para una combinación hash de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Plan de consulta para una combinación hash de tablas basadas en disco.")  
 Plan de consulta para una combinación hash de tablas basadas en disco.  
   
  En esta consulta, las filas de la tabla Order se recuperan con el índice clúster. Ahora se utiliza el operador físico **Hash Match** para **Inner Join**. El índice clúster en la tabla Order no está ordenado en CustomerID y, por lo tanto, **Merge Join** requeriría un operador de ordenación, lo que afectaría al rendimiento. Tenga en cuenta el costo relativo del operador **Hash Match** (75 %) en comparación con el costo del operador **Merge Join** del ejemplo anterior (46 %). El optimizador habría considerado el operador **Hash Match** también en el ejemplo anterior pero concluyó que el operador **Merge Join** proporcionaba un rendimiento mejor.  
@@ -107,7 +105,7 @@ Plan de consulta para una combinación hash de tablas basadas en disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
  El siguiente diagrama muestra el flujo de procesamiento de consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas ad hoc:  
   
- ![Canalización de procesamiento de consultas de SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![Canalización de procesamiento de consultas de SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "Canalización de procesamiento de consultas de SQL Server.")  
 Canalización de procesamiento de consultas de SQL Server  
   
  En este escenario:  
@@ -129,10 +127,10 @@ Canalización de procesamiento de consultas de SQL Server
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] también se denominan [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpretado hace referencia al hecho de que el plan de consulta es interpretado por el motor de ejecución de consulta para cada operador del plan de consultas. El motor de ejecución lee el operador y sus parámetros y realiza la operación.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado se puede utilizar para tener acceso a tablas con optimización para memoria y a tablas basadas en disco. La ilustración siguiente muestra el procesamiento de consultas para el acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado se puede utilizar para tener acceso a tablas optimizadas para memoria y a tablas basadas en disco. La ilustración siguiente muestra el procesamiento de consultas para el acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria:  
   
- ![Canalización de procesamiento de consulta para tsql interpretado.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
-Canalización de procesamiento de consultas para acceso de Transact-SQL interpretado a tablas con optimización para memoria.  
+ ![Canalización de procesamiento de consulta para tsql interpretado.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Canalización de procesamiento de consulta para tsql interpretado.")  
+Canalización de procesamiento de consultas para acceso de Transact-SQL interpretado a tablas optimizadas para memoria.  
   
  Como se muestra en la ilustración, la canalización del procesamiento de consultas permanece principalmente sin cambios:  
   
@@ -142,9 +140,9 @@ Canalización de procesamiento de consultas para acceso de Transact-SQL interpre
   
 -   El motor de ejecución de consultas interpreta el plan de ejecución.  
   
- La diferencia principal con la canalización de procesamiento de consultas tradicional (la ilustración 2) es que las filas de las tablas con optimización para memoria no se recuperan del grupo de búferes mediante Access Methods. En su lugar, las filas se recuperan de las estructuras de datos en memoria a través del motor OLTP en memoria. Las diferencias en las estructuras de datos hacen que el optimizador elija distintos planes en algunos casos, como se muestra en el ejemplo siguiente.  
+ La diferencia principal con la canalización de procesamiento de consultas tradicional (la ilustración 2) es que las filas de las tablas optimizadas para memoria no se recuperan del grupo de búferes mediante Access Methods. En su lugar, las filas se recuperan de las estructuras de datos en memoria a través del motor OLTP en memoria. Las diferencias en las estructuras de datos hacen que el optimizador elija distintos planes en algunos casos, como se muestra en el ejemplo siguiente.  
   
- El siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] contiene las versiones con optimización para memoria de las tablas Order y Customer, con índices hash:  
+ El siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] contiene las versiones optimizadas para memoria de las tablas Order y Customer, con índices hash:  
   
 ```tsql  
 CREATE TABLE dbo.[Customer] (  
@@ -161,7 +159,7 @@ CREATE TABLE dbo.[Order] (
 GO  
 ```  
   
- Considere la misma consulta ejecutada en tablas con optimización para memoria:  
+ Considere la misma consulta ejecutada en tablas optimizadas para memoria:  
   
 ```tsql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
@@ -169,8 +167,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  El plan estimado es el siguiente:  
   
- ![Plan de consulta para una combinación de tablas con optimización para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
-Plan de consulta para una combinación de tablas con optimización para memoria.  
+ ![Plan de consulta para una combinación de tablas optimizadas para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Plan de consulta para una combinación de tablas optimizadas para memoria.")  
+Plan de consulta para una combinación de tablas optimizadas para memoria.  
   
  Observe las siguientes diferencias con el plan para la misma consulta en las tablas basadas en disco (ilustración 1):  
   
@@ -178,7 +176,7 @@ Plan de consulta para una combinación de tablas con optimización para memoria.
   
     -   La definición de la tabla no contiene un índice clúster.  
   
-    -   Los índices clúster no se admiten con tablas con optimización para memoria. En su lugar, cada tabla con optimización para memoria debe tener al menos un índice no clúster y todos los índices de las tablas con optimización para memoria pueden tener acceso eficazmente a todas las columnas de la tabla sin tener que almacenarlas en el índice o hacer referencia a un índice clúster.  
+    -   Los índices clúster no se admiten con tablas optimizadas para memoria. En su lugar, cada tabla optimizada para memoria debe tener al menos un índice no clúster y todos los índices de las tablas optimizadas para memoria pueden tener acceso eficazmente a todas las columnas de la tabla sin tener que almacenarlas en el índice o hacer referencia a un índice clúster.  
   
 -   Este plan contiene una **Hash Match** en lugar de una **Merge Join**. Los índices en las tablas Order y Customer son índices hash y, por tanto, no se ordenan. Una **Merge Join** requeriría operadores de ordenación que reducirían el rendimiento.  
   
@@ -210,7 +208,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Compilación y procesamiento de consultas  
  El siguiente diagrama muestra el proceso de compilación para los procedimientos almacenados compilados de forma nativa:  
   
- ![Compilación nativa de procedimientos almacenados.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Compilación nativa de procedimientos almacenados.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Compilación nativa de procedimientos almacenados.")  
 Compilación nativa de procedimientos almacenados.  
   
  El proceso se describe como  
@@ -227,7 +225,7 @@ Compilación nativa de procedimientos almacenados.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se traduce en la llamada a una función del archivo DLL.  
   
- ![Ejecución de los procedimientos almacenados compilados de forma nativa.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Ejecución de los procedimientos almacenados compilados de forma nativa.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Ejecución de los procedimientos almacenados compilados de forma nativa.")  
 Ejecución de los procedimientos almacenados compilados de forma nativa.  
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
@@ -279,7 +277,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Observe que el operador Hash Match no se admite para la agregación. Por consiguiente, toda la agregación en los procedimientos almacenados compilados de forma nativa utiliza el operador Stream Aggregate, incluso si el plan para la misma consulta en [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado utiliza el operador Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Combinaciones y estadísticas de columnas  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas en los valores de columnas de clave de índice para ayudar a evaluar el costo de ciertas operaciones, como el examen de índice y las búsquedas de índice. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también crea estadísticas en columnas de clave sin índice si se crean explícitamente o si el optimizador de consultas las crea en respuesta a una consulta con predicado). La métrica principal en la estimación del costo es el número de filas procesadas por un único operador. Tenga en cuenta que para las tablas basadas en disco, el número de páginas a las que tiene acceso un operador determinado es importante en la estimación de costos. Sin embargo, como el recuento de páginas no es importante para las tablas con optimización para memoria (siempre es cero), esta explicación se centra en el recuento de filas. La estimación comienza por los operadores de examen y búsqueda de índice en el plan, y se extiende después para incluir los otros operadores, como el operador de combinación. El número estimado de filas que va a procesar un operador de combinación se basa en la estimación de los operadores de examen, índice y búsqueda subyacentes. Para que [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pueda obtener acceso a las tablas con optimización para memoria, puede seguir el plan de ejecución real para ver la diferencia entre los recuentos de filas estimado y real de los operadores del plan.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas en los valores de columnas de clave de índice para ayudar a evaluar el costo de ciertas operaciones, como el examen de índice y las búsquedas de índice. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también crea estadísticas en columnas de clave sin índice si se crean explícitamente o si el optimizador de consultas las crea en respuesta a una consulta con predicado). La métrica principal en la estimación del costo es el número de filas procesadas por un único operador. Tenga en cuenta que para las tablas basadas en disco, el número de páginas a las que tiene acceso un operador determinado es importante en la estimación de costos. Sin embargo, como el recuento de páginas no es importante para las tablas optimizadas para memoria (siempre es cero), esta explicación se centra en el recuento de filas. La estimación comienza por los operadores de examen y búsqueda de índice en el plan, y se extiende después para incluir los otros operadores, como el operador de combinación. El número estimado de filas que va a procesar un operador de combinación se basa en la estimación de los operadores de examen, índice y búsqueda subyacentes. Para que [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pueda obtener acceso a las tablas optimizadas para memoria, puede seguir el plan de ejecución real para ver la diferencia entre los recuentos de filas estimado y real de los operadores del plan.  
   
  Para el ejemplo en la ilustración 1,  
   
@@ -313,4 +311,3 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

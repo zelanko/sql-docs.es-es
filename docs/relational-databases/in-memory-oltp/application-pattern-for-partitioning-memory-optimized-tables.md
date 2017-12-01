@@ -8,43 +8,42 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 395967f86de07074db3a7c8cad7c49195ed54d86
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla con optimización para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Por lo general, esto sería un escenario donde se almacenan datos en función de una clave **datetime** .  
   
- Se pueden emular las tablas con particiones con tablas con optimización para memoria manteniendo una tabla con particiones y una tabla con optimización para memoria con un esquema común. Los datos actuales se insertarían y actualizarían en la tabla con optimización para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se conservarían en la tabla con particiones tradicional.  
+            [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Por lo general, esto sería un escenario donde se almacenan datos en función de una clave **datetime** .  
   
- Una aplicación que sabe que los datos activos están en una tabla con optimización para memoria puede utilizar procedimientos almacenados compilados de forma nativa para tener acceso a los datos. En las operaciones que necesitan tener acceso a todos los datos o que pueden no saber qué tabla contiene los datos importantes, se usa [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado para combinar la tabla con optimización para memoria con la tabla con particiones.  
+ Se pueden emular las tablas con particiones con tablas optimizadas para memoria manteniendo una tabla con particiones y una tabla optimizada para memoria con un esquema común. Los datos actuales se insertarían y actualizarían en la tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se conservarían en la tabla con particiones tradicional.  
+  
+ Una aplicación que sabe que los datos activos están en una tabla optimizada para memoria puede utilizar procedimientos almacenados compilados de forma nativa para tener acceso a los datos. En las operaciones que necesitan tener acceso a todos los datos o que pueden no saber qué tabla contiene los datos importantes, se usa [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado para combinar la tabla optimizada para memoria con la tabla con particiones.  
   
  Este intercambio de particiones se describe de la manera siguiente:  
   
 -   Inserte los datos de la tabla de OLTP en memoria en una tabla de ensayo, posiblemente usando una fecha límite.  
   
--   Elimine los mismos datos de la tabla con optimización para memoria.  
+-   Elimine los mismos datos de la tabla optimizada para memoria.  
   
 -   Cambie a la tabla de ensayo.  
   
 -   Agregue la partición activa.  
   
- ![Cambie la partición.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Cambio de partición.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Cambio de partición.")  
 Mantenimiento de datos activo  
   
  Después de eliminar ActiveOrders, las acciones tienen que realizarse durante una ventana de mantenimiento para evitar que las consultan pierdan datos durante el tiempo que transcurre entre la eliminación de los datos y el cambio a la tabla de ensayo.  
@@ -52,9 +51,9 @@ Mantenimiento de datos activo
  Para obtener un ejemplo relacionado, vea [Creación de particiones en el nivel de aplicación](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
   
 ## <a name="code-sample"></a>Ejemplo de código  
- En el ejemplo siguiente se muestra cómo usar una tabla con optimización para memoria con una tabla basada en disco con particiones. Los datos usados con frecuencia se almacenan en memoria. Para guardar los datos en el disco, cree una nueva partición y cópielos en la tabla con particiones.  
+ En el ejemplo siguiente se muestra cómo usar una tabla optimizada para memoria con una tabla basada en disco con particiones. Los datos usados con frecuencia se almacenan en memoria. Para guardar los datos en el disco, cree una nueva partición y cópielos en la tabla con particiones.  
   
- En la primera parte de este ejemplo se crean la base de datos y los objetos necesarios. En la segunda parte del ejemplo se muestra cómo mover datos de una tabla con optimización para memoria a una tabla con particiones.  
+ En la primera parte de este ejemplo se crean la base de datos y los objetos necesarios. En la segunda parte del ejemplo se muestra cómo mover datos de una tabla optimizada para memoria a una tabla con particiones.  
   
 ```tsql  
 CREATE DATABASE partitionsample;  
@@ -223,4 +222,3 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Objeto SQL Server, Características en desuso | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
   
@@ -96,7 +98,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |EXT_soap_endpoints|Se encontró sys.soap_endpoints. Servicios web XML nativos están desusados. Utilice Windows Communications Foundation (WCF) o ASP.NET en su lugar.|  
 |EXTPROP_LEVEL0TYPE|TYPE se encontró en un level0type. Use SCHEMA como level0type y TYPE como level1type. Se produce una vez por cada consulta.|  
 |EXTPROP_LEVEL0USER|Un level0typeUSER cuando también se especificó level1type. Utilice únicamente USER como level0type para las propiedades extendidas en un usuario. Se produce una vez por cada consulta.|  
-|FASTFIRSTROW|Se encontró la sintaxis FASTFIRSTROW. Reescriba las instrucciones para usar la sintaxis (FAST *n*). Se produce una vez por cada compilación.|  
+|FASTFIRSTROW|Se encontró la sintaxis FASTFIRSTROW. Reescriba las instrucciones para usar la sintaxis OPTION (FAST *n*). Se produce una vez por cada compilación.|  
 |FILE_ID|Se encontró la sintaxis de FILE_ID. Reescriba las instrucciones para utilizar FILE_IDEX. Se produce una vez por cada compilación.|  
 |fn_get_sql|Se compiló la función fn_get_sql. Use sys.dm_exec_sql_text en su lugar. Se produce una vez por cada compilación.|  
 |fn_servershareddrives|Se compiló la función fn_servershareddrives. Utilice en su lugar sys.dm_io_cluster_shared_drives. Se produce una vez por cada compilación.|  
@@ -114,7 +116,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Hindi|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación. Utilice en su lugar Indic_General_90.|  
 |Sugerencia de la tabla HOLDLOCK sin paréntesis||  
 |IDENTITYCOL|Se encontró la sintaxis INDENTITYCOL. Rescriba las instrucciones para utilizar la sintaxis de $identity. Se produce una vez por cada compilación.|  
-|Lista de selección de índice de la vista sin COUNT_BIG(*)|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (*).|  
+|Lista de selección de índice de la vista sin COUNT_BIG(\*)|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (\*).|  
 |INDEX_OPTION|Se encontró la sintaxis de CREATE TABLE, ALTER TABLE o CREATE INDEX sin paréntesis alrededor de las opciones. Reescriba la instrucción para utilizar la sintaxis actual. Se produce una vez por cada consulta.|  
 |INDEXKEY_PROPERTY|Se encontró la sintaxis de INDEXKEY_PROPERTY. Rescriba las instrucciones para consultar sys.index_columns. Se produce una vez por cada compilación.|  
 |Sugerencias TVF indirectas|La aplicación indirecta, a través de una vista, de sugerencias de tabla a una invocación de una función con valores de tabla de múltiples instrucciones se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -292,4 +294,3 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
  [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

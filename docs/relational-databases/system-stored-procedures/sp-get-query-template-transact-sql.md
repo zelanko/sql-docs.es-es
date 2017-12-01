@@ -47,7 +47,7 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumentos  
  '*query_text*'  
- Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe incluirse entre comillas simples y precedida por el especificador Unicode n.. N'*query_text*' es el valor asignado a la @querytext parámetro. Esto es de tipo **nvarchar (max)**.  
+ Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe incluirse entre comillas simples y precedida por el especificador Unicode n. N'*query_text*' es el valor asignado a la @querytext parámetro. Esto es de tipo **nvarchar (max)**.  
   
  @templatetext  
  Es un parámetro de salida de tipo **nvarchar (max)**, suministrado como se indica, para recibir el formulario parametrizado de *query_text* como un literal de cadena.  

@@ -1,7 +1,7 @@
 ---
 title: Crear tabla externa (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>Crear tabla externa (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Las definiciones de columna, incluidos los tipos de datos y el número de columnas deben coincidir con los datos de los archivos externos. Si se produce un error de coincidencia, se rechazarán las filas del archivo cuando se consultan los datos reales.  
   
- Para tablas externas que hacen referencia a archivos de orígenes de datos externos, deben asignar las definiciones de columna y escriba en el esquema exacto del archivo externo. Al definir los tipos de datos que hacen referencia a los datos almacenados en Hadoop/Hive, utilice las siguientes asignaciones entre tipos de datos SQL y Hive y convierte el tipo a un tipo de datos SQL cuando se selecciona de él. Los tipos incluyen todas las versiones de Hive a menos que se indique lo contrario.  
-  
+ Para tablas externas que hacen referencia a archivos de orígenes de datos externos, deben asignar las definiciones de columna y escriba en el esquema exacto del archivo externo. Al definir los tipos de datos que hacen referencia a los datos almacenados en Hadoop/Hive, utilice las siguientes asignaciones entre tipos de datos SQL y Hive y convierte el tipo a un tipo de datos SQL cuando se selecciona de él. Los tipos incluyen todas las versiones de Hive a menos que se indique lo contrario.
+
+> [!NOTE]  
+>  SQL Server no admite el subárbol _infinito_ valor de datos en cualquier conversión. PolyBase se producirá un error de conversión de tipo de datos.
+
+
 |Tipo de datos de SQL|Tipo de datos de .NET|Tipo de datos de Hive|Tipo de datos de Hadoop/Java|Comentarios|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Sólo números sin signo.|  

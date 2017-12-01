@@ -29,7 +29,7 @@ ms.lasthandoff: 11/27/2017
 # <a name="linregintercept-mdx"></a>LinRegIntercept (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Calcula la regresión lineal de un conjunto y devuelve el valor de la intercepción x en la recta de regresión y = ax + b..  
+  Calcula la regresión lineal de un conjunto y devuelve el valor de la intercepción x en la recta de regresión y = ax + b.  
   
 ## <a name="syntax"></a>Sintaxis  
   

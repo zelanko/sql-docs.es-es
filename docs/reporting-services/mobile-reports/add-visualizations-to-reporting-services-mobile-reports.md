@@ -1,26 +1,24 @@
 ---
-title: "Agregar visualizaciones a informes móviles de Reporting Services | Documentos de Microsoft"
+title: "Agregar visualizaciones a informes móviles de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
 Los gráficos son una parte esencial de la visualización de datos. Obtenga más información sobre los gráficos que puede utilizar en los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cubrir una variedad de escenarios. 
@@ -45,7 +43,7 @@ Cada métrica individual o valor mostrados en un gráfico se conoce como una ser
 ### <a name="change-aggregation"></a>Cambiar agregación 
 Para campos numéricos en gráficos, la agregación predeterminada es sumar. Puede cambiarla a media, recuento, mínimo, máximo, primero, último.
 
-* Seleccione la pestaña **Datos** y, en **Propiedades de los datos**, elija **Opciones** junto al campo numérico y, después, seleccione otra agregación.
+* Haga clic en la pestaña **Datos** y, en **Propiedades de los datos**, seleccione **Opciones** junto al campo numérico y, después, seleccione otra agregación.
 
 ### <a name="set-or-clear-filters"></a>Establecer o borrar filtros
 
@@ -67,13 +65,13 @@ El gráfico de tiempo es el gráfico más básico en [!INCLUDE[SS_MobileReptPub_
 
 2. De forma predeterminada, es un gráfico de barras apiladas. Puede cambiar esto en **Visualización de serie**.
 
-3. Si el gráfico necesita datos que aún no están en el informe, seleccione la pestaña **Datos** > **Agregar datos** para [obtener datos de Excel o de un conjunto de datos compartido](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Si el gráfico necesita datos que aún no están en el informe, haga clic en la pestaña **Datos** > **Agregar datos** para [obtener datos de Excel o de un conjunto de datos compartido](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-3. En el panel **Propiedades de los datos**, **Serie principal** es **SimulatedTable**. Seleccione la flecha en el cuadro y seleccione la tabla.
+3. En el panel **Propiedades de los datos** , **Serie principal** es **SimulatedTable**. Seleccione la flecha en el cuadro y seleccione la tabla.
 
-5. Si establece **Estructura de datos** en **Por columnas** (en la pestaña **Diseño** > panel **Propiedades de los elementos visuales**), en el panel **Propiedades de los datos** de seleccionar varias columnas o valores numéricos.
+5. Si establece **Estructura de datos** en **Por columnas** (en la pestaña **Diseño** > panel **Propiedades de los elementos visuales**), en el panel **Propiedades de los datos** puede seleccionar varias columnas o valores numéricos.
 
-   Si establece **Estructura de datos** en **Por filas** (en el panel **Propiedades de los datos**), puede seleccionar un **Campo de nombre de serie** y una columna de valores numéricos.
+   Si establece **Estructura de datos** en **Por filas**(en el panel **Propiedades de los datos** ), puede seleccionar un **Campo de nombre de serie** y una columna de valores numéricos.
    
 Para más información, vea [Agrupar datos por columnas o filas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
@@ -200,5 +198,4 @@ Los gráficos de cascada son una buena opción en estos casos:
 * [Agregar cuadrículas de datos a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Agregar medidores a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 

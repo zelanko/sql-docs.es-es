@@ -1,5 +1,5 @@
 ---
-title: "Agregar acción de contraer o expandir un elemento (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 24cdcaa5d1596b743f370aead53457358d20490a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
   Podrá permitir a los usuarios expandir o contraer interactivamente elementos de informe o expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz. Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento. El establecimiento de la visibilidad funciona en un visor de informes HTML y en ocasiones se denomina acción *de obtención de detalles* .  
@@ -36,13 +36,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  En la vista de diseño del informe, haga clic en la tabla o la matriz para seleccionarla. El Panel de agrupación muestra los grupos de filas y de columnas.  
   
-     ![Panel de agrupación](../../reporting-services/report-design/media/groupingpane.png "panel de agrupación")  
+     ![Panel de agrupación](../../reporting-services/report-design/media/groupingpane.png "Panel de agrupación")  
   
      Si el panel de agrupación no aparece, haga clic en el menú **Ver** y después en **Agrupación**.  
   
 2.  Haga clic con el botón derecho en cualquier parte en la barra de título del panel Agrupación y, después, haga clic en **Avanzadas**. El modo del panel Agrupación alterna para mostrar la estructura de presentación subyacente para las filas y columnas en la superficie de diseño.  
   
-     ![Panel de agrupación con menú Modo avanzado](../../reporting-services/report-design/media/groupingpane-advancedmode.png "panel de agrupación con menú Modo avanzado")  
+     ![Panel de agrupación con menú Modo avanzado](../../reporting-services/report-design/media/groupingpane-advancedmode.png "Panel de agrupación con menú Modo avanzado")  
   
 3.  En panel de grupo adecuado, haga clic en el nombre del grupo de filas o del grupo de columnas cuyas filas o columnas asociadas desea ocultar. El grupo queda seleccionado y el panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   
@@ -55,24 +55,24 @@ ms.lasthandoff: 08/09/2017
   
     -   Seleccione **True** para ocultar el elemento de informe.  
   
-    -   Seleccione  **\<expresión >** para abrir el **expresión** cuadro de diálogo para crear una expresión que se evalúa en tiempo de ejecución para determinar la visibilidad.  
+    -   Seleccione **\<Expresión>** para abrir el cuadro de diálogo **Expresión** para crear una expresión que se evalúe en tiempo de ejecución para determinar la visibilidad.  
   
 5.  En **ToggleItem**, en la lista desplegable, seleccione el nombre de un cuadro de texto al que quiera agregar la imagen de alternancia.  
   
      En la siguiente imagen, el grupo de filas Color está configurado para permitir a los usuarios expandir y contraer las filas asociadas.  
   
-     ![Configurar un grupo de filas que debe expandirse](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "configurar un grupo de filas que debe expandirse")  
+     ![Configuración de un grupo de filas que debe expandirse](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configuración de un grupo de filas que debe expandirse")  
   
     > [!NOTE]  
     >  El cuadro de texto con la imagen de alternancia no puede ser el grupo de filas o columnas para el que desee ocultar las filas o columnas asociadas. Debe estar en el mismo grupo que el elemento que se va a ocultar o en otro grupo antecesor. Por ejemplo, para alternar la visibilidad de las filas asociadas a un grupo secundario, seleccione un cuadro de texto de una fila asociada al grupo primario.  
   
 6.  Para probar el control de alternancia, ejecute el informe y haga clic en el cuadro de texto que contiene la imagen de alternancia. La presentación del informe se actualiza para mostrar los grupos de filas y los grupos de columnas con su visibilidad alternada.  
   
-     ![Ejecutar el informe con el grupo de filas expandible](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "ejecutar el informe con el grupo de filas expandible")  
+     ![Informe en ejecución con un grupo de filas que se pueden expandir](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "Informe en ejecución con un grupo de filas que se pueden expandir")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para agregar una acción de expandir y contraer a un elemento de informe  
   
-1.  En la vista de diseño de informe, haga clic en el elemento de informe para mostrar u ocultar y, a continuación, haga clic en  *\<elemento de informe >* **propiedades**. El  *\<elemento de informe >* **propiedades** abre el cuadro de diálogo para el elemento de informe.  
+1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>***Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>***Propiedades** del elemento de informe.  
   
 2.  Haga clic en **Visibilidad**.  
   
@@ -91,17 +91,17 @@ ms.lasthandoff: 08/09/2017
   
      En la siguiente imagen, la tabla está configurada para permitir a los usuarios expandirla y contraerla. La visualización de la tabla se alterna mediante el cuadro de texto de la tabla Products.  
   
-     ![Configurar una tabla de informe se expanda](../../reporting-services/report-design/media/expandcollapse-reporttable.png "configurar una tabla de informe que debe expandirse")  
+     ![Configurar una tabla de informe que debe expandirse](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configurar una tabla de informe que debe expandirse")  
   
     > [!NOTE]  
     >  El cuadro de texto que elija debe estar en el ámbito contenedor o actual de este elemento de informe (hasta el cuerpo del informe, inclusive). Por ejemplo, para alternar la visibilidad de un gráfico, seleccione un cuadro de texto que esté en el mismo ámbito contenedor que el gráfico; por ejemplo, un rectángulo o el cuerpo del informe. El cuadro de texto debe estar en la misma jerarquía contenedora o superior.  
   
 5.  Para probar el control de alternancia, ejecute el informe y haga clic en el cuadro de texto que contiene la imagen de alternancia. La presentación del informe se actualiza para mostrar los elementos de informe con su visibilidad alternada.  
   
-     ![Ejecutar el informe con una tabla expandida](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "ejecutar el informe con una tabla expandida")  
+     ![Informe en ejecución con una tabla expandida](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Informe en ejecución con una tabla expandida")  
   
 ## <a name="see-also"></a>Vea también  
  [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Ocultar un elemento &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

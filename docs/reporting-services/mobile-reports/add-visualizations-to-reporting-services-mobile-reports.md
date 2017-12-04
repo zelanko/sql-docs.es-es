@@ -121,7 +121,7 @@ En gráficos de comparación, puede elegir tener los mismos colores de gráfico 
 ## <a name="pie-and-funnel-charts"></a>Gráficos circulares y gráficos de embudo  
   
 Los gráficos circulares y de embudo se encuentran entre los más sencillos para las visualizaciones. Puede estructurar los datos por filas o columnas. 
-* Los**gráficos circulares** en informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total en informes móviles de the center. Los gráficos circulares son adecuados para mostrar el tamaño relativo de las diferentes partes de un total. Si hay demasiados segmentos, puede resultar difícil verlos.
+* Los **gráficos circulares** en informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pueden ser circulares, de anillos o de anillos con un total en el centro. Los gráficos circulares son adecuados para mostrar el tamaño relativo de las diferentes partes de un total. Si hay demasiados segmentos, puede resultar difícil verlos.
 * Los**gráficos de embudo** suelen usarse para mostrar las fases de un proceso, como ventas.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)

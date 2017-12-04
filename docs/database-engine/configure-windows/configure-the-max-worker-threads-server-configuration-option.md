@@ -1,7 +1,7 @@
 ---
 title: "Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cfb4c8de68dcaaf081cc703a3e6ce2240d5706a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9e800424a84c6d1a992bcdfeae5104e885872f37
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,63 +57,60 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada.  
+-   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada. Si sospecha que hay un problema de rendimiento, probablemente no se deba a la disponibilidad de subprocesos de trabajo. La causa más probable es que haya alguna E/S que haga que los subprocesos de trabajo esperen. Lo mejor es buscar la causa principal de un problema de rendimiento antes de cambiar el valor de configuración de máximo de subprocesos de trabajo.  
   
 -   La agrupación de subprocesos permite optimizar el rendimiento cuando un gran número de clientes se conecta al servidor. Normalmente, se crea un subproceso del sistema operativo independiente para cada solicitud de la consulta. Sin embargo, cuando hay cientos de conexiones al servidor, el uso de un subproceso por solicitud de consulta puede consumir grandes cantidades de recursos del sistema. La opción de **máximo de subprocesos de trabajo** permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cree un grupo de subprocesos de trabajo para atender un gran número de solicitudes de consulta, lo que mejora el rendimiento.  
   
 -   En la siguiente tabla se muestra el número configurado automáticamente de máximo de subprocesos de trabajo para diferentes combinaciones de CPU y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     |Número de CPU|Equipo de 32 bits|Equipo de 64 bits|  
-    |--------------------|----------------------|----------------------|  
+    |------------|------------|------------|  
     |\<= 4 procesadores|256|512|  
     |8 procesadores|288|576|  
     |16 procesadores|352|704|  
     |32 procesadores|480|960|  
     |64 procesadores|736|1472|  
     |128 procesadores|4224|4480|  
-    |256 procesadores|8320|8576|  
+    |256 procesadores|8320|8576| 
+    
+    Con la siguiente fórmula:
+    
+    |Número de CPU|Equipo de 32 bits|Equipo de 64 bits|  
+    |------------|------------|------------| 
+    |\<= 4 procesadores|256|512|
+    |\> 4 procesadores|256 + ((CPU lógicas - 4) * 8)|512 + ((CPU lógicas - 4) * 8)| 
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede instalar en un sistema operativo de 32 bits. Se muestran los valores de equipo de 32 bits como ayuda para los clientes que ejecutan [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores.   Se recomienda 1024 como número máximo de subprocesos de trabajo para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo de 32 bits.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede instalar en un sistema operativo de 32 bits. Se muestran los valores de equipo de 32 bits como ayuda para los clientes que ejecutan [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores.   Se recomienda 1024 como número máximo de subprocesos de trabajo para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo de 32 bits.  
   
     > [!NOTE]  
-    >  Para obtener recomendaciones sobre el uso de más de 64 CPU, vea [Prácticas recomendadas para ejecutar SQL Server en equipos que tienen más de 64 CPU](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
+    >  Para obtener recomendaciones sobre el uso de más de 64 CPU, vea [Prácticas recomendadas para ejecutar SQL Server en equipos que tienen más de 64 CPU](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Si todos los subprocesos de trabajo están activos con consultas de ejecución prolongada, puede parecer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde hasta que finaliza un subproceso de trabajo y vuelve a estar disponible. Aunque no se trata de un defecto, puede que a veces este comportamiento no sea deseable. Si un proceso parece no responder y no se pueden procesar nuevas consultas, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión de administrador dedicada (DAC) y finalice el proceso. Para impedir este comportamiento, aumente el número máximo de subprocesos de trabajo.  
   
- La opción de configuración del servidor**max worker threads** no tiene en cuenta los subprocesos necesarios para todas las tareas del sistema como Grupos de disponibilidad, Service Broker, administrador de bloqueos y otros.  Si se supera el número de subprocesos configurados, la siguiente consulta proporcionará información sobre las tareas del sistema que han creado los subprocesos adicionales.  
+ La opción de configuración del servidor **max worker threads** no tiene en cuenta los subprocesos necesarios para todas las tareas del sistema como grupos de disponibilidad, Service Broker, administrador de bloqueos y otros. Si se supera el número de subprocesos configurados, la siguiente consulta proporcionará información sobre las tareas del sistema que han creado los subprocesos adicionales.  
   
-```  
-SELECT  
-s.session_id,  
-r.command,  
-r.status,  
-r.wait_type,  
-r.scheduler_id,  
-w.worker_address,  
-w.is_preemptive,  
-w.state,  
-t.task_state,  
-t.session_id,  
-t.exec_context_id,  
-t.request_id  
-FROM sys.dm_exec_sessions AS s  
-INNER JOIN sys.dm_exec_requests AS r  
+ ```t-sql  
+ SELECT  s.session_id, r.command, r.status,  
+    r.wait_type, r.scheduler_id, w.worker_address,  
+    w.is_preemptive, w.state, t.task_state,  
+    t.session_id, t.exec_context_id, t.request_id  
+ FROM sys.dm_exec_sessions AS s  
+ INNER JOIN sys.dm_exec_requests AS r  
     ON s.session_id = r.session_id  
-INNER JOIN sys.dm_os_tasks AS t  
+ INNER JOIN sys.dm_os_tasks AS t  
     ON r.task_address = t.task_address  
-INNER JOIN sys.dm_os_workers AS w  
+ INNER JOIN sys.dm_os_workers AS w  
     ON t.worker_address = w.worker_address  
-WHERE s.is_user_process = 0;  
-  
-```  
+ WHERE s.is_user_process = 0;  
+ ```  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Para configurar la opción de máximo de subprocesos de trabajo  
   
@@ -121,9 +118,11 @@ WHERE s.is_user_process = 0;
   
 2.  Haga clic en el nodo **Procesadores** .  
   
-3.  En el cuadro **max worker threads** , escriba o seleccione un valor entre 128 y 32.767.  
+3.  En el cuadro **Máximo de subprocesos de trabajo**, escriba o seleccione un valor entre 128 y 32 767.  
   
-     Utilice la opción **max worker threads** para configurar el número de subprocesos de trabajo disponibles para procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado de la opción **max worker threads** es el óptimo para la mayor parte de los sistemas. No obstante, dependiendo de la configuración del sistema, el uso de un valor inferior para el **máximo de subprocesos de trabajo** puede mejorar el rendimiento a veces.  
+> [!TIP]
+> Utilice la opción **max worker threads** para configurar el número de subprocesos de trabajo disponibles para procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado de la opción **max worker threads** es el óptimo para la mayor parte de los sistemas. No obstante, dependiendo de la configuración del sistema, el uso de un valor inferior para el **máximo de subprocesos de trabajo** puede mejorar el rendimiento a veces.
+> Vea las [Recomendaciones](#Recommendations) en esta página para obtener más información.
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -146,16 +145,13 @@ EXEC sp_configure 'max worker threads', 900 ;
 GO  
 RECONFIGURE;  
 GO  
-  
 ```  
   
- Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
-  
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de máximo de subprocesos de trabajo  
- El cambio tendrá efecto inmediatamente sin necesidad de reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+ El cambio se aplicará inmediatamente después de ejecutar [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), sin necesidad de reiniciar [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  

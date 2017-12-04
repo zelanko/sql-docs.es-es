@@ -1,7 +1,7 @@
 ---
 title: "Establecer la opción de configuración del servidor Memoria para creación de índices | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c9e2a10cd21015fa56a2081e359baf3b9198064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aab31080adfc6235d6110aa0ad21159996bfcff
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Establecer la opción de configuración del servidor Memoria para creación de índices
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  En este tema se describe cómo establecer la opción de configuración del servidor **memoria para creación de índices** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **memoria para creación de índices** controla la cantidad máxima de memoria asignada inicialmente para la creación de índices. El valor predeterminado para esta opción es 0 (configuración automática). Si más adelante se necesita más memoria para la creación de índices y hay memoria disponible, el servidor la utilizará; por lo tanto, se excederá el valor de esta opción. Si no hay más memoria disponible, la creación de índices continuará utilizando la asignada.  
+  En este tema se describe cómo establecer la opción de configuración del servidor **memoria para creación de índices** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **memoria para creación de índices** controla la cantidad máxima de memoria asignada inicialmente para las operaciones de ordenación durante la creación de índices. El valor predeterminado para esta opción es 0 (configuración automática). Si más adelante se necesita más memoria para la creación de índices y hay memoria disponible, el servidor la utilizará; por lo tanto, se excederá el valor de esta opción. Si no hay más memoria disponible, la creación de índices continuará utilizando la asignada.  
   
  **En este tema**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   El valor de la opción de **memoria mínima por consulta** tiene prioridad sobre la opción **memoria para creación de índices** . Si cambia ambas opciones y el valor de **memoria para creación de índices** es inferior al de **memoria mínima por consulta**, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de consultas, recibirá una advertencia similar.  
+-   El valor de la opción de **[memoria mínima por consulta](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** tiene prioridad sobre la opción **memoria para creación de índices**. Si cambia ambas opciones y el valor de **memoria para creación de índices** es inferior al de **memoria mínima por consulta**, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de consultas, recibirá una advertencia similar.  
   
 -   Al usar tablas e índices con particiones, los requisitos de memoria mínima para la creación de índices pueden aumentar de forma significativa si hay índices con particiones no alineados con un alto grado de paralelismo. Esta opción controla la cantidad inicial total de memoria asignada para todas las particiones de índice en una sola operación de creación de índices. La consulta se terminará con un mensaje de error si la cantidad establecida por esta opción es inferior al mínimo necesario para ejecutar la consulta.  
   
@@ -62,6 +62,8 @@ ms.lasthandoff: 11/20/2017
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada.  
   
 -   La opción **Memoria para creación de índices** se configura automáticamente y, por lo general, funciona sin necesidad de ajuste alguno. No obstante, si tiene dificultades para crear índices, puede probar a aumentar el valor de esta opción a partir del valor de ejecución.  
+
+-   Crear un índice en un sistema de producción suele ser una tarea poco frecuente y que, a menudo, se programa como un trabajo que se ejecutará en horas de poca actividad. Por tanto, si se crean índices con poca frecuencia y durante las horas de poca actividad, el incremento de la **memoria para creación de índices** puede mejorar el rendimiento de la creación de índices. Sin embargo, mantenga la opción de configuración **[memoria mínima por consulta](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** con un número bajo para que el trabajo de creación de índices se inicie aunque no esté disponible toda la memoria solicitada.
   
 ###  <a name="Security"></a> Seguridad  
   

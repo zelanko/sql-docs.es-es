@@ -1,7 +1,7 @@
 ---
 title: "Configurar la opción de configuración del servidor Memoria mínima por consulta | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -22,16 +22,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18458fbe7a7008c23516d372e15979e9dfc7decc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05c59d21bfa00c9d32ef740f4a1ef7acfcf178d8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar la opción de configuración del servidor Memoria mínima por consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  En este tema se describe cómo configurar la opción de configuración de servidor **memoria mínima por consulta** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **min memory per query** especifica la cantidad mínima de memoria (en kilobytes) que se va a asignar para la ejecución de una consulta. Por ejemplo, si se establece el valor 2.048 KB para la opción **min memory per query** , se garantiza que la consulta va a obtener esa cantidad de memoria total, como mínimo. El valor predeterminado es 1.024 KB. El valor mínimo es 512 KB y el valor máximo es 2 147 483 647 KB (2 GB).  
+  En este tema se describe cómo configurar la opción de configuración de servidor **memoria mínima por consulta** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **min memory per query** especifica la cantidad mínima de memoria (en kilobytes) que se va a asignar para la ejecución de una consulta. Por ejemplo, si se establece el valor 2.048 KB para la opción **min memory per query** , se garantiza que la consulta va a obtener esa cantidad de memoria total, como mínimo. El valor predeterminado es 1.024 KB. El valor mínimo es 512 KB y el valor máximo es 2 147 483 647 KB (2 GB).  
   
  **En este tema**  
   
@@ -55,13 +55,15 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   El valor especificado en min memory per query tiene prioridad sobre la opción [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Si cambia ambas opciones y el valor de index create memory es inferior al de min memory per query, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de la consulta recibirá otra advertencia similar.  
+-   El valor especificado en memoria mínima por consulta tiene prioridad sobre la opción [memoria para creación de índices](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Si cambia ambas opciones y el valor de index create memory es inferior al de min memory per query, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de la consulta recibirá otra advertencia similar.  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada.  
   
--   El procesador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta determinar la cantidad óptima de memoria para asignar a una consulta. La opción min memory per query permite al administrador especificar la cantidad mínima de memoria que recibirá cada consulta. Generalmente, las consultas reciben una cantidad mayor de memoria si tienen operaciones de orden y hash en un gran volumen de datos. Aumentar el valor de la opción min memory per query puede mejorar el rendimiento para algunas consultas de pequeño o mediano tamaño, pero podría aumentar la competición por los recursos de la memoria. La opción de min memory per query incluye memoria asignada para ordenar.  
+-   El procesador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta determinar la cantidad óptima de memoria para asignar a una consulta. La opción min memory per query permite al administrador especificar la cantidad mínima de memoria que recibirá cada consulta. Generalmente, las consultas reciben una cantidad mayor de memoria si tienen operaciones de orden y hash en un gran volumen de datos. Aumentar el valor de la opción min memory per query puede mejorar el rendimiento para algunas consultas de pequeño o mediano tamaño, pero podría aumentar la competición por los recursos de la memoria. La opción de memoria mínima por consulta incluye memoria asignada para las operaciones de ordenación.  
+
+-    No establezca la opción de configuración del servidor memoria mínima por consulta con un valor demasiado alto, especialmente en sistemas muy ocupados, ya que la consulta tendrá que esperar hasta que pueda asegurar la memoria mínima solicitada o hasta que se exceda el valor especificado en el valor de configuración del servidor Espera de consulta. Si hay más memoria disponible que el valor mínimo especificado requerido para ejecutar la consulta, se permite que la consulta utilice la memoria adicional, siempre y cuando pueda utilizar la memoria de forma eficaz. 
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -98,8 +100,7 @@ GO
 EXEC sp_configure 'min memory per query', 3500 ;  
 GO  
 RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de memoria mínima por consulta  

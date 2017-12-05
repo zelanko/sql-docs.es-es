@@ -1,5 +1,6 @@
 # Acerca de esta versión
 ## [Novedades](whats-new-analytics-platform-system.md)
+## [Artículos nuevos y actualizados](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [Información general sobre Almacenamiento de datos paralelo](parallel-data-warehouse-overview.md)

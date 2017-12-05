@@ -1,6 +1,6 @@
 # [Programación para interactuar con SQL Server](homepage-sql-connection-programming.md)
 # [Controladores de SQL Server](sql-connection-libraries.md)
-# [Artículos nuevos y recientemente actualizados](new-updated-connect.md)
+# [Artículos nuevos y actualizados](new-updated-connect.md)
 
 # [ADO.NET +](ado-net/microsoft-ado-net-for-sql-server.md)
 # [JDBC +](jdbc/microsoft-jdbc-driver-for-sql-server.md)

@@ -1,5 +1,5 @@
 # [Información general](data-mining-extensions-dmx-reference.md)  
-# [Artículos nuevos y recientemente actualizados](new-updated-dmx.md)
+# [Artículos nuevos y actualizados](new-updated-dmx.md)
 
 # [Instrucciones de DMX: definición de datos](dmx-statements-data-definition.md)  
 ## [CREATE MINING STRUCTURE](create-mining-structure-dmx.md)  

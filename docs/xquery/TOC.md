@@ -1,5 +1,5 @@
 # [Información general](xquery-language-reference-sql-server.md)  
-# [Artículos nuevos y recientemente actualizados](new-updated-xquery.md)
+# [Artículos nuevos y actualizados](new-updated-xquery.md)
 # [Módulos y prólogos: prólogo de XQuery](modules-and-prologs-xquery-prolog.md)  
 
 # [Conceptos básicos de XQuery](xquery-basics.md)  

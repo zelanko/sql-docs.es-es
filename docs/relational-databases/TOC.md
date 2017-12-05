@@ -1,5 +1,5 @@
 # [Información general](database-features.md)
-# [Artículos nuevos y recientemente actualizados](new-updated-relational-databases.md)
+# [Artículos nuevos y actualizados](new-updated-relational-databases.md)
 
 # [Guías de SQL Server](sql-server-guides.md)
 ## Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn

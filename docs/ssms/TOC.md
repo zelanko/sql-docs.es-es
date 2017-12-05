@@ -4,7 +4,7 @@
 # What's New
 ## [Registro de cambios de SSMS y versiones anteriores](sql-server-management-studio-changelog-ssms.md)
 ## [Notas de la versión](download-sql-server-management-studio-ssms.md#release-notes)
-## [Artículos nuevos y recientemente actualizados](new-updated-ssms.md)
+## [Artículos nuevos y actualizados](new-updated-ssms.md)
 
 # [Descargar el módulo de PowerShell de SQL Server](download-sql-server-ps-module.md)
 

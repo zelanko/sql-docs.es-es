@@ -15,7 +15,7 @@
 #### [Administración](partner-management-sql-server.md)
 #### [Desarrollo](partner-dev-sql-server.md)
 
-# [Artículos nuevos y recientemente actualizados](sql-server-new-updated-sql-docs-pr.md)
+# [Artículos nuevos y actualizados](new-updated-sql-server.md)
 
 # Notas de la versión
 

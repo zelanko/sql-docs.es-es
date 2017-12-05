@@ -1,5 +1,5 @@
 # [Descargar SSDT](download-sql-server-data-tools-ssdt.md)
-# [Artículos nuevos y recientemente actualizados](new-updated-ssdt.md)
+# [Artículos nuevos y actualizados](new-updated-ssdt.md)
 # [Registro de cambios para SSDT](changelog-for-sql-server-data-tools-ssdt.md)
 # [Marco de trabajo de la aplicación de capa de datos: Términos de la licencia](data-tier-application-framework-license-terms.md)
 # [Versiones anteriores de SSDT y SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)

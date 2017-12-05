@@ -2,11 +2,13 @@
 title: "Características en desuso de búsqueda de texto completo en SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Características en desuso de búsqueda de texto completo en SQL Server 2016
-  En este tema se describen las características de búsqueda de texto completo en desuso que todavía están disponibles en SQL Server. Está previsto quitar estas características en una versión futura. No use características en desuso en aplicaciones nuevas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describen las características de búsqueda de texto completo en desuso que todavía están disponibles en SQL Server. Está previsto quitar estas características en una versión futura. No use características en desuso en aplicaciones nuevas.  
   
 Puede supervisar el uso de características en desuso mediante el contador de rendimiento del objeto **SQL Server:Deprecated Features** (SQL Server: características en desuso) y los eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
@@ -62,4 +63,3 @@ Puede supervisar el uso de características en desuso mediante el contador de re
  *El objeto **SQL Server:Deprecated Features** no supervisa las apariciones del *filegroup* CREATE FULLTEXT CATLOG ON FILEGROUP.  
   
   
-

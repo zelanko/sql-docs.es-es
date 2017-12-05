@@ -2,11 +2,13 @@
 title: Explorador de Utilidad (Ayuda F1) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4b004cbaba4cab6d83680ce0d7b827366c3e8a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
-  En las secciones siguientes se documentan la funcionalidad de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus operaciones asociadas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En las secciones siguientes se documenta la funcionalidad de utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus operaciones asociadas.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
  Para ver los datos en el panel de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione el nodo superior en el árbol del explorador de la utilidad (identificado como "Utilidad<UCP_Name>\\(nombreDeEquipo\UCP)"). El panel incluye un resumen y datos detallados de todas las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de todas las aplicaciones de capa de datos en la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para actualizar los datos en el panel, haga clic con el botón derecho en el nodo superior del árbol del explorador de la utilidad y seleccione **Actualizar**.  
@@ -127,7 +128,7 @@ ms.lasthandoff: 08/03/2017
  Vista de lista  
  La vista de lista en el panel superior muestra los datos sobre las aplicaciones de capa de datos individuales. Los iconos de estado de mantenimiento proporcionan un resumen del estado para cada aplicación de capa de datos por categoría de utilización:  
   
--   Marca de verificación verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de aplicaciones de capa de datos que no están infringiendo las directivas de utilización de recursos. Los recursos se utilizan apropiadamente.  
+-   Marca de verificación verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de aplicaciones de capa de datos que no están infringiendo las directivas de uso de recursos. Los recursos se utilizan apropiadamente.  
   
 -   Flecha verde hacia abajo - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Los recursos están infrautilizados.  
   
@@ -269,7 +270,7 @@ ms.lasthandoff: 08/03/2017
   
  Los iconos de estado de mantenimiento proporcionan un resumen del estado de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por categoría de utilización:  
   
--   Marca de verificación verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no están infringiendo las directivas de utilización de recursos. Los recursos se utilizan apropiadamente.  
+-   Marca de verificación verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no están infringiendo las directivas de uso de recursos. Los recursos se utilizan apropiadamente.  
   
 -   Flecha verde hacia abajo - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Los recursos están infrautilizados.  
   
@@ -518,4 +519,3 @@ Pestaña **Almacenamiento de datos**: muestra los detalles de configuración par
  [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

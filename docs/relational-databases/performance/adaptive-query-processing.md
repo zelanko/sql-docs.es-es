@@ -2,10 +2,13 @@
 title: Procesamiento de consultas adaptable en bases de datos de Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: "Características de procesamiento de consultas adaptable para mejorar el rendimiento de las consultas en SQL Server (2017 y versiones posteriores) y Azure SQL Database."
 ms.custom: 
-ms.date: 10/13/2017
-ms.prod: sql-server-2017
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,17 +18,14 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: es-es
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/28/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 En este artículo se presentan las características de procesamiento de consultas adaptable que se pueden usar para mejorar el rendimiento de las consultas en SQL Server y Azure SQL Database:
 - Comentarios de concesión de memoria de modo de proceso por lotes.
@@ -71,7 +71,7 @@ Con los comentarios de concesión de memoria habilitados para la segunda ejecuci
 Los distintos valores de parámetros también pueden necesitar diferentes planes de consulta para seguir siendo óptimos. Este tipo de consulta se define como "sensible a parámetros". En el caso de los planes sensibles a parámetros, los comentarios de concesión de memoria se deshabilitarán en una consulta si esta tiene requisitos de memoria inestables.  El plan se deshabilita tras varias ejecuciones repetidas de la consulta, cosa que se puede observar mediante la supervisión del evento de XEvent *memory_grant_feedback_loop_disabled*.
 
 ### <a name="memory-grant-feedback-caching"></a>Almacenamiento en caché de los comentarios de concesión de memoria
-Los comentarios pueden almacenarse en el plan almacenado en caché para una sola ejecución. Pero son las ejecuciones consecutivas de esa instrucción las que se benefician de los ajustes de los comentarios de concesión de memoria. Esta característica se aplica a la ejecución repetida de instrucciones. Los comentarios de concesión de memoria solo cambian el plan almacenado en caché. De momento los cambios no se capturan en la consulta Ssore.
+Los comentarios pueden almacenarse en el plan almacenado en caché para una sola ejecución. Pero son las ejecuciones consecutivas de esa instrucción las que se benefician de los ajustes de los comentarios de concesión de memoria. Esta característica se aplica a la ejecución repetida de instrucciones. Los comentarios de concesión de memoria solo cambian el plan almacenado en caché. Los cambios no se capturan actualmente en el almacén de consultas.
 Si el plan se elimina de la memoria caché, no se conservan los comentarios. Los comentarios también se pierden si se produce una conmutación por error. Una instrucción con OPTION(RECOMPILE) crea un plan y no lo almacena en caché. Puesto que no se almacena, no se generan comentarios de concesión de memoria y no se almacenan para esa compilación y ejecución.  Pero si una instrucción equivalente (es decir, con el mismo hash de consulta) que *no* ha usado OPTION(RECOMPILE) se ha almacenado en caché y luego se ha vuelto a ejecutar, la instrucción consecutiva puede beneficiarse de los comentarios de concesión de memoria.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Seguimiento de la actividad de los comentarios de concesión de memoria
@@ -183,7 +183,7 @@ Compare el plan anterior con el plan real generado con la ejecución intercalada
 1. Observe también que ya no hay advertencias de desbordamiento, ya que se ha concedido más memoria en función del recuento real de filas que pasan desde el recorrido de tabla de MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Instrucciones aptas de ejecución intercalada
-Las instrucciones que hacen referencia a las MSTVF en la ejecución intercalada de momento deben ser de solo lectura y no formar parte de ninguna operación de modificación de datos. Además, las MSTVF no serán aptas para la ejecución intercalada si se usan en el interior de una operación CROSS APPLY.
+Las instrucciones que hacen referencia a las MSTVF en la ejecución intercalada de momento deben ser de solo lectura y no formar parte de ninguna operación de modificación de datos. Además, las MSTVF no son aptas para la ejecución intercalada si no usan constantes en tiempo de ejecución.
 
 ### <a name="interleaved-execution-benefits"></a>Ventajas de la ejecución intercalada
 En general, cuanta mayor sea la distorsión entre el número de filas real y el estimado, además del número de operaciones de nivel inferior del plan, mayor será el impacto sobre el rendimiento.
@@ -231,5 +231,4 @@ Los planes con ejecución intercalada se pueden aplicar. El plan es la versión 
 [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demostración del procesamiento de consultas adaptable](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

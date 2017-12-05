@@ -1,5 +1,5 @@
 ---
-title: Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint | Documentos de Microsoft
+title: Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -13,47 +13,46 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
-ms.contentlocale: es-es
-ms.lasthandoff: 10/06/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 32a2cc64cb54fda7244a07ad8aff8463899f0b3d
+ms.sourcegitcommit: 4286dddf27dcdf1c8ef3ef134474e72559c2f65c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-El elemento web Visor de informes es un elemento web personalizado que puede usarse para ver informes de SQL Server Reporting Services (modo nativo) dentro de su sitio de SharePoint. Puede usar el elemento web para ver, navegar, imprimir y exportar informes en un servidor de informes. El elemento web Visor de informes está asociado a los archivos de definición (.rdl) de informes que se procesan por un servidor de informes de SQL Server Reporting Services o un servidor de informes de Power BI. Este elemento web Visor de informes de no puede usarse con informes de Power BI hospedados en el servidor de informes de Power BI.
+El elemento web Visor de informes es un elemento web personalizado que se puede usar para ver informes de SQL Server Reporting Services (modo nativo) en el sitio de SharePoint. Puede usar el elemento web para ver, explorar, imprimir y exportar informes en un servidor de informes. El elemento web Visor de informes está asociado a archivos de definición de informe (.rdl) que procesa un servidor de informes de SQL Server Reporting Services o Power BI Report Server. Este elemento web Visor de informes no puede usarse con informes de Power BI hospedados en Power BI Report Server.
 
-Use las siguientes instrucciones para implementar manualmente el paquete de solución que agregar el elemento web Visor de informes en un entorno de SharePoint Server 2013 o SharePoint Server 2016. Implementación de la solución es un paso necesario para configurar el elemento web.
+Use las instrucciones siguientes para implementar manualmente el paquete de solución que agrega el elemento web Visor de informes a un entorno de SharePoint Server 2013 o SharePoint Server 2016. La implementación de la solución es un paso necesario para configurar el elemento web.
 
 **El elemento web Visor de informes es un paquete de solución independiente y no está asociado con el modo integrado de SharePoint para SQL Server Reporting Services.**
 
 ## <a name="requirements"></a>Requisitos
 
-**Admite versiones de servidor de SharePoint:**  
+**Compatibilidad con versiones de SharePoint Server:**  
 * SharePoint Server 2016
 * SharePoint Server 2013
 
-**Admite versiones de Reporting Services:**  
-* SQL Server 2008 Reporting Services (modo nativo) y versiones posteriores.
+**Compatibilidad con versiones de Reporting Services:**  
+* SQL Server 2008 Reporting Services (modo nativo) y posteriores.
 * Servidor de informes de Power BI
 
-## <a name="download-the-report-viewer-web-part-solution-package"></a>Descargar el paquete de solución de elementos de web de Visor de informes
+## <a name="download-the-report-viewer-web-part-solution-package"></a>Descargar el paquete de solución del elemento web Visor de informes
 
-El elemento web Visor de informes está disponible en Microsoft Download Center.
+El elemento web Visor de informes está disponible en el Centro de descarga de Microsoft.
 
-[Descargar paquete de solución de elementos de web de Visor de informes](https://www.microsoft.com/download/details.aspx?id=55949)
+[Descargar el paquete de solución del elemento web Visor de informes](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Implementar la solución de granja de servidores
 
-En esta sección se muestra cómo implementar el paquete de soluciones en la granja de servidores de SharePoint. Esta tarea solo es necesario hacerla una vez.
+En esta sección se muestra cómo implementar el paquete de solución en la granja de servidores de SharePoint. Esta tarea solo es necesario hacerla una vez.
 
-1. En un servidor de SharePoint, abra un Shell de administración de SharePoint utilizando la **ejecutar como administrador** opción.
+1. En una instancia de SharePoint Server, abra un shell de administración de SharePoint mediante la opción **Ejecutar como administrador**.
 
-2. Ejecutar [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) para agregar la solución de granja de servidores.
+2. Ejecute [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) para agregar la solución de granja de servidores.
 
     ```
     Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +60,7 @@ En esta sección se muestra cómo implementar el paquete de soluciones en la gra
 
     El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.
 
-3. Ejecute el [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) cmdlet para implementar la solución de granja de servidores.
+3. Ejecute el cmdlet [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) para implementar la solución de granja de servidores.
 
     **SharePoint 2013**
 
@@ -75,25 +74,25 @@ En esta sección se muestra cómo implementar el paquete de soluciones en la gra
     Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
-## <a name="activate-feature"></a>Activar la característica
+## <a name="activate-feature"></a>Activar característica
 
-1. En el sitio de SharePoint, seleccione la **engranaje** icono en la parte superior izquierda y seleccione **configuración del sitio*.
+1. En el sitio de SharePoint, seleccione el icono de **engranaje** de la parte superior izquierda y luego **Configuración del sitio**.
 
     ![Configuración del sitio desde el icono de engranaje.](media/sharepoint-site-settings.png)
 
-    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que puede acceder a menudo un sitio de SharePoint mediante la especificación de *http://<computer name>*  para abrir la colección de sitios raíz.
+    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente puede acceder a un sitio de SharePoint si escribe *http://<computer name>* para abrir la colección de sitios raíz.
 
-3. En **administración de colección de sitios**, seleccione **características de colección de sitios**.
+3. En **Administración de la colección de sitios**, seleccione **Características de la colección de sitios**.
 
-4. Desplácese hacia abajo en la página hasta que encuentre el **elemento web Visor de informes de** característica.
+4. Desplácese hacia abajo en la página hasta que encuentre la característica **Elemento web Visor de informes**.
 
 5. Seleccione **Activar**.
 
-    ![Activar la característica de elemento web Visor de informes](media/web-part-activiate-feature.png)
+    ![Activar la característica Elemento web Visor de informes](media/web-part-activiate-feature.png)
 
-6. Repita para colecciones de sitios adicionales abriendo cada sitio y haciendo clic en acciones del sitio.
+6. Repita este procedimiento con las demás colecciones de sitios al abrir cada sitio y hacer clic en Acciones del sitio.
 
-Si lo desea, también puede usar PowerShell para habilitar esta característica en todos los sitios mediante la [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx) cmdlet.
+También puede usar PowerShell para habilitar esta característica en todos los sitios mediante el cmdlet [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx).
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 
@@ -105,52 +104,52 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 ## <a name="remove-the-solution"></a>Quitar la solución
 
-Aunque Administración Central de SharePoint proporciona la retirada de la solución, no necesita retirar el **ReportViewerWebPart.wsp** a menos que esté solucionando problemas de un problema de instalación o una revisión de la implementación de archivos.
+Aunque Administración central de SharePoint permite retirar una solución, no es necesario retirar el archivo **ReportViewerWebPart.wsp**, a menos que esté solucionando un problema de instalación o implementación de una revisión.
 
-1. En Administración Central de SharePoint, en **configuración del sistema**, seleccione **administrar soluciones de granja**.
+1. En Administración central de SharePoint, en **Configuración del sistema**, seleccione **Administrar soluciones del conjunto de servidores**.
 
 2. Seleccione **ReportViewerWebPart.wsp**.
 
-3. Seleccione retira solución.
+3. Seleccione Retirar solución.
 
-### <a name="remove-the-web-part-from-site-settings"></a>Quite el elemento web de configuración del sitio
+### <a name="remove-the-web-part-from-site-settings"></a>Quitar el elemento web desde Configuración del sitio
 
-Retirar la solución, no se elimina el elemento web Visor de informes en la lista de elementos web dentro de su sitio de SharePoint. Para quitar el elemento web Visor de informes, haga lo siguiente.
+Al retirar la solución no se quita el elemento web Visor de informes de la lista de elementos web del sitio de SharePoint. Para quitar el elemento web Visor de informes, haga lo siguiente.
 
-1. En el sitio de SharePoint, seleccione la **engranaje** icono en la parte superior izquierda y seleccione **configuración del sitio*.
+1. En el sitio de SharePoint, seleccione el icono de **engranaje** de la parte superior izquierda y luego **Configuración del sitio**.
 
     ![Configuración del sitio desde el icono de engranaje.](media/sharepoint-site-settings.png)
 
-    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que puede acceder a menudo un sitio de SharePoint mediante la especificación de *http://<computer name>*  para abrir la colección de sitios raíz.
+    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente puede acceder a un sitio de SharePoint si escribe *http://<computer name>* para abrir la colección de sitios raíz.
 
-2. En **galerías del Diseñador Web**, seleccione **elementos web**.
+2. En **Galerías del diseñador web**, seleccione **elementos web**.
 
-3. Seleccione el **icono Editar** junto a **ReportViewerNativeMode.dwp**. No puede mostrarse en la primera página de resultados.
+3. Seleccione el **icono de edición** situado junto a **ReportViewerNativeMode.dwp**. Puede que no aparezca en la primera página de resultados.
 
 4. Seleccione **Eliminar elemento**.
 
-    ![Editar y eliminar el elemento web de modo nativo de Visor de informes](media/report-viewer-native-mode-edit-delete.png)
+    ![Editar y eliminar el elemento web de modo nativo Visor de informes](media/report-viewer-native-mode-edit-delete.png)
 
-Eliminación del elemento web puede realizarse mediante el uso de PowerShell, pero no hay un comando directo para él. Para obtener un ejemplo de secuencia de comandos, consulte [cómo eliminar elementos web de la Galería de elementos web](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+La eliminación del elemento web puede intentarse mediante PowerShell, aunque no hay ningún comando directo para ello. Para obtener un ejemplo de script, vea [How to delete web parts from the web part Gallery (Cómo eliminar elementos web desde la Galería de elementos web)](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
 
 ## <a name="supported-languages"></a>Idiomas compatibles
 
 Los siguientes idiomas son compatibles con el elemento web:
 
 * Inglés (en)
-* Alemán (Alemania)
+* Alemán (de)
 * Español (sp)
 * Francés (fr)
 * Italiano (it)
-* Japonés (Japón)
+* Japonés (ja)
 * Coreano (ko)
 * Portugués (pt)
 * Ruso (ru)
 * Chino (simplificado - zh-HANS y zh-CHS)
-* Chino (tradicional - zh-HANT y zh-CHT)
+* Chino (tradicional - zh-HANS y zh-CHS)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Una vez el elemento web se ha implementado el Visor de informes y activa, puede agregar el elemento web a una página de SharePoint. Para obtener más información, consulte [elemento web de agregar el Visor de informes a una página de SharePoint](add-report-viewer-web-part-to-page.md).
+Después de implementar y activar el elemento web Visor de informes, puede agregarlo a una página de SharePoint. Para más información, vea [Agregar el elemento web Visor de informes a una página de SharePoint](add-report-viewer-web-part-to-page.md).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

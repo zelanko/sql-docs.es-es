@@ -1,31 +1,29 @@
 ---
 title: Instalar actualizaciones de servicio de SQL Server | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- setup-install
+ms.suite: sql
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 760625b44f96422eabb6f753dab02c47da4f0750
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 874dc2c5d78484b3aab341b8d515d4e652fe4c30
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-servicing-updates"></a>Instalar actualizaciones de servicio de SQL Server
-Este tema proporciona información acerca de cómo instalar actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Esta sección proporciona información acerca de lo siguiente:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema proporciona información acerca de cómo instalar actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Esta sección proporciona información acerca de lo siguiente:  
   
 - Instalar actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] durante una nueva instalación  
   
@@ -47,7 +45,11 @@ Instale las últimas actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ss
 Una vez que el programa de instalación encuentra las versiones más recientes de las actualizaciones aplicables, las descarga y las integra con el proceso de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual. La actualización del producto puede incluir una actualización acumulativa, un Service Pack o un Service Pack más la actualización acumulativa.  
   
 ## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>Instalar actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] una vez instalado  
-En una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], se recomienda aplicar las actualizaciones de seguridad y actualizaciones críticas más recientes, incluidas las versiones de distribución general (GDR), Services Packs (SP) y actualizaciones acumulativas. Para más información, consulte el [anuncio sobre el modelo de servicios incrementales (ISM) de SQL Server de marzo de 2016](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/). 
+En una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], se recomienda aplicar las actualizaciones de seguridad y actualizaciones críticas más recientes, incluidas las versiones de distribución general (GDR), Services Packs (SP) y actualizaciones acumulativas. Para más información, vea el [anuncio de marzo de 2016 sobre el modelo de servicio incremental (ISM) de SQL Server](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/).
+
+> [!NOTE]
+> A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] se está adoptando un ciclo de vida de servicio estándar simplificado y predecible y los Service Packs (SP) ya no están disponibles. Solo hay actualizaciones acumulativas (CU) y versiones de distribución generales (GDR) en caso necesario.
+> Para más información, vea el [anuncio de septiembre de 2017 sobre el modelo de servicio moderno (MSM) de SQL Server](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/).
   
 Las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están disponibles a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), Windows Server Update Services (WSUS) y del Centro de descarga de Microsoft. Las actualizaciones críticas y de seguridad para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están disponibles a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update y para poder verlas necesita suscribirse a Microsoft Update a través del applet Windows Update del Panel de control.  
   
@@ -57,5 +59,4 @@ Cuando reciba una actualización a través de [!INCLUDE[msCoName](../../includes
 [Instalación de SQL Server desde el asistente para instalación](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
 [Agregar características a una instancia de SQL Server &#40;programa de instalación&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
 [Reparar una instalación de SQL Server con errores](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
-
 

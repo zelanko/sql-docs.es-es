@@ -2,31 +2,32 @@
 title: Regulador de recursos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor"></a>Regulador de recursos
-  El regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede usarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor es una característica que puede usarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones.  
   
 ## <a name="benefits-of-resource-governor"></a>Ventajas del regulador de recursos  
  El regulador de recursos que permite administrar las cargas de trabajo y los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la especificación de los límites del consumo de recursos por solicitudes entrantes. En el contexto del Regulador de recursos, la carga de trabajo es un conjunto de consultas o solicitudes de dimensiones similares que pueden (y deberían) tratarse como una entidad única. No se trata de un requisito, pero cuanto más uniforme es el modelo del uso de recursos de una carga de trabajo, mayores son las ventajas que pueden obtenerse del Regulador de recursos. Los límites sobre los recursos pueden reconfigurarse en tiempo real con un impacto mínimo sobre las cargas de trabajo que se están ejecutando.  
@@ -98,4 +99,3 @@ ms.lasthandoff: 06/22/2017
  [Instancias del motor de base de datos &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   
-

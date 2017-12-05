@@ -1,12 +1,14 @@
 ---
 title: "Compatibilidad con la intercalación y Unicode | Microsoft Docs"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres como **char** y **varchar** dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas y acentos de los datos con los que está trabajando. Para ver una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres como **char** y **varchar** dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas y acentos de los datos con los que está trabajando. Para ver una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  Al seleccionar una intercalación para un servidor, base de datos, columna o expresión, se están asignando ciertas características a los datos que afectan a los resultados de muchas operaciones de la base de datos. Por ejemplo, cuando se crea una consulta con ORDER BY, el criterio de ordenación del conjunto de resultados puede depender de la intercalación que se aplica a la base de datos o que se dicta en una cláusula COLLATE en el nivel de expresión de la consulta.    
     
@@ -133,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  También puede intentar utilizar una intercalación diferente para los datos del servidor. Elija una intercalación que se asigne a una página de códigos en el cliente.    
     
- Para usar las intercalaciones UTF 16 disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede seleccionar una de las intercalaciones de `_SC` de caracteres complementarios (solo intercalaciones de Windows) para mejorar la búsqueda y la ordenación de algunos caracteres Unicode.    
+ Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales (_SC) o una de las intercalaciones de la versión 140.    
     
  Para evaluar completamente los problemas relacionados con el uso de tipos de datos Unicode y no Unicode, pruebe su escenario para cuantificar las diferencias de rendimiento en su entorno. Se recomienda normalizar la intercalación que se usa en los sistemas de una organización e implementar servidores y clientes Unicode siempre que sea posible.    
     
@@ -155,35 +156,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> Caracteres complementarios    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona tipos de datos, como **nchar** y **nvarchar** , para almacenar los datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustan a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.    
     
+ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se puede usar una nueva familia de intercalaciones de caracteres adicionales (_SC) con los tipos de datos **nchar**, **nvarchar** y **sql_variant**. Por ejemplo: `Latin1_General_100_CI_AS_SC`o `Japanese_Bushu_Kakusu_100_CI_AS_SC`si usa una intercalación japonesa.    
+
+ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todas las nuevas intercalaciones admiten automáticamente los caracteres adicionales.
+
  Si utiliza caracteres adicionales:    
     
 -   Los caracteres adicionales se pueden utilizar en las operaciones de ordenación y comparación en las versiones de intercalación 90 o mayores.    
     
--   Todas las intercalaciones de nivel _100 admiten la ordenación lingüística con caracteres adicionales.    
+-   Todas las intercalaciones de la versión 100 admiten la ordenación lingüística con caracteres adicionales.    
     
 -   Los caracteres adicionales no son compatibles con metadatos, como nombres de objetos de base de datos.    
     
--   A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se puede usar una nueva familia de intercalaciones de caracteres adicionales (SC) con los tipos de datos **nchar**, **nvarchar** y **sql_variant**. Por ejemplo: `Latin1_General_100_CI_AS_SC`o `Japanese_Bushu_Kakusu_100_CI_AS_SC`si usa una intercalación japonesa.    
-  > [!NOTE]    
-  >  Las bases de datos que usan intercalaciones con caracteres adicionales (\_SC), no se pueden habilitar para la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto se debe a que algunas de las tablas del sistema y los procedimientos almacenados que se crean para la replicación usan el tipo de datos **ntext** heredado, que no admite caracteres adicionales.  
+-   Las bases de datos que usan intercalaciones con caracteres adicionales (\_SC), no se pueden habilitar para la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto se debe a que algunas de las tablas del sistema y los procedimientos almacenados que se crean para la replicación usan el tipo de datos **ntext** heredado, que no admite caracteres adicionales.  
     
-     La marca SC se puede aplicar a:    
+-   La marca SC se puede aplicar a:    
     
-    -   Intercalaciones de Windows de la versión 90    
+    -   Intercalaciones de la versión 90    
     
-    -   Intercalaciones de Windows de la versión 100    
+    -   Intercalaciones de la versión 100    
     
-     La marca SC no se puede aplicar a:    
+-   La marca SC no se puede aplicar a:    
     
     -   Intercalaciones de Windows sin versión de la versión 80    
     
     -   Intercalaciones binarias BIN o BIN2    
     
-    -   Intercalaciones SQL*    
+    -   Intercalaciones SQL\*    
     
- En la siguiente tabla se compara el comportamiento de algunas funciones de cadena y de algunos operadores de cadena cuando usan caracteres adicionales con intercalación de SC y sin ella.    
+    -   Intercalaciones de la versión 140 (estas no necesitan la marca SC, dado que ya admiten caracteres adicionales)    
     
-|Función u operador de cadena|Con una intercalación de SC|Sin ninguna intercalación de SC|    
+ En la siguiente tabla se compara el comportamiento de algunas funciones de cadena y algunos operadores de cadena cuando usan caracteres adicionales con y sin intercalación de caracteres adicionales (SCA):    
+    
+|Función u operador de cadena|Con intercalación de caracteres adicionales (SCA)|Sin intercalación SCA|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|El par suplente de UTF-16 se cuenta como un solo punto de código.|El par suplente de UTF-16 se cuenta como dos puntos de código.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|Estas funciones tratan los pares suplentes como un solo punto de código y funcionan de la forma esperada.|Estas funciones pueden dividir cualquier par suplente y provocar resultados inesperados.|    
@@ -205,15 +210,17 @@ Las aplicaciones de base de datos que interactúan con [!INCLUDE[ssNoVersion](..
 
 ##  <a name="Japanese_Collations"></a> Intercalaciones japonesas agregadas en  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten dos nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (_CS, _AS, _KS, _WS, _VSS, etc.). 
+A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten dos nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-Para obtener una lista de estas intercalaciones, puede consultar el motor de base de datos de SQL Server:
+Para obtener una lista de estas intercalaciones, puede consultar al Motor de base de datos de SQL Server:
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-Estas intercalaciones se admiten en los índices de Motor de base de datos, las tablas con optimización para memoria, los índices de almacén de columnas y los módulos compilados de forma nativa.
+Todas las nuevas intercalaciones tienen compatibilidad integrada con los caracteres adicionales, por lo que ninguna de las nuevas intercalaciones tiene (o necesita) la marca SC.
+
+Estas intercalaciones se admiten en los índices de Motor de base de datos, las tablas optimizadas para memoria, los índices de almacén de columnas y los módulos compilados de forma nativa.
     
 ##  <a name="Related_Tasks"></a> Tareas relacionadas    
     
@@ -239,5 +246,4 @@ Estas intercalaciones se admiten en los índices de Motor de base de datos, las 
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

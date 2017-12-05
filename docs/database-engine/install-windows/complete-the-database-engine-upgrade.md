@@ -1,37 +1,35 @@
 ---
 title: "Completar la actualización del motor de base de datos | Microsoft Docs"
 ms.custom: 
-ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- server-general
+ms.suite: sql
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: f02ff71df24b1e1a8f6c17fd8c6edbdfa02c60a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 581e8cd7a43dd1e4c878cc56b49644e51d7a3a79
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="complete-the-database-engine-upgrade"></a>Completar la actualización motor de base de datos
-
-Una vez completada la actualización a SQL Server, hay algunos pasos más que hay que realizar. Entre ellas, figuran:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una vez completada la actualización a SQL Server, hay algunos pasos más que hay que realizar. Entre ellas, figuran:  
   
 Después de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete las siguientes tareas:  
   
 - **Haga una copia de seguridad de las bases de datos:** haga una copia de seguridad completa de cada base de datos.  
 
-- **Habilite nuevas características:** en SQL Server 2016 y SQL Server 2017, algunos cambios solo se habilitan una vez que el nivel de DATABASE_COMPATIBILITY de una base de datos se ha cambiado a 130 o superior.  Para obtener más información y para ver el flujo de trabajo recomendado, vea [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
+- **Habilite nuevas características:** en SQL Server 2016 y SQL Server 2017, algunos cambios solo se habilitan una vez que el nivel de DATABASE_COMPATIBILITY de una base de datos se ha cambiado a 130 o superior.  Para obtener más información y para ver el flujo de trabajo recomendado, vea [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Si la base de datos tiene tablas optimizadas para memoria creadas en SQL Server 2014, vea [Estadísticas para las tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).
   
 - **Integration Services:**  
   
@@ -45,4 +43,3 @@ Después de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete 
   
 - **Búsqueda de texto completo:** vuelva a rellenar los catálogos de texto completo para garantizar la coherencia semántica de los resultados de las consultas. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
-

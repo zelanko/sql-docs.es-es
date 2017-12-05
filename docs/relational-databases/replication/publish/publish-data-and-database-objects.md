@@ -2,11 +2,13 @@
 title: "Publicación de datos y objetos de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
-  Al crear una publicación puede elegir las tablas y otros objetos de base de datos que desee publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al crear una publicación, elegirá las tablas y otros objetos de base de datos que quiera publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
   
 |Objeto de base de datos|Replicación de instantáneas y replicación transaccional|Replicación de mezcla|  
 |---------------------|--------------------------------------------------------|-----------------------|  
@@ -121,7 +123,7 @@ ms.lasthandoff: 06/22/2017
   
  Cuando se publica una tabla para replicación, puede especificar qué objetos de esquema se deben copiar al suscriptor, como la integridad referencial declarada (restricciones de clave principal, de referencia y UNIQUE), los índices, los desencadenadores DML de usuario (los desencadenadores DDL no se pueden replicar), las propiedades extendidas y la intercalación. Las propiedades extendidas solo se replican en la sincronización inicial entre el publicador y el suscriptor. Si agrega o modifica una propiedad extendida después de la sincronización inicial, el cambio no se replica.  
   
- Para especificar las opciones del esquema, vea [Especificar las opciones del esquema](../../../relational-databases/replication/publish/specify-schema-options.md) o <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Para especificar opciones de esquema, vea [Especificar las opciones del esquema](../../../relational-databases/replication/publish/specify-schema-options.md) o <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### <a name="partitioned-tables-and-indexes"></a>Tablas e índices con particiones  
  La replicación admite la publicación de tablas con particiones e índices. El nivel de compatibilidad depende del tipo de replicación que se utiliza y las opciones que especifica para la publicación y los artículos asociados a las tablas con particiones. Para obtener más información, vea [Replicar tablas e índices con particiones](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
@@ -262,4 +264,3 @@ ms.lasthandoff: 06/22/2017
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

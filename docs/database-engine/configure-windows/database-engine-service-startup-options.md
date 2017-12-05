@@ -1,12 +1,14 @@
 ---
 title: Opciones de inicio del servicio de motor de base de datos | Microsoft Docs
 ms.custom: 
-ms.date: 09/21/2017
-ms.prod: sql-server-2016
+ms.date: 11/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,24 +19,32 @@ helpviewer_keywords:
 - temporarily override default startup options [SQL Server]
 - startup options [SQL Server]
 - starting SQL Server, options
+- single-user mode [SQL Server], startup parameter
+- overriding default startup parameters
+- minimal configuration mode [SQL Server], startup parameter
+- default startup parameters
+- temporarily override default startup parameters [SQL Server]
+- startup parameters [SQL Server]
+- starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7b603e31a37884e7c436a184767f8572412e2ec3
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
-ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
-ms.openlocfilehash: c314a49371def978bf695970694b697fded976c3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="database-engine-service-startup-options"></a>Opciones de inicio del servicio de motor de base de datos
-  Las opciones de inicio señalan ciertas ubicaciones de archivos necesarios durante el inicio y especifican algunas condiciones generales del servidor. La mayoría de los usuarios no necesitan especificar opciones de inicio a menos que estén solucionando un problema de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o que tengan un problema muy poco frecuente y que se les indique que usen una opción de inicio desde el soporte al cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las opciones de inicio señalan ciertas ubicaciones de archivos necesarias durante el inicio y especifican algunas condiciones generales del servidor. La mayoría de los usuarios no necesitan especificar opciones de inicio a menos que estén solucionando un problema de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o que tengan un problema muy poco frecuente y que se les indique que usen una opción de inicio desde el soporte al cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!WARNING]  
 >  El uso incorrecto de opciones de inicio puede afectar al rendimiento del servidor y puede impedir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie.  
+>
+>  Inicie SQL Server en Linux con el usuario "mssql" para evitar problemas de inicio futuros. Ejemplo: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]` 
   
 ## <a name="about-startup-options"></a>Acerca de las opciones de inicio  
  Cuando instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el programa de instalación escribe una serie de opciones de inicio predeterminadas en el Registro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Puede utilizar estas opciones de inicio para especificar un archivo alternativo para la base de datos maestra, el archivo de registro de la base de datos maestra o un archivo de registro de errores. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede encontrar los archivos necesarios, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se iniciará.  
@@ -54,7 +64,7 @@ ms.lasthandoff: 09/22/2017
 |---------------------------|-----------------|  
 |**-c**|Acorta el tiempo de inicio al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el símbolo del sistema. Normalmente, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se inicia como un servicio llamando al Administrador de control de servicios. Dado que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se inicia como un servicio cuando se inicia desde el símbolo del sistema, use **-c** para omitir este paso.|  
 |**-f**|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configuración mínima. Esta opción resulta útil si el valor de una opción de configuración (por ejemplo, la confirmación excesiva de memoria) ha impedido el inicio del servidor. Al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de configuración mínimo, se coloca [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único. Para obtener más información, vea la descripción para **-m** de aquí.|  
-|**-g**  *memory_to_reserve*|Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dejará disponible para asignaciones de memoria dentro del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La memoria fuera del bloque de memoria es el área que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cargar elementos, como archivos .dll de procedimientos extendidos, proveedores OLE DB a los que hacen referencia las consultas distribuidas y objetos de automatización a los que se hace referencia en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . El valor predeterminado es 256 MB.<br /><br /> El uso de esta opción puede ayudarle a optimizar la asignación de memoria, pero solo cuando la memoria física supera el límite establecido por el sistema operativo de memoria virtual disponible para las aplicaciones. El uso de esta opción puede ser apropiado para configuraciones con mucha memoria en las que los requisitos de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no sean típicos y el espacio de direcciones virtuales del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utilice completamente. Si se usa esta opción de manera incorrecta, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría no iniciarse o tener errores en tiempo de ejecución.<br /><br /> Use el valor predeterminado del parámetro **-g** , a menos que vea alguna de las siguientes advertencias en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<tamaño>"<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<tamaño>"<br /><br /> Estos mensajes podrían indicar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está intentando liberar partes del bloque de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fin de buscar espacio para elementos como los archivos .dll de procedimientos almacenados extendidos u objetos de automatización. En este caso, considere la posibilidad de aumentar la cantidad de memoria reservada con el modificador **-g** .<br /><br /> Si usa un valor inferior al predeterminado, aumentará la cantidad de memoria disponible para el bloque de memoria controlado por el administrador de memoria de SQL Server y las pilas de subprocesos; esto podría proporcionar ventajas de rendimiento para cargas de trabajo que consuman mucha memoria en sistemas que no Usen procedimientos almacenados extendidos, consultas distribuidas u objetos de automatización.|  
+|**-g**  *memory_to_reserve*|Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dejará disponible para las asignaciones de memoria dentro del proceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero fuera del grupo de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecido por el valor de configuración del servidor [max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md). La memoria fuera del bloque de memoria es el área que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cargar elementos, como archivos .dll de procedimientos extendidos, proveedores OLE DB a los que hacen referencia las consultas distribuidas y objetos de automatización a los que se hace referencia en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . El valor predeterminado es 256 MB.<br /><br /> El uso de esta opción puede ayudarle a optimizar la asignación de memoria, pero solo cuando la memoria física supera el límite establecido por el sistema operativo de memoria virtual disponible para las aplicaciones. El uso de esta opción puede ser apropiado para configuraciones con mucha memoria en las que los requisitos de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no sean típicos y el espacio de direcciones virtuales del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utilice completamente. Si se usa esta opción de manera incorrecta, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría no iniciarse o tener errores en tiempo de ejecución.<br /><br /> Use el valor predeterminado del parámetro **-g** , a menos que vea alguna de las siguientes advertencias en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<tamaño>"<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<tamaño>"<br /><br /> Estos mensajes podrían indicar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está intentando liberar partes del bloque de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fin de buscar espacio para elementos como los archivos .dll de procedimientos almacenados extendidos u objetos de automatización. En este caso, considere la posibilidad de aumentar la cantidad de memoria reservada con el modificador **-g** .<br /><br /> Si usa un valor inferior al predeterminado, aumentará la cantidad de memoria disponible para el bloque de memoria controlado por el administrador de memoria de SQL Server y las pilas de subprocesos; esto podría proporcionar ventajas de rendimiento para cargas de trabajo que consuman mucha memoria en sistemas que no Usen procedimientos almacenados extendidos, consultas distribuidas u objetos de automatización.|  
 |**-m**|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único. Al iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único, solo se podrá conectar un usuario y no se iniciará el proceso CHECKPOINT. CHECKPOINT garantiza que se escriban periódicamente las transacciones completadas desde la memoria caché de disco al dispositivo de la base de datos. (Normalmente, esta opción se utiliza si las bases de datos del sistema tienen problemas y es necesario repararlas). Habilita la opción sp_configure allow updates. De manera predeterminada, la opción allow updates está deshabilitada. Al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único se permite que cualquier miembro del grupo local de administradores del equipo se conecte a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del rol fijo de servidor sysadmin. Para obtener más información, vea [Conectarse a SQL Server cuando los administradores del sistema no tienen acceso](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). Para obtener más información sobre el modo de usuario único, vea [Iniciar SQL Server en modo de usuario único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).|  
 |**-mNombre de aplicación cliente**|Limita las conexiones a una aplicación cliente especificada. Por ejemplo, `-mSQLCMD`  limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente SQLCMD. Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Use `"Microsoft SQL Server Management Studio - Query" ` para conectar con el Editor de consultas de SSMS. La opción Editor de consultas de SSMS no se puede configurar mediante el Administrador de configuración de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] porque incluye el carácter de guion que la herramienta rechaza.<br /><br /> En el nombre de la aplicación cliente se distinguen mayúsculas y minúsculas. Las comillas dobles son necesarias si el nombre de la aplicación contiene espacios o caracteres especiales.<br /><br />**Ejemplos de cuando se inicia desde la línea de comandos:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -mSQLCMD` <br /><br /> **Nota sobre seguridad**: No use esta opción como una característica de seguridad. La aplicación cliente proporciona el nombre de la misma y puede proporcionar un nombre falso como parte de la cadena de conexión.|  
 |**-n**|No usa el registro de aplicaciones de Windows para registrar los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **-n**, se recomienda usar también la opción de inicio **-e** . De lo contrario, no se registrarán los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -77,11 +87,11 @@ ms.lasthandoff: 09/22/2017
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
 [Establecer la opción de configuración del servidor Buscar procedimientos de inicio](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
-[Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+[Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+[Configuración de opciones de inicio del servidor &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
   
 ## <a name="see-also"></a>Vea también  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sqlservr](../../tools/sqlservr-application.md)  
   
   
-

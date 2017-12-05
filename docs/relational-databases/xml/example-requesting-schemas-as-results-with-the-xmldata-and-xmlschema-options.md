@@ -2,31 +2,32 @@
 title: 'Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b00e028bcc0c14b803aad5203f0b5e88aecceea3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
-  Esta consulta devuelve el esquema XML-DATA que describe la estructura del documento.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Esta consulta devuelve el esquema XML-DATA que describe la estructura del documento.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -57,7 +58,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> se declara como un espacio de nombres. Para evitar conflictos de espacio de nombres al solicitar varios esquemas de datos XML en distintas consultas FOR XML, el identificador del espacio de nombres ( `Schema1` en este ejemplo) cambia en cada ejecución de la consulta. El identificador del espacio de nombres es **Schema*n*** donde***n*** es un número entero.  
+>  <`Schema`> se declara como un espacio de nombres. Para evitar conflictos de espacio de nombres al solicitar varios esquemas de datos XML en distintas consultas FOR XML, el identificador del espacio de nombres ( `Schema1` en este ejemplo) cambia en cada ejecución de la consulta. El identificador del espacio de nombres es **Schema*n***, donde ***n*** es un número entero.  
   
  Al especificar la opción `XMLSCHEMA` , se puede solicitar el esquema XSD del resultado.  
   
@@ -132,4 +133,3 @@ GO
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   
-

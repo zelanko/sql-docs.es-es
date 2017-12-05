@@ -2,29 +2,30 @@
 title: Obtener acceso a datos FILESTREAM con Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], Transact-SQL
+helpviewer_keywords: FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55caf01faba0be9c5277cbea435b256910e3dfc5
-ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: d2a1d91ebbefe9cb4b505d5678f6239eea0ecfc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Obtener acceso a datos FILESTREAM con Transact-SQL
-  En este tema se describe cómo utilizar las instrucciones INSERT, DELETE y UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar los datos de FILESTREAM.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo utilizar las instrucciones INSERT, DELETE y UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar los datos de FILESTREAM.  
   
 > [!NOTE]  
 >  Los ejemplos de este tema requieren la tabla y la base de datos habilitada para FILESTREAM que se crean en [Crear una base de datos habilitada para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md) y [Crear una tabla para almacenar datos FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md).  
@@ -47,9 +48,9 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]  
   
- Cuando selecciona todos los datos de la tabla `Archive`.`dbo.Records` , los resultados son similares a los que se muestran en la tabla siguiente. Sin embargo, la columna `Id` contendrá GUID diferentes.  
+ Al seleccionar todos los datos de la tabla `Archive.dbo.Records`, los resultados son similares a los que se muestran en la tabla siguiente. Sin embargo, la columna `Id` contendrá GUID diferentes.  
   
-|Identificador|SerialNumber|Reanudar|  
+|Identificador|SerialNumber|Gráfico|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[FILESTREAM#FS_DeleteData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_5.sql)]  
   
- Al seleccionar todos los datos de la tabla `dbo.Archive` , la fila ya no está. Ya no puede utilizar el archivo asociado.  
+ Al seleccionar todos los datos de la tabla `Archive.dbo.Records`, la fila ya no existe y no se puede usar el archivo asociado.  
   
 > [!NOTE]  
 >  El recolector de elementos no utilizados de FILESTREAM quita los archivos subyacentes.  

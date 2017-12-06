@@ -2,9 +2,12 @@
 title: Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: fe9ffe38667a07a647e5ed23f84cd7039c430f18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9074f9125c1e1e67717cd1f5bb70710dbb6dff6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint
 
@@ -31,7 +34,7 @@ ms.lasthandoff: 11/09/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona tipos de contenido de SharePoint predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo.
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
  Para agregar tipos de contenido a una biblioteca, debe ser administrador del sitio o disponer del nivel de permiso Control total.  
   

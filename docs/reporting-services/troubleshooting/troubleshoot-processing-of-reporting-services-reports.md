@@ -2,9 +2,12 @@
 title: "Solución de problemas de procesamiento de informes de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a22c557ce2289c950edceff045b1c868d60ef677
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b379a4a9cb342c96e23be750ff4c8c1df08a6dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Solución de problemas de procesamiento de informes de Reporting Services
 Una vez recuperados los datos del informe, el procesador de informes combina los datos y la información de diseño. Cada propiedad de elemento de informe que tiene una expresión se evalúa en el contexto de los datos y el diseño combinados. Utilice este tema como ayuda para solucionar estos problemas.   

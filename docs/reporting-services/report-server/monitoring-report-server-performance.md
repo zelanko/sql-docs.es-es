@@ -2,9 +2,12 @@
 title: Supervisar el rendimiento del servidor de informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c128a907232f734195944219aa358bae4c3514db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 23375f636a34936e891ebd36fa5680ff10173867
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
   Utilice las herramientas de supervisión del rendimiento para supervisar el rendimiento del servidor de informes a fin de evaluar la actividad del servidor, observar tendencias, diagnosticar cuellos de botella del sistema y recopilar datos que pueden ayudar a determinar si la configuración actual del sistema es suficiente. Para optimizar el rendimiento del servidor, puede especificar la frecuencia con que se recicla el dominio de aplicación del servidor de informes. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  

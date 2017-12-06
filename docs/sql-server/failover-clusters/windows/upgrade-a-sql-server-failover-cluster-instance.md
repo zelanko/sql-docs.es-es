@@ -2,10 +2,10 @@
 title: "Actualizar una instancia de clúster de conmutación por error de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Actualización de una instancia de clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la actualización de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a una nueva actualización acumulativa o un nuevo Service Pack de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o, al instalar, a una nueva actualización acumulativa o un nuevo Service Pack de Windows por separado en todos los nodos del clúster de conmutación por error, con tiempo de inactividad limitado a una sola conmutación por error manual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original).  

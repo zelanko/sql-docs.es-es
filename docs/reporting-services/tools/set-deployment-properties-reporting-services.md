@@ -2,9 +2,12 @@
 title: "Establecer propiedades de implementación (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3485cc9a08bb868a16c731ccf3d2d684a110e46e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
   En[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe especificar el servidor de informes y, si lo desea, las carpetas de los informes y orígenes de datos compartidos para poder publicar los elementos de un proyecto de Servidor de informes en un servidor de informes. Las propiedades y valores que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] necesita para generar los informes, obtener una vista previa de los mismos e implementarlos están almacenados en las configuraciones de proyecto correspondiente al proyecto del servidor de informes. Puede crear varios conjuntos con nombre para estas propiedades de proyecto; de esta forma, podrá cambiar de un conjunto de propiedades a otro según sea necesario. Cada conjunto de propiedades es una configuración. Por ejemplo, puede tener una configuración para publicar los informes en un servidor de pruebas y otra configuración diferente para publicar los informes en un servidor de producción.  

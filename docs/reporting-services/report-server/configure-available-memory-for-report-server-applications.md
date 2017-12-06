@@ -2,9 +2,12 @@
 title: Configurar la memoria disponible para las aplicaciones del servidor de informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4291b3defc7fede8059bfb70f66406c87e9f804f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f444ed7b1c875ed523a690d0a13629a1b190f381
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar la memoria disponible para las aplicaciones del servidor de informes
   Aunque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede usar toda la memoria disponible, puede invalidar el comportamiento predeterminado configurando un límite superior en la cantidad total de los recursos de memoria asignados a las aplicaciones de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . También puede establecer umbrales que hacen que el servidor de informes cambie la manera de asignar prioridades y procesa las solicitudes dependiendo de si la presión de memoria es baja, media o alta. En niveles bajos de presión de memoria, el servidor de informes responde concediendo una prioridad ligeramente superior al procesamiento de informes a petición o interactivo. En los niveles altos de presión de memoria, el servidor de informes usa varias técnicas para seguir siendo operativo usando los recursos limitados que están disponibles para él.  

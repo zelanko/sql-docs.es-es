@@ -2,9 +2,12 @@
 title: "Dominios de aplicación para las aplicaciones del servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fa12c471b2074cc5aface50b6604f0ca1d14e954
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce02d45295537bf9eef80816f7099a4697ddfd1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="application-domains-for-report-server-applications"></a>Dominios de aplicación para las aplicaciones del servidor de informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servidor de informes se implementa como un servicio único que contiene el servicio web del servidor de informes, el Administrador de informes y una aplicación de procesamiento de fondo. Cada aplicación se ejecuta en su propio dominio de aplicación dentro del proceso del servidor de informes único. En su mayor parte, los dominios de aplicación se crean, configuran y administran internamente. Sin embargo, saber cómo se producen las operaciones de reciclaje para los dominios de aplicación del servidor de informes puede resultar útil si está investigando problemas de rendimiento o memoria, o resolviendo los problemas de las interrupciones del servicio.  

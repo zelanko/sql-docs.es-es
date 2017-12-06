@@ -1,10 +1,13 @@
 ---
 title: Propiedades MSReportServer_ConfigurationSetting | Microsoft Docs
-ms.custom: force 2/17
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 58de12fd20d2b9491526add38ee68da61462dc73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b2a336cd583cdb629620b881a06d5a1fa46088e9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>Propiedades MSReportServer_ConfigurationSetting
   La clase MSReportServer_ConfigurationSetting representa los parámetros de instalación y tiempo de ejecución de una instancia del servidor de informes. La configuración se guarda en el archivo de configuración RSReportServer.config.  

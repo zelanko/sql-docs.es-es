@@ -2,9 +2,12 @@
 title: "Panel de agrupación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 509fa346013874f26225d6e8263b4e6b9baf0caf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c5a114b5a85a635bb36f3d5eb81785931b82773
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
 Cuando se diseñan informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

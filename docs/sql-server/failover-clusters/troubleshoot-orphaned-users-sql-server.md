@@ -2,7 +2,10 @@
 title: "Solucionar problemas de usuarios huérfanos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-high-availability
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ff0d42bc753de6e179e0cd4c7882bdfd9626cba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1780f563d2e4f9533ebe1f82deefe7b785b6ec8c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuarios huérfanos (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Los usuarios huérfanos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se producen cuando un usuario de base de datos se basa en un inicio de sesión en la base de datos **maestra** , pero ese inicio de sesión ya no existe en **master**. Esto puede suceder cuando se elimina el inicio de sesión o cuando la base de datos se mueve a otro servidor donde el inicio de sesión no existe. En este tema se describe cómo buscar usuarios huérfanos para reasignarles inicios de sesión.  
   

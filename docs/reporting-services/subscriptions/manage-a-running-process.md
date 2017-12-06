@@ -2,9 +2,12 @@
 title: "Administrar un proceso en ejecución | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -33,11 +36,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 30c9b46ae50450697f9288b0e40e062a20af8a82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-a-running-process"></a>Administrar un proceso en ejecución
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supervisa el estado de los trabajos que se ejecutan en el servidor de informes. Periódicamente, el servidor de informes realiza un recorrido de los trabajos en curso y escribe la información sobre su estado en su propia base de datos o en las bases de datos de aplicación de servicio para el modo de SharePoint. Un trabajo está en curso si se está llevando a cabo alguno de los siguientes procesos: ejecución de consultas en un servidor de bases de datos remoto o local, procesamiento de informes o representación de informes.  

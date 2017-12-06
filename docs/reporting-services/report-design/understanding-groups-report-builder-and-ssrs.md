@@ -2,9 +2,12 @@
 title: "Descripción de los grupos (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7985d8c28074d08c53da69e448593433f2709d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un grupo es un conjunto de datos con nombre del conjunto de datos de informe que está enlazado a una región de datos. Básicamente, un grupo organiza una vista de un conjunto de datos de informe. Todos los grupos de una región de datos especifican vistas diferentes del mismo conjunto de datos de informe.  

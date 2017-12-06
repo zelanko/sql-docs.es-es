@@ -2,9 +2,12 @@
 title: "Configurar la autenticación de Windows en el servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5fc00ad32e130ce1eb47dfde98791d8e4f65cd2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-2.  Busque \<**Autenticación**>.  
+2.  Busque \<**Authentication**>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. Puede especificar **RSWindowsNegotiate**, **RSWindowsNTLM**y **RSWindowsKerberos** en cualquier orden. Debe habilitar la persistencia de autenticación si desea autenticar la conexión en lugar de cada solicitud individual. Con la persistencia de autenticación, todas las solicitudes que requieran autenticación se permitirán mientras dure la conexión.  
   
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  Péguela sobre las entradas existentes para \<**Autenticación**>.  
+4.  Péguela sobre las entradas existentes de \<**Authentication**>.  
   
      Observe que no puede utilizar **Custom** con los tipos **RSWindows** .  
   

@@ -2,9 +2,12 @@
 title: "Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3b5e7fa1328cffd991a0f30866d544594eda5554
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 464731c279d55f20b725193cde9db1e5f2974bf2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos
   Las opciones de presentación de polígonos, líneas y puntos en una capa de mapa se controlan estableciendo las opciones de la capa y las reglas para los elementos de mapa de la capa, o invalidando las opciones de elementos de mapa insertados concretos de una capa.  

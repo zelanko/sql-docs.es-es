@@ -2,9 +2,12 @@
 title: "Solución de problemas de conexión de base de datos y servidor con Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solución de problemas de conexión de base de datos y servidor con Reporting Services
 Utilice este tema para solucionar los problemas que surjan durante la conexión a un servidor de informes. Este tema también proporciona información sobre los mensajes de "Error inesperado". Para obtener más información sobre la configuración del origen de datos y cómo configurar la información de conexión del servidor de informes, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) y [Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  

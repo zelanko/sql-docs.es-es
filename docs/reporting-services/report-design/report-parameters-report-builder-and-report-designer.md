@@ -2,9 +2,12 @@
 title: "Parámetros de informe (Generador de informes y Diseñador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 08a65ad0d4d65c7461862757f9a9bf1f8bac651b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
   En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  

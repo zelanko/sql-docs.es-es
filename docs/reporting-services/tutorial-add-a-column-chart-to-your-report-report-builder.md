@@ -2,9 +2,12 @@
 title: "Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f3fccc743eba7809d368771c5e5d942ea954f25
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
 En este tutorial, creará un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un gráfico de columnas que muestra una serie como un conjunto de barras verticales agrupadas por categoría. 
@@ -304,7 +307,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
 4.  Haga clic en **Guardar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
 -    [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 

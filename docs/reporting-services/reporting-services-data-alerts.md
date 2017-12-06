@@ -2,9 +2,12 @@
 title: Alertas de datos de Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f2be4b604e088329f719195976903f6dcb516246
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 981aa87df38c43e33fe573ea769cb686d3fbf59e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
@@ -33,7 +36,7 @@ Las alertas de datos de SQL Server Reporting Services son una solución de alert
 Los mensajes de alertas de datos se envían por correo electrónico. Dependiendo de la importancia de la información, puede elegir enviar mensajes con mayor o menor frecuencia y solo cuando cambien los resultados. Puede especificar varios destinatarios de correo electrónico para mantener informadas a otras personas y mejorar la eficacia y la colaboración.
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
 ##  <a name="AlertingWF"></a> Arquitectura y flujo de trabajo de alertas de datos
 

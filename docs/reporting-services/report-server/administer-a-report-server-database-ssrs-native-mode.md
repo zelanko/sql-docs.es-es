@@ -2,9 +2,12 @@
 title: Administrar una base de datos del servidor de informes (Modo nativo de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 3fc4f3adeac32e917b5b218548906ca6a9cb664d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e8fe9877ea3e30466652a1cd4db8f4af53ba396
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
   Una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dos bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenamiento interno. De manera predeterminada, las bases de datos tienen los nombres ReportServer y ReportServerTempdb. ReportServerTempdb se crea con la base de datos principal del servidor de informes y se usa para almacenar datos temporales, información de sesión e informes almacenados en caché.  

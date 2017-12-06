@@ -2,9 +2,12 @@
 title: "Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8fce3d396a163c77b3b98bd7defd583f94d72b0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
   En una suscripción controlada por datos, los datos de suscripción dinámica se proporcionan mediante una consulta o un comando que recupera los datos desde un origen de datos externo. Los datos de suscripción se pueden recuperar desde cualquier origen de datos compatible que satisfaga los requisitos del procesamiento de suscripciones controladas por datos. La sintaxis de la consulta o el comando debe ser válida para una extensión de procesamiento de datos instalada en el servidor de informes.  

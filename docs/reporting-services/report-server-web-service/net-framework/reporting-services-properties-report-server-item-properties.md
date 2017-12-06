@@ -2,9 +2,12 @@
 title: Propiedades de los elementos del servidor de informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bf0ed39eff089b93dd67ea5c31e8274949efd9e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propiedades de Reporting Services: propiedades de los elementos del servidor de informes
   Las propiedades de los elementos son específicas de los elementos de la base de datos del servidor de informes. Tales elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
 |**MimeType**|Tipo MIME de un recurso en la base de datos del servidor de informes.|  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Referencia técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   

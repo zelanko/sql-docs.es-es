@@ -2,9 +2,12 @@
 title: Configurar conexiones SSL en un servidor de informes en modo nativo | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8012c0fd281c34e199deb6bd4daa206d113508ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  

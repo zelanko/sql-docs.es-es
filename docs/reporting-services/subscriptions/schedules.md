@@ -2,9 +2,12 @@
 title: Programaciones | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e23823f0e372964e6193a8c7a67a349fa170f514
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="schedules"></a>Programaciones
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona **programaciones compartidas** y **programaciones específicas del informe** para ayudarle a controlar el procesamiento y distribución de los informes. La diferencia entre los dos tipos de programaciones radica en cómo se definen, almacenan y administran. La construcción interna de los dos tipos de programación es la misma. Todas las programaciones especifican un tipo de periodicidad: mensual, semanal o diaria. Dentro del tipo de periodicidad, se deben establecer los intervalos y el período para la frecuencia con que se debe producir un evento. El tipo de patrón de periodicidad y cómo se especifican los patrones es el mismo si crea una programación compartida o una programación específica del informe.

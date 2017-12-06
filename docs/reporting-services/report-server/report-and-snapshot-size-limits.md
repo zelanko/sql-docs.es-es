@@ -2,9 +2,12 @@
 title: "Límites de tamaño de informes e instantáneas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d433a0ea0b586929858ca4fe83fcf1a48274f59e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
   Los responsables de administrar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden usar la información de este tema para conocer los límites de tamaño de los informes cuando se publican en un servidor de informes, cuando se representan en tiempo de ejecución y cuando se guardan en el sistema de archivos. En este tema también se incluyen directrices prácticas para medir el tamaño de una base de datos del servidor de informes y se describe cómo afecta el tamaño de las instantáneas al rendimiento del servidor.  

@@ -2,9 +2,12 @@
 title: Entrega a recursos compartidos de archivos en Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0d0492a8bc9b5ef61e8ef8b1d237aac1f818abd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc40553b8a964ad542f22c983ffa7fae5dec243e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura pueden ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido de archivos** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  

@@ -2,9 +2,12 @@
 title: "Establecer la configuración regional de un informe o un cuadro de texto (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 160a33e4de30dc396c84e81f7f6acb057811c0fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac9fb03069eedadd2811ed6512d6de84e0e608cd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Establecer la configuración regional de un informe o un cuadro de texto (Reporting Services)
   La propiedad **Language** de un informe o un cuadro de texto contiene la configuración regional, que determina los formatos predeterminados para mostrar los datos de informe que difieren según el idioma y la región, como por ejemplo, la fecha, la moneda o los valores numéricos. La propiedad **Language** de un cuadro de texto invalida la propiedad **Language** del informe. Si no se especifica ningún valor para **Language**, Reporting Services usa la configuración regional del sistema operativo del servidor de informes para los informes publicados o la del equipo en que se crea el informe para la vista previa del informe.  

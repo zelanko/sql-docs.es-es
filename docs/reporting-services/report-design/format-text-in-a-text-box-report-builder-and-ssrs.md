@@ -2,9 +2,12 @@
 title: Dar formato al texto en un cuadro de texto (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cc81cc2f3f19b6ce326d11db6114deeeb907
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4752ac55673b7c208a2d051da928fee1404693f9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Dar formato al texto en un cuadro de texto (Generador de informes y SSRS)
   Puede dar formato por separado a cualquier parte del texto de un cuadro de texto, y usar texto de marcador de posición y texto estático en un mismo cuadro de texto. Esta capacidad de mezclar formatos y agregar texto de marcador de posición permite crear combinaciones de correspondencia o plantillas para el texto del informe. Podrá definir y dar formato a cualquier expresión de forma independiente mediante un marcador de posición.  

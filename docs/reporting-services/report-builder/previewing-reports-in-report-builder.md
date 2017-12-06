@@ -2,9 +2,12 @@
 title: Mostrar la vista previa de informes en el Generador de informes | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 629decc021a33945c5a4baae9aef1cda70d22f0b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>Mostrar la vista previa de informes en el Generador de informes
   Durante la creación de un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , resulta útil obtener una vista previa del mismo a menudo para comprobar que muestra lo que se pretende. Para obtener una vista previa de un informe, haga clic en **Ejecutar**. El informe se representa en el modo de vista previa.  

@@ -2,9 +2,12 @@
 title: "Lección 2: Modificar las propiedades del origen de datos de informe | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9a2e755b3aa71ba3792b5be5aa72367a0e218215
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará el portal web para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  

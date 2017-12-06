@@ -2,9 +2,12 @@
 title: Establecer la propiedad Url del servicio web | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9f48fb74d52fbea6aa0990bd1cb72354fa5dd0f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9b08281ebbb0b60589e15c52cc22be9f761de5fb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Establecer la propiedad Url del servicio web
   En las aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede modificar en cualquier momento la dirección URL base del servicio web del servidor de informes a la que se dirige la aplicación. Para ello, basta con establecer la propiedad **Url** del objeto de servicio. Por ejemplo:  
@@ -115,7 +118,7 @@ class Sample
 ## <a name="see-also"></a>Vea también  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
- [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

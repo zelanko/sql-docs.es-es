@@ -2,9 +2,12 @@
 title: Limitar el historial de informe (Administrador de informes) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 30b57e9b6d59718f384bcfdbe35efc375f1324ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3ad25020b0290551367d8c061c9d9f0950cb8668
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="limit-report-history-report-manager"></a>Limitar el historial de informe (Administrador de informes)
   El historial de informes es un conjunto de instantáneas de informe que se crean a lo largo del tiempo. Puede crear el historial de informes a petición o programar la frecuencia con que una instantánea se crea y se agrega al historial de informes.  
@@ -53,6 +56,6 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Administrador de informes &#40;modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

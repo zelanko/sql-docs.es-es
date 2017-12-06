@@ -2,9 +2,12 @@
 title: Administrar las excepciones en Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 40b238f118a957a86f7fb0791d9a6012cc150ff6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df0558ddbb66f0a5ff8631464e511d35b94ebec7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Administrar las excepciones en Reporting Services
   Cuando una solicitud de cliente de la API SOAP de Reporting Services no puede completarse, el servidor de informes devuelve un error en lugar de los resultados esperados de la llamada. Cuando una llamada no puede completarse, un error para el servicio web del servidor de informes se devuelve como elemento XML **Fault** de SOAP. El elemento descriptivo clave del error es **detail**, que incluye toda la información de error proporcionada por el servidor de informes así como cualquier información de error adicional del servicio web. La información clave del elemento **detail** es el código de error del servidor de informes. Según el mensaje y el código de error, puede determinar la siguiente acción adecuada que llevar a cabo en las aplicaciones. Para obtener más información acerca de los errores de SOAP, vea el sitio web de World Wide Web Consortium (W3C) en http://www.w3.org/TR/SOAP.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Propiedad Detail](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)   
- [Introducción al control de excepciones en Reporting Services](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Introducción a la administración de excepciones en Reporting Services](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Clase SoapException de Reporting Services](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   

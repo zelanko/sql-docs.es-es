@@ -2,9 +2,12 @@
 title: "Propiedades de la programación (página General) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/11/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 76a45e9de841e0171a3bf5f11ad2b209100a026a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 40ed768da2f17cda058348ad36b014da9874db71
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="schedule-properties-general-page"></a>Propiedades de la programación (página General)
   Use la página [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para ver o modificar una programación compartida. Las programaciones compartidas se pueden utilizar en lugar de las programaciones específicas del informe o de la suscripción. Los cambios a la programación se aplican después de guardarla. La edición de una programación no tiene ningún efecto en los trabajos que se encuentran actualmente en curso. Si edita una programación mientras se usa, todas las suscripciones y los informes de procesamiento actualmente desencadenados de dicha programación podrán terminar.  

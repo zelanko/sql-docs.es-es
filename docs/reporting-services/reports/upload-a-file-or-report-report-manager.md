@@ -2,9 +2,12 @@
 title: Cargar un archivo o un informe (Administrador de informes) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4c41372d28a94a2e8bf0ea86a750c15ea29b2abd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c5934844dd9570ab95ab5641d66a465f57725e55
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Cargar un archivo o un informe (Administrador de informes)
   El Administrador de informes proporciona una característica de carga para poder agregar informes, modelos y otros archivos a un servidor de informes sin tener que publicar dichos elementos desde una aplicación cliente. Los archivos que se cargan del sistema de archivos se almacenan como elementos en el servidor de informes. El tipo de archivo que se carga determina la manera de almacenarse:  

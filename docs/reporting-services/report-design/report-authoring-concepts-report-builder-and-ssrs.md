@@ -2,9 +2,12 @@
 title: "Conceptos de creación de informes (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 312291488481b09890f590db58ef416d5967c507
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38eaef95a61458ddca97d830c3d0fce8df139c3d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
   En esta sección se definen brevemente algunos conceptos clave que se usan para describir informes paginados en la documentación del Generador de informes y del Diseñador de informes. Para obtener definiciones de términos o palabras específicas, vea el [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

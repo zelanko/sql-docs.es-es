@@ -2,9 +2,12 @@
 title: "Agregar efectos 3D a un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 03dd78db6811c25fec35dcdb8b45ecf343194828
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d9e23f2274189f355e92c1db1463b58b823e2eb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Efectos de gráfico: agregar efectos 3D (Generador de informes)
   Se pueden usar efectos tridimensionales (3D) para dar profundidad y agregar impacto visual a los gráficos de los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, si desea resaltar un sector específico de un gráfico circular seccionado, puede girar y cambiar la perspectiva del gráfico para que los usuarios se fijen primero en dicho sector. Cuando se aplican efectos 3D al gráfico, se deshabilitan todos los colores de degradado y los estilos de sombreado.  

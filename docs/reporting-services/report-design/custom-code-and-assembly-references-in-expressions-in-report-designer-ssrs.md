@@ -2,9 +2,12 @@
 title: "Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d53894c807b9d9e80be441aa13fb442ea98f5819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5c6bb20022e7766e66b47c51995eef4fe7fb785c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
   Puede agregar referencias al código personalizado incrustado en un informe o a los ensamblados personalizados que haya generado y guardado en el equipo e implementado en el servidor de informes. El código incrustado se utiliza en constantes, funciones complejas o funciones personalizadas que se usan varias veces en un único informe. Use ensamblados de código personalizados para mantener el código en un único lugar y compartirlo con el fin de utilizarlos en múltiples informes. El código personalizado puede incluir nuevas constantes, variables, funciones o subrutinas personalizadas. Puede incluir referencias de solo lectura en las colecciones integradas, como la colección Parameters. Sin embargo, no puede pasar conjuntos de valores de datos de informe a las funciones personalizadas; concretamente, no se admiten agregados personalizados.  

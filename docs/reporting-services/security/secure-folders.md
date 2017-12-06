@@ -2,9 +2,12 @@
 title: Proteger carpetas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0eed722cabb60b072328181e82fe0c55f265d7aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ea8213ba1a174a818413d1b4fb8b3009e1e6a58a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-folders"></a>Proteger carpetas
   La seguridad de las carpetas es fundamental para proteger todo el contenido de un servidor de informes. Puesto que la seguridad se hereda en toda la estructura de carpetas, puede designar secciones grandes o pequeñas de la jerarquía de carpetas para permitir ciertos tipos de acceso.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Protección de elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

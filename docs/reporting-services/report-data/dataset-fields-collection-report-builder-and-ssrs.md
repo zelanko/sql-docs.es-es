@@ -2,9 +2,12 @@
 title: "Colección de campos de conjunto de datos (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  

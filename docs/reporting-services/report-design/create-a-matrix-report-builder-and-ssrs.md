@@ -2,9 +2,12 @@
 title: Crear una matriz (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 994d0d61ac4a591445285b4f967d5c3c74a820ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0f28b38685f5ffd2ddd067a054e1f23ea6e4482
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Crear una matriz (Generador de informes y SSRS)
   Use una matriz para mostrar datos agrupados e información de resumen. Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. Las matrices ofrecen funcionalidad similar a la de las tablas de referencias cruzadas (crosstab) y las tablas dinámicas. En tiempo de ejecución, a medida que se combinan los datos del informe y las regiones de datos, la matriz aumenta de tamaño horizontal y verticalmente en la página. Los valores de las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Puede dar formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. También puede incluir controles de alternancia de obtención de detalles que ocultan inicialmente los datos detallados; de esta forma, el usuario podrá hacer clic en dichos controles para mostrar más o menos detalles, según sea necesario.  

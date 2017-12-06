@@ -2,9 +2,12 @@
 title: "Métodos de historial de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c8259dc3f456729ff58ce9e0ff980c84098f7e26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a4d8aa87caef231997dce1ca2657b033cd1fa87
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-history-methods"></a>Métodos de historial de informes
   Puede utilizar estos métodos para crear y administrar las instantáneas del historial de elementos.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/09/2017
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Establece opciones del historial de elementos que especifican cuándo se crea una instantánea del historial de elementos para un elemento de catálogo especificado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Referencia técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

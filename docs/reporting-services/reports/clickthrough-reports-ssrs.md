@@ -2,9 +2,12 @@
 title: Informes click-through (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d38ad40a53843dbc1a1c636e37d3e4d9ada21b40
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae47a5218c2854f6fde35eb1f6c15ac65feb12d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="clickthrough-reports-ssrs"></a>Informes click-through (SSRS)
   Un informe click-through es aquel que proporciona información detallada sobre los datos incluidos en el informe principal. Un informe click-through se muestra cuando el usuario hace clic en los datos interactivos que aparecen en el informe principal. Estos informes son generados automáticamente por el servidor de informes. El usuario, como diseñador del modelo, determina lo que se ve en los informes click-through estableciendo las propiedades **DefaultDetailAttribute** y **DefaultAggregateAttribute** que se asignan a una entidad del modelo de informe.  

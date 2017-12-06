@@ -2,9 +2,12 @@
 title: Agregar un filtro (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b6692664b434161cce324e0e81f45f30361b30fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdf9b718e48d41440cd2b4e72097e95ebc8cc42e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Agregar un filtro (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos, una región de datos o un grupo cuando desee incluir o excluir valores específicos para la realización de cálculos o la visualización. Los filtros se aplican en tiempo de ejecución y en este orden: primero en el conjunto de datos, a continuación, en la región de datos y, por último, en el grupo; en las jerarquías de grupo, se aplican en orden descendente. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series.  

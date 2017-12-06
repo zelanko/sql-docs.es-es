@@ -2,9 +2,12 @@
 title: "Implementar una extensión de representación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 396fe5513bb713b1d3296a7edfaff386708de052
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4121274d43473df5dbf0f8f556b6d3da78ed735a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
   Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  

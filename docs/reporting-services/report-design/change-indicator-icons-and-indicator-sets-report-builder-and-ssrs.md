@@ -2,9 +2,12 @@
 title: Cambiar iconos de indicador y conjuntos de indicadores (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a4b2e1ccd63ca5f7a43ada054ffde3ec018938d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2439245c62a0ac0fe4e0ba3490f8a14d9e0b408
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Cambiar iconos de indicador y conjuntos de indicadores (Generador de informes y SSRS)
   Los conjuntos de indicadores preconfigurados que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona para los informes paginados podrían no describir siempre eficazmente los datos ni funcionar bien en el informe resultante. En este tema se ofrecen procedimientos para cambiar la apariencia de los iconos de indicador y cambiar los conjuntos de indicadores para que contengan más o menos iconos, o iconos distintos.  

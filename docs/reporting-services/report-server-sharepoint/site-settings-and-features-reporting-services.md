@@ -2,9 +2,12 @@
 title: "Valores de configuración del sitio de Reporting Services y características del sitio (modo de SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d9bde6f14f53f2b5043bdfec1182c9c43ef37329
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 61a79fe122947e5f68de277035e72639f22f5e6b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Valores de configuración del sitio de Reporting Services y características del sitio (modo de SharePoint)
 
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/09/2017
 El modo de SharePoint de Reporting Services tiene varias características personalizadas de nivel de sitio y una característica de sitio que se pueden administrar desde la página de configuración del sitio de SharePoint. La configuración se aplica a todo el sitio y afecta a todas las aplicaciones de servicio de Reporting Services. Debe tener permisos de Administrador de contenido y Administrador del sistema para ver esta página.  
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
 |Configuración del sitio|Description|  
 |------------------|-----------------|  

@@ -2,9 +2,12 @@
 title: "Lección 3: Definir una suscripción controlada por datos | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  

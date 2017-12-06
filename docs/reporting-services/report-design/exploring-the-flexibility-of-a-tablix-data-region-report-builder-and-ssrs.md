@@ -2,9 +2,12 @@
 title: "Explorar la flexibilidad de una región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e0be403fd6cb357449025c1440dd3e1d82da125e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9a4d8e4383bfe7b961975771f196c8c6fe02a0c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorar la flexibilidad de una región de datos Tablix (Generador de informes y SSRS)
 En un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , cuando agrega una región de datos de lista, tabla o matriz desde la pestaña Insertar de la cinta de opciones, empieza por una plantilla inicial para una región de datos Tablix, pero no está limitado por esa plantilla. Puede seguir definiendo cómo se muestran los datos agregando o quitando características de la región de datos Tablix tales como grupos, filas y columnas.  

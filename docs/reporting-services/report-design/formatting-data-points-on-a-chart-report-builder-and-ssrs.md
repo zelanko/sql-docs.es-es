@@ -2,9 +2,12 @@
 title: "Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: bf3c5c3a2a9603f996a2a66e51367b56669b12ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
 En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  

@@ -2,9 +2,12 @@
 title: Administrar conjuntos de datos compartidos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a7ff9770deac8363b38390c74a79bfe2a582c164
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los conjuntos de datos compartidos recuperan los datos de los orígenes de datos compartidos que se conectan a los orígenes de datos externos. Un conjunto de datos compartido proporciona una manera de compartir una consulta para ayudar a proporcionar un conjunto coherente de datos para varios informes. La consulta del conjunto de datos puede incluir parámetros de conjunto de datos. Puede configurar un conjunto de datos compartido para almacenar en memoria caché los resultados de la consulta para combinaciones de parámetros concretas al usarse por primera vez o especificando una programación. Puede utilizar el almacenamiento en caché del conjunto de datos compartido en combinación con el almacenamiento en caché de los informes y las fuentes de datos de informe para ayudar a administrar el acceso a un origen de datos.  

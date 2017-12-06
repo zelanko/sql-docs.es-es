@@ -2,9 +2,12 @@
 title: Ejemplos de expresiones (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 04/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -31,11 +34,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 860bf17283de6fc522c956ed0c9f4ee26497be8b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
 Las expresiones se usan con frecuencia en los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar el contenido y la apariencia del informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -169,7 +172,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   La siguiente expresión genera los años de intervalo entre SellStartDate y LastReceiptDate. Estos campos están en dos conjuntos de datos distintos, DataSet1 y DataSet2. La [función First &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), que es una función de agregado, devuelve el primer valor de SellStartDate en ConjuntoDeDatos1 y el primer valor de LastReceiptDate en ConjuntoDeDatos2.  
+-   La siguiente expresión genera los años de intervalo entre SellStartDate y LastReceiptDate. Estos campos están en dos conjuntos de datos distintos, DataSet1 y DataSet2. La [función First &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), que es una función de agregado, devuelve el primer valor de SellStartDate en DataSet1 y el primer valor de LastReceiptDate en DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  

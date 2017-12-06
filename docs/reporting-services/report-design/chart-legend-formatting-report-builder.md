@@ -2,9 +2,12 @@
 title: "Aplicar formato a la leyenda de un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -33,11 +36,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4bae3ff2a5111c020fdfaa20c3c3e4fc0d905558
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 878743f3b95871cab938fb85fb683c99bcfdf6f8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Leyenda de gráfico: aplicar formato (Generador de informes)
   La leyenda de un gráfico contiene descripciones para cada una de las categorías de un gráfico. Una leyenda siempre contiene uno o varios elementos de leyenda, cada uno de los cuales consta de un cuadro coloreado que representa la serie y una cadena de texto que describe la serie, tal como se ve en la ilustración siguiente.  

@@ -2,9 +2,12 @@
 title: "Configurar una dirección URL (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 1c356b28e675e824b1a6b6a4b434f27c4fe81de8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bfb7f618f6927c79392d13953dfd4daf5aa84290
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
 9. Haga clic en **Aplicar** para crear la dirección URL.  
   
-10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para obtener instrucciones, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]  
 >  Si tiene enlaces SSL y reservas de direcciones URL existentes y desea cambiar el enlace SSL para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  

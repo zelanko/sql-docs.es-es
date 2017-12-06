@@ -2,9 +2,12 @@
 title: "Función Aggregate (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 463b78943e8e98f58eed3fe8e559ae0a800c807d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 834118e295a58af22a0e0cdd3817af2f33cb023c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funciones del Generador de informes: función Aggregate
   Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.  
@@ -67,9 +70,9 @@ Aggregate(expression, scope)
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
- Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Para más información, vea [Funciones del generador de informes - referencia de funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Para más información sobre los agregados recursivos, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+ Para más información sobre los agregados recursivos, vea [Crear un grupo de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="comparing-the-aggregate-and-sum-functions"></a>Diferencias entre las funciones Aggregate y Sum  
  La función **Aggregate** difiere de las funciones de agregado numéricas como **Sum** en que **Aggregate** devuelve un valor calculado por el proveedor de datos o por la extensión de procesamiento de datos. Las funciones de agregado numéricas como **Sum** devuelven un valor calculado por el procesador de informes en un conjunto de datos perteneciente al conjunto de datos determinado por el parámetro *scope* . Para más información, vea la lista de funciones de agregado en [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  

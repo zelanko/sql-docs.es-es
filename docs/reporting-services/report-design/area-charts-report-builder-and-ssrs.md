@@ -2,9 +2,12 @@
 title: "Gráficos de áreas (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 569148f956a56418e8aae426fbe366ab23e2c3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f54dfffb86d83071951a9c65938eb6f07e04c34a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Gráficos de áreas (Generador de informes y SSRS)
   Un gráfico de áreas muestra una serie como un conjunto de puntos conectados por una línea, con toda el área situada debajo de la línea rellenada. Para obtener más información sobre cómo agregar datos a un gráfico de áreas, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 -   En un gráfico de áreas sencillo, si los valores de varias series son similares, las áreas se pueden superponer y ocultar valores de puntos de datos importantes. Para resolver este problema, cambie el tipo de gráfico por un gráfico de áreas apiladas, que ha sido diseñado para mostrar varias series en un gráfico de áreas.  
   
--   Si el gráfico de áreas apiladas contiene intervalos, es posible que el conjunto de datos incluya valores vacíos, que se mostrarán como una sección vacía en un gráfico de áreas apiladas. Si el conjunto de datos incluye valores vacíos, es posible que le interese insertar puntos vacíos en el gráfico. Al agregar puntos vacíos, se rellenarán las áreas vacías el gráfico con un color diferente para indicar los valores NULL o valores cero. Para más información, vea [Agregar puntos vacíos al gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Si el gráfico de áreas apiladas contiene intervalos, es posible que el conjunto de datos incluya valores vacíos, que se mostrarán como una sección vacía en un gráfico de áreas apiladas. Si el conjunto de datos incluye valores vacíos, es posible que le interese insertar puntos vacíos en el gráfico. Al agregar puntos vacíos, se rellenarán las áreas vacías el gráfico con un color diferente para indicar los valores NULL o valores cero. Para más información, vea [Incorporación de datos vacíos a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Los tipos de gráfico de área son muy similares a los gráficos de columnas y de líneas en cuanto a comportamiento. Si está realizando una comparación entre varias series, plantéese la posibilidad de usar un gráfico de columnas. Si está analizando tendencias durante un período de tiempo, considere la posibilidad de usar un gráfico de líneas.  
   

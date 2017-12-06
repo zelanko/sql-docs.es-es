@@ -2,9 +2,12 @@
 title: "Seguridad de acceso del código en Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 61c41adbb135d869af923efae932f6bed8a94935
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Seguridad de acceso del código en Reporting Services
   La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para obtener información detallada sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la documentación del SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

@@ -2,9 +2,12 @@
 title: Elementos de informe y conjuntos de datos en el Generador de informes | Microsoft Docs
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a22f1e59a693551ffb1575ffdeb351c58480b96b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2456f192a8518ed45c548d94e75e7ec0c5ae1ec9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Elementos de informe y conjuntos de datos en el Generador de informes
   En el Generador de informes, la manera más fácil de incluir datos en un informe es agregar elementos de informe de la galería de elementos de informe. Los elementos de informe contienen los conjuntos de datos de los que dependen, que se conocen como *conjuntos de datos dependientes*. Los conjuntos de datos dependientes están ubicados en orígenes de datos compartidos y pueden ser conjuntos de datos incrustados o conjuntos de datos compartidos. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

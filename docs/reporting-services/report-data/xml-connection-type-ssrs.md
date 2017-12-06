@@ -2,9 +2,12 @@
 title: "Tipo de conexión XML (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ff81c239e4d585678887245afa822059b8ae47e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae17d2f33412291f42ceb71e80e3c9a0b0cad0a3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  

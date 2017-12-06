@@ -2,9 +2,12 @@
 title: "Tipo de conexión de SQL Server (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4379e6cecab92ac580534dde0263a8a4b590dc4e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f3640a9656e5543b98b4c4c85a704fc0a96065a3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Tipo de conexión de SQL Server (SSRS)
   Para incluir en el informe los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use este tipo de origen de datos para conectar y recuperar los datos de la versión actual y de las versiones anteriores de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -2,9 +2,12 @@
 title: "Almacenar en caché conjuntos de datos compartidos (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cdaf429e989b54bafff0a2423a75ebfc93395897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75e58c48bd6e1c0801e2d75c5ec4cd89149b91b7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
   Los resultados de las consultas para un conjunto de datos compartido se pueden copiar en una memoria caché para proporcionar datos coherentes a varios informes y mejorar el tiempo de respuesta de la consulta del conjunto de datos. Al igual que los informes, puede configurar un conjunto de datos compartido que se va a almacenar en memoria caché al usarse por primera vez o especificando una programación.  

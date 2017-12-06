@@ -2,9 +2,12 @@
 title: "Región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90f52e1c600c0f866eb6a2754c486d0c4e5af08a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
   En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], la región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe paginado en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo.  

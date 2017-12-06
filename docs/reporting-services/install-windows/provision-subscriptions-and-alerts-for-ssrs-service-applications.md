@@ -2,9 +2,12 @@
 title: Aprovisionar suscripciones y alertas para aplicaciones de servicio SSRS | Microsoft Docs
 ms.custom: 
 ms.date: 06/03/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a96245405f8f13de983215100cde3b189e2b0f17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f6a21d71f31380543a74db37bd70061a3fe848a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren el Agente SQL Server y la configuración de permisos del mismo. Si ve mensajes de error que indican que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, actualice o compruebe los permisos. El ámbito de este tema es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en él se describen tres formas de actualizar los permisos del Agente SQL Server con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las credenciales que use para los pasos de este tema deben disponer de los permisos adecuados para conceder permisos de ejecución a RSExecRole para los objetos de la aplicación de servicio, msdb y las bases de datos maestras.  

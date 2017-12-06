@@ -2,9 +2,12 @@
 title: "Almacenar en caché un conjunto de datos compartido | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 70006ca9c136f9d2570006e770b8f09d9b47cb9a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad9fcf05d0320850a1623bc62637299c0e4e9cf3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cache-a-shared-dataset"></a>Almacenar en caché un conjunto de datos compartido
   Una manera de mejorar el rendimiento es configurar las propiedades de almacenamiento en caché para un conjunto de datos compartido. Cuando un conjunto de datos compartido se almacena en memoria caché, se guarda una copia de los resultados de la consulta durante un breve período de tiempo. El primer usuario que solicite un informe que utilice el conjunto de datos compartido debe esperar a que los resultados de la consulta y todo el procesamiento se completen antes de ver el informe. Los usuarios subsiguientes que solicitan el informe dentro del período de almacenamiento en caché experimentarán mejor rendimiento porque la consulta y el procesamiento ya se han producido. También puede especificar un plan de actualización de la memoria caché para ejecutar la consulta y almacenar en memoria caché los resultados hasta que expire la memoria caché especificada.  

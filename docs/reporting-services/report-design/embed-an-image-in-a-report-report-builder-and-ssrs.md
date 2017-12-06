@@ -2,9 +2,12 @@
 title: Insertar una imagen en un informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 58b65bbbbb0fd6126ef760bfae5ca25a7a39fc6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 147f38ead5f7c9feed69b80a24335f93ef4ca8bb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incrustar una imagen en un informe (Generador de informes y SSRS)
   Un informe puede incluir una imagen incrustada. El empleo de imágenes incrustadas asegura su disponibilidad permanente en un informe, pero también afecta al tamaño de la definición de informe, el archivo que lo define. Las imágenes incrustadas en un informe se enumeran en el panel Datos de informe.  

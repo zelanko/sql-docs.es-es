@@ -2,9 +2,12 @@
 title: "Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e9baa6389cd217cbd32950b1c2855878db82e214
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fdb2de3aefff54bd7350a6b1831ccea8f7a71721
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  

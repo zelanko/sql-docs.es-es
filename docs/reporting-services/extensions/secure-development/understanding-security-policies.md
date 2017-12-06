@@ -2,9 +2,12 @@
 title: "Descripción de las directivas de seguridad | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f93b2af7e677bd82cc947b1db3e1f32066cdb9ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d24b824fcb87d7eca888f4dbc7c4c142e2c71de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="understanding-security-policies"></a>Descripción de las directivas de seguridad
   Cualquier código ejecutado por un servidor de informes debe formar parte de una directiva de seguridad de acceso del código concreta. Estas directivas de seguridad constan de grupos de código que asignan evidencias a un conjunto de conjuntos de permisos con nombre. Con frecuencia, los grupos de código están asociados a un conjunto de permisos con nombre que especifica los permisos que puede tener el código de ese grupo. El motor en tiempo de ejecución usa las evidencias proporcionadas por un host de confianza o por el cargador para determinar a qué grupos de código pertenece el código y, por tanto, qué permisos se deben conceder al código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cumple esta arquitectura de la directiva de seguridad como lo define Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En las secciones siguientes se describen los distintos tipos de código de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las reglas de directivas asociadas a los mismos.  

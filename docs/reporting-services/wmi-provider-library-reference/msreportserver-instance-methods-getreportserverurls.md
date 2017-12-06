@@ -2,9 +2,12 @@
 title: "Método GetReportServerUrls (MSReportServer_Instance de WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 310a7195267cb538eec621163b5d752a557df982
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1d1042cfa240c6c115a8461fcd3eb1387fe66639
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="msreportserverinstance-methods---getreportserverurls"></a>Métodos MSReportServer_Instance - GetReportServerUrls
   Devuelve una lista de direcciones URL que los usuarios pueden usar para tener acceso al servidor de informes y al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  

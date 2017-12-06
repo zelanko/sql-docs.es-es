@@ -2,9 +2,12 @@
 title: Bibliotecas de clases de elemento de informe personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fbd23c312a441fe7df7b85033e95c96ff2d3a8a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 08b2b886a9bf76f6739a87bbdb270b8a4d0df50c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de clases de elemento de informe personalizado
   Los elementos de informe personalizados usan las clases del espacio de nombres **Microsoft.ReportDesigner**. Las clases utilizadas para implementar un elemento de informe personalizado pueden estar agrupadas en dos categorías principales: las clases únicas diseñadas para admitir la infraestructura del elemento de informe personalizado y las clases contenedora administradas que encapsulan la funcionalidad de los elementos del lenguaje RDL (Report Definition Language) pertinentes. Para obtener un ejemplo de código que ilustre cómo se usan estas clases, vea [Muestras de productos de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -137,7 +140,7 @@ ms.lasthandoff: 11/09/2017
 |**Fields**|Colección de campos (**Microsoft.ReportDesigner.Field**) que se va a quitar.|  
   
 ## <a name="see-also"></a>Vea también  
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
+ [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Creación de un componente de tiempo de diseño de elemento de informe personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
   

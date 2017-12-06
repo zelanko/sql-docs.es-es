@@ -2,9 +2,12 @@
 title: Controlar los encabezados de fila y de columna (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d793d5d6533ebb9ffc466d80966a15a0c250c00d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 522078cebd78ad8991cec90cde78ad3ff961721c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlar los encabezados de fila y de columna (Generador de informes y SSRS)
   Una región de datos de tabla, de matriz o de lista puede abarcar varias páginas en horizontal o vertical. Puede especificar si los encabezados de fila o de columna se repiten en cada página. En un representador interactivo como el Administrador de informes o la vista previa del informe también puede especificar si inmovilizar o no los encabezados de filas o de columnas para mantenerlos a la vista al desplazarse por un informe. En una tabla o matriz, la primera fila suele contener los encabezados de columna que etiquetan los datos de cada columna; la primera columna suele contener los encabezados de fila que etiquetan los datos de cada fila. En los grupos anidados, es posible que desee repetir el conjunto inicial de encabezados de fila y columna que contienen etiquetas de grupo. De forma predeterminada, una región de datos de lista no incluye encabezados.  

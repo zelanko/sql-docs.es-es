@@ -2,9 +2,12 @@
 title: "Agregar un marco de borde a un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cd04a33dda250309bb7f4463bca2f91eb5bd6861
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 199653df3e60e7c13c8fe96b011903e2daf0cf19
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Agregar un marco de borde a un gráfico (Generador de informes y SSRS)
   Para dar un mayor impacto visual a un gráfico, considere la posibilidad de situar un marco de borde alrededor del gráfico. Para seleccionar un marco de borde, puede usar el cuadro de diálogo **Propiedades del gráfico** o el panel de propiedades. Los marcos de borde de gráfico no se pueden aplicar a ninguna otra región de datos.  

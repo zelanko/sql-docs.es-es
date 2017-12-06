@@ -2,9 +2,12 @@
 title: "Crear, modificar y eliminar orígenes de datos compartidos (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: fa6fb63a3766dc5f4f40a1a3891119c867b8aaf7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2bb9f43c7a19513edfa469779e6de9a53ce3b1be
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Crear, modificar y eliminar orígenes de datos compartidos (SSRS)
   Un origen de datos compartido es un conjunto de propiedades de conexión de un origen de datos a las que pueden hacer referencia varios informes, modelos y suscripciones controladas por datos que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Los orígenes de datos compartidos proporcionan una manera fácil de administrar las propiedades del origen de datos que, a menudo, cambian con el tiempo. Si una cuenta de usuario o una contraseña cambia, o si mueve la base de datos a otro servidor, puede actualizar la información de conexión en un único lugar.  

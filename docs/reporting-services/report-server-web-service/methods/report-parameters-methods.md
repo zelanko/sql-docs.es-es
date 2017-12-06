@@ -2,9 +2,12 @@
 title: "Métodos de parámetros de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c60c2ac7535b6cdd728d00d9b1442123c41b153
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 692583210dfdde6ef58c84d4ce0edf93165f6e73
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-parameters-methods"></a>Métodos de parámetros de informes
   Puede utilizar estos métodos para establecer y recuperar los parámetros para los informes.  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 |<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|Establece las propiedades de parámetro para un elemento especificado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Referencia técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

@@ -2,9 +2,12 @@
 title: "Agregar un rectángulo o un contenedor (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c472b3486dc568f79540f1a6bb8c74209828e772
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 706d719a813508541f3eda5df4045937a3af4643
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Agregar un rectángulo o un contenedor (Generador de informes y SSRS)
   Agregue un rectángulo a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] si quiere incluir en él un elemento gráfico para separar distintas áreas, resaltarlas o proporcionar un fondo para uno o más elementos de informe. Los rectángulos también se usan como contenedores para ayudar a controlar la manera en la que se representan las regiones de datos en un informe. Puede personalizar la apariencia de un rectángulo editando sus propiedades, como los colores del borde y de segundo plano. Para más información sobre el uso de un rectángulo como contenedor, vea [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) y [Mostrar los mismos datos en una matriz y en un gráfico &#40;Generador de informes&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    

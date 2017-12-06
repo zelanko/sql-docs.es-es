@@ -2,9 +2,12 @@
 title: Aplicaciones de servicio y servicio de SharePoint de Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f46395b33312f778b202c166870cf53d8da8012f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b5126c0c45bd810ab0d4eb82bf9874209dddd44
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Aplicaciones de servicio y servicio de SharePoint de Reporting Services
 
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/09/2017
   El modo de SharePoint de Reporting Services se ha diseñado como un servicio de SharePoint y usa un servicio de SharePoint y una o varias aplicaciones de servicio. Al crear una aplicación de servicio, el servicio estará disponible y se generará la base de datos de aplicación del servicio. Puede crear varias aplicaciones de servicio de Reporting Services pero una aplicación de servicio es suficiente para la mayor parte de los escenarios de implementación.  
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 ## <a name="creating-a-reporting-services-service-application"></a>Creación de una aplicación de servicio de Reporting Services
 

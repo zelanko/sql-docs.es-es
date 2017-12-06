@@ -2,9 +2,12 @@
 title: Buscar, ver y administrar informes (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e1d41386fc5cea7f7356e5d2d39fe9ea9082d608
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc5a838e47221f6686cb417ae4c20e9ac95d09f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
   En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
  ![Barra de herramientas de informes del Administrador de informes](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Barra de herramientas de informes del Administrador de informes")  
 Ventana del Administrador de informes  
   
- ![Barra de herramientas de informes](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de herramientas de informes")  
+ ![Barra de herramientas de informe](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de herramientas de informe")  
 Barra de herramientas de informe  
   
  Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. También puede exportar el informe mediante una extensión de representación de datos, como CSV (valores separados por comas), y utilizar después el archivo de datos CSV como entrada para otra aplicación. Para más información sobre cómo exportar informes, vea [Exportar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) y [Exportar un informe como otro tipo de archivo &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
@@ -96,7 +99,7 @@ Barra de herramientas de informe
 |Opción|Resultado|  
 |------------|------------|  
 |Botón**Actualizar** de la ventana del explorador|Muestra el informe almacenado en la memoria caché de la sesión. Cuando un usuario abre un informe, se crea una memoria caché de la sesión. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa las sesiones del explorador para mantener una experiencia de visualización coherente mientras permanece abierto un informe.|  
-|![Botón Actualizar del explorador en la barra de herramientas informes](../../reporting-services/media/htmlviewer-refresh.GIF "Botón Actualizar del explorador en la barra de herramientas de informes")|Al hacer clic en el botón **Actualizar** de la barra de herramientas de informes, el servidor de informes vuelve a ejecutar la consulta y actualiza los datos del informe si este se ejecuta a petición. Si el informe está almacenado en la memoria caché o es una instantánea, **Actualizar** muestra el informe almacenado en la base de datos del servidor de informes.|  
+|![Botón para actualizar el explorador de la barra de herramientas](../../reporting-services/media/htmlviewer-refresh.GIF "Botón para actualizar el explorador de la barra de herramientas")|Al hacer clic en el botón **Actualizar** de la barra de herramientas de informes, el servidor de informes vuelve a ejecutar la consulta y actualiza los datos del informe si este se ejecuta a petición. Si el informe está almacenado en la memoria caché o es una instantánea, **Actualizar** muestra el informe almacenado en la base de datos del servidor de informes.|  
 |Combinación de teclas CTRL+F5|Produce el mismo efecto que hacer clic en el botón **Actualizar** de la barra de herramientas de informe.|  
   
   

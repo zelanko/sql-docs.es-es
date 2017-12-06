@@ -2,9 +2,12 @@
 title: Rangos de intervalos (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a5db25f4c1a18344019daeb828226920d2b79bed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3a78c52aacd68919cf6cd3a07bb05da319468ce6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Rangos de intervalos (Generador de informes y SSRS)
   Un tipo de gráfico de intervalos muestra un conjunto de puntos de datos en el que cada uno de ellos se define mediante varios valores para la misma categoría. Los valores se representan mediante el alto de los marcadores con relación al eje de valores. Las etiquetas de las categorías se muestran en el eje de categorías. El gráfico de intervalos sencillo rellena el área situada entre el valor superior y el valor inferior de cada punto de datos.  

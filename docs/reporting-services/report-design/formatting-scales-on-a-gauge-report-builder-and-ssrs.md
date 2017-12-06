@@ -2,9 +2,12 @@
 title: Aplicar formato a las escalas de un medidor (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2b35ef78ab099933bd7d86bab2818734d1f93836
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 63d4542741f790f2f4bc78750ded7ee54d05a83e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a las escalas de un medidor (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la escala del medidor es el intervalo de números, comprendidos entre un mínimo y un máximo, que se muestran en un medidor. Normalmente, una escala del medidor contiene las etiquetas del medidor y las marcas de graduación que proporcionan una lectura precisa de lo que representa el puntero del medidor. Una escala del medidor generalmente está asociada a uno o más punteros del medidor. Puede haber más de una escala en el mismo medidor.  

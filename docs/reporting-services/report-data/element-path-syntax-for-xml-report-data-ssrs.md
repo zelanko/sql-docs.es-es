@@ -2,9 +2,12 @@
 title: Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 121f98cb4b10c480b2f6e215c9432361f963475c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 71d13409c7905b64f4b91b365b07f9b53b58264d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
   En el Diseñador de informes, se define una ruta de acceso de elemento que distingue mayúsculas de minúsculas para especificar los datos que se van a utilizar en un informe desde un origen de datos XML. Una ruta de acceso de elemento indica cómo se deben recorrer los nodos jerárquicos XML y sus atributos en el origen de datos XML. Para utilizar la ruta de acceso de elemento predeterminada, mantenga vacía la consulta del conjunto de datos o el elemento XML **ElementPath** del elemento XML **Query** . Cuando se recuperan datos del origen de datos XML, los nodos de elemento que tienen valores de texto y atributos de nodo de elemento se convierten en columnas en el conjunto de resultados. Los valores de los nodos y atributos pasan a ser datos de fila al ejecutar la consulta. Las columnas aparecen como la colección de campos del conjunto de datos en el panel Datos de informe. En este tema se describe la sintaxis de la ruta de acceso de elemento.  

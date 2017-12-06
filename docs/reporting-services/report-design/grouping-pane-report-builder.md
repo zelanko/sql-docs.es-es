@@ -2,9 +2,12 @@
 title: "Panel de agrupación (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 3766308293310541636462adc6b44de34ca7d703
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32a53057edd5c26d03cf4cbaed68bc56fa8340a7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="grouping-pane-report-builder"></a>Panel de agrupación (Generador de informes)
   El panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel de agrupación contiene los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
  El panel Agrupación muestra los grupos de filas y de columnas correspondientes. En la ilustración siguiente, el grupo basado en subcategorías se ha seleccionado en el panel Grupos de filas, y la celda de agrupamiento [Subcat] está seleccionada en la región de datos Tablix:  
   
- ![Panel de agrupación para la fila anidada y grupos de columnas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
+ ![Panel de agrupación para grupos de filas y columnas anidadas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
   
  En el panel Grupos de filas, el grupo basado en subcategorías es un grupo secundario del grupo basado en categorías. En el panel Grupos de columnas, el grupo de país/región es un grupo secundario del grupo de geografía. El grupo de años y los grupos de país/región son grupos adyacentes.  
   

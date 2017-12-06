@@ -2,9 +2,12 @@
 title: "Gráficos circulares (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b7f623c58e745f8509f27adc21076c1b15d36f53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cc45fbc472c0b3dc3852381b78894105e7998534
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos circulares (Generador de informes y SSRS)
   Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos piramidales y de embudo, forman parte de un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total. Para más información sobre los gráficos de formas, vea [Gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  

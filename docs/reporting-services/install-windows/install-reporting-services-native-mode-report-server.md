@@ -1,10 +1,13 @@
 ---
 title: Instalar el servidor de informes en modo nativo de Reporting Services | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 15a6372f34d1490499880d89e32ac8f0804b0fb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar el servidor de informes en modo nativo de Reporting Services
 
@@ -31,7 +34,7 @@ ms.lasthandoff: 11/09/2017
 Aprenda a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. Esto le proporcionará acceso a un [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] donde puede administrar informes y otros elementos.
 
 > [!NOTE]
-> ¿Busca Power BI Report Server? Vea [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/) (Instalar Power BI Report Server).
+> ¿Busca Power BI Report Server? Vea [Instalar Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
 Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es el modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] predeterminado y se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde la línea de comandos. En el Asistente para la instalación, puede seleccionar instalar archivos y configurar el servidor con los valores predeterminados o instalar solo los archivos. En este tema se examina la *configuración predeterminada para el modo nativo* donde el programa de instalación instala y configura una instancia del servidor de informes. Una vez finalizada la instalación, el servidor de informes se ejecuta y está listo para usar para la visualización básica de informes y la administración de informes.  Otras características adicionales, como la integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] y la entrega de correo electrónico con procesamiento de suscripciones, requieren una configuración adicional.  
   
@@ -97,7 +100,7 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
   
  Un ejemplo de cadena de dirección URL completa podría ser el siguiente:  
   
--   `http://+:80/reportserver` proporciona acceso al servidor de informes.  
+-   `http://+:80/reportserver`, proporciona acceso al servidor de informes.  
   
 -   `http://+:80/reports` proporciona acceso al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
   
@@ -183,7 +186,7 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
 [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
 [Configurar la cuenta del servicio del servidor de informes](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
 [Configurar las direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configuración de una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurar una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Instalación de solo archivos &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [Inicializar un servidor de informes](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
 [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   

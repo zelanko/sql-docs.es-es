@@ -2,9 +2,12 @@
 title: "Vista de diseño de informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d98e581133e48ec19c9123973a39b6a9c0d3a0ac
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes paginados que necesita. La superficie de diseño se encuentra en el centro de la ventana, con la cinta de opciones y los paneles a su alrededor. La superficie de diseño es donde agrega y organiza sus elementos de informe. En este artículo se describen los paneles que se usan para agregar, seleccionar y organizar los recursos de informe y para cambiar las propiedades de los elementos de informe.  

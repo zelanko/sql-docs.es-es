@@ -2,9 +2,12 @@
 title: Crear facturas y formularios con listas (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0a856a2cd47641a0bf906de517813e9d41ae3ea1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 08630eac8299c1086e75338cc6354bf4ba926622
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Crear facturas y formularios con listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Una lista se puede anidar  

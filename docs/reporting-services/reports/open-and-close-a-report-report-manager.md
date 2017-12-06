@@ -2,9 +2,12 @@
 title: Abrir y cerrar un informe (Administrador de informes) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d9541855640ec0be24c633ea3946a1cec03315d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cca7f1627bfa5169912c242a0d81a4877f6848a4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir y cerrar un informe (Administrador de informes)
   Puede usar el Administrador de informes para ver informes publicados en un servidor de informes. De forma predeterminada, todos los informes se abren en HTML. Después de abrirse un informe, puede exportarlo para verlo en otros formatos de aplicación. Si el informe contiene características interactivas o si es un informe del Generador de informes que contiene datos interactivos, puede hacer clic en los vínculos para ver datos o informes adicionales.  
@@ -49,6 +52,6 @@ ms.lasthandoff: 11/09/2017
  [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

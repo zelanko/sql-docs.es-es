@@ -2,9 +2,12 @@
 title: Mapas (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 46d27d3ff4f777c42ef3c9e79bf43d80edf3b1e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9fa84129aa040635592363705e4b4faf108e554
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
   Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  

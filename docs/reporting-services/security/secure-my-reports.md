@@ -2,9 +2,12 @@
 title: Proteger Mis informes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff08b3c8e78fb337a97cbdf491a745157d52fd53
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-my-reports"></a>Proteger Mis informes
   La característica Mis informes proporciona un área de trabajo administrada por el usuario para trabajar con informes. A fin de cumplir su propósito, la carpeta Mis informes precisa permisos menos restrictivos que otras carpetas disponibles para uso general. Los usuarios que solo tienen permisos para ver y ejecutar informes en otras carpetas pueden necesitar un conjunto expandido de permisos para administrar sus carpetas Mis informes y el contenido que poseen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una asignación de roles especializada y una definición de roles para este fin.  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Protección de carpetas](../../reporting-services/security/secure-folders.md)   
+ [Proteger carpetas](../../reporting-services/security/secure-folders.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -2,9 +2,12 @@
 title: "Autenticación de Windows en Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a01267851f882bdafcfced0cee200ff3af01cdcf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8cb93e668b5b9ebec50e1f97aafc680507470cdb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
   La autenticación es el proceso de establecer el derecho de un usuario en una identidad. Hay muchas técnicas que puede utilizar para autenticar a un usuario. La manera más común es mediante contraseñas. Por ejemplo, al implementar la autenticación de formularios, desea una implementación que consulte las credenciales (normalmente con alguna interfaz que solicita un nombre de inicio de sesión y una contraseña) de los usuarios y, a continuación, valida los usuarios con un almacén de datos, como una tabla de base de datos o un archivo de configuración. Si no se pueden validar las credenciales, se produce un error en el proceso de autenticación y el usuario asumirá una identidad anónima.  

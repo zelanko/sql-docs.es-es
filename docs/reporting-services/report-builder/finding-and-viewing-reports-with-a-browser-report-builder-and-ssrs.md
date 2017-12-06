@@ -2,9 +2,12 @@
 title: Buscar y ver informes con un explorador (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f62f6d71f98d076b49f624b1c9fdc6eb9555e7bb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Buscar y ver informes con un explorador (Generador de informes y SSRS)
   Puede utilizar cualquier explorador web compatible para ver un informe mediante una conexión directa a un servidor de informes. Cada informe dispone de una dirección URL en el servidor de informes. Puede escribir la dirección web de un informe para abrirlo por sí solo en una ventana del explorador de una aplicación web. El informe se abre en formato HTML e incluye la barra de herramientas de informe para que pueda navegar por las páginas o buscar valores de datos dentro del informe. Puede establecer parámetros en la dirección URL para ocultar la barra de herramientas o para seleccionar el formato de salida del informe.  

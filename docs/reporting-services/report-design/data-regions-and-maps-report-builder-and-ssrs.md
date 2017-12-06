@@ -2,9 +2,12 @@
 title: Regiones de datos y mapas (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: de9339b33d20c0b1e69f6b1aec0499aed716609f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fc5666464075a418dbb9490095209856fb68a56
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiones de datos y mapas (Generador de informes y SSRS)
   Una región de datos es un objeto de un informe que muestra los datos de un conjunto de datos de informe. Los datos de informe se pueden mostrar como números y texto en una tabla, matriz o lista, gráficamente en un gráfico o medidor, y sobre un fondo geográfico en un mapa. Las tablas, las matrices y las listas están basadas en la región de datos *Tablix* , que se expande cuando es necesario para mostrar todos los datos del conjunto de datos. Una región de datos Tablix admite varios grupos de filas y columnas, tanto estáticas como dinámicas. En un gráfico se representan diversas series y grupos de categorías en una variedad de formatos de gráfico. Un medidor muestra un valor único o un valor agregado para un conjunto de datos. Un mapa muestra datos espaciales como elementos de mapa cuya apariencia puede variar según los datos agregados de un conjunto de datos.  

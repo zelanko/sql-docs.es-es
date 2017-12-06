@@ -2,9 +2,12 @@
 title: "Especificar colores coherentes en varios gráficos de formas (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 661d22ed1d594af2c282b61ec28eaaa37bd6821d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f73e01f06207255c7af761b46e48d0a35b1a8b40
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Especificar colores coherentes en varios gráficos de formas (Generador de informes y SSRS)
   En los gráficos que no son de formas en un informe paginado, [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] selecciona un nuevo color de la paleta en función del índice de series del gráfico. Por ejemplo, la primera serie del gráfico se asignará al primer color de la paleta. Sin embargo, este comportamiento difiere para los gráficos de formas. En los gráficos de formas, cada color de la paleta se asigna a un punto de datos del conjunto de datos. Por ejemplo, el punto de datos 1 se asigna al primer color de la paleta, el punto de datos 2 se asigna al segundo color de la paleta, etc.  

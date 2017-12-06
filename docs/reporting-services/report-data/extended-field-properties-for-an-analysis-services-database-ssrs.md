@@ -2,9 +2,12 @@
 title: Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d3cd894cfb7466ae39ac921b8b3405da6c2e77a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d09ae6530bc9180b23a4ec81eeaeaabf1c41110
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
   La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo **Value** e **IsMissing** en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Para incluir valores de propiedades de campo extendidas en el informe, escriba expresiones que las especifiquen por su nombre con la colección **Fields** integrada.  

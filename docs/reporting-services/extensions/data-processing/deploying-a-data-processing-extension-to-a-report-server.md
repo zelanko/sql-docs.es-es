@@ -2,9 +2,12 @@
 title: "Cómo implementar una extensión de procesamiento de datos en un servidor de informes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c3d55bab5e4f3c1fed041920e6a341620e8c062
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c364b4811da7a34c7f186e99ba042d3f1b336910
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Implementar una extensión de procesamiento de datos en un servidor de informes
   Los servidores de informes utilizan las extensiones de procesamiento de datos para recuperar y procesar los datos en informes representados. Debería implementar el ensamblado de extensión de procesamiento de datos en un servidor de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del servidor de informes, RSReportServer.config.  
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>Vea también  
  [Implementación de una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementación de una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementar una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

@@ -2,9 +2,12 @@
 title: Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1270c65329da7fa5672d6f7690b8638b8c484c18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee561435c401a1b0e3299216172bf4e25e146137
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint
 
@@ -35,7 +38,7 @@ La característica de espacio aislado para el lenguaje RDL (Report Definition La
 -   En el tiempo de procesamiento del informe, limitar la longitud del texto y el texto del valor de devolución de las expresiones.
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
  Cuando se habilita el espacio aislado de RDL, se deshabilitan las siguientes características:  
   

@@ -2,9 +2,12 @@
 title: "Ordenación interactiva (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6aa4a5385bfa8c67d1a1d95bba84e5991026377d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1f8e2113b90aa05f9a3500a483b9830d73a0d4f1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordenación interactiva (Generador de informes y SSRS)
   Puede agregar botones de ordenación interactiva para permitir a los usuarios alternar entre el orden ascendente y descendente para las filas de una tabla o para las filas y columnas de una matriz. El uso más común de la ordenación interactiva es agregar un botón de ordenación a cada encabezado de columna. De esta forma, el usuario podrá elegir la columna por la que desea realizar la ordenación.  

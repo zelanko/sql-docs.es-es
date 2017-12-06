@@ -2,9 +2,12 @@
 title: "Causa y resolución de errores de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0f13ebef237e353886dac2b66d6f1547433e093a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3a628528072e711b0fdb7f3266313b2961a630e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa y resolución de errores de Reporting Services
   Este tema incluye información sobre la causa y la resolución de una serie de errores relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los temas sobre mensajes de error de esta sección proporcionan una explicación del mensaje de error, las posibles causas y las medidas que se pueden tomar para solucionar el problema.  

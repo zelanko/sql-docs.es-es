@@ -2,9 +2,12 @@
 title: "Modificar un archivo de configuración de Reporting Services (RSreportserver.config) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a2cea3ba2d8e2a303a61a6af8bc4f7da4802cc88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1b8d12e3b01fc8717770ae5fdb117f114ae324d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de la aplicación en un conjunto de archivos de configuración. La instalación crea los archivos de configuración para cada instancia del servidor de informes que instala. Dentro de cada archivo, los valores se establecen durante la instalación o al usar herramientas y aplicaciones para configurar un servidor para la operación. En algunos casos, debe modificar directamente un archivo para agregar o configurar la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario.  

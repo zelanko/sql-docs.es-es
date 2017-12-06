@@ -2,9 +2,12 @@
 title: "Entorno de creación del Generador de informes (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5a5817be0d4f9645d52b27673ed31213bd258d37
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4265d5ba1e75e5436e84efd1ecff6a9af75053e4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>entorno de creación del Generador de informes (SSRS)
   El Generador de informes [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es un entorno de creación independiente para crear informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fuera de Visual Studio. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede instalarlo desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o desde el Centro de descarga de Microsoft.  

@@ -2,9 +2,12 @@
 title: "Interfaz de usuario del diseñador gráfico de consultas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 89fc51cda730b9227d80099bf3bb129d43b76a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27cbba801cfa54e30dc69534f6835b3c2d381dfc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Para más información sobre cómo trabajar con tipos de orígenes de datos específicos, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  

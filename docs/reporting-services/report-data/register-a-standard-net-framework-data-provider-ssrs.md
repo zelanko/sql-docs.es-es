@@ -2,9 +2,12 @@
 title: "Registrar un proveedor de datos estándar de .NET Framework (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar un proveedor de datos estándar de .NET Framework (SSRS)
   Para usar un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de terceros para recuperar datos de un conjunto de datos de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es necesario implementar y registrar el ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en dos ubicaciones: en el cliente de creación de informes y en el servidor de informes. En el cliente de creación de informes, debe registrar el proveedor de datos como un tipo de origen de datos y asociarlo a un diseñador de consultas. A continuación, puede seleccionar este proveedor de datos como un tipo de origen de datos al crear un conjunto de datos de informe. El diseñador de consultas asociado se abre para ayudarle a crear consultas para este tipo de origen de datos. En el servidor de informes, debe registrar el proveedor de datos como un tipo de origen de datos. A continuación, puede procesar los informes publicados que recuperan datos de un origen de datos con este proveedor de datos.  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
  La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que puede seleccionar para el proveedor de datos.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Comprobar la implementación y el registro  
- Puede comprobar si el proveedor de datos se implementó correctamente para el servidor de informes si abre el Administrador de informes y comprueba si el proveedor de datos está incluido en la lista de orígenes de datos disponibles. Para más información sobre el administrador de informes y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Puede comprobar si el proveedor de datos se implementó correctamente para el servidor de informes si abre el Administrador de informes y comprueba si el proveedor de datos está incluido en la lista de orígenes de datos disponibles. Para más información sobre el Administrador de informes y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Registrar un proveedor de datos de .NET Framework en el cliente del Diseñador de informes  
  Para crear informes que usen este proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un origen de datos, debe instalar el ensamblado en el equipo cliente que ejecuta el Diseñador de informes. Debe modificar dos archivos de configuración. Modifique RSReportDesigner.config para registrar el proveedor de datos como un origen de datos y para usar el diseñador de consultas genérico. Modifique RSPreviewPolicy.config para conceder permisos de seguridad de acceso del código para el ensamblado del proveedor de datos.  

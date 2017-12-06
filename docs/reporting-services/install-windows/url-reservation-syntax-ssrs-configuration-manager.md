@@ -2,9 +2,12 @@
 title: "Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8118c7cf2050588a64a35b068903aa7ac3154c88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88f5408801551be37142c616644a6cb114834cd4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS)
   En este tema se describen los componentes de las cadenas de direcciones URL para el servicio web del servidor de informes y el Administrador de informes. La cadena de las direcciones URL que se almacena internamente tiene una estructura diferente de una dirección URL que se escribe en la barra de direcciones de una ventana del explorador. La cadena de reserva de direcciones URL aparece en la ventana Resultados de la herramienta Configuración de Reporting Services al configurar una dirección URL y en el archivo RSReportServer.config. Saber cómo se define la cadena de dirección URL puede ser útil al solucionar problemas de la reserva de direcciones URL o al consultar HTTP.SYS para ver las reservas de direcciones URL internas que se definen en el servidor.  

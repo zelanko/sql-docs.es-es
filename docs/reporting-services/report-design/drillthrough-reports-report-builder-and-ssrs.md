@@ -2,9 +2,12 @@
 title: Informes detallados (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9e9c78c6e77fe740f21d109f5444c0ff8fd14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff1ed5030c4f649cea359d7ac14df67ecc0e4426
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Informes detallados (Generador de informes y SSRS)
   Un informe detallado es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Por ejemplo, en esta ilustración, el informe de resumen de ventas enumera los pedidos de ventas y los totales. Cuando el usuario hace clic en un número de pedido de la lista resumida, se abre otro informe con los detalles del pedido en cuestión.  

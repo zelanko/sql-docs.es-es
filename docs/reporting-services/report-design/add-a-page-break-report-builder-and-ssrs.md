@@ -2,9 +2,12 @@
 title: "Agregar un salto de página (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ebb45516f472d7b6bba55097a080d630b00a9ba7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d3beec0ea94190d84836e41e5ee5863c5e04c913
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Agregar un salto de página (Generador de informes y SSRS)
   Puede agregar un salto de página a los rectángulos, las regiones de datos o los grupos situados dentro de las regiones de datos para controlar la cantidad de información de cada página. El hecho de agregar saltos de página puede mejorar el rendimiento de los informes publicados porque solo es necesario procesar los elementos de cada página para ver el informe. Cuando el informe entero está en una sola página, se deben procesar todos los elementos antes de poder verlo.  

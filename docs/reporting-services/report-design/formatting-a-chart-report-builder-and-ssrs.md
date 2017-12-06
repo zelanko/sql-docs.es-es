@@ -2,9 +2,12 @@
 title: "Aplicar formato a un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -57,11 +60,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: afa676627cd7d6364d45bcbe07102f5ad5bf637e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3a2027302934ab4fb9dd1ea68cf70e014ee4de8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Aplicar formato a un gráfico (Generador de informes y SSRS)
   Después de definir los datos para el gráfico y su aspecto, puede aplicar formato para mejorar su aspecto general y resaltar los puntos de datos clave. Las opciones de formato más comunes se pueden modificar desde el cuadro de diálogo de propiedades; estas opciones se muestran al hacer clic con el botón secundario en un elemento de gráfico para ver su menú contextual. Cada elemento de gráfico dispone de su propio cuadro de diálogo. Para más información sobre los elementos de gráfico, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

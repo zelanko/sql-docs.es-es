@@ -2,9 +2,12 @@
 title: Usar los archivos de directivas de seguridad de Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e5be508787d44acd1c3356105cd3bd988b175a4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usar los archivos de directivas de seguridad de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] almacena la información de los componentes de directiva de seguridad en tres archivos de configuración que se copian en el sistema de archivos durante la instalación. Estos archivos de configuración pueden contener una combinación de uso interno y las directivas de seguridad definidas por el usuario para los ensamblados de código en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los tres archivos de configuración corresponden a tres componentes protegibles de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: el servidor de informes y el servicio de Windows, la aplicación web del Administrador de informes y la ventana de vista previa del Diseñador de Informes.  

@@ -2,9 +2,12 @@
 title: Conjuntos de datos de informe (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e55933fa73a87f99231eecb4d1520af4039829c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b455aded926c073e3992165a35fb6b938b66e2de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  

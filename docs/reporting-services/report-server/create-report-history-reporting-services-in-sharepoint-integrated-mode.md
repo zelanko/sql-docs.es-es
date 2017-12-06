@@ -2,9 +2,12 @@
 title: Crear historial de informes (Reporting Services en el modo integrado de SharePoint) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b9f013e1fd6d614e9b4c8767c00feebea1da8ad8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e81318dc5b8c62796347b8412ccef4ecb3ee6d6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>Crear historial de informes (Reporting Services en el modo integrado de SharePoint)
   El historial de informes es un conjunto de instantáneas de informe que se crean a lo largo del tiempo. Cada instantánea es una copia del informe como existía cuando se creó. Incluye el diseño y los datos del informe cuando se creó la instantánea. La información de representación no está almacenada con la instantánea. Al abrir una instantánea en un historial de informes, se abre en un HTML en el elemento web Visor de informes. Una vez representada, puede exportarla a otros formatos de aplicación.  

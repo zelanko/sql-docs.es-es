@@ -2,9 +2,12 @@
 title: "Archivos de registro y orígenes de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5242a9107b7a69b017fbb0ceb78d1d33ff5ec24d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd203c65fc1220fbb26ad0acb4c99fd96f67327c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Archivos de registro y orígenes de Reporting Services
   Los servidores de informes y los entornos de servidor de informes utilizan diversos destinos de archivos registro para registrar información sobre las operaciones y el estado del servidor. Hay dos categorías básicas de registro: registro de ejecución y registro de seguimiento. El registro de ejecución incluye información sobre las estadísticas de ejecución de informes, auditoría, diagnóstico de rendimiento y optimización. El registro de seguimiento es información sobre los mensajes de error y diagnósticos generales.  

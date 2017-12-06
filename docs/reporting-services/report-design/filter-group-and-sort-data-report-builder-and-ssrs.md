@@ -2,9 +2,12 @@
 title: Filtrar, agrupar y ordenar datos (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e9e31e800ebadc67463c8b209ad16a592e85027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  

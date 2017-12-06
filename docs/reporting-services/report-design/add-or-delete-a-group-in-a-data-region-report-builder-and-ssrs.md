@@ -2,9 +2,12 @@
 title: "Agregar o eliminar un grupo en una región de datos (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f5963b0cf861f3f0fa1ce23cddc56b867145a18c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 51a72f84342bbff7617b1ef0e0c927eb9a70923e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Agregar o eliminar un grupo en una región de datos (Generador de informes y SSRS)
 En informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , agregue un grupo a una región de datos cuando quiera organizar los datos por un valor o un conjunto de expresiones determinados para presentación y cálculos. Un grupo tiene un nombre y una expresión que identifica qué datos de un conjunto de datos pertenecen al grupo. Para obtener más información sobre los grupos, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

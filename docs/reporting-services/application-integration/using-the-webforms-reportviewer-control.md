@@ -2,9 +2,12 @@
 title: Usar el control ReportViewer de WebForms | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: b3b92dbd07d94a0e30c93d994c5eaaa28cb7627d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60c6c3398921ef126069fab6f83c4cdec38e10a9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.  
@@ -487,7 +490,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integración de Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Integrar Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  [Recopilación de datos del control ReportViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   

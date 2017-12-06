@@ -2,9 +2,12 @@
 title: Implementar la interfaz IRenderingExtension | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 230c2e5ad4ffb61eb6d3b4d94db4e376b1f04d66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1ab9ad6c035783017ff0a4eb2a2ebe2710c2c0f9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementar la interfaz IRenderingExtension
   La extensión de representación toma los resultados de una definición de informe que se combina con los datos reales y representa los datos resultantes en un formato que se puede usar. La transformación de los datos combinados y el formato se efectúan utilizando una clase de Common Language Runtime (CLR) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. De esta forma se transforma el modelo de objetos en un formato de salida que puede usar un visor, impresora u otro destino de salida.  

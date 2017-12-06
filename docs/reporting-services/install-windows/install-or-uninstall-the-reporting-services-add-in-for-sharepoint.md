@@ -2,9 +2,12 @@
 title: Instalar o desinstalar el complemento de Reporting Services para SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 8fe9e32b81cdd92ab382912fef72c0e140f33e87
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f2d4daa75f8a339b1b0c83d7920b770e80f44525
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Instalar o desinstalar el complemento Reporting Services para SharePoint
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 11/09/2017
   Ejecute el paquete de instalación Complemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (rsSharePoint.msi) en los servidores de SharePoint para proporcionar características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dentro de una implementación de SharePoint. Entre las características se incluyen Power View, un elemento web Visor de informes, un extremo de proxy URL, tipos de contenido y páginas de aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que pueda crear, ver y administrar informes, modelos de informe, orígenes de datos y otro contenido de un servidor de informes en un sitio de SharePoint. El complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint es un componente necesario para un servidor de informes que se ejecute en modo de SharePoint. El complemento se puede instalar desde el Asistente para instalación de SQL Server 2016 o mediante la descarga del archivo rsSharePoint.msi desde el Feature Pack de SQL Server 2016. Para obtener una lista de las versiones del complemento, así como de las páginas de descarga, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 ##  <a name="bkmk_prereq"></a> Requisitos previos  
  La instalación del complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es uno de los diversos pasos necesarios para integrar un servidor de informes con una instancia de un producto de SharePoint. Para obtener más información sobre cómo instalar y configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Instalación del primer servidor de informes en modo de SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  

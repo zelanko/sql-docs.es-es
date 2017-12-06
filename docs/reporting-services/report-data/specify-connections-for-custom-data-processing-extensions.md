@@ -2,9 +2,12 @@
 title: Especificar conexiones para extensiones de procesamiento de datos personalizadas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2a24b319e99347c18d45743c74be2b15c9df0a45
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbfdb365ac9c57233fddcbb4a5054eb563af5219
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexiones para extensiones de procesamiento de datos personalizadas
   Puede crear o usar extensiones de procesamiento de datos personalizadas de otros fabricantes en un servidor de informes con el fin de mejorar la capacidad de procesamiento de datos de orígenes de datos admitidos o proporcionar compatibilidad con orígenes de datos adicionales que no estén disponibles en una instalación predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las conexiones se tratan de forma diferente en función de la implementación. Las implementaciones siguientes están disponibles para extensiones de procesamiento de datos:  

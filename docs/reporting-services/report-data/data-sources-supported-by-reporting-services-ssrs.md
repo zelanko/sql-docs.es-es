@@ -2,9 +2,12 @@
 title: "Orígenes de datos admitidos por Reporting Services (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ba615acb50ae46324d9315feb97ef10502cbac2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96b080d0244783a3af13c8bbe4a7f1587cb10f18
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  

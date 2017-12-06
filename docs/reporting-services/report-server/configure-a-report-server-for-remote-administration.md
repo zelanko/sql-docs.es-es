@@ -1,9 +1,13 @@
 ---
 title: "Configurar un servidor de informes para la administración remota | Microsoft Docs"
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aea0b5ff0ec119cc19744220442761ae74e9bf86
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar un servidor de informes para la administración remota
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede configurar las instancias del servidor de informes local o remotamente. Para configurar una instancia del servidor de informes remota, se puede utilizar la herramienta Configuración de Reporting Services o escribir código personalizado que utilice el proveedor de Instrumental de administración de Windows (WMI) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La herramienta de configuración de Reporting Services proporciona una interfaz gráfica para el proveedor WMI, de modo que se puede configurar un servidor de informes sin tener que escribir código. Al iniciar la herramienta, se puede especificar el servidor remoto con el que se desea establecer la conexión.  

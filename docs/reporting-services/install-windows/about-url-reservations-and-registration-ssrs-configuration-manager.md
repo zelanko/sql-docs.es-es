@@ -2,9 +2,12 @@
 title: "Acerca de las reservas y el registro de direcciones URL (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 78ec76d599f212e75d5e721c5a13413a392a4f09
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
   Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el Administrador de informes al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  

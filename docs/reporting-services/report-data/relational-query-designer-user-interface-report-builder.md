@@ -2,9 +2,12 @@
 title: "Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 41bc0c560e8cb96d22262ca5911e85e25c591fe8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
   El Generador de informes y el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de bases de datos relacionales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  

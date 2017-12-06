@@ -1,11 +1,11 @@
 ---
-title: 'Actualizado: los documentos de T-SQL | Documentos de Microsoft'
-description: "Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, Transact-SQL."
+title: Actualizar - DMA para documentos de SQL Server | Documentos de Microsoft
+description: "Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, para datos migración Ayudante (DMA) para Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: BYHAM
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
@@ -14,14 +14,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: t-sql
-ms.openlocfilehash: 33c50454f34c1902ea7f7dedc9ecb0a54f99ce24
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
 ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-transact-sql-docs"></a>Las nuevas y recientemente actualizado: los documentos de Transact-SQL
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>Nuevos y actualizados recientemente: el Asistente de migración de datos (DMA) para SQL Server
 
 
 
@@ -34,7 +34,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 - *Intervalo de fechas de las actualizaciones:* &nbsp; **2017-09-28** &nbsp; - a - &nbsp; **2017-12-02**
-- *Área de asunto:* &nbsp; **T-SQL**.
+- *Área de asunto:* &nbsp; **datos migración Ayudante (DMA) para SQL Server**.
 
 
 
@@ -72,96 +72,13 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [Barra diagonal inversa (continuación de línea) (Transact-SQL)](#TitleNum_1)
-2. [Seleccione - ORDER BY (cláusula de Transact-SQL)](#TitleNum_2)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-backslash-line-continuation-transact-sqllanguage-elementssql-server-utilities-statements-backslashmd"></a>1. &nbsp;[Barra diagonal inversa (continuación de línea) (Transact-SQL)](language-elements/sql-server-utilities-statements-backslash.md)
-
-*Actualizado: 2017-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([siguiente](#TitleNum_2))
-
-<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
-
-
-
-**B. Dividir una cadena binaria**
-
-
-En el ejemplo siguiente se usa una barra diagonal inversa y un retorno de carro para dividir una cadena binaria en dos líneas.
-
-```
-SELECT 0xabc\
-def AS [ColumnResult];
-
-```
-
- ..! CLUIR-NotShown--ssResult--... /.. /includes/ssresult-MD.MD)]
-
-```
- ColumnResult
- ------------
- 0xABCDEF
-```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-select---order-by-clause-transact-sqlqueriesselect-order-by-clause-transact-sqlmd"></a>2. &nbsp;[Seleccione - ORDER BY (cláusula de Transact-SQL)](queries/select-order-by-clause-transact-sql.md)
-
-*Actualizado: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1))
-
-<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-**<a name="Union"></a>Usar ORDER BY con UNION, EXCEPT e INTERSECT**
-
- Cuando una consulta utiliza los operadores UNION, EXCEPT o INTERSECT, la cláusula ORDER BY se debe especificar al final de la instrucción y se ordenan los resultados de las consultas combinadas. En el siguiente ejemplo se devuelven todos los productos que son rojos o amarillos y la lista combinada se ordena según la columna `ListPrice`.
-
-```sql
-USE AdventureWorks2012;
-GO
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Red'
--- ORDER BY cannot be specified here.
-UNION ALL
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Yellow'
-ORDER BY ListPrice ASC;
-
-```
-
-**Ejemplos:..! CLUIR-NotShown--ssSDWfull--... /.. /includes/sssdwfull-MD.MD)] y..! CLUIR-NotShown--ssPDW--... /.. /includes/sspdw-MD.MD)]**
-
-
+***En este momento no hay artículos de esta área temática actualizados recientemente.***
 
 
 

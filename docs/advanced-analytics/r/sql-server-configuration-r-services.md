@@ -2,7 +2,7 @@
 title: "Configuración de SQL Server (R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuración de SQL Server para su uso con R
 
@@ -70,7 +70,7 @@ El sistema operativo Windows usa un archivo de paginación para administrar los 
 
 La velocidad del disco en el que se almacena el archivo de paginación también puede afectar al rendimiento. Si se almacena el archivo de paginación en un SSD o si se usan varios archivos de paginación en varios SSD, puede mejorar el rendimiento.
 
-Para obtener información sobre el archivo de paginación de ajuste de tamaño, vea [cómo determinar el tamaño del archivo de página adecuado para las versiones de 64 bits de Windows](https://support.microsoft.com/en-us/kb/2860880).
+Para obtener información sobre el archivo de paginación de ajuste de tamaño, vea [cómo determinar el tamaño del archivo de página adecuado para las versiones de 64 bits de Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Optimizaciones en el nivel de instancia o base de datos
 
@@ -167,7 +167,7 @@ Para obtener más información, incluido el código de ejemplo, vea este tutoria
 
 **Otros recursos:**
 
-+ [Soft-NUMA en SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA en SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Cómo asignar nodos NUMA de software a las CPU
 

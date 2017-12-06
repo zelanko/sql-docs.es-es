@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -75,21 +75,36 @@ Las siguientes características no están disponibles en esta versión del contr
 
 ## <a name="character-set-support"></a>Compatibilidad de conjunto de caracteres
 
-El cliente de codificación puede ser uno de los siguientes:
+El controlador admite datos SQLCHAR en uno de los juegos de caracteres siguientes:
+
   -  UTF-8
-  -  ISO-8859-1
-  -  ISO-8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO-8859-1 / CP1252
+  -  ISO-8859-2 / CP1250
   -  ISO-8859-3
   -  ISO-8859-4
   -  ISO-8859-5
   -  ISO-8859-6
   -  ISO-8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO-8859-13
   -  ISO-8859-15
-  
-Datos SQLCHAR deben ser uno de los conjuntos de caracteres admitidos. Los datos de SQLWCHAR deben tener la codificación UTF-16LE (Little Endian).  
+
+Tras la conexión, el controlador detecta la configuración regional actual del proceso que se carga en. Si es una de las codificaciones admitidas anteriores, el controlador utilizará esa codificación para los datos SQLCHAR (caracteres estrechos); en caso contrario, el valor predeterminado es UTF-8. Dado que todos los procesos de inicio en la configuración regional "C" de forma predeterminada (y, por tanto, hacer que el controlador predeterminado UTF-8), si una aplicación necesita utilizar una de las codificaciones anteriores, debe utilizar el **setlocale** función para establecer la configuración regional correctamente antes problema de conexión. ya sea especificando la configuración regional deseada explícitamente, o mediante una cadena vacía, por ejemplo, `setlocale(LC_ALL, "")`, para usar la configuración regional del entorno.
+
+Los datos de SQLWCHAR deben tener la codificación UTF-16LE (Little Endian).
 
 Si SQLDescribeParameter no especifica un tipo de datos SQL en el servidor, el controlador utilizará el especificado en el parámetro *ParameterType* de SQLBindParameter. Si se especifica un tipo SQL de caracteres estrechos, como SQL_VARCHAR, en SQLBindParameter, el controlador convierte los datos proporcionados desde la página de códigos de cliente en el valor predeterminado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] página de códigos. (El valor predeterminado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] página de códigos es normalmente 1252.) Si no se admite la página de códigos de cliente, se establecerá en UTF-8. En este caso, el controlador, a continuación, convierte los datos UTF-8 en la página de códigos predeterminada. No obstante, es posible que se pierdan datos. Si la página de códigos 1252 no puede representar un carácter, el controlador lo convertirá a un signo de interrogación ("?"). Para evitar esta pérdida de datos, especifique un tipo de carácter Unicode SQL, como SQL_NVARCHAR, en SQLBindParameter. En este caso, el controlador convierte los datos Unicode proporcionados en codificación UTF-8 a UTF-16 sin pérdida de datos.
 

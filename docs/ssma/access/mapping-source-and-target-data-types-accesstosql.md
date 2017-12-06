@@ -1,10 +1,13 @@
 ---
 title: "Asignación de origen y los tipos de datos de destino (AccessToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 50bbc2bc214fd0ad8c7e997ea36c1edd0b764421
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 58d908af3ce4c8ee9e04d9499367949e27d9ca3e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Origen de asignación y los tipos de datos de destino (AccessToSQL)
 Los tipos de base de datos de acceso difieren entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos base de datos. Al convertir objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, debe especificar cómo se asignan los tipos de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  

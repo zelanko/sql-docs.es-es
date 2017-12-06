@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREAR formato de archivo externo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E'--dos tildas (p. ej. ~ ~)
   
  DATE_FORMAT = *datetime_format*  
- Especifica un formato personalizado para todos los datos de fecha y hora en que pueden aparecer en un archivo de texto delimitado. Si el archivo de origen usa formatos de datefime de manera predeterminada, esta opción no es necesaria. Un solo formato de fecha y hora personalizado se permite por archivo. No se puede especificar varios formatos de fecha y hora personalizado por cada archivo. Sin embargo, puede usar varios formatos de fecha y hora si cada uno de ellos es el formato predeterminado para su tipo de datos correspondiente en la definición de tabla externa.
+ Especifica un formato personalizado para todos los datos de fecha y hora en que pueden aparecer en un archivo de texto delimitado. Si el archivo de origen usa formatos de fecha y hora de forma predeterminada, esta opción no es necesaria. Un solo formato de fecha y hora personalizado se permite por archivo. No se puede especificar varios formatos de fecha y hora personalizado por cada archivo. Sin embargo, puede usar varios formatos de fecha y hora si cada uno de ellos es el formato predeterminado para su tipo de datos correspondiente en la definición de tabla externa.
  
  
 PolyBase solo utiliza el formato de fecha personalizado para importar los datos. No utiliza el formato personalizado para escribir datos en un archivo externo.

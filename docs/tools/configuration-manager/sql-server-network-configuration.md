@@ -2,9 +2,12 @@
 title: "Configuración de red SQL Server | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6685676da97c7cca367a63c94dc25a3bc882d2f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3e579ea0ccae2dd0f0d77488eca46d8e23f2c09b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-network-configuration"></a>Configuración de red de SQL Server
-  Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de **Configuración de red de servidor** del Administrador de configuración de SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esta sección contiene los temas de Ayuda F1 para el **configuración de red de servidor** cuadros de diálogo en el Administrador de configuración de SQL Server.  
   
 ## <a name="see-also"></a>Vea también  
  [Ayuda del Administrador de configuración de SQL Server](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  

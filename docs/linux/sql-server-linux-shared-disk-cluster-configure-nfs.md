@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: e4e783017d594e07c35e33cc6ac1485abad4af4f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - NFS: SQL Server en Linux
 
@@ -100,7 +100,7 @@ Asegúrese de que se apliquen los estándares de seguridad para tener acceso a. 
     ls TempDir
     ```
 
-    \<TempDir > es el nombre de la carpeta del paso d..
+    \<TempDir > es el nombre de la carpeta del paso d.
 
    * Elimine los archivos desde el directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
 

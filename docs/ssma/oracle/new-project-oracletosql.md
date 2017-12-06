@@ -1,10 +1,13 @@
 ---
 title: Nuevo proyecto (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4cff2bb1f0e114bb0bf5662009866fcfba1c4770
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f40b8abcd137cbf87de329c1346a60874b67df07
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-project-oracletosql"></a>Nuevo proyecto (OracleToSQL)
 Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo, en la **archivo** menú, haga clic en **nuevo proyecto**.  

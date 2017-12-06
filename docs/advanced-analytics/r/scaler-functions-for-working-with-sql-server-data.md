@@ -2,7 +2,7 @@
 title: Funciones de RevoScaleR para trabajar con datos de SQL Server | Documentos de Microsoft
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08d8d3e6a13066aa79c96ba161e1c9d8f230e60f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 36795d4813de07e21f7d89e1bfb59862498d3ce5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>Funciones de RevoScaleR para trabajar con datos de SQL Server
 
@@ -63,7 +63,7 @@ Una vez haya creado un objeto de origen de datos, puede utilizar el objeto para 
 
 + [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) -transformar datos al mover entre orígenes de datos.
 
-Las siguientes funciones se pueden usar para crear un almacén de datos local en el formato xdf.. Este archivo puede ser útil al trabajar con más datos de los que se pueden transferir desde la base de datos en un lote o con más datos de los que caben en la memoria.
+Las siguientes funciones se pueden usar para crear un almacén de datos local en el formato xdf. Este archivo puede ser útil al trabajar con más datos de los que se pueden transferir desde la base de datos en un lote o con más datos de los que caben en la memoria.
 
 Por ejemplo, si suele mover grandes cantidades de datos desde una base de datos a una estación de trabajo local, en lugar de la consulta la base de datos varias veces para cada operación de R, se puede utilizar el archivo xdf. como un tipo de caché para guardar los datos localmente y, a continuación, trabajar con ellos en el área de trabajo de R.
 

@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tablas anidadas (Analysis Services - Minería de datos)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los datos se deben incluir en un algoritmo de minería de datos como una serie de casos contenidos dentro de una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un método único para tratar estos casos, mediante *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Por ejemplo, si la tabla anidada contiene las columnas **Product**, **ProductQuantity**y **ProductPrice**, se puede elegir **Product** como clave de la tabla anidada, pero se ha de agregar **ProductQuantity** a la estructura de minería de datos para usarla como entrada.  
   
 ## <a name="filtering-nested-table-data"></a>Filtrar datos de tablas anidadas  
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]se pueden crear filtros para los datos que se usan en la comprobación o el entrenamiento de un modelo de minería de datos. Se puede usar un filtro que afecte a la composición del modelo o que compruebe éste en un subconjunto de casos. Los filtros también se pueden aplicar a las tablas anidadas. Sin embargo, existen limitaciones en cuanto a la sintaxis que se puede usar con dichas tablas.  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]se pueden crear filtros para los datos que se usan en la comprobación o el entrenamiento de un modelo de minería de datos. Puede utilizarse un filtro que afecte a la composición del modelo, o para probar el modelo en un subconjunto de casos. Los filtros también se pueden aplicar a las tablas anidadas. Sin embargo, existen limitaciones en cuanto a la sintaxis que se puede usar con dichas tablas.  
   
  A menudo se aplica un filtro a una tabla anidada para comprobar si un atributo existe o no existe. Por ejemplo, se puede aplicar un filtro que restrinja los casos usados en el modelo a solo aquellos que tengan un valor especificado en la tabla anidada. O bien, se pueden restringir los casos utilizados en el modelo a los clientes que no han adquirido un artículo determinado.  
   

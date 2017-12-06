@@ -1,10 +1,13 @@
 ---
 title: "Nuevas características de interfaz gráfica de usuario de SSMA para Access a SQL | Documentos de Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d2b9fa1bd4cfd574a1bec992dd060937289963
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90d38ef5e88cb2776d4b036f0cd40461d0cc4397
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuevas características de interfaz gráfica de usuario de SSMA para Access a SQL
 Este capítulo describe nuevas características de interfaz de usuario de SSMA  

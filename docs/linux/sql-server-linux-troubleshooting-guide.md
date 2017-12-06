@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas de SQL Server en Linux
 
@@ -149,7 +149,7 @@ Iniciar SQL Server en modo de usuario único con SQLCMD
    ```
   
 > [!WARNING]  
->  Iniciar SQL Server en Linux con el usuario "mssql" para evitar problemas de inicio futuras. Ejemplo "sudo -u mssql /opt/mssql/bin/sqlservr [opciones de inicio]" 
+>  Inicie SQL Server en Linux con el usuario "mssql" para evitar problemas de inicio futuros. Ejemplo "sudo -u mssql /opt/mssql/bin/sqlservr [OPCIONES DE INICIO]" 
 
 Si accidentalmente han iniciado SQL Server con otro usuario, debe cambiar la propiedad de los archivos de base de datos de SQL Server al usuario antes de iniciar SQL Server con systemd 'mssql'. Por ejemplo, para cambiar la propiedad de todos los archivos de base de datos en /var/opt/mssql para el usuario 'mssql', ejecute el siguiente comando
 

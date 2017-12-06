@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a9253b744e337a69a86e6562156806d59b8f66a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4235f142dbe0a0022ba8b6af4fb2d3c981fae709
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Ejemplo: Script de instalación desatendida de SQL Server para SUSE Linux Enterprise Server
 
@@ -31,7 +31,7 @@ Esta secuencia de comandos de ejemplo Bash instala 2017 de SQL Server en SUSE Li
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Necesita al menos 3,25 GB de memoria para ejecutar SQL Server en Linux.
+- Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. Otros los sistemas de archivos, como **BTRFS**, no son compatibles.
 - Para otros requisitos del sistema, consulte [requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 

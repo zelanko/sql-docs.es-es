@@ -2,9 +2,12 @@
 title: "Configuración de SQL Native Client 11.0 | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8ae731300f9e8ca6064db17cfce5311c77c71b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f5f68510e6a36c34d0c4735b66cdb550c22bfc1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuración de SQL Native Client 11.0
-  Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de **Configuración de SQL Server Native Client** del Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Native Client es la biblioteca de red que los equipos cliente utilizan para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se inicia con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esta sección contiene los temas de Ayuda F1 para el **configuración de SQL Server Native Client** cuadros de diálogo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Native Client es la biblioteca de red que los equipos cliente utilizan para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se inicia con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Las opciones establecidas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuración de SQL Native Client se utilizan en el equipo que ejecuta el programa cliente. Si se establecen en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo afectan a los programas cliente que se ejecutan en el servidor.  
   

@@ -2,9 +2,12 @@
 title: "Propiedades de servidor (pestaña iniciar sesión) del informe | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134c8ff1760e2c56c8d5298015dc56dbbbddbc98
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e326dd97af3e3fbd8580bc5b624c6957a711293
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propiedades de Servidor de informes (pestaña Iniciar sesión)
-  Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Servidor de informes** para especificar la cuenta que utiliza el servicio Servidor de informes así como para iniciar y detener el servicio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **iniciar sesión** pestaña de la **propiedades del servidor de informes** cuadro de diálogo para especificar la cuenta utilizada por el servicio servidor de informes y para iniciar y detener el servicio.  
   
 ## <a name="options"></a>Opciones  
  **Cuenta de sistema local**  

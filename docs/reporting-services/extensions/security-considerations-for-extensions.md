@@ -2,9 +2,12 @@
 title: Consideraciones de seguridad para las extensiones | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 002356fd21ed4124c9bf49d915081bf0902d71f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e794dde4202bbd680f82a8c8cbe1f9af30711fc9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="security-considerations-for-extensions"></a>Consideraciones de seguridad para las extensiones
   Cada aplicación que tenga como destino Common Language Runtime (CLR) debe interactuar con el sistema de seguridad de CLR. Cuando se ejecuta dicha aplicación, el CLR la evalúa automáticamente y le concede un conjunto de permisos. Según los permisos que reciba la aplicación, continúa ejecutándose o genera una excepción de seguridad. La configuración de seguridad local y las directivas de los archivos de configuración de la directiva de seguridad para un servidor de informes determinado definen los permisos de código que un ensamblado recibe.  

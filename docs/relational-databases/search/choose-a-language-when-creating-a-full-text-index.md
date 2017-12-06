@@ -2,7 +2,7 @@
 title: "Elección de un idioma al crear un índice de texto completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-search
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82edddf024831f41ce82ce8ec5d3f212513d89f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
   Al crear un índice de texto completo, tiene que especificar un idioma de columna para la columna indizada. Las consultas de texto completo usarán el [separador de palabras y los lematizadores](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) del idioma especificado en la columna. Hay varios aspectos que deben tenerse en cuenta al elegir el idioma de columna cuando se crea un índice de texto completo. Estas consideraciones se refieren al modo en que se acorta el texto y se indiza a continuación mediante el motor de texto completo.  

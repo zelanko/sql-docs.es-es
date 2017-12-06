@@ -2,9 +2,12 @@
 title: Usar un conjunto de datos externo con Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd33f6f7d6d664ce5d3affea0cb9fdab1b1992ae
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Usar un conjunto de datos externo con Reporting Services
   El objeto **DataSet** es esencial para admitir escenarios de datos desconectados y distribuidos con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. El objeto **DataSet** es una representación residente en memoria de los datos que proporciona un modelo de programación relacional coherente independiente del origen de datos. Se puede utilizar con varios orígenes de datos diferentes, con datos XML, o para administrar los datos local de la aplicación. El objeto **DataSet** representa un conjunto completo de datos, incluidas las tablas relacionadas, las restricciones y las relaciones entre las tablas. Debido a la versatilidad del objeto **DataSet** para almacenar y exponer los datos, estos se pueden procesar y transformar a menudo en un objeto **DataSet** antes de que se produzca cualquier notificación en ellos.  
@@ -170,7 +173,7 @@ public int GetOrdinal(string name)
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementación de una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementar una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

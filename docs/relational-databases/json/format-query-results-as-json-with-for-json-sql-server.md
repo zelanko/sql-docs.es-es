@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a3264d10535196e245ca9f5e0e59366667cf3fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ea8b666dead9d4a23255fe9eecda64258a9f8a
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ La salida de la cláusula **FOR JSON** tiene las características siguientes:
     -   Un conjunto de resultados pequeño puede contener una sola fila.
     -   Un conjunto de resultados grande divide la cadena JSON larga en varias filas.
         -   De forma predeterminada, SQL Server Management Studio (SSMS) concatena los resultados en una sola fila cuando el valor de salida es **Resultados a cuadrícula**. La barra de estado de SSMS muestra el recuento de filas real.
-        -   Otras aplicaciones cliente pueden requerir código para recombinar los resultados extensos en una sola cadena JSON válida mediante la concatenación del contenido de varias filas. Para obtener un ejemplo de este código en una aplicación de C#, vea [Uso de salidas FOR JSON en una aplicación cliente de C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   Otras aplicaciones cliente pueden requerir código para recombinar los resultados extensos en una sola cadena JSON válida mediante la concatenación del contenido de varias filas. Para obtener un ejemplo de este código en una aplicación de C#, vea [Uso de salidas FOR JSON en una aplicación cliente de C#](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
      ![Ejemplo de salida FOR JSON](../../relational-databases/json/media/forjson-example2.png)  
   

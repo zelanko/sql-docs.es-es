@@ -1,10 +1,13 @@
 ---
 title: "Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 770afc0e577f0283193f63ab8ac18fa02734fe8a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services
 Además de [cargar datos de archivos de Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), el Publicador de informes móviles de Microsoft SQL Server también puede obtener acceso a los datos de prácticamente cualquier origen. El acceso a los datos requiere un origen de datos compartido, configurado en un portal web de Reporting Services. Más información sobre la [creación de orígenes de datos compartidos](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) y la [creación de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md).  

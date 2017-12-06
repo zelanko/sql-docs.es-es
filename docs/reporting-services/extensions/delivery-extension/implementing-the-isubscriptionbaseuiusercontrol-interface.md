@@ -2,9 +2,12 @@
 title: Implementar la interfaz ISubscriptionBaseUIUserControl | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cf322d3e2b802bb08b598a3bb357e5ede71144a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15340372a3048e8bd861c7b8e87998c47fad3eaf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface"></a>Implementar la interfaz ISubscriptionBaseUIUserControl
   Las extensiones de entrega de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pueden contener la implementación de una interfaz de usuario (UI) de suscripción para recopilar información específica de la extensión en el Administrador de informes. La UI se invoca cuando un usuario crea una nueva suscripción o modifica una existente. Cuando se crea una suscripción nueva, la UI muestra los valores predeterminados adecuados y permite a los usuarios interactuar con el proveedor de entrega. Cuando se modifica una suscripción, la UI se rellena de antemano con la información en la suscripción actual.  

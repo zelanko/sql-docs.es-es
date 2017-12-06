@@ -2,9 +2,12 @@
 title: Usar Mis informes (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f8bf6c65bd022103f50704c35b2bae7556e247c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b80b260f392298dd02d37d411ae910d81b420715
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usar Mis informes (Generador de informes y SSRS)
   En un servidor de informes configurado en modo nativo, la carpeta Mis informes es un área de trabajo personal que puede usar para trabajar con sus informes y para almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. En cambio, la carpeta Mis informes es un área de trabajo que administra el propio usuario. Así, es posible agregar o quitar informes y carpetas, o guardar informes vinculados, con una configuración personalizada.  

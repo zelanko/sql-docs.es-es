@@ -2,9 +2,12 @@
 title: "Implementar una extensión de seguridad | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ffecd619ed614cdfd2010de015d4c4348663b9f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c5da869967d59a7811356c70a17fd9671165890
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="implementing-a-security-extension"></a>Implementar una extensión de seguridad
   La autenticación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows constituye el sistema principal para proteger los informes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En ciertos casos, sin embargo, puede necesitar extender el sistema de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para organizar la seguridad personalizada en una empresa. Para ello, puede usar la plataforma de desarrollo que proporciona la API de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En esta sección se presentará información general sobre las extensiones de seguridad en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

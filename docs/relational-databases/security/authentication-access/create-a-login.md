@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af636e20cc2da22adf0607529f29959c1a005c9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el permiso **CREATE ENDPOINT** ) se pueden conceder a un inicio de sesión.  
   
-> **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Seguridad  
 

@@ -2,9 +2,12 @@
 title: "Configurar y administrar claves de cifrado (Administrador de configuración de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 798344004af25af275625a88f4569acca84c8eb6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b19b3aa513ed38faa40439b256c83607574aef89
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>Claves de cifrado de SSRS: Administración de claves de cifrado
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza claves de cifrado para proteger las credenciales y la información de conexión que se almacena en una base de datos del servidor de informes. En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el cifrado se puede realizar a través de una combinación de claves públicas, privadas y simétricas que se utilizan para proteger la información confidencial. La clave simétrica se crea al inicializar el servidor de informes durante su instalación o configuración, y el servidor de informes la utiliza para cifrar los datos confidenciales que almacena. El sistema operativo crea las claves públicas y privadas, y se utilizan para proteger la clave simétrica. Para cada instancia del servidor de informes que almacena datos confidenciales en una base de datos del servidor de informes se crea un par de claves pública y privada.  

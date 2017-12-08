@@ -18,6 +18,7 @@
 ### [Incorporación del elemento web Visor de informes a una página web](add-report-viewer-web-part-to-page.md)
 ### [Conexión de un elemento web Filtro o Documentos](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [Personalización del elemento web Visor de informes](customize-the-report-viewer-web-part.md)  
+### [Configuración del sitio de SharePoint para el elemento web Visor de informes](report-viewer-web-part-sharepoint-site-settings.md)
 # [Alta disponibilidad](high-availability-reporting-services.md)  
 # [Habilitar y deshabilitar el espacio seguro para RDL](enable-and-disable-rdl-sandboxing.md)  
 # [Configuración de Reporting Services para utilizar un nombre alternativo del firmante](configure-reporting-services-to-use-a-subject-alternative-name.md)  

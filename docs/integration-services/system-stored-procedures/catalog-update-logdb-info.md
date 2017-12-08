@@ -1,30 +1,28 @@
 ---
-title: Catalog.update_logdb_info (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.update_logdb_info (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a898be08859230ab873fd8e358b892789aaed043
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fad30ab7de9b608a79a8df9269dd84dabcf47418
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>Catalog.update_logdb_info (base de datos de SSISDB)
+# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-Actualización de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala espera registrar información.
+Actualice la información de registro de escalabilidad horizontal de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,23 +31,22 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ```
 
 ## <a name="arguments"></a>Argumentos
-[ @server_name =] *nombre_servidor*  
- El servidor de Sql Server usa para el registro horizontalmente. El *nombre_servidor* es **nvarchar**.  
+[ @server_name = ] *server_name*  
+ Servidor SQL Server que se usa para el registro de la escalabilidad horizontal. El valor de *server_name* es **nvarchar**.  
 
- [ @connection_string =] *conexión*  
- La cadena de conexión que se usa para el registro horizontalmente. El *conexión* es **nvarchar**.
+ [ @connection_string = ] *connection_string*  
+ Cadena de conexión que se usa para el registro de la escalabilidad horizontal. El valor de *connection_string* es **nvarchar**.
 
  ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
 
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
    
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
  
-

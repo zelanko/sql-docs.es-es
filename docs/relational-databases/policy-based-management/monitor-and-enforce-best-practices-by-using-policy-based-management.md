@@ -2,9 +2,12 @@
 title: "Supervisión y aplicación de las prácticas recomendadas usando la administración basada en directivas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 324915644f60d6ca9d5fe15dfce5aa1ab79056a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 31cd1294590d81c25a0a09d67a7746ea7dee49ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
-  La administración basada en directivas permite supervisar los procedimientos recomendados de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y después evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Evalúe manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La administración basada en directivas permite supervisar los procedimientos recomendados de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y después evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Evalúe manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Directivas y reglas para el motor de base de datos  
  En la tabla siguiente se muestran las directivas incluidas con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se ofrece información sobre las reglas de los procedimientos recomendados que evalúa cada directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  

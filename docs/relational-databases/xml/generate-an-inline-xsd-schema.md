@@ -2,9 +2,12 @@
 title: Generar un esquema XSD insertado | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44746f3bdfb42e58addf3841e3cfb826aeec31c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e0b7f3b2064b37cecffb2ae84532731ee742e5ea
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generar un esquema XSD insertado
-  En una cláusula FOR XML, se puede solicitar que una consulta devuelva un esquema insertado con los resultados de la consulta. Si se desea un esquema XDR, se utiliza la palabra clave XMLDATA en la cláusula FOR XML. Si se desea un esquema XSD, se utiliza la palabra clave XMLSCHEMA.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En una cláusula FOR XML, se puede solicitar que una consulta devuelva un esquema insertado con los resultados de la consulta. Si se desea un esquema XDR, se utiliza la palabra clave XMLDATA en la cláusula FOR XML. Si se desea un esquema XSD, se utiliza la palabra clave XMLSCHEMA.  
   
  En este tema se describe la palabra clave XMLSCHEMA y se explica la estructura del esquema XSD insertado resultante. A continuación se indican las limitaciones que existen al solicitar esquemas insertados:  
   

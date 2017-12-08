@@ -2,9 +2,12 @@
 title: "Detección y resolución de conflictos de actualización en cola | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Suscripciones actualizables: Resolución de conflictos de actualización en cola
-  Como las suscripciones de actualización en cola permiten realizar modificaciones en los mismos datos en múltiples ubicaciones, pueden producirse conflictos cuando se sincronizan los datos en el publicador. La replicación detecta los conflictos cuando se sincronizan los cambios con el publicador y resuelve esos conflictos utilizando la directiva de resolución que ha seleccionado al crear la publicación. Pueden producirse los siguientes conflictos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Como las suscripciones de actualización en cola permiten realizar modificaciones en los mismos datos en múltiples ubicaciones, pueden producirse conflictos cuando se sincronizan los datos en el publicador. La replicación detecta los conflictos cuando se sincronizan los cambios con el publicador y resuelve esos conflictos utilizando la directiva de resolución que ha seleccionado al crear la publicación. Pueden producirse los siguientes conflictos:  
   
 -   Conflictos de actualización e inserción. Tienen lugar cuando se modifican los mismos datos en dos ubicaciones. Una de las modificaciones "gana", mientras que la otra "pierde".  
   

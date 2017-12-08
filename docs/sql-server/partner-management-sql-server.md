@@ -7,22 +7,26 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 17/09/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
 ms.author: mikeray
-ms.openlocfilehash: 57a35974fdf1182c626b1ac444a8f2086735ba21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6e4cd02cdf12b18516bbf795db347f2035619774
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-managing-partners"></a>Asociados de administración de SQL Server
-Para administrar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de administración compatibles con Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para administrar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de administración compatibles con Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>Nuestros asociados de administración
 | Asociado | Description | Vínculos |

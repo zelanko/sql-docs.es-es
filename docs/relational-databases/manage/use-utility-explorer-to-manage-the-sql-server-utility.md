@@ -2,9 +2,12 @@
 title: Usar el Explorador de Utilidad para administrar la utilidad de SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
-  El explorador de Utilidad, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conecta a instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para proporcionar una vista de árbol de todos los objetos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El panel de contenido del explorador de la utilidad proporciona varias maneras para ver datos de resumen y detallados sobre el estado de las instancias administradas de SQL Server. El explorador de la utilidad también proporciona una interfaz de usuario para ver y administrar las definiciones de directiva. Las capacidades del explorador de la utilidad varían ligeramente dependiendo de los objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero, generalmente, incluyen objetos, datos y directivas administrados por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Explorador de Utilidad, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conecta a instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para proporcionar una vista de árbol de todos los objetos de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El panel de contenido del explorador de la utilidad proporciona varias maneras para ver datos de resumen y detallados sobre el estado de las instancias administradas de SQL Server. El explorador de la utilidad también proporciona una interfaz de usuario para ver y administrar las definiciones de directiva. Las capacidades del explorador de la utilidad varían ligeramente dependiendo de los objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero, generalmente, incluyen objetos, datos y directivas administrados por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Crear un punto de control de la utilidad  
  Antes de poder usar la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe crear un punto de control de la utilidad. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) o [Crear un punto de control de la utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  

@@ -2,9 +2,12 @@
 title: SQL Statistics (objeto de SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Statistics (objeto de SQL Server)
-  El objeto **SQLServer:SQL Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la compilación y el tipo de solicitudes que se envían a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La supervisión del número de compilaciones y recompilaciones de consultas y el número de lotes que recibe una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de la rapidez con la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las consultas de usuarios y la eficacia con la que el optimizador de consultas las procesa.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **SQLServer:SQL Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la compilación y el tipo de solicitudes que se envían a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La supervisión del número de compilaciones y recompilaciones de consultas y el número de lotes que recibe una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de la rapidez con la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las consultas de usuarios y la eficacia con la que el optimizador de consultas las procesa.  
   
  La compilación constituye una parte significativa del intervalo de respuesta de una consulta. Para guardar el costo de compilación, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] guarda el plan de consulta compilado en una caché de consultas. El objetivo de la memoria caché es reducir la compilación al almacenar consultas compiladas para volver a utilizarlas posteriormente, lo que elimina la necesidad de volver a compilar las consultas cuando se ejecuten después. No obstante, se debe compilar cada consulta única al menos una vez. Las recompilaciones de consultas pueden deberse a los siguientes factores:  
   

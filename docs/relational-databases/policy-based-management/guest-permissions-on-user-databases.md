@@ -2,9 +2,12 @@
 title: Permisos de invitado en bases de datos de usuario | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49a29bf175c9ad048a1243bc4d495bf4be6f0e92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd16791702b01180158b894145f69211017281ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="guest-permissions-on-user-databases"></a>Permisos de invitado en bases de datos de usuario
-  Esta regla determina si el usuario invitado tiene permiso de acceso a la base de datos. Esta regla solo se aplica a las bases de datos de usuario.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta regla determina si el usuario invitado tiene permiso de acceso a la base de datos. Esta regla solo se aplica a las bases de datos de usuario.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  
  Revoque el permiso del usuario invitado para tener acceso a la base de datos si no se requiere.  

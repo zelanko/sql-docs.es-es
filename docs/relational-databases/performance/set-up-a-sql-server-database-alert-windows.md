@@ -2,9 +2,12 @@
 title: Configurar una alerta de base de datos de SQL Server (Windows) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,38 +18,38 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29cc760d28e828b17cb6521c1fe2a6efc011ad24
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 459c324ac13d950f99643e839026d5090e99df78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="set-up-a-sql-server-database-alert-windows"></a>Configurar una alerta de base de datos (Windows)
-  Mediante el Monitor de sistema, puede crear una alerta que se active cuando se alcance un valor de umbral de un contador del Monitor de sistema. Como respuesta a la alerta, el Monitor del sistema puede iniciar una aplicación, como, por ejemplo, una aplicación personalizada creada para tratar la condición de alerta. Por ejemplo, puede crear una alerta que se active cuando el número de interbloqueos sea superior a un valor específico.  
+# <a name="set-up-a-sql-server-database-alert-windows"></a>Configurar una alerta de base de datos de SQL Server (Windows)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor del sistema permite crear una alerta que se activará al alcanzar un valor de umbral de un contador del Monitor del sistema. Como respuesta a la alerta, el Monitor del sistema puede iniciar una aplicación, como, por ejemplo, una aplicación personalizada creada para tratar la condición de alerta. Por ejemplo, puede crear una alerta que se active cuando el número de interbloqueos sea superior a un valor específico. 
   
- También se pueden definir alertas mediante Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+ También se pueden definir alertas mediante Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   
-### <a name="to-set-up-a-sql-server-database-alert"></a>Para configurar una alerta de base de datos de SQL Server  
+## <a name="set-up-a-sql-server-database-alert"></a>Configurar una alerta de base de datos de SQL Server  
   
-1.  En el árbol de navegación de la ventana Rendimiento, expanda **Registros y alertas de rendimiento**.  
+1. En el árbol de navegación de la ventana **Rendimiento**, expanda **Registros y alertas de rendimiento**.  
   
-2.  Haga clic con el botón derecho en **Alertas**y, después, haga clic en **Nueva configuración de alerta**.  
+2. Haga clic con el botón derecho en **Alertas** y, después, seleccione **Nueva configuración de alerta**.
   
-3.  En el cuadro de diálogo **Nueva configuración de alerta** , escriba el nombre de la nueva alerta y, a continuación, haga clic en **Aceptar**.  
+3. En el cuadro de diálogo **Nueva configuración de alerta**, escriba el nombre de la nueva alerta y, a continuación, seleccione **Aceptar**.  
   
-4.  En la pestaña **General** del cuadro de diálogo de la nueva alerta, agregue un **Comentario**y haga clic en **Agregar** para agregar un contador a la alerta.  
+4. En la pestaña **General** del cuadro de diálogo de la nueva alerta, agregue un **Comentario**. Seleccione **Agregar** para agregar un contador a la alerta.  
   
      Todas las alertas deben tener, como mínimo, un contador.  
   
-5.  En el cuadro de diálogo Agregar contadores, seleccione un objeto de SQL Server de la lista **Objeto de rendimiento** y, a continuación, seleccione un contador en **Seleccionar contadores de la lista**.  
+5. En el cuadro de diálogo **Agregar contadores**, seleccione un objeto de SQL Server en la lista **Objeto de rendimiento**. Seleccione un contador en la lista **Seleccionar contadores de la lista**.  
   
-6.  Para agregar el contador a la alerta, haga clic en **Agregar**. Puede continuar agregando contadores o hacer clic en **Cerrar** para volver al cuadro de diálogo de la nueva alerta.  
+6. Para agregar el contador a la alerta, seleccione **Agregar**. Puede continuar agregando contadores o seleccionar **Cerrar** para volver al cuadro de diálogo de la nueva alerta.  
   
-7.  En el cuadro de diálogo de la nueva alerta, haga clic en **Superio a** o **Inferior a**in the **Alertar cuando el valor sea** y escriba un valor de umbral en **Límite**.  
+7. En el cuadro de diálogo de la alerta nueva, seleccione **Superior a** o **Inferior a** en la lista **Alert when the value is** (Alertar cando el valor sea). A continuación, escriba un valor de umbral en **Límite**.  
   
-     La alerta se genera cuando el valor del contador es superior o inferior al valor de umbral, dependiendo de si ha elegido **Superior a** o **Inferior a**.  
+     La alerta se genera cuando el valor del contador es superior o inferior al valor de umbral, dependiendo de si seleccionó **Superior a** o **Inferior a**.  
   
-8.  En los cuadros **Tomar datos de muestra cada** , establezca la frecuencia de muestreo.  
+8. En los cuadros **Tomar datos de muestra cada** , establezca la frecuencia de muestreo.  
   
 9. En la pestaña **Acción** , establezca las acciones que tendrán lugar cada vez que se desencadene la alerta.  
   

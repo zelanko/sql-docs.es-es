@@ -2,9 +2,12 @@
 title: Access Methods (objeto de SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1b594d608fc266567c0a5c86a24f8130c3b6c4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 771047d7d21f79827c9ca073d22f2094f8603f0f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
-  El objeto **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la forma en que se obtiene acceso a los datos lógicos de una base de datos. El acceso físico a las páginas de base de datos en disco se supervisa mediante los contadores de **Buffer Manager** . La supervisión de los métodos que se utilizan para el acceso a los datos almacenados en la base de datos puede ayudar a determinar si se puede mejorar el rendimiento de las consultas al agregar o modificar índices, agregar o mover particiones, agregar archivos o grupos de archivos, desfragmentar índices o volver a escribir las consultas. Los contadores de **Access Methods** también se pueden utilizar para supervisar la cantidad de datos, los índices y el espacio disponible en la base de datos, con lo que se indica el volumen de datos y la fragmentación para cada instancia de servidor. Una fragmentación excesiva de los índices puede tener un efecto negativo sobre el rendimiento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la forma en que se obtiene acceso a los datos lógicos de una base de datos. El acceso físico a las páginas de base de datos en disco se supervisa mediante los contadores de **Buffer Manager** . La supervisión de los métodos que se utilizan para el acceso a los datos almacenados en la base de datos puede ayudar a determinar si se puede mejorar el rendimiento de las consultas al agregar o modificar índices, agregar o mover particiones, agregar archivos o grupos de archivos, desfragmentar índices o volver a escribir las consultas. Los contadores de **Access Methods** también se pueden utilizar para supervisar la cantidad de datos, los índices y el espacio disponible en la base de datos, con lo que se indica el volumen de datos y la fragmentación para cada instancia de servidor. Una fragmentación excesiva de los índices puede tener un efecto negativo sobre el rendimiento.  
   
  Para obtener información detallada acerca del volumen de datos, la fragmentación y el uso, utilice las siguientes vistas de administración dinámica:  
   

@@ -2,9 +2,12 @@
 title: Script para conceder permisos en Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 847fc8a563be78e9dd354d2a1d255945a014fa2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a6706467d2d7860b431513be88149cc8c270230f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permisos en Oracle
-  El script que se proporciona en este tema se utiliza durante la configuración de una base de datos de Oracle que publicará datos utilizando la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este script también está disponible en el directorio siguiente después de la instalación de: *\<unidad>*:\\\Archivos de programa\Microsoft SQL Server\\*\<<nombreDeInstancia>*\MSSQL\Install\oracleadmin.sql. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El script que se proporciona en este tema se utiliza durante la configuración de una base de datos de Oracle que publicará datos utilizando la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este script también está disponible en el directorio siguiente después de la instalación de: *\<unidad>*:\\\Archivos de programa\Microsoft SQL Server\\*\<<nombreDeInstancia>*\MSSQL\Install\oracleadmin.sql. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script incluye la instrucción `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, que es necesaria para los desencadenadores que utiliza la replicación transaccional. Si solo va a utilizar replicación de instantáneas, quite del script esta línea de la línea de comandos.  

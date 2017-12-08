@@ -2,9 +2,12 @@
 title: Estados de los archivos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -32,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a63a9e927ce2768a3ce7a5b96d29e58bf39a5034
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1888b2ab14fd40edd57438ea98dde15adc4efb80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="file-states"></a>Estados de los archivos
-  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el estado de un archivo de bases de datos se mantiene independientemente del estado de la base de datos. Un archivo siempre está en un estado específico, como ONLINE o OFFLINE. Para ver el estado actual de un archivo, use la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Si la base de datos está sin conexión, el estado de los archivos se puede ver desde la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el estado de un archivo de bases de datos se mantiene independientemente del estado de la base de datos. Un archivo siempre está en un estado específico, como ONLINE o OFFLINE. Para ver el estado actual de un archivo, use la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Si la base de datos está sin conexión, el estado de los archivos se puede ver desde la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
  El estado de los archivos en un grupo de archivos determina la disponibilidad de todo el grupo de archivos. Para que un grupo de archivos esté disponible, todos los archivos del grupo de archivos deben estar en línea. Para ver el estado actual de un grupo de archivos, utilice la vista de catálogo [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Si un grupo de archivos está sin conexión e intenta tener acceso al grupo de archivos mediante una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , devolverá un error. Cuando el optimizador de consultas crea planes para instrucciones SELECT, evita índices no clúster y vistas indizadas que residen en grupos de archivos sin conexión, permitiendo que estas instrucciones tengan éxito. No obstante, si el grupo de archivos sin conexión contiene el montón o el índice clúster de la tabla de destino, las instrucciones SELECT no funcionarán. Adicionalmente, cualquier instrucción INSERT, UPDATE o DELETE que modifique una tabla con cualquier índice en un grupo de archivos sin conexión no funcionará.  
   

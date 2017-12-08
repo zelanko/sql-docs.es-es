@@ -2,9 +2,12 @@
 title: "Configuración de topología (replicación punto a punto) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
-  Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminando nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminar nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
   
 > [!NOTE]  
 >  El Asistente de configuración de la topología punto a punto solicita información de la topología cuando se cierra el asistente. Si el asistente se cierra y se vuelve a abrir antes de que todos los nodos respondan a la solicitud de información, el asistente puede mostrar una red parcial.  

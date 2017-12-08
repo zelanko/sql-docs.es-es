@@ -1,31 +1,27 @@
 ---
 title: "Escenarios de uso del Almacén de consultas | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  Pase al nivel de compatibilidad de base de datos más reciente: exponga la carga de trabajo a los últimos cambios del optimizador de consultas y deje que cree posibles nuevos planes.  
   
-5.  Use el Almacén de consultas para realizar correcciones de regresión y análisis, si bien la mayoría de las veces los nuevos cambios del optimizador de consultas deberían generar mejores planes. Con todo, el Almacén de consultas proporcionará una forma fácil de identificar las regresiones de elección del plan y de corregirlas mediante el mecanismo de forzado de plan.  
+5.  Use el Almacén de consultas para realizar correcciones de regresión y análisis, si bien la mayoría de las veces los nuevos cambios del optimizador de consultas deberían generar mejores planes. Con todo, el Almacén de consultas proporcionará una forma fácil de identificar las regresiones de elección del plan y de corregirlas mediante el mecanismo de forzado de plan. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], cuando se usa la característica [Automatic Plan Correction](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) (Corrección de planes automática), este paso es automático.  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar y mejorar las cargas de trabajo ad hoc  
  Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar para mejorar el rendimiento general de la aplicación. Estas cargas de trabajo se suelen caracterizar por un número relativamente grande de consultas diferentes, y todas ellas consumen parte de los recursos del sistema. Al ser únicas, estas consultas se ejecutan con poca frecuencia (normalmente una sola vez, de ahí la nomenclatura “ad hoc”), por lo que su consumo de tiempo de ejecución no es crítico. Por otro lado, dado que la aplicación genera nuevas consultas netas todo el tiempo, se dedica una parte significativa de los recursos del sistema a compilar consultas de una forma que no es óptima. Esta situación tampoco es ideal para el Almacén de consultas, dado que el elevado número de consultas y planes acapara el espacio que tiene reservado, lo que significa que el Almacén de consultas probablemente acabe en modo de solo lectura muy rápidamente. Si activó la **directiva de limpieza según el tamaño** ([muy recomendable](best-practice-with-the-query-store.md) para mantener el almacén de consultas siempre en funcionamiento), el proceso en segundo plano limpiará las estructuras del almacén de consultas prácticamente todo el tiempo, lo que también consume muchos recursos del sistema.  
@@ -229,4 +225,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

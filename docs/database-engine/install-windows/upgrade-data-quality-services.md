@@ -2,11 +2,12 @@
 title: Actualizar Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bc1b70a3c4707976539d13222b088bd744e2d436
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
-En este tema encontrará información sobre cómo actualizar la instalación existente de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Como parte de la actualización de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, debe actualizar también el esquema de bases de datos de DQS.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema encontrará información sobre cómo actualizar la instalación existente de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Como parte de la actualización de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, debe actualizar también el esquema de bases de datos de DQS.  
   
 > [!IMPORTANT]  
 >  -   Debe hacer una copia de seguridad de las bases de datos de DQS antes de actualizar DQS para impedir la pérdida accidental de datos durante la actualización del esquema. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  

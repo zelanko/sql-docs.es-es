@@ -2,9 +2,12 @@
 title: "Características y tareas de la utilidad de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c099214c37d6f3a2d8f1198e6f172f1a11d1b64e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c7a221f337f54f625840fa724db01545a7af2c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Características y tareas de la utilidad de SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesitan administrar su entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en conjunto, requisito cubierto en esta versión por medio del concepto de administración de aplicaciones y de varios servidores de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesitan administrar su entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en conjunto, requisito cubierto en esta versión por medio del concepto de administración de aplicaciones y de varios servidores en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Ventajas de la Utilidad de SQL Server  
  La Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modela las entidades relacionadas con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de una organización en una vista unificada. Los puntos de vista del Explorador de Utilidad y de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) proporcionan a los administradores una vista global del estado de los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que actúa como punto de control de la utilidad (UCP). La combinación del resumen y los datos detallados presentados por el UCP sobre directivas de infrautilización o sobreutilización, y sobre diversidad de parámetros clave, habilita posibilidades de consolidación de recursos y de fácil identificación de sobreutilización. Las directivas de mantenimiento se pueden configurar y ajustarse para modificar umbrales de uso mayor o menor de los recursos. Es posible cambiar las directivas de supervisión globales o configurar directivas de supervisión individuales para cada entidad administrada en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -3,8 +3,11 @@ title: Uso de XEvent Profiler de SSMS | Microsoft Docs
 ms.custom: 
 ms.date: 10/02/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: genemi
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -20,14 +23,14 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d76bcf75112533bce6d74fda23dc43d983cf555
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5d478dc053a744cfffa9f7234fe49bad552cc429
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Uso de XEvent Profiler de SSMS
-XEvent Profiler es una característica de SQL Server Management Studio (SSMS) que muestra una ventana con los eventos extendidos para visualizarlos de forma dinámica. En la información general puede consultar los motivos por los que el generador de perfiles resulta tan útil, las características principales y las instrucciones para visualizar los eventos extendidos.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] XEvent Profiler es una característica de SQL Server Management Studio (SSMS) que muestra una ventana con los eventos extendidos para visualizarlos de forma dinámica. En la información general puede consultar los motivos por los que el generador de perfiles resulta tan útil, las características principales y las instrucciones para visualizar los eventos extendidos.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>¿Por qué XEvent Profiler es tan útil?
 A diferencia de SQL Profiler, XEvent Profiler está directamente integrado en SSMS y compilado con la tecnología de eventos extendidos escalables en el motor de SQL. Esta característica permite acceder rápidamente a una visualización de streaming en vivo de los eventos de diagnóstico en el servidor SQL. Dicha visualización se puede personalizar. Además, las personalizaciones que haga se pueden compartir con otros usuarios de SSMS como archivo .viewsettings. La sesión que crea XE Profiler es menos invasiva para el servidor SQL en ejecución que otro seguimiento SQL similar, en el caso de usar SQL Profiler. El usuario también puede personalizar esta sesión con la IU de propiedades de sesión de XE existentes o mediante TSQL.

@@ -2,9 +2,12 @@
 title: Mejorar el rendimiento de las consultas de texto completo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eb25a291c5bc5f7d0f4e7e90864a883a3c3810ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3066db26dc9f64d91d9f9f4bd4619ffc2722c2ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Mejorar el rendimiento de las consultas de texto completo
-  A continuación se ofrece una lista de recomendaciones que servirán para mejorar el rendimiento de las consultas de texto completo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A continuación se ofrece una lista de recomendaciones que servirán para mejorar el rendimiento de las consultas de texto completo.  
   
  El rendimiento de las consultas de texto completo también se ve afectado por los recursos de hardware, como la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
   

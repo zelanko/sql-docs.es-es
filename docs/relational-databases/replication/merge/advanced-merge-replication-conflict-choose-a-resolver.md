@@ -2,9 +2,12 @@
 title: Elegir un solucionador | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cba1ee9c5659d84f4fbe5a1c6ac5957794df0a88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflictos de replicación de mezcla avanzada: elegir un solucionador
-  Al elegir un solucionador, tenga en cuenta la importancia que tiene la resolución de conflictos en la aplicación y considere si debe utilizar el solucionador de conflictos predeterminado basado en prioridad o un solucionador de artículos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al elegir un solucionador, tenga en cuenta la importancia que tiene la resolución de conflictos en la aplicación y considere si debe utilizar el solucionador de conflictos predeterminado basado en prioridad o un solucionador de artículos.  
   
  Si los datos están divididos sin que varios usuarios escriban en las mismas particiones, y la topología de replicación es relativamente básica (un publicador y unos pocos suscriptores), los conflictos serán escasos o inexistentes. En estos entornos, es probable que no necesite una estrategia de resolución de conflictos compleja. Se recomienda una estrategia que utilice la configuración predeterminada para la resolución de conflictos, por medio de suscripciones en el cliente y una directiva de prioridad. Si la topología es más compleja (por ejemplo, si utiliza suscriptores de republicación), es posible que sea más apropiado utilizar suscripciones en el servidor con prioridades específicas.  
   

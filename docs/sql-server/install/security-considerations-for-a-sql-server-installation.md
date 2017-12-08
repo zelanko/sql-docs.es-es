@@ -2,11 +2,12 @@
 title: "Consideraciones de seguridad en una instalación de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +32,14 @@ caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 9f2669116da566511273ca482f801bd2762ced09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 56f03953494ae639dc19af01d8c6dafaad49151f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Consideraciones de seguridad para una instalación de SQL Server
- La seguridad es importante para todos los productos y negocios. Si aplica las siguientes prácticas recomendadas de seguridad, puede evitar muchas vulnerabilidades de seguridad. En este tema se tratan algunas prácticas recomendadas de seguridad que deben tenerse en cuenta antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En los temas de referencia para estas características se incluyen directrices de seguridad para características específicas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La seguridad es importante para todos los productos y negocios. Si aplica las siguientes prácticas recomendadas de seguridad, puede evitar muchas vulnerabilidades de seguridad. En este tema se tratan algunas prácticas recomendadas de seguridad que deben tenerse en cuenta antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En los temas de referencia para estas características se incluyen directrices de seguridad para características específicas.  
   
 ## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Siga estas prácticas recomendadas cuando configure el entorno del servidor.  

@@ -2,9 +2,12 @@
 title: "Configuración del almacén de administración de datos (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4165c8b8e8e11b281a31e04a3b0fd402146d4e71
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fee53d75e2c41949d1e07f30b2ab751bb6ca322
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
-  En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Si se configura el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se ejecute mediante una de las cuentas de servicio del sistema (sistema local, servicio de red o servicio local) y el almacén de administración de datos se crea en una instancia diferente del recopilador de datos, debe configurar los conjuntos de recopilación para que utilicen un proxy para cargar los datos en el almacén de administración de datos.  

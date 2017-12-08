@@ -2,9 +2,12 @@
 title: "Desactivación y expiración de las suscripciones| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24341df9b17ed7e98b9a9c095e4874b05df4376b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7a5568d5e75605430ad78fd38c5832971f2e2ae8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Desactivación y expiración de las suscripciones
-  Las suscripciones se pueden desactivar o pueden expirar si no se sincronizan en un *período de retención*especificado. La acción que se produce depende del tipo de replicación y del período de retención que se supere.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las suscripciones se pueden desactivar o pueden expirar si no se sincronizan en un *período de retención* especificado. La acción que se produce depende del tipo de replicación y del período de retención que se supere.  
   
  Para establecer períodos de retención, vea [Establecer el período de expiración para las suscripciones](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Establecer el período de retención de distribución para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) y [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   

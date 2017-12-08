@@ -2,9 +2,12 @@
 title: "Extensión del grupo de búferes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9bd32bd87a5cc458e1054555b8616db78957e27f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 63567e05218f3b5a042ef4d2aa41c9aa358433de
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="buffer-pool-extension"></a>Extensión del grupo de búferes
-  A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la extensión del grupo de búferes proporciona una perfecta integración de una extensión de la memoria de acceso aleatorio no volátil (es decir, una unidad de estado sólido) con el grupo de búferes del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para mejorar considerablemente el rendimiento de E/S. La extensión del grupo de búferes no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la extensión del grupo de búferes proporciona una perfecta integración de una extensión de la memoria de acceso aleatorio no volátil (es decir, una unidad de estado sólido) con el grupo de búferes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para mejorar considerablemente el rendimiento de E/S. La extensión del grupo de búferes no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Ventajas de la extensión del grupo de búferes  
  El propósito principal de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es almacenar y recuperar datos, por lo que una E/S de disco intensiva es una de las características principales del Motor de base de datos. Dado que las operaciones de E/S de disco pueden consumir muchos recursos y tardar bastante tiempo en completarse, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se centra en hacer la E/S muy eficaz. El grupo de búferes se utiliza como origen principal de asignación de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La administración de búfer es un componente clave para lograr esta eficacia. El componente de administración de búfer consta de dos mecanismos: el administrador de búfer para obtener acceso a las páginas de bases de datos y actualizarlas, y el grupo de búferes para reducir la E/S de archivos de base de datos.  

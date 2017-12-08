@@ -2,9 +2,12 @@
 title: "Trasvase de registros y replicación (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Trasvase de registros y replicación (SQL Server)
-  El trasvase de registros incluye dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos principal se propagan mediante el trasvase de registros a la otra copia de la base de datos, conocida como la base de datos secundaria. El trasvase de registros incluye la aplicación a la base de datos secundaria del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El trasvase de registros incluye dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos principal se propagan mediante el trasvase de registros a la otra copia de la base de datos, conocida como la base de datos secundaria. El trasvase de registros incluye la aplicación a la base de datos secundaria del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos principal.  
   
  El trasvase de registros se puede usar conjuntamente con la replicación, con el siguiente comportamiento:  
   

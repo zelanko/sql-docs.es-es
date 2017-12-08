@@ -2,9 +2,12 @@
 title: "Creación de un conjunto de recopilación: tipo de recopilador de consultas T-SQL genérico | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49c964b1381aaaf90fac2f4582fd70d9112a4255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 34b63ac7f650bdc3e333bb50a19021a48c65dee1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Creación de un conjunto de recopilación: tipo de recopilador de consultas T-SQL genérico
-  Puede crear un conjunto de recopilación personalizado con elementos de recopilación que utilicen el tipo de recopilador de consultas T-SQL genérico mediante los procedimientos almacenados que se proporcionan con el recopilador de datos. Para realizar esta tarea debe usar el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para llevar a cabo los siguientes procedimientos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede crear un conjunto de recopilación personalizado con elementos de recopilación que utilicen el tipo de recopilador de consultas T-SQL genérico mediante los procedimientos almacenados que se proporcionan con el recopilador de datos. Para realizar esta tarea debe usar el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para llevar a cabo los siguientes procedimientos:  
   
 -   Configurar programaciones de carga.  
   

@@ -2,9 +2,12 @@
 title: "Reducción del ruido en las directivas de uso de la CPU (utilidad de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1c076cc3e503a1417cec2fd9704cae29e0bb8a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bb9460eb2dee21369bac8920dcc77a64e98b9857
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Reducir el ruido en las directivas de uso de la CPU (utilidad de SQL Server)
-  Use las siguientes estrategias para reducir ruido del informe de errores y las infracciones no deseadas en las directivas de uso de los recursos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use las siguientes estrategias para reducir el ruido de los informes y las infracciones no deseadas en las directivas de uso de los recursos de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>¿Cuántas infracciones debe cometer el procesador para que se notifique como sobreutilizado?  
  El período de tiempo de la evaluación y la tolerancia para el porcentaje de infracciones son ambos configurables usando los valores de la pestaña **Directiva** del nodo **Administración de la utilidad** del explorador de la utilidad. Para cambiar las directivas, utilice los controles deslizantes a la derecha de las descripciones de la directiva y, a continuación, haga clic en **Aplicar**. También puede restaurar los valores predeterminados o descartar los cambios con los botones en la parte inferior de la pantalla.  

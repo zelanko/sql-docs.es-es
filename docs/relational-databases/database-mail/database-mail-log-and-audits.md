@@ -2,9 +2,12 @@
 title: "Registro y auditorías del Correo electrónico de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36ed8df0fb949ab678be1760b8c3dd9dfc247119
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f52d8d40a66f2331bf5a0ef12cdf3b8f741e4272
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mail-log-and-audits"></a>Registro y auditorías del Correo electrónico de base de datos
-  La funcionalidad de registro del Correo electrónico de base de datos está diseñado para proporcionar una manera de aislar y de corregir problemas. El Correo electrónico de base de datos almacena información de registro en la base de datos **msdb** . La información acerca del contenido del correo electrónico de base de datos, el estado de los mensajes, y cualquier mensaje recibido, como errores, está registrada por el Correo electrónico de base de datos y se puede usar para solucionar problemas y auditar ordenación.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La funcionalidad de registro de Correo electrónico de base de datos está diseñado para proporcionar una manera de aislar y de corregir problemas. El Correo electrónico de base de datos almacena información de registro en la base de datos **msdb** . La información acerca del contenido del correo electrónico de base de datos, el estado de los mensajes, y cualquier mensaje recibido, como errores, está registrada por el Correo electrónico de base de datos y se puede usar para solucionar problemas y auditar ordenación.  
   
 ## <a name="database-mail-logs"></a>Registros de Correo electrónico de base de datos  
  Tablas en la información de registro de la base de datos **msdb** de [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md). [Vistas del Correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md) expone las tablas para solucionar problemas. Aparecen errores en la vista [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) si Service Broker no puede activar el programa externo, si el programa externo encuentra errores de red o si el servidor SMTP (protocolo simple de transferencia de correo) rechaza un mensaje de correo electrónico. Si el programa externo no puede conectarse a las tablas **msdb** , el programa registra los errores en el registro de eventos de aplicación Windows.  

@@ -2,9 +2,12 @@
 title: "Asistente para la optimización de motor de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c0c43bf59c4b45990c491f129598fe4210a8494b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-tuning-advisor"></a>Asistente para la optimización de motor de base de datos
-  El Asistente para la optimización de motor de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (DTA) analiza las bases de datos y hace recomendaciones que puede usar para optimizar el rendimiento de las consultas. Puede usar el Asistente para la optimización de motor de base de datos a fin de seleccionar y crear un conjunto óptimo de índices, vistas indizadas o particiones de tabla sin necesidad de conocer detalladamente la estructura de la base de datos ni el funcionamiento interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, puede realizar las siguientes tareas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para la optimización de motor de base de datos (DTA) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] analiza las bases de datos y hace recomendaciones que puede usar para optimizar el rendimiento de las consultas. Puede usar el Asistente para la optimización de motor de base de datos a fin de seleccionar y crear un conjunto óptimo de índices, vistas indizadas o particiones de tabla sin necesidad de conocer detalladamente la estructura de la base de datos ni el funcionamiento interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, puede realizar las siguientes tareas.  
   
 -   Solucionar problemas del rendimiento de una consulta específica  
   

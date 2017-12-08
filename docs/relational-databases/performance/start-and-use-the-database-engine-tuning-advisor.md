@@ -2,9 +2,12 @@
 title: "Iniciar y utilizar el Asistente para la optimización del motor de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24e2347ba4cc496fcbb985f4a47bed8022b2c8c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 21efab98503bc82485097c87b04623bf38366a68
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
-  En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inicializar el Asistente para la optimización de motor de base de datos  
  La primera vez que se utilice, un usuario que sea miembro del rol fijo de servidor **sysadmin** debe inicializar el Asistente para la optimización de motor de base de datos. Esto se debe a que varias tablas del sistema se deben crear en la base de datos de **msdb** para admitir las operaciones de optimización. La inicialización permite además que usuarios miembros del rol fijo de base de datos **db_owner** optimicen cargas de trabajo en tablas de bases de datos que son de su propiedad.  

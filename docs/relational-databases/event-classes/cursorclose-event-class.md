@@ -2,9 +2,12 @@
 title: CursorClose, clase de eventos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa3d628acdf6665c102b0315d1fc532e02fd6d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 654126766b8ca24ecfed775253c616d7947bc619
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorclose-event-class"></a>CursorClose, clase de eventos
-  Los eventos de cierre de cursores tienen lugar cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] cierra y desasigna un cursor. La clase de evento **CursorClose** describe los eventos de cierre de cursores que se producen en los cursores de la interfaz de programación de aplicaciones (API). Esta clase de evento tiene lugar cuando se cierra una instrucción de cursor de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Los eventos de cierre de cursores tienen lugar cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] cierra y desasigna un cursor. La clase de evento **CursorClose** describe los eventos de cierre de cursores que se producen en los cursores de la interfaz de programación de aplicaciones (API). Esta clase de evento tiene lugar cuando se cierra una instrucción de cursor de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.  
   
  Incluya la clase de evento **CursorClose** en los seguimientos que registren el rendimiento de los cursores. La cantidad de sobrecarga generada depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
   

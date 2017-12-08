@@ -2,9 +2,12 @@
 title: "Novedades de la instalación de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d41437182f423016da8e25c71bd493c5f1816f95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8754cccdcecd0c9ce12e2416e62234f0857aa8c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novedades de la instalación de SQL Server
-
- La instalación se admite únicamente en procesadores x64. Para más información, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La instalación se admite únicamente en procesadores x64. Para más información, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  La instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] le solicitará que especifique el directorio para guardar el paquete extraído. Si no se escribe ninguna ubicación, el servidor, de forma predeterminada, será la unidad de sistema del equipo. Los archivos extraídos se conservarán una vez completada la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   

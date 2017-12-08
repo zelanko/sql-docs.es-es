@@ -1,10 +1,13 @@
 ---
 title: Novedades de SQL Server 2016
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f4f6bc0101c4cd05a9ec301b3e46b083250d08f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
- Con SQL Server 2016, puede compilar aplicaciones inteligentes críticas mediante una plataforma de base de datos escalable e híbrida con todo integrado, desde rendimiento en memoria y seguridad avanzada hasta análisis en base de datos. La versión de SQL Server 2016 agrega nuevas características de seguridad, funcionalidades de consulta, integración de Hadoop y de la nube, análisis de R y mucho más, junto con numerosas mejoras y ampliaciones. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Con SQL Server 2016, puede compilar aplicaciones inteligentes críticas mediante una plataforma de base de datos escalable e híbrida con todo integrado, desde rendimiento en memoria y seguridad avanzada hasta análisis en base de datos. La versión de SQL Server 2016 agrega nuevas características de seguridad, funcionalidades de consulta, integración de Hadoop y de la nube, análisis de R y mucho más, junto con numerosas mejoras y ampliaciones. 
 
 En esta página se proporciona información de resumen y vínculos a información más detallada sobre las novedades de SQL Server 2016 para cada componente de SQL Server. 
 

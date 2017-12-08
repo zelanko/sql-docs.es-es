@@ -2,9 +2,12 @@
 title: "Definición de la serialización de datos XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc424a86cdbb1437c705de4a719ba863770d32ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 17f11bc07868dd8f22cdf75f369de6e6ca952dc8
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
-  Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos XML se serializa de acuerdo con las reglas que se describen en este tema.  
   
 ## <a name="serialization-encoding"></a>Codificación de la serialización  
  Si el tipo SQL de destino es VARBINARY, el resultado se serializa en UTF-16 con una marca de orden de bytes UTF-16 delante, pero sin una declaración XML. Si el tipo de destino es demasiado pequeño, se genera un error.  

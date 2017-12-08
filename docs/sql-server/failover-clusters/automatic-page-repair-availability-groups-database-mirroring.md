@@ -2,9 +2,12 @@
 title: "Reparación de página automática (grupos de disponibilidad: creación de reflejo de la base de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35a71754742484b4a1cdf35f5b28526e6e12309b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7fb7034634b662ce184065adb72f190ce6b2aa4b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparación de página automática (grupos de disponibilidad: creación de reflejo de base de datos)
-  La reparación de página automática es compatible con la creación de reflejo de la base de datos y con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Cuando ciertos tipos de errores dañan una página, dejándola ilegible, un asociado de creación de reflejo de la base de datos (ya sea principal o reflejado) o una réplica de disponibilidad (principal o secundaria) intenta recuperar la página automáticamente. El asociado y la réplica que no pueden leer la página solicitan una nueva copia de la página a su asociado o a otra réplica. Si la solicitud se realiza correctamente, la copia legible sustituirá a la página ilegible y esto resuelve el error en la mayoría de los casos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La reparación de página automática es compatible con la creación de reflejo de la base de datos y con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Cuando ciertos tipos de errores dañan una página, dejándola ilegible, un asociado de creación de reflejo de la base de datos (ya sea principal o reflejado) o una réplica de disponibilidad (principal o secundaria) intenta recuperar la página automáticamente. El asociado y la réplica que no pueden leer la página solicitan una nueva copia de la página a su asociado o a otra réplica. Si la solicitud se realiza correctamente, la copia legible sustituirá a la página ilegible y esto resuelve el error en la mayoría de los casos.  
   
  Hablando en general, la creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] controlan los errores de E/S de formas equivalentes. Las pocas diferencias se describen aquí.  
   

@@ -2,9 +2,12 @@
 title: SQL Server, objeto Distribuidores de agente de memoria | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5407f694e07b1e5675cb07874d468e12427c3e8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4f602e43f585e83158a9a824677b3c73f88e0b87
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, objeto Distribuidores de agente de memoria
-El objeto de rendimiento **SQLServer:Distribuidores de agente de memoria** proporciona contadores para estadísticas relacionadas con los distribuidores de agente de memoria.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto de rendimiento **SQLServer:Memory Broker Clerks** proporciona contadores para estadísticas relacionadas con los distribuidores de agente de memoria.
 
 En la siguiente tabla se describen los objetos de rendimiento **Distribuidores de agente de memoria** de SQL Server.
 

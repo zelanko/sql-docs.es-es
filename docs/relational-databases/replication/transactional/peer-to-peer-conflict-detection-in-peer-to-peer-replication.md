@@ -2,9 +2,12 @@
 title: "Detección de conflictos en la replicación punto a punto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a2c2b23d8fd86531e7a29707f1b0930b3c794f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0d27cca1b3e5a35dfcf405b8f10cd0e099e2a756
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
-  La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  
   
  La replicación punto a punto de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores ofrece la posibilidad de habilitar la detección de conflictos en una topología punto a punto. Esta opción contribuye a evitar los problemas causados por los conflictos no detectados, como son el comportamiento incoherente de las aplicaciones y las actualizaciones perdidas. Cuando se habilita esta opción, de forma predeterminada, un cambio conflictivo se trata como un error crítico que produce el error del Agente de distribución. En caso de conflicto, la topología permanece en un estado incoherente hasta que se resuelve el conflicto y se restablece la coherencia de los datos en toda la topología.  
   

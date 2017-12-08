@@ -2,9 +2,12 @@
 title: Instancias del motor de base de datos (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
-  Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del ejecutable de **sqlservr.exe** que se ejecuta como un servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del archivo ejecutable **sqlservr.exe** que se ejecuta como servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
   
 ## <a name="instances"></a>Instancias  
  Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] funciona como un servicio que controla todas las solicitudes de aplicación para trabajar con datos de cualquiera de las bases de datos administradas por dicha instancia. Es el destino de las solicitudes de conexión (inicios de sesión) de aplicaciones. La conexión se ejecuta en una conexión de red si la aplicación y la instancia están en equipos independientes. Si la aplicación y la instancia están en el mismo equipo, la conexión de SQL Server se puede ejecutar como una conexión de red o una conexión en memoria. Cuando una conexión se ha completado, una aplicación envía instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] a través de la conexión hasta la instancia. La instancia resuelve las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en operaciones con los datos y objetos de las bases de datos y, si se han concedido los permisos necesarios a las credenciales de inicio de sesión, realiza el trabajo. Los datos recuperados se devuelven a la aplicación, junto con cualesquiera mensajes como errores.  

@@ -2,9 +2,12 @@
 title: Importar un archivo de bacpac para crear una nueva base de datos de usuario | Microsoft Docs
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a919d864464b02da417add79139d532689d43e92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b105471806865b78a07c5478f08d7a1bf6cf49f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
-  Importe un archivo de exportación de la aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una nueva instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
  El proceso de importación compila una nueva DAC en dos fases.  

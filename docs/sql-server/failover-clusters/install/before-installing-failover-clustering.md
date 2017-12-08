@@ -2,9 +2,12 @@
 title: "Antes de instalar los clústeres de conmutación por error | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ee39b07f117a70c4de03d921cf2c751913e70c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95b30dab822ab994f284c82d1408d6a222fcef45
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
-  Antes de instalar un clúster de conmutación por error de SQL Server, debe seleccionar el hardware y el sistema operativo en el que se ejecutará SQL Server. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de instalar un clúster de conmutación por error de SQL Server, debe seleccionar el hardware y el sistema operativo en el que se ejecutará SQL Server. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
   
  Si un clúster de Windows tiene una unidad de disco local y esa misma letra de unidad se usa también en uno o varios nodos del clúster como una unidad compartida, no puede instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en esa unidad.  
   

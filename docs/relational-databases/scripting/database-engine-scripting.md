@@ -2,9 +2,12 @@
 title: Scripting del motor de base de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c1335f0fd0a97feba334ebffc5864b314c09350
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d97fa3f4c13ad328cbcb2302ae6ab2a7b922707e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
-  El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] admite el entorno de scripting de [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell para administrar las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los objetos en las instancias. También puede generar y ejecutar consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contengan [!INCLUDE[tsql](../../includes/tsql-md.md)] y XQuery en entornos muy similares a los de scripts.  
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] El [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] admite el entorno de scripting de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] PowerShell para administrar las instancias del [!INCLUDE[msCoName](../../includes/msconame-md.md)] y los objetos en las instancias. También puede generar y ejecutar consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contengan [!INCLUDE[tsql](../../includes/tsql-md.md)] y XQuery en entornos muy similares a los de scripts.  
   
 ## <a name="sql-server-powershell"></a>SQL Server PowerShell  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell que implementan:  

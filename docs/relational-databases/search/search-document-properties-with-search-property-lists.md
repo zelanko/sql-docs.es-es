@@ -2,9 +2,12 @@
 title: "Buscar propiedades de documento con listas de propiedades de búsqueda | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9d409de5e77c8cb684cb74d821bb9b7d6a45eef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
-  Anteriormente, el contenido de las propiedades de documento no podían distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. En cambio, ahora puede configurar un índice de texto completo para efectuar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos en una columna **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o una columna de datos binarios de **imagen** . Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Anteriormente, el contenido de las propiedades de documento no podía distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. En cambio, ahora puede configurar un índice de texto completo para efectuar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos en una columna **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o una columna de datos binarios de **imagen** . Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
   
  El [filtro](../../relational-databases/search/configure-and-manage-filters-for-search.md) asociado (IFilter) determina si la búsqueda de propiedades es posible en un tipo de documento específico. En algunos tipos de documento, el IFilter asociado extrae algunas o todas las propiedades definidas para ese tipo de documento, así como el contenido del cuerpo del documento. Puede configurar un índice de texto completo para que admita la búsqueda de propiedades solo en aquellas propiedades extraídas por un IFilter durante la indización de texto completo. Entre los IFilters que extraen muchas propiedades de documento se encuentran los IFilters para tipos de documento de Microsoft Office (como .docx, .xlsx y .pptx). Por otra parte, el IFilter XML no emite propiedades.  
   

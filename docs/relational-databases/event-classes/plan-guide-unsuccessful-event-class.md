@@ -2,9 +2,12 @@
 title: Clase de eventos Plan Guide Unsuccessful | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686cf924c8359d5cfaeeeafee7429e9afee8ae6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be69d14358de068a3799823e575df8ea9033531e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Clase de eventos Plan Guide Unsuccessful
-  La clase de eventos Plan Guide Unsuccessful indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. En su lugar, el plan se compiló sin utilizar la guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Plan Guide Unsuccessful indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. En su lugar, el plan se compiló sin utilizar la guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  
   
 -   El lote/módulo de la definición de la guía de plan coincide con el lote que se está ejecutando.  
   

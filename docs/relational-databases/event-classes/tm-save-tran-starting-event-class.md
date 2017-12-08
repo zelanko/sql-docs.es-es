@@ -2,9 +2,12 @@
 title: 'TM: Save Tran Starting, clase de eventos | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b397355e277c4e94824851baed329db829330cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c2224dbfb5dd19da2601996a89ac819f4afd321
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting, clase de eventos
-  La clase de eventos TM: Save Tran Starting indica que se está iniciando una solicitud SAVE TRANSACTION. La solicitud se envía desde el cliente mediante una interfaz de administración de transacciones.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos TM: Save Tran Starting indica que se está iniciando una solicitud SAVE TRANSACTION. La solicitud se envía desde el cliente mediante una interfaz de administración de transacciones.  
   
 ## <a name="tm-save-tran-starting-event-class-data-columns"></a>Columnas de datos de la clase de eventos TM: Save Tran Starting  
   

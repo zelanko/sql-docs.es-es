@@ -2,9 +2,12 @@
 title: "Supervisión de la replicación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 47eb736bd150252f9081184ba589b8033b750c7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3d270a3b798caa19ee5cf393e9c79209ed06079f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-replication-overview"></a>Información general sobre supervisión de la replicación
-  El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una herramienta gráfica que le permite supervisar el estado general de un topología de replicación. El Monitor de replicación proporciona información detallada sobre el estado y rendimiento de las publicaciones y suscripciones, y le permite responder a preguntas comunes, tales como:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una herramienta gráfica que le permite supervisar el estado general de una topología de replicación. El Monitor de replicación proporciona información detallada sobre el estado y rendimiento de las publicaciones y suscripciones, y le permite responder a preguntas comunes, tales como:  
   
 -   ¿Es correcto el sistema de replicación?  
   

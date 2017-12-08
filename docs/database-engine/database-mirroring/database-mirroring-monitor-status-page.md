@@ -2,9 +2,12 @@
 title: "Monitor de creación de reflejo de la base de datos (página Estado) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58634269a34ed091c99954435d93df892fa4d7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 658cb8a6783afc9b01259e8cf2e8915659550867
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
-  En esta página de solo lectura se muestra el estado más reciente de la creación de reflejo de las instancias del servidor principal y reflejado seleccionadas actualmente en el árbol de navegación. Si la información sobre una instancia no se encuentra disponible, algunas celdas de la cuadrícula **Estado** correspondientes a dicha instancia aparecerán atenuadas y mostrarán **Desconocido**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta página de solo lectura se muestra el estado más reciente de la creación de reflejo de las instancias del servidor principal y reflejado seleccionadas actualmente en el árbol de navegación. Si la información sobre una instancia no se encuentra disponible, algunas celdas de la cuadrícula **Estado** correspondientes a dicha instancia aparecerán atenuadas y mostrarán **Desconocido**.  
   
  **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
   

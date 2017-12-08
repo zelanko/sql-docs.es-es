@@ -2,9 +2,12 @@
 title: "Errores posibles de medios durante copia de seguridad y restauración (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39ab370ba08f99d15e43ad88429e1cb72946562b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8bf78aac25b2d9ab927dfe822f140c8dac7bcb9d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ofrece la opción de recuperación de una base de datos a pesar de los errores detectados. Un importante mecanismo de detección de errores nuevo es la creación opcional de una suma de comprobación de copia de seguridad que se puede crear mediante una operación de copia de seguridad y validar mediante una operación de restauración. Puede controlar si una operación comprueba si hay errores y si la operación se detiene o continúa al encontrar un error. Si una copia de seguridad contiene una suma de comprobación de copia de seguridad, las instrucciones RESTORE y RESTORE VERIFYONLY pueden comprobar si hay errores.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ofrece la opción de recuperación de una base de datos a pesar de los errores detectados. Un importante mecanismo de detección de errores nuevo es la creación opcional de una suma de comprobación de copia de seguridad que se puede crear mediante una operación de copia de seguridad y validar mediante una operación de restauración. Puede controlar si una operación comprueba si hay errores y si la operación se detiene o continúa al encontrar un error. Si una copia de seguridad contiene una suma de comprobación de copia de seguridad, las instrucciones RESTORE y RESTORE VERIFYONLY pueden comprobar si hay errores.  
   
 > [!NOTE]  
 >  Las copias de seguridad reflejadas proporcionan hasta cuatro copias (reflejos) de un conjunto de medios, ofreciendo copias alternativas para recuperar el sistema de los errores provocados por los medios dañados. Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  

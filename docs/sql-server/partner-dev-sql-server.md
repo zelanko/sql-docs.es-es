@@ -7,22 +7,26 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 17/09/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
 ms.author: mikeray
-ms.openlocfilehash: e07cf9de9a3526d018e3ce552bf40e21971bdd72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 037864b77e9b807d593a3d9d2425acf507b3c11f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-development-partners"></a>Asociados de desarrollo de SQL Server
-Para admitir el desarrollo de soluciones de base de datos de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de desarrollo para Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para admitir el desarrollo de soluciones de base de datos de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de desarrollo para Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Nuestros asociados de desarrollo
 | Asociado | Description | Vínculos |

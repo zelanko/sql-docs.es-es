@@ -2,9 +2,12 @@
 title: "Administración de ciclo de vida de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -34,14 +37,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab6e7d5d5876bfb5b05599f31e67473231f741c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a13f1130c7bd9deb72c07af66860c20c140eba7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-lifecycle-management"></a>Administración del ciclo de vida de base de datos
-  Administración de ciclo de vida de base de datos (DLM) es un enfoque basado en directiva para administrar bases de datos y activos de datos. DLM no es un producto sino un enfoque integral para administrar el esquema de la base de datos, los datos y los metadatos para una aplicación de base de datos. Un enfoque proactivo y reflexivo de DLM permite a una organización administrar los recursos de datos según los niveles adecuados de rendimiento, protección, disponibilidad y costo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Administración de ciclo de vida de base de datos (DLM) es un enfoque basado en directiva para administrar bases de datos y activos de datos. DLM no es un producto sino un enfoque integral para administrar el esquema de la base de datos, los datos y los metadatos para una aplicación de base de datos. Un enfoque proactivo y reflexivo de DLM permite a una organización administrar los recursos de datos según los niveles adecuados de rendimiento, protección, disponibilidad y costo.  
   
  DLM comienza con la descripción del diseño y el propósito del proyecto, continúa con las actividades de desarrollo, prueba, compilación, implementación, mantenimiento, supervisión y copia de seguridad de la base de datos, y finaliza con el archivado de datos. En este tema se proporciona información general de las fases de DLM que comienzan con el desarrollo de la base de datos y continúan con las acciones de compilación, implementación y supervisión (Figura 1). También se incluyen actividades de administración de datos y operaciones de portabilidad de datos como importación/exportación, copia de seguridad, migración y sincronización.  
   

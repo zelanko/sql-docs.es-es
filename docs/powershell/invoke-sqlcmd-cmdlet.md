@@ -2,9 +2,12 @@
 title: Cmdlet Invoke-Sqlcmd | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta scripts que contienen instrucciones de los lenguajes ([!INCLUDE[tsql](../includes/tsql-md.md)] y XQuery) y comandos admitidos por la utilidad **sqlcmd** .  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
 |Definición de variable.|-v|-Variable|  
-|Consultar el intervalo de tiempo de espera.|-t|-QueryTimeout|  
+|Intervalo de tiempo de espera de consulta (segundos).|-t|-QueryTimeout|  
 |Detener la ejecución cuando se produce un error.|-b|-AbortOnError|  
 |Conexión de administrador dedicada.|-A|-DedicatedAdministratorConnection|  
 |Deshabilitar comandos interactivos, script de inicio y variables de entorno.|-X|-DisableCommands|  
 |Deshabilitar la sustitución de variables.|-X|-DisableVariables|  
 |Nivel de gravedad mínimo que se ha de notificar.|-v|-SeverityLevel|  
 |Nivel de error mínimo que se ha de notificar.|-m|-ErrorLevel|  
-|Intervalo de tiempo de espera de inicio de sesión.|-l|-ConnectionTimeout|  
+|Intervalo de tiempo de espera de inicio de sesión (segundos).|-l|-ConnectionTimeout|  
 |Nombre de host.|-H|-HostName|  
 |Cambiar contraseña y salir.|-Z|-NewPassword|  
 |Archivo de entrada que contiene una consulta.|-i|-InputFile|  

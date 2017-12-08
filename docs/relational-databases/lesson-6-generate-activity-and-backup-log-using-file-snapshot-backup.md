@@ -1,10 +1,13 @@
 ---
 title: "Lección 6: Generación del registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef160e0b0bce71d437e7dd83809a31185ec94767
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5ba32c2a03abab77de366687c5e4fe3e72834204
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos
-En esta lección, va a generar actividad en la base de datos AdventureWorks2014 y, periódicamente, va a crear copias de seguridad del registro de transacciones mediante copias de seguridad de instantáneas de archivos. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, va a generar actividad en la base de datos AdventureWorks2014 y, periódicamente, va a crear copias de seguridad del registro de transacciones mediante copias de seguridad de instantáneas de archivos. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Para generar actividad en la base de datos AdventureWorks2014 y crear periódicamente copias de seguridad del registro de transacciones mediante copias de seguridad de instantáneas de archivos, siga estos pasos:  
   

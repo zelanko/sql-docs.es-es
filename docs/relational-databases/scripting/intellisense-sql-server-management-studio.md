@@ -2,9 +2,12 @@
 title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b749035286507e3ee2a8a05af82d9da9d1e7b4c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-  Los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admiten las opciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reducen las tareas de escritura, proporcionan acceso rápido a la información de sintaxis o facilitan la visualización de los delimitadores de expresiones complejas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admiten las opciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reducen las tareas de escritura, proporcionan acceso rápido a la información de sintaxis o facilitan la visualización de los delimitadores de expresiones complejas.  
   
 ## <a name="benefits-of-intellisense"></a>Ventajas de IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense proporciona una gama de opciones que facilitan el acceso a las referencias del lenguaje. Al codificar, no es necesario dejar que el editor realice búsquedas en los elementos del lenguaje. Puede conservar el contexto, buscar la información necesaria, insertar elementos del lenguaje directamente en el código e incluso hacer que IntelliSense termine de escribir por usted.  

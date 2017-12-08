@@ -2,9 +2,12 @@
 title: "Lección 2: Creación y administración de los datos de una tabla jerárquica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36428e80f9a3b6378bc9d95c20eae0fbf64a9218
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9c72f77d11dbc52f29d503b03624e2d3503cc616
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Crear y administrar los datos de una tabla jerárquica
-En la lección 1, ha modificado una tabla existente para usar el tipo de datos **hierarchyid** y ha rellenado la columna **hierarchyid** con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] En la lección 1, ha modificado una tabla existente para usar el tipo de datos **hierarchyid** y ha rellenado la columna **hierarchyid** con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  
   
 En esta lección se incluyen los temas siguientes:  
   

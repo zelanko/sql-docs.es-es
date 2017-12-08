@@ -2,9 +2,12 @@
 title: "Asignación de referencias a la colección de esquemas XML integrada (sys) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94f052fe1478c26045d27f6481ccfda42ec41a17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5c5edc5eb8bde1089fa63b36a134e32a00e94f56
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Hacer referencia a la colección de esquemas XML integrada (sys)
-  Cada base de datos que se crea posee una colección de esquemas XML **sys** predefinida en el esquema relacional **sys** . Estos esquemas predefinidos se reservan, y son accesibles desde cualquier otra colección de esquemas XML creada por el usuario. Los prefijos utilizados en estos esquemas predefinidos son significativos en XQuery. El único prefijo reservado es **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cada base de datos que se crea posee una colección de esquemas XML **sys** predefinida en el esquema relacional **sys**. Estos esquemas predefinidos se reservan, y son accesibles desde cualquier otra colección de esquemas XML creada por el usuario. Los prefijos utilizados en estos esquemas predefinidos son significativos en XQuery. El único prefijo reservado es **xml** .  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  

@@ -2,9 +2,12 @@
 title: Desencadenadores DML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a6cbad16ee3ca0db8c5506810e62ac869b518823
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: afb92fc71dcb3581024950cfaac84c5b2dac7968
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dml-triggers"></a>Desencadenadores DML
-  Los desencadenadores DML constituyen un tipo especial de procedimiento almacenado que se inicia automáticamente cuando tiene lugar un evento de lenguaje de manipulación de datos (DML) que afecta a la tabla o la vista definida en el desencadenador. Los eventos DML incluyen las instrucciones INSERT, UPDATE o DELETE. Los desencadenadores DML pueden usarse para aplicar reglas de negocios y la integridad de datos, consultar otras tablas e incluir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] complejas. El desencadenador y la instrucción que lo activa se tratan como una sola transacción, que puede revertirse desde el desencadenador. Si se detecta un error grave (por ejemplo, no hay suficiente espacio en disco), se revierte automáticamente toda la transacción.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Los desencadenadores DML constituyen un tipo especial de procedimiento almacenado que se aplica automáticamente cuando tiene lugar un evento de lenguaje de manipulación de datos (DML) que afecta a la tabla o la vista definida en el desencadenador. Los eventos DML incluyen las instrucciones INSERT, UPDATE o DELETE. Los desencadenadores DML pueden usarse para aplicar reglas de negocios y la integridad de datos, consultar otras tablas e incluir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] complejas. El desencadenador y la instrucción que lo activa se tratan como una sola transacción, que puede revertirse desde el desencadenador. Si se detecta un error grave (por ejemplo, no hay suficiente espacio en disco), se revierte automáticamente toda la transacción.  
   
 ## <a name="dml-trigger-benefits"></a>Ventajas de los desencadenadores DML  
  Los desencadenadores DML se parecen a las restricciones en que pueden aplicar la integridad de entidad o de dominio. En general, la integridad de entidad se debe exigir siempre en el nivel más bajo mediante índices que formen parte de las restricciones PRIMARY KEY y UNIQUE o que se creen independientemente de las restricciones. La integridad de dominio se debe aplicar con restricciones CHECK y la integridad referencial (RI) se debe aplicar a las restricciones de FOREIGN KEY. Los desencadenadores DML resultan de especial utilidad cuando las características permitidas por las restricciones no cubren las necesidades funcionales de la aplicación.  

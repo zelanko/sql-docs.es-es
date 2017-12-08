@@ -1,10 +1,13 @@
 ---
 title: "Instalar las características de SQL Server 2016 Business Intelligence | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/02/2016
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
@@ -16,14 +19,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 78f608debbe1d5dd20d593957289765924399b51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c7146172d2e6029ec1923cbdd58aa80d59ceaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Install SQL Server Business Intelligence Features (Instalar las características de SQL Server Business Intelligence)
-  Las características de SQL Server que forman parte de la plataforma Microsoft Business Intelligence incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. En esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se explica cómo instalar estas características.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Las características de SQL Server que forman parte de la plataforma Microsoft Business Intelligence incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. En esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se explica cómo instalar estas características.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden instalar como servidores independientes, en configuraciones escaladas o como aplicaciones de servicio compartido en una granja de SharePoint. Al instalar los servicios en una granja de servidores, se habilitan las características de BI que solo están disponibles en SharePoint, incluido [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], el diseñador de informes interactivo ad hoc de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecuta en bases de datos de modelo tabular de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] .  
   

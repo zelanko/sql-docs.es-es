@@ -2,9 +2,12 @@
 title: Editor de consultas del motor de base de datos (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)
-  Use el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para crear y ejecutar scripts que contengan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . El editor también permite ejecutar scripts que contengan comandos **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para crear y ejecutar scripts que contengan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. El editor también permite ejecutar scripts que contengan comandos **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Transact-SQL (Ayuda F1)  
  El editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite la vinculación al tema de referencia para una instrucción específica de [!INCLUDE[tsql](../../includes/tsql-md.md)] al presionar F1. Para ello, resalte el nombre de una instrucción Transact-SQL y presione F1. El motor de búsqueda de ayuda buscará un tema que tenga un atributo de Ayuda F1 que coincida con la cadena resaltada.  

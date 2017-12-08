@@ -2,9 +2,12 @@
 title: Clase de eventos Execution Warnings | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings, clase de eventos
-  La clase de eventos Execution Warnings indica las advertencias de concesión de memoria que han tenido lugar durante la ejecución de una instrucción o procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta clase de evento puede supervisarse para determinar si las consultas han tenido que esperar uno o más segundos para obtener memoria antes de continuar, o si el intento inicial de obtener memoria no ha sido satisfactorio. La información sobre los períodos de espera de las consultas puede servir de ayuda para descubrir problemas de contención en el sistema que pueden afectar al rendimiento.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Execution Warnings indica las advertencias de concesión de memoria que han tenido lugar durante la ejecución de una instrucción o procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta clase de evento puede supervisarse para determinar si las consultas han tenido que esperar uno o más segundos para obtener memoria antes de continuar, o si el intento inicial de obtener memoria no ha sido satisfactorio. La información sobre los períodos de espera de las consultas puede servir de ayuda para descubrir problemas de contención en el sistema que pueden afectar al rendimiento.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Columnas de datos de la clase de evento Execution Warnings  
   

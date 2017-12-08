@@ -2,9 +2,12 @@
 title: Usar los cmdlets del motor de base de datos | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f73610b00bc4c7dd6e68128f841a3c7a1e6ed691
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Utilizar los cmdlets del motor de base de datos
-  Los cmdlets de Windows PowerShell son comandos de una sola función que suelen seguir la convención de nomenclatura verbo-nombre, como **Get-Help** o **Set-MachineName**. El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell proporciona cmdlets específicos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los cmdlets de Windows PowerShell son comandos de una sola función que suelen seguir la convención de nomenclatura verbo-nombre, como **Get-Help** o **Set-MachineName**. El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell proporciona cmdlets específicos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="database-engine-cmdlets"></a>Cmdlets del motor de base de datos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una pequeña parte de los cmdlets de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Estos cmdlets se usan principalmente para ejecutar scripts Transact-SQL existentes de los nuevos scripts de PowerShell, evaluar las directivas de administración basadas en directivas y ayuda a especificar los identificadores de SQL Server en rutas de acceso del proveedor de SQL Server.  

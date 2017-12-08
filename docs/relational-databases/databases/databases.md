@@ -2,9 +2,12 @@
 title: Bases de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8610ef88d11d41536ad2cca8f3eb9ab9418692b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databases"></a>Bases de datos
-  Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
   
 ## <a name="basic-information-about-databases"></a>Información básica sobre las bases de datos  
  Un equipo puede tener una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas. Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede contener una o varias bases de datos.  En una base de datos, hay uno o varios grupos de propiedad de objetos denominados esquemas. Dentro de cada esquema hay objetos de base de datos como tablas, vistas y procedimientos almacenados. Algunos objetos, como certificados y claves asimétricas, se encuentran en la base de datos, pero no dentro de un esquema. Para obtener más información acerca de cómo crear tablas, vea [Tables](../../relational-databases/tables/tables.md).  

@@ -2,9 +2,12 @@
 title: Establecer umbrales de advertencia | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
-  Utilice este cuadro de diálogo para habilitar y configurar uno o varios umbrales de advertencia para la base de datos seleccionada en el árbol de navegación del cuadro de diálogo **Monitor de creación de reflejo de la base de datos** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para habilitar y configurar uno o varios umbrales de advertencia para la base de datos seleccionada en el árbol de navegación del cuadro de diálogo **Monitor de creación de reflejo de la base de datos**.  
   
  El cuadro de diálogo intenta conectarse a las dos instancias del servidor. Estas conexiones se establecen de forma asincrónica. En el cuadro de diálogo se muestra el estado de conexión de cada asociado. Si el asociado no está conectado, haga clic en **Conectar**.  
   

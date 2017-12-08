@@ -2,9 +2,12 @@
 title: Clase de eventos SP:StmtCompleted |Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd823a1bb566458d1c158ab6cfc121808e0c6ae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03cc98635538469e135a0b1546005fa218be2d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted [clase de eventos]
-  La clase de eventos SP:StmtCompleted indica que se ha completado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en un procedimiento almacenado.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos SP:StmtCompleted indica que se ha completado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en un procedimiento almacenado.  
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:StmtCompleted  
   

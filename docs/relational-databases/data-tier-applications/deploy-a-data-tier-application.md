@@ -2,9 +2,12 @@
 title: "Implementación una aplicación de capa de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21bcace1cd6c05ac3516095aff955e24ff016967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d65afb41e160671afa9466f648a08e49937e3b6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
-  Implemente una aplicación de capa de datos (DAC) desde un paquete DAC en una instancia existente del motor de base de datos o de Azure SQL Database mediante un asistente o un script de PowerShell. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Implemente una aplicación de capa de datos (DAC) desde un paquete DAC en una instancia existente del motor de base de datos o de Azure SQL Database mediante un asistente o un script de PowerShell. 
   
  El proceso de implementación registra una instancia de DAC almacenando la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea una base de datos y, después, rellena la base de datos con todos los objetos de base de datos definidos en la DAC.  
  

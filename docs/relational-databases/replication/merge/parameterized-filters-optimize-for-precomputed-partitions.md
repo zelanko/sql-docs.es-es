@@ -2,9 +2,12 @@
 title: "Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59067f9e47c7bff8a41326da8e095e2d8d9fe94a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros con parámetros: optimizar para las particiones precalculadas
-  Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Cuando un suscriptor se sincroniza con un publicador, el publicador debe evaluar los filtros del suscriptor para determinar qué filas pertenecen a la partición, o conjunto de datos, de ese suscriptor. Este proceso de determinar la pertenencia a particiones de los cambios en el publicador para cada suscriptor que recibe un conjunto de datos filtrados se denomina *evaluación de particiones*. Sin las particiones precalculadas, la evaluación de particiones debe realizarse para cada cambio efectuado en una columna filtrada del publicador desde la última vez que se ejecutó el Agente de mezcla para un suscriptor concreto, y este proceso tiene que repetirse para cada suscriptor que se sincroniza con el publicador.  
   

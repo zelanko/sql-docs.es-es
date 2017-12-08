@@ -2,9 +2,12 @@
 title: "Nueva generación de bases de datos del sistema | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 69f9e085f5eb6acb749c64a7fb370deabb975e6a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
-  Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](../../relational-databases/databases/master-database.md), [modelo](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)o de [recursos](../../relational-databases/databases/resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](../../relational-databases/databases/master-database.md), [modelo](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) o [de recurso](../../relational-databases/databases/resource-database.md), o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **En este tema**  
   

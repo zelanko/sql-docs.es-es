@@ -2,9 +2,12 @@
 title: "Información general de la interfaz del Monitor de replicación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58dd67c03b3df116914c4f03cbb336136b251e3f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 977bcf0ef4265e3864fee580dd2a8bced177b334
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
-  El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o en el distribuidor de toda la actividad de replicación en un formato de dos recuadros. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Ver información de toda la topología  
  El panel izquierdo del Monitor de replicación muestra  

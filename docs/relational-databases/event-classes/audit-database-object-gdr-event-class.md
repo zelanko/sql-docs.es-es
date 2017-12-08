@@ -2,9 +2,12 @@
 title: Audit Database Object GDR (clase de eventos) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3562535d86b961ea9dd6749e7f91f6ccb141f672
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8bb6bc48d7465952a00143d68f53ed8e98805148
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR, clase de eventos
-  La clase de eventos **Audit Database Object GDR** se produce cuando se ha emitido una instrucción GRANT, REVOKE o DENY para objetos de bases de datos, como ensamblados y esquemas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Audit Database Object GDR** se produce cuando se ha emitido una instrucción GRANT, REVOKE o DENY para objetos de bases de datos, como ensamblados y esquemas.  
   
 ## <a name="audit-database-object-gdr-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Database Object GDR  
   

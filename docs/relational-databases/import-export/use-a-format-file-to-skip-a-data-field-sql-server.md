@@ -2,9 +2,12 @@
 title: Usar un archivo de formato para omitir un campo de datos (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 404ce71e0f35de64ba31cb45d28a606a0e512763
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fbe24a2b8a4865121a3bf949be1434a23c0383de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar un archivo de formato para omitir un campo de datos (SQL Server)
-Un archivo de datos puede contener más campos que el número de columnas de la tabla. En este tema se describe la modificación de archivos de formato XML y no XML para adaptarse a un archivo de datos con más campos asignando las columnas de la tabla a los campos de datos correspondientes y omitiendo los campos adicionales.  Revise [Crear un archivo de formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) para información adicional.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un archivo de datos puede contener más campos que el número de columnas de la tabla. En este tema se describe la modificación de archivos de formato XML y no XML para adaptarse a un archivo de datos con más campos asignando las columnas de la tabla a los campos de datos correspondientes y omitiendo los campos adicionales.  Revise [Crear un archivo de formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) para información adicional.
 
 |Esquema|
 |---|

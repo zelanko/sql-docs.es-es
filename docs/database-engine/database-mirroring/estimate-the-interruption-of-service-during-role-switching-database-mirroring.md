@@ -2,9 +2,12 @@
 title: "Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86103fe23292df96c1ef11dafd0e3b5d70196e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
-  Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará fuera de servicio depende del tipo y la causa de la conmutación de roles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará fuera de servicio depende del tipo y la causa de la conmutación de roles.  
   
 -   En el caso de la conmutación automática por error, existen dos factores que influyen en el tiempo durante el cual estará interrumpido el servicio: el tiempo necesario para que el servidor reflejado reconozca que ha fallado la instancia del servidor principal (es decir, detección del error) y el tiempo necesario para realizar una conmutación por error de la base de datos (es decir, tiempo de conmutación por error).  
   

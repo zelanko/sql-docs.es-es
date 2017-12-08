@@ -2,9 +2,12 @@
 title: "Creación de desencadenadores anidados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e1320a9a1e3670c6d5cfc04d4b56f9d3ba51cc6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c00fc71fb0d0bd5dadd986b14d140e1293bcafba
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-nested-triggers"></a>Crear desencadenadores anidados
-  Los desencadenadores DML y DDL están anidados cuando un desencadenador realiza una acción que inicia otro desencadenador. Estas acciones pueden iniciar otros desencadenadores y así sucesivamente. Los desencadenadores DML y DDL se pueden anidar hasta un máximo de 32 niveles. Puede controlar si los desencadenadores AFTER se pueden anidar en la opción de configuración del servidor **nested triggers** . Los desencadenadores INSTEAD OF (solo los desencadenadores DML pueden ser desencadenadores INSTEAD OF) se pueden anidar independientemente de esta configuración.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Los desencadenadores DML y DDL están anidados cuando un desencadenador realiza una acción que inicia otro desencadenador. Estas acciones pueden iniciar otros desencadenadores y así sucesivamente. Los desencadenadores DML y DDL se pueden anidar hasta un máximo de 32 niveles. Puede controlar si los desencadenadores AFTER se pueden anidar en la opción de configuración del servidor **nested triggers** . Los desencadenadores INSTEAD OF (solo los desencadenadores DML pueden ser desencadenadores INSTEAD OF) se pueden anidar independientemente de esta configuración.  
   
 > [!NOTE]  
 >  Una referencia a código administrado desde un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)] se considera como un nivel en lo que respecta al límite de anidamiento de 32 niveles. Los métodos invocados desde el código administrado no cuentan para este límite.  

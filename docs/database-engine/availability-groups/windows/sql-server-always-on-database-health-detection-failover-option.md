@@ -3,8 +3,11 @@ title: "Opción de conmutación por error de detección del estado de la base de
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad
-
-Desde SQL Server 2016, hay una opción disponible de detección del estado del nivel de la base de datos (DB_FAILOVER) al configurar un grupo de disponibilidad AlwaysOn. La detección del estado del nivel de la base de datos advierte cuando una base de datos deja de estar en estado en línea, cuando algo va mal, y activará la conmutación automática por error del grupo de disponibilidad. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Desde SQL Server 2016, hay una opción disponible de detección del estado del nivel de la base de datos (DB_FAILOVER) al configurar un grupo de disponibilidad AlwaysOn. La detección del estado del nivel de la base de datos advierte cuando una base de datos deja de estar en estado en línea, cuando algo va mal, y activará la conmutación automática por error del grupo de disponibilidad. 
 
 La detección del estado de nivel de la base de datos está habilitada en el grupo de disponibilidad como un todo, de ahí que supervise todas y cada una de las bases de datos del grupo de disponibilidad. Esta opción no se puede habilitar de manera selectiva para bases de datos específicas del grupo de disponibilidad. 
 

@@ -2,9 +2,12 @@
 title: "Limitación de los resultados de la búsqueda con RANK | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f82c1bfe30401d60de557c79ad7fd95be78496c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aec9bea3dabdf53867f6346ac10ee42d7b2e297a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
-  Las funciones [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) devuelven una columna denominada RANK que contiene valores ordinales de 0 a 1000 (valores de intervalo). Estos valores se utilizan para clasificar las filas devueltas en función del grado de coincidencia con los criterios de selección. Los valores de clasificación solo indican un orden relativo de relevancia de las filas en el conjunto de resultados, con un valor inferior que indica la relevancia menor. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las funciones [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) devuelven una columna denominada RANK que contiene valores ordinales de 0 a 1000 (valores de intervalo). Estos valores se utilizan para clasificar las filas devueltas en función del grado de coincidencia con los criterios de selección. Los valores de clasificación solo indican un orden relativo de relevancia de las filas en el conjunto de resultados, con un valor inferior que indica la relevancia menor. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta.  
   
 > [!NOTE]  
 >  Los predicados CONTAINS y FREETEXT no devuelven ningún valor de clasificación.  

@@ -1,11 +1,14 @@
 ---
 title: "Notas de la versión de SQL Server 2012 SP4 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b09784b129109f907c19a56a2a6fadcba119e73d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 562c03dfc873adeaca8f8486f1ecb4c66c3c4d14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>Notas de la versión de SQL Server 2012 SP4
-En este tema se resumen las mejoras incluidas en SQL Server 2012 SP4. También se describen cuestiones que se deben revisar antes de instalar o de solucionar problemas de instalación de SP4. Las notas de la versión solo están disponibles en Internet, no se incluyen en el disco de instalación. Este tema se actualiza periódicamente, conforme se van detectando nuevos problemas. Para obtener una lista detallada de correcciones de SP4, vea [Notas de las versión de SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937).  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] En este tema se resumen las mejoras incluidas en SQL Server 2012 SP4. También se describen cuestiones que se deben revisar antes de instalar o de solucionar problemas de instalación de SP4. Las notas de la versión solo están disponibles en Internet, no se incluyen en el disco de instalación. Este tema se actualiza periódicamente, conforme se van detectando nuevos problemas. Para obtener una lista detallada de correcciones de SP4, vea [Notas de las versión de SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937).  
 
 > El Service Pack 4 incluye todas las actualizaciones acumulativas de SQL Server 2012 SP3.
   

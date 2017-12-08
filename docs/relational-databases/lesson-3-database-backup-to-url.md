@@ -1,10 +1,13 @@
 ---
 title: "Lección 3: Copia de seguridad de base de datos en la dirección URL | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f63e84d8c22b5c88214cc4d85a6bebf572c41430
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Lesson 3: Database backup to URL (Lección 3: Copia de seguridad de base de datos en la dirección URL)
-En esta lección, realizará una copia de seguridad de la base de datos AdventureWorks2014 en la instancia local de SQL Server 2016 en el contenedor de Azure que ha creado en la [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, realizará una copia de seguridad de la base de datos AdventureWorks2014 en la instancia local de SQL Server 2016 en el contenedor de Azure que ha creado en la [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
 > Si quiere realizar una copia de seguridad de una base de datos de SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la sintaxis en desuso que aparece [aquí](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) para realizar una copia de seguridad en la dirección URL mediante la sintaxis WITH CREDENTIAL.  

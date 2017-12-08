@@ -2,9 +2,12 @@
 title: Especificar la longitud de campo mediante bcp (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 213f03b9f8b3fe55daa28dbc131067fca581aa31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
-  La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos **int** ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **bcp** le solicitará la longitud del campo, las longitudes predeterminadas de los campos y los efectos de la longitud del campo en el almacenamiento de datos en los archivos de datos que contienen datos de tipo **char** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos **int** ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **bcp** le solicitará la longitud del campo, las longitudes predeterminadas de los campos y los efectos de la longitud del campo en el almacenamiento de datos en los archivos de datos que contienen datos de tipo **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Solicitud bcp para la longitud de campo  
  Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w**o **-N**), el comando solicita la longitud de campo de cada campo, de la manera siguiente:  

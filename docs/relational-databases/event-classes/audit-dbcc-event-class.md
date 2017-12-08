@@ -2,9 +2,12 @@
 title: Audit DBCC (clase de eventos) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 337844121fd89c5b9b106fbe0e73ab465d8b0d1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: baa47ae61e79cae5b447a6b40d512c5d68d1aac0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-dbcc-event-class"></a>Audit DBCC, clase de eventos
-  La clase de eventos **Audit DBCC** se produce cuando se emite un comando DBCC.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Audit DBCC** se produce cuando se emite un comando DBCC.  
   
 ## <a name="audit-dbcc-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit DBCC  
   

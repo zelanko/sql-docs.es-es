@@ -2,9 +2,12 @@
 title: 'Propiedades del publicador: Publicador, Suscriptores | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c671522b75f0794874fe911e0c52b7f79d84678d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd2f8ef154f1fb1f2bb0c81e84965d6c86c13e3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>Propiedades del publicador - Publicador, Suscriptores
-  La página **Suscriptores** del cuadro de diálogo **Propiedades del publicador** se utiliza para que los publicadores ejecuten versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Esta página permite habilitar a los suscriptores para que reciban datos de publicaciones de este Publicador. Al habilitar un suscriptor para que reciba de desde este Publicador no se crean suscripciones para publicaciones de este publicador. Para crear una suscripción, debe utilizar el Asistente para nueva suscripción.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La página **Suscriptores** del cuadro de diálogo **Propiedades del publicador** se utiliza para que los publicadores ejecuten versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Esta página permite habilitar a los suscriptores para que reciban datos de publicaciones de este Publicador. Al habilitar un suscriptor para que reciba de desde este Publicador no se crean suscripciones para publicaciones de este publicador. Para crear una suscripción, debe utilizar el Asistente para nueva suscripción.  
   
 ## <a name="options"></a>Opciones  
  **Suscriptores**  

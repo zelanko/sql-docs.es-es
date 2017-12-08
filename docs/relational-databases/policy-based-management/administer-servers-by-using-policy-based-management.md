@@ -2,9 +2,12 @@
 title: "Administrar servidores mediante administración basada en directivas | Microsoft Docs"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f980a3c0022592582d9df62fd81b179a7f1dc7a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c8ed9f06fc87d159af34b32ebeb061a872eb9429
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
-   La administración basada en directivas es un sistema basado en directivas para administrar una o más instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se usa para crear condiciones que contengan expresiones de condición. A continuación, cree directivas que apliquen las condiciones a los objetos de destino de la base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La administración basada en directivas es un sistema basado en directivas para administrar una o más instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se usa para crear condiciones que contengan expresiones de condición. A continuación, cree directivas que apliquen las condiciones a los objetos de destino de la base de datos.  
 
 Por ejemplo, como el administrador de la base de datos, puede que desee asegurarse de que ciertos servidores no tienen habilitada la opción Correo electrónico de base de datos, por lo que crea una condición y una directiva que establece esa opción de servidor. 
    

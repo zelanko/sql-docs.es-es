@@ -2,9 +2,12 @@
 title: "Reflejo e instantáneas de base de datos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c2f343a2399b6d486d735e175a7c2685b159a18b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a6237b8211c04cf9c0fbb1f098856f1043fcb19d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Reflejo e instantáneas de base de datos (SQL Server)
-  Puede aprovechar una base de datos reflejada de la cual se está realizando el mantenimiento con fines de disponibilidad para descargar informes. A fin de utilizar una base de datos reflejada para informes, puede crear una instantánea de base de datos en la base de datos reflejada y dirigir las solicitudes de conexión de cliente a la instantánea más reciente. Una instantánea de base de datos es una instantánea estática coherente con las transacciones y de solo lectura de la base de datos de origen tal como existía en el momento de la creación de la instantánea. Para crear la instantánea de una base de datos en una base de datos reflejada, la base de datos debe hallarse en estado de reflejo sincronizado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede aprovechar una base de datos reflejada de la cual se está realizando el mantenimiento con fines de disponibilidad para descargar informes. A fin de utilizar una base de datos reflejada para informes, puede crear una instantánea de base de datos en la base de datos reflejada y dirigir las solicitudes de conexión de cliente a la instantánea más reciente. Una instantánea de base de datos es una instantánea estática coherente con las transacciones y de solo lectura de la base de datos de origen tal como existía en el momento de la creación de la instantánea. Para crear la instantánea de una base de datos en una base de datos reflejada, la base de datos debe hallarse en estado de reflejo sincronizado.  
   
  A diferencia de la base de datos reflejada, los clientes pueden obtener acceso a las instantáneas de base de datos. Mientras el servidor reflejado se comunique con el servidor principal, podrá dirigir clientes de informe para que se conecten a una instantánea. Observe que, puesto que las instantáneas de base de datos son estáticas, no hay nuevos datos disponibles. Para hacer que los datos relativamente recientes estén disponibles para los usuarios, deberá crear una nueva instantánea de base de datos de forma periódica y hacer que las aplicaciones dirijan las conexiones entrantes de cliente a la instantánea más reciente.  
   

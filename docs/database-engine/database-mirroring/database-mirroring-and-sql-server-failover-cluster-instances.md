@@ -2,9 +2,12 @@
 title: "Creación de reflejo de la base de datos e instancias de clúster de conmutación por error | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85bfda015ac159cad16deb1e2e2bac20f304b6df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4a180fe2ed117c92207a768745dd86a99fd39661
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Creación de reflejo de la base de datos e instancias de clúster de conmutación por error
-  Un clúster de conmutación por error es una combinación de uno o más discos físicos en un grupo de clústeres de los Servicios de Cluster Server de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), conocido como un grupo de recursos, que son nodos participantes en el clúster. El grupo de recursos está configurado como una instancia en clúster de conmutación por error que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece en la red como si fuera un solo equipo, pero dispone de funcionalidad que proporciona conmutación por error de un nodo a otro si un nodo deja de estar disponible. Para obtener más información, vea [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un clúster de conmutación por error es una combinación de uno o más discos físicos en un grupo de clústeres del servicio de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), conocido como grupo de recursos, que son nodos participantes en el clúster. El grupo de recursos está configurado como una instancia en clúster de conmutación por error que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece en la red como si fuera un solo equipo, pero dispone de funcionalidad que proporciona conmutación por error de un nodo a otro si un nodo deja de estar disponible. Para obtener más información, vea [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  Los clústeres de conmutación por error proporcionan compatibilidad de alta disponibilidad para una instancia entera de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a diferencia de la creación de reflejo de la base de datos, que proporciona compatibilidad de alta disponibilidad para una sola base de datos. La creación de reflejo de la base de datos trabaja entre clústeres de conmutación por error y, también, entre un clúster de conmutación por error y un host no agrupado.  
   

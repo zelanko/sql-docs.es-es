@@ -2,9 +2,12 @@
 title: "Comparación de la consulta FOR XML con la consulta FOR XML anidada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26e2fb52bc52ff9f00fb70f20385533104cb8924
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c58715813c4369258d5244e517e2e1753a9046c7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparación de la consulta FOR XML con la consulta FOR XML anidada
-  En este tema se compara una consulta FOR XML de nivel único con una consulta FOR XML anidada. Una de las ventajas de usar consultas FOR XML anidadas es que puede especificar una combinación de XML centrado en atributos y un XML centrado en elementos para los resultados de la consulta. En este ejemplo se demuestra.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este tema se compara una consulta FOR XML de nivel único con una consulta FOR XML anidada. Una de las ventajas de usar consultas FOR XML anidadas es que puede especificar una combinación de XML centrado en atributos y un XML centrado en elementos para los resultados de la consulta. En este ejemplo se demuestra.  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta `SELECT` recupera información de categoría y subcategoría de productos de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . No hay FOR XML anidado en la consulta.  

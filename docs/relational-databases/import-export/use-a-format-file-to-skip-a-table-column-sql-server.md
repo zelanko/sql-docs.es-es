@@ -2,9 +2,12 @@
 title: Usar un archivo de formato para omitir una columna de tabla (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02dff7296690e0ecf3bfd76f9e7be1808885b2f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0603aa186c900e60cc17bc388d439738fd41a95a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar un archivo de formato para omitir una columna de tabla  (SQL Server)
-  En este tema se describen los archivos de formato. Se puede utilizar un archivo de formato para omitir la importación de una columna de tabla cuando el campo no existe en el archivo de datos. Un archivo de datos solo puede contener menos campos que el número de columnas en la tabla si las columnas omitidas tienen un valor nulo y/o contienen un valor predeterminado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describen los archivos de formato. Se puede utilizar un archivo de formato para omitir la importación de una columna de tabla cuando el campo no existe en el archivo de datos. Un archivo de datos solo puede contener menos campos que el número de columnas en la tabla si las columnas omitidas tienen un valor nulo y/o contienen un valor predeterminado.  
   
 ## <a name="sample-table-and-data-file"></a>Tabla y archivo de datos de ejemplo  
  Los siguientes ejemplos requieren una tabla denominada `myTestSkipCol` en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] bajo el esquema **dbo** . Para crear esta tabla, realice lo siguiente:  

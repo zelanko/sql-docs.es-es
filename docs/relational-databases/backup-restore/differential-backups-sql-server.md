@@ -2,9 +2,12 @@
 title: Copias de seguridad diferenciales (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 127eed1b2970254accdfc83a795e3b0a66d9f08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="differential-backups-sql-server"></a>Copias de seguridad diferenciales (SQL Server)
-  Este tema de copias de seguridad y restauración es pertinente para todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema de copias de seguridad y restauración se aplica a todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Una copia de seguridad diferencial se basa en la copia de seguridad de datos completa más reciente existente. Una copia de seguridad diferencial captura solo los datos que han cambiado después de la última copia de seguridad completa. La copia de seguridad completa en la que se basa una diferencial se denomina *base* de la diferencial. Las copias de seguridad completas, a excepción de las de solo copia, pueden servir como base para una serie de copias de seguridad diferenciales, incluidas las de base de datos, las parciales, y las de archivos. La copia de seguridad de base de una copia de seguridad diferencial de archivos puede estar contenida en una copia de seguridad completa, una copia de seguridad de archivos o una copia de seguridad parcial.  
   

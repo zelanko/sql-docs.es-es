@@ -2,9 +2,12 @@
 title: "Contraseña administrativa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592f3db3d5340f29832c29e1fcca7a2d46a7033f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-password"></a>Contraseña administrativa
-  Si en la página **Distribuidores** de este asistente ha seleccionado un distribuidor remoto para este publicador, debe escribir una contraseña para la replicación de conexión entre el publicador y el distribuidor utilizando el inicio de sesión **distributor_admin** . La contraseña debe coincidir con la especificada en la página **Contraseña del distribuidor** del Asistente para configurar la distribución o en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si, en la página **Distribuidores** de este asistente, ha seleccionado un distribuidor remoto para este publicador, debe escribir una contraseña para la replicación de conexión entre el publicador y el distribuidor utilizando el inicio de sesión **distributor_admin**. La contraseña debe coincidir con la especificada en la página **Contraseña del distribuidor** del Asistente para configurar la distribución o en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** .  
   
 ## <a name="options"></a>Opciones  
  **Contraseña**  

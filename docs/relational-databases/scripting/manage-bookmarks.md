@@ -2,9 +2,12 @@
 title: "Administración de marcadores | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-bookmarks"></a>Administrar marcadores
-  Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear vínculos a líneas específicas de código en el documento. Puede abrir esta ventana desde el menú **Ver** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear vínculos a líneas específicas de código en el documento. Puede abrir esta ventana desde el menú **Ver** .  
   
  Para crear y navegar a través de los marcadores, haga clic en los botones que se ubican en la barra de herramientas del **Editor de texto** y en la parte superior de la ventana **Marcadores** . Puede agregar y quitar marcadores, activarlos o deshabilitarlos, y organizarlos en carpetas. También están disponibles algunos comandos desde el menú contextual de la ventana **Marcadores** . Para agregar o quitar un marcador, coloque el punto de inserción en la línea deseada del editor y haga clic en **Cambiar a un marcador de la línea actual**. Para activar un marcador, active su casilla en la ventana **Marcadores** ; para deshabilitarlo (pero no quitarlo), desactive la casilla.  
   

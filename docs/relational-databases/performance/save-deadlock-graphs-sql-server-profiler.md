@@ -1,10 +1,13 @@
 ---
-title: "Guardar gráficos de interbloqueo (SQL Server Profiler) | Microsoft Docs"
+title: Guardar grafos de interbloqueo (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,51 +21,51 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1dcd65f7fd6d87ab186f9b2afe6b4e36502045a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 92eecce1715fa172a17b849711ba6f9cc09cfbb8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="save-deadlock-graphs-sql-server-profiler"></a>Guardar gráficos de interbloqueo (SQL Server Profiler)
-  En este tema se explica cómo guardar un gráfico de interbloqueo mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Los gráficos de interbloqueo se guardan como archivos XML.  
+# <a name="save-deadlock-graphs-sql-server-profiler"></a>Guardar grafos de interbloqueo (SQL Server Profiler)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se explica cómo guardar un grafo de interbloqueo mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Los gráficos de interbloqueo se guardan como archivos XML.  
   
-### <a name="to-save-deadlock-graph-events-separately"></a>Para guardar eventos deadlock graph por separado  
+## <a name="save-deadlock-graph-events-separately"></a>Guardar eventos de grafo de interbloqueo por separado  
   
-1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y, a continuación, conéctese a una instancia de SQL Server.  
+1. En el menú **Archivo**, seleccione **Nuevo seguimiento** y, a continuación, conéctese a una instancia de SQL Server.  
   
-     Aparecerá el cuadro de diálogo **Propiedades de seguimiento**.  
+     Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
     > [!NOTE]  
-    >  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión** , el cuadro de diálogo **Propiedades de seguimiento**no aparecerá y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
+    >  Si selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento** no aparecerá y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, seleccione **Opciones** y desmarque la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión**.  
   
-2.  En el cuadro de diálogo Propiedades de seguimiento, en el cuadro**Nombre de seguimiento** , escriba un nombre para el seguimiento.  
+2. En el cuadro de diálogo **Propiedades de seguimiento** , en el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
-3.  En la lista **Usar la plantilla** , seleccione la plantilla de seguimiento que desea utilizar para el seguimiento o seleccione la opción **En blanco** si no desea utilizar ninguna plantilla.  
+3. En la lista **Usar la plantilla**, seleccione una plantilla de seguimiento en la que se basará el seguimiento. Si no quiere usar una plantilla, seleccione **En blanco**.  
   
-4.  Realice una de las siguientes operaciones:  
+4. Realice una de las siguientes operaciones:  
   
-    -   Active la casilla**Guardar en archivo** para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)**.  
+    -   Active la casilla **Guardar en archivo** para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)**.  
   
-         Si lo desea, seleccione **Habilitar sustitución incremental de archivos** y **El servidor procesa los datos de seguimiento**.  
+         Opcionalmente, active las casillas **Habilitar sustitución incremental de archivos** y **El servidor procesa los datos de seguimiento** . 
   
     -   Active la casilla **Guardar en tabla** para capturar el seguimiento en una tabla de base de datos.  
   
-         Si lo desea, haga clic en **Establecer número máximo de filas**y especifique un valor.  
+         Si quiere, seleccione **Establecer número máximo de filas** y especifique un valor.  
   
-5.  Opcionalmente, active la casilla **Habilitar hora de detención de seguimiento** para especificar una fecha y hora de detención.  
+5. Opcionalmente, active la casilla **Habilitar hora de detención de seguimiento** para especificar una fecha y hora de detención. 
   
-6.  Haga clic en la pestaña **Selección de eventos**.  
+6. Seleccione la pestaña **Selección de eventos**.  
   
-7.  En el cuadro de diálogo **Eventos**, expanda la categoría de evento **Bloqueos**y, luego, active la casilla **Deadlock graph**. Si la categoría de eventos Bloqueos no está disponible, seleccione la opción **Mostrar todos los eventos** para mostrarla.  
+7. En la columna de datos **Eventos**, expanda la categoría de eventos **Locks** y active la casilla **Deadlock graph**. Si la categoría de eventos **Locks** no está disponible, active la casilla **Mostrar todos los eventos** para mostrarla.  
   
-     Aparecerá el cuadro de diálogo **Configuración de extracción de eventos**se agrega al cuadro de diálogo **Propiedades de seguimiento**.  
+     La pestaña **Configuración de extracción de eventos** se agrega al cuadro de diálogo **Propiedades de seguimiento**.  
   
-8.  En el menú **Configuración de extracción de eventos**, haga clic en **Guardar eventos XML de interbloqueo por separado**.  
+8. En la pestaña **Configuración de extracción de eventos**, seleccione **Guardar eventos XML de interbloqueo por separado**.  
   
-9. En el cuadro de diálogo **Guardar como** , escriba el nombre del archivo donde desee almacenar los eventos deadlock graph.  
+9. En el cuadro de diálogo **Guardar como**, escriba el nombre del archivo en que quiera almacenar los eventos de grafo de interbloqueo.  
   
-10. Haga clic en **Todos los lotes XML de interbloqueo en un solo archivo** para guardar todos los eventos deadlock graph en un solo archivo XML, o bien haga clic en **Cada lote XML de interbloqueo en un archivo independiente**para crear un nuevo archivo XML para cada evento deadlock graph.  
+10. Seleccione **Todos los lotes XML de interbloqueo en un solo archivo** para guardar todos los eventos de grafo de interbloqueo en un solo archivo XML. O bien seleccione **Cada lote XML de interbloqueo en un archivo independiente** para crear un nuevo archivo XML para cada grafo de interbloqueo.  
   
  Una vez guardado el archivo de interbloqueo, puede abrir el archivo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Abrir, ver e imprimir un archivo de interbloqueo &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   

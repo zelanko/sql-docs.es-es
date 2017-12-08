@@ -2,9 +2,12 @@
 title: Visor de archivos de registro | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dfd00aef3ab0c91f2acd55c6cb8e1596a70d1df0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ec6cadb76a448fd54db16cef55dcf2019d9b6a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-viewer"></a>Visor de archivos de registro
-  El Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se usa para obtener acceso a la información sobre los errores y eventos capturados en los archivos de registro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Visor del archivo de registro de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se usa para obtener acceso a la información sobre los errores y eventos capturados en los archivos de registro.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Ventajas de usar el visor del archivo de registro  
  Puede ver los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar. Puede tener acceso a los archivos de registro sin conexión de servidores registrados o mediante programación a través de consultas WMI y WQL (Lenguaje de la consulta de WMI). Para obtener más información, vea [Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md). Estos son los tipos de archivos de registro a que se puede tener acceso con el visor del archivo de registro:  

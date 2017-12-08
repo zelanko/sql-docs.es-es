@@ -2,9 +2,12 @@
 title: Preprocesamiento de un esquema para combinar esquemas incluidos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08a839ccc5aae2426af36dc5bcef27e33406a343
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Preprocesar un esquema para combinar esquemas incluidos
-  El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  
   
  Para solucionar este problema, los esquemas XML que incluyen la directiva \<xsd:include> se pueden procesar previamente para copiar y combinar el contenido de todos los esquemas incluidos en un solo esquema para cargarlo en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
   

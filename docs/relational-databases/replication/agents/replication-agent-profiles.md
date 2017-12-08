@@ -2,9 +2,12 @@
 title: "Perfiles del Agente de replicación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba2b5e4cb56cc8134a3febebb5c84ff8935a235d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88f88d0a47ec41c18382d4247051156d65dfcf99
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agent-profiles"></a>Perfiles del Agente de replicación
-  Cuando se configura la replicación, se instala un conjunto de perfiles de agente en el distribuidor. Un perfil de agente contiene un conjunto de parámetros que se usan cada vez que se ejecuta un agente: cada agente inicia una sesión en el distribuidor durante su proceso de inicio y consulta los parámetros de su perfil. En las suscripciones de mezcla que utilizan la sincronización web, los perfiles se descargan y almacenan en el suscriptor. Si se cambia el perfil, éste se actualiza en el suscriptor la próxima vez que se ejecuta el Agente de mezcla. Para obtener más información acerca de la sincronización web, vea [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando se configura la replicación, se instala un conjunto de perfiles de agente en el distribuidor. Un perfil de agente contiene un conjunto de parámetros que se usan cada vez que se ejecuta un agente: cada agente inicia una sesión en el distribuidor durante su proceso de inicio y consulta los parámetros de su perfil. En las suscripciones de mezcla que utilizan la sincronización web, los perfiles se descargan y almacenan en el suscriptor. Si se cambia el perfil, éste se actualiza en el suscriptor la próxima vez que se ejecuta el Agente de mezcla. Para obtener más información acerca de la sincronización web, vea [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  La replicación proporciona un perfil predeterminado para cada agente y perfiles predefinidos adicionales para el Agente de registro del LOG, el Agente de distribución y el Agente de mezcla. Además de los perfiles proporcionados, puede crear perfiles adecuados a los requisitos de su aplicación. Un perfil de agente permite cambiar fácilmente los principales parámetros de todos los agentes asociados con ese perfil. Por ejemplo, si tiene 20 agentes de instantáneas y necesita cambiar el valor de tiempo de espera de la consulta (el parámetro **-QueryTimeout** ), puede actualizar el perfil utilizado por los agentes de distribución, con lo que todos los agentes de instantáneas comenzarán automáticamente a utilizar el nuevo valor la próxima vez que se ejecuten.  
   

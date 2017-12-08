@@ -2,9 +2,12 @@
 title: "Implementar un controlador de lógica de negocios para un artículo de mezcla | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a497eb370a69b36ca0ab5b84b8f3809f0e6dd8b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3355b1aa21c41653106818ef1bd212322b03ca53
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar un controlador de lógica de negocios para un artículo de mezcla
-  En este tema se describe cómo implementar un controlador de lógica de negocios para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante programación de la replicación o Replication Management Objects (RMO).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo implementar un controlador de lógica de negocios para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante programación de la replicación o Replication Management Objects (RMO).  
   
  El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos que se producen durante el proceso de sincronización de la replicación de mezcla. El proceso de la replicación puede invocar los métodos en el controlador de lógica de negocios para cada fila cambiada que se replica durante la sincronización.  
   

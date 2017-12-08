@@ -2,9 +2,12 @@
 title: OLEDB DataRead, clase de eventos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf914267c6cd1e859d7f2ab5fed7c02895f879e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead, clase de eventos
-  La clase de eventos OLEDB DataRead se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos. Incluya esta clase de eventos en los seguimientos que supervisan cuándo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una llamada de solicitud de datos al proveedor OLE DB.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos OLEDB DataRead se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos. Incluya esta clase de eventos en los seguimientos que supervisan cuándo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una llamada de solicitud de datos al proveedor OLE DB.  
   
  Al incluir la clase OLEDB DataRead habrá una gran sobrecarga. Se recomienda limitar el uso de esta clase de eventos a los seguimientos que supervisan problemas específicos durante períodos breves.  
   

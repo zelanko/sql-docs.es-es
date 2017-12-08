@@ -2,9 +2,12 @@
 title: "Supervisión del uso de la CPU | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad8ff221557c1ecbfe1d8fe5cf453c7b99e96203
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-cpu-usage"></a>Supervisar el uso de la CPU
-  Supervise una instancia de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periódicamente para determinar si los índices de uso de la CPU son normales. Un índice de uso de la CPU constantemente alto puede indicar la necesidad de actualizar la CPU o de agregar varios procesadores. Además, un uso alto de la CPU puede indicar que hay una aplicación mal optimizada o diseñada. La optimización de la aplicación puede reducir el uso de la CPU.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Supervise una instancia de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periódicamente para determinar si los índices de uso de la CPU son normales. Un índice de uso de la CPU constantemente alto puede indicar la necesidad de actualizar la CPU o de agregar varios procesadores. Además, un uso alto de la CPU puede indicar que hay una aplicación mal optimizada o diseñada. La optimización de la aplicación puede reducir el uso de la CPU.  
   
  El contador **Procesador: % de tiempo de procesador** en el Monitor de sistema es la forma más eficaz de determinar el uso de la CPU. Este contador supervisa el tiempo que la CPU dedica a la ejecución de un subproceso que no está inactivo. Un estado continuado de entre el 80 y el 90 por ciento puede ser indicativo de que es necesario actualizar la CPU o bien agregar más procesadores. Para sistemas con múltiples procesadores, es necesario supervisar una instancia independiente de este contador para cada procesador. Este valor representa la suma del tiempo de procesador en un procesador específico. Para determinar la media para todos los procesadores de impresión, utilice el contador **Sistema: % Tiempo total de procesador** en su lugar.  
   

@@ -2,9 +2,12 @@
 title: 'TM: Commit Tran Starting (clase de eventos) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b47e683a16ab2d0afdd0d1a4edc04f2d01b0591
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e364db334ec5186470621c8f4d8de68a597989c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting, clase de eventos
-  La clase de eventos TM: Commit Tran Starting indica que se está iniciando una solicitud COMMIT TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones. La columna EventSubClass indica si se reiniciará una nueva transacción una vez se confirme la transacción actual.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos TM: Commit Tran Starting indica que se está iniciando una solicitud COMMIT TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones. La columna EventSubClass indica si se reiniciará una nueva transacción una vez se confirme la transacción actual.  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Columnas de datos de la clase de eventos TM: Commit Tran Starting  
   

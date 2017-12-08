@@ -2,9 +2,12 @@
 title: Procedimientos almacenados (motor de base de datos) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44d4e3c81bdf4e6bfb7f4dea74047dba6e9f4efd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd0517fa69865cd3a4d3180071be0551606a5090
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
-  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
   
 -   Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.  
   

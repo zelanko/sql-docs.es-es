@@ -2,9 +2,12 @@
 title: "Creación de particiones en el nivel de aplicación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0133e07a063589deeae9cf1d1cb9e05fe480437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
-  Esta aplicación procesa pedidos. Hay mucho trabajo de procesamiento para los pedidos recientes. Sin embargo, hay poco para los pedidos antiguos. Los pedidos recientes están en una tabla optimizada para memoria. Los pedidos antiguos están en una tabla basada en disco. Todos los pedidos posteriores a *hotDate* están en la tabla optimizada para memoria. Todos los pedidos anteriores a *hotDate* están en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Esta aplicación procesa pedidos. Hay mucho trabajo de procesamiento para los pedidos recientes. Sin embargo, hay poco para los pedidos antiguos. Los pedidos recientes están en una tabla optimizada para memoria. Los pedidos antiguos están en una tabla basada en disco. Todos los pedidos posteriores a *hotDate* están en la tabla optimizada para memoria. Todos los pedidos anteriores a *hotDate* están en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  
   
  En este ejemplo no se usa una tabla con particiones para la tabla basada en disco, pero se hace un seguimiento de un punto de división explícito entre las dos tablas, mediante una tercera tabla. El punto de división se puede usar para asegurarse de que los datos recién insertados se insertan siempre en la tabla adecuada según la fecha. También se puede usar para determinar dónde buscar datos. Los últimos datos en llegar siguen estando en la tabla adecuada.  
   

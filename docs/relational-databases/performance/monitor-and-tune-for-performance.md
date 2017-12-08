@@ -1,10 +1,13 @@
 ---
 title: "Supervisión y optimización del rendimiento | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -32,14 +35,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28e89f06241fe44250b058e03717a30da62f308e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f9825e46e8f39d8077df64a2e15b6a2eeec47c03
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
-  El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento.  
   
  La evaluación continua del rendimiento de la base de datos ayuda a minimizar los tiempos de respuesta y a maximizar el rendimiento, obteniendo como resultado un rendimiento óptimo. El tráfico de red, la E/S de disco y el uso de la CPU eficientes son factores clave para obtener un buen rendimiento. Es necesario analizar a fondo los requisitos de las aplicaciones, comprender la estructura lógica y física de los datos, evaluar el uso de la base de datos y negociar contrapartidas, como el procesamiento de transacciones en línea (OLTP) frente a los sistemas de ayuda para la toma de decisiones.  
   

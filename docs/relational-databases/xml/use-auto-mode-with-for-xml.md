@@ -2,9 +2,12 @@
 title: Usar el modo AUTO con FOR XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4323f476f72a437074c8cc12b657e0e05da0dca1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2e830183ed89e7d9496809fd7545219b1b978079
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar el modo AUTO con FOR XML
-  Tal como se describe en [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Tal como se describe en[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  
   
  Cada tabla de la cláusula FROM, de la que al menos se presenta una columna en la cláusula SELECT, se representa como un elemento XML. Las columnas que se incluyen en la cláusula SELECT se asignan a atributos o subelementos, si se especifica la opción ELEMENTS en la cláusula FOR XML.  
   

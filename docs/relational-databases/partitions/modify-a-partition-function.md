@@ -2,9 +2,12 @@
 title: "Modificación de una función de partición | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6951b2a5363c78238c38956fa90d0cfd107f919
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-a-partition-function"></a>Modificar una función de partición
-  Puede cambiar el modo en que se crean las particiones de una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al sumar o restar el número de particiones especificadas, en aumentos de 1, en la función de partición de la tabla o el índice con particiones mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lo que sucede al agregar una partición es que se "divide" una partición existente en dos particiones y se vuelven a definir los límites de las particiones nuevas. Al quitar una partición, se "mezclan" los límites de dos particiones en una sola. Lo que hace esta última acción es volver a llenar una partición y dejar la otra sin asignar.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede cambiar el modo en que se crean las particiones de una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al sumar o restar el número de particiones especificadas, en aumentos de 1, en la función de partición de la tabla o el índice con particiones mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lo que sucede al agregar una partición es que se "divide" una partición existente en dos particiones y se vuelven a definir los límites de las particiones nuevas. Al quitar una partición, se "mezclan" los límites de dos particiones en una sola. Lo que hace esta última acción es volver a llenar una partición y dejar la otra sin asignar.  
   
 > [!CAUTION]  
 >  Varias tablas o índices pueden utilizar la misma función de partición. Cuando se modifica una función de partición, afecta a todas las funciones en una sola transacción. Compruebe las dependencias de la función de partición antes de modificarla.  

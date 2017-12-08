@@ -2,9 +2,12 @@
 title: Habilitar y deshabilitar la captura de datos modificados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 77002b107ffcd26066850394b5d713d020919bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 204b18d54a65c8fdf3cbc86d04e7daf1850fe84f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
-  Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar la captura de datos modificados en una base de datos  
  Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor **sysadmin** habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) en el contexto de la base de datos. Para saber si una base de datos ya está habilitada, consulte la columna **is_cdc_enabled** en la vista de catálogo **sys.databases**.  

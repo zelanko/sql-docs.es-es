@@ -1,10 +1,13 @@
 ---
 title: "Procedimiento recomendado con el Almacén de consultas | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   En este tema se describen los procedimientos recomendados para usar el Almacén de consultas con la carga de trabajo.  
   
-##  <a name="SSMS"></a> Uso de la versión más reciente de SQL Server Management Studio  
+##  <a name="SSMS"></a> Utilice la versión más reciente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene un conjunto de interfaces de usuario diseñadas para configurar el Almacén de consultas, así como para consumir datos recopilados sobre la carga de trabajo.  
 Descargue la última versión de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aquí](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Vaya a la subcarpeta Almacén de consultas del nodo de la base de datos en el Explorador de objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para abrir las vistas de solución de problemas de escenarios concretos.   
 El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] funciona con el conjunto de métricas de ejecución, cada una expresada como cualquiera de las siguientes funciones estadísticas:  
   
-|Métrica de ejecución|Función estadística|  
-|----------------------|------------------------|  
-|Tiempo de CPU, duración, recuento de ejecuciones, lecturas lógicas, escrituras lógicas, consumo de memoria y lecturas físicas|Promedio, máximo, mínimo, desviación estándar y total|  
+|Versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Métrica de ejecución|Función estadística|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Tiempo de CPU, duración, recuento de ejecuciones, lecturas lógicas, escrituras lógicas, consumo de memoria, lecturas físicas, tiempo de CLR, grado de paralelismo (DOP) y recuento de filas|Promedio, máximo, mínimo, desviación estándar y total|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|Tiempo de CPU, duración, recuento de ejecuciones, lecturas lógicas, escrituras lógicas, consumo de memoria, lecturas físicas, tiempo de CLR, grado de paralelismo (DOP), recuento de filas, memoria de registro, memoria de TempDB y tiempos de espera|Promedio, máximo, mínimo, desviación estándar y total|
   
  En el gráfico siguiente se muestra cómo localizar vistas del Almacén de consultas:  
   
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Puede aplicar uno de estos dos pasos o ambos ejecutando la siguiente instrucción que vuelve a cambiar explícitamente el modo de operación a lectura y escritura:  
+Puede aplicar uno de estos dos pasos o ambos ejecutando la siguiente instrucción que vuelve a cambiar explícitamente el modo de operación a lectura y escritura:  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -230,7 +234,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Si el problema continúa, significa que los datos del Almacén de consultas siguen estando dañados en el disco.
+ Si el problema continúa, significa que los datos del Almacén de consultas siguen dañados en el disco.
  
  El Almacén de consultas podría recuperarse mediante la ejecución del procedimiento almacenado **sp_query_store_consistency_check** en la base de datos afectada.
  

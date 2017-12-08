@@ -2,9 +2,12 @@
 title: Planes de mantenimiento | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abd4882c905f18643da40892c4cbf200091d5363
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plans"></a>Planes de mantenimiento
-  Los planes de mantenimiento crean un flujo de trabajo de las tareas necesarias para asegurarse de que la base de datos está optimizada, se realizan copias de seguridad de la misma con regularidad y no tiene incoherencias. El Asistente para planes de mantenimiento también crea planes de mantenimiento principales, pero la creación manual de planes le da mucha más flexibilidad.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los planes de mantenimiento crean un flujo de trabajo de las tareas necesarias para asegurarse de que la base de datos está optimizada, se realizan copias de seguridad de esta con regularidad y no tiene incoherencias. El Asistente para planes de mantenimiento también crea planes de mantenimiento principales, pero la creación manual de planes le da mucha más flexibilidad.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Ventajas de los planes de mantenimiento  
  En [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)], los planes de mantenimiento crean un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que ejecuta un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los planes de mantenimiento se pueden ejecutar manual o automáticamente a intervalos programados.  

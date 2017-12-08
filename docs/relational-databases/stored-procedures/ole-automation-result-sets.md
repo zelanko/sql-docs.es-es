@@ -2,9 +2,12 @@
 title: "Conjuntos de resultados de automatización OLE | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86a6ef5870af8d4ee2f9151301d560e04de9c11f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: baef4873acc75daecf116f482cb1e1401015e82a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-result-sets"></a>Conjuntos de resultados de automatización OLE
-  Si una propiedad o método de automatización OLE devuelve datos en una matriz de una o dos dimensiones, la matriz se devuelve al cliente como un conjunto de resultados:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si una propiedad o método de automatización OLE devuelve datos en una matriz de una o dos dimensiones, la matriz se devuelve al cliente como conjunto de resultados:  
   
 -   Se devuelve al cliente una matriz unidimensional como conjunto de resultados de fila única con tantas columnas como elementos tenga la matriz. Por ejemplo, array(10) se devuelve como una fila única de 10 columnas.  
   

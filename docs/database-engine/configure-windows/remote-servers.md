@@ -2,9 +2,12 @@
 title: Servidores remotos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="remote-servers"></a>Servidores remotos
-  Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Una configuración de servidor remoto permite a un cliente conectado a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutar un procedimiento almacenado en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin necesidad de establecer una conexión individual. En cambio, el servidor al que está conectado el cliente acepta la solicitud de cliente y la envía al servidor remoto en nombre del cliente. El servidor remoto procesa la solicitud y devuelve todos los resultados al servidor original. Este servidor, a su vez, pasa esos resultados al cliente. Cuando configura un servidor remoto, también debe tener en cuenta los aspectos de seguridad.  
   

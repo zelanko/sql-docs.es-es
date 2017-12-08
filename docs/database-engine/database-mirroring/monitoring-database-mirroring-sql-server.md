@@ -2,9 +2,12 @@
 title: "Supervisar la creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 873b3fe6f7bcfa321f9a6b05473b57b9fb2030cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
-  En esta sección se presentan el Monitor de creación de reflejo de la base de datos y los procedimientos almacenados del sistema **sp_dbmmonitor** , se explica el funcionamiento de la supervisión de la creación de reflejo de la base de datos (incluido el **Trabajo del Monitor de creación de reflejo de la base de datos**) y se resume la información que se puede supervisar sobre las sesiones de creación de reflejo de la base de datos. Además, en esta sección se describe cómo definir umbrales de advertencia para un conjunto de eventos de creación de reflejo de la base de datos predefinidos y cómo configurar alertas sobre cualquier evento de creación de reflejo de la base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta sección se presentan el Monitor de creación de reflejo de la base de datos y los procedimientos almacenados del sistema **sp_dbmmonitor**, se explica el funcionamiento de la supervisión de la creación de reflejo de la base de datos (incluido el **Trabajo del Monitor de creación de reflejo de la base de datos)** y se resume la información que se puede supervisar sobre las sesiones de creación de reflejo de la base de datos. Además, en esta sección se describe cómo definir umbrales de advertencia para un conjunto de eventos de creación de reflejo de la base de datos predefinidos y cómo configurar alertas sobre cualquier evento de creación de reflejo de la base de datos.  
   
  Se puede supervisar una base de datos reflejada durante una sesión de creación de reflejo para comprobar si hay flujo de datos y si éste es correcto. Para configurar y administrar la supervisión de una o varias bases de datos reflejadas en una instancia de servidor, se puede usar el Monitor de creación de reflejo de la base de datos o los procedimientos almacenados del sistema **sp_dbmmonitor** .  
   

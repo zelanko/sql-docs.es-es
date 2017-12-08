@@ -2,9 +2,12 @@
 title: Solucionar problemas de los publicadores de Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2796e5af63fb0fcce047baab1895a4ac58a64f65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1878b377957022e672dfec13f51e8f54e009c36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
-  En este tema se describen varios problemas que pueden surgir al configurar y utilizar un publicador de Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describen varios problemas que pueden surgir al configurar y utilizar un publicador de Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Aparece un error referente al cliente Oracle y al software de red  
  La cuenta con la que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor debe tener permisos de lectura y escritura para el directorio (y todos los subdirectorios) en el que está instalado el software de red del cliente Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  

@@ -2,9 +2,12 @@
 title: Desempaquetar un paquete DAC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc4498e01b9f72d8ef2cd9f13b137c67f48d63ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5599ea686d99afa78e0ef12f89765e889746f723
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unpack-a-dac-package"></a>Desempaquetar un paquete de DAC
-  Utilice el diálogo Unpack Data-tier Application para descomprimir los scripts y archivos de un paquete de la aplicación de capa de datos (DAC). Los scripts y archivos se colocan en una carpeta donde se pueden revisar antes de usar el paquete para implementar la DAC en un sistema de producción. El contenido de una DAC también se puede comparar con el contenido de otro paquete desempaquetado en otra carpeta.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice el cuadro de diálogo Unpack Data-tier Application (Desempaquetar aplicación de capa de datos) para descomprimir los scripts y archivos de un paquete de la aplicación de capa de datos (DAC). Los scripts y archivos se colocan en una carpeta donde se pueden revisar antes de usar el paquete para implementar la DAC en un sistema de producción. El contenido de una DAC también se puede comparar con el contenido de otro paquete desempaquetado en otra carpeta.  
   
 1.  **Antes de empezar:**  [Seguridad](#Security)  
   

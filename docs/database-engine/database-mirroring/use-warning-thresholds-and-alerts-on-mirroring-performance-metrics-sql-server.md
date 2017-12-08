@@ -2,9 +2,12 @@
 title: "Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e808e50a091e9442068271275cf08b812d5a83b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ba4368ce9a1557d8cd199f0bad59fb3d40a2cdf4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo (SQL Server)
-  Este tema contiene información acerca de los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los que se pueden configurar y administrar umbrales de advertencia para la creación de reflejo de la base de datos. Puede usar el Monitor de creación de reflejo de la base de datos o los procedimientos almacenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**y **sp_dbmmonitordropalert** . Este tema también contiene información acerca de cómo configurar alertas en los eventos de creación de reflejo de la base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema contiene información acerca de los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los que se pueden configurar y administrar umbrales de advertencia para la creación de reflejo de la base de datos. Puede usar el Monitor de creación de reflejo de la base de datos o los procedimientos almacenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**y **sp_dbmmonitordropalert** . Este tema también contiene información acerca de cómo configurar alertas en los eventos de creación de reflejo de la base de datos.  
   
  Después de establecer la supervisión de una base de datos reflejada, un administrador del sistema puede configurar los umbrales de advertencia de algunas métricas de rendimiento clave. Además, el administrador puede configurar alertas para estos y otros eventos de la creación de reflejo de la base de datos.  
   

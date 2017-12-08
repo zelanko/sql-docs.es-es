@@ -1,39 +1,37 @@
 ---
 title: "Índices de tablas con optimización para memoria | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
-ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Índices de tablas con optimización para memoria
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
-En este artículo se describen los tipos de índices que están disponibles para una tabla con optimización para memoria. El artículo:  
+En este artículo se describen los tipos de índices que están disponibles para una tabla optimizada para memoria. El artículo:  
   
 - Ofrece ejemplos de código corto que muestran la sintaxis de Transact-SQL.  
-- Describe cómo se diferencian los índices con optimización para memoria de los índices tradicionales basados en disco.  
-- Explica las circunstancias en las que cada tipo de índice con optimización para memoria resulta más adecuado.  
+- Describe cómo se diferencian los índices optimizados para memoria de los índices tradicionales basados en disco.  
+- Explica las circunstancias en las que cada tipo de índice optimizado para memoria resulta más adecuado.  
   
   
 Los índices de*hash* se abordan con más detalle en un [artículo relacionado](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
@@ -42,15 +40,15 @@ Los índices de*hash* se abordan con más detalle en un [artículo relacionado](
 Los índices de*almacén de columnas* se tratan en [otro artículo](~/relational-databases/indexes/columnstore-indexes-overview.md).  
   
   
-## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxis de índices con optimización para memoria  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxis de índices optimizados para memoria  
   
-Cada instrucción CREATE TABLE para una tabla con optimización para memoria debe incluir entre 1 y 8 cláusulas para declarar los índices. El índice debe ser uno de los siguientes:  
+Cada instrucción CREATE TABLE para una tabla optimizada para memoria debe incluir e indexar, ya sea explícitamente a través de un elemento INDEX, o implícitamente a través de un elemento PRIMARY KEY o una restricción UNIQUE. El índice debe ser uno de los siguientes:  
   
 - Índice de hash.  
 - Índice no agrupado (es decir, la estructura interna predeterminada de un árbol B).  
   
   
-Para declararse con el valor predeterminado de DURABILITY = SCHEMA_AND_DATA, la tabla con optimización para memoria debe tener una clave principal. La cláusula PRIMARY KEY NONCLUSTERED de la siguiente instrucción CREATE TABLE cumple dos requisitos:  
+Para declararse con el valor predeterminado de DURABILITY = SCHEMA_AND_DATA, la tabla optimizada para memoria debe tener una clave principal. La cláusula PRIMARY KEY NONCLUSTERED de la siguiente instrucción CREATE TABLE cumple dos requisitos:  
   
 - Proporciona un índice para satisfacer el requisito mínimo de tener un índice en la instrucción CREATE TABLE.  
 - Proporciona la clave principal necesaria para la cláusula SCHEMA_AND_DATA.  
@@ -66,15 +64,17 @@ Para declararse con el valor predeterminado de DURABILITY = SCHEMA_AND_DATA, la 
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-  
+> [!NOTE]  
+>  [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tienen un límite de 8 índices por tabla optimizada para memoria o tipo de tabla. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ya no hay un límite para el número de índices específicos para tablas optimizadas para memoria y tipos de tabla.
+
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Ejemplo de código para sintaxis  
   
-En este apartado se incluye un bloque de código de Transact-SQL que muestra la sintaxis para crear varios índices en una tabla con optimización para memoria. El código muestra lo siguiente:  
+En este apartado se incluye un bloque de código de Transact-SQL que muestra la sintaxis para crear varios índices en una tabla optimizada para memoria. El código muestra lo siguiente:  
   
   
-1. Crear una tabla con optimización para memoria.  
+1. Crear una tabla optimizada para memoria.  
 2. Usar instrucciones ALTER TABLE para agregar dos índices.  
 3. Usar INSERT para insertar algunas filas de datos.  
   
@@ -124,19 +124,19 @@ En este apartado se incluye un bloque de código de Transact-SQL que muestra la 
   
   
   
-## <a name="b-nature-of-memory-optimized-indexes"></a>B. Naturaleza de los índices con optimización para memoria  
+## <a name="b-nature-of-memory-optimized-indexes"></a>B. Naturaleza de los índices optimizados para memoria  
   
-En una tabla con optimización para memoria, todos los índices también son con optimización para memoria. Hay varias formas de diferenciar un índice en un índice con optimización para memoria de un índice tradicional en una tabla basada en disco.  
+En una tabla optimizada para memoria, todos los índices también son optimizados para memoria. Hay varias formas de diferenciar un índice en un índice optimizado para memoria de un índice tradicional en una tabla basada en disco.  
   
-Cada índice con optimización para memoria existe únicamente en la memoria activa. Dicho índice no tiene representación en disco.  
+Cada índice optimizado para memoria existe únicamente en la memoria activa. Dicho índice no tiene representación en disco.  
   
 - Los índices con optimización para memoria se vuelven a generar cuando la base de datos vuelve a estar en línea.  
   
   
-Cuando una instrucción UPDATE de SQL modifica los datos de una tabla con optimización para memoria, los cambios correspondientes en sus índices no se escriben en el registro.  
+Cuando una instrucción UPDATE de SQL modifica los datos de una tabla optimizada para memoria, los cambios correspondientes en sus índices no se escriben en el registro.  
   
   
-Las entradas de un índice con optimización para memoria contienen una dirección de memoria directa a la fila de la tabla.  
+Las entradas de un índice optimizado para memoria contienen una dirección de memoria directa a la fila de la tabla.  
   
 - En cambio, las entradas de un índice de árbol B tradicional en disco contienen un valor de clave que el sistema debe usar en primer lugar para hallar la dirección de memoria a la fila de tabla asociada.  
   
@@ -147,7 +147,7 @@ Los índices con optimización para memoria no tienen ninguna página fija como 
   
 ## <a name="c-duplicate-index-key-values"></a>C. Valores de clave de índice duplicados
 
-Los valores de clave de índice duplicados pueden afectar al rendimiento de las operaciones en las tablas con optimización para memoria. Cuando el número de duplicados es elevado (más de 100, por ejemplo), la tarea de mantenimiento de un índice no es eficaz porque hay que atravesar cadenas duplicadas en la mayoría de las operaciones de índice. El impacto de esto se aprecia en operaciones INSERT, UPDATE y DELETE realizadas en tablas con optimización para memoria. Este problema es más patente en el caso de los índices de hash, debido tanto el menor costo por operación de este tipo de índices y a la interferencia de grandes cadenas duplicadas con la cadena de colisión de hash. Para reducir la duplicación en un índice, use un índice no agrupado y agregue más columnas (por ejemplo, desde la clave principal) al final de la clave de índice con el propósito de reducir el número de duplicados.
+Los valores de clave de índice duplicados pueden afectar al rendimiento de las operaciones en las tablas optimizadas para memoria. Cuando el número de duplicados es elevado (más de 100, por ejemplo), la tarea de mantenimiento de un índice no es eficaz porque hay que atravesar cadenas duplicadas en la mayoría de las operaciones de índice. El impacto de esto se aprecia en operaciones INSERT, UPDATE y DELETE realizadas en tablas optimizadas para memoria. Este problema es más patente en el caso de los índices de hash, debido tanto el menor costo por operación de este tipo de índices y a la interferencia de grandes cadenas duplicadas con la cadena de colisión de hash. Para reducir la duplicación en un índice, use un índice no agrupado y agregue más columnas (por ejemplo, desde la clave principal) al final de la clave de índice con el propósito de reducir el número de duplicados.
 
 Pensemos, por ejemplo, en una tabla Customers con una clave principal en CustomerId y un índice en la columna CustomerCategoryID. Normalmente, habrá muchos clientes de una categoría determinada y, por tanto, muchos valores duplicados para una clave determinada en el índice de CustomerCategoryID. En este escenario, la recomendación es usar un índice no agrupado en (CustomerCategoryID, CustomerId). Este índice se puede usar en consultas que usan un predicado donde existe CustomerCategoryID y que no contienen duplicados y, en consecuencia, no provocan ineficiencias en el mantenimiento de índices.
 
@@ -167,7 +167,7 @@ Para evaluar el promedio de duplicados de clave de índice para su propia tabla 
   
 La naturaleza de las consultas concretas determina qué tipo de índice es la mejor opción.  
 
-Al implementar tablas con optimización para memoria en una aplicación existente, la recomendación general es comenzar por los índices no agrupados, ya que sus capacidades se parecen más a las de los índices agrupados y no agrupados tradicionales de las tablas basadas en disco. 
+Al implementar tablas optimizadas para memoria en una aplicación existente, la recomendación general es comenzar por los índices no agrupados, ya que sus capacidades se parecen más a las de los índices agrupados y no agrupados tradicionales de las tablas basadas en disco. 
   
   
 ### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 Ventajas de los índices no agrupados  
@@ -232,4 +232,3 @@ En la tabla siguiente se enumeran todas las operaciones que son compatibles con 
   
   
 En la tabla, Sí se refiere a que el índice puede atender la solicitud con eficiencia y No se refiere a que el índice no puede satisfacer la solicitud con eficiencia.  
-

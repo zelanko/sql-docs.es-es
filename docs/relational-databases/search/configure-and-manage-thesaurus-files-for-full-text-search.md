@@ -2,9 +2,12 @@
 title: "Configurar y administrar archivos de sinónimos para búsquedas de texto completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,15 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 669070a97978afa1c461cb8cfbc6e14143232432
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 072df52e6a96bae1393f212a3160f549ed2880e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
-Las consultas de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden buscar sinónimos de los términos especificados por el usuario usando un *diccionario de sinónimos* de búsqueda de texto completo. Cada diccionario de sinónimos define un conjunto de sinónimos para un idioma concreto. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las consultas de búsqueda de texto completo de 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden buscar sinónimos de los términos especificados por el usuario usando un *diccionario de sinónimos* de búsqueda de texto completo. Cada diccionario de sinónimos define un conjunto de sinónimos para un idioma concreto. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos.
 
 La comprobación de coincidencia con el diccionario de sinónimos tiene lugar para todas las consultas [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) y [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) , y para las consultas [CONTAINS](../../t-sql/queries/contains-transact-sql.md) y [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) que especifican la cláusula `FORMSOF THESAURUS`.
   

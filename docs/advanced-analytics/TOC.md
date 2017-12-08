@@ -122,6 +122,7 @@
 
 ### [Avoid errors with user package libraries for R (Evitación de errores con las bibliotecas de paquete de usuario para R)](r/packages-installed-in-user-libraries.md)
 
+### [Agregar SQLRUserGroup como usuario de base de datos](r/add-sqlrusergroup-to-database.md)
 
 ## Modelado y exploración de datos
 

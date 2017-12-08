@@ -2,9 +2,12 @@
 title: "Función clasificadora del regulador de recursos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a47914e36079c04040e1ccc23228278396154fbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor-classifier-function"></a>Función clasificadora del regulador de recursos
-  El proceso de clasificación del regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna las sesiones de entrada a un grupo de carga de trabajo según las características de la sesión. Puede adaptar la lógica de clasificación escribiendo una función definida por el usuario, denominada función clasificadora.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El proceso de clasificación del regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna las sesiones de entrada a un grupo de carga de trabajo según las características de la sesión. Puede adaptar la lógica de clasificación escribiendo una función definida por el usuario, denominada función clasificadora.  
   
 ## <a name="classification"></a>Clasificación  
  El regulador de recursos admite la clasificación de sesiones de entrada. La clasificación se basa en un conjunto de criterios escritos por el usuario contenidos en una función. Los resultados de la lógica de la función permiten al regulador de recursos clasificar las sesiones en los grupos de cargas de trabajo existentes.  

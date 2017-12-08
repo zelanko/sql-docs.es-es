@@ -1,11 +1,14 @@
 ---
 title: "Notas de la versión de SQL Server 2012 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Release Notes, SQL Server
@@ -15,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a84e08ccbb7806dafe0549b5825192dfd6e33565
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
-En este documento de notas de la versión se describen los problemas conocidos que debe conocer antes de instalar o solucionar problemas de Microsoft SQL Server 2012 ([haga clic aquí para descargarlo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] En este documento de notas de la versión se describen los problemas conocidos que debe conocer antes de instalar Microsoft SQL Server 2012 o solucionar sus problemas ([haga clic aquí para descargarlo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
   
 Para obtener una introducción e información acerca de cómo instalar SQL Server 2012, vea el documento Léame de SQL Server 2012. El documento Léame está disponible en el disco de instalación y en la página de descarga [Léame](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . También puede encontrar más información en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) y en los foros de [SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   

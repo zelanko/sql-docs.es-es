@@ -2,9 +2,12 @@
 title: "Especificar parámetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3b2bf91392ea6142dc0bb9ea624437069425a556
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f0b580149c946b88eafc138dc69e55ef673aafc9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-parameters"></a>Especificar parámetros
-  Al especificar parámetros de procedimiento, los programas de llamada pueden pasar valores en el cuerpo del procedimiento. Estos valores se pueden usar para distintos fines durante la ejecución del procedimiento. Los parámetros de procedimiento también pueden devolver valores al programa de llamada si el parámetro se marca como OUTPUT.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al especificar parámetros de procedimiento, los programas de llamada pueden pasar valores en el cuerpo del procedimiento. Estos valores se pueden usar para distintos fines durante la ejecución del procedimiento. Los parámetros de procedimiento también pueden devolver valores al programa de llamada si el parámetro se marca como OUTPUT.  
   
  Un procedimiento puede tener un máximo de 2100 parámetros; cada uno con un nombre, un tipo de datos y una dirección asignados. Opcionalmente, a los parámetros se les pueden asignar valores predeterminados.  
   

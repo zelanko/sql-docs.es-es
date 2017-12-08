@@ -2,9 +2,12 @@
 title: Supervisar el trasvase de registros (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d1ed3b2823e6de0f4afe534398c40ec461e59850
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Supervisar el trasvase de registros (Transact-SQL)
-  Después de configurar el trasvase de registros, puede supervisar la información acerca del estado de todos los servidores de trasvase de registros. El historial y el estado de las operaciones de trasvase de registros siempre se guardan de forma local en los trabajos de trasvase de registros. El historial y el estado de la operación de copia de seguridad se almacenan en el servidor principal, y el historial y el estado de las operaciones de copia y restauración se almacenan en el servidor secundario. Si ha implementado un servidor de supervisión remoto, esta información se almacena también en dicho servidor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Después de configurar el trasvase de registros, puede supervisar la información acerca del estado de todos los servidores de trasvase de registros. El historial y el estado de las operaciones de trasvase de registros siempre se guardan de forma local en los trabajos de trasvase de registros. El historial y el estado de la operación de copia de seguridad se almacenan en el servidor principal, y el historial y el estado de las operaciones de copia y restauración se almacenan en el servidor secundario. Si ha implementado un servidor de supervisión remoto, esta información se almacena también en dicho servidor.  
   
  Puede configurar alertas que se activarán si las operaciones de trasvase de registros no se producen según lo programado. Los errores se indican mediante un trabajo de alerta que vigila el estado de las operaciones de copias de seguridad y restauración. Puede definir alertas que envíen una notificación a un operador cuando aparezcan estos errores. Si hay un servidor de supervisión configurado, el trabajo de alerta se ejecuta en el servidor de supervisión que detecta los errores de todas las operaciones de la configuración de trasvase de registros. Si no se ha especificado ningún servidor de supervisión, el trabajo de alerta se ejecuta en la instancia de servidor principal, que supervisa la operación de copia de seguridad. Si no se ha especificado ningún servidor de supervisión, el trabajo de alerta se ejecuta también en cada instancia de servidor secundario para supervisar las operaciones locales de copia y restauración.  
   

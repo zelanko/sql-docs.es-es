@@ -2,9 +2,12 @@
 title: El registro de transacciones (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5c2b3a5bd97800d958c04bbc11a509d0db15cdc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4126d98d24184164618bad5601c3c6301ce77d2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
-  Todas las bases de datos de SQL Server tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todas las bases de datos de SQL Server tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos.
   
 El registro de transacciones es un componente esencial de la base de datos. Si hay un error del sistema, ese registro será necesario para devolver la base de datos a un estado coherente. 
 

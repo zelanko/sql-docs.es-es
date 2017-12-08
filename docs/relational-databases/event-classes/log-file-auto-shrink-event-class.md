@@ -2,9 +2,12 @@
 title: Clase de eventos Log File Auto Shrink | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ea569906a61d179c4634f11dff301b5d2c0783
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ff072f287fd371fb0239c2adbe80c90965fee4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, clase de eventos
-  La clase de eventos **Log File Auto Shrink** indica que el archivo de registro se ha reducido automáticamente. Este evento no se desencadena si el archivo de registro se reduce mediante una instrucción ALTER DATABASE explícita.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Log File Auto Shrink** indica que el archivo de registro se ha reducido automáticamente. Este evento no se desencadena si el archivo de registro se reduce mediante una instrucción ALTER DATABASE explícita.  
   
  Incluya la clase de eventos **Log File Auto Shrink** en los seguimientos que supervisen la reducción del archivo de registro. Cuando esta clase de eventos se incluye en un seguimiento, el volumen de sobrecarga suele ser bajo a no ser que el archivo se reduzca con frecuencia.  
   

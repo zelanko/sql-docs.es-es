@@ -2,9 +2,12 @@
 title: "Obtener información sobre los desencadenadores DML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0cafdf4bc0fb8fcc9fdb8465b77f8c5dc757698
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a122a5b17171241742d9f573fa8840360957ba12
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtener información acerca de los desencadenadores DML
-  En este tema se describe cómo obtener información acerca de los desencadenadores DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta información puede incluir los tipos de desencadenadores de una tabla, el nombre de un desencadenador, su propietario y la fecha en que se creó o modificó. Si el desencadenador no se cifró cuando se creó, se obtiene la definición del desencadenador. Puede usar la definición para entender cómo un desencadenador afecta a la tabla en la que se define. También puede averiguar los objetos que usa un desencadenador específico. Con esta información, puede identificar los objetos que afectan al desencadenador, en el caso de que se modifiquen o se eliminen de la base de datos.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En este tema se describe cómo obtener información acerca de los desencadenadores DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta información puede incluir los tipos de desencadenadores de una tabla, el nombre de un desencadenador, su propietario y la fecha en que se creó o modificó. Si el desencadenador no se cifró cuando se creó, se obtiene la definición del desencadenador. Puede usar la definición para entender cómo un desencadenador afecta a la tabla en la que se define. También puede averiguar los objetos que usa un desencadenador específico. Con esta información, puede identificar los objetos que afectan al desencadenador, en el caso de que se modifiquen o se eliminen de la base de datos.  
   
  **En este tema**  
   

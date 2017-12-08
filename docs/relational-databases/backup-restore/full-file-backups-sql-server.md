@@ -2,9 +2,12 @@
 title: Copias de seguridad de archivos completas (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05d90a6c48c8841a03d276efe1da2ced2d20336c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 68298d631d672ffc5752762612864bb96e88eecf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="full-file-backups-sql-server"></a>Copias de seguridad de archivos completas (SQL Server)
-  Este tema es pertinente para bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen varios archivos o grupos de archivos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema se aplica a bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen varios archivos o grupos de archivos.  
   
  Es posible realizar una copia de seguridad y restaurar individualmente los archivos de una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Además, puede especificar un grupo de archivos entero en lugar de especificar cada archivo constitutivo individualmente. Tenga en cuenta que si un archivo de un grupo de archivos se encuentra sin conexión (por ejemplo, porque se está restaurando), todo el grupo de archivos estará sin conexión y no se puede realizar una copia de seguridad.  
   

@@ -2,9 +2,12 @@
 title: "Configuración de red de cliente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 86acaf42c34d0d3e190f80fd6d5cdd234300e944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: da5be764397fd6a2542676235af6276636bdadbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="client-network-configuration"></a>Configuración de red de cliente
-  El software de cliente permite que los equipos cliente se conecten a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de una red. Un "cliente" es una aplicación front-end que utiliza los servicios que proporciona un servidor, por ejemplo, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El equipo que hospeda esta aplicación recibe el nombre de *equipo cliente*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El software de cliente permite que los equipos cliente se conecten a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de una red. Un "cliente" es una aplicación front-end que utiliza los servicios que proporciona un servidor, por ejemplo, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El equipo que hospeda esta aplicación recibe el nombre de *equipo cliente*.  
   
  En su nivel más sencillo, un cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede residir en el mismo equipo que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, normalmente un cliente se conecta a uno o más servidores remotos mediante una red. La arquitectura cliente/servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite administrar sin ningún problema varios clientes y servidores de una red. Las configuraciones cliente predeterminadas son suficientes en la mayoría de los casos.  
   

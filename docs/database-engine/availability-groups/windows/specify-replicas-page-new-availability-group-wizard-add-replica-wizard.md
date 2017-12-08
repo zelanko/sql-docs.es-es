@@ -2,9 +2,12 @@
 title: "Especificar la página de réplicas (Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: daabab1d4122ce132579f399a4ea6c923477da35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9e6deec0c8993271ec1c5bf02101516585faeaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Especificar la página de réplicas (Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica)
-  En este tema se describen las opciones de la página **Especificar réplicas** . Esta página se aplica a **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** y a **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describen las opciones de la página **Especificar réplicas**. Esta página se aplica a **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** y a **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
   
 |Pestaña|Descripción breve|  
 |---------|-----------------------|  

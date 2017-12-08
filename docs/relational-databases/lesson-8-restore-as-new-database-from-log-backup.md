@@ -1,10 +1,13 @@
 ---
 title: "Lección 8: Restauración como una base de datos nueva desde una copia de seguridad de registros | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Lección 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros
-En esta lección, restaurará la base de datos AdventureWorks2014 como una base de datos nueva desde una copia de seguridad del registro de transacciones de instantáneas de archivos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, restaurará la base de datos AdventureWorks2014 como una base de datos nueva desde una copia de seguridad del registro de transacciones de instantáneas de archivos.  
   
 En este escenario, realizará una restauración a una instancia de SQL Server en una máquina virtual diferente a efectos de análisis de negocio e informes. Al restaurar en una instancia diferente en una máquina virtual diferente, se descarga la carga de trabajo en una máquina virtual dedicada y con un tamaño para este propósito, quitando los requisitos del recurso del sistema transaccional.  
   

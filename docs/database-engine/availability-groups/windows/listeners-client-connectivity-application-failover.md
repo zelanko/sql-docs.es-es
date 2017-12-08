@@ -2,9 +2,12 @@
 title: "Agentes de escucha, conectividad de cliente y conmutación por error de una aplicación | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: af6a6732a78007d51221cff6c6fb386e3abe48f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Agentes de escucha, conectividad de cliente y conmutación por error de una aplicación
-  Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
   
 > [!NOTE]  
 >  Para la mayoría de las configuraciones habituales de agente de escucha, puede crear el primer agente de escucha del grupo de disponibilidad utilizando simplemente instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] o cmdlets de PowerShell. Para obtener más información, vea [Tareas relacionadas](#RelatedTasks), más adelante en este mismo tema.  

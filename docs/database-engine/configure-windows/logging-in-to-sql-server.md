@@ -2,9 +2,12 @@
 title: "Iniciar una sesión en SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7d7c2aa416af62d1ffba8af688f2fbabf8a2aa3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-to-sql-server"></a>Iniciar una sesión en SQL Server
-  Puede iniciar una sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cualquiera de las herramientas gráficas de administración o desde el símbolo del sistema.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede iniciar sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cualquiera de las herramientas gráficas de administración o desde el símbolo del sistema.  
   
  Cuando se inicia una sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una herramienta gráfica de administración, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el sistema pedirá el nombre del servidor, un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña, si es necesario. Si inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la autenticación de Windows, no tendrá que proporcionar un inicio de sesión de SQL Server cada vez que tenga acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza su cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para iniciar la sesión automáticamente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta con autenticación de modo mixto (modo de autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows) y decide iniciar una sesión mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña. Siempre que sea posible, utilice la autenticación de Windows.  
   

@@ -2,9 +2,12 @@
 title: Configurar reglas de firewall antes de ejecutar al depurador de TSQL | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 43a0926518f6a5f1f8751389db274f27c9da6993
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar reglas de firewall antes de ejecutar al depurador de TSQL
-  Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se deben configurar reglas de Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL  
  El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye los componentes tanto del lado servidor como del lado cliente. Los componentes del depurador del lado servidor se instalan con cada instancia del motor de base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o versiones posteriores. Los componentes del depurador del lado cliente se incluyen:  

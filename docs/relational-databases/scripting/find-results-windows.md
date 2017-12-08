@@ -2,9 +2,12 @@
 title: "Ventanas Resultados de la búsqueda | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 739ebc9657fa81650ab57a95d057dc3cc674ebf9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ca6d03068225909a645b05059a3da15893604821
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-results-windows"></a>Ventanas Resultados de la búsqueda
-  Las dos ventanas Resultados de la búsqueda muestran las coincidencias encontradas utilizando las pestañas **Buscar en archivos** o **Reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar** . El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las dos ventanas Resultados de la búsqueda muestran las coincidencias encontradas utilizando las pestañas **Buscar en archivos** o **Reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar**. El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
   
  La ventana Resultados de la búsqueda seleccionada se abrirá automáticamente cada vez que se encuentren coincidencias. Para mostrar la ventana Resultados de la búsqueda de forma manual, haga clic en **Otras ventanas** en el menú **Ver** y, a continuación, haga clic en **Resultados de la búsqueda 1** o **Resultados de la búsqueda 2**.  
   

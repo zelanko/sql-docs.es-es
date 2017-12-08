@@ -2,9 +2,12 @@
 title: Iniciar la utilidad sqlcmd | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a21662f3522e5fa6652f97aad88d68a1475d498a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db7c4d4d03742ff8834acef16f8b59334ae83fce
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - Iniciar la utilidad
-  La utilidad [sqlcmd](../../tools/sqlcmd-utility.md) permite escribir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedimientos del sistema y archivos de script en el símbolo del sistema, en el Editor de consultas en modo SQLCMD, en un archivo de script de Windows o en un paso de trabajo del sistema operativo (Cmd.exe) de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La [utilidad sqlcmd](../../tools/sqlcmd-utility.md) permite escribir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimientos del sistema y archivos de script en el símbolo del sistema, en el Editor de consultas en modo SQLCMD, en un archivo de script de Windows o en un paso de trabajo del sistema operativo (Cmd.exe) de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 > [!NOTE]  
 >  La autenticación de Windows es el modo de autenticación predeterminado para **sqlcmd**. Para usar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe especificar un nombre de usuario y una contraseña mediante las opciones **-U** y **-P** .  
   

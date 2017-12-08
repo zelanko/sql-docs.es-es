@@ -2,11 +2,12 @@
 title: Instalar SQL Server con SysPrep | Microsoft Docs
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,15 @@ caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 1f13a80130626df2fe09ff37d566395d23e3b952
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar SQL Server con SysPrep
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionadas con SysPrep. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se puede acceder a las acciones de configuración relacionadas de SysPrep de 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde Centro de instalación. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 También puede preparar y completar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el símbolo del sistema o un archivo de configuración. Para obtener más información, vea:  
   

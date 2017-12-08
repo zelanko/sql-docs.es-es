@@ -2,9 +2,12 @@
 title: 'Grupo de disponibilidad: asistente para agregar una base de datos a un grupo | Microsoft Docs'
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba447d05c338960146037e38d1f142637962cc02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4fbbbb723c1e1b1f7ddcd8ff1396e9ca563efd03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>Grupo de disponibilidad: asistente para agregar una base de datos a un grupo
-  Use el Asistente para agregar una base de datos al grupo de disponibilidad como ayuda para agregar una o varias bases de datos a un grupo de disponibilidad AlwaysOn existente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el Asistente para agregar una base de datos al grupo de disponibilidad como ayuda para agregar una o varias bases de datos a un grupo de disponibilidad AlwaysOn existente.  
   
 > [!NOTE]  
 >  Para obtener información sobre cómo usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para agregar una base de datos, vea [Agregar una base de datos a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  

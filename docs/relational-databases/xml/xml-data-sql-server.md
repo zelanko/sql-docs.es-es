@@ -2,9 +2,12 @@
 title: Datos XML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc7a773347d9be3a7d5eec26a06ca4ef9e17b83a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f62fcdcbc840bab91f49a07edf832aa88be305bc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-data-sql-server"></a>Datos XML (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma eficaz para desarrollar aplicaciones completas para la administración de datos semiestructurados. La compatibilidad con XML está integrada en todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluye lo siguiente:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma eficaz para desarrollar aplicaciones completas para la administración de datos semiestructurados. La compatibilidad con XML está integrada en todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluye lo siguiente:  
   
 -   El tipo de datos **xml** . Los valores XML se pueden almacenar de forma nativa en una columna de tipo de datos **xml** cuyo tipo se puede asignar de acuerdo con una colección de esquemas XML o que puede dejarse sin tipo. Es posible indizar la columna XML.  
   

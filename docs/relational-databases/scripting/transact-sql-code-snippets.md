@@ -2,9 +2,12 @@
 title: "Fragmentos de código de Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d3c7b87cbf1ee3a61fa783a8f113b87fcb5d5cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Fragmentos de código de Transact-SQL
-  Un fragmento de código [!INCLUDE[tsql](../../includes/tsql-md.md)]es una plantilla que contiene la estructura básica de una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede usar los fragmentos como punto de partida para agregar instrucciones en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede insertar los fragmentos de código predefinidos proporcionados con SQL Server o crear los suyos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un fragmento de código [!INCLUDE[tsql](../../includes/tsql-md.md)] es una plantilla que contiene la estructura básica de una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede usar los fragmentos como punto de partida para agregar instrucciones en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede insertar los fragmentos de código predefinidos proporcionados con SQL Server o crear los suyos.  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Tareas de los fragmentos de código de Transact-SQL  
   

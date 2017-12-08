@@ -1,10 +1,13 @@
 ---
 title: "Administración y supervisión de la búsqueda de texto completo para una instancia de servidor | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d6f184f66b02ef2f92c9593001edc3364f4d62a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d5d37441c773b2934b544734889a9d7c86cbdfa2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Administrar y supervisar la búsqueda de texto completo para una instancia de servidor
-  La administración de texto completo de una instancia del servidor incluye:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La administración de texto completo de una instancia del servidor incluye:  
   
 -   Tareas de administración del sistema como administrar el servicio del iniciador de FDHOST (MSSQLFDLauncher), reiniciar el proceso de host de demonio de filtro si cambia las credenciales de la cuenta de servicio, configurar las propiedades de texto completo del servidor y realizar copia de seguridad de los catálogos de texto completo. En el nivel del servidor, por ejemplo, puede especificar un idioma de texto completo predeterminado que sea diferente del idioma predeterminado de la instancia del servidor en su totalidad.  
   

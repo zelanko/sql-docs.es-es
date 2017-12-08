@@ -2,9 +2,12 @@
 title: Cuadro de herramientas (Ayuda F1) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
-  El**cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El **cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
   
  Los elementos del**cuadro de herramientas** se pueden arrastrar y colocar, o bien copiar y pegar en los editores de código o en superficies de vistas de diseño de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

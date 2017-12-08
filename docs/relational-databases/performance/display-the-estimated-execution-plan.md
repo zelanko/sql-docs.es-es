@@ -2,9 +2,12 @@
 title: "Mostrar el plan de ejecución estimado | Microsoft Docs"
 ms.custom: 
 ms.date: 08/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b05bddb677c7cf707c63c003c569eb296270832d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c559446e933893547306252d0efe05ecab75f479
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="display-the-estimated-execution-plan"></a>Mostrar el plan de ejecución estimado
-  En este tema se describe cómo generar planes de ejecución estimados gráficos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se generan planes de ejecución estimados, las consultas o lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] no se ejecutan. Por este motivo, un plan de ejecución estimado no contiene ninguna información en tiempo de ejecución, como métricas de uso real de recursos o advertencias en tiempo de ejecución. En su lugar, el plan de ejecución que se genera muestra el plan de ejecución de la consulta que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usaría con más probabilidad si se ejecutaran realmente las consultas, así como las filas estimadas de los operadores del plan.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describe cómo generar planes de ejecución estimados gráficos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se generan planes de ejecución estimados, las consultas o lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] no se ejecutan. Por este motivo, un plan de ejecución estimado no contiene ninguna información en tiempo de ejecución, como métricas de uso real de recursos o advertencias en tiempo de ejecución. En su lugar, el plan de ejecución que se genera muestra el plan de ejecución de la consulta que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usaría con más probabilidad si se ejecutaran realmente las consultas, así como las filas estimadas de los operadores del plan.  
   
  Para utilizar esta característica, los usuarios deben tener los permisos correspondientes para ejecutar la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para la que se va a generar un plan de ejecución gráfico, y se les debe conceder el permiso SHOWPLAN para todas las bases de datos a las que haga referencia la consulta.  
   

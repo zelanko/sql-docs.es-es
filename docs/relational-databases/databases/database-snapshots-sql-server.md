@@ -2,9 +2,12 @@
 title: "Instantáneas de base de datos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69680a68ba3656f3bbbaa0515da33cd602d1473f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6c8389b3c37b71df9e49a75c45b667cc4575192c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-snapshots-sql-server"></a>Instantáneas de base de datos (SQL Server)
-  Una instantánea de base de datos es una vista estática de solo lectura de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada *base de datos de origen*. La instantánea de base de datos es coherente en cuanto a las transacciones con la base de datos de origen tal como existía en el momento de la creación de la instantánea. Una instantánea de base de datos siempre reside en la misma instancia de servidor que la base de datos de origen. A medida que se actualiza la base de datos de origen, se actualiza la instantánea de base de datos. Por consiguiente, durante cuanto más tiempo existe una instantánea de base de datos, más probable es que agote el espacio en disco disponible.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una instantánea de base de datos es una vista estática de solo lectura de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada *base de datos de origen*. La instantánea de base de datos es coherente en cuanto a las transacciones con la base de datos de origen tal como existía en el momento de la creación de la instantánea. Una instantánea de base de datos siempre reside en la misma instancia de servidor que la base de datos de origen. A medida que se actualiza la base de datos de origen, se actualiza la instantánea de base de datos. Por consiguiente, durante cuanto más tiempo existe una instantánea de base de datos, más probable es que agote el espacio en disco disponible.  
   
  En una determinada base de datos de origen pueden existir varias instantáneas. Cada instantánea de base de datos se mantiene hasta que el propietario de la base de datos la quita explícitamente.  
   

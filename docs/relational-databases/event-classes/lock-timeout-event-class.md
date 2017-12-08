@@ -2,9 +2,12 @@
 title: Clase de eventos Lock:Timeout | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db75a1766177f5aa96600249289f1eb97dd9c19c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2523de44f225c1429453362067c7a859e6a17b56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout (clase de eventos)
-  La clase de eventos Lock:Timeout indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. El tiempo de espera está determinado por la función del sistema @@LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Lock:Timeout indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. El tiempo de espera está determinado por la función del sistema @@LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.  
   
  Utilice la clase de eventos Lock:Timeout para supervisar cuándo se producen las condiciones de tiempo de espera. Esta información es útil para determinar si los tiempos de espera afectan al rendimiento de la aplicación de manera significativa y qué objetos están implicados. Puede examinar el código de aplicación que modifica estos objetos para determinar si se pueden realizar cambios para minimizar los tiempos de espera.  
   

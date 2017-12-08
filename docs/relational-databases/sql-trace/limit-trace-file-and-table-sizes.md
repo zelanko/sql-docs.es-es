@@ -2,9 +2,12 @@
 title: "Limitación del tamaño de la tabla y el archivo de seguimiento | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar el tamaño de la tabla y el archivo de seguimiento
-  Los resultados de Seguimiento de SQL difieren en cuanto a tamaño en función de las clases de evento que se incluyen en el seguimiento y la forma en que se utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si realiza el seguimiento de clases de evento que se producen con frecuencia, puede minimizar la cantidad de datos que recopila el seguimiento estableciendo el tamaño máximo del archivo o el número máximo de filas. Si especifica el tamaño máximo del archivo o las filas, se garantiza que el archivo o la tabla de seguimiento no crecerán más allá del límite especificado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los resultados de Seguimiento de SQL difieren en cuanto a tamaño en función de las clases de evento que se incluyen en el seguimiento y la forma en que se utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si realiza el seguimiento de clases de evento que se producen con frecuencia, puede minimizar la cantidad de datos que recopila el seguimiento estableciendo el tamaño máximo del archivo o el número máximo de filas. Si especifica el tamaño máximo del archivo o las filas, se garantiza que el archivo o la tabla de seguimiento no crecerán más allá del límite especificado.  
   
 > [!NOTE]  
 >  Si guarda datos del seguimiento en un archivo que ya existe, puede anexar datos al archivo o sobrescribirlo. Si decide anexar datos al archivo y el archivo de seguimiento ya ha alcanzado o supera el tamaño máximo de archivo especificado, se le ofrece la posibilidad de aumentar el tamaño máximo de archivo o especificar un archivo nuevo. Lo mismo ocurre con las tablas de seguimiento.  

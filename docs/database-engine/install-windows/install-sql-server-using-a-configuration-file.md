@@ -2,11 +2,12 @@
 title: "Instalar SQL Server mediante un archivo de configuración | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: home-page
@@ -15,14 +16,14 @@ caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 01513b22956771f125ccb010d41eef45028dc0d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9120e19773602e9d7bd462318a702ac5c6507a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 
  
 Este artículo está actualizado específicamente para SQL Server 2016 y SQL Server 2017. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx).
  

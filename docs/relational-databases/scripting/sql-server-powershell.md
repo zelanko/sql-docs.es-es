@@ -2,9 +2,12 @@
 title: SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2007b572b659f5fe9371618b667bb27a43bc70c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite Windows PowerShell, que es un poderoso shell de scripting que permite a los administradores y desarrolladores automatizar la administración de servidores y la implementación de aplicaciones. El lenguaje de Windows PowerShell admite una lógica más compleja que los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] , con lo que se permite a los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generar poderosos scripts de administración. Los scripts de Windows PowerShell también se pueden utilizar para administrar otros productos de servidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esto ofrece a los administradores un lenguaje común de scripting para los diferentes servidores.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite Windows PowerShell, que es un eficaz shell de scripting que permite a los administradores y desarrolladores automatizar la administración de servidores y la implementación de aplicaciones. El lenguaje de Windows PowerShell admite una lógica más compleja que los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] , con lo que se permite a los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generar poderosos scripts de administración. Los scripts de Windows PowerShell también se pueden utilizar para administrar otros productos de servidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esto ofrece a los administradores un lenguaje común de scripting para los diferentes servidores.  
   
 ## <a name="sql-server-powershell-components"></a>Componentes de SQL Server PowerShell  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un módulo de Windows PowerShell denominado **sqlps** que se usa para importar componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno o un script de Windows PowerShell. El módulo **sqlps** carga dos complementos de Windows PowerShell que implementan:  

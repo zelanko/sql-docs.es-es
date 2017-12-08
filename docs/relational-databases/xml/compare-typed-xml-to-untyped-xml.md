@@ -2,9 +2,12 @@
 title: Comparar XML con tipo y XML sin tipo | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
-  Se pueden crear variables, parámetros y columnas del tipo de datos **xml** . Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo **xml** . En este caso, se dice que la instancia del tipo de datos **xml** es una instancia *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Se pueden crear variables, parámetros y columnas del tipo de datos **xml**. Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo **xml** . En este caso, se dice que la instancia del tipo de datos **xml** es una instancia *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML correcto y tipo de datos XML  
  El tipo de datos **xml** implementa el tipo de datos **xml** del estándar ISO. Por lo tanto, puede almacenar documentos XML versión 1.0 correctos, así como los denominados fragmentos de contenido XML con nodos de texto y un número arbitrario de elementos de nivel superior en una columna XML sin tipo. El sistema comprueba que todos los datos tienen un formato correcto, no requiere que la columna esté enlazada a esquemas XML y rechaza los datos que no tienen un formato correcto en sentido amplio. Esto también se cumple para parámetros y variables XML sin tipo.  

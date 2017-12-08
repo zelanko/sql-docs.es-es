@@ -2,9 +2,12 @@
 title: Programa para la mejora de la experiencia del usuario de SQL Server Data Tools | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d3ac32a1bded13f7d2411fac6100353f3ec7e2c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 43e2581a1d24c109ed3389d2a6686c44b870c285
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programa para la mejora de la experiencia del usuario de SQL Server Data Tools
-  Obtenga información sobre el modo en que el Programa para la mejora de la experiencia del usuario (CEIP) ayuda a Microsoft a identificar formas de mejorar el software.  Puede configurar herramientas para participar o dejar de hacerlo en cualquier momento.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Obtenga información sobre el modo en que el Programa para la mejora de la experiencia del usuario (CEIP) ayuda a Microsoft a identificar formas de mejorar el software.  Puede configurar herramientas para participar o dejar de hacerlo en cualquier momento.  
   
 > [!NOTE]  
 >  Para ver una explicación de las prácticas de recopilación y uso de datos de usuario de las versiones de Microsoft SQL Server 2016 y de cualquier otro producto y servicio, consulte esta [declaración de privacidad de Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  

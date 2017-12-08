@@ -20,15 +20,14 @@ ms.date: 07/19/2017"
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
+ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
-ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
-Puede usar una herramienta de diagnóstico interactiva que está integrada en PolyBase para ayudar a solucionar autenticación cuando se usa PolyBase en un clúster de Hadoop protegido con Kerberos. 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede usar una herramienta de diagnóstico interactiva integrada en PolyBase para ayudar a solucionar problemas de autenticación cuando se usa PolyBase en un clúster de Hadoop protegido con Kerberos. 
 
 Este artículo sirve como guía para describir el proceso de depuración de ese tipo de problemas con esta herramienta.
 
@@ -208,6 +207,5 @@ En Active Directory, puede ver los nombres de entidad de seguridad de servicio s
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html) (Guía de Cloudera para configurar Kerberos para CDH)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html) (Guía de Hortonworks para configurar Kerberos para HDP)  
 [Solución de problemas de PolyBase](polybase-troubleshooting.md)
-
 
 

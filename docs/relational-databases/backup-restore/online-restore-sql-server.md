@@ -2,9 +2,12 @@
 title: "Restauración con conexión (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f17516a1a1ac2d07da67ee4688703ef0a5ee5611
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
-  La restauración en línea solo se admite en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta versión, la restauración de un archivo, una página o por etapas es en línea de manera predeterminada. Este tema es pertinente para las bases de datos que incluyen varios archivos o grupos de archivos y, en el modelo de recuperación simple, solo para grupos de archivos de solo lectura.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La restauración en línea solo se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. En esta versión, la restauración de un archivo, una página o por etapas es en línea de manera predeterminada. Este tema es pertinente para las bases de datos que incluyen varios archivos o grupos de archivos y, en el modelo de recuperación simple, solo para grupos de archivos de solo lectura.  
   
  La restauración de datos mientras la base de datos está en línea se denomina *restauración en línea*. Se considera que una base de datos está en línea siempre que el grupo de archivos principal esté en línea, aunque alguno de los grupos de archivos secundarios esté sin conexión. En todos los modelos de recuperación se puede restaurar un archivo sin conexión mientras la base de datos está en línea. En el modelo de recuperación completa, también se pueden restaurar páginas mientras la base de datos está en línea.  
   

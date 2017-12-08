@@ -2,9 +2,12 @@
 title: Apertura de un editor (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 561ddee283355b308e58cd5e0aa5eb66c29b1c47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bd3905d6c9f0db1081b9d2cf96450a0405fb4da8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
-  En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] admite cuatro editores: el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , los editores DMX y MDX para editar scripts con esos lenguajes y el editor XML/A para editar scripts XML/A o archivos XML. Cualquiera de los editores también se puede usar para editar archivos de texto.  

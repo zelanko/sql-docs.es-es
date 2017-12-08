@@ -2,9 +2,12 @@
 title: "Creación de un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cace8601462fd2469d7cdbfb4cce168111d42d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
-  Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
   
 -   **Antes de empezar:**  , [Requisitos previos](#Prerequisites), [Recomendaciones](#Recommendations), [Permisos](#Permissions)  
   

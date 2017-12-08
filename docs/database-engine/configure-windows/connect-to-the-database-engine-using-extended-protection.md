@@ -2,9 +2,12 @@
 title: "Conectar al motor de base de datos con protección ampliada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
   
 > [!IMPORTANT]  
 >  Windows no habilita la **protección ampliada** de forma predeterminada. Para obtener información acerca de cómo habilitar la **protección ampliada** en Windows, vea [Protección ampliada para la autenticación](http://support.microsoft.com/kb/968389).  

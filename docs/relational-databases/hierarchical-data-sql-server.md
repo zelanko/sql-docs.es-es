@@ -2,9 +2,12 @@
 title: "Datos jerárquicos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2127532c0e60feba9cff8f2f986260ac8179e6d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
-  El tipo de datos **hierarchyid** integrado facilita el almacenamiento y la consulta de datos jerárquicos. **hierarchyid** se optimiza para representar los árboles, que son el tipo más común de datos jerárquicos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] El tipo de datos **hierarchyid** integrado facilita el almacenamiento y la consulta de datos jerárquicos. **hierarchyid** se optimiza para representar los árboles, que son el tipo más común de datos jerárquicos.  
   
  Los datos jerárquicos se definen como un conjunto de elementos de datos que se relacionan entre sí mediante relaciones jerárquicas. Las relaciones jerárquicas existen allí donde un elemento de los datos es el elemento primario de otro elemento. Entre los ejemplos de datos jerárquicos que se almacenan normalmente en las bases de datos se incluyen los siguientes:  
   

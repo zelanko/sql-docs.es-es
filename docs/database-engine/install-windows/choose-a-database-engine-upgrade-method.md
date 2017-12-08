@@ -2,11 +2,12 @@
 title: "Elegir un método de actualización del motor de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 418cb013fddfa58783babbee63e00524f411a39c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c568ec23e5f64e65afb794a7e0c60a0eeb693622
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
-  Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Existen varios métodos que se deben considerar a la hora de planear la actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árbol de decisión del método de actualización de motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización de motor de base de datos")  
   

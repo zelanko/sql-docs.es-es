@@ -2,9 +2,12 @@
 title: Clase de eventos Lock:Acquired | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f96b334e4c722b456bad9a043d753b18cca5495b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 707749c893523d6db48220d4223bf29bb8680ef0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired (clase de eventos)
-  La clase de eventos Lock:Acquired indica que se ha logrado la adquisición de un bloqueo en un recurso, por ejemplo, una página de datos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Lock:Acquired indica que se ha logrado la adquisición de un bloqueo en un recurso; por ejemplo, una página de datos.  
   
  Las clases de eventos Lock:Acquired y Lock:Released se pueden utilizar para supervisar cuándo se bloquean objetos, el tipo de bloqueos obtenidos y cuánto tiempo se han mantenido éstos. Los bloqueos mantenidos durante largos períodos pueden causar problemas de contención y se deben investigar. Por ejemplo, una aplicación puede estar adquiriendo bloqueos en filas de una tabla y esperar después a que se produzca una entrada del usuario. Puesto que la introducción de datos puede tardar bastante tiempo, los bloqueos pueden bloquear a otros usuarios. En tal caso, es necesario volver a diseñar la aplicación para que realice solicitudes de bloqueo solo cuando sea preciso y no solicite que el una entrada del usuario cuando se han adquirido bloqueos.  
   

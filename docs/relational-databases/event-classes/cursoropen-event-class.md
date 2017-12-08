@@ -2,9 +2,12 @@
 title: CursorOpen, clase de eventos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 276c1b736886099672a38b85e48f982291e8ae1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen, clase de eventos
-  La clase de eventos **CursorOpen** describe los eventos de cursor abierto que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de cursor abierto ocurren cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define la instrucción SQL que se desea asociar con el cursor y las opciones de cursor y, a continuación, rellena el cursor.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **CursorOpen** describe los eventos de cursor abierto que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de cursor abierto ocurren cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define la instrucción SQL que se desea asociar con el cursor y las opciones de cursor y, a continuación, rellena el cursor.  
   
  Incluya la clase de evento **CursorOpen** en los seguimientos que registran el rendimiento de los cursores. Cuando la clase de evento **CursorOpen** se incluye en un seguimiento, la cantidad de sobrecarga impuesta depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
   

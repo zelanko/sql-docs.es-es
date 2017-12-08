@@ -2,9 +2,12 @@
 title: Exchange Spill (clase de eventos) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bbbac6c6e2fd126ab40cddf9b21aa426b69d04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, clase de eventos
-  La clase de evento **Exchange Spill** indica que los búferes de comunicación de un plan de consulta paralelo se han escrito de forma temporal en la base de datos **tempdb** . Esto sucede raramente y solo cuando un plan de consulta tiene múltiples recorridos de intervalo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Exchange Spill** indica que los búferes de comunicación de un plan de consulta paralelo se han escrito de forma temporal en la base de datos **tempdb**. Esto sucede raramente y solo cuando un plan de consulta tiene múltiples recorridos de intervalo.  
   
  Normalmente, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] que genera tales recorridos de intervalo tiene muchos operadores BETWEEN, cada uno de los cuales selecciona un intervalo de filas de una tabla o un índice. Como alternativa, puede obtener múltiples intervalos mediante expresiones como (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Además, los planes de consulta deben requerir que estos intervalos se recorran en orden, bien porque hay una cláusula ORDER BY en T.a, o bien porque un iterador del plan requiere que éste consuma las tuplas en orden.  
   

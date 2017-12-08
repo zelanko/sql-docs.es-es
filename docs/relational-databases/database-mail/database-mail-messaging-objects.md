@@ -2,9 +2,12 @@
 title: "Objetos de mensajería de Correo electrónico de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09a2cf5e1516b6783ae82226766919ce32391f57
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2bf2a7485e9769fe478c3f10e85d4b61b958d45b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
-  La base de datos **msdb** es la base de datos host del Correo electrónico de base de datos. Esta base de datos contiene los procedimientos almacenados y objetos de mensajería del Correo electrónico de base de datos. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el Asistente para configuración del Correo electrónico de base de datos, que permite habilitar el correo electrónico de base de datos, crear y administrar perfiles y cuentas, y configurar las opciones del Correo electrónico de base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de datos **msdb** es la base de datos host del Correo electrónico de base de datos. Esta base de datos contiene los procedimientos almacenados y objetos de mensajería del Correo electrónico de base de datos. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el Asistente para configuración del Correo electrónico de base de datos, que permite habilitar el correo electrónico de base de datos, crear y administrar perfiles y cuentas, y configurar las opciones del Correo electrónico de base de datos.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objetos de la base de datos **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitado en la base de datos **msdb** . No obstante, el Correo electrónico de base de datos no usa la configuración de red de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Por ello, los usuarios no tienen que crear un extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para usar el Correo electrónico de base de datos. El proceso externo de Correo electrónico de base de datos usa una conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] estándar para comunicarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -2,9 +2,12 @@
 title: Clases de eventos configurables por el usuario | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff6cce49cb06cf6d102be1cf7c5dc93abff1fc2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76c62dfdfecf2aa657d64f6bc6209749ea8bff35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-configurable-event-class"></a>clases de eventos configurables por el usuario
-  Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Columnas de datos de las clases de eventos configurables por el usuario  
   

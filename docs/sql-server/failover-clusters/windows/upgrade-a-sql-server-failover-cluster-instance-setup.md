@@ -2,9 +2,12 @@
 title: "Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/22/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d9a4d46b684ef368b227c6de43b73950e8d3b00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cab55502d441bd32ba4256db1a78bd755396eaf2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)
-  Puede actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con la interfaz de usuario de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o desde un símbolo del sistema.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con la interfaz de usuario de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o desde un símbolo del sistema.  
   
  En las instalaciones locales debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como administrador. Si instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  
   

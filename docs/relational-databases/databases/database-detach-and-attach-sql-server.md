@@ -2,9 +2,12 @@
 title: "Anexión y separación de bases de datos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dca7ad5e8c2ad26d16b41f4e719dfe585a4a512f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: df36f7e602f85000e2254b1bffa3d240ab7321a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
-  Los archivos de registro de datos y transacciones de una base de datos se pueden desasociar y volverse a adjuntar posteriormente a la misma instancia u otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Separar y adjuntar una base de datos es útil si desea cambiar la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo o si desea mover la base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los archivos de registro de datos y transacciones de una base de datos se pueden desasociar y volverse a adjuntar posteriormente a la misma instancia u otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Separar y adjuntar una base de datos es útil si desea cambiar la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo o si desea mover la base de datos.  
   
   
 ##  <a name="Security"></a> Seguridad  

@@ -1,6 +1,6 @@
 
 # [Información general sobre las herramientas y utilidades de SQL Server](../tools/overview-sql-tools.md)
-# [Artículos nuevos y recientemente actualizados](new-updated-tools.md)
+# [Artículos nuevos y actualizados](new-updated-tools.md)
 
 # [SQL Operations Studio (versión preliminar)](../sql-operations-studio/what-is.md)
 

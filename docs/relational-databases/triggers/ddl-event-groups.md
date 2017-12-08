@@ -2,9 +2,12 @@
 title: Grupos de eventos DDL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccea01b74a215c298ad5411c7da862f2f7f62a15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec4272b36c365f38793bcf8ccd5692e5933e3164
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
-  En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Determinados procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar desencadenadores DDL o notificaciones de eventos. Pruebe los desencadenadores DDL y las notificaciones de eventos para determinar sus respuestas a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, tanto la instrucción CREATE TYPE como el procedimiento almacenado **sp_addtype** activarán un desencadenador DDL o una notificación de eventos creada en un evento CREATE_TYPE.  

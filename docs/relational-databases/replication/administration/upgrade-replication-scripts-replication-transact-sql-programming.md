@@ -2,9 +2,12 @@
 title: "Actualizar scripts de replicación (programación de la replicación con Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c19ed05d9f7a324d8e6ae834c9c1528b3249625
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83f7b41bb5c2ad54f4b095a7d30aa2879688d2a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Actualizar scripts de replicación (programación de la replicación con Transact-SQL)
-  Los archivos de script[!INCLUDE[tsql](../../../includes/tsql-md.md)] se pueden utilizar para configurar mediante programación una topología de replicación. Para obtener más información, consulte [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los archivos de script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se pueden utilizar para configurar mediante programación una topología de replicación. Para obtener más información, consulte [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación).  
   
 > [!IMPORTANT]  
 >  Aunque no necesita actualizar scripts ejecutados por miembros del rol **sysadmin** , se recomienda modificar los ya existentes tal como se describe en este tema. Especifique una cuenta que tenga permisos mínimos para cada agente de replicación tal como se describe en la sección sobre permisos requeridos por el agente del tema [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

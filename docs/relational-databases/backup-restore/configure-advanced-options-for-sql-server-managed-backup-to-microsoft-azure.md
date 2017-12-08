@@ -2,9 +2,12 @@
 title: Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e968aad24d2d1ac529028eb39f64b2a842e1712b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure
-  En el tutorial siguiente se describe cómo configurar las opciones avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Estos procedimientos solo son necesarios si necesita las características que ofrecen. De lo contrario, puede habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] y depender del comportamiento predeterminado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En el tutorial siguiente se describe cómo configurar las opciones avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Estos procedimientos solo son necesarios si necesita las características que ofrecen. De lo contrario, puede habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] y depender del comportamiento predeterminado.  
   
  En cada escenario, la copia de seguridad se especifica mediante el parámetro `database_name` . Cuando `database_name` es NULL o *, los cambios afectan a la configuración predeterminada en el nivel de instancia. La configuración del nivel de instancia afecta también a las nuevas bases de datos que se crean después del cambio.  
   

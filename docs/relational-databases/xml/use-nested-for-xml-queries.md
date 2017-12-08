@@ -2,9 +2,12 @@
 title: Usar consultas FOR XML anidadas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53864aece4894c0aa72bf886f087ef76d5b4f9c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: decd82111d3cb541af7aaaf61bb516582b31cfb0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML anidadas
-  El tipo de datos **xml** y la [directiva TYPE en consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permiten que el XML que devuelven las consultas FOR XML se pueda procesar en el servidor y también en el cliente.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] El tipo de datos **xml** y la [directiva TYPE en consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permiten que el código XML que devuelven las consultas FOR XML se pueda procesar en el servidor y también en el cliente.  
   
 ## <a name="processing-with-xml-type-variables"></a>Procesar con variables de tipo xml  
  Puede asignar el resultado de la consulta FOR XML a una variable de tipo **xml** , o utilizar XQuery para consultar el resultado y asignar ese resultado a una variable de tipo **xml** para procesarlo más.  

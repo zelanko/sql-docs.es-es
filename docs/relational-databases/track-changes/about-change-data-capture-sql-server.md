@@ -2,9 +2,12 @@
 title: Acerca de la captura de datos modificados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b2cd9bcb4b9d2c4e9a657e88d46193a60309db20
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b839baf4614d89b29d5244859735f1b3ccf1df19
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
-  La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
   
  Un buen ejemplo de consumidor de datos a quien va dirigida esta tecnología es una aplicación de extracción, transformación y carga (ETL). Una aplicación ETL carga incrementalmente los datos modificados de las tablas de origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un almacenamiento de datos o data mart. Aunque la representación de las tablas de origen dentro del almacén de datos debe reflejar los cambios en las tablas de origen, una tecnología de extremo a extremo que actualice una réplica del origen no resulta adecuada en este caso. En su lugar, necesita un flujo de datos modificados confiable y estructurado de forma que los consumidores puedan aplicarlo a representaciones de destino dispares de los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona esta tecnología.  
   

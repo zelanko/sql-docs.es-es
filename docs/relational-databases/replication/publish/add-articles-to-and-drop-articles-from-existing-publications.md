@@ -2,9 +2,12 @@
 title: "Agregar y quitar artículos de publicaciones existentes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fea1fa67796e56359eed3bb7bfd9746a48f18cf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9d6f6fc1ab13564faaab865410f9b9d132c3b6fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
-  Después de crear una publicación, se le pueden agregar y quitar artículos. Se pueden agregar artículos en cualquier momento, pero las acciones necesarias para quitar artículos dependen del tipo de replicación y del momento en que se quite el artículo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Después de crear una publicación, se le pueden agregar y quitar artículos. Se pueden agregar artículos en cualquier momento, pero las acciones necesarias para quitar artículos dependen del tipo de replicación y del momento en que se quite el artículo.  
   
 ## <a name="adding-articles"></a>agregar artículos  
  Para agregar un artículo, es necesario agregar el artículo a la publicación, crear una instantánea nueva para la publicación y sincronizar la suscripción para aplicar el esquema y los datos para el nuevo artículo.  

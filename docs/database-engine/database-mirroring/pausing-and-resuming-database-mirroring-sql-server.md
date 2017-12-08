@@ -2,9 +2,12 @@
 title: "Pausar y reanudar la creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausar y reanudar la creación de reflejo de la base de datos (SQL Server)
-  El propietario de la base de datos puede pausar y reanudar posteriormente una sesión de creación de reflejo de la base de datos en cualquier momento. La pausa preserva el estado de la sesión mientras se suspende la creación de reflejo. Durante los cuellos de botella, las pausas pueden ser útiles para mejorar el rendimiento en el servidor principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El propietario de la base de datos puede pausar y reanudar posteriormente una sesión de creación de reflejo de la base de datos en cualquier momento. La pausa preserva el estado de la sesión mientras se suspende la creación de reflejo. Durante los cuellos de botella, las pausas pueden ser útiles para mejorar el rendimiento en el servidor principal.  
   
  Cuando se realiza una pausa en una sesión, la base de datos principal sigue estando disponible. La pausa establece el estado de la sesión de creación de reflejo de la base de datos en SUSPENDED y la base de datos reflejada ya no se mantiene al día con la base de datos principal, lo que ocasiona que la base de datos principal se ejecute de una manera expuesta.  
   

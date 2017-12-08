@@ -2,9 +2,12 @@
 title: Clase de eventos Showplan XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813e54cf56af7b0d0b465e474582ea16d9fea16a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 38dd57838cab286714f85716e71b617e493c551c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML [clase de eventos]
-  La clase de eventos Showplan XML se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Incluya la clase de eventos Showplan XML para identificar los operadores de plan de presentación. Esta clase de evento almacena cada evento como un documento XML bien definido.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Showplan XML se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Incluya la clase de eventos Showplan XML para identificar los operadores de plan de presentación. Esta clase de evento almacena cada evento como un documento XML bien definido.  
   
  Si se incluye la clase de eventos Showplan XML en un seguimiento, la carga hará disminuir significativamente el rendimiento. Showplan XML almacena un plan de consulta creado al optimizar la consulta. Para minimizar la carga, limite el uso de esta clase de evento a seguimientos que supervisan problemas específicos durante períodos de tiempo breves.  
   

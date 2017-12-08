@@ -2,9 +2,12 @@
 title: "Monitor de replicación, página Principal | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ea7953ff3052c4880564ab566b549336d542345
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 390fc9dbb3202793d1dcd80e253586adf193b6a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-monitor-main-page"></a>Monitor de replicación, página Principal
-  El Monitor de replicación permite realizar un seguimiento del estado y del rendimiento de las publicaciones y las suscripciones en una topología de replicación. Los siguientes temas proporcionan más información:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación permite realizar un seguimiento del estado y del rendimiento de las publicaciones y las suscripciones en una topología de replicación. Los siguientes temas proporcionan más información:  
   
 -   Para obtener información general sobre el Monitor de replicación, vea [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md) (Supervisar la replicación).  
   

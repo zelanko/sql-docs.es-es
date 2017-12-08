@@ -2,9 +2,12 @@
 title: "Creación, modificación y eliminación de FileTables | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c2409e20ab8d3944d33f09f6961cdb1d860669e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3834e2948ea4e43bc5e44a4aed9f1560b2864b64
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
-  Describe cómo crear una nueva FileTable. O bien, modificar o quitar una FileTable existente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe cómo crear una tabla FileTable nueva, o cómo modificar o quitar una existente.  
   
 ##  <a name="BasicsCreate"></a> Crear una FileTable  
  Una FileTable es una tabla de usuario especializada que tiene un esquema predefinido y fijo. Este esquema almacena los datos FILESTREAM, la información de directorios y archivos, así como los atributos de archivos. Para obtener información acerca del esquema de FileTable, vea [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  

@@ -2,9 +2,12 @@
 title: CursorPrepare (clase de eventos) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6fcbca475c65b6fb1b3aed42f49bfa7dace3cea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare [clase de eventos]
-  La clase de eventos **CursorPrepare** describe los eventos de preparación de cursor que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de preparación de cursor tienen lugar cuando el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila una instrucción SELECT asociada a un cursor en un plan de ejecución, pero no crea el cursor.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **CursorPrepare** describe los eventos de preparación de cursor que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de preparación de cursor tienen lugar cuando el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila una instrucción SELECT asociada a un cursor en un plan de ejecución, pero no crea el cursor.  
   
  Incluya la clase de evento **CursorPrepare** en los seguimientos que registran el rendimiento de los cursores. Cuando la clase de evento **CursorPrepare** se incluye en un seguimiento, la cantidad de sobrecarga que se produce depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
   

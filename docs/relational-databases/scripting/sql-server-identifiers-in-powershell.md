@@ -2,9 +2,12 @@
 title: Identificadores de SQL Server en PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdc0185b9ac8564a47ca6e4e51b8fdb76e63a653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores de SQL Server en PowerShell
-  El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las rutas de acceso de Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener caracteres que Windows PowerShell no admite en las rutas de acceso. Debe definir estos caracteres como caracteres de escape o usar una codificación especial para ellos al usar los identificadores en las rutas de acceso de Windows PowerShell.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las rutas de acceso de Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener caracteres que Windows PowerShell no admite en las rutas de acceso. Debe definir estos caracteres como caracteres de escape o usar una codificación especial para ellos al usar los identificadores en las rutas de acceso de Windows PowerShell.  
   
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Identificadores de SQL Server en rutas de Windows PowerShell  
  Los proveedores de Windows PowerShell exponen las jerarquías de datos mediante una estructura de ruta similar a la que se usa para el sistema de archivos de Windows. El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa rutas a los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], la unidad se establece en SQLSERVER:, la primera carpeta se establece en \SQL y se hace referencia a los objetos de la base de datos como contenedores y elementos. Esta es la ruta de acceso a la tabla Vendor en el esquema Purchasing de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en una instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  

@@ -2,9 +2,12 @@
 title: "Características obsoletas en la replicación de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 01/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 88516ace8eaa8fe76929ee7d15c6475a1081f030
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e7c787f7c58a87b50e4cdaf2d5d6a5ffda4b245f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Características que ya no se utilizan en la replicación de SQL Server
-  Este tema describe las características de replicación desusadas que siguen estando disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema describe las características de replicación en desuso que siguen disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Elementos desusados en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   

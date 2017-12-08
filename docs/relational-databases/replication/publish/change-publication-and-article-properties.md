@@ -2,9 +2,12 @@
 title: "Cambio delas propiedades de la publicación y de los artículos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5afcb14260648ba416360d26e94466e730b13c64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d43da2c0314c2b724a7d5b04db3a56ff5ceb664f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
-  Una vez creada una publicación, la mayoría de las propiedades de la publicación y de los artículos se pueden cambiar, aunque algunas requieren la regeneración de la instantánea o la reinicialización de las suscripciones. En este tema se ofrece información sobre todas las propiedades que requieren una de estas acciones o las dos si se cambian.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una vez creada una publicación, la mayoría de las propiedades de la publicación y de los artículos se puede cambiar, aunque algunas requieren la regeneración de la instantánea o la reinicialización de las suscripciones. En este tema se ofrece información sobre todas las propiedades que requieren una de estas acciones o las dos si se cambian.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propiedades de la publicación para replicación de instantáneas y replicación transaccional.  
   

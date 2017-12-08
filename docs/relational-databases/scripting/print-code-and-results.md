@@ -2,9 +2,12 @@
 title: "Impresión de código y resultados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 493a87b6a78fbc1918c86852999afbb9bc557be3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="print-code-and-results"></a>Imprimir código y resultados
-  Al imprimir una consulta o un archivo, los elementos en color se imprimen en color siempre que la impresora sea compatible con la impresión en color y ésta se haya habilitado en la configuración de la impresora.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al imprimir una consulta o un archivo, los elementos en color se imprimen en color, siempre que la impresora sea compatible con la impresión en color y esta se haya habilitado en la configuración de la impresora.  
   
  No obstante, la fuente y el color del texto en el editor, y el modo que en que el texto se imprime en la impresora pueden variar. En el menú **Herramientas** , seleccione **Opciones**. En **Entorno**, haga clic en **Fuentes y colores**y seleccione las fuentes y los colores de los elementos que se mostrarán en el editor y las fuentes y los colores que resultarán al imprimir. Puesto que estos valores pueden variar, el resultado puede ser distinto al que aparece en el editor.  
   

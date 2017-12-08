@@ -2,9 +2,12 @@
 title: "Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: feb48c4622ada4f281d60d96c32a2f68e4e8e1b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e334ba23daa658900e6977811d1305a1ad0b16e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
-  Si los extremos de la creación de reflejo de la base de datos usan la Autenticación de Windows, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agregar o reemplazar un testigo. Cuando se agrega un testigo en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , se cambia también el modo de operación al modo de alta seguridad con conmutación automática por error.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si los extremos de la creación de reflejo de la base de datos usan la autenticación de Windows, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agregar o reemplazar un testigo. Cuando se agrega un testigo en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , se cambia también el modo de operación al modo de alta seguridad con conmutación automática por error.  
   
 > [!NOTE]  
 >  Es muy recomendable que el testigo se encuentre en otro equipo de alguno de los asociados. La cuenta de servicio que usa el testigo debe estar en el mismo dominio que las cuentas de servicio que usan las instancias del servidor principal y del servidor reflejado, o bien debe estar en un dominio de confianza.  

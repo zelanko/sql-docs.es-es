@@ -2,9 +2,12 @@
 title: "Especificar una acción del punto de interrupción | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05021a400801a1cae9edbd5e5f9443ff3bd89a63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4f2df0116147c4c4093762e91274d01dfe1610c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
-  Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Consideraciones sobre las acciones  
  La acción predeterminada para un punto de interrupción es que se detenga la ejecución cuando se hayan satisfecho el número de llamadas y la condición de punto de interrupción. El uso principal de una acción **Cuando se llama** en el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste, sin embargo, en imprimir información en la **ventana de salida** del depurador, donde se especificará un mensaje de impresión.  

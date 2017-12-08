@@ -2,9 +2,12 @@
 title: Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fa116b3ef7a86697f053a653c14aad0e86f1535
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
-  En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Instrucciones admitidas por IntelliSense  
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  

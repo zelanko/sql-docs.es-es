@@ -2,9 +2,12 @@
 title: Usar la utilidad sqlcmd | Microsoft Docs
 ms.custom: 
 ms.date: 06/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd: usar la utilidad
-  La utilidad **sqlcmd** es una herramienta de línea de comandos para la ejecución ad hoc e interactiva de instrucciones y scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] y para la automatización de tareas de creación de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para usar **sqlcmd** interactivamente o para compilar archivos de script que se ejecutan mediante **sqlcmd**, los usuarios deben estar familiarizados con [!INCLUDE[tsql](../../includes/tsql-md.md)]. La utilidad **sqlcmd** se usa normalmente de las formas siguientes:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La utilidad **sqlcmd** es una herramienta de línea de comandos para la ejecución ad hoc e interactiva de instrucciones y scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] y para la automatización de tareas de creación de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar **sqlcmd** interactivamente o para compilar archivos de script que se ejecutan mediante **sqlcmd**, los usuarios deben estar familiarizados con [!INCLUDE[tsql](../../includes/tsql-md.md)]. La utilidad **sqlcmd** se usa normalmente de las formas siguientes:  
   
 -   Los usuarios escriben instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de una forma similar al modo en que trabajan con el símbolo del sistema. Los resultados se muestran en el símbolo del sistema. Para abrir una ventana del símbolo del sistema, escriba "cmd" en el cuadro de búsqueda de Windows y haga clic en **Símbolo del sistema** para abrirla. En el símbolo del sistema, escriba **sqlcmd** seguido de una lista de opciones que quiera. Para obtener una lista completa de las opciones admitidas por **sqlcmd**, vea [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md).  
   

@@ -2,9 +2,12 @@
 title: Monitor de actividad | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09ef7a3e992e4c9cdfd0a077de72587079f51aae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a8e7ef91222dd0a8b1626bb91d2b7578a5a947b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activity-monitor"></a>Monitor de actividad
-  El Monitor de actividad muestra información acerca de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el modo en que estos afectan a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Monitor de actividad muestra información acerca de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el modo en que estos afectan a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El Monitor de actividad es una ventana de documento de organización por pestañas cuyos paneles, que se presentan a continuación, se pueden expandir o contraer: **Información general**, **Tareas de usuario activas**, **Esperas de recursos**, **E/S de archivo de datos**y **Consultas costosas recientes**. Cuando un panel está expandido, el Monitor de actividad consulta la instancia en busca de información. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad de la instancia.  
  

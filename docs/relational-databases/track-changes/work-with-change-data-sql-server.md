@@ -2,9 +2,12 @@
 title: Trabajar con datos modificados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4a6407cbe969ff2d5e016849acbcd148e540a69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
-  Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  
   
  Se proporcionan varias funciones que ayudan a determinar los valores de LSN adecuados para utilizarse al consultar una función TVF. La función [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) devuelve el LSN más pequeño asociado a un intervalo de validez de la instancia de captura. El intervalo de validez es el intervalo de tiempo durante el cual los datos modificados están actualmente disponibles en sus instancias de captura. La función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) devuelve el LSN más grande del intervalo de validez. Las funciones [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) y [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) están disponibles para ayudar a ubicar los valores LSN en una escala de tiempo convencional. Dado que la captura de datos modificados utiliza intervalos de consulta cerrados, a veces es necesario generar el valor de LSN siguiente en un flujo para garantizar que los cambios no estén duplicados en ventanas de consulta consecutivas. Las funciones [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) y [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) son útiles cuando es necesario realizar un ajuste incremental en un valor LSN.  
   

@@ -2,9 +2,12 @@
 title: "Configuración de red del servidor | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor
-  Entre las tareas de configuración de red del servidor se incluyen las siguientes: habilitar protocolos, modificar el puerto o canalización usados por un protocolo, configurar el cifrado, configurar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, mostrar u ocultar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la red y registrar el nombre de la entidad de seguridad del servidor. La mayoría de las veces, no es necesario cambiar la configuración de red del servidor. Solo debe volver a configurar los protocolos de red del servidor si la red tiene requisitos especiales.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Entre las tareas de configuración de red del servidor se incluyen las siguientes: habilitar protocolos, modificar el puerto o canalización que usa un protocolo, configurar el cifrado, configurar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, mostrar u ocultar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la red y registrar el nombre de la entidad de seguridad del servidor. La mayoría de las veces, no es necesario cambiar la configuración de red del servidor. Solo debe volver a configurar los protocolos de red del servidor si la red tiene requisitos especiales.  
   
  La configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se realiza mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice la Herramienta de red de servidor que se incluye con dichos productos.  
   

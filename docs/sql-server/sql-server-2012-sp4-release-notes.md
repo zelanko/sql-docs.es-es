@@ -1,9 +1,9 @@
 ---
 title: "Notas de la versión de SQL Server 2012 SP4 | Microsoft Docs"
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 562c03dfc873adeaca8f8486f1ecb4c66c3c4d14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>Notas de la versión de SQL Server 2012 SP4
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] En este tema se resumen las mejoras incluidas en SQL Server 2012 SP4. También se describen cuestiones que se deben revisar antes de instalar o de solucionar problemas de instalación de SP4. Las notas de la versión solo están disponibles en Internet, no se incluyen en el disco de instalación. Este tema se actualiza periódicamente, conforme se van detectando nuevos problemas. Para obtener una lista detallada de correcciones de SP4, vea [Notas de las versión de SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937).  

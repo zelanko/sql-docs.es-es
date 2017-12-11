@@ -2,9 +2,12 @@
 title: "Información del depurador de Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
-  Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Siempre que el depurador pare temporalmente la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
   
 ## <a name="debugger-windows"></a>Ventanas del depurador  
  En el modo de depurador, éste abre dos ventanas en la parte inferior de la ventana principal de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El depurador muestra toda su información en estas dos ventanas. Cada una de ellas tiene pestañas que puede seleccionar para controlar el conjunto de información que se muestra en la ventana. La ventana izquierda del depurador contiene las pestañas **Variables locales**, **Inspección1**, **Inspección2**, **Inspección3**e **Inspección4** . La ventana derecha del depurador contiene las pestañas **Pila de llamadas**, **Subprocesos**, **Puntos de interrupción**, **Ventana de comandos**y **Salida** .  

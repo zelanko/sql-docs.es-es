@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="polybase-guide"></a>Guía de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase es una tecnología que tiene acceso a datos fuera de la base de datos mediante el lenguaje T-SQL.  En SQL Server 2016, le permite ejecutar consultas sobre datos externos en Hadoop o importar/exportar datos desde Azure Blob Storage. Las consultas se optimizan para insertar cálculo en Hadoop. En Azure SQL Data Warehouse, puede importar o exportar datos desde Azure Blob Storage y Azure Data Lake Store.
@@ -59,7 +59,7 @@ Por simplificar, PolyBase no requiere que instale más software en el entorno de
   
 ## <a name="performance"></a>Rendimiento  
   
--   **Inserción de cálculo en Hadoop.**El optimizador de consultas toma una decisión basada en costos para insertar cálculo en Hadoop cuando, al hacerlo, se va a mejorar el rendimiento de las consultas.  Para tomar esa decisión basada en costos, usa estadísticas relativas a las tablas externas.   La inserción de cálculo crea trabajos MapReduce y aprovecha los recursos de cálculo distribuidos de Hadoop.  
+-   **Inserción de cálculo en Hadoop.**El optimizador de consultas toma una decisión basada en costos para insertar cálculo en Hadoop cuando, al hacerlo, se va a mejorar el rendimiento de las consultas.  Para tomar esa decisión basada en costos, usa estadísticas relativas a las tablas externas. La inserción de cálculo crea trabajos MapReduce y aprovecha los recursos de cálculo distribuidos de Hadoop.  
   
 -   **Escala de los recursos de cálculo.** Para mejorar el rendimiento de las consultas, puede usar [grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)de SQL Server. Gracias a esto, la transferencia de datos paralelos entre instancias de SQL Server y nodos de Hadoop es factible y, además, se agregan recursos de cálculo para operar en los datos externos.  
   

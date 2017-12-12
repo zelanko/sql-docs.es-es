@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc794554646b0382f5cb0e0c60451e213746d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo generar las instancias XML.  
@@ -73,7 +73,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  De forma predeterminada, el analizador de XML descarta los espacios en blanco insignificantes cuando convierte datos de cadena a XML si se da alguna de las condiciones siguientes:  
   
--   `The xml:space` en un elemento o en sus elementos antecesores.  
+-   El atributo `xml:space` no está definido en un elemento o sus elementos antecesores.  
   
 -   El atributo `xml:space` activo en un elemento, o uno de sus elementos antecesores, tiene el valor predeterminado.  
   

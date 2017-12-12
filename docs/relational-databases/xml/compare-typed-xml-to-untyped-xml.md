@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Se pueden crear variables, parámetros y columnas del tipo de datos **xml**. Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo **xml** . En este caso, se dice que la instancia del tipo de datos **xml** es una instancia *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  En los ejemplos siguientes se usa una convención de nomenclatura de dos partes para especificar el nombre de la recopilación de esquemas XML. La primera parte corresponde al nombre de esquema y la segunda al nombre de la colección de esquemas XML.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociar una colección de esquemas con una variable de tipo XML  
- En el ejemplo siguiente se crea una variable de tipo**xml** y se le asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
+ En el ejemplo siguiente se crea una variable de tipo **xml** y se le asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

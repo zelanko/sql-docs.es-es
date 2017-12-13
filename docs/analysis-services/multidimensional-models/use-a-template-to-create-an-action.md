@@ -2,12 +2,12 @@
 title: "Usar una plantilla para crear una acción | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc98dc219eb8b4f003f77236f088f2e1f4fbe4d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 27968d5a1e32dc5f357f1fd509508347628c9367
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar una plantilla para crear una acción
-  La vista **Acciones** del Diseñador de cubos contiene varias plantillas que puede usar para crear acciones comunes. Se puede obtener acceso al Diseñador de cubos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El **acciones** vista de diseñador de cubos contiene varias plantillas que puede usar para crear acciones comunes. Se puede obtener acceso al Diseñador de cubos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
 >  Una vez creada la acción, estará disponible para los usuarios después de actualizar o volver a procesar el cubo. Para más información, vea [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  

@@ -2,12 +2,12 @@
 title: Tuplas | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 15dfc7f0ef9690acb208acd17eb6c4b5f27778bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tuples"></a>Tuplas
-  Una tupla identifica de forma inequívoca un segmento de datos de un cubo. Una combinación de miembros de dimensión forma la tupla, siempre que no haya dos o más miembros que pertenecen a la misma jerarquía.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Una tupla identifica de forma única un segmento de datos de un cubo. Una combinación de miembros de dimensión forma la tupla, siempre que no haya dos o más miembros que pertenecen a la misma jerarquía.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Miembros de atributo implícitos o predeterminados en una tupla  
  Al definir una tupla en una consulta o expresión MDX, no es necesario incluir explícitamente el miembro de atributo de cada jerarquía de atributo. Si no se incluye de manera explicita un miembro de una jerarquía de atributo en una consulta o expresión, el miembro predeterminado de esa jerarquía de atributo es el miembro de atributo implícitamente incluido en la tupla. A menos que se lo defina explícitamente de otra manera en un cubo, el miembro predeterminado de cada jerarquía de atributo es el miembro (All), si existe. Si no existe un miembro (All) dentro de una jerarquía de atributo, el miembro predeterminado es un miembro del nivel superior de la jerarquía de atributo. La medida predeterminada es la primera medida especificada en el cubo, a menos que se defina explícitamente una medida predeterminada. Para más información, vea [Definir un miembro predeterminado](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) y [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  

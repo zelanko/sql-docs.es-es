@@ -2,12 +2,12 @@
 title: Comprobar un PowerPivot para SharePoint | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
-  Una instancia de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint que instale en una granja de servidores de SharePoint se administra a través de Administración central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Sin embargo, para comprobar una instalación por completo, debe tener un libro [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint la instancia que se instala en una granja de SharePoint se administra a través de Administración Central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Sin embargo, para comprobar una instalación por completo, debe tener un libro [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
   
 ||  
 |-|  

@@ -2,12 +2,12 @@
 title: "Diseñar agregaciones (XMLA) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-xmla"></a>Diseñar agregaciones (XMLA)
-  Los diseños de agregaciones están asociados a las particiones de un grupo de medida determinado para asegurar que las particiones usan la misma estructura al almacenar agregaciones. Utilizando la misma estructura de almacenamiento para particiones le permite definir con facilidad las particiones que pueden combinarse más tarde mediante el [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obtener más información acerca de los diseños de agregaciones, consulte [agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diseños de agregaciones están asociados a las particiones de un grupo de medida determinado para asegurarse de que las particiones utilizan la misma estructura al almacenar agregaciones. Utilizando la misma estructura de almacenamiento para particiones le permite definir con facilidad las particiones que pueden combinarse más tarde mediante el [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obtener más información acerca de los diseños de agregaciones, consulte [agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Para definir las agregaciones para un diseño de agregaciones, puede usar el [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) comando de XML for Analysis (XMLA). El **DesignAggregations** comando tiene propiedades que identifican el diseño de agregaciones que se usará como una referencia y cómo controlar el proceso de diseño basado en esa referencia. Mediante el **DesignAggregations** comandos y sus propiedades, puede diseñar agregaciones de forma iterativa o por lote y, a continuación, ver las estadísticas de diseño resultantes para evaluar el proceso de diseño.  
   

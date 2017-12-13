@@ -2,12 +2,12 @@
 title: Conceder permisos de procesamiento (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccb2f4ebb1db848d62f470ed2e37230a95916cb9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Otorgar permisos de procesamiento (Analysis Services)
-  Como administrador, puede crear un rol dedicado para las operaciones de procesamiento de Analysis Services, lo cual le permitirá delegar esa tarea en particular a otros usuarios o a aplicaciones destinadas al procesamiento programado desatendido. Los permisos de procesamiento pueden concederse en los niveles de base de datos, cubo, dimensión y estructura de minería de datos. Salvo que esté trabajando en una base de datos tabular o un cubo muy extenso, le recomendamos que otorgue derechos de procesamiento en el nivel de la base de datos, donde se engloben todos los objetos, incluso aquellos que tengan dependencias entre sí.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Como administrador, puede crear un rol dedicado para las operaciones de procesamiento de Analysis Services, lo que le permite delegar esa tarea en particular a otros usuarios, o para aplicaciones que se usan para el procesamiento programado desatendido. Los permisos de procesamiento pueden concederse en los niveles de base de datos, cubo, dimensión y estructura de minería de datos. Salvo que esté trabajando en una base de datos tabular o un cubo muy extenso, le recomendamos que otorgue derechos de procesamiento en el nivel de la base de datos, donde se engloben todos los objetos, incluso aquellos que tengan dependencias entre sí.  
   
  Los permisos se otorgan mediante roles que asocian objetos con permisos y cuentas de usuario o grupo de Windows. Recuerde que los permisos son acumulativos. Si un rol otorga permisos para procesar un cubo, y un segundo rol otorga al mismo usuario permiso para procesar una dimensión, los permisos de los dos roles diferentes se combinan para proporcionar al usuario permiso para procesar el cubo y para procesar la dimensión específica en la base de datos.  
   

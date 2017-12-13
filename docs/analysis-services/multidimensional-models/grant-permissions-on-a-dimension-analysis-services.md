@@ -2,12 +2,12 @@
 title: "Conceder permisos para una dimensión (Analysis Services) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Otorgar permisos para una dimensión (Analysis Services)
-  La seguridad de dimensión se usa para establecer permisos en un objeto de dimensión, no en sus datos. Por lo general, el principal objetivo a la hora de establecer permisos en una dimensión es permitir o denegar el acceso a las operaciones de procesamiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Seguridad de dimensión se usa para establecer permisos en un objeto de dimensión, no en sus datos. Por lo general, el principal objetivo a la hora de establecer permisos en una dimensión es permitir o denegar el acceso a las operaciones de procesamiento.  
   
  Pero quizás su objetivo no sea controlar las operaciones de procesamiento, sino más bien el acceso a los datos para una dimensión o a los atributos y jerarquías que contiene. Por ejemplo, una empresa con divisiones comerciales regionales quiere que la información sobre rendimiento comercial esté disponible para aquellos que no pertenecen a la división. Para permitir o denegar el acceso a porciones de los datos de la dimensión para sus diferentes partes constituyentes, puede establecer permisos para los atributos de la dimensión y los miembros de la dimensión. Tenga en cuenta que no puede denegar el acceso a un objeto individual de una dimensión, solamente a sus datos. Si su objetivo inmediato es permitir o denegar el acceso a los miembros de una dimensión, incluidos los derechos de acceso a jerarquías de atributo individuales, vea [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) para obtener más información.  
   

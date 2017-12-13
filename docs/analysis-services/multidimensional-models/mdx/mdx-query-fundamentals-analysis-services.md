@@ -2,12 +2,12 @@
 title: "Aspectos básicos de consulta MDX (Analysis Services) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 280033210c597c611ce1af8ff98c4ea94e1852f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 601c9d365870528a8716091cfc3a1ba60bd2f920
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Aspectos básicos de las consultas MDX (Analysis Services)
-  Las expresiones multidimensionales (MDX) permiten consultar objetos multidimensionales, como los cubos, y devolver conjuntos de celdas multidimensionales que contengan los datos del cubo. Este tema y los temas secundarios proporcionan información general sobre las consultas MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Expresiones multidimensionales (MDX) le permite consultar objetos multidimensionales, como cubos y devolver conjuntos de celdas multidimensionales que contienen los datos del cubo. Este tema y los temas secundarios proporcionan información general sobre las consultas MDX.  
   
  En los temas siguientes se describen las consultas MDX y los conjuntos de celdas que generan, y proporcionan información más detallada acerca de la sintaxis básica de MDX.  
   

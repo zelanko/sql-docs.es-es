@@ -2,12 +2,12 @@
 title: Cubo de almacenamiento (Analysis Services - datos multidimensionales) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Almacenamiento de cubos (Analysis Services - Datos multidimensionales)
-  Puede que el almacenamiento solamente incluya metadatos del cubo o puede que incluya todos los datos de origen de la tabla de hechos y las agregaciones definidas por dimensiones relacionadas con el grupo de medida. La cantidad de datos almacenados varía en función del modo de almacenamiento seleccionado y el número de agregaciones. La cantidad de datos almacenados afecta directamente al rendimiento de las consultas. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa varias técnicas para minimizar el espacio necesario para el almacenamiento de datos del cubo y las agregaciones:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Almacenamiento puede incluir solo los metadatos del cubo, o puede incluir todos los datos de origen de la tabla de hechos, así como las agregaciones definidas por dimensiones relacionadas con el grupo de medida. La cantidad de datos almacenados varía en función del modo de almacenamiento seleccionado y el número de agregaciones. La cantidad de datos almacenados afecta directamente al rendimiento de las consultas. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa varias técnicas para minimizar el espacio necesario para el almacenamiento de datos del cubo y las agregaciones:  
   
 -   Las opciones de almacenamiento permiten seleccionar las ubicaciones y los modos de almacenamiento más adecuados a los datos del cubo.  
   

@@ -2,12 +2,12 @@
 title: Modelo de objetos y conceptos de AMO | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c61b7e481b68e7aec256d81a391089f07963509f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>Modelo de objetos y conceptos de AMO
-  Este tema proporciona una definición de Analysis Management Objects (AMO), cómo AMO está relacionada con otras herramientas y bibliotecas suministradas en la arquitectura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y una explicación conceptual de todos los objetos principales de AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tema proporciona una definición de Analysis Management Objects (AMO), cómo AMO está relacionada con otras herramientas y bibliotecas suministradas en la arquitectura de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y una explicación conceptual de todos los objetos principales de AMO.  
   
  AMO es una colección completa de clases de administración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que se puede usar mediante programación, bajo el espacio de nombres de <xref:Microsoft.AnalysisServices>, en un entorno administrado. Las clases se incluyen en el archivo AnalysisServices.dll, que normalmente se encuentra donde el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el programa de instalación instala los archivos, en la carpeta \100\SDK\Assemblies\\. Para usar clases de AMO, incluya una referencia a este ensamblado en sus proyectos.  
   

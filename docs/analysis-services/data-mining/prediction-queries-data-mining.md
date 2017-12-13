@@ -2,12 +2,12 @@
 title: "Consultas de predicción (minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Consultas de predicción (minería de datos)
-  El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
   
  Funcionalmente, hay diferentes tipos de consultas de predicción admitidos en SQL Server, dependiendo del tipo de entradas a la consulta:  
   

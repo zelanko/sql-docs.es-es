@@ -2,12 +2,12 @@
 title: Contadores de rendimiento (SSAS) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
-  Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante contadores de rendimiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante el uso de contadores de rendimiento.  
   
  El Monitor de rendimiento es un complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) que hace un seguimiento del uso de los recursos. Para iniciar este complemento MMC, escriba **PerfMon** en el símbolo del sistema, o bien, en el Panel de control, haga clic en **Herramientas administrativas**y, después, en **Monitor de rendimiento**. El Monitor de rendimiento permite seguir la actividad y el rendimiento de los servidores y los procesos mediante objetos y contadores predefinidos, y supervisar los eventos mediante contadores definidos por el usuario. El Monitor de rendimiento recopila recuentos en lugar de datos sobre los eventos, como, por ejemplo, uso de la memoria, cantidad de transacciones activas o actividad de la CPU. También puede establecer umbrales en contadores específicos para generar alertas que notifiquen a los operadores.  
   

@@ -2,12 +2,12 @@
 title: Alta disponibilidad y escalabilidad en Analysis Services | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidad y escalabilidad en Analysis Services
-  En este artículo se describen las técnicas empleadas con más frecuencia para lograr una alta disponibilidad y escalabilidad de las bases de datos de Analysis Services. Aunque ambos aspectos podrían abordarse por separado, la realidad es que van frecuentemente de la mano. Así, una implementación escalable para grandes cargas de trabajo de procesamiento o de consulta normalmente conlleva una disponibilidad elevada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artículo describen las técnicas utilizadas con más frecuencia para lograr bases de datos de Analysis Services alta disponibilidad y escalabilidad. Aunque ambos aspectos podrían abordarse por separado, la realidad es que van frecuentemente de la mano. Así, una implementación escalable para grandes cargas de trabajo de procesamiento o de consulta normalmente conlleva una disponibilidad elevada.  
   
  Pero esto no sucede a la inversa. Una alta disponibilidad, sin escala, puede ser perfectamente el único objetivo cuando existen contratos de nivel de servicio muy estrictos para cargas de trabajo de consulta de tamaño moderado, pero críticos.  
   

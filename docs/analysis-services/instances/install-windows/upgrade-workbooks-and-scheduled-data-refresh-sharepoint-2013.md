@@ -2,12 +2,12 @@
 title: "Actualizar libros y actualización de datos programada (SharePoint 2013) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Actualizar libros y actualización de datos programada (SharePoint 2013)
-  En este tema se explica la experiencia de usuario de libros creados en entornos anteriores de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y cómo actualizar los libros de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para poder aprovechar las nuevas características presentadas en esta versión. Para obtener más información sobre las nuevas características, vea [Novedades de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tema explica la experiencia del usuario de libros creados anteriormente en [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] entornos y cómo actualizar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] libros de modo que puede aprovechar las nuevas características presentadas en esta versión. Para obtener más información sobre las nuevas características, vea [Novedades de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  No se puede revertir la actualización de los libros que se actualizan automáticamente en el servidor. Una vez actualizado un libro, permanece actualizado. Para usar una versión anterior, puede volver a publicar el libro anterior en SharePoint, restaurar una versión anterior o reciclar el libro. Para obtener más información acerca de cómo restaurar o reciclar un documento en SharePoint, vea [Planear la protección de contenido mediante papeleras de reciclaje y control de versiones](http://go.microsoft.com/fwlink/?LinkId=238669).  

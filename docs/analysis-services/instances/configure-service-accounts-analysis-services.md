@@ -2,12 +2,12 @@
 title: Configurar cuentas de servicio (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar las cuentas de servicio (Analysis Services)
-  El aprovisionamiento de cuentas para todo un producto se documenta en [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que contiene gran cantidad de información sobre las cuentas de servicio de todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluido [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aprovisionamiento de cuentas para todo un producto se documenta en [configurar cuentas de servicio de Windows y permisos](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que proporciona información de la cuenta de servicio completo para todos los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicios, incluida la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
   
  En este tema se ofrece información complementaria para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], que incluye los permisos adicionales necesarios para las instalaciones tabulares y para instalaciones en clúster. Además se ocupa de los permisos necesarios para admitir las operaciones del servidor. Por ejemplo, puede configurar operaciones de consultas y procesamiento para que se ejecuten en la cuenta del servicio, en cuyo caso deberá otorgar permisos adicionales para que funcione.  
   

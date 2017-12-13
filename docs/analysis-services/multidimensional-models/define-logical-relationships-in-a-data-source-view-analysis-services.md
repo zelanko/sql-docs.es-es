@@ -2,12 +2,12 @@
 title: "Definir relaciones lógicas en una vista del origen de datos (Analysis Services) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7ebf28e254d90e0d617c2b3319770e91c54e9a16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relaciones lógicas en una vista del origen de datos (Analysis Services)
-  El Asistente para vistas del origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista del origen de datos (DSV), en función de las relaciones de la base de datos subyacente o de los criterios de coincidencia de nombres que se especifiquen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El Asistente para vistas de origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista de origen de datos (DSV) en función de las relaciones de base de datos subyacente o el nombre que coincida con los criterios que especifique.  
   
  En caso de que esté trabajando con datos de varios orígenes de datos, puede que necesite definir manualmente relaciones lógicas en la DSV para complementar las relaciones definidas automáticamente. Las relaciones son necesarias en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para identificar las tablas de hechos y dimensiones, para construir consultas para la recuperación de datos y metadatos de orígenes de datos subyacentes, y para usar las características avanzadas de Business Intelligence.  
   

@@ -2,12 +2,12 @@
 title: Crear procedimientos almacenados | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a18ccef8d4e2e79f5a88e43def0bf13b683e266
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5badc4ffe9ddfc52a767f93771436913369ab1f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-stored-procedures"></a>Crear procedimientos almacenados
-  Todos los procedimientos almacenados deben asociarse a una clase de Common Language Runtime (CLR) o Modelo de objetos componentes (COM) para poder usarse. La clase debe estar instalada en el servidor, normalmente en forma de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® biblioteca de vínculos dinámicos (DLL) y registrarse como un ensamblado en el servidor o en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Todos los procedimientos almacenados deben asociarse con un common language runtime (CLR) o una clase de modelo de objetos componentes (COM) para poder usarlo. La clase debe estar instalada en el servidor, normalmente en forma de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® biblioteca de vínculos dinámicos (DLL) y registrarse como un ensamblado en el servidor o en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos.  
   
  Los procedimientos almacenados se registran en un servidor o en una base de datos. Se puede llamar a los procedimientos almacenados del servidor desde cualquier contexto de consulta. Solo se puede tener acceso a los procedimientos almacenados de base de datos si el contexto de base de datos es la base de datos bajo la cual se define el procedimiento almacenado. Si las funciones de un ensamblado llaman a las funciones en otro ensamblado, debe registrar ambos ensamblados en el mismo contexto (servidor o base de datos). Para un servidor o un implementado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos en un servidor, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para registrar un ensamblado. Para un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Diseñador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar un ensamblado en el proyecto.  
   

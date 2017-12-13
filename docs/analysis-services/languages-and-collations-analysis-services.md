@@ -2,12 +2,12 @@
 title: Idiomas e intercalaciones (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades**Language** y **Collation** se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar posteriormente en diferentes niveles de la jerarquía de objetos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operativos Windows. Las propiedades**Language** y **Collation** se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar posteriormente en diferentes niveles de la jerarquía de objetos.  
   
  (Solo) en un modelo multidimensional, se pueden establecer estas propiedades en una base de datos o un cubo; también se pueden establecer en traducciones que se crean para objetos dentro de un cubo. En un modelo tabular, el idioma y la intercalación se heredan del sistema operativo host.  
   

@@ -2,12 +2,12 @@
 title: "Gráfico de elevación (Analysis Services: minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
-  A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *gráfico de elevación* gráficamente representa la mejora que proporciona un modelo de minería de datos cuando se comparan con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
   
  En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el gráfico de elevación puede comparar la precisión de varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   

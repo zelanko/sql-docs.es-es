@@ -2,12 +2,12 @@
 title: "SystemGetAccuracyResults (Analysis Services: minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cef352e37903dd18048f7496928f9e96faaba26c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Minería de datos)
-  Devuelve métricas de precisión de validación cruzada para una estructura de minería de datos y todos los modelos relacionados, excluidos los modelos de agrupación en clústeres.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Devuelve las métricas de precisión de validación cruzada para una estructura de minería de datos y todos los modelos relacionados, excluidos los modelos de clústeres.  
   
  Este procedimiento almacenado devuelve métricas para todo el conjunto de datos como una partición única. Para particionar el conjunto de datos en secciones transversales y devolver métricas para cada partición, use [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   

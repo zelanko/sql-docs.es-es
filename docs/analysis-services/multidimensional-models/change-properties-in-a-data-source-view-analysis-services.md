@@ -2,12 +2,12 @@
 title: Cambiar las propiedades de una vista del origen de datos (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Cambiar las propiedades de una vista del origen de datos (Analysis Services)
-  Una vez que haya definido una vista del origen de datos mediante el Asistente para vistas del origen de datos y le haya agregado tablas, vistas, cálculos con nombre y consultas con nombre, podría interesarle cambiar las propiedades relativas a:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de definir una vista del origen de datos mediante el Asistente para la vista del origen de datos y agregar tablas, vistas, cálculos con nombre y ver consultas con nombre para el origen de datos, puede que desee cambiar las propiedades relacionadas con:  
   
 -   Criterios de coincidencia de vistas del origen de datos  
   

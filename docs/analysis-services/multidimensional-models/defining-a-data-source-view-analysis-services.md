@@ -2,12 +2,12 @@
 title: Definir los datos de un origen de vista (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4331bf4de9efa68338e509976b534549bd3506d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
-  Una vista del origen de datos contiene el modelo lógico del esquema que utilizan los objetos de bases de datos multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una vista del origen de datos contiene el modelo lógico del esquema utilizado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos de base de datos multidimensional, es decir, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
   
 -   Contiene los metadatos que representan objetos seleccionados de uno o varios orígenes de datos subyacentes, o los metadatos que se usarán para generar un almacén de datos relacional subyacente si emplea el enfoque de arriba abajo para la generación de esquemas.  
   

@@ -2,12 +2,12 @@
 title: "Ejemplos de consultas de modelo de clústeres de secuencia | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Ejemplos de consultas de modelos de clústeres de secuencia
-  Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre la información almacenada en el modelo, o se puede crear una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones según los datos nuevos que se proporcionen. En un modelo de agrupación en clústeres de secuencia, las consultas de contenido normalmente proporcionan detalles adicionales sobre los clústeres que se encontraron o las transiciones dentro de esos clústeres. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se crea una consulta en un modelo de minería de datos, puede crear cualquier una consulta de contenido, que proporciona detalles sobre la información almacenada en el modelo, o puede crear una consulta de predicción, que utiliza los patrones en el modelo para realizar predicciones basadas en nuevos datos que proporcione. En un modelo de agrupación en clústeres de secuencia, las consultas de contenido normalmente proporcionan detalles adicionales sobre los clústeres que se encontraron o las transiciones dentro de esos clústeres. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
   
  Las consultas de predicción en un modelo de agrupación en clústeres de secuencia suelen realizar recomendaciones basadas en las secuencias y transiciones, en los atributos sin secuencia que se incluían en el modelo o en una combinación de atributos de secuencia y sin secuencia.  
   

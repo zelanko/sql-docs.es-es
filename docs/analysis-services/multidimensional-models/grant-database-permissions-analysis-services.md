@@ -2,12 +2,12 @@
 title: Conceder permisos de base de datos (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Otorgar permisos de base de datos (Analysis Services)
-  Si va a empezar a usar Analysis Services y tiene conocimientos sobre bases de datos relacionales, lo primero que necesita saber es que, en lo que respecta al acceso a datos, la base de datos no es el objeto protegible principal en Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si se está aproximando a la administración de la base de datos de Analysis Services con un fondo en bases de datos relacionales, lo primero que debe comprender es que, en términos de acceso a datos, la base de datos no es el objeto protegible principal en Analysis Services.  
   
  La estructura de consultas primordial en Analysis Services son los cubos (o modelos tabulares), con los permisos de usuarios que se establecen en estos objetos en particular. En comparación con el motor de bases de datos relacionales, donde los inicios de sesión de base de datos y los permisos de usuario (en general, **db_datareader**) se establecen en la propia base de datos, una base de datos de Analysis Services es sobre todo un contenedor para los objetos de consulta principales de un modelo de datos. Si su objetivo inmediato es habilitar el acceso a datos para un cubo o modelo tabular, por ahora puede omitir los permisos de base de datos y pasar directamente a este tema: [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   

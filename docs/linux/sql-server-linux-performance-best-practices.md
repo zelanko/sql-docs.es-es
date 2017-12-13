@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8aa36adac3f7be50105a387dc3d39fca208eaba8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Prácticas recomendadas de rendimiento y directrices de configuración para SQL Server 2017 en Linux
 
@@ -55,7 +55,6 @@ Las recomendaciones siguientes son los valores de configuración opcionales que 
 Considere el uso de las siguientes opciones de configuración de sistema operativo Linux para experimentar un rendimiento óptimo con una instalación de SQL Server.
 
 ### <a name="kernel-settings-for-high-performance"></a>Configuración de kernel de alto rendimiento
-
 Estos son los recomendados rendimiento relacionados con el máximo de configuración de sistema operativo Linux y rendimiento para una instalación de SQL Server. Consulte la documentación del sistema operativo Linux para el proceso configurar estas opciones.
 
 
@@ -92,7 +91,7 @@ sysctl -w kernel.numa_balancing=0
 El valor predeterminado de **vm.max_map_count** (que es 65536) pueden no ser lo suficientemente alto como para una instalación de SQL Server. Cambie este valor (que es un límite superior) a 256K.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Deshabilitar la última fecha/hora de acceso en sistemas de archivos para archivos de registro y datos de SQL Server

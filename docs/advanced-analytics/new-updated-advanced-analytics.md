@@ -6,20 +6,24 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: advanced-analytics
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
+ms.prod: sql-non-specified
+ms.prod_service: r-services
 ms.author: genemi
 ms.workload: advanced-analytics
-ms.openlocfilehash: 636e243f1f39f0bfa688c6caada1e03078de9a32
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: HT
+ms.openlocfilehash: 840e34eee090d9fba2ec25e10375a8b0c375fea4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Nuevos y actualizados recientemente: análisis avanzados para SQL Server
 
@@ -47,7 +51,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [Agregar SQLRUserGroup como un usuario de base de datos](r/add-sqlrusergroup-to-database.md)
+1. [Agregar SQLRUserGroup como usuario de base de datos](r/add-sqlrusergroup-to-database.md)
 2. [Cómo utilizar las funciones de RevoScaleR para buscar o instalar paquetes de R en SQL Server](r/use-revoscaler-to-manage-r-packages.md)
 3. [Uso de R en la base de datos SQL Azure](r/using-r-in-azure-sql-database.md)
 

@@ -2,12 +2,12 @@
 title: El Comprobador de coherencia (DBCC) para Analysis Services de la base de datos | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Comprobador de coherencia de base de datos (DBCC) para Analysis Services
-  DBCC proporciona validación de base de datos a petición para bases de datos multidimensionales y tabulares en una instancia de Analysis Services. Puede ejecutar DBCC en una ventana de consulta XMLA o MDX en SQL Server Management Studio (SSMS) y realizar el seguimiento de la salida de DBCC en SQL Server Profiler o sesiones xEvent en SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC proporciona validación de la base de datos a petición para bases de datos multidimensionales y tabulares en una instancia de Analysis Services. Puede ejecutar DBCC en una ventana de consulta XMLA o MDX en SQL Server Management Studio (SSMS) y realizar el seguimiento de la salida de DBCC en SQL Server Profiler o sesiones xEvent en SSMS.  
 El comando toma una definición de objeto y devuelve un conjunto de resultados vacío o la información detallada del error si el objeto está dañado.   En este artículo, aprenderá a ejecutar el comando, interpretar los resultados y solucionar los problemas que surjan.  
   
  En el caso de las bases de datos tabulares, las comprobaciones de coherencia realizadas por DBCC equivalen a la validación integrada que se produce automáticamente cada vez que se vuelve a cargar, se sincroniza o se restaura una base de datos.  En cambio, las comprobaciones de coherencia de bases de datos multidimensionales se producen solo al ejecutar DBCC a petición.  

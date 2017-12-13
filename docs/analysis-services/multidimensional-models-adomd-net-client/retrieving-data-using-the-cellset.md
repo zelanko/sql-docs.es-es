@@ -2,12 +2,12 @@
 title: Recuperar datos mediante el objeto CellSet | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ed3598bd03977ae56eb159afd01955e109275e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3252672f1188bd72ab51c6ad3aa44ddb2b281b90
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Recuperar datos mediante el objeto CellSet
-  Al recuperar datos analíticos, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> proporciona la máxima interactividad y flexibilidad. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> es una caché de datos y metadatos jerárquicos en memoria que conserva las dimensiones originales de los datos. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> también se puede recorrer en estado conectado o desconectado. Debido a la posibilidad de utilizarlo sin conexión, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> se puede usar para ver datos y metadatos en un orden cualquiera y proporciona el modelo de objetos más completo para la recuperación de datos. Dicha capacidad de uso sin conexión también hace que el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> tenga la máxima sobrecarga y sea el modelo de objetos de recuperación de datos de ADOMD.NET más lento de rellenar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se recuperan los datos analíticos, el <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto proporciona la máxima interactividad y flexibilidad. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> es una caché de datos y metadatos jerárquicos en memoria que conserva las dimensiones originales de los datos. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> también se puede recorrer en estado conectado o desconectado. Debido a la posibilidad de utilizarlo sin conexión, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> se puede usar para ver datos y metadatos en un orden cualquiera y proporciona el modelo de objetos más completo para la recuperación de datos. Dicha capacidad de uso sin conexión también hace que el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> tenga la máxima sobrecarga y sea el modelo de objetos de recuperación de datos de ADOMD.NET más lento de rellenar.  
   
 ## <a name="retrieving-data-in-a-connected-state"></a>Recuperar datos en estado conectado  
  Si desea utilizar el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> para recuperar datos, siga estos pasos:  

@@ -2,12 +2,12 @@
 title: "(Minería de datos) de la selección de características | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
-  La*selección de características* es una parte importante del aprendizaje automático. La selección de características hace referencia al proceso de reducir las entradas para su procesamiento y análisis, o de encontrar las entradas más significativas. Un término relacionado, *ingeniería de características* (o *extracción de características*), hace referencia al proceso de extraer información útil o características de datos existentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Selección de características* es una parte importante del aprendizaje automático. La selección de características hace referencia al proceso de reducir las entradas para su procesamiento y análisis, o de encontrar las entradas más significativas. Un término relacionado, *ingeniería de características* (o *extracción de características*), hace referencia al proceso de extraer información útil o características de datos existentes.  
   
 ## <a name="why-do-feature-selection"></a>¿Por qué usar la selección de características?  
  La selección de características es crítica para crear un modelo adecuado por varios motivos. El primero motivo es que la selección de características implica cierto grado de *reducción de cardinalidad*para imponer un corte en el número de atributos que se tendrán en cuenta al crear un modelo. Los datos casi siempre contienen más información de la necesaria para crear el modelo, o bien el tipo incorrecto de información. Por ejemplo, puede que tenga un conjunto de datos de 500 columnas donde se describan las características de los clientes. Pero, si algunas de las columnas tienen pocos datos, obtendrá pocas ventajas si las agrega al modelo y, si algunas de las columnas están duplicadas, usar las dos columnas podría afectar al modelo.  

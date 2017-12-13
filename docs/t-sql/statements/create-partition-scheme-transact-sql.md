@@ -34,19 +34,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c97264457e575aa076e6b10f3454f0d8cf6e2d7
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un esquema en la base de datos actual que asigna a grupos de archivos las particiones de una tabla o índice con particiones. El número y el dominio de las particiones de una tabla o índice con particiones se determinan en una función de partición. Una función de partición debe crearse en un [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) instrucción antes de crear un esquema de partición.  
 
-[!NOTE]
-En la base de datos de SQL Azure se admiten sólo los grupos de archivos principales.  
+>[!NOTE]
+>En la base de datos de SQL Azure se admiten sólo los grupos de archivos principales.  
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

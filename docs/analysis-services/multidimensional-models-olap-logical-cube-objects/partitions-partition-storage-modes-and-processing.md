@@ -2,12 +2,12 @@
 title: "Modos de almacenamiento y procesamiento de la partición | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 66d7906862ef10fe5e2f9aa93a143d0655c84971
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Particiones - procesamiento y modos de almacenamiento de partición
-  El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El modo de almacenamiento de una partición afecta a la consulta y procesamiento de rendimiento, los requisitos de almacenamiento y ubicaciones de almacenamiento de la partición y su grupo de medida primario y el cubo. La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
   
  Una partición puede utilizar uno de estos tres modos de almacenamiento básicos:  
   

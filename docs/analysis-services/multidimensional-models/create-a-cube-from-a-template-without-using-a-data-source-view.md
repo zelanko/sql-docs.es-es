@@ -2,12 +2,12 @@
 title: Crear un cubo a partir de una plantilla sin usar una vista del origen de datos | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
-  Seleccione **Generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin usar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Seleccione **generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin utilizar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Seleccionar el método de generación  
  En la página **Seleccionar método de generación** del Asistente para cubos, haga clic en **Generar el cubo sin un origen de datos**. Para generar el cubo usando una plantilla de cubo existente, active la casilla **Usar una plantilla de cubo** . . Si prefiere no usar una plantilla, deberá establecer las opciones manualmente.  

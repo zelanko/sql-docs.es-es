@@ -2,12 +2,12 @@
 title: LANGUAGE y FORMAT_STRING en FORMATTED_VALUE | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 757e4e6dd284117d0e686e7908c7c71e1ba28636
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Propiedades de celda MDX - FORMATTED_VALUE, propiedad
-  La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, LANGUAGE y FORMAT_STRING de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, FORMAT_STRING y LANGUAGE de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
   
 ## <a name="value-formatstring-language-properties"></a>Propiedades VALUE, FORMAT_STRING y LANGUAGE  
  En la tabla siguiente se explica en qué consisten estas propiedades para ayudar a preparar su uso de forma conjunta.  

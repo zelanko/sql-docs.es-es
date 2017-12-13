@@ -2,12 +2,12 @@
 title: "Las extensiones de personalización de Analysis Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e1e10612e9e0f93206299e07271b3795c92962a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcc21da9d0f0297bf5db834d3ec66acdb3be397a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización constituyen el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización constituyen el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
   
 -   **Diseño e implementación dinámicos** inmediatamente después de diseñar e implementar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización, los usuarios tienen acceso a los objetos y la funcionalidad al principio de la siguiente sesión de usuario.  
   

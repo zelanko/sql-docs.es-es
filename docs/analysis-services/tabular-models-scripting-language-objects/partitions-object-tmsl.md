@@ -2,12 +2,12 @@
 title: Objeto de particiones (TMSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ea3c1f7486caa923bcf5cfc07d83a65e76578e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a6725ed37b909b80393a2760df26ba25b6f5148f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-object-tmsl"></a>Objeto de particiones (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define una partición, o una segmentación lógica del conjunto de filas de tabla. Una partición está formada por una consulta SQL usada para la importación de datos para datos de ejemplo en el entorno de modelado, o como una consulta de datos completa para pasar a través de la ejecución de consultas mediante DirectQuery.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define una partición, o una segmentación lógica del conjunto de filas de tabla. Una partición está formada por una consulta SQL usada para la importación de datos para datos de ejemplo en el entorno de modelado, o como una consulta de datos completa para pasar a través de la ejecución de consultas mediante DirectQuery.  
   
  Las propiedades de la partición determinan cómo se generan los datos de la tabla.  En la jerarquía de objetos, el objeto primario de una partición es un objeto de tabla.  
   

@@ -2,12 +2,12 @@
 title: Compartir las fuentes de datos mediante una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b345b289e396d62565f9fee76a72c0cf9cb9d04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Compartir las fuentes de distribución de datos mediante una biblioteca de fuentes de distribución de datos (Power Pivot para SharePoint)
-  Una fuente de distribución de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato en línea de Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, las fuentes de distribución de datos se usan para rellenar un origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos de una aplicación o servicio que pueden usar Atom.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una fuente de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, las fuentes de distribución de datos se usan para rellenar un origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos de una aplicación o servicio que pueden usar Atom.  
   
  Si ya utiliza una combinación de aplicaciones que pueden usar Atom, puede que nunca necesite saber cómo se generan y usan las fuentes porque la transferencia de datos se realiza sin problemas entre las aplicaciones. Sin embargo, las organizaciones que utilizan soluciones personalizadas para publicar fuentes Atom a menudo necesitan una manera de hacer que las fuentes estén disponibles para los trabajadores de la información. Una forma de conseguirlo es crear y compartir archivos de documento de servicio de datos (.atomsvc) que proporcionan las conexiones a los orígenes en línea que producen las fuentes. Una biblioteca de propósito especial, denominada biblioteca de fuentes de distribución de datos, permite crear y compartir los documentos de servicio de datos en una aplicación web de SharePoint.  
   

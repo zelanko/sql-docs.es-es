@@ -2,12 +2,12 @@
 title: "Crear una conexión de modelo semántico de BI en una base de datos de modelo Tabular | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular
-  Utilice la información de este tema para configurar una conexión de modelo semántico de BI que se redirija a una base de datos modelo tabular que se ejecuta en una instancia de Analysis Services fuera de la granja de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use la información de este tema para configurar una conexión de modelo semántico de BI que redirija a una base de datos de modelo tabular que se ejecutan en una instancia de Analysis Services fuera de la granja de SharePoint.  
   
  Después de crear una conexión de modelo semántico de BI y configurar los permisos de SharePoint y Analysis Services, los usuarios pueden utilizarla como origen de datos para Excel o informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

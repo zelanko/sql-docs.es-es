@@ -2,12 +2,12 @@
 title: "Condición de elemento (ASSL) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 697353480e768dfef00124a670105d88162f844b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f3ac35eff92580b9ec62739aa61c213eaf9e749b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="condition-element-assl"></a>Elemento Condition (ASSL)
-  Contiene una expresión de expresiones multidimensionales (MDX) que determina si el [acción](../../../analysis-services/scripting/objects/action-element-assl.md) elemento primario se aplica al destino.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene una expresión de expresiones multidimensionales (MDX) que determina si el [acción](../../../analysis-services/scripting/objects/action-element-assl.md) elemento primario se aplica al destino.  
   
 ## <a name="syntax"></a>Sintaxis  
   

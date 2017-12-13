@@ -2,12 +2,12 @@
 title: "Use la Galería de PowerPivot | Documentos de Microsoft"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Uso de la Galería de Power Pivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una biblioteca de documentos de SharePoint especial que permite obtener una eficaz vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Es una biblioteca de documentos de SharePoint especial que proporciona administración de documento y vista previa enriquecida para los libros de Excel publicados y los informes de Reporting Services que contienen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] datos.  
   
 > [!NOTE]  
 >  Según cómo esté configurado el servidor, podría ver mensajes de error o advertencia en el área de vista previa para documentos concretos. Los mensajes pueden aparecer cuando un libro de Excel se establece para actualizar sus datos automáticamente cada vez que se abre. Los mensajes de advertencia de actualización de datos aparecerán como imagen de vista previa si Servicios de Excel está configurado para mostrar mensajes de error de advertencia de actualización de datos. Los administradores de servicios o de la granja pueden modificar la configuración para permitir que aparezca una vista previa de la hoja de cálculo real. Para más información, vea [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

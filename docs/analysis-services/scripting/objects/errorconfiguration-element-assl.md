@@ -2,12 +2,12 @@
 title: Elemento ErrorConfiguration (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f0e9d89f0d7bec19ac05d86a098d44185b6ccca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 549042cd3d0db39967ab575abd71488a3f60ac40
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="errorconfiguration-element-assl"></a>Elemento ErrorConfiguration (ASSL)
-  Especifica los valores para administrar errores que se pueden producir cuando se procesa el elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Especifica la configuración para controlar los errores que pueden producirse cuando se procesa el elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   

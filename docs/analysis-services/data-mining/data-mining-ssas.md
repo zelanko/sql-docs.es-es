@@ -2,12 +2,12 @@
 title: "Minería de datos (SSAS) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-ssas"></a>Minería de datos (SSAS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha sido un líder en el análisis predictivo desde la versión en el año 2000 al proporcionar la minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La combinación de la minería de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma integrada para el análisis predictivo en la que se incluye la limpieza de los datos, la preparación, el aprendizaje automático y la generación de informes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En la minería de datos se incluyen varios algoritmos estándar, como los modelos de clústeres EM y mediana-K, redes neuronales, regresión logística y regresión lineal, árboles de decisión y clasificadores de Bayes naive. Todos los modelos tienen visualizaciones integradas para ayudarle a desarrollar, restringir y evaluar los modelos.  Integrar la minería de datos en una solución de inteligencia empresarial le ayudará a tomar decisiones inteligentes sobre problemas complejos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha sido líder en los análisis predictivos desde el lanzamiento de 2000, proporcionando la minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La combinación de la minería de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma integrada para el análisis predictivo en la que se incluye la limpieza de los datos, la preparación, el aprendizaje automático y la generación de informes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En la minería de datos se incluyen varios algoritmos estándar, como los modelos de clústeres EM y mediana-K, redes neuronales, regresión logística y regresión lineal, árboles de decisión y clasificadores de Bayes naive. Todos los modelos tienen visualizaciones integradas para ayudarle a desarrollar, restringir y evaluar los modelos.  Integrar la minería de datos en una solución de inteligencia empresarial le ayudará a tomar decisiones inteligentes sobre problemas complejos.  
   
 ## <a name="benefits-of-data-mining"></a>Ventajas de la minería de datos  
  La minería de datos (también denominado análisis predictivo y aprendizaje automático) usa principios estadísticos documentados para detectar patrones en los datos. La aplicación de los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a los datos le permitirá predecir tendencias, identificar patrones, crear reglas y recomendaciones, analizar la secuencia de eventos en conjuntos de datos complejos y obtener nuevos puntos de vista.  

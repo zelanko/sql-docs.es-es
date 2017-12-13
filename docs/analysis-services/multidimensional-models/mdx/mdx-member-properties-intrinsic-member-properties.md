@@ -2,12 +2,12 @@
 title: "Propiedades de miembro intrínsecas (MDX) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Propiedades de miembro MDX - propiedades de miembro intrínsecas
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expone propiedades intrínsecas de los miembros de dimensión que se pueden incluir en una consulta para devolver datos o metadatos adicionales para usarlos en una aplicación personalizada o como ayuda durante la investigación o la construcción de un modelo. Si utiliza las herramientas de cliente de SQL Server, puede ver las propiedades intrínsecas en SQL Server Management Studio (SSMS).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expone propiedades intrínsecas de los miembros de dimensión que se pueden incluir en una consulta para devolver datos adicionales o metadatos para su uso en una aplicación personalizada o para ayudar en la investigación del modelo o la construcción. Si utiliza las herramientas de cliente de SQL Server, puede ver las propiedades intrínsecas en SQL Server Management Studio (SSMS).  
   
  Las propiedades intrínsecas son **ID**, **KEY**, **KEYx**y **NAME**, que son las propiedades que exponen todos los miembros de cualquier nivel. También puede devolver información de posición, como **LEVEL_NUMBER** o **PARENT_UNIQUE_NAME**, entre otros.  
   

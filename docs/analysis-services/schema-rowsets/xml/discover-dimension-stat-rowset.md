@@ -2,12 +2,12 @@
 title: Conjunto de filas DISCOVER_DIMENSION_STAT | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed2707a9ee417f8e019137034e90f1a9132948e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdimensionstat-rowset"></a>Conjunto de filas DISCOVER_DIMENSION_STAT
-  Proporciona información acerca de una dimensión, incluida la base de datos que lo contiene, el nombre de la dimensión, sus atributos y un recuento de los miembros para cada atributo. En un modelo tabular, corresponde a las columnas de una tabla y el número de valores de cada columna.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información sobre una dimensión, incluidos el nombre de la base de datos que contiene, el nombre de la dimensión, sus atributos y un recuento de los miembros de cada atributo. En un modelo tabular, corresponde a las columnas de una tabla y el número de valores de cada columna.  
   
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   

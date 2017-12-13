@@ -2,12 +2,12 @@
 title: Kpistatus, elemento (CSDLBI) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 211e4790f20d7cf9d6a31fc15082e40d37553772
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 714326df1756cb74b862c8145d7bff2facebdb1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpistatus-element-csdlbi"></a>KpiStatus, elemento (CSDLBI)
-  El elemento KpiStatus define una referencia a la columna que contiene el valor utilizado como indicador de estado en un indicador clave de rendimiento (KPI).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento KpiStatus define una referencia a la columna que contiene el valor utilizado como indicador de estado en un indicador clave de rendimiento (KPI).  
   
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se enumeran los elementos y atributos que definen el elemento KpiStatus.  

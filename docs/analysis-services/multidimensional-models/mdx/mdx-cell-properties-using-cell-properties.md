@@ -2,12 +2,12 @@
 title: Usar las propiedades de celda (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52ef98613eceec0356317f1cd578ac63506d6815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81d09a847b9bb405cd028eaa8cd1b4cb9feac9a1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propiedades de celda MDX: con propiedades de celda
-  Las propiedades de celda de las expresiones multidimensionales (MDX) contienen información sobre el contenido y el formato de las celdas de un origen de datos multidimensional, como un cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Propiedades de celda en expresiones multidimensionales (MDX) contienen información sobre el contenido y el formato de las celdas de un origen de datos multidimensional, como un cubo.  
   
  MDX admite la palabra clave CELL PROPERTIES en una instrucción MDX SELECT para recuperar propiedades de celda intrínsecas. Las propiedades de celda intrínsecas se suelen utilizar para facilitar la presentación visual de los datos de las celdas.  
   

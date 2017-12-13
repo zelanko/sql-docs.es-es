@@ -2,12 +2,12 @@
 title: "Crear una ubicación de confianza para sitios de Power Pivot en Administración Central | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
-  Servicios de Excel permite especificar qué ubicaciones son repositorios válidos para los libros que se abren en un servidor de SharePoint. Estas ubicaciones se denominan 'ubicaciones de confianza' y puede utilizar opciones de configuración diferentes para cada ubicación de confianza que cree. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, podría considerar crear una ubicación de confianza para los sitios que contienen libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de modo que pueda aplicar la configuración que funcione mejor para acceder a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , al tiempo que conserva la configuración predeterminada para el resto de la granja.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excel Services le permite especificar qué ubicaciones son repositorios válidos para los libros que se abren en un servidor de SharePoint. Estas ubicaciones se denominan 'ubicaciones de confianza' y puede utilizar opciones de configuración diferentes para cada ubicación de confianza que cree. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, podría considerar crear una ubicación de confianza para los sitios que contienen libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de modo que pueda aplicar la configuración que funcione mejor para acceder a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , al tiempo que conserva la configuración predeterminada para el resto de la granja.  
   
   
 ## <a name="prerequisites"></a>Requisitos previos  

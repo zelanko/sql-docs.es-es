@@ -2,12 +2,12 @@
 title: "Implementación de la solución de modelo multidimensional | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cba427cba20a443179621758dabc8d56b1104152
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implementación de soluciones de modelos multidimensionales
-  Una vez completado el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Estos son los métodos de implementación, por orden de ventaja: automatización AMO, XMLA, Asistente para la implementación, Utilidad de implementación, Asistente para sincronizar y Copia de seguridad y restauración.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de haber completado el desarrollo de un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Estos son los métodos de implementación, por orden de ventaja: automatización AMO, XMLA, Asistente para la implementación, Utilidad de implementación, Asistente para sincronizar y Copia de seguridad y restauración.  
   
  En este tema se incluyen las secciones siguientes:  
   

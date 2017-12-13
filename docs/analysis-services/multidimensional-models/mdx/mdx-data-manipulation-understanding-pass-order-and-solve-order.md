@@ -2,12 +2,12 @@
 title: "Descripción de orden de paso y orden de resolución (MDX) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX - descripción paso ordenar y el orden de resolución
-  Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un cubo se calcula como resultado de un script MDX, puede ir a través de varias fases de computación según el uso de varias características relacionadas con el cálculo. Cada una de estas fases se denomina paso de cálculo.  
   
  Se puede hacer referencia a un paso de cálculo con una posición ordinal, llamada número de paso de cálculo. El recuento de los pasos de cálculo necesarios para calcular por completo todas las celdas de un cubo se denomina profundidad de paso de cálculo del cubo.  
   

@@ -2,12 +2,12 @@
 title: Sincronizar bases de datos de Analysis Services | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8824ea31de1d2dc2774f57ac70af05a30f442408
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye una característica de sincronización de bases de datos hace que dos bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sean equivalentes; para ello, copia los datos y los metadatos de una base de datos de un servidor de origen en una base de datos de un servidor de destino. Use la característica Sincronizar base de datos para realizar cualquiera de las tareas siguientes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye una característica de sincronización de base de datos que realiza dos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de datos equivalentes copiando los datos y metadatos de una base de datos en un servidor de origen a una base de datos en un servidor de destino. Use la característica Sincronizar base de datos para realizar cualquiera de las tareas siguientes:  
   
 -   Implementar una base de datos de un servidor de ensayo en un servidor de producción.  
   

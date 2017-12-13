@@ -2,12 +2,12 @@
 title: "Configurar fórmulas de miembro personalizado para los atributos de una dimensión | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f6cd6ca41dab2aa9d213281de94882c03f50db2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10b6f8e3daf8a5b13bee1bef87454dfc40096804
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>Asistente de BI - fórmulas de miembro personalizadas para los atributos de una dimensión
-  Agregar una fórmula de miembro personalizado a un cubo o dimensión para reemplazar la agregación predeterminada asociada a un miembro de dimensión con los resultados de una expresión de Expresiones multidimensionales (MDX). (Esta mejora configura la propiedad **CustomRollupColumn** en un atributo especificado de una dimensión).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Agregar una fórmula de miembro personalizado a un cubo o dimensión para reemplazar la agregación predeterminada que está asociada a un miembro de dimensión con los resultados de una expresión de expresiones multidimensionales (MDX). (Esta mejora configura la propiedad **CustomRollupColumn** en un atributo especificado de una dimensión).  
   
 > [!NOTE]  
 >  Hay una fórmula de miembro personalizado disponible solamente para dimensiones que se basan en orígenes de datos existentes. Para las dimensiones creadas sin usar un origen de datos, debe ejecutar el Asistente para generar esquemas para crear una vista del origen de datos antes de agregar una fórmula de miembro personalizado.  

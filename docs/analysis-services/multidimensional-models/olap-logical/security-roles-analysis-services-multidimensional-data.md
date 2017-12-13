@@ -2,12 +2,12 @@
 title: Roles de seguridad (Analysis Services - datos multidimensionales) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Roles de seguridad (Analysis Services - Datos multidimensionales)
-  Las funciones se utilizan en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para administrar la seguridad para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos y datos. En términos simples, un rol asocia los identificadores de seguridad (SID) de usuarios de Microsoft Windows y grupos que tienen derechos de acceso específicos y los permisos definidos para los objetos administrados por una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se proporcionan dos tipos de roles en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Las funciones se utilizan en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para administrar la seguridad para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos y datos. En términos simples, un rol asocia los identificadores de seguridad (SID) de usuarios de Microsoft Windows y grupos que tienen derechos de acceso específicos y los permisos definidos para los objetos administrados por una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se proporcionan dos tipos de roles en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   El rol del servidor, que es un rol fijo que proporciona acceso de administrador a una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   

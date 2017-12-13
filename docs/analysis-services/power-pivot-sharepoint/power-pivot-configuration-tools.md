@@ -2,12 +2,12 @@
 title: "Herramientas de configuración dinámica de energía | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 093e9a77dccdf8b01383152601ceadcdff816db9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-tools"></a>Herramientas de configuración de Power Pivot
-  Configure, repare o quite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con las herramientas de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Configurar, reparar o quitar una [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con las [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] herramientas de configuración.  
   
  El Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no instala herramientas de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Las herramientas de configuración estarán disponibles para su descarga en una versión futura de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

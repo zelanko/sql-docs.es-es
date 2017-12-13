@@ -2,12 +2,12 @@
 title: "Profundizar en los datos de los casos de un modelo de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7b636ccf4c39f90a356e8b7289453afb61bbac7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3c8baf27751f67ee124acc1736dc91cb1724ce7c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
-  Si un modelo de minería de datos se ha configurado para obtener detalles de los casos de modelos, al examinar el modelo, puede recuperar información detallada sobre los casos que se usaron para crear el modelo. Además, si la estructura de minería de datos subyacente se ha configurado para permitir la obtención de detalles de la estructura de casos, y tiene los permisos adecuados, puede devolver información de la estructura de minería de datos. Puede incluir columnas que no se incluían en el modelo de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si se ha configurado un modelo de minería de datos para obtener detalles de los casos del modelo, al examinar el modelo, puede recuperar información detallada acerca de los casos que se usaron para crear el modelo. Además, si la estructura de minería de datos subyacente se ha configurado para permitir la obtención de detalles de la estructura de casos, y tiene los permisos adecuados, puede devolver información de la estructura de minería de datos. Puede incluir columnas que no se incluían en el modelo de minería de datos.  
   
  Si la estructura de minería de datos no permite la obtención de detalles de los datos subyacentes, pero sí lo hace el modelo de minería de datos, puede ver la información de los casos de modelo pero no de la estructura de minería de datos.  
   

@@ -2,12 +2,12 @@
 title: Conjunto de filas DISCOVER_CALC_DEPENDENCY | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9eca892f8ddf9e85e05d33b81023a3602c861734
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY, conjunto de filas
-  Informa sobre las dependencias entre los cálculos y sobre los objetos a los que se hace referencia en dichos cálculos. Puede utilizar esta información en una aplicación cliente para informar sobre los problemas con fórmulas complejas o para avisar cuándo se eliminan o modifican objetos relacionados. También puede utilizar el conjunto de filas para extraer las expresiones de DAX que se utilizan en medidas o columnas calculadas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Informa sobre las dependencias entre los cálculos y sobre los objetos que se hace referencia en dichos cálculos. Puede utilizar esta información en una aplicación cliente para informar sobre los problemas con fórmulas complejas o para avisar cuándo se eliminan o modifican objetos relacionados. También puede utilizar el conjunto de filas para extraer las expresiones de DAX que se utilizan en medidas o columnas calculadas.  
   
  **Se aplica a:** modelos tabulares  
   

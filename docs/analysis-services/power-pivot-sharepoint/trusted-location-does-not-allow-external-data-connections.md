@@ -2,12 +2,12 @@
 title: "Ubicación no permite conexiones de datos externos de confianza | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dbb40ba2f00c91d1d9b96aff5bcb25ac475d4cc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 74571e33141442205621edd3465761770ea53fe4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="trusted-location-does-not-allow-external-data-connections"></a>Ubicación de confianza no permite conexiones de datos externos
-  En los libros de Excel que contienen datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services devuelve este error si no puede conectarse a orígenes de datos insertados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los libros de Excel que contienen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] datos, Excel Services devuelven este error si no se puede conectar a orígenes de datos incrustados.  
   
 ## <a name="details"></a>Detalles  
   

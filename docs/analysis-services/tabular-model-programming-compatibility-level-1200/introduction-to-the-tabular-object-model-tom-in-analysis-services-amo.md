@@ -2,12 +2,12 @@
 title: "Introducción al modelo de objetos tabulares (TOM) de Analysis Services AMO | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introducción al modelo de objetos Tabular (TOM) en Analysis Services AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  El modelo de objetos tabulares (TOM) es una extensión de la biblioteca de cliente de objeto de administración de servicios de análisis (AMO), creada para admitir escenarios de programación para los modelos tabulares que se integró en el nivel de compatibilidad 1200 y versiones posterior. Al igual que con AMO, TOM ofrece un mecanismo de programación para controlar funciones administrativas como la creación de modelos, importar y actualizar los datos y asignación de roles y permisos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]El modelo de objetos tabulares (TOM) es una extensión de la biblioteca de cliente de objeto de administración de servicios de análisis (AMO), creada para admitir escenarios de programación para los modelos tabulares que se integró en el nivel de compatibilidad 1200 y versiones posterior. Al igual que con AMO, TOM ofrece un mecanismo de programación para controlar funciones administrativas como la creación de modelos, importar y actualizar los datos y asignación de roles y permisos.  
   
 TOM expone metadatos tabulares nativo, como **modelo**, **tablas**, **columnas**, y **relaciones** objetos.  Una vista de alto nivel del árbol de modelo de objetos, que se proporciona a continuación, muestra cómo se relacionan los componentes.  
   

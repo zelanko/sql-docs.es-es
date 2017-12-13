@@ -2,12 +2,12 @@
 title: "Exportar e importar objetos de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exportar e importar objetos de minería de datos
-  Además de la funcionalidad incluida en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear copias de seguridad, restaurar y migrar soluciones, la minería de datos de SQL Server proporciona la capacidad de transferir rápidamente estructuras y modelos de minería de datos entre servidores diferentes usando Extensiones de minería de datos (DMX).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Además de la funcionalidad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para copia de seguridad, restaurar y migrar soluciones, minería de datos de SQL Server proporciona la capacidad de transferir rápidamente modelos y estructuras de minería de datos entre distintos servidores mediante el uso de minería de datos Extensiones (DMX).  
   
  Si la solución de minería de datos usa datos relacionales en lugar de una base de datos multidimensional, la transferencia de los modelos mediante **EXPORT** e **IMPORT** es mucho más rápida y sencilla que si se usa la restauración de la base de datos o se implementa una solución completa.  
   

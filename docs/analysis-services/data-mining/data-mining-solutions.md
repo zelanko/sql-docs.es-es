@@ -2,12 +2,12 @@
 title: "Soluciones de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d296518a6a41af88d194e8cb23b2abc371b497b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-solutions"></a>Soluciones de minería de datos
-  Una solución de minería de datos es una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene uno o más proyectos de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una solución de minería de datos es un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solución que contiene uno o varios proyectos de minería de datos.  
   
  En los temas de esta sección se ofrece información acerca del diseño y la implementación de una solución de minería de datos integrada mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener información general acerca del proceso de diseño de minería de datos y de las herramientas relacionadas, vea [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   

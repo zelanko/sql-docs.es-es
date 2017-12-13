@@ -2,12 +2,12 @@
 title: "Matriz de clasificación (Analysis Services: minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matriz de clasificación (Analysis Services - Minería de datos)
-  Una *matriz de clasificación* ordena todos los casos del modelo en categorías, determinando si el valor de predicción coincide con el valor real. A continuación, se cuentan todos los casos de cada categoría y los totales se muestran en la matriz. La matriz de clasificación es una herramienta estándar de evaluación de modelos estadísticos a la que a veces se denomina *matriz de confusión*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *matriz de clasificación* ordena todos los casos del modelo en categorías, determinando si el valor de predicción coincide con el valor real. A continuación, se cuentan todos los casos de cada categoría y los totales se muestran en la matriz. La matriz de clasificación es una herramienta estándar de evaluación de modelos estadísticos a la que a veces se denomina *matriz de confusión*.  
   
  El gráfico que se crea cuando se elige la opción **Matriz de clasificación** compara los valores reales con los valores de predicción para cada estado de predicción especificado. Las filas de la matriz representan los valores de predicción para el modelo, mientras que las columnas representan los valores reales. Las categorías usadas en el análisis son *falso positivo*, *verdadero positivo*, *falso negativo*y *verdadero negativo*.  
   

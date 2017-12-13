@@ -2,12 +2,12 @@
 title: Conceptos clave para MDX (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
-  Para poder utilizar las expresiones multidimensionales (MDX) para consultar datos multidimensionales o crear expresiones MDX en un cubo, viene bien conocer los conceptos y los términos multidimensionales.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Para poder usar expresiones multidimensionales (MDX) para consultar datos multidimensionales o crear expresiones MDX en un cubo, lo ayuda a comprender los términos y conceptos multidimensionales.  
   
  La mejor forma de empezar es con un ejemplo de resumen de datos que ya conozca y, entonces, ver cómo se relacionan con él las MDX. Esta es una tabla dinámica creada en Excel que contiene datos extraídos de un cubo de muestras de Analysis Services.  
   

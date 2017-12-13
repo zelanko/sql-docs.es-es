@@ -2,12 +2,12 @@
 title: Los totales visuales y totales no visuales | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 822e1f7e496b3c6fb74fff558b37b244e2b41512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totales visuales y totales no visuales
-  Los totales visuales son totales que se encuentran al final de una columna o fila que suman todos los elementos visibles de la columna o fila. Este es el comportamiento predeterminado de la mayoría de las tablas cuando se muestran. Sin embargo, a veces el usuario desea mostrar solo ciertas columnas de una tabla manteniendo los totales de toda la fila, incluidos los que no se muestran y que se denominan **Totales no visuales**, ya que el total proviene de los valores visibles y no visibles.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Los totales visuales son totales al final de una columna o fila que suman todos los elementos visibles en la columna o fila. Este es el comportamiento predeterminado de la mayoría de las tablas cuando se muestran. Sin embargo, a veces el usuario desea mostrar solo ciertas columnas de una tabla manteniendo los totales de toda la fila, incluidos los que no se muestran y que se denominan **Totales no visuales**, ya que el total proviene de los valores visibles y no visibles.  
   
  En el siguiente escenario se muestra el comportamiento de los totales no visuales. El primer paso muestra el comportamiento predeterminado de los totales visuales.  
   

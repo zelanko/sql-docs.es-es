@@ -2,12 +2,12 @@
 title: Mantenimiento de reglas de referencia (PowerPivot para SharePoint) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Referencia de las reglas de estado (PowerPivot para SharePoint)
-  En este tema de referencia se describen las reglas de estado de SharePoint que agrega una instalación de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint. Estas reglas se usan para notificar problemas con el mantenimiento, la disponibilidad o la configuración del servidor de una aplicación de servicio [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o su instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema de referencia describe las reglas de mantenimiento de SharePoint que agregan un [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para la instalación de SharePoint. Estas reglas se usan para notificar problemas con el mantenimiento, la disponibilidad o la configuración del servidor de una aplicación de servicio [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o su instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociada.  
   
  En la tabla siguiente se enumeran las reglas en el orden en que aparecen en la página Definiciones de la regla de analizador de mantenimiento de Administración central de SharePoint. Las reglas configurables son aquellas para las que puede cambiar los umbrales en los que se desencadenan. Para obtener más información, vea [Configuración de las reglas de mantenimiento de PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md). La reparación automática indica que hay un remedio integrado en el que se puede hacer clic en la página de informes de problemas para resolver el problema.  
   

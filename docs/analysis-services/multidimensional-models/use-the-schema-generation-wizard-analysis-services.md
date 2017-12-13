@@ -2,12 +2,12 @@
 title: "Usar el Asistente para generación de esquemas (Analysis Services) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a52799da2610aa55a0e045b2192b46ffd5f85f15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Usar el Asistente para generar esquemas (Analysis Services)
-  El Asistente para generar esquemas requiere una cantidad limitada de información durante la fase de generación. La mayoría de la información que el Asistente para generar esquemas requiere para generar esquemas relacionales se extrae de los cubos y las dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se han creado previamente en el proyecto. Además, puede personalizar el modo en que se genera el esquema de la base de datos del área de asunto y cómo se asignan nombres a los objetos del esquema.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El Asistente para generar esquemas requiere una cantidad limitada de información durante la fase de generación. La mayoría de la información que el Asistente para generar esquemas requiere para generar esquemas relacionales se extrae de los cubos y las dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se han creado previamente en el proyecto. Además, puede personalizar el modo en que se genera el esquema de la base de datos del área de asunto y cómo se asignan nombres a los objetos del esquema.  
   
 ## <a name="start-the-wizard"></a>Iniciar el asistente  
  Puede abrir el Asistente para generar esquemas desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] de varias formas:  

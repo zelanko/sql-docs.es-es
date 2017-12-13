@@ -2,12 +2,12 @@
 title: Objetos de procesamiento de Analysis Services | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Procesar objetos de Analysis Services
-  El procesamiento afecta a los siguientes tipos de objetos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : cubos, dimensiones, grupos de medida, particiones, modelos y estructuras de minería de datos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede especificar el nivel de procesamiento de cada objeto, o bien puede especificar la opción Procesar predeterminado para permitir que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seleccione automáticamente el nivel óptimo de procesamiento. Para más información sobre los distintos niveles de procesamiento de cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Procesamiento afecta a los siguientes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tipos de objetos: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de datos, cubos, dimensiones, grupos de medida, particiones y las estructuras de minería de datos y modelos. Puede especificar el nivel de procesamiento de cada objeto, o bien puede especificar la opción Procesar predeterminado para permitir que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seleccione automáticamente el nivel óptimo de procesamiento. Para más información sobre los distintos niveles de procesamiento de cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Debe tener en cuenta las consecuencias del comportamiento del procesamiento a fin de reducir las repercusiones negativas. Por ejemplo, el procesamiento completo de una dimensión establece automáticamente todas las particiones como dependientes de esa dimensión en un estado sin procesar. Esto hace que los cubos afectados no estén disponibles para consulta hasta que se procesen las particiones dependientes.  
   

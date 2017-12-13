@@ -2,12 +2,12 @@
 title: Conjuntos de filas de esquema OLE DB | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>Conjuntos de filas de esquema OLE DB
-  El proveedor XML for Analysis (XMLA) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] admite los conjuntos de filas de esquemas OLE DB siguientes. Use la **DISCOVER_ENUMERATORS** conjunto de filas con el [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Los siguientes conjuntos de filas de esquema de OLE DB son compatibles con el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para el proveedor de Analysis (XMLA). Use la **DISCOVER_ENUMERATORS** conjunto de filas con el [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas.  
   
  También puede encontrar información detallada sobre estos conjuntos de filas buscando el tema sobre los conjuntos de filas de esquemas en la parte correspondiente a la referencia del programador OLE DB de MSDN® Library en el sitio web en [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   

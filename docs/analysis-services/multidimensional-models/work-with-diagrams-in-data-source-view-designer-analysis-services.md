@@ -2,12 +2,12 @@
 title: "Trabajar con diagramas en el Diseñador de vistas del origen de datos (Analysis Services) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78ed687d57d110b8b851a6ad69dcaf50ce79301f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db04c042238a82e090e13c795c96114207526e31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabajar con diagramas en el Diseñador de vistas del origen de datos (Analysis Services)
-  Un diagrama de vista del origen de datos (DSV) es una representación visual de los objetos de una DSV. Puede trabajar con el diagrama de forma interactiva para agregar, ocultar, eliminar o modificar objetos específicos. También puede crear varios diagramas en la misma DSV para resaltar un subconjunto de los objetos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un diagrama de vista (DSV) de origen de datos es una representación visual de los objetos de una DSV. Puede trabajar con el diagrama de forma interactiva para agregar, ocultar, eliminar o modificar objetos específicos. También puede crear varios diagramas en la misma DSV para resaltar un subconjunto de los objetos.  
   
  Para cambiar el área del diagrama que se muestra en el panel de diagramas, haga clic en la flecha de cuatro puntas de la esquina inferior derecha del panel y, a continuación, arrastre el cuadro de selección sobre el diagrama en miniatura hasta seleccionar el área que desea que aparezca en el panel de diagramas.  
   

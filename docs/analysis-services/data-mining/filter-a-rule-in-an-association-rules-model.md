@@ -2,12 +2,12 @@
 title: "Filtro de modelo de reglas de una regla en una asociación | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 778e0ea8664cce55473c8cbd9963f4c25f32c4e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7f0a74cc5f14d268b5854781786608ee9e4fc4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrar una regla en un modelo de reglas de asociación
-  Puede usar filtros con los modelos de asociación para restringir los resultados a las asociaciones que le interesan. Por ejemplo, puede filtrar las reglas para mostrar solo las que incluyan un producto concreto.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede utilizar el filtrado con modelos de asociación para restringir los resultados a las asociaciones que le interesen. Por ejemplo, puede filtrar las reglas para mostrar solo las que incluyan un producto concreto.  
   
  En el Diseñador de minería de datos, use los controles de la pestaña **Reglas** del Visor de reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para filtrar las reglas que se muestran.  También puede crear una consulta en el modelo para ver solo el conjunto de elementos que contiene un valor determinado.  
   

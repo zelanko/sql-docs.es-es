@@ -2,12 +2,12 @@
 title: Elegir y asignar datos de prueba de modelo | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>Elegir y asignar datos de prueba para el modelo
-  Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se utilizarán para probar el modelo y asignar dichos datos al modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se usará para probar el modelo y asignan los datos al modelo.  
   
  De forma predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizará los datos de prueba del modelo de minería de datos, siempre que se haya creado un conjunto de datos de exclusión al generar la estructura. La manera más fácil de probar los modelos basados en la misma estructura de minería de datos consiste en crear un conjunto de pruebas de exclusión, ya que los nombres de las columnas y los tipos de datos siempre coincidirán con el modelo y podrá estar casi seguro de que la distribución de los datos es similar. Además, el diseñador creará automáticamente las relaciones entre la columnas de entrada y las del modelo.  
   

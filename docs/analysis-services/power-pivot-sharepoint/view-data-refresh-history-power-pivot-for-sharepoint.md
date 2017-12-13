@@ -2,12 +2,12 @@
 title: "Ver historial (PowerPivot para SharePoint) de actualización de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c2347b4bf7a02f61599f0a318ab1660dff50e4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Ver el Historial de actualización de datos (Power Pivot para SharePoint)
-  El historial de actualización de datos es un registro de toda la actividad de actualización de datos para los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un libro de Excel. Las operaciones de actualización de datos se realizan en una instancia del servidor de Analysis Services en una granja de servidores de SharePoint según la programación que se proporcione. De forma predeterminada, el historial de la actualización de datos se retiene durante un año. Sin embargo, el administrador de una granja de servidores puede especificar una directiva de retención diferente para el historial de uso y eventos que determine durante cuánto tiempo se mantienen los registros de actualización de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Historial de actualización de datos es un registro de toda la actividad de actualización de datos para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] datos en un libro de Excel. Las operaciones de actualización de datos se realizan en una instancia del servidor de Analysis Services en una granja de servidores de SharePoint según la programación que se proporcione. De forma predeterminada, el historial de la actualización de datos se retiene durante un año. Sin embargo, el administrador de una granja de servidores puede especificar una directiva de retención diferente para el historial de uso y eventos que determine durante cuánto tiempo se mantienen los registros de actualización de datos.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   

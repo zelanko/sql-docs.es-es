@@ -2,12 +2,12 @@
 title: Crear un informe de Power View con un origen de datos Multidimensional | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffbac3cbba343bdaa966c6018cfa8add822e3869
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f216f4fc9938938fedc9a8b02b943784fd44535
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Crear un informe de Power View con un origen de datos multidimensionales
-  La creación de un informe de Power View basado en un modelo multidimensional no difiere en nada de la creación de un informe basado en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o en un modelo tabular de Analysis Services. Los informes de Power View se crean a partir de un archivo de conexión de origen de datos de informe (.rsds) de una biblioteca de SharePoint. Para obtener más información sobre cómo se crea un archivo .rsds, vea [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Crear una vista avanzada informe basado en un modelo multidimensional no es diferente de la creación de un informe basado en un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro o en un modelo Tabular de Analysis Services. Los informes de Power View se crean a partir de un archivo de conexión de origen de datos de informe (.rsds) de una biblioteca de SharePoint. Para obtener más información sobre cómo se crea un archivo .rsds, vea [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Antes de empezar, debe conocer:  
   

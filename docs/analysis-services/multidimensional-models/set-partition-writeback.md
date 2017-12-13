@@ -2,12 +2,12 @@
 title: Establecer la reescritura de particiones | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
-  Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si habilita a un grupo de medida para escritura, los usuarios finales puede cambiar los datos del cubo mientras lo examinan, donde se guardan los cambios en una tabla independiente denominada tabla de reescritura, no en los datos del cubo ni los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
   
  Los datos de reescritura se pueden examinar o eliminar. También puede convertir los datos de reescritura en una partición. En una partición habilitada para escritura, puede utilizar los roles de cubo para conceder acceso de lectura/escritura a usuarios y grupos de usuarios y para limitar el acceso a determinadas celdas o grupos de celdas de la partición.  
   

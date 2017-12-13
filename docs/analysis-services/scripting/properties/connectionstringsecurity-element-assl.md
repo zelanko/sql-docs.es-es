@@ -2,12 +2,12 @@
 title: Elemento ConnectionStringSecurity (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d001daaacb06528c0baadde69e452fc917ce819b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: de0fc4240ea0d64a0083c0cae3c9a39d7de832a6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connectionstringsecurity-element-assl"></a>Elemento ConnectionStringSecurity (ASSL)
-  Especifica si la contraseña del usuario se extrae de la cadena de conexión a un origen de datos por temas de seguridad.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Especifica si la contraseña del usuario se extrae de la cadena de conexión de origen de datos por razones de seguridad.  
   
 ## <a name="syntax"></a>Sintaxis  
   

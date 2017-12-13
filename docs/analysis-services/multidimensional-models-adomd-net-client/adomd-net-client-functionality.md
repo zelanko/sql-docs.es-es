@@ -2,12 +2,12 @@
 title: La funcionalidad de cliente de ADOMD.NET | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-functionality"></a>Funcionalidad de cliente de ADOMD.NET
-  ADOMD.NET actúa como un puente entre una aplicación y un origen de datos, como ocurre con otros proveedores de datos de .NET Framework [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Sin embargo, ADOMD.NET, a diferencia de otros proveedores de datos de .NET Framework en ese ADOMD.NET, funciona con datos analíticos. Para funcionar con datos analíticos, ADOMD.NET admite una funcionalidad muy distinta de la funcionalidad de otros proveedores de datos de .NET Framework. ADOMD.NET no solo permite recuperar datos, sino también metadatos y cambiar la estructura del almacén de datos analíticos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET, como ocurre con otros [!INCLUDE[msCoName](../../includes/msconame-md.md)] proveedores de datos de .NET Framework, actúa como un puente entre una aplicación y un origen de datos. Sin embargo, ADOMD.NET, a diferencia de otros proveedores de datos de .NET Framework en ese ADOMD.NET, funciona con datos analíticos. Para funcionar con datos analíticos, ADOMD.NET admite una funcionalidad muy distinta de la funcionalidad de otros proveedores de datos de .NET Framework. ADOMD.NET no solo permite recuperar datos, sino también metadatos y cambiar la estructura del almacén de datos analíticos:  
   
  **Recuperación de metadatos**  
  Las aplicaciones pueden obtener más información sobre los datos que se pueden recuperar desde el origen de datos a través de la recuperación de metadatos, mediante conjuntos de filas de esquema o del modelo de objetos. Se reconoce toda la información, como los tipos disponibles de cada indicador clave de rendimiento (KPI), las dimensiones de un cubo y los parámetros que necesitan los modelos de minería de datos. Los metadatos son más importantes para *dinámica* las aplicaciones que requieren intervención del usuario para determinar el tipo, profundidad y ámbito de los datos que va a recuperar. En los ejemplos se incluye el Analizador de consultas, Microsoft Excel y otras herramientas para realizar consultas. Los metadatos son menos críticos para *estático* las aplicaciones que realizan un conjunto predefinido de acciones.  

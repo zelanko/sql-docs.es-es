@@ -2,12 +2,12 @@
 title: Establecer las propiedades de origen de datos (SSAS Multidimensional) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Establecer propiedades de origen de datos (SSAS multidimensional)
-  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un origen de datos especifica una conexión a un almacenamiento de datos externo o a la base de datos relacional que proporciona datos a un modelo multidimensional. Las propiedades del origen de datos determinan la cadena de conexión, un intervalo de tiempo de espera, el número máximo de conexiones y el nivel de aislamiento de transacciones.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objeto de origen de datos especifica una conexión a un almacén de datos externo o la base de datos relacional que proporciona datos a un modelo multidimensional. Las propiedades del origen de datos determinan la cadena de conexión, un intervalo de tiempo de espera, el número máximo de conexiones y el nivel de aislamiento de transacciones.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Establecer las propiedades del origen de datos en SQL Server Data Tools  
   

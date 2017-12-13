@@ -2,12 +2,12 @@
 title: Tipo de datos DimensionPermission (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0cafbd3a0c86682d3993a5e32547d0430b751a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a9d16cbd8e19b4af5b61e68cf43685b6482419e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensionpermission-data-type-assl"></a>Tipo de datos DimensionPermission (ASSL)
-  Define un tipo de datos derivado que representa los permisos asignados a una dimensión de la base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un tipo de datos derivado que representa los permisos asignados a una dimensión de base de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   

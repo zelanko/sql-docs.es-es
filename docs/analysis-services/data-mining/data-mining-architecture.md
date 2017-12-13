@@ -2,12 +2,12 @@
 title: "Arquitectura de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-architecture"></a>Arquitectura de minería de datos
-  En esta sección se describe la arquitectura de las soluciones de minería de datos que se hospedan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En los temas de esta sección se describe la arquitectura lógica y física de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita la minería de datos, y también proporcionan información acerca de los clientes, los proveedores y los protocolos que se pueden utilizar para comunicarse con los servidores de minería de datos y trabajar con objetos de minería de datos tanto local como remotamente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta sección describe la arquitectura de soluciones de minería de datos que se hospedan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En los temas de esta sección se describe la arquitectura lógica y física de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita la minería de datos, y también proporcionan información acerca de los clientes, los proveedores y los protocolos que se pueden utilizar para comunicarse con los servidores de minería de datos y trabajar con objetos de minería de datos tanto local como remotamente.  
   
  En general, la minería de datos de SQL Server opera como un servicio que se proporciona como parte de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo multidimensional; por consiguiente, recomendamos que también repase las secciones siguientes de los Libros en pantalla en las que se describe el funcionamiento, el mantenimiento y la configuración de las soluciones multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

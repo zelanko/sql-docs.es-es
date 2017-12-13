@@ -2,12 +2,12 @@
 title: Acceso a datos de modelos multidimensionales (Analysis Services - datos multidimensionales) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Acceso a datos de modelos multidimensionales (Analysis Services: datos multidimensionales)
-  Utilice la información de este tema para aprender a acceder a los datos multidimensionales de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] empleando métodos de programación, script o aplicaciones cliente que incluyan compatibilidad integrada para la conexión a un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en la red.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Use la información de este tema para obtener información sobre cómo obtener acceso a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] datos multidimensionales utilizando métodos de programación, script o aplicaciones de cliente que incluyan compatibilidad integrada para conectarse a un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor en la red.  
   
  Este tema contiene las siguientes secciones:  
   

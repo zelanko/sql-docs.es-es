@@ -2,12 +2,12 @@
 title: Definir consultas con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas con nombre en una vista del origen de datos (Analysis Services)
-  Una consulta con nombre es una expresión SQL representada como una tabla. En una consulta con nombre, puede especificar una expresión SQL para seleccionar las filas y columnas que devuelven una o más tablas de uno o más orígenes de datos. Una consulta con nombre es similar a cualquier otra tabla de una vista del origen de datos (DSV), con filas y relaciones, con la excepción de que la consulta con nombre se basa en una expresión.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una consulta con nombre es una expresión SQL representada como una tabla. En una consulta con nombre, puede especificar una expresión SQL para seleccionar las filas y columnas que devuelven una o más tablas de uno o más orígenes de datos. Una consulta con nombre es similar a cualquier otra tabla de una vista del origen de datos (DSV), con filas y relaciones, con la excepción de que la consulta con nombre se basa en una expresión.  
   
  Una consulta con nombre permite ampliar el esquema relacional de las tablas existentes en una DSV sin modificar el origen de datos subyacente. Por ejemplo, se puede usar una serie de consultas con nombre para dividir una compleja tabla de dimensiones en tablas de menores dimensiones y más sencillas, a fin de usarlas en dimensiones de base de datos. Una consulta con nombre también se puede usar para combinar varias tablas de base de datos de uno o varios orígenes de datos y formar una sola tabla de vista del origen de datos.  
   

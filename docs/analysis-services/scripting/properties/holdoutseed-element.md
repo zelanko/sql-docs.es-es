@@ -2,12 +2,12 @@
 title: Elemento HoldoutSeed | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 751e18d05897651d0996232f8b4c5c590985a5b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c018e11960726554b2f02a0ec7aaa537d599a6d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="holdoutseed-element"></a>Elemento HoldoutSeed
-  Especifica el valor de inicialización de una partición de extracción repetible que contiene el conjunto de pruebas de un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento. Esta semilla asegura que el contenido del modelo permanece igual durante el nuevo procesamiento. Si no se especifica o se establece en 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un valor de inicialización mediante un algoritmo hash en el nombre de la estructura de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Especifica el valor de inicialización de una partición de extracción repetible que contiene el conjunto de pruebas de un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento. Esta semilla asegura que el contenido del modelo permanece igual durante el nuevo procesamiento. Si no se especifica o se establece en 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un valor de inicialización mediante un algoritmo hash en el nombre de la estructura de minería de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   

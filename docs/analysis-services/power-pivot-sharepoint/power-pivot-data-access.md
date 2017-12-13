@@ -2,12 +2,12 @@
 title: "Acceso a datos PowerPivot de energía | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 386df5d2dfc9443b07352a0f30e30d74bdf6ff7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9e5ea91f535ca2897e0b0de7859647992a1bd388
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-access"></a>Acceso a datos PowerPivot
-  En este tema se describen las diferentes formas de recuperar datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en una biblioteca de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe las maneras en que los datos se recuperan de un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro que se publica en una biblioteca de SharePoint.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se almacenan en un libro de Excel. La cadena de conexión es una dirección URL de un libro en un sitio de SharePoint.  
   

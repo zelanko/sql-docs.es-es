@@ -2,12 +2,12 @@
 title: "Descripción de Power View para modelos multidimensionales | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35ac97b27348e930bdf69a7aaf0d15c3f2728de6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f12f3aaada759d91c77d56bb4fc199d2b038eab4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
-  En este artículo se describe la característica Power View para modelos multidimensionales de SQL Server y se proporciona información importante para los profesionales y los administradores de BI que pretenden implementar Power View para modelos multidimensionales en su organización.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artículo describe la característica Power View para modelos multidimensionales en SQL Server y proporciona información importante para profesionales de BI y los administradores que pretenden implementar Power View para modelos multidimensionales en su organización.  
   
  Los modelos multidimensionales ofrecen soluciones de análisis, almacenamiento y modelado de datos OLAP punteras del sector. Los modelos multidimensionales de SQL Server permiten el análisis de datos, la exploración y la visualización ad hoc mediante Microsoft Power View.  
   

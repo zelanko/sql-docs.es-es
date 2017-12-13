@@ -2,12 +2,12 @@
 title: "Configurar el tamaño máximo del archivo de carga (PowerPivot para SharePoint) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c52d3ad3556021c7f4d37c08dc0456733457cb87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68e7aa514a63f6bce6ddcff33c1b7a6a2616beed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configuración del tamaño de carga máximo de archivos (PowerPivot para SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contienen grandes cantidades de datos que resultan en archivos que superan el tamaño de archivo máximo permitido en las cargas de SharePoint. Al intentar cargar un archivo que supera el límite superior, obtendrá el siguiente error en SharePoint:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros a menudo contienen grandes cantidades de datos que resultan en archivos que superan el tamaño de archivo máximo permitido para la carga de SharePoint. Al intentar cargar un archivo que supera el límite superior, obtendrá el siguiente error en SharePoint:  
   
 -   “El archivo especificado es mayor que el tamaño de archivo máximo admitido.”  
   

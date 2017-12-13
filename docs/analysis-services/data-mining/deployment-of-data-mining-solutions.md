@@ -2,12 +2,12 @@
 title: "Implementación de soluciones de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e40b686c7aa60b023600e17170c33e2ba7b776be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa0664275dd45cb5cccdef8a9f93d3b4da697be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implementación de soluciones de minería de datos
-  El último paso del proceso de minería de datos consiste en implementar los modelos en un entorno de producción. La implementación es importante porque hace que los modelos estén a disposición de los usuarios para que pueda realizar cualquiera de las siguientes tareas:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El último paso en el proceso de minería de datos consiste en implementar los modelos en un entorno de producción. La implementación es importante porque hace que los modelos estén a disposición de los usuarios para que pueda realizar cualquiera de las siguientes tareas:  
   
 -   Utilice los modelos para crear predicciones y tomar decisiones empresariales. Para más información sobre las herramientas que puede usar para crear consultas, vea [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md).  
   

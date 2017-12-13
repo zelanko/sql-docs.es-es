@@ -2,12 +2,12 @@
 title: "Crear ámbito de consulta (MDX) de conjuntos con nombre | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a05d52185020b6906469f3244e3ae1a6b1fc7a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e5f201c0cb07527083985d8de46a2ac3f8431b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Conjuntos con nombre denominado conjuntos: crear ámbito de consulta MDX
-  Si un conjunto con nombre solo es necesario para una consulta de Expresiones multidimensionales (MDX) única, puede definir ese conjunto con nombre mediante la palabra clave WITH. Un conjunto con nombre que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Si un conjunto con nombre solo es necesario para una consulta de expresiones multidimensionales (MDX) única, puede definir ese conjunto con nombre mediante el uso de la palabra clave WITH. Un conjunto con nombre que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  
   
  Como se trata en este tema, la sintaxis de la palabra clave WITH es bastante flexible, incluso ajustando el uso de funciones para definir el conjunto con nombre.  
   

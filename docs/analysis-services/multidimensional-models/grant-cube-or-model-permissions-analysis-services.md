@@ -2,12 +2,12 @@
 title: Conceder permisos para cubos o modelos (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb36f978c414a1ef5916cb0ebd78971c001940e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Otorgar permisos para cubos o modelos (Analysis Services)
-  Un cubo o modelo tabular es el objeto de consulta principal en un modelo de datos de Analysis Services. Cuando se conecte a datos multidimensionales o tabulares desde Excel para una exploración de datos ad hoc, los usuarios por lo general comienzan seleccionando un cubo o modelo tabular específico como la estructura de datos que subyace tras el objeto de informe dinámico. En este tema, se describe cómo otorgar los permisos necesarios para tener acceso a cubos o datos tabulares.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un cubo o modelo tabular es el objeto de consulta principal en un modelo de datos de Analysis Services. Cuando se conecte a datos multidimensionales o tabulares desde Excel para una exploración de datos ad hoc, los usuarios por lo general comienzan seleccionando un cubo o modelo tabular específico como la estructura de datos que subyace tras el objeto de informe dinámico. En este tema, se describe cómo otorgar los permisos necesarios para tener acceso a cubos o datos tabulares.  
   
  De forma predeterminada, ninguna persona que no sea un administrador de servidor o de base de datos dispondrá de permisos para consultar cubos en una base de datos. El acceso a cubos por parte de una persona que no sea administrador requiere pertenecer a un rol que se haya creado para la base de datos que contenga el cubo correspondiente. La pertenencia es compatible con cuentas de usuario o grupo de Windows que se hayan definido en Active Directory o en el equipo local. Antes de comenzar, identifique a qué cuentas se asignará pertenencia en los roles que va a crear.  
   

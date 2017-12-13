@@ -2,12 +2,12 @@
 title: Cambiar el nombre de una tabla o columna (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edfd1fe4e353f74f9729325b40865905a1907dc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf322e42ce1913eef2a7cf03208192c3b1b6e4ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Cambiar el nombre de una tabla o una columna (SSAS tabular)
-  Puede cambiar el nombre de una tabla durante el proceso de importación si escribe un **Nombre descriptivo** en la página **Seleccionar tablas y vistas** del **Asistente para importación de tablas**. También puede cambiar los nombres de tabla y de columna si importa los datos especificando una consulta en la página **Especificar una consulta SQL** del **Asistente para la importación de tablas**.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede cambiar el nombre de una tabla durante el proceso de importación escribiendo un **Nombre_descriptivo** en el **seleccionar tablas y vistas** página de la **Table Import Wizard**. También puede cambiar los nombres de tabla y de columna si importa los datos especificando una consulta en la página **Especificar una consulta SQL** del **Asistente para la importación de tablas**.  
   
  Después de haber agregado los datos al modelo, el nombre (o el título) de una tabla aparece en la pestaña de tabla, en la parte inferior del diseñador de modelos. Puede cambiar el nombre de la tabla para darle otro más adecuado. También puede cambiar el nombre de una columna una vez que los datos se hayan agregado al modelo. Esta opción es especialmente importante si ha importado los datos de varios orígenes y desea asegurarse de que las columnas de tablas diferentes tengan nombres que son fáciles de distinguir.  
   

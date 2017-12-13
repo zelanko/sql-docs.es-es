@@ -2,12 +2,12 @@
 title: "Importación desde PowerPivot (SSAS Tabular) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66ca9811b808ac3ef6b282479972482e78a083e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>Importación desde PowerPivot (SSAS Tabular)
-  En este tema se describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y los datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mediante la plantilla de proyectos Importar desde [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y los datos de un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro mediante el uso de la importación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] plantilla de proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Creación de un nuevo modelo tabular desde un archivo de PowerPivot para Excel  
  Al crear un nuevo proyecto de modelos tabulares importando desde un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , los metadatos que definen la estructura del libro se usan para crear y definir la estructura del proyecto de modelo tabular en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Los objetos como tablas, columnas, medidas y relaciones se conservan, y aparecerán en el proyecto de modelos tabulares tal como están en el libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . No se realizan cambios en el archivo de libro .xlsx.  

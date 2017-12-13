@@ -2,12 +2,12 @@
 title: Supervisar una instancia de Analysis Services | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Supervisar una instancia de Analysis Services
-  Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o mediante el Monitor de Rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o el Monitor de rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  
   
 > [!NOTE]  
 >  Para obtener más información sobre la supervisión, vea [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guía de operaciones de SQL Server 2008 R2).  

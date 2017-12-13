@@ -2,12 +2,12 @@
 title: "Crear una nueva estructura de minería de datos relacional | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea2feced212b0af6a9cf67a2eccc0445b9bee74f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b692e96ec58398536111d08df759bf31ee92b3d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
-  Use el Asistente para minería de datos para crear una nueva estructura de minería de datos, utilizando los datos de la base de datos relacional o de otro origen, y guarde la estructura y un modelo relacionado en una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usar el Asistente para minería de datos para crear una nueva estructura de minería de datos, utilizando los datos de una base de datos relacional u otro origen y, a continuación, guarde la estructura y un modelo relacionado en una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos.  
   
 ## <a name="to-create-a-relational-mining-structure"></a>Para crear una estructura de minería de datos relacional  
   

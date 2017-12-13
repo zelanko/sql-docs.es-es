@@ -2,12 +2,12 @@
 title: "Jerarquías desiguales | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Jerarquías definidas por el usuario - jerarquías desiguales
-  Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
   
  En la mayoría de las jerarquías de una dimensión, cada nivel tiene el mismo número de miembros por encima de él que cualquier otro miembro del mismo nivel. Una jerarquía desigual es diferente en el sentido de que el primario lógico de al menos un miembro no se encuentra en el nivel que está inmediatamente por encima del miembro. Cuando ocurre esto, la jerarquía desciende a distintos niveles de diferentes rutas de obtención de detalles. En una aplicación cliente, esto puede hacer que las rutas de obtención de detalles sean innecesariamente complicadas.  
   

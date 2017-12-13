@@ -2,12 +2,12 @@
 title: "Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5111073e53da22a27edfe9d3f3c13985236c0b15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Cantidad un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services
-  En este tema se describe cómo crear un nuevo proyecto de minería de datos mediante la importación de los metadatos de un proyecto de minería de datos existente en otro servidor, usando para ello la plantilla de proyecto **Importar del servidor (multidimensional y minería de datos)**, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe cómo crear un nuevo proyecto de minería de datos importando los metadatos de un proyecto de minería de datos existente en otro servidor, mediante la plantilla, **importar desde el proyecto de servidor (Multidimensional y minería de datos)**, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importar los orígenes de datos, estructuras de minería de datos y modelos de minería de datos de un proyecto de minería de datos existente  
  Al usar la plantilla de proyecto **Importar del servidor (multidimensional y minería de datos)**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea un nuevo proyecto de minería de datos y después copia los metadatos del proyecto especificado de minería de datos. El nuevo proyecto contiene los mismos orígenes de datos, vistas del origen de datos, estructuras de minería de datos y modelos de minería de datos que la base de datos de los que los importó. Sin embargo, el proyecto no se puede utilizar hasta que se haya actualizado ciertas propiedades y haya procesado los objetos según se indica:  

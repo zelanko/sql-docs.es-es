@@ -2,12 +2,12 @@
 title: "Crear y administrar jerarquías (SSAS Tabular) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 813d48fcb964fc82c3dd9b1b72a70d0f1385f35c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c8e53bd34427fa3aa556163f0e1fd4205c77953e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Crear y administrar jerarquías (SSAS tabular)
-  Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Las jerarquías pueden crearse y administrarse en el Diseñador de modelos, en la vista de diagrama. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
   
  En este tema se incluyen las tareas siguientes:  
   

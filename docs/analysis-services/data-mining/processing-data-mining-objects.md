@@ -2,12 +2,12 @@
 title: "Procesar objetos de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06346679653136a2efa0fc228405e3282078b279
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b25fae3fd5c17b93cc17ce2a3f7ea6d6059aa0fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-data-mining-objects"></a>Procesar objetos de minería de datos
-  Un objeto de minería de datos solo es un contenedor vacío hasta que se procesa. El*procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un objeto de minería de datos es sólo un contenedor vacío hasta que se ha procesado. El*procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
   
  **Procesar estructuras de minería de datos** : una estructura de minería de datos obtiene los datos de un origen de datos externo, definido por los enlaces de columna y el uso de los metadatos, y los lee. Se leen todos los datos y, a continuación, se analizan para extraer varias estadísticas. Analysis Services almacena una representación compacta de los datos, que puede ser analizada por los algoritmos de minería de datos, en una caché local. Una vez procesados los modelos, puede conservar esta caché o eliminarla. De forma predeterminada, la caché se almacena. Para más información, consulte [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md).  
   

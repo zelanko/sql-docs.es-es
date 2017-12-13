@@ -2,12 +2,12 @@
 title: Objeto de relaciones (TMSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0c1865295c0c4a16737be0a7ea5789b60c14f42c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-object-tmsl"></a>Objeto de relaciones (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define una relación entre una tabla de origen y de destino, con la capacidad de especificar la cardinalidad y la dirección de los filtros de consulta y seguridad.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define una relación entre una tabla de origen y de destino, con la capacidad de especificar la cardinalidad y la dirección de los filtros de consulta y seguridad.  
   
 ## <a name="object-definition"></a>Definición del objeto  
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Relación** objetos también tienen las siguientes propiedades.  

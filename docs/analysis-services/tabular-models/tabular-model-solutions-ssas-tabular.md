@@ -1,12 +1,12 @@
 ---
 title: Soluciones de modelos tabulares (SSAS Tabular) | Documentos de Microsoft
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 27d4523d7d0e23fbc0043c0ef4b8909285703e31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 147f0b4f37d0b24e78ad8c314e9cdff12e85459e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-tabular-models"></a>Crear modelos tabulares
-  En los temas de esta sección se proporciona información sobre la creación de modelos tabulares usando el diseñador de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Temas de esta sección proporcionan información acerca de cómo crear modelos tabulares mediante el Diseñador de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Diseñador de modelos tabulares](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  

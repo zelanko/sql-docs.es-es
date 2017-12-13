@@ -2,12 +2,12 @@
 title: Crear una tabla calculada (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>Crear una tabla calculada (SSAS tabular)
-  Una *tabla calculada* es un objeto calculado que se basa en una expresión o consulta DAX derivada del resto de tablas del mismo modelo (o de una parte).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *tabla calculada* es un objeto calculado, en función de una expresión, o de consulta DAX derivada de la totalidad o parte de otras tablas en el mismo modelo.  
   
  Un problema habitual de diseño que las tablas calculadas pueden resolver es exponer una dimensión realizadora de roles en un contexto específico para que se pueda exponer como una estructura de consulta en aplicaciones cliente.  Como probablemente recuerde, una dimensión realizadora de roles es simplemente una tabla expuesta en varios contextos. Un ejemplo clásico es la tabla Date, manifestada como OrderDate, ShipDate o DueDate en función de la relación de clave externa. Al crear una columna calculada explícitamente para ShipDate, obtendrá una tabla independiente que está disponible para consultas, tan operativa como cualquier otra tabla.  
   

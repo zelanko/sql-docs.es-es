@@ -2,12 +2,12 @@
 title: "Cambiar las propiedades de un modelo de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a0b40837b81326e63821e4f46f360f79b5940280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccfd17eb10b11052f24cf18f9b0e94649b5030af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Cambiar las propiedades de un modelo de minería de datos
-  Algunas propiedades del modelo de minería de datos se aplican al modelo en su conjunto, mientras que otras se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo son las propiedades **Drillthrough** , que especifica si los datos de los casos deben estar disponibles para las consultas, y **Description** . Entre las propiedades que se aplican a la columna se incluyen **Usage** y **ModelingFlags**, que controlan cómo se utilizan los datos en la columna dentro del modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Algunas propiedades del modelo de minería de datos se aplican al modelo como un todo, y otras propiedades del modelo que se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo son las propiedades **Drillthrough** , que especifica si los datos de los casos deben estar disponibles para las consultas, y **Description** . Entre las propiedades que se aplican a la columna se incluyen **Usage** y **ModelingFlags**, que controlan cómo se utilizan los datos en la columna dentro del modelo.  
   
  Las propiedades del modelo siguientes disponen de editores avanzados que se pueden utilizar para crear expresiones o configurar propiedades complejas del modelo. Las propiedades siguientes proporcionan:  
   

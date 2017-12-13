@@ -2,12 +2,12 @@
 title: Conjunto de filas DISCOVER_DATASOURCES | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdatasources-rowset"></a>Conjunto de filas DISCOVER_DATASOURCES
-  Devuelve una lista de los orígenes de datos del proveedor XML for Analysis (XMLA) que están disponibles en el servidor o servicio web. Los orígenes de datos publicados se devuelven desde una dirección URL del servidor web de la aplicación. El cliente puede conectarse a uno de los orígenes de datos de esta lista.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Devuelve una lista de los XML de orígenes de datos de proveedor de Analysis (XMLA) que están disponibles en el servidor o servicio Web. Los orígenes de datos publicados se devuelven desde una dirección URL del servidor web de la aplicación. El cliente puede conectarse a uno de los orígenes de datos de esta lista.  
   
  Si se llama a la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método con el **DISCOVER_DATASOURCES** valor de enumeración en el [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, el **Discover** método devuelve el **DISCOVER_DATASOURCES** conjunto de filas.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||La descripción del origen de datos escrita por el publicador.<br /><br /> Puede devolver **NULL**.|  
 |**Dirección URL**|**DBTYPE_WSTR**|Sí|Ruta de acceso única que muestra dónde invocar los métodos de XML for Analysis (XMLA) para ese origen de datos.<br /><br /> Puede devolver **NULL**.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Una cadena que contiene la información adicional necesaria para conectarse al origen de datos.<br /><br /> Puede devolver **NULL**.|  
-|**ProviderName**|**DBTYPE_WSTR**|Sí|Nombre del proveedor para el origen de datos.<br /><br /> Ejemplo:`"MSOLAP"`<br /><br /> Puede devolver **NULL**.|  
+|**ProviderName**|**DBTYPE_WSTR**|Sí|Nombre del proveedor para el origen de datos.<br /><br /> Ejemplo: `"MSOLAP"`<br /><br /> Puede devolver **NULL**.|  
 |**ProviderType**|**DBTYPE_WSTR**|Sí|Tipos de datos admitidos por el proveedor. Esta matriz puede incluir uno o varios de los tipos siguientes:<br /><br /> **MDP**: proveedor de datos multidimensionales.<br /><br /> **TDP**: proveedor de datos tabulares.<br /><br /> **DMP**: proveedor de minería de datos (implementa la especificación de OLE DB para minería de datos).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|Sí|Especificación de qué tipo de modo de seguridad usa el origen de datos. Los valores pueden ser cualquier de los siguientes:<br /><br /> **Unauthenticated**: no se tiene que enviar ningún id. de usuario ni contraseña.<br /><br /> **Authenticated**: el id. de usuario y la contraseña deben incluirse en la información necesaria para conectarse al origen de datos.<br /><br /> **Integrado**: el origen de datos utiliza la seguridad subyacente para determinar la autorización, como seguridad integrada que proporciona [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
   

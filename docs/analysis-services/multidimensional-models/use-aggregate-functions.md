@@ -2,12 +2,12 @@
 title: Usar funciones de agregado | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
-  Al usar una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en la dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es **Sum**. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se utiliza una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en esa dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es **Sum**. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
   
  En Analysis Services, todas las medidas que se crean están respaldadas por una función de agregación que determina la operación de la medida. Entre los tipos predefinidos de agregación, se encuentran **Sum**, **Min**, **Max**, **Count**, **Distinct Count**y muchas otras más funciones especializadas. O bien, si necesita agregaciones basadas en fórmulas complejas o personalizadas, puede crear un cálculo MDX en vez de usar una función de agregación creada previamente. Por ejemplo, si quiere definir una medida para un valor de porcentaje, lo haría en MDX con una medida calculada. Vea, [CREATE MEMBER &#40;instrucción MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   

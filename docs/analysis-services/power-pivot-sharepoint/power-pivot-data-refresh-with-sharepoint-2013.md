@@ -2,12 +2,12 @@
 title: "Actualización de datos de PowerPivot con SharePoint 2013 de energía | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d81e977d4396111d478e1457c26479061cf97862
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos Power Pivot con SharePoint 2013
-  El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El diseño de la actualización de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelos de datos en SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   

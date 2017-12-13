@@ -2,12 +2,12 @@
 title: "Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a916b45036a24d812594b5478efb1d33f06a2c62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef434312b7c70784acdd5d65c1cda5a964c444fd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensiones: Asistente de BI en el Diseñador de dimensiones de la base de datos
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede crear operadores de resúmenes personalizados y fórmulas de miembro personalizado, y configurar las dimensiones para la reescritura mediante el Asistente de Business Intelligence o el Diseñador de dimensiones. Puede iniciar el Asistente de Business Intelligence desde el Explorador de soluciones o desde el Diseñador de cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se puede obtener acceso al Diseñador de dimensiones desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], crear operadores de resúmenes personalizados y de miembro personalizado, fórmulas y configurar dimensiones para la reescritura mediante el Asistente de Business Intelligence o el Diseñador de dimensiones. Puede iniciar el Asistente de Business Intelligence desde el Explorador de soluciones o desde el Diseñador de cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se puede obtener acceso al Diseñador de dimensiones desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Para iniciar el Asistente de Business Intelligence  
   

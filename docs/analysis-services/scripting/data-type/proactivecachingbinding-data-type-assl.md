@@ -2,12 +2,12 @@
 title: Tipo de datos ProactiveCachingBinding (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb1f1d86b26222e327fc36090113cb4a0d5ce4ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7727c84f7854d254434a2d04da7d5d51b54ea9f0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>Tipo de datos ProactiveCachingBinding (ASSL)
-  Define un tipo de datos derivado abstracto que representa información para el [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sobre los cambios de origen de datos que requieren volver a generar la memoria caché o sobre el estado del proceso de regeneración.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un tipo de datos derivado abstracto que representa información para el [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sobre los cambios de origen de datos que requieren volver a generar la memoria caché o sobre el estado del proceso de regeneración.  
   
 ## <a name="syntax"></a>Sintaxis  
   

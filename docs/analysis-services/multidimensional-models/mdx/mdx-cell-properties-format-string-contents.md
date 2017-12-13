@@ -2,12 +2,12 @@
 title: FORMAT_STRING, contenido (MDX) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propiedades de celda MDX - FORMAT_STRING, contenido
-  La propiedad de celda **FORMAT_STRING** da formato a la propiedad **VALUE** de la celda, lo que crea el valor para la propiedad de la celda **FORMATTED_VALUE** . La propiedad de celda **FORMAT_STRING** controla los valores sin formato numéricos y de cadena con la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda **FORMATTED_VALUE** . En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El **FORMAT_STRING** formatos de propiedad de celda la **valor** propiedad de celda, crea el valor para el **FORMATTED_VALUE** propiedad de la celda. La propiedad de celda **FORMAT_STRING** controla los valores sin formato numéricos y de cadena con la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda **FORMATTED_VALUE** . En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
   
 ## <a name="string-values"></a>Valores de cadena  
  Una expresión de formato para cadenas puede tener una sección o dos, separadas con punto y coma (;).  

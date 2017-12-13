@@ -2,12 +2,12 @@
 title: Tipos de datos admitidos en los modelos tabulares de Analysis Services | Documentos de Microsoft
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de datos admitidos en los modelos tabulares
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  En este artículo se describen los tipos de datos que se pueden usar en los modelos tabulares, así como la conversión implícita de los tipos de datos cuando los datos se calculan o se usan en una fórmula DAX (Expresiones de análisis de datos).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este artículo describe los tipos de datos que pueden usarse en los modelos tabulares y como la conversión implícita de tipos de datos cuando los datos se calculan o se usan en una fórmula de expresiones de análisis de datos (DAX).  
 
   
 ##  <a name="bkmk_data_types"></a>Tipos de datos usados en los modelos tabulares  

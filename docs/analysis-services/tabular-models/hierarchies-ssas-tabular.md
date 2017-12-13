@@ -2,12 +2,12 @@
 title: "Jerarquías | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>Jerarquías
-  Las jerarquías, en los modelos tabulares, son metadatos que definen las relaciones entre dos o más columnas de una tabla. Las jerarquías pueden aparecer por separado de otras columnas en una lista de campos del cliente de informes, facilitando la navegación de los usuarios del cliente y su inclusión en un informe.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Las jerarquías, en los modelos tabulares, son metadatos que definen las relaciones entre dos o más columnas de una tabla. Las jerarquías pueden aparecer por separado de otras columnas en una lista de campos del cliente de informes, facilitando la navegación de los usuarios del cliente y su inclusión en un informe.  
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
  Las tablas pueden incluir docenas o incluso centenares de columnas con nombres de columna inusuales sin ningún orden aparente. Esto puede ofrecer un aspecto desordenado en las listas de campos del cliente de informes, dificultando a los usuarios la búsqueda e inclusión de datos en un informe. Las jerarquías pueden proporcionar una vista sencilla e intuitiva de las normalmente complejas estructuras de datos.  

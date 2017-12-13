@@ -2,12 +2,12 @@
 title: Elemento LastUpdate (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0137ecd5ec2344ece1c4ab65ad55ec344678e1bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e1f1e67f477c150fcb438bec025efcc3045f15d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lastupdate-element-assl"></a>Elemento LastUpdate (ASSL)
-  Solo lectura contiene marca de tiempo que indica la última vez que el asociado [base de datos](../../../analysis-services/scripting/objects/database-element-assl.md) o cualquiera de los objetos principales que contiene la base de datos modificado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Solo lectura contiene marca de tiempo que indica la última vez que el asociado [base de datos](../../../analysis-services/scripting/objects/database-element-assl.md) o cualquiera de los objetos principales que contiene la base de datos modificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -2,12 +2,12 @@
 title: "Lección 4: Definir avanzado atributos y propiedades de dimensión | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a649addc2a2ab676856076fa64ed352f48cf4e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ed7b1d026369b249b1acfc7da23242efcc22b26
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definir propiedades de dimensiones y de atributos avanzados
-En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de dimensiones.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de la dimensión.  
   
 > [!NOTE]  
 > Esta lección se basa en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones de este tutorial. En la primera tarea de esta lección se describe dónde buscar el proyecto de ejemplo adecuado que debe utilizar para la lección, así como la diferencia existente entre este proyecto y el proyecto que ha creado en las tres primeras lecciones.  

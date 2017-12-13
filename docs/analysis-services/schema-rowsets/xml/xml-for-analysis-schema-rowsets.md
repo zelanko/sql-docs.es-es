@@ -2,12 +2,12 @@
 title: "XML para conjuntos de filas de esquema de análisis | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-  El proveedor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for analysis (XMLA) incluye conjuntos de filas de esquema que devuelven metadatos sobre el estado, la actividad y los objetos de servidor. La recuperación de metadatos es necesaria si está desarrollando una aplicación cliente que se conecte a un modelo de Analysis Services cuyas estructura y características sean variables.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para el proveedor de Analysis (XMLA) incluye conjuntos de filas de esquema que devuelven metadatos sobre el estado del servidor, la actividad y objetos. La recuperación de metadatos es necesaria si está desarrollando una aplicación cliente que se conecte a un modelo de Analysis Services cuyas estructura y características sean variables.  
   
  Los conjuntos de filas de esquema también proporcionan una visión general de los procesos y operaciones internos que pueden ayudarle a supervisar el servidor y solucionar problemas. Para admitir mejor las tareas administrativas ad hoc, puede ejecutar una consulta DMV (Vista de administración dinámica) en la mayoría de los conjuntos de filas de esquema. Las consultas DMV devuelven resultados en un formato tabular legible que puede ver en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   

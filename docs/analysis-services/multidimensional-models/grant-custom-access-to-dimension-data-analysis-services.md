@@ -2,12 +2,12 @@
 title: "Conceder acceso personalizado a los datos de la dimensión (Analysis Services) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acceso personalizado a datos de dimensión (Analysis Services)
-  Después de permitir el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen explícitamente el acceso a miembros de la dimensión (incluidas las medidas que contiene la Dimensión de Medidas que contengan todas las medidas utilizadas en un cubo). Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de habilitar el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen el acceso a los miembros de dimensión (incluidas las medidas contenidas en la dimensión Measures que contiene todas las medidas utilizadas en un cubo) explícitamente. Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
   
  ![Las tablas dinámicas con y sin un miembro de dimensión](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "tablas dinámicas con y sin un miembro de dimensión")  
   

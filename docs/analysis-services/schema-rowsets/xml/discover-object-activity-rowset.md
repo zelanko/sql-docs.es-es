@@ -2,12 +2,12 @@
 title: Conjunto de filas DISCOVER_OBJECT_ACTIVITY | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3ec98be8fe8e1779364d845a78a8e610734ddab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa671c4b9c53d793b9f122d2c7e9eef9d7aac417
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY, conjunto de filas
-  Proporciona el uso de recursos por objeto desde el inicio del servicio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona el uso de recursos por objeto desde el inicio del servicio.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_OBJECT_ACTIVITY** contiene las siguientes columnas.  

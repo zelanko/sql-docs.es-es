@@ -2,12 +2,12 @@
 title: Power Pivot Management Dashboard and Usage Data | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0d275e7cbe68ddd7dca965d50d05d1777711b48e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Panel de administración de Power Pivot y datos de uso
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] es una colección de informes predefinidos y elementos web de Administración central de SharePoint que ayudan a administrar una implementación de SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint. El Panel de administración proporciona información relacionada con el estado del servidor, la actividad de los libros y la actualización de datos. El panel usa datos de la recopilación de datos de uso de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Panel de administración es una colección de informes predefinidos y elementos web de Administración Central de SharePoint que le ayudarán a administración un servidor de SQL [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para la implementación de SharePoint. El Panel de administración proporciona información relacionada con el estado del servidor, la actividad de los libros y la actualización de datos. El panel usa datos de la recopilación de datos de uso de SharePoint.  
   
   
 ##  <a name="prereq"></a> Requisitos previos  

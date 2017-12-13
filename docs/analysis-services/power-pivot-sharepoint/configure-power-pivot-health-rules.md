@@ -2,12 +2,12 @@
 title: Configurar reglas de estado de Power Pivot | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configuración de las reglas de mantenimiento de PowerPivot
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint incluye reglas de mantenimiento de SharePoint que ayudan a supervisar y remediar problemas de configuración y disponibilidad del servidor. Las reglas de mantenimiento que se aplican a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecen en la página Revisar las definiciones de la regla.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]para SharePoint incluye reglas de mantenimiento de SharePoint que le ayudarán a supervisar y solucionar problemas de configuración y disponibilidad del servidor. Las reglas de mantenimiento que se aplican a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecen en la página Revisar las definiciones de la regla.  
   
  Las reglas de estado permiten la detección temprana de problemas del servidor que podrían conducir a la larga a la interrupción del servicio. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint proporciona varias reglas para ayudarle a identificar y solucionar problemas antes de que afecten a los usuarios. Puede personalizar muchas de estas reglas para adaptarlas a las características únicas de la implementación. Por ejemplo, si desea más tiempo para solucionar las advertencias sobre el espacio en disco, podría subir el porcentaje de espacio en disco disponible desde el 5% hasta el 10% de modo que la advertencia aparezca antes.  
   

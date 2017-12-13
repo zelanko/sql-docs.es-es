@@ -2,12 +2,12 @@
 title: "Elija la columna que se usan para probar un modelo de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfefbe59b4adc99b675f2735b86346062b172315
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Elija la columna que se va a utilizar para probar un modelo de minería de datos
-  Para poder medir la exactitud de un modelo de minería de datos, debe decidir qué resultado desea devolver. La mayoría de los modelos de minería de datos requieren que seleccione al menos una columna para utilizarla como atributo de predicción al crear el modelo. Por consiguiente, al probar la precisión del modelo, normalmente debe seleccionar ese atributo para las pruebas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para poder medir la precisión de un modelo de minería de datos, debe decidir qué resultado que desea evaluar. La mayoría de los modelos de minería de datos requieren que seleccione al menos una columna para utilizarla como atributo de predicción al crear el modelo. Por consiguiente, al probar la precisión del modelo, normalmente debe seleccionar ese atributo para las pruebas.  
   
  En la siguiente lista se describen algunas consideraciones adicionales para elegir el atributo de predicción para utilizarlo en las pruebas:  
   

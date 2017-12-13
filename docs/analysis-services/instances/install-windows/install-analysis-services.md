@@ -2,12 +2,12 @@
 title: Instalar Analysis Services | Documentos de Microsoft
 ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a8d39f0b940aaec84b7b731a7f764b2e2e3d72ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar SQL Server Analysis Services
-  SQL Server Analysis Services es un servidor de bases de datos analíticas que hospeda modelos tabulares, cubos multidimensionales y modelos de minería de datos que se pueden acceder desde informes, hojas de cálculo y paneles.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services es un servidor de bases de datos analíticas que hospeda modelos tabulares, cubos multidimensionales y modelos de minería de datos que se pueden acceder desde informes, hojas de cálculo y paneles.  
   
  Analysis Services es varias instancias, lo que significan que puede instalar más de una copia en un único equipo o ejecutar versiones nuevas y antiguas en paralelo. Cualquier instancia que se instale se ejecuta en uno de tres modos, según lo que se determine durante la instalación: multidimensional y de minería de datos, tabular o SharePoint. Si quiere usar varios modos, necesitará una instancia independiente para cada uno.  
   

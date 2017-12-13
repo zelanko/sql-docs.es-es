@@ -2,12 +2,12 @@
 title: "Crear e implementar una base de datos vacía (Analysis Services AMO-TOM) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fd42cdbd8eae5bada2c169a601c801a6e619afe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9581f7eb39fe0a6f8979ce09fde4233e800bef8d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>Crear e implementar una base de datos vacía (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Un escenario de programación común para AMO TOM consiste en generar las bases de datos y modelos sobre la marcha. Este artículo le guiará por los pasos necesarios para crear una base de datos. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Un escenario de programación común para AMO TOM consiste en generar las bases de datos y modelos sobre la marcha. Este artículo le guiará por los pasos necesarios para crear una base de datos. 
 
 Para las soluciones tabulares, hay una correspondencia uno a uno entre una base de datos y un modelo, con un modelo por base de datos. Por lo general puede especificar uno u otro, y el motor deducirá el objeto que falta. 
 

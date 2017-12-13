@@ -2,12 +2,12 @@
 title: "Implementar una solución de minería de datos en versiones anteriores de SQL Server | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6abe08512e8ff66299a7d50e0fcc90b7355a54ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 834b8ceae72e00eea7bf989ea9583068551bfc92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implementar soluciones de minería de datos para versiones anteriores de SQL Server
-  En esta sección se describen problemas conocidos de compatibilidad que pueden surgir al intentar implementar un modelo o estructura de minería de datos que se creó en una instancia de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] en una base de datos que utiliza SQL Server 2005 Analysis Services, o al implementar modelos creados en SQL Server 2005 en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta sección describen los problemas de compatibilidad conocidos que pueden surgir al intentar implementar un modelo de minería de datos o la estructura de minería de datos que se creó en una instancia de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] a una base de datos que utiliza SQL Server 2005 Analysis Services, o al implementar los modelos creados en SQL Server 2005 a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  No se admite la implementación en una instancia de SQL Server 2000 Analysis Services.  
   

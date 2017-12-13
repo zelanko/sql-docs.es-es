@@ -2,12 +2,12 @@
 title: Cambiar las asignaciones de filtros de fila (SSAS Tabular) de tabla, columna o | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a88238ef377de669f3100852272c9cdbee8987c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 055b4415c1b7c60a1f22047d8e7ac95c7bc0e8cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Cambiar las asignaciones de filtros de tabla, columna o fila (SSAS tabular)
-  Este tema describe cómo cambiar las asignaciones de filtros de tabla, columna o fila mediante el cuadro de diálogo **Editar propiedades de tabla** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema describe cómo cambiar las asignaciones de filtros de fila, columna o tabla utilizando la **editar propiedades de tabla** cuadro de diálogo de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Las opciones del cuadro de diálogo **Editar propiedades de tabla** serán diferentes dependiendo de si importó los datos originalmente seleccionando las tablas en una lista o usando una consulta SQL. Si importó originalmente los datos seleccionándolos en una lista, el cuadro de diálogo **Editar propiedades de tabla** mostrará el modo de vista previa de tabla. Este modo mostrará únicamente un subconjunto limitado a las primeras cincuenta filas de la tabla de origen. Si importó originalmente los datos mediante una instrucción SQL, el cuadro de diálogo **Editar propiedades de tabla** solo mostrará una instrucción SQL. Mediante una instrucción de consulta SQL, se puede recuperar un subconjunto de filas diseñando un filtro o editando la instrucción SQL manualmente.  
   

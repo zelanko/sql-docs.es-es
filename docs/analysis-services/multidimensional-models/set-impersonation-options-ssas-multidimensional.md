@@ -2,12 +2,12 @@
 title: "Establezca las opciones de suplantación (SSAS - multidimensionales) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
-  Al crear un objeto de **data source** en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Al crear un **origen de datos** de objeto en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
   
  Para las conexiones que utilizan la autenticación de Windows, la opción de suplantación también determina la identidad en la que las consultas se ejecuten en el origen de datos externo. Por ejemplo, si establece la opción de suplantación en **contoso\dbuser**, las consultas usadas para recuperar datos durante el procesamiento se ejecutan como **contoso\dbuser** en el servidor de bases de datos.  
   

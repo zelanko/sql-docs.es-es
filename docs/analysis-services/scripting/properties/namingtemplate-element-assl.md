@@ -2,12 +2,12 @@
 title: Elemento NamingTemplate (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e10a7edf7c8c5b1aad63f76cda140e5894402799
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07ef827685df902c88bd14e35c99dd5dab440149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
-  Define cómo se denominan los niveles en una jerarquía de elementos primarios y secundarios construida a partir del [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define cómo se denominan los niveles en una jerarquía de elementos primarios y secundarios construida a partir del [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   

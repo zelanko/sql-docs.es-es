@@ -2,12 +2,12 @@
 title: "Programación del modelo de propiedades del cubo - multidimensionales | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -41,14 +41,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc44854185830f93ff672cae6a0ebc68a88aa80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programación del modelo de propiedades del cubo - multidimensionales
-  Los cubos tienen varias propiedades que se pueden establecer para modificar el comportamiento del cubo. Estas propiedades se resumen en la tabla siguiente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los cubos tienen un número de propiedades que se pueden establecer para modificar el comportamiento de todo el cubo. Estas propiedades se resumen en la tabla siguiente.  
   
 > [!NOTE]  
 >  Algunas propiedades se establecen automáticamente cuando se crea el cubo y no se pueden cambiar.  

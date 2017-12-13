@@ -2,12 +2,12 @@
 title: Procesamiento por lotes (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d9ed1a3c1c832a1ceb34d96f0df44030da2e33cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34082c3567e1050be6e72992387435ec9ef0c22b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="batch-processing-analysis-services"></a>Procesamiento por lotes (Analysis Services)
-  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el comando Batch para enviar varios comandos de procesamiento al servidor en una única solicitud. El procesamiento por lotes ofrece una forma de controlar qué objetos se deben procesar y en qué orden. Además, un lote se puede ejecutar como una serie de trabajos independientes o como una transacción en la que un error en un proceso causa la reversión del lote completo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el comando Batch para enviar varios comandos de procesamiento en el servidor en una única solicitud. El procesamiento por lotes ofrece una forma de controlar qué objetos se deben procesar y en qué orden. Además, un lote se puede ejecutar como una serie de trabajos independientes o como una transacción en la que un error en un proceso causa la reversión del lote completo.  
   
  El procesamiento por lotes maximiza la disponibilidad de datos consolidando y reduciendo el tiempo empleado en confirmar los cambios. Cuando se procesa totalmente una dimensión, cualquier partición que usa dicha dimensión se marca como sin procesar. Como resultado, los cubos que contienen las particiones sin procesar no están disponibles para búsquedas. Puede solucionar esto con un trabajo de procesamiento por lotes mediante el procesamiento de las dimensiones junto con las particiones afectadas. La ejecución del trabajo de procesamiento por lotes como una transacción asegura que todos los objetos incluidos en la transacción permanezcan disponibles para consultas hasta que se complete todo el procesamiento. Mientras la transacción confirma los cambios, se aplican bloqueos en los objetos afectados, por lo que estos no están disponibles temporalmente, pero en general la cantidad de tiempo empleado para confirmar los cambios es inferior a la que se emplearía procesando los objetos individualmente.  
   

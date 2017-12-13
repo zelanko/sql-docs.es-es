@@ -2,12 +2,12 @@
 title: "Programación de actualización de datos y orígenes de datos, sin autenticación de Windows | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Programación de actualización de datos y orígenes de datos, sin autenticación de Windows
-  En este tema se describe un flujo de trabajo de nuevos datos de programación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe un flujo de trabajo de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint nuevos datos de programación que pueden usar datos de orígenes que **no** compatible con la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
   
 ||  
 |-|  

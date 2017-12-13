@@ -2,12 +2,12 @@
 title: Configurar el uso de espacio en disco (PowerPivot para SharePoint) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurar el uso del espacio en disco (Power Pivot para SharePoint)
-  Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa el espacio en disco del equipo host para almacenar en memoria caché las bases de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para obtener recargas más rápidas. Cada base de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se carga en la memoria primero se almacena en la memoria caché del disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se usa.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint implementación utiliza el espacio en disco del equipo host para caché [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] bases de datos para obtener recargas más rápidas. Cada base de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se carga en la memoria primero se almacena en la memoria caché del disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se usa.  
   
  En este tema se explica cómo establecer los límites de espacio en disco.  
   

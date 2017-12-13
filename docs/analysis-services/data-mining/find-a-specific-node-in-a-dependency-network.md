@@ -2,12 +2,12 @@
 title: "Buscar un nodo específico en una red de dependencias | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f95a58a73030375534a202dd0c6a6d24a449e373
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Buscar un nodo determinado en una red de dependencias
-  Una red de dependencias de un modelo de minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede contener muchos nodos, por lo que puede resultar difícil localizar los datos en los que está interesado. Para buscar un nodo específico, puede usar el cuadro de diálogo **Buscar nodo** en la pestaña **Red de dependencias** del Diseñador de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una red de dependencias en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modelo de minería de datos puede contener muchos nodos, lo que resulta difícil localizar los datos que le interesen. Para buscar un nodo específico, puede usar el cuadro de diálogo **Buscar nodo** en la pestaña **Red de dependencias** del Diseñador de minería de datos.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Para buscar un nodo determinado en una red de dependencias  
   

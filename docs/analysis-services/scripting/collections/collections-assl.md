@@ -2,12 +2,12 @@
 title: Colecciones (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68be246ab77c93a910a4d37b40808a42adecb8ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="collections-assl"></a>Colecciones (ASSL)
-  Esta sección de referencia contiene información sobre sintaxis y uso de cada uno de los elementos que actúan como una colección en el esquema del Lenguaje de scripting de Analysis Services (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta sección de referencia contiene información de sintaxis y el uso de cada elemento que actúa como una colección en el esquema de Analysis Services Scripting Language (ASSL).  
   
  Aunque el esquema ASSL solamente contiene elementos XML, desde el punto de vista de un programador, los elementos descritos en esta sección se corresponden con colecciones de objetos, como por ejemplo la **dimensiones** y **cubos** colecciones.  
   

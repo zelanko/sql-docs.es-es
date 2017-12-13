@@ -2,12 +2,12 @@
 title: Procesar un modelo multidimensional (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Procesar un modelo multidimensional (Analysis Services)
-  El procesamiento es el paso, o serie de pasos, en los que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El procesamiento es el paso, o serie de pasos, en el que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
   
  De forma predeterminada, el procesamiento aparece cuando se implementa una solución al servidor. También puede procesar toda o parte de una solución, ya sea de modo ad hoc mediante herramientas como [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o según una programación utilizando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Agente SQL Server. Al realizar un cambio estructural en el modelo, como quitar una dimensión o cambiar el nivel de compatibilidad, deberá procesarse de nuevo para sincronizar los aspectos físicos y lógicos del modelo.  
   

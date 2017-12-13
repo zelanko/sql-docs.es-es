@@ -2,8 +2,8 @@
 title: "Instalación desatendida de SQL Server en Red Hat Enterprise Linux | Documentos de Microsoft"
 description: "Ejemplo de secuencia de comandos SQL Server - instalación desatendida en Red Hat Enterprise Linux"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Ejemplo: Script de instalación desatendida de SQL Server para Red Hat Enterprise Linux
 
@@ -39,7 +39,7 @@ Esta secuencia de comandos de ejemplo intensiva de errores instala SQL Server 20
 Guardar el script de ejemplo en un archivo y, a continuación, para personalizarlo, reemplace los valores de variables en el script. También puede establecer cualquiera de las variables de secuencias de comandos como variables de entorno, siempre y cuando se eliminen en el archivo de script.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

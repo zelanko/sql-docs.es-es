@@ -2,12 +2,12 @@
 title: Dimensiones (Analysis Services - datos multidimensionales) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f876ad9e6b7627b22322604d406a189b6c03834
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensiones (Analysis Services - Datos multidimensionales)
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las dimensiones son un componente fundamental de los cubos. Las dimensiones organizan los datos en función de un área de interés para los usuarios, por ejemplo clientes, almacenes o empleados. Las dimensiones en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contienen atributos que corresponden a columnas de tablas de dimensiones. Estos atributos aparecen como jerarquías de atributo y se pueden organizar en jerarquías definidas por el usuario, o bien se pueden definir como jerarquías de elementos primarios y secundarios basadas en columnas en la tabla de dimensiones subyacente. Las jerarquías se utilizan para organizar las medidas incluidas en un cubo. En los siguientes temas se proporciona información general acerca de las dimensiones, los atributos y las jerarquías.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las dimensiones son un componente fundamental de los cubos. Las dimensiones organizan los datos en función de un área de interés para los usuarios, por ejemplo clientes, almacenes o empleados. Las dimensiones en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contienen atributos que corresponden a columnas de tablas de dimensiones. Estos atributos aparecen como jerarquías de atributo y se pueden organizar en jerarquías definidas por el usuario, o bien se pueden definir como jerarquías de elementos primarios y secundarios basadas en columnas en la tabla de dimensiones subyacente. Las jerarquías se utilizan para organizar las medidas incluidas en un cubo. En los siguientes temas se proporciona información general acerca de las dimensiones, los atributos y las jerarquías.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

@@ -2,12 +2,12 @@
 title: "Crear un informe de validación cruzada | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47368a14a07f9ab0a42df11d29dbca6404b19463
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cross-validation-report"></a>Crear un informe de validación cruzada
-  Este tema le guía a través del proceso de creación de un informe de validación cruzada utilizando la pestaña Gráfico de precisión del Diseñador de minería de datos. Para obtener información general sobre el aspecto de un informe de validación cruzada y sobre las medidas estadísticas que se incluyen en este, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En este tema le guía por la creación de un informe de validación cruzada mediante la pestaña gráfico de precisión en el Diseñador de minería de datos. Para obtener información general sobre el aspecto de un informe de validación cruzada y sobre las medidas estadísticas que se incluyen en este, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un informe de validación cruzada es totalmente diferente de un gráfico de precisión, como un gráfico de mejora respecto al modelo predictivo o una matriz de clasificación.  
   

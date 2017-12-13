@@ -2,12 +2,12 @@
 title: Automatizar tareas administrativas de Analysis Services con SSIS | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43277dfa53b449da914ec32f35f1263f3082f9b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9303a84fe9bd7b26434d869ec4c2d6216f0938f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tareas administrativas de Analysis Services con SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite automatizar la ejecución de scripts DDL, tareas de procesamiento de cubos y modelos de minería de datos, y tareas de consulta de minería de datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] le permite automatizar la ejecución de scripts DDL, cubo y procesamiento de tareas y tareas de consulta de minería de datos del modelo de minería de datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se ha diseñado para realizar operaciones de limpieza de datos durante las tareas de procesamiento y para reunir datos procedentes de diferentes orígenes de datos. Cuando se trabaja con cubos y modelos de minería de datos, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede transformar datos no numéricos en datos numéricos y puede garantizar que esos valores de datos se encuentran dentro de los límites esperados, creando así datos limpios desde los cuales llenar dimensiones y tablas de hechos.  
   

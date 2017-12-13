@@ -2,12 +2,12 @@
 title: Agregar un origen de datos al modelo Tabular (Analysis Services AMO-TOM) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8aac5145c520ac61fda5689a4ba40b882bb554da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Agregar un origen de datos al modelo Tabular (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-El **DataSource** clase en el espacio de nombres Microsoft.AnalysisServices.Tabular es una abstracción de un modelo Tabular origen de datos que especifica el tipo y la ubicación de los datos importados durante una operación de actualización de datos. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]El **DataSource** clase en el espacio de nombres Microsoft.AnalysisServices.Tabular es una abstracción de un modelo Tabular origen de datos que especifica el tipo y la ubicación de los datos importados durante una operación de actualización de datos. 
 
 Puede agregar un origen de datos al modelo Tabular creando instancias de un objeto de una clase derivada de **DataSource**y, a continuación, agréguelo a la **orígenes de datos** colección del objeto de modelo. Para confirmar los cambios en el servidor, llame a **Model.SaveChanges()** o **Database.Update(UpdateOptions.ExpandFull)**. 
 

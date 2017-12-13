@@ -2,12 +2,12 @@
 title: Crear Scripts de Analysis Services en Management Studio | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 22811448d173c9f55229557dfed64e16ead18706
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55f3f1485ba2e684371444ec6f40696b3f853fcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Crear scripts de Analysis Services en Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye características, plantillas y editores de generación de script que se pueden usar para incluir objetos y tareas de Analysis Services en un script.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye las características de generación de scripts, plantillas y editores que puede usar para generar el script de objetos de Analysis Services y las tareas.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Incluir tareas de Analysis Services en un script en Management Studio  
  La inclusión de tareas en un script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se logra haciendo clic en una de las opciones de script de un cuadro de diálogo orientado a tareas. Todos los cuadros de diálogo que se usan para realizar tareas tales como copia de seguridad o restauración de base de datos, procesar un objeto o diseñar una agregación, incluyen una opción de script en la parte superior del cuadro de diálogo. La selección de una de estas opciones genera un script XMLA basado en la información y los valores del cuadro de diálogo.  

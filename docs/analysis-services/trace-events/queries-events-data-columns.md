@@ -2,12 +2,12 @@
 title: Consulta las columnas de datos de eventos | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 672a41fddca9909e20a5f1c578bfe22a7def9488
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8e4af838d93f7cf7f3c66c462504879188499be
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="queries-events-data-columns"></a>Columnas de datos de Eventos de consultas
-  La categoría de eventos Eventos de consultas tiene las siguientes clases de eventos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de eventos de consultas tiene las siguientes clases de evento:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
 |------------------|--------------------|---------------------------|  

@@ -2,12 +2,12 @@
 title: KPI (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2e5c74ba7ae5a96646364ffebf4895af1999319b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpis"></a>KPI
-  Un *KPI* (indicador clave de rendimiento) de un modelo tabular se usa para medir el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , que también se define con una medida o un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *KPI* (indicador de rendimiento clave), en un modelo tabular, se usa para medir el rendimiento de un valor, definido por un *Base* medida, con un *destino* valor, también definido por un medida o por un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
  En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para valorar los objetivos empresariales. Un KPI se evalúa con frecuencia a lo largo del tiempo. Por ejemplo, el departamento de ventas de una organización puede usar un KPI para medir el beneficio bruto mensual frente al beneficio bruto previsto. El departamento de contabilidad puede medir los gastos mensuales frente a los ingresos para evaluar los costos y un departamento de recursos humanos puede medir la rotación trimestral de los empleados. Cada uno de ellos es un ejemplo de KPI. Los profesionales de una empresa suelen usar KPI agrupados en un cuadro de mandos empresarial para obtener un resumen histórico rápido y preciso de los éxitos empresariales o para identificar tendencias.  

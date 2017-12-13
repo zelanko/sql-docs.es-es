@@ -2,12 +2,12 @@
 title: "Aplicar funciones de predicción a un modelo | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funciones de predicción a un modelo
-  Para crear una consulta de predicción en minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , antes debe seleccionar el modelo de minería de datos en el que se basará la consulta. Puede seleccionar cualquier modelo de minería de datos que esté incluido en el proyecto actual.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para crear una consulta de predicción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minería de datos, primero debe seleccionar el modelo de minería de datos en el que se basará la consulta. Puede seleccionar cualquier modelo de minería de datos que esté incluido en el proyecto actual.  
   
  Cuando haya seleccionado un modelo, agregue una *función de predicción* a la consulta. Una función de predicción puede usarse para obtener una predicción, pero también se pueden agregar funciones de predicción que devuelven estadísticas relacionadas, como la probabilidad del valor de predicción o la información que se usó para generar la predicción.  
   

@@ -2,12 +2,12 @@
 title: Roles (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles"></a>Roles
-  Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Roles, en los modelos tabulares, definen los permisos de miembro para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
   
  Para SQL Server Analysis Services, roles contienen a miembros de usuario por nombre de usuario o grupo de Windows y permisos (lectura, process, administrador). Para los servicios de análisis de Azure, los usuarios deben estar en su Azure Active Directory y los nombres de usuario y grupos especificados deben ser por una dirección de correo electrónico profesional o UPN. 
   

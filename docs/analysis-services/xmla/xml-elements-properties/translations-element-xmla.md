@@ -2,12 +2,12 @@
 title: Elemento Translations (XMLA) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71c0a06802b3ab16468638f25079eaa4a8be7a19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68c0979adaf1b2dd19ee6750746ee8128da649af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-element-xmla"></a>Elemento Translations (XMLA)
-  Contiene una colección de los elementos [Translation](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) que se utilizan para identificar las claves de miembro del miembro de atributo representado por el elemento primario [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de [traducción](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) elementos que se usan para identificar las claves de miembro del miembro de atributo representado por el elemento primario [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   

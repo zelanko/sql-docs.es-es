@@ -2,12 +2,12 @@
 title: Tables, objeto (TMSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables, objeto (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define las tablas contenidas en un modelo. Las tablas en un modelo o están enlazadas a tablas en una base de datos externo desde el que se importan o consultar los datos o una tabla calculada construido a partir de una expresión de DAX. Dentro de una tabla, uno o varios **partición** objetos describen el origen de los datos.  Entre las tablas, una **relación** objeto especifica la cardinalidad, la dirección del filtro y otras propiedades de la relación.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define las tablas contenidas en un modelo. Las tablas en un modelo o están enlazadas a tablas en una base de datos externo desde el que se importan o consultar los datos o una tabla calculada construido a partir de una expresión de DAX. Dentro de una tabla, uno o varios **partición** objetos describen el origen de los datos.  Entre las tablas, una **relación** objeto especifica la cardinalidad, la dirección del filtro y otras propiedades de la relación.  
   
 ## <a name="object-definition"></a>Definición de objeto  
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Tabla** objetos también tienen las siguientes propiedades.  

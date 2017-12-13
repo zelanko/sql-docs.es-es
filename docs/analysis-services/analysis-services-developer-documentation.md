@@ -2,12 +2,12 @@
 title: "Documentación para desarrolladores de Analysis Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Documentación para desarrolladores de Analysis Services
-En Analysis Services, prácticamente cualquier objeto y la carga de trabajo son programable y, a menudo hay más de un enfoque que puede elegir.  Las opciones incluyen escribir código administrado, secuencias de comandos o mediante unos estándares abiertos como XMLA y MSOLAP si los requisitos de la solución impiden mediante .NET framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]En Analysis Services, prácticamente cualquier objeto y la carga de trabajo son programable y, a menudo hay más de un enfoque que puede elegir.  Las opciones incluyen escribir código administrado, secuencias de comandos o mediante unos estándares abiertos como XMLA y MSOLAP si los requisitos de la solución impiden mediante .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>¿Qué puede realizar en el código
 Escenarios de programación habituales incluyen servidor e implementación de base de datos, administración, modelo y creación de base de datos y acceso a datos desde sus aplicaciones personalizadas e informes que usan datos de Analysis Services. Comunes a todos estos escenarios es una fijo arquitectura y el objeto de definición jerarquía, con las operaciones bien también se entiende que abarcan la definición de datos, el procesamiento y cargas de trabajo de consulta.

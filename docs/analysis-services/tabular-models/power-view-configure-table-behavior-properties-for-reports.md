@@ -2,12 +2,12 @@
 title: Configurar las propiedades de comportamiento de tablas para informes de Power View (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurar las propiedades de comportamiento de tablas para informes
-  Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Si está utilizando un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades de comportamiento de tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.  
   

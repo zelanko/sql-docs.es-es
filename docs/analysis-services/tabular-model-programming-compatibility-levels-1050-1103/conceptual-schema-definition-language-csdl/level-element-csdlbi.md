@@ -2,12 +2,12 @@
 title: Nivel de elemento (CSDLBI) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8430e055cb366420af51d8045381da1aacf78e3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 63a271429d0d71516760e81ba0c085f903d90511
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="level-element-csdlbi"></a>Level, elemento (CSDLBI)
-  El elemento Level es un tipo complejo que define un solo nivel de una jerarquía  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento Level es un tipo complejo que define un único nivel de una jerarquía  
   
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se enumeran los elementos y atributos que definen el elemento Level.  

@@ -2,12 +2,12 @@
 title: Instalar, distribuir y hacer referencia al modelo de objeto Tabular | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Instalar, distribuir y hacer referencia al modelo de objeto Tabular
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-En este artículo se explica cómo descargar, hacer referencia y redistribuir Analysis Services Tabular objeto modelo (TOM), una biblioteca de C# para crear y administrar los modelos tabulares y las bases de datos en código administrado.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En este artículo se explica cómo descargar, hacer referencia y redistribuir Analysis Services Tabular objeto modelo (TOM), una biblioteca de C# para crear y administrar los modelos tabulares y las bases de datos en código administrado.  
   
 TOM es una extensión de la biblioteca de cliente AMO (Microsoft.AnalysisServices.dll) que se incluye con SQL Server 2016. Funciona con los modelos tabulares que se elige como destino el motor de metadatos tabulares en la versión de SQL Server 2016. Para usar TOM, el modelo y la base de datos deben estar en el nivel de compatibilidad 1200 o superior.  
 

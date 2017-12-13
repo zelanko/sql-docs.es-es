@@ -2,12 +2,12 @@
 title: "Arquitectura lógica (Analysis Services: minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ccd3748b3190fc3d2ff55c850ae94f2244738dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67c8c404bfcf499957fefd0470d7cc3f9caeeb9d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
-  La minería de datos es un proceso que implica la interacción de varios componentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Minería de datos es un proceso que implica la interacción de varios componentes.  
   
 -   Puede tener acceso a orígenes de datos en una base de datos de SQL Server o cualquier otro origen de datos y usarlos para el entrenamiento, las pruebas o la predicción.  
   

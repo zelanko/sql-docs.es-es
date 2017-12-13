@@ -2,12 +2,12 @@
 title: Examinar el cubo | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00dee701e3bea7e30924352e136c6202d6a10ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0dbee75cc8ac8550df25d47265796d4526442787
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Lección 2-6-examinar el cubo
-Una vez implementado un cubo, los datos de este pueden verse en la pestaña **Explorador** del Diseñador de cubos y los datos de dimensión pueden verse en la pestaña **Explorador** del Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Después de implementar un cubo, los datos del cubo están visibles en el **explorador** pestaña del Diseñador de cubos y los datos de dimensión es visible en el **explorador** ficha en el Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
   
 Para las dimensiones, la pestaña Explorador proporciona una manera de ver los miembros o de navegar por una jerarquía hasta el nodo hoja. Puede examinar datos de dimensiones en distintos idiomas, suponiendo que se hayan agregado las traducciones al modelo.  
   

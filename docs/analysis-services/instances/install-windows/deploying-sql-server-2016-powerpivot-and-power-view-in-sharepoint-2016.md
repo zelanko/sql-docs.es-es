@@ -2,12 +2,12 @@
 title: "Implementación de SQL Server 2016 PowerPivot y Power View en SharePoint 2016 | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d688ba6f378ca6ce4cebab95ce67572b33f27068
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae98c7bb08848dd1d4b914ebfbaef71f40b22873
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016"></a>Implementación de SQL Server 2016 PowerPivot y Power View en SharePoint 2016
-  **Resumen:** este documento va dirigido a administradores y arquitectos de SharePoint, e incluye instrucciones detalladas para la implementación y la configuración de un entorno de demostración de Microsoft BI basado en las versiones preliminares de SharePoint Server 2016, Office Online Server y la pila SQL Server 2016 BI para SharePoint 2016. Tras una breve presentación de los cambios importantes en la arquitectura y las correspondientes dependencias del sistema, se describen los requisitos de software y de configuración y el camino de implementación recomendado para habilitar y comprobar las funcionalidades de BI en tres fases principales. En este documento también se analizan los problemas conocidos que existen en las versiones SharePoint Server 2016 Beta 2, Office Online Server Preview y SQL Server 2016 CTP 3.1 y se sugieren las soluciones más adecuadas. Estas soluciones ya no será necesarias en las versiones finales de los productos. Cuando vaya a implementar versiones de RTM, busque una versión actualizada de este documento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Resumen:** este documento va dirigido SharePoint los administradores y arquitectos incluye instrucciones detalladas para implementar y configurar un entorno de demostración de Microsoft BI basado en las versiones preliminares de SharePoint Server 2016, office Online Server y SQL Server 2016 BI pila para SharePoint 2016. Tras una breve presentación de los cambios importantes en la arquitectura y las correspondientes dependencias del sistema, se describen los requisitos de software y de configuración y el camino de implementación recomendado para habilitar y comprobar las funcionalidades de BI en tres fases principales. En este documento también se analizan los problemas conocidos que existen en las versiones SharePoint Server 2016 Beta 2, Office Online Server Preview y SQL Server 2016 CTP 3.1 y se sugieren las soluciones más adecuadas. Estas soluciones ya no será necesarias en las versiones finales de los productos. Cuando vaya a implementar versiones de RTM, busque una versión actualizada de este documento.  
   
  **Escritor:** Kay Unkroth  
   

@@ -2,12 +2,12 @@
 title: Relaciones (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-ssas-tabular"></a>relaciones (SSAS tabular)
-  En los modelos tabulares, una relación es una conexión entre dos tablas de datos. La relación establece cómo se deben relacionar los datos de las dos tablas. Por ejemplo, una tabla de clientes y una tabla de pedidos se pueden relacionar para mostrar el nombre del cliente que está asociado a cada pedido.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En los modelos tabulares, una relación es una conexión entre dos tablas de datos. La relación establece cómo se deben relacionar los datos de las dos tablas. Por ejemplo, una tabla de clientes y una tabla de pedidos se pueden relacionar para mostrar el nombre del cliente que está asociado a cada pedido.  
   
  Cuando use el Asistente para la importación de tablas para importar desde el mismo origen de datos, las relaciones que ya existan en las tablas (en el origen de datos) que elija importar se volverán a crear en el modelo. Si desea ver las relaciones detectadas que se han vuelto a crear automáticamente, use la vista de diagrama del diseñador de modelos o el cuadro de diálogo Administrar relaciones. También puede crear manualmente nuevas relaciones entre las tablas usando la vista de diagrama del diseñador de modelos o mediante los cuadros de diálogo Crear relación o Administrar relaciones.  
   

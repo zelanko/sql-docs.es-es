@@ -2,12 +2,12 @@
 title: "Tareas del Visor de modelo y procedimientos de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae59c83e386be1eb222a24cd3ef7a9c9b070444f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tareas y procedimientos del Visor de modelos de minería de datos
-  El Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que pueden usarse para explorar modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que puede usar para explorar los modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

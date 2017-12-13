@@ -2,12 +2,12 @@
 title: "Lección 2: Definir e implementar un cubo | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c09c3c4ce31c969b4ec6096a19e53cd2b225de04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1daca588189dfd90ba4d1a238f17d7b3aa5757e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lección 2: Definir e implementar un cubo
-Ahora que ha definido una vista del origen de datos en un proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , está preparado para definir el cubo inicial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Después de definir una vista del origen de datos en su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto, está listo para definir un inicial [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo.  
   
 Puede definir un cubo y sus dimensiones en un solo paso mediante el Asistente para cubos. También puede definir una o más dimensiones y usar el Asistente para cubos con objeto de definir un cubo que use dichas dimensiones. Si está diseñando una solución compleja, generalmente empezará definiendo las dimensiones. Para obtener más información, consulte [Dimensiones en modelos multidimensionales](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) o [Cubos en modelos multidimensionales](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md).  
   

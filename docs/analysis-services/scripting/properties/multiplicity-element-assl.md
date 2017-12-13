@@ -2,12 +2,12 @@
 title: Elemento Multiplicity (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2483225abebeb66fe691ee11e33f1322a3f10dc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f7d9f031f8976f88e3a9d07e831672d5af2f5fed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multiplicity-element-assl"></a>Elemento Multiplicity (ASSL)
-  Indica si los atributos del RelationshipEnd están en el lado de “uno” o en el lado de “varios” de una relación.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Indica si los atributos del relationshipEnd están en el lado "uno" o en el lado "varios" de una relación.  
   
 ## <a name="syntax"></a>Sintaxis  
   

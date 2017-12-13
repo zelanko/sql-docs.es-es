@@ -2,12 +2,12 @@
 title: "Crear una nueva estructura de minería de datos OLAP | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1aceaa55b007eaf43a9a44540284ba95786fca63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
-  Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede usar el Asistente para minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utiliza datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para crear una estructura de minería de datos OLAP  
   

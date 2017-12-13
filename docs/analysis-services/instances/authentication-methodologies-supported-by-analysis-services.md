@@ -2,12 +2,12 @@
 title: "Metodologías de autenticación admitidas por Analysis Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 86e65d3db90f2cf30f8fe4ae7288819ac4745e54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5fd280c748fd887e3582a95c7f023dbc659b604a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologías de autenticación admitidas por Analysis Services
-  Las conexiones desde una aplicación cliente a una instancia de Analysis Services requieren la autenticación de Windows (integrada). Puede proporcionar una identidad de usuario de Windows mediante cualquiera de los métodos siguientes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las conexiones desde una aplicación cliente a una instancia de Analysis Services requieren autenticación de Windows (integrada). Puede proporcionar una identidad de usuario de Windows mediante cualquiera de los métodos siguientes:  
   
 -   NTLM  
   

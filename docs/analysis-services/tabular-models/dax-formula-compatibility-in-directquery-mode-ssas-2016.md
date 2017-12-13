@@ -2,12 +2,12 @@
 title: "Compatibilidad de las fórmulas DAX en el modo DirectQuery (SSAS 2016) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,16 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ab540d2806d6afb75eab3890fdad605a7b34a71c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidad de las fórmulas DAX en el modo DirectQuery 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-Para los modelos tabulares de 1200 y superior en el modo DirectQuery, ya no se aplican muchas limitaciones funcionales en versiones anteriores. En el caso de las fórmulas DAX en particular:
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Para los modelos tabulares de 1200 y superior en el modo DirectQuery, ya no se aplican muchas limitaciones funcionales en versiones anteriores. En el caso de las fórmulas DAX en particular:
 
 - Ahora DirectQuery genera consultas más sencillas que reportan un mejor rendimiento.
 - Seguridad de nivel de fila (RLS) ahora se admite en el modo DirectQuery.

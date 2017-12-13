@@ -2,12 +2,12 @@
 title: Power ver propiedades de informes (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>Informes de vista avanzada - propiedades (SSAS Tabular)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permite la creación de informes ad hoc intuitiva para los usuarios profesionales como analistas de datos, responsables de la toma de decisiones empresariales y trabajadores de la información. Los informes pueden crearse con facilidad y pueden interactuar con vistas de datos de los modelos tabulares basados en los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicados en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o los modelos tabulares creados con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e implementados en las instancias de Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación de Silverlight basada en explorador que se inicia desde SharePoint Server 2010 o versiones posteriores.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] proporciona intuitiva de informes ad hoc para usuarios empresariales como analistas de datos, empresarios y trabajadores de la información. Los informes pueden crearse con facilidad y pueden interactuar con vistas de datos de los modelos tabulares basados en los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicados en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o los modelos tabulares creados con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e implementados en las instancias de Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación de Silverlight basada en explorador que se inicia desde SharePoint Server 2010 o versiones posteriores.  
   
  Al crear proyectos de modelos tabulares en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede configurar algunas propiedades de informes únicas para los informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Los temas de esta sección describen cómo optimizar un modelo para mejorar la experiencia de informes en [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

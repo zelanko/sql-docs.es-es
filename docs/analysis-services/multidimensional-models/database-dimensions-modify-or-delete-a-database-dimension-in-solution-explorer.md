@@ -2,12 +2,12 @@
 title: "Modificar o eliminar una dimensión de base de datos en el Explorador de soluciones | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 36a2a8434122e4d3bf649de2358abc2186ea30d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39f474112a5823835ba2f6800aeca01916d7997a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>Base de datos de dimensiones: modificar o eliminar una dimensión de base de datos en el Explorador de soluciones
-  Puede modificar o eliminar una dimensión mediante el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cuando se modifica una dimensión, los cambios no están disponibles para los usuarios hasta que se procesa la dimensión. Para más información, vea [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede modificar o eliminar una dimensión mediante el Diseñador de dimensiones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cuando se modifica una dimensión, los cambios no están disponibles para los usuarios hasta que se procesa la dimensión. Para más información, vea [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>Para modificar una dimensión en Herramientas de datos de SQL Server  
   

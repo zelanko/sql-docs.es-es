@@ -2,12 +2,12 @@
 title: Elemento Restrictions (XMLA) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 577800202732858fe5427ec92220af1cf76c29f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 02e7c51544dc498c6754dfdbb0ff89aeaa77c574
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restrictions-element-xmla"></a>Elemento Restrictions (XMLA)
-  Contiene las columnas de restricción y datos utilizados por la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene las columnas de restricción y datos utilizados por la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -2,12 +2,12 @@
 title: "Columnas de datos de eventos de notificación | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29b3b8561d260e17adb78bb944ee32a20b26406b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 39c93ff427048fe1893dd78f8fe35abc0b52885b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="notification-events-data-columns"></a>Columnas de datos de eventos de notificación
-  Los eventos de notificación son aquéllos no provocados directamente por los usuarios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, las notificaciones tienen lugar porque los usuarios actualizan tablas subyacentes para el almacenamiento automático en la caché.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eventos de notificación son aquéllos no provocados directamente por los usuarios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, las notificaciones tienen lugar porque los usuarios actualizan tablas subyacentes para el almacenamiento automático en la caché.  
   
  La categoría de eventos Eventos de notificación tiene la siguiente clase de eventos:  
   

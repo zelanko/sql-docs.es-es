@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraer, transformar y cargar datos en Linux con SSIS
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tema se describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS permite solucionar problemas de integración de datos complejos, extraer datos de varios orígenes y formatos, transformar y limpiar los datos y cargar los datos en varios destinos. 
+Este artículo describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS permite solucionar problemas de integración de datos complejos, extraer datos de varios orígenes y formatos, transformar y limpiar los datos y cargar los datos en varios destinos. 
 
 Paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Server que se ejecutan en Windows local o en la nube, en Linux o en Docker. También pueden conectarse a la base de datos de SQL Azure, almacenamiento de datos de SQL Azure, orígenes de datos ODBC, archivos sin formato y otros orígenes de datos, incluidos los orígenes ADO.NET, archivos XML y los servicios OData.
 
@@ -47,17 +47,17 @@ Para ejecutar un paquete SSIS en un equipo Linux, haga lo siguiente:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>Otras tareas habituales de SSIS
+## <a name="design-packages"></a>Diseñar paquetes
 
--   **Diseñar paquetes**.
+**Conectarse a orígenes de datos ODBC**. Con SSIS al actualizar los Linux CTP 2.1 y versiones posteriores, paquetes SSIS pueden usar conexiones de ODBC en Linux. Esta funcionalidad se ha probado con el servidor SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador de ODBC Unicode que se ajusta a la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; También puede utilizar la autenticación de Windows. Para obtener más información, consulte el [entrada del blog del anuncio de compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-    -   **Conectarse a orígenes de datos ODBC**. Con SSIS al actualizar los Linux CTP 2.1 y versiones posteriores, paquetes SSIS pueden usar conexiones de ODBC en Linux. Esta funcionalidad se ha probado con el servidor SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador de ODBC Unicode que se ajusta a la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; También puede utilizar la autenticación de Windows. Para obtener más información, consulte el [entrada del blog del anuncio de compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Las rutas de acceso**. Proporcionar las rutas de acceso de estilo de Windows en los paquetes SSIS. SSIS en Linux no es compatible con las rutas de acceso basado en Linux, pero las rutas de acceso de estilo de Windows asigna a las rutas de acceso de estilo de Linux en tiempo de ejecución. A continuación, por ejemplo, SSIS en Linux asigna la ruta de acceso de estilo de Windows `C:\test` a la ruta de acceso basado en Linux `/test`.
 
-    -   **Las rutas de acceso**. Proporcionar las rutas de acceso de estilo de Windows en los paquetes SSIS. SSIS en Linux no es compatible con las rutas de acceso basado en Linux, pero las rutas de acceso de estilo de Windows asigna a las rutas de acceso de estilo de Linux en tiempo de ejecución. A continuación, por ejemplo, SSIS en Linux asigna la ruta de acceso de estilo de Windows `C:\test` a la ruta de acceso basado en Linux `/test`.
+## <a name="deploy-packages"></a>Implementar paquetes
+Solo puede almacenar paquetes en el sistema de archivos en Linux en esta versión. La base de datos de catálogo de SSIS y el servicio SSIS heredado no están disponibles en Linux para el almacenamiento y la implementación del paquete.
 
--   **Implementar paquetes**. Solo puede almacenar paquetes en el sistema de archivos en Linux en esta versión. La base de datos de catálogo de SSIS y el servicio SSIS heredado no están disponibles en Linux para el almacenamiento y la implementación del paquete.
-
--   **Programar paquetes**. Puede utilizar el sistema de Linux, como las herramientas de programación `cron` para programar paquetes. No se puede usar el Agente SQL en Linux para programar la ejecución de paquetes en esta versión. Para obtener más información, consulte [paquetes SSIS de programación en Linux con cron](sql-server-linux-schedule-ssis-packages.md).
+## <a name="schedule-packages"></a>Paquetes de programación
+Puede utilizar el sistema de Linux, como las herramientas de programación `cron` para programar paquetes. No se puede usar el Agente SQL en Linux para programar la ejecución de paquetes en esta versión. Para obtener más información, consulte [paquetes SSIS de programación en Linux con cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 

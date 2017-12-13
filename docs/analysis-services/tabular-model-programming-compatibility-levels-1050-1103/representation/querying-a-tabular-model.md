@@ -2,12 +2,12 @@
 title: Consultar un modelo Tabular | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querying-a-tabular-model"></a>Consultar un modelo tabular
-  Cuando un programador consulta un modelo tabular, implica la recuperación de datos de la base de datos tabular (TDS); para lograr este objetivo tiene dos opciones: usar consultas de tabla de uso en DAX o usar MDX y recuperar los datos como si provinieran de un cubo. Sin embargo, según el modo subyacente del modelo tabular, podría tener que limitarse a usar solo consultas de tabla DAX; el modo DirectQuery requiere el uso de consultas de tabla DAX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Como desarrollador, consulta un modelo tabular significa para recuperar datos de la base de datos tabular; para lograr este objetivo tiene dos opciones: utilizar consultas de tabla en DAX o usar MDX y recuperar los datos como si provinieran de un cubo. Sin embargo, según el modo subyacente del modelo tabular, podría tener que limitarse a usar solo consultas de tabla DAX; el modo DirectQuery requiere el uso de consultas de tabla DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Consultar con ADOMD.Net  
  El uso de ADOMD.Net para consultar un modelo tabular es simple y flexible; puede enviar instrucciones MDX o expresiones de consulta tabulares desde DAX al servidor para obtener los resultados.  

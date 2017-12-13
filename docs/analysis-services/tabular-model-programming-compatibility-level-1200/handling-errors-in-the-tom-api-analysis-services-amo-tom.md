@@ -2,12 +2,12 @@
 title: Control de errores en la API de TOM (Analysis Services AMO-TOM) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30d824c54359a7f7db0d57f7a4a7922329a0e89b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5ba78401880831916adb608cb55f0c93579f84e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="handling-errors-in-the-tom-api-analysis-services-amo-tom"></a>Control de errores en la API de TOM (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Una práctica común para las bibliotecas administradas del modelo de objeto Tabular (TOM) como objetos de administración de servicios de análisis (AMO) consiste en usar excepciones como un mecanismo para informar sobre las condiciones de error al usuario.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Una práctica común para las bibliotecas administradas del modelo de objeto Tabular (TOM) como objetos de administración de servicios de análisis (AMO) consiste en usar excepciones como un mecanismo para informar sobre las condiciones de error al usuario.  
 
 Cuando se detecta un error en AMO TOM, además de producir algunas excepciones de .NET estándares como puede ser **ArgumentException** y **InvalidOperationException**, TOM también puede producir varias excepciones de TOM específica.  
 

@@ -2,12 +2,12 @@
 title: "Tipos (minería de datos) de contenido | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico para una columna en una estructura de minería de datos y un tipo de datos lógico para la columna cuando se usa en un modelo  
   
  El *tipo de datos* determina el modo en que los algoritmos procesan los datos de esas columnas cuando se crean modelos de minería. La definición del tipo de datos de una columna proporciona al algoritmo información sobre el tipo de datos de las columnas y el modo de procesar los datos. Cada tipo de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite uno o varios tipos de contenido para la minería de datos.  
   

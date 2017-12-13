@@ -2,12 +2,12 @@
 title: Objeto de modelo (TMSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e2ba45e7f346fc597e579ce7dd7d7d0369fd94de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-object-tmsl"></a>Objeto de modelo (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Define un modelo Tabular. Hay un modelo por base de datos y una base de datos que se pueden especificar en un determinado comando. Un objeto de base de datos es el objeto primario.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define un modelo Tabular. Hay un modelo por base de datos y una base de datos que se pueden especificar en un determinado comando. Un objeto de base de datos es el objeto primario.  
   
  Las definiciones de modelo son demasiado grandes para reproducir toda la sintaxis de un tema. Por esta razón, una las partes principales para resaltar la sintaxis parcial puede encontrarse a continuación, con vínculos a los objetos secundarios.  
   

@@ -2,12 +2,12 @@
 title: "Gráfico de beneficios (Analysis Services: minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddde9150e2e748e75cef8fb25f16377c9dcea4b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gráfico de beneficios (Analysis Services - Minería de datos)
-  Un gráfico de beneficios muestra la rentabilidad estimada asociada al uso de un modelo de minería de datos. Por ejemplo, suponga que su modelo predice con qué clientes debe ponerse en contacto una compañía en un escenario empresarial. En ese caso, agregaría al gráfico de beneficios información sobre el costo de realizar la campaña de envío de correo directo. Entonces, en el gráfico completo puede ver el beneficio estimado si se dirige correctamente a los clientes en comparación con si se pone en contacto con los clientes de forma aleatoria.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un gráfico de beneficios muestra la rentabilidad estimada asociada al uso de un modelo de minería de datos. Por ejemplo, suponga que su modelo predice con qué clientes debe ponerse en contacto una compañía en un escenario empresarial. En ese caso, agregaría al gráfico de beneficios información sobre el costo de realizar la campaña de envío de correo directo. Entonces, en el gráfico completo puede ver el beneficio estimado si se dirige correctamente a los clientes en comparación con si se pone en contacto con los clientes de forma aleatoria.  
   
 ## <a name="build-a-profit-chart"></a>Crear un gráfico de beneficios  
  Un gráfico de beneficios es similar a un gráfico de mejora respecto al modelo predictivo. Empiece creando un gráfico de elevación y, después, agregue la información de costo y beneficios.  

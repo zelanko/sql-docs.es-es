@@ -2,12 +2,12 @@
 title: "Seleccione un modelo de minería de datos y un visor de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 712e8e501d3f1a8a37b2627d2356ff542af8bd08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Seleccionar un modelo de minería de datos y un visor de minería de datos
-  Para explorar un modelo de minería de datos puede utilizar uno de los visores de la pestaña **Visor de modelos de minería de datos** en el Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede explorar un modelo de minería de datos mediante uno de los visores de la **Visor de modelos de minería de datos** pestaña del Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  
   
 -   El cuadro de lista desplegable **Modelo de minería de datos** en la pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene una lista de todos los modelos de minería de datos que se encuentran en la estructura de minería de datos actual.  
   

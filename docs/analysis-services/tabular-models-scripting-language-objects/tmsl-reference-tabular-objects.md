@@ -2,12 +2,12 @@
 title: Definiciones de objetos tabulares modelo Scripting Language (TMSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 031c472ad444e809126eb897755777f970032b51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcf8b3c47b7663e467ad421a3732f8663320f055
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tmsl-reference---tabular-objects"></a>Referencia TMSL: objetos tabulares
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Las aplicaciones que crean, consumir o administrar bases de datos tabulares o que se conectan a una instancia de SQL Server 2016 Analysis Services en modo tabular, puede usar el Tabular Model Scripting Language (TMSL) para los comandos y las representaciones de objeto en formato JSON.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Las aplicaciones que crean, consumir o administrar bases de datos tabulares o que se conectan a una instancia de SQL Server 2016 Analysis Services en modo tabular, puede usar el Tabular Model Scripting Language (TMSL) para los comandos y las representaciones de objeto en formato JSON.  
   
  Este artículo documentan los objetos principales del esquema TMSL utilizado en los scripts generados por SQL Server Management Studio, SQL Server Data Tools (SSDT) y PowerShell de AMO.  
   

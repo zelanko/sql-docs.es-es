@@ -2,12 +2,12 @@
 title: Traducciones en modelos tabulares (Analysis Services) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traducciones en modelos tabulares (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Agrega compatibilidad con la cadena de traducción para los modelos tabulares. Un único objeto del modelo puede tener varias traducciones de un nombre o una descripción, lo que hace posible admitir varios idiomas dentro de la definición del modelo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agrega compatibilidad con la cadena de traducción para los modelos tabulares. Un único objeto del modelo puede tener varias traducciones de un nombre o una descripción, lo que hace posible admitir varios idiomas dentro de la definición del modelo.  
   
  Las cadenas traducidas solo son para los metadatos de objeto (nombres y descripciones de tablas y columnas) que aparecen en una herramienta de cliente, como una lista de tabla dinámica de Excel.  Para utilizar cadenas traducidas, la conexión de cliente especifica la referencia cultural. En la característica **Análisis en Excel** , puede seleccionar el idioma de una lista desplegable. En otras herramientas, es posible que tenga que especificar la referencia cultural en la cadena de conexión.  
   

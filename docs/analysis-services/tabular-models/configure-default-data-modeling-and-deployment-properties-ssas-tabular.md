@@ -2,12 +2,12 @@
 title: "Configurar las propiedades de implementación (SSAS Tabular) y predeterminadas de modelado de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurar las propiedades predeterminadas de modelado de datos y de implementación (SSAS tabular)
-  En este tema se describe cómo configurar los valores predeterminados de propiedad de nivel de compatibilidad, implementación y base de datos del área de trabajo, que se pueden predefinir para cada proyecto nuevo de modelos tabulares que cree en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un proyecto nuevo, estas propiedades se pueden cambiar en función de sus necesidades específicas.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema describe cómo configurar el nivel de compatibilidad predeterminado, implementación y configuración de propiedad de base de datos de área de trabajo, que se puede predefinir, para cada nuevo modelo tabular de proyecto cree en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un proyecto nuevo, estas propiedades se pueden cambiar en función de sus necesidades específicas.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Para configurar el valor predeterminado de la propiedad Nivel de compatibilidad para los nuevos proyectos de modelos  
   

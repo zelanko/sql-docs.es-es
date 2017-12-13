@@ -2,12 +2,12 @@
 title: Definir el comportamiento de suma parcial | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2881b5fbfa0fef9b17e1e86d2bf83f2599995108
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-semiadditive-behavior"></a>Definir el comportamiento de suma parcial
-  Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
   
  Se agrega comportamiento de suma parcial a un cubo para definir un método de agregación para medidas o miembros individuales del atributo de tipo de cuenta. Si el cubo contiene una dimensión de cuenta, puede establecer automáticamente un comportamiento de suma parcial basado en el tipo de cuenta.  
   

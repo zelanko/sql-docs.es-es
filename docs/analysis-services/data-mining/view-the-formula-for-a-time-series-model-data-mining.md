@@ -2,12 +2,12 @@
 title: "Ver la fórmula de serie temporal de un modelo (minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Ver la fórmula de un modelo de serie temporal (Minería de datos)
-  Si ha creado un modelo de serie temporal con la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la forma más sencilla de ver la ecuación de regresión del modelo es usar la **Leyenda de minería de datos** del [Visor de series temporales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que presenta todas las constantes en un formato legible.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si ha creado un modelo de serie de tiempo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minería de datos, la manera más fácil encontrar la ecuación de regresión en el modelo consiste en usar la **leyenda de minería de datos** de la [Visor de Series temporales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que presenta todas las constantes en un formato legible.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Para ver la fórmula de regresión de ARTXP para un modelo de serie temporal  
   

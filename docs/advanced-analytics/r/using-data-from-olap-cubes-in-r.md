@@ -2,7 +2,7 @@
 title: Utilizando los datos de los cubos OLAP en R | Documentos de Microsoft
 ms.custom: 
 ms.prod: sql-non-specified
-ms.date: 11/29/2017
+ms.date: 12/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,22 +15,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 60e95f4c101a4afe2a8161ba40df7b27bd85f602
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 21bb48b26b7bf8e755ba85a16fb25676bbff4363
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilizando los datos de los cubos OLAP en R
 
-El **olapR** paquete es un paquete de R, proporcionado por Microsoft para su uso con SQL Server y servidor de aprendizaje de máquina, que permite ejecutar consultas MDX para obtener datos de los cubos OLAP. Con este paquete, no necesita crear servidores vinculados o limpiar de conjuntos de filas planas; datos OLAP se pueden usar directamente en R.
+El **olapR** paquete es un paquete de R, proporcionado por Microsoft para su uso con SQL Server y servidor de aprendizaje de máquina, que permite ejecutar consultas MDX para obtener datos de los cubos OLAP. Con este paquete, no necesita crear servidores vinculados o limpiar de conjuntos de filas planas; puede obtener datos OLAP directamente de R.
 
 En este artículo se describe la API, junto con información general de OLAP y MDX para los usuarios de R que podría estar familiarizado con las bases de datos de cubo multidimensional.
 
 > [!IMPORTANT]
-> Una instancia de Analysis Services puede admitir convencionales cubos multidimensionales o modelos tabulares, pero una instancia no admite ambos tipos de modelos. Por lo tanto, antes de crear una consulta en una base de datos de Analysis Services, compruebe que contiene los modelos multidimensionales.
-> 
-> Aunque se pueden consultar un modelo tabular mediante MDX, el **olapR** paquete no es compatible con las conexiones a instancias de modelo tabular. Si necesita obtener datos de un modo tabular, una opción mejor consiste en habilitar [DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular) sobre el modelo y marca la instancia disponible como un servidor vinculado en SQL Server. 
+> Una instancia de Analysis Services puede admitir convencionales cubos multidimensionales o modelos tabulares, pero una instancia no admite ambos tipos de modelos. Por lo tanto, antes de intentar crear una consulta MDX en un cubo, compruebe que la instancia de Analysis Services contiene los modelos multidimensionales.
 
 ## <a name="what-is-an-olap-cube"></a>¿Qué es un cubo OLAP?
 
@@ -70,9 +68,9 @@ El paquete **olapR** admite dos métodos de creación de consultas MDX:
 
     No todas las consultas MDX pueden crearse mediante el uso de este método, dado que MDX puede ser complejo. Sin embargo, esta API admite la mayoría de las operaciones habituales y útiles, incluyendo segmento, dados, obtención de detalles, paquete acumulativo de actualizaciones y dinámica en las dimensiones de N.
 
-+ **Copiar y pegar MDX correcto.** Crear manualmente y, a continuación, pegue en cualquier consulta MDX. Esta opción es el mejor si hay consultas MDX existentes que desea volver a, o si la consulta que desee crear es demasiado compleja para **olapR** a controlar. 
++ **Copiar y pegar MDX correcto.** Crear manualmente y, a continuación, pegue en cualquier consulta MDX. Esta opción es el mejor si hay consultas MDX existentes que desea volver a, o si la consulta que desee crear es demasiado compleja para **olapR** a controlar.
 
-    Compile el MDX con cualquier utilidad de cliente, como SSMS o Excel y, a continuación, guarde la cadena que define la consulta MDX. Proporcione esta cadena MDX como un argumento a la *controlador de consultas SSAS* en el **olapR** paquete. La función envía la consulta al servidor de Analysis Services especificado y devuelve los resultados a R, suponiendo que tenga permisos para consultar el cubo por supuesto.
+    Después de compilar el MDX con cualquier utilidad de cliente, como SSMS o Excel, guarde la cadena de consulta. Proporcione esta cadena MDX como un argumento a la *controlador de consultas SSAS* en el **olapR** paquete. El proveedor envía la consulta al servidor de Analysis Services especificado y devuelve los resultados para R. 
 
 Para obtener ejemplos de cómo compilar un MDX consulta o ejecutan una consulta MDX existente, consulte [cómo crear consultas MDX mediante R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md).
 
@@ -80,40 +78,50 @@ Para obtener ejemplos de cómo compilar un MDX consulta o ejecutan una consulta 
 
 Esta sección enumeran algunos problemas conocidos y preguntas comunes sobre la **olapR** paquete.
 
-### <a name="tabular-models-are-not-supported"></a>No se admiten los modelos tabulares
+### <a name="tabular-model-support"></a>Compatibilidad con los modelos tabulares
 
-Si se conecta a una instancia de Analysis Services que contiene un modelo tabular, el `explore` función devuelve el estado correcto con un valor devuelto de TRUE. Sin embargo, los objetos del modelo tabular no son un tipo compatible y no se puede explorar.
+Si se conecta a una instancia de Analysis Services que contiene un modelo tabular, el `explore` función devuelve el estado correcto con un valor devuelto de TRUE. Sin embargo, los objetos del modelo tabular son diferentes de objetos multidimensionales, y la estructura de una base de datos multidimensional es diferente de un modelo tabular.
 
-Además, si diseña una consulta MDX válida en un modelo tabular (mediante el uso de una herramienta externa) y, a continuación, pegue la consulta en esta API, la consulta devuelve un resultado nulo y no notifica un error.
+Aunque DAX (expresiones de análisis de datos) es el lenguaje que se suele utilizado con los modelos tabulares, puede diseñar consultas MDX válidas en un modelo tabular, si ya está familiarizado con MDX. No puede usar los constructores olapR para generar consultas MDX válidas en un modelo tabular.
 
-Si tiene que extraer datos de un modelo tabular para su uso en R, considere las siguientes opciones:
+Sin embargo, las consultas MDX son una manera eficaz para recuperar datos de un modelo tabular. Si necesita obtener datos de un modelo tabular para su uso en R, considere la posibilidad de estos métodos en su lugar:
 
 + Habilitar DirectQuery en el modelo y agregar el servidor como un servidor vinculado en SQL Server. 
 + Si el modelo tabular se basa en un puesto de datos relacionales, obtenga los datos directamente desde el origen.
 
 ### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>Cómo determinar si una instancia contiene los modelos tabulares o multidimensionales
 
-Hay diferencias fundamentales entre los modelos tabulares y modelos multidimensionales que afectan a la forma que los datos se almacenan y procesan. Por ejemplo, los modelos tabulares se almacenan en memoria y aprovechan los índices de almacén de columnas para realizar cálculos muy rápidos. En modelos multidimensionales, se almacenan datos en disco y las agregaciones se definen de antemano y se recuperan mediante el uso de consultas MDX.
-
-Por esta razón, una única instancia de Analysis Services puede contener un solo tipo de modelo. Vea el artículo siguiente para obtener más sugerencias acerca de cómo distinguir los dos tipos de modelos:
-
-+ [Comparación de modelos multidimensionales y tabulares](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+Una única instancia de Analysis Services puede contener un solo tipo de modelo, aunque puede contener varios modelos. La razón es que hay diferencias fundamentales entre los modelos tabulares y los modelos multidimensionales que controlan la forma en que se almacenan los datos y se procesan. Por ejemplo, los modelos tabulares se almacenan en memoria y aprovechan los índices de almacén de columnas para realizar cálculos muy rápidos. En modelos multidimensionales, se almacenan datos en disco y las agregaciones se definen de antemano y se recuperan mediante el uso de consultas MDX.
 
 Si se conecta a Analysis Services mediante un cliente como SQL Server Management Studio, puede indicar un vistazo qué tipo de modelo se admite, examinando el icono de la base de datos.
 
-También puede ver las propiedades del servidor. El **modo de servidor** propiedad es compatible con dos valores: _multidimensionales_ o _tabular_.
+También puede ver y consultar las propiedades del servidor para determinar qué tipo de modelo de la instancia admite. El **modo de servidor** propiedad es compatible con dos valores: _multidimensionales_ o _tabular_.
 
-Para obtener más información acerca de cómo comprobar el tipo de servidor mediante la propiedad de servidor, consulte [OLE DB para OLAP Schema Rowsets](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
+Vea el artículo siguiente para obtener información general acerca de los dos tipos de modelos:
+
++ [Comparación de modelos multidimensionales y tabulares](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+
+Vea el artículo siguiente para obtener información sobre cómo consultar las propiedades del servidor:
+
++ [OLE DB para los conjuntos de filas de esquema OLAP](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### <a name="writeback-is-not-supported"></a>No se admite la reescritura
 
 No es posible volver a escribir los resultados de cálculos de R personalizados en el cubo.
 
-En general, incluso si un cubo está habilitado para la escritura diferida, se admiten solo las operaciones limitadas y podría ser necesaria una configuración adicional. Se recomienda utilizar MDX para estas operaciones.
+En general, incluso si un cubo está habilitado para la escritura diferida, se admiten solo las operaciones limitadas y podría ser necesaria una configuración adicional. Se recomienda utilizar MDX para tales operaciones.
 
 + [Dimensiones habilitadas para escritura](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
 + [Particiones habilitadas para escritura](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
 + [Configurar el acceso personalizado a datos de celda](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
+
+### <a name="long-running-mdx-queries-block-cube-processing"></a>Las consultas MDX de larga ejecución bloquee el procesamiento de cubos
+
+Aunque la **olapR** paquete realiza solo las operaciones de lectura, las consultas MDX pueden crear bloqueos que impiden que se procese el cubo de ejecución prolongada. Pruebe siempre las consultas MDX de antemano para que sepa que se debe devolver la cantidad de datos.
+
+Si intenta conectarse a un cubo que se bloquea, podría obtener un error que no se puede alcanzar el almacén de datos de SQL Server. Las resoluciones sugeridas incluyen la habilitación de las conexiones remotas, comprobando el servidor o nombre de instancia y así sucesivamente; Sin embargo, considere la posibilidad de una conexión abierta anterior.
+
+Un administrador SSAS puede evitar problemas de bloqueo mediante la identificación y terminar sesiones abiertas. Una propiedad de tiempo de espera también puede aplicarse a las consultas MDX en el nivel de servidor para forzar la finalización de todas las consultas de larga duración.
 
 ## <a name="resources"></a>Recursos
 

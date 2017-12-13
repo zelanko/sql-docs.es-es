@@ -2,12 +2,12 @@
 title: Elemento ColumnID (ColumnBinding) (ASSL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d13ccee573076a8b56071601d86c693240621d1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8770dff41d52939a3d8c311674d816bb1a16257f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="columnid-element-columnbinding-assl"></a>Elemento ColumnID (ColumnBinding) (ASSL)
-  Contiene el identificador (Id.) de la columna de la tabla a la que se enlaza el elemento de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene el identificador (ID) de la columna de la tabla a la que está enlazado el elemento de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   

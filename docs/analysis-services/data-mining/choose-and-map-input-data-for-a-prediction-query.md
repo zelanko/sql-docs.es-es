@@ -2,12 +2,12 @@
 title: "Elegir y asignar datos de entrada para una consulta de predicción | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
-  Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Crear predicciones a partir de un modelo de minería de datos, generalmente se realiza esto proporcionando datos nuevos en el modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Algunas veces, los datos que necesita se encuentran en varias tablas en una combinación de uno a varios. Es el caso de los datos usados para los modelos de asociación o los modelos de clústeres de secuencia, que usan una tabla de casos vinculada a una tabla anidada que contiene detalles sobre productos o transacciones. Si el modelo usa una estructura de tabla de casos anidados, los datos usados para la predicción también deben tener dicha estructura.  
   

@@ -2,12 +2,12 @@
 title: "Suplantación en los modelos tabulares de Analysis Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>Suplantación 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Este tema proporciona a los autores de modelos tabulares una descripción de cómo las credenciales de inicio de sesión se usa Analysis Services cuando se conecta a un origen de datos para importar y procesar (actualizar) los datos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema proporciona a los autores de modelos tabulares una descripción de cómo las credenciales de inicio de sesión se usa Analysis Services cuando se conecta a un origen de datos para importar y procesar (actualizar) los datos.  
 
 ##  <a name="bkmk_conf_imp_info"></a>Configurar la suplantación  
  El lugar y en qué contexto existe un modelo determina cómo se configura la información de suplantación. Al crear un nuevo proyecto de modelo, la suplantación se configura en SQL Server Data Tools (SSDT) cuando se conecta a un origen de datos para importar datos. Una vez implementado un modelo, suplantación puede configurarse en la propiedad de cadena de conexión de base de datos de modelo mediante el uso de SQL Server Management Studio (SSMS). Para los modelos tabulares en Analysis Services de Azure, puede usar SSMS o **ver como: Script** modo en el diseñador basado en navegador para editar el archivo Model.bim en JSON.

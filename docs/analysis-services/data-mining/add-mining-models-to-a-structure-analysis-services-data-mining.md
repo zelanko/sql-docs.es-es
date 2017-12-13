@@ -2,12 +2,12 @@
 title: "Agregar modelos de minería de datos a una estructura (Analysis Services: minería de datos) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Agregar modelos de minería de datos a una estructura (Analysis Services - Minería de datos)
-  Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una estructura de minería de datos está pensada para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
   
 ## <a name="adding-new-mining-models"></a>Agregar nuevos modelos de minería de datos  
  Si utiliza el Asistente para minería de datos para crear un nuevo modelo de minería de datos, de forma predeterminada, primero siempre debe crear una estructura de minería de datos. El asistente le ofrece la posibilidad de agregar un modelo de minería de datos inicial a la estructura. Sin embargo, no es necesario crear un modelo de manera inmediata. Si solo crea la estructura, no necesita tomar una decisión sobre qué columna debe utilizar como atributo de predicción, o sobre cómo utilizar los datos en un modelo determinado. En su lugar, solo tiene que establecer la estructura de datos general que desea utilizar en el futuro; más adelante puede utilizar [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) para agregar nuevos modelos de minería de datos basados en dicha estructura.  

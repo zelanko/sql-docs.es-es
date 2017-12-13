@@ -2,12 +2,12 @@
 title: Algoritmo de red neuronal de Microsoft | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Algoritmo de red neuronal de Microsoft
-  El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una implementación de la popular arquitectura de red neuronal adaptable para el aprendizaje automático.  El algoritmo prueba cada posible estado del atributo de entrada con cada posible estado del atributo de predicción, y calcula las probabilidades de cada combinación según los datos de aprendizaje. Puede usar estas probabilidades para tareas de clasificación o regresión, así como para predecir un resultado en función de algunos atributos de entrada. También se puede usar una red neuronal para el análisis de asociación.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal es una implementación de la arquitectura de red neuronal adaptables y popular para el aprendizaje automático.  El algoritmo prueba cada posible estado del atributo de entrada con cada posible estado del atributo de predicción, y calcula las probabilidades de cada combinación según los datos de aprendizaje. Puede usar estas probabilidades para tareas de clasificación o regresión, así como para predecir un resultado en función de algunos atributos de entrada. También se puede usar una red neuronal para el análisis de asociación.  
   
  Cuando se crea un modelo de minería de datos con el algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , puede incluir varias salidas y el algoritmo creará varias redes. El número de redes incluidas en un modelo de minería de datos depende del número de estados (o valores de atributo) de las columnas de entrada, así como del número de columnas de predicción que usa el modelo de minería de datos y el número de estados de dichas columnas.  
   

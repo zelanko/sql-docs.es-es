@@ -2,12 +2,12 @@
 title: Trabajar con conjuntos de filas de esquema en ADOMD.NET | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Recuperar metadatos: trabajar con conjuntos de filas de esquema
-  Si necesita más metadatos de los que hay disponibles en el modelo de objetos ADOMD.NET, ADOMD.NET proporciona la capacidad de recuperar toda la variedad disponible de conjuntos de filas de esquema de XML for Analysis (XMLA), OLE DB, OLE DB para OLAP y OLE DB para minería de datos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si necesita más metadatos de los que está disponible en el modelo de objetos ADOMD.NET, ADOMD.NET proporciona la capacidad de recuperar el intervalo completo de XML para Analysis (XMLA), OLE DB, OLE DB para OLAP y OLE DB para minería de datos de conjuntos de filas de esquema:  
   
  **XML de metadatos de análisis**  
  Los conjuntos de filas de esquema de XML for Analysis proporcionan un método para recuperar información de bajo nivel sobre el servidor. Entre la información disponible se incluyen los orígenes de datos disponibles en el servidor, las palabras clave reservadas por el proveedor, los literales admitidos por el proveedor, etc. Incluso puede utilizar un conjunto de filas de esquema de XML for Analysis para detectar todos los conjuntos de filas de esquema admitidos por el proveedor.  

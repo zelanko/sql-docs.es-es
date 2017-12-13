@@ -2,12 +2,12 @@
 title: El modo DirectQuery | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,17 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9bd8eb8e3bd0f313fec3e2d0228fb04e08cb6199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="directquery-mode"></a>Modo DirectQuery
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Este tema se describe *directquerymode* para los modelos tabulares de Analysis Services en los niveles de compatibilidad 1200 y versiones posteriores. El modo DirectQuery se puede activar para modelos que diseñe en SSDT, o bien para modelos tabulares que ya se hayan implementado, puede cambiar al modo DirectQuery en SSMS. Antes de elegir el modo DirectQuery, es importante comprender las ventajas y las limitaciones.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema se describe *directquerymode* para los modelos tabulares de Analysis Services en los niveles de compatibilidad 1200 y versiones posteriores. El modo DirectQuery se puede activar para modelos que diseñe en SSDT, o bien para modelos tabulares que ya se hayan implementado, puede cambiar al modo DirectQuery en SSMS. Antes de elegir el modo DirectQuery, es importante comprender las ventajas y las limitaciones.
   
 ##  <a name="bkmk_Benefits"></a> Ventajas
  De forma predeterminada, los modelos tabulares utilizan una caché en memoria para almacenar los datos y realizar consultas en ellos. Cuando los datos de consultas de modelos tabulares residen en memoria, incluso las consultas complejas se pueden ejecutar con increíble rapidez. Pero hay algunas limitaciones para el uso de datos en caché. Es decir, los conjuntos de datos de gran tamaño pueden superar la cantidad de memoria disponible y los requisitos de actualización de datos pueden ser difíciles (por no decir imposibles) de cumplir en una programación de procesamiento normal.  

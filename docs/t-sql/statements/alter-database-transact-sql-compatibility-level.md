@@ -1,7 +1,7 @@
 ---
 title: MODIFICAR el nivel de compatibilidad de base de datos (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62a9e4eec99073e63d53c2d610a7527fbe5f9c91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,15 +102,7 @@ SELECT name, compatibility_level FROM sys.databases;
  Si existen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicaciones se ven afectadas por las diferencias de comportamiento en la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], convertir la aplicación para trabajar sin problemas con el nuevo modo de compatibilidad. A continuación, utilice **ALTER DATABASE** para cambiar el nivel de compatibilidad a 130. La nueva configuración de compatibilidad de una base de datos surte efecto cuando un **base de datos de uso** emitido o un nuevo inicio de sesión se procesa con esa base de datos como la base de datos de forma predeterminada.  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Si se cambia el nivel de compatibilidad mientras hay usuarios conectados a la base de datos, pueden producirse conjuntos de resultados incorrectos para las consultas activas. Por ejemplo, si el nivel de compatibilidad cambia mientras se está compilando un plan de consulta, es posible que el plan compilado se base en los niveles de compatibilidad nuevo y antiguo, lo que produciría un plan incorrecto y, posiblemente, resultados imprecisos. Además, el problema puede agravarse si se coloca el plan en la memoria caché de plan y se reutiliza en consultas sucesivas. Para evitar resultados de consulta no exactos, se recomienda el siguiente procedimiento para cambiar el nivel de compatibilidad de una base de datos:  
-  
-1.  Establezca la base de datos en modo de acceso de usuario único mediante ALTER DATABASE SET SINGLE_USER.  
-  
-2.  Cambie el nivel de compatibilidad de la base de datos.  
-  
-3.  Coloque la base de datos en modo de acceso multiusuario mediante ALTER DATABASE SET MULTI_USER.  
-  
-4.  Para obtener más información acerca de cómo establecer el modo de acceso de una base de datos, vea [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+Para el flujo de trabajo recomendado para actualizar el nivel de compatibilidad, vea [cambiar el modo de compatibilidad de base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>Niveles de compatibilidad y procedimientos almacenados  
  Cuando se ejecuta un procedimiento almacenado, se utiliza el nivel de compatibilidad actual de la base de datos en la que se define. Cuando se cambia el nivel de compatibilidad de una base de datos, todos sus procedimientos almacenados se vuelven a compilar de forma automática según sea necesario.  

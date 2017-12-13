@@ -2,12 +2,12 @@
 title: Acciones (Analysis Services - datos multidimensionales) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8880e5f1dd0f2d2163fecbf33d08fb5162c7ddc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
-  Las acciones pueden ser de tipos diferentes y se deben crear como corresponda. Las acciones pueden ser:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las acciones pueden ser de tipos diferentes y se deben crear como corresponda. Las acciones pueden ser:  
   
 -   Acciones de obtención de detalles, que devuelven el conjunto de filas que representa los datos subyacentes de las celdas seleccionadas del cubo donde se produce la acción.  
   

@@ -2,12 +2,12 @@
 title: "Tareas y procedimientos de consulta de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2be13f6662ad2ed4d3cdae60eb1cc7ac458f62a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tareas y procedimientos de Consulta de minería de datos
-  La capacidad de crear consultas es esencial para usar los modelos de minería de datos. En esta sección se proporcionan enlaces a ejemplos de cómo crear consultas sobre un modelo de minería de datos usando las herramientas proporcionadas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Si necesita más información sobre qué es una consulta de minería de datos o los tipos diferentes de consultas que puede crear, vea [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La capacidad de crear consultas es esencial hacer uso de los modelos de minería de datos. En esta sección se proporcionan enlaces a ejemplos de cómo crear consultas sobre un modelo de minería de datos usando las herramientas proporcionadas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Si necesita más información sobre qué es una consulta de minería de datos o los tipos diferentes de consultas que puede crear, vea [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md).  
   
 ## <a name="creating-queries-with-prediction-query-builder"></a>Crear consultas mediante el Generador de consultas de predicción  
  El Generador de consultas de predicción se proporciona en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como una manera de generar consultas gráficamente sobre modelos de minería de datos. Los siguientes temas explican cómo puede seleccionar un modelo, especificar un origen de datos, personalizar las predicciones y guardar la salida.  

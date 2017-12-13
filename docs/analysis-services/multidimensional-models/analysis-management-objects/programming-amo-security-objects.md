@@ -2,12 +2,12 @@
 title: Programar objetos de seguridad AMO | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b81d5b81df182309384c5d647a4251688bb1489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8733a0255c22701009baf79892d7ff6f83b9c87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-security-objects"></a>Programar objetos de seguridad AMO
-  En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programar objetos de seguridad o ejecutar aplicaciones que usan objetos de seguridad AMO requiere ser miembro del grupo Administrador del servidor o el grupo de administradores de base de datos. Administrador del servidor y Administrador de base de datos son un acceso niveles proporcionado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programar objetos de seguridad o ejecutar aplicaciones que usan objetos de seguridad AMO requiere ser miembro del grupo Administrador del servidor o el grupo de administradores de base de datos. Administrador del servidor y Administrador de base de datos son un acceso niveles proporcionado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  En [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], el acceso de usuario a cualquier objeto se obtiene a través de la combinación de roles y permisos que se asignan a ese objeto. Para obtener más información, consulte [clases Security de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   

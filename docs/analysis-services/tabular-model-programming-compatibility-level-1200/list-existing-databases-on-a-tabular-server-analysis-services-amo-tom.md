@@ -2,12 +2,12 @@
 title: Lista de bases de datos existentes en un servidor Tabular (Analysis Services AMO-TOM) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79563e4a6bcbcbf5aa52e903b81cb9c3fcb9639c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>Lista de bases de datos existentes en un servidor Tabular (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Cuando haya un **Server** objeto que se conecta a una instancia de Analysis Services, puede iterar sobre **Server.Databases** colección para enumerar todas las bases de datos hospedadas por la instancia de servicios de análisis. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cuando haya un **Server** objeto que se conecta a una instancia de Analysis Services, puede iterar sobre **Server.Databases** colección para enumerar todas las bases de datos hospedadas por la instancia de servicios de análisis. 
 
 El **Server.Databases** colección contiene un **base de datos** objeto para cada base de datos que se hospedan en el servidor, independientemente del modo de servidor (Multidimensional o Tabular) o el tipo de base de datos (Multidimensional, Pre-1200 tabulares, o Tabular 1200 y superior). 
 

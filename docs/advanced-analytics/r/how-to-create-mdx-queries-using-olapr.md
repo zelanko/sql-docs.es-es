@@ -17,24 +17,24 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4ee223a3c27ee35a823917f9d1aefcd8fb86e80e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 235240ef5b49e0fb08ac86e215e98907dd42880a
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Cómo crear consultas MDX mediante olapR
 
-El [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) paquete admite consultas en modelos multidimensionales hospedadas en SQL Server Analysis Services. Puede crear una consulta en un cubo existente mediante MDX, explorar las dimensiones y otros objetos de cubo y pegar en las consultas MDX existentes para recuperar los datos.
+El [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) paquete admite consultas MDX en cubos hospedadas en SQL Server Analysis Services. Puede crear una consulta en un cubo existente, explorar las dimensiones y otros objetos de cubo y pegar en las consultas MDX existentes para recuperar los datos.
 
-En este artículo se describe los dos usos principales del paquete olapR:
+Este artículo describen los dos usos principales de la **olapR** paquete:
 
-+ [Crear una consulta de R, utilizando los constructores que se proporciona en el paquete olapR](#buildMDX)
++ [Crear una consulta MDX de R, utilizando los constructores que se proporciona en el paquete olapR](#buildMDX)
 + [Ejecutar una consulta MDX existente, válida con olapR y un proveedor OLAP](#executeMDX)
 
 No se admiten las siguientes operaciones:
 
-+ Consultas en un modelo tabular
++ Consultas DAX en un modelo tabular
 + Creación de nuevos objetos OLAP
 + Reescritura en particiones, incluidas las medidas o sumas
 
@@ -48,7 +48,7 @@ No se admiten las siguientes operaciones:
 
 4. Use las siguientes funciones auxiliares para proporcionar más detalles sobre las dimensiones y las medidas que se deben incluir en la consulta MDX:
 
-     + `cube()` : especifique el nombre de la base de datos SSAS.
+     + `cube()` : especifique el nombre de la base de datos SSAS. Si se conecta a una instancia con nombre, proporcione el nombre del equipo y el nombre de la instancia. 
      + `columns()`Proporcionar los nombres de las medidas deben utilizarse en el **ON columnas** argumento.
      + `rows()`Proporcionar los nombres de las medidas deben utilizarse en el **ON filas** argumento.
      + `slicers()` : especifique un campo o los miembros que se usarán como segmentación. Una segmentación se parece a un filtro que se aplica a todos los datos de consulta MDX.
@@ -59,7 +59,7 @@ No se admiten las siguientes operaciones:
          
          Si la consulta es relativamente sencilla, puede usar las funciones `columns`, `rows`, etc. para crear la consulta. También puede usar la función `axis()` con un valor de índice distinto de cero para crear una consulta MDX con varios calificadores o para agregar dimensiones adicionales como calificadores.
 
-5. Pase el identificador y la consulta MDX completada en las funciones `executeMD` o `execute2D`, en función de la forma de los resultados.
+5. Pase el identificador y la consulta MDX completada, en una de las funciones siguientes, dependiendo de la forma de los resultados: 
 
   + `executeMD` : devuelve una matriz multidimensional
   + `execute2D` : devuelve una trama de datos bidimensional (tabular)
@@ -81,7 +81,7 @@ No se admiten las siguientes operaciones:
 
 Los ejemplos siguientes se basan en el proyecto de mart y el cubo de datos de AdventureWorks, porque ese proyecto está ampliamente disponible, en varias versiones, incluidos los archivos de copia de seguridad que se pueden restaurar fácilmente a Analysis Services. Si no dispone de un cubo existente, obtener un cubo de ejemplo que usa cualquiera de estas opciones:
 
-+ Crear el cubo que se usa en estos ejemplos, siga el tutorial de servicios de Analysinotes hasta la lección 4: [crear un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Crear el cubo que se usa en estos ejemplos, siga el tutorial de Analysis Services en la lección 4: [crear un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Descargar un cubo existente como una copia de seguridad y restaurarlo a una instancia de Analysis Services. Por ejemplo, este sitio proporciona un cubo de procesamiento completo en formato comprimido: [SQL de modelo Multidimensional de Adventure Works 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extraiga el archivo y, a continuación, restaurarla en la instancia SSAS. Para obtener más información, consulte [copias de seguridad y restauración](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), o [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
@@ -98,7 +98,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + En las columnas puede especificar varias medidas como elementos de una cadena separada por comas.
 + El eje Fila usa todos los valores posibles (todos los MIEMBROS) de la dimensión "Product Line" (Línea de productos). 
-+ Esta consulta devolvería una tabla con tres columnas, que contendría un _resumen_ de las ventas por Internet de todos los países.
++ Esta consulta devuelve una tabla con tres columnas, que contiene un _acumulación_ resumen de ventas por Internet de todos los países.
 + La cláusula WHERE especifica la _eje segmentador_. En este ejemplo, la segmentación de datos usa un miembro de la **SalesTerritory** dimensión que desea filtrar la consulta para que sólo las ventas de Australia utilizadas en los cálculos.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Para crear esta consulta con las funciones proporcionadas en olapR
@@ -115,6 +115,12 @@ slicers(qry) <- c("[Sales Territory].[Sales Territory Country].[Australia]")
 
 result1 <- executeMD(ocs, qry)
 
+```
+
+Para una instancia con nombre, asegúrese de escape los caracteres que se podrían considerar caracteres de control en R.  Por ejemplo, la cadena de conexión siguiente hace referencia a una instancia OLAP01, en un servidor denominado ContosoHQ:
+
+```R
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>Para ejecutar esta consulta como una cadena MDX predefinida
@@ -156,7 +162,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| Resultado  |  
+| Resultado  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -174,7 +180,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| Resultado  |  
+| Resultado  |
 | ----|
 | _Customer_|
 |_Date_|
@@ -183,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Para devolver todos los miembros de la jerarquía y la dimensión especificadas
 
-Después de definir el origen y de crear el identificador, especifique el cubo, la dimensión y la jerarquía que va a devolver.
+Después de definir el origen y de crear el identificador, especifique el cubo, la dimensión y la jerarquía que va a devolver. En los resultados devueltos, los elementos que tienen el prefijo  **->**  representan los elementos secundarios del miembro anterior.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -191,7 +197,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| Resultado  |  
+| Resultado  |
 | ----|
 | _Accessories_|
 |_Bikes_|
@@ -200,8 +206,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 |-> Assembly Components|
 
-
-Elementos de los resultados devueltos que tienen el prefijo  **->**  representan los elementos secundarios del miembro anterior.
 
 ## <a name="see-also"></a>Vea también
 

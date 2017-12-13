@@ -2,12 +2,12 @@
 title: "Códigos de tipo que se utilizan en los seguimientos de objeto de Analysis Services | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados en seguimientos
-  En esta página se indica el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services. Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta página enumera el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services. Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
   
 > [!NOTE]  
 >  Aquí se enumeran más códigos de los que realmente aparecerán en un registro de seguimiento. La lista que aparece a continuación es una lista exhaustiva de los códigos de tipo para cada objeto, pero solo los objetos que llevan bloqueo presentarán un código de tipo de objeto en un registro de seguimiento.  

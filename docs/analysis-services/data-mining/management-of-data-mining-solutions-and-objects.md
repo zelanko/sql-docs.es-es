@@ -2,12 +2,12 @@
 title: "Administración de soluciones de minería de datos y objetos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas de cliente que puede usar para administrar las estructuras de minería de datos existentes y los modelos de minería de datos. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
   
  Además de estas herramientas, puede administrar los objetos de minería de datos mediante programación con AMO, o utilizar otros clientes que puedan conectarse con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como, por ejemplo, los complementos de minería de datos para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   

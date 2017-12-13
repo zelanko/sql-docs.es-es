@@ -2,12 +2,12 @@
 title: Las clases fundamentales de AMO | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5323ecb7ac5acc40964357e57ce86f6538313ea9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ffdb76b0fa396430c913cfb081e7ca5f6f27b0b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-fundamental-classes"></a>Clases fundamentales de AMO
-  Las clases fundamentales son el punto inicial cuando se trabaja con AMO (Objetos de administración de análisis). A través de estas clases puede establecer su entorno para el resto de los objetos que se usarán en su aplicación. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Clases fundamentales son el punto de partida para trabajar con objetos de administración de análisis (AMO). A través de estas clases puede establecer su entorno para el resto de los objetos que se usarán en su aplicación. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
  La ilustración siguiente muestra la relación de las clases que se explican en este tema.  
   

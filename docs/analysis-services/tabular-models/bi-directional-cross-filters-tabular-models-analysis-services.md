@@ -2,12 +2,12 @@
 title: -Modelos tabulares - Analysis Services los filtros cruzados bidireccionales | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>-Modelos tabulares - Analysis Services los filtros cruzados bidireccionales
-  Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para permitir los *filtros cruzados bidireccionales* en los modelos tabulares, lo que elimina la necesidad de usar soluciones DAX manuales para propagar el contexto de filtro en las relaciones entre tablas.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nuevo en SQL Server 2016 es un enfoque integrado para permitir *bidireccional filtros cruzados* en los modelos tabulares, eliminando la necesidad de usar soluciones DAX manuales para propagar el contexto de filtro en relaciones de tabla.  
   
  Si descomponemos el concepto en sus componentes, el *filtrado cruzado* es la capacidad de establecer un contexto de filtro en una tabla en función de los valores de una tabla relacionada, mientras que la transferencia de un contexto de filtro a una segunda tabla relacionada en el otro lado de una relación de tabla es *bidireccional* . Como su nombre indica, es posible realizar la segmentación en ambas direcciones de la relación, en lugar de en una sola.  Internamente, el filtrado bidireccional expande el contexto de filtro para consultar un superconjunto de los datos.  
   

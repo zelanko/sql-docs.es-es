@@ -2,12 +2,12 @@
 title: "Atributos CSDLBI para el diseño de informes | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,19 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para el diseño de informes
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  En esta sección se describen los atributos de las extensiones de CSDL para la creación de modelos tabulares que afectan al diseño de consultas de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En esta sección se describe los atributos de las extensiones de CSDL para la creación de modelos tabulares que afectan a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diseño de consultas.  
   
-## <a name="model-attributes"></a>Atributos del modelo  
+## <a name="model-attributes"></a>Model Attributes  
  Estos atributos se definen en un subelemento de un elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
   
 |Nombre del atributo|Tipo de datos|Descripción|  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**Alignment**|Enum|Valor que indica cómo los valores del campo se deben alinear en una presentación tabular. Los valores posibles son: **Default**, **Center**, **Left**o **Right**. Si se omite, se determina la alineación basándose en el tipo de datos del campo de forma predeterminada.|  
 |**FormatString**|Texto|Cadena de formato de .NET Framework que indica cómo se debe dar formato al valor del campo de forma predeterminada. Si se omite, se supone que se usa el formato siguiente:<br /><br /> Campos - fecha y hora: fecha corta regional o "d"<br /><br /> -Función de agregado campos punto flotante y campos enteros con un valor predeterminado: número regional o "n"<br /><br /> -Función de agregado de enteros no tiene ningún valor predeterminado: número decimal regional o "d"<br /><br /> Para todos los demás tipos de campos, no se aplica ninguna cadena de formato.|  
 |**Unidades**|Texto|Símbolo que se aplica a los valores de los campos para expresar unidades. Si se omite, se supone que las unidades son desconocidas.|  
-|**Ancho**|Integer|Anchura preferida en caracteres que debe reservar para mostrar los valores del campo en una presentación tabular. Si se omite, la anchura predeterminada se basa en el tipo de datos del campo.|  
+|**Width**|Integer|Anchura preferida en caracteres que debe reservar para mostrar los valores del campo en una presentación tabular. Si se omite, la anchura predeterminada se basa en el tipo de datos del campo.|  
 |**SortDirection**|Enum|Valor que indica cómo se suelen ordenar los valores de los campos. Los valores posibles son: **Default**, **Ascending**o **Descending**. Si se omite, el valor predeterminado asigna una dirección de ordenación basándose en el tipo de datos del campo.|  
 |**IsRightToLeft**|Boolean|Indica si el campo contiene texto que se debe leer de derecha a izquierda. Si se omite, se supone que se debe usar la configuración del modelo.|  
 |**OrderBy**|MemberRef|Referencia a otro campo dentro del modelo que define la ordenación de los valores de este campo. Los valores de los dos campos deben tener una asignación 1:1, o la ordenación quedará indefinida. Si se omite, el campo se ordena basándose en su propio valor.|  

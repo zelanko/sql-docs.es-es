@@ -2,12 +2,12 @@
 title: Migrar de ADO MD a ADOMD.NET | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4b442d18188a5ba57066d6c9f3b2f1c2bdd18f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a67be24e9b9b9abeb2fb3c09d11e60cc4c18597c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Migrar de ADO MD a ADOMD.NET
-  La biblioteca de ADOMD.NET es similar a la biblioteca de ActiveX Data Objects Multidimensional (ADO MD), una extensión de la biblioteca de Objetos de datos ActiveX (ADO) que se utiliza para tener acceso a datos multidimensionales en aplicaciones cliente basadas en el Modelo de objetos componentes (COM). ADO MD proporciona un acceso fácil a los datos multidimensionales de lenguajes no administrados como C++ y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET proporciona un acceso fácil a los datos analíticos (tanto multidimensionales como de minería de datos) de lenguajes administrados como [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Además, ADOMD.NET proporciona un modelo de objetos de metadatos mejorado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La biblioteca de ADOMD.NET es similar a la biblioteca de ActiveX Data Objects Multidimensional (ADO MD), una extensión de la biblioteca de ActiveX Data Objects (ADO) que se utiliza para tener acceso a datos multidimensionales en aplicaciones de cliente basada en COM Component Object Model. ADO MD proporciona un acceso fácil a los datos multidimensionales de lenguajes no administrados como C++ y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET proporciona un acceso fácil a los datos analíticos (tanto multidimensionales como de minería de datos) de lenguajes administrados como [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Además, ADOMD.NET proporciona un modelo de objetos de metadatos mejorado.  
   
  Migrar las aplicaciones cliente existentes de ADO MD a ADOMD.NET resulta fácil, pero hay varias diferencias importantes con respecto a la migración:  
   

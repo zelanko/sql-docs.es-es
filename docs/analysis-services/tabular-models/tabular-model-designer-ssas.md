@@ -1,12 +1,12 @@
 ---
 title: "Diseñador de modelos tabulares | Documentos de Microsoft"
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>Diseñador de modelos tabulares (SSAS)
-El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con plantillas adicionales de tipo de proyecto para el desarrollo específico de soluciones de modelos tabulares profesionales.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se instala como una descarga web gratuita. Vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) para más información.    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]El Diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con plantillas de tipo de proyecto adicionales específicamente para desarrollar soluciones de modelos tabulares profesionales.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se instala como una descarga web gratuita. Vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) para más información.    
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se agregan nuevas plantillas de proyecto para crear modelos tabulares a los tipos de proyecto disponibles. Una vez creado un proyecto de modelo tabular mediante una de las plantillas, puede empezar a crear modelos mediante las herramientas y los asistentes del diseñador de modelos tabulares.  

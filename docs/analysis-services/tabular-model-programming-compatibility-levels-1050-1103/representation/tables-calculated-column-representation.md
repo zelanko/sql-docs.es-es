@@ -2,12 +2,12 @@
 title: "Calcula la representación de la columna (Tabular) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1817234c6a3061afc53377053725009babbcc84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b781ff43a5fbcbb9d8a2a58837a1546724e2338
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---calculated-column-representation"></a>Tablas: representación de la columna calculada
-  Una columna calculada es una expresión de DAX que crea una nueva columna en una tabla, en la que se almacenan los valores obtenidos. La expresión de columna calculada se evalúa cada vez que se procesa la tabla.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Una columna calculada es la expresión de DAX que crea una nueva columna en una tabla y los valores obtenidos se almacenan en la tabla. La expresión de columna calculada se evalúa cada vez que se procesa la tabla.  
   
 ## <a name="calculated-column-representation"></a>Representación de la columna calculada  
   

@@ -2,12 +2,12 @@
 title: "Agregar una tabla anidada a una estructura de minería de datos | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95bac11034fd091d9390a618568a6b58e6067dcf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779df394f1ce179c07292723200a7405d4648ec8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Agregar una tabla anidada a una estructura de minería de datos
-  El Diseñador de minería de datos puede utilizarse para agregar una estructura de minería de datos después de haber sido creada por el Asistente para minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizar el Diseñador de minería de datos para agregar una tabla anidada a una estructura de minería de datos una vez creada por el Asistente para minería de datos.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Para agregar una tabla anidada a una estructura de minería de datos  
   

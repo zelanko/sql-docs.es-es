@@ -2,12 +2,12 @@
 title: "Propiedades de la estructura de minería de datos y columnas de la estructura | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propiedades de estructuras de minería de datos y columnas de estructuras
-  Puede establecer o cambiar las propiedades de una estructura de minería de datos, y de sus columnas y tablas anidadas asociadas, mediante la pestaña **Estructura de minería de datos** del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede establecer o cambiar las propiedades de una estructura de minería de datos y de sus columnas asociadas y tablas anidadas mediante el **estructura de minería de datos** pestaña del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
   
 > [!NOTE]  
 >  Si cambia el valor de cualquier propiedad de la estructura de minería de datos, incluso los metadatos como un nombre o una descripción, es necesario volver a procesar la estructura de minería de datos y sus modelos para ver o consultar el modelo.  

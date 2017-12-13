@@ -2,12 +2,12 @@
 title: Aplicar filtros para modelar los datos de prueba | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0a9ffaeaeaffb9a93e36f865a6b3e7a0647befa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a los datos de prueba del modelo
-  Al especificar un origen de datos externo que se va a utilizar para probar un modelo, opcionalmente puede aplicar un filtro para restringir los datos de entrada. Por ejemplo, es posible que desee probar el modelo específicamente para realizar predicciones para los clientes con a un intervalo de ingresos determinado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Al especificar un origen de datos externos a utilizar para probar un modelo, opcionalmente puede aplicar un filtro para restringir los datos de entrada. Por ejemplo, es posible que desee probar el modelo específicamente para realizar predicciones para los clientes con a un intervalo de ingresos determinado.  
   
  Por ejemplo, en el escenario de distribución de correo directo de Adventure Works, puede crear una expresión de filtro como la siguiente en ProspectiveBuyer, que es la tabla que contiene los datos de prueba, y restringir los casos por intervalo de ingresos:  
   

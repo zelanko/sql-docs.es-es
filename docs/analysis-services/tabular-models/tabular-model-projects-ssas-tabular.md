@@ -2,12 +2,12 @@
 title: Proyectos de modelos tabulares (SSAS Tabular) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d6422eb1648f33f699525edbc944f3bc0b4c5519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Proyectos de modelos tabulares (SSAS tabular)
-  Para crear un modelo tabular, primero debe crear un proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]proporciona tres nuevas plantillas de proyectos de Business Intelligence para crear proyectos de modelos tabulares. Cada plantilla de proyectos proporciona un marco en el que se puede empezar a crear el modelo. En los temas de esta sección se describe cómo crear un proyecto de modelos tabulares mediante plantillas de proyectos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Para crear un nuevo modelo tabular, primero debe crear un nuevo proyecto de modelo tabular en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]proporciona tres nuevas plantillas de proyectos de Business Intelligence para crear proyectos de modelos tabulares. Cada plantilla de proyectos proporciona un marco en el que se puede empezar a crear el modelo. En los temas de esta sección se describe cómo crear un proyecto de modelos tabulares mediante plantillas de proyectos.  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   

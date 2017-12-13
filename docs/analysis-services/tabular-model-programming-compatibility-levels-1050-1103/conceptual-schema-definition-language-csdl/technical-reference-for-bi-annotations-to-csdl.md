@@ -2,12 +2,12 @@
 title: "Referencia técnica de anotaciones de BI para CSDL | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Referencia técnica para las anotaciones de Business Intelligence en CSDL
-  En esta sección se enumeran los elementos, los atributos y las propiedades de CSDL que se utilizan para representar los modelos tabulares de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Algunos elementos son nuevos; otros se han anotado o extendido para que admitan los modelos de Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta sección enumeran los elementos, atributos y propiedades de CSDL que se usan para representar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] los modelos tabulares. Algunos elementos son nuevos; otros se han anotado o extendido para que admitan los modelos de Business Intelligence.  
   
  Para obtener información general de los modelos tabulares y cómo se representan las entidades, relaciones y fórmulas en CSDL, vea [anotaciones de CSDL para Business Intelligence &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

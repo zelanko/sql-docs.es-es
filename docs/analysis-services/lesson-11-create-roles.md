@@ -2,12 +2,12 @@
 title: "Lección 12: Crear Roles | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 13879f3376bcfc86dc049d44f19d97ff5ee0d3d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd5cb3548313be0a8a3b2350d27b60997deec963
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-11-create-roles"></a>Lección 11: Crear Roles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -67,7 +67,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 1.  En el Administrador de roles, haga clic en **nuevo**.    
   
-2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**.  
+2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**  
   
 3.  Asignar este rol **lectura** permiso.  
   

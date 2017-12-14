@@ -1,5 +1,5 @@
 ---
-title: "Generar paquetes mediante programación | Documentos de Microsoft"
+title: "Compilar paquetes mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b80495b726ac6fdac713ba028629633bf84cc004
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88e58bc5a10c7b42f33fe1dae255114a919af556
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="building-packages-programmatically"></a>Generar paquetes mediante programación
   Si necesita crear paquetes de forma dinámica o administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular paquetes mediante programación. En este enfoque, tiene un intervalo de opciones continuo:  
@@ -38,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
  Puede utilizar el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para escribir código que cree, configure y ejecute paquetes en cualquier lenguaje de programación administrado. Por ejemplo, quizá desee crear paquetes controlados por metadatos que configuren las conexiones o los orígenes de datos, las transformaciones y los destinos basándose en el origen de datos seleccionado y en sus tablas y columnas.  
   
- En esta sección se describe y se muestra cómo crear y configurar un paquete mediante programación línea a línea. Al final del intervalo de las opciones de programación del paquete menos complejo, simplemente puede cargar y ejecutar un paquete existente sin modificación como se describe en [ejecutar y administrar paquetes mediante programación](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
+ En esta sección se describe y se muestra cómo crear y configurar un paquete mediante programación línea a línea. En el extremo menos complejo del intervalo de opciones de programación del paquete, solo tiene que cargar y ejecutar un paquete existente sin modificación como se describe en [Ejecutar y administrar paquetes mediante programación](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
   
  Una opción intermedia no descrita aquí consiste en cargar un paquete existente como una plantilla, reconfigurarlo (por ejemplo, para un origen de datos distinto) y ejecutarlo. También puede utilizar la información de esta sección para modificar los objetos existentes de un paquete.  
   
@@ -58,10 +55,10 @@ ms.lasthandoff: 08/03/2017
  [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
  Describe cómo agregar administradores de conexión a un paquete.  
   
- [Trabajar con Variables mediante programación](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
+ [Trabajar con variables mediante programación](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
  Describe cómo agregar y utilizar las variables durante la ejecución del paquete.  
   
- [Control de eventos mediante programación](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
+ [Controlar eventos mediante programación](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
  Describe cómo administrar los eventos de paquetes y tareas.  
   
  [Habilitar el registro mediante programación](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
@@ -86,11 +83,11 @@ ms.lasthandoff: 08/03/2017
  Describe cómo guardar un paquete mediante programación.  
   
 ## <a name="reference"></a>Referencia  
- [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Muestra los códigos de error predefinidos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con sus nombres simbólicos y sus descripciones.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Ampliar paquetes con Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Ampliar paquetes con scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Explica cómo extender el flujo de control mediante la tarea Script y cómo extender el flujo de datos mediante el componente de script.  
   
  [Ampliar paquetes con objetos personalizados](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
@@ -109,4 +106,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

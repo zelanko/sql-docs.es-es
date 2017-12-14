@@ -1,5 +1,5 @@
 ---
-title: "Referencia de interfaz de usuario de cuadro de diálogo de tipos de columna de sugerir | Documentos de Microsoft"
+title: "Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.suggestdatatypes.f1
+f1_keywords: sql13.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 78a2fb3483b72ff06582b8be30be2f937b2d1317
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna
   Utilice el cuadro de diálogo **Sugerir tipos de columna** para identificar el tipo de datos y la longitud de las columnas de un Administrador de conexiones de archivos planos basándose en un muestreo del contenido del archivo.  
@@ -52,8 +49,7 @@ ms.lasthandoff: 08/03/2017
  Escriba o seleccione el porcentaje de longitud de columna que se incrementará para tipos de datos de caracteres. El porcentaje debe ser un número entero.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Administrador de conexión de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
-

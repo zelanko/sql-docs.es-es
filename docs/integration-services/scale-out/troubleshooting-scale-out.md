@@ -1,97 +1,99 @@
 ---
-title: "Solución de problemas de SQL Server Integration Services (SSIS) escalada | Documentos de Microsoft"
+title: "Solución de problemas de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41bb853dd08591596f6f5baa918e174d0c26a6b5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 56d61bc6ba76514ba2291243002a7423ec8e265c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="troubleshooting-scale-out"></a>Solución de problemas de escalado horizontal
+# <a name="troubleshooting-scale-out"></a>Solución de problemas de escalabilidad horizontal
 
-SSIS horizontalmente implica communtication entre SSISDB, servicios de escala Out Master y escala Out trabajo. A veces, la comunicación se interrumpe debido a errores en la configuración, la falta de permisos de acceso y otras razones. Este documento le ayudará a solucionar problemas de la configuración horizontalmente.
+La escalabilidad horizontal de SSIS implica la comunicación entre SSISDB, el servicio del patrón de escalabilidad horizontal y el servicio del trabajo de escalabilidad horizontal. A veces, la comunicación se interrumpe debido a errores de configuración, falta de permisos de acceso y otros motivos. Este documento le ayudará a solucionar problemas de configuración de escalabilidad horizontal.
 
-Para investigar los síntomas que se produce este problema, siga los pasos siguientes uno por uno hasta que se resuelva el problema.
+Para investigar los síntomas que experimente, realice los pasos siguientes uno por uno hasta que se resuelva el problema.
 
 ### <a name="symptoms"></a>**Síntomas** 
-Escala Out maestra no se puede conectar a SSISDB. 
+El patrón de escalabilidad horizontal no se puede conectar a SSISDB. 
 
-Propiedades principales no se muestran en el administrador fuera de la escala.
+Las propiedades del patrón no se pueden mostrar en el Administrador de escalabilidad horizontal.
 
-Propiedades principales no se han rellenado [SSISDB]. [catalog]. [master_properties]
+Las propiedades del patrón no se rellenan en [SSISDB].[catalog].[master_properties]
 
 ### <a name="solution"></a>**Solución**
-Paso 1: Comprobar si está habilitada la opción horizontalmente.
+Paso 1: Comprobar si la escalabilidad horizontal está habilitada.
 
-Haga clic en **SSISDB** nodo en el Explorador de objetos de SSMS y activar **está habilitada la característica horizontalmente**.
+Haga clic con el botón derecho en el nodo **SSISDB** en el Explorador de objetos de SSMS y compruebe que la característica **Escalabilidad horizontal esté habilitada**.
 
-![Está horizontalmente habilitada](media\isenabled.PNG)
+![Escalabilidad horizontal habilitada](media\isenabled.PNG)
 
-Si el valor de propiedad es False, habilitar horizontalmente mediante una llamada a procedimiento almacenado [SSISDB]. [catalog]. [enable_scaleout].
+Si el valor de propiedad es False, habilite Escalabilidad horizontal mediante una llamada al procedimiento almacenado [SSISDB].[catalog].[enable_scaleout].
 
-Paso 2: Comprobar si el nombre de Sql Server especificado en el archivo de configuración de escala Out Master es correcta y reinicie el servicio de escala Out Master.
+Paso 2: Comprobar si el nombre de SQL Server especificado en el archivo de configuración del patrón de escalabilidad horizontal es correcto y reiniciar el servicio del patrón de escalabilidad horizontal.
 
 ### <a name="symptoms"></a>**Síntomas** 
-Escala Out trabajo no se puede conectar al maestro de salida de escala
+El trabajo de escalabilidad horizontal no puede conectarse al patrón de escalabilidad horizontal.
 
-No mostrar escala Out trabajo después de agregarlo en el administrador fuera de la escala
+El trabajo de escalabilidad horizontal no se muestra después de agregarlo en el Administrador de escalabilidad horizontal
 
-Escala Out trabajo no se muestra en [SSISDB]. [catalog]. [worker_agents]
+El trabajo de escalabilidad horizontal no se muestra en [SSISDB].[catalog].[worker_agents]
 
-Servicio de escala Out trabajo se está ejecutando, mientras escala Out trabajador está sin conexión
+El servicio del trabajo de escalabilidad horizontal se está ejecutando mientras el trabajo de escalabilidad horizontal está desconectado
 
 ### <a name="solutions"></a>**Soluciones** 
-Compruebe los mensajes de error de registro de servicio de escala Out trabajo en \<controlador\>: \Users\\*[cuenta que ejecuta el servicio de trabajo]*\AppData\Local\SSIS\Cluster\Agent.
+Compruebe los mensajes de error de registro del servicio de trabajo de escalabilidad horizontal en \<unidad\>:\Usuarios\\*[cuenta que ejecuta el servicio de trabajo]*\AppData\Local\SSIS\Cluster\Agent.
 
 **Caso** 
 
-System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en https://*[NombreDeEquipo]: [puerto]*/ClusterManagement/ que pudiera aceptar el mensaje.
+System.ServiceModel.EndpointNotFoundException: No había ningún punto de conexión escuchando en https://*[NombreDeEquipo]:[Puerto]*/ClusterManagement/ que pudiera aceptar el mensaje.
 
-Paso 1: Compruebe si el número de puerto especificado en el archivo de configuración de servicio de escala Out maestro sea correcto y reinicie el servicio de escala Out Master. 
+Paso 1: Comprobar si el número de puerto especificado en el archivo de configuración del servicio del patrón de escalabilidad horizontal es correcto y reiniciar el servicio del patrón de escalabilidad horizontal. 
 
-Paso 2: Compruebe si el punto de conexión principal especificado en la configuración de servicio de escala Out trabajo sea correcto y reinicie el servicio de escala Out trabajo.
+Paso 2: Comprobar si el punto de conexión principal especificado en la configuración del servicio del trabajo de escalabilidad horizontal es correcto y reiniciar el servicio del trabajo de escalabilidad horizontal.
 
-Paso 3: Comprobar si el puerto de firewall está abierto en el nodo de escala Out Master.
+Paso 3: Comprobar si el puerto de firewall está abierto en el nodo del patrón de escalabilidad horizontal.
 
-Paso 4: Resolver otros problemas de conexión entre el nodo de escala Out maestra y el nodo de escala Out trabajo.
+Paso 4: Resolver cualquier otro problema de conexión entre el nodo del patrón de escalabilidad horizontal y el nodo del trabajo de escalabilidad horizontal.
 
 **Caso**
 
-System.ServiceModel.Security.SecurityNegotiationException: No puede establecer una relación de confianza para el canal seguro SSL/TLS con la entidad '*[nombre máquina]: [puerto]*'. ---> System.Net.WebException: se cerró la conexión subyacente: no se pudo establecer la relación de confianza para el canal seguro SSL/TLS. ---> System.Security.Authentication.AuthenticationException: el certificado remoto no es válido de acuerdo con el procedimiento de validación.
+System.ServiceModel.Security.SecurityNegotiationException: No se puede establecer una relación de confianza para el canal seguro SSL/TLS con la entidad '*[Nombre de la máquina]:[Puerto]*'. ---> System.Net.WebException. Se cerró la conexión subyacente: No se puede establecer una relación de confianza para el canal seguro SSL/TLS. ---> System.Security.Authentication.AuthenticationException: El certificado remoto no es válido según el procedimiento de validación.
 
-Paso 1: Certificado al almacén de certificados raíz del equipo local en el nodo de escala Out trabajo escala Out maestro de instalación si no aún instalado y se reinicie el servicio de escala Out trabajo.
+Paso 1: Instalar el certificado del patrón de escalabilidad horizontal para el almacén de certificados raíz de la máquina local en el nodo de trabajo de escalabilidad horizontal si todavía no está instalado y reiniciar el servicio del trabajo de escalabilidad horizontal.
 
-Paso 2: Comprobar si el nombre de host en el extremo principal se incluye en el certificado de CNs de escala Out principal. Si no es así, restablecer el punto de conexión principal en el archivo de configuración de escala Out trabajo y reinicie el servicio de escala Out trabajo. 
+Paso 2: Comprobar si el nombre de host del punto de conexión principal está incluido en los nombres comunes del certificado del patrón de escalabilidad horizontal. Si no es así, restablezca el punto de conexión principal del archivo de configuración del trabajo de escalabilidad horizontal y reinicie el servicio del trabajo de escalabilidad horizontal. 
 
 > [!Note]
-> Si no es posible cambiar el nombre de host del extremo principal debido a la configuración de DNS, tendrá que cambiar el certificado de escala Out Master. Vea [ocuparse de certificados en SSIS horizontalmente](deal-with-certificates-in-ssis-scale-out.md).
+> Si no es posible cambiar el nombre de host del punto de conexión principal debido a la configuración de DNS, debe cambiar el certificado del patrón de escalabilidad horizontal. Consulte [Deal with certificates in SSIS Scale Out](deal-with-certificates-in-ssis-scale-out.md) (Tratar con certificados en la escalabilidad horizontal de SSIS)
 
-Paso 3: Comprobar si la huella digital maestra especificada en la configuración de escala Out trabajo coincide con la huella digital del certificado de escala Out Master. 
+Paso 3: Comprobar si la huella digital del patrón especificada en la configuración del trabajo de escalabilidad horizontal coincide con el certificado del patrón de escalabilidad horizontal de la huella digital. 
 
 **Caso**
 
-System.ServiceModel.Security.SecurityNegotiationException: No pudo establecer el canal seguro para SSL/TLS con la entidad '*[nombre máquina]: [puerto]*'. ---> System.Net.WebException: se anuló la solicitud: no se pudo crear el canal seguro SSL/TLS.
+System.ServiceModel.Security.SecurityNegotiationException: No se pudo establecer un canal seguro para SSL/TLS con la autoridad '*[Nombre de la máquina]:[Puerto]*'. ---> System.Net.WebException. Se anuló la solicitud: No se puede crear un canal seguro SSL/TLS.
 
-Paso 1: Comprobar si la cuenta que ejecuta el servicio escala Out Worker tiene acceso al certificado de escala Out trabajo mediante el siguiente comando.
+Paso 1: Comprobar si la cuenta que ejecuta el servicio del trabajo de escalabilidad horizontal tiene acceso al certificado del trabajo de escalabilidad horizontal mediante el siguiente comando.
 
 ```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-Si la cuenta no tiene acceso, concede mediante el comando siguiente y reinicie el servicio de escala Out trabajo.
+Si la cuenta no tiene acceso, concédaselo mediante el comando siguiente y reinicie el servicio del trabajo de escalabilidad horizontal.
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
@@ -99,13 +101,13 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 **Caso**
 
-System.ServiceModel.Security.MessageSecurityException: Se prohíbe la solicitud HTTP con el esquema de autenticación de cliente 'Anonymous'. ---> System.Net.WebException: el servidor remoto devolvió un error: (403) prohibido.
+System.ServiceModel.Security.MessageSecurityException: Se prohibió la solicitud HTTP con el esquema de autenticación de cliente 'Anonymous'. ---> System.Net.WebException. Error en el servidor remoto: (403) Prohibido.
 
-Paso 1: Certificado al almacén de certificados raíz del equipo local en el nodo de escala Out Master instalación escala Out trabajo si no aún instalado y se reinicie el servicio de escala Out trabajo.
+Paso 1: Instalar el certificado del trabajo de escalabilidad horizontal para el almacén de certificados raíz de la máquina local en el nodo del patrón de escalabilidad horizontal si todavía no está instalado y reiniciar el servicio del trabajo de escalabilidad horizontal.
 
-Paso 2: Limpiar inútiles certificados en el almacén de certificados raíz del equipo local en el nodo de escala Out Master.
+Paso 2: Limpiar certificados obsoletos del almacén de certificados raíz de la máquina local en el nodo del patrón de escalabilidad horizontal.
 
-Paso 3: Configurar Schannel para no volverá a enviar la lista de entidades de certificación raíz de confianza durante el proceso de negociación TLS/SSL, mediante la adición de la entrada del registro siguiente en el nodo de escala Out Master.
+Paso 3: Configurar SChannel para que deje de enviar la lista de entidades de certificación raíz de confianza durante el proceso del protocolo de enlace TLS/SSL mediante la edición de la entrada del Registro siguiente en el nodo del patrón de escalabilidad horizontal.
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -117,15 +119,15 @@ Datos del valor: 0 (False)
 
 **Caso**
 
-System.ServiceModel.CommunicationException: Se produjo un error al realizar la solicitud HTTP a https://*[nombre máquina]: [puerto]*  /ClusterManagement /. Esto puede deberse al hecho de que el certificado de servidor no está configurado correctamente con HTTP. SYS en el caso HTTPS. Esto también podría deberse a un error de coincidencia del enlace de seguridad entre el cliente y el servidor. 
+System.ServiceModel.CommunicationException: Error al realizar la solicitud HTTP a https://*[Nombre de la máquina]:[Puerto]*/ClusterManagement/. Este error puede deberse a que el certificado del servidor no está configurado correctamente con HTTP.SYS en la instrucción 'case' HTTPS. La causa puede ser también una falta de coincidencia del enlace de seguridad entre el cliente y el servidor. 
 
-Paso 1: Comprobar si escala Out Master certificado está enlazado al puerto en el punto de conexión principal correctamente en el nodo principal con el siguiente comando. Compruebe si el hash del certificado muestra coincide con la huella digital de certificado de escala Out Master.
+Paso 1: Comprobar si el certificado del patrón de escalabilidad horizontal está enlazado al puerto en el punto de conexión principal correctamente en el nodo principal con el siguiente comando. Compruebe si el hash del certificado que se muestra coincide con la huella digital del certificado del patrón de escalabilidad horizontal.
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-Si el enlace no es correcto, restablézcala con los siguientes comandos y reinicie el servicio de escala Out trabajo.
+Si el enlace no es correcto, restablézcalo con los siguientes comandos y reinicie el servicio del trabajo de escalabilidad horizontal.
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
@@ -133,33 +135,42 @@ netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate
 ```
 
 ### <a name="symptoms"></a>**Síntomas**
-No iniciar la ejecución en horizontalmente.
+Se produjo un error de validación al conectar el trabajo de escalabilidad horizontal al patrón de escalabilidad horizontal en el Administrador de escalabilidad horizontal. Mensaje de error: "No se puede abrir el almacén de certificados en la máquina".
 
 ### <a name="solution"></a>**Solución**
 
-Compruebe el estado de los equipos seleccionados para ejecutar el paquete en [SSISDB]. [catalog]. [worker_agents]. Al menos un trabajo debe estar conectado y habilitado.
+Paso 1: Ejecutar el Administrador de escalabilidad horizontal como administrador. Si lo abre con SSMS, debe ejecutar SSMS como administrador.
 
-### <a name="symptoms"></a>**Síntomas** 
-Paquetes funcionan correctamente, pero no hay ningún mensaje registrado.
-
-### <a name="solution"></a>**Solución**
-
-Compruebe si se permite la autenticación de SQL Server por el servidor Sql Server que se hospeda SSISDB.
-
-> [!Note]  
-> Si ha cambiado la cuenta para el registro horizontalmente, consulte [cambiar la cuenta para la escala fuera registro](change-logdb-account.md) y compruebe la cadena de conexión que se usa para el registro.
+Paso 2: Iniciar el servicio de Registro remoto en la máquina si no se está ejecutando.
 
 ### <a name="symptoms"></a>**Síntomas**
-Los mensajes de error en el informe de ejecución del paquete no son suficientes para solucionar el problema.
+No se inicia la ejecución en la escalabilidad horizontal.
 
 ### <a name="solution"></a>**Solución**
-Número de registros de ejecución puede encontrarse en TasksRootFolder configurado en WorkerSettings.config. De forma predeterminada, es \<controlador\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks. El *[account]* es la cuenta que ejecuta el servicio escala Out Worker con el valor predeterminado SSISScaleOutWorker140.
 
-Para buscar el registro para la ejecución del paquete con *[Id. de ejecución]*, ejecute el comando de T-SQL siguiente para obtener la *[Id. de tarea]*. A continuación, busque la subcarpeta denominada con *[Id. de tarea]* en TasksRootFolder.<sup> 1<sup>
+Compruebe el estado de las máquinas seleccionadas para ejecutar el paquete en [SSISDB].[catalog].[worker_agents]. Debe haber un trabajo en línea y habilitado como mínimo.
+
+### <a name="symptoms"></a>**Síntomas** 
+Los paquetes se ejecutan correctamente, pero no hay ningún mensaje registrado.
+
+### <a name="solution"></a>**Solución**
+
+Compruebe si se permite que el servidor de SQL Server que hospeda SSISDB realice la autenticación de SQL Server.
+
+> [!Note]  
+> Si cambió la cuenta para el registro de escalabilidad horizontal, consulte [Change the Account for Scale Out Logging](change-logdb-account.md) (Cambiar la cuenta para el registro de escalabilidad horizontal) y compruebe la cadena de conexión usada para el registro.
+
+### <a name="symptoms"></a>**Síntomas**
+Los mensajes de error del informe de ejecución del paquete no son suficientes para resolver los problemas.
+
+### <a name="solution"></a>**Solución**
+Puede encontrar más registros de ejecución en la carpeta TasksRootFolder configurada en WorkerSettings.config. De forma predeterminada, es \<unidad\>:\Usuarios\\*[cuenta]*\AppData\Local\SSIS\ScaleOut\Tasks. *[cuenta]* es la cuenta que ejecuta el servicio de trabajo de escalabilidad horizontal con el valor predeterminado SSISScaleOutWorker140.
+
+Para localizar el registro de la ejecución del paquete con *[id. de ejecución]*, ejecute el comando T-SQL siguiente para obtener el *[id. de tarea]*. A continuación, busque la subcarpeta denominada *[id. de tarea]* en TasksRootFolder.<sup>1<sup>
 
 ```sql
 SELECT [TaskId]
 FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
 ```
-<sup>1</sup> esta consulta es para solucionar problemas de propósito único y abra cambiar cuando el escenario de registro y diagnóstico para escala Out trabajador se ha mejorado en el futuro. 
+<sup>1</sup> Esta consulta está destinada solo a solucionar problemas y está abierta a cambios si el escenario de registro y diagnóstico del trabajo de escalabilidad horizontal mejora en el futuro. 

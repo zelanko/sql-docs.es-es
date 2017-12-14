@@ -1,5 +1,5 @@
 ---
-title: Roles (servicio SSIS) de Integration Services | Documentos de Microsoft
+title: Roles de Integration Services (servicio SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dtsserver.packageroles.f1
+f1_keywords: sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - security [Integration Services], roles
 - db_ssisoperator role
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0fa2a9cbc44c9f934ddde096cf22be56bf705a67
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3e618908333f48e0a86fa7974ce82f0a48293c5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-roles-ssis-service"></a>Roles de Integration Services (servicio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona determinados roles fijos a nivel de base de datos para ayudar a proteger el acceso a los paquetes almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los roles disponibles son diferentes, según si va a guardar paquetes en la base de datos de catálogo de SSIS (SSISDB) o en la base de datos msdb.  
@@ -138,8 +135,8 @@ ms.lasthandoff: 08/03/2017
   
 11. Haga clic en **Aceptar**.
 
-## <a name="roles_dialog"></a>Referencia de interfaz de usuario de cuadro de diálogo de Roles de paquete
-  Use el cuadro de diálogo **Roles de paquete**, disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para especificar los roles de base de datos que tienen acceso de lectura al paquete y los roles de base de datos que tienen acceso de escritura al paquete. Los roles de base de datos se aplican solo a paquetes almacenados en la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database.  
+## <a name="roles_dialog"></a> Referencia de la interfaz de usuario del cuadro de diálogo Roles del paquete
+  Use el cuadro de diálogo **Roles de paquete** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para especificar los roles de base de datos que tienen acceso de lectura al paquete y los roles de base de datos que tienen acceso de escritura al paquete. Los roles de base de datos se aplican solo a paquetes almacenados en la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database.  
   
  Los roles enumerados en el cuadro de diálogo son los roles de base de datos actuales de la base de datos del sistema **msdb** . Si no se seleccionan roles, se aplican los roles de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predeterminados. De manera predeterminada, el rol de lector incluye **db_ssisadmin**, **db_ssisoperator**y el usuario que creó el paquete. Un usuario que sea miembro de uno de estos roles o que haya creado los paquetes puede enumerar, ver, exportar y ejecutar paquetes. De manera predeterminada, el rol de escritor incluye **db_ssisadmin** y el usuario que creó el paquete. Un usuario que sea miembro de este rol y el usuario que creó los paquetes pueden importar, eliminar y cambiar paquetes.  
   
@@ -154,4 +151,3 @@ ms.lasthandoff: 08/03/2017
   
  **Rol de escritor**  
  Seleccione un rol de la lista.  
-

@@ -1,5 +1,5 @@
 ---
-title: Actualizar Integration Services | Documentos de Microsoft
+title: Actualizar Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,24 +17,23 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: ac549895dbe211f38529f657caa58fc766f911f0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
   Si [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o una versión posterior está instalado actualmente en el equipo, puede realizar la actualización a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  Al actualizar a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] en un equipo que tenga instalada una de estas versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] se instala en paralelo con la versión anterior.  
   
- Con esta instalación en paralelo se instalan varias versiones de la utilidad dtexec. Para asegurarse de que está ejecutando la versión correcta de la utilidad, en la línea de comandos que se ejecute la utilidad escribiendo la ruta de acceso completa (\<unidad >: \Program SQL Server\\< versión\>\DTS\Binn). Para obtener más información acerca de dtexec, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Con esta instalación en paralelo se instalan varias versiones de la utilidad dtexec. Para asegurarse de que ejecuta la versión correcta de la utilidad, escriba la ruta de acceso completa en el símbolo del sistema (\<unidad>:\Archivos de programa\Microsoft SQL Server\\<versión\>\DTS\Binn) para ejecutar la utilidad. Para obtener más información acerca de dtexec, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
 >  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando se instalaba [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todos los usuarios del grupo Usuarios tenía acceso al servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma predeterminada. Cuando instala [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los usuarios no tienen acceso al servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El servicio es seguro de forma predeterminada. Después de instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutar la herramienta de configuración de DCOM (Dcomcnfg.exe) para conceder acceso al servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a usuarios específicos. Para más información, vea [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
@@ -155,4 +153,3 @@ ms.lasthandoff: 09/26/2017
  Entrada de blog [Hacer que las extensiones y aplicaciones personalizadas existentes de SSIS funcionen en Denali](http://go.microsoft.com/fwlink/?LinkId=238157), en blogs.msdn.com.  
   
   
-

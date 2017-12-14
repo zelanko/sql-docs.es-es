@@ -1,5 +1,5 @@
 ---
-title: Destino de DataReader | Documentos de Microsoft
+title: Destino de DataReader | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.datareaderdest.f1
+f1_keywords: sql13.dts.designer.datareaderdest.f1
 helpviewer_keywords:
 - DataReader destination
 - destinations [Integration Services], DataReader
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7fd213d85558c2c9e114dc2b71854f21ac29a6c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 86e80aebc070af07e700ac24e913214500bae9f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datareader-destination"></a>DataReader, destino
   El destino de DataReader expone los datos en un flujo de datos mediante la interfaz ADO.NET **DataReader** . En ese momento los datos pueden ser usados por otras aplicaciones. Por ejemplo, puede configurar el origen de datos de un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para usar el resultado de la ejecución de un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para ello, se crea un flujo de datos que implementa el destino de DataReader.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   
-

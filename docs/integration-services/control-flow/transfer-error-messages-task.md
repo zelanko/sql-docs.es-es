@@ -1,5 +1,5 @@
 ---
-title: Transferir mensajes de Error, tarea | Documentos de Microsoft
+title: Tarea Transferir mensajes de error | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
 - sql13.dts.designer.transfererrormessagestask.general.f1
 - sql13.dts.designer.transfererrormessagestask.errormessages.F1
-helpviewer_keywords:
-- Transfer Error Messages task [Integration Services]
+helpviewer_keywords: Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 17d64ff71608c6e3bc4a260ab1c0538b7997a288
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error
   La tarea Transferir mensajes de error transfiere uno o más mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los mensajes definidos por el usuario son mensajes con un identificador igual o mayor que 50000. Los mensajes con un identificador menor que 50000 son mensajes de error del sistema, y no se pueden transferir mediante la tarea Transferir mensajes de error.  
@@ -100,14 +97,14 @@ ms.lasthandoff: 08/11/2017
  Escriba una descripción de la tarea Transferir mensajes de error.  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>Editor de la tarea Transferir mensajes de error (página Mensajes)
-  Use la página**Mensajes** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para especificar propiedades para copiar uno o varios mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra. 
+  Use la página **Mensajes** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para especificar propiedades para copiar uno o varios mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra. 
   
 ### <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión...>** para crear una conexión nueva al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión nueva al servidor de destino.  
   
  **IfObjectExists**  
  Seleccione si la tarea debe sobrescribir mensajes de error definidos por el usuario existentes, omitir mensajes existentes o generar un error si existen ya mensajes de error con el mismo nombre en el servidor de destino.  
@@ -139,4 +136,3 @@ ms.lasthandoff: 08/11/2017
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

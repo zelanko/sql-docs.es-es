@@ -1,5 +1,5 @@
 ---
-title: "Opciones de solicitud (tarea de generación de perfiles de datos) para el perfil de distribución de longitud columna | Documentos de Microsoft"
+title: "Opciones de Solicitud de perfil de distribución de longitud de columnas (tarea de generación de perfiles de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5799a96f092b7277bdeb5e7e49ca998d17f12020
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 356a85544a0ab42a7a60990aea0a18ddcfd27404
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de distribución de longitud de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de distribución de longitud de columna** seleccionadas en el panel de solicitudes. Un perfil de distribución de columnas nulas indica las diferentes longitudes de los valores de cadena de la columna seleccionada y el porcentaje de filas de la tabla que cada longitud representa. Este perfil puede ayudarle a identificar los problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos de dos caracteres y detecta valores menores de dos caracteres.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Opciones de Data  
  **ConnectionManager**  
- Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) con el fin de conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se va a generar el perfil.  
+ Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se generará el perfil.  
   
  **TableOrView**  
  Seleccione la tabla o vista existente que contenga la columna de la que se va a generar un perfil.  
@@ -87,8 +84,7 @@ ms.lasthandoff: 08/03/2017
  Indique si omitir los espacios finales cuando el perfil compara valores de cadena. El valor predeterminado de esta opción es **True**.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea &#40; de la generación de perfiles de datos Página general &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulario de perfil rápido de tabla única &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

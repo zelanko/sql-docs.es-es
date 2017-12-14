@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_environment_variable_property (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.set_environment_variable_property (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 984628f717a46de8965a0d2e9fec3d722de197ad
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 388980eede4b88a07c9b726c099133ec5cec039e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nombreDeCarpeta*  
- Nombre de la carpeta que contiene el entorno. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nombre de la carpeta que contiene el entorno. El parámetro *folder_name* es de tipo **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- El nombre del entorno. El *environment_name* es **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ El nombre del entorno. El parámetro *environment_name* es de tipo **nvarchar(128)**.  
   
- [ @variable_name =] *variable_name*  
- Nombre de la variable de entorno. El *variable_name* es **nvarchar (128)**.  
+ [ @variable_name = ] *variable_name*  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
   
- [ @property_name =] *property_name*  
- Nombre de la propiedad de variable de entorno. El *property_name* es **nvarchar (128)**.  
+ [ @property_name = ] *property_name*  
+ Nombre de la propiedad de variable de entorno. El parámetro *property_name* es de tipo **nvarchar(128)**.  
   
- [ @property_value =] *property_value*  
- Valor de la propiedad de variable de entorno. El *property_value* es **nvarchar (4000)**.  
+ [ @property_value = ] *property_value*  
+ Valor de la propiedad de variable de entorno. El parámetro *property_value* es de tipo **nvarchar(4000)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -67,9 +65,9 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   Permisos READ y MODIFY en el entorno  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -88,4 +86,3 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  En esta versión, solo se puede establecer la propiedad `Description`. El valor de la propiedad `Description` no puede superar los 4.000 caracteres.  
   
   
-

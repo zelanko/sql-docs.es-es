@@ -1,5 +1,5 @@
 ---
-title: "Destino de almacén de Azure Data Lake | Documentos de Microsoft"
+title: Destino de Azure Data Lake Store | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSDEST.F1
 - sql14.dts.designer.afpadlsdest.f1
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f8cfa5230a36a27a7e98fa6f336bcee56fa062e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9ef3c09f3afffd8a770f7279da734611216b7177
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-data-lake-store-destination"></a>Destino de Azure Data Lake Store
   El componente **Destino de Azure Data Lake Store** permite que un paquete SSIS escriba datos en un Azure Data Lake Store. Los formatos de archivo admitidos son: Text, Avro y ORC. 
   
- El **Azure Data Lake almacén Destination** es un componente de la [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+ El **Destino de Azure Data Lake Store** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
  
  >   [!NOTE]
  > Para garantizar que el Administrador de conexiones de Azure Data Lake Store y los componentes que lo utilizan (es decir, Origen de Data Lake Store y Destino de Azure Data Lake Store) se puedan conectar a los servicios, descargue la versión más reciente de Azure Feature Pack [aquí](https://www.microsoft.com/download/details.aspx?id=49492). 
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/26/2017
 3.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.  
   
   
-

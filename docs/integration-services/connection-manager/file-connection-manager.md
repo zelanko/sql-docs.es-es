@@ -1,5 +1,5 @@
 ---
-title: Administrador de conexiones de archivo | Documentos de Microsoft
+title: Administrador de conexiones de archivos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.fileconnectionmanager.f1
+f1_keywords: sql13.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 674252aaf1932465e2727ee3842dfc0031587042
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-connection-manager"></a>administrador de conexiones de archivos
   Un administrador de conexiones de archivos permite a un paquete hacer referencia a un archivo o carpeta existente o crear un archivo o carpeta en tiempo de ejecución. Por ejemplo, puede hacer referencia a un archivo de Excel. Ciertos componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan información de los archivos para realizar su trabajo. Por ejemplo, una tarea Ejecutar SQL puede hacer referencia a un archivo que contiene las instrucciones SQL que ejecuta la tarea. Otros componentes realizan operaciones en los archivos. Por ejemplo, la tarea Sistema de archivos puede hacer referencia a un archivo para copiarlo en una nueva ubicación.  
@@ -99,4 +96,3 @@ ms.lasthandoff: 08/09/2017
  Seleccione el archivo o la carpeta mediante el cuadro de diálogo **Seleccionar archivo** o **Buscar carpeta** .  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Transformación de caché | Documentos de Microsoft"
+title: "Transformación de caché | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
 - sql13.dts.designer.cachetranscon.f1
 - sql13.dts.designer.cachetransmap.f1
-helpviewer_keywords:
-- Cache transform
+helpviewer_keywords: Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: b1120ee2702b4951c91717a108997253de023d9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-transform"></a>Transformación de caché
   La transformación de caché genera un conjunto de datos de referencia para la transformación de búsqueda escribiendo datos de un origen de datos conectado del flujo de datos en un Administrador de conexiones de caché. La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de la base de datos de referencia.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 08/19/2017
   
  En un paquete único, solo una transformación de caché puede escribir datos en el mismo administrador de conexiones de caché. Si el paquete contiene varias transformaciones de caché, la primera transformación de caché a la que se llama cuando se ejecuta el paquete escribe los datos en el administrador de conexiones. Las operaciones de escritura de las transformaciones de caché posteriores producirán errores.  
   
- Para obtener más información, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Para obtener más información, vea [Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configuración de la transformación de caché  
  Puede configurar el administrador de conexiones de caché para guardar los datos en un archivo caché (.caw).  
@@ -85,4 +82,3 @@ ms.lasthandoff: 08/19/2017
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)  
   
   
-

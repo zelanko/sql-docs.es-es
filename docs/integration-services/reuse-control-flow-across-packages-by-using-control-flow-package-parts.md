@@ -1,5 +1,5 @@
 ---
-title: "Reutilización del flujo de Control en paquetes mediante el uso de elementos de paquete de flujo de Control | Documentos de Microsoft"
+title: "Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25de11d7825c2e52b8247d44ee790d21c0457468
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
   Guarde un contenedor o una tarea de flujo de control que use con frecuencia en un archivo de elemento independiente —un archivo “.dtsxp”— y reutilícelos varias veces en uno o varios paquetes mediante elementos del paquete de flujo de control. Esta reusabilidad facilita el diseño y el mantenimiento de paquetes SSIS.  
@@ -36,18 +34,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="create-a-new-control-flow-package-part"></a>Creación de un nuevo elemento del paquete de flujo de control  
  Para crear un nuevo elemento del paquete de flujo de control, en el Explorador de soluciones, expanda la carpeta **Package Parts** . Haga clic con el botón derecho en **Flujo de control** y seleccione **Nuevo elemento de paquete de flujo de control**.  
   
- ![Crear una nueva plantilla de flujo de control](../integration-services/media/control-flow-templates-create-new.png "crear una nueva plantilla de flujo de control")  
+ ![Crear una nueva plantilla de flujo de control](../integration-services/media/control-flow-templates-create-new.png "Crear una nueva plantilla de flujo de control")  
   
  Se creará un archivo de elemento con la extensión ".dtsxp" en la carpeta **Elementos del paquete | Flujo de control** . A la vez, también se agrega un nuevo elemento con el mismo nombre al cuadro de herramientas de SSIS. (El elemento del cuadro de herramientas solo está visible mientras tenga un proyecto que contenga el elemento del paquete abierto en Visual Studio).  
   
- ![Plantillas de flujo en el cuadro de herramientas de control](../integration-services/media/control-flow-templates-in-toolbox.png "plantillas de flujo en el cuadro de herramientas de Control")  
+ ![Plantillas de flujo de control en el cuadro de herramientas](../integration-services/media/control-flow-templates-in-toolbox.png "Plantillas de flujo de control en el cuadro de herramientas")  
   
 ## <a name="design-a-control-flow-package-part"></a>Diseño de un elemento del paquete de flujo de control  
  Para abrir el editor de elemento del paquete, haga doble clic en el archivo del elemento en el Explorador de soluciones. Puede diseñar el elemento de la misma forma que diseñaría un paquete.  
   
- ![Paso 1 del diseño de plantilla de flujo de control](../integration-services/media/control-flow-template-design-step-1.png "paso 1 del diseño de plantilla de flujo de control")  
+ ![Paso 1 del diseño de plantillas de flujo de control](../integration-services/media/control-flow-template-design-step-1.png "Paso 1 del diseño de plantillas de flujo de control")  
   
- ![Paso 2 de diseño de plantilla de flujo de control](../integration-services/media/control-flow-template-design-step-2.png "paso 2 del diseño de plantilla de flujo de control")  
+ ![Paso 2 del diseño de plantillas de flujo de control](../integration-services/media/control-flow-template-design-step-2.png "Paso 2 del diseño de plantillas de flujo de control")  
   
  Los elementos del paquete de flujo de control presentan las siguientes limitaciones:  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 08/03/2017
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>Acción de arrastrar y soltar un elemento del paquete de flujo de control  
  Para reutilizar un elemento en un proyecto, basta con arrastrarlo desde el cuadro de herramientas y soltarlo donde desee, al igual que sucede con cualquier otro contenedor o tarea. Puede arrastrar el elemento y colocarlo en el paquete varias veces para reutilizar la lógica en varias ubicaciones de este. Utilice este método para reutilizar un elemento que forme parte del proyecto actual.  
   
- ![Agregar una plantilla de flujo de control a un paquete](../integration-services/media/control-flow-templates-add-to-package.png "agregar una plantilla de flujo de control a un paquete")  
+ ![Agregar una plantilla de flujo de control a un paquete](../integration-services/media/control-flow-templates-add-to-package.png "Agregar una plantilla de flujo de control a un paquete")  
   
- ![Paquete con varias plantillas de flujo de control](../integration-services/media/control-flow-templates-in-package.png "paquete con varias plantillas de flujo de control")  
+ ![Paquete con varias plantillas de flujo de control](../integration-services/media/control-flow-templates-in-package.png "Paquete con varias plantillas de flujo de control")  
   
  Cuando se guarda el paquete, el Diseñador SSIS comprueba si hay alguna instancia del elemento en él.  
   
@@ -75,14 +73,14 @@ ms.lasthandoff: 08/03/2017
   
 -   Si el paquete no utiliza elementos, el diseñador elimina cualquier archivo .dtsx.designer que se haya creado con anterioridad para el paquete (es decir, cualquier archivo .dtsx.designer que tenga el mismo nombre que el paquete).  
   
- ![El Explorador de soluciones con plantillas de flujo de control](../integration-services/media/control-flow-templates-in-solution-explorer.png "el Explorador de soluciones con plantillas de flujo de control")  
+ ![Explorador de soluciones con plantillas de flujo de control](../integration-services/media/control-flow-templates-in-solution-explorer.png "Explorador de soluciones con plantillas de flujo de control")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Adición de una copia de un elemento del paquete de flujo de control existente o una referencia a un elemento existente  
  Para agregar una copia de un elemento existente en el sistema de archivos a un paquete, en el Explorador de soluciones, expanda la carpeta **Package Parts** . Haga clic con el botón derecho en **Flujo de control** y seleccione **Agregar elemento de paquete de flujo de control existente**.  
   
- ![Agregar una nueva plantillas de flujo de control en el menú](../integration-services/media/control-flow-templates-add-from-menu.png "agregar un nuevas plantillas de flujo de control en el menú")  
+ ![Agregar una nueva plantilla de flujo de control desde el menú](../integration-services/media/control-flow-templates-add-from-menu.png "Agregar una nueva plantilla de flujo de control desde el menú")  
   
- ![Cuadro de diálogo Agregar copia de las plantillas existentes](../integration-services/media/control-flow-templates-add-copy-dialog.png "cuadro de diálogo Agregar copia de plantillas existentes")  
+ ![Cuadro de diálogo Add Copy of Existing Templates (Agregar copia de las plantillas existentes)](../integration-services/media/control-flow-templates-add-copy-dialog.png "Cuadro de diálogo Add Copy of Existing Templates (Agregar copia de las plantillas existentes)")  
   
  **Opciones**  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  Utilice la pestaña **Propiedades** del cuadro de diálogo **Package Part Configuration**  (Configuración de elemento del paquete) para especificar las propiedades del elemento.  
   
- ![Ficha de propiedades del cuadro de diálogo Configuración de plantilla](../integration-services/media/template-configuration-properties-tab.png "ficha de propiedades del cuadro de diálogo Configuración de plantilla")  
+ ![Ficha Propiedades del cuadro de diálogo Configuración de plantilla](../integration-services/media/template-configuration-properties-tab.png "Ficha Propiedades del cuadro de diálogo Configuración de plantilla")  
   
  En la jerarquía de vista de árbol del panel izquierdo se enumeran todas las propiedades configurables de la instancia del elemento.  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-managers-tab"></a>Pestaña Administradores de conexiones  
  Utilice la pestaña **Administradores de conexiones** del cuadro de diálogo **Package Part Configuration**  (Configuración de elemento del paquete) para especificar las propiedades de los administradores de conexiones de la instancia del elemento.  
   
- ![Pestaña administradores de conexión del cuadro de diálogo Configuración de plantilla](../integration-services/media/template-configuration-connection-managers-tab.png "pestaña administradores de conexión del cuadro de diálogo Configuración de plantilla")  
+ ![Ficha Propiedades del cuadro de diálogo Template Configuration (Configuración de plantillas)](../integration-services/media/template-configuration-connection-managers-tab.png "Ficha Propiedades del cuadro de diálogo Template Configuration (Configuración de plantillas)")  
   
  En la tabla del panel izquierdo se enumeran todos los administradores de conexiones definidos en el elemento del flujo de control. Elija el administrador de conexiones que desea configurar.  
   
@@ -156,7 +154,6 @@ ms.lasthandoff: 08/03/2017
   
  En el siguiente diagrama se muestra la relación entre los elementos (archivos “.dtsx”), el Diseñador de SSIS y el runtime de SSIS.  
   
- ![Archivos de plantillas de flujo y el flujo de control](../integration-services/media/control-flow-templates-intro.png "archivos de plantillas de flujo y el flujo de Control")  
+ ![Archivos y flujo de plantillas de flujo de control](../integration-services/media/control-flow-templates-intro.png "Archivos y flujo de plantillas de flujo de control")  
   
   
-

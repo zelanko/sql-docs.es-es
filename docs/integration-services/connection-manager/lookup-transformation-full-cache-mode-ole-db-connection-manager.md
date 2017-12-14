@@ -1,5 +1,5 @@
 ---
-title: "Modo de caché completa de transformación de búsqueda - administrador de conexiones OLE DB | Documentos de Microsoft"
+title: "Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e038db8132d3c57a16af2a68ba9e6b57e890a444
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25e4840c5fa2b9ae98c172549467811150ec0217
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Modo de caché completa de transformación de búsqueda - administrador de conexiones OLE DB
+# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
   
  La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de un conjunto de datos de referencia. Para más información, consulte [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -90,9 +87,8 @@ ms.lasthandoff: 08/03/2017
 13. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar una transformación Búsqueda en modo de caché completa mediante el Administrador de conexiones de caché](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementar una búsqueda en modo no hay caché o caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementación de una transformación Búsqueda en el modo de caché completa con el Administrador de conexiones de caché](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

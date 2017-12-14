@@ -1,5 +1,5 @@
 ---
-title: "Trabajar con administradores de conexión mediante programación | Documentos de Microsoft"
+title: "Trabajar con administradores de conexiones mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,46 +8,42 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- connection managers [Integration Services], programming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9093b9eadce231aea248cd04c2b57dc5dd5e1a76
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5c61113cc241b20a30ac31ac6e89d82251c0dd69
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabajar con administradores de conexiones mediante programación
-  En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el método AcquireConnection de la clase del Administrador de conexión asociado es el método que llama con mayor frecuencia cuando se trabaja con administradores de conexión en código administrado. Cuando se escribe código administrado, tendrá que llamar el método AcquireConnection para usar la funcionalidad de una conexión de administrador. Debe llamar a este método independientemente de si escribe el código administrado en una tarea Script, un componente de script, un objeto personalizado o una aplicación personalizada.  
+  En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el método AcquireConnection de la clase de administradores de conexiones asociada es el método al que se llama con mayor frecuencia cuando se está trabajando con administradores de conexiones en código administrado. Al escribir código administrado, tiene que llamar al método AcquireConnection para utilizar la funcionalidad de un administrador de conexiones. Debe llamar a este método independientemente de si escribe el código administrado en una tarea Script, un componente de script, un objeto personalizado o una aplicación personalizada.  
   
- Para llamar correctamente a la llamada del método AcquireConnection, tiene que conocer las respuestas a las siguientes preguntas:  
+ Para llamar correctamente al método AcquireConnection, tiene que conocer las respuestas a las preguntas siguientes:  
   
--   **¿Los administradores de conexión devuelven un objeto administrado desde el método AcquireConnection?**  
+-   **¿Qué administradores de conexiones devuelven un objeto administrado desde el método AcquireConnection?**  
   
-     Muchos administradores de conexión devuelven objetos COM no administrados (System.__ComObject) y estos objetos no se puede usar fácilmente desde el código administrado. La lista de estos administradores de conexiones incluye el administrador de conexiones OLE DB de uso frecuente.  
+     Muchos administradores de conexiones devuelven objetos COM no administrados (System.__ComObject) y estos objetos no se pueden utilizar con facilidad desde el código administrado. La lista de estos administradores de conexiones incluye el administrador de conexiones OLE DB de uso frecuente.  
   
--   **¿Para los administradores de conexión que devuelven un objeto administrado, los objetos devuelven sus métodos AcquireConnection?**  
+-   **En el caso de los administradores de conexiones que devuelven un objeto administrado, ¿qué objetos devuelven sus métodos AcquireConnection?**  
   
-     Para convertir el valor devuelto al tipo adecuado, tendrá que saber qué tipo de objeto que devuelve el método AcquireConnection. Por ejemplo, el método AcquireConnection para la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Administrador de conexiones devuelve un objeto SqlConnection abierto cuando se usa el proveedor SqlClient. Sin embargo, el método AcquireConnection para el Administrador de conexiones de archivos solamente devuelve una cadena.  
+     Para convertir el valor devuelto al tipo adecuado, debe saber qué tipo de objeto devuelve el método AcquireConnection. Por ejemplo, el método AcquireConnection para el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] devuelve un objeto SqlConnection abierto al utilizar el proveedor SqlClient. Sin embargo, el método AcquireConnection para el administrador de conexiones de archivos solamente devuelve una cadena.  
   
  En este tema se responden estas preguntas sobre los administradores de conexiones incluidos con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## <a name="connection-managers-that-do-not-return-a-managed-object"></a>Administradores de conexiones que no devuelven un objeto administrado  
- En la tabla siguiente se enumera los administradores de conexión que devuelven un objeto COM nativo (System.__ComObject) desde el método AcquireConnection. Estos objetos no administrados no resultan fáciles de usar desde código administrado.  
+ En la tabla siguiente se enumeran los administradores de conexiones que devuelven un objeto COM nativo (System.__ComObject) desde el método AcquireConnection. Estos objetos no administrados no resultan fáciles de usar desde código administrado.  
   
-|Tipo de administrador de conexiones|Nombre del Administrador de conexiones|  
+|Tipo de administrador de conexiones|Nombre del administrador de conexiones|  
 |-----------------------------|-----------------------------|  
 |ADO|Administrador de conexiones ADO|  
 |MSOLAP90|Administrador de conexiones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|  
@@ -57,12 +53,12 @@ ms.lasthandoff: 09/26/2017
 |ODBC|ODBC, administrador de conexiones|  
 |OLEDB|OLE DB, administrador de conexiones|  
   
- Por lo general, puede usar un [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager desde el código administrado para conectarse a un origen de datos ADO, Excel, ODBC u OLE DB.  
+ Normalmente, puede utilizar un administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] desde el código administrado para conectarse a un origen de datos ADO, Excel, ODBC u OLE DB.  
   
 ## <a name="return-values-from-the-acquireconnection-method"></a>Valores devueltos del método AcquireConnection  
- En la tabla siguiente se enumera los administradores de conexión que devuelven un objeto administrado desde el método AcquireConnection. Estos objetos administrados se pueden usar con facilidad desde código administrado.  
+ En la tabla siguiente se enumeran los administradores de conexiones que devuelven un objeto administrado desde el método AcquireConnection. Estos objetos administrados se pueden usar con facilidad desde código administrado.  
   
-|Tipo de administrador de conexiones|Nombre del Administrador de conexiones|Tipo de valor devuelto|Información adicional|  
+|Tipo de administrador de conexiones|Nombre del administrador de conexiones|Tipo de valor devuelto|Información adicional|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Administrador de conexiones de [!INCLUDE[vstecado](../includes/vstecado-md.md)]|**System.Data.SqlClient.SqlConnection**||  
 |FILE|administrador de conexiones de archivos|**System.String**|Ruta de acceso al archivo.|  
@@ -76,9 +72,8 @@ ms.lasthandoff: 09/26/2017
 |SQLMOBILE|Administrador de conexiones de SQL Server Compact|**System.Data.SqlServerCe.SqlCeConnection**||  
   
 ## <a name="see-also"></a>Vea también  
- [Conectarse a orígenes de datos de la tarea de secuencia de comandos](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [Conectarse a orígenes de datos en el componente de Script](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [Conectarse a orígenes de datos de la tarea Script](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [Conectarse a orígenes de datos del componente de script](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Conectarse a orígenes de datos de una tarea personalizada](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   
-

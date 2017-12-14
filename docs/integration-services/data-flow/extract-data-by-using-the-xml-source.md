@@ -1,5 +1,5 @@
 ---
-title: Extraer datos mediante el origen XML | Documentos de Microsoft
+title: Extraer datos mediante el origen de XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: ba401b0f0a97415ecd2a24f168129d3a3c312811
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2090f6eb85b4f89ff71dd1728f668690733a4df5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extraer datos mediante el origen de XML
   Para agregar y configurar un origen XML, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  
@@ -73,7 +71,6 @@ ms.lasthandoff: 08/03/2017
  [Origen XML](../../integration-services/data-flow/xml-source.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

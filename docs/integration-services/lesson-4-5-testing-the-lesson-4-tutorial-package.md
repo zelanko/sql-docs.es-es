@@ -1,5 +1,5 @@
 ---
-title: "Paso 5: Probar el paquete del Tutorial lección 4 | Documentos de Microsoft"
+title: "Paso 5: Probar el paquete del tutorial de la lección 4 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68e4545ee2eae96664007a8dc69c9953c0351107
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lección 4-5-probar el paquete del Tutorial lección 4
+# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lección 4-5: Probar el paquete del tutorial de la lección 4
 En tiempo de ejecución, el archivo dañado, Currency_BAD.txt, no podrá generar una coincidencia en la transformación Lookup Currency Key. Puesto que la salida de errores de Lookup Currency Key se ha configurado para redirigir las filas con errores al nuevo destino de filas con errores, el componente no genera ningún error y el paquete se ejecuta correctamente. Todas las filas que generan un error se escriben en el archivo ErrorOutput.txt.  
   
 En esta tarea, probará la configuración de la salida de error revisada ejecutando el paquete. Tras ejecutar correctamente el paquete, verá el contenido del archivo ErrorOutput.txt.  
@@ -40,11 +37,11 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 **Flujo de control**  
   
-![Controlar el flujo de paquete](../integration-services/media/task4lesson2control.gif "controlar el flujo del paquete")  
+![Controlar el flujo en el paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
   
 **Flujo de datos**  
   
-![Flujo de datos en el paquete](../integration-services/media/task5lesson5data.gif "en paquete de flujo de datos")  
+![Flujo de datos del paquete](../integration-services/media/task5lesson5data.gif "Data flow in package")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Para ejecutar el paquete de tutorial de la lección 4  
   
@@ -60,4 +57,3 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
   
   
-

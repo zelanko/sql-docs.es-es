@@ -1,5 +1,5 @@
 ---
-title: Destino de SAP BW | Documentos de Microsoft
+title: Destino de SAP BW | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e61105936766817678d3806f603c506bad94bd5e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination"></a>Destino de SAP BW
   El destino de SAP BW es el componente de destino de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. De esta forma, el destino de SAP BW carga los datos desde el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en la versión 7 del sistema SAP Netweaver BW.  
@@ -96,19 +94,19 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Usar el Diseñador SSIS para configurar el destino  
  Para obtener más información sobre las propiedades del destino de SAP BW que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de destino de SAP BW &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de SAP BW &#40; Página Asignaciones &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Editor de destino de SAP BW &#40;página Asignaciones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Editor de destino de SAP BW &#40; Página de salida de error &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Editor de destino de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor de destino de SAP BW &#40; Página avanzadas &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Editor de destino de SAP BW &#40;página Avanzadas&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  Mientras configura el destino de SAP BW, también puede usar varios cuadros de diálogo para buscar o crear objetos de SAP Netweaver BW. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   
--   [Buscar Infopackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [Buscar InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
--   [Crear nuevo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
+-   [Crear InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [Crear InfoCube para datos de transacción](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
@@ -126,4 +124,3 @@ ms.lasthandoff: 08/03/2017
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

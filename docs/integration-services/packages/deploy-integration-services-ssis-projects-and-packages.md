@@ -1,12 +1,14 @@
 ---
-title: "Implementación de Integration Services (SSIS) proyectos y paquetes | Documentos de Microsoft"
+title: "Implementación de proyectos y paquetes de Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +20,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes heredados. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/27/2017
 Para más información sobre el modelo de implementación de paquetes heredada, vea [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si utilizó este modelo, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introdujo la característica Implementación incremental de paquetes que permite implementar uno o varios paquetes sin implementar todo el proyecto.  
+>  El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si utilizó este modelo, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introdujo la característica Implementación incremental de paquetes que permite implementar uno o varios paquetes sin implementar todo el proyecto.  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Comparación del modelo de implementación de proyectos y el modelo de implementación de paquetes heredados  
  El tipo de modelo de implementación que elija para un proyecto determina qué opciones de desarrollo y administrativas están disponibles para ese proyecto. En la tabla siguiente se muestran las diferencias y similitudes entre utilizar el modelo de implementación del proyecto y utilizar el modelo de implementación de paquetes.  
@@ -55,7 +56,7 @@ Para más información sobre el modelo de implementación de paquetes heredada, 
 |Los paquetes se ejecutan en un proceso de Windows independiente.|Los paquetes se ejecutan en un proceso de Windows independiente.|  
 |Se utiliza el Agente SQL Server para programar la ejecución del paquete.|Se utiliza el Agente SQL Server para programar la ejecución del paquete.|  
   
- El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si utilizó este modelo, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introdujo la característica Implementación incremental de paquetes que permite implementar uno o varios paquetes sin implementar todo el proyecto.   
+ El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si utilizó este modelo, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introdujo la característica Implementación incremental de paquetes que permite implementar uno o varios paquetes sin implementar todo el proyecto.   
   
 ## <a name="features-of-project-deployment-model"></a>Características del modelo de implementación del proyecto  
  En la tabla siguiente se enumeran las características disponibles en los proyectos desarrollados solo para el modelo de implementación del proyecto.  
@@ -71,25 +72,25 @@ Para más información sobre el modelo de implementación de paquetes heredada, 
 ## <a name="project-deployment"></a>Implementación del proyecto  
  En el centro del modelo de implementación del proyecto está el archivo de implementación del proyecto (extensión .ispac). El archivo de implementación del proyecto es una unidad autónoma de implementación que incluye solamente la información esencial sobre los paquetes y los parámetros del proyecto. El archivo de implementación del proyecto no captura toda la información contenida en el archivo de proyecto de Integration Services (extensión .dtproj). Por ejemplo, los archivos de texto adicional que se utilizan para escribir notas no se almacenan en el archivo de implementación del proyecto y, por lo tanto, no se implementan en el catálogo.  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Permisos necesarios para implementar SSIS proyectos y paquetes
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Permisos necesarios para implementar proyectos y paquetes de SSIS
 
-Si cambia la cuenta del servicio SSIS de manera predeterminada, tendrá que proporcionar permisos adicionales a la cuenta de servicio no predeterminado para poder implementar paquetes correctamente. Si la cuenta de servicio no predeterminado no tiene los permisos necesarios, verá el siguiente mensaje de error.
+Si cambia la configuración predeterminada de la cuenta de servicio de SSIS, es posible que tenga que proporcionar permisos adicionales a la cuenta de servicio no predeterminada para poder implementar paquetes correctamente. Si la cuenta de servicio no predeterminada no tiene los permisos necesarios, verá el siguiente mensaje de error.
 
-*Se produjo un error de .NET Framework durante la ejecución de la rutina definido por el usuario o agregado "deploy_project_internal": System.ComponentModel.Win32Exception: no se dispone de un privilegio requerido por el cliente.*
+*Se produjo un error de .NET Framework durante la ejecución de la rutina definida por el usuario o el agregado "deploy_project_internal": System.ComponentModel.Win32Exception: no se dispone de un privilegio requerido por el cliente.*
 
-Este error suele ser el resultado de la falta de permisos de DCOM. Para corregir el error, haga lo siguiente.
+Este error suele ser el resultado de la falta de permisos de DCOM. Para corregirlo, haga lo siguiente.
 
-1.  Abra la **servicios de componentes** consola (o ejecute Dcomcnfg.exe).
-2.  En el **servicios de componentes** de la consola, expanda **servicios de componentes** > **equipos** > **Mi PC** > **configuración DCOM**.
-3.  En la lista, busque **xx.0 de Microsoft SQL Server Integration Services** para la versión de SQL Server que esté usando. Por ejemplo, SQL Server 2016 es la versión 13.
-4.  Haga clic en y seleccione **propiedades**.
-5.  En el **propiedades de Microsoft SQL Server Integration Services 13.0** cuadro de diálogo, seleccione la **seguridad** ficha.
-6.  Por cada uno de los tres conjuntos de permisos - inicio y activación, acceso y la configuración - seleccionan **personalizar**, a continuación, seleccione **editar** para abrir el **permiso** cuadro de diálogo.
-7.  En el **permiso** diálogo cuadro, agregue la cuenta de servicio no predeterminado y conceder **permitir** permisos según sea necesario. Normalmente, tiene una cuenta **inicio Local** y **activación Local** permisos.
-8.  Haga clic en **Aceptar** dos veces y, a continuación, cierre el **servicios de componentes** consola.
+1.  Abra la consola **Servicios de componente** (o ejecute Dcomcnfg.exe).
+2.  En la consola **Servicios de componente**, expanda **Servicios de componente** > **Equipos** > **Mi PC** > **Configuración DCOM**.
+3.  En la lista, busque **Microsoft SQL Server Integration Services xx.0** para encontrar la versión de SQL Server que esté usando. Por ejemplo, SQL Server 2016 es la versión 13.
+4.  Haga clic con el botón derecho y seleccione **Propiedades**.
+5.  En el cuadro de diálogo **Propiedades de Microsoft SQL Server Integration Services 13.0**, seleccione la pestaña **Seguridad**.
+6.  Por cada uno de los tres conjuntos de permisos (inicio y activación, acceso y configuración), seleccione **Personalizar** y, luego, **Editar** para abrir el cuadro de diálogo **Permiso**.
+7.  En el cuadro de diálogo **Permiso**, agregue la cuenta de servicio no predeterminada y conceda los permisos **Permitir** según sea necesario. Normalmente, una cuenta tiene los permisos **Ejecución local** y **Activación local**.
+8.  Haga clic en **Aceptar** dos veces y, a continuación, cierre la consola **Servicios de componente**.
 
-Para obtener más información sobre el error descrito en esta sección y los permisos requeridos por la cuenta de servicio SSIS, vea la entrada de blog siguiente.  
-[System.ComponentModel.Win32Exception: No se dispone de un privilegio requerido por el cliente al implementar el proyecto de SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Para obtener más información sobre el error descrito en esta sección y los permisos necesarios para la cuenta de servicio de SSIS, vea la entrada de blog siguiente.  
+[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/) (System.ComponentModel.Win32Exception: el cliente no dispone de un privilegio requerido durante la implementación de un proyecto de SSIS)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implementar proyectos en el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite administrar paquetes, ejecutar paquetes y configurar valores de tiempo de ejecución para paquetes usando entornos.  
@@ -99,11 +100,11 @@ Para obtener más información sobre el error descrito en esta sección y los pe
   
  Para implementar un proyecto en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , debe completar las tareas siguientes:  
   
-1.  Crear un catálogo de SSISDB, si no lo tiene todavía. Para obtener más información, consulte [catálogo de SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Crear un catálogo de SSISDB, si no lo tiene todavía. Para obtener más información, vea [SSIS Catalog](../../integration-services/service/ssis-catalog.md) (Catálogo de SSIS).  
   
 2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
   
-    -   Si creó el proyecto en [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], de forma predeterminada el proyecto utiliza el modelo de implementación de proyectos.  
+    -   Si creó el proyecto en [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] o en una versión posterior, de forma predeterminada el proyecto utiliza el modelo de implementación de proyectos.  
   
     -   Si creó el proyecto en la versión anterior de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], después de abrir el archivo de proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], deberá convertir el proyecto al modelo de implementación de proyectos.  
   
@@ -157,7 +158,7 @@ Para obtener más información sobre el error descrito en esta sección y los pe
 3.  Finalice el asistente. 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
-  La característica Implementación incremental de paquetes presentada en  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] le permite implementar uno o varios paquetes en un proyecto nuevo o existente sin implementar todo el proyecto.  
+  La característica Implementación incremental de paquetes presentada en  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] le permite implementar uno o varios paquetes en un proyecto nuevo o existente sin implementar todo el proyecto.  
   
 ###  <a name="DeployWizard"></a> Implementación de paquetes mediante el Asistente para implementación de Integration Services  
   
@@ -310,7 +311,7 @@ Inicie el asistente de una de estas dos formas:
  La página permite revisar la configuración seleccionada. Puede cambiar las selecciones si hace clic en **Anterior**o si hace clic en cualquiera de los pasos del panel izquierdo. Haga clic en **Implementar** para iniciar el proceso de implementación.  
   
 #### <a name="results"></a>Resultado  
- Una vez completado el proceso de implementación, debería ver la página **Resultados** . Esta página muestra si cada acción si se completó correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar informe...**  para guardar los resultados en un archivo XML o haga clic en **cerrar** para salir del asistente.
+ Una vez completado el proceso de implementación, debería ver la página **Resultados** . Esta página muestra si cada acción si se completó correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar informe** para guardar los resultados en un archivo XML o haga clic en **Cerrar** para salir del asistente.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -729,4 +730,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Guardar informe**  
  Haga clic en esta opción para guardar un resumen de la conversión del proyecto en un archivo .xml.  
-

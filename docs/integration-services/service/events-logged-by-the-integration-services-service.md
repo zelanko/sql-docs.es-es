@@ -1,5 +1,5 @@
 ---
-title: Eventos registrados por el servicio Integration Services | Documentos de Microsoft
+title: Eventos registrados por el servicio Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados por el servicio Integration Services
   El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra diversos mensajes en el registro de eventos de aplicación de Windows. El servicio registra estos mensajes cuando el servicio se inicia, cuando se detiene y cuando se producen ciertos problemas.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
  Para obtener información general sobre el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-## <a name="service-status-messages"></a>Mensajes de estado de servicio
+## <a name="service-status-messages"></a>Mensajes de estado personalizados
  Cuando selecciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para la instalación, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se instala y se inicia, y el tipo de inicio del servicio se establece como automático.  
   
 |Identificador del evento|Nombre simbólico|Texto|Notas|  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>Tareas relacionadas  
  Para obtener información sobre cómo ver las entradas de registro, vea [Eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

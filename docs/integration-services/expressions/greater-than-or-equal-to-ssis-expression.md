@@ -1,5 +1,5 @@
 ---
-title: "&gt;= (Mayor o igual que) (expresión de SSIS) | Documentos de Microsoft"
+title: "&gt;= (Mayor o igual que) (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8739ef9b5147a2019d71ee5ffa06274dea29d53
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 86e4fb934f5f583314e5d3bc69a9275d911e5dfe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Mayor o igual que) (expresión de SSIS)
   Realiza una comparación para determinar si la primera expresión es mayor o igual que la segunda. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  
@@ -111,11 +109,10 @@ ListPrice >= 500
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [&#62; &#40; Mayor &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#60; &#40; Menor &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#60; = &#40; Menor o igual a &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [&#62; &#40;Mayor que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#60; &#40;Menor que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#60;= &#40;Menor o igual que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

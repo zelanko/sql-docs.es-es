@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Agregar y configurar el contenedor de bucles Foreach | Documentos de Microsoft'
+title: 'Paso 2: Agregar y configurar el contenedor de bucles Para cada uno | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 315933379f0ec61453fa0fd783686f9446a977c0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lección 2: 2: agregar y configurar el contenedor de bucles Foreach
+# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lección 2-2: Agregar y configurar el contenedor de bucles Para cada uno
 En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
   
 El contenedor de bucles Foreach que agregue debe poder conectarse a cada uno de los archivos planos de la carpeta. Puesto que todos los archivos de la carpeta tienen el mismo formato, el contenedor de bucles Foreach puede utilizar el mismo administrador de conexiones de archivos planos para conectarse a cada uno de estos archivos. El administrador de conexiones de archivos planos que el contenedor utilizará es el mismo administrador de conexiones de archivos planos que creó en la lección 1.  
@@ -43,7 +40,7 @@ En los procedimientos de esta tarea se muestra cómo crear y modificar el conten
 Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, el contenedor de bucles Foreach se iterará en la colección de archivos de la carpeta Datos de ejemplo. Cada vez que se encuentre un archivo que coincida con los criterios, el contenedor de bucles Foreach rellenará la variable definida por el usuario con el nombre de archivo, asignará la variable definida por el usuario a la propiedad **ConnectionString** del administrador de conexiones de archivos planos Sample Currency Data y, después, ejecutará el flujo de datos en ese archivo. Por consiguiente, en cada iteración del bucle Foreach la tarea de flujo de datos utilizará un archivo plano distinto.  
   
 > [!NOTE]  
-> Dado que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa controlar el flujo de flujo de datos, los bucles que agregue al flujo de control no precisarán ninguna modificación en el flujo de datos. Por consiguiente, no es necesario modificar el flujo de datos creado en la lección 1.  
+> Puesto que [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa el flujo de control del flujo de datos, los bucles que agregue al flujo de control no precisarán ninguna modificación en el flujo de datos. Por consiguiente, no es necesario modificar el flujo de datos creado en la lección 1.  
   
 ### <a name="to-add-a-foreach-loop-container"></a>Para agregar un contenedor de bucles Foreach  
   
@@ -75,7 +72,7 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   
-    3.  Haga clic en el vínculo para la [SQL2012. Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) archivo.  
+    3.  Haga clic en vínculo del archivo [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031)  
   
 6.  En el cuadro **Archivos**, escriba **Currency_\*.txt**.  
   
@@ -83,7 +80,7 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
   
 1.  Haga clic en **Asignaciones de variables**.  
   
-2.  En el **asignaciones de variables** página, en la **Variable** columna, haga clic en la celda vacía y seleccione  **\<nueva Variable... >**.  
+2.  En la página **Asignaciones de variables**, en la columna **Variable**, haga clic en la celda vacía y seleccione **\<Nueva variable...>**.  
   
 3.  En el cuadro de diálogo **Agregar variable** , en **Nombre**, escriba **varFileName**.  
   
@@ -99,7 +96,7 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
 -   Arrastre la tarea Flujo de datos **Extract Sample Currency Data** al contenedor de bucles Foreach que ahora se denomina **Foreach File in Folder**.  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
-[Paso 3: Modificar el Administrador de conexión de archivos planos](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[Paso 3: Modificar el Administrador de conexiones de archivos planos](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vea también  
 [configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
@@ -107,4 +104,3 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
   
   
   
-

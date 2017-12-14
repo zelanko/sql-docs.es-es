@@ -1,5 +1,5 @@
 ---
-title: "Lección 1: Crear un proyecto y el paquete básico con SSIS | Documentos de Microsoft"
+title: "Lección 1: Crear un proyecto y un paquete básico con SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 0839d5dfbcb033a9a0d466ce9b87ecc738b15250
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lección 1: Crear un proyecto y un paquete básico con SSIS
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [lección 1: crear el proyecto y el paquete básico](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Lección 1: Crear el proyecto y el paquete básico](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
 
 En esta lección, creará un paquete ETL simple que extrae datos de un único origen de archivo plano, transforma los datos usando dos componentes de la transformación de búsqueda y escribe dichos datos en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes nuevos, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
   
@@ -39,7 +36,7 @@ En esta lección, creará un paquete ETL simple que extrae datos de un único or
 ## <a name="understanding-the-package-requirements"></a>Descripción de los requisitos de paquete  
 Este tutorial necesita Microsoft SQL Server Data Tools.  
   
-Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](http://msdn.microsoft.com/en-us/data/hh297027).  
+Para obtener más información sobre cómo instalar SQL Server Data Tools, consulte [Descargar SQL Server Data Tools](http://msdn.microsoft.com/en-us/data/hh297027).  
   
 Antes de crear un paquete, debe saber qué formato se utiliza en los datos de origen y de destino. Una vez que conozca ambos formatos de datos, estará listo para definir las transformaciones necesarias para asignar los datos de origen al destino.  
   
@@ -86,23 +83,22 @@ Esta lección contiene las siguientes tareas:
   
 -   [Paso 1: Crear un nuevo proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Paso 2: Agregar y configurar un administrador de conexión de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Paso 2: agregar y configurar un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Paso 3: agregar y configurar un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Paso 4: Agregar una tarea de flujo de datos al paquete](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Paso 4: agregar una tarea de flujo de datos al paquete](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Paso 5: Agregar y configurar el origen de archivo plano](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 -   [Paso 6: Agregar y configurar transformaciones de búsqueda](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Paso 7: Agregar y configurar el destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Paso 7: agregar y configurar el destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Paso 8: Lo más fácil de entender el paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Paso 8: Facilitar la comprensión del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Paso 9: Probar el paquete del Tutorial lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Paso 9: Probar el paquete del tutorial de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
 [Paso 1: Crear un nuevo proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "^ (Bit a bit OR exclusivo) (expresión de SSIS) | Documentos de Microsoft"
+title: "^ (OR exclusivo bit a bit) (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4c0a93affde5af98cdeb24fd04bb00d9ac72af7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4b5ef9e3403fd606bc8143d66837b5848f35a9d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusivo bit a bit) (expresión de SSIS)
   Lleva a cabo una operación OR exclusiva bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si un bit es 0 y el otro bit es 1, el bit de resultado correspondiente se establece en 1. Si ambos bits son 0, o bien si ambos bits son 1, el bit de resultado correspondiente se establece en 0.  
@@ -101,10 +99,9 @@ ReorderPoint ^ SafetyStockLevel
  00000110  
   
 ## <a name="see-also"></a>Vea también  
- [&#124; &#124; &#40; Operador lógico OR &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
- [&#124; &#40; Bit a bit OR inclusivo &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
- [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [&#124;&#124; &#40;Operador OR lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
+ [&#124; &#40;OR inclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
+ [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

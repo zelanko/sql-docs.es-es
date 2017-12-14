@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_execution_property_override_value | Documentos de Microsoft
+title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,23 +38,23 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
- Identificador único de la instancia de ejecución. El *execution_id* es **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Identificador único de la instancia de ejecución. El parámetro *execution_id* es **bigint**.  
   
- [ @property_path =] *rutaDeAccesoAPropiedad*  
- Ruta de acceso a la propiedad en el paquete. El *rutaDeAccesoAPropiedad* es **nvarchar (4000)**.  
+ [ @property_path = ] *property_path*  
+ Ruta de acceso a la propiedad en el paquete. El parámetro *property_path* es **nvarchar(4000)**.  
   
- [ @property_value =] *property_value*  
- El valor de invalidación que se va a asignar a la propiedad. El *property_value* es **nvarchar (max)**.  
+ [ @property_value = ] *property_value*  
+ El valor de invalidación que se va a asignar a la propiedad. El parámetro *property_value* es **nvarchar(max)**.  
   
- [ @sensitive =] *confidencial*  
- Cuando el valor es 1, la propiedad es confidencial y se cifra cuando se almacena. Cuando el valor es 0, la propiedad no es confidencial y el valor se almacena como texto simple. El *confidencial* argumento es **bits**.  
+ [ @sensitive = ] *sensitive*  
+ Cuando el valor es 1, la propiedad es confidencial y se cifra cuando se almacena. Cuando el valor es 0, la propiedad no es confidencial y el valor se almacena como texto simple. El argumento *sensitive* es **bit**.  
   
 ## <a name="remarks"></a>Comentarios  
- Este procedimiento realiza la misma función que la **invalidaciones de propiedad** sección la **avanzadas** pestaña de la **Ejecutar paquete** cuadro de diálogo. La ruta de acceso a la propiedad se deriva de la **ruta de acceso del paquete** propiedad de la tarea de paquete.  
+ Este procedimiento realiza la misma función que la sección **Invalidaciones de propiedad** de la pestaña **Avanzadas** del diálogo **Ejecutar paquete**. La ruta de acceso a la propiedad se deriva de la propiedad **Ruta de acceso del paquete** de la tarea del paquete.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno  
@@ -76,4 +74,3 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

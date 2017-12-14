@@ -1,5 +1,5 @@
 ---
-title: Copiar objetos de paquete | Documentos de Microsoft
+title: Copiar objetos de paquete | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 73a3dde55206c32b43c43423189ebf764dcb38bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de paquete
   Este tema describe el modo de copiar elementos de flujo de control, elementos de flujo de datos y administradores de conexión dentro de un paquete o entre paquetes.  
@@ -72,8 +70,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>Vea también  
  [Flujo de control](../integration-services/control-flow/control-flow.md)   
  [Flujo de datos](../integration-services/data-flow/data-flow.md)   
- [Integration Services &#40; SSIS &#41; Conexiones](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copiar elementos de proyecto](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+ [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Copiar los elementos de proyectos](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   
-

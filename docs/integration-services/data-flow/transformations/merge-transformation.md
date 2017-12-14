@@ -1,5 +1,5 @@
 ---
-title: "Transformación mezclar | Documentos de Microsoft"
+title: "Transformación Mezclar | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 0d644035d982bf43af90ac9697528d0290e1809e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-transformation"></a>Mezclar, transformación
   La transformación Mezclar combina dos conjuntos de datos ordenados en un solo conjunto de datos. Las filas de cada conjunto de datos se insertan en la salida en función de los valores de sus columnas de clave.  
@@ -76,13 +74,13 @@ ms.lasthandoff: 08/19/2017
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para la combinación y transformaciones de combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-transformation-editor"></a>Editor de transformación Mezclar
   Use el **Editor de transformación Mezclar** para especificar las columnas de dos conjuntos de datos ordenados que desee combinar.  
   
 > [!IMPORTANT]  
->  La transformación Mezclar requiere datos ordenados para sus entradas. Para más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+>  La transformación Mezclar requiere datos ordenados para sus entradas. Para obtener más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="options"></a>Opciones  
  **Nombre de la columna de salida**  
@@ -96,9 +94,8 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>Vea también  
  [Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Unión transformación todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

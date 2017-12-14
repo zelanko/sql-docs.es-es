@@ -1,5 +1,5 @@
 ---
-title: "Editor de la tarea (página General) de generación de perfiles de datos | Documentos de Microsoft"
+title: "Editor de la tarea de generación de perfiles de datos (página General) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.general.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe778df2be9b176d95ef78d52daf1bd4ef8bd7e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
   Utilice la página **General** del **Editor de tareas de generación de perfiles de datos** para configurar las opciones siguientes:  
@@ -66,9 +62,9 @@ ms.lasthandoff: 08/03/2017
  **Destino**  
  Especifique qué administrador de conexiones de archivos o variable de paquete contiene el perfil de datos generado:  
   
--   Si la opción **DestinationType** está establecida en **FileConnection**, la opción **Destination** muestra los administradores de conexión de archivos disponibles. Seleccione uno de estos administradores de conexión, o \<nueva conexión de archivos > para crear una nueva conexión de archivos de administrador.  
+-   Si la opción **DestinationType** está establecida en **FileConnection**, la opción **Destination** muestra los administradores de conexión de archivos disponibles. Seleccione uno de estos administradores de conexiones o \<Nueva conexión de archivos> para crear un administrador de conexiones de archivos nuevo.  
   
--   Si la opción **DestinationType** está establecida en **Variable**, la opción **Destination** muestra las variables de paquete disponibles en la lista **Destination** . Seleccione una de estas variables, o seleccione \<nueva Variable > para crear una nueva variable.  
+-   Si la opción **DestinationType** está establecida en **Variable**, la opción **Destination** muestra las variables de paquete disponibles en la lista **Destination** . Seleccione una de estas variables o \<Nueva variable> para crear una variable nueva.  
   
  **OverwriteDestination**  
  Especifique si sobrescribir el archivo de salida si ya existe. El valor predeterminado es **False**. El valor de esta propiedad se usa cuando la opción DestinationType está establecida en FileConnection. Cuando la opción DestinationType está establecida en Variable, la tarea siempre sobrescribe el valor anterior de la variable.  
@@ -84,11 +80,10 @@ ms.lasthandoff: 08/03/2017
  Abre el Visor de perfil de datos. El Visor de perfil de datos independiente muestra el resultado del perfil de datos de la tarea Generación de perfiles de datos. El resultado del perfil de datos puede verse después de ejecutar la tarea Generación de perfiles de datos dentro del paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y de calcular los perfiles de datos.  
   
 > [!NOTE]  
->  También puede abrir el Visor de perfil de datos mediante la ejecución de la DataProfileViewer.exe en la carpeta  *\<unidad >*: \Program archivos (x86) | Archivos de programa\Microsoft SQL Server\110\DTS\Binn.  
+>  También puede abrir el Visor de perfil de datos si ejecuta el archivo DataProfileViewer.exe en la carpeta *\<unidad>*:\Archivos de programa (x86) | Archivos de programa\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Vea también  
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
- [Editor de la tarea &#40; de la generación de perfiles de datos Página solicitudes de perfil &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

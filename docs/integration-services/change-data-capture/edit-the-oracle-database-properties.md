@@ -1,5 +1,5 @@
 ---
-title: Editar las propiedades de la base de datos de Oracle | Documentos de Microsoft
+title: Editar las propiedades de la base de datos de Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraProp
+f1_keywords: oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3519bfc323bc4a9b19e32a171b5aa08f719062fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-the-oracle-database-properties"></a>Editar las propiedades de la base de datos de Oracle
   Use la pestaña Oracle del editor de propiedades para realizar cambios en la descripción que proporcionó en la página Crear base de datos CDC del Asistente para nueva instancia y para realizar cambios en la información de conexión a bases de datos de minería de registros de Oracle.  
@@ -51,9 +48,8 @@ ms.lasthandoff: 08/03/2017
  Puede ver las propiedades de la base de datos de Oracle en el visor. Cuando se usa el visor, la información es de solo lectura. El visor también incluye una lista de las columnas capturadas de la tabla. Para obtener información acerca de cómo obtener acceso al visor, vea [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo administrar un servicio CDC desde la consola del diseñador CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
+ [Cómo administrar un servicio CDC desde la Consola del diseñador CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Conectarse a una base de datos de origen de Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Conectar con Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   
-

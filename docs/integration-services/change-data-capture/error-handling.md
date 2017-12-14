@@ -1,5 +1,5 @@
 ---
-title: Control de errores | Documentos de Microsoft
+title: Tratamiento de errores | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>Tratamiento de errores
   Una instancia CDC de Oracle realiza minería de datos en los cambios de una sola base de datos de origen de Oracle (un clúster de Oracle RAC se considera una sola base de datos) y escribe los cambios confirmados en las tablas de cambios en una base de datos CDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   La tabla MSXDBCDC.dbo.xdbcdc_trace, que el proceso principal del servicio CDC de Oracle emplea para el registro y el seguimiento generales.  
   
--   El \<base de datos cdc >. cdc.xdbcdc_trace tabla, que se usa para el registro y seguimiento general por instancias CDC de Oracle. Esto significa que los errores relacionados con una instancia CDC de Oracle específica se registran en la tabla de seguimiento de esa instancia.  
+-   La tabla \<cdc-database>.cdc.xdbcdc_trace, que las instancias Oracle CDC usan para el registro y el seguimiento generales. Esto significa que los errores relacionados con una instancia CDC de Oracle específica se registran en la tabla de seguimiento de esa instancia.  
   
  El servicio CDC de Oracle registra información cuando el servicio:  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/03/2017
  [La instancia CDC de Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

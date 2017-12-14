@@ -1,5 +1,5 @@
 ---
-title: Crear paquetes en SQL Server Data Tools | Documentos de Microsoft
+title: Crear paquetes en SQL Server Data Tools | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 26fe270767369de22f7a5b87f34a92fce2b1c2bd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Crear paquetes en herramientas de datos de SQL Server
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede crear un paquete nuevo utilizando uno de los métodos siguientes:  
@@ -77,9 +75,8 @@ Para instalar SQL Server Data Tools (SSDT), vea [Descargar SQL Server Data Tools
   
 2.  En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
-     ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades de proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion propiedad en el cuadro de diálogo de propiedades de proyecto")  
+     ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  Puede crear, mantener y ejecutar paquetes cuyo destino es SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
   
-

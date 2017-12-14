@@ -1,5 +1,5 @@
 ---
-title: "Guardar un paquete mediante programación | Documentos de Microsoft"
+title: "Guardar un paquete mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,32 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: f6b99377f6eaf720b9511b560e5cf563ede2b869
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a433d64b0c2b7694dfe1fc89db6dc6df9060b54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación
   Después de generar un nuevo paquete o modificar uno existente mediante programación, por lo general desea guardar los cambios.  
   
- Todos los métodos utilizados en este tema para guardar paquetes requieren una referencia al ensamblado **Microsoft.SqlServer.ManagedDTS** . Después de agregar la referencia en un proyecto nuevo, importe la <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres con un **con** o **importaciones** instrucción.  
+ Todos los métodos utilizados en este tema para guardar paquetes requieren una referencia al ensamblado **Microsoft.SqlServer.ManagedDTS** . Después de agregar la referencia en un proyecto nuevo, importe el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> mediante una instrucción **using** o **Imports**.  
   
 ## <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación  
- Para guardar un paquete mediante programación, llame a uno de los métodos siguientes de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> clase:  
+ Para guardar un paquete mediante programación, llame a uno de los métodos siguientes de la clase de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>:  
   
 |Ubicación de almacenamiento|Método que se llama|  
 |----------------------|--------------------|  
@@ -51,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  [Guardar paquetes](../../integration-services/save-packages.md)  
   
   
-

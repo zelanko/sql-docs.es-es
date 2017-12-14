@@ -1,5 +1,5 @@
 ---
-title: "Herramientas de solución de problemas de conectividad de paquete | Documentos de Microsoft"
+title: Herramientas para solucionar problemas de conectividad entre paquetes | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 11c80c7ecc8fc8598b1079458d83773db6e68f06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Herramientas para solucionar problemas de conectividad entre paquetes
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que pueden usarse para solucionar problemas de conectividad entre los paquetes y los orígenes de datos desde los que los paquetes extraen y cargan los datos.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Administrador de conexiones OLE DB, origen de OLE DB y destino de OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Administrador de conexiones y el origen de ADO NET  
+    -   Administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y origen de ADO NET  
   
     -   Tarea Ejecutar SQL  
   
@@ -77,8 +75,7 @@ ms.lasthandoff: 08/03/2017
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de herramientas de desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas de ejecución del paquete](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Herramientas para solucionar problemas de la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

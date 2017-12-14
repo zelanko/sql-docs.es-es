@@ -1,5 +1,5 @@
 ---
-title: "Agregar tareas mediante programación | Documentos de Microsoft"
+title: "Agregar tareas mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>Agregar tareas mediante programación
   Se pueden agregar tareas a los siguientes tipos de objetos en el motor en tiempo de ejecución:  
@@ -50,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  Cada contenedor incluye una colección <xref:Microsoft.SqlServer.Dts.Runtime.Executables> que contiene los objetos <xref:Microsoft.SqlServer.Dts.Runtime.Executable> individuales. Cada tarea ejecutable hereda e implementa el método <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> y el método <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>. El motor en tiempo de ejecución llama a estos dos métodos para procesar cada <xref:Microsoft.SqlServer.Dts.Runtime.Executable>.  
   
- Para agregar una tarea a un paquete, necesita un contenedor con una colección <xref:Microsoft.SqlServer.Dts.Runtime.Executables> existente. En la mayoría de las ocasiones, la tarea que agregará a la colección es un paquete. Para agregar la nueva tarea ejecutable a la colección de ese contenedor, se llama a la <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> método. El método tiene un parámetro único, una cadena, que contiene los valores CLSID, PROGID, moniker STOCK o <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> de la tarea que agrega.  
+ Para agregar una tarea a un paquete, necesita un contenedor con una colección <xref:Microsoft.SqlServer.Dts.Runtime.Executables> existente. En la mayoría de las ocasiones, la tarea que agregará a la colección es un paquete. Para agregar el nuevo ejecutable de tarea a la colección de dicho contenedor, debe llamar al método <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. El método tiene un parámetro único, una cadena, que contiene los valores CLSID, PROGID, moniker STOCK o <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> de la tarea que agrega.  
   
 ## <a name="task-names"></a>Nombres de tarea  
- Aunque se puede especificar una tarea por nombre o por identificador, el **existencias** moniker es el parámetro que se usan con mayor frecuencia en el <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> método. Para agregar una tarea a un archivo ejecutable identificado por la **existencias** moniker, use la siguiente sintaxis:  
+ Aunque puede especificar una tarea por nombre o por identificador, el moniker **STOCK** es el parámetro que se usa con mayor frecuencia en el método <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. Para agregar a un ejecutable una tarea identificada por el moniker **STOCK**, use la sintaxis siguiente:  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +62,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- En la lista siguiente muestra los nombres para cada tarea que se utilizan después de la **existencias** moniker.  
+ En la lista siguiente se muestran los nombres para cada tarea que se utilizan después del moniker **STOCK**.  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +124,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- Puede obtener el nombre largo de la tarea mediante programación, sin tener que especificar la versión de la tarea, mediante el uso de la **AssemblyQualifiedName** propiedad de la clase, como se muestra en el ejemplo siguiente. En este ejemplo se requiere una referencia al ensamblado Microsoft.SqlServer.SQLTask.  
+ Puede obtener el nombre largo de la tarea mediante programación, sin tener que especificar la versión de la tarea, con la propiedad **AssemblyQualifiedName** de la clase, como se muestra en el ejemplo siguiente. En este ejemplo se requiere una referencia al ensamblado Microsoft.SqlServer.SQLTask.  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- En el ejemplo de código siguiente se muestra cómo crear un <xref:Microsoft.SqlServer.Dts.Runtime.Executables> colección de un nuevo paquete y, a continuación, agregue una tarea sistema de archivos y una tarea inserción masiva a la colección mediante el uso de sus **existencias** monikers. En este ejemplo se requiere una referencia a los ensamblados Microsoft.SqlServer.FileSystemTask y Microsoft.SqlServer.BulkInsertTask.  
+ En el ejemplo de código siguiente se muestra cómo crear una colección <xref:Microsoft.SqlServer.Dts.Runtime.Executables> a partir de un nuevo paquete y, después, cómo agregar una tarea de sistema de archivos y una tarea de inserción masiva a la colección, con sus monikers **STOCK**. En este ejemplo se requiere una referencia a los ensamblados Microsoft.SqlServer.FileSystemTask y Microsoft.SqlServer.BulkInsertTask.  
   
 ```csharp  
 using System;  
@@ -209,7 +206,7 @@ Module Module1
 End Module  
 ```  
   
- **Salida de ejemplo:**  
+ **Salida del ejemplo:**  
   
  `Type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -311,7 +308,7 @@ Module Module1
 End Module  
 ```  
   
- **Salida de ejemplo:**  
+ **Salida del ejemplo:**  
   
  `Found task of type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -331,7 +328,7 @@ End Module
   
 -   Puede codificar rutinas genéricas que funcionan en cualquier tarea, ya que no es necesario conocer el nombre de la tarea en tiempo de compilación. Estas rutinas genéricas incluyen métodos donde se pasa el nombre de la tarea al método; el código del método funciona en todas las tareas. Éste es un método adecuado para escribir código de prueba.  
   
- Realiza la conversión de la <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> a la clase específica de la tarea presenta las siguientes ventajas:  
+ La conversión de <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> a la clase específica de la tarea presenta las siguientes ventajas:  
   
 -   El proyecto de Visual Studio proporciona finalización de instrucciones (IntelliSense).  
   
@@ -420,10 +417,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [EzAPI, actualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+ Entrada del blog sobre [EzAPI, actualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
 
 ## <a name="see-also"></a>Vea también  
  [Conectar tareas mediante programación](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

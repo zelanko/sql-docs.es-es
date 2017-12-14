@@ -1,5 +1,5 @@
 ---
-title: "Orígenes de datos | Documentos de Microsoft"
+title: "Orígenes de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [Integration Services], about data sources
+helpviewer_keywords: data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a9bdd1ee95d794dc02851da35beff5ce4ea88243
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Orígenes de datos
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un objeto de tiempo de diseño que puede usar en los paquetes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : el origen de datos.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/27/2017
  No existe dependencia entre un origen de datos y los administradores de conexión que hacen referencia a él. Si el origen de datos ya no forma parte de un proyecto, los paquetes siguen siendo válidos, porque la información sobre el origen de datos, como, por ejemplo, su tipo de conexión y cadena de conexión, se incluye en la definición de paquete.  
   
   
-

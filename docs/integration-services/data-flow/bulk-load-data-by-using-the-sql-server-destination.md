@@ -1,5 +1,5 @@
 ---
-title: Carga masiva de datos mediante el destino de SQL Server | Documentos de Microsoft
+title: Realizar una carga masiva de datos mediante el destino de SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 72c335cab197a6adcb85f0b0e7c05cc9f8c3e7dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Realizar una carga masiva de datos mediante el destino de SQL Server
   Para agregar y configurar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen de datos.  
@@ -74,10 +72,9 @@ ms.lasthandoff: 08/03/2017
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Destino de SQL Server](../../integration-services/data-flow/sql-server-destination.md)   
+ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

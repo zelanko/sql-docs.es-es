@@ -1,5 +1,5 @@
 ---
-title: Guardar paquetes | Documentos de Microsoft
+title: Guardar paquetes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.savecopyas.f1
+f1_keywords: sql13.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-packages"></a>Guardar paquetes
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , se generan los paquetes con el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y se guardan en el sistema de archivos como archivos XML (archivos .dtsx). También puede guardar copias del archivo XML de paquete en la base de datos msdb, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o en el almacén de paquetes. El almacén de paquetes representa las carpetas en la ubicación del sistema de archivos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra.  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     >  Puede comprobar la ruta y el nombre de archivo donde se guardó el paquete en la ventana Propiedades.  
 
 ## <a name="save-a-copy-of-a-package"></a>Guardar una copia de un paquete
-  Esta sección describe cómo guardar una copia de un paquete en el sistema de archivos, en el almacén de paquetes o en la **msdb** en la base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al especificar una ubicación para guardar la copia del paquete, puede actualizar también el nombre del paquete.  
+  En esta sección se describe cómo guardar una copia de un paquete en el sistema de archivos, en el almacén de paquetes o en la base de datos **msdb** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al especificar una ubicación para guardar la copia del paquete, puede actualizar también el nombre del paquete.  
   
  El almacén de paquetes puede incluir la base de datos **msdb** y las carpetas del sistema de archivos, solamente la base de datos **msdb**o solamente las carpetas del sistema de archivos. En **msdb**, los paquetes se guardan en la tabla **sysssispackages** . Esta tabla incluye una columna **folderid** que identifica la carpeta lógica a la que pertenece el paquete. Las carpetas lógicas proporcionan una forma útil de agrupar paquetes guardados en **msdb** del mismo modo que las carpetas del sistema de archivos proporcionan una forma de agrupar paquetes guardados en el sistema de archivos. Las filas en la tabla **sysssispackagefolders** en **msdb** definen las carpetas.  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  En el Explorador de soluciones, haga doble clic en el paquete cuya copia desea guardar.  
   
-2.  En el **archivo** menú, haga clic en **Guardar copia del \<archivo de paquete > como**.  
+2.  En el menú **Archivo**, haga clic en **Guardar copia de \<archivo de paquete> como**.  
   
 3.  En el cuadro de diálogo **Guardar copia del paquete** , seleccione una ubicación de paquete en la lista **Ubicación del paquete** . Las siguientes opciones están disponibles:  
     -   SQL Server
@@ -94,7 +91,7 @@ ms.lasthandoff: 09/26/2017
 9. Haga clic en **Aceptar**.  
 
 ## <a name="save-a-package-as-a-package-template"></a>Guardar un paquete como una plantilla de paquete
- Esta sección describe cómo designar y usar paquetes personalizados como plantillas cuando se crean nuevos paquetes de Integration Services en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. De forma predeterminada, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa una plantilla de paquetes que crea un paquete vacío cuando se agrega un nuevo paquete a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . No puede reemplazar esta plantilla predeterminada, pero puede agregar nuevas plantillas.  
+ En esta sección se describe cómo designar y usar paquetes personalizados como plantillas cuando se crean nuevos paquetes de Integration Services en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. De forma predeterminada, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa una plantilla de paquetes que crea un paquete vacío cuando se agrega un nuevo paquete a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . No puede reemplazar esta plantilla predeterminada, pero puede agregar nuevas plantillas.  
   
  Puede designar varios paquetes para utilizar como plantillas. Para poder implementar paquetes personalizados como plantillas, primero debe crear los paquetes.  
   
@@ -114,9 +111,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto, seleccione **Agregar** y, después, haga clic en **Nuevo elemento**.  
   
-3.  En el **Agregar nuevo elemento -\<nombre del proyecto >** diálogo cuadro, haga clic en el paquete que desea utilizar como plantilla.  
+3.  En el cuadro de diálogo **Agregar nuevo elemento -\<nombre de proyecto>**, haga clic en el paquete que quiera usar como plantilla.  
   
      La lista de plantillas incluye la plantilla de paquetes predeterminada denominada Nuevo paquete de SSIS. El icono de paquete identifica plantillas que se pueden utilizar como plantillas de paquetes.  
   
 4.  Haga clic en **Agregar**.  
-

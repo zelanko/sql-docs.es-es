@@ -1,5 +1,5 @@
 ---
-title: "Componente de flujo de métodos en tiempo de ejecución de los datos | Documentos de Microsoft"
+title: "Métodos en tiempo de ejecución de un componente de flujo de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos en tiempo de ejecución de un componente de flujo de datos
   En tiempo de ejecución, la tarea de flujo de datos examina la secuencia de componentes, prepara un plan de ejecución y administra un grupo de subprocesos de trabajo que ejecutan el plan de trabajo. La tarea carga filas de datos de los orígenes, las procesa a través de las transformaciones y, a continuación, las guarda en los destinos.  
@@ -167,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- Para obtener más información sobre cómo desarrollar componentes que agregan filas a búferes de salida, consulte [desarrollar un componente de origen personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) y [desarrollar un componente de transformación personalizado con salidas asincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
+ Para obtener más información sobre el desarrollo de componentes que agregan filas a los búferes de salida, vea [Desarrollar un componente de origen personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) y [Desarrollar un componente de transformación personalizado con salidas asincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
 ### <a name="receiving-rows"></a>Recibir filas  
- Los componentes reciben filas de los componentes de nivel superior en objetos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. La tarea de flujo de datos proporciona un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> que contiene las filas agregadas al flujo de datos por componentes de nivel superior como un parámetro al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Este búfer de entrada se puede usar para examinar y modificar filas y columnas en el búfer, pero no se puede usar para agregar o quitar filas. Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> varias veces hasta que no hay más búferes disponibles. La última vez que se llama, el <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> propiedad es **true**. Puede iterar sobre la colección de filas en el búfer mediante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, que hace avanzar el búfer a la siguiente fila. Este método devuelve **false** cuando el búfer está en la última fila de la colección. No tiene que comprobar la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>, a menos que tenga que realizar una acción adicional después de que las últimas filas de datos se hayan procesado.  
+ Los componentes reciben filas de los componentes de nivel superior en objetos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. La tarea de flujo de datos proporciona un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> que contiene las filas agregadas al flujo de datos por componentes de nivel superior como un parámetro al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Este búfer de entrada se puede usar para examinar y modificar filas y columnas en el búfer, pero no se puede usar para agregar o quitar filas. Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> varias veces hasta que no hay más búferes disponibles. En la última llamada, la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> es **true**. Puede iterar sobre la colección de filas en el búfer mediante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, que hace avanzar el búfer a la siguiente fila. Este método devuelve **false** cuando el búfer está en la última fila de la colección. No tiene que comprobar la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>, a menos que tenga que realizar una acción adicional después de que las últimas filas de datos se hayan procesado.  
   
  El texto siguiente muestra el patrón correcto para usar el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> y la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>:  
   
@@ -216,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- Para obtener más información sobre cómo desarrollar componentes que reciben filas en búferes de entrada, consulte [desarrollar un componente de destino personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) y [desarrollar un componente de transformación personalizado con salidas sincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
+ Para obtener más información sobre el desarrollo de componentes que reciben filas en los búferes de entrada, vea [Desarrollar un componente de destino personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) y [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Métodos en tiempo de diseño de un componente de flujo de datos](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

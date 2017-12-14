@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS) escalada trabajo | Documentos de Microsoft
+title: Trabajador de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,31 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cb36dc89fbe8fbedc96e426d00f6982213d7d4c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
-Escala Out trabajo ejecuta un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] servicio escala Out Worker a la ejecución de extracción tareas escala Out maestro y ejecuta los paquetes localmente con ISServerExec.exe.
+El trabajo de escalabilidad horizontal ejecuta un servicio de trabajo de escalabilidad horizontal de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] para extraer tareas de ejecución del patrón de escalabilidad horizontal y ejecuta los paquetes localmente con ISServerExec.exe.
 
 ## <a name="configure-sql-server-integration-services-scale-out-worker-service"></a>Configurar servicio de trabajador de escalado horizontal de SQL Server Integration Services
 El servicio de trabajador de escalado horizontal puede configurarse mediante el archivo \<controlador\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config. El servicio debe reiniciarse después de actualizar el archivo de configuración.
 
 Configuración  |Description  |Valor predeterminado  
 ---------|---------|---------
-DisplayName|Nombre para mostrar del trabajador de escalado horizontal. **NO se estén usando en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de 2017.**|Nombre de equipo         
-Description|Descripción del trabajador de escalado horizontal. **NO se estén usando en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de 2017.**|Vacía         
+DisplayName|Nombre para mostrar del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nombre de equipo         
+Description|Descripción del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vacía         
 MasterEndpoint|Punto de conexión para conectarse al patrón de escalado horizontal.|Punto de conexión establecido durante la instalación del trabajador de escalado horizontal         
 MasterHttpsCertThumbprint|Huella digital del certificado SSL de cliente usado para autenticar el patrón de escalado horizontal|Huella digital del certificado de cliente especificado durante la instalación del trabajador de escalado horizontal.          
 WorkerHttpsCertThumbprint|Huella digital del certificado del patrón de escalado horizontal usado para autenticar el trabajador de escalado horizontal.|Huella digital de un certificado creado e instalado automáticamente durante la instalación del trabajador de escalado horizontal          
@@ -43,8 +41,8 @@ StoreName|Nombre del almacén en el que está el certificado de ese trabajador.|
 AgentHeartbeatInterval|Intervalo del latido del trabajador de escalado horizontal.|00:01:00         
 TaskHeartbeatInterval|Intervalo del estado de la tarea de generación de informes del trabajador de escalado horizontal.|00:00:10         
 HeartbeatErrorTollerance|Una vez transcurrido este período desde el último latido correcto, la tarea finaliza si se recibe una respuesta de error del latido.|00:10:00      
-TaskRequestMaxCPU|Límite superior de CPU del trabajador de escalado horizontal para solicitar tareas. **NO se estén usando en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de 2017.**|70.0         
-TaskRequestMinMemory|Límite inferior de memoria en MB del trabajador de escalado horizontal para solicitar tareas. **NO se estén usando en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de 2017.**|100.0         
+TaskRequestMaxCPU|Límite superior de CPU del trabajador de escalado horizontal para solicitar tareas. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|70.0         
+TaskRequestMinMemory|Límite inferior de memoria en MB del trabajador de escalado horizontal para solicitar tareas. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|100.0         
 MaxTaskCount|Número máximo de tareas que puede contener el trabajador de escalado horizontal.|10         
 LeaseInterval|Intervalo de concesión de una tarea por parte del trabajador de escalado horizontal.|00:01:00         
 TasksRootFolder|Carpeta de registros de tareas. Si el valor está vacío, se usa la ruta de acceso de la carpeta \<controlador\>: \Users\\*[cuenta]*\AppData\Local\SSIS\Cluster\Tasks. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacía         
@@ -55,13 +53,12 @@ ExecutionLogCacheFolder|Carpeta que se usa para almacenar en caché el registro 
 ExecutionLogMaxBufferLogCount|Número máximo de registros de ejecución en caché en un búfer de registro de ejecución en memoria.|10000        
 ExecutionLogMaxInMemoryBufferCount|Número máximo de búferes de registro de ejecución en memoria para los registros de ejecución.|10         
 ExecutionLogRetryCount|Número de reintentos si se produce un error en el registro de ejecución.|3
-ExecutionLogRetryTimeout|El tiempo de espera de reintento si se produce un error en el registro de ejecución. ExecutionLogRetryCount se omite si se alcanza ExecutionLogRetryTimeout.|7.00:00:00 (7 días)        
+ExecutionLogRetryTimeout|Tiempo de expiración de reintentos si se produce un error en el registro de ejecución. ExecutionLogRetryCount se omite si se alcanza ExecutionLogRetryTimeout.|7.00:00:00 (7 días)        
 AgentId|Id. de agente de trabajador del trabajador de escalado horizontal|Se genera automáticamente        
 
 ## <a name="view-scale-out-worker-log"></a>Ver el registro del trabajador de escalado horizontal
-El archivo de registro del servicio de escala Out trabajador está en el \<controlador\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Agent ruta de acceso.
+El archivo de registro del servicio de trabajo de escalabilidad horizontal está en la ruta de acceso de la carpeta \<unidad\>:\Usuarios\\*[cuenta]*\AppData\Local\SSIS\ScaleOut\Agent.
 
-TasksRootFolder configura la ubicación del registro de cada tarea individual en el archivo WorkerSettings.config. Si no se especifica, el registro está en la \<controlador\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks ruta de acceso. 
+TasksRootFolder configura la ubicación del registro de cada tarea individual en el archivo WorkerSettings.config. Si no se especifica, el registro está en la ruta de acceso de la carpeta \<unidad\>:\Usuarios\\*[cuenta]*\AppData\Local\SSIS\ScaleOut\Tasks. 
 
-El *[account]* es la cuenta de servicio de escala Out trabajo. De forma predeterminada, la cuenta es SSISScaleOutWorker140.
-
+*[cuenta]* es la cuenta que ejecuta el servicio de trabajo de escalabilidad horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.

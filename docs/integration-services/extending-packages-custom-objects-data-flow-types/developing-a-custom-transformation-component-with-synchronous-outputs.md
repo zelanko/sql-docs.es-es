@@ -1,5 +1,5 @@
 ---
-title: "Desarrollar un componente de transformación personalizado con salidas sincrónicas | Documentos de Microsoft"
+title: "Desarrollar un componente de transformación personalizado mediante salidas sincrónicas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,20 +24,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Desarrollar un componente de transformación personalizado con salidas sincrónicas
-  Los componentes de transformación con salidas sincrónicas reciben filas de los componentes de nivel superior y leen o modifican los valores de las columnas de estas filas al pasarlas a los componentes de nivel inferior. También pueden definir columnas de salida adicionales que se derivan de las columnas que proporcionan los componentes de nivel superior, pero no agregan filas al flujo de datos. Para obtener más información acerca de las diferencias entre los componentes sincrónicos y asincrónicos, vea [descripción sincrónico y transformaciones asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  Los componentes de transformación con salidas sincrónicas reciben filas de los componentes de nivel superior y leen o modifican los valores de las columnas de estas filas al pasarlas a los componentes de nivel inferior. También pueden definir columnas de salida adicionales que se derivan de las columnas que proporcionan los componentes de nivel superior, pero no agregan filas al flujo de datos. Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, consulte [Understanding Synchronous and Asynchronous Transformations (Descripción de las transformaciones sincrónicas y asincrónicas)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Este tipo de componente es el adecuado para las tareas en las que se modifican los datos insertados cuando se proporcionan al componente, y donde el componente no tiene que ver todas las filas antes de procesarlas. Se trata de desarrollar el componente más sencillo debido a que las transformaciones con salidas sincrónicas no conectan normalmente a orígenes de datos externos, administran columnas de metadatos externas o agregan filas a búferes de salida.  
   
@@ -194,7 +191,7 @@ End Sub
 ### <a name="processing-rows"></a>Procesar las filas  
  Los componentes reciben objetos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> que contienen filas y columnas del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Durante este método las filas en el búfer se iteran y las columnas identificadas durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> se pueden leer y modificar. La tarea de flujo de datos llama repetidamente al método hasta que el componente de nivel superior no proporciona más filas.  
   
- Una columna individual en el búfer se lee o escribe mediante el método de acceso de indizador de matriz, o mediante uno de los **obtener** o **establecer** métodos. El **obtener** y **establecer** métodos son más eficaces y se deben usar cuando se conoce el tipo de datos de la columna en el búfer.  
+ Se lee o se escribe una columna individual en el búfer mediante el método de acceso al indizador de matrices o mediante uno de los métodos **Get** o **Set**. Los métodos **Get** y **Set** son más eficaces y se deben usar cuando se conoce el tipo de datos de la columna en el búfer.  
   
  En el siguiente ejemplo de código se muestra una implementación del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> que procesa las filas entrantes.  
   
@@ -332,9 +329,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar un componente de transformación personalizado con salidas asincrónicas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
- [Descripción de las transformaciones sincrónicas y asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Crear una transformación sincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Developing a Custom Transformation Component with Asynchronous Outputs (Desarrollar un componente de transformación personalizado con salidas asincrónicas)](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
+ [Understanding Synchronous and Asynchronous Transformations (Descripción de las transformaciones sincrónicas y asincrónicas)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
+ [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

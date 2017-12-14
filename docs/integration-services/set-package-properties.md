@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de paquete | Documentos de Microsoft
+title: Establecer las propiedades de paquetes | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>Establecer las propiedades de paquetes
   Cuando se crea un paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la interfaz gráfica proporcionada por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se configuran las propiedades del objeto de paquete en la ventana Propiedades.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|Nombre del equipo en el que creó el paquete.|  
 |**CreatorName**|Nombre de la persona que creó el paquete.|  
 |**Description**|Descripción de la funcionalidad del paquete.|  
-|**ID**|GUID del paquete, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura. Para generar un nuevo valor aleatorio para el **identificador** propiedad, seleccione  **\<generar nuevo Id.\>**  en la lista desplegable.|  
+|**ID**|GUID del paquete, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura. Para generar un nuevo valor aleatorio para la propiedad **ID**, seleccione **\<Generar nuevo Id.\>** en la lista desplegable.|  
 |**Nombre**|Nombre del paquete.|  
 |**PackageType**|Tipo de paquete. Los valores son **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**y **SQLReplication**. El valor predeterminado de esta propiedad es **Default**. Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|Última versión importante del paquete.|  
 |**VersionMinor**|Última versión de menor importancia del paquete.|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>Establecer las propiedades de paquete en la ventana Propiedades 
+## <a name="set-package-properties-in-the-properties-window"></a>Establecimiento de las propiedades del paquete en la ventana Propiedades 
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea configurar.  
   
 2.  En el **Explorador de soluciones**, haga doble clic en el paquete para abrirlo en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , o bien haga clic con el botón derecho y seleccione **Diseñador de vistas**.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete actualizado.  
   
-

@@ -1,5 +1,5 @@
 ---
-title: La instancia CDC de Oracle | Documentos de Microsoft
+title: Instancia Oracle CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e34f2e09e740e44566fb6081ebfe1dcd5842d97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-instance"></a>La instancia CDC de Oracle
   La instancia CDC de Oracle es un proceso creado por el servicio CDC de Oracle para procesar los cambios capturados a partir de una sola base de datos de origen de Oracle. La instancia CDC de Oracle recupera su configuración de la tabla **cdc.xdbcdc_config** y mantiene su estado en la tabla **cdc.xdbcdc_state** . Estas tablas forman parte de la base de datos CDC, que define la instancia CDC de Oracle. Para obtener más información acerca de la base de datos y las tablas xdbcdc, vea [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
@@ -51,7 +49,6 @@ ms.lasthandoff: 08/03/2017
 -   **Administrar la recuperación**: cuando se inicia una instancia CDC de Oracle, su estado interno se restaura desde las tablas **xdbcdc_state** y **xdbcdc_staged_transactions** . Una vez restaurado el estado, la instancia CDC continúa de la forma habitual.  
   
 ## <a name="see-also"></a>Vea también  
- [Control de errores](../../integration-services/change-data-capture/error-handling.md)  
+ [Tratamiento de errores](../../integration-services/change-data-capture/error-handling.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Identificar filas de datos similares mediante la transformación Agrupación aproximada | Documentos de Microsoft"
+title: "Identificar filas de datos similares mediante la transformación Agrupación aproximada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b1f699ecfaa3c25d54a10e7b7b138cd56e025073
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar filas de datos similares mediante la transformación Agrupación aproximada
   Para agregar y configurar una transformación Agrupación aproximada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -88,10 +86,9 @@ ms.lasthandoff: 08/03/2017
 20. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Crear base de datos (SQL Server importar y exportar) | Documentos de Microsoft
+title: "Crear base de datos (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.createdatabase.f1
+f1_keywords: sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3f8c2b652515f4c84121dcf14371a9e86c8f86f2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: aa72ff1cc846db19f946bff714e97303c41306f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crear base de datos (Asistente para importación y exportación de SQL Server)
 Si selecciona **Nuevo** en la página **Seleccionar un destino** para crear una base de datos de destino de SQL Server nueva, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el cuadro de diálogo **Crear base de datos** . En esta página, debe proporcionar un nombre para la base de datos nueva. Si quiere, también puede cambiar la configuración del tamaño inicial y el crecimiento automático de la nueva base de datos y su archivo de registro. 
 
-El **Create Database** cuadro de diálogo del asistente ofrece solo las opciones básicas que están disponibles para crear una nueva base de datos de SQL Server. Para ver y configurar todas las opciones para un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de datos, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear la base de datos, o para configurar la base de datos después de que el asistente crea uno. 
+En el cuadro de diálogo **Crear base de datos** del asistente solo se proporcionan las opciones básicas disponibles para crear una base de datos de SQL Server. Para ver y configurar todas las opciones de una base de datos nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear la base de datos o configurarla una vez la haya creado el asistente. 
 
 > [!NOTE]
 > Si busca información sobre la instrucción CREATE DATABASE de [!INCLUDE[tsql](../../includes/tsql-md.md)] y no sobre el cuadro de diálogo **Crear base de datos** del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -38,11 +35,11 @@ El **Create Database** cuadro de diálogo del asistente ofrece solo las opciones
 ## <a name="screen-shot-of-the-create-database-page"></a>Captura de pantalla de la página Crear base de datos  
 En la siguiente captura de pantalla se muestra el cuadro de diálogo **Crear base de datos** del asistente.  
 
-![Crear página de base de datos de la importación y el Asistente para exportación de](../../integration-services/import-export-data/media/create-database.png "Crear página de base de datos de la importación y el Asistente para exportación")  
+![Página Crear base de datos del Asistente para importación y exportación](../../integration-services/import-export-data/media/create-database.png "Create database page of the Import and Export Wizard")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Proporcionar un nombre para la nueva base de datos  
 **Nombre**  
- Proporcione un nombre para la base de datos de SQL Server de destino.
+ Proporcione un nombre para la base de datos de destino de SQL Server.
  
 ### <a name="naming-requirements"></a>Requisitos de nomenclatura
 Cuando asigne un nombre a la base de datos, asegúrese de respetar las convenciones de nomenclatura de SQL Server.  
@@ -97,5 +94,4 @@ Para obtener más información sobre las opciones de tamaño de archivo que apar
 
 ## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
  Después de proporcionar un nombre para la base de datos que creará el asistente y de hacer clic en **Aceptar**, el cuadro de diálogo **Crear base de datos** mostrará la página **Seleccionar un destino** . Para más información, vea [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
 

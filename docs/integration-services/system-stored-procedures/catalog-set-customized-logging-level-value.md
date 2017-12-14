@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_customized_logging_level_value | Documentos de Microsoft
+title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75ef405fe4550e81ec2d5178a1d3242d405755af
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d29b6fbe45795f56d3f560816cd16946e477106
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogsetcustomizedlogginglevelvalue"></a>Catalog.set_customized_logging_level_value
+# <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Cambia las estadísticas o los eventos registrados por un nivel de registro personalizado existente. Para obtener más información acerca de los niveles de registro personalizados, consulte [Integration Services &#40; SSIS &#41; Registro](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Cambia las estadísticas o los eventos que registró un nivel de registro personalizado ya existente. Para obtener más información sobre los niveles de registro personalizados, consulte [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,27 +37,27 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @level_name =] *level_name*  
- El nombre de un miembro de nivel de registro personalizado.  
+ [ @level_name = ] *level_name*  
+ Es el nombre de un nivel de registro personalizado existente.  
   
- El *level_name* es **nvarchar (128)**.  
+ El parámetro *level_name* es **nvarchar(128)**.  
   
- [ @property_name =] *property_name*  
- El nombre de la propiedad que se va a cambiar. Los valores válidos son **perfil** y **eventos**.  
+ [ @property_name = ] *property_name*  
+ Es el nombre de la propiedad que se va a cambiar. Los valores válidos son **PROFILE** y **EVENTS**.  
   
- El *property_name* es **nvarchar (128)**.  
+ El parámetro *property_name* es **nvarchar(128)**.  
   
- [ @property_value =] *property_value*  
- El nuevo valor para la propiedad especificada del nivel de registro personalizado.  
+ [ @property_value = ] *property_value*  
+ Es el nuevo valor de la propiedad especificada del nivel de registro personalizado especificado.  
   
- Para obtener una lista de valores válidos para el perfil y los eventos, vea [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
+ Para obtener una lista de valores válidos para el perfil y los eventos, consulte [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
   
- El *property_value* es un **bigint**.  
+ El parámetro *property_value* es **bigint**.  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="return-codes"></a>Códigos de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
  Cuando se produce un error en el procedimiento almacenado, se genera un error.  
   
@@ -76,7 +74,6 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que el procedimiento almacenado genere un error.  
   
--   El usuario no tiene los permisos necesarios.  
+-   El usuario no tiene los permisos requeridos.  
   
   
-

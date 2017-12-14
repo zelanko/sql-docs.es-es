@@ -1,5 +1,5 @@
 ---
-title: Catalog.Folders (base de datos SSISDB) | Documentos de Microsoft
+title: catalog.folders (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9622bd1a5f1415c9f506a00a63441081154b53ff
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5a439659dd93bdcd4d6c627782de8772adfe6466
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +32,10 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |id|**bigint**|Identificador único de la carpeta.|  
 |name|**sysname(nvarchar(128)**|Nombre de la carpeta, que es único dentro del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
-|description|**nvarchar (1024)**|Descripción de la carpeta.|  
-|created_by_sid|**varbinary (85)**|Identificador de seguridad único (SID) del usuario que creó la carpeta.|  
-|created_by_name|**nvarchar (128)**|Nombre del usuario que creó la carpeta.|  
-|created_time|**DateTimeOffset(7)**|Fecha y hora en que se creó la carpeta.|  
+|description|**nvarchar(1024)**|Descripción de la carpeta.|  
+|created_by_sid|**varbinary(85)**|Identificador de seguridad único (SID) del usuario que creó la carpeta.|  
+|created_by_name|**nvarchar(128)**|Nombre del usuario que creó la carpeta.|  
+|created_time|**datetimeoffset(7)**|Fecha y hora en que se creó la carpeta.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta vista muestra una fila para cada carpeta en el catálogo.  
@@ -47,12 +45,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso READ en la carpeta  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 > [!NOTE]  
 >  Cuando se dispone de permiso para realizar una operación en el servidor, también se dispone de permiso para ver información sobre la operación. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Actualizar paquetes de Integration Services | Documentos de Microsoft
+title: Actualizar paquetes de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c82382c5948f6f81b5b3e80bc6fe9fd76eb23942
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-integration-services-packages"></a>Actualizar paquetes de Integration Services
   Cuando se actualiza una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los paquetes de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] existentes no se actualizan automáticamente al formato de paquete que la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza. Tendrá que seleccionar un método de actualización y actualizar manualmente los paquetes.  
   
- Para obtener información sobre cómo actualizar paquetes al convertir un proyecto en el modelo de implementación de proyecto, vea [implementar Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)
+ Para obtener información sobre la actualización de paquetes al convertir un proyecto al modelo de implementación de proyecto, vea [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
   
 ## <a name="selecting-an-upgrade-method"></a>Seleccionar un método de actualización  
  Puede utilizar distintos métodos para actualizar los paquetes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . En algunos de estos métodos, la actualización solo es temporal. En otros, es definitiva. La tabla siguiente describe cada uno de estos métodos y si la actualización es temporal o definitiva.  
@@ -62,14 +60,14 @@ ms.lasthandoff: 08/03/2017
   
 -   DTExecUI.exe.config  
   
- Usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] componentes personalizados, debe modificar el archivo devenv.exe.config que se encuentra en  *\<unidad >*: \Program Visual Studio 10.0\Common7\IDE.  
+ Si quiere usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyan componentes personalizados de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], debe modificar el archivo devenv.exe.config que se encuentra en *<unidad\<*:\Archivos de programa\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información acerca de la redirección de versión de ensamblado, consulte [ \<assemblyBinding > (elemento) para \<en tiempo de ejecución >](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Buscar los ensamblados  
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una caché global de ensamblados para .NET 4, que se encuentra en  *\<unidad >*: \Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una memoria caché global de ensamblados diferente para .NET 4, que se encuentra en *\<unidad>*:\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
   
- Al igual que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el núcleo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivos .dll de extensibilidad también se encuentran en  *\<unidad >*: \Program SQL Server\130\SDK\Assemblies.  
+ Como ocurre en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos básicos de extensibilidad .dll de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también se encuentran en *\<unidad>*:\Archivos de programa\Microsoft SQL Server\130\SDK\Assemblies.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Descripción de los resultados de la actualización del paquete SQL Server  
  Durante el proceso de actualización del paquete, la mayoría de los componentes y las características de los paquetes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se convierten sin problema en sus homólogos de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, hay varios componentes y características que no se actualizarán u obtendrán resultados en la actualización que habría que tener en cuenta. La tabla siguiente identifica estos componentes y características.  
@@ -79,10 +77,9 @@ ms.lasthandoff: 08/03/2017
   
 |Componente o característica|Resultados de la actualización|  
 |--------------------------|---------------------|  
-|Cadenas de conexión|En el caso de paquetes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , los nombres de ciertos proveedores han cambiado y requieren valores diferentes en las cadenas de conexión. Para actualizar las cadenas de conexión, utilice uno de los procedimientos siguientes:<br /><br /> Use el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar el paquete y seleccione la opción **Actualizar las cadenas de conexión para reflejar los nuevos nombres de proveedor** .<br /><br /> En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la página General del cuadro de diálogo Opciones, seleccione la opción **Actualizar las cadenas de conexión para reflejar los nuevos nombres de proveedor** . Para obtener más información acerca de esta opción, vea la página General.<br /><br /> En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete y cambie manualmente el texto de la propiedad ConnectionString.<br /><br /> Nota: No puede usar los procedimientos anteriores para actualizar una cadena de conexión cuando esta se almacena en un archivo de configuración o en un archivo de origen de datos ni cuando una expresión establece la propiedad **ConnectionString** . Para actualizar la cadena de conexión en estos casos, debe actualizar manualmente el archivo o la expresión.<br /><br /> Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../../integration-services/connection-manager/data-sources.md).|  
+|Cadenas de conexión|En el caso de paquetes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , los nombres de ciertos proveedores han cambiado y requieren valores diferentes en las cadenas de conexión. Para actualizar las cadenas de conexión, utilice uno de los procedimientos siguientes:<br /><br /> Use el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar el paquete y seleccione la opción **Actualizar las cadenas de conexión para reflejar los nuevos nombres de proveedor** .<br /><br /> En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la página General del cuadro de diálogo Opciones, seleccione la opción **Actualizar las cadenas de conexión para reflejar los nuevos nombres de proveedor** . Para obtener más información acerca de esta opción, vea Página General.<br /><br /> En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete y cambie manualmente el texto de la propiedad ConnectionString.<br /><br /> Nota: No puede usar los procedimientos anteriores para actualizar una cadena de conexión cuando esta se almacena en un archivo de configuración o en un archivo de origen de datos ni cuando una expresión establece la propiedad **ConnectionString** . Para actualizar la cadena de conexión en estos casos, debe actualizar manualmente el archivo o la expresión.<br /><br /> Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../../integration-services/connection-manager/data-sources.md).|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>Scripts que dependen de ADODB.dll  
  Es posible que los scripts Tarea de script y Componente de script que hacen referencia de forma explícita a ADODB.dll no se actualicen o ejecuten en equipos sin [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] instalado. Para actualizar los scripts Tarea de script o Componente de script, se recomienda que quite la dependencia de ADODB.dll.  Ado.Net es la alternativa recomendada para el código administrado como scripts VB y C#.  
   
   
-

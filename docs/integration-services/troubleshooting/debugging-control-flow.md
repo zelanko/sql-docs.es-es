@@ -1,16 +1,17 @@
 ---
-title: Depurar el flujo de Control | Documentos de Microsoft
+title: Depurar el flujo de control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.setbreakpoints.f1
+f1_keywords: sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluyen características y herramientas que necesita para solucionar los problemas del flujo de control en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite puntos de interrupción en contenedores y tareas.  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/03/2017
   
  El diagrama siguiente muestra la pestaña **Progreso** .  
   
- ![Pestaña progreso del Diseñador SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "pestaña progreso del Diseñador SSIS")  
+ ![Pestaña Progreso del Diseñador SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
   
 ## <a name="debug-windows"></a>Ventanas de depuración  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye varias ventanas que se pueden usar para trabajar con puntos de interrupción y para depurar paquetes que contienen puntos de interrupción. Para obtener más información sobre cada ventana, abra la ventana y luego presione F1 para mostrar la Ayuda correspondiente de esa ventana.  
@@ -133,9 +134,9 @@ ms.lasthandoff: 08/03/2017
   
     -   Para establecer puntos de interrupción en un flujo de control de paquete, haga clic en la pestaña **Flujo de control** , haga clic con el botón derecho en una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias y, después, haga clic en **Editar puntos de interrupción**.  
   
-    -   Para establecer puntos de interrupción en un controlador de eventos, haga clic en la pestaña **Controlador de eventos**, haga clic con el botón derecho en una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias y, después, haga clic en **Editar puntos de interrupción**.  
+    -   Para establecer puntos de interrupción en un controlador de eventos, haga clic en la pestaña **Controlador de eventos** , haga clic con el botón derecho en una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias y, después, haga clic en **Editar puntos de interrupción**.  
   
-4.  En el **establecer puntos de interrupción \<nombre de contenedor >** cuadro de diálogo, seleccione los puntos de interrupción para habilitar.  
+4.  En el cuadro de diálogo **Establecer puntos de interrupción \<nombre de contenedor>**, seleccione los puntos de interrupción que quiere habilitar.  
   
 5.  Opcionalmente, modifique el tipo y la cantidad de número de llamadas para cada punto de interrupción.  
   
@@ -165,6 +166,5 @@ ms.lasthandoff: 08/03/2017
  Especifique el número de visitas en el que se desencadena una interrupción. Esta opción no está disponible si la interrupción está siempre activa.  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
- [Depurar un script estableciendo puntos de interrupción en una tarea Script y un componente Script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-
+ [Herramientas para solucionar problemas del desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Depurar un script mediante el establecimiento de puntos de interrupción en una tarea Script y un componente de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

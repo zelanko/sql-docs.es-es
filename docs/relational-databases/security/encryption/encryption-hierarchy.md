@@ -2,9 +2,12 @@
 title: "Jerarquía de cifrado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c0b0ad380f67917414067b1ddc90b8e421420cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="encryption-hierarchy"></a>Jerarquía de cifrado
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifra los datos con una infraestructura de cifrado jerárquico y administración de claves. Cada capa cifra la capa inferior utilizando una combinación de certificados, claves asimétricas y claves simétricas. Las claves asimétricas y las claves simétricas pueden estar almacenadas fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un módulo de Administración extensible de claves (EKM).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifra los datos con una infraestructura de cifrado jerárquico y de administración de claves. Cada capa cifra la capa inferior utilizando una combinación de certificados, claves asimétricas y claves simétricas. Las claves asimétricas y las claves simétricas pueden estar almacenadas fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un módulo de Administración extensible de claves (EKM).  
   
  La siguiente ilustración muestra que cada nivel de la jerarquía de cifrado cifra el nivel que tiene por debajo y muestra las configuraciones de cifrado más comunes. El acceso al principio de la jerarquía se suele proteger mediante una contraseña.  
   

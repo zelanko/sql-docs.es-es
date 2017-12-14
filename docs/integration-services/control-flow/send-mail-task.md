@@ -1,5 +1,5 @@
 ---
-title: Tarea Enviar correo | Documentos de Microsoft
+title: Tarea Enviar correo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a810d72817ebdf5a1078e95315adb755a2d42891
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
   La tarea Enviar correo envía un mensaje de correo electrónico. Un paquete puede utilizar la tarea Enviar correo para enviar mensajes si las tareas del paquete de flujo de trabajo finalizan correctamente o si se producen errores, o para enviar mensajes en respuesta a eventos provocados por el paquete en tiempo de ejecución. Por ejemplo, la tarea puede notificar a un administrador de base de datos si la tarea Copia de seguridad de la base de datos se realizó correctamente o no.  
@@ -109,7 +107,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opciones  
  **SMTPConnection**  
- Seleccione un administrador de conexión de SMTP en la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión de administrador.  
+ Seleccione un administrador de conexiones SMTP de la lista, o bien haga clic en **\<Nueva conexión…>** para crear un administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
@@ -157,19 +155,18 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexión de archivos  
  **MessageSource**  
- Seleccione un administrador de conexión de archivos en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en\<**Nueva conexión…**> para crear un administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Seleccione una variable en la lista o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+ Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

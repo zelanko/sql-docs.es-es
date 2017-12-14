@@ -1,5 +1,5 @@
 ---
-title: Catalog.execution_parameter_values (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.execution_parameter_values (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 60907a82f3d0bb9f273355fd6bfbd7378ce72c9f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c222d113bc0ec603bee5c63f3e4badff58dc1d42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +31,11 @@ ms.lasthandoff: 09/26/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |execution_parameter_id|**bigint**|Identificador único (ID) del parámetro de ejecución.|  
-|execution_id|**bigint**|Identificador único para la instancia de ejecución.|  
-|object_type|**smallint**|Cuando el valor es `20`, el valor del parámetro es un parámetro de proyecto. Cuando el valor es `30`, el valor del parámetro es un parámetro de paquete. Cuando el valor es `50`, el parámetro es uno de los siguientes:<br /><br /> **LOGGING_LEVEL**<br /><br /> **DUMP_ON_ERROR**<br /><br /> **DUMP_ON_EVENT**<br /><br /> **DUMP_EVENT_CODE**<br /><br /> **CALLER_INFO**<br /><br /> **SINCRONIZADA**|  
-|parameter_data_type|**nvarchar (128)**|El tipo de datos del parámetro.|  
+|execution_id|**bigint**|Identificador único de la instancia de ejecución.|  
+|object_type|**smallint**|Cuando el valor es `20`, el valor del parámetro es un parámetro de proyecto. Cuando el valor es `30`, el valor del parámetro es un parámetro de paquete. Cuando el valor es `50`, el parámetro es uno de los siguientes:<br /><br /> **LOGGING_LEVEL**<br /><br /> **DUMP_ON_ERROR**<br /><br /> **DUMP_ON_EVENT**<br /><br /> **DUMP_EVENT_CODE**<br /><br /> **CALLER_INFO**<br /><br /> **SYNCHRONIZED**|  
+|parameter_data_type|**nvarchar(128)**|El tipo de datos del parámetro.|  
 |parameter_name|**sysname**|Nombre del parámetro.|  
-|parameter_value|**sql_variant**|El valor del parámetro. Cuando confidencial es `0`, se muestra el valor de texto simple. Cuando confidencial es `1`, **NULL** se muestra el valor.|  
+|parameter_value|**sql_variant**|El valor del parámetro. Cuando el parámetro "sensitive" es `0`, se muestra el valor de texto no cifrado. Cuando el parámetro "sensitive" es `1`, se muestra el valor **NULL**.|  
 |sensitive|**bit**|Cuando el valor es `1`, el valor del parámetro es confidencial. Cuando el valor es `0`, el valor del parámetro no es confidencial.|  
 |required|**bit**|Cuando el valor es `1`, se requiere el valor del parámetro para iniciar la ejecución. Cuando el valor es `0`, no se requiere el valor del parámetro para iniciar la ejecución.|  
 |value_set|**bit**|Cuando el valor es `1`, el valor del parámetro se ha asignado. Cuando el valor es `0`, el valor del parámetro no se ha asignado.|  
@@ -51,12 +49,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso READ en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 > [!NOTE]  
 >  Cuando se dispone de permiso para realizar una operación en el servidor, también se dispone de permiso para ver información sobre la operación. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
   
-

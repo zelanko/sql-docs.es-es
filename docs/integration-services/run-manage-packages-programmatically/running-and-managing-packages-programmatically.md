@@ -1,5 +1,5 @@
 ---
-title: "Ejecutar y administrar paquetes mediante programación | Documentos de Microsoft"
+title: "Ejecutar y administrar paquetes mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Ejecutar y administrar paquetes mediante programación
   Si tiene que administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular los paquetes mediante programación. En este enfoque cuenta con varias opciones:  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  Puede cargar y ejecutar un paquete existente desde una aplicación cliente con solo escribir unas cuantas líneas de código.  
   
- En esta sección se describe y se muestra cómo ejecutar un paquete existente mediante programación y cómo obtener acceso a la salida del flujo de datos desde otras aplicaciones. Como opción de programación avanzada, puede crear mediante programación un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete línea por línea tal como se describe en el tema [generar paquetes mediante programación](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ En esta sección se describe y se muestra cómo ejecutar un paquete existente mediante programación y cómo obtener acceso a la salida del flujo de datos desde otras aplicaciones. Como opción de programación avanzada, puede crear un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] línea por línea mediante programación como se describe en el tema [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) (Generar paquetes mediante programación).  
   
  En esta sección también se tratan otras tareas administrativas que puede realizar mediante programación para administrar paquetes almacenados, paquetes en ejecución y roles de paquete.  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [Administrar los paquetes en ejecución mediante programación](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  Describe cómo enumerar los paquetes que se están ejecutando actualmente, examinar sus propiedades y detener un paquete en ejecución.  
   
- [Administrar Roles de paquete mediante programación &#40; Servicio SSIS &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [Managing Package Roles Programmatically &#40;SSIS Service&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md) (Administrar roles de paquete mediante programación &#40;servicio SSIS&#41;)  
  Describe cómo obtener o establecer información sobre los roles asignados a un paquete o una carpeta.  
   
 ## <a name="reference"></a>Referencia  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

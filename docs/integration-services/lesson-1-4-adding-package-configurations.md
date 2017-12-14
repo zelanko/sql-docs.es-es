@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4: Agregar configuraciones de paquete | Documentos de Microsoft'
+title: 'Paso 4: Agregar configuraciones de paquetes | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>Lección 1-4 - agregar configuraciones de paquetes
+# <a name="lesson-1-4---adding-package-configurations"></a>Lección 1-4: Agregar configuraciones de paquetes
 En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona diversos tipos de configuración. Puede almacenar configuraciones en variables de entorno, entradas del Registro, variables definidas por el usuario, tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y archivos XML. Para proporcionar más flexibilidad, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite el uso de configuraciones indirectas. Esto significa que se usa una variable de entorno para especificar la ubicación de la configuración, que a su vez especifica los valores reales. Los paquetes del proyecto Deployment Tutorial utilizan una combinación de archivos de configuración XML y configuraciones indirectas. Un archivo de configuración XML puede incluir configuraciones de varias propiedades y, si hace falta, varios paquetes pueden hacer referencia a él. En este tutorial, utilizará un archivo de configuración independiente para cada paquete.  
@@ -145,4 +142,3 @@ Creará dos archivos de configuración, DataTransferConfig.dtsConfig y LoadXMLDa
 [Configuraciones de paquetes](../integration-services/packages/package-configurations.md)  
 [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md)  
 [Acceso a los archivos usados por los paquetes](../integration-services/security/security-overview-integration-services.md#files)  
-

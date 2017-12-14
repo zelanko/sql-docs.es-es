@@ -1,29 +1,30 @@
 ---
-title: Catalog.catalog_properties (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.catalog_properties (base de datos SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca3d5da05126d5b71bf6d714f9e8449f9f5c8335
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 16fa5f45b6d4368816e7d5ea115d7f4cff6aa9cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (base de datos SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Muestra las propiedades del catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -33,24 +34,30 @@ ms.lasthandoff: 09/26/2017
 |property_value|**nvarchar(256)**|Valor de la propiedad de catálogo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta vista muestra una fila para cada propiedad de catálogo. Las propiedades mostradas en esta vista incluyen lo siguiente:  
+ Esta vista muestra una fila para cada propiedad de catálogo.
   
 |Nombre de propiedad|Description|  
 |-------------------|-----------------|  
-|**ENCRYPTION_ALGORITHM**|El tipo de algoritmo de cifrado que se utiliza para cifrar los datos confidenciales. Entre los valores compatibles se incluyen: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` y `AES_256`. Nota: para modificar esta propiedad la base de datos de catálogo debe estar en modo de usuario único.|  
-|**MAX_PROJECT_VERSIONS**|El número de nuevas versiones del proyecto que se retendrán para un proyecto único. Si está habilitada la limpieza de versiones, se eliminarán las versiones anteriores que superen este número.|  
-|**OPERATION_CLEANUP_ENABLED**|Cuando el valor es `TRUE`, detalles de la operación y los mensajes de operación anteriores a **RETENTION_WINDOW** (días) se eliminan desde el catálogo. Si el valor es `FALSE`, se almacenarán todos los detalles y los mensajes de la operación en el catálogo. Nota: un trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la limpieza de operaciones.|  
-|**RETENTION_WINDOW**|Número de días que los detalles y los mensajes de la operación estarán almacenados en el catálogo. Si el valor es `-1`, la ventana de retención es infinita. Nota: Si no se desea ninguna limpieza, establezca **OPERATION_CLEANUP_ENABLED** a **FALSE**.|  
-|**VALIDATION_TIMEOUT**|Se detendrán las validaciones si no se completan en el número de segundos especificado por esta propiedad.|  
-|**VERSION_CLEANUP_ENABLED**|Cuando el valor es `TRUE`, solo el **MAX_PROJECT_VERSIONS** número de versiones del proyecto se almacenan en el catálogo y se eliminan todas las demás versiones del proyecto. Cuando el valor es **FALSE**, todas las versiones del proyecto se almacenan en el catálogo. Nota: un trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la limpieza de operaciones.|  
-|**SERVER_LOGGING_LEVEL**|Nivel de registro predeterminado del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
+|**DEFAULT_EXECUTION_MODE**|Es el modo de ejecución de paquetes predeterminado de todo el servidor: `Server` (0) o `Scale Out` (1). |
+|**ENCRYPTION_ALGORITHM**|El tipo de algoritmo de cifrado que se utiliza para cifrar los datos confidenciales. Entre los valores compatibles se incluyen: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` y `AES_256`. Nota: para modificar esta propiedad la base de datos de catálogo debe estar en modo de usuario único.|
+|**IS_SCALEOUT_ENABLED**|Cuando el valor es `True`, se habilita la característica de escalabilidad horizontal de SSIS. Si no habilitó la escalabilidad horizontal, es posible que esta propiedad no aparezca en la vista.|
+|**MAX_PROJECT_VERSIONS**|Es el número de nuevas versiones de proyecto que se retendrán en un proyecto único. Si está habilitada la limpieza de versiones, se eliminarán las versiones anteriores que superen este número.|  
+|**OPERATION_CLEANUP_ENABLED**|Si el valor es `TRUE`, se eliminarán del catálogo los detalles y los mensajes de la operación anteriores a **RETENTION_WINDOW** (días). Si el valor es `FALSE`, se almacenarán todos los detalles y los mensajes de la operación en el catálogo. Nota: un trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la limpieza de operaciones.|  
+|**RETENTION_WINDOW**|Número de días que los detalles y los mensajes de la operación estarán almacenados en el catálogo. Si el valor es `-1`, la ventana de retención es infinita. Nota: Si no quiere realizar ninguna limpieza, establezca **OPERATION_CLEANUP_ENABLED** en **FALSE**.|
+|**SCHEMA_BUILD**|Es el número de compilación del esquema de base de datos del catálogo SSISDB. Este número cambia cada vez que se crea o actualiza el catálogo de SSISDB.|
+|**SCHEMA_VERSION**|Es el número de versión principal del esquema de base de datos del catálogo SSISDB. Este número cambia cada vez que se crea o actualiza la versión principal del catálogo de SSISDB.|
+|**VALIDATION_TIMEOUT**|Las validaciones se detienen si no se completan dentro del número de segundos que especificó la propiedad.|  
+|**SERVER_CUSTOMIZED_LOGGING_LEVEL**|Es el nivel de registro personalizado y predeterminado del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si no creó los niveles de registro personalizados, es posible que esta propiedad no aparezca en la vista.|
+|**SERVER_LOGGING_LEVEL**|Nivel de registro predeterminado del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|Cuando el valor es 1 (`PER_EXECUTION`), el certificado y la clave simétrica que se usan para proteger los parámetros de ejecución confidenciales y los registros de ejecución se crean para cada *ejecución*. Cuando el valor es 2 (`PER_PROJECT`), el certificado y la clave simétrica se crean una vez por cada *proyecto*. Para obtener más información acerca de esta propiedad, consulte la sección Comentarios del procedimiento almacenado [catalog.cleanup_server_log](..\system-stored-procedures\catalog-cleanup-server-log.md#remarks) de SSIS.|
+|**VERSION_CLEANUP_ENABLED**|Si el valor es `TRUE`, solo el número **MAX_PROJECT_VERSIONS** de versiones del proyecto se almacena en el catálogo y se eliminan todas las demás versiones del proyecto. Si el valor es **FALSE**, se almacenan todas las versiones del proyecto en el catálogo. Nota: un trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la limpieza de operaciones.|
+|||
   
 ## <a name="permissions"></a>Permissions  
  Esta vista exige uno de los siguientes permisos:  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
   
-

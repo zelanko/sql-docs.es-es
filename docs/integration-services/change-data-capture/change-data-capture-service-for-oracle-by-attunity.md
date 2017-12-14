@@ -1,5 +1,5 @@
 ---
-title: Captura de datos modificados Service para Oracle de Attunity | Documentos de Microsoft
+title: Change Data Capture Service para Oracle de Attunity | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 1f1ce0a4f9e616f38f4b99ad220a7c7e8ba6a2fc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5438d58a852f5f61cd45b3f9b74a7a7ed5383c47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Servicio de captura de datos modificados para Oracle de Attunity
   El servicio CDC para Oracle es un servicio de Windows que examina los registros de transacciones de Oracle y captura los cambios a las tablas de Oracle deseadas en tablas de cambios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las tablas de cambios de SQL donde se almacenan los cambios capturados de Oracle son el mismo tipo de tablas de cambios empleadas en la característica de captura de datos modificados nativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que el uso de estos cambios sea tan sencillo como el de los cambios realizados a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,8 +50,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>Base de datos de Oracle de origen  
   
--   Base de datos de Oracle 10g versión 2
--   Base de datos de Oracle 11g de la versión 1 y la versión 2
+-   Oracle Database 10g versión 2
+-   Oracle Database 11g versión 1 y versión 2
 -   Oracle Database 12C en instalación clásica. (La instalación de tipo multiinquilino no es compatible).  
   
 ### <a name="target-sql-server-database"></a>Base de datos de SQL Server de destino  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/03/2017
  [Trabajar con el servicio CDC de Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   
-

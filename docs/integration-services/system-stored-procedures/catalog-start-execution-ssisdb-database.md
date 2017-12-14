@@ -1,5 +1,5 @@
 ---
-title: Catalog.start_execution (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.start_execution (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +36,16 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
   
 ## <a name="arguments"></a>Argumentos  
  [@execution_id =] *execution_id*  
- Identificador único de la instancia de ejecución. El *execution_id* es **bigint**.
+ Identificador único de la instancia de ejecución. El parámetro *execution_id* es **bigint**.
  
- [@retry_count =] *número_reintentos*  
- El número de reintentos si se produce un error en la ejecución. Entrará en vigor solo si la ejecución en horizontalmente. Este parámetro es opcional. Si no se especifica, su valor se establece en 0. El *cuenta_reintentos* es **int**.
+ [@retry_count =] *retry_count*  
+ Es el número de reintentos si se produce un error en la ejecución. Solo tendrá efecto si la ejecución está en modo de escalabilidad horizontal. Este parámetro es opcional. Si no se especifica, su valor se establece en 0. El parámetro *retry_count* es **int**.
   
 ## <a name="remarks"></a>Comentarios  
- Una ejecución se utiliza para especificar los valores de parámetro que es utilizado por un paquete durante una única instancia de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hace referencia a un proyecto que no está actualizado. Esta referencia no válida hace que el procedimiento almacenado genere un error.  
+ Una ejecución se usa para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hará referencia a un proyecto obsoleto. Esta referencia no válida hace que el procedimiento almacenado genere un error.  
   
 > [!NOTE]  
->  Las ejecuciones solo pueden iniciarse una vez. Para iniciar una instancia de ejecución, debe estar en estado creado (un valor de `1` en el **estado** columna de la [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) vista).  
+>  Las ejecuciones solo pueden iniciarse una vez. Para iniciar una instancia de ejecución, debe tener el estado creado (el valor de `1` en la columna de **estado** de la vista [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama a catalog.create_execution para crear una instancia de ejecución para el paquete Child1.dtsx. Project1 de Integration Services contiene el paquete. En el ejemplo se llama a catalog.set_execution_parameter_value para establecer valores para los parámetros Parameter1, Parameter2 y LOGGING_LEVEL. En el ejemplo se llama a catalog.start_execution para iniciar una instancia de ejecución.  
@@ -67,7 +65,7 @@ GO
 ```  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno  
@@ -77,9 +75,9 @@ GO
   
 -   Los permisos READ y MODIFY de la instancia de ejecución, los permisos READ y EXECUTE del proyecto y, si procede, los permisos READ del entorno al que se hace referencia  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -97,4 +95,3 @@ GO
 -   La versión del proyecto asociada a la instancia de ejecución está obsoleta; solo se puede ejecutar la versión más actual de un proyecto  
   
   
-

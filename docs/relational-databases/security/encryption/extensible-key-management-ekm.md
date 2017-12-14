@@ -2,9 +2,12 @@
 title: "Administración extensible de claves (EKM) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c642ca8448624c79b77f84c71619439918856767
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extensible-key-management-ekm"></a>Administración extensible de claves (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona las funciones del cifrado de datos junto con la *Administración extensible de claves* (EKM), las cuales usan la *API criptográfica de Microsoft* (MSCAPI) para el cifrado y generación de clave. Las claves de cifrado utilizadas para cifrar datos y claves se crean en contenedores transitorios de claves y se deben exportar desde un proveedor antes de que se almacenen en la base de datos. Este enfoque permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona funciones del cifrado de datos junto con la *Administración extensible de claves* (EKM) mediante el proveedor de la *API criptográfica de Microsoft* (MSCAPI) para el cifrado y la generación de claves. Las claves de cifrado utilizadas para cifrar datos y claves se crean en contenedores transitorios de claves y se deben exportar desde un proveedor antes de que se almacenen en la base de datos. Este enfoque permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
   
  Con la creciente demanda para cumplir con las leyes y con las políticas de privacidad de datos, las organizaciones están aprovechándose del cifrado como una forma de obtener una solución de "defensa en profundidad". Este enfoque es a menudo poco práctico si solo se utilizan las herramientas de administración del cifrado de base de datos. Los fabricantes de hardware proporcionan productos específicamente diseñados para la administración de claves de la empresa usando *Módulos de seguridad por hardware* (HSM). Los dispositivos HSM almacenan las claves de cifrado en módulos de hardware o de software. Ésta es una solución más segura porque las claves de cifrado no residen junto a los datos de cifrado.  
   

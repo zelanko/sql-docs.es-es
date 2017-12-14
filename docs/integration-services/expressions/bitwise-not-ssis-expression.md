@@ -1,5 +1,5 @@
 ---
-title: "~ (Not bit a bit) (expresión de SSIS) | Documentos de Microsoft"
+title: "~ (NOT bit a bit) (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 398f902d224f49e00b3fdc62bf39300ba180fda8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 57e1a67408db2b1ed6412e269559be3faa9c9d1a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Not bit a bit) (expresión de SSIS)
   Realiza una negación bit a bit de un entero. Este operador puede aplicarse a tipos de datos enteros con o sin signo.  
@@ -66,8 +64,7 @@ ms.lasthandoff: 08/03/2017
  1111111101010101  
   
 ## <a name="see-also"></a>Vea también  
- [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

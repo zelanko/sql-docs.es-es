@@ -1,5 +1,5 @@
 ---
-title: Captura de datos modificados (SSIS) | Documentos de Microsoft
+title: Change Data Capture (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/26/2017
   
  Cuando el administrador ha habilitado la captura de datos modificados en la base de datos, es posible crear un paquete que realiza una carga incremental de los datos modificados. El diagrama siguiente muestra los pasos necesarios para crear un paquete de este tipo que realiza una carga incremental desde una sola tabla:  
   
- ![Cambiar pasos de creación de paquete de captura de datos](../../integration-services/change-data-capture/media/cdc-package-creation.gif "cambiar pasos de creación de paquete de captura de datos")  
+ ![Pasos de creación de un paquete de Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Change Data Capture Package Creation Steps")  
   
  Tal como se muestra en el diagrama anterior, la creación de un paquete que realiza una carga incremental de datos modificados conlleva los pasos siguientes:  
   
@@ -129,4 +127,3 @@ ms.lasthandoff: 09/26/2017
  Entrada de blog, sobre el [patrón de diseño de SSIS y la carga incremental](http://go.microsoft.com/fwlink/?LinkId=217679), en sqlblog.com  
   
   
-

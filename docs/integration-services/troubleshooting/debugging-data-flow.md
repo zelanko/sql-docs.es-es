@@ -1,5 +1,5 @@
 ---
-title: Depurar el flujo de datos | Documentos de Microsoft
+title: Depurar el flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -176,7 +174,7 @@ order by source_component_name desc
   
 4.  Haga clic con el botón derecho en el componente cuyas columnas de salida de error quiere configurar y haga clic en **Mostrar editor avanzado**.  
   
-5.  Haga clic en el **propiedades de entrada y salida** pestaña y expanda  **\<nombre de componente > salida de Error** y, a continuación, expanda **columnas de salida**.  
+5.  Haga clic en la pestaña **Propiedades de entrada y salida** y expanda **Salida de error de \<nombre de componente>** y, después, expanda **Columnas de salida**.  
   
 6.  Haga clic en una columna y actualice sus propiedades.  
   
@@ -253,7 +251,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  El parámetro dataflow_path_id_string del procedimiento almacenado add_data_tap corresponde a la propiedad IdentificationString de la ruta de flujo de datos a la que desea agregar una derivación de datos. Para obtener dataflow_path_id_string, haga clic en la ruta de flujo de datos (flecha entre las tareas del flujo de datos) y anote el valor de la propiedad **IdentificationString** de la ventana Propiedades.  
   
- Cuando se ejecuta la secuencia de comandos, el archivo de salida se almacena en \<archivos de programa > \Microsoft SQL Server\110\DTS\DataDumps. Si ya existe un archivo con ese nombre, se crea un archivo nuevo con un sufijo (por ejemplo: output[1].txt).  
+ Cuando se ejecuta el script, el archivo de salida se almacena en \<Archivos de programa>\Microsoft SQL Server\110\DTS\DataDumps. Si ya existe un archivo con ese nombre, se crea un archivo nuevo con un sufijo (por ejemplo: output[1].txt).  
   
  Como se ha indicado anteriormente, también puede usar el procedimiento almacenado [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md), en lugar de usar el procedimiento almacenado add_data_tap. Este procedimiento almacenado toma como parámetro el identificador de la tarea Flujo de datos en lugar de task_package_path. Puede obtener el identificador de la tarea Flujo de datos de la ventana Propiedades en Visual Studio.  
   
@@ -283,4 +281,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Crear un paquete mediante programación | Documentos de Microsoft"
+title: "Crear un paquete mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b16b2cc623c44884e088168e3c16ccb412dd88b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-package-programmatically"></a>Crear un paquete mediante programación
   El objeto <xref:Microsoft.SqlServer.Dts.Runtime.Package> es el contenedor de nivel superior para todos los demás objetos de una solución de proyecto [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Al igual que el contenedor de nivel superior, el paquete es el primer objeto creado y los objetos subsiguientes se agregan a él y, a continuación, se ejecutan dentro del contexto del paquete. El propio paquete no mueve o transforma los datos. El paquete se basa en las tareas que contiene para realizar el trabajo. Las tareas realizan la mayor parte del trabajo que realiza un paquete y definen la funcionalidad de un paquete. Un paquete se crea y ejecuta con solo tres líneas de código, pero se agregan varias tareas y los objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> para proporcionar una funcionalidad adicional al paquete. En esta sección se describe cómo crear un paquete mediante programación. No proporciona información acerca de cómo crear las tareas o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Estos temas se tratan en secciones posteriores.  
@@ -73,15 +70,15 @@ Module Module1
 End Module  
 ```  
   
- Para compilar y ejecutar el ejemplo, presione F5 en Visual Studio. Para compilar el código que usa el compilador de C#, **csc.exe**, en el símbolo del sistema para compilar, use el siguiente comando y archivo referencias, reemplazando el  *\<filename >* con el nombre del archivo .cs o .vb y dándole un  *\<outputfilename >* de su elección.  
+ Para compilar y ejecutar el ejemplo, presione F5 en Visual Studio. Para compilar el código mediante el compilador de C#, **csc.exe**, en el símbolo del sistema que se debe compilar, use las siguientes referencias de comando y archivo, reemplazando *\<filename>* por el nombre del archivo .cs o .vb y proporcionando el nombre *\<outputfilename>* que elija.  
   
- **csc/target: library/out: \<outputfilename > .dll \<filename > .cs /r:Microsoft.SqlServer.Managed DTS.dll "sc**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Para compilar el código que usa el compilador de Visual Basic. NET, **vbc.exe**, en el símbolo del sistema para compilar, use el siguiente comando y referencias de archivo.  
+ Para compilar el código mediante el compilador de Visual Basic .NET, **vbc.exe**, en el símbolo del sistema que se debe compilar, use las siguientes referencias de comando y archivo.  
   
- **vbc/target: library/out: \<outputfilename > .dll \<filename > .vb /r:Microsoft.SqlServer.Managed DTS.dll "sc**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- También puede crear un paquete cargando un paquete existente que se guardó en disco, en el sistema de archivos o en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La diferencia es que el <xref:Microsoft.SqlServer.Dts.Runtime.Application> en primer lugar se crea el objeto y, a continuación, se rellena el objeto de paquete mediante uno de los métodos sobrecargados de la aplicación: **LoadPackage** para archivos sin formato, **LoadFromSQLServer** para paquetes guardados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para los paquetes guardados en el sistema de archivos. En el ejemplo siguiente se carga un paquete existente desde el disco y, a continuación, se muestran varias propiedades en el paquete.  
+ También puede crear un paquete cargando un paquete existente que se guardó en disco, en el sistema de archivos o en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La diferencia es que primero se crea el objeto <xref:Microsoft.SqlServer.Dts.Runtime.Application> y, después, uno de los métodos sobrecargados de la aplicación rellena el objeto de paquete: **LoadPackage** para archivos planos, **LoadFromSQLServer** para archivos guardados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para los paquetes guardados en el sistema de archivos. En el ejemplo siguiente se carga un paquete existente desde el disco y, a continuación, se muestran varias propiedades en el paquete.  
   
 ```csharp  
 using System;  
@@ -150,7 +147,7 @@ Module ApplicationTests
 End Module  
 ```  
   
- **Salida de ejemplo:**  
+ **Salida del ejemplo:**  
   
  `Number of configurations = 2`  
   
@@ -160,12 +157,11 @@ End Module
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [API ejemplo - origen OleDB y destino de OLE DB](http://go.microsoft.com/fwlink/?LinkId=220824), en blogs.msdn.com.  
+-   Entrada del blog sobre el [ejemplo de API, origen OleDB y destino OleDB](http://go.microsoft.com/fwlink/?LinkId=220824), en blogs.msdn.com.  
   
--   Entrada de blog, [EzAPI, actualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+-   Entrada del blog sobre [EzAPI, actualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar tareas mediante programación](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

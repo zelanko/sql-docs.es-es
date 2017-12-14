@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) controladores de eventos | Documentos de Microsoft
+title: Controladores de eventos de Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
   En el tiempo de ejecución, los ejecutables (paquetes y contenedores de bucles Foreach, bucles For, de secuencia y de host de tarea) producen eventos. Por ejemplo un evento OnError se produce cuando se genera un error. Puede crear controladores de eventos personalizados para estos eventos con el fin de ampliar la funcionalidad de paquetes y facilitar la administración de paquetes en el tiempo de ejecución. Los controladores de eventos pueden realizar tareas tales como las siguientes:  
@@ -51,11 +49,11 @@ ms.lasthandoff: 09/26/2017
   
  El diagrama siguiente muestra un paquete simple que tiene un contenedor de bucles For que contiene una tarea Ejecutar SQL.  
   
- ![Paquete, bucle For, host de la tarea y tarea Ejecutar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "paquete, bucle For, host de la tarea y tarea Ejecutar SQL")  
+ ![Paquete, bucle For, host de la tarea y tarea Ejecutar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
  Solo el paquete tiene un controlador de eventos, para su evento **OnError** . Si se produce un error cuando se ejecuta una tarea Ejecutar SQL, se ejecuta el controlador de eventos **OnError** para el paquete. El siguiente diagrama muestra la secuencia de llamadas que produce el controlador de eventos **OnError** para que se ejecute el paquete.  
   
- ![Flujo de controlador de eventos](../integration-services/media/mw-dts-eventhandlers.gif "flujo del controlador de eventos")  
+ ![Flujo del controlador de eventos](../integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
   
  Los controladores de eventos son miembros de una colección de controladores de eventos y todos los contenedores incluyen esta colección. Si crea el paquete mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , puede ver los miembros de las colecciones de controladores de eventos en las carpetas **Controladores de eventos** en la pestaña **Explorador de paquetes** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -105,7 +103,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
  La pestaña **Controlador de eventos** también incluye el área de Administradores de **conexión** , donde se crean y modifican los administradores de conexión que usan los controladores de eventos para conectarse a los servidores y orígenes de datos. Para obtener más información, vea [Crear administradores de conexiones](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Agregar un controlador de eventos en la ficha controladores de eventos  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Adición de un controlador de eventos en la pestaña Controladores de eventos  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -113,7 +111,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
 3.  Haga clic en la pestaña **Controladores de eventos** .  
   
-     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](../integration-services/media/eventhandlers.gif "captura de pantalla de la superficie de diseño con el controlador de eventos")  
+     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](../integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
   
      La creación del flujo de control y de los flujos de datos en un controlador de eventos se asemeja a la creación del flujo de control y de los flujos de datos en un paquete. Para obtener más información, consulte [Control Flow](../integration-services/control-flow/control-flow.md) y [Data Flow](../integration-services/data-flow/data-flow.md).  
   
@@ -129,7 +127,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
 9. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete.  
 
-## <a name="set-the-properties-of-an-event-handler"></a>Establecer las propiedades de un controlador de eventos  
+## <a name="set-the-properties-of-an-event-handler"></a>Establecimiento de las propiedades de un controlador de eventos  
  Puede establecer propiedades en la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o mediante programación.  
   
  Para obtener información sobre cómo establecer estas propiedades en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
@@ -140,4 +138,3 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
  Para obtener información sobre cómo agregar un controlador de eventos a un paquete, vea [agregar un controlador de eventos a un paquete](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   
-

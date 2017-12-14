@@ -1,5 +1,5 @@
 ---
-title: Desarrollar un componente de origen personalizado | Documentos de Microsoft
+title: Desarrollar un componente de origen personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite a los desarrolladores escribir componentes de origen que pueden conectarse a orígenes de datos personalizados y proporcionar datos de esos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que los desarrolladores escriban componentes de origen que se puedan conectar a los orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
   
  Los componentes de origen tienen una o más salidas y ninguna entrada. En tiempo de diseño, los componentes de origen se utilizan para crear y configurar conexiones, leer metadatos de columna del origen de datos externo y configurar las columnas de salida del origen en función del origen de datos externo. Durante la ejecución, conectan al origen de datos externo y agregan filas a un búfer de salida. A continuación, la tarea de flujo de datos proporciona este búfer de filas de datos a componentes de nivel inferior.  
   
- Para obtener una introducción general de desarrollo de componentes de flujo de datos, vea [desarrollar un componente de flujo de datos personalizada](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ Para obtener información general sobre el desarrollo de componentes de flujo de datos, vea [Developing a Custom Data Flow Componen](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) (Desarrollo de un componente de flujo de datos personalizado).  
   
 ## <a name="design-time"></a>Tiempo de diseño  
  La implementación de la funcionalidad en tiempo de diseño de un componente de origen implica especificar una conexión a un origen de datos externo, agregar y configurar columnas de salida que reflejen el origen de datos y validar que el componente esté listo para ejecutarse. Por definición, un componente de origen no tiene ninguna entrada y una o más salidas asincrónicas.  
   
 ### <a name="creating-the-component"></a>Crear el componente  
- Los componentes de origen se conectan a los orígenes de datos externos utilizando objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definidos en un paquete. Indican su requisito de un administrador de conexiones agregando un elemento a la colección <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Esta colección sirve a dos fines: incluir referencias a administradores de conexión del paquete que utiliza el componente y anunciar la necesidad de un administrador de conexiones al diseñador. Cuando un <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> se ha agregado a la colección, el **Editor avanzado** muestra la **propiedades de conexión** ficha, que permite a los usuarios seleccionar o crear una conexión en el paquete.  
+ Los componentes de origen se conectan a los orígenes de datos externos utilizando objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definidos en un paquete. Indican su requisito de un administrador de conexiones agregando un elemento a la colección <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Esta colección sirve a dos fines: incluir referencias a administradores de conexión del paquete que utiliza el componente y anunciar la necesidad de un administrador de conexiones al diseñador. Cuando se agrega <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a la colección, el **Editor avanzado** muestra la pestaña **Propiedades de conexión**, que permite a los usuarios seleccionar o crear una conexión en el paquete.  
   
  En el ejemplo de código siguiente se muestra una implementación de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> que agrega una salida y agrega un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -112,7 +109,7 @@ End Class
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>Conectar a un origen de datos externo  
- Una vez agregada una conexión a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> para establecer una conexión al origen de datos externo. A este método se le llama en tiempo de diseño y en tiempo de ejecución. El componente debe establecer una conexión al administrador de conexiones especificado por la conexión en tiempo de ejecución y, posteriormente, al origen de datos externo.  
+ Una vez agregada una conexión a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> para establecer una conexión al origen de datos externo. A este método se le llama en tiempo de diseño y en tiempo de ejecución. El componente debería establecer una conexión con el administrador de conexiones especificado por la conexión en tiempo de ejecución y, como consecuencia, con el origen de datos externo.  
   
  Una vez establecida la conexión, el componente debe almacenarla en caché y liberarla al llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A>. Al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> se le llama en tiempo de diseño y en tiempo de ejecución, como el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>. Los programadores invalidan este método y liberan la conexión establecida por el componente durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>.  
   
@@ -188,7 +185,7 @@ End Sub
 |DT_STR|Mayor que 0 y menor que 8000.|0|0|Distinto de 0 y una página de códigos válida.|  
 |DT_WSTR|Mayor que 0 y menor que 4.000.|0|0|0|  
   
- Puesto que las restricciones en las propiedades de tipo de datos se basan en el tipo de datos de la columna de salida, debe elegir el tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] correcto al trabajar con tipos administrados. La clase base proporciona tres métodos auxiliares, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, para ayudar a los desarrolladores de componentes administrados en la selección de un [!INCLUDE[ssIS](../../includes/ssis-md.md)] tipo de datos dado un tipo administrado. Estos métodos convierten los tipos de datos administrados en tipos de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y viceversa.  
+ Puesto que las restricciones en las propiedades de tipo de datos se basan en el tipo de datos de la columna de salida, debe elegir el tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] correcto al trabajar con tipos administrados. La clase base proporciona tres métodos de aplicación auxiliar, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, para ayudar a los programadores de componentes administrados a seleccionar un tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] dado un tipo administrado. Estos métodos convierten los tipos de datos administrados en tipos de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y viceversa.  
   
  En el ejemplo de código siguiente se muestra cómo se rellena la colección de columnas de salida de un componente en función del esquema de una tabla. Los métodos de aplicación auxiliar de la clase base se utilizan para establecer el tipo de datos de la columna; las propiedades dependientes se establecen en función del tipo de datos.  
   
@@ -369,9 +366,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Validar el componente  
- Debe validar un componente de origen y comprobar que las columnas definidas en sus colecciones de columnas de salida coinciden con las columnas del origen de datos externo. En ocasiones, la comprobación de las columnas de salida en el origen de datos externo puede resultar imposible, como en un estado desconectado, o cuando es preferible evitar largos viajes de ida y vuelta (round trip) al servidor. En estas situaciones, las columnas de la salida se pueden seguir validando mediante la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> del objeto de salida. Para obtener más información, consulte [validar un componente de flujo de datos](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
+ Debe validar un componente de origen y comprobar que las columnas definidas en sus colecciones de columnas de salida coinciden con las columnas del origen de datos externo. En ocasiones, la comprobación de las columnas de salida en el origen de datos externo puede resultar imposible, como en un estado desconectado, o cuando es preferible evitar largos viajes de ida y vuelta (round trip) al servidor. En estas situaciones, las columnas de la salida se pueden seguir validando mediante la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> del objeto de salida. Para obtener más información, vea [Validating a Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md) (Validación de un componente de flujo de datos).  
   
- Esta colección existe tanto en los objetos de entrada como en los objetos de salida, y se puede rellenar con las columnas del origen de datos externo. Puede utilizar esta colección para validar las columnas de salida cuando [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador está sin conexión, cuando el componente está desconectado o cuando el <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propiedad es **false**. La colección se debe rellenar por primera vez al mismo tiempo que se crean las columnas de salida. Agregar columnas de metadatos externas a la colección resulta relativamente fácil porque la columna de metadatos externa debe coincidir inicialmente con la columna de salida. Las propiedades de tipo de datos se deberán haber establecido correctamente y se pueden copiar directamente en el objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
+ Esta colección existe tanto en los objetos de entrada como en los objetos de salida, y se puede rellenar con las columnas del origen de datos externo. Puede utilizar esta colección para validar las columnas de salida cuando el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] no tiene conexión, cuando el componente está desconectado o cuando la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> es **false**. La colección se debe rellenar por primera vez al mismo tiempo que se crean las columnas de salida. Agregar columnas de metadatos externas a la colección resulta relativamente fácil porque la columna de metadatos externa debe coincidir inicialmente con la columna de salida. Las propiedades de tipo de datos se deberán haber establecido correctamente y se pueden copiar directamente en el objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  En el siguiente código de ejemplo se agrega una columna de metadatos externa basada en una columna de salida recién creada. Se supone que la columna de salida ya se ha creado.  
   
@@ -416,7 +413,7 @@ Private Sub CreateExternalMetaDataColumn(ByVal output As IDTSOutput100, ByVal ou
 ### <a name="locating-columns-in-the-buffer"></a>Localizar columnas en el búfer  
  El búfer de salida de un componente contiene las columnas definidas por el componente y cualquier columna agregada a la salida de un componente de nivel inferior. Por ejemplo, si un componente de origen proporciona tres columnas en su salida y el componente siguiente agrega una cuarta columna de salida, el búfer de salida que proporciona el componente de origen contiene estas cuatro columnas.  
   
- El índice de la columna de salida de la colección de columnas de salida no define el orden de las columnas de una fila de búfer. Una columna de salida solo se puede localizar de forma precisa en una fila de búfer mediante el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A>. Este método busca la columna con el identificador de linaje especificado en el búfer especificado y devuelve su ubicación en la fila. Los índices de las columnas de salida se encuentran normalmente en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> y se almacenan para su uso durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>.  
+ El índice de la columna de salida de la colección de columnas de salida no define el orden de las columnas de una fila de búfer. Una columna de salida solo se puede localizar de forma precisa en una fila de búfer mediante el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A>. Este método localiza la columna con el identificador de linaje especificado en el búfer especificado y devuelve su ubicación en la fila. Los índices de las columnas de salida se encuentran normalmente en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> y se almacenan para su uso durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>.  
   
  En el ejemplo de código siguiente se busca la ubicación de las columnas de salida del búfer de salida durante una llamada a <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> y se almacenan en una estructura interna. El nombre de la columna también se almacena en la estructura y se utiliza en el ejemplo de código para el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> en la sección siguiente de este tema.  
   
@@ -677,8 +674,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar un componente de destino personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [Crear un origen con el componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [Developing a Custom Destination Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  (Desarrollo de un componente de destino personalizado)  
+ [Crear un origen con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Habilitar y configurar las configuraciones de paquete | Documentos de Microsoft'
+title: 'Paso 2: Habilitar y configurar las configuraciones de paquetes | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lección 5-2: habilitar y configurar las configuraciones de paquetes
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lección 5-2: Habilitar y configurar las configuraciones de paquetes
 En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Usará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad **Directory** del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Para crear una variable nueva de nivel de paquete asignada a la propiedad Directory  
@@ -117,4 +114,3 @@ En esta tarea, convertirá el proyecto al modelo de implementación de paquetes 
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 3: Modificar el valor de configuración de la propiedad Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

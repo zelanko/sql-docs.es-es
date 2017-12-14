@@ -1,5 +1,5 @@
 ---
-title: Agregar copia de paquete existente | Documentos de Microsoft
+title: Agregar copia de paquete existente | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.addcopyexistingpackage.f1
-helpviewer_keywords:
-- Add Copy of Existing Package dialog box
+f1_keywords: sql13.dts.designer.addcopyexistingpackage.f1
+helpviewer_keywords: Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cf1faebe886981c272a71d54d84bc42b2a66f9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -57,4 +53,3 @@ ms.lasthandoff: 09/26/2017
  [Servicio Integration Services &#40;servicio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   
   
-

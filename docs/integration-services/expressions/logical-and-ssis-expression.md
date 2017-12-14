@@ -1,5 +1,5 @@
 ---
-title: "&amp;&amp;(AND lógico) (Expresión de SSIS) | Documentos de Microsoft"
+title: "&amp;&amp; (AND lógico) (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a52d1a0bf10aba48b1e628a9253c7f2361f58506
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: be65e95a28cedfcd697ef79b87adfe0096ac84ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;(AND lógico) (Expresión de SSIS)
+# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND lógico) (expresión de SSIS)
   Realiza una operación lógica AND. La expresión devuelve TRUE si todas las condiciones son TRUE.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -72,9 +70,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [& &#40; AND bit a bit &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
- [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [& &#40;AND bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
+ [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

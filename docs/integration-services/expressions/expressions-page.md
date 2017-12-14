@@ -1,5 +1,5 @@
 ---
-title: "Página expresiones | Documentos de Microsoft"
+title: "Página Expresiones | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionspage.f1
-helpviewer_keywords:
-- Expressions Page dialog box
+f1_keywords: sql13.dts.designer.expressionspage.f1
+helpviewer_keywords: Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2517f3b049261614a219d64698a99bd82e14915d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8ea1c1154819e58814a0c2f83c8f246e0588e967
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expressions-page"></a>Página Expresiones
   Utilice la página **Expresiones** para editar expresiones de propiedad y obtener acceso a los cuadros de diálogo **Editor de expresiones de propiedad** y **Generador de expresiones** .  
@@ -40,13 +36,12 @@ ms.lasthandoff: 08/03/2017
  **Expresiones (...)**  
  Haga clic en los puntos suspensivos para abrir el cuadro de diálogo **Editor de expresiones de propiedad** . Para más información, consulte [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md).  
   
- **\<nombre de propiedad >**  
+ **\<property name>**  
  Haga clic en los puntos suspensivos para abrir el cuadro de diálogo **Generador de expresiones** . Para más información, consulte [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variables del sistema](../../integration-services/system-variables.md)   
- [Integration Services &#40; SSIS &#41; Expresiones](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

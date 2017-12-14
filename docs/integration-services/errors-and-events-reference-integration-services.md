@@ -1,5 +1,5 @@
 ---
-title: Referencia de errores y eventos (Integration Services) | Documentos de Microsoft
+title: Referencia de errores y eventos (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referencia de errores y eventos (Integration Services)
   Esta sección de la documentación contiene información sobre varios errores y eventos relacionados con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se incluye información sobre las causas y la forma de resolver los mensajes de error.  
@@ -85,7 +83,6 @@ ms.lasthandoff: 08/03/2017
 |SQLISService_274|Indica que la entrada del Registro que contiene la ubicación del archivo de configuración no existe o esta vacía.|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
+ [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

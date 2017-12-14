@@ -1,5 +1,5 @@
 ---
-title: Datos de flujos de datos | Documentos de Microsoft
+title: Datos de flujos de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 15689319652b1527bae7a7c27da9d89979c492d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-in-data-flows"></a>Datos de flujos de datos
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de tipos de datos que se usan en flujos de datos.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/03/2017
  Una vez que ha implementado un paquete en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede analizar el flujo de datos en el paquete durante la ejecución para comprobar el rendimiento o buscar si hay algún otro problema. Hay informes estándar disponibles que le permiten ver el estado del paquete y el historial y consultar las vistas de la base de datos que proporcionan información detallada sobre la ejecución del paquete. También puede agregar y quitar dinámicamente las derivaciones de datos durante la ejecución de los componentes específicos de destino del paquete. Para más información, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
-

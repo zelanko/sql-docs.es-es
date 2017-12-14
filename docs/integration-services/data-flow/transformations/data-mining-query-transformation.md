@@ -1,5 +1,5 @@
 ---
-title: "Transformación consulta de minería de datos | Documentos de Microsoft"
+title: "Transformación Consulta de minería de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 0a9182fa318301a36198d38191eb64ef403c48bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query-transformation"></a>Consulta de minería de datos, transformación
   La transformación Consulta de minería de datos realiza consultas de predicción en modelos de minería de datos. Esta transformación contiene un generador de consultas para crear consultas de Extensiones de minería de datos (DMX). El generador de consultas permite crear instrucciones personalizadas para evaluar los datos de entrada de la transformación en un modelo de minería existente mediante el lenguaje DMX. Para más información, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../../dmx/data-mining-extensions-dmx-reference.md).  
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/19/2017
  Seleccione una conexión de Analysis Services existente mediante el cuadro de lista o cree una nueva conexión con el botón **Nuevo** que se describe a continuación.  
   
  **Nuevo**  
- Cree una nueva conexión mediante el cuadro de diálogo **Agregar administrador de conexiones con Analysis Services** .  
+ Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Estructura de minería de datos**  
  Seleccione una opción de la lista de estructuras del modelo de minería de datos.  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/19/2017
  **Generar nueva consulta**  
  Haga clic en **Generar nueva consulta** para crear una consulta DMS (Extensiones de minería de datos) mediante el generador de consultas gráfico.  
   
-

@@ -1,5 +1,5 @@
 ---
-title: Catalog.Operations (base de datos SSISDB) | Documentos de Microsoft
+title: catalog.operations (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f9d1969e9fe7bcb2104003cfab057effcd35da5d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da7c2512b5163153aaa4da37e946bd9a7e550e85
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,29 +33,29 @@ ms.lasthandoff: 09/26/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|operation_id|**bigint**|El identificador único (ID) de la operación.|  
-|operation_type|**smallint**|El tipo de operación.|  
+|operation_id|**bigint**|Identificador (id.) único de la operación.|  
+|operation_type|**smallint**|Tipo de operación.|  
 |created_time|**datetimeoffset**|Hora de creación de la operación.|  
 |object_type|**smallint**|Tipo de objeto afectado por la operación. El objeto puede ser una carpeta (`10`), proyecto (`20`), paquete (`30`), entorno (`40`) o instancia de ejecución (`50`).|  
 |object_id|**bigint**|Identificador del objeto afectado por la operación.|  
-|object_name|**nvarchar (260)**|Nombre del objeto.|  
+|object_name|**nvarchar(260)**|Nombre del objeto.|  
 |status|**int**|Estado de la operación. Los valores posibles son creado (`1`), en ejecución (`2`), cancelado (`3`), con errores (`4`), pendiente (`5`), finalizado inesperadamente (`6`), correcto (`7`), deteniendo (`8`) y completado (`9`).|  
 |start_time|**datetimeoffset**|Hora a la que se inició la operación.|  
 |end_time|**datetimeoffsset**|Hora a la que finalizó la operación.|  
-|caller_sid|**varbinary (85)**|Identificador de seguridad (SID) del usuario si se utilizó Autenticación de Windows para iniciar sesión.|  
-|caller_name|**nvarchar (128)**|Nombre de la cuenta que realizó la operación.|  
+|caller_sid|**varbinary(85)**|Identificador de seguridad (SID) del usuario si se utilizó Autenticación de Windows para iniciar sesión.|  
+|caller_name|**nvarchar(128)**|Nombre de la cuenta que realizó la operación.|  
 |process_id|**int**|Identificador de proceso del proceso externo, si es aplicable.|  
-|stopped_by_sid|**varbinary (85)**|Identificador de seguridad (SID) del usuario que detuvo la operación.|  
-|stopped_by_name|**nvarchar (128)**|Nombre del usuario que detuvo la operación.|  
-|server_name|**nvarchar (128)**|Información del servidor Windows y de la instancia asociada a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|machine_name|**nvarchar (128)**|Nombre del equipo en el que se está ejecutando la instancia del servidor.|  
+|stopped_by_sid|**varbinary(85)**|Identificador de seguridad (SID) del usuario que detuvo la operación.|  
+|stopped_by_name|**nvarchar(128)**|Nombre del usuario que detuvo la operación.|  
+|server_name|**nvarchar(128)**|Información del servidor Windows y de la instancia asociada a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|machine_name|**nvarchar(128)**|Nombre del equipo en el que se está ejecutando la instancia del servidor.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta vista muestra una fila por cada operación del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Permite al administrador enumerar todas las operaciones lógicas que se realizaron en el servidor, por ejemplo la implementación de un proyecto o la ejecución de un paquete.  
   
- Esta vista muestra los siguientes tipos de operación, como se muestra en el **operation_type** columna:  
+ Esta vista muestra los siguientes tipos de operación, como se muestra en la columna **operation_type**:  
   
-|**operation_type** valor|**operation_type** descripción|**object_id** descripción|**object_name** descripción|  
+|Valor de **operation_type**|Descripción de **operation_type**|Descripción de **object_id**|Descripción de **object_name**|  
 |-------------------------------|-------------------------------------|--------------------------------|----------------------------------|  
 |`1`|Inicialización de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|**NULL**|**NULL**|  
 |`2`|Período de retención<br /><br /> (Trabajo del SQL Agent)|**NULL**|**NULL**|  
@@ -75,12 +73,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso de lectura en la operación  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Cuando se dispone de permiso para realizar una operación en el servidor, también se dispone de permiso para ver información sobre la operación. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
   
-

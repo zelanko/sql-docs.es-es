@@ -1,5 +1,5 @@
 ---
-title: "Administrador de conexiones de caché | Documentos de Microsoft"
+title: "Administrador de conexiones de caché | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords:
-- Cache connection manager
+f1_keywords: sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords: Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
   El administrador de conexiones de caché lee datos a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Si configura el administrador de conexiones de caché para que utilice un archivo caché, los datos siempre se almacenan en memoria.  
@@ -59,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o mediante programación.  
   
- Para obtener información sobre cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener más información sobre cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="cache-connection-manager-editor"></a>Editor del administrador de conexiones de caché
   El administrador de conexiones de caché lee un conjunto de datos de referencia a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Los datos siempre se almacenan en memoria.  
@@ -135,7 +131,6 @@ ms.lasthandoff: 08/09/2017
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la **Code Page**.  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
- [Implementar una transformación Búsqueda en modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

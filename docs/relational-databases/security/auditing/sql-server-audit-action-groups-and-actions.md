@@ -2,9 +2,12 @@
 title: Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs
 ms.custom: 
 ms.date: 10/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fbdcbf397021885a9a69875f6dcaa8122cab0d77
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2a6dbc0a4fd646a93f6b0934d3297579e7e44398
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
-  La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] constan de cero o más elementos de acción de auditoría. Estos elementos pueden ser grupos de acciones, como Server_Object_Change_Group, o acciones individuales tales como las operaciones SELECT en una tabla.  
   

@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) consultas | Documentos de Microsoft
+title: Consultas de Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas de Integration Services (SSIS)
   La tarea Ejecutar SQL, el origen de OLE DB, el destino de OLE DB y la transformación Búsqueda pueden utilizar consultas de SQL. En la tarea Ejecutar SQL, las instrucciones SQL pueden crear, actualizar y eliminar datos y objetos de bases de datos, ejecutar procedimientos almacenados y ejecutar instrucciones SELECT. En el origen de OLE DB y la transformación Búsqueda, las instrucciones SQL son normalmente instrucciones SELECT o EXEC. Normalmente, éstas últimas ejecutan procedimientos almacenados que devuelven conjuntos de resultados.  
@@ -39,8 +36,8 @@ ms.lasthandoff: 09/26/2017
   
 Puede proporcionar la instrucción SQL de las maneras siguientes:
 1.   Escríbala directamente en el diseñador.
-2.   Especifique una conexión a un archivo que contiene la instrucción.
-3.   Especificar una variable que contiene la instrucción.  
+2.   Especifique una conexión a un archivo que contenga la instrucción.
+3.   Especifique una variable que contenga la instrucción.  
   
 ## <a name="direct-input-sql"></a>Entrada directa en SQL  
  El Generador de consultas está disponible en la interfaz de usuario de la tarea Ejecutar SQL, el origen de OLE DB, el destino de OLE DB y la transformación Búsqueda. El Generador de consultas ofrece las siguientes ventajas:  
@@ -102,17 +99,17 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
 |-----------|-----------------|  
 |**Mostrar u ocultar panel de diagrama**|Muestra u oculta el panel **Diagrama** .|  
 |**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el panel **Cuadrícula** .|  
-|**Mostrar u ocultar panel SQL**|Muestra u oculta el panel de **SQL** .|  
+|**Mostrar u ocultar panel de SQL**|Muestra u oculta el panel de **SQL** .|  
 |**Mostrar u ocultar panel de resultados**|Muestra u oculta el panel **Resultados** .|  
 |**Ejecutar**|Ejecuta la consulta. Los resultados se mostrarán en el panel de resultados.|  
 |**Comprobar SQL**|Comprueba que la instrucción SQL sea válida.|  
 |**Orden ascendente**|Ordena las filas de salida de la columna seleccionada en el panel de cuadrícula en orden ascendente.|  
 |**Orden descendente**|Ordena las filas de salida de la columna seleccionada en el panel de cuadrícula en orden descendente.|  
 |**Quitar filtro**|Seleccione un nombre de columna en el panel de cuadrícula y, a continuación, haga clic en **Quitar filtro** para quitar los criterios de ordenación de dicha columna.|  
-|**Utilizar Group By**|Agrega la funcionalidad GROUP BY a la consulta.|  
+|**Usar GROUP BY**|Agrega la funcionalidad GROUP BY a la consulta.|  
 |**Agregar tabla**|Agrega una nueva tabla a la consulta.|  
   
- **Definición de consulta**  
+ **Definición de la consulta**  
  La definición de la consulta proporciona una barra de herramientas y paneles en los que se define y prueba la consulta.  
   
 |Panel|Description|  
@@ -123,4 +120,3 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
 |Panel**Resultados** |Muestra los resultados de la consulta al hacer clic en **Ejecutar** en la barra de herramientas.| 
 
   
-

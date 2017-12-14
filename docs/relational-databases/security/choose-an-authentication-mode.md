@@ -2,9 +2,12 @@
 title: "Elección de un modo de autenticación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,16 +30,16 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9431f2d00cdaa5ef7389fad71a68095b3cf1147f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1164bed25cbd7c13809c4a4ec8ea679119befd7b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choose-an-authentication-mode"></a>Elegir un modo de autenticación
-  Durante la instalación, debe seleccionar un modo de autenticación para [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Hay dos modos posibles: modo de autenticación de Windows y modo mixto. El modo de autenticación de Windows habilita la autenticación de Windows y deshabilita la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El modo mixto habilita tanto la autenticación de Windows como la de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La autenticación de Windows está disponible siempre y no se puede deshabilitar.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante la instalación, debe seleccionar un modo de autenticación para [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Hay dos modos posibles: modo de autenticación de Windows y modo mixto. El modo de autenticación de Windows habilita la autenticación de Windows y deshabilita la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El modo mixto habilita tanto la autenticación de Windows como la de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La autenticación de Windows está disponible siempre y no se puede deshabilitar.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configurar el modo de autenticación  
  Si selecciona la autenticación de modo mixto durante la instalación, debe proporcionar una contraseña segura, y confirmarla después, para la cuenta integrada de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada sa. La cuenta sa se conecta mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

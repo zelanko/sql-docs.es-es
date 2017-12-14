@@ -1,5 +1,5 @@
 ---
-title: Extraer datos mediante el origen de OLE DB | Documentos de Microsoft
+title: Extraer datos mediante el origen de OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 67082fa6742c230b5a60e98a553c975b9fab228d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraer datos mediante el origen de OLE DB
   Para agregar y configurar un origen de OLE DB, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  
@@ -76,7 +74,6 @@ ms.lasthandoff: 08/03/2017
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

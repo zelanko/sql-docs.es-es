@@ -1,5 +1,5 @@
 ---
-title: "Paso 2: Ejecutar el Asistente para instalación de paquete | Documentos de Microsoft"
+title: 'Paso 2: Ejecutar el Asistente para instalar paquetes | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lección 3-2-ejecuta al Asistente para la instalación de paquetes
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lección 3-2: Ejecutar el Asistente para instalar paquetes
 En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  
   
 El Asistente para la instalación de paquetes le guiará por los pasos para instalar y configurar los paquetes. Instalará los paquetes en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo de destino (el equipo en el que copió el paquete de implementación). También creará una carpeta, C:\DeploymentTutorialInstall, en la que el asistente instalará los archivos no empaquetados.  
@@ -113,4 +110,3 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
   
 ## <a name="see-also"></a>Vea también  
 [Servicio Integration Services &#40;servicio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-

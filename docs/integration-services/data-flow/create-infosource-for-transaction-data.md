@@ -1,5 +1,5 @@
 ---
-title: "Crear InfoSource para datos de transacción | Documentos de Microsoft"
+title: "Crear InfoSource para datos de transacción | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1cfb0db72c6fca86efb2e7fcdb24d602caea90eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-infosource-for-transaction-data"></a>Crear Infosource para datos de transacción
   Use el cuadro de diálogo **Crear InfoSource para los datos de transacción** para crear un InfoSource nuevo para los datos de transacción en el sistema SAP Netweaver BW.  
@@ -101,7 +99,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

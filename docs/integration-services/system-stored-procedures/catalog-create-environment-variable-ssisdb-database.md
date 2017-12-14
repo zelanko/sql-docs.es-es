@@ -1,5 +1,5 @@
 ---
-title: Catalog.create_environment_variable (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.create_environment_variable (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: e020fef5d484af024ef822cf6fcc654e547b7b68
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +41,26 @@ catalog.create_environment_variable [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@folder_name =] *nombreDeCarpeta*  
- Nombre de la carpeta que contiene el entorno. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Nombre de la carpeta que contiene el entorno. El parámetro *folder_name* es de tipo **nvarchar(128)**.  
   
  [@environment_name =] *environment_name*  
- El nombre del entorno. El *environment_name* es **nvarchar (128)**.  
+ El nombre del entorno. El parámetro *environment_name* es de tipo **nvarchar(128)**.  
   
  [@variable_name =] *variable_name*  
- Nombre de la variable de entorno. El *variable_name* es **nvarchar (128)**.  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
   
  [@data_type =] *data_type*  
- Tipo de datos de la variable. Admite datos de variable de entorno tipos incluyen **booleano**, **bytes**, **DateTime**, **doble**, **Int16**, **Int32**, **Int64**, **único**, **cadena**, **UInt32**y  **UInt64**. Tipos de datos de la variable de entorno no admitidos incluyen **Char**, **DBNull**, **objeto**, y **Sbyte**. Tipo de datos de la *data_type* parámetro es **nvarchar (128)**.  
+ Tipo de datos de la variable. Los tipos de datos de las variables de entorno admitidos incluyen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** y **UInt64**. Los tipos de datos de las variables de entorno no admitidos incluyen **Char**, **DBNull**, **Object** y **Sbyte**. El tipo de datos del parámetro *data_type* es **nvarchar(128)**.  
   
- [@sensitive =] *confidencial*  
- Indica si la variable contiene un valor confidencial o no. Use un valor de `1` para indicar que el valor de la variable de entorno es confidencial o un valor de `0` para indicar que no lo es. Un valor confidencial se cifra cuando se almacena. Un valor que no es confidencial se almacena en texto sin formato. *Confidencial* es **bits**.  
+ [@sensitive =] *sensitive*  
+ Indica si la variable contiene un valor confidencial o no. Use un valor de `1` para indicar que el valor de la variable de entorno es confidencial o un valor de `0` para indicar que no lo es. Un valor confidencial se cifra cuando se almacena. Un valor que no es confidencial se almacena en texto no cifrado.*Sensitive* es de tipo **bit**.  
   
- [@value =] *valor*  
- Valor de la variable de entorno. El *valor* es **sql_variant**.  
+ [@value =] *value*  
+ Valor de la variable de entorno. El parámetro *value* es de tipo **sql_variant**.  
   
- [@description =] *descripción*  
- Descripción de la variable de entorno. El *valor* es **nvarchar (1024)**.  
+ [@description =] *description*  
+ Descripción de la variable de entorno. El parámetro *value* es de tipo **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -75,9 +73,9 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   Permisos READ y MODIFY en el entorno  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -94,23 +92,22 @@ catalog.create_environment_variable [@folder_name =] folder_name
  El procedimiento almacenado valida el tipo de datos de la variable para garantizar que es compatible con el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!TIP]  
->  Considere el uso de la **Int16** tipo de datos en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en lugar de no admitida **Sbyte** tipo de datos.  
+>  Considere la posibilidad de usar el tipo de datos **Int16** en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en lugar del tipo de datos **Sbyte**, que no es compatible.  
   
- El valor pasado a este procedimiento almacenado con el *valor* parámetro se convierte de un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tipo de datos que un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos según la tabla siguiente:  
+ El valor que se pasa a este procedimiento almacenado con el parámetro *value* se convierte de un tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a un tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como se indica en la siguiente tabla:  
   
 |Tipo de datos de Integration Services|Tipo de datos de SQL Server|  
 |------------------------------------|--------------------------|  
 |**Boolean**|**bit**|  
-|**Bytes**|**binario**, **varbinary**|  
-|**DateTime**|**fecha y hora**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
-|**Doble**|Valor numérico exacto: **decimal**, **numérico**; Numérico aproximado: **float**, **real**|  
+|**Byte**|**binary**, **varbinary**|  
+|**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
+|**Doble**|Valor numérico exacto: **decimal**, **numeric**; valor numérico aproximado: **float**, **real**|  
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**Único**|Valor numérico exacto: **decimal**, **numérico**; Numérico aproximado: **float**, **real**|  
+|**Único**|Valor numérico exacto: **decimal**, **numeric**; valor numérico aproximado: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  
-|**UInt32**|**int** (**int** es la asignación disponible más cercana a **Uint32**.)|  
-|**UInt64**|**bigint** (**int** es la asignación disponible más cercana a **Uint64**.)|  
+|**UInt32**|**int** (**int** es la asignación disponible más próxima a **Uint32**).|  
+|**UInt64**|**bigint** (**int** es la asignación disponible más próxima a **Uint64**).|  
   
   
-

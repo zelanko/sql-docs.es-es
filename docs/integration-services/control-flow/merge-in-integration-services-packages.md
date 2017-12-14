@@ -1,5 +1,5 @@
 ---
-title: MERGE en paquetes Integration Services | Documentos de Microsoft
+title: MERGE en paquetes de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE en paquetes de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la instrucción SQL de una tarea Ejecutar SQL puede contener una instrucción MERGE. Esta instrucción MERGE permite llevar a cabo varias operaciones INSERT, UPDATE y DELETE en una única instrucción.  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  La base de datos Inventory incluye una tabla ProductsInventory con las columnas ProductID y StockOnHand. La tabla Shipments, que contiene las columnas ProductID, CustomerID y Quantity, realiza un seguimiento de los envíos de los productos a los clientes. La tabla ProductInventory debe actualizarse diariamente basándose en la información de la tabla Shipments. Una única instrucción MERGE puede reducir el inventario en la tabla ProductInventory sobre la base de los envíos realizados. Si el inventario de un producto se ha reducido a 0, dicha instrucción MERGE también puede eliminar la fila del producto de la tabla ProductInventory.  
   
   
-

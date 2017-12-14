@@ -1,5 +1,5 @@
 ---
-title: Origen de archivo sin formato | Documentos de Microsoft
+title: Origen de archivo sin formato | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 14608c3bbf570ecfa4cbc0d45d2961ea7ab48a4d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 07a436d27cdfd65c77878e5a2abf636235117f9d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el origen de archivo sin formato puede leer datos más rápidamente que otros orígenes, como el origen de archivo plano o el origen de OLE DB.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/17/2017
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   
-

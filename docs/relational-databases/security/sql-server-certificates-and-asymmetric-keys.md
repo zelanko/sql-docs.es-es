@@ -2,9 +2,12 @@
 title: "Certificados y claves asimétricas de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1175f8ea6b93440437b23c6322fe2eb8a89332c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eadfb0677c17e0c40d1b32ca01998c8079fcd238
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
-  La criptografía de clave pública (PKI) es un método para mantener la confidencialidad de los mensajes en el que el usuario crea una clave *pública* y una clave *privada* . La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se utiliza para cifrar los datos y la clave privada se utiliza para descifrarlos. Un mensaje que se cifra mediante la clave pública solo se puede descifrar con la clave privada correcta. Dado que existen dos claves diferentes, estas claves son *asimétricas*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La criptografía de clave pública (PKI) es un método para mantener la confidencialidad de los mensajes en el que el usuario crea una clave *pública* y una clave *privada*. La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se utiliza para cifrar los datos y la clave privada se utiliza para descifrarlos. Un mensaje que se cifra mediante la clave pública solo se puede descifrar con la clave privada correcta. Dado que existen dos claves diferentes, estas claves son *asimétricas*.  
   
  Tanto los certificados como las claves asimétricas son métodos para utilizar el cifrado asimétrico. Los certificados se suelen emplear como contenedores para las claves asimétricas porque pueden contener más información, como las fechas de expiración y los emisores. No hay ninguna diferencia entre los dos mecanismos en cuanto al algoritmo criptográfico y tampoco hay diferencia en cuanto al nivel de cifrado si no varía la longitud de la clave. Generalmente, se utiliza un certificado para cifrar otros tipos de claves de cifrado en una base de datos o para firmar módulos de código.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Transformación combinación de mezcla | Documentos de Microsoft"
+title: "Transformación Combinación de mezcla | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +21,18 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 7e9daf9c88882acb90097ce12495db9cab775290
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="merge-join-transformation"></a>Transformación Combinación de mezcla
+# <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
   La transformación Combinación de mezcla proporciona una salida que se genera combinando dos conjuntos de datos ordenados mediante una combinación FULL, LEFT o INNER. Por ejemplo, puede utilizar una combinación LEFT para combinar una tabla que incluye información de productos con una tabla que incluye el país o la región en que se fabricó un producto. El resultado es una tabla que muestra todos los productos y su país o región de origen.  
   
  Puede configurar la transformación Combinación de mezcla de las siguientes maneras:  
@@ -68,13 +66,13 @@ ms.lasthandoff: 08/19/2017
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para la combinación y transformaciones de combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-join-transformation-editor"></a>Editor de transformación Combinación de mezcla
   Use el cuadro de diálogo **Editor de transformación Combinación de mezcla** para especificar el tipo de combinación, las columnas de combinación y las columnas de salida para mezclar dos entradas fusionadas por combinación.  
   
 > [!IMPORTANT]  
->  La transformación Combinación de mezcla requiere datos ordenados para sus entradas. Para más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+>  La transformación Combinación de mezcla requiere datos ordenados para sus entradas. Para obtener más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="options"></a>Opciones  
  **Tipo de combinación**  
@@ -95,9 +93,8 @@ ms.lasthandoff: 08/19/2017
  Escriba un alias para cada columna de salida. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Unión transformación todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

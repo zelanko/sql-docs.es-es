@@ -1,5 +1,5 @@
 ---
-title: Tratar con certificados de Sql Server Integration Services horizontalmente | Documentos de Microsoft
+title: Usar certificados en la escalabilidad horizontal de SQL Server Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,44 +8,42 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2970b2b2cc7cf30c18a203ebbb92b5418bfc9be5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e09fec1fcf9cf0221dad50d708adef773b297237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deal-with-certificates-in-sql-server-integration-services-scale-out"></a>Tratar con certificados de SQL Server Integration Services horizontalmente
+# <a name="deal-with-certificates-in-sql-server-integration-services-scale-out"></a>Usar certificados en la escalabilidad horizontal de SQL Server Integration Services
 
-Para proteger la comunicación entre escala Out maestra y de escala Out trabajo, se utilizan dos certificados en horizontalmente, es decir, escala Out Master y escala Out trabajo certificado. 
+Para proteger la comunicación entre el patrón de escalabilidad horizontal y el trabajo de escalabilidad horizontal, se usan dos certificados en la escalabilidad horizontal; por ejemplo, el certificado del patrón de escalabilidad horizontal y el del trabajo de escalabilidad horizontal. 
 
-## <a name="scale-out-master-certificate"></a>Certificado de escala Out Master
+## <a name="scale-out-master-certificate"></a>Certificado del patrón de escalabilidad horizontal
 
-En la mayoría de los casos, el certificado de escala Out maestra se configura durante la instalación de escala Out Master.
+En la mayoría de los casos, el certificado del patrón de escalabilidad horizontal se configura durante la instalación de este patrón de escalabilidad horizontal.
 
-En el **escala Out configuración de Integration Services - nodo Master** página del Asistente para instalación de SQL Server, puede elegir crear un nuevo certificado SSL autofirmado o usar un certificado SSL existente.
+En la página **Configuración de la escalabilidad horizontal de Integration Services - Nodo principal** del asistente de instalación de SQL Server, puede elegir crear un nuevo certificado SSL autofirmado o usar un certificado SSL ya existente.
 
-![Configuración de master](media/master-config.PNG)
+![Configuración principal](media/master-config.PNG)
 
-Si no tiene requisitos especiales en certificados, puede crear un nuevo certificado SSL autofirmado. También puede especificar el CNs en el certificado. Asegúrese de que el nombre de host del punto de conexión principal utilizado por escala Out trabajador más adelante se incluye en el CNs. De forma predeterminada, se incluyen el nombre del equipo y la dirección ip del nodo principal. 
+Si no tiene requisitos especiales en los certificados, puede crear un nuevo certificado SSL autofirmado. Además, puede especificar los nombres comunes en el certificado. Asegúrese de que el nombre de host del punto de conexión del patrón que el trabajo de escalabilidad horizontal usará más adelante se incluye en el apartado de nombres comunes. De forma predeterminada, se incluyen el nombre de la máquina y la dirección IP del nodo principal. 
 
-Si decide usar un certificado existente, haga clic en "Examinar" para seleccionar un certificado SSL de **raíz** almacén de certificados del equipo local.
+Si decide usar un certificado existente, haga clic en "Examinar..." para seleccionar un certificado SSL desde el almacén de certificados **raíz** del equipo local.
 
-### <a name="change-scale-out-master-certificate"></a>Cambiar escala Out Master certificado
+### <a name="change-scale-out-master-certificate"></a>Cambiar el certificado del patrón de escalabilidad horizontal
 
-Puede que desee cambiar el certificado de escala Out maestra debido a la expiración de certificados u otras razones. Siga los pasos siguientes:
+Puede que quiera cambiar el certificado del patrón de escalabilidad horizontal porque está a punto de expirar o por otras razones. Para hacerlo, siga estos pasos:
 
 #### <a name="1-create-a-ssl-certificate"></a>1. Cree un certificado SSL.
-Cree e instale un certificado SSL en el maestro de nodo con el siguiente comando:
+Cree e instale un certificado SSL en el nodo principal mediante el siguiente comando:
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
 ```
@@ -54,8 +52,8 @@ Ejemplo:
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
 ```
 
-#### <a name="2-bind-the-certificate-to-master-port"></a>2. Enlazar el certificado al maestro de puerto
-Compruebe el enlace original con el comando:
+#### <a name="2-bind-the-certificate-to-master-port"></a>2. Enlace el certificado al puerto principal.
+Compruebe el enlace original mediante el comando:
 ```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
@@ -63,7 +61,7 @@ Ejemplo:
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
 ```
-Eliminar el enlace original y configurar el nuevo enlace con los siguientes comandos:
+Elimine el enlace original y configure el nuevo enlace mediante los siguientes comandos:
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
@@ -73,31 +71,31 @@ Ejemplo:
 netsh http delete sslcert ipport=0.0.0.0:8391
 netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe6ce328f77d53 certstorename=Root appid={a1f96506-93e0-4c91-9171-05a2f6739e13}
 ```
-#### <a name="3-update-scale-out-master-service-configuration-file"></a>3. Archivo de configuración de servicio de actualización escala Out Master
-Archivo de configuración del servicio de actualización escala Out Master, \<controlador\>: \Program Server\140\DTS\Binn\MasterSettings.config SQL, en patrón de nodo. Actualización **SSLCertThumbprint** a la huella digital del certificado SSL nuevo.
+#### <a name="3-update-scale-out-master-service-configuration-file"></a>3. Actualice el archivo de configuración del servicio del patrón de escalabilidad horizontal.
+Actualice el archivo de configuración del servicio del patrón de escalabilidad horizontal (\<controlador\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config) en el nodo principal. Actualice **SSLCertThumbprint** a la huella digital del certificado SSL nuevo.
 
-#### <a name="4-restart-scale-out-master-service"></a>4. Reinicie el servicio de escala Out Master
+#### <a name="4-restart-scale-out-master-service"></a>4. Reinicie el servicio del patrón de escalabilidad horizontal.
 
-#### <a name="5-reconnect-scale-out-worker-to-scale-out-master"></a>5. Volver a conectar escalada de trabajo para escalar horizontalmente Master
-Para cada trabajo escala Out, ya sea eliminar el trabajo y vuelva a agregarlo con [escala Out Manager](integration-services-ssis-scale-out-manager.md) o siga los pasos 5.1 a 5.3 siguientes:
+#### <a name="5-reconnect-scale-out-worker-to-scale-out-master"></a>5. Reconecte el trabajo y el patrón de escalabilidad horizontal.
+En cada trabajo de escalabilidad horizontal, puede optar por eliminar ese trabajo y volver a agregarlo mediante el [Administrador de escalabilidad horizontal](integration-services-ssis-scale-out-manager.md) o seguir los pasos 5.1 a 5.3 que se detallan a continuación:
 
-5.1 instale el certificado de cliente SSL en el almacén raíz del equipo local en el nodo de trabajo
+5.1 Instale el certificado SSL de cliente en el almacén raíz de la máquina local en el nodo del trabajo.
 
-5.2 actualizar escala Out trabajo servicio configuración actualización escala Out trabajo servicio archivo de configuración, \<controlador\>: \Program Server\140\DTS\Binn\WorkerSettings.config SQL, en el nodo de trabajo. Actualización **MasterHttpsCertThumbprint** a la huella digital del certificado SSL nuevo.
+5.2 Actualice el archivo de configuración del servicio de trabajo de escalabilidad horizontal (\<controlador\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config), en el nodo de trabajo. Actualice **MasterHttpsCertThumbprint** a la huella digital del certificado SSL nuevo.
 
-5.3 reiniciar escala horizontalmente servicio de trabajo
+5.3 Reinicie el servicio de trabajo de escalabilidad horizontal.
 
 
-## <a name="scale-out-worker-certificate"></a>Certificado del escalado Out trabajo
+## <a name="scale-out-worker-certificate"></a>Certificado de trabajo de escalabilidad horizontal
 
-Certificado de escala Out trabajador se genera automáticamente durante la instalación de escala Out trabajo. 
+El certificado de trabajo de escalabilidad horizontal se crea automáticamente durante la instalación del trabajo de escalabilidad horizontal en cuestión. 
 
-### <a name="change-scale-out-worker-certificate"></a>Cambiar el certificado de escala Out trabajo
+### <a name="change-scale-out-worker-certificate"></a>Cambiar el certificado de trabajo de escalabilidad horizontal
 
-En los casos que desea cambiar el certificado del escalado Out trabajo, siga estos pasos.
+En los casos en que quiera cambiar el certificado del trabajo de escalabilidad horizontal, siga estos pasos.
 
 #### <a name="1-create-a-certificate"></a>1. Crear un certificado
-Cree e instale un certificado con el siguiente comando:
+Cree e instale un certificado mediante el siguiente comando:
 ```dos
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
@@ -105,10 +103,10 @@ Ejemplo:
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
-#### <a name="2-install-the-client-certificate-to-the-root-store-of-local-machine-on-worker-node"></a>2. Instale el certificado de cliente en el almacén raíz del equipo local en el nodo de trabajo
+#### <a name="2-install-the-client-certificate-to-the-root-store-of-local-machine-on-worker-node"></a>2. Instale el certificado de cliente en el almacén raíz de la máquina local en el nodo del trabajo.
 
-#### <a name="3-give-service-access-to-the-certificate"></a>3. Conceder acceso al servicio para el certificado
-Eliminar el certificado antiguo y conceda acceso de servicio de escala Out trabajo para el nuevo certificado con el comando:
+#### <a name="3-give-service-access-to-the-certificate"></a>3. Conceda acceso de servicio al certificado.
+Elimine el certificado antiguo y conceda acceso al nuevo certificado al servicio de trabajo de escalabilidad horizontal mediante el comando:
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
@@ -118,10 +116,9 @@ Ejemplo:
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker140
 ```
-#### <a name="4-update-scale-out-worker-configuration-file"></a>4. Archivo de configuración de escala a un trabajo de actualización
-Archivo de configuración de servicio de escala a un trabajo de actualización, \<controlador\>: \Program Server\140\DTS\Binn\WorkerSettings.config SQL, en el nodo de trabajo. Actualización **WorkerHttpsCertThumbprint** a la huella digital del nuevo certificado.
+#### <a name="4-update-scale-out-worker-configuration-file"></a>4. Actualice el archivo de configuración del trabajo de escalabilidad horizontal.
+Actualice el archivo de configuración del servicio del trabajo de escalabilidad horizontal (\<controlador\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config) en el nodo de trabajo. Actualice **WorkerHttpsCertThumbprint** a la huella digital del certificado nuevo.
 
-#### <a name="5-install-the-client-certificate-to-the-root-store-of-local-machine-on-master-node"></a>5. Instale el certificado de cliente en el almacén raíz del equipo local en el maestro de nodo
+#### <a name="5-install-the-client-certificate-to-the-root-store-of-local-machine-on-master-node"></a>5. Instale el certificado de cliente en el almacén raíz de la máquina local en el nodo principal.
 
-#### <a name="6-restart-scale-out-worker-service"></a>6. Reiniciar servicio escala Out Worker
-
+#### <a name="6-restart-scale-out-worker-service"></a>6. Reinicie el servicio de trabajo de escalabilidad horizontal.

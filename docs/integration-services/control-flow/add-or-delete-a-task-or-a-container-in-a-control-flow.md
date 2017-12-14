@@ -1,5 +1,5 @@
 ---
-title: Agregar o eliminar una tarea o un contenedor en un flujo de Control | Documentos de Microsoft
+title: Agregar o eliminar tareas o contenedores en un flujo de control | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Agregar o eliminar tareas o contenedores en un flujo de control
   Cuando se trabaja en el diseñador de flujo de control, el cuadro de herramientas del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] enumera las tareas que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para generar flujo de control en un paquete. Para obtener más información sobre el cuadro de herramientas, vea [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -39,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
  Los procedimientos siguientes describen cómo agregar o eliminar una tarea o un contenedor en el flujo de control de un paquete.  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Agregar una tarea o un contenedor para un flujo de control  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Agregar una tarea o contenedor a un flujo de control  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -69,12 +67,12 @@ ms.lasthandoff: 09/26/2017
   
 3.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
 
-## <a name="set-the-properties-of-a-task-or-container"></a>Establecer las propiedades de una tarea o contenedor
+## <a name="set-the-properties-of-a-task-or-container"></a>Establecer las propiedades de una tarea o un contenedor
 Puede establecer la mayoría de las propiedades de tareas y contenedores utilizando la ventana **Propiedades** . Las excepciones son propiedades de colecciones de tareas y propiedades que son demasiado complejas como para establecerse mediante la ventana **Propiedades** . Por ejemplo, no puede configurar el enumerador que usa el contenedor de bucles Foreach en la ventana **Propiedades** . Debe usar un editor de tareas o contenedores para establecer estas propiedades complejas. La mayoría de los editores de tareas y contenedores tienen varios nodos y cada nodo contiene propiedades relacionadas. El nombre del nodo indica el sujeto de las propiedades que contiene el nodo.  
   
  Los procedimientos siguientes describen cómo establecer las propiedades de una tarea o de un contenedor utilizando las ventanas **Propiedades** o el correspondiente editor de tareas y contenedores.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Establecer las propiedades de una tarea o contenedor con la ventana Propiedades  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Establecer las propiedades de una tarea o un contenedor con la ventana Propiedades  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -93,7 +91,7 @@ Puede establecer la mayoría de las propiedades de tareas y contenedores utiliza
   
 7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Establecer las propiedades de una tarea o contenedor con el editor de la tarea o contenedor  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Establecer las propiedades de una tarea o un contenedor con un editor de tareas o contenedores  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -124,4 +122,3 @@ Puede establecer la mayoría de las propiedades de tareas y contenedores utiliza
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

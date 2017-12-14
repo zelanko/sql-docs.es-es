@@ -1,5 +1,5 @@
 ---
-title: Administrador de conexiones SMTP | Documentos de Microsoft
+title: Administrador de conexiones SMTP | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.smtpconnection.f1
+f1_keywords: sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
 - connection managers [Integration Services], SMTP
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cbf76aa747615b974f6f1258ada2269d3c2ce83f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="smtp-connection-manager"></a>Administrador de conexiones SMTP
   Un administrador de conexiones SMTP permite a un paquete conectarse a un servidor de Protocolo simple de transferencia de correo (SMTP). La tarea Enviar correo que incluye [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa un administrador de conexiones SMTP.  
@@ -85,4 +82,3 @@ ms.lasthandoff: 08/09/2017
  **Habilitar capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  
   
-

@@ -1,5 +1,5 @@
 ---
-title: Generar tablas reflejadas e instancias de captura CDC | Documentos de Microsoft
+title: Generar tablas reflejadas e instancias de captura CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- mirTab
+f1_keywords: mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9c6a29a7c5ec5b42dfa8d0e923563c3b21fa0c51
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: acdee260896fb782824f6b7488bc8ffec8ea3e6d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>Generar tablas reflejadas e instancias de captura CDC
   Use la página Generar tablas reflejadas para generar las tablas reflejadas para las tablas que se incluyeron en la instancia CDC.  
@@ -37,7 +34,6 @@ ms.lasthandoff: 08/03/2017
  Haga clic en **Siguiente** para abrir la página [Finish](../../integration-services/change-data-capture/finish.md) .  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo crear la instancia de base de datos de cambios SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
+ [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   
-

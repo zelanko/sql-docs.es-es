@@ -1,5 +1,5 @@
 ---
-title: "Vistas (catálogo de Integration Services) | Documentos de Microsoft"
+title: "Vistas (catálogo de Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- views [Integration Services]
+helpviewer_keywords: views [Integration Services]
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7293a70046df19eef816d3e7830518959ecbc98
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 33c1ab15f6974f99ae7e5ec39fead59407e36bd5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="views-integration-services-catalog"></a>Vistas (catálogo de Integration Services)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   En esta sección se describen las vistas [!INCLUDE[tsql](../../includes/tsql-md.md)] que están disponibles para administrar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Consulta el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vistas para inspeccionar objetos, configuración y datos operativos que se almacenan en la **SSISDB** catálogo.  
+ Consulte las vistas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para inspeccionar los objetos, valores y datos operativos almacenados en el catálogo de **SSISDB**.  
   
  El nombre predeterminado del catálogo es SSISDB. Entre los objetos que se almacenan en el catálogo se incluyen proyectos, paquetes, parámetros, entornos y el historial de operaciones.  
   
  Puede utilizar las vistas de base de datos y los procedimientos almacenados directamente, o escribir código personalizado que llame a la API administrada. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la API administrada consultan las vistas y llaman a los procedimientos almacenados que se describen en esta sección para realizar muchas de sus tareas.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Catalog.catalog_properties &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
  Muestra las propiedades del catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.effective_object_permissions &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)  
+ [catalog.effective_object_permissions &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)  
  Muestra los permisos efectivos de la entidad de seguridad actual para todos los objetos del catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.environment_variables &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-environment-variables-ssisdb-database.md)  
@@ -57,13 +54,13 @@ ms.lasthandoff: 09/26/2017
  [catalog.executions &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
  Muestra las instancias de ejecución del paquete en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los paquetes que se ejecutan con la tarea Ejecutar paquete se ejecutan en la misma instancia de ejecución que el paquete primario.  
   
- [Catalog.explicit_object_permissions &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)  
+ [catalog.explicit_object_permissions &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)  
  Muestra solo los permisos asignados explícitamente al usuario.  
   
  [catalog.extended_operation_info &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)  
  Muestra la información extendida sobre todas las operaciones del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.Folders &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md)  
+ [catalog.folders &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md)  
  Muestra las carpetas del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.object_parameters &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)  
@@ -87,12 +84,11 @@ ms.lasthandoff: 09/26/2017
  [catalog.projects &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-projects-ssisdb-database.md)  
  Muestra los detalles para todos los proyectos que aparecen en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.validations &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md)  
+ [catalog.validations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md)  
  Muestra los detalles de todas las validaciones de paquete y proyecto en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-[Catalog.master_properties &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)  
-Muestra las propiedades de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala Out Master.
+[catalog.master_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)  
+Muestra las propiedades del patrón de escalabilidad horizontal de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
-[Catalog.worker_agents &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)  
-Muestra la información de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala Out trabajo.  
-
+[catalog.worker_agents &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)  
+Muestra la información del trabajo de escalabilidad horizontal de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

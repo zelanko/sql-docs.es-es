@@ -1,5 +1,5 @@
 ---
-title: "Herramientas de solución de problemas de ejecución del paquete | Documentos de Microsoft"
+title: "Herramientas para solucionar problemas de la ejecución de paquetes"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que puede utilizar para solucionar problemas de los paquetes durante su ejecución, después de que los paquetes se hayan completado e implementado.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Ayudar a garantizar la integridad de los datos mediante el uso de transacciones**. Para más información, vea [Transacciones de Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Detectar y controlar errores de paquetes mediante controladores de eventos  
  Se puede responder a los diversos eventos que generan el paquete y los objetos del paquete utilizando controladores de eventos.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Agregar información descriptiva a las salidas de error**. Se puede facilitar el análisis de la salida de error si se agrega el mensaje de error y el nombre de la columna, además de los dos identificadores numéricos que proporciona la salida de error. Para obtener un ejemplo de cómo agregar estas dos columnas adicionales mediante el uso de scripting, consulte [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
--   **O bien, obtenga los nombres de columna mediante el registro del evento DiagnosticEx**. Este evento escribe un mapa de linaje de flujo de datos en el registro. Luego, puede buscar el nombre de columna en este mapa de linaje mediante el identificador de columna que captura una salida de error.  Para obtener más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
+-   **O bien, obtenga los nombres de columna mediante el registro del evento DiagnosticEx**. Este evento escribe un mapa de linaje de flujo de datos en el registro. Luego, puede buscar el nombre de columna en este mapa de linaje mediante el identificador de columna que captura una salida de error.  Para obtener más información, vea [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md) (Control de errores en los datos).  
   
      El valor de la columna de mensaje para **DiagnosticEx** es texto XML. Para ver el texto del mensaje de una ejecución de paquete, ejecute una consulta en la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Tenga en cuenta que el evento **DiagnosticEx** no conserva el espacio en blanco en la salida XML para reducir el tamaño del registro. Para mejorar la legibilidad, copie el registro en un editor XML (en Visual Studio, por ejemplo) que admita el formato XML y el resaltado de sintaxis.  
   
@@ -118,4 +116,3 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada de blog [Agregar el nombre de columna de error a una salida de error](http://go.microsoft.com/fwlink/?LinkId=261546), en dougbert.com.  
-

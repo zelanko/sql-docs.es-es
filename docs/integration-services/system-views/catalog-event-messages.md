@@ -1,5 +1,5 @@
 ---
-title: Catalog.event_messages | Documentos de Microsoft
+title: catalog.event_messages | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0db5ace2a95bea93189cb48378b01a4ba599942
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +31,14 @@ ms.lasthandoff: 09/26/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|bigint|Identificador único del mensaje de evento.|  
-|Operation_id|bigint|El tipo de operación.<br /><br /> Para obtener una lista de tipos de operación, vea [catalog.operations &#40; Base de datos SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Operation_id|bigint|Tipo de operación.<br /><br /> Para obtener una lista de los tipos de operaciones, consulte [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Hora de creación del mensaje.|  
-|Message_type|smallint|Tipo del mensaje mostrado. Para obtener más información acerca de los tipos de mensaje, consulte [catalog.operation_messages &#40; Base de datos SSISDB &#41; ](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_type|smallint|Tipo del mensaje mostrado. Para obtener más información acerca de los tipos de mensaje, consulte [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|smallint|Origen del mensaje.|  
 |message|nvarchar(max)|Texto del mensaje.|  
-|Extended_info_id|bigint|El identificador de la información adicional relacionada con el mensaje de operación, se encuentra en la [catalog.extended_operation_info &#40; Base de datos SSISDB &#41; ](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) vista.|  
+|Extended_info_id|bigint|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [catalog.extended_operation_info &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Nombre del archivo de paquete.|  
-|Event_name|nvarchar (1024)|Evento de tiempo de ejecución asociado al mensaje.|  
+|Event_name|nvarchar(1024)|Evento de tiempo de ejecución asociado al mensaje.|  
 |Message_source_name|nvarchar(4000)|Componente del paquete que constituye el origen del mensaje.|  
 |Message_source_id|nvarchar(38)|Identificador único del origen del mensaje.|  
 |Subcomponent_name|nvarchar(4000)|Componente de flujo de datos que es el origen del mensaje.<br /><br /> Cuando el motor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] devuelve mensajes, aparece SSIS.Pipeline en esta columna.|  
@@ -59,19 +57,18 @@ ms.lasthandoff: 09/26/2017
 |30|Objetos de nivel de paquete|  
 |40|Tareas de flujo de control|  
 |50|Contenedores de flujo de control|  
-|60|Tarea flujo de datos|  
+|60|Tarea Flujo de datos|  
   
 ## <a name="permissions"></a>Permissions  
  Esta vista exige uno de los siguientes permisos:  
   
 -   Permiso de lectura en la operación  
   
--   La pertenencia a la **ssis_admin** rol de base de datos.  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor.  
+-   Pertenencia al rol del servidor de **sysadmin**  
   
 ## <a name="see-also"></a>Vea también  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   
-

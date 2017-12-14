@@ -1,5 +1,5 @@
 ---
-title: Desarrollar una interfaz de usuario para una tarea personalizada | Documentos de Microsoft
+title: Desarrollar una interfaz de usuario para una tarea personalizada | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desarrollar una interfaz de usuario para una tarea personalizada
   El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite a los desarrolladores de tareas personalizadas crear con facilidad una interfaz de usuario personalizada para una tarea que posteriormente se puede integrar y mostrar en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. La interfaz de usuario puede proporcionar información útil al usuario en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] y guiar a los usuarios para configurar correctamente las propiedades y los valores de la tarea personalizada.  
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  En esta sección se describe el rol del atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> y la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> cuando se está desarrollando una interfaz de usuario para una tarea personalizada y se proporcionan detalles sobre cómo crear, integrar, implementar y depurar la tarea en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
- El [!INCLUDE[ssIS](../../../includes/ssis-md.md)] proporciona varios puntos de entrada a la interfaz de usuario para la tarea: el usuario puede seleccionar **editar** en el menú contextual, haga doble clic en la tarea, o haga clic en el **Mostrar Editor** vínculo en la parte inferior de la hoja de propiedades. Cuando el usuario tiene acceso a uno de estos puntos de entrada, el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] busca y carga el ensamblado que contiene la interfaz de usuario para la tarea. Ésta es responsable de la creación del cuadro de diálogo de propiedades que se muestra al usuario en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] proporciona varios puntos de entrada a la interfaz de usuario de la tarea: el usuario puede seleccionar **Editar** en el menú contextual, hacer doble clic en la tarea o hacer clic en el vínculo **Mostrar editor** en la parte inferior de la hoja de propiedades. Cuando el usuario tiene acceso a uno de estos puntos de entrada, el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] busca y carga el ensamblado que contiene la interfaz de usuario para la tarea. Ésta es responsable de la creación del cuadro de diálogo de propiedades que se muestra al usuario en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
  Una tarea y su interfaz de usuario son entidades independientes. Se deben implementar en ensamblados independientes para reducir el trabajo de localización, implementación y mantenimiento. La DLL de la tarea no carga, llama ni generalmente contiene ningún conocimiento de su interfaz de usuario, salvo la información que se incluye en los valores de atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> codificados en la tarea. Ésta es la única manera en que se asocian una tarea y su interfaz de usuario.  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Si se utiliza, establézcala en uno de los valores de la enumeración <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Por ejemplo, `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contiene información de contacto para las ocasiones en que la tarea requiere soporte técnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Asigna un tipo a la tarea.|  
-|Attribute.TypeId|Cuando se implementa en una clase derivada, obtiene un identificador único para este atributo. Para obtener más información, consulte **Attribute.TypeID** propiedad en la biblioteca de clases de .NET Framework.|  
+|Attribute.TypeId|Cuando se implementa en una clase derivada, obtiene un identificador único para este atributo. Para obtener más información, vea la propiedad **Attribute.TypeID** en la biblioteca de clases de .NET Framework.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|El nombre de tipo del ensamblado que utiliza el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] para cargar el ensamblado. Esta propiedad se utiliza para buscar el ensamblado de interfaz de usuario para la tarea.|  
   
  En el ejemplo de código siguiente se muestra <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> tal como aparecería, codificado sobre la definición de clase.  
@@ -127,7 +124,7 @@ End Class 'MyTask
   
  El diseñador llama al método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> para solicitar la ventana que se muestra en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. La tarea crea una instancia de la ventana que contiene la interfaz de usuario para la tarea y devuelve la interfaz de usuario al diseñador para mostrarla. Normalmente, los objetos <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> y <xref:Microsoft.SqlServer.Dts.Runtime.Connections> se proporcionan a la ventana a través de un constructor sobrecargado de modo que se puedan utilizar para configurar la tarea.  
   
- El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] llama al método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> de la UI de la tarea para mostrar la interfaz de usuario para la tarea. La interfaz de usuario de la tarea devuelve el formulario Windows Forms de este método y el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] muestra este formulario como un cuadro de diálogo modal. Cuando se cierra el formulario, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] diseñador examina el valor de la **DialogResult** propiedad del formulario para determinar si se ha modificado la tarea y si se deben guardar estas modificaciones. Si el valor de la **DialogResult** propiedad es **Aceptar**, el [!INCLUDE[ssIS](../../../includes/ssis-md.md)] diseñador llama a los métodos de persistencia de la tarea para guardar los cambios; en caso contrario, se descartan los cambios.  
+ El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] llama al método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> de la UI de la tarea para mostrar la interfaz de usuario para la tarea. La interfaz de usuario de la tarea devuelve el formulario Windows Forms de este método y el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] muestra este formulario como un cuadro de diálogo modal. Cuando se cierra el formulario, el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] examina el valor de la propiedad **DialogResult** del formulario para determinar si se ha modificado la tarea y si estas modificaciones se deben guardar. Si el valor de la propiedad **DialogResult** es **correcto**, el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] llama a los métodos de persistencia de la tarea para guardar los cambios; de lo contrario, se descartan esos cambios.  
   
  En el ejemplo de código siguiente se implementa la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> y se supone la existencia de una clase de formulario Windows Forms denominada SampleTaskForm.  
   
@@ -213,4 +210,3 @@ End Class
  [Desarrollar una interfaz de usuario para una tarea personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

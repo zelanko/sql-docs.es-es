@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) en un clúster | Documentos de Microsoft"
+title: "Integration Services (SSIS) en un clúster | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,27 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 52fb4e913a48b65544aaca84408f847af74412be
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) en un clúster
   No se recomienda la agrupación en clústeres de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] porque el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no es un servicio en clúster o que reconozca clústeres, y no admite la conmutación por error de un nodo de clúster a otro. Por consiguiente, en un entorno en clúster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se debería instalar e iniciar como un servicio independiente en cada nodo del clúster.  
   
  Aunque el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no es un servicio de clúster, puede configurar manualmente el servicio para que funcione como un recurso de clúster después de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] por separado en cada nodo del clúster.  
   
- Sin embargo, si la alta disponibilidad es su objetivo a la hora de establecer un entorno de hardware en clúster, puede lograr este objetivo sin configurar el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como recurso de clúster.  Para administrar los paquetes de cualquier nodo del clúster desde cualquier nodo del clúster, modifique el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en cada nodo del clúster. Debe modificar cada uno de estos archivos de configuración de forma que indique todas las instancias disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las que se guardan paquetes. Esta solución proporciona la alta disponibilidad que necesitan la mayoría de los clientes, sin los posibles problemas que se producen cuando el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura como un recurso de clúster. Para obtener más información sobre cómo cambiar el archivo de configuración, consulte [servicio Integration Services &#40; Servicio SSIS &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).  
+ Sin embargo, si la alta disponibilidad es su objetivo a la hora de establecer un entorno de hardware en clúster, puede lograr este objetivo sin configurar el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como recurso de clúster.  Para administrar los paquetes de cualquier nodo del clúster desde cualquier nodo del clúster, modifique el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en cada nodo del clúster. Debe modificar cada uno de estos archivos de configuración de forma que indique todas las instancias disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las que se guardan paquetes. Esta solución proporciona la alta disponibilidad que necesitan la mayoría de los clientes, sin los posibles problemas que se producen cuando el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura como un recurso de clúster. Para más información sobre cómo modificar el archivo de configuración, vea [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Servicio Integration Services [servicio SSIS]).  
   
  Entender el rol del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es esencial para tomar una decisión informada sobre cómo configurar el servicio en un entorno en clúster. Para más información, vea [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Si tiene varios grupos de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un clúster, una conmutación por error podría producir resultados inesperados. Considere el escenario siguiente. Grupo 1, que contiene el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , se está ejecutando en Nodo A. Grupo 2, que también contiene el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , se está ejecutando en Nodo B. Grupo 2 conmuta por error a Nodo A. El intento de iniciar otra instancia del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en Nodo A produce un error porque el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es un servicio de instancia única. El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está intentando la conmutación por error a Nodo A también producirá un error en función de la configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en Grupo 2. Si el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se había configurado para afectar a los demás servicios del grupo de recursos, se producirá un error en el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está creando la conmutación por error porque se ha producido un error en el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si el servicio se había configurado para no afectar a los demás servicios del grupo de recursos, el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrá realizar conmutación por error al Nodo A. A menos que el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en Grupo 2 estuviera configurado para no afectar a los demás servicios del grupo de recursos, el error del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que está conmutando por error podría hacer que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está conmutando por error también produjera un error.  
 
-## <a name="configure-the-service-as-a-cluster-resource"></a>Configurar el servicio como un recurso de clúster
+## <a name="configure-the-service-as-a-cluster-resource"></a>Configuración del servicio como un recurso de clúster
 Para los clientes que decidan que las ventajas de configurar el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como un recurso de clúster son más que los inconvenientes, esta sección contiene las instrucciones de configuración necesarias. Sin embargo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] no recomienda que el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configure como un recurso de clúster.  
   
  Para configurar el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como recurso de clúster, es necesario completar las siguientes tareas.  
@@ -139,4 +137,3 @@ Para los clientes que decidan que las ventajas de configurar el servicio [!INCLU
 -   En el **Administrador de clústeres**, seleccione el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , haga clic con el botón derecho y seleccione **Poner en línea** en el menú emergente. El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está en línea ahora como recurso de clúster.  
   
   
-

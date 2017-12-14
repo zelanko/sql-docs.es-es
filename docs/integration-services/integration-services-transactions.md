@@ -1,5 +1,5 @@
 ---
-title: Transacciones de Integration Services | Documentos de Microsoft
+title: Transacciones de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transactions"></a>Transacciones de Integration Services
   Los paquetes utilizan transacciones para enlazar las acciones de base de datos que las tareas realizan en unidades atómicas y mantener de esta forma la integridad de los datos. Todos los tipos de contenedor de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (contenedores de paquetes, de bucles For y Foreach o de secuencias, y hosts de las tareas que encapsulan cada tarea, se pueden configurar para que utilicen transacciones. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona tres opciones para configurar transacciones: **NotSupported**, **Supported**y **Required**.  
@@ -53,7 +51,7 @@ Cuando configura un paquete para utilizar transacciones, tiene dos opciones:
   
  El procedimiento siguiente describe cómo configurar ambas opciones.  
   
-### <a name="configure-a-package-to-use-a-single-transaction"></a>Configurar un paquete para utilizar una transacción única  
+### <a name="configure-a-package-to-use-a-single-transaction"></a>Configurar un paquete para usar una transacción única  
  En esta opción, el propio paquete inicia una transacción única. Configure el paquete para iniciar esta transacción estableciendo la propiedad TransactionOption del paquete en **Requerido**.  
   
  A continuación, dé de alta tareas y contenedores específicos en esta transacción única. Para dar de alta una tarea o un contenedor en una transacción, establezca la propiedad TransactionOption de esa tarea o contenedor en **Se admite**.  
@@ -77,7 +75,7 @@ Cuando configura un paquete para utilizar transacciones, tiene dos opciones:
   
 8.  Repita los pasos 6 y 7 para cada tarea y contenedor que desee inscribir en la transacción.  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>Configurar un paquete para que use varias transacciones  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>Configurar un paquete de modo que use varias transacciones  
  En esta opción, el propio paquete admite las transacciones pero no inicia una transacción. Configure el paquete para admitir transacciones estableciendo la propiedad TransactionOption del paquete en **Se admite**.  
   
  A continuación, configure las tareas y contenedores deseados dentro del paquete para iniciar transacciones o participar en ellas. Para configurar una tarea o un contenedor para iniciar una transacción, establezca la propiedad TransactionOption de esa tarea o contenedor en **Requerido**.   
@@ -124,7 +122,7 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
   
  En el diagrama siguiente se muestran las cinco transacciones no relacionadas del paquete. El contenedor de secuencias inicia una transacción y las tareas Ejecutar SQL inician las otras cuatro.  
   
- ![Implementación de varias transacciones](../integration-services/media/mw-dts-trans2.gif "implementación de varias transacciones")  
+ ![Implementación de varias transacciones](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
  
 ## <a name="inherited-transactions"></a>Transacciones heredadas
  Un paquete puede ejecutar otro paquete, utilizando la tarea Ejecutar paquete. El paquete secundario, que es el que ejecuta la tarea Ejecutar paquete, puede crear su propia transacción de paquete o heredar la del paquete primario.  
@@ -148,7 +146,7 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
   
 -   **TransactionOption** se establece en **NotSupported** en el paquete E y en las tareas Ejecutar paquete C y Ejecutar paquete E.  
   
- ![Flujo de transacciones heredadas](../integration-services/media/mw-dts-executepack.gif "flujo de transacciones heredadas")  
+ ![Flujo de transacciones heredadas](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
   
  Solo los paquetes B, D y F pueden heredar transacciones de sus paquetes primarios.  
   
@@ -170,4 +168,3 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
  [Varias transacciones](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

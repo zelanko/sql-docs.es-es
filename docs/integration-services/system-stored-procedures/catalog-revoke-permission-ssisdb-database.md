@@ -1,5 +1,5 @@
 ---
-title: Catalog.revoke_permission (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.revoke_permission (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
- Tipo del objeto protegible. Tipos de objetos protegibles incluyen carpeta (`1`), proyecto (`2`), entorno (`3`) y la operación (`4`). El *object_type* es **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identitifier único (Id.) del objeto protegible. El *object_id* es **bigint**.  
+ [ @object_id = ] *object_id*  
+ Es el identificador único (id.) del objeto protegible. El parámetro *object_id* es **bigint**.  
   
- [ @principal_id =] *principal_id*  
- Identificador de la entidad de seguridad cuyo permiso se va a revocar. El *principal_id* es **int**.  
+ [ @principal_id = ] *principal_id*  
+ Identificador de la entidad de seguridad cuyo permiso se va a revocar. El parámetro *principal_id* es **int**.  
   
- [ @permission_type =] *permission_type*  
- Tipo de permiso. El *permission_type* es **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Tipo de permiso. El parámetro *permission_type* es **smallint**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
  1 (object_class no es válido)  
   
  2 (object_id no existe)  
   
- 3 (entidad de seguridad no existe)  
+ 3 (la entidad de seguridad no existe)  
   
- 4 (permiso no es válido)  
+ 4 (el permiso no es válido)  
   
  5 (otro error)  
   
@@ -79,12 +77,12 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Permisos ASSIGN_PERMISSIONS en el objeto  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="remarks"></a>Comentarios  
- Si se especifica permission_type, el procedimiento almacenado quita el permiso que se asigna explícitamente a la entidad de seguridad para el objeto. Aunque cuando no haya ninguna de esas instancias, el procedimiento devuelve un valor de código correcto (`0`). Si se omite permission_type, el procedimiento almacenado quita todos los permisos de la entidad de seguridad para el objeto.  
+ Si se especifica permission_type, el procedimiento almacenado quita el permiso asignado explícitamente a la entidad de seguridad del objeto. Aunque cuando no haya ninguna de esas instancias, el procedimiento devuelve un valor de código correcto (`0`). Si se omite permission_type, el procedimiento almacenado quita todos los permisos de la entidad de seguridad del objeto.  
   
 > [!NOTE]  
 >  La entidad de seguridad todavía puede tener el permiso especificado en el objeto si es miembro de un rol que tiene el permiso especificado.  
@@ -104,4 +102,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|Permite a la entidad de seguridad administrar los permisos de todos los objetos de la carpeta.|Carpeta|  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Administrador de conexiones SMO | Documentos de Microsoft
+title: Administrador de conexiones SMO | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.smoconnection.f1
+f1_keywords: sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: d1f03b27dd5dca9e9a2940abf3731a2f5cefe0af
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eace0d881304757c067c95a30fadb2bc0e960641
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="smo-connection-manager"></a>SMO, administrador de conexiones
   Un administrador de conexiones SMO permite a un paquete conectarse a un servidor de Objeto de administración de SQL (SMO). Las tareas de transferencia que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usan un administrador de conexiones SMO. Por ejemplo, la tarea Transferir inicios de sesión que transfiere inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un administrador de conexiones SMO.  
@@ -80,4 +77,3 @@ ms.lasthandoff: 08/09/2017
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

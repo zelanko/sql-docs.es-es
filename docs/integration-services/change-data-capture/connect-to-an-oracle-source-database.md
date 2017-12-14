@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una base de datos de origen de Oracle | Documentos de Microsoft
+title: Conectar con una base de datos de origen de Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraDb
+f1_keywords: oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1c48c856677c0b840fdeb56a683c84425d77e4a4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Un usuario debe tener concedidos los privilegios siguientes en la base de datos de Oracle para poder ser un usuario de minería de registros.  
 >   
->  -   Seleccione en \<any-captured-table >  
+>  -   SELECT en \<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE en DBMS LOGMNR  
 > -   SELECT en V$LOGMNR CONTENTS  
@@ -74,8 +71,7 @@ ms.lasthandoff: 08/03/2017
  Cuando termine de especificar información en esta página, haga clic en **Siguiente** para [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo crear la instancia de base de datos de cambios SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Editar propiedades de instancia](../../integration-services/change-data-capture/edit-instance-properties.md)  
+ [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Editar propiedades de la instancia](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
-

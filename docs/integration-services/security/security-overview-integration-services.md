@@ -1,5 +1,5 @@
 ---
-title: "Información general sobre seguridad (Integration Services) | Documentos de Microsoft"
+title: "Información general sobre seguridad (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: adc486a9655f8ddf394a371efa9da793e2fa4728
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b40010fd76da5b1f040ab5e5311ac655d111d660
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
   La seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de varios niveles que proporcionan un entorno de seguridad rico y flexible. Estos niveles de seguridad incluyen el uso de firmas digitales, propiedades de paquete, roles de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y permisos del sistema operativo. La mayoría de estas características de seguridad pertenecen a las categorías de identidad y control de acceso.  
@@ -151,4 +149,3 @@ ms.lasthandoff: 08/03/2017
 -   [Firmar un paquete mediante un certificado digital](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
 -   [Establecer o cambiar el nivel de protección de los paquetes](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
-

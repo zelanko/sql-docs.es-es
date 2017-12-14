@@ -1,5 +1,5 @@
 ---
-title: Catalog.deploy_project (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.deploy_project (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: b056ec4e0d4f762190154988fe3fa225e447c315
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +38,24 @@ catalog.deploy_project [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@folder_name =] *nombreDeCarpeta*  
- El nombre de la carpeta donde se implementa el proyecto. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Es el nombre de la carpeta donde se implementará el proyecto. El parámetro *folder_name* es **nvarchar(128)**.  
   
- [@project_name =] *Nombre_proyecto*  
- Nombre del proyecto nuevo o actualizado en la carpeta. El *Nombre_proyecto* es **nvarchar (128)**.  
+ [@project_name =] *project_name*  
+ Nombre del proyecto nuevo o actualizado en la carpeta. El parámetro *project_name* es **nvarchar(128)**.  
   
  [@projectstream =] *projectstream*  
  Contenido binario de un archivo de implementación de proyecto (extensión .ispac) de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Puede usar una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas BULK para recuperar el contenido binario del archivo. Para obtener un ejemplo, vea [implementar Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Para obtener más información acerca de OPENROWSET, vea [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+ Puede usar una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas BULK para recuperar el contenido binario del archivo. Para ver un ejemplo, consulte [Deploy Integration Services (SSIS) Projects and Packages (Implementación de proyectos y paquetes de Integration Services [SSIS])](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Para obtener más información sobre la cláusula OPENROWSET, consulte [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
- El *projectstream* es **varbinary (max)**  
+ El parámetro *projectstream* es **varbinary(MAX)**  
   
  [@operation_id =] *operation_id*  
- Devuelve el identificador único para la operación de implementación. El *operation_id* es **bigint**.  
+ Devuelve el identificador único para la operación de implementación. El parámetro *operation_id* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno  
@@ -67,16 +65,16 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Permisos CREATE_OBJECTS en la carpeta para implementar un nuevo proyecto o permisos MODIFY en el proyecto para actualizar un proyecto  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  La siguiente lista describe algunas condiciones que pueden hacer que este procedimiento almacenado produzca un error:  
   
 -   Un parámetro hace referencia a un objeto que no existe, un parámetro intenta crear un objeto que ya existe o un parámetro no es válido por algún otro motivo  
   
--   El valor del parámetro  *@project_name*  no coincide con el nombre del proyecto en el archivo de implementación  
+-   El valor del parámetro *@project_name* no coincide con el nombre del proyecto en el archivo de implementación.  
   
 -   El usuario no tiene permisos suficientes  
   
@@ -84,4 +82,3 @@ catalog.deploy_project [@folder_name =] folder_name
  Durante la implementación o la actualización de un proyecto, el procedimiento almacenado no comprueba el nivel de protección de paquetes individuales en el proyecto.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Ejecute la utilidad de paquetes (dtexecui) | Documentos de Microsoft
+title: "Utilidad de ejecución de paquetes (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,23 +22,21 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="execute-package-utility-dtexecui"></a>Ejecute la utilidad de paquetes (dtexecui)
-  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
+# <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
+  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
   
  Los paquetes se ejecutan en el mismo proceso que la utilidad **dtexecui.exe** . Como esta utilidad es una herramienta de 32 bits, los paquetes que se ejecutan con **dtexecui.exe** en un entorno de 64 bits se ejecutan en Windows en Win32 (WOW). Al desarrollar y probar comandos mediante la utilidad dtexecui.exe en un equipo de 64 bits, debe probar los comandos en modo de 64 bits mediante la versión de 64 bits de **dtexecui.exe** antes de implementar o programar los comandos en un servidor de producción.  
   
@@ -378,7 +375,6 @@ ms.lasthandoff: 08/03/2017
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="see-also"></a>Vea también  
- [DTExec (utilidad)](../../integration-services/packages/dtexec-utility.md)  
+ [dtexec (utilidad)](../../integration-services/packages/dtexec-utility.md)  
   
   
-

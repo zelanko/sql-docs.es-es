@@ -1,5 +1,5 @@
 ---
-title: (SSIS) paquetes de Integration Services | Documentos de Microsoft
+title: Paquetes de Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
  El siguiente diagrama muestra un paquete individual que contiene un flujo de control con una tarea Flujo de datos que, a su vez, contiene un flujo de datos.  
   
- ![Un paquete con un flujo de control y flujo de datos](../integration-services/media/ssis-package.gif "un paquete con un flujo de control y flujo de datos")  
+ ![Un paquete con un flujo de control y flujo de datos](../integration-services/media/ssis-package.gif "A package with a control flow and a data flow")  
   
  Una vez creado el paquete básico, puede agregarle características avanzadas como registro y variables para extender su funcionalidad. Para obtener más información, vea la sección Objetos que extienden la funcionalidad de un paquete.  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 08/03/2017
 |**PackageEnd**|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
 |**Diagnostic**|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.|  
   
-## <a name="set-the-properties-of-a-package"></a>Establecer las propiedades de un paquete  
+## <a name="set-the-properties-of-a-package"></a>Establecimiento de las propiedades de un paquete  
  Puede establecer propiedades en la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o mediante programación.  
   
  Para obtener más información sobre cómo establecer estas propiedades usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vea [Establecer las propiedades de paquetes](../integration-services/set-package-properties.md).  
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Tareas relacionadas  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye dos herramientas gráficas para crear paquetes aparte del modelo de objetos [!INCLUDE[ssIS](../includes/ssis-md.md)] : el Diseñador [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el Asistente para importación y exportación de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para obtener detalles, vea los siguientes temas.  
   
--   [Importar y exportar datos con el Asistente de exportación y la importación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [Crear paquetes en SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Crear paquetes en herramientas de datos de SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   Vea [generar paquetes mediante programación](../integration-services/building-packages-programmatically/building-packages-programmatically.md) en la Guía del desarrollador. 
+-   Vea [Building Packages Programmatically](../integration-services/building-packages-programmatically/building-packages-programmatically.md) (Generación de paquetes mediante programación) en la Guía del desarrollador. 
   
   
-

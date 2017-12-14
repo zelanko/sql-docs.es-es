@@ -2,9 +2,12 @@
 title: "Roles de aplicación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: "31"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9437e6150d5c1dba89b082d016dccaa59744d4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76f05f0da9acce4f7e1a9e7749972a29ddd31a67
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="application-roles"></a>Roles de aplicación
-  Un rol de aplicación es una entidad de seguridad de base de datos que permite que una aplicación se ejecute con sus propios permisos de usuario. Puede utilizar los roles de aplicación para permitir el acceso a datos específicos únicamente a aquellos usuarios que se conecten a través de una aplicación concreta. A diferencia de los roles de base de datos, los roles de aplicación no contienen miembros y están inactivos de manera predeterminada. Los roles de aplicación funcionan con ambos modos de autenticación. Los roles de aplicación se habilitan empleando **sp_setapprole**, que requiere una contraseña. Debido a que los roles de aplicación son una entidad de seguridad de la base de datos, solo pueden obtener acceso a otras bases de datos por medio de los permisos que se conceden para dichas bases de datos a **guest**. Por tanto, cualquier base de datos en la que se haya deshabilitado **guest** no será accesible para los roles de aplicación de otras bases de datos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un rol de aplicación es una entidad de seguridad de base de datos que permite que una aplicación se ejecute con sus propios permisos de usuario. Puede utilizar los roles de aplicación para permitir el acceso a datos específicos únicamente a aquellos usuarios que se conecten a través de una aplicación concreta. A diferencia de los roles de base de datos, los roles de aplicación no contienen miembros y están inactivos de manera predeterminada. Los roles de aplicación funcionan con ambos modos de autenticación. Los roles de aplicación se habilitan empleando **sp_setapprole**, que requiere una contraseña. Debido a que los roles de aplicación son una entidad de seguridad de la base de datos, solo pueden obtener acceso a otras bases de datos por medio de los permisos que se conceden para dichas bases de datos a **guest**. Por tanto, cualquier base de datos en la que se haya deshabilitado **guest** no será accesible para los roles de aplicación de otras bases de datos.  
   
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los roles de aplicación no pueden tener acceso a los metadatos de nivel de servidor porque no están asociadas a una entidad de seguridad a nivel de servidor. Para deshabilitar esta restricción y permitir a los roles de aplicación tener acceso a los metadatos de nivel de servidor, defina la marca global 4616. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) y [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).  
   

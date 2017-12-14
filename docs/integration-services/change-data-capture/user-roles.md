@@ -1,5 +1,5 @@
 ---
-title: Roles de usuario | Documentos de Microsoft
+title: Roles de usuario | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f01d18033764d683871cbc8d5883e25c78b7d958
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-roles"></a>Roles de usuario
   En esta sección se describen los roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity. Los roles descritos son roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , roles de Windows o roles de base de datos de Oracle.  
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  En la lista siguiente se describen los privilegios necesarios que se deben conceder al usuario de minería de registros:  
   
--   Seleccione en \<any-captured-table >  
+-   SELECT en \<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +179,3 @@ ms.lasthandoff: 08/03/2017
  Las credenciales para este usuario nunca se almacenan. La Consola del diseñador CDC las solicita cada vez que son necesarias y se mantienen para las demás sesiones de la interfaz de usuario.  
   
   
-

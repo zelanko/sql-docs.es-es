@@ -1,5 +1,5 @@
 ---
-title: Interfaz de usuario de Integration Services | Documentos de Microsoft
+title: Interfaz de usuario de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 |**Firma digital**|Firmar un paquete o quitar la firma del paquete.|En el menú **SSIS** , haga clic en **Firma digital**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Firma digital**.|  
 |**Establecer puntos de interrupción**|Habilitar puntos de interrupción en tareas y establecer las propiedades de los puntos de interrupción.|En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en una tarea o contenedor y, luego, haga clic en **Editar puntos de interrupción**. Para establecer un punto de interrupción en el paquete, haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Editar puntos de interrupción**.|  
   
- La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el \<GettingStartedSamples > dirección URL de fuente del valor del elemento que especifica la RSS. El archivo se encuentra en la  *\<unidad >*: carpeta \Program SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la  *\<unidad >*: \Program (x86) \Microsoft SQL Server\110\DTS\Binn carpeta  
+ La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el valor del elemento \<GettingStartedSamples> que especifica la dirección URL de la fuente RSS. El archivo se encuentra en la carpeta *unidad>\<*:\Archivos de programa\Microsoft SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la carpeta *\<unidad>*:\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn.  
   
  Si el archivo SamplesSites.xml se daña, reemplace el XML del archivo por el XML predeterminado siguiente.  
   
@@ -128,4 +126,3 @@ ms.lasthandoff: 08/03/2017
  [Diseñador SSIS](../integration-services/ssis-designer.md)  
   
   
-

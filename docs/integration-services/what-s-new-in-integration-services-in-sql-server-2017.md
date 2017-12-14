@@ -1,5 +1,5 @@
 ---
-title: "¿Qué &#39; s de Integration Services en SQL Server de 2017 | Documentos de Microsoft"
+title: Novedades de Integration Services en SQL Server 2017 | Microsoft Docs
 ms.custom: 
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>¿Qué &#39; s de Integration Services en SQL Server de 2017
+# <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
 En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
 >   [!NOTE]
@@ -33,77 +31,77 @@ En este tema, se describen las características que se han agregado o actualizad
 
 ## <a name="highlights-of-this-release"></a>Aspectos destacados de esta versión
 
-Aquí están las características nuevas más importantes de Integration Services en SQL Server 2017.
+A continuación se presentan las características nuevas más importantes de Integration Services en SQL Server 2017.
 
--   **Escalar horizontalmente**. Distribuir la ejecución de paquetes SSIS más fácilmente en varios equipos de trabajo y administrar ejecuciones y los trabajadores de un único equipo maestro. Para obtener más información, consulte [horizontalmente Integration Services](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+-   **Escalabilidad horizontal**. Distribuya la ejecución de paquetes SSIS más fácilmente en varios equipos de trabajo, y administre ejecuciones y trabajos de un único equipo maestro. Para obtener más información, consulte [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md) (Escalabilidad horizontal de Integration Services).
 
--   **Servicios de integración en Linux**. Ejecutar paquetes SSIS en equipos Linux. Para obtener más información, consulte [de extracción, transformación y carga datos en Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
+-   **Integration Services en Linux**. Ejecute paquetes SSIS en equipos Linux. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
 
--   **Mejoras de la conectividad**. Conectarse a las fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online con los componentes actualizados de OData. 
+-   **Mejoras en la conectividad**. Conéctese a fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online con los componentes de OData actualizados. 
 
-## <a name="new-in-azure-data-factory"></a>Nueva de la factoría de datos de Azure
+## <a name="new-in-azure-data-factory"></a>Novedades en Azure Data Factory
 
-Con la versión preliminar pública de la factoría de datos de Azure versión 2 de septiembre de 2017, ahora puede hacer lo siguiente:
--   Implementar paquetes en la base de datos de catálogo de SSIS (SSISDB) en la base de datos de SQL Azure.
--   Ejecutar paquetes que se implementen en Azure en el tiempo de ejecución de integración de Azure SSIS, un componente de Data Factory de Azure versión 2.
+Con la versión preliminar pública de Azure Data Factory versión 2 de septiembre de 2017, ahora puede hacer lo siguiente:
+-   Implementar paquetes en la base de datos de catálogo de SSIS (SSISDB) en Azure SQL Database.
+-   Ejecutar paquetes implementados en Azure en Integration Runtime para la integración de SSIS en Azure, un componente de Azure Data Factory versión 2.
 
-Para obtener más información, consulte [las cargas de trabajo de los servicios de integración de SQL Server elevar y cambiar a la nube](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
 
-Estas nuevas capacidades requieren versión 17.2 o una versión posterior de SQL Server Data Tools (SSDT), pero no requieren 2017 de SQL Server o SQL Server 2016. Al implementar paquetes en Azure, el Asistente para la implementación de paquetes siempre actualiza los paquetes al formato de paquete más reciente.
+Estas nuevas funcionalidades requieren SQL Server Data Tools (SSDT) versión 17.2 o posterior, pero no requieren SQL Server 2017 o SQL Server 2016. Al implementar paquetes en Azure, el Asistente para la implementación de paquetes siempre actualiza los paquetes al formato más reciente.
 
-## <a name="new-in-the-azure-feature-pack"></a>Nuevo en el Feature Pack de Azure
+## <a name="new-in-the-azure-feature-pack"></a>Novedades de Azure Feature Pack
 
-Además de las mejoras de conectividad en SQL Server Integration Services Feature Pack para Azure ha agregado compatibilidad para almacén de Azure Data Lake. Para obtener más información, consulte la entrada de blog [nuevo Azure característica Pack versión fortalecen ADLS conectividad](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/). Consulte también [Azure Feature Pack para Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+Además de las mejoras de conectividad en SQL Server, Integration Services Feature Pack para Azure admite Azure Data Lake Store. Para obtener más información, consulte la entrada de blog [New Azure Feature Pack Release Strengthening ADLS Connectivity](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/) (Nueva versión de Azure Feature Pack que refuerza la conectividad de ADLS). Consulte también [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md) (Azure Feature Pack para Integration Services [SSIS]).
 
-## <a name="new-in-sql-server-data-tools-ssdt"></a>Nuevo en SQL Server Data Tools (SSDT)
+## <a name="new-in-sql-server-data-tools-ssdt"></a>Novedades de SQL Server Data Tools (SSDT)
 
-Ahora puede desarrollar proyectos de SSIS y paquetes destinados a versiones de SQL Server 2012 a través de 2017 en 2017 de Visual Studio o en Visual Studio 2015. Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+Ahora puede desarrollar proyectos y paquetes de SSIS para las versiones de SQL Server desde 2012 hasta 2017 en Visual Studio 2017 o Visual Studio 2015. Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>Nuevo en SSIS en SQL Server de 2017 RC1
+## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>Novedades de SSIS en SQL Server 2017 RC1
 
-### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Características nuevas y modificadas en horizontalmente para SSIS
+### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Características nuevas y modificadas en la escalabilidad horizontal para SSIS
 
--   Patrón de escalabilidad horizontal ahora admite alta disponibilidad. Puede habilitar Always On para SSISDB y configurar para el servidor de agrupación en clústeres de conmutación por error de Windows Server que hospeda el servicio escala Out maestro. Al aplicar este cambio al maestro fuera de la escala, evitar un único punto de error y proporcionar una alta disponibilidad para la implementación completa horizontalmente.
--   Se mejoró el control de conmutación por error de los registros de ejecución de Trabajadores de escalabilidad horizontal. Los registros de ejecución se guardan en disco local en caso de que el trabajador de salida de escala se detiene inesperadamente. Posteriormente, cuando se reinicia el trabajo, vuelve a cargar los registros persistentes y continúa guardarlas en SSISDB.
--   Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad. Este cambio de nombre del parámetro tiene las siguientes consecuencias:
-    -   Si tiene secuencias de comandos existentes para ejecutar paquetes en horizontalmente, tendrá que cambiar el nombre del parámetro de *runincluster* a *runinscaleout* para que las secuencias de comandos funcione en RC1.
-    -   SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no se pueden activar la ejecución del paquete en horizontalmente en RC1. El mensaje de error es este: "*@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. 17.2 y versiones posteriores de SSMS admite la nueva ejecución de paquete y el nombre de parámetro en horizontalmente. Hasta que SSMS versión 17,2 está disponible para solucionar este problema, puede usar la versión existente de SSMS para generar el script de ejecución de paquetes y después cambiar el nombre de la *runincluster* parámetro *runinscaleout* en la secuencia de comandos y ejecute el script.
--   El catálogo de SSIS tiene una nueva propiedad global para especificar el modo predeterminado de ejecución de los paquetes de SSIS. Esta nueva propiedad se aplica cuando se llama a la **[catalog]. [ create_execution]** procedimiento almacenado con el *runinscaleout* parámetro establecido en null. Este modo también se aplica a trabajos del Agente SQL de SSIS. Puede establecer la propiedad global nuevo en el cuadro de diálogo de propiedades para el nodo SSISDB en SSMS, o con el siguiente comando:
+-   Patrón de escalabilidad horizontal ahora admite alta disponibilidad. Puede habilitar Always On para SSISDB y configurar el clúster de conmutación por error de Windows Server para el servidor que hospeda el servicio del patrón de escalabilidad horizontal. Al aplicar este cambio al patrón de escalabilidad horizontal, evita un único punto de error y proporciona una alta disponibilidad para la implementación de escalabilidad horizontal completa.
+-   Se mejoró el control de conmutación por error de los registros de ejecución de Trabajadores de escalabilidad horizontal. Los registros de ejecución se guardan en un disco local por si el trabajo de escalabilidad horizontal se detiene inesperadamente. Posteriormente, cuando se reinicia el trabajo, vuelve a cargar los registros persistentes y los sigue guardando en SSISDB.
+-   Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad. Este cambio en el nombre del parámetro tiene las siguientes consecuencias:
+    -   Si tiene scripts existentes para ejecutar paquetes en Escalabilidad horizontal, debe cambiar el nombre del parámetro de *runincluster* a *runinscaleout* para que los scripts funcionen en RC1.
+    -   SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es este: "*@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. Hasta que esté disponible la versión 17.2 de SSMS, como solución alternativa, puede usar la versión existente de SSMS para generar el script de ejecución de paquetes, cambiar el nombre del parámetro *runincluster* a *runinscaleout* en el script y, luego, ejecutar el script.
+-   El catálogo de SSIS tiene una nueva propiedad global para especificar el modo predeterminado de ejecución de los paquetes de SSIS. Esta nueva propiedad se aplica cuando llama al procedimiento almacenado **[catalog].[create_execution]** con el parámetro *runinscaleout* establecido en null. Este modo también se aplica a los trabajos del Agente SQL de SSIS. Puede establecer la propiedad global nueva en el cuadro de diálogo Propiedades para el nodo SSISDB en SSMS o con el siguiente comando:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
     ```
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-21"></a>Nuevo en SSIS en la CTP de SQL Server de 2017 2.1
+## <a name="new-in-ssis-in-sql-server-2017-ctp-21"></a>Novedades de SSIS en SQL Server 2017 CTP 2.1
 
-### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Características nuevas y modificadas en horizontalmente para SSIS
+### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Características nuevas y modificadas en Escalabilidad horizontal para SSIS
 
--   Ahora puede usar el **Use32BitRuntime** parámetro cuando se desencadena la ejecución en horizontalmente.
--   Se ha mejorado el rendimiento de inicio de sesión para SSISDB para ejecuciones de paquetes en horizontalmente. Ahora, los registros de mensaje de evento y el contexto del mensaje se escriben en SSISDB en modo por lotes en lugar de uno a uno. Estas son algunas notas adicionales sobre esta mejora:        
-    - Algunos informes en la versión actual de SQL Server Management Studio (SSMS) actualmente no mostrar estos registros para las ejecuciones en horizontalmente. Prevemos que se admitirán en la próxima versión de SSMS. Los informes afectados incluyen la *todas las conexiones* informe, el *contexto del Error* informes y el *información de conexión* sección en el panel de servicios de integración.
-    - Una nueva columna **event_message_guid** se ha agregado. Utilice esta columna para unir [catalog]. la vista [event_message_context] y [catalog]. ver [event_messages] en lugar de usar **event_message_id** al consultar estos registros de ejecuciones en horizontalmente.
--   Para obtener la aplicación de administración para SSIS horizontalmente, [descargar SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 o una versión posterior.
+-   Ahora puede usar el parámetro **Use32BitRuntime** cuando desencadena la ejecución en Escalabilidad horizontal.
+-   Se mejoró el rendimiento de inicio de sesión en SSISDB para ejecuciones de paquetes en Escalabilidad horizontal. Ahora, los registros de mensaje del evento y de contexto del mensaje se escriben en SSISDB por lotes en lugar de uno a uno. A continuación se muestran algunas notas adicionales sobre esta mejora:        
+    - Actualmente, algunos informes de la versión actual de SQL Server Management Studio (SSMS) no muestran estos registros para las ejecuciones en Escalabilidad horizontal. Prevemos que se admitirán en la próxima versión de SSMS. Los informes afectados incluyen el informe *Todas las conexiones*, el informe *Contexto de error* y la sección *Información de conexión* en el Panel Servicio de integración.
+    - Se agregó la nueva columna **event_message_guid**. Utilice esta columna para combinar las vistas [catalog].[event_message_context] y [catalog].[event_messages] en lugar de usar **event_message_id** al consultar estos registros de ejecuciones en Escalabilidad horizontal.
+-   Para obtener la aplicación de administración para Escalabilidad horizontal de SSIS, [descargue SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 o una versión posterior.
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Nuevo en SSIS en SQL Server de 2017 CTP 2.0
+## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Novedades de SSIS en SQL Server 2017 CTP 2.0
 
-No hay ningún nuevas características SSIS en SQL Server de 2017 CTP 2.0.
+No hay características nuevas de SSIS en SQL Server 2017 CTP 2.0.
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-14"></a>Nuevo en SSIS en la CTP de SQL Server de 2017 1.4
+## <a name="new-in-ssis-in-sql-server-2017-ctp-14"></a>Novedades de SSIS en SQL Server 2017 CTP 1.4
 
-No hay ningún nuevas características SSIS en 1.4 de CTP de SQL Server de 2017.
+No hay características nuevas de SSIS en SQL Server 2017 CTP 1.4.
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-13"></a>Nuevo en SSIS en la CTP de SQL Server de 2017 1.3
+## <a name="new-in-ssis-in-sql-server-2017-ctp-13"></a>Novedades de SSIS en SQL Server 2017 CTP 1.3
 
-No hay ningún nuevas características SSIS en 1.3 de CTP de SQL Server de 2017.
+No hay características nuevas de SSIS en SQL Server 2017 CTP 1.3.
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-12"></a>Nuevo en SSIS en la CTP de SQL Server de 2017 1.2
+## <a name="new-in-ssis-in-sql-server-2017-ctp-12"></a>Novedades de SSIS en SQL Server 2017 CTP 1.2
 
-No hay ningún nuevas características SSIS en SQL Server de 2017 CTP 1.2.
+No hay características nuevas de SSIS en SQL Server 2017 CTP 1.2.
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-11"></a>Nuevo en SSIS en la CTP de SQL Server de 2017 1.1
+## <a name="new-in-ssis-in-sql-server-2017-ctp-11"></a>Novedades de SSIS en SQL Server 2017 CTP 1.1
 
-No hay ningún nuevas características SSIS en SQL Server de 2017 CTP 1.1.
+No hay características nuevas de SSIS en SQL Server 2017 CTP 1.1.
 
-## <a name="new-in-ssis-in-sql-server-2017-ctp-10"></a>Nuevo en SSIS en SQL Server de 2017 CTP 1.0
+## <a name="new-in-ssis-in-sql-server-2017-ctp-10"></a>Novedades de SSIS en SQL Server 2017 CTP 1.0
 
 ### <a name="scale-out-for-ssis"></a>Escalado horizontal para SSIS
 
@@ -116,5 +114,4 @@ Para obtener más información, consulte [Escalado horizontal de Integration Ser
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Compatibilidad con recursos de Microsoft Dynamics Online
 
 El origen OData y el administrador de conexiones OData ahora admiten la conexión a fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online.
-
 

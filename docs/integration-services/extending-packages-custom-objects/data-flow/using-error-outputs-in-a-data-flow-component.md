@@ -1,5 +1,5 @@
 ---
-title: Uso de salidas de Error en un componente de flujo de datos | Documentos de Microsoft
+title: Usar las salidas de error en un componente de flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,25 +26,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usar las salidas de error en un componente de flujo de datos
   Se pueden agregar objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> especiales denominados salidas de error a los componentes para permitir que el componente redirija las filas que no puede procesar durante la ejecución. Los problemas que un componente puede encontrar generalmente se clasifican como errores o truncamientos y son específicos de cada componente. Los componentes que proporcionan las salidas de error ofrecen a los usuarios del componente la flexibilidad para administrar las condiciones de error, para ello filtran las filas de errores fuera del conjunto de resultados, generan un error en el componente cuando se produce un problema o pasan por alto los errores y continúan.  
   
- Para implementar y admiten salidas de error en un componente, debe establecer primero la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> propiedad del componente a **true**. A continuación, debe agregar una salida al componente que tiene su <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> propiedad establecida en **true**. Finalmente, el componente debe contener código que redirija las filas a la salida de error cuando se produzcan errores o truncamientos. Este tema cubre estos tres pasos y explica las diferencias entre las salidas de error sincrónicas y asincrónicas.  
+ Para implementar y admitir las salidas de error de un componente, debe establecer primero la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> del componente en **true**. A continuación, debe agregar una salida al componente que tenga la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> establecida en **true**. Finalmente, el componente debe contener código que redirija las filas a la salida de error cuando se produzcan errores o truncamientos. Este tema cubre estos tres pasos y explica las diferencias entre las salidas de error sincrónicas y asincrónicas.  
   
 ## <a name="creating-an-error-output"></a>Crear una salida de error   
- Crear una salida de error mediante una llamada a la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> método de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>y, a continuación, establecer el <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> propiedad de la nueva salida a **true**. Si la salida es asincrónica, no se debe hacer nada más en la salida. Si la salida es sincrónica y hay otra salida que es sincrónica con la misma entrada, debe establecer también las propiedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Las dos propiedades deben tener los mismos valores que la otra salida que es sincrónica con la misma entrada. Si estas propiedades no están establecidas en un valor distinto de cero, las filas proporcionadas por la entrada se envían a las dos salidas que son sincrónicas con la entrada.  
+ Puede crear una salida de error llamando al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> y estableciendo a continuación la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> de la nueva salida en **true**. Si la salida es asincrónica, no se debe hacer nada más en la salida. Si la salida es sincrónica y hay otra salida que es sincrónica con la misma entrada, debe establecer también las propiedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Las dos propiedades deben tener los mismos valores que la otra salida que es sincrónica con la misma entrada. Si estas propiedades no están establecidas en un valor distinto de cero, las filas proporcionadas por la entrada se envían a las dos salidas que son sincrónicas con la entrada.  
   
  Cuando un componente encuentra un error o un truncamiento durante la ejecución, continúa basándose en los valores de las propiedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> de la entrada o salida, o las columnas de entrada o de resultados, donde se produjo el error. El valor de estas propiedades se debe establecer de forma predeterminada en <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>. Cuando la salida de error del componente está conectada a un componente de nivel inferior, el usuario del componente establece esta propiedad y permite al usuario controlar cómo administra el componente el error o el truncamiento.  
   
@@ -283,7 +280,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>Redirigir filas con salidas asincrónicas  
- En lugar de dirigir las filas a una salida, como se hace con salidas de error sincrónicas, los componentes con salidas asincrónicas envían una fila a una salida de error agregando explícitamente la fila al objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> de salida. Al implementar un componente que utiliza las salidas de error asincrónicas, se requiere agregar las columnas a la salida de error que se proporcionan a los componentes de nivel inferior y almacenar en memoria caché el búfer de salida para la salida de error que se proporciona al componente durante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Los detalles de implementación de un componente con salidas asincrónicas se tratan detalladamente en el tema [desarrollar un componente de transformación personalizado con salidas asincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Si las columnas no se agregan explícitamente a la salida de error, la fila del búfer que se agrega al búfer de salida contiene solo las dos columnas de error.  
+ En lugar de dirigir las filas a una salida, como se hace con salidas de error sincrónicas, los componentes con salidas asincrónicas envían una fila a una salida de error agregando explícitamente la fila al objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> de salida. Al implementar un componente que utiliza las salidas de error asincrónicas, se requiere agregar las columnas a la salida de error que se proporcionan a los componentes de nivel inferior y almacenar en memoria caché el búfer de salida para la salida de error que se proporciona al componente durante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Los detalles de implementación de un componente con salidas asincrónicas se tratan detalladamente en el tema [Developing a Custom Transformation Component with Asynchronous Outputs (Desarrollar un componente de transformación personalizado con salidas asincrónicas)](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Si las columnas no se agregan explícitamente a la salida de error, la fila del búfer que se agrega al búfer de salida contiene solo las dos columnas de error.  
   
  Para enviar una fila a una salida de error asincrónica, debe agregar una fila al búfer de salida de error. A veces, se puede haber agregado ya una fila al búfer de salida no de error y debe quitar esta fila utilizando el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A>. A continuación puede establecer los valores de las columnas del búfer de salida y, finalmente, llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A> para proporcionar el código de error específico del componente y el valor de la columna de error.  
   
@@ -442,7 +439,6 @@ End Sub
   
 ## <a name="see-also"></a>Vea también  
  [Control de errores en los datos](../../../integration-services/data-flow/error-handling-in-data.md)   
- [Uso de salidas de Error](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Usar salidas de error](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
-

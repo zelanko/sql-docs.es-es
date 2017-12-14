@@ -1,5 +1,5 @@
 ---
-title: "Agregar conexiones mediante programación | Documentos de Microsoft"
+title: "Agregar conexiones mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,31 +27,30 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b768ad80f2b28cc3fb73a2210188bab26c902441
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ed662d5dff653fc0e245db65f6fe25b4b209c77e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-connections-programmatically"></a>Agregar conexiones mediante programación
-  La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa las conexiones físicas con los orígenes de datos externos. La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> aísla los detalles de la implementación de la conexión del tiempo de ejecución. Esto habilita al tiempo de ejecución para que interactúe con cada administrador de conexiones de una manera coherente y de predicción. Los administradores de conexiones contienen un conjunto de propiedades estándar que todas las conexiones tienen en el común, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Sin embargo, las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> son normalmente las únicas propiedades que se requieren para configurar un administrador de conexiones. A diferencia de otros paradigmas de programación, donde las clases de conexión exponen métodos como **abiertos** o **conectar** para establecer físicamente una conexión al origen de datos, el motor en tiempo de ejecución administra todas las conexiones para el paquete mientras se ejecuta.  
+  La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa las conexiones físicas con los orígenes de datos externos. La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> aísla los detalles de la implementación de la conexión del tiempo de ejecución. Esto habilita al tiempo de ejecución para que interactúe con cada administrador de conexiones de una manera coherente y de predicción. Los administradores de conexiones contienen un conjunto de propiedades estándar que todas las conexiones tienen en el común, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Sin embargo, las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> son normalmente las únicas propiedades que se requieren para configurar un administrador de conexiones. A diferencia de otros paradigmas de programación, donde las clases de conexión exponen métodos como **Open** o **Connect** para establecer físicamente una conexión al origen de datos, el motor en tiempo de ejecución administra todas las conexiones para el paquete mientras se ejecuta.  
   
  La clase <xref:Microsoft.SqlServer.Dts.Runtime.Connections> es una colección de los administradores de conexiones agregados a ese paquete y que están disponibles para su uso en tiempo de ejecución. Puede agregar más administradores de conexiones a la colección mediante el método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> de la colección y proporcionando una cadena que indica el tipo de administrador de conexiones. El método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> devuelve la instancia <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> que se agregó al paquete.  
   
 ## <a name="intrinsic-properties"></a>Propiedades intrínsecas  
- La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> expone un conjunto de propiedades comunes para todas las colecciones. Sin embargo, a veces se necesita tener acceso a las propiedades que son únicas para un tipo de conexión concreto. La colección <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> de la clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> proporciona el acceso a estas propiedades. Se pueden recuperar las propiedades de la colección mediante el indizador, o el nombre de propiedad y el **GetValue** método y los valores se establecen mediante el **SetValue** método. Las propiedades de las propiedades de objeto de conexión subyacente también se pueden establecer adquiriendo una instancia real del objeto y estableciendo directamente sus propiedades. Para obtener la conexión subyacente, use la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> del administrador de conexiones. La siguiente línea de código muestra una línea de C# que crea un administrador de conexiones de ADO.NET que tiene la clase subyacente, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass>.  
+ La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> expone un conjunto de propiedades comunes para todas las colecciones. Sin embargo, a veces se necesita tener acceso a las propiedades que son únicas para un tipo de conexión concreto. La colección <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> de la clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> proporciona el acceso a estas propiedades. Las propiedades se pueden recuperar de la colección mediante el indizador, o el nombre de propiedad y el método **GetValue**, y los valores se establecen mediante el método **SetValue**. Las propiedades de las propiedades de objeto de conexión subyacente también se pueden establecer adquiriendo una instancia real del objeto y estableciendo directamente sus propiedades. Para obtener la conexión subyacente, use la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> del administrador de conexiones. La siguiente línea de código muestra una línea de C# que crea un administrador de conexiones de ADO.NET que tiene la clase subyacente, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass>.  
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- Esto convierte el objeto de administrador de conexiones en su objeto de conexión subyacente. Si usas C++, el **QueryInterface** método de la <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> objeto se denomina y se solicita la interfaz del objeto de conexión subyacente.  
+ Esto convierte el objeto de administrador de conexiones en su objeto de conexión subyacente. Si usa C++, se llama al método **QueryInterface** del objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y se solicita la interfaz del objeto de conexión subyacente.  
   
- En la tabla siguiente se enumeran los administradores de conexión que se incluyen en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y la cadena que se utiliza en la instrucción `package.Connections.Add("xxx")`. Para obtener una lista de todos los administradores de conexión, vea [Integration Services &#40; SSIS &#41; Las conexiones](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
+ En la tabla siguiente se enumeran los administradores de conexión que se incluyen en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y la cadena que se utiliza en la instrucción `package.Connections.Add("xxx")`. Para obtener una lista de todos los administradores de conexión, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
 |String|Administrador de conexiones|  
 |------------|------------------------|  
@@ -66,7 +63,7 @@ ms.lasthandoff: 08/03/2017
 |"FILE"|Administrador de conexiones para conexiones de archivos.|  
 |"MULTIFLATFILE"|Administrador de conexiones para varias conexiones de archivos planos.|  
 |"MULTIFILE"|Administrador de conexiones para varias conexiones de archivos.|  
-|"SQLMOBILE"|Administrador de conexiones para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compactar las conexiones.|  
+|"SQLMOBILE"|Administrador de conexiones para conexiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|  
 |"MSOLAP100"|Administrador de conexiones para conexiones [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |"FTP"|Administrador de conexiones para conexiones FTP.|  
 |"HTTP"|Administrador de conexiones para conexiones HTTP.|  
@@ -208,7 +205,7 @@ Public Class CreateConnection
 End Class  
 ```  
   
- **Salida de ejemplo:**  
+ **Salida del ejemplo:**  
   
  `Connection description: OLE DB connection to the AdventureWorks database.`  
   
@@ -217,11 +214,10 @@ End Class
  `Number of connections in package: 2`  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico, [las cadenas de conexión](http://go.microsoft.com/fwlink/?LinkId=220743), en carlprothman.net.  
+ Artículo técnico, [Connection Strings](http://go.microsoft.com/fwlink/?LinkId=220743) (Cadenas de conexión), en carlprothman.net.  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Conexiones](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Crear administradores de conexión](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Crear administradores de conexiones](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

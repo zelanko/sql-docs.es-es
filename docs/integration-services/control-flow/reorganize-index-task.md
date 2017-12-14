@@ -1,5 +1,5 @@
 ---
-title: "Tarea Reorganizar índice | Documentos de Microsoft"
+title: "Tarea Reorganizar índice | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.reorganizeindextask.f1
+f1_keywords: sql13.dts.designer.reorganizeindextask.f1
 helpviewer_keywords:
 - reorganizing indexes
 - Reorganize Index task [Integration Services]
 - indexes [Integration Services]
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b9cdd0be56414ccc4e80b4657bd33045b8ad931
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1b26f5ea9c244876b87283e0aa05a204e616a46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reorganize-index-task"></a>Tarea Reorganizar índice
   La tarea Reorganizar índice reorganiza los índices de las tablas y vistas de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre la administración de índices, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
@@ -56,4 +53,3 @@ ms.lasthandoff: 08/03/2017
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

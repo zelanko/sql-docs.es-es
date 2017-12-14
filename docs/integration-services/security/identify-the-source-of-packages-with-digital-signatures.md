@@ -1,5 +1,5 @@
 ---
-title: Identificar el origen de paquetes con firmas digitales | Documentos de Microsoft
+title: Identificar el origen de paquetes con firmas digitales | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.digitalsigning.f1
+f1_keywords: sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar el origen de paquetes con firmas digitales
   Es posible firmar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con un certificado digital para identificar su origen. Una vez que el paquete está firmado con un certificado digital, se puede configurar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para que compruebe la firma digital antes de cargarlo. Para hacer que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] compruebe la firma, puede establecer una opción en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o en la utilidad **dtexec** (dtexec.exe), o bien establecer un valor opcional del Registro.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
      Aunque se haya firmado el paquete, también debe configurar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para comprobar la firma digital antes de cargar el paquete.  
 
-## <a name="signing_dialog"></a>Referencia de interfaz de usuario del cuadro de diálogo de firma digital
+## <a name="signing_dialog"></a> Referencia de la interfaz de usuario del cuadro de diálogo Firma digital
   Utilice el cuadro de diálogo **Firma digital** para firmar un paquete con una firma digital o para quitar la firma. El cuadro de diálogo **Firma digital** está disponible en la opción de **Firma digital** del menú **SSIS** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Para más información, consulte [Firmar un paquete mediante un certificado digital](#cert).  
@@ -155,7 +152,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>Vea también  
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Información general de seguridad &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Información general sobre seguridad &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

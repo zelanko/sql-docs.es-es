@@ -2,9 +2,12 @@
 title: "Página Permisos o Elementos protegibles | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>Página Permisos o Elementos protegibles
-  Utilice la página **Permisos** o la página **Elementos protegibles** para ver o establecer los permisos de los elementos protegibles. Esta página se puede abrir desde varias ubicaciones. El contenido de la página puede cambiar ligeramente, dependiendo de cómo se abra la página y de su contenido. La cuadrícula superior de la página puede estar rellena al abrir la página, o bien puede estar vacía. Para agregar elementos a la cuadrícula superior, haga clic en **Buscar**. En la cuadrícula superior, seleccione un elemento y luego establezca los permisos apropiados en la pestaña **Explícito** . Para ver los permisos agregados, use la pestaña **Vigente** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilice la página **Permisos** o la página **Elementos protegibles** para ver o establecer los permisos de los elementos protegibles. Esta página se puede abrir desde varias ubicaciones. El contenido de la página puede cambiar ligeramente, dependiendo de cómo se abra la página y de su contenido. La cuadrícula superior de la página puede estar rellena al abrir la página, o bien puede estar vacía. Para agregar elementos a la cuadrícula superior, haga clic en **Buscar**. En la cuadrícula superior, seleccione un elemento y luego establezca los permisos apropiados en la pestaña **Explícito** . Para ver los permisos agregados, use la pestaña **Vigente** .  
   
  Para comprender las combinaciones posibles de elementos protegibles y de entidades de seguridad, vea los vínculos de sintaxis específica de los elementos protegibles en el tema [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). Para más información, consulte [Securables](../../relational-databases/security/securables.md).  
   

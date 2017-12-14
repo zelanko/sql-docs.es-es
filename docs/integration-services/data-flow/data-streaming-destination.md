@@ -1,35 +1,35 @@
 ---
-title: Datos de destino de Streaming | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Destino de streaming de datos | Microsoft Docs
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
+f1_keywords: SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f6b5a6b41776010d957f149a28cd74d51a3b35b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-streaming-destination"></a>Destino de streaming de datos
   El **Destino de streaming de datos** es un componente de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) que permite que el **proveedor OLE DB para SSIS** consuma la salida de un paquete SSIS como un conjunto de resultados tabular. Para crear un servidor vinculado que utilice el proveedor OLE DB para SSIS y, después, ejecutar una consulta SQL en el servidor vinculado para mostrar los datos devueltos por el paquete SSIS.  
   
  En el ejemplo siguiente, la siguiente consulta devuelve una salida del paquete Package.dtsx en el proyecto SSISPackagePublishing de la carpeta Power BI del catálogo de SSIS. Esta consulta utiliza el servidor vinculado llamado [Default Linked Server for Integration Services] que, a su vez, usa el nuevo proveedor OLE DB para SSIS. En la consulta se incluye el nombre de la carpeta, del proyecto y del paquete del catálogo de SSIS. El proveedor OLE DB para SSIS ejecuta el paquete especificado en la consulta y devuelve el conjunto de resultados tabulares.  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: Administrador de conexiones MSMQ | Documentos de Microsoft
+title: Administrador de conexiones MSMQ | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="msmq-connection-manager"></a>MSMQ, administrador de conexiones
   Un administrador de conexiones MSMQ permite a un paquete conectarse a una cola de mensajes que usa Message Queue Server (que también recibe el nombre de MSMQ). La tarea Cola de mensajes que incluye [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa un administrador de conexiones MSMQ.  
@@ -47,8 +44,8 @@ ms.lasthandoff: 08/09/2017
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
 |----------------|-----------------|  
-|Público|\<nombre del equipo >\\< nombre de la cola\>|  
-|Privada|\<nombre del equipo > \Private$\\< nombre de la cola\>|  
+|Público|\<nombre del equipo>\\<nombre de la cola\>|  
+|Privada|\<nombre del equipo>\Private$\\<nombre de la cola\>|  
   
  Puede usar un punto (.) para representar el equipo local.  
   
@@ -79,8 +76,8 @@ ms.lasthandoff: 08/09/2017
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
 |----------------|-----------------|  
-|Público|\<nombre del equipo >\\< nombre de la cola\>|  
-|Privada|\<nombre del equipo > \Private$\\< nombre de la cola\>|  
+|Público|\<nombre del equipo>\\<nombre de la cola\>|  
+|Privada|\<nombre del equipo>\Private$\\<nombre de la cola\>|  
   
  Puede utilizar "." para representar el equipo local.  
   
@@ -89,7 +86,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vea también  
  [Tarea Cola de mensajes](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40; SSIS &#41; Conexiones](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Catalog.executions (base de datos SSISDB) | Documentos de Microsoft
+title: catalog.executions (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5e60664352054cd8f62250cc7c6b8082e84f607f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c4bb75156f20f2d652d7553937ac5772a56fdf91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,33 +35,33 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Identificador (id.) único global de la instancia de ejecución.|  
 |nombreDeCarpeta|**sysname(nvarchar(128))**|Nombre de la carpeta que contiene el proyecto.|  
-|Nombre_proyecto|**sysname(nvarchar(128))**|Nombre del proyecto.|  
-|package_name|**nvarchar (260)**|Nombre del primer paquete que se inició durante la ejecución.|  
+|project_name|**sysname(nvarchar(128))**|Nombre del proyecto.|  
+|package_name|**nvarchar(260)**|Nombre del primer paquete que se inició durante la ejecución.|  
 |reference_id|**bigint**|Entorno al que hace referencia la instancia de ejecución.|  
-|reference_type|**Char (1)**|Indica si el entorno se puede encontrar en la misma carpeta que el proyecto (referencia relativa) o en una carpeta diferente (referencia absoluta). Cuando el valor es `R`, el entorno se encuentra utilizando una referencia relativa. Cuando el valor es `A`, el entorno se encuentra utilizando una referencia absoluta.|  
-|environment_folder_name|**nvarchar (128)**|Nombre de la carpeta que contiene el entorno.|  
-|environment_name|**nvarchar (128)**|Nombre del entorno al que se hizo referencia durante la ejecución.|  
+|reference_type|**char(1)**|Indica si el entorno se puede encontrar en la misma carpeta que el proyecto (referencia relativa) o en una carpeta diferente (referencia absoluta). Cuando el valor es `R`, el entorno se encuentra utilizando una referencia relativa. Cuando el valor es `A`, el entorno se encuentra utilizando una referencia absoluta.|  
+|environment_folder_name|**nvarchar(128)**|Nombre de la carpeta que contiene el entorno.|  
+|environment_name|**nvarchar(128)**|Nombre del entorno al que se hizo referencia durante la ejecución.|  
 |project_lsn|**bigint**|Versión del proyecto correspondiente a la instancia de ejecución. No se garantiza que este número sea secuencial.|  
-|executed_as_sid|**varbinary (85)**|SID del usuario que inició la instancia de ejecución.|  
-|executed_as_name|**nvarchar (128)**|Nombre de la entidad de seguridad de base de datos que se utilizó para iniciar la instancia de ejecución.|  
-|use32bitruntime|**bit**|Indica si el motor en tiempo de ejecución de 32 bits se usa para ejecutar el paquete en un sistema operativo de 64 bits. Cuando el valor es `1`, la ejecución se realiza con el tiempo de ejecución de 32 bits. Si el valor es `0`, se realiza la ejecución con el motor en tiempo de ejecución de 64 bits.|  
+|executed_as_sid|**varbinary(85)**|SID del usuario que inició la instancia de ejecución.|  
+|executed_as_name|**nvarchar(128)**|Nombre de la entidad de seguridad de base de datos que se utilizó para iniciar la instancia de ejecución.|  
+|use32bitruntime|**bit**|Indica si el motor en tiempo de ejecución de 32 bits se usa para ejecutar el paquete en un sistema operativo de 64 bits. Si el valor es `1`, se realiza la ejecución con el motor en tiempo de ejecución de 32 bits. Si el valor es `0`, se realiza la ejecución con el motor en tiempo de ejecución de 64 bits.|  
 |object_type|**smallint**|Tipo de objeto. El objeto puede ser un proyecto (`20`) o un paquete (`30`).|  
 |object_id|**bigint**|Identificador del objeto afectado por la operación.|  
 |status|**int**|Estado de la operación. Los valores posibles son creado (`1`), en ejecución (`2`), cancelado (`3`), con errores (`4`), pendiente (`5`), finalizado inesperadamente (`6`), correcto (`7`), deteniendo (`8`) y completado (`9`).|  
 |start_time|**datetimeoffset**|Hora a la que se inició la instancia de ejecución.|  
 |end_time|**datetimeoffsset**|Hora a la que finalizó la instancia de ejecución.|  
-|caller_sid|**varbinary (85)**|Identificador de seguridad (SID) del usuario si se utilizó Autenticación de Windows para iniciar sesión.|  
-|caller_name|**nvarchar (128)**|Nombre de la cuenta que realizó la operación.|  
+|caller_sid|**varbinary(85)**|Identificador de seguridad (SID) del usuario si se utilizó Autenticación de Windows para iniciar sesión.|  
+|caller_name|**nvarchar(128)**|Nombre de la cuenta que realizó la operación.|  
 |process_id|**int**|Identificador de proceso del proceso externo, si es aplicable.|  
-|stopped_by_sid|**varbinary (85)**|Identificador de seguridad (SID) del usuario que detuvo la instancia de ejecución.|  
-|stopped_by_name|**nvarchar (128)**|Nombre del usuario que detuvo la instancia de ejecución.|  
+|stopped_by_sid|**varbinary(85)**|Identificador de seguridad (SID) del usuario que detuvo la instancia de ejecución.|  
+|stopped_by_name|**nvarchar(128)**|Nombre del usuario que detuvo la instancia de ejecución.|  
 |total_physical_memory_kb|**bigint**|Memoria física total (en megabytes) en el servidor cuando se inició la ejecución.|  
 |available_physical_memory_kb|**bigint**|Memoria física disponible (en megabytes) en el servidor cuando se inició la ejecución.|  
 |total_page_file_kb|**bigint**|Memoria de página total (en megabytes) en el servidor cuando se inició la ejecución.|  
 |available_page_file_kb|**bigint**|Memoria de página disponible (en megabytes) en el servidor cuando se inició la ejecución.|  
 |cpu_count|**int**|Número de CPU lógicas en el servidor cuando se inició la ejecución.|  
-|server_name|**nvarchar (128)**|Información del servidor Windows y de la instancia asociada a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|machine_name|**nvarchar (128)**|Nombre del equipo en el que se está ejecutando la instancia del servidor.|  
+|server_name|**nvarchar(128)**|Información del servidor Windows y de la instancia asociada a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|machine_name|**nvarchar(128)**|Nombre del equipo en el que se está ejecutando la instancia del servidor.|  
 |dump_id|**uniqueidentifier**|El identificador de un volcado de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -74,12 +72,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso READ en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
   
-

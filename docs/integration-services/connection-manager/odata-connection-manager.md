@@ -1,5 +1,5 @@
 ---
-title: Administrador de conexiones OData | Documentos de Microsoft
+title: Administrador de conexiones OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,12 +8,11 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
@@ -21,27 +20,26 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: f54562b59e8c61f723c17e2812ca39cb2e95f273
-ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 38e19fec56bb0392435adb1b6c6313fed59770b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
- Conectarse a un origen de datos de OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos de OData y consumir datos desde el servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
+ Conéctese a un origen de datos OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos OData y consumir datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Agregar un administrador de conexiones ODATA a un paquete SSIS  
- Puede agregar un nuevo administrador de conexiones OData a un paquete SSIS de tres maneras:  
+ Hay tres formas de agregar un nuevo administrador de conexiones OData a un paquete SSIS:  
   
 -   Haga clic en el botón **Nuevo...** en el **Editor de origen OData**  
   
 -   Haga clic con el botón derecho en la carpeta **Administradores de conexiones** en el **Explorador de soluciones**y, después, haga clic en **Nuevo administrador de conexiones**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   
--   Pulse el botón derecho en el **administradores de conexión** panel en la parte inferior del paquete y, a continuación, seleccione **nueva conexión**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
+-   Haga clic con el botón derecho en el panel **Administradores de conexiones** en la parte inferior del diseñador de paquetes y seleccione **Nueva conexión**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   
 ## <a name="connection-manager-authentication"></a>Autenticación del administrador de conexiones  
- El Administrador de conexiones OData admite cinco modos de autenticación.  
+ El administrador de conexiones OData admite cinco modos de autenticación.  
   
 -   Autenticación de Windows  
   
@@ -55,26 +53,26 @@ ms.lasthandoff: 08/28/2017
   
 Para el acceso anónimo, seleccione la opción Autenticación de Windows.  
 
-Para conectar a Microsoft Dynamics AX Online o Microsoft Dynamics CRM online, no se puede utilizar el **Microsoft Online Services** opción de autenticación. No se puede utilizar cualquier opción que está configurada para la autenticación multifactor.
+Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, no puede usar la opción de autenticación **Microsoft Online Services**. Tampoco podrá usar ninguna opción que esté configurada para la autenticación multifactor.
   
 ### <a name="specifying-and-securing-credentials"></a>Especificar y proteger las credenciales  
  Si el servicio OData requiere autenticación básica, puede especificar un nombre de usuario y una contraseña en el [Editor del administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager-editor.md). Los valores que especifica en el editor se conservan en el paquete. El valor de contraseña se cifra según el nivel de protección del paquete.  
   
- Hay varias maneras de parametrizar los valores de nombre de usuario y contraseña o almacenarlos fuera del paquete. Por ejemplo, puede utilizar parámetros, o establecer propiedades del Administrador de la conexión directamente al ejecutar el paquete de SQL Server Management Studio.  
+ Hay varias maneras de parametrizar los valores de nombre de usuario y contraseña o almacenarlos fuera del paquete. Por ejemplo, puede usar parámetros o definir las propiedades del administrador de conexiones directamente al ejecutar el paquete desde SQL Server Management Studio.  
   
 ## <a name="odata-connection-manager-properties"></a>Propiedades del administrador de conexiones OData  
- En la lista siguiente se describe las propiedades del Administrador de conexiones OData.  
+ En la lista siguiente se describen algunas de las propiedades del administrador de conexiones OData.  
   
 |||  
 |-|-|  
 |Propiedad|Description|  
 |Url|Dirección URL al documento de servicio.|  
-|UserName|Nombre de usuario que se utilizará para la autenticación, si es necesario.|  
-|Contraseña|Contraseña que se utilizará para la autenticación, si es necesario.|  
-|ConnectionString|Incluye otras propiedades del Administrador de conexiones.|  
+|UserName|Nombre de usuario que se usará para la autenticación, si es necesario.|  
+|Contraseña|Contraseña que se usará para la autenticación, si es necesario.|  
+|ConnectionString|Incluye otras propiedades del administrador de conexiones.|  
   
 ## <a name="odata-connection-manager-editor"></a>Editor del administrador de conexiones OData
-  Use la **OData Connection Manager Editor** cuadro de diálogo para agregar una conexión o editar una conexión existente a un origen de datos de OData.  
+  Use el cuadro de diálogo **Editor del administrador de conexiones OData** para agregar una conexión o editar una conexión existente con un origen de datos OData.  
   
 ### <a name="options"></a>Opciones  
  **Nombre del administrador de conexiones**  
@@ -85,16 +83,15 @@ Para conectar a Microsoft Dynamics AX Online o Microsoft Dynamics CRM online, no
   
  **Autenticación**  
 Seleccione una de las siguientes opciones:
--   **Autenticación de Windows**. Para el acceso anónimo, seleccione esta opción.
+-   **Autenticación de Windows**. Para obtener de acceso anónimo, seleccione esta opción.
 -   **Autenticación básica** 
--   **En línea de Microsoft Dynamics AX** de Dynamics AX en línea
--   **Microsoft Dynamics CRM Online** de Dynamics CRM Online
--   **Servicios en línea de Microsoft** de Microsoft Online Services
+-   **Microsoft Dynamics AX Online** para Dynamics AX Online
+-   **Microsoft Dynamics CRM Online** para Dynamics CRM Online
+-   **Microsoft Online Services** para Microsoft Online Services
 
-Si selecciona una opción distinta de la autenticación de Windows, escriba la **nombre de usuario** y **contraseña**. 
+Si selecciona una opción distinta de la autenticación de Windows, escriba el **nombre de usuario** y la **contraseña**. 
 
-Para conectar a Microsoft Dynamics AX Online o Microsoft Dynamics CRM online, no se puede utilizar el **Microsoft Online Services** opción de autenticación. No se puede utilizar cualquier opción que está configurada para la autenticación multifactor.
+Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, no puede usar la opción de autenticación **Microsoft Online Services**. Tampoco podrá usar ninguna opción que esté configurada para la autenticación multifactor.
 
  **Probar conexión**  
  Haga clic en este botón para probar la conexión con el origen OData.  
-

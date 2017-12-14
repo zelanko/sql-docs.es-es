@@ -1,5 +1,5 @@
 ---
-title: "Derivar valores de columna mediante la transformación columna derivada | Documentos de Microsoft"
+title: "Derivar valores de columna mediante la transformación Columna derivada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c48aea11f3e1c72f134fdd5dad856d8d7a827ec4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de columna mediante la transformación Columna derivada
   Para agregar y configurar una transformación Columna derivada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Si la expresión no es válida, el texto de la expresión se resalta y la información sobre herramientas de la columna describe los errores.  
   
-7.  En el **columna derivada** lista, seleccione  **\<agregar como columna nueva >** para escribir el resultado de la expresión de evaluación a una nueva columna, o seleccione una columna existente para actualizarla con el resultado de evaluación.  
+7.  En la lista **Columna derivada**, seleccione **\<agregar como columna nueva>** para escribir el resultado de evaluación de la expresión en una nueva columna, o seleccione una columna existente para actualizarla con el resultado de la evaluación.  
   
      Si se decide usar una columna nueva, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa la expresión y asigna un tipo de datos a la columna, en función del tipo de datos, la longitud, precisión, escala y página de códigos.  
   
@@ -67,12 +65,11 @@ ms.lasthandoff: 08/03/2017
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación columna derivada](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Tipos de datos de Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40; SSIS &#41; Expresiones](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
+ [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

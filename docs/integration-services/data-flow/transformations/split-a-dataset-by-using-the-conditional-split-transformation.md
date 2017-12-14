@@ -1,5 +1,5 @@
 ---
-title: "Dividir un conjunto de datos mediante la transformación División condicional | Documentos de Microsoft"
+title: "División de un conjunto de datos con la transformación División condicional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 04462fe588d783d9a4c8fbde3487866084d7d8e5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir un conjunto de datos usando la transformación División condicional
   Para agregar y configurar una transformación División condicional, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -68,12 +66,11 @@ ms.lasthandoff: 08/03/2017
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación División condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+ [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipos de datos de Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40; SSIS &#41; Expresiones](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
+ [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

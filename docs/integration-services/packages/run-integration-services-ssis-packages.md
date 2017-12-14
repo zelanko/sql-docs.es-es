@@ -1,12 +1,14 @@
 ---
-title: "Ejecución de Integration Services (SSIS) paquetes | Documentos de Microsoft"
+title: Ejecutar paquetes de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,21 +23,21 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-integration-services-ssis-packages"></a>Ejecutar paquetes de Integration Services (SSIS)
   Para ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede utilizar una de las herramientas en función de dónde se almacenan los paquetes. Las herramientas se enumeran en la tabla a continuación.  
   
- Para almacenar un paquete en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , utilice el modelo de implementación del proyecto para implementar el proyecto en el servidor. Para obtener información, consulte [implementar Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Para almacenar un paquete en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , utilice el modelo de implementación del proyecto para implementar el proyecto en el servidor. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Package](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
   
  Para almacenar un paquete en el almacén de paquetes SSIS, la base de datos msdb o en el sistema de archivos, utilice el modelo de implementación de paquetes. Para más información, vea [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
@@ -49,8 +51,8 @@ ms.lasthandoff: 08/03/2017
 |**dtexecui**<br /><br /> Para más información, vea [Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes &#40;DtExecUI&#41;](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|No|Sí|Sí|  
 |**Agente SQL Server**<br /><br /> Use un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar un paquete.<br /><br /> Para más información, consulte [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Sí|Sí|Sí|  
 |**Procedimiento almacenado integrado**<br /><br /> Para más información, vea [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Sí|No|No|  
-|**API administrada, mediante el uso de tipos y miembros en el** <xref:Microsoft.SqlServer.Management.IntegrationServices> espacio de nombres|Sí|No|No|  
-|**API administrada, mediante el uso de tipos y miembros en el** <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres|No actualmente|Sí|Sí|  
+|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|No|No|  
+|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Dts.Runtime>|No actualmente|Sí|Sí|  
 
 ## <a name="execution-and-logging"></a>Ejecución y registro  
  Los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se pueden habilitar para el registro y el usuario puede capturar la información en tiempo de ejecución de los archivos de registro. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -80,12 +82,12 @@ ms.lasthandoff: 08/03/2017
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que quiera ejecutar y, después, haga clic en **Propiedades**.  
   
-2.  En el  **\<nombre del proyecto > páginas de propiedades** cuadro de diálogo, haga clic en **generar**.  
+2.  En el cuadro de diálogo **\<nombre del proyecto> Página de propiedades**, haga clic en **Compilar**.  
   
 3.  Actualice el valor de la propiedad OutputPath para especificar la carpeta que quiere usar para la implementación en tiempo de diseño y haga clic en **Aceptar**.  
 
 
-## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Ejecutar un paquete en el Servidor SSIS con SQL Server Management Studio
+## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Ejecutar un paquete en el servidor SSIS con SQL Server Management Studio
   Después de implementar el proyecto en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede ejecutar el paquete en el servidor.  
   
  Puede utilizar los informes de operaciones para ver información sobre los paquetes que se han ejecutado, o que se están ejecutando actualmente, en el servidor. Para obtener más información, consulte [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
@@ -171,4 +173,3 @@ ms.lasthandoff: 08/03/2017
 [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
-

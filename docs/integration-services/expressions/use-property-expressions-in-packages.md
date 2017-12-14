@@ -1,5 +1,5 @@
 ---
-title: Usar expresiones de propiedad en paquetes | Documentos de Microsoft
+title: Usar expresiones de propiedad en paquetes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  El diagrama siguiente muestra las interfaces de usuario que sirven para agregar, cambiar y quitar expresiones de propiedad.  
   
- ![La interfaz de usuario para las expresiones de propiedad](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "la interfaz de usuario para las expresiones de propiedad")  
+ ![Interfaz de usuario para las expresiones de propiedad](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
  En la ventana **Propiedades** y en la página **Expresiones** , haga clic en el botón Examinar **(…)** en el nivel de la colección de **Expresiones** para abrir el cuadro de diálogo **Editor de expresiones de propiedad** . El Editor de expresiones de propiedad le permite asignar una propiedad a una expresión y escribir una expresión de propiedad. Si quiere usar las herramientas gráficas de expresiones para crear y validar la expresión, haga clic en el botón Examinar **(…)** en el nivel de expresión para abrir el cuadro de diálogo **Generador de expresiones** y, después, cree o modifique la expresión (y, de manera opcional, valídela).  
   
@@ -183,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Single Table perfil rápido Form (tarea de generación de perfiles de datos) | Documentos de Microsoft"
+title: "Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.quickprofile.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: aa61ac73fbc2ec86424728393e9ff9651b502e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
   Utilice el **Formulario de perfil rápido de tabla única** para configurar rápidamente la tarea de generación de perfiles de datos de una sola tabla o vista utilizando la configuración predeterminada.  
@@ -60,8 +56,7 @@ ms.lasthandoff: 08/03/2017
 >  El tipo Perfil de inclusión de valores no está disponible en el **Formulario de perfil rápido de tabla única**.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea &#40; de la generación de perfiles de datos Página general &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Editor de la tarea &#40; de la generación de perfiles de datos Página solicitudes de perfil &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

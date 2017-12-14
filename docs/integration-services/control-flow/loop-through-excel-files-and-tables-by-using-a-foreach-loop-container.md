@@ -1,12 +1,14 @@
 ---
-title: Recorrer los archivos de Excel y las tablas mediante el uso de un contenedor de bucles Foreach | Documentos de Microsoft
+title: Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles Para cada uno | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +16,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 41d1bbd66cb2dc73441e95cfa9573f60ced3358b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -100,6 +102,6 @@ ms.lasthandoff: 08/03/2017
  [Administrador de conexiones de Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Origen de Excel](../../integration-services/data-flow/excel-source.md)   
  [Destino de Excel](../../integration-services/data-flow/excel-destination.md)   
- [Trabajar con archivos de Excel con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Trabajar con archivos de Excel con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

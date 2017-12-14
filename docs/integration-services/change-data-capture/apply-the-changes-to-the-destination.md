@@ -1,5 +1,5 @@
 ---
-title: Aplicar los cambios al destino | Documentos de Microsoft
+title: Aplicar los cambios al destino | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],applying changes
+helpviewer_keywords: incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9edb9959d4d72e6f18d8949cfe5b311cf9a0a131
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Aplicar los cambios al destino
   En el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tercera y última tarea consiste en aplicar los cambios al destino. Necesitará un componente para aplicar las inserciones, otro para aplicar las actualizaciones y otro más para aplicar las eliminaciones.  
@@ -113,4 +110,3 @@ ms.lasthandoff: 08/03/2017
  En la instrucción Transact-SQL que recupera los datos modificados, puede especificar *all with merge* como el valor del parámetro *row_filter_option* al llamar a la función **cdc.fn_cdc_get_net_changes_<capture_instance>**. Esta función de captura de datos modificados funciona con más eficacia cuando no tiene que realizar el procesamiento adicional necesario para distinguir las inserciones de las actualizaciones. Al especificar el valor del parámetro *all with merge* , el valor **__$operation** de los datos modificados es 1 para las eliminaciones o 5 para los cambios producidos por las inserciones o actualizaciones. Para obtener más información sobre la función de Transact-SQL que se ha usado para recuperar los datos modificados, vea [Recuperar y describir datos modificados](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Una vez recuperados los cambios con el valor del parámetro *all with merge* , podrá aplicar las eliminaciones y almacenar las filas restantes en una tabla temporal o de ensayo. A continuación, en una tarea Ejecutar SQL de nivel inferior, puede utilizar una única instrucción MERGE para aplicar al destino todas las inserciones o actualizaciones de la tabla de ensayo.  
   
   
-

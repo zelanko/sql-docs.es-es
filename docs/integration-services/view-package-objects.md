@@ -1,5 +1,5 @@
 ---
-title: Ver objetos de paquete | Documentos de Microsoft
+title: Ver objetos de paquete | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="view-package-objects"></a>Ver objetos de paquete
   En el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la pestaña **Explorador de paquetes** proporciona una vista de explorador del paquete. La vista refleja la jerarquía de contenedores de la arquitectura de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El contenedor de paquetes se encuentra en la parte superior de la jerarquía y puede expandir el paquete para ver las conexiones, ejecutables, controladores de eventos, proveedores de registro, restricciones de precedencia y variables del paquete.  
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/26/2017
   
  El siguiente diagrama muestra una vista de árbol de un paquete simple.  
   
- ![Captura de pantalla de la pestaña de explorador de paquetes](../integration-services/media/packageexplorer.gif "captura de pantalla de la pestaña de explorador de paquetes")  
+ ![Captura de pantalla de la pestaña Explorador de paquetes](../integration-services/media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
   
-## <a name="view-the-package-structure-and-content"></a>Ver la estructura del paquete y el contenido  
+## <a name="view-the-package-structure-and-content"></a>Ver la estructura y el contenido de los paquetes  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea ver en el **Explorador de paquetes**.  
   
@@ -70,8 +68,7 @@ ms.lasthandoff: 09/26/2017
  [Contenedores de Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Restricciones de precedencia](../integration-services/control-flow/precedence-constraints.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40; SSIS &#41; Controladores de eventos](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; SSIS &#41; Registro](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Registro de Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

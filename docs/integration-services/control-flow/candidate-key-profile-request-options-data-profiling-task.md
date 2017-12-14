@@ -1,5 +1,5 @@
 ---
-title: "Opciones de solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos) | Documentos de Microsoft"
+title: "Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1ab8c13659f0bebb3b4da68789cfa9ebebadc7b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de claves candidatas** seleccionadas en el panel de solicitudes. Un perfil de claves candidatas notifica si una columna o conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores duplicados en una posible columna de clave.  
@@ -64,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Opciones de Data  
  **ConnectionManager**  
- Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) con el fin de conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se va a generar el perfil.  
+ Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se generará el perfil.  
   
  **TableOrView**  
  Seleccione la tabla o vista cuyo perfil se va a generar.  
@@ -136,8 +133,7 @@ ms.lasthandoff: 08/03/2017
  Especifique el número máximo de infracciones de las claves candidatas que van a notificarse en la salida. El valor predeterminado de esta propiedad es 100. Esta opción está deshabilitada cuando se selecciona **Exact** como **KeyStrengthThresholdSetting**.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea &#40; de la generación de perfiles de datos Página general &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulario de perfil rápido de tabla única &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

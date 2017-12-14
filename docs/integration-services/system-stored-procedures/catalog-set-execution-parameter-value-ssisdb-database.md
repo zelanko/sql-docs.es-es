@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_execution_parameter_value (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.set_execution_parameter_value (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7b13e7b1c28bad6e573e829183372da4bb62f92d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +40,13 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
- Identificador único de la instancia de ejecución. El *execution_id* es **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Identificador único de la instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.  
   
- [ @object_type =] *object_type*  
- El tipo del parámetro.  
+ [ @object_type = ] *object_type*  
+ Tipo de parámetro.  
   
- Para los parámetros siguientes, establezca *object_type* a 50  
+ Para los parámetros siguientes, establezca *object_type* en 50.  
   
 -   LOGGING_LEVEL  
   
@@ -66,53 +64,53 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Use el valor `20` para indicar un parámetro de proyecto o el valor `30` para indicar un parámetro de paquete.  
   
- El *object_type* es **smallint**.  
+ El parámetro *object_type* es de tipo **smallInt**.  
   
- [ @parameter_name =] *parameter_name*  
- Nombre del parámetro. El *parameter_name* es **nvarchar (128)**.  
+ [ @parameter_name = ] *parameter_name*  
+ Nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)**.  
   
- [ @parameter_value =] *parameter_value*  
- El valor del parámetro. El *parameter_value* es **sql_variant**.  
+ [ @parameter_value = ] *parameter_value*  
+ El valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
   
 ## <a name="remarks"></a>Comentarios  
  Para determinar los valores de parámetros usados para una ejecución determinada, consulte la vista catalog.execution_parameter_values.  
   
- Para especificar el ámbito de la información que se registra durante la ejecución del paquete, establezca *parameter_name* en LOGGING_LEVEL y *parameter_value* a uno de los siguientes valores.  
+ Para especificar el ámbito de la información que se registra durante una ejecución de paquetes, establezca *parameter_name* en LOGGING_LEVEL y *parameter_value* en uno de los valores siguientes.  
   
- Establecer el *object_type* parámetro en 50.  
+ Establezca el parámetro *object_type* en 50.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|0|None<br /><br /> El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
+|0|Ninguno<br /><br /> El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
 |1|Básico<br /><br /> Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Es el valor predeterminado.|  
 |2|Rendimiento<br /><br /> Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.|  
-|3|Detallado<br /><br /> Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico. <br />Los eventos personalizados incluyen los eventos registrados por las tareas de Integration Services. Para obtener más información, vea [Custom Messages for Logging](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
-|4|Linaje en tiempo de ejecución<br /><br /> Recopila los datos necesarios para realizar el seguimiento de linaje en el flujo de datos.|  
-|100|Nivel de registro personalizado<br /><br /> Especifique la configuración en el parámetro CUSTOMIZED_LOGGING_LEVEL. Para obtener más información acerca de los valores que se pueden especificar, vea [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Para obtener más información acerca de los niveles de registro personalizados, consulte [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
+|3|Detallado<br /><br /> Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico. <br />Los eventos personalizados incluyen los eventos registrados por las tareas de Integration Services. Para más información, vea [Mensajes personalizados para registro](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
+|4|Linaje en tiempo de ejecución<br /><br /> Recopila los datos necesarios para realizar un seguimiento del linaje en el flujo de datos.|  
+|100|Nivel de registro personalizado<br /><br /> Especifique la configuración en el parámetro CUSTOMIZED_LOGGING_LEVEL. Para obtener más información acerca de los valores que se pueden especificar, vea [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Para obtener más información acerca de los niveles de registro personalizados, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
  Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzca algún error durante la ejecución del paquete, establezca los valores de los parámetros siguientes para una instancia de ejecución que no se haya ejecutado.  
   
-|Parámetro|Value|  
+|Parámetro|Valor|  
 |---------------|-----------|  
-|*execution_id*|El identificador único para la instancia de ejecución|  
+|*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
  Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzcan eventos durante la ejecución del paquete, establezca los valores de los parámetros siguientes para una instancia de ejecución que no se haya ejecutado.  
   
-|Parámetro|Value|  
+|Parámetro|Valor|  
 |---------------|-----------|  
-|*execution_id*|El identificador único para la instancia de ejecución|  
+|*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
  Para especificar los eventos durante la ejecución del paquete que hacen que el servidor de Integration Services genere archivos de volcado, establezca los valores de los parámetros siguientes para una instancia de ejecución que no se haya ejecutado. Separe los diversos códigos de evento mediante un punto y coma.  
   
-|Parámetro|Value|  
+|Parámetro|Valor|  
 |---------------|-----------|  
-|*execution_id*|El identificador único para la instancia de ejecución|  
+|*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|Uno o varios códigos de evento.|  
@@ -141,16 +139,16 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -164,8 +162,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
 -   El tipo de datos del valor de parámetro no coincide con el tipo de datos del parámetro.  
   
 ## <a name="see-also"></a>Vea también  
- [Catalog.execution_parameter_values &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
+ [catalog.execution_parameter_values &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [Generar archivos de volcado para la ejecución de paquetes](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

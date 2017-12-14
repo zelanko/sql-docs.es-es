@@ -1,5 +1,5 @@
 ---
-title: Especificar copia de tabla o consulta (SQL Server importar y exportar) | Documentos de Microsoft
+title: "Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.specifytablecopyorquery.f1
+f1_keywords: sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 59820083a0a092fc6704bebd491f1bfc0827732d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4ba4c750ecf556cdaae6fdbdfb08b6991316e544
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server)
   Después de proporcionar información sobre el destino de los datos y sobre cómo se conectará a estos, en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará **Especificar copia de tabla o consulta**. En esta página, elija una de las opciones siguientes.
--   **Copiar los datos de una o varias tablas o vistas**. Puede elegir una o varias tablas de una lista.
--   **Escribir una consulta para especificar los datos que se van a transferir**. Desee escribir o pegar en el texto de una consulta SQL.
+-   **Copiar los datos de una o varias tablas o vistas**. Puede seleccionar una o varias tablas de una lista.
+-   **Escribir una consulta para especificar los datos que se van a transferir**. Puede escribir o pegar el texto de una consulta SQL.
     
 > [!TIP]
 > Si tiene que copiar más de una base de datos u objetos de base de datos que no sean tablas y vistas, use al Asistente para copiar bases de datos en lugar del Asistente para importación y exportación. Para más información, vea [Usar el Asistente para copiar bases de datos](../../relational-databases/databases/use-the-copy-database-wizard.md).     
@@ -38,11 +35,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Captura de pantalla de la página Especificar copia de tabla o consulta    
  En la captura de pantalla siguiente se muestra la página **Especificar copia de tabla o consulta** del asistente.    
     
- ![Página de copia o consulta de tabla de la importación y el Asistente para exportación de](../../integration-services/import-export-data/media/table-copy-or-query.png "página de copia o consulta de tabla de la importación y el Asistente para exportación")    
+ ![Página Especificar copia de tabla o consulta del Asistente para importación y exportación](../../integration-services/import-export-data/media/table-copy-or-query.png "Página Especificar copia de tabla o consulta del Asistente para importación y exportación")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Especifique si quiere copiar una tabla completa o escribir una consulta 
  **Copiar los datos de una o varias tablas o vistas**    
- Seleccione esta opción si desea copiar datos desde el origen sin filtrar ni ordenar registros.   
+ Seleccione esta opción si quiere copiar los datos del origen sin tener que filtrar ni ordenar registros.   
 
 Al seleccionar **Copiar los datos de una o varias tablas o vistas**, puede copiar desde una tabla o vista a una tabla de destino, o bien desde varias tablas o vistas a varias tablas de destino.
 
@@ -58,10 +55,10 @@ Después de hacer clic en **Siguiente**, escriba una instrucción SQL para espec
 ## <a name="why-isnt-the-copy-option-available"></a>¿Por qué no está disponible la opción Copiar?    
  Es posible que la opción **Copiar los datos de una o varias tablas o vistas** no esté disponible si el asistente usa un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para conectarse al origen de datos. Esto ocurre cuando el asistente no tiene información suficiente sobre el proveedor de datos para pedir una lista de tablas y vistas desde el origen de datos. 
  
-Puede seguir usando el **escribir una consulta** opción, aunque normalmente no escriben consultas SQL, siempre y cuando se conoce el nombre de la tabla que va a exportar. En el **proporcionar una consulta de origen** cuadro de diálogo que se ve después haga clic en **siguiente**, escriba la consulta como `SELECT * FROM <name of table>`. Si el nombre de la tabla contiene espacios u otros caracteres especiales, incluya el nombre entre corchetes - `SELECT * FROM [<name of table>]`.
+Puede seguir usando la opción **Write a query (Escribir una consulta)**, aunque normalmente no escriba consultas SQL, siempre y cuando conozca el nombre de la tabla que quiere exportar. En el cuadro de diálogo **Proporcionar una consulta de origen**, que se muestra después de hacer clic en **Siguiente**, escriba la consulta como `SELECT * FROM <name of table>`. Si el nombre de la tabla contiene espacios u otros caracteres especiales, escriba el nombre entre corchetes (`SELECT * FROM [<name of table>]`).
 
 ### <a name="more-info"></a>Más información
- La opción **Copiar los datos de una o varias tablas o vistas** solo está disponible para los proveedores que tienen la sección ProviderDescription en el archivo ProviderDescriptors.xml. (De forma predeterminada, este archivo se encuentra en \< *unidad*>: \Program SQL Server\130\DTS\ProviderDescriptors.) Cada sección ProviderDescription del archivo contiene la información que necesita para recuperar los metadatos del proveedor correspondiente.    
+ La opción **Copiar los datos de una o varias tablas o vistas** solo está disponible para los proveedores que tienen la sección ProviderDescription en el archivo ProviderDescriptors.xml. (De forma predeterminada, este archivo se encuentra en \<*unidad*>:\Archivos de programa\Microsoft SQL Server\130\DTS\ProviderDescriptors). Cada sección ProviderDescription del archivo contiene la información que necesita para recuperar los metadatos del proveedor correspondiente.    
     
  De forma predeterminada, el archivo ProviderDescriptors.xml contiene la sección ProviderDescription solo para los proveedores siguientes.    
     
@@ -88,6 +85,5 @@ Puede seguir usando el **escribir una consulta** opción, aunque normalmente no 
 
 ## <a name="see-also"></a>Vea también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

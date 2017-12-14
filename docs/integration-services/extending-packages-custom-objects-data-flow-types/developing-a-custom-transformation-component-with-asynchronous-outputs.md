@@ -1,5 +1,5 @@
 ---
-title: "Desarrollar un componente de transformación personalizado con salidas asincrónicas | Documentos de Microsoft"
+title: "Desarrollar un componente de transformación personalizado con salidas asincrónicas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,28 +26,27 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desarrollar un componente de transformación personalizado con salidas asincrónicas
-  Cuando una transformación no puede generar filas hasta que un componente ha recibido todas sus filas de entrada o no genera exactamente una fila de salida por cada fila recibida como entrada, se utiliza un componente con salidas asincrónicas. Por ejemplo, la transformación Agregado no puede calcular una suma de las filas hasta que las ha leído todas. En cambio, puede utilizar un componente con salidas sincrónicas en cualquier momento al modificar cada fila de datos a medida que las atraviesa. Puede modificar los datos para cada fila en su lugar o bien crear una o más columnas nuevas, cada una de las cuales tiene un valor para cada una de las filas de entrada. Para obtener más información acerca de las diferencias entre los componentes sincrónicos y asincrónicos, vea [descripción sincrónico y transformaciones asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  Cuando una transformación no puede generar filas hasta que un componente ha recibido todas sus filas de entrada o no genera exactamente una fila de salida por cada fila recibida como entrada, se utiliza un componente con salidas asincrónicas. Por ejemplo, la transformación Agregado no puede calcular una suma de las filas hasta que las ha leído todas. En cambio, puede utilizar un componente con salidas sincrónicas en cualquier momento al modificar cada fila de datos a medida que las atraviesa. Puede modificar los datos para cada fila en su lugar o bien crear una o más columnas nuevas, cada una de las cuales tiene un valor para cada una de las filas de entrada. Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, vea [Descripción de las transformaciones sincrónicas y asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Los componentes de transformación con salidas asincrónicas son únicos porque actúan como componentes de destino y componentes de origen. Este tipo de componente recibe filas de componentes de nivel superior y agrega filas que consumen los componentes de nivel inferior. Ningún otro componente de flujo de datos realiza estas dos operaciones.  
   
  Las columnas de los componentes de nivel superior disponibles en un componente con salidas sincrónicas están automáticamente disponibles para los componentes de nivel inferior del componente. Por tanto, un componente con salidas sincrónicas no tiene que definir ninguna columna de salida para proporcionar columnas y filas al componente siguiente. Los componentes con salidas asincrónicas, por otro lado, deben definir columnas de salida y proporcionar filas a los componentes de nivel inferior. Así, un componente con salidas asincrónicas tiene más tareas que realizar durante el tiempo de diseño y el tiempo de ejecución y el programador de componentes tiene más código que implementar.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene varias transformaciones con salidas asincrónicas. Por ejemplo, la transformación Ordenar requiere todas sus filas antes de poder ordenarlas y lo consigue mediante salidas asincrónicas. Después de recibir todas sus filas, las ordena y las agrega a su salida.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene varias transformaciones con salidas asincrónicas. Por ejemplo, la transformación Ordenar requiere todas sus filas antes de poder ordenarlas y lo consigue mediante salidas asincrónicas. Después de recibir todas sus filas, las ordena y las agrega a su salida.  
   
- En esta sección se explica en detalle cómo desarrollar transformaciones con salidas asincrónicas. Para obtener más información acerca del desarrollo del componente de origen, consulte [desarrollar un componente de origen personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
+ En esta sección se explica en detalle cómo desarrollar transformaciones con salidas asincrónicas. Para obtener más información acerca del desarrollo de componentes de origen, vea [Desarrollar un componente de origen personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
 ## <a name="design-time"></a>Tiempo de diseño  
   
@@ -331,7 +328,6 @@ End Namespace
 ## <a name="see-also"></a>Vea también  
  [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Descripción de las transformaciones sincrónicas y asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Crear una transformación asincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

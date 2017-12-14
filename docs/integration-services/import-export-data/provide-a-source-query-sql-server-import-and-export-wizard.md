@@ -1,5 +1,5 @@
 ---
-title: Proporcionar una consulta de origen (SQL Server importar y exportar) | Documentos de Microsoft
+title: "Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.providesourcequery.f1
+f1_keywords: sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190c39de92d8fc1b559f43c90c95e446ccc87272
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 11ce97439baf73614bda8b2bd57c412790876189
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
-Si ha especificado que quiere proporcionar una consulta para seleccionar los datos que se van a copiar, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Proporcionar una consulta de origen**. En esta página, escriba y pruebe la consulta SQL que selecciona los datos que se van a copiar desde el origen de datos en el destino. También puede pegar el texto de una consulta guardada o cargar el texto de consulta desde un archivo.
+Si ha especificado que quiere proporcionar una consulta para seleccionar los datos que se van a copiar, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Proporcionar una consulta de origen**. En esta página, escriba y pruebe la consulta SQL que selecciona los datos que se van a copiar desde el origen de datos en el destino. También puede pegar el texto de una consulta guardada o cargarlo desde un archivo.
 
 ## <a name="screen-shot-of-the-source-query-page"></a>Captura de pantalla de la página Consulta de origen  
 La siguiente captura de pantalla muestra la página del asistente **Proporcionar una consulta de origen** .
  
-En este sencillo ejemplo, el usuario ha escrito la consulta `SELECT * FROM Sales.Customer` para copiar todas las filas y todas las columnas de la **Sales.Customer** tabla en la base de datos de origen.
--   `SELECT *`significa copia todas las columnas.
--   La ausencia de un `WHERE` cláusula significa copiar todas las filas.
+En este sencillo ejemplo, el usuario ha introducido la consulta `SELECT * FROM Sales.Customer` para copiar todas las filas y columnas de la tabla **Sales.Customer** de la base de datos de origen.
+-   `SELECT *` significa que se copiarán todas las columnas.
+-   La ausencia de una cláusula `WHERE` significa que se copiarán todas las filas.
   
- ![Página de consulta de origen de la importación y el Asistente para exportación de](../../integration-services/import-export-data/media/source-query.png "página de consulta de origen de la importación y el Asistente para exportación")  
+ ![Página de consultas de origen del asistente para importación y exportación](../../integration-services/import-export-data/media/source-query.png "Source query page of the Import and Export Wizard")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>Proporcionar la consulta y comprobar su sintaxis
 **Instrucción SQL**  
- Escriba una consulta SELECT para recuperar filas y columnas de datos específicas de la base de datos de origen. También puede pegar el texto de una consulta guardada, o cargar la consulta desde un archivo, haga clic en **examinar**. 
+ Escriba una consulta SELECT para recuperar filas y columnas de datos concretos de la base de datos de origen. También puede pegar el texto de una consulta guardada o cargar la consulta desde un archivo haciendo clic en la opción **Examinar**. 
   
- Por ejemplo, la consulta siguiente recupera el **SalesPersonID**, **SalesQuota**, y **SalesYTD** en el ejemplo de AdventureWorks de base de datos para los vendedores cuyo porcentaje de comisión es superior al 1,5%.  
+ Por ejemplo, la siguiente consulta recupera los valores de **SalesPersonID**, **SalesQuota** y **SalesYTD** de la base de datos de ejemplo AdventureWorks para aquellos vendedores con un porcentaje de comisión superior al 1,5 por ciento.  
   
 ```sql
 SELECT SalesPersonID, SalesQuota, SalesYTD  
@@ -62,7 +59,7 @@ Si el origen de datos es Excel, consulte [Proporcionar una consulta de origen pa
 > Si el tiempo necesario para comprobar la sintaxis de la instrucción supera el valor de tiempo de espera de 30 segundos, el análisis se detiene y se genera un error. No podrá pasar esta página del asistente hasta que el análisis se realice correctamente. Una solución para evitar el tiempo de espera es crear una vista de base de datos basada en la consulta que quiere usar y luego consultar la vista desde el asistente, en lugar de escribir directamente el texto de la consulta.  
   
  **Examinar**  
- Seleccione un archivo guardado que contiene el texto de una consulta SQL mediante el uso de la **abiertos** cuadro de diálogo. Al seleccionar un archivo se copiará el texto del archivo en el cuadro de texto **Instrucción SQL** .  
+ Seleccione un archivo guardado que contenga el texto de una consulta de SQL mediante el cuadro de diálogo **Abrir**. Al seleccionar un archivo se copiará el texto del archivo en el cuadro de texto **Instrucción SQL** .  
  
 ## <a name="excelQueries"></a> Proporcionar una consulta de origen para Excel
 ### <a name="specify-excel-objects-in-queries"></a>Especificar objetos de Excel en las consultas
@@ -94,6 +91,5 @@ Tanto si especifica una hoja de cálculo o un rango como la tabla de origen, el 
 -   Para la mayoría de los destinos, la página siguiente es **Seleccionar tablas y vistas de origen**. En esta página, se revisa la consulta proporcionada y, opcionalmente, se eligen las columnas que se van a copiar y se obtiene una vista previa de los datos de ejemplo. Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  
   
 -   Si el destino es un archivo plano, la página siguiente es **Configurar el destino del archivo plano**. En esta página, especifique las opciones de formato del archivo de destino plano. (Después de configurar el archivo plano, la página siguiente es **Seleccionar tablas y vistas de origen**). Para más información, vea [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
-
 
 

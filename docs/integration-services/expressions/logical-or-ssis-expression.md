@@ -1,5 +1,5 @@
 ---
-title: "|| (OR lógico) (Expresión de SSIS) | Documentos de Microsoft"
+title: "|| (OR lógico) (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c369d66dbfdfefa0249ef0e479266bf17cf8f7d6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 40ae6c6f72dc69685c91631cff5b2a5f71bdf0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OR lógico) (expresión de SSIS)
   Realiza una operación lógica OR. La expresión devuelve TRUE si una o ambas condiciones son TRUE.  
@@ -72,10 +70,9 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [&#124; &#40; Bit a bit OR inclusivo &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
- [^ &#40; Bit a bit OR exclusivo &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
- [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [&#124; &#40;OR inclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
+ [^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
+ [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

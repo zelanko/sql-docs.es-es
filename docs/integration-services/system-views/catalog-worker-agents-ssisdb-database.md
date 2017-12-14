@@ -1,5 +1,5 @@
 ---
-title: Catalog.worker_agents (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.worker_agents (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,48 +8,45 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d56af0ab150255c53746898a638a32112938755c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: a74c1d81b2defff8b3d5566c221e1df102c136e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogworkeragents-ssisdb-database"></a>Catalog.worker_agents (base de datos de SSISDB)
+# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Muestra la información de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escala Out trabajo.
+Muestra la información del trabajo de escalabilidad horizontal [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|WorkerAgentId|**uniqueidentifier**|El agente de trabajo Id. de escala Out trabajo.|
-|IsEnabled|**bit**|Si está habilitado el trabajador Out de la escala.|
-|DisplayName|**nvarchar(256)**|El nombre para mostrar del trabajador Out en escala.|
-|Description|**nvarchar(256)**|La descripción de la escala fuera trabajo.|
-|MachineName|**nvarchar(256)**|El nombre del equipo para escala Out trabajador.|
-|Etiquetas|**nvarchar(max)**|Las etiquetas de escala Out trabajo.|
-|UserAccount|**nvarchar(256)**|La cuenta de usuario que se ejecuta el servicio de escala Out trabajo.|
-|LastOnlineTime|**DateTimeOffset(7)**|La última vez que el trabajador de salida de escala está en línea.|
+|WorkerAgentId|**uniqueidentifier**|Id. de agente de trabajo del trabajo de escalabilidad horizontal.|
+|IsEnabled|**bit**|Si está habilitado el trabajo de escalabilidad horizontal.|
+|DisplayName|**nvarchar(256)**|Nombre para mostrar del trabajo de escalabilidad horizontal.|
+|Description|**nvarchar(256)**|Descripción del trabajo de escalabilidad horizontal.|
+|MachineName|**nvarchar(256)**|Nombre de máquina del trabajo de escalabilidad horizontal.|
+|Etiquetas|**nvarchar(max)**|Etiquetas del trabajo de escalabilidad horizontal.|
+|UserAccount|**nvarchar(256)**|Cuenta de usuario que ejecuta el servicio de trabajo de escalabilidad horizontal.|
+|LastOnlineTime|**datetimeoffset(7)**|Última vez que el trabajo de escalabilidad horizontal estuvo en línea.|
 
 ## <a name="remarks"></a>Comentarios
-Esta vista muestra una fila para cada escala Out trabajador conectarse a la escala fuera Master trabajar con el catálogo de SSISDB.
+Esta vista muestra una fila para cada trabajo de escalabilidad horizontal que esté conectado al patrón de escalabilidad horizontal que funciona con el catálogo de SSISDB.
 
 ## <a name="permissions"></a>Permissions
 Esta vista exige uno de los siguientes permisos:
 
-- La pertenencia a la **ssis_admin** rol de base de datos
+- Pertenencia al rol de base de datos de **ssis_admin**
 
-- La pertenencia a la **ssis_cluster_executor** rol de base de datos
+- Pertenencia al rol de base de datos **ssis_cluster_executor**
 
-- La pertenencia a la **sysadmin** rol de servidor
-
+- Pertenencia al rol de servidor de **sysadmin**

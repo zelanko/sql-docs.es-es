@@ -1,5 +1,5 @@
 ---
-title: Desarrollar un componente de destino personalizado | Documentos de Microsoft
+title: Desarrollar un componente de destino personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,30 +23,29 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b579a17ba5095e3864148abaff75880da9fed108
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a95f24318503d8f76604bbcf683bc9ed79bd1ce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-destination-component"></a>Desarrollar un componente de destino personalizado
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite a los desarrolladores escribir componentes de destino personalizados que pueden conectarse a y almacenar datos en cualquier origen de datos personalizado. Los componentes de destino personalizados resultan útiles si necesitar conectarse a orígenes de datos a los que no se puede tener acceso mediante uno de los componentes de origen existentes incluidos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite a los desarrolladores escribir componentes de destino personalizados que pueden conectarse a cualquier origen de datos personalizado y almacenar datos en él. Los componentes de destino personalizados resultan útiles si necesitar conectarse a orígenes de datos a los que no se puede tener acceso mediante uno de los componentes de origen existentes incluidos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Los componentes de destino tienen una o más entradas y ninguna salida. En tiempo de diseño, crean y configuran conexiones y leen metadatos de columna del origen de datos externo. Durante la ejecución, conectan a su origen de datos externo y agregan filas que se reciben de los componentes de nivel superior en el flujo de datos al origen de datos externo. Si el origen de datos externo existe antes de la ejecución del componente, el componente de destino también debe asegurarse de que los tipos de datos de las columnas que recibe el componente coinciden con los tipos de datos de las columnas en el origen de datos externo.  
   
- En esta sección se tratan los detalles de cómo desarrollar componentes de destino y se proporcionan ejemplos de código para aclarar conceptos importantes. Para obtener una introducción general de desarrollo de componentes de flujo de datos, vea [desarrollar un componente de flujo de datos personalizada](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ En esta sección se tratan los detalles de cómo desarrollar componentes de destino y se proporcionan ejemplos de código para aclarar conceptos importantes. Para obtener información general sobre el desarrollo de componentes de flujo de datos, vea [Developing a Custom Data Flow Componen](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) (Desarrollo de un componente de flujo de datos personalizado).  
   
 ## <a name="design-time"></a>Tiempo de diseño  
  La implementación de la funcionalidad en tiempo de diseño de un componente de destino implica especificar una conexión a un origen de datos externo y validar que el componente se ha configurado correctamente. Por definición, un componente de destino tiene una entrada y posiblemente una salida de error.  
   
 ### <a name="creating-the-component"></a>Crear el componente  
- Los componentes de destino se conectan a los orígenes de datos externos utilizando objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definidos en un paquete. El componente de destino indica su requisito de un administrador de conexiones para la [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador y a los usuarios del componente, agregando un elemento a la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> colección de la <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Esta colección sirve a dos fines: anuncia la necesidad de un administrador de conexiones al Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] y, después de que el usuario ha seleccionado o creado un administrador de conexiones, incluye una referencia al administrador de conexiones en el paquete que utiliza el componente. Cuando un <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> se agrega a la colección, el **Editor avanzado** muestra la **propiedades de conexión** tab, para pedir al usuario que seleccione o cree una conexión en el paquete para su uso por el componente.  
+ Los componentes de destino se conectan a los orígenes de datos externos utilizando objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definidos en un paquete. El componente de destino indica su requisito de un administrador de conexiones al Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] y a los usuarios del componente mediante la adición de un elemento a la colección <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Esta colección sirve a dos fines: anuncia la necesidad de un administrador de conexiones al Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] y, después de que el usuario ha seleccionado o creado un administrador de conexiones, incluye una referencia al administrador de conexiones en el paquete que utiliza el componente. Cuando se agrega un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a la colección, el **Editor avanzado** muestra la pestaña **Propiedades de conexión**, para solicitar al usuario que seleccione o cree en el paquete una conexión para que la use el componente.  
   
  En el ejemplo de código siguiente se muestra una implementación de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> que agrega una entrada y, a continuación, agrega un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -111,7 +108,7 @@ End Namespace
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>Conectar a un origen de datos externo  
- Después de agrega una conexión a la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, invalida el <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> método para establecer una conexión al origen de datos externo. La llamada a este método se realiza en tiempo de diseño y en tiempo de ejecución. El componente debe establecer una conexión al administrador de conexiones especificado por la conexión en tiempo de ejecución y, como consecuencia, al origen de datos externo. Una vez establecida, el componente debe almacenar internamente en la memoria caché la conexión y liberarla cuando se llame a <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A>. Los programadores invalidan este método y liberan la conexión establecida por el componente durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>. Se llama a ambos métodos, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>, en tiempo de diseño y en tiempo de ejecución.  
+ Una vez agregada una conexión a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> para establecer una conexión al origen de datos externo. La llamada a este método se realiza en tiempo de diseño y en tiempo de ejecución. El componente debe establecer una conexión al administrador de conexiones especificado por la conexión en tiempo de ejecución y, como consecuencia, al origen de datos externo. Una vez establecida, el componente debe almacenar internamente en la memoria caché la conexión y liberarla cuando se llame a <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A>. Los programadores invalidan este método y liberan la conexión establecida por el componente durante <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>. Se llama a ambos métodos, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>, en tiempo de diseño y en tiempo de ejecución.  
   
  En el ejemplo de código siguiente se muestra un componente que conecta a una conexión de ADO.NET en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> y, a continuación, cierra la conexión en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A>.  
   
@@ -174,9 +171,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Validar el componente  
- Los desarrolladores de componentes de destino deben realizar una validación, como se describe en [validar componentes](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md). Además, deben comprobar que las propiedades de tipo de datos de las columnas definidas en la colección de columnas de entrada del componente coinciden con las columnas en el origen de datos externo. En ocasiones, la comprobación de las columnas de entrada con respecto al origen de datos externo puede resultar imposible o no ser deseable; por ejemplo si el componente o el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] están en un estado desconectado o si no resultan aceptables los viajes de ida y vuelta (round trip) al servidor. En estas situaciones, las columnas de la colección de columnas de entrada se pueden validar mediante la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> del objeto de entrada.  
+ Los programadores de componentes de destino deben realizar la validación tal como se describe en [Component Validation](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md) (Validación de componentes). Además, deben comprobar que las propiedades de tipo de datos de las columnas definidas en la colección de columnas de entrada del componente coinciden con las columnas en el origen de datos externo. En ocasiones, la comprobación de las columnas de entrada con respecto al origen de datos externo puede resultar imposible o no ser deseable; por ejemplo si el componente o el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] están en un estado desconectado o si no resultan aceptables los viajes de ida y vuelta (round trip) al servidor. En estas situaciones, las columnas de la colección de columnas de entrada se pueden validar mediante la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> del objeto de entrada.  
   
- Esta colección existe en los objetos de entrada y salida; el programador del componente debe rellenarla a partir de las columnas del origen de datos externo. Esta colección se puede utilizar para validar las columnas de entrada cuando el [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador está sin conexión, cuando el componente está desconectado o cuando el <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propiedad es **false**.  
+ Esta colección existe en los objetos de entrada y salida; el programador del componente debe rellenarla a partir de las columnas del origen de datos externo. Esta colección se puede usar para validar las columnas de entrada cuando el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] está en modo sin conexión, cuando el componente está desconectado o cuando la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> es **false**.  
   
  En el siguiente código de ejemplo se agrega una columna de metadatos externa basada en una columna de entrada existente.  
   
@@ -214,7 +211,7 @@ End Sub
 ```  
   
 ## <a name="run-time"></a>Tiempo de ejecución  
- Durante la ejecución, el componente de destino recibe una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> cada vez que está disponible un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> completo del componente de nivel superior. Este método se llama repetidamente hasta que no haya ningún más búferes disponibles y el <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> propiedad es **true**. Durante este método, los componentes de destino leen las columnas y filas del búfer y las agregan al origen de datos externo.  
+ Durante la ejecución, el componente de destino recibe una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> cada vez que está disponible un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> completo del componente de nivel superior. Se llama a este método repetidamente hasta que no existen más búferes disponibles y la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> es **true**. Durante este método, los componentes de destino leen las columnas y filas del búfer y las agregan al origen de datos externo.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Localizar columnas en el búfer  
  El búfer de entrada para un componente contiene todas las columnas definidas en las colecciones de columnas de salida de los componentes de nivel superior del componente en el flujo de datos. Por ejemplo, si un componente de origen proporciona tres columnas en su salida y el componente siguiente agrega una columna de salida adicional, el búfer proporcionado al componente de destino contiene cuatro columnas, aunque el componente de destino escriba solamente dos columnas.  
@@ -492,8 +489,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar un componente de origen personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
- [Crear un destino con el componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  (Desarrollar un componente de origen personalizado)  
+ [Crear un destino con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

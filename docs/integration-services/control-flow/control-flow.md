@@ -1,5 +1,5 @@
 ---
-title: Flujo de control | Documentos de Microsoft
+title: Flujo de control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,26 +16,25 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="control-flow"></a>Flujo de control
-  Un paquete consta de un flujo de control y, opcionalmente, uno o varios flujos de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos diferentes de control de elementos de flujo: contenedores que proporcionan las estructuras de paquetes, las tareas que proporcionan la funcionalidad y las restricciones de precedencia que conectan los ejecutables, contenedores y tareas en un flujo de control ordenado.  
+  Un paquete consta de un flujo de control y, opcionalmente, uno o varios flujos de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos diferentes de elementos de flujo de control: los contenedores que proporcionan las estructuras de los paquetes, las tareas que proporcionan la funcionalidad y las restricciones de precedencia que conectan los ejecutables, los contenedores y las tareas en un flujo de control ordenado.  
   
  Para obtener más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md), [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)y [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
  El siguiente diagrama muestra un flujo de control que posee un contenedor y seis tareas. Cinco de las tareas se definen en el nivel de paquete y una de ellas se define en el nivel de contenedor. La tarea se encuentra dentro de un contenedor.  
   
- ![Controlar el flujo con seis tareas y un contenedor](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "flujo con seis tareas y un contenedor de Control")  
+ ![Flujo de control con seis tareas y un contenedor](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "Control flow with six tasks and a container")  
   
  La arquitectura de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite el anidamiento de contenedores, y un flujo de control puede incluir varios niveles de contenedores anidados. Por ejemplo, un paquete puede incluir un contenedor tal como un contenedor de bucles Foreach, que a su vez puede contener otro contenedor de bucles Foreach y así sucesivamente.  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
  El siguiente diagrama muestra el flujo de control de un paquete simple en el diseñador de flujo de control. El flujo de control que se muestra en el diagrama se compone de tres tareas de nivel de paquete y un contenedor de nivel de paquete que contiene tres tareas. Las tareas y el contenedor se conectan mediante restricciones de precedencia.  
   
- ![Captura de pantalla del Diseñador de flujo de control con paquete](../../integration-services/connection-manager/media/samplecontrolflow.gif "captura de pantalla del Diseñador de flujo de control con paquete")  
+ ![Captura de pantalla del diseñador de flujo de control con paquete](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
   
  Crear un flujo de control incluye las siguientes tareas:  
   
@@ -67,15 +65,14 @@ ms.lasthandoff: 08/03/2017
   
      Muchas tareas requieren una conexión a un origen de datos y tiene que agregar al paquete los administradores de conexión que la tarea requiere. Según el tipo de enumerador que usa, el contenedor de bucles Foreach también puede requerir un administrador de conexiones. Puede agregar los administradores de conexión a medida que genera el flujo de control elemento por elemento o antes de empezar a generar el flujo de control. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) y [Crear administradores de conexiones](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]El diseñador también incluye muchas características de tiempo de diseño que puede usar para administrar la superficie de diseño y que el control flujo autodocumente.  
+ El Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] también incluye varias características de tiempo de diseño que se pueden usar para administrar la superficie de diseño y hacer que el flujo de control se autodocumente.  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   
--   [Agregar o eliminar una tarea o un contenedor en un flujo de Control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Agregar o eliminar tareas o contenedores en un flujo de control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [Agrupar o desagrupar componentes](../../integration-services/group-or-ungroup-components.md)  
   
   
-

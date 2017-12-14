@@ -1,5 +1,5 @@
 ---
-title: Codificar y depurar la tarea Script | Documentos de Microsoft
+title: Programar y depurar la tarea Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -26,50 +23,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: "81"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificar y depurar la tarea Script
-  Después de configurar la secuencia de comandos de tareas en el **Editor de la tarea de secuencia de comandos**, escribir el código personalizado en el entorno de desarrollo de la tarea de secuencia de comandos.  
+  Después de configurar la tarea Script en el **Editor de la tarea Script**, puede escribir el código personalizado en el entorno de desarrollo de la tarea Script.  
   
 ## <a name="script-task-development-environment"></a>Entorno de desarrollo de la tarea Script  
- La tarea Script utiliza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] herramientas para aplicaciones (VSTA) como entorno de desarrollo para la secuencia de comandos.  
+ La tarea Script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) como el entorno de desarrollo del propio script.  
   
- El código de script se escribe en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Especificar el lenguaje de script estableciendo la **ScriptLanguage** propiedad en el **Editor de la tarea de secuencia de comandos**. Si prefiere utilizar otro lenguaje de programación, puede desarrollar un ensamblado personalizado en el lenguaje seleccionado y utilizar su funcionalidad en el código de la tarea Script.  
+ El código de script se escribe en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Puede especificar el lenguaje de script estableciendo la propiedad **ScriptLanguage** en el **Editor de la tarea Script**. Si prefiere utilizar otro lenguaje de programación, puede desarrollar un ensamblado personalizado en el lenguaje seleccionado y utilizar su funcionalidad en el código de la tarea Script.  
   
  El script que crea en la tarea Script se almacena en la definición de paquete. No hay un archivo de script independiente. Por consiguiente, el uso de la tarea Script no afecta a la implementación del paquete.  
   
 > [!NOTE]  
 >  Al diseñar el paquete y depurar el script, el código de script se escribe temporalmente en un archivo de proyecto. Dado que almacenar información confidencial en un archivo supone un riesgo potencial para la seguridad, recomendamos que no incluya información confidencial como contraseñas en el código de script.  
   
- De forma predeterminada, **Option Strict** está deshabilitado en el IDE.  
+ De forma predeterminada, la instrucción **Option Strict** está deshabilitada en el IDE.  
   
 ## <a name="script-task-project-structure"></a>Estructura del proyecto de la tarea Script  
  Al crear o modificar el script contenido en una tarea Script, VSTA abre un proyecto nuevo vacío o vuelve a abrir el proyecto existente. La creación de este proyecto VSTA no afecta a la implementación del paquete, porque el proyecto está guardado en el archivo empaquetado; la tarea Script no crea archivos adicionales.  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementos y clases de proyecto en el proyecto de la tarea Script  
- De forma predeterminada, el proyecto de la tarea de secuencia de comandos muestra en la ventana Explorador de proyectos de VSTA contiene un elemento único, **ScriptMain**. El **ScriptMain** elemento, a su vez, contiene una sola clase, también denominada **ScriptMain**. Los elementos de código de la clase varían, dependiendo del lenguaje de programación seleccionado para la tarea Script:  
+ De forma predeterminada, el proyecto de la tarea Script mostrado en la ventana Explorador de proyectos de VSTA contiene un elemento único, **ScriptMain**. El elemento **ScriptMain**, a su vez, contiene una clase única, también denominada **ScriptMain**. Los elementos de código de la clase varían, dependiendo del lenguaje de programación seleccionado para la tarea Script:  
   
--   Cuando se configura la tarea de secuencia de comandos para la [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] lenguaje de programación del **ScriptMain** clase tiene una subrutina pública, **principal**. El **ScriptMain.Main** subrutina es el método que el tiempo de ejecución llama al ejecutar la tarea de secuencia de comandos.  
+-   Cuando la tarea Script se configura para el lenguaje de programación [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)], la clase **ScriptMain** tiene una subrutina pública, **Main**. La subrutina **ScriptMain.Main** es el método al que el entorno en tiempo de ejecución llama cuando ejecuta la tarea Script.  
   
-     De forma predeterminada, el único código en el **Main** subrutina de un script nuevo es la línea `Dts.TaskResult = ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación. El **Dts.TaskResult** propiedad se describe en [devolver resultados de la tarea de secuencia de comandos](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     De forma predeterminada, el único código de la subrutina **Main** de un script nuevo es la línea `Dts.TaskResult = ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación. La propiedad **Dts.TaskResult** se describe en [Devolver los resultados de la tarea Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
--   Cuando se configura la tarea de secuencia de comandos para Visual C# lenguaje de programación del **ScriptMain** clase tiene un método público, **principal**. Se llama al método cuando se ejecuta la tarea Script.  
+-   Cuando la tarea Script está configurada para el lenguaje de programación Visual C#, la clase **ScriptMain** tiene un método público, **Main**. Se llama al método cuando se ejecuta la tarea Script.  
   
-     De forma predeterminada, el **Main** método incluye la línea `Dts.TaskResult = (int)ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación.  
+     De manera predeterminada, el método **Main** incluye la línea `Dts.TaskResult = (int)ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación.  
   
- El **ScriptMain** elemento puede contener clases distintas de la **ScriptMain** clase. Las clases solo están disponibles en la tarea Script en la que residen.  
+ El elemento **ScriptMain** puede contener clases distintas de la clase **ScriptMain**. Las clases solo están disponibles en la tarea Script en la que residen.  
   
- De forma predeterminada, el **ScriptMain** elemento de proyecto contiene el siguiente código generado automáticamente. La plantilla de código también proporciona información general sobre la tarea Script, así como información adicional sobre cómo recuperar y manipular objetos SSIS, como variables, eventos y conexiones.  
+ De forma predeterminada, el elemento de proyecto **ScriptMain** contiene el código siguiente generado automáticamente. La plantilla de código también proporciona información general sobre la tarea Script, así como información adicional sobre cómo recuperar y manipular objetos SSIS, como variables, eventos y conexiones.  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -207,28 +203,28 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>Elementos de proyecto adicionales del proyecto de la tarea Script  
- El proyecto de la tarea de secuencia de comandos puede incluir elementos que no sea el valor predeterminado **ScriptMain** elemento. Puede agregar clases, módulos y archivos de código al proyecto. También puede utilizar las carpetas para organizar los grupos de elementos. Todos los elementos que se agregan se conservan dentro del paquete.  
+ El proyecto de la tarea Script puede incluir elementos distintos del elemento **ScriptMain** predeterminado. Puede agregar clases, módulos y archivos de código al proyecto. También puede utilizar las carpetas para organizar los grupos de elementos. Todos los elementos que se agregan se conservan dentro del paquete.  
   
 ### <a name="references-in-the-script-task-project"></a>Referencias en el proyecto de la tarea Script  
- También puede agregar referencias a los ensamblados administrados haciendo clic en el proyecto de la tarea de secuencia de comandos en **el Explorador de proyectos**y, a continuación, haga clic en **Agregar referencia**. Para obtener más información, consulte [que hacen referencia a otros ensamblados en las soluciones de Scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ Para agregar referencias a los ensamblados administrados, haga clic con el botón derecho en el proyecto de la tarea Script en el **Explorador de proyectos** y, después, haga clic en **Agregar referencia**. Para obtener más información, consulte [Hacer referencia a otros ensamblados en soluciones de scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
->  Puede ver las referencias del proyecto en el IDE de VSTA en **vista de clases** o en **el Explorador de proyectos**. Puede abrir cualquiera de estas ventanas en el **vista** menú. Puede agregar una nueva referencia de la **proyecto** menú, de **el Explorador de proyectos**, o de **vista de clases**.  
+>  Puede ver las referencias de proyecto en el IDE de VSTA en la **Vista de clases** o en el **Explorador de proyectos**. Puede abrir cualquiera de estas ventanas en el menú **Ver**. Puede agregar una referencia nueva en el menú **Proyecto**, en el **Explorador de proyectos** o en **Vista de clases**.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Interactuar con el paquete de la tarea Script  
- La tarea Script utiliza global **Dts** objeto, que es una instancia de la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> clase y sus miembros para interactuar con el paquete contenedor y con el [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en tiempo de ejecución.  
+ La tarea Script utiliza el objeto **Dts** global, que es una instancia de la clase <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> y sus miembros para interactuar con el paquete contenedor y con el módulo ejecutable de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
- En la tabla siguiente se enumera los miembros públicos principales de la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> (clase), que se expone al código de la tarea de secuencia de comandos a través de la información global de **Dts** objeto. Los temas de esta sección describen con más detalle el uso de estos miembros.  
+ En la tabla siguiente se enumeran los miembros públicos principales de la clase <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, que se expone al código de la tarea Script a través del objeto **Dts** global. Los temas de esta sección describen con más detalle el uso de estos miembros.  
   
 |Miembro|Finalidad|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Proporciona acceso a los administradores de conexión definidos en el paquete.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Proporciona una interfaz de eventos que permite a la tarea Script generar errores, advertencias y mensajes informativos.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Proporciona una manera sencilla para devolver un único objeto para el tiempo de ejecución (además del **TaskResult**) que también se puede utilizar para la bifurcación del flujo de trabajo.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Proporciona una manera simple de devolver un objeto único al módulo ejecutable (además de **TaskResult**) que también se puede utilizar para la bifurcación del flujo de trabajo.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|Registra información como el progreso y los resultados de las tareas en proveedores de registro habilitados.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|Informa del éxito o error de la tarea.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|Proporciona la transacción, si hay alguna, dentro de la que el contenedor de la tarea se está ejecutando.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Proporciona acceso a las variables enumeradas en la **ReadOnlyVariables** y **ReadWriteVariables** propiedades para su uso dentro de la secuencia de comandos de la tarea.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Proporciona acceso a las variables enumeradas en las propiedades de tarea **ReadOnlyVariables** y **ReadWriteVariables** para su uso en el script.|  
   
  La clase <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> contiene también algunos miembros públicos que probablemente no utilizará.  
   
@@ -246,18 +242,17 @@ To open Help, press F1.
 >  Debe ejecutar el paquete para depurar en la tarea Script. Si ejecuta solamente la tarea individual, se pasan por alto los puntos de interrupción del código de la tarea Script.  
   
 > [!NOTE]  
->  No puede depurar una tarea Script al ejecutar esta última como parte de un paquete secundario que se ejecuta desde una tarea Ejecutar paquete. Puntos de interrupción establecidos en la tarea de secuencia de comandos en el paquete secundario se descartan en estas circunstancias. Puede depurar el paquete secundario ejecutándolo normalmente por separado.  
+>  No puede depurar una tarea Script al ejecutar esta última como parte de un paquete secundario que se ejecuta desde una tarea Ejecutar paquete. Los puntos de interrupción establecidos en la tarea Script del paquete secundario se descartan en estas circunstancias. Puede depurar el paquete secundario ejecutándolo normalmente por separado.  
   
 > [!NOTE]  
 >  Al depurar un paquete que contiene varias tareas Script, el depurador depura una tarea Script. El sistema puede depurar otra tarea Script si el depurador se completa, como en el caso de un bucle Foreach o un contenedor de bucles For.  
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [problemas de instalación y configuración de VSTA para las instalaciones de SSIS 2008 y R2](http://go.microsoft.com/fwlink/?LinkId=215661), en blogs.msdn.com.  
+-   Entrada de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (Problemas de instalación y configuración de VSTA en instalaciones de SSIS 2008 y R2), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vea también  
- [Hacer referencia a otros ensamblados en soluciones de Scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [Configurar la tarea de secuencia de comandos en el Editor de la tarea de secuencia de comandos](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Hacer referencia a otros ensamblados en soluciones de scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
+ [Configurar la tarea Script en el editor de la tarea Script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

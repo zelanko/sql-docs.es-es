@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Probar los paquetes implementados | Documentos de Microsoft'
+title: 'Paso 3: Probar los paquetes implementados | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lección 3: 3: probar los paquetes implementados
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lección 3-3: Probar los paquetes implementados
 En esta tarea probará los paquetes que ha implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 En otros tutoriales de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ejecutó paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], con la opción **Iniciar depuración** del menú **Depurar** . Esta vez ejecutará los paquetes de otra forma.  
@@ -52,7 +49,7 @@ Las carpetas de nivel superior dentro de la carpeta Paquetes almacenados son car
     > [!IMPORTANT]  
     > Si no puede conectarse a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], es probable que no se esté ejecutando el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para conocer el estado del servicio, haga clic en **Inicio**, elija sucesivamente **Todos los programas**, **Microsoft SQL Server**, **Herramientas de configuración**, y haga clic en **Administrador de configuración de SQL Server**. En el panel izquierdo, haga clic en **Servicios de SQL Server**. En el panel derecho, busque el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Inicie el servicio, si no se está ejecutando todavía.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]se abre. De forma predeterminada, se abre la ventana Explorador de objetos y se coloca en la esquina superior derecha del estudio. Si el Explorador de objetos no está abierto, haga clic en **Explorador de objetos** en el menú **Ver** .  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . De forma predeterminada, se abre la ventana Explorador de objetos y se coloca en la esquina superior derecha del estudio. Si el Explorador de objetos no está abierto, haga clic en **Explorador de objetos** en el menú **Ver** .  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>Para ejecutar los paquetes con la Utilidad de ejecución de paquetes  
   
@@ -114,8 +111,7 @@ Las carpetas de nivel superior dentro de la carpeta Paquetes almacenados son car
     La consulta devuelve 21 filas de datos. El resultado devuelto consta de filas del archivo de datos XML, orders.xml. Cada fila es un resumen por país y región; la fila presenta el nombre de un país o región, el número de pedidos de cada país o región, y las fechas del pedido más reciente y más antiguo.  
   
 ## <a name="see-also"></a>Vea también  
-[DTExec (utilidad)](../integration-services/packages/dtexec-utility.md)  
+[dtexec (utilidad)](../integration-services/packages/dtexec-utility.md)  
   
   
   
-

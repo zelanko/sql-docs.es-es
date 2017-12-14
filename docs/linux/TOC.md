@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Implementación de un clúster de Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_Creación y configuración de grupos de disponibilidad](sql-server-linux-create-availability-group.md)
 
 # Conceptos
 ## Install
@@ -51,6 +53,7 @@
 ### [Usar PowerShell para administrar](sql-server-linux-manage-powershell.md)
 ### [Usar el trasvase de registros](sql-server-linux-use-log-shipping.md)
 ### [Usar alertas de correo electrónico y de correo de base de datos](sql-server-linux-db-mail-sql-agent.md)
+### [Configuración de varias subredes para la disponibilidad](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrar](sql-server-linux-migrate-overview.md)
 ### [Exportar e importar un BACPAC desde Windows](sql-server-linux-migrate-ssms.md)
@@ -63,19 +66,20 @@
 ### [Programar paquetes de SSIS](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Configurar la continuidad empresarial](sql-server-linux-business-continuity-dr.md)
+### [Conceptos básicos sobre disponibilidad](sql-server-linux-ha-basics.md)
 ### [Copias de seguridad y restauración](sql-server-linux-backup-and-restore-database.md)
 #### [Interfaz de dispositivo virtual: Linux](sql-server-linux-backup-vdi-specification.md)
 ### [Instancia de clúster de conmutación por error](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+#### [Red Hat Enterprise Linux (RHEL)]()
 ##### [Configurar (complemento de alta disponibilidad)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operar (complemento de alta disponibilidad)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server (SLES)]()
 ##### [Configurar (complemento de alta disponibilidad)](sql-server-linux-shared-disk-cluster-sles-configure.md)
 ### [Grupos de disponibilidad](sql-server-linux-availability-group-overview.md)
 #### [Crear para la alta disponibilidad](sql-server-linux-availability-group-ha.md)
 ##### [Configurar un grupo de disponibilidad](sql-server-linux-availability-group-configure-ha.md)
 ##### [Configurar en RHEL](sql-server-linux-availability-group-cluster-rhel.md)
-##### [Configurar en SUSE](sql-server-linux-availability-group-cluster-sles.md)
+##### [Configurar en SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configurar en Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Operar](sql-server-linux-availability-group-failover-ha.md)
 #### [Crear solo para el escalado de lectura]()
@@ -91,8 +95,8 @@
 
 # Ejemplos
 ## Instalación desatendida
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Recursos

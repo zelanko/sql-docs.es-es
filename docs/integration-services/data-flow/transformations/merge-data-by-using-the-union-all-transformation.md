@@ -1,5 +1,5 @@
 ---
-title: "Combinar datos mediante la unión transformación todo | Documentos de Microsoft"
+title: "Combinar datos mediante la transformación Unión de todo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 21fe86b697f0790488abc0b7f8b730dbc831f881
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Combinar datos mediante la transformación Unión de todo
   Para agregar y configurar una transformación Unión de todo, el paquete ya debe incluir al menos una tarea Flujo de datos y dos orígenes de datos.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Haga doble clic en la transformación Unión de todo.  
   
-5.  En el **Editor de transformación Unión de todo**, asigne una columna de una entrada a una columna en la lista **Nombre de la columna de salida** haciendo clic en una fila y luego seleccionando una columna en la lista de entrada. Seleccione  **\<omitir >** en la lista de entrada para omitir la asignación de la columna.  
+5.  En el **Editor de transformación Unión de todo**, asigne una columna de una entrada a una columna en la lista **Nombre de la columna de salida** haciendo clic en una fila y luego seleccionando una columna en la lista de entrada. Seleccione **\<omitir>** en la lista de entrada para omitir la asignación de la columna.  
   
     > [!NOTE]  
     >  La asignación entre dos columnas requiere que los metadatos de las columnas coincidan.  
@@ -63,10 +61,9 @@ ms.lasthandoff: 08/03/2017
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Unión transformación todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

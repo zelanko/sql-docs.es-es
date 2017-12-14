@@ -1,5 +1,5 @@
 ---
-title: "Analizar el archivo de texto no estándar se da formato con el componente de Script | Documentos de Microsoft"
+title: "Analizar formatos de archivo de texto no estándar con el componente de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - text file reading [Integration Services]
 - Script component [Integration Services], non-standard text file formats
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c6bf6a70027da7804e2fdca998948d44c9a26097
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 71d6dc8817b80e99fa5aece9fd5c581f22c69c4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  
@@ -42,14 +39,14 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Si desea crear un componente que pueda reutilizar más fácilmente en varias tareas de flujo de datos y varios paquetes, puede utilizar el código de este ejemplo de componente de script como punto de inicio para el componente de flujo de datos personalizado. Para obtener más información, vea [Desarrollar un componente de flujo de datos personalizado](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a>Ejemplo 1: Analizar registros delimitados por fila  
+##  <a name="example1"></a> Ejemplo 1: Analizar registros delimitados por fila  
  En este ejemplo se muestra cómo tomar un archivo de texto en el que cada columna de datos aparece en una línea independiente y analizarlo en una tabla de destino utilizando el componente de script.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) y [crear una transformación asincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información acerca de cómo configurar el componente de script para su uso como transformación en el flujo de datos, vea [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) y [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
-1.  Crear y guardar un archivo de texto denominado **rowdelimiteddata.txt** que contiene los datos de origen siguientes:  
+1.  Cree y guarde un archivo de texto denominado **rowdelimiteddata.txt** que contenga los siguientes datos de origen:  
   
     ```  
     FirstName: Nancy  
@@ -94,17 +91,17 @@ ms.lasthandoff: 09/26/2017
   
 6.  Agregue un administrador de conexiones OLE DB al paquete y configúrelo para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a la base de datos donde creó la tabla de destino.  
   
-7.  Agregue una tarea flujo de datos al paquete y haga clic en el **de flujo de datos** pestaña del Diseñador SSIS.  
+7.  Agregue una tarea de flujo de datos al paquete y haga clic en la pestaña **Flujo de datos** del Diseñador SSIS.  
   
-8.  Agregue un origen de archivo plano al flujo de datos y configúrelo para utilizar el administrador de conexiones RowDelimitedData. En el **columnas** página de la **Editor de origen de archivos planos**, seleccione la única columna externa disponible.  
+8.  Agregue un origen de archivo plano al flujo de datos y configúrelo para utilizar el administrador de conexiones RowDelimitedData. En la página **Columnas** del **Editor de origen de archivos planos**, seleccione la única columna externa disponible.  
   
 9. Agregue un componente de script al flujo de datos y configúrelo como una transformación. Conecte la salida del origen de archivo plano al componente de script.  
   
-10. Haga doble clic en el componente de Script para mostrar la **Editor de transformación Script**.  
+10. Haga doble clic en el componente de script para mostrar el **Editor de transformación Script**.  
   
-11. En el **columnas de entrada** página de la **Editor de transformación Script**, seleccione la columna de entrada disponible única.  
+11. En la página **Columnas de entrada** del **Editor de transformación Script**, seleccione la única columna de entrada disponible.  
   
-12. En el **entradas y salidas** página de la **Editor de transformación Script**, seleccione salida 0 y establezca su **SynchronousInputID** en None. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
+12. En la página **Entradas y salidas** del **Editor de transformación Script**, seleccione Salida 0 y establezca **SynchronousInputID** en Ninguno. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
   
     -   FirstName  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 09/26/2017
   
     -   StateProvince  
   
-13. En el **Script** página de la **Editor de transformación Script**, haga clic en **editar Script** y escriba el código que se muestra en el **ScriptMain** clase de en el ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
+13. En la página **Script** del **Editor de transformación Script**, haga clic en **Editar script** y escriba el código que se muestra en la clase **ScriptMain** del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
 14. Agregue un destino de SQL Server al flujo de datos. Configúrelo para utilizar el administrador de conexiones OLE DB y la tabla RowDelimitedData. Conecte la salida del componente de script a este destino.  
   
@@ -197,17 +194,17 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a>Ejemplo 2: Dividir registros primarios y secundarios  
+##  <a name="example2"></a> Ejemplo 2: Dividir registros primarios y secundarios  
  Este ejemplo muestra cómo tomar un archivo de texto, en el que una fila de separación precede a una fila de registro primario a la que siguen un número indefinido de filas de registro secundario, y cómo analizarlo en tablas de destino primarias y secundarias correctamente normalizadas mediante el componente de script. Este sencillo ejemplo se puede adaptar fácilmente a archivos de origen que utilizan más de una fila o columna para cada registro primario y secundario, siempre que exista una forma de identificar el principio y el final de cada registro.  
   
 > [!CAUTION]  
 >  El único fin de este ejemplo es usarlo para realizar una demostración. Si ejecuta más de una vez el ejemplo, se insertan valores de clave duplicados en la tabla de destino.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) y [crear una transformación asincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información acerca de cómo configurar el componente de script para su uso como transformación en el flujo de datos, vea [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) y [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
-1.  Crear y guardar un archivo de texto denominado **parentchilddata.txt** que contiene los datos de origen siguientes:  
+1.  Cree y guarde un archivo de texto denominado **prentchilddata.txt** que contenga los siguientes datos de origen:  
   
     ```  
     **********  
@@ -253,23 +250,23 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 6.  Agregue un administrador de conexiones OLE DB al paquete y configúrelo para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a la base de datos donde creó las tablas de destino.  
   
-7.  Agregue una tarea flujo de datos al paquete y haga clic en el **de flujo de datos** pestaña del Diseñador SSIS.  
+7.  Agregue una tarea de flujo de datos al paquete y haga clic en la pestaña **Flujo de datos** del Diseñador SSIS.  
   
-8.  Agregue un origen de archivo plano al flujo de datos y configúrelo para utilizar el administrador de conexiones ParentChildData. En el **columnas** página de la **Editor de origen de archivos planos**, seleccione la única columna externa disponible.  
+8.  Agregue un origen de archivo plano al flujo de datos y configúrelo para utilizar el administrador de conexiones ParentChildData. En la página **Columnas** del **Editor de origen de archivos planos**, seleccione la única columna externa disponible.  
   
 9. Agregue un componente de script al flujo de datos y configúrelo como una transformación. Conecte la salida del origen de archivo plano al componente de script.  
   
-10. Haga doble clic en el componente de Script para mostrar la **Editor de transformación Script**.  
+10. Haga doble clic en el componente de script para mostrar el **Editor de transformación Script**.  
   
-11. En el **columnas de entrada** página de la **Editor de transformación Script**, seleccione la columna de entrada disponible única.  
+11. En la página **Columnas de entrada** del **Editor de transformación Script**, seleccione la única columna de entrada disponible.  
   
-12. En el **entradas y salidas** página de la **Editor de transformación Script**, seleccione salida 0, cámbiele el nombre a ParentRecords y establezca su **SynchronousInputID** en None. Crear columnas de salida 2:  
+12. En la página **Entradas y salidas** del **Editor de transformación Script**, seleccione Salida 0, cámbiele el nombre a ParentRecords y establezca **SynchronousInputID** en Ninguno. Cree 2 columnas de salida:  
   
     -   ParentID (la clave principal), de tipo entero de cuatro bytes con signo [DT_I4]  
   
     -   ParentRecord, de tipo cadena [DT_STR] con una longitud de 32.  
   
-13. Cree una segunda salida y denomínela ChildRecords. El **SynchronousInputID** de la nueva salida ya está establecida en None. Cree 3 columnas de salida:  
+13. Cree una segunda salida y denomínela ChildRecords. El valor **SynchronousInputID** de la nueva salida ya está establecido en Ninguno. Cree 3 columnas de salida:  
   
     -   ChildID (la clave principal), de tipo entero de cuatro bytes con signo [DT_I4]  
   
@@ -277,7 +274,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord, de tipo cadena [DT_STR] con una longitud de 50.  
   
-14. En el **Script** página de la **Editor de transformación Script**, haga clic en **editar Script**. En el **ScriptMain** clase, escriba el código que se muestra en el ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
+14. En la página **Script** del **Editor de transformación Script**, haga clic en **Editar script**. En la clase **ScriptMain**, escriba el código mostrado en el ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
 15. Agregue un destino de SQL Server al flujo de datos. Conecte la salida ParentRecords del componente de script a este destino. Configúrela para utilizar el administrador de conexiones OLE DB y la tabla Parents.  
   
@@ -357,8 +354,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una transformación sincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
+ [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

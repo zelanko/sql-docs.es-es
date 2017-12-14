@@ -1,5 +1,5 @@
 ---
-title: Editar las propiedades avanzadas | Documentos de Microsoft
+title: Editar las propiedades avanzadas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- advanced
+f1_keywords: advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 469785d1add7db3382852938d3a798f7a6666e3e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 322399090ca90882fdbbf403643f6909ce5ae33f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-the-advanced-properties"></a>Editar las propiedades avanzadas
   Use la pestaña **Avanzadas** para agregar propiedades especiales a la instancia CDC.  
@@ -46,4 +43,3 @@ ms.lasthandoff: 08/03/2017
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   
-

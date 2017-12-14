@@ -1,5 +1,5 @@
 ---
-title: "Editor de destino de SAP BW (página asignaciones) | Documentos de Microsoft"
+title: "Editor de destino de SAP BW (página Asignaciones) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.columns.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 285474f7ac773bef181487099409bc4c2e93dfc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor de destino de SAP BW (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de SAP BW** para asignar columnas de entrada a columnas de destino.  
@@ -81,16 +78,15 @@ ms.lasthandoff: 08/03/2017
  **Columna de entrada**  
  Permite ver las columnas de entrada que ha seleccionado.  
   
- Para asignar una columna de entrada a la misma columna de destino, seleccione una columna de entrada diferente de la lista. Para quitar una asignación, seleccione  **\<omitir >** para excluir la columna de entrada de los resultados.  
+ Para asignar una columna de entrada a la misma columna de destino, seleccione una columna de entrada diferente de la lista. Para quitar una asignación, seleccione **\<omitir>** con el fin de excluir la columna de entrada de los resultados.  
   
  **Columna de destino**  
  Permite ver todas las columnas de destino disponibles, tanto si las columnas están asignadas como si no lo están.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de destino de SAP BW &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Editor de destino de SAP BW &#40; Página de salida de error &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor de destino de SAP BW &#40; Página avanzadas &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Editor de destino de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de destino de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

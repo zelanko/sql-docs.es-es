@@ -1,5 +1,5 @@
 ---
-title: Ejecutar paquetes en SQL Server Integration Services (SSIS) escalar horizontalmente | Documentos de Microsoft
+title: Ejecutar paquetes en la escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes de Integration Services (SSIS) horizontalmente
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
 Una vez implementados los paquetes en el servidor de Integration Services, puede ejecutarlos en el escalado horizontal.
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Ejecutar paquetes con el cuadro de diálogo Ejecutar paquete en horizontalmente 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Ejecutar paquetes con el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal 
 
 1. Abrir el cuadro de diálogo Ejecutar paquete en escalado horizontal
 
@@ -43,7 +39,7 @@ Una vez implementados los paquetes en el servidor de Integration Services, puede
     En la pestaña **Avanzadas** , establezca una opción de escalado horizontal denominada **Número de reintentos**. Establece el número de veces que se vuelve a intentar ejecutar un paquete si se produce un error.
 
     > [!Note]
-    > El **volcado de errores** opción solo surte efecto cuando la cuenta que ejecuta el servicio escala Out Worker es un administrador del equipo local.
+    > La opción **Volcado de errores** solo surte efecto cuando la cuenta que ejecuta el servicio Trabajador de escalabilidad horizontal es un administrador del equipo local.
 
 3. Seleccionar equipos
 
@@ -53,7 +49,7 @@ Una vez implementados los paquetes en el servidor de Integration Services, puede
    > Los paquetes se ejecutan con las credenciales de las cuentas de usuario de los servicios de trabajador de escalado horizontal, que se muestran en la página **Selección de equipo** . De forma predeterminada, la cuenta es NT Service\SSISScaleOutWorker140. Es posible que quiera cambiar a sus propias cuentas de laboratorio.
 
    >[!WARNING]
-   >Ejecuciones de paquetes que se desencadena por usuarios diferentes en el mismo proceso de trabajo se ejecutan con la misma cuenta. No hay ningún límite de seguridad entre ellos. 
+   >Las ejecuciones de paquetes que desencadenan usuarios diferentes en el mismo trabajo se ejecutan con la misma cuenta. No presentan ningún límite de seguridad entre sí. 
 
 4. Ejecutar los paquetes y ver informes 
 
@@ -109,16 +105,15 @@ Para ejecutar paquetes en escalado horizontal se necesita alguno de los siguient
   
 -   Pertenencia al rol de servidor **sysadmin**  
 
-## <a name="set-default-execution-mode"></a>Establecer el modo de ejecución de forma predeterminada
-Para establecer el modo de ejecución predeterminado para "Escala Out", haga clic en el **SSISDB** nodo en el Explorador de objetos de SSMS y seleccione **propiedades**.
-En el **propiedades de catálogo** cuadro de diálogo, establezca **modo de ejecución de todo el servidor predeterminado** a **horizontalmente**.
+## <a name="set-default-execution-mode"></a>Establecer el modo de ejecución predeterminado
+Para establecer el modo de ejecución predeterminado en "Escalabilidad horizontal", haga clic en el nodo **SSISDB** del Explorador de objetos de SSMS y seleccione **Propiedades**.
+En el cuadro de diálogo **Propiedades del catálogo**, establezca **Modo de ejecución predeterminado de todo el servidor** en **Escalabilidad horizontal**.
 
-Después de esta configuración, no es necesario especificar el  **@runinscaleout**  parámetro [catalog]. [ create_execution]. Ejecuciones se ejecutan automáticamente en horizontalmente. 
+Después de esta configuración, no es necesario especificar el parámetro **@runinscaleout** para [catalog].[create_execution]. Las ejecuciones se ejecutan automáticamente con Escalabilidad horizontal. 
 
-![Modo de archivo exe](media\exe-mode.PNG)
+![Modo de ejecución](media\exe-mode.PNG)
 
-Para cambiar el modo de ejecución predeterminado al modo no - horizontalmente, basta con establecer **modo de ejecución de todo el servidor predeterminado** a **Server**.
+Para volver a cambiar el modo de ejecución predeterminado a Escalabilidad horizontal, establezca **Modo de ejecución predeterminado de todo el servidor** en **Servidor**.
 
 ## <a name="run-package-in-sql-agent-job"></a>Ejecutar el paquete en el trabajo del Agente SQL
-En el trabajo del agente Sql, puede ejecutar un paquete SSIS como un paso del trabajo. Para ejecutar el paquete en horizontalmente, puede aprovechar el modo de ejecución predeterminado anterior. Después de configurar el modo de ejecución predeterminado para "Escala Out", paquetes de trabajos del agente Sql se ejecutará en horizontalmente.
-
+En el trabajo del agente SQL, puede optar por ejecutar un paquete SSIS como un paso del trabajo. Para ejecutar el paquete con Escalabilidad horizontal, puede aprovechar el modo de ejecución predeterminado anterior. Después de configurar el modo de ejecución predeterminado en "Escalabilidad horizontal", los trabajos del agente SQL se ejecutarán con Escalabilidad horizontal.

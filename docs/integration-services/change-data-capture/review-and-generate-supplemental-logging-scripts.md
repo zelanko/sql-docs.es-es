@@ -1,5 +1,5 @@
 ---
-title: Revisar y generar Scripts de registro complementario | Documentos de Microsoft
+title: Revisar y generar scripts de registro complementario | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- scripts
+f1_keywords: scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar y generar scripts de registro complementario
   Use la pestaña **Scripts** para ejecutar o volver a ejecutar un script en la base de datos de origen de Oracle que configura el registro complementario.  
@@ -63,7 +60,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Credenciales de Oracle para ejecutar Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Credenciales de Oracle para ejecutar script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

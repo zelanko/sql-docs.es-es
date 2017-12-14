@@ -1,5 +1,5 @@
 ---
-title: Equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server | Documentos de Microsoft
+title: Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server
   Cuando se tienen que ejecutar varios paquetes, es conveniente utilizar otros servidores que están disponibles. Se denomina equilibrio de carga a este método de utilizar otros servidores para ejecutar paquetes cuando los paquetes están todos bajo el control de un paquete primario. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el equilibrio de carga es un procedimiento manual que deben llevar a cabo los propietarios de los paquetes. Los servidores no realizan el equilibrio de carga automáticamente. Asimismo, los paquetes ejecutados en los servidores remotos deben ser paquetes completos, y no tareas individuales en otros paquetes.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>Ilustración de equilibrio de carga  
  El siguiente diagrama muestra un paquete primario en un servidor. El paquete primario contiene varias tareas Ejecutar trabajo del Agente SQL. Cada tarea del paquete primario llama a un Agente SQL Server en un servidor remoto. Esos servidores remotos contienen trabajos del Agente SQL Server que incluyen un paso que llama a un paquete en ese servidor.  
   
- ![Información general sobre la arquitectura de equilibrio de carga SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "arquitectura de equilibrio de carga de información general de SSIS")  
+ ![Información general sobre la arquitectura de equilibrio de carga de SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
   
  Los pasos requeridos para el equilibrio de carga en esta arquitectura no son conceptos nuevos. En lugar de ello, el equilibrio de carga se logra al utilizar conceptos existentes y objetos SSIS comunes de una nueva manera.  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>Listado de paquetes secundarios  
  Si implementa un proyecto que contiene un paquete primario y uno o varios paquetes secundarios en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede ver una lista de los paquetes secundarios que ejecuta el paquete primario. Cuando se ejecuta el paquete primario, se genera automáticamente un informe de **información general** para el paquete primario en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El informe lista los paquetes secundarios ejecutados por la tarea Ejecutar paquete contenida en el paquete primario, como se muestra en la imagen siguiente.  
   
- ![Informe información general sobre con la lista de los paquetes secundarios](../../integration-services/packages/media/overviewreport-childpackagelisting.png "informe información general sobre con la lista de los paquetes secundarios")  
+ ![Informe de información general con la lista de los paquetes secundarios](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Informe de información general con la lista de los paquetes secundarios")  
   
  Si desea información sobre cómo acceder al informe de **información general** , vea [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -125,17 +123,16 @@ ms.lasthandoff: 08/03/2017
 >  Puede usar una tarea Ejecutar SQL que contenga una instrucción Transact-SQL de **sp_start_job N'package_name'**. Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Entorno de depuración  
- Al probar el paquete primario, utilice el entorno de depuración del diseñador ejecutándolo mediante Depurar/Iniciar depuración (F5). También puede usar la utilidad del símbolo del sistema **dtexec**. Para obtener más información, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Al probar el paquete primario, utilice el entorno de depuración del diseñador ejecutándolo mediante Depurar/Iniciar depuración (F5). También puede usar la utilidad del símbolo del sistema **dtexec**. Para más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Registro para la carga de paquetes equilibrados en servidores remotos
   Para un administrador es más fácil administrar los registros de todos los paquetes secundarios que están en ejecución en varios servidores cuando todos los paquetes secundarios utilizan el mismo proveedor de registro y todos escriben en el mismo destino. Una manera de crear un archivo común de registro para todos los paquetes secundarios es configurar los paquetes secundarios para que registren sus eventos en un proveedor de registro de SQL Server. Puede configurar todos los paquetes para que utilicen la misma base de datos, el mismo servidor y la misma instancia del servidor.  
   
  Para ver los archivos de registro, el administrador solo tiene que registrarse en un único servidor para ver los archivos de registro de todos los paquetes secundarios.  
   
- Para obtener información acerca de cómo habilitar el registro en un paquete, vea [registro de Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Para obtener información sobre cómo habilitar el registro en un paquete, consulte [Integration Services (SSIS) Logging](../../integration-services/performance/integration-services-ssis-logging.md) (Registro de Integration Services [SSIS]).  
 
 ## <a name="related-tasks"></a>Tareas relacionadas  
  [Trabajos del Agente SQL Server para paquetes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

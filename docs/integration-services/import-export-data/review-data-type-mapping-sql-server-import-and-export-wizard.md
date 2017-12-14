@@ -1,5 +1,5 @@
 ---
-title: "Revise el tipo de datos de asignación (SQL Server importar y exportar) | Documentos de Microsoft"
+title: "Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,45 +8,42 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9ddeba48bde846c4c3494fef62d946bab792984
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
-Si ha especificado una asignación de tipo de datos que puede que no se complete correctamente en la lista **Asignaciones** del cuadro de diálogo **Asignaciones de columnas** , en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará la página **Revisar asignación de tipos de datos** . En esta página, revise información detallada sobre las conversiones de tipos de datos que el asistente necesita realizar para que los datos de origen sean compatibles con el destino. Esta información incluye indicaciones visuales para distinguir las conversiones de tipo de datos que se esperan que sean correctas de las conversiones que pueden producir errores o truncamientos. En cada conversión puede decidir si quiere aceptar la conversión que sugiere el asistente, así como especificar cómo administrar los errores que se produzcan.   
+Si ha especificado una asignación de tipo de datos que puede que no se complete correctamente en la lista **Asignaciones** del cuadro de diálogo **Asignaciones de columnas** , en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará la página **Revisar asignación de tipos de datos** . En esta página, revise información detallada sobre las conversiones de tipos de datos que el asistente necesita realizar para que los datos de origen sean compatibles con el destino. En esta información se incluyen indicaciones visuales para distinguir las conversiones de tipos de datos que se espera que sean correctas de las que podrían producir errores o truncamientos. En cada conversión puede decidir si quiere aceptar la conversión que sugiere el asistente, así como especificar cómo administrar los errores que se produzcan.   
   
 > [!TIP]
 > No se pueden cambiar las asignaciones de tipos de datos en la página **Revisar asignación de tipos de datos** . Pero puede hacer clic en **Volver** para volver a la página **Seleccionar tablas y vistas de origen** y, después, hacer clic en **Editar asignaciones** para volver a abrir el cuadro de diálogo **Asignaciones de columnas** . En el cuadro de diálogo **Asignaciones de columnas** puede especificar asignaciones de tipos de datos que es más probable que se completen correctamente. Para volver a ver el cuadro de diálogo **Asignaciones de columnas** , vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
   
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>Captura de pantalla de la página Revisar asignación de tipo de datos
- La captura de pantalla siguiente muestra un ejemplo de la **revisión Data Type Mapping** página del asistente.
+ La siguiente captura de pantalla muestra un ejemplo de la página del asistente **Revisar asignación de tipos de datos**.
  
  En este ejemplo:
- -   El usuario ha especificado una asignación en el **asignaciones de columnas** cuadro de diálogo que no se realice correctamente.
+ -   El usuario ha especificado una asignación en el cuadro de diálogo **Asignaciones de columnas** que podría no realizarse correctamente.
  -   El icono de advertencia en la fila de la lista **Tabla** indica que hay un problema al convertir, como mínimo, una columna de datos de los resultados de la consulta a un tipo de datos compatible en la tabla de destino.
- -   El icono de advertencia en la primera fila de la **asignar tipos de datos** lista indica que la asignación de la **int** tipo de datos de la columna de origen a la **smalldatetime** tipo de datos de la columna de destino puede ocasionar una pérdida de datos.
+ -   El icono de advertencia de la primera fila de la lista **Asignación de tipo de datos** indica que la asignación del tipo de datos **int** de la columna de origen al tipo de datos **smalldatetime** de la columna de destino podría provocar una pérdida de datos.
  
- ![Página de asignación de tipo de datos de revisión de la importación y el Asistente para exportación de](../../integration-services/import-export-data/media/review-mapping.png "página Revisar asignación de tipo de datos de la importación y el Asistente para exportación") 
+ ![Página Revisar asignación de tipos de datos del Asistente para importación y exportación](../../integration-services/import-export-data/media/review-mapping.png "Página Revisar asignación de tipos de datos del Asistente para importación y exportación") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Revisar las tablas de origen y destino  
- En la sección superior de la página **Revisar asignación de tipos de datos** se muestra la lista **Tabla** , que contiene una lista de las tablas que se van a copiar del origen al destino. Para ver información de conversión sobre una tabla individual, seleccione una tabla en la lista **Tabla** . La información de conversión para las columnas individuales de la tabla seleccionada aparece en la parte inferior de la página en el **asignar tipos de datos** cuadrícula.
+ En la sección superior de la página **Revisar asignación de tipos de datos** se muestra la lista **Tabla** , que contiene una lista de las tablas que se van a copiar del origen al destino. Para ver información de conversión sobre una tabla individual, seleccione una tabla en la lista **Tabla** . La información de conversión de las columnas individuales de la tabla seleccionada aparece en la cuadrícula **Asignación de tipo de datos** de la parte inferior de la página.
 
-En este ejemplo, los resultados de la consulta que el usuario proporcionó se copiarán a la tabla Sales.CustomerNew2 en el destino. El icono de advertencia indica que hay un problema al convertir al menos una columna de datos de los resultados de consulta a un tipo de datos compatibles en la tabla de destino.
+En este ejemplo, los resultados de la consulta que el usuario proporcionó se copiarán en la tabla Sales.CustomerNew2 en el destino. El icono de advertencia indica que hay un problema al convertir, como mínimo, una columna de datos de los resultados de la consulta a un tipo de datos compatible en la tabla de destino.
 
 ![Revisar asignación: Tablas](../../integration-services/import-export-data/media/review-mapping-tables.png)
   
@@ -59,10 +56,10 @@ En este ejemplo, los resultados de la consulta que el usuario proporcionó se co
 |(Icono de destino)|Indica si el destino ya existe o lo crea el asistente:<br /> - Un icono de tabla indica que el destino es una tabla existente.<br />- Un icono de tabla con un rayo de sol indica que el destino es una tabla nueva que va a crear el asistente.|  
 |**Destino**|Nombre de la tabla de destino.|  
   
-## <a name="review-the-data-type-mappings"></a>Revise las asignaciones de tipos de datos  
- La sección central de la página **Revisar asignación de tipos de datos** es la lista **Asignación de tipo de datos** . Esta cuadrícula proporciona información de conversión detallada sobre las columnas de la tabla de origen que está seleccionado en el **tabla** lista en la parte superior de la página.
+## <a name="review-the-data-type-mappings"></a>Revisar las asignaciones de tipos de datos  
+ La sección central de la página **Revisar asignación de tipos de datos** es la lista **Asignación de tipo de datos** . En esta cuadrícula se proporciona información de conversión detallada sobre las columnas de la tabla de origen que está seleccionada en la lista **Tabla** de la parte superior de la página.
 
-En este ejemplo, cada columna en el origen se copiarán a una columna con el mismo nombre y tipo de datos en el destino. El icono de advertencia en la primera fila de la **asignar tipos de datos** lista indica que la asignación de la **int** tipo de datos de la columna de origen a la **smalldatetime** tipo de datos de la columna de destino puede ocasionar una pérdida de datos.
+En este ejemplo, cada una de las columnas del origen se copiará en una columna con el mismo nombre y el mismo tipo de datos en el destino. El icono de advertencia de la primera fila de la lista **Asignación de tipo de datos** indica que la asignación del tipo de datos **int** de la columna de origen al tipo de datos **smalldatetime** de la columna de destino podría provocar una pérdida de datos.
  
 ![Revisar asignación: Asignaciones](../../integration-services/import-export-data/media/review-mapping-mappings.png)  
 
@@ -85,7 +82,7 @@ En la tabla siguiente se describen las columnas de la lista **Asignación de tip
 ## <a name="specify-global-error-handling-options"></a>Especificar opciones globales de control de errores  
  En la sección inferior de la página **Revisar asignación de tipos de datos** puede especificar las opciones de control de errores que se aplican de forma predeterminada a todas las columnas. Esta configuración se aplica a todas las conversiones que tienen seleccionada la opción **Usar global** en las columnas **Al producirse un error** o **Al producirse truncamiento** de la lista **Asignación de tipo de datos** .   
 
-Este ejemplo muestra los valores predeterminados para las dos opciones de control de errores global.
+En este ejemplo se muestran los valores predeterminados para las dos opciones de control de errores globales.
 
 ![Revisar asignación: Errores](../../integration-services/import-export-data/media/review-mapping-errors.png)
 
@@ -104,5 +101,4 @@ Este ejemplo muestra los valores predeterminados para las dos opciones de contro
  
  ## <a name="see-also"></a>Vea también
 [Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-
 

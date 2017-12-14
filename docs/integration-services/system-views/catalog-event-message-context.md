@@ -1,5 +1,5 @@
 ---
-title: Catalog.event_message_context | Documentos de Microsoft
+title: catalog.event_message_context | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7aeb07c52f7ed00aa5a6a29cdd054258cb62d65
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +34,9 @@ ms.lasthandoff: 09/26/2017
 |Event_message_id|bigint|Identificador único del mensaje con el que el contexto se relaciona.|  
 |Context_depth|int|A medida que la profundidad aumenta, el contexto se elija del error. Cuando se produce un error, la profundidad del contexto comienza en 1. El valor 0 indica el estado del paquete antes de que se inicie la ejecución.|  
 |Package_path|Nvarchar(max)|Ruta de acceso del origen del contexto.|  
-|Context_type|smallint|Tipo del objeto que es el origen del contexto. Consulte la **comentarios** sección para obtener una lista de tipos de contexto.|  
+|Context_type|smallint|Tipo del objeto que es el origen del contexto. Consulte la sección **Comentarios** para obtener una lista de tipos de contexto.|  
 |Context_source_name|Nvarchar(4000)|Nombre del objeto que es el origen del contexto.|  
-|Context_source_id|nvarchar(38)|Identificador único del objeto que es el origen del contexto.|  
+|Context_source_id|Nvarchar(38)|Identificador único del objeto que es el origen del contexto.|  
 |Property_name|Nvarchar(4000)|Nombre de la propiedad asociada al origen del contexto.|  
 |Property_value|Sql_variant|Valor de la propiedad asociada al origen del contexto.|  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/26/2017
   
 ||||  
 |-|-|-|  
-|Valor de tipo de contexto|Nombre de tipo|Description|  
+|Valor de tipo de contexto|Nombre del tipo|Description|  
 |10|Tarea|Estado de una tarea cuando se produjo un error.|  
 |20|Canalización|Error de un componente de canalización: componente de origen, de destino o de transformación.|  
 |30|Secuencia|Estado de una secuencia.|  
@@ -62,9 +60,8 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso de lectura en la operación  
   
--   La pertenencia a la **ssis_admin** rol de base de datos.  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor.  
+-   Pertenencia al rol del servidor de **sysadmin**  
   
   
-

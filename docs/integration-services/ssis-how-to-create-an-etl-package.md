@@ -1,5 +1,5 @@
 ---
-title: "SSIS cómo crear un paquete ETL | Documentos de Microsoft"
+title: 'Tutorial de SSIS: Crear un paquete ETL sencillo | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b14d05d686b26aaad7e6de24c9b445e0c4b1abf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Tutorial de SSIS: Crear un paquete ETL sencillo
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [SSIS Tutorial: crear un paquete ETL sencillo](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Tutorial de SSIS: Crear un paquete ETL sencillo](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) es una plataforma que permite generar soluciones de integración de datos de alto rendimiento, entre las que se incluyen paquetes de extracción, transformación y carga de datos (ETL) para el almacenamiento de datos. SSIS incluye herramientas gráficas y asistentes para generar y depurar paquetes; tareas para realizar funciones de flujo de datos tales como operaciones de FTP; ejecución de instrucciones SQL y envío de mensajes de correo electrónico; orígenes y destinos de datos para extraer y cargar datos; transformaciones para limpiar, agregar, combinar y copiar datos; un servicio de administración, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar la ejecución y almacenamiento de paquetes; e interfaces de programación de aplicaciones (API) para programar el modelo de objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -52,7 +49,7 @@ Este tutorial está concebido para los usuarios familiarizados con las operacion
   
 Para utilizar este tutorial, el sistema debe tener instalados los siguientes componentes:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]con el **AdventureWorksDW2012** base de datos. Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para descargar la base de datos **AdventureWorksDW2012** , vea [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos **AdventureWorksDW2012** . Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para descargar la base de datos **AdventureWorksDW2012** , vea [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
     > Cuando adjunte la base de datos (archivo\*.mdf), [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] buscará un archivo .ldf de forma predeterminada. Debe quitar manualmente el archivo .ldf antes de hacer clic en Aceptar en el cuadro de diálogo **Adjuntar bases de datos** .  
@@ -88,4 +85,3 @@ En esta lección, expandirá el paquete que creó en la lección 5 para benefici
   
   
   
-

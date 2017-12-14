@@ -2,9 +2,12 @@
 title: "Temas de procedimientos de la administración de inicios de sesión, usuarios y esquemas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bbcff4255e1835db5712229bbf5a57eea2284e31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 885bdb0b2edc620503d8fbc905eab76ffa0f14b5
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Temas de procedimientos de la administración de inicios de sesión, usuarios y esquemas
-  Esta página proporciona vínculos a temas que muestran cómo administrar inicios de sesión, usuarios de base de datos y esquemas de base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y cómo unir un rol y conceder permisos a una entidad de seguridad.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En esta página se proporcionan vínculos a temas que muestran cómo administrar inicios de sesión, usuarios de base de datos y esquemas de base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y cómo unir un rol y conceder permisos a una entidad de seguridad.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

@@ -1,5 +1,5 @@
 ---
-title: Catalog.grant_permission (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.grant_permission (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
- Tipo del objeto protegible. Tipos de objetos protegibles incluyen carpeta (`1`), proyecto (`2`), entorno (`3`) y la operación (`4`). El *object_type* es **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identificador único (id.) del objeto protegible. El *object_id* es **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificador único (id.) del objeto protegible. El parámetro *object_id* es **bigint**.  
   
- [ @principal_id =] *principal_id*  
- Identificador de la entidad de seguridad cuyo permiso se va a conceder. El *principal_id* es **int**.  
+ [ @principal_id = ] *principal_id*  
+ Identificador de la entidad de seguridad cuyo permiso se va a conceder. El parámetro *principal_id* es **int**.  
   
- [ @permission_type =] *permission_type*  
- Tipo de permiso que se va a conceder. El *permission_type* es **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Tipo de permiso que se va a conceder. El parámetro *permission_type* es **smallint**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
  1 (object_class no es válido)  
   
  2 (object_id no existe)  
   
- 3 (entidad de seguridad no existe)  
+ 3 (la entidad de seguridad no existe)  
   
- 4 (permiso no es válido)  
+ 4 (el permiso no es válido)  
   
  5 (otro error)  
   
@@ -76,11 +74,11 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   Permisos ASSIGN_PERMISSIONS en el objeto  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
 
-Este procedimiento no se puede llamar los inicios de sesión que se autenticaron con SQL Server. No es posible llamarlo por el inicio de sesión de sa.
+Los inicios de sesión que se autenticaron con SQL Server no pueden llamar a este procedimiento. El inicio de sesión de SA no puede llamarlo.
   
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento almacenado le permite conceder los tipos de permiso descritos en la tabla siguiente:  
@@ -101,4 +99,3 @@ Este procedimiento no se puede llamar los inicios de sesión que se autenticaron
  Vea la sección Valores de código de retorno para obtener los errores y los mensajes pertinentes.  
   
   
-

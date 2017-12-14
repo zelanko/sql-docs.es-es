@@ -1,5 +1,5 @@
 ---
-title: Destino de blobs de Azure | Documentos de Microsoft
+title: Destino de blob de Azure | Microsoft Docs
 ms.custom: 
 ms.date: 07/25/2016
 ms.prod: sql-non-specified
@@ -8,32 +8,30 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobdest.f1
 - sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 152d92859c2f4ce96d0cc1ba9b02ffb412d18fde
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e74108f39d2d7b64cae124592d9c30345207853c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-blob-destination"></a>Destino de blobs de Azure
  El componente **Azure Blob Destination** (Destino de blobs de Azure) permite que un paquete SSIS escriba datos en un blob de Azure. Los formatos de archivo admitidos son: CSV y AVRO. 
    
  Arrastre y coloque el **destino de blobs de Azure** en el diseñador de flujos de datos y haga doble clic en él para ver el editor.  
   
- El **destino de Blob de Azure** es un componente de la [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ **Destino de blob de Azure** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 1.  En el campo **Azure storage connection manager** (Administrador de conexiones de almacenamiento de Azure), especifique un administrador de conexiones de almacenamiento de Azure existente o cree uno nuevo que haga referencia a una cuenta de almacenamiento de Azure.  
   
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 6.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Asignar parámetros de consulta a Variables en un componente de flujo de datos | Documentos de Microsoft"
+title: "Asignar parámetros de consulta a variables en un componente de flujo de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25f7da499f4ee62a6cdc8093c92d8d9002897edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Asignar parámetros de consulta a variables en un componente de flujo de datos
   Al configurar el origen de OLE DB para utilizar las consultas parametrizadas, puede asignar los parámetros a las variables.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Haga clic en **Parámetros**.  
   
-8.  En el **establecer parámetros de consulta** diálogo cuadro, asigne cada parámetro de la **parámetros** lista a una variable en el **Variables** lista o cree una nueva variable haciendo clic en  **\<nueva variable >**. Haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **Establecer parámetros de consulta**, asigne cada parámetro de la lista **Parámetros** a una variable de la lista **Variables** o cree una variable haciendo clic en **\<Nueva variable>**. Haga clic en **Aceptar**.  
   
     > [!NOTE]  
     >  Solo están disponibles para su asignación las variables del sistema y las variables definidas por el usuario que están en el ámbito del paquete, un contenedor principal como un bucle Foreach, o la tarea Flujo de datos que contiene el componente de flujo de datos. La variable debe tener un tipo de datos compatible con la columna en la cláusula WHERE a la que se asigna el parámetro.  
@@ -62,7 +60,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)   
- [Transformación de búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Transformación Búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
-

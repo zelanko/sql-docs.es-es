@@ -1,5 +1,5 @@
 ---
-title: Crear la base de datos de cambio SQL Server | Documentos de Microsoft
+title: Crear la base de datos de cambios de SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraIns
+f1_keywords: oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8faa5b7ed377f91fd64d1e7dcde0cea22e84062d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-sql-server-change-database"></a>Crear la base de datos de cambios de SQL Server
   Cuando se inicia el Asistente para nueva instancia, se abre la página Crear base de datos CDC. Use la página Crear base de datos CDC para proporcionar información sobre la nueva instancia CDC y crear una nueva base de datos Cambios.  
@@ -59,8 +56,7 @@ ms.lasthandoff: 08/03/2017
      Después de crear la base de datos, puede hacer clic en **Siguiente** para [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo crear la instancia de base de datos de cambios SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [El servicio CDC de Oracle](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
   
-

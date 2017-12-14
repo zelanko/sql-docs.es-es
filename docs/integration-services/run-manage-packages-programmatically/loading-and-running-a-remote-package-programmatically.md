@@ -1,5 +1,5 @@
 ---
-title: "Cargar y ejecutar un paquete remoto mediante programación | Documentos de Microsoft"
+title: "Cargar y ejecutar mediante programación un paquete remoto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,53 +8,50 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Integration Services packages, running
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9890f84a983b07534713fe5ec8c547f01e5b2264
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c0a229c7706ac3c46cf7a1688c15dd4e02daa4c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Cargar y ejecutar mediante programación un paquete remoto
   Para ejecutar los paquetes remotos desde un equipo local que no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], inicie los paquetes para que se ejecuten en el equipo remoto en el que está instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para ello, haga que el equipo local use el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un servicio web o un componente remoto para iniciar los paquetes en el equipo remoto. Si intenta iniciar los paquetes remotos directamente desde el equipo local, se cargarán y se intentará ejecutar los paquetes desde el equipo local. Si el equipo local no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se ejecutarán los paquetes.  
   
 > [!NOTE]  
->  No se puede ejecutar paquetes fuera [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] en un equipo cliente que no tiene [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado y los términos de su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] licencias no permiten instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en otros equipos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es un componente de servidor y no se puede distribuir entre equipos cliente.  
+>  No puede ejecutar paquetes fuera de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] en un equipo cliente que no tenga instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y puede que las condiciones de su licencia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no le permitan instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en equipos adicionales. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es un componente de servidor y no se puede distribuir entre equipos cliente.  
   
- Como alternativa, puede ejecutar un paquete remoto desde un equipo local que tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obtener más información, consulte [cargar y ejecutar un paquete Local Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
+ Como alternativa, puede ejecutar un paquete remoto desde un equipo local que tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obtener más información, consulte [Loading and Running a Local Package Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md) (Cargar y ejecutar un paquete local mediante programación).  
   
-##  <a name="top"></a>Ejecutar un paquete remoto en el equipo remoto  
+##  <a name="top"></a> Ejecución de un paquete remoto en el equipo remoto  
  Como se ha mencionado anteriormente, hay varias maneras en las que puede ejecutar un paquete remoto en un servidor remoto:  
   
--   [Usar el Agente SQL Server para ejecutar el paquete remoto mediante programación](#agent)  
+-   [Uso del Agente SQL Server para ejecutar un paquete remoto mediante programación](#agent)  
   
--   [Usar un servicio Web o componente remoto para ejecutar el paquete remoto mediante programación](#service)  
+-   [Uso de un servicio web o el componente remoto para ejecutar el paquete remoto mediante programación](#service)  
   
- Casi todos los métodos que se usan en este tema para cargar y guardar paquetes requieren una referencia a la **Microsoft.SqlServer.ManagedDTS** ensamblado. La excepción es el enfoque de ADO.NET mostrado en este tema para ejecutar el **sp_start_job** procedimiento almacenado, lo que requiere sólo una referencia a **System.Data**. Después de agregar la referencia a la **Microsoft.SqlServer.ManagedDTS** ensamblado en un nuevo proyecto, importe el <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres con un **con** o **importaciones** instrucción.  
+ Casi todos los métodos que se utilizan en este tema para cargar y guardar los paquetes requieren una referencia al ensamblado **Microsoft.SqlServer.ManagedDTS**. La excepción es el enfoque de ADO.NET mostrado en este tema para ejecutar el procedimiento almacenado **sp_start_job**, que requiere solo una referencia a **System.Data**. Después de agregar la referencia al ensamblado **Microsoft.SqlServer.ManagedDTS** en un proyecto nuevo, importe el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> con una instrucción **using** o **Imports**.  
   
-###  <a name="agent"></a>Mediante el Agente SQL Server para ejecutar un paquete remoto mediante programación en el servidor  
- En el ejemplo de código siguiente se muestra cómo utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante programación para ejecutar un paquete remoto en el servidor. El ejemplo de código llama al procedimiento almacenado del sistema, **sp_start_job**, que inicia un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente. El trabajo que el procedimiento inicia se denomina `RunSSISPackage` y este trabajo se encuentra en el equipo remoto. El trabajo `RunSSISPackage` ejecuta luego el paquete en el equipo remoto.  
+###  <a name="agent"></a> Uso del Agente SQL Server para ejecutar un paquete remoto mediante programación en el servidor  
+ En el ejemplo de código siguiente se muestra cómo utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante programación para ejecutar un paquete remoto en el servidor. En el ejemplo de código se llama al procedimiento almacenado del sistema, **sp_start_job**, que inicia un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El trabajo que el procedimiento inicia se denomina `RunSSISPackage` y este trabajo se encuentra en el equipo remoto. El trabajo `RunSSISPackage` ejecuta luego el paquete en el equipo remoto.  
   
 > [!NOTE]  
->  El valor devuelto de la **sp_start_job** procedimiento almacenado indica si el procedimiento almacenado ha podido iniciar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correctamente el trabajo del agente. El valor devuelto no indica si el paquete se ha iniciado correctamente o no.  
+>  El valor devuelto del procedimiento almacenado **sp_start_job** indica si el procedimiento almacenado ha podido iniciar correctamente el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor devuelto no indica si el paquete se ha iniciado correctamente o no.  
   
- Para obtener información sobre solución de problemas de paquetes que se ejecutan desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente, vea el artículo de Microsoft [un paquete SSIS no se ejecuta al llamar al paquete SSIS desde un paso de trabajo del Agente SQL Server](http://support.microsoft.com/kb/918760).  
+ Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el artículo de Microsoft [El paquete de SSIS no se ejecuta cuando recibe una llamada de un paso de trabajo del Agente SQL Server](http://support.microsoft.com/kb/918760).  
   
 ### <a name="sample-code"></a>Código muestra  
   
@@ -153,26 +150,26 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a>Uso de un servicio Web o componente remoto para ejecutar un paquete remoto mediante programación  
- La solución anterior para ejecutar los paquetes en ejecución mediante programación en el servidor no requiere ningún código personalizado en el servidor. Sin embargo, quizá prefiera una solución que no confía en el Agente SQL Server para ejecutar los paquetes. En el ejemplo siguiente se muestra un servicio web que se puede crear en el servidor para iniciar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localmente y una aplicación de prueba que se puede utilizar para llamar al servicio web desde un equipo cliente. Si prefiere crear un componente remoto en lugar de un servicio Web, puede utilizar la misma lógica de código con muy pocos cambios en un componente remoto. No obstante, un componente remoto puede requerir una configuración más amplia que un servicio web.  
+###  <a name="service"></a> Uso de un servicio web o el componente remoto para ejecutar el paquete remoto mediante programación  
+ La solución anterior para ejecutar los paquetes en ejecución mediante programación en el servidor no requiere ningún código personalizado en el servidor. Sin embargo, quizá prefiera una solución que no confía en el Agente SQL Server para ejecutar los paquetes. En el ejemplo siguiente se muestra un servicio web que se puede crear en el servidor para iniciar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localmente y una aplicación de prueba que se puede utilizar para llamar al servicio web desde un equipo cliente. Si prefiere crear un componente remoto en lugar de un servicio web, puede utilizar la misma lógica de código con muy pocos cambios en un componente remoto. No obstante, un componente remoto puede requerir una configuración más amplia que un servicio web.  
   
 > [!IMPORTANT]  
->  Con la configuración predeterminada para la autenticación y autorización, un servicio web no tiene generalmente los permisos necesarios para obtener acceso a SQL Server o al sistema de archivos para cargar y ejecutar los paquetes. Puede que tenga que asignar los permisos adecuados para el servicio Web configurando las opciones de autenticación y autorización en el **web.config** de archivos y asignar permisos de sistema de archivos y base de datos según corresponda. Una descripción completa de los permisos de la Web, base de datos y sistema de archivos está más allá del ámbito de este tema.  
+>  Con la configuración predeterminada para la autenticación y autorización, un servicio web no tiene generalmente los permisos necesarios para obtener acceso a SQL Server o al sistema de archivos para cargar y ejecutar los paquetes. Quizá tenga que asignar los permisos adecuados al servicio web configurando los valores de autenticación y autorización en el archivo **web.config** y asignando los permisos de base de datos y del sistema de archivos según corresponda. Una descripción completa de los permisos de la Web, base de datos y sistema de archivos está más allá del ámbito de este tema.  
   
 > [!IMPORTANT]  
->  Los métodos de la <xref:Microsoft.SqlServer.Dts.Runtime.Application> clase para trabajar con el almacén de paquetes SSIS solo admiten ".", localhost o el nombre del servidor local. No puede utilizar "(local)".  
+>  Los métodos de la clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> para trabajar con el almacén de paquetes SSIS solamente admiten ".", localhost o el nombre del servidor local. No puede utilizar "(local)".  
   
 ### <a name="sample-code"></a>Código muestra  
  Los ejemplos de código siguientes muestran cómo crear y probar el servicio web.  
   
 #### <a name="creating-the-web-service"></a>Crear el servicio web  
- Un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se puede cargar directamente desde un archivo, directamente desde SQL Server o desde el Almacén de paquetes SSIS, que administra el almacenamiento del paquete en SQL Server y en carpetas del sistema de archivos especiales. Este ejemplo es compatible con todas las opciones disponibles mediante el uso de un **Select Case** o **cambiar** construcción para seleccionar la sintaxis adecuada para iniciar el paquete y concatenar los argumentos de entrada de forma adecuada. El método de servicio web LaunchPackage devuelve el resultado de ejecución del paquete como un entero en lugar de un valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> para que los equipos cliente no requieran una referencia a ningún ensamblado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se puede cargar directamente desde un archivo, directamente desde SQL Server o desde el Almacén de paquetes SSIS, que administra el almacenamiento del paquete en SQL Server y en carpetas del sistema de archivos especiales. En este ejemplo se admiten todas las opciones disponibles utilizando el constructor **Select Case** o **switch** para seleccionar la sintaxis adecuada para iniciar el paquete y concatenar adecuadamente los argumentos de entrada. El método de servicio web LaunchPackage devuelve el resultado de ejecución del paquete como un entero en lugar de un valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> para que los equipos cliente no requieran una referencia a ningún ensamblado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>Para crear un servicio web para ejecutar mediante programación los paquetes en el servidor  
   
 1.  Abra Visual Studio y cree un proyecto de servicio web en el lenguaje de programación preferido. En el código de ejemplo se utiliza el nombre LaunchSSISPackageService para el proyecto.  
   
-2.  Agregue una referencia a **Microsoft.SqlServer.ManagedDTS** y agregue un **importaciones** o **con** instrucción al archivo de código para el  **Microsoft.SqlServer.Dts.Runtime** espacio de nombres.  
+2.  Agregue una referencia a **Microsoft.SqlServer.ManagedDTS** y agregue una instrucción **Imports** o **using** al archivo de código para el espacio de nombres **Microsoft.SqlServer.Dts.Runtime**.  
   
 3.  Pegue el código de ejemplo del método de servicio web de LaunchPackage en la clase. (En el ejemplo se muestra el contenido completo de la ventana de código).  
   
@@ -426,12 +423,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo, [Cómo: automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
+-   Vídeo: [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
   
 ## <a name="see-also"></a>Vea también  
- [Comprender las diferencias entre la ejecución Local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Cargar y ejecutar un paquete Local mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+ [Descripción de las diferencias entre la ejecución local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Cargar y ejecutar un paquete local mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Cargar la salida de un paquete local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

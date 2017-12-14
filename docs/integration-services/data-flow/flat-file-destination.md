@@ -1,5 +1,5 @@
 ---
-title: Plano de destino de archivo | Documentos de Microsoft
+title: Destino de archivo plano | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 14de99532df85ad2d65d28bdeeccfcbd8fa3d039
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-destination"></a>Destino de archivo plano
   El destino de archivo plano escribe datos en un archivo de texto. El archivo de texto puede tener formato delimitado, de ancho fijo, de ancho fijo con delimitador de filas o desigual a la derecha.  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/17/2017
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles a columnas de entrada.  
   
  **Columna de entrada**  
- Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione  **\<omitir >** para excluir la columna de la salida.  
+ Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione **\<omitir>** para excluir la columna de los resultados.  
   
  **Columna de destino**  
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/17/2017
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   
-

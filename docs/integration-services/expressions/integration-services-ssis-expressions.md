@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) expresiones | Documentos de Microsoft
+title: Expresiones de Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Expresiones de Integration Services (SSIS)
   Una expresión es una combinación de símbolos: identificadores, literales, funciones y operadores, que produce un solo valor de datos. Las expresiones simples pueden ser una sola constante, variable o función. Es más frecuente que las expresiones sean complejas, con varios operadores y funciones, y que hagan referencia a varias columnas y variables. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se pueden usar expresiones para definir condiciones para las instrucciones CASE, crear y actualizar valores de las columnas de datos, asignar valores a variables, actualizar o llenar propiedades en tiempo de ejecución, definir restricciones en las restricciones de precedencia y proporcionar las expresiones que utiliza el contenedor de bucles For.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Las restricciones de precedencia pueden usar expresiones para especificar las condiciones que determinan si se ejecuta la tarea o el contenedor restringido de un paquete. El resultado de evaluar las expresiones usadas en una restricción de precedencia debe ser **true** o **false**. Por ejemplo, la expresión @A > @B compara dos variables definidas por el usuario para determinar si se ejecuta la tarea restringida.  
   
--   El contenedor de bucles For puede usar expresiones para generar las instrucciones de inicialización, evaluación e incremento utilizadas por la estructura de bucle. Por ejemplo, la expresión @Counter = 1 inicializa el contador del bucle.  
+-   El contenedor de bucles For puede usar expresiones para generar las instrucciones de inicialización, evaluación e incremento utilizadas por la estructura de bucle. Por ejemplo, la expresión @Counter = 1 inicializa el contador de bucle.  
   
  Las expresiones también se pueden utilizar para actualizar los valores de las propiedades de paquetes, contenedores de los bucles For y ForEach, tareas, administradores de conexión de paquetes y proyectos, proveedores de registro y enumeradores ForEach. Por ejemplo, con una expresión de propiedad se puede asignar la cadena "Localhost.AdventureWorks" a la propiedad ConnectionName de la tarea Ejecutar SQL. Para más información, vea [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Control de acceso para los datos confidenciales en paquetes | Documentos de Microsoft
+title: "Control del acceso a la información confidencial en paquetes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd057df624f83e6a43bd7ed13d8f7c98e462c698
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
   Para proteger los datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede establecer un nivel de protección que ayude a proteger los datos confidenciales únicamente o todos los datos del paquete. Asimismo, puede cifrar estos datos con una contraseña o una clave de usuario, o confiar en que la base de datos cifre los datos. Además, el nivel de protección que utiliza para un paquete no es necesariamente estático, sino que cambia a lo largo de su ciclo de vida. A menudo se establece un nivel de protección durante el desarrollo y otro cuando el paquete se implementa.  
@@ -118,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Para establecer o cambiar el nivel de protección de los paquetes en el símbolo del sistema  
   
-1.  Revise los valores disponibles para la **ProtectionLevel** propiedad en la sección [configurar el nivel de protección de paquetes](#set_protection)y determine el valor adecuado para el paquete.  
+1.  Revise los valores disponibles para la propiedad **ProtectionLevel** en la sección [Configurar el nivel de protección de los paquetes](#set_protection) y determine el valor adecuado para su paquete.  
   
 2.  Revise las asignaciones para la opción **Encrypt** en el tema [dtutil Utility](../../integration-services/dtutil-utility.md)y determine el número entero adecuado que usar como valor de la propiedad **ProtectionLevel** seleccionada.  
   
@@ -140,10 +138,10 @@ ms.lasthandoff: 08/03/2017
   
          Si utiliza un comando similar en un archivo por lotes, escriba el marcador de posición del archivo, "% f", como "%% f" en el archivo por lotes.  
 
-## <a name="protection_dialog"></a>Cuadro de diálogo de nivel de protección de proyecto de paquete
+## <a name="protection_dialog">Cuadro de diálogo Package Project Protection Level</a> (Nivel de protección del proyecto de paquetes)
   Utilice el cuadro de diálogo **Nivel de protección de paquetes** para actualizar el nivel de protección de un paquete. El nivel de protección determina el método de protección, la contraseña o la clave de usuario, así como el ámbito de protección de paquetes. La protección puede incluir todos los datos o solo los datos confidenciales.  
   
- Para conocer los requisitos y opciones de seguridad de los paquetes, quizá le resulte útil ver [información general de seguridad &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md).  
+ Para entender los requisitos y las opciones de la seguridad de paquetes, puede resultar útil ver el tema [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) (Información general sobre seguridad &#40;Integration Services&#41;).  
   
 ### <a name="options"></a>Opciones  
  **Package protection level**  
@@ -155,7 +153,7 @@ ms.lasthandoff: 08/03/2017
  **Vuelva a escribir la contraseña**  
  Escriba la contraseña nuevamente.  
 
-## <a name="password_dialog"></a>Cuadro de diálogo de contraseña de paquete
+## <a name="password_dialog"></a>Cuadro de diálogo Contraseña del paquete
   Utilice el cuadro de diálogo **Contraseña del paquete** con el fin de proporcionar la contraseña para un paquete cifrado con una contraseña. Debe proporcionar una contraseña si el paquete utiliza el nivel de protección **Cifrar la información confidencial con una contraseña**o **Cifrar todos los datos con una contraseña** .  
   
 ### <a name="options"></a>Opciones  
@@ -164,7 +162,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Información general de seguridad &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
- [DTUtil (utilidad)](../../integration-services/dtutil-utility.md)  
+ [Información general sobre seguridad &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [dtutil (utilidad)](../../integration-services/dtutil-utility.md)  
   
-

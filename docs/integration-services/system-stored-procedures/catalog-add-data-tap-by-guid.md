@@ -1,5 +1,5 @@
 ---
-title: Catalog.add_data_tap_by_guid | Documentos de Microsoft
+title: catalog.add_data_tap_by_guid | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9bd4ecb4a6a419f1965a349d46d16d764dd83708
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: efb6c297b776cd6246f0c6226160afba9302bcdb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,30 +40,30 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
- Identificador de ejecución correspondiente a la ejecución que contiene el paquete. El *execution_id* es un **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Identificador de ejecución correspondiente a la ejecución que contiene el paquete. El parámetro *execution_id* es de tipo **bigint**.  
   
- [ @dataflow_task_guid =] *dataflow_task_guid*  
- El identificador del flujo de tarea de datos del paquete que contiene la ruta de flujo de datos que se va a derivar. El *dataflow_task_guid* es un**uniqueidentifier**.  
+ [ @dataflow_task_guid = ] *dataflow_task_guid*  
+ El identificador del flujo de tarea de datos del paquete que contiene la ruta de flujo de datos que se va a derivar. El parámetro *dataflow_task_guid* es de tipo **uniqueidentifier**.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- La cadena de identificación para la ruta de acceso de flujo de datos. Una ruta de acceso conecta dos componentes de flujo de datos. El **IdentificationString** propiedad para la ruta de acceso especifica la cadena.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ Cadena de identificación de la ruta de flujo de datos. Una ruta de acceso conecta dos componentes de flujo de datos. La propiedad **IdentificationString** de la ruta de acceso especifica la cadena.  
   
- Para buscar la cadena de identificación, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] haga clic en la ruta de acceso entre componentes de flujo de datos de dos y, a continuación, haga clic en **propiedades**. El **IdentificationString** propiedad aparece en la **propiedades** ventana.  
+ Para buscar la cadena de identificación, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] haga clic con el botón derecho en la ruta de acceso entre dos componentes de flujo de datos y, a continuación, haga clic en **Propiedades**. La propiedad **IdentificationString** aparece en la ventana **Propiedades**.  
   
- El *dataflow_path_id_string* es un **nvarchar (4000)**.  
+ El parámetro *dataflow_path_id_string* es de tipo **nvarchar(4000)**.  
   
- [ @data_filename =] *data_filename*  
- Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Archivos de derivación de datos se escriben en la carpeta "*\<carpeta de instalación de SQL Server >*\130\DTS\\". El *data_filename* es un **nvarchar (4000)**.  
+ [ @data_filename = ] *data_filename*  
+ Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta "*\<Carpeta de instalación de SQL Server>*\130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)**.  
   
- [ @max_rows =] max_rows  
- Número de filas que se capturan durante la derivación de datos. Si no se especifica este valor, se capturan todas las filas. El valor max_rows es un **int**.  
+ [ @max_rows = ] max_rows  
+ Número de filas que se capturan durante la derivación de datos. Si no se especifica este valor, se capturan todas las filas. El parámetro max_rows es de tipo **int**.  
   
- [ @data_tap_id =] *data_tap_id*  
- Identificador de la derivación de datos. El *data_tap_id* es un **bigint**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Identificador de la derivación de datos. El parámetro *data_tap_id* es de tipo **bigint**.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se crea una derivación de datos en la ruta de acceso del flujo de datos, `Paths[SRC DimDCVentor.OLE DB Source Output]`, en el flujo de datos tarea `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Los datos derivados se almacenan en el archivo DCVendorOutput.csv.  
+ En el ejemplo siguiente, se crea una derivación de datos en la ruta de flujo de datos, `Paths[SRC DimDCVentor.OLE DB Source Output]`, en la tarea de flujo de datos `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Los datos derivados se almacenan en el archivo DCVendorOutput.csv.  
   
 ```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
@@ -75,7 +73,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Para agregar derivaciones de datos, la instancia de la ejecución debe estar en estado creado (un valor de 1 en el **estado** columna de la [catalog.operations &#40; Base de datos SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)vista). El valor de estado cambia cuando se ejecuta la ejecución. Puede crear una ejecución mediante una llamada a [catalog.create_execution &#40; Base de datos SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ Para agregar derivaciones de datos, la instancia de la ejecución debe estar en el estado creado (un valor 1 en la columna **status** de la vista [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). El valor de estado cambia cuando se ejecuta la ejecución. Puede crear una ejecución mediante una llamada a [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  A continuación se indican algunas consideraciones sobre el procedimiento almacenado add_data_tap_by_guid.  
   
@@ -100,9 +98,9 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 -   Permisos MODIFY en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**.  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**.  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que el procedimiento almacenado genere un error.  
@@ -119,4 +117,3 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
   
   
-

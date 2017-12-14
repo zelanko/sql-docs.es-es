@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Crear carpetas de trabajo y Variables de entorno | Documentos de Microsoft'
+title: 'Paso 1: Crear carpetas de trabajo y variables de entorno | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: de69cfa9d63daa6cd5638774aba2540fd2ffdbaa
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8ee63b1546b182cad4e0bb2b137c1bad51f15032
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lección 1-1-crear carpetas de trabajo y Variables de entorno
+# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lección 1-1: Crear carpetas de trabajo y variables de entorno
 En esta tarea, creará la carpeta de trabajo (C:\DeploymentTutorial) y las nuevas variables de entorno del sistema (`DataTransfer` y `LoadXMLData`) que usará en posteriores tareas del tutorial.  
   
 La carpeta de trabajo está en la raíz de la unidad C. Si debe usar otra unidad o ubicación, puede hacerlo. No obstante, deberá anotar esta ubicación y usarla siempre que el tutorial haga referencia a la ubicación de la carpeta de trabajo DeploymentTutorial.  
@@ -97,4 +94,3 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
   
   
   
-

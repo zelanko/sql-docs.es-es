@@ -1,5 +1,5 @@
 ---
-title: "Cargar y ejecutar un paquete Local mediante programación | Documentos de Microsoft"
+title: "Cargar y ejecutar un paquete local mediante programación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -25,20 +22,19 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
-  Puede ejecutar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes según sea necesario o en momentos predeterminados mediante el uso de los métodos descritos en [paquetes en ejecución](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Sin embargo, con solo unas líneas de código, también puede ejecutar un paquete desde una aplicación personalizada como una aplicación Windows Forms, una aplicación de consola, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  
+  Puede ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] según sea necesario o en momentos predeterminados mediante los métodos descritos en [Ejecución de paquetes](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Sin embargo, con solo unas líneas de código, también puede ejecutar un paquete desde una aplicación personalizada como una aplicación Windows Forms, una aplicación de consola, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  
   
  En este tema se describe:  
   
@@ -46,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Ejecutar un paquete mediante programación  
   
- Todos los métodos utilizados en este tema para cargar y ejecutar paquetes requieren una referencia a la **Microsoft.SqlServer.ManagedDTS** ensamblado. Después de agregar la referencia en un proyecto nuevo, importe la <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres con un **con** o **importaciones** instrucción.  
+ Todos los métodos utilizados en este tema para cargar y ejecutar paquetes requieren una referencia al ensamblado **Microsoft.SqlServer.ManagedDTS**. Después de agregar la referencia en un proyecto nuevo, importe el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> mediante una instrucción **using** o **Imports**.  
   
 ## <a name="loading-a-package-programmatically"></a>Cargar un paquete mediante programación  
  Para cargar un paquete mediante programación en el equipo local, tanto si el paquete está almacenado localmente como si lo está de forma remota, llame a uno de los métodos siguientes:  
@@ -67,16 +63,16 @@ ms.lasthandoff: 08/03/2017
   
 1.  Inicie el entorno de desarrollo de Visual Studio y cree una nueva aplicación en su lenguaje de desarrollo preferido. En este ejemplo se utiliza una aplicación de consola; sin embargo, también puede ejecutar un paquete de una aplicación Windows Forms, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  
   
-2.  En el **proyecto** menú, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **Aceptar**.  
+2.  En el menú **Proyecto**, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **Aceptar**.  
   
-3.  Usar Visual Basic **importaciones** instrucción o C# **con** statement para importar el **Microsoft.SqlServer.Dts.Runtime** espacio de nombres.  
+3.  Use la instrucción **Imports** de Visual Basic o la instrucción **using** de C# para importar el espacio de nombres **Microsoft.SqlServer.Dts.Runtime**.  
   
 4.  Agregue el código siguiente en la rutina principal. La aplicación de consola completada se debe parecer al ejemplo siguiente.  
   
     > [!NOTE]  
     >  En el código de ejemplo se muestra cómo cargar el paquete desde el sistema de archivos mediante el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>. No obstante, también puede cargar el paquete desde la base de datos MSDB mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> o bien desde el almacén de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>.  
   
-5.  Ejecute el proyecto. El código de ejemplo ejecuta el paquete de ejemplo CalculatedColumns que se instala con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejemplos. El resultado de la ejecución del paquete se muestra en la ventana de la consola.  
+5.  Ejecute el proyecto. En el código de ejemplo se ejecuta el paquete de ejemplo CalculatedColumns que se instala con los ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El resultado de la ejecución del paquete se muestra en la ventana de la consola.  
   
 ### <a name="sample-code"></a>Código muestra  
   
@@ -144,7 +140,7 @@ namespace RunFromClientAppCS
   
 2.  Agregue el código siguiente en la rutina principal. La aplicación de consola completada se debe parecer al ejemplo siguiente.  
   
-3.  Ejecute el proyecto. El código de ejemplo ejecuta el paquete de ejemplo CalculatedColumns que se instala con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejemplos. El resultado de la ejecución del paquete se muestra en la ventana de la consola, junto con cualquier error que se produzca.  
+3.  Ejecute el proyecto. En el código de ejemplo se ejecuta el paquete de ejemplo CalculatedColumns que se instala con los ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El resultado de la ejecución del paquete se muestra en la ventana de la consola, junto con cualquier error que se produzca.  
   
 ### <a name="sample-code"></a>Código muestra  
   
@@ -234,9 +230,8 @@ namespace RunFromClientAppWithEventsCS
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Comprender las diferencias entre la ejecución Local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Descripción de las diferencias entre la ejecución local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Cargar y ejecutar un paquete remoto mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
- [Cargar la salida de un paquete Local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [Cargar la salida de un paquete local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

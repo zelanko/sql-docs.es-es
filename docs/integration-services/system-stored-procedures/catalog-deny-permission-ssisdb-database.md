@@ -1,5 +1,5 @@
 ---
-title: Catalog.deny_permission (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.deny_permission (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,28 +38,28 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
- Tipo del objeto protegible. Tipos de objetos protegibles incluyen carpeta (`1`), proyecto (`2`), entorno (`3`) y la operación (`4`). El *object_type* es **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identificador único (Id.) o clave principal del objeto protegible. El *object_id* es **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificador único (Id.) o clave principal del objeto protegible. El parámetro *object_id* es **bigint**.  
   
- [ @principal_id =] *principal_id*  
- El identificador de la entidad de seguridad que será denegado. El *principal_id* es **int**.  
+ [ @principal_id = ] *principal_id*  
+ El identificador de la entidad de seguridad que será denegado. El parámetro *principal_id* es **int**.  
   
- [ @permission_type =] *permission_type*  
- El tipo de permiso que será denegado. El *permission_type* es **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ El tipo de permiso que será denegado. El parámetro *permission_type* es **smallint**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (correcto)  
+ 0 (Correcto)  
   
  1 (object_class no es válido)  
   
  2 (object_id no existe)  
   
- 3 (entidad de seguridad no existe)  
+ 3 (la entidad de seguridad no existe)  
   
- 4 (permiso no es válido)  
+ 4 (el permiso no es válido)  
   
  5 (otro error)  
   
@@ -73,9 +71,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Permiso MANAGE_PERMISSIONS en el objeto  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento almacenado le permite denegar los tipos de permiso descritos en la tabla siguiente:  
@@ -95,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
   
--   Si se especifica permission_type, el procedimiento deniega el permiso especificado que se asigna explícitamente a la entidad de seguridad especificada para el objeto especificado. Aun cuando no haya ninguna de esas instancias, el procedimiento devuelve todavía un valor de código correcto (`0`).  
+-   Si se especifica "permission_type", el procedimiento deniega el permiso especificado que está asignado explícitamente a la entidad de seguridad indicada para el objeto especificado. Aun cuando no haya ninguna de esas instancias, el procedimiento devuelve todavía un valor de código correcto (`0`).  
   
--   Si se omite permission_type, el procedimiento deniega todos los permisos de la entidad de seguridad especificada en el objeto especificado.  
+-   Si se omite "permission_type", el procedimiento deniega al objeto especificado todos los permisos de la entidad de seguridad indicada.  
   
   
-

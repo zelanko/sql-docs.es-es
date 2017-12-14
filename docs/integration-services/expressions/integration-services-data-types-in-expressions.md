@@ -1,28 +1,30 @@
 ---
-title: Tipos de datos en expresiones de Integration Services | Documentos de Microsoft
+title: Tipos de datos de Integration Services en las expresiones | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
   El evaluador de expresiones utiliza tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cuando los datos entran por primera vez en un flujo de datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , el motor de flujo de datos convierte todos los datos de columna a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los datos de columna ya utilizados por una expresión a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las expresiones usadas en las transformaciones División condicional y Columna derivada pueden hacer referencia a columnas, ya que forman parte de un flujo de datos que incluye datos de columna.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Tenga en cuenta las expresiones en la siguiente captura de pantalla.  
   
- ![Tipos de datos en expresiones de SSIS de cadena](../../integration-services/expressions/media/stringsinssisexpressions.png "tipos de datos en expresiones de SSIS de cadena")  
+ ![Tipos de datos String en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
   
 1.  La primera expresión se ejecuta sin error porque la función NULL(DT_STR,...) es en el nivel raíz de la expresión.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  Los ejemplos siguientes muestran los efectos de la conversión.  
   
- ![Convertir cadenas en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "convertir cadenas en expresiones de SSIS")  
+ ![Convertir cadenas en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
   
 1.  En la primera expresión, la conversión no es en el nivel raíz de la expresión. El evaluador de expresiones controla esta conversión de forma inteligente y convierte en DT_WSTR, no en DT_STR. La expresión devuelve DT_WSTR.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  En el siguiente diagrama se muestra el tipo de resultado de las conversiones implícitas de las operaciones binarias. La intersección de la columna y la fila en esta tabla es el tipo de resultado de una operación binaria con operandos de los tipos izquierdo (From) y derecho (To).  
   
- ![Conversión entre tipos de datos de tipos de datos implícitas](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "conversión entre tipos de datos de tipos de datos implícitas")  
+ ![Conversión de tipos de datos implícitos entre tipos de datos](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
   
  La intersección de un entero con signo y un entero sin signo es un entero con signo posiblemente más grande que cualquiera de los argumentos.  
   

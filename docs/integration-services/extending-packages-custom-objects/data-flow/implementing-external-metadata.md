@@ -1,5 +1,5 @@
 ---
-title: Implementar metadatos externos | Documentos de Microsoft
+title: Implementar metadatos externos | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96d413bca20ec171d515ac6d0ad81b5b994bd854
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a87f4a2f1119b1fc9d6b104264636c930352a713
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-external-metadata"></a>Implementar metadatos externos
   Cuando un componente está desconectado de su origen de datos, puede validar las columnas de las colecciones de columnas de entrada y de resultados con las columnas en su origen de datos externo mediante la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Esta interfaz permite mantener una instantánea de las columnas en el origen de datos externo y asignar estas columnas a las columnas de la colección de columnas de entrada y de resultados del componente.  
@@ -85,12 +82,12 @@ End Sub
  La validación requiere pasos adicionales para los componentes que mantienen una colección de columnas de metadatos externos, porque debe validar una colección de columnas adicional. La validación se puede dividir en validación con conexión o validación sin conexión.  
   
 ### <a name="connected-validation"></a>Validación con conexión  
- Cuando un componente está conectado a un origen de datos externo, las columnas de las colecciones de entrada o de salida se comprueban directamente con el origen de datos externo. Además, se deben validar las columnas de la recopilación de metadatos externos. Esto es necesario porque la colección de metadatos externos puede modificarse mediante el uso de la **Editor avanzado** en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], y los cambios realizados en la colección no son detectables. Por consiguiente, cuando se está conectado, los componentes deben asegurarse de que las columnas de la colección de columnas de metadatos externos continúan reflejando las columnas en el origen de datos externo.  
+ Cuando un componente está conectado a un origen de datos externo, las columnas de las colecciones de entrada o de salida se comprueban directamente con el origen de datos externo. Además, se deben validar las columnas de la recopilación de metadatos externos. Esto es necesario porque la colección de metadatos externos se puede modificar utilizando el **Editor avanzado** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], y los cambios realizados en la colección no son detectables. Por consiguiente, cuando se está conectado, los componentes deben asegurarse de que las columnas de la colección de columnas de metadatos externos continúan reflejando las columnas en el origen de datos externo.  
   
- Puede ocultar la colección de metadatos externos en el **Editor avanzado** estableciendo la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> propiedad de la colección a **false**. Sin embargo, esto también oculta la **asignación de columnas** pestaña del editor, lo que permite a los usuarios asignar columnas de la colección de entrada o de salida a las columnas de la colección de columnas de metadatos externos. Si se establece esta propiedad en **false** impide que los desarrolladores modificar mediante programación la colección, pero proporciona un nivel de protección para la colección de columnas de metadatos externos de un componente que se utiliza exclusivamente en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Puede ocultar la colección de metadatos externos en el **Editor avanzado** estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> de la colección en **false**. No obstante, esto también oculta la pestaña **Asignación de columnas** del editor, que permite a los usuarios asignar las columnas de la colección de entrada o de salida a las columnas de la colección de columnas de metadatos externos. El establecimiento de esta propiedad en **false** no impide que los desarrolladores modifiquen la colección mediante programación, pero proporciona un nivel de protección para la colección de columnas de metadatos externos de un componente que se utiliza exclusivamente en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="disconnected-validation"></a>Validación sin conexión  
- Cuando un componente está desconectado de un origen de datos externo, se simplifica la validación porque las columnas de la colección de entrada o de salida se comprueban directamente con las columnas de la recopilación de metadatos externos y no con el origen externo. Un componente debe realizar la validación sin conexión cuando no se ha establecido la conexión a su origen de datos externo o cuando el <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propiedad es **false**.  
+ Cuando un componente está desconectado de un origen de datos externo, se simplifica la validación porque las columnas de la colección de entrada o de salida se comprueban directamente con las columnas de la recopilación de metadatos externos y no con el origen externo. Un componente debe realizar la validación sin conexión cuando no se ha establecido la conexión a su origen de datos externo o cuando la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> es **false**.  
   
  En el ejemplo de código siguiente se muestra una implementación de un componente que realiza la validación con su colección de columnas de metadatos externos.  
   
@@ -122,4 +119,3 @@ End Function
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)  
   
   
-

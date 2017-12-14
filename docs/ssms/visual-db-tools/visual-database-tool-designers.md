@@ -3,8 +3,11 @@ title: "Diseñadores de Visual Database Tools | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dd9803b8a53023baa09ec8d05e075a642105388
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="visual-database-tool-designers"></a>Diseñadores de Visual Database Tools
-Visual Database Tools es una combinación de herramientas de diseño que se pueden utilizar para trabajar con un origen de datos. Puede utilizar estas herramientas para crear consultas, diseñar o modificar la estructura de una base de datos o actualizar datos. Estas herramientas son: Diseñador de diagramas de base de datos, Diseñador de tablas y Diseñador de consultas y vistas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools es una combinación de herramientas de diseño que se pueden usar para trabajar con un origen de datos. Puede utilizar estas herramientas para crear consultas, diseñar o modificar la estructura de una base de datos o actualizar datos. Estas herramientas son: Diseñador de diagramas de base de datos, Diseñador de tablas y Diseñador de consultas y vistas.  
   
 ## <a name="properties-window"></a>Ventana Propiedades  
 La ventana Propiedades no es exclusiva de Visual Database Tools, pero aquí es donde se pueden hacer gran parte de las modificaciones. En ella se muestran las propiedades de los elementos seleccionados (por ejemplo, una tabla) y se pueden editar dichas propiedades (desde el nombre de las propiedades hasta la intercalación de una columna). Algunas propiedades pueden verse en la ventana Propiedades, pero deben modificarse en otra herramienta.  

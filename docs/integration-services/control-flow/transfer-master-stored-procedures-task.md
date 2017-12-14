@@ -1,5 +1,5 @@
 ---
-title: Tarea Transferir procedimientos almacenados principales | Documentos de Microsoft
+title: Tarea Transferir procedimientos almacenados principales | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
 - sql13.dts.designer.transferstoredprocedurestask.general.f1
 - sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
-helpviewer_keywords:
-- Transfer Master Stored Procedures task [Integration Services]
+helpviewer_keywords: Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 83001193fc8cedf13bf7425d6b8bae88ac09c987
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 3028cc454a6957672a0c0fd9f34ce5582849dd1f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales
   La tarea Transferir procedimientos almacenados principales transfiere uno o más procedimientos almacenados definidos por el usuario entre las bases de datos **master** en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para transferir un procedimiento almacenado de la base de datos **master** , el propietario del procedimiento debe ser dbo.  
@@ -111,10 +108,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión...>** para crear una conexión nueva al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión nueva al servidor de destino.  
   
  **IfObjectExists**  
  Seleccione el modo en que la tarea debe controlar los procedimientos almacenados definidos por el usuario que tengan el mismo nombre que los que ya existen en la base de datos **maestra** del servidor de destino.  
@@ -144,4 +141,3 @@ ms.lasthandoff: 08/11/2017
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

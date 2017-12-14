@@ -3,8 +3,11 @@ title: "Cuadro de diálogo Índices XML (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52f966e4e4ea42595fa93c83b608a18ae5a0b863
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1d2fc393ebd15e3c76dd17912e0e9f29c7a369a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Índices XML (cuadro de diálogo, Visual Database Tools)
-Utilice el cuadro de diálogo **Índices XML** para crear índices para las columnas de tipo de datos XML que no pueden indizarse utilizando el cuadro de diálogo **Índice y claves** . Cada columna XML puede tener más de un índice XML, pero el primero que se cree (principal) será la base de los otros (secundarios). Si elimina el índice XML principal, también se eliminarán los índices secundarios.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Índices XML** para crear índices para las columnas de tipo de datos XML que no pueden indexarse con el cuadro de diálogo **Índice y claves**. Cada columna XML puede tener más de un índice XML, pero el primero que se cree (principal) será la base de los otros (secundarios). Si elimina el índice XML principal, también se eliminarán los índices secundarios.  
   
 ## <a name="options"></a>Opciones  
 **Índice XML seleccionado**  

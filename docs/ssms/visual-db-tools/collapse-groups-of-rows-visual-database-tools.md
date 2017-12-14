@@ -3,8 +3,11 @@ title: Contraer grupos de filas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11ab34e9c5651be1dc771d71a738f49bb230262a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6afdaa463c3a7e1ac427af43156343e7ab7dcee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Contraer grupos de filas (Visual Database Tools)
-Puede crear un resultado de consulta en el que cada fila de resultados se corresponda con un grupo de filas completo de los datos originales. Cuando se contraen filas, conviene tener en cuenta lo siguiente:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede crear un resultado de consulta en el que cada fila de resultados se corresponda con un grupo de filas completo de los datos originales. Cuando se contraen filas, conviene tener en cuenta lo siguiente:  
   
 -   **Puede eliminar filas duplicadas** Algunas consultas pueden crear conjuntos de resultados en los que aparezcan varias filas idénticas. Por ejemplo, puede crear un conjunto de resultados en el que cada fila contenga la ciudad y el nombre del estado de una ciudad que contiene un autor; pero si una ciudad contiene varios autores, habrá varias filas idénticas. El código SQL resultante puede presentar el siguiente aspecto:  
   

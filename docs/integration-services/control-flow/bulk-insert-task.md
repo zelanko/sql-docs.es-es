@@ -1,5 +1,5 @@
 ---
-title: "La inserción masiva | Documentos de Microsoft"
+title: "Tarea Inserción masiva| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 5e0fb65fba9e0a9d600af89fd6b77c1a38030e08
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -129,7 +127,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opciones  
  **Conexión**  
- Seleccione un administrador de conexiones de OLE DB en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión.  
+ Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -145,13 +143,13 @@ ms.lasthandoff: 08/11/2017
 |**Especificar**|Especifique el formato. Si se selecciona esta opción, se muestran las opciones dinámicas **RowDelimiter** y **ColumnDelimiter**.|  
   
  **Archivo**  
- Seleccione un administrador de conexiones de archivos o archivos planos en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión.  
+ Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
   
  La ubicación del archivo es relativa al motor de base de datos de SQL Server especificado en el administrador de conexiones para esta tarea. Es preciso que el motor de base de datos de SQL Server tenga acceso al archivo de texto en un disco duro local en el servidor o mediante una unidad compartida o asignada a SQL Server. El tiempo de ejecución de SSIS no tiene acceso al archivo.  
   
  Si obtiene acceso al archivo de origen utilizando el administrador de conexiones de archivos planos, la tarea Inserción masiva no utiliza el formato especificado en el administrador de conexiones de archivos planos. En su lugar, la tarea Inserción masiva usa el formato especificado en un archivo de formato o los valores de las propiedades RowDelimiter y ColumnDelimiter de la tarea.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **Actualizar tablas**  
  Actualice la lista de tablas y vistas.  
@@ -221,4 +219,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Cada fila que no pueda importarse con la operación de carga masiva se contabilizará como un error.  
   
-

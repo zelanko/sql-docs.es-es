@@ -1,5 +1,5 @@
 ---
-title: Catalog.configure_catalog (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.configure_catalog (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 7edd093ee4804c8c0c01a5638fd7df519f4564bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @property_name =] *property_name*  
- Nombre de la propiedad de catálogo. El *property_name* es **nvarchar (255)**. Para obtener más información sobre las propiedades disponibles, vea [catalog.catalog_properties &#40; Base de datos SSISDB &#41; ](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ [ @property_name = ] *property_name*  
+ Nombre de la propiedad de catálogo. *property_name* es **nvarchar(255)**. Para obtener más información sobre las propiedades disponibles, vea [catalog.catalog_properties &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
- [ @property_value =] *property_value*  
- Valor de la propiedad de catálogo. El *property_value* es **nvarchar (255)**. Para obtener más información acerca de los valores de propiedad, vea [catalog.catalog_properties &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ [ @property_value = ] *property_value*  
+ Valor de la propiedad de catálogo. *property_value* es **nvarchar(255)**. Para obtener más información sobre los valores de las propiedades, vea [catalog.catalog_properties &#40; Base de datos SSISDB &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -50,20 +48,20 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  Ninguno  
   
 ## <a name="remarks"></a>Comentarios  
- Este procedimiento almacenado determina si el *property_value* es válido para cada *property_name*.  
+ Este procedimiento almacenado determina si *property_value* es válido para cada *property_name*.  
   
  Este procedimiento almacenado solo se puede realizar cuando no hay ninguna ejecución activa, como ejecuciones pendientes, en cola, en ejecución y en pausa.  
   
- Mientras se está configurando el catálogo, todos los otros catálogos almacenan procedimientos producirá un error con el mensaje de error "Servidor se está configurando actualmente."
+ Mientras se está configurando el catálogo, todos los demás procedimientos almacenados de catálogo producirán un error y mostrarán el mensaje de error "El servidor se está configurando actualmente".
   
  Cuando el catálogo está configurado, se escribe una entrada en el registro de operaciones.  
   
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -73,4 +71,3 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 -   El valor de la propiedad no es válido  
   
   
-

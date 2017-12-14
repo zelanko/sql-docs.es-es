@@ -1,5 +1,5 @@
 ---
-title: "La transformación Búsqueda aproximada | Documentos de Microsoft"
+title: "Transformación Búsqueda aproximada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,17 +35,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/19/2017
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **de** , pero no se puede combinar una columna con el tipo de datos **DT_WSTR** con una columna con el tipo de datos **int** .  
+ Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** data type, but invalid to join a column with the **DT_WSTR** con una columna con el tipo de datos **int** data type.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   
@@ -223,8 +221,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>Vea también  
  [Transformación Búsqueda](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

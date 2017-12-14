@@ -3,8 +3,11 @@ title: "Personalizar (página Comandos) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adcb678da9ce46a261aa288085339e820137d616
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
-Este cuadro de diálogo permite agregar comandos en las barras de herramientas y menús, y eliminarlos de éstos; también permite cambiar las imágenes que se utilizan para los botones de barra de herramientas o los comandos de los menús. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este cuadro de diálogo permite agregar y quitar comandos en las barras de herramientas y menús, y también cambiar las imágenes que se usan para los botones de barra de herramientas o comandos de menú. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
 **Categorías**  

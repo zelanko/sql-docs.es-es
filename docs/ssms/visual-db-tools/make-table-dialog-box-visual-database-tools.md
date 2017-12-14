@@ -3,8 +3,11 @@ title: "Cuadro de diálogo Crear tabla (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Crear tabla (cuadro de diálogo, Visual Database Tools)
-Permite denominar una tabla creada en la que se copian filas. Este cuadro de diálogo aparece al cambiar el tipo de una consulta para convertirla en consulta MAKE TABLE. Para cambiar el tipo de una consulta, en el menú **Diseñador de consultas** , seleccione **Cambiar tipo**y, a continuación, haga clic en **Crear tabla**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite denominar una tabla creada en la que se copian filas. Este cuadro de diálogo aparece al cambiar el tipo de una consulta para convertirla en consulta MAKE TABLE. Para cambiar el tipo de una consulta, en el menú **Diseñador de consultas** , seleccione **Cambiar tipo**y, a continuación, haga clic en **Crear tabla**.  
   
 ## <a name="options"></a>Opciones  
 **Nombre de tabla**  

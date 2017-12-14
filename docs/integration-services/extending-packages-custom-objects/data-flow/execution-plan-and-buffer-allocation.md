@@ -1,5 +1,5 @@
 ---
-title: "Plan de ejecución y la asignación de búferes | Documentos de Microsoft"
+title: "Plan de ejecución y asignación de búfer | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,27 +23,26 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0beb223eec74e28e70614f324203a0d2d47637e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan de ejecución y asignación de búfer
   Antes de la ejecución, la tarea de flujo de datos examina sus componentes y genera un plan de ejecución para cada secuencia de componentes. En esta sección se proporcionan detalles sobre el plan de ejecución, cómo ver el plan y cómo se asignan búferes de entrada y salida en función del plan de ejecución.  
   
 ## <a name="understanding-the-execution-plan"></a>Descripción del plan de ejecución  
- Un plan de ejecución contiene subprocesos de origen y de trabajo; cada subproceso contiene listas de trabajo que especifican listas de trabajo de salida para los subprocesos de origen o listas de trabajo de entrada y salida para los subprocesos de trabajo. Los subprocesos de origen en un plan de ejecución representan los componentes de origen del flujo de datos y se identifican en el plan de ejecución *SourceThread**n*, donde  *n*  es el número de base cero del subproceso de origen.  
+ Un plan de ejecución contiene subprocesos de origen y de trabajo; cada subproceso contiene listas de trabajo que especifican listas de trabajo de salida para los subprocesos de origen o listas de trabajo de entrada y salida para los subprocesos de trabajo. Los subprocesos de origen de un plan de ejecución representan los componentes de origen del flujo de datos y se identifican en el plan de ejecución mediante *SourceThread**n*, donde *n* es el número de base cero del subproceso de origen.  
   
  Cada subproceso de origen crea un búfer, establece un agente de escucha y llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> en el componente de origen. Aquí es donde se inicia la ejecución y se original los datos, a medida que el componente de origen comienza a agregar filas a los búferes de salida que le proporciona la tarea de flujo de datos. Una vez que los subprocesos de origen se están ejecutando, el equilibrio de trabajo se distribuye entre subprocesos de trabajo.  
   
- Un subproceso de trabajo puede contener listas de trabajo de entrada y salida y se identifica en el plan de ejecución como *WorkThread**n*, donde  *n*  es el número de base cero del subproceso de trabajo. Estos subproceso contienen listas de trabajo de salida cuando el gráfico contiene un componente con salidas asincrónicas.  
+ Un subproceso de trabajo puede contener listas de trabajo de entrada y salida y se identifica en el plan de ejecución como *WorkThread**n*, donde *n* es el número de base cero del subproceso de trabajo. Estos subproceso contienen listas de trabajo de salida cuando el gráfico contiene un componente con salidas asincrónicas.  
   
  El plan de ejecución de ejemplo siguiente representa un flujo de datos que contiene un componente de origen conectado a una transformación con una salida asincrónica conectada a un componente de destino. En este ejemplo, WorkThread0 contiene una lista de trabajo de salida porque el componente de transformación tiene una salida asincrónica.  
   
@@ -83,7 +80,7 @@ End WorkThread1
 ```  
   
 > [!NOTE]  
->  El plan de ejecución se genera cada vez que se ejecuta un paquete y se puede capturar mediante la adición de un proveedor de registro para el paquete, habilitando el registro y seleccionando la **PipelineExecutionPlan** eventos.  
+>  El plan de ejecución se genera cada vez que se ejecuta un paquete y se puede capturar agregando un proveedor de registro al paquete, habilitando el registro y seleccionando el evento **PipelineExecutionPlan**.  
   
 ## <a name="understanding-buffer-allocation"></a>Descripción de la asignación de búferes  
  La tarea de flujo de datos, basándose en el plan de ejecución, crea búferes que contienen las columnas definidas en las salidas de los componentes de flujo de datos. El búfer se reutiliza a media que los datos fluyen a través de la secuencia de componentes, hasta que se encuentra un componente con salidas asincrónicas. Entonces, se crea un nuevo búfer que contiene las columnas de salida de la salida asincrónica y las columnas de salida de componentes de nivel inferior.  
@@ -92,6 +89,5 @@ End WorkThread1
   
  Los componentes de transformación con salidas asincrónicas reciben el búfer de entrada existente del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> y reciben el nuevo búfer de salida del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Un componente de transformación con salidas asincrónicas es el único tipo de componente de flujo de datos que recibe un búfer de entrada y un búfer de salida.  
   
- Dado que el búfer proporcionado a un componente es probable que contenga más columnas que el componente tiene en sus colecciones de columnas de entrada o salida, pueden llamar los desarrolladores de componentes la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> método para buscar una columna en el búfer mediante la especificación de su **LineageID**.  
+ Dado que es probable que el búfer que se proporciona a un componente contenga más columnas de las que el componente incluye en sus colecciones de columnas de entrada o salida, los desarrolladores de componentes pueden llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> para localizar una columna en el búfer mediante la especificación de su valor **LineageID**.  
   
-

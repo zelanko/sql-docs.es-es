@@ -1,5 +1,5 @@
 ---
-title: "Transferir inicios de sesión, tarea | Documentos de Microsoft"
+title: "Tarea Transferir inicios de sesión | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
 - sql13.dts.designer.transferloginstask.general.f1
 - sql13.dts.designer.transferloginstask.logins.f1
-helpviewer_keywords:
-- Transfer Logins task [Integration Services]
+helpviewer_keywords: Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 93192dbbae84bb86732ca8fd0a5de3bbd320aac7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
   La tarea Transferir inicios de sesión transfiere uno o varios inicios de sesión entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -110,10 +107,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión...>** para crear una conexión nueva al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
   
  **LoginsToTransfer**  
  Seleccione los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que va a copiar del servidor de origen al de destino. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
@@ -144,4 +141,3 @@ ms.lasthandoff: 08/11/2017
  **CopySids**  
  Seleccione esta opción si los identificadores de seguridad asociados a los inicios de sesión deben copiarse al servidor de destino. **CopySids** debe establecerse en **True** si la tarea Transferir inicios de sesión se utiliza junto con la tarea Transferir bases de datos. De lo contrario, la base de datos transferida no reconocerá los inicios de sesión copiados.  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Transformación dimensión de variación lenta | Documentos de Microsoft"
+title: "Transformación Dimensión de variación lenta | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.slowlychangingdimtrans.f1
+f1_keywords: sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8061b07985e3d8d85656ddb85996384b5b6ee257
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="slowly-changing-dimension-transformation"></a>Transformación Dimensión de variación lenta
+# <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
   
 > [!IMPORTANT]  
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/03/2017
 -   La entrada del blog sobre cómo [optimizar el Asistente para dimensiones de variación lenta](http://go.microsoft.com/fwlink/?LinkId=199481), en blogs.msdn.com.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Paso 1: Copiar el paquete de la lección 3 | Documentos de Microsoft"
+title: "Paso 1: Copiar el paquete de la lección 3 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c578fc6154a2a78e223bc1a920669228776e689
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 435147a234c6d6ddc6d1efc09e5b02de4e9e5e4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lección 4-1: copiar el paquete de la lección 3
+# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lección 4-1: Copiar el paquete de la lección 3
 En esta tarea, creará una copia del paquete que ha creado en la lección 3, denominado Lesson 3.dtsx. Por otra parte, si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, a continuación, copiar dicho paquete para trabajar. Usará esta nueva copia en toda la lección 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>Para crear el paquete de la lección 4  
@@ -73,4 +70,3 @@ En esta tarea, creará una copia del paquete que ha creado en la lección 3, den
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 2: Crear un archivo dañado](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Opciones de solicitud de perfil de patrón de columna (tarea de generación de perfiles de datos) | Documentos de Microsoft"
+title: "Opciones de Solicitud de Perfil de patrón de columnas (tarea de generación de perfiles de datos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: es-es
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de patrón de columnas** seleccionadas en el panel de solicitudes. Un perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle a identificar problemas en los datos, como cadenas no válidas, y puede sugerir expresiones regulares que se pueden utilizar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Delimiters** De forma predeterminada, la lista de delimitadores contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
--   **Símbolos** de forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%` , así como la marca de graduación. Por ejemplo, si los símbolos son "`()-`", el valor"(425) 123-4567" se convierte en ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symbols** De forma predeterminada, la lista **Symbols** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`, así como la marca de graduación. Por ejemplo, si los símbolos son "`()-`", el valor"(425) 123-4567" se convierte en ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un carácter no puede ser delimitador y símbolo a la vez.  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
  **Symbols**  
- Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y " @ " para las direcciones de correo electrónico.  De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista **Symbols** contiene los caracteres siguientes: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
@@ -152,7 +149,6 @@ ms.lasthandoff: 10/05/2017
   
 ## <a name="see-also"></a>Vea también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulario de perfil rápido de tabla única &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Visor de perfil de datos | Documentos de Microsoft
+title: Visor de perfil de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dataprofileviewer.f1
+f1_keywords: sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profile-viewer"></a>Visor de perfil de datos
   El paso siguiente del proceso de generación de perfiles de datos consiste en ver y analizar los perfiles de datos. Estos perfiles pueden verse después de ejecutar la tarea de generación de perfiles de datos dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y de calcular los perfiles de datos. Para más información sobre cómo configurar y ejecutar las tareas de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -41,7 +38,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Haga clic con el botón derecho en la tarea **Generación de perfiles de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] y, después, haga clic en **Editar**. Haga clic en **Abrir el visor de perfil** en la página **General** del **Editor de tareas de generación de perfiles de datos**.  
   
--   En la carpeta  *\<unidad >*: \Program archivos (x86) | Programa de programa\Microsoft SQL Server\110\DTS\Binn, ejecute DataProfileViewer.exe.  
+-   En la carpeta *\<unidad>*:\Archivos de programa (x86) | Archivos de programa\Microsoft SQL Server\110\DTS\Binn, ejecute DataProfileViewer.exe.  
   
  El visor utiliza varios paneles para mostrar los perfiles solicitados y los resultados calculados, y también permite la obtención de detalles:  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Tipo de perfil = Perfil de distribución de longitud de columnas  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas - \<columna > panel  
+##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas - panel \<columna>  
  **Longitud mínima**  
  Muestra la longitud mínima de los valores de esta columna.  
   
@@ -126,7 +123,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Tipo de perfil = Perfil de proporción de columnas nulas  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas Null - \<columna > panel  
+##### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas nulas - panel \<columna>  
  **Recuento nulo**  
  Muestra el número de filas en las que la columna de perfiles tiene el valor null.  
   
@@ -138,7 +135,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>Tipo de perfil = Perfil de patrón de columnas  
   
-##### <a name="column-pattern-profile---column-pane"></a>Perfil de patrón de columna - \<columna > panel  
+##### <a name="column-pattern-profile---column-pane"></a>Perfil de patrón de columnas - panel \<columna>  
  **Recuento de filas**  
  Muestra el número de filas de la tabla o vista.  
   
@@ -151,7 +148,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>Tipo de perfil = Perfil de estadísticas de columnas  
   
-##### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas - \<columna > panel  
+##### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas - panel \<columna>  
  **Mínima**  
  Muestra el valor mínimo situado en la columna de perfiles.  
   
@@ -166,7 +163,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Tipo de perfil = Perfil de distribución de valores de columna  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna - \<columna > panel  
+##### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna - panel \<columna>  
  **Número de valores distintos**  
  Muestra el recuento de valores distintos que se encuentran en la columna de perfiles.  
   
@@ -185,7 +182,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>Tipo de perfil = Perfil de claves candidatas  
   
-##### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas - \<tabla > panel  
+##### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas - panel \<tabla>  
  **Columnas de clave**  
  Muestra las columnas que se seleccionaron para los perfiles como clave candidata.  
   
@@ -193,7 +190,7 @@ ms.lasthandoff: 08/11/2017
  Muestra el nivel (como porcentaje) de la columna de clave candidata o de una combinación de columnas. Un nivel de clave menor del 100% indica que hay valores duplicados.  
   
 ##### <a name="key-violations-pane"></a>Panel Infracciones de clave  
- **\<Column1 >, \<Columna2 >, etcetera.**  
+ **\<columna1>, \<columna2>, etc.**  
  Muestra los valores duplicados que se encontraron en la columna de perfiles.  
   
  **Count**  
@@ -216,17 +213,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Un porcentaje alto de valores erróneos en los datos podría provocar resultados inesperados en un perfil Dependencia funcional. Por ejemplo, el 90% de las filas tienen el valor "WI" como estado para el valor "98052" de código postal. El perfil notifica filas que contienen valor de estado correcto de "WA" como infracciones.  
   
- **\<nombre de columna determinante >**  
+ **\<nombre de columna determinante>**  
  Muestra el valor de la columna determinante o la combinación de columnas en esta infracción de la dependencia funcional.  
   
- **\<nombre de columna dependiente >**  
+ **\<nombre de columna dependiente>**  
  Muestra el valor de la columna dependiente en esta infracción de la dependencia funcional.  
   
  **Recuento de soporte**  
  Muestra el número de filas en las que el valor de columna determinante determina la columna dependiente.  
   
  **Recuento de infracciones**  
- Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Éstas son las filas donde el valor dependiente es el valor mostrado en el  **\<nombre de columna dependiente >** columna.)  
+ Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el que se muestra en la columna **\<nombre de columna dependiente>**).  
   
  **Porcentaje admitido**  
  Muestra el porcentaje de filas en las que el valor de columna determinante determina la columna dependiente.  
@@ -244,10 +241,9 @@ ms.lasthandoff: 08/11/2017
  Muestra el nivel (como porcentaje) de la superposición entre las columnas. Un nivel de clave menor que 100% indica que hay casos en los que el valor de subconjunto no se encuentra entre los valores del superconjunto.  
   
 ##### <a name="inclusion-violations-pane"></a>Panel Infracciones de inclusión  
- **\<Column1 >, \<Columna2 >, etcetera.**  
+ **\<columna1>, \<columna2>, etc.**  
  Muestra los valores en la columna o columnas del subconjunto que no se encontraban en la columna o columnas del superconjunto.  
   
  **Count**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   
-

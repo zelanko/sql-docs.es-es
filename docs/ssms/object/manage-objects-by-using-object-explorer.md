@@ -3,8 +3,11 @@ title: Administrar objetos mediante el Explorador de objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1deb4bbc2566d2c59bf24caddde565265594f2a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 190cdeff71f6b46b6ff2e7c6f42895137a67eda6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Administrar objetos mediante el Explorador de objetos
-Puede utilizar el Explorador de objetos para administrar objetos, como bases de datos, tablas y procedimientos almacenados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar el Explorador de objetos para administrar objetos, como bases de datos, tablas y procedimientos almacenados.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Ver objetos en el Explorador de objetos  
 El Explorador de objetos utiliza una estructura de árbol para agrupar la información en carpetas. Para expandir las carpetas, haga clic en el signo más (+) o haga doble clic en la carpeta. Expanda las carpetas para obtener información más detallada. Haga clic con el botón secundario en las carpetas o en los objetos para realizar tareas comunes. Haga doble clic en los objetos para realizar las tareas más comunes.  

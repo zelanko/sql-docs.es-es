@@ -3,8 +3,11 @@ title: Crear un evento definido por el usuario | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8298bbe39bcaeada19b2a5b50b87a1f14a8a5f89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 571d6eefa997650d588972d9c5b48750ff1905c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-user-defined-event"></a>Crear un evento definido por el usuario
-Puede crear eventos definidos por el usuario si desea supervisar los eventos distintos de otros predefinidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. También puede asignar un nivel de gravedad a cada evento definido por el usuario.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede crear eventos definidos por el usuario si quiere supervisar eventos que no sean los predefinidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. También puede asignar un nivel de gravedad a cada evento definido por el usuario.  
   
 > [!NOTE]  
 > Cuando use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], seleccione la opción **Escribir en el registro de eventos de aplicación Windows** para cada mensaje de evento definido por el usuario, y garantizar así que se registran los mensajes. De manera predeterminada, los mensajes definidos por el usuario con niveles de gravedad inferiores a 19 no se envían al registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows cuando se producen. Por tanto, no desencadenan alertas del Agente SQL Server.  

@@ -3,8 +3,11 @@ title: "Modificar operadores de combinación (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebec4a0b9106152a8a7914263a70a7ddf0399679
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 62763186119afe111ee2a191a577db19178be896
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
-De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) combina tablas usando un signo igual (una combinación de igualdad), que compara los valores de las dos columnas de combinación. Si lo desea, puede cambiar el operador utilizado para comparar valores de las columnas de combinación.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) combina tablas mediante un signo igual (una combinación de igualdad), que compara los valores de las dos columnas de combinación. Si lo desea, puede cambiar el operador utilizado para comparar valores de las columnas de combinación.  
   
 ### <a name="to-modify-join-operators"></a>Para modificar operadores de combinación  
   

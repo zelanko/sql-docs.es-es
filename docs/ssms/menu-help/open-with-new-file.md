@@ -3,8 +3,11 @@ title: Abrir con (nuevo archivo) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce714ce9042b3c827e1916ec3b6664ca06e278e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
-Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, a continuación, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, después, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  
   
 ## <a name="options"></a>Opciones  
 **Seleccione el programa que desee usar**  

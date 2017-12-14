@@ -1,5 +1,5 @@
 ---
-title: "Actualizar la versión de un componente de flujo de datos | Documentos de Microsoft"
+title: "Actualizar la versión de un componente de flujo de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - PerformUpgrade method
 - custom data flow components [Integration Services], upgrading version
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d93362af894bb395123b5b18dc5b8ac60a418a0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Actualizar la versión de un componente de flujo de datos
   Los paquetes que se crearon con una versión anterior de su componente pueden contener metadatos que ya no son válidos, como propiedades personalizadas cuyo uso se ha modificado en versiones más recientes del componente. Puede invalidar el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> para actualizar los metadatos previamente guardados en paquetes anteriores para reflejar las propiedades actuales de su componente.  
@@ -54,9 +51,9 @@ ms.lasthandoff: 08/03/2017
 -   Establece los metadatos de la versión en la versión actual del componente.  
   
 > [!NOTE]  
->  El motor de flujo de datos pasa su propio número de versión en la <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> método en el *elemento pipelineVersion* parámetro. Este parámetro no es útil en la versión 1.0 de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], pero sí puede ser útil en versiones posteriores.  
+>  El motor de flujo de datos pasa su propio número de versión al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> en el parámetro *pipelineVersion*. Este parámetro no es útil en la versión 1.0 de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], pero sí puede ser útil en versiones posteriores.  
   
- El código de ejemplo usa únicamente los dos valores de enumeración que asignan directamente a los valores booleanos anteriores para la propiedad personalizada. Los usuarios pueden seleccionar otros valores de enumeración disponibles a través de la interfaz de usuario personalizada del componente, bien en el Editor avanzado o bien mediante programación. Para obtener información acerca de cómo mostrar los valores de enumeración de una propiedad personalizada en el Editor avanzado, vea "Crear propiedades personalizadas" en [métodos en tiempo de diseño de un componente de flujo de datos](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ El código de ejemplo usa únicamente los dos valores de enumeración que asignan directamente a los valores booleanos anteriores para la propiedad personalizada. Los usuarios pueden seleccionar otros valores de enumeración disponibles a través de la interfaz de usuario personalizada del componente, bien en el Editor avanzado o bien mediante programación. Para obtener información acerca de cómo mostrar valores de enumeración para una propiedad personalizada en el Editor avanzado, vea "Crear propiedades personalizadas" en [Métodos en tiempo de diseño de un componente de flujo de datos](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +185,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

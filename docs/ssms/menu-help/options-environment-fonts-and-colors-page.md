@@ -3,8 +3,11 @@ title: "Opciones (Entorno - página Fuentes y colores) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 522dd3d6c6428c722ced50d677543ae91ef545b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae02d8e4c6639555fe79ceca82ca46361648ddee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opciones (Entorno -página Fuentes y colores)
-El cuadro de diálogo **Opciones[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] le permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de**  [!INCLUDE[msCoName](../../includes/msconame_md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El cuadro de diálogo **Opciones** permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. En el menú **Herramientas** , haga clic en **Opciones** , expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
   
 Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
   

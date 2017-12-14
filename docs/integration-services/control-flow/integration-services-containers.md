@@ -1,5 +1,5 @@
 ---
-title: Contenedores de Integration Services | Documentos de Microsoft
+title: Contenedores de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 32617273341026d55a6ac63baa99c2a2d02c4a6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-containers"></a>Contenedores de Integration Services
   Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
@@ -109,4 +107,3 @@ ms.lasthandoff: 08/03/2017
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

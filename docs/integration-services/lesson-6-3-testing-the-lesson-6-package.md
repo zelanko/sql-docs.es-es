@@ -1,5 +1,5 @@
 ---
-title: "Paso 3: Probar el paquete de la lección 6 | Documentos de Microsoft"
+title: "Paso 3: Probar el paquete de la lección 6 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0b97045d3916f7e3831bc1711e8657eecc58bdc0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c49bdaac8214e2ae34af24d0fd243c252b986f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-3---testing-the-lesson-6-package"></a>Lección 6: 3: probar el paquete de la lección 6
+# <a name="lesson-6-3---testing-the-lesson-6-package"></a>Lección 6-3: Probar el paquete de la lección 6
 En tiempo de ejecución, el paquete obtendrá el valor de la Propiedad de directorio desde el parámetro VarFolderName.  
   
 Para comprobar que, durante la ejecución, el paquete actualiza la propiedad Directory con el nuevo valor, simplemente debe ejecutar el paquete. Puesto que en el directorio solamente se copiaron tres archivos de datos de ejemplo, el flujo de datos solamente se ejecutará tres veces, en lugar de repetirse a través de los 14 archivos de la carpeta original.  
@@ -54,4 +51,3 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
   
   
-

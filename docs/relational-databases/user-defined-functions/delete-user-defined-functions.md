@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 5.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias de *nombre_función***. De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
+    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias** de *nombre_función*. De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

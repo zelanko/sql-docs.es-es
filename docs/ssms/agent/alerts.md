@@ -3,8 +3,11 @@ title: Alertas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bcf6d6ecebacd8ea3f3b2a18d5ffe89cb5d2b6ba
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="alerts"></a>Alertas
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] genera eventos que se incluyen en el registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente lee el registro de aplicación y compara los eventos con las alertas definidas. Cuando el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] encuentra una coincidencia, activa una alerta, que es una respuesta automatizada a un evento. Además de supervisar los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] también puede supervisar las condiciones de rendimiento y los eventos de Instrumental de administración de Windows (WMI).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] genera eventos que se incluyen en el registro de aplicaciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente lee el registro de aplicación y compara los eventos con las alertas definidas. Cuando el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] encuentra una coincidencia, activa una alerta, que es una respuesta automatizada a un evento. Además de supervisar los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] también puede supervisar las condiciones de rendimiento y los eventos de Instrumental de administración de Windows (WMI).  
   
 Para definir una alerta, debe especificar:  
   

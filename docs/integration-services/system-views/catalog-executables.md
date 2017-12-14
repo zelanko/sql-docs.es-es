@@ -1,5 +1,5 @@
 ---
-title: Catalog.Executables | Documentos de Microsoft
+title: catalog.executables | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa0d2d5df7c3c39b1ad33794ae11c1a34ffe72d4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 490f6ae4a2c849baa8da2ca799b39beac1a4ebda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutables"></a>catalog.executables
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/26/2017
 |execution_id|**bigint**|Identificador único de la instancia de ejecución.|  
 |executable_name|**nvarchar(4000)**|El nombre del ejecutable.|  
 |executable_guid|**nvarchar(38)**|El GUID del ejecutable.|  
-|package_name|**nvarchar (260)**|Nombre del paquete.|  
+|package_name|**nvarchar(260)**|Nombre del paquete.|  
 |package_path|**nvarchar(max)**|La ruta de acceso del paquete.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -46,13 +44,12 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso READ en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Cuando se dispone de permiso para realizar una operación en el servidor, también se dispone de permiso para ver información sobre la operación. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
 ## <a name="remarks"></a>Comentarios  
   
-

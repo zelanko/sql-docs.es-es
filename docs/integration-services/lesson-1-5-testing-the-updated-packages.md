@@ -1,5 +1,5 @@
 ---
-title: 'Paso 5: Probar los paquetes actualizados | Documentos de Microsoft'
+title: 'Paso 5: Probar los paquetes actualizados | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55dae3d13775100b6d443dfc8d97948c3f621c01
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1f2690cf45f8d0791bc70ef77ed0ffdbbf4c10a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-5---testing-the-updated-packages"></a>Lección 1-5-probar los paquetes actualizados
+# <a name="lesson-1-5---testing-the-updated-packages"></a>Lección 1-5: Probar los paquetes actualizados
 Antes de ir a la siguiente lección, en la que creará el paquete de implementación que se utilizará para instalar los paquetes del tutorial en el equipo de destino, debe probar los paquetes. En esta tarea, ejecutará los paquetes, DataTransfer.dtsx y LoadXMLData, que ha agregado al proyecto Deployment Tutorial y ha ampliado con configuraciones.  
   
 Al ejecutar los paquetes, cada ejecutable del paquete se convierte en color verde en cuanto finaliza correctamente. Cuando todos los ejecutables están en verde, el paquete se ha completado correctamente. También puede ver el progreso en la ejecución del paquete en la pestaña **Progreso** .  
@@ -55,4 +52,3 @@ Si los paquetes no se ejecutan correctamente, debe solucionarlos antes de ir a l
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Recopilar una lista para el bucle ForEach con la tarea Script | Documentos de Microsoft
+title: Recopilar una lista para el bucle Para cada uno con la tarea Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 526d0a36a1be48f9437e9a9d9ad2b341d4320bb6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Recopilar una lista para el bucle Foreach con la tarea Script
-  El enumerador de variable para Foreach enumera los elementos de una lista que le se pasa en una variable y realiza las mismas tareas en cada elemento. Puede utilizar código personalizado en una tarea Script para rellenar una lista con este fin. Para obtener más información sobre el enumerador, vea [contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+  El enumerador de variable para Foreach enumera los elementos de una lista que le se pasa en una variable y realiza las mismas tareas en cada elemento. Puede utilizar código personalizado en una tarea Script para rellenar una lista con este fin. Para obtener más información sobre el enumerador, vea [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md).  
   
 > [!NOTE]  
 >  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- En el ejemplo siguiente se utiliza métodos de la **System.IO** espacio de nombres para recopilar una lista de libros de Excel en el equipo que son posteriores o anteriores a un número de días especificado por el usuario en una variable. Busca de forma recursiva en los directorios de la unidad C los archivos que tienen la extensión .xls y examina la fecha en la que cada archivo se modificó por última vez para determinar si el archivo pertenece a la lista. Agrega los archivos correspondientes a una **ArrayList** y guarda el **ArrayList** a una variable para su uso posterior en un contenedor de bucles Foreach. El contenedor de bucles Foreach se configura para utilizar el enumerador de variable para Foreach.  
+ En el ejemplo siguiente se utilizan métodos del espacio de nombres **System.IO** para recopilar una lista de libros de Excel del equipo que son posteriores o anteriores a un número de días especificado por el usuario en una variable. Busca de forma recursiva en los directorios de la unidad C los archivos que tienen la extensión .xls y examina la fecha en la que cada archivo se modificó por última vez para determinar si el archivo pertenece a la lista. Agrega los archivos correspondientes a un objeto **ArrayList** y guarda **ArrayList** en una variable para el uso posterior en un contenedor de bucles Para cada uno. El contenedor de bucles Foreach se configura para utilizar el enumerador de variable para Foreach.  
   
 > [!NOTE]  
->  La variable que se utiliza con el enumerador de Variable de Foreach debe ser de tipo **objeto**. El objeto que se coloca en la variable debe implementar una de las interfaces siguientes: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource**, o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un **matriz** o **ArrayList** es más frecuente. El **ArrayList** requiere una referencia y un **importaciones** instrucción para el **System.Collections** espacio de nombres.  
+>  La variable que utiliza con el enumerador de variable para Para cada uno debe ser del tipo **Object**. El objeto que se coloca en la variable debe implementar una de las interfaces siguientes: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. En general, se usa **Array** o **ArrayList**. **ArrayList** requiere una referencia y una instrucción **Imports** para el espacio de nombres **System.Collections**.  
   
  Puede experimentar con esta tarea utilizando diferentes valores positivos y negativos en la variable de paquete `FileAge`. Por ejemplo, puede escribir 5 para buscar archivos creados en los cinco últimos días o escribir -3 para buscar archivos creados hace más de tres días. Esta tarea puede tardar un minuto o dos en una unidad de disco con un gran número de carpetas donde buscar.  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  Cree una variable de paquete denominada `FileAge` del tipo entero y escriba un valor entero positivo o negativo. Cuando el valor es positivo, el código busca archivos posteriores al número especificado de días; cuando es negativo, archivos anteriores al número especificado de días.  
   
-2.  Cree una variable de paquete denominada `FileList` de tipo **objeto** para recibir la lista de archivos recopilados por la tarea de secuencia de comandos para su uso posterior por Foreach enumerador de Variable.  
+2.  Cree una variable de paquete denominada `FileList` de tipo **Object** para recibir la lista de archivos recopilada por la tarea Script para su uso posterior en el enumerador de variable para Para cada uno.  
   
-3.  Agregar el `FileAge` variable a la tarea de secuencia de comandos **ReadOnlyVariables** propiedad y agregue el `FileList` variable a la **ReadWriteVariables** propiedad.  
+3.  Agregue la variable `FileAge` a la propiedad **ReadOnlyVariables** de la tarea Script y la variable `FileList` a la propiedad **ReadWriteVariables**.  
   
-4.  En el código, importe la **System.Collections** y **System.IO** espacios de nombres.  
+4.  En el código, importe los espacios de nombres **System.Collections** y **System.IO**.  
   
 ### <a name="code"></a>código  
   
@@ -183,7 +180,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    listForEnumerator = new ArrayList();  
+    ArrayList listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -256,8 +253,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Contenedor de bucles foreach](../../integration-services/control-flow/foreach-loop-container.md)   
+ [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md)   
  [configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

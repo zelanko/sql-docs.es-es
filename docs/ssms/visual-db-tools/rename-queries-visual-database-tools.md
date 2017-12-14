@@ -3,8 +3,11 @@ title: Cambiar el nombre de las consultas (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95c9219c6ee69d72900853ef3f63c1db78231bec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5fa7b55c00212c09d3d6203552488a813f33cf8d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rename-queries-visual-database-tools"></a>Cambiar el nombre de las consultas (Visual Database Tools)
-Puede cambiar el nombre de una consulta que no esté abierta para su edición. En el procedimiento siguiente se presupone que la consulta cuyo nombre quiere cambiar está cerrada.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede cambiar el nombre de una consulta que no esté abierta para su edición. En el procedimiento siguiente se presupone que la consulta cuyo nombre quiere cambiar está cerrada.  
   
 ### <a name="to-rename-a-query"></a>Para cambiar el nombre de una consulta  
   

@@ -1,5 +1,5 @@
 ---
-title: "Asignación de tipo de datos en el Asistente de exportación y la importación de SQL Server | Documentos de Microsoft"
+title: "Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4eca10e506087ee5d8106cb05c861c4efa49a65d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6ad6f16e3fd34d259f8dcab86ebcbc715d9fe192
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
  En el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, pero no puede especificar conversiones personalizadas para los valores de columna. Como resultado, la asignación integrada de tipos de datos del origen al destino es muy importante.  
   
 ##  <a name="wizardMapping"></a> ¿Cómo asigna el asistente tipos de datos entre el origen y el destino?
 El asistente usa archivos de asignación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala para asignar tipos de datos de un sistema o versión de base de datos a otro. Por ejemplo, puede asignar de tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipos de datos de Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en las siguientes carpetas.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (para 64 bits)
--   **C:\Program archivos (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (para 32 bits).  
+-   **C:\Archivos de programa\Microsoft SQL Server\130\DTS\MappingFiles\** (para versiones de 64 bits)
+-   **C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (para versiones de 32 bits).  
   
  Si modifica un archivo de asignación existente o agrega un nuevo archivo de asignación a la carpeta, debe cerrar y volver a abrir el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para cargar el archivo de asignación nuevo o modificado.  
  
@@ -85,5 +83,4 @@ A continuación se muestra una parte del archivo de asignación XML que asigna d
 </dtm:DataTypeMappings>  
   
 ```  
-
 

@@ -1,5 +1,5 @@
 ---
-title: "REPLACENULL (expresión de SSIS) | Documentos de Microsoft"
+title: "REPLACENULL (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b99a726d050dc2235f653061295e5f0829e93150
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 20c49b574e16d162a01f8c616df2481bf534292c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (expresión SSIS)
   Devuelve el valor del parámetro de la segunda expresión si el parámetro de la primera expresión es NULL; en caso contrario, devuelve el valor de la primera expresión.  
@@ -62,11 +60,10 @@ REPLACENULL(MyColumn, "1900-01-01")
 ```  
   
 > [!NOTE]  
->  En el ejemplo siguiente se muestra cómo se realizó [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] / [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
+>  En el ejemplo siguiente se muestra cómo se realizó en [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
   
 ```  
 (DT_DBTIMESTAMP) (ISNULL(MyColumn) ? “1900-01-01” : MyColumn)   
 ```  
   
   
-

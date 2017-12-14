@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4: Agregar un destino de archivo sin formato | Documentos de Microsoft'
+title: 'Paso 4: Agregar un destino de archivo plano | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ff4badae70e5762f51003c0d3edae3ad1fb3907b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lección 4-4-agregar un destino de archivo sin formato
+# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lección 4-4: Agregar un destino de archivo plano
 La salida de errores de la transformación Lookup Currency Key redirige a la transformación Script cualquier fila de datos que haya generado un error durante la operación de búsqueda. Para mejorar la información acerca de los errores producidos, la transformación Script ejecuta un script que obtiene una descripción de los errores.  
   
 En esta tarea guardará toda esta información acerca de las filas con errores en un archivo delimitado para su procesamiento posterior. Para guardar las filas con errores, es preciso agregar y configurar un administrador de conexiones de archivos planos para el archivo de texto que contendrá los datos de error y un destino de archivo plano. Al establecer propiedades en el administrador de conexiones de archivos planos que usa el destino de archivo plano, puede especificar la manera en que el destino de archivo plano establece el formato y escribe el archivo de texto. Para obtener más información, vea [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) y [Flat File Destination](../integration-services/data-flow/flat-file-destination.md).  
@@ -73,4 +70,3 @@ En esta tarea guardará toda esta información acerca de las filas con errores e
   
   
   
-

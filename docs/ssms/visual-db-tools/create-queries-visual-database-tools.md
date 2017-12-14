@@ -3,8 +3,11 @@ title: Crear consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 44d4501f760e397a9ce6339a9f898f30cbc181fa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Crear consultas (Visual Database Tools)
-Las consultas le permiten recuperar datos de las tablas y las vistas de su base de datos. El **Diseñador de consultas y vistas**, que permite crear y trabajar con consultas, se compone de cuatro paneles: el [panel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), el [panel Criterios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)y el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las consultas permiten recuperar datos de las tablas y vistas de la base de datos. El **Diseñador de consultas y vistas**, que permite crear y trabajar con consultas, se compone de cuatro paneles: el [panel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), el [panel Criterios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)y el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>Para crear una nueva consulta  
   

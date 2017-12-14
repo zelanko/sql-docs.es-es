@@ -1,5 +1,5 @@
 ---
-title: Destino de Excel | Documentos de Microsoft
+title: Destino de Excel | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ee5bd643443aca136883e94a768fca60960c869
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -216,9 +214,8 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>Vea también  
  [Origen de Excel](../../integration-services/data-flow/excel-source.md)   
- [Integration Services &#40; SSIS &#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   
- [Trabajar con archivos de Excel con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Trabajar con archivos de Excel con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
-

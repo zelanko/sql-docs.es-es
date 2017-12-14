@@ -3,8 +3,11 @@ title: "Opciones (Entorno - Ayuda - página General) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fc966f121da19eb546c9950f2f852d0d37fc9a96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---help---general-page"></a>Opciones (Entorno - Ayuda - Página General)
-Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas internamente en [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o externamente en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas de forma interna en [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o de forma externa en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
   
 > [!NOTE]  
 > Los cambios realizados en las opciones de esta página no tendrán efecto hasta que se reinicie el entorno.  

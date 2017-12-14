@@ -1,5 +1,5 @@
 ---
-title: "Codificación de un proveedor de registro personalizado | Documentos de Microsoft"
+title: Programar un proveedor de registro personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificar un proveedor de registro personalizado
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
   
- Para obtener ejemplos funcionales de proveedores de registro personalizados, consulte [desarrollar una interfaz de usuario para un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ Para obtener ejemplos funcionales de proveedores de registro personalizados, consulte [Desarrollar una interfaz de usuario para un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
   
 ## <a name="configuring-the-log-provider"></a>Configurar el proveedor de registro  
   
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
  Puede invalidar el método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> para almacenar en memoria caché las referencias a la colección de conexiones y a la interfaz de eventos. Puede utilizar estas referencias almacenadas en memoria caché más adelante en otros métodos del proveedor de registro.  
   
 ### <a name="using-the-configstring-property"></a>Utilizar la propiedad ConfigString  
- En tiempo de diseño, un proveedor de registro recibe información de configuración de la **configuración** columna. Esta información de configuración corresponde a la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> del proveedor de registro. De forma predeterminada, esta columna contiene un cuadro de texto del que puede recuperar cualquier información de cadena. La mayoría de los proveedores de registro incluidos con [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilizan esta propiedad para almacenar el nombre del administrador de conexión que el proveedor utiliza para conectarse a un origen de datos externo. Si utiliza el proveedor de registro del <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> propiedad, utilice la <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> método para validar esta propiedad y asegúrese de que la propiedad está establecida correctamente.  
+ En tiempo de diseño, un proveedor de registro recibe información de configuración de la columna **Configuración**. Esta información de configuración corresponde a la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> del proveedor de registro. De forma predeterminada, esta columna contiene un cuadro de texto del que puede recuperar cualquier información de cadena. La mayoría de los proveedores de registro incluidos con [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilizan esta propiedad para almacenar el nombre del administrador de conexión que el proveedor utiliza para conectarse a un origen de datos externo. Si el proveedor de registro utiliza la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> para validarla y asegurarse de que se haya establecido correctamente.  
   
 ### <a name="validating-the-log-provider"></a>Validar el proveedor de registro  
  Puede invalidar el método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> para asegurarse de que el proveedor se ha configurado correctamente y está listo para la ejecución. Normalmente, un nivel mínimo de validación es asegurarse de que se establece <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> correctamente. La ejecución no puede continuar hasta que el proveedor de registro devuelva <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> en el método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>.  
@@ -87,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>Conservar el proveedor de registro  
- Normalmente, no tiene que implementar la persistencia personalizada para un administrador de conexión. Solo se requiere la persistencia personalizada cuando las propiedades de un objeto usan tipos de datos complejos. Para obtener más información, consulte [desarrollar objetos personalizados para Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ Normalmente, no tiene que implementar la persistencia personalizada para un administrador de conexión. Solo se requiere la persistencia personalizada cuando las propiedades de un objeto usan tipos de datos complejos. Para obtener más información, vea [Desarrollar objetos personalizados para Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="logging-with-the-log-provider"></a>Registrar con el proveedor de registro  
  Hay tres métodos en tiempo de ejecución que todos los proveedores de registro deben invalidar: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
@@ -142,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Escribir entradas del registro  
- El <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> método se llama cada vez que un objeto en el paquete genera un evento mediante una llamada a un incendio\<eventos > método en una de las interfaces de eventos. Cada evento se provoca con información sobre su contexto y normalmente un mensaje explicativo. Sin embargo, no todas las llamadas al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> incluyen información de todos los parámetros de método. Por ejemplo, algunos eventos estándar cuyos nombres son autoexplicativos no proporcionan MessageText, y DataCode y DataBytes están pensados para la información complementaria opcional.  
+ Se llama al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> cada vez que un objeto del paquete provoca un evento llamando a un método Fire\<event> en una de las interfaces de eventos. Cada evento se provoca con información sobre su contexto y normalmente un mensaje explicativo. Sin embargo, no todas las llamadas al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> incluyen información de todos los parámetros de método. Por ejemplo, algunos eventos estándar cuyos nombres son autoexplicativos no proporcionan MessageText, y DataCode y DataBytes están pensados para la información complementaria opcional.  
   
  En el ejemplo de código siguiente se implementa el método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> y se escriben los eventos en el flujo que se abrió en la sección anterior.  
   
@@ -203,4 +199,3 @@ End Sub
  [Desarrollar una interfaz de usuario para un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

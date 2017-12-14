@@ -3,8 +3,11 @@ title: Explorador de objetos| Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 41d97e078b7d7faa4cd15e35a2f3de6b438d09c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 05c1ba2d0a8d223ee1d4713613b23d9d07df8241
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="object-explorer"></a>Explorador de objetos
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona características para administrar objetos en las instancias de [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona características para administrar objetos en las instancias de [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Ventajas del Explorador de objetos  
 El Explorador de objetos proporciona un interfaz jerárquica para ver y administrar los objetos de cada instancia de SQL Server. El panel Detalles del Explorador de objetos muestra una vista tabular de los objetos de instancia y la capacidad de buscar objetos específicos. Las funciones del Explorador de objetos varían ligeramente según el tipo de servidor, aunque, por lo general, incluyen características de desarrollo de bases de datos y características de administración para todo tipo de servidores.  

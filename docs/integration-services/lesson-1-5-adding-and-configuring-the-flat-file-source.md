@@ -1,5 +1,5 @@
 ---
-title: 'Paso 5: Agregar y configurar el formato de archivo origen | Documentos de Microsoft'
+title: 'Paso 5: Agregar y configurar el origen de archivo plano | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c56b634f36e69e06e03e0206cd70d841f4682ea
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0afc0fff3b28eea9d510b81f2ec3a6224d493db5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lección 1-5-agregar y configurar el origen de archivo plano
+# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Lección 1-5: Agregar y configurar el origen de archivo plano
 En esta tarea, agregará un origen de archivo plano al paquete y configurará dicho origen. Un origen de archivo plano es un componente de flujo de datos que utiliza metadatos definidos por un administrador de conexiones de archivo plano para especificar el formato y la estructura de los datos que deben extraerse del archivo plano mediante un proceso de transformación. El origen de archivo plano puede configurarse para extraer datos de un único archivo plano utilizando la definición de formato de archivo proporcionada por el administrador de conexiones de archivo plano.  
   
 Para este tutorial, configurará el origen de archivo plano para utilizar el administrador de conexiones **Sample Flat File Source Data** creado con anterioridad.  
@@ -61,4 +58,3 @@ Para este tutorial, configurará el origen de archivo plano para utilizar el adm
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Conectarse a un origen de datos de Excel (SQL Server importar y exportar) | Documentos de Microsoft
+title: "Conectarse a un origen de datos de Excel (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: b4411fdd2337d93f15b149febf845fb7b0762c40
-ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 2aeb225037970b8a77169db18c204ecf6d4c19d6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Excel (importación de SQL Server y Asistente para exportación)
-Este tema muestra cómo conectarse a un **Microsoft Excel** del origen de datos de la **elegir un origen de datos** o **elegir un destino** página de la importación de SQL Server y el Asistente para exportación.
+# <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Excel (Asistente para importación y exportación de SQL Server)
+En este tema se muestra cómo conectarse a un origen de datos de **Microsoft Excel** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server.
 
 En la siguiente captura de pantalla se muestra una conexión de ejemplo a un libro de Microsoft Excel.
 
@@ -35,12 +33,12 @@ En la siguiente captura de pantalla se muestra una conexión de ejemplo a un lib
 ## <a name="options-to-specify"></a>Opciones para especificar
 
 > [!NOTE]
-> Las opciones de conexión para este proveedor de datos son los mismos si Excel es el origen o el destino. Es decir, las opciones que ve son los mismos en ambos el **elegir un origen de datos** y **elegir un destino** páginas del asistente.
+> Las opciones de conexión de este proveedor de datos son las mismas independientemente de si Excel es el origen o el destino. Es decir, las opciones que ve son las mismas en ambas páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
 **Ruta de acceso del archivo Excel**  
- Especifique la ruta de acceso y el nombre del archivo de Excel. Por ejemplo:
+ Especificar la ruta de acceso y el nombre del archivo de Excel. Por ejemplo:
 -   Para un archivo en el equipo local, **C:\\MyData.xlsx**.
--   Un archivo en un recurso compartido de red,  **\\ \\ventas\\base de datos\\Northwind.xlsx**.
+-   Para un archivo en un recurso compartido de red, **\\\\Sales\\Database\\Northwind.xlsx**.
 
 O bien, haga clic en **Examinar**.  
   
@@ -54,34 +52,33 @@ O bien, haga clic en **Examinar**.
 Seleccione la versión de Excel que usa el libro de origen.
 
 > [!IMPORTANT]
-> Tendrá que descargar e instalar archivos adicionales para conectarse a los archivos de Excel. Vea [obtener los archivos que necesita para conectarse a Excel](#officeDownloads) en esta página para obtener más información.
+> Es posible que tenga que descargar e instalar archivos adicionales para conectarse a archivos de Excel. Para obtener más información, vea [Obtener los archivos que necesita para conectarse a Excel](#officeDownloads) en esta página.
 
 **La primera fila tiene nombres de columna**  
-Indicar si la primera fila de datos contiene nombres de columna.
--   Si los datos no contienen nombres de columna, pero se habilita esta opción, el Asistente trata la primera fila de datos de origen como los nombres de columna.
--   Si los datos contienen nombres de columna, pero se deshabilita esta opción, el Asistente trata la fila de nombres de columna como la primera fila de datos.
+Indique si la primera fila de los datos contiene nombres de columna.
+-   Si los datos no contienen nombres de columna, pero se habilita esta opción, el asistente trata la primera fila de los datos de origen como los nombres de columna.
+-   Si los datos contienen nombres de columna, pero se deshabilita esta opción, el asistente trata la fila de nombres de columna como la primera fila de datos.
 
-Si especifica que los datos no tienen nombres de columna, el asistente usa F1, F2 y así sucesivamente, como encabezados de columna.
+Si especifica que los datos no tienen nombres de columna, el asistente usa F1, F2, etc., como encabezados de columna.
 
 ## <a name="i-dont-see-excel-in-the-list-of-data-sources"></a>No veo Excel en la lista de orígenes de datos
-¿Si no ve Excel en la lista de orígenes de datos, se está ejecutando al Asistente de 64 bits? Los proveedores para Excel y Access son normalmente de 32 bits y no están visibles en el Asistente de 64 bits. Ejecute al Asistente de 32 bits en su lugar.
+Si no ve Excel en la lista de orígenes de datos, ¿comprobó que está ejecutando el asistente de 64 bits? Los proveedores para Excel y Access son normalmente de 32 bits y no son visibles en el asistente de 64 bits. Ejecute al asistente de 32 bits en su lugar.
 
 > [!NOTE]
-> Para usar la versión de 64 bits de la importación de SQL Server y el Asistente para exportación, tendrá que instalar a SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
+> Para usar la versión de 64 bits del Asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 ## <a name="officeDownloads"></a>Obtener los archivos que necesita para conectarse a Excel  
-Tendrá que descargar los componentes de conectividad para orígenes de datos de Microsoft Office, como Excel y Access, si no están instaladas. Descargar la versión más reciente de los componentes de conectividad para los archivos de Excel y Access aquí: [redistribuible de 2016 de motor de base de datos Microsoft acceso](https://www.microsoft.com/download/details.aspx?id=54920).
+Es posible que tenga que descargar los componentes de conectividad para orígenes de datos de Microsoft Office, incluidos Excel y Access, si aún no están instalados. Descargue la versión más reciente de los componentes de conectividad para los archivos de Access y Excel aquí: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
-La versión más reciente de los componentes puede abrir archivos creados con versiones anteriores de Excel.
+La versión más reciente de los componentes puede abrir los archivos creados con versiones anteriores de los programas de Excel.
 
-Si el equipo tiene una versión de 32 bits de Office, tendrá que instalar la versión de 32 bits de los componentes, y también tiene que asegurarse de que se ejecuta el paquete en modo de 32 bits.
+Si el equipo tiene una versión de Office de 32 bits, tendrá que instalar la versión de 32 bits de los componentes, y también debe asegurarse de que ejecuta el paquete en el modo de 32 bits.
 
-Si tiene una suscripción de Office 365, asegúrese de que descargue el redistribuible de 2016 de motor de base de datos de acceso y no el Runtime de 2016 de Microsoft Access. Al ejecutar el programa de instalación, verá un mensaje de error que no se puede instalar la descarga en paralelo con componentes de hacer clic para ejecutar Office. Para pasar por alto este mensaje de error, ejecute la instalación en modo silencioso, abra una ventana del símbolo del sistema y ejecuta el. Un archivo ejecutable que se descargó con el `/quiet` cambiar. Por ejemplo:
+Si tiene una suscripción de Office 365, asegúrese de descargar Access Database Engine 2016 Redistributable y no Microsoft Access 2016 Runtime. Al ejecutar el instalador, verá un mensaje de error que indica que no se puede instalar la descarga en paralelo con componentes para hacer clic y ejecutar de Office. Para omitir este mensaje de error, ejecute la instalación en modo silencioso abriendo una ventana del símbolo del sistema y ejecutando el archivo .EXE que descargó con el modificador `/quiet`. Por ejemplo:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="see-also"></a>Vea también
-[Elija un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Elegir un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

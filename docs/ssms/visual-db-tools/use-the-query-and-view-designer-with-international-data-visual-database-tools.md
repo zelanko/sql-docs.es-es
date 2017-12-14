@@ -3,8 +3,11 @@ title: "Usar el Diseñador de consultas y vistas con datos internacionales | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96713730d6dadca1681e571200db51cee8f30af4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utilizar el Diseñador de consultas y vistas con datos internacionales (Visual Database Tools)
-Puede usar el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) con datos en cualquier idioma y en cualquier versión del sistema operativo Windows. Las siguientes instrucciones describen las diferencias que observará y proporcionan información sobre cómo administrar datos en aplicaciones internacionales.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) con datos en cualquier idioma y en cualquier versión del sistema operativo Windows. Las siguientes instrucciones describen las diferencias que observará y proporcionan información sobre cómo administrar datos en aplicaciones internacionales.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Información localizada en los paneles Criterios y SQL  
 Si se está utilizando el panel Criterios para crear una consulta, los datos podrán especificarse en el formato que corresponda a la Configuración regional de Windows para el equipo. Por ejemplo, si está buscando datos, puede especificar los datos en las columnas Criterios mediante el uso de cualquier formato que esté acostumbrado a utilizar, con las siguientes excepciones:  

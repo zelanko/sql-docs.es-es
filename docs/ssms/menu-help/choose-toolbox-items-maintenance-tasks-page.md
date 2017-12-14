@@ -3,8 +3,11 @@ title: "Elegir elementos del cuadro de herramientas (página Tareas de mantenimi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
-Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que muestra el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** se muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que se muestran en el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
   
 ## <a name="options"></a>Opciones  
 La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de información.  

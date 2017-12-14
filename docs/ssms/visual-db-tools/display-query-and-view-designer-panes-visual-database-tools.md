@@ -3,8 +3,11 @@ title: "Mostrar los paneles del Diseñador de consultas y vistas (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c0030d21dc3e2c73702d708964b57cec4fa08a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
-El Diseñador de consultas y vistas se compone de cuatro paneles diferentes: el panel Diagrama, el panel Criterios, el panel SQL y el panel Resultados. Por lo general, cuando se abre una vista o se crea una nueva consulta, se abren todas las ventanas, pero si es necesario abrir alguna de estas ventanas, podrá hacerlo siempre y cuando el Diseñador de consultas y vistas esté abierto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Diseñador de consultas y vistas se compone de cuatro paneles diferentes: los paneles Diagrama, Criterios, SQL y Resultados. Por lo general, cuando se abre una vista o se crea una nueva consulta, se abren todas las ventanas, pero si es necesario abrir alguna de estas ventanas, podrá hacerlo siempre y cuando el Diseñador de consultas y vistas esté abierto.  
   
 ### <a name="to-display-query-and-view-designer-panes"></a>Para mostrar los paneles del Diseñador de consultas y vistas  
   

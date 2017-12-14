@@ -3,8 +3,11 @@ title: Guardar diagramas de base de datos (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b298fde1eb4484fca942ed305e5f93f4e40170b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1cd40d3be8c74afe886983ab74d6241a70cb941e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Guardar diagramas de base de datos (Visual Database Tools)
-Al guardar un diagrama de base de datos, puede guardar todos los cambios realizados, incluidos los efectuados en las tablas, las columnas y otros objetos de base de datos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al guardar un diagrama de base de datos, puede guardar todos los cambios realizados, incluidos los efectuados en las tablas, columnas y otros objetos de base de datos.  
   
 ### <a name="to-save-the-database-diagram"></a>Para guardar el diagrama de base de datos  
   

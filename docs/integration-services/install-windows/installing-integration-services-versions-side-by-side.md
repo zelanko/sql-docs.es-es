@@ -1,5 +1,5 @@
 ---
-title: Instalar Integration Services en paralelo de versiones | Documentos de Microsoft
+title: Instalar versiones de Integration Services en paralelo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,27 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: cbd0a16ec79df06780e4156a23c7b8767a6db5e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installing Integration Services Versions Side by Side (Instalación de versiones de Integration Services en paralelo)
   Puede instalar   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS) side-by-side con versiones anteriores de SSIS. En este tema se describen algunas limitaciones de las instalaciones en paralelo.  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) en paralelo con versiones anteriores de SSIS. En este tema se describen algunas limitaciones de las instalaciones en paralelo.  
   
 ## <a name="designing-and-maintaining-packages"></a>Diseño y mantenimiento de paquetes  
  Para diseñar y mantener paquetes orientados a SQL Server 2016, SQL Server 2014 o SQL Server 2012, use SQL Server Data Tools (SSDT) para Visual Studio 2015. Para obtener SSDT, consulte [Descarga de las SQL Server Data Tools más recientes](../../ssdt/download-sql-server-data-tools-ssdt.md).  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/27/2017
  Puede usar la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de la utilidad **dtexec** o del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar paquetes de Integration Services que se crearon con las versiones anteriores de las herramientas de desarrollo. Cuando estas herramientas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cargan un paquete que se desarrolló en una versión anterior de las herramientas de desarrollo, la herramienta convierte, de forma temporal, el paquete en memoria en el formato de paquete que [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] usa. Si el paquete presenta problemas que impiden realizar una conversión correcta, la herramienta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no podrá ejecutar el paquete hasta que se resuelvan esos problemas. Para obtener más información, vea [Actualizar paquetes de Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
   
-

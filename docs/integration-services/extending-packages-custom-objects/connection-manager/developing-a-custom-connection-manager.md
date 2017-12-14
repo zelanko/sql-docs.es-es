@@ -1,5 +1,5 @@
 ---
-title: Desarrollar un administrador de conexiones personalizado | Documentos de Microsoft
+title: Desarrollar un administrador de conexiones personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - packages [Integration Services], connections
 - custom connection managers [Integration Services], about custom connection managers
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1297f0123a896003e2dbca5f01a05fffbf18b23d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b34531a1c303d28584faea0918ae89994f3df8c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-connection-manager"></a>Desarrollar un administrador de conexiones personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa administradores de conexión para encapsular la información necesaria para conectarse a un origen de datos externo. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye diversos administradores de conexión que admiten conexiones a los orígenes de datos usados con más frecuencia, desde bases de datos empresariales hasta archivos de texto y hojas de cálculo de Excel. Si [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] admite administradores de conexiones y orígenes de datos externos que no cumplen completamente sus requisitos, puede crear un administrador de conexiones personalizado.  
@@ -81,7 +78,6 @@ ms.lasthandoff: 08/03/2017
  [Desarrollar un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Describe cómo programar los enumeradores personalizados.  
   
- [Desarrollar un componente de flujo de datos personalizados](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ [Desarrollar un componente de flujo de datos personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Describe cómo programar orígenes, transformaciones y destinos personalizados del flujo de datos.  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) herramientas de desarrollo y administración | Documentos de Microsoft"
+title: "Herramientas de implementación y administración de Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: b0b765912f6cd4e6128453918d2a30b3ef1e1a63
-ms.contentlocale: es-es
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 07f4bba6b5a5312d62898f26b1ed6965f72cbec2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-ssis-development-and-management-tools"></a>Herramientas de administración y desarrollo de Integration Services (SSIS)
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]incluye dos estudios para trabajar con paquetes:  
+# <a name="integration-services-ssis-development-and-management-tools"></a>Herramientas de implementación y administración de Integration Services (SSIS)
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye dos estudios para trabajar con paquetes:  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para desarrollar los paquetes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que una solución empresarial requiere. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] proporciona el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el que se crean paquetes.  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 10/04/2017
   
 -   Crear una utilidad de implementación que pueda instalar paquetes y sus dependencias en otros equipos.  
   
--   Guardar copias de los paquetes en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos msdb, la [!INCLUDE[ssIS](../includes/ssis-md.md)] almacén de paquetes y el sistema de archivos.  
+-   Guardar copias de paquetes en la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos.  
   
  Para obtener más información sobre [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consulte [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx).  
   
@@ -69,4 +67,3 @@ ms.lasthandoff: 10/04/2017
 -   Ejecutar la Utilidad de ejecución de paquetes para generar una línea de comandos para usarse al ejecutar a utilidad de símbolo del sistema **dtexec** (dtexec.exe).  
   
 -   Importar y exportar paquetes hacia y desde la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos.  
-

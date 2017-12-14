@@ -3,8 +3,11 @@ title: Explorador de soluciones | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c561819367b6e61a1ccfc977a9533efdc95009e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solution-explorer"></a>Explorador de soluciones
-El panel Explorador de soluciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona contenedores denominados proyectos para administrar elementos, tales como scripts de base de datos, consultas, conexiones de datos y archivos. Uno o varios proyectos que están relacionados entre sí se pueden combinar en un contenedor denominado solución.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El panel Explorador de soluciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona contenedores denominados proyectos para administrar elementos, tales como scripts de base de datos, consultas, conexiones de datos y archivos. Uno o varios proyectos que están relacionados entre sí se pueden combinar en un contenedor denominado solución.  
   
 Una solución contiene uno o varios proyectos, además de archivos y metadatos que ayudan a definir la solución como un conjunto. Un proyecto es un conjunto de archivos y metadatos relacionados, por ejemplo, información de conexión. Las soluciones y los proyectos contienen elementos que representan los scripts, las consultas, la información de conexión y los archivos necesarios para crear la solución de base de datos.  
   

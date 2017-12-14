@@ -1,5 +1,5 @@
 ---
-title: Origen de OLE DB | Documentos de Microsoft
+title: Origen OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
   El origen de OLE DB extrae datos de varias bases de datos relacionales compatibles con OLE DB mediante una tabla de base de datos, una vista o un comando SQL. Por ejemplo, el origen de OLE DB puede extraer datos de tablas de bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -132,7 +130,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  La propiedad **CommandTimeout** del origen de OLE DB no está disponible en el **Editor de origen de OLE DB**, pero se puede establecer mediante el **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Abra el Editor de origen de OLE DB (página Administrador de conexiones)  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Abrir el Editor de origen de OLE DB (página Administrador de conexiones)  
   
 1.  Agregue el origen de OLE DB al paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/17/2017
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
->  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, los valores \<valor demasiado grande para mostrarlo > o System.Byte [] Mostrar. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor SQL OLE DB y el último, cuando se utiliza el proveedor Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System.Byte[]. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor SQL OLE DB y el último, cuando se utiliza el proveedor Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
   
@@ -235,8 +233,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>Vea también  
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40; SSIS &#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   
-

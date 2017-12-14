@@ -1,5 +1,5 @@
 ---
-title: Contenedor de bucles for | Documentos de Microsoft
+title: Contenedor de bucles Para | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a3671f4af356741dce481aaafa67023aabbc763
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
   El contenedor de bucles For define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **For** de los lenguajes de programación. En cada repetición del bucle, el contenedor de bucles For evalúa una expresión y repite el flujo de trabajo hasta que la expresión se evalúe como **False**.  
@@ -45,18 +43,18 @@ ms.lasthandoff: 09/26/2017
   
  El siguiente diagrama muestra un contenedor de bucles For con una tarea Enviar correo. Si la expresión de inicialización es `@Counter = 0`, la expresión de evaluación es `@Counter < 4`y la expresión de iteración es `@Counter = @Counter + 1`, el bucle se repetirá cuatro veces y enviará cuatro mensajes de correo electrónico.  
   
- ![Un contenedor de bucles for repite una tarea cuatro veces](../../integration-services/control-flow/media/ssis-forloop.gif "contenedor de bucles For A repite una tarea cuatro veces")  
+ ![Un contenedor de bucles Para repite una tarea cuatro veces](../../integration-services/control-flow/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
   
  Las expresiones deben ser expresiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] válidas.  
   
- Para crear las expresiones de inicialización y asignación, puede utilizar el operador de asignación (=). La gramática de expresiones de Integration Services no admite este operador; solo se puede utilizar en las expresiones de inicialización y asignación del contenedor de bucles For. Cualquier expresión que utiliza el operador de asignación debe tener la sintaxis `@Var = <expression>`, donde **Var** es una variable de tiempo de ejecución y \<expresión > es una expresión que sigue las reglas de la [!INCLUDE[ssIS](../../includes/ssis-md.md)] expresión sintaxis. La expresión puede incluir variables, literales y cualquier operador o función compatible con la gramática de expresiones de SSIS. La evaluación de la expresión debe devolver un tipo de datos que se pueda convertir al tipo de datos de la variable.  
+ Para crear las expresiones de inicialización y asignación, puede utilizar el operador de asignación (=). La gramática de expresiones de Integration Services no admite este operador; solo se puede utilizar en las expresiones de inicialización y asignación del contenedor de bucles For. Cualquier expresión que use el operador de asignación necesita tener la sintaxis `@Var = <expression>`, donde **Var** es una variable de tiempo de ejecución y \<expression> es una expresión que sigue las reglas de sintaxis de la expresión [!INCLUDE[ssIS](../../includes/ssis-md.md)]. La expresión puede incluir variables, literales y cualquier operador o función compatible con la gramática de expresiones de SSIS. La evaluación de la expresión debe devolver un tipo de datos que se pueda convertir al tipo de datos de la variable.  
   
  Un contenedor de bucles For solo puede tener una expresión de evaluación. Esto significa que el contenedor de bucles For ejecutará todos los elementos de flujo de control el mismo número de veces. Como el contenedor de bucles For puede incluir otros contenedores de bucles For, es posible generar bucles anidados e implementar bucles complejos en paquetes.  
   
  Puede establecer una propiedad de transacción en el contenedor de bucles For para definir una transacción para un subconjunto del flujo de control del paquete. De esta manera, puede administrar las transacciones en mayor detalle. Por ejemplo, si un contenedor de bucles For repite un flujo de control que actualiza los datos de una tabla varias veces, puede configurar el bucle For y su flujo de control para que utilicen una transacción, a fin de asegurarse de que si no se actualizan todos los datos correctamente, no se actualice ningún dato. Para más información, vea [Transacciones de Integration Services](../../integration-services/integration-services-transactions.md).  
   
-## <a name="add-iteration-to-a-control-flow-with-the-for-loop-container"></a>Agregar iteración a un flujo de control con el contenedor de bucles for
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]incluye el contenedor de bucles for, un elemento de flujo de control que simplifica la inclusión de bucles que condicionalmente repite un flujo de control en un paquete. Para más información, vea [Contenedor de bucles For](../../integration-services/control-flow/for-loop-container.md).  
+## <a name="add-iteration-to-a-control-flow-with-the-for-loop-container"></a>Agregar iteración a un flujo de control con el contenedor de bucles Para
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para, un elemento de flujo de control que simplifica la inclusión de bucles que repiten condicionalmente un flujo de control en un paquete. Para más información, vea [Contenedor de bucles For](../../integration-services/control-flow/for-loop-container.md).  
   
  El contenedor de bucles For evalúa una condición en cada iteración del bucle y se detiene cuando la condición es false. El contenedor de bucles For incluye expresiones para inicializar el bucle, especificando la condición de evaluación que detiene la ejecución del flujo de control repetido y asignando un valor a una expresión que actualiza el valor con el que se compara la condición de evaluación. Debe proporcionar una condición de evaluación, pero las expresiones de inicialización y asignación son opcionales.  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/26/2017
   
  El contenedor de bucles For puede incluir un flujo de control con varias tareas y otros contenedores. Agregar tareas y contenedores a un contenedor de bucles For es similar a agregarlas a un paquete, salvo que las tareas y contenedores se arrastran al contenedor de bucles For en lugar de al paquete. Si el contenedor de bucles For incluye más de una tarea o contenedor, puede conectarlos mediante restricciones de precedencia, tal y como se hace en un paquete. Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
-## <a name="add-a-for-loop-container-in-a-control-flow"></a>Agregue un contenedor de bucles for en un flujo de control  
+## <a name="add-a-for-loop-container-in-a-control-flow"></a>Agregar un contenedor de bucles Para en un flujo de control  
   
 1.  Agregue el contenedor de bucles For al paquete. Para más información, vea [Agregar o eliminar tareas o contenedores en un flujo de control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 4.  Configure el contenedor de bucles For. Para más información, vea [Configurar un contenedor de bucles For](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
 
-##  <a name="configure-the-for-loop-container"></a>Configurar el contenedor de bucles for
+##  <a name="configure-the-for-loop-container"></a>Configurar el contenedor de bucles Para
 En este procedimiento se describe cómo configurar un contenedor de bucles For mediante el cuadro de diálogo **Editor de bucles For** .  
   
  Para obtener un ejemplo del contenedor de bucles For, vea [Bucles de SSIS que no producen error](http://go.microsoft.com/fwlink/?LinkId=240295) en bimonkey.com.  
@@ -96,7 +94,7 @@ En este procedimiento se describe cómo configurar un contenedor de bucles For m
   
 7.  Haga clic en **Aceptar** para cerrar el **Editor de bucles For**.  
 
-## <a name="for-loop-editor-dialog-box"></a>Cuadro de diálogo Editor de bucles
+## <a name="for-loop-editor-dialog-box"></a>Cuadro de diálogo Editor de bucles Para
 Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** para configurar un bucle que repita un flujo de trabajo hasta que una condición específica se evalúe como False.  
   
  Para obtener información acerca del contenedor de bucles For y cómo utilizarlo en paquetes, vea [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
@@ -120,12 +118,12 @@ Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** par
  **Description**  
  Escriba una descripción del contenedor de bucles For.  
  
-## <a name="use-expressions-with-the-for-loop-container"></a>Usar expresiones con el contenedor de bucles for  
+## <a name="use-expressions-with-the-for-loop-container"></a>Usar expresiones con el contenedor de bucles Para  
  Al configurar el contenedor de bucles For especificando una condición de evaluación, valor de inicialización o valor de asignación, puede usar literales o expresiones.  
   
  Las expresiones pueden incluir variables. La ventaja de usar variables es que se pueden actualizar en tiempo de ejecución, lo que hace que los paquetes sean más flexibles y fáciles de administrar. La longitud máxima de una expresión es 4000 caracteres.  
   
- Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, para una variable denominada **contador**, escriba @Counter en la expresión que usa el contenedor de bucles for. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, para un **contador** variable en el **MyNamespace** espacio de nombres, tipo [@MyNamespace::Counter].  
+ Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, en el caso de una variable llamada **Counter**, escriba @Counter en la expresión utilizada por el contenedor de bucles Para. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, en el caso de una variable **Counter** en el espacio de nombres **MyNamespace**, escriba [@MyNamespace::Counter].  
   
  Las variables que usa el contenedor de bucles For se deben definir en el ámbito del contenedor de bucles For o en el ámbito de cualquier contenedor que se encuentre más arriba en la jerarquía de contenedores de paquetes. Por ejemplo, un contenedor de bucles For puede usar variables definidas en su ámbito y también variables definidas en el ámbito de paquetes. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
@@ -134,7 +132,6 @@ Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** par
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de control](../../integration-services/control-flow/control-flow.md)   
- [Integration Services &#40; SSIS &#41; Expresiones](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

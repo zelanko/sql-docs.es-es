@@ -1,5 +1,5 @@
 ---
-title: Flujo de datos | Documentos de Microsoft
+title: Flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow"></a>Flujo de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  El siguiente diagrama muestra un flujo de datos que tiene un origen, una transformación con una entrada y una salida, y un destino. El diagrama incluye las entradas, salidas y salidas de error además de las columnas de entrada, salida y externas.  
   
- ![Componentes y sus entradas y salidas de flujo de datos](../../integration-services/data-flow/media/mw-dts-dataflow.gif "componentes y sus entradas y salidas de flujo de datos")  
+ ![Componentes de flujo de datos y sus entradas y salidas](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Data flow components and their inputs and outputs")  
   
 ## <a name="data-flow-implementation"></a>Implementación de flujo de datos  
  Agregar una tarea Flujo de datos al flujo de control de un paquete es el primer paso en la implementación de un flujo de datos en un paquete. Un paquete puede incluir varias tareas Flujo de datos, cada una de las cuales tiene su propio flujo de datos. Por ejemplo, si un paquete requiere que los flujos de datos se ejecuten en un orden especificado, o que se realicen otras tareas entre los flujos de datos, debe utilizar una tarea Flujo de datos independiente para cada flujo de datos.  
@@ -224,4 +222,3 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenido relacionado  
  Vídeo, [Rendimiento de Microsoft Connector para Oracle de Attunity (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369), en technet.microsoft.com.  
-

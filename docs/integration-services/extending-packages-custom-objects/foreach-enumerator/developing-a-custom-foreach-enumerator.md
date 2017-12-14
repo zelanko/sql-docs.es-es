@@ -1,5 +1,5 @@
 ---
-title: Desarrollar un enumerador ForEach personalizado | Documentos de Microsoft
+title: Desarrollar un enumerador Para cada uno personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services]
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 193fc8958826ac2bc382d5717a4f72690607a217
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 72173ef704d12154cffe3eabcbe09317f1c40c10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Desarrollar un enumerador foreach personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa enumeradores de foreach para iterar por los elementos de una colección y realizar las mismas tareas para cada elemento. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios enumeradores de foreach que admiten las colecciones de uso más frecuente, como todos los archivos de una carpeta, todas las tablas de una base de datos o todos los elementos de una lista almacenados en una variable de paquete. Si las colecciones y enumeradores foreach que se proporcionan no cumplen completamente sus requisitos, puede crear un enumerador foreach personalizado.  
@@ -39,10 +36,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="in-this-section"></a>En esta sección  
  En esta sección se describe cómo crear, configurar y codificar un enumerador foreach personalizado y su interfaz de usuario personalizada.  
   
- [Crear un enumerador Foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
+ [Crear un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
  Describe cómo crear las clases para un proyecto de enumerador foreach personalizado.  
   
- [Codificar un enumerador Foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
+ [Codificar un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
  Describe cómo implementar un enumerador foreach personalizado invalidando los métodos y propiedades de la clase base.  
   
  [Desarrollar una interfaz de usuario para un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
@@ -74,7 +71,6 @@ ms.lasthandoff: 08/03/2017
  [Desarrollar un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  Describe cómo programar los proveedores de registro personalizados.  
   
- [Desarrollar un componente de flujo de datos personalizados](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ [Desarrollar un componente de flujo de datos personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Describe cómo programar orígenes, transformaciones y destinos personalizados del flujo de datos.  
  
-

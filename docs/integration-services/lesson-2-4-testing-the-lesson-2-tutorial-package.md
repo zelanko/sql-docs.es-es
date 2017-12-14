@@ -1,5 +1,5 @@
 ---
-title: "Paso 4: Probar el paquete del Tutorial lección 2 | Documentos de Microsoft"
+title: "Paso 4: Probar el paquete del tutorial de la lección 2 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b767baea5d3979763b2e7bfb741cb1fd6589ebfd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 26912319fa6a922f0ef3fdc8ac3df090f01accdc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lección 2-4: probar el paquete del Tutorial lección 2
+# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lección 2-4: Probar el paquete del tutorial de la lección 2
 Con el contenedor de bucles Foreach y el administrador de conexiones de archivo plano que ha configurado, el paquete de la lección 2 puede iterarse a través de la colección de 14 archivos planos de la carpeta Datos de ejemplo. Cada vez que se encuentra un archivo que coincide con los criterios de nombre de archivo especificados, el contenedor de bucles Foreach rellena la variable definida por el usuario con el nombre de archivo. Esta variable, a su vez, actualiza la propiedad ConnectionString del administrador de conexiones de archivos planos, y se establece una conexión con el archivo plano nuevo. A continuación, el contenedor de bucles Foreach ejecuta la tarea de flujo de datos sin modificar en los datos del nuevo archivo plano antes de establecer conexión con el siguiente archivo de la carpeta.  
   
 Utilice el procedimiento siguiente para probar la nueva función del bucle que ha agregado al paquete.  
@@ -40,11 +37,11 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 **Flujo de control**  
   
-![Controlar el flujo de paquete](../integration-services/media/task4lesson2control.gif "controlar el flujo del paquete")  
+![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
   
 **Flujo de datos**  
   
-![Flujo de datos en el paquete](../integration-services/media/task9lesson1data.gif "en paquete de flujo de datos")  
+![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>Para probar el paquete del tutorial de la lección 2  
   
@@ -62,5 +59,4 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
   
   
-
 

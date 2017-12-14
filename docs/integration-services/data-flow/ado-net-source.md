@@ -1,5 +1,5 @@
 ---
-title: Origen de ADO NET | Documentos de Microsoft
+title: Origen de ADO NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
   El origen de ADO NET consume datos de un proveedor .NET y hace que los datos estén disponibles para el flujo de datos.  
@@ -128,7 +126,7 @@ ms.lasthandoff: 08/17/2017
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
->  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, los valores \<valor demasiado grande para mostrarlo > o System.Byte [] Mostrar. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y el último, cuando se utiliza el proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+>  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System.Byte[]. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y el último, cuando se utiliza el proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
   
@@ -144,7 +142,7 @@ ms.lasthandoff: 08/17/2017
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
  **Examinar**  
- Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
+ Use el cuadro de diálogo **Abrir** para encontrar el archivo que contiene el texto de la consulta SQL.  
   
 ## <a name="ado-net-source-editor-columns-page"></a>Editor de orígenes de ADO NET (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de orígenes de ADO NET** para asignar una columna de salida a cada columna externa (origen).  
@@ -208,8 +206,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>Vea también  
  [Destino de DataReader](../../integration-services/data-flow/datareader-destination.md)   
- [Destino ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
+ [Destino de ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   
-

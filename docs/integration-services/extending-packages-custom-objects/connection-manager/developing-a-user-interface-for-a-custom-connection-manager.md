@@ -1,5 +1,5 @@
 ---
-title: Desarrollar una interfaz de usuario para un administrador de conexiones personalizado | Documentos de Microsoft
+title: Desarrollar una interfaz de usuario para un administrador de conexiones personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desarrollar una interfaz de usuario para un administrador de conexiones personalizado
   Después de invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar una funcionalidad personalizada, quizá desee crear una interfaz de usuario personalizada para el administrador de conexiones. Si no crea una interfaz de usuario personalizada, los usuarios solo pueden configurar el administrador de conexiones mediante la ventana Propiedades.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/03/2017
  En un proyecto o ensamblado personalizado de la interfaz de usuario, tiene normalmente dos clases, una clase que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> y el formulario Windows Forms que muestra para recopilar información del usuario.  
   
 > [!IMPORTANT]  
->  Después de firmar y generar la interfaz de usuario personalizada e instalarla en la caché de ensamblados global tal y como se describe en [codificar un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), recuerde proporcionar el nombre completo de esta clase en el <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> propiedad de la <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
+>  Después de firmar y generar la interfaz de usuario personalizada e instalarla en la memoria caché de ensamblados global tal y como se describe en [Programar un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), recuerde proporcionar el nombre completo de esta clase en la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
   
 > [!NOTE]  
 >  Muchas de las tareas, orígenes y destinos que se han incluido en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] se usan únicamente con tipos específicos de administradores de conexiones integrados. Por consiguiente, estos ejemplos no se pueden probar con las tareas y componentes integrados.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 >  Quizá no tenga que escribir ningún código para el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> si no se requiere ninguna limpieza cuando el usuario elimina una instancia del administrador de conexiones.  
   
 ### <a name="initializing-the-user-interface"></a>Inicializar la interfaz de usuario  
- En el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, el diseñador proporciona una referencia al administrador de conexiones que se va a configurar para que la clase de interfaz de usuario pueda modificar las propiedades del administrador de conexiones. Como se muestra en el código siguiente, el código se debe almacenar en memoria caché la referencia a la conexión de Manager: para usar más adelante.  
+ En el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, el diseñador proporciona una referencia al administrador de conexiones que se va a configurar para que la clase de interfaz de usuario pueda modificar las propiedades del administrador de conexiones. Como se muestra en el código siguiente, el código tiene que almacenar en memoria caché la referencia al administrador de conexiones para el uso posterior.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  Después de crear la clase de interfaz de usuario que implementa los métodos de la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, debe crear un formulario Windows Forms donde el usuario puede configurar las propiedades del administrador de conexiones.  
   
 ### <a name="initializing-the-user-interface-form"></a>Inicializar el formulario de la interfaz de usuario  
- Al mostrar el formulario personalizado para la edición, puede pasar una referencia al administrador de conexiones que se está editando. Puede pasar esta referencia mediante un constructor personalizado para la clase de formulario, o creando su propio **inicializar** método tal como se muestra aquí.  
+ Al mostrar el formulario personalizado para la edición, puede pasar una referencia al administrador de conexiones que se está editando. Puede pasar esta referencia mediante un constructor personalizado para la clase de formulario o crear su propio método **Initialize** como se muestra aquí.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -299,4 +296,3 @@ private void ConfigureControlsFromConnectionManager()
  [Codificar un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

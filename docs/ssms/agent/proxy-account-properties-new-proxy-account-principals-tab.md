@@ -3,8 +3,11 @@ title: "Propiedades de cuenta de proxy - Nueva cuenta de proxy (pestaña Entidad
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b32006733340f1bc8672a828030f8e7d12897d30
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 60fdffb69df65303117569f7a5ff6b2ea1a2bd94
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy - Nueva cuenta de proxy (pestaña Entidades de seguridad)
-Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en los pasos de trabajo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para ver o cambiar las entidades de seguridad que pueden usar una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en los pasos de trabajo.  
   
 ## <a name="options"></a>Opciones  
 **Entidades de seguridad de la cuenta de proxy**  

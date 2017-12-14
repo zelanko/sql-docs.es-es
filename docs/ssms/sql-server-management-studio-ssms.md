@@ -2,8 +2,12 @@
 title: SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 027258a4da555e2874b6a6e041d703edbe1cb743
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 381f25f48dbbf367b81ba7fdf95cc75f4665cff4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) es un entorno integrado para administrar cualquier infraestructura de SQL. Use SSMS para acceder a todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)], Azure SQL Database y SQL Data Warehouse, y para configurarlos, administrarlos y desarollarlos. SSMS ofrece una única utilidad integral que combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos que permiten a desarrolladores y administradores de bases de datos de todos los niveles acceder a [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].
 
 

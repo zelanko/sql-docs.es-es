@@ -1,5 +1,5 @@
 ---
-title: Catalog.object_versions (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.object_versions (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3ea7c5ae054a002b9bb4f150e60f323ae03d702a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b50e91381182bf2462c8f784a71e811f3bb8efe9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +34,10 @@ ms.lasthandoff: 09/26/2017
 |object_id|**bigint**|Identificador único del objeto.|  
 |object_type|**smallint**|Tipo de objeto. Se mostrará un valor `20` para los proyectos.|  
 |object_name|**sysname(nvarchar(128))**|Nombre del objeto.|  
-|description|**nvarchar (1024)**|Descripción del proyecto.|  
-|created_by|**nvarchar (128)**|Nombre del usuario que agregó el objeto al catálogo.|  
+|description|**nvarchar(1024)**|Descripción del proyecto.|  
+|created_by|**nvarchar(128)**|Nombre del usuario que agregó el objeto al catálogo.|  
 |created_time|**datetimeoffset**|Fecha y hora en que el objeto se agregó al catálogo.|  
-|restored_by|**nvarchar (128)**|Nombre del usuario que restauró el objeto.|  
+|restored_by|**nvarchar(128)**|Nombre del usuario que restauró el objeto.|  
 |last_restored_time|**datetimeoffset**|Fecha y hora en que el objeto se restauró por última vez.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -50,12 +48,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permiso READ en el objeto  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia en el **sysadmin** rol de servidor.  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
   
-

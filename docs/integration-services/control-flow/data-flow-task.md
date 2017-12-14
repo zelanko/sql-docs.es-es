@@ -1,5 +1,5 @@
 ---
-title: Tarea flujo de datos | Documentos de Microsoft
+title: Tarea Flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataflowtask.f1
+f1_keywords: sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
 - data flow task [Integration Services]
 - performance [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3021aa51460aee1d74acdaa383aeca6ca4edd534
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-task"></a>Tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  El siguiente diagrama muestra una tarea Flujo de datos con varios flujos de datos.  
   
- ![Flujos de datos](../../integration-services/control-flow/media/mw-dts-09.gif "flujos de datos")  
+ ![Flujos de datos](../../integration-services/control-flow/media/mw-dts-09.gif "Flujos de datos")  
   
 ## <a name="log-entries"></a>Entradas del registro  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
@@ -125,4 +122,3 @@ ms.lasthandoff: 08/03/2017
  Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com  
   
   
-

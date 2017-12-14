@@ -1,5 +1,5 @@
 ---
-title: Desarrollar un proveedor de registro personalizado | Documentos de Microsoft
+title: Desarrollar un proveedor de registro personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - SSIS packages, log providers
 - custom log providers [Integration Services]
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9d5dee6649539d340fd9954798db913136553aae
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 12f2a2fc7733184a4ddfa28b16eedbd03c4a0c02
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-log-provider"></a>Desarrollar un proveedor de registro personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye completas capacidades de registro que permiten capturar eventos que se producen durante la ejecución del paquete. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios proveedores de registro que permiten crear registros y almacenarlos en formatos como XML, texto, base de datos o en el registro de eventos de Windows. Si los proveedores de registro y los formatos de salida que se proporcionan no cumplen completamente sus requisitos, puede crear un proveedor de registro personalizado.  
@@ -45,11 +42,11 @@ ms.lasthandoff: 08/03/2017
  [Crear un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)  
  Describe cómo crear las clases para un proyecto de proveedor de registro personalizado.  
   
- [Codificación de un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
+ [Codificar un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
  Describe cómo implementar un proveedor de registro personalizado invalidando los métodos y propiedades de la clase base.  
   
  [Desarrollar una interfaz de usuario para un proveedor de registro personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
- Interfaces de usuario personalizadas para proveedores de registro personalizados no se admiten en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Las interfaces de usuario personalizadas para los proveedores de registro personalizados no se admiten en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -77,7 +74,6 @@ ms.lasthandoff: 08/03/2017
  [Desarrollar un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Describe cómo programar los enumeradores personalizados.  
   
- [Desarrollar un componente de flujo de datos personalizados](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ [Desarrollar un componente de flujo de datos personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Describe cómo programar orígenes, transformaciones y destinos personalizados del flujo de datos.  
   
-

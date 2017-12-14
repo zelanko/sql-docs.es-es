@@ -3,8 +3,11 @@ title: "Herramientas Diseñador de consultas y vistas (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b7c1e9721c938395e7df9dc10dbe617c3e95f12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e5e890d0a453291ba71ab06b0489fb3d0c8c216a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Herramientas Diseñador de consultas y vistas (Visual Database Tools)
-Al diseñar una consulta, una vista, una función insertada o un procedimiento almacenado de una sola instrucción, el diseñador que utiliza está formado por cuatro paneles: el panel Diagrama, el panel Criterios, el panel de SQL y el panel Resultados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al diseñar una consulta, vista, función insertada o procedimiento almacenado de una sola instrucción, el diseñador que se usa está formado por cuatro paneles: los paneles Diagrama, Criterios, SQL y Resultados.  
   
 ![Diseñador de consultas](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "Diseñador de consultas")  
   

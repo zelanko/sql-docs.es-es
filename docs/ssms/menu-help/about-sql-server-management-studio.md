@@ -3,8 +3,11 @@ title: Acerca de SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6cfc37d86a22f9da3584f77f0515eae3c699c2ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a6159dfe1ef26fd91fbd1407d8a8ad7da6676148
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="about-sql-server-management-studio"></a>Acerca de SQL Server Management Studio
-Utilice este cuadro de diálogo para ver o copiar información sobre la instalación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Las ediciones de evaluación muestran el número de días que faltan hasta el vencimiento del producto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use este cuadro de diálogo para ver o copiar información sobre la instalación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Las ediciones de evaluación muestran el número de días que faltan hasta el vencimiento del producto.  
   
 ## <a name="options"></a>Opciones  
 **Nombre de componente**  

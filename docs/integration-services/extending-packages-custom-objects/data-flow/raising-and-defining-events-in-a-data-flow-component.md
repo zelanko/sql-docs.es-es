@@ -1,5 +1,5 @@
 ---
-title: Componente de flujo de provocar y definir eventos en datos | Documentos de Microsoft
+title: Provocar y definir eventos en un componente de flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,23 +23,22 @@ helpviewer_keywords:
 - events [Integration Services], raising
 - predefined events [Integration Services]
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a900b27c9056d95fb2284d8ba9d6b09d9c6635b5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fd7e9017dbc3bcfea38ea43b21a9c3a463eb813e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Provocar y definir eventos en un componente de flujo de datos
   Los desarrolladores de componentes pueden producir un subconjunto de los eventos definido en la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> mediante una llamada a los métodos expuestos en la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. También puede definir eventos personalizados con la colección <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> y provocarlos durante la ejecución con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. En esta sección se describe cómo crear y provocar un evento y se proporcionan instrucciones sobre el momento en que se deben provocar los eventos en tiempo de diseño.  
   
-## <a name="raising-events"></a>Generar eventos  
- Componentes provocan eventos mediante el uso de la **activan\<X >** métodos de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaz. Puede provocar eventos durante el diseño y la ejecución de los componentes. Normalmente, en el diseño de los componentes, se llama a los métodos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> durante la validación. Estos eventos muestran mensajes en el **lista de errores** panel de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y proporcionar comentarios a los usuarios del componente cuando un componente está configurado incorrectamente.  
+## <a name="raising-events"></a>Provocar eventos  
+ Los componentes provocan eventos mediante los métodos **Fire\<X>** de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Puede provocar eventos durante el diseño y la ejecución de los componentes. Normalmente, en el diseño de los componentes, se llama a los métodos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> durante la validación. Estos eventos muestran mensajes en el panel **Lista de errores** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y proporcionan información a los usuarios del componente cuando este está configurado incorrectamente.  
   
  Los componentes también pueden provocar eventos en cualquier momento durante la ejecución. Los eventos permiten a los programadores de componentes proporcionar información a los usuarios del componente cuando éste se ejecuta. Es probable que la llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> durante la ejecución produzca un error en el paquete.  
   
@@ -52,10 +49,10 @@ ms.lasthandoff: 08/03/2017
   
  Los eventos personalizados de un componente no se conservan en el paquete XML. Por tanto, se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> durante el diseño y la ejecución para permitir al componente definir los eventos que provoca.  
   
- El *allowEventHandlers* parámetro de la <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> método especifica si el componente permite <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objetos que se crean para el evento. Observe que los objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> son sincrónicos. Por tanto, el componente no reanuda la ejecución hasta que ha terminado de ejecutarse un objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> adjuntado al evento personalizado. Si el *allowEventHandlers* parámetro es **true**, cada parámetro del evento estará disponible para todos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objetos a través de las variables que se crean y rellenan automáticamente mediante la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en tiempo de ejecución.  
+ El parámetro *allowEventHandlers* del método <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> especifica si el componente permite crear objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para el evento. Observe que los objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> son sincrónicos. Por tanto, el componente no reanuda la ejecución hasta que ha terminado de ejecutarse un objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> adjuntado al evento personalizado. Si el parámetro *allowEventHandlers* es **true**, cada parámetro del evento pasa a estar disponible automáticamente para cualquier objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> a través de variables que el entorno de ejecución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] crea y rellena de forma automática.  
   
 ### <a name="raising-a-custom-event"></a>Provocar un evento personalizado  
- Los componentes provocan eventos personalizados mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> y proporcionando el nombre, texto y parámetros del evento. Si el *allowEventHandlers* parámetro es **true**, cualquier <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> que se crean para el evento personalizado son ejecutados por el [!INCLUDE[ssIS](../../../includes/ssis-md.md)] motor en tiempo de ejecución.  
+ Los componentes provocan eventos personalizados mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> y proporcionando el nombre, texto y parámetros del evento. Si el parámetro *allowEventHandlers* es **true**, el entorno de ejecución de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ejecuta los elementos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> creados para el evento personalizado.  
   
 ### <a name="custom-event-sample"></a>Ejemplo de evento personalizado  
  En el ejemplo de código siguiente se muestra un componente que define un evento personalizado durante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> y, a continuación, provoca el evento en tiempo de ejecución mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>.  
@@ -101,8 +98,7 @@ End Sub
 ```  
 
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Controladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Agregar un controlador de eventos a un paquete](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

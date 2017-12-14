@@ -3,8 +3,11 @@ title: "Opciones (Entorno - Ayuda - página En línea) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---help---online-page"></a>Opciones (Entorno - Ayuda - Página En línea)
-El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El cuadro de diálogo **Opciones** permite especificar los orígenes de la Ayuda que se van a usar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  
   
 **Cuando cargue contenido de la Ayuda**  
 Establece el orden en que deben utilizarse los orígenes de la Ayuda F1 y especifica cuáles deben utilizarse.  

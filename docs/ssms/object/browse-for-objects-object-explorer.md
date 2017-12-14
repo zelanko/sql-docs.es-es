@@ -3,8 +3,11 @@ title: Buscar objetos (Explorador de objetos) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e6e65cd3b8a6f9120f2e20872eacb8fd40f2b7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f995e8f75cd25b006c89480bd1f5efece9e08d9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="browse-for-objects-object-explorer"></a>Buscar objetos (Explorador de objetos)
-Muestra una lista de objetos del tipo seleccionado. Seleccione uno o más objetos de esta lista activando la casilla correspondiente. En el cuadro **Buscar objetos** solo se muestran los elementos que corresponden a la acción y para los que se tienen permisos de visualización.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Muestra una lista de objetos del tipo seleccionado. Seleccione uno o más objetos de esta lista activando la casilla correspondiente. En el cuadro **Buscar objetos** solo se muestran los elementos que corresponden a la acción y para los que se tienen permisos de visualización.  
   
 ## <a name="options"></a>Opciones  
 **casilla**  

@@ -1,5 +1,5 @@
 ---
-title: "Paso 1: Copiar el paquete de la lección 1 | Documentos de Microsoft"
+title: "Paso 1: Copiar el paquete de la lección 1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3b601049b8904d439136a1fdc9af7cd84a86b5b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lección 2-1: copiar el paquete de la lección 1
+# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lección 2-1: Copiar el paquete de la lección 1
 En esta tarea, creará una copia del paquete que ha creado en la lección 1, denominado Lesson 1.dtsx. Si no ha completado la lección 1, puede agregar al proyecto el paquete completado de la lección 1 que se incluye con el tutorial y, después, copiar dicho paquete. Usará esta nueva copia en toda la lección 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Para crear el paquete de la lección 2  
@@ -73,4 +70,3 @@ En esta tarea, creará una copia del paquete que ha creado en la lección 1, den
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 2: agregar y configurar el contenedor de bucles Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
-

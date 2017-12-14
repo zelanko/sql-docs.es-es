@@ -1,5 +1,5 @@
 ---
-title: "RTRIM (expresión de SSIS) | Documentos de Microsoft"
+title: "RTRIM (expresión de SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 83882b11a5b0f262857c1d291e8dbefcd22a2531
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: effad67e8221be52ccad428fb151dad548a6a5cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (expresión de SSIS)
   Devuelve una expresión de caracteres después de quitar los espacios finales.  
@@ -73,9 +71,8 @@ RTRIM(@FirstName)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [LTRIM &#40; Expresión de SSIS &#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [RECORTE &#40; Expresión de SSIS &#41;](../../integration-services/expressions/trim-ssis-expression.md)   
- [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [LTRIM &#40;expresión de SSIS&#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
+ [TRIM &#40;expresión de SSIS&#41;](../../integration-services/expressions/trim-ssis-expression.md)   
+ [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

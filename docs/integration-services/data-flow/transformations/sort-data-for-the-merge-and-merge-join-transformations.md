@@ -1,5 +1,5 @@
 ---
-title: "Ordenar los datos para la combinación y transformaciones de combinación de mezcla | Documentos de Microsoft"
+title: "Ordenar datos para las transformaciones Mezclar y Combinación de mezcla | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
   En [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], las transformaciones Mezclar y Combinación de mezcla requieren datos ordenados en sus entradas. Los datos de entrada deben estar ordenados físicamente, y se deben establecer opciones de ordenación en las salidas y en las columnas de salida del origen o en la transformación de nivel superior. Si las opciones de ordenación indican que los datos están ordenados, pero en realidad no lo están, los resultados de la operación de mezcla o combinación de mezcla son impredecibles.  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  Haga clic en la pestaña **Propiedades de entrada y salida** .  
   
-6.  Haga clic en  **\<nombre de componente > salida**y establezca el **IsSorted** propiedad **True**.  
+6.  Haga clic en **Salida de \<nombre del componente>** y establezca la propiedad **IsSorted** en **True**.  
   
     > [!NOTE]  
     >  Si establece manualmente la propiedad **IsSorted** de la salida en **True** y los datos no están ordenados, es posible que falten datos o que haya comparaciones de datos no válidas en la transformación de nivel inferior Mezclar o Combinación de mezcla al ejecutar el paquete.  
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Transformación combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

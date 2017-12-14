@@ -1,5 +1,5 @@
 ---
-title: Control de errores en datos | Documentos de Microsoft
+title: Control de errores en los datos| Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
   Cuando un componente de flujo de datos aplica una transformación a los datos de columna, extrae datos de orígenes o carga datos en destinos, pueden producirse errores. Los errores con frecuencia se producen debido a valores de datos inesperados. Por ejemplo, una conversión de datos genera un error porque una columna contiene una cadena en lugar de un número, una inserción en una base de datos genera un error porque los datos corresponden a una fecha y la columna tiene un tipo de datos numéricos, o una expresión genera un error al evaluarse porque el valor de la columna es cero, lo que da como resultado una operación matemática no válida.  
@@ -57,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  El siguiente diagrama muestra un flujo de datos simple que incluye una salida de error.  
   
- ![Flujo de datos con salida de error](../../integration-services/data-flow/media/mw-dts-11.gif "de flujo de datos con salida de error")  
+ ![Flujo de datos con salida de error](../../integration-services/data-flow/media/mw-dts-11.gif "Data flow with error output")  
   
  Para obtener más información, vea [Flujo de datos](../../integration-services/data-flow/data-flow.md) y [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
 
-## <a name="configure-error-output-dialog-box"></a>Configurar el cuadro de diálogo de salida de Error
+## <a name="configure-error-output-dialog-box"></a>Cuadro de diálogo Configurar la salida de errores
 Use el cuadro de diálogo **Configurar la salida de errores** para configurar las opciones de control de errores para las transformaciones de flujo de datos que admiten salida de errores.  
   
  Para obtener más información sobre cómo trabajar con salidas de error, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
@@ -154,10 +151,9 @@ Use el cuadro de diálogo **Configurar la salida de errores** para configurar la
 
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   
- [Transformar datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [Transformación de datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Conectar componentes con rutas de acceso](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
- [Tarea flujo de datos](../../integration-services/control-flow/data-flow-task.md)   
+ [Tarea Flujo de datos](../../integration-services/control-flow/data-flow-task.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -3,8 +3,11 @@ title: Ventana Propiedades (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="properties-window-management-studio"></a>Ventana Propiedades (Management Studio)
-Utilice esta ventana para ver las propiedades de los elementos seleccionados. También puede utilizarla para ver las propiedades de archivos, proyectos y soluciones. Para obtener acceso a esta ventana, haga clic en **Ventana Propiedades** en el menú **Ver** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta ventana para ver las propiedades de los elementos seleccionados. También puede utilizarla para ver las propiedades de archivos, proyectos y soluciones. Para obtener acceso a esta ventana, haga clic en **Ventana Propiedades** en el menú **Ver** .  
   
 La ventana de propiedades muestra distintos tipos de campos de edición, dependiendo de los requisitos de cada propiedad. Las propiedades atenuadas son de solo lectura.  
   

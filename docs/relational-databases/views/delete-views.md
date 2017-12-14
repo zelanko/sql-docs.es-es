@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 3.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias de *view_name***. Esto mostrará todos los objetos que dependen de la vista y todos los objetos de los que depende la vista.  
+    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias** de *view_name*. Esto mostrará todos los objetos que dependen de la vista y todos los objetos de los que depende la vista.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

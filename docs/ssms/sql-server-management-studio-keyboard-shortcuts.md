@@ -2,9 +2,12 @@
 title: "SQL Server Management Studio métodos abreviados de teclado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b42d5ff8c209d4df06abbf8c85b0edee8883a868
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Métodos abreviados de teclado de SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , con métodos abreviados de teclado basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , con métodos abreviados de teclado basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  
   
 > [!NOTE]  
 >  Para que solo aparezcan los títulos, haga clic en **Contraer todo** en la parte superior de esta página.  

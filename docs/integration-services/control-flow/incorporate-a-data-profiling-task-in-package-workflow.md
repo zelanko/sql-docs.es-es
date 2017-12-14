@@ -1,5 +1,5 @@
 ---
-title: "Incorporar una tarea de flujo de trabajo de paquete de generación de perfiles de datos | Documentos de Microsoft"
+title: "Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling task [Integration Services], using output in workflow
+helpviewer_keywords: Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3712f432207551dac0d14666b01ad8d8e2f8fc0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -93,7 +90,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Agregue un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al paquete. Configure dicho administrador de conexiones de forma que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) y se conecte a una instancia disponible de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     De forma predeterminada, el Administrador de conexiones tiene el siguiente nombre: \<nombre del servidor >. AdventureWorks1.  
+     De forma predeterminada, el administrador de conexiones tiene el nombre siguiente: \<nombre de servidor>.AdventureWorks1.  
   
 3.  Agregue un administrador de conexiones de archivos al paquete. Configure este administrador de conexiones con objeto de crear el archivo de resultados para la tarea de generación de perfiles de datos.  
   
@@ -340,4 +337,3 @@ ms.lasthandoff: 08/03/2017
  [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md)  
   
   
-

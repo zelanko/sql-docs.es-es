@@ -1,5 +1,5 @@
 ---
-title: Origen de CDC | Documentos de Microsoft
+title: Origen CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/17/2017
   
 -   Nombre de la variable de paquete de estado CDC basado en lo que determina el intervalo de procesamiento CDC. El origen CDC no modifica esa variable.  
   
- Los datos devueltos por el origen de CDC están el mismo que el devuelto por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciones CDC **cdc.fn_cdc_get_all_changes_\<nombre de instancia de captura >** o **cdc.fn_cdc_get_net_changes_\<nombre de instancia de captura >** (si está disponible). La única adición opcional es la columna **__$initial_processing** , que indica si el intervalo de procesamiento actual puede solaparse con una carga inicial de la tabla. Para obtener más información acerca del procesamiento inicial, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ Los datos devueltos por el origen CDC son los mismos que los devueltos por las funciones CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (si estuvieran disponibles). La única adición opcional es la columna **__$initial_processing** , que indica si el intervalo de procesamiento actual puede solaparse con una carga inicial de la tabla. Para obtener más información acerca del procesamiento inicial, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  El origen de CDC tiene una salida normal y una salida de error.  
   
@@ -86,20 +84,20 @@ use <cdc-enabled-database-name>
   
  donde:  
   
--   \<CDC-habilitado-base de datos-name > es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos que contiene las tablas de cambios.  
+-   \<cdc-enabled-database-name> es del nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene las tablas de cambios.  
   
--   \<valor-from-state-cs > es el valor que aparece en la variable de estado CDC como CS /\<valor-from-state-cs > / (CS representa para actual procesamiento-al inicio del intervalo).  
+-   \<value-from-state-cs> es el valor que aparece en la variable de estado CDC como CS/\<value-from-state-cs>/ (CS representa el inicio del intervalo de procesamiento actual [Current-processing-range-Start]).  
   
--   \<valor de estado ce > es el valor que aparece en la variable de estado CDC como CE /\<valor-from-state-cs > / (CE representa para actual procesamiento-al final del intervalo).  
+-   \<value-from-state-ce> es el valor que aparece en la variable de estado CDC como CE/\<value-from-state-cs>/ (CE representa el final del intervalo de procesamiento actual [Current-processing-range-End]).  
   
--   \<modo > son los modos de procesamiento de CDC. Los modos de procesamiento tienen uno de los siguientes valores **Todo**, **Todo con valores antiguos**, **Neto**, **Neto con máscara de actualización**, **Neto con combinación**.  
+-   \<mode> son los modos de procesamiento de CDC. Los modos de procesamiento tienen uno de los siguientes valores **Todo**, **Todo con valores antiguos**, **Neto**, **Neto con máscara de actualización**, **Neto con combinación**.  
   
  Este script ayuda a aislar los problemas reproduciéndolos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], donde resulta sencillo reproducir e identificar los errores.  
   
 #### <a name="sql-server-error-message"></a>Mensaje de error de SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]podría devolver el mensaje siguiente:  
   
- **Se ha especificado un número insuficiente de argumentos para el procedimiento o función cdc.fn_cdc_get_net_changes_\<... >.**  
+ **Se ha especificado un número insuficiente de argumentos para el procedimiento o función cdc.fn_cdc_get_net_changes_ \<..>.**  
   
  Este error indica que falta un argumento. Indica que los valores de LSN inicial o final de la variable de estado CDC no son válidos.  
   
@@ -110,7 +108,7 @@ use <cdc-enabled-database-name>
   
 -   [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de CDC &#40; Página columnas &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Editor de origen de CDC &#40;página Columnas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Editor de origen de CDC &#40;página Salida de error&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -155,7 +153,7 @@ use <cdc-enabled-database-name>
  **Instancia de captura**  
  Seleccione o escriba el nombre de la instancia de captura CDC con la tabla CDC que se va a leer.  
   
- Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre de instancia de captura predeterminado para una tabla [esquema]. [tabla] es \<esquema > _\<tabla >, pero que pueden ser diferentes nombres de instancia de captura reales en uso. La tabla real que se lee desde es la tabla CDC **cdc.\< instancia de captura > _CT**.  
+ Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [esquema].[tabla] es \<schema>_\<table>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real de la que se lee es la tabla CDC **cdc.\<capture-instance>_CT**.  
   
  **Modo de procesamiento CDC**  
  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
@@ -166,7 +164,7 @@ use <cdc-enabled-database-name>
   
 -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
--   **Neto con máscara de actualización**: este modo es similar al modo neto normal pero también agrega columnas booleanas con el patrón de nombre **__ $\<nombre de columna >\__Changed** que indica la fila de cambio de las columnas cambiadas en la actual.  
+-   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
   
 -   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   
@@ -256,4 +254,3 @@ use <cdc-enabled-database-name>
 -   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), en mattmasson.com.  
   
   
-

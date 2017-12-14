@@ -3,8 +3,11 @@ title: Reconciliar los cambios realizados por varios usuarios (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00eeab1dbe74e77189136b200b4f1ddfe50e218b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar los cambios realizados por varios usuarios (Visual Database Tools)
-En un entorno multiusuario, varios usuarios pueden realizar cambios en el mismo objeto al mismo tiempo. Esto puede ocurrir cuando se trabaja en la estructura del objeto en los diseñadores de diagramas de base de datos o tablas, o con los valores de los resultados que devuelve el panel Resultados del Diseñador de consultas y vistas. Esto puede ocasionar conflictos que es necesario solucionar.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En un entorno multiusuario, varios usuarios pueden realizar cambios en el mismo objeto al mismo tiempo. Esto puede ocurrir cuando se trabaja en la estructura del objeto en los diseñadores de diagramas de base de datos o tablas, o con los valores de los resultados que devuelve el panel Resultados del Diseñador de consultas y vistas. Esto puede ocasionar conflictos que es necesario solucionar.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflictos en los diseñadores de diagramas de base de datos o tablas  
 Por ejemplo, otro usuario podría eliminar o cambiar el nombre de una tabla mientras está trabajando con esa tabla o con una tabla relacionada en el Diseñador de tablas. Al intentar guardar la tabla, el [Cuadro de diálogo Se han detectado cambios en la base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) le informará que la base de datos se actualizó desde que se abrió la tabla.  

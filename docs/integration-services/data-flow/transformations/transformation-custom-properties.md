@@ -1,12 +1,14 @@
 ---
-title: "Propiedades personalizadas de transformación | Documentos de Microsoft"
+title: "Propiedades personalizadas de transformación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
-  Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
+  Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
  En este tema se enumeran y describen las propiedades personalizadas de las diversas transformaciones de flujo de datos. Para obtener información sobre las propiedades comunes a la mayor parte de los objetos de flujo de datos, vea [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los siguientes caracteres: espacio (), comas (,), punto (.), punto y coma (;), dos puntos (:), guión (-), doble comillas rectas ("), marca de comillas rectas ('), marca" y "comercial (&), la barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), abrir paréntesis ((), cerrar paréntesis ()), menor que (\<), mayor que (>), abrir corchete ([]), corchete de cierre (]), llave ({}), Cerrar llave (}), canalización (&#124;), de apertura de cierre signo de almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de **True** está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
 |MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
 |MinSimilarity|Doble|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es **True**.|  
-|Delimiters|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los siguientes caracteres: espacio (), coma (,), semicolon(;) de punto (.), guión (-) de dos puntos (:), doble comillas rectas ("), marca de comillas rectas ('), marca" y "comercial (&), la barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), cerrar paréntesis ()), menor que (\<), mayor que (>), abrir corchete ([]), corchete de cierre (]), llave ({}), Cerrar llave (}), canalización (&#124;) de apertura de cierre. almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimiters|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es **True**.|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de **True** está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer con el **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
@@ -633,7 +635,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>Vea también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Propiedades de ruta de acceso](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Propiedades del flujo de datos que se pueden establecer mediante expresiones](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [Propiedades de la ruta de acceso](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

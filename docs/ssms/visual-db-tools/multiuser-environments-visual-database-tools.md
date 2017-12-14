@@ -3,8 +3,11 @@ title: Entornos multiusuario (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 751293d6a9993d8d68650857e62e0e589850f3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b698bbf209cc7f30c6b5c13b90104e1cadd752be
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Entornos multiusuario (Visual Database Tools)
-Un entorno multiusuario es un entorno al que otros usuarios pueden conectarse y en el que pueden realizar cambios en la misma base de datos en la que usted está trabajando. Como resultado, es posible que varios usuarios estén trabajando con los mismos objetos de base de datos a la vez. De este modo, en un entorno multiusuario es posible que la base de datos se vea afectada por los cambios realizados por otros usuarios mientras está trabajando y viceversa.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un entorno multiusuario es un entorno al que otros usuarios pueden conectarse y en el que pueden realizar cambios en la misma base de datos en la que usted está trabajando. Como resultado, es posible que varios usuarios estén trabajando con los mismos objetos de base de datos a la vez. De este modo, en un entorno multiusuario es posible que la base de datos se vea afectada por los cambios realizados por otros usuarios mientras está trabajando y viceversa.  
   
 Una cuestión clave al trabajar con bases de datos en un entorno multiusuario son los permisos de acceso. Los permisos de que dispone para la base de datos determinan el alcance del trabajo que puede realizar con la base de datos. Por ejemplo, para realizar cambios en objetos en una base de datos, debe disponer de los permisos de escritura apropiados para la base de datos. Para obtener más información acerca de los permisos en la base de datos, vea la documentación de la base de datos. Para más información, consulte [Permisos y Visual Database Tools &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md).  
   

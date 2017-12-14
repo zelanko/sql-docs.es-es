@@ -1,5 +1,5 @@
 ---
-title: "Paso 2: Comprobar el paquete de implementación | Documentos de Microsoft"
+title: "Paso 2: Comprobar el conjunto de implementación | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20d8b11e28f7e26e5b61662d8340ab6dbfcc0b95
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 7519674b77c6fcbf94c49f677e6ec1cf6c936a38
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lección 2-2-comprobar el paquete de implementación
+# <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lección 2-2: Comprobar el conjunto de implementación
 En la lección 1, ha creado el proyecto Deployment Tutorial y le ha agregado paquetes y archivos auxiliares; en la tarea anterior, ha creado una utilidad de implementación para el proyecto.  
   
 En esta tarea, comprobará el contenido del paquete de implementación. El paquete de implementación es la carpeta que copiará en el equipo de destino y que usará para instalar paquetes. Si ha usado el valor predeterminado, bin\Deployment, como ubicación de la utilidad de implementación, el paquete de implementación está en la carpeta Bin\Deployment dentro de la carpeta Deployment Tutorial del proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -69,4 +66,3 @@ En esta tarea, comprobará el contenido del paquete de implementación. El paque
   
   
   
-

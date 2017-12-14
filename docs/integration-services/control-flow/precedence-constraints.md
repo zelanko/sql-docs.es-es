@@ -1,5 +1,5 @@
 ---
-title: Las restricciones de precedencia | Documentos de Microsoft
+title: Restricciones de precedencia | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.  
   
  Una restricción de precedencia vincula dos ejecutables: el ejecutable de precedencia y el ejecutable restringido. El ejecutable de precedencia se ejecuta antes del ejecutable restringido y el resultado de la ejecución del ejecutable de precedencia puede determinar si se ejecuta el ejecutable restringido. El siguiente diagrama muestra dos ejecutables vinculados por una restricción de precedencia.  
   
- ![Ejecutables conectados mediante una restricción de precedencia](../../integration-services/control-flow/media/ssis-pcsimple.gif "ejecutables conectados mediante una restricción de precedencia")  
+ ![Ejecutables conectados mediante una restricción de precedencia](../../integration-services/control-flow/media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
   
  En un flujo de control lineal, es decir, un flujo sin bifurcaciones, las restricciones de precedencia controlan ellas mismas la secuencia en que se ejecutan las tareas. Si un flujo de control se bifurca, el motor de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] determina el orden de ejecución entre las tareas y contenedores que siguen inmediatamente la bifurcación. El motor de tiempo de ejecución también determina el orden de ejecución entre los flujos de trabajo no conectados en un flujo de control.  
   
  La arquitectura de contenedor anidado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] habilita todos los contenedores, salvo el contenedor del host de la tarea que encapsula una sola tarea, para incluir otros contenedores, cada uno de los cuales tiene su propio flujo de control. Los contenedores de bucles For, de bucles Foreach y de secuencia pueden incluir varias tareas y otros contenedores, que a su vez pueden incluir varias tareas y contenedores. Por ejemplo, un paquete con una tarea Script y un contenedor de secuencias tiene una restricción de precedencia que vincula la tarea Script y el contenedor de secuencias. El contenedor de secuencias incluye tres tareas Script y las restricciones de precedencia vinculan las tres tareas Script en un flujo de control. El siguiente diagrama muestra las restricciones de precedencia en un paquete con dos niveles de anidamiento.  
   
- ![Restricciones de precedencia en un paquete](../../integration-services/control-flow/media/mw-dts-12.gif "restricciones de precedencia en un paquete")  
+ ![Restricciones de precedencia en un paquete](../../integration-services/control-flow/media/mw-dts-12.gif "Precedence contraints in a package")  
   
  Dado que el paquete se encuentra en la parte superior de la jerarquía de contenedores de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , no se pueden vincular varios paquetes mediante restricciones de precedencia. Sin embargo, puede agregar una tarea Ejecutar paquete a un paquete y vincular indirectamente otro paquete en el flujo de control.  
   
@@ -168,7 +165,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Establezca el valor de una restricción de precedencia con el menú contextual  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Establecer el valor de una restricción de precedencia con el menú contextual  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -187,11 +184,11 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
  En la ilustración siguiente, la tarea A y la tarea B están vinculadas por una restricción de precedencia que usa un resultado de ejecución y una expresión. El valor de restricción se establece en **Success** y la expresión es  `@X >== @Z`. La tarea B, la tarea restringida, se ejecuta solamente si la tarea A se completa correctamente y el valor de la variable **X** es mayor o igual al valor de la variable **Z**.  
   
- ![Restricción de precedencia entre dos tareas](../../integration-services/control-flow/media/mw-dts-03.gif "restricción de precedencia entre dos tareas")  
+ ![Restricciones de precedencia entre dos tareas](../../integration-services/control-flow/media/mw-dts-03.gif "Precedence constraint between two tasks")  
   
  Los ejecutables también se pueden vincular mediante varias restricciones de precedencia que contienen diferentes expresiones. Por ejemplo, en la siguiente ilustración, las tareas B y C están vinculadas a la tarea A por restricciones de precedencia que usan resultados de ejecución y expresiones. Los dos valores de restricción se establecen en **Success**. Una restricción de precedencia incluye la expresión `@X >== @Z`, y la otra restricción de precedencia la expresión `@X < @Z`. Según los valores de la variable **X** y la variable **Z**, se ejecuta la tarea C o la tarea B.  
   
- ![Expresiones en restricciones de precedencia](../../integration-services/control-flow/media/mw-dts-04.gif "expresiones en restricciones de precedencia")  
+ ![Expresiones en restricciones de precedencia](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions on precedence constraints")  
   
  Puede agregar o modificar una expresión mediante el **Editor de restricciones de precedencia** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o en la ventana Propiedades que proporciona [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Sin embargo, la ventana Propiedades no proporciona ninguna comprobación de la sintaxis de la expresión.  
   
@@ -215,7 +212,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
  
-### <a name="combine-execution-values-and-expressions"></a>Combinar expresiones y valores de ejecución  
+### <a name="combine-execution-values-and-expressions"></a>Combinar valores de ejecución y expresiones  
  La siguiente tabla describe los efectos de combinar una restricción de valor de ejecución y una expresión en una restricción de precedencia.  
   
 |Operación de evaluación|La restricción se evalúa como|La expresión se evalúa como|El ejecutable restringido se ejecuta|  
@@ -239,7 +236,7 @@ Una restricción de precedencia conecta dos ejecutables: dos tareas, dos contene
   
  El ensamblaje de escenarios de restricciones complejas mediante la agrupación de restricciones le permite implementar un flujo de control complejo en paquetes. Por ejemplo, en la siguiente ilustración, la tarea D se vincula a la tarea A mediante una restricción **Success** , la tarea D se vincula a la tarea B mediante una restricción **Failure** , y la tarea D se vincula a la tarea C mediante una restricción **Success** . Las restricciones de precedencia entre la tarea D y la tarea A, entre la tarea D y la tarea B, y entre la tarea D y la tarea C participan en una relación lógica *and* . Por lo tanto, para que la tarea D se ejecute, la tarea A se debe ejecutar correctamente, la tarea B debe sufrir un error en su ejecución, y la tarea C se debe ejecutar correctamente.  
   
- ![Las tareas vinculadas por las restricciones de precedencia](../../integration-services/control-flow/media/precedenceconstraints.gif "las tareas vinculadas por las restricciones de precedencia")  
+ ![Tareas vinculadas por las restricciones de precedencia](../../integration-services/control-flow/media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
   
 ### <a name="logicaland-property"></a>Propiedad LogicalAnd  
  Si una tarea o contenedor tiene varias restricciones, la propiedad **LogicalAnd** especifica si se evalúa una restricción de precedencia individualmente o en conjunto con otras restricciones.  
@@ -272,4 +269,3 @@ Cuando se usa por primera vez el Diseñador [!INCLUDE[ssIS](../../includes/ssis-
 4.  En la superficie de diseño de la pestaña **Flujo de control** , haga clic en la tarea o contenedor y arrastre su conector al ejecutable al que desea aplicar la restricción de precedencia.  
   
 5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
-

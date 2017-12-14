@@ -3,8 +3,11 @@ title: "Crear consultas de inserción de resultados (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7728baf26863015b323cd3841b0f9dfb898ea897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddef4fd36ca72c473b480c31e7cd46c7e710d295
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Crear consultas de inserción de resultados (Visual Database Tools)
-Puede copiar filas de una tabla a otra o dentro de una misma tabla utilizando una consulta de inserción de resultados. Por ejemplo, en una tabla `titles` , puede utilizar una consulta de inserción de resultados para copiar la información de todos los títulos de una editorial en una segunda tabla y proporcionar esa tabla a la editorial. Una consulta de inserción de resultados es similar a una consulta de creación de tabla, con la diferencia de que la primera copia las filas en una tabla existente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede copiar filas de una tabla a otra o dentro de una misma tabla mediante una consulta de inserción de resultados. Por ejemplo, en una tabla `titles` , puede utilizar una consulta de inserción de resultados para copiar la información de todos los títulos de una editorial en una segunda tabla y proporcionar esa tabla a la editorial. Una consulta de inserción de resultados es similar a una consulta de creación de tabla, con la diferencia de que la primera copia las filas en una tabla existente.  
   
 > [!TIP]  
 > También puede copiar filas de una tabla a otra mediante las funciones de cortar y pegar. Cree una consulta para cada tabla y ejecútelas. Copie las filas que desee de una cuadrícula de resultados a la otra.  

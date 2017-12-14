@@ -1,5 +1,5 @@
 ---
-title: Analysis Services tarea ejecutan DDL | Documentos de Microsoft
+title: Tarea Ejecutar DDL de Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 908b95b4020cb20e02bb2d196d95860ddca27049
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services
   La tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta instrucciones del lenguaje de definición de datos (DDL) que pueden crear, quitar o modificar modelos de minería de datos y objetos multidimensionales, como cubos y dimensiones. Por ejemplo, una instrucción DDL puede crear una partición en el cubo de **Adventure Works** o eliminar una dimensión de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], la base de datos de ejemplo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -257,7 +255,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Opciones estáticas  
  **Conexión**  
- Seleccione un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto o un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrador de conexiones en la lista, o haga clic en \< **nueva conexión...** > y use la **Agregar administrador de conexión de Analysis Services** cuadro de diálogo para crear una nueva conexión.  
+ Seleccione un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la lista, o bien haga clic en \<**Nueva conexión…**> y use el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** para crear una conexión.  
   
  **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -278,14 +276,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="sourcetype--file-connection"></a>SourceType = Conexión de archivos  
  **Source**  
- Seleccione una conexión de archivos en la lista o haga clic en \< **nueva conexión...** > y use la **File Connection Manager** cuadro de diálogo para crear una nueva conexión.  
+ Seleccione una conexión de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> y use el cuadro de diálogo **Administrador de conexiones de archivos** para crear una conexión.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Source**  
- Seleccione una variable en la lista o haga clic en \< **nueva variable...** > y use la **agregar Variable** cuadro de diálogo para crear una nueva variable.  
+ Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> y use el cuadro de diálogo **Agregar variable** para crear una variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
-

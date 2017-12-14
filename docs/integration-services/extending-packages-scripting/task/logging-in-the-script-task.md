@@ -1,5 +1,5 @@
 ---
-title: Registro en la tarea Script | Documentos de Microsoft
+title: Registrar en la tarea Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SQL Server Integration Services packages, logs
 - SSIS packages, logs
@@ -26,25 +23,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3f656f97ab20e1692fdfa3fe6996bfa1d36d5256
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-the-script-task"></a>Registrar en la tarea Script
-  El uso del registro en los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite registrar información detallada sobre el progreso, los resultados y los problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Puede utilizar la tarea de secuencia de comandos la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> método de la **Dts** objeto que se va a registrar datos definidos por el usuario. Si está habilitado el registro y la **ScriptTaskLogEntry** se selecciona el evento para su registro en el **detalles** pestaña de la **configurar registros de SSIS** cuadro de diálogo, una sola llamada a la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> método almacena la información de eventos en todos los proveedores de registro configurados para la tarea.  
+  El uso del registro en los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite registrar información detallada sobre el progreso, los resultados y los problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. La tarea Script puede utilizar el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> del objeto **Dts** para registrar datos definidos por el usuario. Si el registro está habilitado y se selecciona el evento **ScriptTaskLogEntry** para el registro en la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS**, una sola llamada al método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> almacena la información de eventos en todos los proveedores de registro configurados para la tarea.  
   
 > [!NOTE]  
->  Si bien puede realizar registros directamente desde la tarea Script, puede que le interese implementar los eventos en lugar de registrarlos. Al utilizar eventos, no solo puede habilitar el registro de mensajes de eventos, pero también puede responder al evento con el valor predeterminado o controladores de eventos definidos por el usuario.  
+>  Si bien puede realizar registros directamente desde la tarea Script, puede que le interese implementar los eventos en lugar de registrarlos. Al utilizar eventos, no solamente puede habilitar el registro de mensajes de evento, sino que también puede responder al evento con controladores de eventos predeterminados o definidos por el usuario.  
   
- Para obtener más información acerca del registro, consulte [Integration Services &#40; SSIS &#41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Para obtener más información sobre el registro, vea [Registro de Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="logging-example"></a>Ejemplo de registro  
  En el ejemplo siguiente se muestra el registro de la tarea Script mediante el registro de un valor que representa el número de filas procesadas.  
@@ -104,10 +100,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [registro de eventos personalizados para tareas de Integration Services](http://go.microsoft.com/fwlink/?LinkId=165644), en dougbert.com  
+-   Entrada de blog [Logging custom events for Integration Services tasks (Registro de eventos personalizados para tareas de Integration Services)](http://go.microsoft.com/fwlink/?LinkId=165644) en dougbert.com.  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro de Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

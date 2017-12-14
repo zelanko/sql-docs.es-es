@@ -1,5 +1,5 @@
 ---
-title: Catalog.rename_customized_logging_level | Documentos de Microsoft
+title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>Catalog.rename_customized_logging_level
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Cambia el nombre de un nivel de registro personalizado existente. Para obtener más información acerca de los niveles de registro personalizados, consulte [Integration Services &#40; SSIS &#41; Registro](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Cambia el nombre de un nivel de registro personalizado existente. Para obtener más información sobre los niveles de registro personalizados, consulte [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,15 +36,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @old_name =] *Nombre_antiguo*  
- El nombre de la existente Personalizar nivel de registro para cambiar el nombre.  
+ [ @old_name = ] *old_name*  
+ Nombre de un nivel de registro personalizado existente que va a cambiar.  
   
- El *Nombre_antiguo* es **nvarchar (128)**.  
+ *old_name* es **nvarchar(128)**.  
   
- [ @new_name =] *new_name*  
- El nuevo nombre para el elemento especificado el nivel de registro personalizado.  
+ [ @new_name = ] *new_name*  
+ Nuevo nombre del nivel de registro personalizado especificado.  
   
- El *new_name* es **nvarchar (128)**.  
+ *new_name* es **nvarchar(128)**.  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -68,7 +66,6 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que el procedimiento almacenado genere un error.  
   
--   El usuario no tiene los permisos necesarios.  
+-   El usuario no tiene los permisos requeridos.  
   
   
-

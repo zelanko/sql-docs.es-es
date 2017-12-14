@@ -1,5 +1,5 @@
 ---
-title: Validar un componente de flujo de datos | Documentos de Microsoft
+title: Validar un componente de flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>Validar un componente de flujo de datos
   El método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> se proporciona para impedir la ejecución de un componente que no se ha configurado correctamente. Utilice este método para comprobar que un componente tiene el número esperado de objetos de entrada y salida, que las propiedades personalizadas del componente tienen valores aceptables y que se especifican las conexiones necesarias. Utilice este método también para comprobar que las columnas de las colecciones de entrada y salida tienen los tipos de datos correctos y que el elemento <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de cada columna se ha establecido de forma adecuada para el componente. La implementación de la clase base ayuda en el proceso de validación al comprobar la colección de columnas de entrada del componente y asegurarse de que cada columna de la colección hace referencia a una columna del elemento <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> del componente de nivel superior.  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  El valor <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> indica que el componente tiene un error que puede rectificarse mediante la edición del componente en el diseñador. Este error se produce normalmente porque no se ha especificado una propiedad personalizada o una conexión necesaria, o bien se ha establecido de forma incorrecta.  
   
- El valor final del error es <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, lo que indica que el componente ha detectado errores que solo deberían producirse si la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> se ha modificado directamente, ya sea mediante la edición del XML del paquete o el uso del modelo de objetos. Por ejemplo, este tipo de error se produce cuando un componente ha agregado una sola entrada, pero la validación detecta que existe más de una entrada en <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Devuelven de errores que generan este valor solamente pueden repararse mediante el restablecimiento del componente mediante el uso de la **restablecer** botón en el **Editor avanzado** cuadro de diálogo.  
+ El valor final del error es <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, lo que indica que el componente ha detectado errores que solo deberían producirse si la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> se ha modificado directamente, ya sea mediante la edición del XML del paquete o el uso del modelo de objetos. Por ejemplo, este tipo de error se produce cuando un componente ha agregado una sola entrada, pero la validación detecta que existe más de una entrada en <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Los errores que generan este valor devuelto solamente pueden repararse si se restablece el componente mediante el botón **Restablecer** del cuadro de diálogo **Editor avanzado**.  
   
- Además de devolver valores de error, los componentes proporcionan comentarios mediante la exposición de advertencias o errores durante la validación. Los métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> proporcionan este mecanismo. Cuando se llaman a estos métodos, estos eventos se registran en el **lista de errores** ventana de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. A continuación, los desarrolladores de componentes pueden proporcionar comentarios directamente a los usuarios sobre los errores que se han producido y, si procede, sobre cómo corregirlos.  
+ Además de devolver valores de error, los componentes proporcionan comentarios mediante la exposición de advertencias o errores durante la validación. Los métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> proporcionan este mecanismo. Cuando se llama a estos métodos, estos eventos se exponen en la ventana **Lista de errores** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. A continuación, los desarrolladores de componentes pueden proporcionar comentarios directamente a los usuarios sobre los errores que se han producido y, si procede, sobre cómo corregirlos.  
   
  En el siguiente ejemplo de código se muestra una implementación invalidada del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>.  
   
@@ -199,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

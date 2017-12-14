@@ -1,5 +1,5 @@
 ---
-title: "Transformación extracción de términos | Documentos de Microsoft"
+title: "Transformación Extracción de términos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
   La transformación Extracción de términos extrae términos del texto en una columna de entrada de transformación y luego escribe los términos en una columna de salida de transformación. La transformación funciona solo con texto en inglés y utiliza únicamente su propio diccionario en inglés e información lingüística sobre el idioma inglés.  
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/19/2017
   
 -   Combinaciones de números, signos de puntuación y caracteres alfabéticos. Por ejemplo, *A23B#99* devuelve el término *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   Los caracteres, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ y ‘.  
   
     > [!NOTE]  
     >  Las siglas que incluyen uno o más puntos (.) no se separan en varias oraciones.  
@@ -260,7 +258,6 @@ ms.lasthandoff: 08/19/2017
  Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores para las filas que provocan errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformación Búsqueda de términos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
 

@@ -1,5 +1,5 @@
 ---
-title: Hacer referencia a otros ensamblados en soluciones de Scripting | Documentos de Microsoft
+title: Hacer referencia a otros ensamblados en soluciones de scripting | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SSIS Script task, .NET Framework
 - Script task [Integration Services], adding references
@@ -29,26 +26,25 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - referencing Web services
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3deb13c7e3aeb2e974ac6e6582555a617346a298
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1e90784bab93fa79b02add5223bebea08113a70c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Hacer referencia a otros ensamblados en soluciones de scripting
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] biblioteca de clases proporciona al desarrollador de script con un conjunto eficaz de herramientas para implementar funcionalidad personalizada en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes. Tanto la tarea como el componente Script también pueden usar ensamblados administrados personalizados.  
+  La biblioteca de clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona al desarrollador de script un conjunto eficaz de herramientas para implementar una funcionalidad personalizada en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Tanto la tarea como el componente Script también pueden usar ensamblados administrados personalizados.  
   
 > [!NOTE]  
->  Para habilitar los paquetes para utilizar los objetos y métodos de un servicio Web, use la **Agregar referencia Web** comandos disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA). En versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tenía que generar una clase de proxy para utilizar un servicio web.  
+>  Para permitir que los paquetes usen los objetos y métodos de un servicio web, use el comando **Agregar referencia web** disponible en [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). En versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tenía que generar una clase de proxy para utilizar un servicio web.  
   
 ## <a name="using-a-managed-assembly"></a>Utilizar un ensamblado administrado  
- Para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para buscar un ensamblado administrado en tiempo de diseño, debe hacer lo siguiente:  
+ Para que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] busque en tiempo de diseño un ensamblado administrado, debe efectuar los pasos siguientes:  
   
 1.  Almacene el ensamblado administrado en una carpeta del equipo.  
   
@@ -57,7 +53,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Agregue una referencia al ensamblado administrado.  
   
-     Para agregar la referencia, en VSTA, en la **Agregar referencia** cuadro de diálogo, en la **examinar** ficha, busque y agregue el ensamblado administrado.  
+     Para agregar la referencia, en VSTA, en el cuadro de diálogo **Agregar referencia**, en la pestaña **Examinar**, busque y agregue el ensamblado administrado.  
   
  Para que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] busque en tiempo de ejecución el ensamblado administrado, debe efectuar los pasos siguientes:  
   
@@ -65,35 +61,34 @@ ms.lasthandoff: 08/03/2017
   
 2.  Instale el ensamblado en la memoria caché de ensamblados global en el equipo en el que se ejecuta el paquete.  
   
-     Para obtener más información, consulte [Building, Deploying and Debugging Custom Objects](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+     Para obtener más información, consulte [Generar, implementar y depurar objetos personalizados](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## <a name="using-the-microsoft-net-framework-class-library"></a>Utilizar la Biblioteca de clases de Microsoft .NET Framework  
  Tanto la tarea como el componente Script pueden aprovechar todos los demás objetos y la funcionalidad expuesta por la biblioteca de clases de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Por ejemplo, mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puede recuperar información acerca del entorno e interactuar con el equipo que está ejecutando el paquete.  
   
  En esta lista se describen algunas de las clases más utilizadas de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]:  
   
--   **System.Data** contiene la arquitectura de ADO.NET.  
+-   **System.Data** Contiene la arquitectura de ADO.NET.  
   
--   **System.IO** proporciona una interfaz para el sistema de archivos y secuencias.  
+-   **System.IO** Proporciona una interfaz para el sistema de archivos y los flujos.  
   
--   **System.Windows.Forms** proporciona la creación de formularios.  
+-   **System.Windows.Forms** Permite la creación de formularios.  
   
--   **System.Text.RegularExpressions** proporciona clases para trabajar con expresiones regulares.  
+-   **System.Text.RegularExpressions** Proporciona las clases para trabajar con expresiones regulares.  
   
--   **System.Environment** devuelve información sobre el equipo local, el usuario actual y la configuración de equipo y usuario.  
+-   **System.Environment** Devuelve información acerca del equipo local, el usuario actual y los valores del equipo y del usuario.  
   
--   **System.Net** proporciona comunicaciones por red.  
+-   **System.Net** Proporciona comunicaciones por red.  
   
--   **System.DirectoryServices** expone Active Directory.  
+-   **System.DirectoryServices** Expone Active Directory.  
   
--   **System.Drawing** proporciona bibliotecas de manipulación de imágenes completas.  
+-   **System.Drawing** Proporciona bibliotecas de manipulación de imágenes completas.  
   
--   **System.Threading** habilita la programación multiproceso.  
+-   **System.Threading** Habilita la programación multiproceso.  
   
  Para obtener más información acerca de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea MSDN Library.  
   
 ## <a name="see-also"></a>Vea también  
- [Ampliar paquetes con Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Ampliar paquetes con scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
-

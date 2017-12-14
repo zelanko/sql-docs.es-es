@@ -3,8 +3,11 @@ title: Reglas para actualizar resultados (Visual Database Tools) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a4c523c915ec236189f9b97104fcd78c725b4fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2e40ed53f2d9b239e5bc565533fda84882a8a030
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Reglas para actualizar resultados (Visual Database Tools)
-En muchos casos, puede actualizar el conjunto de resultados mostrado en el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Sin embargo, en algunos casos no es posible realizar esta actualización.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En muchos casos, puede actualizar el conjunto de resultados mostrado en el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Sin embargo, en algunos casos no es posible realizar esta actualización.  
   
 En general, para actualizar resultados, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) debe tener información suficiente para identificar de forma exclusiva la fila en la tabla. Por ejemplo, si la consulta incluye una clave principal en la lista de resultados. Además, debe tener permisos suficientes para actualizar la base de datos.  
   

@@ -1,5 +1,5 @@
 ---
-title: Tarea Control CDC | Documentos de Microsoft
+title: Tarea Control CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 99a864cf9f2e8708fa4e605dacaa7ecaf170ef79
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d098ce43f58a5a65424b536742da199bb162957f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
   La tarea Control CDC se usa para controlar el ciclo de vida de los paquetes de captura de datos modificados (CDC). Controla la sincronización de paquetes CDC con el paquete de carga inicial, la administración de los intervalos de número de secuencia de registro (LSN) que se procesan en una ejecución de un paquete CDC. Además, la tarea Control CDC se ocupa de los escenarios de error y de la recuperación.  
@@ -78,10 +76,10 @@ ms.lasthandoff: 08/11/2017
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Propiedades personalizadas de la tarea de Control CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+-   [Propiedades personalizadas de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
- [Definir una Variable de estado](../../integration-services/data-flow/define-a-state-variable.md)  
+ [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
@@ -161,4 +159,3 @@ ms.lasthandoff: 08/11/2017
  **Nombre del estado**  
  Escriba un nombre para asociar al estado CDC persistente. Los paquetes de carga completa y CDC que funcionan con el mismo contexto CDC especificarán un nombre común para el estado. Este nombre se usa para buscar la fila de estado en la tabla de estado.  
   
-

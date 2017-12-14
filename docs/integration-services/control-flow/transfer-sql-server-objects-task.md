@@ -1,5 +1,5 @@
 ---
-title: Transferir objetos de tarea SQL Server | Documentos de Microsoft
+title: Tarea Transferir objetos de SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
 - sql13.dts.designer.transfersqlserverobjects.general.f1
 - sql13.dts.designer.transfersqlserverobjects.objects.f1
-helpviewer_keywords:
-- Transfer SQL Server Objects task [Integration Services]
+helpviewer_keywords: Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: fd7916034970aba3a64d66ee2b59a1661d8a9515
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 05b3013e4e0328766b0131d41d0fd9b6cd38148b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server
   La tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfiere uno o varios tipos de objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, la tarea puede copiar tablas y procedimientos almacenados. Dependiendo de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utilice como origen, hay diferentes tipos de objetos disponibles para copiar. Por ejemplo, solo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se incluyen esquemas y agregados definidos por el usuario.  
@@ -152,13 +149,13 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Opciones estáticas  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
   
  **SourceDatabase**  
  Seleccione una base de datos en el servidor de origen desde donde se copiarán los objetos.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
   
  **DestinationDatabase**  
  Seleccione una base de datos en el servidor de destino al que se copiarán los objetos.  
@@ -332,10 +329,9 @@ ms.lasthandoff: 08/11/2017
  Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar colecciones de esquemas XML** .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor de la tarea de objetos de transferencia SQL Server &#40; Página general &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
- [Página expresiones](../../integration-services/expressions/expressions-page.md)   
+ [Editor de la tarea Transferir objetos de SQL Server &#40;página General&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
  [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-

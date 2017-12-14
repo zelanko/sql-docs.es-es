@@ -1,5 +1,5 @@
 ---
-title: Catalog.delete_customized_logging_level | Documentos de Microsoft
+title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5268aa751ca177158cbcb3627aa5dd61473f5e06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogdeletecustomizedlogginglevel"></a>Catalog.delete_customized_logging_level
+# <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Elimina un nivel de registro personalizado existente. Para obtener más información acerca de los niveles de registro personalizados, consulte [Integration Services &#40; SSIS &#41; Registro](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Elimina un nivel de registro personalizado existente. Para obtener más información sobre los niveles de registro personalizados, consulte [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,10 +36,10 @@ delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @level_name =] *level_name*  
- El nombre de la existente Personalizar nivel de registro para eliminar.  
+ [ @level_name = ] *level_name*  
+ Nombre de un nivel de registro personalizado existente que va a eliminar.  
   
- El *level_name* es **nvarchar (128)**.  
+ *level_name* es **nvarchar(128)**.  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -63,7 +61,6 @@ delete_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que el procedimiento almacenado genere un error.  
   
--   El usuario no tiene los permisos necesarios.  
+-   El usuario no tiene los permisos requeridos.  
   
   
-

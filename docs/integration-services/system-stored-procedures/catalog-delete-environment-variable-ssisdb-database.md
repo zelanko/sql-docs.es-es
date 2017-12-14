@@ -1,5 +1,5 @@
 ---
-title: Catalog.delete_environment_variable (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.delete_environment_variable (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bd3ff266d41d4e62d5ecb9314a14de7e1b86d8d5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 03262f4292055b4370d80470c6f9aaee147e9d23
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ delete_environment_variable [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nombreDeCarpeta*  
- Nombre de la carpeta que contiene el entorno. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Nombre del entorno que contiene la variable. El *environment_name* es **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ Nombre del entorno que contiene la variable. *environment_name* es **nvarchar(128)**.  
   
- [ @variable_name =] *variable_name*  
- Nombre de la variable que se va a eliminar. El *variable_name* es **nvarchar (128)**.  
+ [ @variable_name = ] *variable_name*  
+ Nombre de la variable que se va a eliminar. *variable_name* es **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -59,9 +57,9 @@ delete_environment_variable [ @folder_name = ] folder_name
   
 -   Permisos READ y MODIFY en el entorno  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -71,4 +69,3 @@ delete_environment_variable [ @folder_name = ] folder_name
 -   La variable de entorno no existe  
   
   
-

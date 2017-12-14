@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de un componente de flujo de datos | Documentos de Microsoft
+title: Establecer las propiedades de un componente de flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Establecer las propiedades de un componente de flujo de datos
   Para establecer las propiedades de los componentes de flujo de datos, que incluyen orígenes, destinos y transformaciones, utilice una de las características siguientes:  
@@ -146,7 +143,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ValidateExternalMetadata|Boolean|Indica si se validan los metadatos de columnas externas. El valor predeterminado de esta propiedad es **True**.|  
 |Versión|Integer|Versión de un componente.|  
   
-###  <a name="inputs"></a>Propiedades de entrada  
+###  <a name="inputs"></a> Propiedades de entradas  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , las transformaciones y los destinos tienen entradas. Una entrada de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  La tabla siguiente describe las propiedades de las entradas de componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -166,7 +163,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
   
  Los destinos y algunas transformaciones no admiten la salida de errores y, además, las propiedades ErrorRowDisposition y TruncationRowDisposition de estos componentes son de solo lectura.  
   
-###  <a name="inputcolumns"></a>Propiedades de columna de entrada  
+###  <a name="inputcolumns"></a> Propiedades de las columnas de entrada  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , una entrada contiene una colección de columnas de entrada. Una columna de entrada de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  La tabla siguiente describe las propiedades de las columnas de entrada de los componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -190,7 +187,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
   
  Las columnas de entrada también tienen las propiedades de tipo de datos descritas en "Propiedades del tipo de datos”.  
   
-###  <a name="outputs"></a>Propiedades de salida  
+###  <a name="outputs"></a> Propiedades de salidas  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , las transformaciones y los orígenes tienen salidas. Una salida de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  La tabla siguiente describe las propiedades de las salidas de componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -206,12 +203,12 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ID|Integer|Valor que identifica la salida de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la salida.|  
 |IsErrorOut|Boolean|Indica si la salida es una salida de errores.|  
-|IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es **False**.<br /><br /> **\*\*Importante \* \***  establecer el valor de la **IsSorted** propiedad **True** no se ordenan los datos. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es **False**.<br /><br /> **\*\* Importante \*\*** Aunque se establezca el valor de la propiedad **IsSorted** en **True**, los datos no se ordenan. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nombre|String|Nombre de la salida.|  
 |SynchronousInputID|Integer|El Id. de una entrada que es sincrónica con la salida.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
   
-###  <a name="outputcolumns"></a>Propiedades de columna de salida  
+###  <a name="outputcolumns"></a> Propiedades de las columnas de salida  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , una salida contiene una colección de columnas de resultados. Una columna de resultados de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  La tabla siguiente describe las propiedades de las columnas de resultados de los componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -234,7 +231,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
   
  Las columnas de resultados también incluyen un conjunto de propiedades de tipo de datos.  
   
-### <a name="external-metadata-column-properties"></a>Propiedades de columna de metadatos externos  
+### <a name="external-metadata-column-properties"></a>Propiedades de las columnas de metadatos externos  
  En el modelo de objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , las entradas y salidas pueden contener una colección de columnas de metadatos externos. Una columna de metadatos externos de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  La tabla siguiente describe las propiedades de las columnas de metadatos externos de los componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -248,7 +245,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
   
  Las columnas de metadatos externos también incluyen un conjunto de propiedades de tipo de datos.  
   
-### <a name="data-type-properties"></a>Propiedades de tipo de datos  
+### <a name="data-type-properties"></a>Propiedades de tipos de datos  
  Las columnas de resultados y de metadatos externos incluyen un conjunto de propiedades de tipo de datos. Dependiendo del tipo de datos de la columna, las propiedades pueden ser de lectura y escritura o de solo lectura.  
   
  La tabla siguiente describe las propiedades del tipo de datos de las columnas de resultados y de metadatos externos.  
@@ -262,7 +259,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |Escala|Integer|Escala de una columna numérica.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Propiedades personalizadas de los componentes de flujo de datos
-Para obtener información sobre las propiedades personalizadas, vea los temas siguientes  
+Para obtener información acerca de propiedades personalizadas, vea los siguientes temas.  
   
 -   [Propiedades personalizadas de ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -348,7 +345,7 @@ Los valores de ciertas propiedades de objetos de flujo de datos se pueden especi
  
  Los valores de las propiedades de la siguiente lista se pueden especificar mediante expresiones de propiedades.  
   
-### <a name="data-flow-sources"></a>Orígenes de flujo de datos  
+### <a name="data-flow-sources"></a>Orígenes de flujos de datos  
   
 |Objeto Flujo de datos|Propiedad|  
 |----------------------|--------------|  
@@ -372,13 +369,12 @@ Los valores de ciertas propiedades de objetos de flujo de datos se pueden especi
 |Ordenar, transformación|Propiedad MaximumThreads|  
 |Anulación de dinamización, transformación|Propiedad PivotKeyValue|  
   
-### <a name="data-flow-destinations"></a>Destinos de flujo de datos  
+### <a name="data-flow-destinations"></a>Destinos de flujos de datos  
   
 |Objeto Flujo de datos|Propiedad|  
 |----------------------|--------------|  
 |Destino ADO NET|Propiedad TableOrViewName<br /><br /> Propiedad BatchSize<br /><br /> Propiedad CommandTimeOut|  
 |Destino de archivo plano|Propiedad Header|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Destino de Compact|Propiedad TableName|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]destino|Propiedad BulkInsertTableName<br /><br /> Propiedad BulkInsertFirstRow<br /><br /> Propiedad BulkInsertLastRow<br /><br /> Propiedad BulkInsertOrder<br /><br /> Propiedad Tiempo de espera|  
-
+|Destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact|Propiedad TableName|  
+|Destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Propiedad BulkInsertTableName<br /><br /> Propiedad BulkInsertFirstRow<br /><br /> Propiedad BulkInsertLastRow<br /><br /> Propiedad BulkInsertOrder<br /><br /> Propiedad Tiempo de espera|  
 

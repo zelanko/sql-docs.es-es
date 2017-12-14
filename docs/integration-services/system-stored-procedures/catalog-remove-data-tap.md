@@ -1,5 +1,5 @@
 ---
-title: Catalog.remove_data_tap | Documentos de Microsoft
+title: catalog.remove_data_tap | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f2c9b5d9333c201120e5f3a3e392c59012a8ac7
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 28339c0762182397a266fa42abf6411a3dd56ef4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +35,8 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @data_tap_id =] *data_tap_id*  
- Identificador único de la derivación de datos que se crea usando el procedimiento almacenado catalog.add_data_tap. El *data_tap_id* es **bigint**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Identificador único de la derivación de datos que se crea usando el procedimiento almacenado catalog.add_data_tap. *data_tap_id* es **bigint**.  
   
 ## <a name="remarks"></a>Comentarios  
  Si un paquete contiene varias tareas Flujo de datos con el mismo nombre, la derivación de datos se agrega a la primera tarea Flujo de datos con el nombre especificado.  
@@ -52,16 +50,16 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  Ninguno  
   
 ## <a name="remarks"></a>Comentarios  
- Puntee en quitar los datos, la instancia de la ejecución debe estar en estado creado (un valor de 1 en el **estado** columna de la [catalog.operations &#40; Base de datos SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)vista).  
+ Para quitar derivaciones de datos, la instancia de la ejecución debe estar en el estado creado (un valor 1 en la columna **status** de la vista [catalog.operations &#40;Base de datos SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos MODIFY en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que el procedimiento almacenado genere un error.  
@@ -69,8 +67,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 -   El usuario no tiene permisos MODIFY.  
   
 ## <a name="see-also"></a>Vea también  
- [Catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
+ [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

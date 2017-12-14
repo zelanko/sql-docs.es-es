@@ -3,8 +3,11 @@ title: Combinar condiciones cuando OR tiene prioridad (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56714e86553346cc53125ad90d2140df502179e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f8852df6a617323c69741eebd7c9c1475f4f054
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Combinar condiciones cuando OR tiene prioridad (Visual Database Tools)
-Para vincular condiciones con OR y darle prioridad sobre condiciones vinculadas con AND, debe repetir la condición AND para cada condición OR.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para vincular condiciones con OR y darles prioridad sobre las condiciones vinculadas con AND, debe repetir la condición AND para cada condición OR.  
   
 Imagine, por ejemplo, que desea buscar todos los empleados que han estado en la compañía más de cinco años y que tienen puestos de nivel bajo o están jubilados. Esta consulta requiere tres condiciones, una única condición vinculada a dos condiciones adicionales con AND:  
   

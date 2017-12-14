@@ -3,8 +3,11 @@ title: Propiedades de columna (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2927394b094a21e5e854f28974387e61fb31c0f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 647187fc56293cf1d30b2daa4150f1ad05503338
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
-Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Hay dos conjuntos de propiedades para columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
   
 > [!NOTE]  
 > Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  

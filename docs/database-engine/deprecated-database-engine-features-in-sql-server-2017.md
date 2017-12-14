@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Niveles de compatibilidad|Nivel de compatibilidad de la base de datos 110 Y 120.|Planee actualizar la base de datos y la aplicación en una versión futura.|Nivel de compatibilidad de la base de datos 110<br /><br /> Nivel de compatibilidad de la base de datos 120||  
 |XML|Generación de esquemas XDR insertados|La directiva XMLDATA para la opción FOR XML ha quedado desusada. Utilice la XSD generación en los modos RAW y AUTO. No hay sustitución para la directiva XMLDATA en modo EXPLICIT.|XMLDATA|181|  
 |Copias de seguridad y restauración|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
-|Copias de seguridad y restauración|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Copias de seguridad y restauración|sp_addumpdevice "**tape**"|sp_addumpdevice "**disk**"|ADDING TAPE DEVICE|236|  
 |Copias de seguridad y restauración|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Intercalaciones|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Ninguno. Estas intercalaciones existen en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], pero no están visibles en fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Intercalaciones|Hindi<br /><br /> Macedonian|Estas intercalaciones existen en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] y versiones posteriores, pero no están visibles en fn_helpcollations. Utilice en su lugar Macedonian_FYROM_90 e Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  

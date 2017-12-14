@@ -1,5 +1,5 @@
 ---
-title: "Características de rendimiento del flujo de datos | Documentos de Microsoft"
+title: "Características de rendimiento del flujo de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/03/2017
  Hay dos directrices generales que no dependen del componente de flujo de datos y que debería seguir para mejorar el rendimiento: optimizar las consultas y evitar las cadenas innecesarias.  
   
 #### <a name="optimize-queries"></a>Optimizar las consultas  
- Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada utiliza la instrucción SELECT * FROM \<tableName > sintaxis. Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
+ Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada usa la sintaxis SELECT * FROM \<tableName>. Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
   
  Para crear una consulta, puede escribirla o utilizar el Generador de consultas.  
   
@@ -167,13 +165,13 @@ ms.lasthandoff: 08/03/2017
  Es posible que guardar datos en los destinos lleve más tiempo del esperado. Para identificar si esto se debe a que el destino no es capaz de procesar los datos con suficiente rapidez, puede sustituir el destino por una transformación Recuento de filas temporalmente. Si el rendimiento mejora de forma significativa, es probable que el destino que carga los datos sea la causa de la tardanza.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Revisar la información de la pestaña Progreso  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]Proporciona información sobre el flujo de control y flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **Progreso** se muestran las tareas y los contenedores en orden de ejecución; incluye las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el paquete en sí. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona información sobre el flujo de control y sobre el flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **Progreso** se muestran las tareas y los contenedores en orden de ejecución; incluye las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el paquete en sí. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
   
  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   
--   [Ordenar datos para la combinación y transformaciones de combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
@@ -209,8 +207,7 @@ ms.lasthandoff: 08/03/2017
 -   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de herramientas de desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas de ejecución del paquete](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Herramientas para solucionar problemas de la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

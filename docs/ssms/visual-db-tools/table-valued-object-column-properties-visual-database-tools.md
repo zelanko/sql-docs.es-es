@@ -3,8 +3,11 @@ title: Propiedades (de columna) de objeto con valores de tabla (Visual Database 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20acb3fa9cb3be515a7677eab69a2c1696f29d82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0a4c3c8d3487215f824eeed8d78aea202b1e0da6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propiedades (de columna) de objeto con valores de tabla (Visual Database Tools)
-Estas propiedades aparecen cuando selecciona una columna en un objeto de valor de tabla en el panel **Diagrama** del Diseñador de vistas y de consultas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Estas propiedades aparecen cuando selecciona una columna en un objeto con valor de tabla en el panel **Diagrama** del Diseñador de vistas y de consultas.  
   
 > [!NOTE]  
 > Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  

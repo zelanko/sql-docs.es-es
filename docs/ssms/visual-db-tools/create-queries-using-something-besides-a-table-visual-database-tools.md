@@ -3,8 +3,11 @@ title: Crear consultas a partir de otro objeto distinto de una tabla | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10e634170ad1d21ec5094032dbe0b63395b40eb8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Crear consultas a partir de otro objeto distinto de una tabla (Visual Database Tools)
-Al escribir una consulta de recuperación, puede enunciar qué columnas y qué filas desea obtener y dónde tiene que buscar el procesador de consultas los datos originales. Normalmente, estos datos originales están formados por una o varias tablas combinadas entre sí. Pero los datos originales pueden proceder de orígenes que no sean tablas. De hecho, pueden provenir de vistas, consultas, sinónimos o funciones definidas por el usuario que devuelven una tabla.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al escribir una consulta de recuperación, puede enunciar qué columnas y filas quiere obtener, y dónde tiene que buscar el procesador de consultas los datos originales. Normalmente, estos datos originales están formados por una o varias tablas combinadas entre sí. Pero los datos originales pueden proceder de orígenes que no sean tablas. De hecho, pueden provenir de vistas, consultas, sinónimos o funciones definidas por el usuario que devuelven una tabla.  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>Utilizar una vista en lugar de una tabla  
 Puede seleccionar filas en una vista. Por ejemplo, supongamos que la base de datos incluye una vista denominada "ExpensiveBooks", en la que cada fila describe un título cuyo precio supera 19,99. La definición de vista puede presentar el siguiente aspecto:  

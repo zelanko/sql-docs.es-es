@@ -3,8 +3,11 @@ title: "Crear consultas de creación de tabla (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3062cf684505e7c67c5b65a8e296ff75deb3610b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Crear consultas de creación de tabla (Visual Database Tools)
-Puede copiar filas en una nueva tabla mediante una consulta de creación de tabla, que sirve para crear subconjuntos de datos con los que trabajar o para copiar el contenido de una tabla de una base de datos a otra. La consulta de creación de tabla es similar a la consulta de inserción de resultados, con la diferencia de que en la primera se crea una nueva tabla en la que se copian las filas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede copiar filas en una nueva tabla mediante una consulta de creación de tabla, que sirve para crear subconjuntos de datos con los que trabajar o copiar el contenido de una tabla de una base de datos a otra. La consulta de creación de tabla es similar a la consulta de inserción de resultados, con la diferencia de que en la primera se crea una nueva tabla en la que se copian las filas.  
   
 Cuando se crea una consulta de creación de tabla, se especifica:  
   

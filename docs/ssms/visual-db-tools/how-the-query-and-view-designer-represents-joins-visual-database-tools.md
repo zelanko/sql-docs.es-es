@@ -3,8 +3,11 @@ title: "Cómo representa combinaciones el Diseñador de consultas y vistas | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2231538d858cf69c6275c00458ebfa97561bd303
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d112b8edd88c1d5b34f63206dc3c69a1e2e89652
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
-Si las tablas están combinadas, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representa la combinación de forma gráfica en el [panel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) y mediante sintaxis SQL en el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si las tablas están combinadas, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representa la combinación de forma gráfica en el [panel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) y mediante sintaxis SQL en el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## <a name="diagram-pane"></a>panel Diagrama  
 En el panel Diagrama, el Diseñador de consultas y vistas muestra una línea de combinación entre las columnas de datos implicadas en la combinación. El Diseñador de consultas y vistas muestra una línea de combinación para cada condición de combinación. Por ejemplo, la ilustración siguiente muestra una línea de combinación entre dos tablas que están combinadas:  

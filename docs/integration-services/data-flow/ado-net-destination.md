@@ -1,5 +1,5 @@
 ---
-title: Destino ADO NET | Documentos de Microsoft
+title: Destino de ADO NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: es-es
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
   El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/08/2017
  Un destino ADO NET incluye asignaciones entre columnas de entrada y columnas en el origen de datos de destino. No es preciso que asigne columnas de entrada a todas las columnas de destino. Sin embargo, las propiedades de algunas columnas de destino pueden requerir la asignación de columnas de entrada. De lo contrario, se podrían producir errores. Por ejemplo, si una columna de destino no permite valores NULL, se debe asignar una columna de entrada a esa columna de destino. Además, los tipos de datos de las columnas asignadas deben ser compatibles. Por ejemplo, no es posible asignar una columna de entrada con un tipo de datos de cadena a una columna de destino con un tipo de datos numéricos si el proveedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)] no admite esta asignación.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no se permite insertar texto en columnas cuyo tipo de datos se establece en la imagen. Para obtener más información sobre los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite insertar texto en las columnas cuyo tipo de datos se haya establecido como imagen. Para obtener más información sobre los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 > [!NOTE]  
 >  El destino ADO NET no permite asignar una columna de entrada cuyo tipo sea DT_DBTIME a una columna de base de datos cuyo tipo sea datetime. Para obtener más información sobre los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -104,12 +102,12 @@ ms.lasthandoff: 11/08/2017
  Si selecciona **Use bulk insert when available**(Usar la inserción masiva cuando esté disponible) y establece la opción **Error** en **Redirect the row**(Redirigir la fila), el lote de datos que el destino redirige a la salida de error puede incluir filas correctas. Para obtener más información sobre cómo administrar errores en operaciones masivas, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md). Para obtener más información sobre la opción **Error** , vea [Editor de destinos de ADO NET &#40;página Salida de error&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Si una tabla de origen de SQL Server o Sybase incluye una columna de identidad, debe utilizar las tareas ejecutar SQL para habilitar IDENTITY_INSERT antes el destino ADO NET y deshabilitarla de nuevo posteriormente. (La propiedad de columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite valores explícitos de la tabla de origen se inserta en la columna de identidad en la tabla de destino.)  
+>  Si una tabla de origen de SQL Server o de Sybase incluye una columna de identidad, debe usar las tareas Ejecutar SQL para habilitar IDENTITY_INSERT antes del destino de ADO NET y para deshabilitarlo nuevamente después. (La propiedad de la columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite que valores explícitos de la tabla de origen se inserten en la columna de identidad de la tabla de destino).  
 >   
->   Para ejecutar las instrucciones SET IDENTITY_INSERT y los datos que se carga correctamente, se debe hacer lo siguiente. 
->       1. Usar el mismo administrador de conexiones de ADO.NET para las tareas ejecutar SQL y para el destino de ADO.NET. 
->       2. En el Administrador de conexiones, establezca el **RetainSameConnection** propiedad y el **MultipleActiveResultSets** propiedad en True. 
->       3. En el destino de ADO.NET, establezca el **UseBulkInsertWhenPossible** propiedad en False. 
+>   Para ejecutar las instrucciones SET IDENTITY_INSERT y la carga de datos correctamente, se debe hacer lo siguiente. 
+>       1. Use el mismo administrador de conexiones de ADO.NET para las tareas Ejecutar SQL y para el destino de ADO NET. 
+>       2. En el administrador de conexiones, establezca la propiedad **RetainSameConnection** y la propiedad **MultipleActiveResultSets** en True. 
+>       3. En el destino de ADO.NET, establezca la propiedad **UseBulkInsertWhenPossible** en False. 
 >
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 11/08/2017
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
   
  **Columna de entrada**  
- Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones seleccionando  **\<omitir >** para excluir columnas de los resultados.  
+ Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones, seleccione **\<ignore>** con el fin de excluir columnas de la salida.  
   
  **Columna de destino**  
  Muestra todas las columnas de destino disponibles, tanto si están asignadas como si no lo están.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 11/08/2017
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
   
-

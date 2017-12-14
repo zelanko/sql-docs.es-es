@@ -1,5 +1,5 @@
 ---
-title: "Editor de origen de SAP BW (página Administrador de conexiones) | Documentos de Microsoft"
+title: "Editor de origen de SAP BW (página Administrador de conexiones) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwsource.connection.f1
+f1_keywords: sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: eba966d7321d44088c197d0f5a8829ff591a9bdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de origen de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de SAP BW** para seleccionar el administrador de conexiones de SAP BW para el origen de SAP BW. En esta página, puede seleccionar el modo de ejecución y los parámetros para extraer los datos del sistema SAP Netweaver BW.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el origen de SAP BW.  
   
-2.  En la pestaña **Flujo de datos** , haga doble clic en el destino SAP BW.  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de SAP BW.  
   
 3.  En **Editor de origen de SAP BW**, haga clic en **Administrador de conexiones** para abrir la página **Administrador de conexiones** del editor.  
   
@@ -132,10 +129,9 @@ ms.lasthandoff: 08/03/2017
  Permite escribir el identificador de solicitud asociado a la extracción.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen de SAP BW &#40; Página columnas &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Editor de origen de SAP BW &#40; Página de salida de error &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Editor de origen de SAP BW &#40; Página avanzadas &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
- [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Editor de origen de SAP BW &#40;página Columnas&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [Editor de origen de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

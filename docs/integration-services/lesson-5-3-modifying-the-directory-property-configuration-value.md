@@ -1,5 +1,5 @@
 ---
-title: "Paso 3: Modificar el valor de configuración de la propiedad de directorio | Documentos de Microsoft"
+title: "Paso 3: Modificar el valor de configuración de la propiedad Directory | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 881aab31aab8cc4dc339b5f399f8cd207feb6ebb
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 28a85b62c9aacb842c296a2f383963e318570610
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Lección 5: 3: modificar el valor de configuración de la propiedad de directorio
+# <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Lección 5-3: Modificar el valor de configuración de la propiedad Directory
 En esta tarea, modificará el parámetro de configuración, almacenado en el archivo SSISTutorial.dtsConfig, para la propiedad Value de la variable de nivel de paquete `User::varFolderName`. Esta variable actualiza la propiedad Directory del contenedor de bucles Foreach. El valor modificado hará referencia a la carpeta **New Sample Data** que ha creado en la tarea anterior. Una vez que haya modificado el parámetro de configuración y que haya ejecutado el paquete, la variable actualizará la propiedad Directory, mediante el valor rellenado desde el archivo de configuración, en lugar del valor del directorio configurado originalmente en el paquete.  
   
 ### <a name="to-modify-the-configuration-setting-of-the-directory-property"></a>Para modificar el parámetro de configuración de la propiedad Directory  
@@ -47,4 +44,3 @@ En esta tarea, modificará el parámetro de configuración, almacenado en el arc
   
   
   
-

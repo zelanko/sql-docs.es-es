@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un paquete SSIS con PowerShell | Documentos de Microsoft
+title: Ejecutar un paquete SSIS con PowerShell | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: d392ac49442ef0f04961908fff7acf553fa1aa57
-ms.contentlocale: es-es
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Ejecutar un paquete SSIS con PowerShell
-Este tutorial de inicio rápido muestra cómo usar un script de PowerShell para conectarse a un servidor de base de datos y ejecutar un paquete SSIS.
+Este tutorial de inicio rápido muestra cómo usar un script de PowerShell para conectarse a un servidor de bases de datos y ejecutar un paquete SSIS.
 
 ## <a name="powershell-script"></a>Script de PowerShell
-Proporcione los valores adecuados para las variables en la parte superior de la secuencia de comandos siguiente y, a continuación, ejecute el script para ejecutar el paquete SSIS.
+Proporcione los valores adecuados para las variables en la parte superior del script siguiente y, a continuación, ejecute el script para ejecutar el paquete SSIS.
 
 > [!NOTE]
-> En el ejemplo siguiente se utiliza la autenticación de Windows. Para usar autenticación de SQL Server, reemplace la `Integrated Security=SSPI;` argumento con `User ID=<user name>;Password=<password>;`.
+> En el ejemplo siguiente se usa la autenticación de Windows. Para usar la autenticación de SQL Server, reemplace el argumento `Integrated Security=SSPI;` por `User ID=<user name>;Password=<password>;`.
 
 ```powershell
 # Variables
@@ -70,10 +68,9 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
-- Tenga en cuenta otras formas para ejecutar un paquete.
+- Tenga en cuenta otras formas de ejecutar un paquete.
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Ejecutar un paquete SSIS con Transact-SQL (frente a código)](ssis-quickstart-run-tsql-vscode.md)
-    - [Ejecutar un paquete SSIS desde la línea de comandos](./ssis-quickstart-run-cmdline.md)
+    - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
     - [Ejecutar un paquete SSIS con C#](./ssis-quickstart-run-dotnet.md) 
-

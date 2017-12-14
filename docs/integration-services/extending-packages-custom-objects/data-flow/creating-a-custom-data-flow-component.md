@@ -1,5 +1,5 @@
 ---
-title: Crear un componente de flujo de datos personalizado | Documentos de Microsoft
+title: Crear un componente de flujo de datos personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,20 +22,19 @@ helpviewer_keywords:
 - data flow components [Integration Services]
 - data flow components [Integration Services], developing
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 565a2b8e48537cea20a8e509cf5b6d7b59cc12f0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c081005af99b0090d452f8d17afa73b08f05645d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Crear un componente de flujo de datos personalizado
-  En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], la tarea de flujo de datos expone un modelo de objetos que permite a los programadores crear componentes de flujo de datos personalizados, orígenes, transformaciones y destinos, mediante el uso de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] y código administrado.  
+  En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], la tarea de flujo de datos expone un modelo de objetos que permite que los desarrolladores creen componentes de flujo de datos personalizados, orígenes, transformaciones y destinos, mediante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] y código administrado.  
   
  Una tarea de flujo de datos consta de componentes que contienen una interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> y una colección de objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> que definen el movimiento de datos entre los componentes.  
   
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/03/2017
 |Tiempo de ejecución|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |Contenedor en tiempo de ejecución|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  
   
- En el ejemplo de código siguiente se muestra un componente simple que deriva de la clase base y aplica <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Debe agregar una referencia al ensamblado Microsoft.SqlServer.DTSPipelineWrap.  
+ En el ejemplo de código siguiente se muestra un componente simple que deriva de la clase base y aplica <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Deberá agregar una referencia al ensamblado Microsoft.SqlServer.DTSPipelineWrap.  
   
 ```csharp  
 using System;  
@@ -96,4 +93,3 @@ End Class
  [Desarrollar una interfaz de usuario para un componente de flujo de datos](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
   
   
-

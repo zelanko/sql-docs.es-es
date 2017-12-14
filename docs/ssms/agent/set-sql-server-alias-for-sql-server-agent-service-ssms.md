@@ -3,8 +3,11 @@ title: "Establecer un alias conexión de SQL Server para el servicio del Agente 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cab13165bdf564af1b7d369875bc0889d2d4dfd9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 78edcd258efdc5649819c9966ec662fa7abd34fc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Establecer un alias conexión de SQL Server para el servicio del Agente SQL Server (SQL Server Management Studio)
-En este tema se describe cómo establecer un alias de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el fin de conectarse al [!INCLUDE[ssDE](../../includes/ssde_md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. De manera predeterminada, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a través de canalizaciones con nombre, mediante nombres de servidores dinámicos que no requieren ninguna configuración adicional del cliente. Solo es necesario configurar un alias de conexión de servidor si no se utiliza el transporte de red predeterminado o si se va a conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a la escucha en una canalización con nombre alternativa.  
+# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo establecer un alias de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el fin de conectarse al [!INCLUDE[ssDE](../../includes/ssde_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. De manera predeterminada, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a través de canalizaciones con nombre, mediante nombres de servidores dinámicos que no requieren ninguna configuración adicional del cliente. Solo es necesario configurar un alias de conexión de servidor si no se utiliza el transporte de red predeterminado o si se va a conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a la escucha en una canalización con nombre alternativa.  
   
 **En este tema**  
   

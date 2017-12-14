@@ -3,8 +3,11 @@ title: "Especificar varias condiciones de búsqueda en varias columnas | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d97db8a777c9ba47f4b986033ee583dfb89a3abc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b38e01322e2ecf4f29edf7ab92c281558166ef59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Especificar varias condiciones de búsqueda para varias columnas (Visual Database Tools)
-Puede ampliar o reducir el alcance de la consulta incluyendo varias columnas de datos como parte de la condición de búsqueda. Por ejemplo, podría:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede ampliar o reducir el ámbito de la consulta incluyendo varias columnas de datos como parte de la condición de búsqueda. Por ejemplo, podría:  
   
 -   Buscar los empleados que han trabajado más de cinco años en la compañía o que tienen determinados puestos de trabajo.  
   

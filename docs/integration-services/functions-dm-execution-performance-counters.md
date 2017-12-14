@@ -1,5 +1,5 @@
 ---
-title: dm_execution_performance_counters (base de datos de SSISDB) | Documentos de Microsoft
+title: dm_execution_performance_counters (base de datos SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funciones - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
+ [ @execution_id = ] *execution_id*  
  El identificador único de la ejecución que contiene uno o más paquetes. Los paquetes que se ejecutan con la tarea Ejecutar paquete se ejecutan en la misma instancia que el paquete primario.  
   
- Si no se especifica un identificador de ejecución, se devuelven estadísticas de rendimiento de varias ejecuciones. Si es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de todas las ejecuciones actuales.  Si no es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de las ejecuciones actuales para las que tiene permisos de lectura. El *execution_id* es un **BigInt**.  
+ Si no se especifica un identificador de ejecución, se devuelven estadísticas de rendimiento de varias ejecuciones. Si es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de todas las ejecuciones actuales.  Si no es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de las ejecuciones actuales para las que tiene permisos de lectura. *execution_id* es **BigInt**.  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se muestran los valores de nombre de contador devueltos por la función dm_execution_performance_counter.  
@@ -67,7 +65,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Nombre de la columna|Tipo de columna|Description|Comentarios|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** no es un valor válido.|Identificador único para la ejecución que contiene el paquete.||  
-|counter_name|**nvarchar (128)**|Nombre del contador.|Consulte la **comentarios** sección de valores.|  
+|counter_name|**nvarchar(128)**|Nombre del contador.|Vea la sección **Comentarios** de los valores.|  
 |counter_value|**BigInt**|Valor devuelto por el contador.||  
   
 ## <a name="example"></a>Ejemplo  
@@ -90,9 +88,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Permisos READ y MODIFY en la instancia de ejecución  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que la función genere un error.  
@@ -102,4 +100,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   El identificador de ejecución especificado no es válido.  
   
   
-

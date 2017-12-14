@@ -3,8 +3,11 @@ title: Trabajar con columnas en consultas de funciones agregadas (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed7d22169cafdc01fc129191bf2a0fffac4a8ec3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2aca7a040d2eba0fec2870ee95a89d1ad47ae1b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabajar con columnas en consultas de funciones agregadas (Visual Database Tools)
-Al crear consultas agregadas, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) asume determinados criterios para poder crear una consulta válida. Por ejemplo, si está creando una consulta de funciones de agregado y marca una columna de datos para los resultados, el Diseñador de consultas y vistas incluye automáticamente la columna en la cláusula GROUP BY para que no intente mostrar sin darse cuenta el contenido de una fila individual en un resumen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al crear consultas de funciones agregadas, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) asume determinados criterios para poder crear una consulta válida. Por ejemplo, si está creando una consulta de funciones de agregado y marca una columna de datos para los resultados, el Diseñador de consultas y vistas incluye automáticamente la columna en la cláusula GROUP BY para que no intente mostrar sin darse cuenta el contenido de una fila individual en un resumen.  
   
 ## <a name="using-group-by"></a>Utilizar Agrupar por  
 El Diseñador de consultas y vistas utiliza las siguientes instrucciones para trabajar con columnas:  

@@ -1,5 +1,5 @@
 ---
-title: Tarea Ejecutar paquete | Documentos de Microsoft
+title: Tarea Ejecutar paquete | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
   La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/11/2017
  La tarea Ejecutar paquete puede ejecutar paquetes secundarios incluidos en el mismo proyecto que contiene el paquete primario. Para seleccionar un paquete secundario del proyecto, establezca la propiedad **ReferenceType** en **Referencia de proyecto**y, a continuación, establezca la propiedad **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. [Implementación de Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  La tarea Ejecutar paquete además puede ejecutar paquetes almacenados en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y paquetes almacenados en el sistema de archivos. La tarea usa un administrador de conexiones OLE DB para conectar con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un administrador de conexiones de archivos para tener acceso al sistema de archivos. Para obtener más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) y [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/11/2017
  Seleccione **Referencia de proyecto** para los paquetes secundarios que están en el proyecto. Seleccione **Referencia externa** para los paquetes secundarios que se encuentran fuera del paquete  
   
 > [!NOTE]  
->  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. [Implementación de Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Contraseña**  
  Si el paquete secundario está protegido con contraseña, debe proporcionar esta contraseña o hacer clic en el botón de puntos suspensivos (...) y crear una nueva contraseña.  
@@ -195,7 +193,7 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>Ubicación = SQL Server  
  **Conexión**  
- Seleccione un administrador de conexiones de OLE DB en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Seleccione un administrador de conexiones OLE DB de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -204,7 +202,7 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--file-system"></a>Ubicación = Sistema de archivos  
  **Conexión**  
- Seleccione un administrador de conexión de archivos en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -214,7 +212,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> Establecer las opciones de la página Enlaces de parámetro  
  Puede pasar valores del paquete primario o del proyecto al paquete secundario. El proyecto debe utilizar el modelo de implementación del proyecto y el paquete secundario debe estar incluido en el mismo proyecto que contiene el paquete primario.  
   
- Para obtener información sobre cómo convertir proyectos en el modelo de implementación de proyecto, vea [implementar Integration Services (SSIS) proyectos y paquetes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Para obtener información sobre cómo convertir proyectos al modelo de implementación de proyectos, vea [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Parámetro de paquete secundario**  
  Escriba o seleccione un nombre para el parámetro de paquete secundario.  
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  Haga clic para quitar una asignación entre un parámetro o variable y un parámetro de paquete secundario.  
   
   
-

@@ -3,8 +3,11 @@ title: "Cuadro de diálogo Ubicación (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Ubicación (cuadro de diálogo, Visual Database Tools)
-Utilice este cuadro de diálogo para ubicar y seleccionar la carpeta que contiene los archivos de interés. Este cuadro de diálogo devuelve la ruta de acceso de la carpeta seleccionada al cuadro de diálogo que realiza la llamada. Puede tener acceso a este cuadro de diálogo de esta forma:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use este cuadro de diálogo para localizar y seleccionar la carpeta que contiene los archivos de interés. Este cuadro de diálogo devuelve la ruta de acceso de la carpeta seleccionada al cuadro de diálogo que realiza la llamada. Puede tener acceso a este cuadro de diálogo de esta forma:  
   
 -   Elija **Nuevo** en el menú **Archivo** y seleccione **Proyecto**. Cuando se muestre el cuadro de diálogo **Nuevo proyecto** , elija **Examinar**. El cuadro de diálogo **Ubicación** se abre con el título **Ubicación del proyecto**.  
   

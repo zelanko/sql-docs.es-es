@@ -1,5 +1,5 @@
 ---
-title: Contenedor de bucles foreach | Documentos de Microsoft
+title: Contenedor de bucles Para cada uno | Microsoft Docs
 ms.custom: 
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 72a38ba6fa45a5b7d6c6003100b27398c60ed522
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 10/10/2017
   
 -   Enumerador de ADO para Foreach, para enumerar filas de tablas. Por ejemplo, puede obtener las filas de un conjunto de registros ADO.  
   
-     El destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete del tipo de datos **Object** . Normalmente usa un contenedor de bucles Foreach con el enumerador Foreach ADO para procesar una fila del conjunto cada vez. La variable especificada para el enumerador Foreach ADO debe ser del tipo de datos Object. Para obtener más información acerca del destino de conjunto de registros, vea [usar un destino de conjunto de registros](../../integration-services/data-flow/use-a-recordset-destination.md).  
+     El destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete del tipo de datos **Object** . Normalmente usa un contenedor de bucles Foreach con el enumerador Foreach ADO para procesar una fila del conjunto cada vez. La variable especificada para el enumerador Foreach ADO debe ser del tipo de datos Object. Para obtener más información acerca del destino de conjunto de registros, vea [Usar un destino de conjunto de registros](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
 -   Enumerador de conjunto de filas del esquema para Foreach de ADO.NET, para enumerar la información de esquema sobre un origen de datos. Por ejemplo, puede enumerar y obtener una lista de tablas de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -70,11 +68,11 @@ ms.lasthandoff: 10/10/2017
   
 -   Enumerador de blobs de Azure para Foreach usado para enumerar blobs en un contenedor de blobs en Almacenamiento de Azure.  
 
--   Enumerador de archivos para foreach ADLS para enumerar los archivos en un directorio en el almacén de Azure Data Lake.
+-   Enumerador de archivos de ADLS para el bucle Para cada uno para enumerar los archivos en un directorio en Azure Data Lake Store.
   
  El siguiente diagrama muestra un contenedor de bucles Foreach que tiene una tarea Sistema de archivos. El bucle Foreach utiliza el Enumerador de archivos para Foreach y la tarea Sistema de archivos está configurada para copiar un archivo. Si la carpeta especificada por el enumerador contiene cuatro archivos, el bucle se repetirá cuatro veces y copiará cuatro archivos.  
   
- ![Un contenedor de bucles Foreach que enumera una carpeta](../../integration-services/control-flow/media/ssis-foreachloop.gif "contenedor de un bucle de Foreach que enumera una carpeta")  
+ ![Contenedor de bucles Para cada uno que enumera una carpeta](../../integration-services/control-flow/media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
   
  Puede utilizar una combinación de variables y expresiones de propiedades para actualizar la propiedad del objeto de paquete con el valor de colección de enumerador. Primero debe asignar el valor de colección a una variable definida por el usuario y después debe implementar una expresión de propiedad en la propiedad que utiliza la variable. Por ejemplo, el valor de la colección del Enumerador de archivos para Foreach se asigna a una variable denominada **MyFile** , que se usa en la expresión de propiedad para la propiedad Subject de una tarea Enviar correo. Cuando se ejecuta el paquete, la propiedad Subject se actualiza con el nombre de un archivo cada vez que se repite el bucle. Para más información, vea [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -100,16 +98,16 @@ ms.lasthandoff: 10/10/2017
 |SMO para Foreach|Especifique la conexión a una base de datos y los objetos SMO que se van a enumerar.|  
 |Enumerador de archivos HDFS para Foreach|Especifique una carpeta y los archivos que se van a enumerar, el formato de nombre de archivo de los archivos recuperados y si hay que recorrer las subcarpetas.|  
 |Por cada blob de Azure|Deberá especificar el contenedor de blobs de Azure que contendrá los blobs que se van a enumerar.|  
-|Archivo de ADLS de foreach|Especifique el directorio de almacén de Data Lake de Azure que contiene los archivos que hay que enumerar.|
+|Archivo de ADLS para Para cada uno|Especifique el directorio de Azure Data Lake Store que contiene los archivos que hay que enumerar.|
 
-## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Agregar enumeración a un flujo de control con un contenedor de bucles Foreach
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]incluye el contenedor de bucles Foreach, un elemento de flujo de control que simplifica la inclusión de una construcción bucle que enumera archivos y objetos en el flujo de control de un paquete. Para más información, vea [Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md).  
+## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Agregar enumeración a un flujo de control con un contenedor de bucles Para cada uno
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para cada uno, un elemento de flujo de control que simplifica la inclusión de una construcción de bucle que enumera archivos y objetos en el flujo de control de un paquete. Para más información, vea [Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md).  
   
  El contenedor de bucles Foreach no proporciona una funcionalidad, sino solamente la estructura en la que se genera el flujo de control repetible, se especifica un tipo de enumerador y se configura el enumerador. Para proporcionar la funcionalidad del contenedor, debe incluir por lo menos una tarea en el contenedor de bucles Foreach. Para más información, consulte [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
  El contenedor de bucles Foreach puede incluir un flujo de control con varias tareas y otros contenedores. Agregar tareas y contenedores a un contenedor de bucles Foreach es similar a agregarlas a un paquete, salvo que las tareas y contenedores se arrastran al contenedor de bucles Foreach en lugar de al paquete. Si el contenedor de bucles Foreach incluye más de una tarea o contenedor, puede conectarlos mediante restricciones de precedencia, tal y como se hace en un paquete. Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
-### <a name="add-and-configure-a-foreach-loop-container"></a>Agregar y configurar un contenedor de bucles Foreach
+### <a name="add-and-configure-a-foreach-loop-container"></a>Agregar y configurar el contenedor de bucles Para cada uno
   
 1.  Agregue el contenedor de bucles Foreach al paquete. Para más información, vea [Agregar o eliminar tareas o contenedores en un flujo de control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
@@ -132,7 +130,7 @@ Este procedimiento describe cómo configurar un contenedor de bucles Foreach, in
   
 5.  Especifique un enumerador y establezca las opciones del enumerador de la manera siguiente:  
   
-    -   Para usar el enumerador Foreach File, proporcione la carpeta que contiene los archivos para enumerar, especifique un filtro para el nombre de archivo y el tipo y especificar si se debe devolver el nombre de archivo completo. Además, indique si se deben recorrer las subcarpetas para obtener más archivos.  
+    -   Para usar el enumerador de archivos Para cada uno, proporcione la carpeta que contiene los archivos que se deben enumerar, especifique un filtro para el nombre y tipo de archivo, y especifique si se debe devolver el nombre de archivo completo. Además, indique si se deben recorrer las subcarpetas para obtener más archivos.  
   
     -   Para usar el enumerador de elementos para Foreach, haga clic en **Columnas**y, en el cuadro de diálogo **Columnas For Each Item** , haga clic en **Agregar** para agregar columnas. Seleccione un tipo de datos de la lista **Tipo de datos** para cada columna y haga clic en **Aceptar**.  
   
@@ -158,18 +156,18 @@ Este procedimiento describe cómo configurar un contenedor de bucles Foreach, in
   
          Después, haga clic en EnumerationType y seleccione el tipo de enumeración de la lista. Si EnumerationType es **Navigator, Node o NodeText**, haga clic en OuterXPathStringSourceType, seleccione el tipo de origen y, después, haga clic en OuterXPathString. Según el valor establecido para OuterXPathStringSourceType, seleccione una variable o una conexión de archivo de la lista, cree una variable o una conexión de archivo, o bien escriba la cadena de la expresión XPath (lenguaje de rutas XML) externa.  
   
-         Si es EnumerationType **ElementCollection**, establecer OuterXPathStringSourceType y OuterXPathString tal y como se ha descrito anteriormente. Después, haga clic en InnerElementType, seleccione un tipo de enumeración para los elementos internos y, después, haga clic en InnerXPathStringSourceType. Según el valor establecido para InnerXPathStringSourceType, seleccione una variable o conexión de archivo, cree una variable o una conexión de archivo, o bien escriba la cadena para la expresión XPath interna.  
+         Si EnumerationType es **ElementCollection**, establezca OuterXPathStringSourceType y OuterXPathString como se ha descrito anteriormente. Después, haga clic en InnerElementType, seleccione un tipo de enumeración para los elementos internos y, después, haga clic en InnerXPathStringSourceType. Según el valor establecido para InnerXPathStringSourceType, seleccione una variable o conexión de archivo, cree una variable o una conexión de archivo, o bien escriba la cadena para la expresión XPath interna.  
   
     -   Para usar el Enumerador de SMO para Foreach, seleccione una conexión ADO.NET existente o haga clic en **Nueva conexión** en la lista **Conexión** y luego escriba la cadena que se debe usar o haga clic en **Examinar**. Si hace clic en **Examinar**, en el cuadro de diálogo **Seleccionar enumeración de SMO** , seleccione el tipo de objeto que se debe enumerar y el tipo de enumeración, y haga clic en **Aceptar**.  
   
 6.  De manera opcional, haga clic en el botón Examinar ( **…** ) en el cuadro de texto **Expresiones** de la página **Colección** para crear expresiones que actualicen valores de propiedades. Para más información, vea [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  Las propiedades enumeradas en la **propiedad** lista varían según el enumerador.  
+    >  Las propiedades de la lista **Propiedad** varían según el enumerador.  
   
-7.  Si lo desea, haga clic en **asignaciones de variables** para asignar propiedades de objetos para el valor de la colección y, a continuación, haga lo siguiente:  
+7.  Si quiere, puede hacer clic en **Asignaciones de variables** para asignar propiedades de objetos al valor de la colección y, luego, haga lo siguiente:  
   
-    1.  En el **Variables** lista, seleccione una variable o haga clic en  **\<nueva Variable >** para crear una nueva variable.  
+    1.  En la lista **Variables**, seleccione una variable o haga clic en **\<Nueva variable>** para crear una.  
   
     2.  Si agrega una nueva variable, establezca las propiedades de la variable en el cuadro de diálogo **Agregar variable** y haga clic en **Aceptar**.  
   
@@ -182,7 +180,7 @@ Este procedimiento describe cómo configurar un contenedor de bucles Foreach, in
   
 9. Haga clic en **Aceptar**.  
 
-## <a name="general-page---foreach-loop-editor"></a>Página general - Editor de bucles Foreach
+## <a name="general-page---foreach-loop-editor"></a>Página General: Editor de bucles Para cada uno
 Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach** para asignar nombre y describir un contenedor de bucles Foreach que utiliza un enumerador especificado para repetir un flujo de trabajo para cada miembro de una colección.  
   
  Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
@@ -197,8 +195,8 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Description**  
  Escriba una descripción del contenedor de bucles Foreach.  
 
-## <a name="collection-page---foreach-loop-editor"></a>Página de la colección - Editor de bucles Foreach
- Use la **colección** página de la **Editor de bucles Foreach** cuadro de diálogo para especificar el tipo de enumerador y configurarlo.  
+## <a name="collection-page---foreach-loop-editor"></a>Página Colección: Editor de bucles Para cada uno
+ Use la página **Colección** del cuadro de diálogo **Editor de bucles Para cada uno** para especificar el tipo de enumerador y configurarlo.  
   
  Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
@@ -208,16 +206,16 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Enumerador de archivos para foreach**|Enumera archivos. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de archivos para Foreach**.|  
-|**Enumerador Foreach Item**|Enumera los valores de un elemento. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de elementos para Foreach**.|  
-|**Enumerador de ADO para foreach**|Enumera tablas o filas de las tablas. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de ADO para Foreach**.|  
-|**Foreach ADO.NET Schema Rowset enumerador**|Enumera un esquema. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de conjunto de filas del esquema para Foreach de ADO.NET**.|  
-|**Enumerador de Variable de foreach**|Enumera el valor en una variable. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de variable para Foreach**.|  
-|**Enumerador de lista de nodos para foreach**|Enumera los nodos de un documento XML. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de lista de nodos para Foreach**.|  
-|**Enumerador de SMO para foreach**|Enumera un objeto SMO. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de SMO para Foreach**.|  
+|**Enumerador de archivos para Para cada uno**|Enumera archivos. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de archivos para Foreach**.|  
+|**Enumerador de elementos para Para cada uno**|Enumera los valores de un elemento. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de elementos para Foreach**.|  
+|**Enumerador de ADO para Para cada uno**|Enumera tablas o filas de las tablas. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de ADO para Foreach**.|  
+|**Enumerador de conjunto de filas del esquema para Para cada uno de ADO.NET**|Enumera un esquema. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de conjunto de filas del esquema para Foreach de ADO.NET**.|  
+|**Enumerador de variable para Para cada uno**|Enumera el valor en una variable. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de variable para Foreach**.|  
+|**Enumerador de lista de nodos para Para cada uno**|Enumera los nodos de un documento XML. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de lista de nodos para Foreach**.|  
+|**Enumerador de SMO para Para cada uno**|Enumera un objeto SMO. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de SMO para Foreach**.|  
 |**Enumerador de archivos HDFS para Foreach**|Enumerar archivos HDFS en la ubicación de HDFS especificada. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de archivos HDFS para Foreach**.|  
-|**Enumerador de Blob de Azure para foreach**|Enumerar archivos blob en la ubicación de blob especificada. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de blob de Azure para Foreach**.|  
-|**Enumerador de archivos para foreach ADLS**|Enumerar archivos en el directorio de almacén de Data Lake especificado. Al seleccionar este valor muestra las opciones dinámicas en la sección **enumerador de archivos para Foreach ADLS**.|
+|**Enumerador de blob de Azure para Para cada uno**|Enumerar archivos blob en la ubicación de blob especificada. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de blob de Azure para Foreach**.|  
+|**Enumerador de archivos de ADLS para Para cada uno**|Enumerar archivos en el directorio de Data Lake Store especificado. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de archivos ADLS para Para cada uno**.|
   
  **Expresiones**  
  Haga clic en **Expresiones** o expándalo para ver la lista de expresiones de propiedad existentes. Haga clic en el botón de puntos suspensivos **(…)** para agregar una expresión de propiedad para una propiedad de enumerador o para editar y evaluar una expresión de propiedad existente.  
@@ -229,13 +227,13 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 #### <a name="enumerator--foreach-file-enumerator"></a>Enumerador = Enumerador de archivos para Foreach  
  El enumerador de archivos para Foreach se utiliza para enumerar los archivos de una carpeta. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL, puede utilizar el enumerador de archivos para Foreach para enumerar los archivos que contienen instrucciones SQL que ejecuta la tarea Ejecutar SQL. El enumerador puede configurarse para incluir subcarpetas.  
   
- El contenido de las carpetas y subcarpetas que enumera el enumerador de archivos para Foreach puede cambiar mientras el bucle se ejecuta ya que los procesos externos o las tareas del bucle agregan, cambian el nombre o eliminan archivos mientras el bucle se ejecuta. Estos cambios pueden provocar un número de situaciones inesperadas:  
+ El contenido de las carpetas y subcarpetas que enumera el enumerador de archivos para Foreach puede cambiar mientras el bucle se ejecuta ya que los procesos externos o las tareas del bucle agregan, cambian el nombre o eliminan archivos mientras el bucle se ejecuta. Estos cambios pueden provocar varias situaciones inesperadas:  
   
--   Si se eliminan archivos, las acciones de una tarea en el bucle Foreach pueden afectar a un conjunto diferente de archivos de los archivos utilizados por las tareas posteriores.  
+-   Si los archivos se eliminan, las acciones de una tarea del bucle Para cada uno pueden afectar a un conjunto de archivos diferente de los archivos utilizados por las tareas posteriores.  
   
--   Si se cambia el nombre de archivos y un proceso externo agrega archivos automáticamente para sustituir los archivos cuyo nombre ha cambiado, las acciones de tareas en el bucle Foreach pueden afectar a los mismos archivos dos veces.  
+-   Si los archivos se cambian de nombre y un proceso externo agrega archivos automáticamente para reemplazar los archivos cuyo nombre ha cambiado, las acciones de las tareas en el bucle Para cada uno pueden afectar dos veces a los mismos archivos.  
   
--   Si se agregan archivos, puede resultar difícil determinar que afecta a los archivos el bucle Foreach.  
+-   Si se agregan archivos, puede resultar difícil determinar los archivos que el bucle Para cada uno ha afectado.  
   
  **Carpeta**  
  Permite especificar la ruta de la carpeta raíz que se va a enumerar.  
@@ -249,17 +247,17 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 > [!NOTE]  
 >  Use caracteres comodín (*) para especificar los archivos que desea incluir en la colección. Por ejemplo, para incluir los archivos con nombres que contienen "abc", use el filtro siguiente: \*abc\*.  
 >   
->  Cuando se especifica una extensión de nombre de archivo, el enumerador también devuelve archivos que tienen la misma extensión con caracteres adicionales anexados. (Este comportamiento es el mismo que el del comando **dir** en el sistema operativo, que también compara nombres de archivo con formato 8.3 para mantener la compatibilidad con versiones anteriores). Este comportamiento del enumerador podría producir resultados inesperados. Por ejemplo, suponga que desea enumerar solo archivos de Excel 2003 y especifica "* .xls". Sin embargo, los devuelve el enumerador también archivos de Excel 2007 porque esos archivos tienen la extensión, ".xlsx".  
+>  Cuando se especifica una extensión de nombre de archivo, el enumerador también devuelve archivos que tienen la misma extensión con caracteres adicionales anexados. (Este comportamiento es el mismo que el del comando **dir** en el sistema operativo, que también compara nombres de archivo con formato 8.3 para mantener la compatibilidad con versiones anteriores). Este comportamiento del enumerador podría producir resultados inesperados. Por ejemplo, suponga que desea enumerar solo archivos de Excel 2003 y especifica "* .xls". Sin embargo, el enumerador también devuelve archivos de Excel 2007 porque esos archivos tienen la extensión ".xlsx".  
 >   
 >  Puede usar una expresión para especificar los archivos que quiere incluir en una colección. Para ello, expanda **Expresiones** en la página **Colección** , seleccione la propiedad **FileSpec** y, después, haga clic en el botón de puntos suspensivos (…) para agregar la expresión de propiedad.  
   
- **Nombre completo**  
- Seleccione esta opción si desea recuperar la ruta completa de los nombres de archivo. Si se especifican caracteres comodín en la opción archivos, las rutas de acceso completas devueltas coinciden con el filtro.  
+ **Completo**  
+ Seleccione esta opción si desea recuperar la ruta completa de los nombres de archivo. Si se especifican caracteres comodín en la opción Archivos, las rutas completas devueltas coinciden con el filtro.  
   
- **Solo el nombre**  
+ **Solo nombre**  
  Seleccione esta opción si desea recuperar únicamente los nombres. Si se especifican caracteres comodín en la opción Archivos, los nombres de archivo devueltos coinciden con el filtro.  
   
- **Nombre y la extensión**  
+ **Nombre y extensión**  
  Seleccione esta opción si desea recuperar los nombres y las extensiones de archivo asociadas. Si se especifican caracteres comodín en la opción Archivos, el nombre y extensión de los archivos devueltos coinciden con el filtro.  
   
  **Recorrer subcarpetas**  
@@ -270,7 +268,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Para actualizar las propiedades de la tarea Ejecutar proceso, se asignan variables a las columnas de elementos mediante el índice de la columna. La primera columna definida en el elemento enumerador tiene el valor de índice de 0, la segunda columna el valor 1 y así sucesivamente. Los valores de la variable se actualizan con cada repetición del bucle. Las propiedades **Executable** y **WorkingDirectory** de la tarea Ejecutar proceso se pueden actualizar mediante expresiones de propiedad que utilizan estas variables.  
   
- **Definir los elementos de la colección foreach Item**  
+ **Definir los elementos de la colección de elementos para Para cada uno**  
  Proporcione un valor para cada columna de la tabla.  
   
 > [!NOTE]  
@@ -279,7 +277,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 > [!NOTE]  
 >  Si los valores proporcionados no son compatibles con el tipo de datos de la columna, el texto de muestra en color rojo.  
   
- **Tipo de datos de columna**  
+ **Tipo de datos de la columna**  
  Muestra el tipo de datos de la columna activa.  
   
  **Quitar**  
@@ -294,27 +292,27 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  El enumerador de ADO para Foreach se utiliza para enumerar filas o tablas de un objeto ADO o ADO.NET que está almacenado en una variable. Por ejemplo, si el bucle Foreach incluye una tarea Script que escribe un conjunto de datos en una variable, puede utilizar el enumerador de ADO para Foreach para enumerar las filas del conjunto de datos. Si la variable contiene un conjunto de datos ADO.NET, el enumerador puede configurarse para enumerar filas en varias tablas o para enumerar tablas.  
   
  **Variable de origen de objeto ADO**  
- Seleccione una variable definida por el usuario en la lista o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+ Seleccione en la lista una variable definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
   
 > [!NOTE]  
 >  La variable debe tener el tipo de datos Object o, de lo contrario, se producirán errores.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **Filas de la primera tabla**  
+ **Filas en la primera tabla**  
  Seleccione esta opción si desea enumerar solo las filas de la primera tabla.  
   
- **Filas de todas las tablas (solo conjunto de datos ADO.NET)**  
+ **Filas en todas las tablas (solo en el conjunto de datos ADO.NET)**  
  Seleccione esta opción si desea enumerar las filas de todas las tablas. Esta opción solo está disponible si todos los objetos que se van a enumerar son miembros del mismo conjunto de datos ADO.NET.  
   
- **Todas las tablas (solo conjunto de datos ADO.NET)**  
+ **Todas las tablas (solo en el conjunto de datos ADO.NET)**  
  Seleccione esta opción si solo desea enumerar las tablas.  
   
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerador = Enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
  El enumerador de conjunto de filas del esquema para Foreach de ADO.NET se utiliza para enumerar un esquema para un origen de datos especificado. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL, puede utilizar el enumerador de conjunto de filas del esquema para Foreach de ADO.NET para enumerar esquemas, como las columnas de la base de datos **AdventureWorks** , y la tarea Ejecutar SQL para obtener los permisos de esquema.  
   
  **Conexión**  
- Seleccione un administrador de conexiones de ADO.NET en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de ADO.NET administrador.  
+ Seleccione en la lista un administrador de conexiones ADO.NET o haga clic en \<**Nueva conexión...**> para crear un administrador de conexiones ADO.NET.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones ADO.NET debe utilizar un proveedor .NET para OLE DB. Si se conecta a SQL Server, el proveedor recomendado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que aparece enumerado en la sección **Proveedores .NET de OleDb** del cuadro de diálogo **Administrador de conexiones** .  
@@ -333,7 +331,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  El enumerador de variable para Foreach se utiliza para enumerar los objetos enumerables incluidos en una variable especificada. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL que ejecuta una consulta y almacena el resultado en una variable, puede utilizar el enumerador de variable para Foreach para enumerar los resultados de la consulta.  
   
  **Variable**  
- Seleccione una variable en la lista o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+ Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -356,11 +354,11 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **DocumentSource**  
  Si el valor de **DocumentSourceType** es **Entrada directa**, proporcione el código XML o haga clic en el botón de puntos suspensivos (…) para proporcionarlo a través del cuadro de diálogo **Editor de origen del documento**.  
   
- Si **DocumentSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivo o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Si **DocumentSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   
  **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DocumentSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+ Si **DocumentSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -369,8 +367,8 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Navegador**|Se enumera mediante un objeto XPathNavigator.|  
-|**Nodo**|Se enumeran los nodos devueltos por una operación XPath.|  
+|**Navigator**|Se enumera mediante un objeto XPathNavigator.|  
+|**Node**|Se enumeran los nodos devueltos por una operación XPath.|  
 |**NodeText**|Se enumeran los nodos de texto devueltos por una operación XPath.|  
 |**ElementCollection**|Se enumeran los nodos de elemento devueltos por una operación XPath.|  
   
@@ -386,11 +384,11 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **OuterXPathString**  
  Si **OuterXPathStringSourceType** está establecido en **Entrada directa**, debe proporcionar la cadena XPath.  
   
- Si **OuterXPathStringSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivo o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Si **OuterXPathStringSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   
  **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **OuterXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+ Si **OuterXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -409,19 +407,19 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **InnerXPathString**  
  Si **InnerXPathStringSourceType** está establecido en **Entrada directa**, debe proporcionar la cadena XPath.  
   
- Si **InnerXPathStringSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivo o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Si **InnerXPathStringSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   
  **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **InnerXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+ Si **InnerXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una nueva.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerador = Enumerador de SMO para Foreach  
- El enumerador de SMO para Foreach se utiliza para enumerar objetos de Objetos de administración de SQL Server (SMO). Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL, puede utilizar el enumerador de SMO para Foreach para enumerar las tablas de la **AdventureWorks** la base de datos y ejecutar consultas que contar el número de filas de cada tabla.  
+ El enumerador de SMO para Foreach se utiliza para enumerar objetos de Objetos de administración de SQL Server (SMO). Por ejemplo, si el bucle Para cada uno incluye una tarea Ejecutar SQL, puede utilizar el enumerador de SMO para Para cada uno para enumerar las tablas de la base de datos **AdventureWorks** y ejecutar las consultas que realizan el recuento de filas de cada tabla.  
   
  **Conexión**  
- Seleccione un administrador de conexiones de ADO.NET existente o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Seleccione un administrador de conexiones ADO.NET existente o haga clic en \<**Nueva conexión…**> para crear uno.  
   
  Temas relacionados: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -433,32 +431,32 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  **Temas relacionados:** [Seleccionar enumeración de SMO, cuadro de diálogo](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0).  
   
-####  <a name="ForeachHDFSFile"></a>Enumerador = enumerador de archivos HDFS para Foreach  
+####  <a name="ForeachHDFSFile"></a> Enumerador = Enumerador de archivos HDFS para Para cada uno  
  El **Enumerador de archivos HDFS para Foreach** habilita un paquete SSIS para enumerar los archivos HDFS en la ubicación especificada de HDFS. El nombre de un archivo HDFS se puede almacenar en una variable y usar en tareas en el Contenedor de bucles Foreach.  
   
  **Administrador de conexiones de Hadoop**  
  Especifique un administrador de conexiones de Hadoop existente o cree uno nuevo, que apunta a donde se hospedan los archivos HDFS. Para obtener más información, vea [Hadoop Connection Manager](../../integration-services/connection-manager/hadoop-connection-manager.md).  
   
- **Ruta de acceso de directorio**  
+ **Ruta de acceso al directorio**  
  Especifique el nombre del directorio HDFS que contiene los archivos HDFS que hay que enumerar.  
   
  **Filtro de nombre de archivo**  
- Especifique un filtro de nombre para seleccionar archivos con un determinado patrón de nombre. Por ejemplo, Mihoja*.xls\* incluye archivos como MySheet001.xls y MySheetABC.xlsx.  
+ Especifique un filtro de nombre para seleccionar archivos con un determinado patrón de nombre. Por ejemplo, MiHoja*.xls\* incluirá archivos como MiHoja001.xls y MiHojaABC.xlsx.  
   
- **Recuperar el nombre de archivo**  
+ **Recuperación del nombre de archivo**  
  Especifique el tipo de nombre de archivo recuperado por SSIS.  
   
--   **Nombre completo** hace referencia al nombre completo, que contiene el nombre de archivo y ruta del directorio.  
+-   **Nombre completo** hace referencia al nombre completo que contiene el nombre de archivo y la ruta de acceso al directorio.  
   
--   **Solo nombre** hace referencia se recupera el nombre de archivo sin la ruta de acceso.  
+-   **Solo nombre** hace referencia a que se recupera el nombre de archivo sin la ruta de acceso.  
   
  **Recorrer subcarpetas**  
  Especifique si desea crear un bucle entre subcarpetas de forma recursiva.  
   
  En la página **Asignaciones de variables** del editor, seleccione o cree una variable para almacenar el nombre del archivo HDFS enumerado.  
   
-####  <a name="ForeachAzureBlob"></a>Enumerador = enumerador de Blob de Azure para Foreach  
- El  **Enumerador de blob de Azure** habilita un paquete SSIS para enumerar los archivos de blob en la ubicación de blob especificada. Puede almacenar el nombre del archivo blob enumerado en una variable y usar en tareas en el contenedor de bucles Foreach.  
+####  <a name="ForeachAzureBlob"></a> Enumerador = Enumerador de blob de Azure para Para cada uno  
+ El  **Enumerador de blob de Azure** habilita un paquete SSIS para enumerar los archivos de blob en la ubicación de blob especificada. Puede almacenar el nombre del archivo de blob enumerado en una variable y usarlo en tareas en el Contenedor de bucles Para cada uno.  
   
  El **Enumerador de blobs de Azure** es un componente de SQL Server Integration Services (SSIS) Feature Pack para Azure para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Descargue el Feature Pack [aquí](http://go.microsoft.com/fwlink/?LinkID=626967).  
   
@@ -470,40 +468,40 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Nombre del contenedor de blob**  
  Especifique el nombre del contenedor de blob que contiene los archivos de blob que hay que enumerar.
   
- **Directorio de BLOB**  
+ **Directorio de blob**  
  Especifique el directorio de blob que contiene los archivos de blob que hay que enumerar. El directorio de blob es una estructura jerárquica virtual.  
   
- **Filtro de nombre de BLOB**  
- Especifique un nombre de filtro para enumerar los archivos con un determinado patrón de nombre. Por ejemplo, `MySheet*.xls\*` incluye archivos como MySheet001.xls y MySheetABC.xlsx.  
+ **Filtro de nombre de blob**  
+ Especifique un nombre de filtro para enumerar los archivos con un determinado patrón de nombre. Por ejemplo, `MySheet*.xls\*` incluirá archivos como MiHoja001.xls y MiHojaABC.xlsx.  
   
- **Intervalo de tiempo de BLOB filtro desde/hasta**  
- Especifique un filtro de intervalo de tiempo. Archivos modificados después **TimeRangeFrom** y antes de **TimeRangeTo** se enumeran. 
+ **Filtro de intervalo de tiempo desde/hasta de blob**  
+ Especifique un filtro de intervalo de tiempo. Se enumeran los archivos modificados después de **TimeRangeFrom** y antes de **TimeRangeTo**. 
 
-####  <a name="ForeachAdlsFile"></a>Enumerador = enumerador de archivos para Foreach ADLS 
-El **enumerador de archivos de ADLS** habilita un paquete SSIS para enumerar los archivos de almacén de Azure Data Lake. Puede almacenar la ruta de acceso completa del archivo enumerado (prefijado con una barra diagonal - `/`) en una variable y use la ruta de acceso de archivo en tareas en el contenedor de bucles Foreach.
+####  <a name="ForeachAdlsFile"></a> Enumerador = Enumerador de archivos de ADLS para Para cada uno 
+El **Enumerador de archivos de ADLS** permite que un paquete de SSIS enumere los archivos en Azure Data Lake Store. Puede almacenar la ruta de acceso completa del archivo enumerado (prefijado con una barra diagonal: `/`) en una variable y usar la ruta de acceso de archivo en tareas dentro del contenedor de bucles Para cada uno.
   
 **AzureDataLakeConnection**  
-Especifica un administrador de conexiones de Data Lake de Azure, o crea uno nuevo que haga referencia a una cuenta ADLS.   
+Especifica un administrador de conexiones de Azure Data Lake, o crea uno nuevo que hace referencia a una cuenta de ADLS.   
   
 **AzureDataLakeDirectory**  
-Especifica el directorio ADLS que contiene los archivos que hay que enumerar.
+Especifica el directorio de ADLS que contiene los archivos que hay que enumerar.
   
 **FileNamePattern**  
-Especifica un filtro de nombre de archivo. Se enumeran solo los archivos cuyos nombres coincidan con el patrón especificado. Los caracteres comodín `*` y `?` son compatibles. 
+Especifica un filtro de nombre de archivo. Se enumeran solo los archivos cuyo nombre coincide con el patrón especificado. Se admite el uso de los caracteres comodín `*` y `?`. 
   
 **SearchRecursively**  
 Especifica si se debe buscar de forma recursiva en el directorio especificado.  
 
-## <a name="variable-mappings-page---foreach-loop-editor"></a>Página de asignaciones de variables - Editor de bucles Foreach
+## <a name="variable-mappings-page---foreach-loop-editor"></a>Página Asignaciones de variables: Editor de bucles Para cada uno
  Use la página **Asignaciones de variables** del cuadro de diálogo **Editor de bucles Foreach** para asignar variables al valor de la colección. El valor de la variable se actualiza con los valores de la colección en cada iteración del bucle.  
   
- Para obtener información acerca de cómo utilizar el contenedor de bucles Foreach en un paquete de Integration Services, vea [contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md). Para saber cómo se configura, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Para obtener más información acerca de cómo utilizar el contenedor de bucles Para cada uno en un paquete de Integration Services, vea [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md). Para saber cómo se configura, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  El tutorial de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , llamado Tutorial para crear un paquete ETL sencillo, incluye una lección que le enseña a agregar y configurar un bucle Foreach.  
   
 ### <a name="options"></a>Opciones  
  **Variable**  
- Seleccione una variable existente o haga clic en **nueva variable...**  para crear una nueva variable.  
+ Seleccione una variable existente o haga clic en **Nueva variable…** para crear una.  
   
 > [!NOTE]  
 >  Una vez asignada una variable, se agregará automáticamente una nueva fila a la lista **Variable**.  
@@ -519,7 +517,7 @@ Especifica si se debe buscar de forma recursiva en el directorio especificado.
 **Eliminar**  
  Seleccione una variable y haga clic en **Eliminar**.  
 
-## <a name="schema-restrictions-dialog-box-adonet"></a>Cuadro de diálogo restricciones de esquema (ADO.NET)
+## <a name="schema-restrictions-dialog-box-adonet"></a>Cuadro de diálogo Restricciones de esquema (ADO.NET)
 Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las restricciones de esquema que se van a aplicar a Foreach ADO.NET Schema Rowset Enumerator.  
   
 ### <a name="options"></a>Opciones  
@@ -563,16 +561,16 @@ Use el cuadro de diálogo **Seleccionar enumeración de SMO** para especificar e
  **Rellenar previamente**  
  Use la opción **Rellenar previamente** con el tipo de enumeración Objetos.  
   
- **Nombres de**  
+ **Nombres**  
  Utilice el tipo de enumeración Nombres.  
   
- **Urn**  
+ **URN**  
  Utilice el tipo de enumeración URN.  
   
  **Ubicaciones**  
  Utilice el tipo de enumeración Ubicaciones. Esta opción solo está disponible para archivos.  
 
-## <a name="use-property-expressions-with-foreach-loop-containers"></a>Usar expresiones de propiedad con contenedores de bucles Foreach  
+## <a name="use-property-expressions-with-foreach-loop-containers"></a>Usar expresiones de propiedad con contenedores de bucles Para cada uno  
  Se puede configurar que los paquetes ejecuten varios ejecutables simultáneamente. Esta configuración se debe utilizar con precaución cuando el paquete incluye un contenedor de bucles Foreach que implementa expresiones de propiedad.  
   
  Con frecuencia, es útil implementar una expresión de propiedad para establecer el valor de la propiedad ConnectionString de los administradores de conexiones que usan los enumeradores de bucle Foreach. La expresión de propiedad de ConnectionString se establece con una variable que se asigna al valor de la colección del enumerador y se actualiza en cada iteración del bucle.  
@@ -584,4 +582,3 @@ Use el cuadro de diálogo **Seleccionar enumeración de SMO** para especificar e
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   
   
-

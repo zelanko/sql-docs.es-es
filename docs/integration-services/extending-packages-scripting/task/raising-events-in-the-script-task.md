@@ -1,5 +1,5 @@
 ---
-title: Generar eventos en la tarea Script | Documentos de Microsoft
+title: Provocar eventos en la tarea Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - events [Integration Services], scripts
 - warnings [Integration Services]
@@ -25,22 +22,21 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80f16c8d4fa5d4eb27eefe76b2dcf811e21cfaab
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f89d065e802cf37ddbca5ef173e3cd3004a00bbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-events-in-the-script-task"></a>Provocar eventos en la tarea Script
-  Los eventos proporcionan una manera de notificar errores, advertencias y otra información, como el progreso o el estado de una tarea, al paquete contenedor. El paquete proporciona controladores de eventos para administrar las notificaciones de eventos. La tarea Script puede provocar eventos mediante llamadas a métodos en el <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> propiedad de la **Dts** objeto. Para obtener más información acerca de cómo [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] paquetes controlan los eventos, vea [Integration Services &#40; SSIS &#41; Controladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md).  
+  Los eventos proporcionan una manera de notificar errores, advertencias y otra información, como el progreso o el estado de una tarea, al paquete contenedor. El paquete proporciona controladores de eventos para administrar las notificaciones de eventos. La tarea Script puede provocar los eventos mediante llamadas a los métodos en la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> del objeto **Dts**. Para obtener más información sobre la manera en que los paquetes [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] controlan los eventos, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
   
- Los eventos se pueden registrar en cualquier proveedor de registro habilitado en el paquete. Los proveedores de registro almacenan información sobre los eventos en un almacén de datos. La tarea Script también puede utilizar el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para registrar información en un proveedor de registro sin provocar un evento. Para obtener más información sobre cómo usar el <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> método, consulte [registro en la tarea de secuencia de comandos](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
+ Los eventos se pueden registrar en cualquier proveedor de registro habilitado en el paquete. Los proveedores de registro almacenan información sobre los eventos en un almacén de datos. La tarea Script también puede utilizar el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para registrar información en un proveedor de registro sin provocar un evento. Para obtener más información acerca de cómo usar el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>, vea [Registrar en la tarea Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
   
  Para provocar un evento, la tarea Script llama a uno de los métodos expuesto por la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>. En la tabla siguiente se enumeran los métodos que expone la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
@@ -153,8 +149,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Controladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Agregar un controlador de eventos a un paquete](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

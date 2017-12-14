@@ -1,5 +1,5 @@
 ---
-title: Analizar datos | Documentos de Microsoft
+title: Analizar datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-data"></a>Analizar datos
   Los flujos de datos de paquetes extraen y cargan datos entre almacenes de datos heterogéneos, que pueden usar diversos tipos de datos estándar y personalizados. En un flujo de datos, los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] realizan el trabajo de extraer datos, analizar datos de cadenas y convertir datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden analizar datos para convertirlos en un tipo de datos diferentes, o bien crear copias de columnas con diferentes tipos de datos. Las expresiones usadas en los componentes también pueden convertir argumentos y operandos en diferentes tipos de datos. Finalmente, cuando se cargan los datos en un almacén de datos, el destino puede analizar los datos para convertirlos en un tipo de datos que usa el destino. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -55,7 +53,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
 ## <a name="numeric-data-formats-fast-parse"></a>Formatos de datos numéricos (análisis rápido)
 El análisis rápido ofrece un conjunto rápido y simple de rutinas, que no distinguen la configuración regional, para analizar datos. El análisis rápido admite solo un conjunto limitado de formatos para tipos de datos enteros.  
   
-### <a name="integer-data-type"></a>Tipo de datos entero
+### <a name="integer-data-type"></a>Tipo de datos Integer
  Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  El análisis rápido admite los siguientes formatos para tipos de datos enteros:  
@@ -171,7 +169,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
  Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="datetime-data-type"></a>Tipo de datos de fecha y hora  
+### <a name="datetime-data-type"></a>Tipo de datos de fecha/hora  
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de fecha/hora:  
   
 -   Formatos con espacios en blanco iniciales. Por ejemplo, el valor "  2003-01/10T203910" es válido.  
@@ -210,4 +208,3 @@ El análisis estándar es un conjunto de rutinas de análisis dependientes de la
   
  El análisis estándar proporciona conversión de tipo de datos internacionales y se debe usar si el análisis rápido no admite el formato de datos. Para obtener más información sobre la conversión API de los tipos de automatización de datos, vea "Los tipos de conversión de datos API" en la [biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
-

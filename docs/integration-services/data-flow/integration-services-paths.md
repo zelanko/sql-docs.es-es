@@ -1,5 +1,5 @@
 ---
-title: Rutas de Integration Services | Documentos de Microsoft
+title: Rutas de Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,24 +22,23 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
   Una ruta conecta dos componentes en un flujo de datos conectando la salida de un componente de flujo de datos con la entrada de otro componente. Una ruta tiene un origen y un destino. Por ejemplo, si una ruta conecta un origen de OLE DB y una transformación Ordenar, el origen de OLE DB es el origen de la ruta y la transformación Ordenar es el destino de la ruta. El origen es el componente donde se inicia la ruta y el destino es el componente donde finaliza la ruta.  
   
  Si ejecuta un paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede ver los datos en un flujo de datos adjuntando los visores de datos a una ruta. Un visor de datos se puede configurar para mostrar los datos en una cuadrícula. Un visor de datos es una herramienta de depuración útil. Para más información, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
-## <a name="configure-the-path"></a>Configurar la ruta de acceso  
+## <a name="configure-the-path"></a>Configurar la ruta  
  El Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona el cuadro de diálogo **Editor de rutas de flujo de datos** para establecer las propiedades de ruta, ver los metadatos de las columnas de datos que pasan por la ruta y configurar los visores de datos.  
   
  Entre las propiedades configurables de la ruta se incluyen el nombre, descripción y anotación de la ruta. También puede configurar rutas mediante programación. Para obtener más información, vea [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
  Los metadatos muestran el nombre, tipo de datos, precisión, escala, longitud, página de códigos y componente de origen de cada columna en la salida del componente anterior. El componente de origen es el componente de flujo de datos que creó la columna. Este componente puede ser el primero en el flujo de datos, o puede no serlo. Por ejemplo, las transformaciones Unión de todo y Ordenar crean sus propias columnas, y son los orígenes de sus columnas de salida. Por otro lado, una transformación Copiar columna puede pasar por columnas sin modificarlas o puede crear nuevas columnas copiando columnas de entrada. La transformación Copiar columna es el componente de origen solamente de las nuevas columnas.  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Establecer las propiedades de una ruta de acceso con el flujo de ruta de acceso del Editor de datos
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Establecer las propiedades de una ruta con el Editor de rutas de flujo de datos
 Las rutas conectan dos componentes de flujo de datos. Para poder establecer propiedades de ruta, el flujo de datos debe contener por lo menos dos componentes de flujo de datos conectados.
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
@@ -64,7 +62,7 @@ Las rutas conectan dos componentes de flujo de datos. Para poder establecer prop
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
 
-## <a name="general-page---data-flow-path-editor"></a>Página general - Editor de rutas de flujo de datos
+## <a name="general-page---data-flow-path-editor"></a>Página General, Editor de rutas de flujo de datos
 Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para establecer propiedades de ruta, ver metadatos de columna y administrar los visores de datos adjuntados a la ruta.  
   
  Utilice el nodo **General** del cuadro de diálogo **Editor de rutas de flujo de datos** para nombrar y describir la ruta, y para especificar las opciones de anotación de ruta.  
@@ -91,11 +89,11 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
  **SourceName**  
  Muestra la salida que es el inicio de la ruta.  
  
-## <a name="metadata-page---data-flow-path-editor"></a>Página metadatos - Editor de rutas de flujo de datos
+## <a name="metadata-page---data-flow-path-editor"></a>Página Metadatos: Editor de rutas de flujo de datos
 Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flujo de datos** para ver los metadatos de las columnas de rutas.  
   
 ### <a name="options"></a>Opciones  
- **Metadatos de ruta de acceso**  
+ **Metadatos de ruta**  
  Muestra los metadatos de columna. Haga clic en los encabezados de columna para ordenar los datos de columna.  
   
  **Nombre**  
@@ -128,17 +126,17 @@ Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flu
  **Componente de origen**  
  Muestra el componente de flujo de datos de origen de la columna.  
   
- **Copiar en el portapapeles**  
+ **Copiar al Portapapeles**  
  Copia los metadatos de la columna al Portapapeles. De forma predeterminada, todas las filas de metadatos se copian en el orden mostrado actualmente.  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>Página de visores de datos - Editor de rutas de flujo de datos
+## <a name="data-viewers-page---data-flow-path-editor"></a>Página Visores de datos: Editor de rutas de flujo de datos
 Utilice la página **Visores de datos** del cuadro de diálogo **Editor de rutas de flujo de datos** para administrar los visores de datos que se adjuntan a la ruta.  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
  Muestra los visores de datos.  
   
- **Tipo de Visor de datos**  
+ **Tipo de visor de datos**  
  Muestra el tipo del visor de datos.  
   
  **Agregar**  
@@ -155,7 +153,7 @@ Los objetos de flujo de datos del modelo de objetos de [!INCLUDE[msCoName](../..
   
  En este tema se enumeran y describen las propiedades personalizadas de las rutas de acceso que conectan los objetos del flujo de datos.  
   
-### <a name="custom-properties-of-a-path"></a>Propiedades personalizadas de una ruta de acceso  
+### <a name="custom-properties-of-a-path"></a>Propiedades personalizadas de una ruta  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], una ruta de acceso que conecta componentes en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>.  
   
  La tabla siguiente describe las propiedades configurables de las rutas de acceso en un flujo de datos. El motor de flujo de datos también asigna valores a propiedades de solo lectura adicionales no enumeradas aquí.  
@@ -165,4 +163,3 @@ Los objetos de flujo de datos del modelo de objetos de [!INCLUDE[msCoName](../..
 |PathAnnotation|Integer (enumeración)|Un valor que indica si una anotación se debería mostrar con la ruta de acceso en el área del diseñador. Los valores posibles son **AsNeeded**, **SourceName**, **PathName**y **Never**. El valor predeterminado es **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|La entrada asociada a la ruta de acceso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|La salida asociada a la ruta de acceso.|  
-

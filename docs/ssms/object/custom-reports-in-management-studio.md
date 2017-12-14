@@ -3,8 +3,11 @@ title: Informes personalizados en Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Informes personalizados en Management Studio
-En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], muchos nodos del Explorador de objetos muestran un conjunto de informes estándar creados por [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Estos informes incluyen un resumen de la información que se suele solicitar al servidor. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, los administradores pueden ejecutar los informes personalizados que se crearon en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], muchos nodos del Explorador de objetos muestran un conjunto de informes estándar creados por [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Estos informes incluyen un resumen de la información que se suele solicitar al servidor. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, los administradores pueden ejecutar los informes personalizados que se crearon en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 ## <a name="implementation"></a>Implementación  
 Los informes personalizados se almacenan como archivos de definición de informe (.rdl) y se crean mediante el lenguaje RDL (Report Definition Language). RDL contiene información en formato XML acerca de la recuperación y el diseño de los datos de un informe. RDL es un esquema abierto. Los desarrolladores pueden extender RDL con atributos y elementos adicionales. Los informes pueden ejecutar cualquier instrucción [!INCLUDE[tsql](../../includes/tsql_md.md)] válida presente en el informe.  

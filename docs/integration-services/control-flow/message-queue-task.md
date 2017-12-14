@@ -1,5 +1,5 @@
 ---
-title: Tarea cola de mensajes | Documentos de Microsoft
+title: Tarea Cola de mensajes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cc23a330f63d67cef6a5e12df9bf3b6ca82dcff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="message-queue-task"></a>Tarea Cola de mensajes
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
@@ -124,7 +122,7 @@ ms.lasthandoff: 08/11/2017
  Indica si se va a utilizar el formato 2000 de Message Queue Server (que también recibe el nombre de MSMQ). El valor predeterminado es **False**.  
   
  **MSMQConnection**  
- Seleccione un administrador de conexiones MSMQ existente o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+ Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
  **Temas relacionados**: [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/11/2017
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de variable o haga clic en \< **nueva variable...** > y, a continuación, configure una nueva variable.  
+ Escriba el nombre de la variable o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -279,7 +277,7 @@ ms.lasthandoff: 08/11/2017
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para conservar el mensaje recibido o haga clic en \< **nueva variable...** > y, a continuación, configure una nueva variable.  
+ Escriba el nombre de la variable para retener el mensaje recibido o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -308,4 +306,3 @@ ms.lasthandoff: 08/11/2017
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

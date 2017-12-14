@@ -3,8 +3,11 @@ title: "SQL Server Management Studio: telemetría (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd49e14d6a19d1ac81a5cb17494988ce05c40e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db59123cfd2f78bc069bdb2b688dc2daec8e6830
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Auditoría local para colección de comentarios sobre el uso de SSMS
-
-SQL Server Management Studio (SSMS) contiene características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SSMS puede recopilar información estándar del equipo e información sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad de SSMS. No recopilamos su nombre, dirección ni otra información de contacto. Para obtener más información, vea la [Declaración de privacidad de SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) contiene características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SSMS puede recopilar información estándar del equipo e información sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad de SSMS. No recopilamos su nombre, dirección ni otra información de contacto. Para obtener más información, vea la [Declaración de privacidad de SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
 
 ## <a name="audit-feature-usage-data"></a>Auditar datos del uso características
 

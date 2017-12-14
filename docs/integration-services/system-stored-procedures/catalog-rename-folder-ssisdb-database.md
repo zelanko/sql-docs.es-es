@@ -1,5 +1,5 @@
 ---
-title: Catalog.rename_folder (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.rename_folder (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8320f1a4d4fb08e206e2dcde2e5158b5dd0729aa
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8cc91bd37682f929d69f12185fa3646d972c31e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @old_name =] *Nombre_antiguo*  
- Nombre original de la carpeta. El *Nombre_antiguo* es **nvarchar (128)**.  
+ [ @old_name = ] *old_name*  
+ Nombre original de la carpeta. *old_name* es **nvarchar(128)**.  
   
- [ @new_name =] *new_name*  
- Nombre nuevo de la carpeta. El *new_name* es **nvarchar (128)**.  
+ [ @new_name = ] *new_name*  
+ Nombre nuevo de la carpeta. *new_name* es **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  Ninguno  
@@ -52,9 +50,9 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -64,4 +62,3 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 -   El nuevo nombre ya se ha utilizado en una carpeta existente  
   
   
-

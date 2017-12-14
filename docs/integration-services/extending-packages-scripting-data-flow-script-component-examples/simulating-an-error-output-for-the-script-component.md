@@ -1,5 +1,5 @@
 ---
-title: Simular una salida de Error para el componente de Script | Documentos de Microsoft
+title: Simular una salida de error para el componente de script | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script component [Integration Services], error output
 - error outputs [Integration Services], Script component
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0af8434531660958557928376cf8a4fd19ca9e68
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7a802bffc3178cecd58279fed0d93ad55bcdc0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simular una salida de error para el componente de script
   Aunque no puede configurar directamente una salida como una salida de error en el componente de script para el control automático de filas del error, puede reproducir la funcionalidad de una salida de error integrada mediante la creación de una salida adicional y la utilización de una lógica condicional en su script para dirigir las filas a esta salida cuando corresponda. Puede que desee imitar el comportamiento de una salida de error integrada agregando dos columnas de salida adicionales para recibir el número de error y el identificador de la columna en la que se produjo un error.  
@@ -44,25 +40,25 @@ ms.lasthandoff: 08/03/2017
   
 1.  Antes de crear el nuevo componente de script, cree un administrador de conexiones y configure un origen de flujo de datos que seleccione datos de la dirección de la base de datos de ejemplo AdventureWorks. En este ejemplo, donde solo se examina la columna CountryRegionName, simplemente puede usar la vista Person.vStateCountryProvinceRegion o puede seleccionar los datos combinando las tablas Person.Address, Person.StateProvincey Person.CountryRegion.  
   
-2.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación. Abra la **Editor de transformación Script**.  
+2.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación. Abra el **Editor de transformación Script**.  
   
-3.  En el **Script** , establezca el **ScriptLanguage** propiedad con el lenguaje de script que desea usar para codificar la secuencia de comandos.  
+3.  En la página **Script**, establezca la propiedad **ScriptLanguage** en el lenguaje de script que quiere usar para programar el script.  
   
 4.  Haga clic en **Editar script** para abrir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
-5.  En el **Input0_ProcessInputRow** método, escriba o pegue el código de ejemplo se muestra a continuación.  
+5.  En el método **Input0_ProcessInputRow**, escriba o pegue el código de ejemplo que se muestra a continuación.  
   
 6.  Cierre VSTA.  
   
-7.  En el **columnas de entrada** página, seleccione las columnas que desea procesar en la transformación del Script. En este ejemplo se utiliza únicamente la columna CountryRegionName. Las columnas de entrada disponibles que no se seleccionen pasarán simplemente al flujo de datos sin cambios.  
+7.  En la página **Columnas de entrada**, seleccione las columnas que quiere procesar en la transformación Script. En este ejemplo se utiliza únicamente la columna CountryRegionName. Las columnas de entrada disponibles que no se seleccionen pasarán simplemente al flujo de datos sin cambios.  
   
-8.  En el **entradas y salidas** página, agregue un nuevo, segunda salida y establecer su **SynchronousInputID** valor para el identificador de la entrada, que es también el valor de la **SynchronousInputID** propiedad de la salida predeterminada. Establecer el **ExclusionGroup** propiedad de ambas salidas en el mismo valor distinto de cero (por ejemplo, 1) para indicar que cada fila se dirigirá a solo una de las dos salidas. Asigne un nombre distintivo a la nueva salida de error, como "MyErrorOutput".  
+8.  En la página **Entradas y salidas**, agregue una segunda salida nueva y establezca su valor **SynchronousInputID** en el identificador de la entrada, que también es el valor de la propiedad **SynchronousInputID** de la salida predeterminada. Establezca la propiedad **ExclusionGroup** de ambas salidas en el mismo valor distinto de cero (por ejemplo, 1) para indicar que cada fila se dirigirá únicamente a una de las dos salidas. Asigne un nombre distintivo a la nueva salida de error, como "MyErrorOutput".  
   
 9. Agregue las columnas de salida adicionales a la nueva salida de error para capturar la información de error deseada que puede incluir el código de error, el identificador de la columna en la que se produjo el error y, posiblemente, la descripción del error. En este ejemplo se crean las nuevas columnas, ErrorColumn y ErrorMessage. Si está detectando los errores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinidos en su propia implementación, asegúrese de agregar una columna ErrorCode para el número de error.  
   
 10. Observe el valor del identificador de la columna o columnas de entrada que el componente de script comprobará para las condiciones de error. En este ejemplo se usa este identificador de columna para rellenar el valor ErrorColumn.  
   
-11. Cerrar la **Editor de transformación Script.**  
+11. Cierre el **Editor de transformación Script**.  
   
 12. Adjunte las salidas del componente de script a destinos convenientes. Para pruebas ad hoc, la manera más fácil de configurar es mediante destinos de archivo plano.  
   
@@ -111,8 +107,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 ## <a name="see-also"></a>Vea también  
  [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)   
- [Uso de salidas de Error en un componente de flujo de datos](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
- [Crear una transformación sincrónica con el componente de secuencia de comandos](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Usar las salidas de error en un componente de flujo de datos](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
+ [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Origen OData | Documentos de Microsoft
+title: Origen OData| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,38 +17,37 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>Origen OData
 Use el componente de origen OData en un paquete SSIS para consumir datos de un servicio de Open Data Protocol (OData). El componente admite los protocolos OData v3 y v4.  
   
--   Protocolo OData V3, el componente admite los formatos de datos ATOM y JSON.  
+-   Protocolo OData V3: el componente admite los formatos de datos JSON y ATOM.  
   
--   Protocolo OData V4, el componente admite el formato de datos JSON.  
+-   Protocolo OData V4: el componente admite el formato de datos JSON.  
 
-El origen OData incluye compatibilidad para los orígenes de datos siguientes:
--   Microsoft Dynamics AX en línea y Microsoft Dynamics CRM Online
--   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la siguiente dirección URL: http://\<server > / _vti_bin/ListData.svc. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+El origen OData incluye compatibilidad con los orígenes de datos siguientes:
+-   Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online
+-   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la dirección URL siguiente: http://\<servidor>/_vti_bin/ListData.svc. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
   
-## <a name="odata-format-and-performance"></a>Formato OData y el rendimiento
- La mayoría de los servicios de OData pueden devolver resultados en varios formatos. Puede especificar el formato del resultado establecer mediante el `$format` la opción de consulta. Los formatos como JSON y JSON Light son más eficaces que ATOM o XML, y pueden conseguir mejor rendimiento cuando se transfieren grandes cantidades de datos. En la tabla siguiente se muestran resultados de pruebas de ejemplo. Como puede ver, hubo una mejora del rendimiento del 30-53 % al cambiar de ATOM a JSON y del 67 % cuando se cambió de ATOM al nuevo formato JSON Light (disponible en WCF Data Services 5.1).  
+## <a name="odata-format-and-performance"></a>Formato y rendimiento de OData
+ La mayoría de los servicios de OData puede devolver resultados en varios formatos. Puede especificar el formato del conjunto de resultados mediante la opción de consulta `$format`. Los formatos como JSON y JSON Light son más eficaces que ATOM o XML, y pueden conseguir mejor rendimiento cuando se transfieren grandes cantidades de datos. En la tabla siguiente se muestran resultados de pruebas de ejemplo. Como puede ver, hubo una mejora del rendimiento del 30-53 % al cambiar de ATOM a JSON y del 67 % cuando se cambió de ATOM al nuevo formato JSON Light (disponible en WCF Data Services 5.1).  
   
 |Filas|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
 |10000|113 segundos|74 segundos|68 segundos|  
 |1000000|1110 segundos|853 segundos|665 segundos|  
   
-## <a name="related-topics-in-this-section"></a>Temas relacionados en esta sección  
+## <a name="related-topics-in-this-section"></a>Temas relacionados de esta sección  
   
 -   [Tutorial: Usar el origen OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
@@ -78,10 +76,10 @@ El origen OData incluye compatibilidad para los orígenes de datos siguientes:
 |Ruta de acceso a recursos|Recupera datos del origen OData mediante una ruta de acceso a recursos.|  
   
  **Opciones de consulta**  
- Especifique las opciones de consulta. Por ejemplo: `$top=5` 
+ Especifique las opciones de consulta. Por ejemplo, `$top=5` 
   
  **Dirección URL de fuente**  
- Muestra solo lectura en función de las opciones que ha seleccionado en este cuadro de diálogo de dirección URL de fuente.  
+ Muestra la dirección URL de la fuente de solo lectura según las opciones que ha seleccionado en este cuadro de diálogo.  
   
  **Vista previa**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista previa** . **Vista previa** puede mostrar hasta 20 filas.  
@@ -140,4 +138,3 @@ El origen OData incluye compatibilidad para los orígenes de datos siguientes:
  [Administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Guardar scripts como proyectos o soluciones | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f2e8f9470fe28427a78eb74a41c4e76c400f3761
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 58ff1fcef47768a5ad4d8749b66b1928ffa99e3c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Lección 3.3: Guardar scripts como proyectos o soluciones
-Los desarrolladores que estén familiarizados con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio acogerán con entusiasmo el Explorador de soluciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los scripts empleados en su empresa pueden agruparse en proyectos de script; estos proyectos pueden administrarse conjuntamente en forma de solución. Cuando los scripts se colocan en soluciones y proyectos de script, pueden abrirse como un grupo o guardarse juntos en un producto de control de código fuente como Visual SourceSafe. Los proyectos de script incluyen información de conexión para que los scripts se ejecuten correctamente y pueden incluir archivos que no sean de script, por ejemplo, un archivo auxiliar de texto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los desarrolladores que estén familiarizados con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio acogerán con entusiasmo el Explorador de soluciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los scripts empleados en su empresa pueden agruparse en proyectos de script; estos proyectos pueden administrarse conjuntamente en forma de solución. Cuando los scripts se colocan en soluciones y proyectos de script, pueden abrirse como un grupo o guardarse juntos en un producto de control de código fuente como Visual SourceSafe. Los proyectos de script incluyen información de conexión para que los scripts se ejecuten correctamente y pueden incluir archivos que no sean de script, por ejemplo, un archivo auxiliar de texto.  
   
 En la práctica siguiente, se crea un script breve que hace consultas a la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , ubicada en una solución y un proyecto de script.  
   

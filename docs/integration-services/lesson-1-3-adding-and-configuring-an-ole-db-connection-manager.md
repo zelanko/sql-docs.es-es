@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Agregar y configurar un administrador de conexiones OLE DB | Documentos de Microsoft'
+title: 'Paso 3: Agregar y configurar un administrador de conexiones OLE DB | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Lección 1: 3: agregar y configurar un administrador de conexiones OLE DB
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Lección 1-3: Agregar y configurar un administrador de conexiones OLE DB
 Una vez que haya agregado un administrador de conexiones de archivos planos al origen de datos, la siguiente tarea consiste en agregar un administrador de conexiones OLE DB para conectarse al destino. Un administrador de conexiones OLE DB permite a un paquete extraer datos de un origen de datos compatible con OLE DB o cargar datos en este origen de datos. Mediante el administrador de conexiones OLE DB, puede especificar el servidor, el método de autenticación y la base de datos predeterminada de la conexión.  
   
 En esta lección, creará un administrador de conexiones OLE DB que usa la Autenticación de Windows para conectarse a la instancia local de **AdventureWorksDB2012**. Otros componentes que creará más adelante en este tutorial, como la transformación Búsqueda y el destino de OLE DB, también harán referencia al administrador de conexiones OLE DB que cree.  
@@ -62,4 +59,3 @@ En esta lección, creará un administrador de conexiones OLE DB que usa la Auten
 ## <a name="see-also"></a>Vea también  
 [Administrador de conexiones OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

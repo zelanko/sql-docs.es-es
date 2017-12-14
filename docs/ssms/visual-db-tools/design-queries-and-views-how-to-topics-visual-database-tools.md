@@ -3,8 +3,11 @@ title: "Temas de procedimientos de diseño de consultas y vistas (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4212d888298d36e7a2aa9365de7153e3e353fff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 208b7c4819344b1a54dfbff8b5299cb122f01727
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)
-El Diseñador de consultas y vistas le ayudará a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Diseñador de consultas y vistas le ayuda a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  

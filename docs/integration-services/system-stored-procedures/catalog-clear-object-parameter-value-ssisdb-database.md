@@ -1,5 +1,5 @@
 ---
-title: Catalog.clear_object_parameter_value (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.clear_object_parameter_value (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nombreDeCarpeta*  
- Nombre de la carpeta que contiene el proyecto. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)**.  
   
- [ @project_name =] *Nombre_proyecto*  
- El nombre del proyecto. El *Nombre_proyecto* es **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nombre del proyecto. *project_name* es **nvarchar(128)**.  
   
- [ @object_type =] *object_type*  
- Tipo de objeto. Los valores válidos incluyen `20` para un proyecto y `30` para un paquete. El *object_type* es **smallInt**.  
+ [ @object_type = ] *object_type*  
+ Tipo de objeto. Los valores válidos incluyen `20` para un proyecto y `30` para un paquete. *object_type* es **smallInt**.  
   
- [@ objeto _name =] *objeto _name*  
- Nombre del paquete. El *objeto _name* es **nvarchar (260)**.  
+ [ @ object _name = ] *object _name*  
+ Nombre del paquete. *object _name* es **nvarchar(260)**.  
   
- [ @parameter_ nombre =] *parameter_name*  
- Nombre del parámetro. El *parameter_ nombre* es **nvarchar (128)**.  
+ [ @parameter_ name = ] *parameter_name*  
+ Nombre del parámetro. *parameter_ name* es **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -67,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   Permisos READ y MODIFY en el proyecto  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
- En la lista siguiente se describe algunas condiciones que pueden hacer que el procedimiento clear_object_parameter almacenado genere un error:  
+ En la lista siguiente se describen algunas condiciones que pueden hacer que el procedimiento almacenado clear_object_parameter produzca un error:  
   
 -   Se ha especificado un tipo de objeto no válido o no se ha podido encontrar el nombre de objeto en el proyecto.  
   
@@ -83,4 +81,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   El usuario no tiene los permisos adecuados.  
   
   
-

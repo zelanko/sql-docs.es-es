@@ -56,7 +56,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
   
 |Si la versión que tiene instalada actualmente es...|Y desea...|Descargue e instale...|  
 |-------------------------------------------|----------------------|---------------------------|  
-|**Instalaciones de&32; bits:**|||  
+|**Instalaciones de 32 bits:**|||  
 |Una versión de 32 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 32 bits de SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -67,7 +67,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |No instalar la versión de 32 bits de SQL Server 2012 Management Studio|Instalar la versión de 32 bits de SQL Server 2012 Management Studio junto con el SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Sin versión de 32 bits de SQL Server 2012 RTM Express|Instalar versión de 32 bits de SQL Server 2012 Express incluido el SP1|SQLEXPR32_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Instalación de una versión de 32 bits de **SQL Server 2008** o **SQL Server 2008 R2**|**Actualización en contexto** a la versión de 32 bits de SQL Server 2012 incluido el SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **y** SQLServer2012SP1-FullSlipstream-x86-ENU.box desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|**Instalaciones de&64; bits:**|||  
+|**Instalaciones de 64 bits:**|||  
 |Una versión de 64 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 64 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 64 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 64 bits de SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -125,7 +125,7 @@ Los detalles del error interno contendrán un mensaje similar al siguiente:
   
 -   "El valor 'SharePoint Principal' no es compatible con la propiedad de la cadena de conexión 'User Identity'."  
   
-**Solución alternativa:** instale el paquete del instalador de PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) en SharePoint Server 2013. El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descargas de [!INCLUDE[msCoName](../includes/msconame-md.md)] en [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266).  
+**Solución alternativa:** instale el paquete del instalador de PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) en SharePoint Server 2013. El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descargas de [!INCLUDE[msCoName](../includes/msconame-md.md)] en [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 Las hojas de Power View en un libro PowerPivot se borran tras una actualización de datos programada  
 **Problema**: en el complemento PowerPivot para SharePoint, con **Actualización de datos programada** en un libro con Power View se eliminarán todas las hojas de Power View.  

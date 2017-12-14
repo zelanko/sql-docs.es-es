@@ -3,8 +3,11 @@ title: "Cuadro de diálogo Índices espaciales (Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a3e6df8d3ffcae88b1a89c5c4551d0a8a5b8b8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
-Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **Geometry** o **Geography** (*columnas espaciales*) que no pueden indexarse mediante el cuadro de diálogo **Índice y claves**. Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
   
 Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   

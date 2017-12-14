@@ -1,5 +1,5 @@
 ---
-title: Provocar y definir eventos en una tarea personalizada | Documentos de Microsoft
+title: Provocar y definir eventos en una tarea personalizada | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 44e27c1ff000046744aa78479b73cc8ef39d6f2e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f71ff29b7e029bc52fd6ffe243b4279e6caf08b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Provocar y definir eventos en una tarea personalizada
   El motor en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] facilita una colección de eventos que proporciona el estado del progreso de una tarea cuando esta se valida y ejecuta. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> define estos eventos y se proporciona a las tareas como un parámetro para los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -47,13 +44,13 @@ ms.lasthandoff: 08/03/2017
  Hay otro conjunto de eventos, que se definen en la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>, que produce <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> en nombre de la tarea. <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> provoca eventos que se producen antes y después de la validación y ejecución, mientras que la tarea provoca los eventos que se producen durante la ejecución y validación.  
   
 ## <a name="creating-custom-events"></a>Crear eventos personalizados  
- Los programadores de tareas personalizadas pueden definir eventos nuevos y personalizados creando un nuevo <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> en su implementación invalidada del método <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>. Después de la <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> está creado, se agrega a la **EventInfos** colección utilizando la <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> método. La firma de método del método <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> es como sigue:  
+ Los programadores de tareas personalizadas pueden definir eventos nuevos y personalizados creando un nuevo <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> en su implementación invalidada del método <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>. Una vez creado <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo>, se agrega a la colección **EventInfos** mediante el método <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>. La firma de método del método <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> es como sigue:  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  En el siguiente ejemplo de código se muestra el método **InitializeTask** de una tarea personalizada, donde se crean dos eventos personalizados y se establecen sus propiedades. Los nuevos eventos se agregan a la colección <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- El primer evento personalizado tiene un *eventName* de "**OnBeforeIncrement**" y una *description* de "**Se activa una vez actualizado el valor inicial**". El parámetro siguiente, el valor **true**, indica que este evento debe permitir la creación de un contenedor de controladores de eventos para controlar el evento. El controlador de eventos es un contenedor que proporciona estructura en un paquete y sirve a las tareas, como otros contenedores tales como el paquete, Sequence, ForLoop y ForEachLoop. Cuando el *allowEventHandlers* parámetro es **true**, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> se crean objetos para el evento. Cualquier parámetro definido para el evento está ahora disponible a <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> en la colección de variables de <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ El primer evento personalizado tiene un *eventName* de "**OnBeforeIncrement**" y una *description* de "**Se activa una vez actualizado el valor inicial**". El parámetro siguiente, el valor **true**, indica que este evento debe permitir la creación de un contenedor de controladores de eventos para controlar el evento. El controlador de eventos es un contenedor que proporciona estructura en un paquete y sirve a las tareas, como otros contenedores tales como el paquete, Sequence, ForLoop y ForEachLoop. Cuando el parámetro *allowEventHandlers*es **true**, se crean objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para el evento. Cualquier parámetro definido para el evento está ahora disponible a <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> en la colección de variables de <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -127,7 +124,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>Ejemplo  
- En el ejemplo siguiente se muestra una tarea que define un evento personalizado en el **InitializeTask** método, agrega el evento personalizado a la <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> colección y, a continuación, genera el evento personalizado durante su **Execute** método mediante una llamada a la <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> método.  
+ En el ejemplo siguiente se muestra una tarea que define un evento personalizado en el método **InitializeTask**, agrega el evento personalizado a la colección <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> y, a continuación, genera el evento personalizado durante su método **Execute** llamando al método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>.  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -200,8 +197,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Controladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Agregar un controlador de eventos a un paquete](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

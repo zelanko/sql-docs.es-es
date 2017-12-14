@@ -1,5 +1,5 @@
 ---
-title: Origen de ODBC | Documentos de Microsoft
+title: Origen ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source"></a>Origen ODBC
   El origen ODBC extrae los datos de una base de datos con ODBC mediante una tabla de base de datos, una vista o una instrucción SQL.  
@@ -89,7 +87,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Extraer datos mediante el origen de ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Extraer datos mediante el origen ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [Propiedades personalizadas del origen ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
@@ -200,4 +198,3 @@ ms.lasthandoff: 08/17/2017
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del origen de ODBC.  
   
   
-

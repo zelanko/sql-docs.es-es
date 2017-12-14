@@ -1,5 +1,5 @@
 ---
-title: "Transformación Búsqueda de términos | Documentos de Microsoft"
+title: "Transformación Búsqueda de términos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/19/2017
 |Términos de referencia|Windows, Windows 7 Professional|  
 |Salida|Windows|  
   
- La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes: %, @ &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", y '.  
+ La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ y ‘.  
   
 ## <a name="data-types"></a>Tipos de datos  
  La transformación Búsqueda de términos solo puede usar una columna que tenga el tipo de datos DT_WSTR o DT_NTEXT. Si una columna contiene texto, pero no tiene uno de estos tipos de datos, la transformación Conversión de datos puede agregar una columna con el tipo de datos DT_WSTR o DT_NTEXT al flujo de datos y copiar los valores de columnas en la nueva columna. La salida de transformación Conversión de datos posteriormente se puede usar como la entrada para la transformación Búsqueda de términos. Para más información, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
@@ -157,7 +155,6 @@ ms.lasthandoff: 08/19/2017
  Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores de las filas que provocan errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Transformación extracción de términos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+ [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Transformación Extracción de términos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

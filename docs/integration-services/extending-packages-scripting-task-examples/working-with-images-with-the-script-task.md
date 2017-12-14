@@ -1,5 +1,5 @@
 ---
-title: "Trabajar con imágenes con la tarea Script | Documentos de Microsoft"
+title: "Trabajar con imágenes con la tarea Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -28,48 +25,47 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabajar con imágenes con la tarea Script
-  Una base de datos de productos o usuarios suele incluir imágenes además de datos de texto y numéricos. El **System.Drawing** espacio de nombres en Microsoft .NET Framework proporciona clases para manipular las imágenes.  
+  Una base de datos de productos o usuarios suele incluir imágenes además de datos de texto y numéricos. El espacio de nombres **System.Drawing** de Microsoft .NET Framework proporciona clases para manipular las imágenes.  
   
- [Ejemplo 1: Convertir imágenes en formato JPEG](#example1)  
+ [Ejemplo 1: Convertir las imágenes al formato JPEG](#example1)  
   
  [Ejemplo 2: Crear y guardar las imágenes en miniatura](#example2)  
   
 > [!NOTE]  
 >  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a>Descripción de ejemplo 1: Convertir imágenes en formato JPEG  
+##  <a name="example1"></a> Ejemplo 1: Descripción: convertir las imágenes al formato JPEG  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable y se guarda como un archivo JPEG comprimido mediante un codificador. El código para recuperar la información del codificador se encapsula en una función privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  
   
 1.  Cree una variable de cadena denominada `CurrentImageFile` y establezca el valor en la ruta de acceso y nombre de un archivo de imagen existente.  
   
-2.  En el **Script** página de la **Editor de la tarea de secuencia de comandos**, agregar el `CurrentImageFile` variable a la **ReadOnlyVariables** propiedad.  
+2.  En la página **Script** del **Editor de la tarea Script**, agregue la variable `CurrentImageFile` a la propiedad **ReadOnlyVariables**.  
   
-3.  En el proyecto de script, establezca una referencia la **System.Drawing** espacio de nombres.  
+3.  Establezca una referencia al espacio de nombres **System.Drawing** en el proyecto de script.  
   
-4.  En el código, utilice **importaciones** instrucciones para importar el **System.Drawing** y **System.IO** espacios de nombres.  
+4.  En el código, utilice instrucciones **Imports** para importar los espacios de nombres **System.Drawings** y **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Para configurar este ejemplo de la tarea Script para su uso con varios archivos de imagen  
   
 1.  Coloque la tarea Script dentro de un contenedor de bucles Foreach.  
   
-2.  En el **colección** página de la **Editor de bucles Foreach**, seleccione la **enumerador de archivos para Foreach** como enumerador y especifique la ruta de acceso y la máscara del origen de archivos, por ejemplo, como "*.bmp."  
+2.  En la página **Colección** del **Editor de bucles Para cada uno**, seleccione como enumerador el **Enumerador de archivos Para cada uno** y especifique la ruta de acceso y la máscara de archivo de los archivos de código fuente, como "*.bmp".  
   
-3.  En el **asignaciones de variables** página, asigne el `CurrentImageFile` variable al índice 0. Esta variable pasa el nombre de archivo actual a la tarea Script de cada iteración del enumerador.  
+3.  En la página **Asignaciones de variables**, asigne la variable `CurrentImageFile` al índice 0. Esta variable pasa el nombre de archivo actual a la tarea Script de cada iteración del enumerador.  
   
     > [!NOTE]  
     >  Estos pasos son adicionales a los enumerados en el procedimiento para el uso con un archivo de imagen único.  
@@ -159,7 +155,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>Descripción de ejemplo 2: Crear y guardar las imágenes en miniatura  
+##  <a name="example2"></a> Ejemplo 2: Descripción: crear y guardar las imágenes en miniatura  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable, se crea una miniatura de la imagen a la vez que se mantiene una relación de aspecto constante y se guarda la miniatura con un nombre de archivo modificado. El código que calcula el alto y ancho de la miniatura a la vez que mantiene una relación de aspecto constante se encapsula en una subrutina privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  
@@ -168,19 +164,19 @@ End Function
   
 2.  Cree también la variable entera `MaxThumbSize` y asígnela un valor en píxeles, como 100.  
   
-3.  En el **Script** página de la **Editor de la tarea de secuencia de comandos**, agregue las dos variables para el **ReadOnlyVariables** propiedad.  
+3.  En la página **Script** del **Editor de la tarea Script**, agregue ambas variables a la propiedad **ReadOnlyVariables**.  
   
-4.  En el proyecto de script, establezca una referencia la **System.Drawing** espacio de nombres.  
+4.  Establezca una referencia al espacio de nombres **System.Drawing** en el proyecto de script.  
   
-5.  En el código, utilice **importaciones** instrucciones para importar el **System.Drawing** y **System.IO** espacios de nombres.  
+5.  En el código, utilice instrucciones **Imports** para importar los espacios de nombres **System.Drawings** y **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Para configurar este ejemplo de la tarea Script para su uso con varios archivos de imagen  
   
 1.  Coloque la tarea Script dentro de un contenedor de bucles Foreach.  
   
-2.  En el **colección** página de la **Editor de bucles Foreach**, seleccione la **enumerador de archivos para Foreach** como el **enumerador**y especifique la ruta de acceso y la máscara de los archivos de origen, como "*.jpg."  
+2.  En la página **Colección** del **Editor de bucles Para cada uno**, seleccione como **Enumerador** el **Enumerador de archivos Para cada uno** y especifique la ruta de acceso y la máscara de archivo de los archivos de código fuente, como "*.jpg".  
   
-3.  En el **asignaciones de variables** página, asigne el `CurrentImageFile` variable al índice 0. Esta variable pasa el nombre de archivo actual a la tarea Script de cada iteración del enumerador.  
+3.  En la página **Asignaciones de variables**, asigne la variable `CurrentImageFile` al índice 0. Esta variable pasa el nombre de archivo actual a la tarea Script de cada iteración del enumerador.  
   
     > [!NOTE]  
     >  Estos pasos son adicionales a los enumerados en el procedimiento para el uso con un archivo de imagen único.  
@@ -300,4 +296,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

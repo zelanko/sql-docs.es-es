@@ -3,8 +3,11 @@ title: Crear autocombinaciones manualmente (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 830f65d92ec3c8b96a57944b044f6ef61303e5b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d1b1d10f031ba4f794e2590dee5561deb1570ed9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Crear autocombinaciones manualmente (Visual Database Tools)
-Puede combinar una tabla consigo misma aunque no tenga una relación reflexiva en la base de datos. Por ejemplo, puede utilizar una autocombinación para buscar pares de autores que residan en la misma ciudad.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede combinar una tabla consigo misma aunque no tenga una relación reflexiva en la base de datos. Por ejemplo, puede utilizar una autocombinación para buscar pares de autores que residan en la misma ciudad.  
   
 Al igual que el resto de las combinaciones, una autocombinación requiere al menos dos tablas. La diferencia reside en que, en lugar de agregar una segunda tabla a la consulta, se agrega una segunda instancia de la misma tabla. De ese modo, puede comparar una columna de la primera instancia de la tabla con la misma columna de la segunda instancia y, por tanto, comparar los valores de una columna entre sí. El [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) asigna un alias a la segunda instancia de la tabla.  
   

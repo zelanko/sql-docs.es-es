@@ -1,5 +1,5 @@
 ---
-title: "Crear la función para recuperar los datos modificados | Documentos de Microsoft"
+title: "Crear la función para recuperar los datos modificados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -124,9 +121,9 @@ deallocate #hfunctions
   
  Para simplificar las consultas de todas las filas de una tabla de cambios, las funciones de contenedor generadas también admiten las convenciones siguientes:  
   
--   Si el @start_time del parámetro es null, las funciones de contenedor usan el valor LSN más bajo de la instancia de captura como el límite inferior de la consulta.  
+-   Si el parámetro @start_time es NULL, las funciones de contenedor usan el valor LSN más bajo de la instancia de captura como el límite inferior de la consulta.  
   
--   Si el @end_time del parámetro es null, las funciones de contenedor usan el valor LSN más alto de la instancia de captura como el límite superior de la consulta.  
+-   Si el parámetro @end_time es NULL, las funciones de contenedor usan el valor LSN más alto de la instancia de captura como el límite superior de la consulta.  
   
  La mayoría de los usuarios podrán usar las funciones de contenedor creadas por el procedimiento almacenado del sistema, **sys.sp_cdc_generate_wrapper_function** , sin realizar ninguna modificación. Sin embargo, para personalizar las funciones de contenedor, es necesario personalizar los scripts CREATE antes de ejecutarlos.  
   
@@ -220,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
 |**__$operation**|**int**|Operación del lenguaje de manipulación de datos (DML) asociada al cambio. Puede ser uno de los valores siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores antes de la operación de actualización)<br /><br /> 4 = actualizar (valores después de la operación de actualización)|  
 |**__$update_mask**|**varbinary(128)**|Máscara de bits basada en los ordinales de las columnas de la tabla de cambios que identifica las columnas que han cambiado. Puede examinar este valor para determinar las columnas que han cambiado.|  
-|**\<captura de columnas de la tabla de origen >**|varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
+|**\<columnas de la tabla de origen capturadas>**|varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
  Para obtener más información, vea [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
@@ -230,4 +227,3 @@ go
  **Tema siguiente:** [Recuperar y describir datos modificados](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

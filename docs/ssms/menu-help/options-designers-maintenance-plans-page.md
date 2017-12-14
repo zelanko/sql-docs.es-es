@@ -3,8 +3,11 @@ title: "Opciones (Diseñadores - página Planes de mantenimiento) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opciones (Diseñadores - página Planes de mantenimiento)
-Utilice el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
 **Conectar una nueva forma a la forma seleccionada de manera predeterminada**  

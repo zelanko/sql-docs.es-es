@@ -3,8 +3,11 @@ title: "Consultas con parámetros (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27bce5dd7beddbe1ed41881c311be47aaff4c78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0a076e12d307e39188ca4d462fc1f65221066e8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas con parámetros (Visual Database Tools)
-En algunos casos, tal vez necesite crear una consulta que pueda utilizar en muchas ocasiones, pero con un valor diferente cada vez. Por ejemplo, puede ejecutar habitualmente una consulta para buscar todos los `title_ids` escritos por un autor. Puede ejecutar la misma consulta para cada solicitud, con la salvedad de que el nombre o el Id. del autor serán diferentes cada vez.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En algunos casos, es posible que quiera crear una consulta que pueda usar en muchas ocasiones, pero con un valor diferente cada vez. Por ejemplo, puede ejecutar habitualmente una consulta para buscar todos los `title_ids` escritos por un autor. Puede ejecutar la misma consulta para cada solicitud, con la salvedad de que el nombre o el Id. del autor serán diferentes cada vez.  
   
 Para crear una consulta que pueda tener valores diferentes en distintas ocasiones, puede utilizar parámetros en la consulta. Un parámetro es un marcador de posición para un valor que se proporciona al ejecutar la consulta. Una instrucción SQL con un parámetro puede presentar el siguiente aspecto ("?" representaría el parámetro del Id. del autor):  
   

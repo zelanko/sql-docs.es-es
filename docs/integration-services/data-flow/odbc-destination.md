@@ -1,5 +1,5 @@
 ---
-title: Destino de ODBC | Documentos de Microsoft
+title: Destino ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   El destino ODBC carga de forma masiva los datos en tablas de base de datos que admiten ODBC. El destino ODBC usa un administrador de conexiones ODBC para conectarse al origen de datos.  
@@ -70,11 +68,11 @@ ms.lasthandoff: 08/17/2017
   
  Para obtener más información, vea uno de los siguientes temas:  
   
--   [Editor de destino de ODBC &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de ODBC &#40; Página Asignaciones &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino de ODBC &#40; Página de salida de error &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Cargar datos mediante el destino de ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
--   [Propiedades personalizadas del destino de ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
+-   [Propiedades personalizadas de los destinos de ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
 ## <a name="odbc-destination-editor-connection-manager-page"></a>Editor de destino de ODBC (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de ODBC** para seleccionar el administrador de conexiones de ODBC para el destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -136,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  Lista de columnas de destino disponibles. Arrastre y coloque una columna de destino en una columna de entrada disponible para asignar las columnas.  
   
 #### <a name="input-column"></a>Columna de entrada  
- Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones seleccionando  **\<omitir >** para excluir columnas de los resultados.  
+ Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones, seleccione **\<ignore>** con el fin de excluir columnas de la salida.  
   
 #### <a name="destination-column"></a>Columna de destino  
  Muestra todas las columnas de destino disponibles, tanto las asignadas como las no asignadas.  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Redirigir fila  
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del destino de ODBC. Para obtener más información, vea Destino de ODBC.  
   
-

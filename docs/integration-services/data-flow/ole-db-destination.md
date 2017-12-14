@@ -1,5 +1,5 @@
 ---
-title: Destino de OLE DB | Documentos de Microsoft
+title: Destino de OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -99,9 +97,9 @@ ms.lasthandoff: 08/17/2017
   
 |Opción de carga rápida|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene la forma **KILOBYTES_PER_BATCH** = \<valor entero positivo**>**.|  
+|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formato **KILOBYTES_PER_BATCH** = \<valor de entero positivo**>**.|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
-|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato orden \<nombre de columna > ASC &#124; DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice agrupado de la tabla.|  
+|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato ORDER \<nombre de columna> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice agrupado de la tabla.|  
   
  Las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] se suelen escribir en mayúsculas, aunque las palabras clave no distinguen entre mayúsculas y minúsculas.  
   
@@ -272,7 +270,7 @@ ms.lasthandoff: 08/17/2017
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
   
  **Columna de entrada**  
- Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones seleccionando  **\<omitir >** para excluir columnas de los resultados.  
+ Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones, seleccione **\<ignore>** con el fin de excluir columnas de la salida.  
   
  **Columna de destino**  
  Muestra todas las columnas de destino disponibles, tanto si están asignadas como si no lo están.  
@@ -312,4 +310,3 @@ ms.lasthandoff: 08/17/2017
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   
-

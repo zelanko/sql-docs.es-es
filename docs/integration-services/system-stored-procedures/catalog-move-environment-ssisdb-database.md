@@ -1,5 +1,5 @@
 ---
-title: Catalog.move_environment (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.move_environment (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e08328e0baccaa9098d8647b50c6133de2504912
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4c143403ba0ebfb429c8d7f646214704c4e692d4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.move_environment [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @source_folder =] *source_folder*  
- Nombre de la carpeta de origen en la que está ubicado el entorno antes de moverlo. El *source_folder* es **nvarchar (128)**.  
+ [ @source_folder = ] *source_folder*  
+ Nombre de la carpeta de origen en la que está ubicado el entorno antes de moverlo. *source_folder* es **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Nombre del entorno que se va a mover. El *environment_name* es **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ Nombre del entorno que se va a mover. *environment_name* es **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- Nombre de la carpeta de destino en la que está ubicado el entorno después de moverlo. El *destination_folder* es **nvarchar (128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ Nombre de la carpeta de destino en la que está ubicado el entorno después de moverlo. *destination_folder* es **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -59,9 +57,9 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   Permisos READ y MODIFY en el entorno  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -79,4 +77,3 @@ catalog.move_environment [ @source_folder = ] source_folder
 >  Un proyecto puede tener referencias de entorno absolutas o relativas. Las referencias relativas hacen referencia al entorno por nombre y requieren que el entorno resida en la misma carpeta que el proyecto. Las referencias absolutas hacen referencia al entorno por nombre y carpeta y hacen referencia a los entornos que residen en una carpeta diferente a la del proyecto.  
   
   
-

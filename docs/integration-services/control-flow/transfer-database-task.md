@@ -1,5 +1,5 @@
 ---
-title: Tarea de la base de datos de transferencia | Documentos de Microsoft
+title: Tarea Transferir base de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +17,18 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords:
-- Transfer Database task [Integration Services]
+helpviewer_keywords: Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
   La tarea Transferir bases de datos transfiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferencia de otras tareas que solo transfieren objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiándolos, la tarea Transferir bases de datos puede copiar o mover una base de datos. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor.  
@@ -112,10 +109,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión...>** para crear una conexión nueva al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor de destino.  
@@ -214,4 +211,3 @@ ms.lasthandoff: 08/11/2017
  Escriba la ubicación del recurso compartido de archivos de red o haga clic para examinar y buscar la ubicación del recurso compartido del archivo de red.  
   
  Cuando transfiera una base de datos en el modo sin conexión, los archivos se copian en la ubicación **Recurso compartido de archivos de red** antes de transferirlos a la ubicación **Carpeta de destino** .  
-

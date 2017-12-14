@@ -1,5 +1,5 @@
 ---
-title: Catalog.create_folder (base de datos de SSISDB) | Documentos de Microsoft
+title: catalog.create_folder (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 43d128f9dcc4cea632c810a13d21eb5e1ddb61df
-ms.contentlocale: es-es
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: d909a3596dd260065904f0d4e8413978288cc9fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@folder_name =] *nombreDeCarpeta*  
- El nombre de la nueva carpeta. El *nombre_de_carpeta* es **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ El nombre de la nueva carpeta. *folder_name* es **nvarchar(128)**.  
   
  [@folder_name =] *folder_id*  
- El identificador único (ID) de la carpeta. El *folder_id* es **bigint**.  
+ El identificador único (ID) de la carpeta. *folder_id* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  Se devuelve el identificador de carpeta.  
@@ -52,12 +50,11 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 ## <a name="permissions"></a>Permissions  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
--   La pertenencia a la **ssis_admin** rol de base de datos  
+-   Pertenencia al rol de base de datos **ssis_admin**  
   
--   La pertenencia a la **sysadmin** rol de servidor  
+-   Pertenencia al rol de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
-Si ya existe una carpeta con el mismo nombre, el procedimiento almacenado devuelve un error.  
+El procedimiento almacenado devuelve un error si ya existe una carpeta con el mismo nombre.  
   
   
-

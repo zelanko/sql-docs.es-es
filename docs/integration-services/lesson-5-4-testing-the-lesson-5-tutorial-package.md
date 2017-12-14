@@ -1,5 +1,5 @@
 ---
-title: "Paso 4: Probar el paquete del Tutorial lección 5 | Documentos de Microsoft"
+title: "Paso 4: Probar el paquete del tutorial de la lección 5 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lección 5-4: probar el paquete del Tutorial lección 5
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lección 5-4: Probar el paquete del tutorial de la lección 5
 Durante la ejecución, el paquete obtendrá el valor de la propiedad **Directory** de una variable actualizada en tiempo de ejecución, en lugar de utilizar el nombre de directorio original especificado al crear el paquete. El valor de la variable lo rellena el archivo SSISTutorial.dtsConfig.  
   
 Para comprobar que, durante la ejecución, el paquete actualiza la propiedad Directory con el nuevo valor, simplemente debe ejecutar el paquete. Puesto que en el directorio solamente se copiaron tres archivos de datos de ejemplo, el flujo de datos solamente se ejecutará tres veces, en lugar de repetirse a través de los 14 archivos de la carpeta original.  
@@ -37,11 +34,11 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 **Flujo de control**  
   
-![Controlar el flujo de paquete](../integration-services/media/task4lesson2control.gif "controlar el flujo del paquete")  
+![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
   
 **Flujo de datos**  
   
-![Flujo de datos en el paquete](../integration-services/media/task9lesson1data.gif "en paquete de flujo de datos")  
+![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Para probar el paquete de tutorial de la lección 5  
   
@@ -54,4 +51,3 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
   
   
-

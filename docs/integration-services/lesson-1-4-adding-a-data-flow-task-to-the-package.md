@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4: Agregar una tarea de flujo de datos al paquete | Documentos de Microsoft'
+title: 'Paso 4: Agregar una tarea Flujo de datos al paquete | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 870216159af6caf2bff04631d954cd4bb56cd7fa
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4e715f7bc147e790afa9f737a0b5e9d1231a2b60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lección 1-4-agregar una tarea de flujo de datos al paquete
+# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lección 1-4: Agregar una tarea Flujo de datos al paquete
 Una vez que ha creado los administradores de conexión para los datos de origen y de destino, la siguiente tarea consiste en agregar una tarea de flujo de datos al paquete. La tarea de flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y proporciona la funcionalidad para transformar, limpiar y modificar los datos a medida que se mueven. En la tarea de flujo de datos se lleva a cabo la mayor parte del proceso de extracción, transformación y carga (ETL).  
   
 > [!NOTE]  
@@ -56,4 +53,3 @@ Una vez que ha creado los administradores de conexión para los datos de origen 
   
   
   
-

@@ -3,8 +3,11 @@ title: "Lista de columnas (cuadro de diálogo, Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bcc0686b1d0cca66764bde9dffe7ab725fd6e50f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7347d75f3f213cb5b39fa753fc33a184a36b29cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Lista de columnas (cuadro de diálogo, Visual Database Tools)
-Al escribir consultas, puede ser útil ver una lista de columnas disponibles en los objetos con valores de tabla seleccionados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al escribir consultas, puede ser útil ver una lista de columnas disponibles en los objetos con valores de tabla seleccionados.  
   
 Para tener acceso a este cuadro de diálogo, en el panel Diagrama del menú **Diseñador de consultas** , haga clic con el botón derecho en el encabezado de un objeto con valores de tabla y, luego, haga clic en **Propiedades**. En la ventana **Propiedades** , haga clic en el campo **Lista de columnas** . A continuación, haga clic en los puntos suspensivos **(...)** que aparecen a la derecha del campo.  
   

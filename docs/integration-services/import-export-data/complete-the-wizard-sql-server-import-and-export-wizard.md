@@ -1,5 +1,5 @@
 ---
-title: "Finalización del asistente (importación de SQL Server y el Asistente para exportación) | Documentos de Microsoft"
+title: "Finalización del asistente (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,29 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.completewizard.f1
+f1_keywords: sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2592ac0539b2cd693e4aef48d7652c7970ec71c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b06adc095408d010acc2008352447a2ee48d8f67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Finalización del asistente (Asistente para importación y exportación de SQL Server)
-Después de especificar si desea ejecutar inmediatamente la operación de copia y después de guardar el paquete creado por el asistente, opcionalmente el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra Import and Export Wizard **Complete el asistente**. En esta página, revise las opciones que ha realizado en el asistente y, después, haga clic en **Finalizar** para iniciar la operación de copia.
+Después de especificar si quiere ejecutar la operación de copia inmediatamente (y, de manera opcional, después de guardar el paquete que creó el asistente), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Finalización del asistente**. En esta página, revise las opciones que ha realizado en el asistente y, después, haga clic en **Finalizar** para iniciar la operación de copia.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Captura de pantalla de la página Finalización del asistente 
- La captura de pantalla siguiente muestra un ejemplo sencillo de la **Complete el asistente** página del asistente.  
+ En la captura de pantalla siguiente se muestra un ejemplo sencillo de la página **Finalización del asistente** del asistente.  
   
- ![Página Finalización del Asistente de la importación y el Asistente para exportación de](../../integration-services/import-export-data/media/complete.png "página Finalización del Asistente de la importación y el Asistente para exportación")  
+ ![Página Finalización del asistente del Asistente para importación y exportación](../../integration-services/import-export-data/media/complete.png "Complete the Wizard page of the Import and Export Wizard")  
   
 ## <a name="review-the-options-you-selected"></a>Revisar las opciones seleccionadas  
  
@@ -48,5 +45,4 @@ Revise el resumen y compruebe la información siguiente:
  
 ## <a name="see-also"></a>Vea también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Desarrollar tipos específicos de los componentes de Script | Documentos de Microsoft"
+title: "Desarrollar tipos específicos de los componentes de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Script component [Integration Services], examples
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Script component [Integration Services], examples
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 458ba4be689ed976a5948380d35f38020f7dd4dd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 40797e78a6229c063e634cd152daf3108f6340ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-specific-types-of-script-components"></a>Desarrollar tipos específicos de los componentes de script
   El componente de script es una herramienta configurable que puede utilizar en el flujo de los datos de un paquete para llenar casi cualquier requisito no cumplido por los orígenes, transformaciones y destinos que se incluyen con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Esta sección contiene ejemplos de código de componente de script que muestran las cuatro opciones para configurar el componente de script:  
@@ -40,7 +36,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Como un destino.  
   
- Para obtener ejemplos adicionales del componente de Script, consulte [Additional Script Component Examples](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
+ Para obtener ejemplos adicionales del componente de Script, consulte [Ejemplos de componente de script adicionales](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear un origen con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
@@ -56,8 +52,7 @@ ms.lasthandoff: 09/26/2017
  Explica y muestra cómo crear un destino de flujo de datos mediante el componente de script.  
   
 ## <a name="see-also"></a>Vea también  
- [Comparar soluciones de Scripting y objetos personalizados](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
- [Componentes de flujo de desarrollar tipos específicos de datos](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
+ [Comparar soluciones de scripting y objetos personalizados](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
+ [Desarrollar tipos específicos de componentes de flujo de datos](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
   
   
-

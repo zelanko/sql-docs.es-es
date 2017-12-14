@@ -1,5 +1,5 @@
 ---
-title: La tarea FTP | Documentos de Microsoft
+title: Tarea FTP | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords:
-- FTP task [Integration Services]
+helpviewer_keywords: FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ftp-task"></a>Tarea FTP
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
@@ -89,7 +86,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opciones  
  **FtpConnection**  
- Seleccione un administrador de conexiones FTP existente o haga clic en \< **nueva conexión...** > para crear una conexión de administrador.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \<**Nueva conexión...**> para crear uno nuevo.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
@@ -152,33 +149,32 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Seleccione una variable definida por el usuario existente o haga clic en \< **nueva variable...** > para crear una variable definida por el usuario.  
+ Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Agregar variable  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Seleccione un administrador de conexiones FTP existente o haga clic en \< **nueva conexión...** > para crear una conexión de administrador.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \<**Nueva conexión...**> para crear uno nuevo.  
   
- **Temas relacionados**: [Administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>Opciones dinámicas de IsLocalPathVariable  
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Seleccione una variable definida por el usuario existente o haga clic en \< **nueva variable...** > para crear una variable.  
+ Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Agregar variable  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Seleccione un administrador de conexión de archivos existente o haga clic en \< **nueva conexión...** > para crear una conexión de administrador.  
+ Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear uno nuevo.  
   
- **Temas relacionados**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **Temas relacionados**: [Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   
-

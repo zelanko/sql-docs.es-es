@@ -1,5 +1,5 @@
 ---
-title: "Editor de destino de SAP BW (página Administrador de conexiones) | Documentos de Microsoft"
+title: "Editor de destino de SAP BW (página Administrador de conexiones) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de destino de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SAP BW** para seleccionar un administrador de conexiones de SAP BW que va a usar el destino SAP BW. En esta página, puede seleccionar los parámetros para cargar los datos en el sistema SAP Netweaver BW.  
@@ -120,10 +117,9 @@ ms.lasthandoff: 08/03/2017
 |**InfoPackage**|Cree un InfoPackage nuevo con el cuadro de diálogo **Crear InfoPackage** . Para obtener más información sobre este cuadro de diálogo, vea [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de destino de SAP BW &#40; Página Asignaciones &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Editor de destino de SAP BW &#40; Página de salida de error &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor de destino de SAP BW &#40; Página avanzadas &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Editor de destino de SAP BW &#40;página Asignaciones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Editor de destino de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Las bases de datos de Oracle CDC | Documentos de Microsoft
+title: Bases de datos CDC de Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
   Una instancia CDC de Oracle está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el mismo nombre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos se denomina la base de datos CDC de Oracle (o la base de datos CDC).  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/03/2017
  Cuando se crea una base de datos CDC y se configuran tablas CDC de Oracle de origen, el propietario de la base de datos CDC puede conceder el permiso SELECT para las tablas reflejadas y definir roles de acceso CDC de SQL Server para controlar quién tiene acceso a los datos modificados.  
   
 ## <a name="mirror-tables"></a>Tablas reflejadas  
- Para cada tabla capturada, \<nombre de esquema >.\< nombre de tabla >, en la base de datos de origen de Oracle, se crea una tabla vacía similar en la base de datos CDC, con el mismo nombre de esquema y tabla. Las tablas de origen de Oracle con el nombre de esquema `cdc` (no distingue entre mayúsculas y minúsculas) no se pueden capturar porque el esquema `cdc` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reservado para CDC de SQL Server.  
+ Para cada tabla capturada, \<schema-name>.\<table-name>, en la base de datos de origen de Oracle, se crea una tabla vacía similar en la base de datos CDC, con el mismo nombre de esquema y de tabla. Las tablas de origen de Oracle con el nombre de esquema `cdc` (no distingue entre mayúsculas y minúsculas) no se pueden capturar porque el esquema `cdc` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reservado para CDC de SQL Server.  
   
  Las tablas reflejadas están vacías; no se almacena ningún dato en ellas. Se usan para habilitar la infraestructura estándar CDC de SQL Server que usa la instancia CDC de Oracle. Para evitar que se inserten o actualicen datos en las tablas reflejadas, se deniegan todas las operaciones UPDATE, DELETE e INSERT para PUBLIC. Esto garantiza que no se puedan modificar.  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_Change_Tables_CT"></a> Tablas de cambios (_CT)  
  Las tablas de cambios se crean a partir de las tablas reflejadas. Contienen datos modificados que se capturan de la base de datos de Oracle. La denominación de las tablas emplea la convención siguiente:  
   
- **[cdc]. [\<instancia de captura > _CT]**  
+ **[cdc].[\<capture-instance>_CT]**  
   
  Cuando la captura está habilitada inicialmente para la tabla `<schema-name>.<table-name>`, el nombre predeterminado de la instancia de captura es `<schema-name>_<table-name>`. Por ejemplo, el nombre predeterminado de la instancia de captura para la tabla de Oracle HR.EMPLOYEES es HR_EMPLOYEES y la tabla de cambios asociada es [cdc]. [HR_EMPLOYEES_CT].  
   
@@ -197,4 +195,3 @@ ms.lasthandoff: 08/03/2017
  [Diseñador de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   
-

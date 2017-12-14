@@ -3,8 +3,11 @@ title: "Usar cláusulas HAVING y WHERE en la misma consulta | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b656aff64222d86d80fd7ef68a08267c15ffe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4bfd62f245d9f2c46324fc437483fb379a2faa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utilizar cláusulas HAVING y WHERE en la misma consulta (Visual Database Tools)
-En algunas ocasiones, será conveniente excluir algunas filas de los grupos (utilizando una cláusula WHERE) antes de aplicar una condición a los grupos como un todo (utilizando una cláusula HAVING).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En algunas ocasiones, es posible que quiera excluir algunas filas de los grupos (mediante una cláusula WHERE) antes de aplicar una condición a los grupos como un todo (mediante una cláusula HAVING).  
   
 Una cláusula HAVING es como una cláusula WHERE, pero que solo se aplica a los grupos en su totalidad (es decir, a las filas del conjunto de resultados que representa los grupos), a diferencia de la cláusula WHERE, que se aplica a filas individuales. Una consulta puede contener tanto una cláusula WHERE como una cláusula HAVING. En tal caso:  
   

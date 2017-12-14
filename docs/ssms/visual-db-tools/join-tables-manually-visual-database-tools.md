@@ -3,8 +3,11 @@ title: Combinar tablas manualmente (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b73ed044ca4610040bfb31e6108ebd2b51a47c67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f9fe3b4dd3fc65924ef308ca5ce817c9a008fc1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Combinar tablas manualmente (Visual Database Tools)
-Cuando se agregan dos o más tablas a una consulta, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) intenta combinarlas en función de datos comunes o de información almacenada en la base de datos acerca de cómo se relacionan las tablas. Para detalles, consulte [Combinar tablas automáticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). No obstante, si el Diseñador de consultas y vistas no ha combinado las tablas automáticamente o si desea crear otras condiciones de combinación entre tablas, puede combinar las tablas de forma manual.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cuando se agregan dos o más tablas a una consulta, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) intenta combinarlas en función de datos comunes o de información almacenada en la base de datos sobre cómo se relacionan las tablas. Para detalles, consulte [Combinar tablas automáticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). No obstante, si el Diseñador de consultas y vistas no ha combinado las tablas automáticamente o si desea crear otras condiciones de combinación entre tablas, puede combinar las tablas de forma manual.  
   
 Puede crear combinaciones basadas en comparaciones entre dos columnas cualesquiera y no solo entre columnas que contengan la misma información. Por ejemplo, si la base de datos contiene dos tablas, `titles` y `roysched`, puede comparar los valores de la columna `ytd_sales` de la tabla `titles` con las columnas `lorange` y `hirange` de la tabla `roysched` . Esta combinación le permitirá buscar títulos cuyas ventas anuales acumuladas estén comprendidas entre los intervalos inferior y superior de los pagos por regalías (royalties).  
   

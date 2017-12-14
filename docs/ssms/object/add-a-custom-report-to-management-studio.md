@@ -3,8 +3,11 @@ title: Agregar un informe personalizado a Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46f60b50eee6f24c9f9cd20571a9954c9630560
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99bdd9671b2cea32f88b3904b3d67f698c50d085
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>agregar un informe personalizado a Management Studio
-En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] que se guarda como archivo .rdl y, a continuación, cómo se agrega dicho archivo a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] como informe personalizado. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] puede crear una gran variedad de informes complejos. Para crear un informe siguiendo las instrucciones de este tema, debe tener instalado [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] en el equipo. No es necesario instalar [!INCLUDE[ssRS](../../includes/ssrs_md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para ejecutar un informe personalizado mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo crear un informe sencillo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] que se guarda como archivo .rdl y, después, cómo agregar ese archivo a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] como un informe personalizado. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] puede crear una gran variedad de informes complejos. Para crear un informe siguiendo las instrucciones de este tema, debe tener instalado [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] en el equipo. No es necesario instalar [!INCLUDE[ssRS](../../includes/ssrs_md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para ejecutar un informe personalizado mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>Para crear un informe simple guardado como un archivo .rdl  

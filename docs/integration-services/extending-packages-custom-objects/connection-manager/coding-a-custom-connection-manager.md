@@ -1,5 +1,5 @@
 ---
-title: Codificar un administrador de conexiones personalizado | Documentos de Microsoft
+title: Programar un administrador de conexiones personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab9cc5d32606564b4b79ac5270217fd849e97fd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codificar un administrador de conexiones personalizado
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
   
- Para obtener ejemplos de administradores de conexión personalizados, consulte [desarrollar una interfaz de usuario para un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Los ejemplos de código mostrados en este tema se deducen del ejemplo de administrador de conexiones personalizado de SQL Server.  
+ Para obtener ejemplos de administradores de conexiones personalizados, consulte [Desarrollar una interfaz de usuario para un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Los ejemplos de código mostrados en este tema se deducen del ejemplo de administrador de conexiones personalizado de SQL Server.  
   
 > [!NOTE]  
 >  Muchas de las tareas, orígenes y destinos que se han incluido en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] se usan únicamente con tipos específicos de administradores de conexiones integrados. Por consiguiente, estos ejemplos no se pueden probar con las tareas y componentes integrados.  
@@ -196,13 +192,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>Conservar el administrador de conexiones  
- Normalmente, no tiene que implementar la persistencia personalizada para un administrador de conexiones. Solo se requiere la persistencia personalizada cuando las propiedades de un objeto usan tipos de datos complejos. Para obtener más información, consulte [desarrollar objetos personalizados para Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ Normalmente, no tiene que implementar la persistencia personalizada para un administrador de conexiones. Solo se requiere la persistencia personalizada cuando las propiedades de un objeto usan tipos de datos complejos. Para obtener más información, vea [Desarrollar objetos personalizados para Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="working-with-the-external-data-source"></a>Trabajar con el origen de datos externos  
  Los métodos que permiten conectar a un origen de datos externo son los métodos más importantes de un administrador de conexiones personalizado. Se llama varias veces a los métodos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> durante tiempo de diseño y tiempo de ejecución.  
   
 ### <a name="acquiring-the-connection"></a>Adquirir la conexión  
- Debe decidir el tipo de objeto que es el adecuado para devolver el método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> de su administrador de conexiones personalizado. Por ejemplo, un administrador de conexiones de archivos devuelve únicamente una cadena que contiene una ruta y nombre de archivo, mientras que una conexión ADO.NET devuelve un objeto de conexión administrado que ya está abierto. Un administrador de conexiones OLE DB devuelve un objeto de conexión OLE DB nativo que el código administrado no puede utilizar. El Administrador de conexiones personalizado de SQL Server, desde el que se toman los fragmentos de código de este tema, devuelve un formato de archivo **SqlConnection** objeto.  
+ Debe decidir el tipo de objeto que es el adecuado para devolver el método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> de su administrador de conexiones personalizado. Por ejemplo, un administrador de conexiones de archivos devuelve únicamente una cadena que contiene una ruta y nombre de archivo, mientras que una conexión ADO.NET devuelve un objeto de conexión administrado que ya está abierto. Un administrador de conexiones OLE DB devuelve un objeto de conexión OLE DB nativo que el código administrado no puede utilizar. El administrador de conexiones SQL Server personalizado, del que se toman los fragmentos de código en este tema, devuelve un objeto **SqlConnection** abierto.  
   
  Los usuarios de su administrador de conexiones necesitan conocer de antemano el tipo de objeto que se espera, para que puedan convertir el objeto devuelto al tipo adecuado y obtener acceso sus métodos y propiedades.  
   
@@ -273,4 +269,3 @@ public override void ReleaseConnection(object connection)
  [Desarrollar una interfaz de usuario para un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

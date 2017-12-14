@@ -1,5 +1,5 @@
 ---
-title: Crear un administrador de conexiones personalizado | Documentos de Microsoft
+title: Crear un administrador de conexiones personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c617741134c19c012f487bc00263c2e4b071810
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17534beced4fc9e917ded7fb91514460deb83d0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-connection-manager"></a>Crear un administrador de conexiones personalizado
   Los pasos que debe seguir para crear un administrador de conexiones personalizado son similares a los pasos necesarios para crear cualquier otro objeto personalizado para [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -46,16 +42,16 @@ ms.lasthandoff: 08/03/2017
 ## <a name="getting-started-with-a-custom-connection-manager"></a>Introducción a un administrador de conexiones personalizado  
   
 ### <a name="creating-projects-and-classes"></a>Crear proyectos y clases  
- Dado que todos los administradores de conexiones administrados se derivan de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, el primer paso para crear un administrador de conexiones personalizado consiste en crear un proyecto de bibliotecas de clases en el lenguaje de programación administrado que prefiera y, a continuación, crear una clase que herede de la clase base. En esta clase derivada, invalidará los métodos y propiedades de la clase base para implementar la funcionalidad personalizada.  
+ Dado que todos los administradores de conexiones administrados se derivan de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, el primer paso para crear un administrador de conexiones personalizado consiste en crear un proyecto de bibliotecas de clases en el lenguaje de programación administrado que prefiera y, a continuación, crear una clase que herede de la clase base. En esta clase derivada se invalidarán los métodos y las propiedades de la clase base para implementar la funcionalidad personalizada.  
   
  En la misma solución, cree un segundo proyecto de bibliotecas de clases para la interfaz de usuario personalizada. Se recomienda usar un ensamblado independiente para la interfaz de usuario a fin de facilitar la implementación, ya que le permite actualizar y volver a implementar la tarea o su interfaz de usuario de forma independiente.  
   
  Configure ambos proyectos para firmar los ensamblados que se generarán en tiempo de compilación mediante un archivo de clave de nombre seguro.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Aplicar el atributo DtsConnection  
- Aplique el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase que ha creado para identificarlo como un administrador de conexiones. Este atributo proporciona información en tiempo de diseño, como el nombre, la descripción y el tipo de conexión del administrador de conexiones. El <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> y **descripción** propiedades corresponden a la **tipo** y **descripción** las columnas mostradas en la **Agregar administrador de conexiones SSIS** cuadro de diálogo que se muestra al configurar las conexiones para un paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Aplique el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase que ha creado para identificarlo como un administrador de conexiones. Este atributo proporciona información en tiempo de diseño, como el nombre, la descripción y el tipo de conexión del administrador de conexiones. Las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> y **Description** corresponden a las columnas **Tipo** y **Descripción** que se muestran en el cuadro de diálogo **Agregar administrador de conexiones SSIS**, que aparece al configurar las conexiones para un paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
- Use la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> para vincular el administrador de conexiones a su interfaz de usuario personalizada. Para obtener el token de clave pública que se requiere para esta propiedad, puede usar **sn.exe -t** para mostrar el token de clave pública del archivo de par de claves (.snk) que se va a usar para firmar el ensamblado de la interfaz de usuario.  
+ Use la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> para vincular el administrador de conexiones a su interfaz de usuario personalizada. Para obtener el token de clave pública necesario para esta propiedad, puede usar **sn.exe -t** con el fin de mostrar el token de clave pública del archivo de pares de claves (.snk) que quiere usar para firmar el ensamblado de la interfaz de usuario.  
   
 ```vb  
 <DtsConnection(ConnectionType:="SQLVB", _  
@@ -81,11 +77,10 @@ ConnectionManagerBase
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>Generar, implementar y depurar un administrador de conexiones personalizado  
- Los pasos para generar, implementar y depurar un administrador de conexiones personalizado en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son similares a los pasos necesarios en otros tipos de objetos personalizados. Para obtener más información, consulte [Building, Deploying and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).    
+ Los pasos para generar, implementar y depurar un administrador de conexiones personalizado en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son similares a los pasos necesarios en otros tipos de objetos personalizados. Para obtener más información, consulte [Generar, implementar y depurar objetos personalizados](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).    
   
 ## <a name="see-also"></a>Vea también  
- [Codificar un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
+ [Programar un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
  [Desarrollar una interfaz de usuario para un administrador de conexiones personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

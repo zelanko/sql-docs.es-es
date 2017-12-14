@@ -1,5 +1,5 @@
 ---
-title: Componente de flujo de registro y definir entradas de registro de datos | Documentos de Microsoft
+title: Registrar y definir entradas de registro en un componente de flujo de datos | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - logs [Integration Services], custom
 - custom log entries [Integration Services]
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a0cbdbb818c7299221172f5ceb9b4ee5c54bddcb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dbe113aad9e86802378eec1b24cc6539d758a5ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrar y definir entradas de registro en un componente de flujo de datos
   Los componentes de flujo de datos personalizados pueden publicar mensajes en una entrada de registro existente con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. También pueden presentar información al usuario con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> o métodos similares de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Sin embargo, este enfoque supone la sobrecarga de provocar y controlar eventos adicionales y obliga al usuario a buscar los mensajes que le pueden interesar entre todos los mensajes informativos detallados. Puede utilizar una entrada de registro personalizada tal como se describe a continuación para proporcionar información de registro personalizada etiquetada de forma diferenciada a los usuarios del componente.  
@@ -77,7 +74,7 @@ End Sub
   
  En el ejemplo anterior se utiliza <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT> porque el componente espera registrar una entrada una vez por ejecución.  
   
- Después de registrar la entrada de registro personalizado y agregar una instancia del componente personalizado a la superficie del Diseñador de flujo de datos, el **registro** cuadro de diálogo en el diseñador muestra una nueva entrada de registro con el nombre "Entrada de registro de componente personalizado mi" en la lista de entradas de registro disponibles.  
+ Después de registrar la entrada de registro personalizada y agregar una instancia del componente personalizado a la superficie del diseñador de flujo de datos, el cuadro de diálogo **Registro** del diseñador muestra una nueva entrada de registro con el nombre "My Custom Component Log Entry" en la lista de entradas de registro disponibles.  
   
 ### <a name="logging-to-a-custom-log-entry"></a>Registrar en una entrada de registro personalizada  
  Después de registrar la entrada de registro personalizada, el componente puede registrar los mensajes personalizados. En el ejemplo siguiente se escribe una entrada de registro personalizada durante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> que contiene el texto de una instrucción SQL que utiliza el componente.  
@@ -105,10 +102,9 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- Ahora cuando el usuario ejecuta el paquete, después de seleccionar el "Mi componente de entrada de registro personalizada" en el **registro** cuadro de diálogo, el registro contendrá una entrada claramente etiquetada como "Entrada de registro de componente para personalizada de usuario:: mi." Esta nueva entrada de registro contiene el texto de la instrucción SQL, la marca de tiempo y cualquier dato adicional registrado por el programador.  
+ Cuando el usuario ejecuta el paquete, después de seleccionar "My Custom Component Log Entry" en el cuadro de diálogo **Registro**, el registro contendrá una entrada claramente etiquetada como "User::My Custom Component Log Entry". Esta nueva entrada de registro contiene el texto de la instrucción SQL, la marca de tiempo y cualquier dato adicional registrado por el programador.  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services &#40; SSIS &#41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro de Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

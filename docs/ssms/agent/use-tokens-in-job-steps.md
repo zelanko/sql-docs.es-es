@@ -3,8 +3,11 @@ title: Usar tokens en pasos de trabajo | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a4cef9cc3d5a72bba4b818c89acfe6e15878ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente le permite usar tokens en scripts de pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql_md.md)] . La utilización de tokens al escribir pasos de trabajo ofrece la misma flexibilidad que las variables al escribir programas de software. Una vez que se inserta un token en un script de pasos de trabajo, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sustituye el token en tiempo de ejecución, antes de que el subsistema de [!INCLUDE[tsql](../../includes/tsql_md.md)] ejecute el paso de trabajo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite usar tokens en scripts de pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql_md.md)]. La utilización de tokens al escribir pasos de trabajo ofrece la misma flexibilidad que las variables al escribir programas de software. Una vez que se inserta un token en un script de pasos de trabajo, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sustituye el token en tiempo de ejecución, antes de que el subsistema de [!INCLUDE[tsql](../../includes/tsql_md.md)] ejecute el paso de trabajo.  
   
 > [!IMPORTANT]  
 > A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1, la sintaxis del token del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ha cambiado. Como resultado, todos los tokens que se usan en pasos de trabajo deben adjuntar ahora una macro de escape; de lo contrario, esos pasos de trabajo producirán un error. El uso de las macros de escape y la actualización de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que usa tokens se describen en las secciones siguientes, "Descripción del uso de tokens", "Tokens y macros del Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] " y "Actualizar pasos de trabajo para usar macros". Además, también ha cambiado la sintaxis de [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] , que usaba corchetes para llamar a los tokens de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] (por ejemplo, "`[DATE]`"). Ahora debe delimitar los nombres de los tokens entre paréntesis y colocar un signo de dólar (`$`) al principio de la sintaxis del token. Por ejemplo:  

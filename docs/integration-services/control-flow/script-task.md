@@ -1,5 +1,5 @@
 ---
-title: Tarea de script | Documentos de Microsoft
+title: Tarea Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 83f4682136c01e29f034800656ee4bb27a8d62da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-task"></a>Tarea Script
   La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="script-task-editor-general-page"></a>Editor de la tarea Script (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Script** para asignar un nombre a la tarea Script y describirla.  
   
- Para obtener más información acerca de la tarea Script, vea [tarea Script](../../integration-services/control-flow/script-task.md) y [configurar la tarea Script en el Editor de la tarea Script](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obtener información sobre cómo programar la tarea Script, vea [extender el paquete con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Para obtener más información acerca de la tarea Script, vea [Script Task](../../integration-services/control-flow/script-task.md) y [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obtener información sobre cómo programar la tarea Script, vea [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
@@ -118,7 +116,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  En [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] y versiones posteriores, se recompilan todos los scripts. En versiones anteriores, se establece una propiedad **PrecompileScriptIntoBinaryCode** para especificar que se precompiló el script.  
   
- Para obtener más información acerca de la tarea Script, vea [Script Task](../../integration-services/control-flow/script-task.md) y [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obtener información sobre cómo programar la tarea Script, vea [extender el paquete con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Para obtener más información acerca de la tarea Script, vea [Script Task](../../integration-services/control-flow/script-task.md) y [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obtener información sobre cómo programar la tarea Script, vea [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Opciones  
  **Lenguaje de script**  
@@ -153,4 +151,3 @@ ms.lasthandoff: 08/11/2017
 -   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](http://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
   
   
-

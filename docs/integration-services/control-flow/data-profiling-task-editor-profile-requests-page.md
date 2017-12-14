@@ -1,5 +1,5 @@
 ---
-title: "Editor de la tarea (página de solicitudes de perfil) de generación de perfiles de datos | Documentos de Microsoft"
+title: "Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
@@ -138,25 +134,24 @@ ms.lasthandoff: 08/03/2017
   
  Estas opciones varían según el perfil seleccionado. Para obtener información acerca de las opciones de tipos de perfiles individuales, vea los temas siguientes:  
   
--   [Opciones de solicitud de perfil de claves candidatas &#40; los datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de proporción de columnas nulas de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de estadísticas de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de los valores de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de longitud de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de patrón de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Funcional opciones de solicitud de perfil de dependencia &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de inclusión de valor &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea &#40; de la generación de perfiles de datos Página general &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulario de perfil rápido de tabla única &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

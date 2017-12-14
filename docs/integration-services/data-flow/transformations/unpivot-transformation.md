@@ -1,5 +1,5 @@
 ---
-title: "Transformación Anulación de dinamización | Documentos de Microsoft"
+title: "Transformación Anulación de dinamización | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,28 +20,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 559bfa5d851d3a40d1ed691ea4023acb3d6eb731
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unpivot-transformation"></a>Anulación de dinamización, transformación
   La transformación Anulación de dinamización transforma un conjunto de datos sin normalizar en una versión más normalizada ampliando los valores de varias columnas de un solo registro en varios registros con los mismos valores en una sola columna. Por ejemplo, un conjunto de datos que enumera nombres de clientes tiene una fila para cada cliente, con los productos y la cantidad comprada en columnas dentro de la fila. Después de que la transformación Anulación de dinamización normaliza el conjunto de datos, el conjunto de datos contiene una fila diferente para cada producto que compró el cliente.  
   
  El diagrama siguiente muestra un conjunto de datos antes de que se anule la dinamización de los datos en la columna Product.  
   
- ![Conjunto de datos después de que se anule la dinamización](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "conjunto de datos después de que se anule la dinamización")  
+ ![Conjunto de datos después de que se anule la dinamización](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Dataset after it is unpivoted")  
   
  El diagrama siguiente muestra un conjunto de datos después de que se haya anulado la dinamización de los datos en la columna Product.  
   
- ![Conjunto de datos antes de que se anule la dinamización](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "conjunto de datos antes de que se anule la dinamización")  
+ ![Conjunto de datos antes de que se anule la dinamización](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Dataset before it is unpivoted")  
   
  En algunas circunstancias, los resultados de anulación de dinamización pueden contener filas con valores no esperados. Por ejemplo, si los datos de muestra del diagrama en los que se va a anular la dinamización tuvieran valores NULL en todas las columnas Qty para Fred, el resultado incluiría solamente una fila para Fred, no cinco. La columna Qty contendría NULL o cero, dependiendo del tipo de datos de la columna.  
   
@@ -100,8 +98,7 @@ ms.lasthandoff: 08/19/2017
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), el Nombre de la columna del valor de clave dinámica es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformación dinámica](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

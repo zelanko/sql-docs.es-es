@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33293b17caff5d5c71b58bff3f34ed130ab19ba3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Ejecutar un paquete SSIS desde el símbolo del sistema con DTExec.exe
 Este tutorial de inicio rápido muestra cómo ejecutar un paquete SSIS desde el símbolo del sistema mediante la ejecución de `DTExec.exe` con los parámetros adecuados.
@@ -25,7 +25,7 @@ Este tutorial de inicio rápido muestra cómo ejecutar un paquete SSIS desde el 
 > [!NOTE]
 > El método descrito en este artículo no se ha probado con los paquetes que se implementan en un servidor de Azure SQL Database.
 
-Para obtener más información sobre `DTExec.exe`, consulte [dtexec Utility](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility).
+Para obtener más información sobre `DTExec.exe`, consulte [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
 
 ## <a name="run-a-package-with-dtexec"></a>Ejecutar un paquete con dtexec
 

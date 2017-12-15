@@ -20,11 +20,11 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a5520dc00083bdd4522e10a2479e69fa000dc65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 556f0efa1ce15ee23acc190e547e3700e64eca4d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Administrador de conexiones de Azure Data Lake Store
 Un paquete de SQL Server Integration Services (SSIS) puede usar el administrador de conexiones de Azure Data Lake Store para conectarse a un servicio de Azure Data Lake Store con uno de los dos tipos de autenticación siguientes:
@@ -47,7 +47,7 @@ El administrador de conexiones de Azure Data Lake Store es un componente de [Fea
     1.  Si seleccionó la opción de autenticación **Identidad de usuario de Azure AD**, realice lo siguiente:
         1. Proporcione los valores para los campos **Nombre de usuario** y **Contraseña**. 
     
-        2. Seleccione **Probar conexión** para probar la conexión. Si usted o el administrador de inquilinos no permitió previamente que SSIS obtuviera acceso a los datos de Azure Data Lake Store, seleccione **Aceptar** cuando se le solicite. Para obtener más información sobre esta experiencia del consentimiento, consulte [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. Seleccione **Probar conexión** para probar la conexión. Si usted o el administrador de inquilinos no permitió previamente que SSIS obtuviera acceso a los datos de Azure Data Lake Store, seleccione **Aceptar** cuando se le solicite. Para obtener más información sobre esta experiencia del consentimiento, consulte [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
         >   [!NOTE] 
         > Al seleccionar la opción de autenticación **Identidad de usuario de Azure AD**, no se admitirá la autenticación multifactor ni la autenticación de la cuenta de Microsoft.
@@ -55,7 +55,7 @@ El administrador de conexiones de Azure Data Lake Store es un componente de [Fea
     2. Si seleccionó la opción de autenticación **Azure AD Service Identity** (Identidad de servicio de Azure AD), realice lo siguiente:
         1. Cree una entidad de servicio y una aplicación de Azure Active Directory (AAD) para tener acceso a los datos de Azure Data Lake.
     
-        2. Asigne los permisos adecuados para permitir que esta aplicación de AAD tenga acceso a los recursos de Azure Data Lake. Para obtener más información sobre esta opción de autenticación, consulte [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Utilizar el portal para crear una aplicación de Active Directory y una entidad de servicio que puedan tener acceso a los recursos).
+        2. Asigne los permisos adecuados para permitir que esta aplicación de AAD tenga acceso a los recursos de Azure Data Lake. Para obtener más información sobre esta opción de autenticación, consulte [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) (Utilizar el portal para crear una aplicación de Active Directory y una entidad de servicio que puedan tener acceso a los recursos).
     
         3. Proporcione los valores para los campos **Id. de cliente**, **Clave secreta** y **Nombre de inquilino**.
     

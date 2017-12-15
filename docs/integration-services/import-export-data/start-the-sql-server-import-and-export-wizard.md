@@ -22,15 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5bcd54dcbbf171b74855f5d48a7af113dd12ee43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar el Asistente para importación y exportación de SQL Server
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Ejecutar el Asistente para importación y exportación de SQL Server](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Ejecutar el Asistente para importación y exportación de SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
 Inicie el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguiendo uno de los métodos que se describen en este tema para importar datos de cualquier origen de datos admitido o exportar datos a este.
 
@@ -47,7 +47,7 @@ Puede iniciar el asistente de las siguientes maneras:
 Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 > [!NOTE]
-> Para usar la versión de 64 bits del Asistente para importación y exportación de SQL Server, debe instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
+> Para usar la versión de 64 bits del asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 ## <a name="startStart"></a> menú Inicio  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>Iniciar el Asistente para importación y exportación de SQL Server desde el menú Inicio
@@ -121,16 +121,16 @@ Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes
  A continuación, se presentan algunas tareas básicas adicionales.
 -   **Vea un ejemplo rápido de cómo funciona el asistente.**
 
-    -   **Si prefiere ver capturas de pantalla.** Eche un vistazo a este sencillo y completo ejemplo en una sola página: [Comenzar con este sencillo ejemplo del Asistente para importación y exportación](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+    -   **Si prefiere ver capturas de pantalla.** Eche un vistazo a este ejemplo sencillo y completo en una sola página: [Get started with this simple example of the Import and Export Wizard (Comenzar con este sencillo ejemplo del Asistente para importación y exportación)](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Si prefiere ver un vídeo.** Aquí tiene un vídeo de cuatro minutos de YouTube en que se muestra el asistente y se explica cómo exportar datos a Excel, con instrucciones claras y sencillas: [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Usar el Asistente para importación y exportación de SQL Server para exportar a Excel).
+    -   **Si prefiere ver un vídeo.** Aquí tiene un vídeo de cuatro minutos de YouTube en el que se muestra el asistente y se explica cómo exportar datos a Excel, con instrucciones claras y sencillas: [Using the SQL Server Import and Export Wizard to Export to Excel (Usar el Asistente para importación y exportación de SQL Server para exportar a Excel)](https://go.microsoft.com/fwlink/?linkid=829049).
 
 -   **Obtenga más información sobre cómo funciona el asistente.**
 
     -   **Obtenga más información sobre el asistente.** Si quiere obtener información general sobre el asistente, consulte [Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-    -   **Obtenga más información sobre los pasos del asistente.** Si está buscando información sobre los pasos del asistente, consulte [Pasos del asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). También hay una página independiente de documentación para cada página del asistente.
+    -   **Obtenga más información sobre los pasos del asistente.** Si está buscando información sobre los pasos del asistente, consulte [Steps in the SQL Server Import and Export Wizard (Pasos del asistente para importación y exportación de SQL Server)](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). También hay una página independiente de documentación para cada página del asistente.
 
-    -   **Obtenga información sobre cómo conectarse a orígenes y destinos de datos.** Si está buscando información sobre cómo conectarse a sus datos, seleccione la página que quiera de la lista en esta página: [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md) (Conectarse a orígenes de datos con el Asistente para importación y exportación de SQL Server). Hay una página independiente de documentación para cada uno de los varios orígenes de datos de uso frecuente.
+    -   **Obtenga información sobre cómo conectarse a orígenes y destinos de datos.** Si está buscando información sobre cómo conectarse a sus datos, seleccione la página que quiera de esta lista: [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md) (Conexión a orígenes de datos con el Asistente para importación y exportación de SQL Server). Hay una página independiente de documentación para cada origen de datos de uso frecuente.
 
 

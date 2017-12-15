@@ -30,15 +30,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac2dd0d5907c2fc0f06713b49c79db5ad548f32f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bb672edb72392a8ae215160719aa3476c2452f1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar y exportar datos con el Asistente para importación y exportación de SQL Server
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Ejecutar el Asistente para importación y exportación de SQL Server](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Ejecutar el Asistente para importación y exportación de SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
  El Asistente para importación y exportación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece una manera sencilla de copiar datos de un origen a un destino. En esta introducción se describen los orígenes de datos que el asistente puede usar como orígenes y destinos, así como los permisos que necesita para ejecutar al asistente.
 
@@ -75,7 +75,7 @@ Para obtener información sobre cómo conectarse a un destino de uso frecuente, 
 -   [Conectarse a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
-Para obtener más información sobre cómo conectarse a un origen de datos que no aparezca en esta lista, consulte [The Connection Strings Reference](https://www.connectionstrings.com/) (Referencia de cadenas de conexión). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la información de conexión que necesitan.
+Para obtener más información sobre cómo conectarse a un origen de datos que no aparezca en esta lista, consulte [The Connection Strings Reference (Referencia de cadenas de conexión)](https://www.connectionstrings.com/). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la información de conexión que necesitan.
 
 ## <a name="what-permissions-do-i-need"></a>¿Qué permisos necesito?  
  Para ejecutar correctamente el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe disponer como mínimo de los siguientes permisos. Si ya trabaja con el origen y el destino de datos, probablemente cuente con los permisos necesarios.

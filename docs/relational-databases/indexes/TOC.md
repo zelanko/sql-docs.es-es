@@ -26,16 +26,14 @@
 ## [Configurar operaciones de índice en paralelo](configure-parallel-index-operations.md)  
 ## [Propiedades del índice (Ayuda F1)](index-properties-f1-help.md)  
 
-
-
 # Índices de almacén de columnas
 ## [Información general](columnstore-indexes-overview.md)  
-## [Arquitectura](columnstore-indexes-architecture.md)  
+## [Arquitectura](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
 ## [Guía de diseño](columnstore-indexes-design-guidance.md)  
 ## [Guía de la carga de datos](columnstore-indexes-data-loading-guidance.md)  
 ## [Novedades](columnstore-indexes-what-s-new.md)  
 ## [Rendimiento de las consultas](columnstore-indexes-query-performance.md)  
 ## [Análisis operativos en tiempo real](get-started-with-columnstore-for-real-time-operational-analytics.md)  
-## [Almacenamiento de datos de almacén de datos](columnstore-indexes-data-warehouse.md)  
+## [Data Warehouse](columnstore-indexes-data-warehouse.md)  
 ## [Desfragmentar](columnstore-indexes-defragmentation.md)  
 

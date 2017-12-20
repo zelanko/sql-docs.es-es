@@ -25,3 +25,4 @@
 ### [Cambiar la dirección IP de una instancia de clúster de conmutación por error](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [Actualizar una instancia del clúster de conmutación por error de SQL Server](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [Actualizar una instancia de clúster de conmutación por error de SQL Server (Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)

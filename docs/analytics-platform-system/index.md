@@ -1,20 +1,24 @@
 ---
 title: "Documentación del producto (Analytics Platform System)"
+description: "Microsoft Analytics Platform System (APS), una plataforma de datos diseñada para almacenamiento de datos y análisis de macrodatos, ofrece integración profunda de datos, procesamiento de consultas de alta velocidad, almacenamiento altamente escalable y mantenimiento sencillo de las soluciones de inteligencia empresarial de un extremo a otro."
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.suite: sql
 ms.prod: analytics-platform-system
+ms.prod_service: mpp-data-warehouse
+ms.service: 
+ms.component: 
 ms.technology: mpp-data-warehouse
-description: "Microsoft Analytics Platform System (APS), una plataforma de datos diseñada para almacenamiento de datos y análisis de macrodatos, ofrece integración profunda de datos, procesamiento de consultas de alta velocidad, almacenamiento altamente escalable y mantenimiento sencillo de las soluciones de inteligencia empresarial de un extremo a otro."
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 713516fc-3101-4a03-a331-d817c29c7703
 caps.latest.revision: "49"
-ms.openlocfilehash: 2baf6aa411e311a4baa2bbdfffed70e807b0fef9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bdfb4f595504ee97abf47ac384d3a149dac53fb0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS), una plataforma de datos diseñada para almacenamiento de datos y análisis de macrodatos, ofrece integración profunda de datos, procesamiento de consultas de alta velocidad, almacenamiento altamente escalable y mantenimiento sencillo de las soluciones de inteligencia empresarial de un extremo a otro.  

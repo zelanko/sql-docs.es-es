@@ -122,8 +122,6 @@
 
 ### [Avoid errors with user package libraries for R (Evitación de errores con las bibliotecas de paquete de usuario para R)](r/packages-installed-in-user-libraries.md)
 
-### [Agregar SQLRUserGroup como usuario de base de datos](r/add-sqlrusergroup-to-database.md)
-
 ## Modelado y exploración de datos
 
 ### [Bibliotecas de R y tipos de datos](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [Consideraciones de seguridad para el tiempo de ejecución de R en SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modificar el grupo de cuentas de usuario de SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [Agregar SQLRUserGroup como usuario de base de datos](r/add-sqlrusergroup-to-database.md)
+
 ### [Implementar y usar modelos mediante servicios web](operationalization-with-mrsdeploy.md)
+
 ### [Administración y supervisión de soluciones de aprendizaje automático](r/managing-and-monitoring-r-solutions.md)
 ### [Regulación de recursos para Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Creación de grupos de recursos para el aprendizaje automático](r/how-to-create-a-resource-pool-for-r.md)

@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue una tarea Flujo de datos a la superficie de diseño.  
   
-2.  En la pestaña **Flujo de datos** tab, add an OLE DB source to the Flujo de datos task, and then open the **Editor de origen de OLE DB**.  
+2.  En la pestaña **Flujo de datos** pestaña, añadir un origen de OLE DB a la tarea de flujo de datos, y luego abrir el **Editor de origen de OLE DB.**  
   
 3.  En la página **Administrador de conexiones** del editor, configure el origen con los valores siguientes:  
   

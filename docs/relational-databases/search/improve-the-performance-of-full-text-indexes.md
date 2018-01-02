@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describen algunas de las causas comunes de un rendimiento deficiente de las consultas y los índices de texto completo. También se proporcionan algunas sugerencias para mitigar estos problemas y mejorar el rendimiento.
@@ -151,7 +151,7 @@ Para información esencial sobre las fórmulas siguientes, vea las notas que sig
   
  `F = 8*10*8=640`  
   
- El cálculo siguiente obtiene el valor óptimo de **max server memory**—*M*. *T*otal de memoria física disponible en este sistema en MB—*T*— es `8192`.  
+ El cálculo siguiente obtiene el valor óptimo de **max server memory**—*M*. Total de memoria física disponible en este sistema en MB—*T*— es `8192`.  
   
  `M = 8192-640-500=7052`  
   

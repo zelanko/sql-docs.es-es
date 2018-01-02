@@ -1,7 +1,7 @@
 ---
 title: 'SQL Server Management Studio: Registro de cambios (SSMS) | Microsoft Docs'
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,17 +17,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este artículo se proporcionan detalles sobre las actualizaciones, mejoras y correcciones de errores de las versiones actuales y anteriores de SSMS. Descargue las [versiones anteriores de SSMS a continuación](#previous-ssms-releases).
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+Disponible con carácter general | Número de compilación: 14.0.17213.0
+
+### <a name="whats-new"></a>Novedades
+
+**SSMS general**
+
+Evaluación de vulnerabilidad:
+- Se ha incluido un nuevo servicio de evaluación de vulnerabilidades de SQL para analizar las bases de datos con objeto de encontrar posibles vulnerabilidades y desviaciones con respecto a los procedimientos recomendados, como errores de configuración, permisos excesivos y datos confidenciales sin protección. 
+- Los resultados de la evaluación incluyen pasos que requieren acción con los que se corrige cada problema y scripts de solución personalizados cuando proceda. El informe de evaluación se puede personalizar para ajustarse a cada entorno y adaptarse a los requisitos particulares. Obtenga más información en [Evaluación de vulnerabilidades de SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+
+SMO:
+- Se ha corregido un problema en el que *HasMemoryOptimizedObjects* iniciaba una excepción en Azure.
+- Se ha agregado compatibilidad con la nueva característica CATALOG_COLLATION.
+
+Panel AlwaysOn:
+- Mejoras en el análisis de latencia de Grupos de disponibilidad.
+- Se han agregado dos informes nuevos: *AlwaysOn\_Latency\_Primary* y *AlwaysOn\_Latency\_Secondary*.
+
+Plan de presentación:
+- Se han actualizado los vínculos para que apunten a la documentación correcta.
+- Se permite el análisis de plan único directamente desde plan real generado.
+- Nuevo conjunto de iconos.
+- Se ha agregado compatibilidad para identificar "operadores lógicos de aplicación" como GbApply o InnerApply.
+        
+XE Profiler:
+- Se ha cambiado el nombre a generador de perfiles XEvent.
+- Ahora, los comandos de menú Iniciar y Detener inician o detienen la sesión de forma predeterminada.
+- Se han habilitado métodos abreviados de teclado (como CTRL+F para realizar búsquedas).
+- Se han agregado las acciones database\_name y client\_hostname a los eventos pertinentes en las sesiones del generador de perfiles XEvent. Para que el cambio surta efecto, puede que sea necesario eliminar las instancias de sesión QuickSessionStandard o QuickSessionTSQL existentes en los servidores (vea el [artículo 3142981 de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3142981)).
+
+Línea de comandos:
+- Se ha agregado una nueva opción de línea de comandos ("-G") que sirve para conectar SSMS automáticamente a un servidor o a una base de datos por medio de la autenticación de Active Directory ("Integrado" o "Contraseña"). Para más información, vea [Ssms (Utilidad)](ssms-utility.md).
+
+Asistente para la importación de archivos planos:
+- Se ha agregado un método para seleccionar un nombre de esquema distinto del predeterminado ("dbo") al crear la tabla.
+
+Almacén de consultas:
+- Se ha restaurado el informe "Consultas con regresión" al expandir la lista de informes Almacén de consultas disponible.
+
+**Integration Services (IS)**
+- Se ha agregado una función de validación de paquetes al Asistente para la implementación que sirve para que el usuario averigüe qué componentes de los paquetes SSIS no se admiten en Azure-SSIS IR.
+
+### <a name="bug-fixes"></a>Correcciones de errores
+
+**SSMS general**
+
+- Explorador de objetos:
+    - Se ha corregido un problema por el que el nodo de función con valores de tabla no aparecía con las instantáneas de base de datos (vea el [artículo de Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)).
+    - Se ha mejorado el rendimiento al expandir el nodo *Bases de datos* cuando el servidor tiene bases de datos AUTOCLOSE.
+- Editor de consultas:
+    - Se ha corregido un problema por el que se producían errores en IntelliSense con usuarios que no tienen acceso a la base de datos maestra.
+    - Se ha corregido un problema que hacía que SSMS se bloqueara en algunos casos cuando se cerraba la conexión con un equipo remoto (vea el [artículo de Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)).
+- Visor de XEvent:
+    - Se ha vuelto a habilitar la funcionalidad para exportar a XEL.
+    - Se han corregido problemas por los que, a veces, los usuarios no podían cargar un archivo XEL completo.
+- Generador de perfiles XEvent:
+    - Se ha corregido un problema que hacía que SSMS se bloqueara si un usuario no tenía el permiso *VER ESTADO DEL SERVIDOR*.
+    - Se ha corregido un problema en el que, al cerrar la ventana de datos actualizados del generador de perfiles XEvent, no se detenía la sesión subyacente.
+- Servidores registrados:
+    - Se ha corregido un problema que hacía que el comando "Mover a…" dejara de funcionar (vea el [artículo de Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) y el [artículo de Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
+- SMO:
+    - Se ha corregido un problema en el que el método TransferData en el objeto de transferencia no funcionaba.
+    - Se ha corregido un problema por el que las bases de datos de servidor iniciaban una excepción con las bases de datos de SQL DW en pausa.
+    - Se ha corregido un problema en el que, al crear scripts de bases de datos SQL en SQL DW, se generaban valores de parámetro de T-SQL incorrectos.
+    - Se ha corregido un problema en el que, al crear el script de una base de datos extendida, se emitía incorrectamente la opción *DATA\_COMPRESSION*.
+- Monitor de actividad de trabajo:
+    - Se ha corregido un problema en el que el usuario obtenía un error "El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección. 
+        Nombre del parámetro: index (System.Windows.Forms)" al intentar filtrar por categoría (vea el [artículo de Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)).
+- Cuadro de diálogo de conexión:
+    - Se ha corregido un problema en el que los usuarios del dominio sin acceso a un controlador de dominio de lectura/escritura no podían iniciar sesión en un servidor SQL Server por medio de la autenticación SQL (vea el [artículo de Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)).
+- Replicación:
+    - Se ha corregido un problema en el que se mostraba un error similar a "No se puede aplicar el valor 'null' a la propiedad ServerInstance" al examinar las propiedades de una suscripción de extracción en SQL Server.
+- Programa de instalación de SSMS:
+    - Se ha corregido un problema que hacía que el programa de instalación de SSMS reconfigurara incorrectamente todos los productos instalados en el equipo.
+- Configuración del usuario:
+   - Con esta corrección, los usuarios de la nube al amparo del Gobierno de Estados Unidos tendrán acceso ininterrumpido a sus recursos de Azure SQL Database y ARM con SSMS a través de la autenticación universal y del inicio de sesión de Azure Active Directory.  Los usuarios con versiones anteriores de SSMS deberán abrir Herramientas|Opciones|Servicios de Azure y, en Administración de recursos, cambiar la configuración de la propiedad "Entidad de Active Directory" por https://login.microsoftonline.us.
+
+**Analysis Services (AS)**
+
+- Generador de perfiles: se ha corregido un problema que ocurría al intentar conectarse por medio de la autenticación de Windows en Azure AS.
+- Se ha corregido un problema que provocaba un bloqueo al cancelar los detalles de la conexión en un modelo 1400.
+- Ahora, cuando se establece una clave de blob de Azure en el cuadro de diálogo de propiedades de la conexión al actualizar las credenciales, dicha clave se enmascara visualmente.
+- Se ha corregido un problema en el cuadro de diálogo Selección de usuario de Azure Analysis Services para mostrar el GUID de la aplicación en lugar del identificador del objeto en las búsquedas.
+- Se ha corregido un problema en la barra de herramientas Examen de base de datos\Diseñador de consultas de MDX que hacía que los iconos se asignaran incorrectamente a algunos de los botones.
+- Se ha corregido un problema que impedía conectarse a SSAS a través de direcciones http/https de IIS de msmdpump.
+- Ahora, algunas cadenas del cuadro de diálogo Selector de usuarios de Azure Analysis Services se han traducido a otros idiomas.
+- Ahora, la propiedad MaxConnections es visible en los orígenes de datos de los modelos tabulares.
+- Ahora, el Asistente para la implementación generará definiciones de JSON correctas para los miembros del rol de Azure AS.
+- Se ha corregido un problema en SQL Profiler que hacía que, al seleccionar la autenticación de Windows en Azure AS, se seguía pidiendo que se iniciara sesión.
+
+
+## <a name="previous-ssms-releases"></a>Versiones de SSMS anteriores
+
+Para descargar las versiones anteriores de SSMS, haga clic en los vínculos de título de las secciones siguientes.
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![descargar](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Disponible con carácter general | Número de compilación: 14.0.17199.0
 
 ### <a name="enhancements"></a>Mejoras
@@ -117,10 +213,6 @@ Disponible con carácter general | Número de compilación: 14.0.17199.0
 
 - La [execution_path] de [catalog].[event_messagea] no es correcta para ejecuciones de paquetes en Escalabilidad horizontal. [execution_path] comienza con "\Package" en lugar del nombre de objeto del ejecutable del paquete. Al ver el informe general sobre ejecuciones de paquetes en SSMS, el vínculo de "Ruta de acceso de ejecución" de Información general de ejecución no puede funcionar. La solución es hacer clic en "Ver mensajes" en el informe general para comprobar todos los mensajes de eventos.
 
-
-## <a name="previous-ssms-releases"></a>Versiones de SSMS anteriores
-
-Para descargar las versiones anteriores de SSMS, haga clic en los vínculos de título de las secciones siguientes.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![descargar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponible con carácter general | Número de compilación: 14.0.17177.0

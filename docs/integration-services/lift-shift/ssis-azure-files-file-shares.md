@@ -1,19 +1,19 @@
 ---
 title: Almacenar y recuperar archivos en recursos compartidos de archivos de forma local y en Azure | Microsoft Docs
 description: "En este artículo se describe cómo usar el sistema de archivos y los recursos compartidos de archivos, de forma local y en Azure, con SSIS."
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Almacenar y recuperar archivos en recursos compartidos de archivos de forma local y en Azure con SSIS
 En este artículo se describe cómo actualizar los paquetes de SQL Server Integration Services (SSIS) cuando se elevan y desplazan paquetes que usan sistemas de archivos locales a SSIS de Azure.
@@ -22,7 +22,7 @@ En este artículo se describe cómo actualizar los paquetes de SQL Server Integr
 > Actualmente, la base de datos del catálogo de SSIS (SSISDB) solo admite un único conjunto de credenciales de acceso. Por lo tanto, Integration Runtime (IR) de SSIS de Azure no puede usar credenciales diferentes para conectarse a diferentes recursos compartidos de archivos de forma local y a recursos compartidos de Azure Files.
 
 ## <a name="store-temporary-files"></a>Almacenar archivos temporales
-Si necesita almacenar y procesar archivos temporales durante la ejecución de un paquete único, este paquete puede usar la carpeta temporal `(.)/temp` o `%TEMP%` de los nodos de Integration Runtime de SSIS de Azure.
+Si necesita almacenar y procesar archivos temporales durante la ejecución de un paquete único, los paquetes pueden usar la carpeta de trabajo actual (`.`) o la carpeta temporal (`%TEMP%`) de los nodos de Integration Runtime de SSIS de Azure.
 
 ## <a name="store-files-across-multiple-package-executions"></a>Almacenar archivos en varias ejecuciones de paquetes
 Si necesita almacenar y procesar archivos permanentes y hacer que persistan durante varias ejecuciones de paquetes, puede usar los recursos compartidos de archivos locales o Azure Files.

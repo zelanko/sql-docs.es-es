@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ Al realizar la recompilación de índices en línea reanudables, se aplican las 
 - Recuperación de errores de recompilación de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
 - Cuando una operación de índice está en pausa, tanto el índice original como uno recién creado requieren espacio en disco y deben actualizarse durante las operaciones de DML.
 
-- Se permite el truncamiento de registros de truncamiento durante una operación de recompilación de índice (no se puede realizar esta operación para una operación de índice en línea normal).
+- Se permite el truncamiento de registros de transacción durante una operación de recompilación de índice (no se puede realizar esta operación para una operación de índice en línea normal).
 - Opción SORT_IN_TEMPDB=ON no admitida
 
 > [!IMPORTANT]
-> La recompilación reanudable no le exige que mantenga abierto un truncamiento de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración del espacio de registro. Con el nuevo diseño, se consigue mantener los datos necesarios en una base de datos junto con todas las referencias necesarias para reiniciar la operación reanudable.
+> La recompilación reanudable no le exige que mantenga abierta una transacción de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración del espacio de registro. Con el nuevo diseño, se consigue mantener los datos necesarios en una base de datos junto con todas las referencias necesarias para reiniciar la operación reanudable.
 >
 
 Por lo general, no hay ninguna diferencia de rendimiento entre la recompilación de índices en línea reanudables y no reanudables. Al actualizar un índice reanudable mientras una operación de regeneración de índice está en pausa:

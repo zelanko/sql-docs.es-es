@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  En este tutorial se usa Azure PowerShell. Antes de iniciar el tutorial, [descargue e instale Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Si también desea habilitar opciones avanzadas o usar una programación personalizada, configure las opciones antes de habilitar por primera vez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obtener más información, consulte [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Si también desea habilitar opciones avanzadas o usar una programación personalizada, configure las opciones antes de habilitar por primera vez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obtener más información, consulte [Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con valores predeterminados  
   

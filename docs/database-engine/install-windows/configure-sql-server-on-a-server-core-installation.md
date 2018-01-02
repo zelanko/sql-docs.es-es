@@ -19,11 +19,11 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar SQL Server en una instalación Server Core
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se incluye información detallada sobre cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instalación Server Core.  
@@ -115,7 +115,7 @@ Estos pasos están pensados para realizarse en un equipo donde se ejecute la edi
   
 7. Seleccione la pestaña **Alta disponibilidad de AlwaysOn** .  
   
-8. Compruebe que el campo Nombre del clúster de conmutación por error de Windows contiene el nombre del nodo de clúster de conmutación por error local. Si el campo está en blanco, esta instancia de servidor no admite actualmente los grupos de disponibilidad de AlwaysOn. Puede ser que el equipo local no sea un nodo de clúster, que se haya cerrado el clúster de WSFC o que esta edición de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] no admita los Grupos de disponibilidad de AlwaysOn.  
+8. Compruebe que el campo Nombre del clúster de conmutación por error de Windows contiene el nombre del nodo de clúster de conmutación por error local. Si el campo está en blanco, esta instancia de servidor no admite actualmente los grupos de disponibilidad de AlwaysOn. Puede ser que el equipo local no sea un nodo de clúster, que se haya cerrado el clúster de WSFC o que esta edición de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] no admita los grupos de disponibilidad AlwaysOn.  
   
 9. Active la casilla Habilitar los grupos de disponibilidad de AlwaysOn y haga clic en Aceptar.  
   

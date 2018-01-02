@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiera modificar y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas:** *nombre_estadísticas* , en la página **General** , haga clic en **Agregar**, **Quitar**, **Subir**o **Bajar**o any combination, to alter the properties of the statistics. Recuerde que la ubicación de una columna dentro de la cuadrícula **Columnas de estadísticas** puede afectar considerablemente a la utilidad de las estadísticas.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas:** *nombre_estadísticas*, en la página **General**, haga clic en **Agregar**, **Quitar**, **Subir**o **Bajar**o cualquier combinación, para alterar las propiedades de las estadísticas. Recuerde que la ubicación de una columna dentro de la cuadrícula **Columnas de estadísticas** puede afectar considerablemente a la utilidad de las estadísticas.  
   
 7.  Haga clic en **Aceptar**.  
   

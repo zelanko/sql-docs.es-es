@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,6 +32,10 @@ El Asistente para importación de archivos planos es una forma muy sencilla de c
 El objetivo del asistente es mejorar la experiencia de importación actual y ofrece un marco inteligente conocido como Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Para un usuario sin conocimientos especializados en el tema de los dominios, importar datos puede ser una tarea compleja y tediosa, además de que se suelen producir errores. Este asistente permite simplificar el proceso de importación, ya que basta con seleccionar un archivo de entrada y un nombre de tabla único. El marco de PROSE se encarga del resto.
 
 PROSE analiza los patrones de datos del archivo de entrada e infiere los nombres de las columnas, los tipos y los delimitadores, entre otros valores. El marco memoriza la estructura del archivo y hace el resto del trabajo para que los usuarios no tengan que preocuparse de ello.
+
+Para comprender mejor la mejora de la experiencia de usuario del Asistente para la importación de archivos planos, vea este vídeo:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>Requisitos previos
 Esta característica solo está disponible para la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).

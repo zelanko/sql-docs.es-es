@@ -3,7 +3,7 @@ title: Quitar un grupo de servidores (SQL Server Management Studio) | Microsoft 
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0ff2470ac6875c75c5a4882855536b4d0cf2d55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Quitar un grupo de servidores (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo quitar un grupo de servidores de Servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los grupos de servidores se pueden eliminar en cualquier momento. Si no están vacíos, se eliminarán también los servidores o grupos de servidores que incluyan. Antes de eliminar un grupo de servidores, traslade los servidores o grupos de servidores que desee conservar a un nuevo grupo de servidores.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  En el cuadro de diálogo **Confirmación de eliminación** , haga clic en **Sí**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Mover un servidor registrado o un grupo de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
   
   

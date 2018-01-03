@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1eab2fac5e1d2f944228e75f00fb8ecc8596b9c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-programming-task-table"></a>Tabla de tareas de programación de ADO
 En la tabla siguiente se enumera las tareas de programación contenidas en el *Guía del programador de ADO* y proporciona referencias para cada tarea. Estas referencias pueden ser descripciones textuales o ejemplos de código en el que puede encontrar información sobre la característica de ADO que realiza la tarea.
 
-|Tarea de ADO|Referencias|
+|Tarea de ADO|References|
 |--------------|----------------|
 |Conectarse a un proveedor de datos|[Conectarse a orígenes de datos](../../ado/guide/data/connecting-to-data-sources.md)|
 |Ejecutar comandos o llamar a procedimientos almacenados|[Preparar y ejecutar comandos](../../ado/guide/data/preparing-and-executing-commands.md)|

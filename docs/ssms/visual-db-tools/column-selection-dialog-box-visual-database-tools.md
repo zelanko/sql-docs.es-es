@@ -3,7 +3,7 @@ title: "Selección de columnas (cuadro de diálogo, Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f391acc3059f0e263977ea4a3f834a98ce5d962f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa038800133fb48bb16d73a0fb73dbf000ed8d86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Selección de columnas (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite cambiar la vista Personalizada de las tablas en el diagrama de base de datos. La vista Personalizada solo muestra las propiedades de columna identificadas por el usuario.  
   
 Este cuadro de diálogo aparece cuando se hace clic con el botón derecho en una tabla y después se elige **Modificar vista personalizada** en el menú contextual.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Columnas disponibles**  
 Muestra todas las columnas existentes en la tabla seleccionada de la base de datos. Las propiedades de la tabla de base de datos y el tipo de base de datos determinan las columnas que se van a mostrar aquí. Resalte la columna que desee mostrar y utilice los botones de flecha para mover las columnas al cuadro **Columnas seleccionadas** .  
   
@@ -54,7 +54,7 @@ Guarda la vista personalizada.
 **Cancelar**  
 Cancela la modificación de la vista personalizada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Personalizar la cantidad de información mostrada en los diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   

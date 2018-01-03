@@ -3,7 +3,7 @@ title: "Nueva programación de trabajo: propiedades de programación del trabajo
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b1e568c6ccc32c56e098c8bd3ce407c631909c6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94af2eeef2d7a6bc308463deb70207305f52500f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nueva programación de trabajo - Propiedades de programación del trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para ver y cambiar las propiedades de la programación.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Nombre**  
 Escriba un nuevo nombre de la programación.  
   
@@ -39,7 +39,7 @@ Vea los trabajos que utiliza la programación.
 **Tipo de programación**  
 Seleccione el tipo de programación.  
   
-**Habilitado**  
+**Enabled**  
 Seleccione esta opción para habilitar o deshabilitar la programación.  
   
 ## <a name="recurring-schedule-types-options"></a>Opciones de tipos de programación periódica  
@@ -101,7 +101,7 @@ Seleccione la fecha de ejecución del trabajo.
 **Time**  
 Seleccione la hora de ejecución del trabajo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Programar un trabajo](../../ssms/agent/schedule-a-job.md)  
   

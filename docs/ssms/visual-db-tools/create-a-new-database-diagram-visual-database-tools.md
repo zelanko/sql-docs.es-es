@@ -3,7 +3,7 @@ title: Crear un diagrama de base de datos (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ba635346ceebfd444f15aaae189cf6a31ff19d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Crear un diagrama de base de datos nuevo (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar el Explorador de objetos para crear diagramas de base de datos. Estos diagramas muestran gráficamente la estructura de la base de datos. Mediante el uso de diagramas de base de datos puede crear y modificar tablas, columnas, relaciones y claves. Además, puede modificar índices y restricciones.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Puede agregar o eliminar tablas, modificar las tablas existentes y cambiar las relaciones entre tablas hasta que el nuevo diagrama de base de datos esté completo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Descripción de la propiedad de un diagrama de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

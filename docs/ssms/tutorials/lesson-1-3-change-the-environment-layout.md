@@ -3,7 +3,7 @@ title: "Cambiar el diseño del entorno | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lección 1.3: Cambiar el diseño del entorno
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] compiten por tener espacio en la pantalla. Para aprovechar mejor el espacio, puede cerrar, ocultar o mover los componentes de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Las prácticas de esta página muestran cómo mover los componentes a ubicaciones diferentes.  
@@ -57,7 +57,7 @@ Puede personalizar la presentación de los componentes de [!INCLUDE[ssManStudio]
   
 1.  Haga clic con el botón secundario en la barra de título del Explorador de objetos; verá las siguientes opciones de menú:  
   
-    -   Float  
+    -   float  
   
     -   Acoplar  
   
@@ -65,7 +65,7 @@ Puede personalizar la presentación de los componentes de [!INCLUDE[ssManStudio]
   
     -   Ocultar automáticamente  
   
-    -   Hide  
+    -   Ocultar  
   
     Estas opciones también están disponibles en el menú **Ventana** o desplegando la flecha hacia abajo de la barra de herramientas.  
   

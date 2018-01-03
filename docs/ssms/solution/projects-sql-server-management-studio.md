@@ -3,7 +3,7 @@ title: Proyectos (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 485a950448f582f332af028eaa2edb69fb065043
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f7b80e3d65bbb72e154b267aa22f117e1e9060b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="projects-sql-server-management-studio"></a>Proyectos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un proyecto de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] es una colección de scripts y archivos relacionados de forma lógica que se pueden guardar juntos para la administración y el desarrollo de bases de datos.  
@@ -61,7 +61,7 @@ Para modificar información sobre una conexión, use la ventana de propiedades d
 |Describe cómo cambiar la información de conexión para una consulta.|[Cambiar la conexión asociada a una consulta](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Describe cómo cambiar las propiedades de conexión.|[Ver o cambiar las propiedades de una conexión en un proyecto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  

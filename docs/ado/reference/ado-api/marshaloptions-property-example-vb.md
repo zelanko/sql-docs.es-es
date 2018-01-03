@@ -3,7 +3,7 @@ title: Ejemplo de la propiedad MarshalOptions (VB) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b45e39c0b12ecb961278604bdf56592d9bb651ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66303cf1b144086d3bc3f3ef4b7f3d4743343e18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaloptions-property-example-vb"></a>Ejemplo de la propiedad MarshalOptions (VB)
 Este ejemplo se utiliza la [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propiedad para especificar qué filas se envían al servidor, todas las filas o sólo las modificadas.  

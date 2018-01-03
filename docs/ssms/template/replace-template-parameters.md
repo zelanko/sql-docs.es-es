@@ -3,7 +3,7 @@ title: "Reemplazar los parámetros de plantilla | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-templates
 ms.reviewer: 
@@ -23,13 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d36529a476493920ceb74d64069d5e77e7d10e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cae991dbfcdfb2b00a3229746455c58b59f39bd5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replace-template-parameters"></a>Reemplazar los parámetros de plantilla
+# <a name="replace-template-parameters"></a>Reemplazar parámetros de plantilla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las plantillas contienen parámetros que se pueden reemplazar por valores específicos de la implementación cada vez que se use la plantilla. Después de abrir una plantilla en un editor de código, puede reemplazar los parámetros por valores relevantes para su implementación.  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
@@ -37,7 +37,7 @@ El cuadro de diálogo **Especificar valores para parámetros de plantilla** es u
   
 Para usar este cuadro de diálogo, los parámetros del script deben aparecer entre corchetes angulares (`< >`) in con el formato `<`*parameter_name*`,` *data_type*`,` *default_value*`>`.  
   
-## <a name="replace-template-parameters"></a>Reemplazar los parámetros de plantilla  
+## <a name="replace-template-parameters"></a>Reemplazar parámetros de plantilla  
 Después de abrir la plantilla en una ventana del editor de código:  
   
 1.  En el menú **Consulta** , haga clic en **Especificar valores para parámetros de plantilla**.  
@@ -46,7 +46,7 @@ Después de abrir la plantilla en una ventana del editor de código:
   
 3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Reemplazar parámetros de plantilla** y modificar el script en el editor de consultas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Explorador de plantillas](../../ssms/template/template-explorer.md)  
 [Abrir una plantilla](../../ssms/template/open-a-template.md)  
   

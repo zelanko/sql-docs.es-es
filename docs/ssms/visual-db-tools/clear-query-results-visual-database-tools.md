@@ -3,7 +3,7 @@ title: Borrar los resultados de una consulta (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30c1aa87c77ce0a3f60c690d24eb563c524b7739
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9150c8d8c7fd9db38827347f040bd9076b1facb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Borrar los resultados de una consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Después de ejecutar una consulta en el **Diseñador de consultas y vistas**, puede borrar el panel Resultados. Este procedimiento se aplica a las consultas creadas mediante las opciones **Abrir vista** o **Abrir tabla** del Explorador de objetos. En[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], después de ejecutar una consulta en el Editor de consultas, el panel Resultados no se puede borrar excepto si se cierra la ventana Editor de consultas o se ejecuta otra consulta.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
     Si está ejecutando una consulta cuando borra el panel Resultados, el Diseñador de consultas y vistas detendrá la consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Ejecutar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Detener una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

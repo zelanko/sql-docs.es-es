@@ -3,7 +3,7 @@ title: "Desplazarse por el Diseñador de consultas y vistas (Visual Database Too
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134e017c94bbf364d74c3914149a09be3deaa9a3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cbebb7269afbf1ae1caa16032c7d4c4406ba148
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Desplazarse por el Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En el Diseñador de consultas y vistas puede trabajar tanto con el teclado como con el ratón. En las tablas siguientes se describen los métodos específicos.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |Desplazarse por las columnas de una tabla o un objeto con estructura de tabla|Teclas de dirección|En la columna a la que desea ir|  
 |Elegir la columna de datos seleccionada para obtener resultados|BARRA ESPACIADORA o la tecla MÁS|En la casilla situada junto al nombre de la columna|  
 |Quitar de los resultados de la consulta la columna de datos seleccionada|BARRA ESPACIADORA o la tecla MENOS|En la casilla situada junto al nombre de la columna|  
-|Quitar de la consulta la tabla, el objeto con estructura de tabla o la línea de combinación que haya seleccionado|DELETE|Haga clic con el botón derecho y después elija **Quitar**|  
+|Quitar de la consulta la tabla, el objeto con estructura de tabla o la línea de combinación que haya seleccionado|Delete|Haga clic con el botón derecho y después elija **Quitar**|  
   
 > [!NOTE]  
 > Si hay varios elementos seleccionados, cuando presione esta tecla se verán afectados todos ellos. Para seleccionar varios elementos, haga clic en cada elemento mientras mantiene presionada la tecla CTRL.  
@@ -57,7 +57,7 @@ Para más información, consulte [Panel Diagrama &#40;Visual Database Tools&#41;
   
 ## <a name="criteria-pane"></a>Panel de criterios  
   
-|Para|Presione|Hacer clic en .|  
+|A|Presione|Hacer clic en .|  
 |------|---------|---------|  
 |Desplazarse por las celdas|Teclas de dirección o TAB o MAYÚS+TAB|En la celda de destino|  
 |Desplazarse a la última fila de la columna seleccionada|CTRL+FLECHA ABAJO||  
@@ -72,8 +72,8 @@ Para más información, consulte [Panel Diagrama &#40;Visual Database Tools&#41;
 |Pegar texto del Portapapeles (en modo de edición)|CTRL+V||  
 |Alternar entre el modo de inserción y el modo de sobreimpresión mientras se edita una celda|INS||  
 |Activar o desactivar la casilla en la columna de resultados|BARRA ESPACIADORA|En la casilla|  
-|Borrar el contenido seleccionado de una celda|DELETE||  
-|Borrar todos los valores de la columna de cuadrícula seleccionada|DELETE||  
+|Borrar el contenido seleccionado de una celda|Delete||  
+|Borrar todos los valores de la columna de cuadrícula seleccionada|Delete||  
 |Insertar una fila entre las filas existentes|INS después de seleccionar la fila de cuadrícula||  
 |Agregar una columna O...|INS tras seleccionar una columna O...||  
   
@@ -82,7 +82,7 @@ Para más información, consulte [Panel Diagrama &#40;Visual Database Tools&#41;
   
 Para más información, consulte [Panel Criterios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  
   
-## <a name="sql-pane"></a>Panel SQL  
+## <a name="sql-pane"></a>panel SQL  
 Cuando trabaje en el panel SQL, puede usar las teclas de edición estándar de Windows, como CTRL + las teclas de dirección, para desplazarse por las palabras, y los comandos **Cortar**, **Copiar**y **Pegar** del menú **Edición** .  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ Para más información, consulte [Panel SQL &#40;Visual Database Tools&#41;](../
 |Seleccionar hasta el último carácter de una celda|MAYÚS+FIN||  
 |Alternar entre el modo de edición y el modo de selección de celda|F2||  
 |Alternar entre el modo de inserción y el modo de sobreimpresión mientras se edita una celda|INS||  
-|Eliminar una fila de la tabla|DELETE||  
+|Eliminar una fila de la tabla|Delete||  
 |Deshacer los cambios realizados en la celda actual|ESC en la celda modificada||  
 |Deshacer los cambios realizados en la fila actual|ESC en cualquier celda que no se haya modificado||  
 |Escribir un valor NULL en una celda|CTRL+0||  
@@ -117,6 +117,6 @@ Para más información, consulte [Panel SQL &#40;Visual Database Tools&#41;](../
   
 Para más información, consulte [Panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "Actualización y ejemplo de los métodos CancelUpdate (VC ++) | Document
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d20d467624e2fc095ac428b956fd76e937f8e8e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ddd959a6cbc89cb043a4f58810d06c69b0d0e7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Actualización y ejemplo de los métodos CancelUpdate (VC ++)
 Este ejemplo se muestra la [actualización](../../../ado/reference/ado-api/update-method.md) método junto con el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  

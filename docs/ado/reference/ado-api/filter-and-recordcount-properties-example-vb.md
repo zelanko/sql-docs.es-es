@@ -3,7 +3,7 @@ title: Filtro y ejemplo de las propiedades RecordCount (VB) | Documentos de Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f76a90fdff9969b60929b25727a1ba2dd352c3ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459fb1d5cfbcf83cd49e6710ba96e7cfea704918
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filtro y ejemplo de las propiedades RecordCount (VB)
 En este ejemplo abierto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla de publicadores en el ***Pubs*** base de datos. A continuación, utiliza el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar el número de registros visibles a aquellos editores en un determinado país o región. El **RecordCount** propiedad se utiliza para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  

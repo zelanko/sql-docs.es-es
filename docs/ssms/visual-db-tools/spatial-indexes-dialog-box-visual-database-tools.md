@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Índices espaciales (Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **Geometry** o **Geography** (*columnas espaciales*) que no pueden indexarse mediante el cuadro de diálogo **Índice y claves**. Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
   
 Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Índice espacial seleccionado**  
 Enumera los índices espaciales existentes. Seleccione un índice para mostrar sus propiedades. Si la lista está vacía, no se han definido índices espaciales para la tabla.  
   
@@ -120,6 +120,6 @@ Especifica si se deben calcular estadísticas nuevas cuando se crea el índice. 
 **Bloqueos de fila permitidos**  
 Especifica si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Información general sobre los índices espaciales](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

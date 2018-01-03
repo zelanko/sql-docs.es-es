@@ -3,7 +3,7 @@ title: "SQL Server Management Studio métodos abreviados de teclado | Microsoft 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fe84424ba04636e1731acaded762b6b16bf47e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Métodos abreviados de teclado de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , con métodos abreviados de teclado basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |Mostrar el menú contextual|MAYÚS+F10|MAYÚS+F10|  
 |Mostrar el cuadro de diálogo **Nuevo archivo** para crear un archivo|CTRL+N|CTRL+N|  
 |Mostrar el cuadro de diálogo **Nuevo proyecto** para crear un proyecto nuevo|CTRL+MAYÚS+N|CTRL+MAYÚS+N|  
-|Mostrar el cuadro de diálogo **Abrir archivo** para abrir un archivo existente|CTRL+O<br /><br /> o bien<br /><br /> CTRL+MAYÚS+G|CTRL+O|  
+|Mostrar el cuadro de diálogo **Abrir archivo** para abrir un archivo existente|CTRL+O<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+G|CTRL+O|  
 |Mostrar el cuadro de diálogo **Abrir proyecto** para abrir un proyecto existente|CTRL+MAYÚS+O|CTRL+MAYÚS+O|  
 |Mostrar el cuadro de diálogo **Agregar nuevo elemento** para agregar un archivo nuevo al proyecto actual|CTRL+MAYÚS+A|CTRL+MAYÚS+A|  
 |Mostrar el cuadro de diálogo **Agregar elemento existente** para agregar un archivo existente al proyecto actual|MAYÚS+ALT+A|MAYÚS+ALT+A|  
@@ -71,10 +71,10 @@ ms.lasthandoff: 12/05/2017
 |Mover el punto de inserción a la barra desplegable situada encima del editor de código cuando el editor está en la vista Código o Código del servidor|CTRL+F2|Sin equivalencia|  
 |Ir a la barra de herramientas de la ventana de herramientas actual|MAYÚS+ALT|MAYÚS+ALT|  
 |Mostrar el navegador del IDE con la primera ventana de herramientas seleccionada|ALT+F7|Sin equivalencia|  
-|Ir a la siguiente ventana de herramientas|ALT+F6<br /><br /> o bien<br /><br /> F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
+|Ir a la siguiente ventana de herramientas|ALT+F6<br /><br /> o Administrador de configuración de<br /><br /> F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
 |Ir a la ventana de herramientas anterior|MAYÚS+ALT+F7|MAYÚS+ALT+F7|  
 |Ir al siguiente panel de una vista de panel dividido de un documento|F6|F6|  
-|Ir a la ventana seleccionada anteriormente|MAYÚS+ALT+F6<br /><br /> o bien<br /><br /> MAYÚS+F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|MAYÚS+ALT+F6|  
+|Ir a la ventana seleccionada anteriormente|MAYÚS+ALT+F6<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|MAYÚS+ALT+F6|  
 |Ir al panel anterior de una vista de panel dividido de un documento|MAYÚS+F6|F6|  
 |Mostrar el menú Acoplar|ALT+SIGNO MENOS (-)|Sin equivalencia|  
 |Mostrar un menú emergente con todas las ventanas abiertas|CTRL+ALT+FLECHA ABAJO|Sin equivalencia|  
@@ -86,14 +86,14 @@ ms.lasthandoff: 12/05/2017
 |Mostrar la ventana Resumen|F7|F7|  
 |Mostrar la ventana Propiedades|F4|F4|  
 |Mostrar la ventana **Resultados**|CTRL+ALT+O|Sin equivalencia|  
-|Mostrar la ventana **Lista de tareas**|CTRL+\\, T<br /><br /> o bien<br /><br /> CTRL+\\, CTRL+T|CTRL+ALT+K|  
+|Mostrar la ventana **Lista de tareas**|CTRL+\\, T<br /><br /> o Administrador de configuración de<br /><br /> CTRL+\\, CTRL+T|CTRL+ALT+K|  
 |Alternar entre la vista de lista Detalles del Explorador de objetos y el panel de propiedades Detalles del Explorador de objetos.|F6|F6|  
 |Controlar la barra de división que separa la vista de lista Detalles del Explorador de objetos y el panel de propiedades Detalles del Explorador de objetos a fin de ajustar el tamaño del panel de información.|TAB, luego flecha ARRIBA o flecha ABAJO|TAB, luego flecha ARRIBA o flecha ABAJO|  
 |Mostrar el cuadro de herramientas|CTRL+ALT+X|CTRL+ALT+X|  
 |Mostrar la ventana Marcadores|CTRL+K, CTRL+W|CTRL+K, CTRL+W|  
 |Mostrar la ventana del explorador|CTRL+ALT+R|CTRL+ALT+R|  
 |Mostrar un menú de etiquetas inteligentes de comandos comunes para los controles del servidor web en el diseñador de HTML|MAYÚS+ALT+F10|Sin equivalencia|  
-|Mostrar la ventana Lista de errores (solo Editor de[!INCLUDE[tsql](../includes/tsql-md.md)] )|CRTL+\\, CTRL+E<br /><br /> o bien<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
+|Mostrar la ventana Lista de errores (solo Editor de[!INCLUDE[tsql](../includes/tsql-md.md)] )|CRTL+\\, CTRL+E<br /><br /> o Administrador de configuración de<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
 |Ir a la entrada siguiente en la ventana Lista de errores (solo Editor de[!INCLUDE[tsql](../includes/tsql-md.md)] )|CTRL+MAYÚS+F12|CTRL+MAYÚS+F12|  
 |Mostrar la página anterior del historial de consultas. Disponible solamente en la ventana del explorador web|ALT+FLECHA IZQUIERDA|Sin equivalencia|  
 |Mostrar la página siguiente del historial de consultas. Disponible solamente en la ventana del explorador web|ALT+FLECHA DERECHA|Sin equivalencia|  
@@ -186,8 +186,8 @@ ms.lasthandoff: 12/05/2017
 |Pasar a la vista de pantalla completa|MAYÚS+ALT+ENTRAR|MAYÚS+ALT+ENTRAR|  
 |Desplazarse por el texto una línea hacia arriba|CTRL+FLECHA ARRIBA|CTRL+FLECHA ARRIBA|  
 |Desplazarse por el texto una línea hacia abajo|CTRL+FLECHA ABAJO|CTRL+ FLECHA ABAJO|  
-|Deshacer la última acción de modificación|CTRL+Z<br /><br /> o bien<br /><br /> ALT+RETROCESO|CTRL+Z|  
-|Restaurar la modificación previamente deshecha|CTRL+MAYÚS+Z<br /><br /> o bien<br /><br /> CTRL+Y<br /><br /> o bien<br /><br /> ALT+MAYÚS+RETROCESO|CTRL+MAYÚS+Z<br /><br /> o bien<br /><br /> CTRL+Y<br /><br /> o bien<br /><br /> ALT+MAYÚS+RETROCESO|  
+|Deshacer la última acción de modificación|CTRL+Z<br /><br /> o Administrador de configuración de<br /><br /> ALT+RETROCESO|CTRL+Z|  
+|Restaurar la modificación previamente deshecha|CTRL+MAYÚS+Z<br /><br /> o Administrador de configuración de<br /><br /> CTRL+Y<br /><br /> o Administrador de configuración de<br /><br /> ALT+MAYÚS+RETROCESO|CTRL+MAYÚS+Z<br /><br /> o Administrador de configuración de<br /><br /> CTRL+Y<br /><br /> o Administrador de configuración de<br /><br /> ALT+MAYÚS+RETROCESO|  
 |Guardar el elemento seleccionado|CTRL+S|CTRL+S|  
 |Guardar todo|CTRL+MAYÚS+S|CTRL+MAYÚS+S|  
 |Cerrar|CTRL+F4|CTRL+F4|  
@@ -206,7 +206,7 @@ ms.lasthandoff: 12/05/2017
 |Abrir una consulta nueva con la conexión actual|CTRL+N|CTRL+N|  
 |Abrir una base de datos en el Explorador de objetos|ALT+F8|ALT+F8|  
 |Especificar valores para los parámetros de plantilla|CTRL+MAYÚS+M|CTRL+MAYÚS+M|  
-|Ejecutar la parte seleccionada del editor de consultas o todo él si no hay nada seleccionado|F5<br /><br /> o bien<br /><br /> CTRL+MAYÚS+E|F5<br /><br /> o bien<br /><br /> CTRL+E<br /><br /> o bien<br /><br /> ALT+X|  
+|Ejecutar la parte seleccionada del editor de consultas o todo él si no hay nada seleccionado|F5<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+E|F5<br /><br /> o Administrador de configuración de<br /><br /> CTRL+E<br /><br /> o Administrador de configuración de<br /><br /> ALT+X|  
 |Analizar la parte seleccionada del editor de consultas o todo él si no hay nada seleccionado|CTRL+F5|CTRL+F5|  
 |Mostrar el plan de ejecución estimado|CTRL+MAYÚS+ALT+L|CTRL+L|  
 |Cancelar la consulta que se está ejecutando|ALT+INTERRUMPIR|ALT+INTERRUMPIR|  
@@ -240,8 +240,8 @@ ms.lasthandoff: 12/05/2017
 |------------|-----------------------------|---------------------------------|  
 |Insertar una línea nueva|ENTRAR o MAYÚS+ENTRAR|ENTRAR o MAYÚS+ENTRAR|  
 |Intercambiar los caracteres de cualquier lado del cursor (no es aplicable al Editor SQL).|CTRL+T|CTRL+T|  
-|Eliminar un carácter situado a la derecha del cursor|DELETE|DELETE|  
-|Eliminar un carácter situado a la izquierda del cursor|RETROCESO<br /><br /> o bien<br /><br /> MAYÚS+<br /><br /> RETROCESO|RETROCESO<br /><br /> o bien<br /><br /> MAYÚS+<br /><br /> RETROCESO|  
+|Eliminar un carácter situado a la derecha del cursor|Delete|Delete|  
+|Eliminar un carácter situado a la izquierda del cursor|RETROCESO<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+<br /><br /> RETROCESO|RETROCESO<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+<br /><br /> RETROCESO|  
 |Eliminar el espacio en blanco de la selección o eliminar el espacio en blanco junto al curso si no hay selección|CTRL+K, C|Sin equivalencia|  
 |Insertar el número de espacios configurado para el editor|TAB|TAB|  
 |Insertar una línea en blanco encima del cursor|CTRL+ENTRAR|CTRL+ENTRAR|  
@@ -284,7 +284,7 @@ ms.lasthandoff: 12/05/2017
 |Definir la siguiente instrucción|Ctrl+3 0|Sin equivalencia|  
 |Mostrar la instrucción siguiente|ALT+NUM|Sin equivalencia|  
 |Implementar el comando **Ejecutar hasta el cursor**|CTRL+F10|CTRL+F10|  
-|Mostrar el cuadro de diálogo **Inspección rápida**|CTRL+ALT+Q<br /><br /> o bien<br /><br /> MAYÚS+F9|CTRL+ALT+Q|  
+|Mostrar el cuadro de diálogo **Inspección rápida**|CTRL+ALT+Q<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+F9|CTRL+ALT+Q|  
 |Alternar puntos de interrupción|F9|F9|  
 |Habilitar puntos de interrupción|CTRL+F9|Sin equivalencia|  
 |Eliminar punto de interrupción Solamente disponible en la ventana **Puntos de interrupción**|ALT+F9, D|Sin equivalencia|  
@@ -309,8 +309,8 @@ ms.lasthandoff: 12/05/2017
   
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Enumerar miembros|CTRL+J|CTRL+ESPACIO<br /><br /> o bien<br /><br /> CTRL+J|  
-|Completar palabra|CTRL+ESPACIO<br /><br /> o bien<br /><br /> ALT+FLECHA DERECHA|ALT+FLECHA DERECHA|  
+|Enumerar miembros|CTRL+J|CTRL+ESPACIO<br /><br /> o Administrador de configuración de<br /><br /> CTRL+J|  
+|Completar palabra|CTRL+ESPACIO<br /><br /> o Administrador de configuración de<br /><br /> ALT+FLECHA DERECHA|ALT+FLECHA DERECHA|  
 |Mostrar información rápida|CTRL+K, CTRL+I|Sin equivalencia|  
 |Mostrar información de parámetros|CTRL+MAYÚS+ESPACIO|CTRL+MAYÚS+ESPACIO|  
 |Copiar sugerencia de parámetros|CTRL+MAYÚS+ALT+C|Sin equivalencia|  
@@ -349,7 +349,7 @@ ms.lasthandoff: 12/05/2017
   
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Ayuda|F1<br /><br /> o bien<br /><br /> MAYÚS+F1|F1|  
+|Ayuda|F1<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+F1|F1|  
 |Mostrar los Libros en pantalla de SQL Server|CTRL+F1|Sin equivalencia|  
 |Abrir el Administrador de la biblioteca de ayuda|CTRL+ALT+F1|Sin equivalencia|  
 |Mostrar la página web del centro de recursos de SQL Server|CTRL+ALT+F2|Sin equivalencia|  
@@ -387,11 +387,11 @@ ms.lasthandoff: 12/05/2017
   
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Cortar (eliminar el elemento seleccionado y colocarlo en el Portapapeles)|CTRL+X<br /><br /> o bien<br /><br /> MAYÚS+CTRL+SUPR|CTRL+X<br /><br /> o bien<br /><br /> MAYÚS+SUPR|  
-|Cortar todas las líneas seleccionadas o la línea actual si no hay nada seleccionado|CTRL+L<br /><br /> o bien<br /><br /> CTRL+MAYÚS+L|Sin equivalencia|  
-|Copiar en el Portapapeles|CTRL+C<br /><br /> o bien<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> o bien<br /><br /> CTRL+INSERT|  
-|Pegar desde el Portapapeles en el punto de inserción|CTRL+V<br /><br /> o bien<br /><br /> MAYÚS+INSERT|CTRL+V<br /><br /> o bien<br /><br /> MAYÚS+INSERT|  
-|Pegar un elemento desde el anillo del Portapapeles en el punto de inserción y seleccionar automáticamente el elemento pegado|CTRL+MAYÚS+V<br /><br /> o bien<br /><br /> CTRL+MAYÚS+INSERT|Sin equivalencia|  
+|Cortar (eliminar el elemento seleccionado y colocarlo en el Portapapeles)|CTRL+X<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+CTRL+SUPR|CTRL+X<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+SUPR|  
+|Cortar todas las líneas seleccionadas o la línea actual si no hay nada seleccionado|CTRL+L<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+L|Sin equivalencia|  
+|Copiar en el Portapapeles|CTRL+C<br /><br /> o Administrador de configuración de<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> o Administrador de configuración de<br /><br /> CTRL+INSERT|  
+|Pegar desde el Portapapeles en el punto de inserción|CTRL+V<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+INSERT|CTRL+V<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+INSERT|  
+|Pegar un elemento desde el anillo del Portapapeles en el punto de inserción y seleccionar automáticamente el elemento pegado|CTRL+MAYÚS+V<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+INSERT|Sin equivalencia|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Métodos abreviados de teclado para el visor de registros  
   
@@ -465,7 +465,7 @@ ms.lasthandoff: 12/05/2017
 |Ir al control anterior de la página|MAYÚS+TAB|Sin equivalencia|  
 |Mostrar la cuadrícula en la superficie de diseño|ENTRAR|Sin equivalencia|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Personalizar los menús y los métodos abreviados de teclado](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   

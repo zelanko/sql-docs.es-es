@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Errores de sintaxis SQL (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b59d9f9ce4768a5cabb6c763b99a029f7720e7c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd83cac5ef064cb5df226ecc94b5be954f506405
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Errores de sintaxis SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este cuadro de diálogo se notifica que el diseñador no puede analizar la instrucción SQL en el panel SQL.  
@@ -42,6 +42,6 @@ Este cuadro de diálogo aparece cuando especifica o modifica una instrucción SQ
   
 El cuadro de diálogo muestra un mensaje con el motivo por el que no se puede analizar la instrucción SQL. Haga clic en **Aceptar** para continuar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

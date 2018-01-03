@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Crear tabla (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fba467f32b32d76ceed49a4dbb26c0e61878f953
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Crear tabla (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite denominar una tabla creada en la que se copian filas. Este cuadro de diálogo aparece al cambiar el tipo de una consulta para convertirla en consulta MAKE TABLE. Para cambiar el tipo de una consulta, en el menú **Diseñador de consultas** , seleccione **Cambiar tipo**y, a continuación, haga clic en **Crear tabla**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Nombre de tabla**  
 Escriba el nombre de la tabla que desea crear. El Diseñador de consultas y vistas no comprueba si el nombre ya está en uso o si se dispone de permiso para crear la tabla.  
   
@@ -38,7 +38,7 @@ Para crear una tabla de destino en otra base de datos, especifique un nombre de 
 > [!NOTE]  
 > Antes de ejecutar la consulta, puede cambiar las propiedades de la tabla que desea crear modificándolas en la ventana **Propiedades** . Para detalles, consulte [Propiedades de la consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Crear consultas de creación de tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
-[Tipos de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

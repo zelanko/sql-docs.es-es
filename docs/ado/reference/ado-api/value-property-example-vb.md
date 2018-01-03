@@ -3,7 +3,7 @@ title: Valor de ejemplo de la propiedad (VB) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9dec056e56809d7dc874e858930997238268ae7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 812eee7536a0dcfdcd8f868a6bd151436201fed4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-property-example-vb"></a>Ejemplo de la propiedad de valor (VB)
 Este ejemplo se muestra la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad con [campo](../../../ado/reference/ado-api/field-object.md) y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos y mostrar valores de campo y propiedad para el ***empleados*** tabla.  

@@ -3,7 +3,7 @@ title: Propiedad ActiveConnection (ADO) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9722834bb3a5edb7abdb1ecf7b0235a069d60f09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77c5f58c5fed82651e5fc7f0228ef36e5fbea880
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection (propiedad, ADO)
 Indica a qué [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto especificado [comando](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), o [registro](../../../ado/reference/ado-api/record-object-ado.md) pertenece actualmente el objeto.  
@@ -38,7 +38,7 @@ Indica a qué [conexión](../../../ado/reference/ado-api/connection-object-ado.m
 ## <a name="remarks"></a>Comentarios  
  Use la **ActiveConnection** propiedad para determinar el **conexión** objeto en el cual especificado **comando** objeto ejecutará o especificado  **Conjunto de registros** se abrirá.  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>Comando  
  Para **comando** objetos, el **ActiveConnection** propiedad es de lectura/escritura.  
   
  Si intenta llamar a la [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método en un **comando** objeto antes de establecer esta propiedad en un formato de archivo **conexión** objeto o cadena de conexión válida, se produce un error.  

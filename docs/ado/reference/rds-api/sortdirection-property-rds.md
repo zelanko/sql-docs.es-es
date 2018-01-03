@@ -1,11 +1,13 @@
 ---
 title: Propiedad SortDirection (RDS) | Documentos de Microsoft
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d1b07bebfd6b047e13c394a070757b26bd0c354
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e2bc3372e360debd15fa33b6badd4bd6bdc61fa
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sortdirection-property-rds"></a>Propiedad SortDirection (RDS)
 Indica si un criterio de ordenación es ascendente o descendente.  
@@ -39,7 +41,7 @@ DataControl.SortDirection = value
  *DataControl*  
  Una variable de objeto que representa un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- *Valor*  
+ *Value*  
  A **booleano** valor que, cuando se establece en **True**, indica la dirección de ordenación es ascendente. **False** indica un orden descendente.  
   
 ## <a name="remarks"></a>Comentarios  

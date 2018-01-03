@@ -3,7 +3,7 @@ title: "Abrir y cerrar el ejemplo de los métodos (VB) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 566e22c5a1db01dfa28005fef73f23cb4e3a8811
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa6d182aadb49dfa3a1e4851ff46c6bf2a983449
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-and-close-methods-example-vb"></a>Ejemplo de los métodos de apertura y cierre (VB)
 Este ejemplo se utiliza la **abiertos** y [cerrar](../../../ado/reference/ado-api/close-method-ado.md) métodos tanto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos que se han abierto.  

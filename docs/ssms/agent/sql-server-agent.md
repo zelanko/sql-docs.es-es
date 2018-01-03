@@ -3,7 +3,7 @@ title: Agente SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente 
@@ -80,7 +80,7 @@ Una *programación* especifica cuándo se ejecuta un trabajo. Se puede ejecutar 
   
 Para obtener más información, vea [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Alertas  
+### <a name="alerts"></a>Trabajos  
 Una *alerta* es una respuesta automática a un evento específico. Por ejemplo, un evento puede ser el inicio de un trabajo o que los recursos del sistema alcancen un umbral específico. Debe definir las condiciones en las que se genera una alerta.  
   
 Una alerta puede responder a una de las condiciones siguientes:  
@@ -155,7 +155,7 @@ Un subsistema es un objeto predefinido que representa las funciones disponibles 
   
 Cada proxy se corresponde con unas credenciales de seguridad. Cada proxy puede asociarse a un conjunto de subsistemas y un conjunto de inicios de sesión. El proxy solo se puede utilizar con pasos de trabajo que utilizan un subsistema asociado al proxy. Para crear un paso de trabajo que utilice un proxy determinado, el propietario del trabajo debe utilizar un inicio de sesión asociado al proxy o debe ser miembro de un rol con acceso ilimitado a los servidores proxy. Los miembros del rol fijo de servidor **sysadmin** tienen acceso ilimitado a los servidores proxy. Los miembros de **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** solo pueden utilizar servidores proxy para los que dispongan de acceso específico. Cada usuario que sea miembro de alguno de estos roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] debe tener acceso a servidores proxy específicos para poder crear pasos de trabajo que usen esos proxy.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 Use los pasos siguientes para configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] de manera que se automatice la administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
   
 1.  Establezca las tareas administrativas o eventos del servidor que se realizan con regularidad y si estas tareas o eventos se pueden administrar mediante programación. Una tarea es una buena candidata a la automatización si consta de una secuencia de pasos predecible y se produce en un momento específico o en respuesta a un evento concreto.  
@@ -181,6 +181,6 @@ Use las siguientes tareas para comenzar a trabajar con el agente de [!INCLUDE[ss
 |Describe el Asistente para planes de mantenimiento, que es una utilidad que puede ayudarle a crear trabajos, alertas y operadores para automatizar la administración de una instancia de SQL Server.|[Usar el Asistente para planes de mantenimiento](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
 |Describe cómo automatizar tareas administrativas mediante el Agente SQL Server.|[Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Configuración de Área expuesta](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

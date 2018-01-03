@@ -3,7 +3,7 @@ title: Colocar objeto (ADO MD) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a2ef6f300bee660c3b6c7f5786fb12284650a96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0af353cd84db8dd68c371d49119092c7b971348c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="position-object-ado-md"></a>Objeto Position (ADO MD)
 Representa un conjunto de uno o varios miembros de distintas dimensiones que define un punto a lo largo de un eje.  

@@ -2,11 +2,11 @@
 title: "Referencia de API de servicios de aprendizaje de máquina de SQL Server | Documentos de Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 52261d7ebb01ca4156d067ba0f25af3cd90a64bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4447df04e7bffe4d5103be1cb93791a151b81857
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>Referencia de API de servicios de aprendizaje de máquina de SQL Server
 
@@ -31,7 +31,7 @@ En su mayor parte, SQL Server utiliza las mismas bibliotecas de R y Python que s
 > [!NOTE]
 > Documentación para todas las API se deriva de código fuente y no se hayan editado. Si ve errores, agregue un comentario en la documentación de referencia de API. 
 
-## <a name="r"></a>L
+## <a name="r"></a>R
 
 + [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
@@ -73,7 +73,7 @@ En su mayor parte, SQL Server utiliza las mismas bibliotecas de R y Python que s
 
     Funciones de utilidad para su uso con entornos de RevoScaleR
 
-## <a name="other"></a>Otro
+## <a name="other"></a>Otros
 
 Temas "Cómo" y resúmenes específicas para el uso de estas R o las API de Python en SQL Server pueden encontrarse aquí:
 

@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bdc3ea0d960d2bb2e4abbe2f16ec2ff2a3db62b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 974a77627d00103a5ac4f89ab9773dfcea0a0ef6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda y especificar el orden en que deben realizarse las búsquedas. Para que se muestre este cuadro de diálogo, seleccione el botón **Examinar (...)** situado junto a la lista desplegable **Buscar en** en Buscar en archivos o Reemplazar en archivos, en la ventana Buscar y reemplazar.  
   
 Agregue carpetas a la lista **Carpetas seleccionadas** , escriba un nombre para este conjunto de carpetas en el campo **Conjunto de carpetas** y haga clic en **Aplicar** para guardarlo. Este ámbito personalizado de búsqueda podrá seleccionarse por nombre posteriormente en las listas desplegables **Buscar en** , en **Buscar en archivos** y **Reemplazar en archivos**. Para quitar un conjunto de carpetas personalizado de las listas **Buscar en** , seleccione su nombre en el campo **Conjunto de carpetas** y haga clic en **Eliminar**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 Los controles que se muestran a continuación se encuentran disponibles para ayudarle a reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda.  
   
 **Conjunto de carpetas**  

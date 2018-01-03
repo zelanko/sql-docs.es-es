@@ -3,7 +3,7 @@ title: "Ayuda con F1 para los cuadros de diálogos de opciones | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8af76afab17affc70b5d8ed6478be09cda02120
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bdf5e5b420a413c49d64743b8241e70810e9b965
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Opciones (Ayuda F1 de cuadros de diálogos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta sección contiene la Ayuda F1 de los cuadros de diálogo disponibles cuando se hace clic en **Opciones** en el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

@@ -3,7 +3,7 @@ title: Guardar tablas seleccionadas en un diagrama (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13e47d349680589c14f2804629c1417872f49265
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec8f86fbb4056c950cae3a7aa9e6572bb6f98ace
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Guardar tablas seleccionadas en un diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede guardar una tabla específica o un conjunto de tablas si no quiere guardar todos los cambios que ha realizado en un diagrama de base de datos.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > La lista de tablas puede contener otras tablas además de las seleccionadas. Por ejemplo, si cambia el tipo de datos de una columna que participa en una relación con otra tabla, se incluirán las dos tablas en esta lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

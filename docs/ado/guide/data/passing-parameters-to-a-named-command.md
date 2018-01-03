@@ -3,7 +3,7 @@ title: "Pasar parámetros a un comando con nombre | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd64725eab5760c0cce7d2ecf33b320d94b3a283
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0db27250c2f095c31aa5bca95b738fa64ca922
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Pasar parámetros a un comando con nombre
 Tal y como se pasa el resultado del comando como un *out* variable del comando con nombre, parámetros para un comando con parámetros puede sido pasado como *en* variables para el comando con nombre.  

@@ -3,7 +3,7 @@ title: "Personalizar los menús y los métodos abreviados de teclado | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790f0a159366986a193bbfd4509f92d65ec5492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una tecla de método abreviado permite seleccionar un botón o comando de menú presionando ALT+*<single letter>*. Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
@@ -166,6 +166,6 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
 > [!NOTE]  
 > Algunos comandos solo están disponibles cuando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] está mostrando el contenido pertinente. Si no está disponible ninguno de los comandos del menú, el elemento de menú no estará disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Características de SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
   

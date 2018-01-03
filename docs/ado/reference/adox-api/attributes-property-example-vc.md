@@ -3,7 +3,7 @@ title: Atributos de ejemplo de la propiedad (VC ++) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69ec8dcfecac32da4d963198298cf94f58edba1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a24ab881fb2c4c86f92d25c0c697ae4d40aa6707
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-property-example-vc"></a>Ejemplo de la propiedad de atributos (VC ++)
 Este ejemplo se muestra la [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). Si se establece en **adColNullable** permite al usuario establecer el valor de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro que no se conozcan los datos y un registro donde los datos que no se aplican.  

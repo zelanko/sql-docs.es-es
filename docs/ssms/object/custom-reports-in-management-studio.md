@@ -3,7 +3,7 @@ title: Informes personalizados en Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Informes personalizados en Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], muchos nodos del Explorador de objetos muestran un conjunto de informes estándar creados por [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Estos informes incluyen un resumen de la información que se suele solicitar al servidor. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, los administradores pueden ejecutar los informes personalizados que se crearon en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
@@ -64,7 +64,7 @@ Cuando trabaje con informes personalizados, tenga en cuenta las siguientes limit
 ## <a name="managing-custom-reports"></a>Administrar informes personalizados  
 Se recomienda que los usuarios que disponen de varios informes personalizados los organicen en carpetas del sistema de archivos que dispongan de los permisos del sistema de archivos NTFS adecuados.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Los informes personalizados se ejecutan con los permisos del usuario actual. Para evitar que un usuario malintencionado cambie las consultas ejecutadas por el informe, se deben establecer los permisos de la carpeta del sistema de archivos que contiene los archivos de informe para restringir el acceso.  
   
 Tanto el usuario como la cuenta usados por el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] requieren acceso de lectura en la carpeta del sistema de archivos que contiene los archivos de informe.  
@@ -76,7 +76,7 @@ Cualquier comando de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] v
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [agregar un informe personalizado a Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Anular la supresión de las advertencias de Ejecutar informe personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Usar informes personalizados con las propiedades de nodo del Explorador de objetos](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  

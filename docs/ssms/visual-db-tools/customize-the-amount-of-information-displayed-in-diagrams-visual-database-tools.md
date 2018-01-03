@@ -3,7 +3,7 @@ title: "Personalizar la cantidad de información mostrada en los diagramas | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4e05f53f40655a5bf269db9022abd9e6e40eb09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b3b6f3ae70e0917303cf0dab79c0bd296ba9043
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar la cantidad de información mostrada en los diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al agregar una tabla a un diagrama de base de datos, esta aparece con un número establecido de propiedades. Puede elegir en un menú de opciones la cantidad de información que va a aparecer, o bien puede crear un conjunto de propiedades personalizado.  
@@ -59,6 +59,6 @@ Las opciones son:
   
 3.  En el cuadro de diálogo **Selección de columnas** , elija las propiedades que desea mostrar cuando se elija **Personalizar** en el menú **Vista de tabla** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

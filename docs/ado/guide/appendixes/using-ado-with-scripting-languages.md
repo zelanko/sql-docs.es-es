@@ -3,7 +3,7 @@ title: Usar ADO con lenguajes de Scripting | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,31 +20,31 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 Dentro de un entorno de scripting, ADO permite exponer datos mediante secuencias de comandos de servidor. En este escenario, ADO, el proveedor OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado está instalado en un servidor que ejecuta Internet Information Services (IIS). Utilizando páginas Active Server (ASP), ADO es un componente al que hace referencia en una secuencia de comandos que puede generar código HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP en un explorador Web del cliente. Mediante el uso de secuencias de comandos, la página Web puede enviar acciones a la secuencia de comandos de servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
   
  Antes de usar un objeto de ActiveX en una página Web, es importante saber si el objeto es seguro para scripting. Cuando un objeto se considera seguro para scripting, significa que el control no puede realizar ninguna acción perjudicial en el equipo del usuario y por lo tanto, se puede ejecutar sin solicitar la aprobación del usuario. En la tabla siguiente se enumera los objetos ADO e indica si son seguros para scripting.  
   
-|Object|¿Es seguro para Scripting?|  
+|Objeto|¿Es seguro para Scripting?|  
 |------------|-------------------------|  
 |Conexión ADO|Sí|  
-|Comando de ADO|No|  
-|Parámetro de ADO|No|  
+|Comando de ADO|no|  
+|Parámetro de ADO|no|  
 |Conjunto de registros ADO|Sí|  
 |Registro de ADO|Sí|  
 |Secuencia de ADO|Sí|  
-|Error de ADO.|No|  
-|Catálogo ADOX|No|  
-|Conjunto de celdas ADOX|No|  
+|Error de ADO.|no|  
+|Catálogo ADOX|no|  
+|Conjunto de celdas ADOX|no|  
 |DataControl RDS|Sí|  
 |DataSpace RDS|Sí|  
-|DataFactory RDS|No|  
+|DataFactory RDS|no|  
   
  En la tabla siguiente enumera los proveedores incluidos con Windows DAC/MDAC e indica si son seguros para scripting.  
   
@@ -53,8 +53,8 @@ Dentro de un entorno de scripting, ADO permite exponer datos mediante secuencias
 |Forma|Sí|  
 |Persist|Sí|  
 |Remote|Sí|  
-|Proveedor OLE DB para SQL Server (SQLOLEDB)|No|  
-|Proveedor OLE DB para ODBC (MSDASQL)|No|  
+|Proveedor OLE DB para SQL Server (SQLOLEDB)|no|  
+|Proveedor OLE DB para ODBC (MSDASQL)|no|  
   
 ## <a name="odbc-data-sources"></a>Orígenes de datos ODBC  
  Una diferencia importante entre el código de ADO de secuencias de comandos y secuencias de comandos no es el origen de datos ODBC, si se utiliza. Para las aplicaciones no son secuencias de comandos, puede crear un DSN de usuario en el Administrador de orígenes de datos de ODBC. Para los scripts que se ejecutan en IIS, debe crear un DSN de sistema; en caso contrario, las secuencias de comandos no reconocerán el origen de datos que creó. Esto se aplica a cualquier aplicación de secuencias de comandos de ADO mediante el proveedor Microsoft OLE DB para ODBC a través de IIS de Microsoft.  

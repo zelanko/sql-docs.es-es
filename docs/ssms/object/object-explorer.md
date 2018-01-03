@@ -3,7 +3,7 @@ title: Explorador de objetos| Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 05c1ba2d0a8d223ee1d4713613b23d9d07df8241
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8c782b118587bb1b3b8596172901daf57086ef81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer"></a>Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +53,6 @@ El Explorador de objetos proporciona un interfaz jerárquica para ver y administ
 |Describe cómo abrir el Explorador de objetos y configurar las opciones que definen el comportamiento del explorador.|[Abrir y configurar el Explorador de objetos](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Describe cómo conectar el Explorador de objetos a una instancia de [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]y [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)].|[Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Describe cómo administrar los objetos representados como nodos de la jerarquía del Explorador de objetos.|[Administrar objetos mediante el Explorador de objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|Describe el panel Detalles del Explorador de objetos, una vista tabular de todos los objetos del servidor con una interfaz de usuario para administrarlos.|[Panel de detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)|  
+|Describe el panel Detalles del Explorador de objetos, una vista tabular de todos los objetos del servidor con una interfaz de usuario para administrarlos.|[Panel Detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)|  
 |Describe maneras de ejecutar informes personalizados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].|[Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
   

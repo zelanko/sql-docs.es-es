@@ -3,7 +3,7 @@ title: Editor SQL (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4abc54346419e0ba6281e71d583cf0a4e571caf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el Editor SQL para editar procedimientos almacenados, funciones, desencadenadores y scripts SQL existentes. Esta ventana aparece al abrir cualquiera de estos objetos. Si desea crear una instrucción SQL nueva para ejecutarla en el origen de datos, use el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) del Diseñador de consultas.  
@@ -54,6 +54,6 @@ El editor SQL proporciona numerosas características de edición de texto SQL de
   
 Al editar instrucciones SQL, algunas instrucciones Transact-SQL se incluyen en un cuadro rodeado por una línea fina. Esto ayuda a dividir visualmente el código SQL en secciones de comandos e identifica bloques de instrucciones SQL que pueden diseñarse de forma gráfica mediante el Diseñador de consultas. Para más información sobre cómo usar el Diseñador de consultas, vea [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: Descartar los cambios realizados en diagramas (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59f4167104b87c8e37ab2df3f2590cabbf6dede7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7cef5c9676d25b0d37b8a863e4155c2a0068f3b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Descartar los cambios realizados en diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede descartar los cambios realizados en el diagrama de base de datos que no quiera guardar en la base de datos.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
     > [!CAUTION]  
     > Si tiene otros diagramas de base de datos abiertos o ventanas de diseño de tablas conectadas a la misma base de datos, ciérrelos sin guardar los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Trabajar con tablas en diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

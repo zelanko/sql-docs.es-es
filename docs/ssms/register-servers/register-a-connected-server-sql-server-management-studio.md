@@ -3,7 +3,7 @@ title: Registrar un servidor conectado (SQL Server Management Studio) | Microsof
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrar un servidor conectado (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo registrar un servidor conectado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Mediante el registro del servidor, puede guardar la información de conexión correspondiente a los servidores a los que accede con frecuencia. Un servidor puede registrarse antes de conectarlo o cuando se conecta desde el Explorador de objetos.  Puede ver los servidores registrados en SSMS si va a **Ver**\\**Servidores registrados** en el menú.
@@ -57,7 +57,7 @@ Cuando un usuario se conecta con un nombre y una contraseña de inicio de sesió
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Para obtener más información, vea [Elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-     -    **Nombre de usuario.**  
+     -    **User name**  
 Muestra el nombre de usuario actual con el que se conecta. Esta opción de solo lectura únicamente está disponible si ha seleccionado la autenticación de Windows para conectarse. Para cambiar **Nombres de usuario**, inicie una sesión en el equipo como un usuario distinto. 
 
      -    **Inicio de sesión**  
@@ -84,7 +84,7 @@ Haga clic para probar la conexión al servidor seleccionado en **Nombre del serv
 **Guardar**  
 Haga clic aquí para guardar la configuración del servidor registrado. 
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Crear un servidor registrado (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
   
   

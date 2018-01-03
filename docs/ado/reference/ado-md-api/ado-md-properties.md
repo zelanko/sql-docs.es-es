@@ -3,7 +3,7 @@ title: Propiedades de ADO MD | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 |||  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Devuelve una colección de **miembros** para que el actual **miembro** es el elemento primario en la jerarquía.|  
 |[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[Profundidad](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel jerárquico.|  
-|[Descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Devuelve un texto de explicación del objeto actual.|  
+|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Devuelve un texto de explicación del objeto actual.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica el número de dimensiones en un eje.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica si hay elementos secundarios inmediatamente después del miembro en el eje.|  
 |[PivotView](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica información de filtro para el objeto cellset actual.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del conjunto de celdas.|  
 |[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nombre único para el objeto actual.|  
-|[Valor](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  
+|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

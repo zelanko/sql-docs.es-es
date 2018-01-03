@@ -3,7 +3,7 @@ title: "Propiedades de paso de trabajo: nuevo paso de trabajo (página General) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propiedades de paso de trabajo - Nuevo paso de trabajo (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o bien para definir un nuevo paso de trabajo.  
   
 Para navegar a esta página, en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , expanda el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , haga clic con el botón derecho en **Trabajos**, haga clic en **Nuevo trabajo**, seleccione la página **Pasos** y haga clic en **Nuevo**. También puede navegar a esta página si hace clic con el botón derecho en un trabajo en el Explorador de objetos, hace clic en **Propiedades**, selecciona la página **Pasos** y hace clic en **Nuevo**, **Insertar**o **Editar**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Nombre del paso**  
 Establece el nombre del paso de trabajo.  
   
@@ -278,7 +278,7 @@ En esta pestaña puede consultar los orígenes de datos especificados en el paqu
 **Connection Manager**  
 Muestra el nombre del origen de datos.  
   
-**Description**  
+**Descripción**  
 Muestra la descripción del origen de datos.  
   
 **Cadena de conexión**  
@@ -371,7 +371,7 @@ Debe especificar las opciones en la ventana de línea de comandos.
 **Línea de comandos**  
 Escriba las opciones de línea de comandos que se van a utilizar en este paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)  
 [Trabajos del Agente SQL Server para paquetes](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [Administrar agentes de replicación](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  

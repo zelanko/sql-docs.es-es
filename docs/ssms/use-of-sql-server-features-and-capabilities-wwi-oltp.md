@@ -3,7 +3,7 @@ title: Argumentos para herramientas externas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c09b8aa81f0846305b0bd1f33a89a269af64b45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07a73ebeb158d520db011f979bfd2e21c543c22f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="arguments-for-external-tools"></a>Argumentos de las herramientas externas
+# <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los argumentos son variables para las que el entorno de Studio proporciona valores cuando se inicia una herramienta desde el menú **Herramientas**. Es posible agregar herramientas externas, como el Bloc de notas, al menú **Herramientas** mediante el cuadro de diálogo **Herramientas externas** .  
   
 En la tabla siguiente se enumeran los argumentos de las herramientas externas.  
@@ -51,7 +51,7 @@ En la tabla siguiente se enumeran los argumentos de las herramientas externas.
   
 *La línea actual, la columna actual o el texto actual se basan en la posición del cursor en el editor de texto tal y como aparece en la barra de estado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Cuadro de diálogo Herramientas externas](../ssms/external-tools-dialog-box.md)  
 [Elementos generales de la interfaz de usuario](../ssms/general-user-interface-elements.md)  
   

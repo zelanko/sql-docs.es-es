@@ -3,7 +3,7 @@ title: Propiedades de columna (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 647187fc56293cf1d30b2daa4150f1ad05503338
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ef372c7a1716fe9e928b3567c52c654268f7a3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Hay dos conjuntos de propiedades para columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
@@ -131,7 +131,7 @@ Le permite guardar la columna calculada con el origen de datos. Una columna calc
 **Tipo de datos comprimido**  
 Muestra información sobre el tipo de datos del campo con el mismo formato que la instrucción SQL CREATE TABLE. Por ejemplo, un campo que contiene una cadena de longitud variable con una longitud máxima de 20 caracteres se representa como "varchar(20)". Para cambiar esta propiedad, escriba el valor directamente.  
   
-**Description**  
+**Descripción**  
 Muestra la descripción de la columna. Para ver la descripción completa o para editarla, haga clic en Descripción y, a continuación, haga clic en los puntos suspensivos **(…)** a la derecha de la propiedad.  
   
 **Categoría Especificación de texto completo**  

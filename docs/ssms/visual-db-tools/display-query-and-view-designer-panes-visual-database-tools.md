@@ -3,7 +3,7 @@ title: "Mostrar los paneles del Diseñador de consultas y vistas (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Diseñador de consultas y vistas se compone de cuatro paneles diferentes: los paneles Diagrama, Criterios, SQL y Resultados. Por lo general, cuando se abre una vista o se crea una nueva consulta, se abren todas las ventanas, pero si es necesario abrir alguna de estas ventanas, podrá hacerlo siempre y cuando el Diseñador de consultas y vistas esté abierto.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  En el menú **Diseñador de consultas** , seleccione **Panel** y haga clic en el panel que desee abrir.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Crear consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   

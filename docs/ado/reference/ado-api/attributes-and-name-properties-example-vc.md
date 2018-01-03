@@ -3,7 +3,7 @@ title: Ejemplo de propiedades de nombre (VC ++) y atributos | Documentos de Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c157c41d046585806c7ae3f00ef822fa90e06b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79633c646120c4b53eb123d4ca0f3665b4d7be95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Atributos y ejemplo de las propiedades nombre (VC ++)
 Este ejemplo muestra el valor de la [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos. Usa el [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad para mostrar el nombre de cada **campo** y **propiedad** objeto.  

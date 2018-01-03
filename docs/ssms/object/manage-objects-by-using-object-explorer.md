@@ -3,7 +3,7 @@ title: Administrar objetos mediante el Explorador de objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190cdeff71f6b46b6ff2e7c6f42895137a67eda6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec883f561a30166fc824164e38ac9ba539c98553
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Administrar objetos mediante el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar el Explorador de objetos para administrar objetos, como bases de datos, tablas y procedimientos almacenados.  
@@ -58,8 +58,8 @@ Cuando el Explorador de objetos está conectado a un servidor, es posible abrir 
 ### <a name="start-powershell"></a>Iniciar PowerShell  
 Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Vea también  
-[Explorador de objetos](../../ssms/object/object-explorer.md)  
+## <a name="see-also"></a>Ver también  
+[Ver](../../ssms/object/object-explorer.md)  
 [Abrir y configurar el Explorador de objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Panel de detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)  

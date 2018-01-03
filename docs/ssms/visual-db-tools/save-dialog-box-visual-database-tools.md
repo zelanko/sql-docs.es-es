@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Guardar (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ecfaae0da3917b08db87173dfc2b7842e2972ae0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 81aa8d84f9ec5546401fc1ae9344ce2cdcee5af1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Guardar (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Aparece cuando se guarda el trabajo en el Diseñador de tablas y ese trabajo afecta a otras tablas. Este cuadro de diálogo permite confirmar las tablas que se van a guardar.  
@@ -32,13 +32,13 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Los cambios que realice en una tabla del Diseñador de tablas no se confirmarán en la base de datos hasta que guarde la tabla. Una vez guardada la tabla, no se podrán deshacer los cambios. Para descartar los cambios no guardados, cierre todas las tablas abiertas sin guardarlas.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Advertir sobre las tablas afectadas**  
 Especifica si este cuadro de diálogo aparecerá la próxima vez que guarde las tablas seleccionadas. La opción está activada de forma predeterminada. Si desactiva esta opción, podrá volver a activarla en el cuadro de diálogo **Opciones** .  
   
 **Guardar archivo de texto**  
 Muestra el cuadro de diálogo **Guardar como** , que permite especificar una ubicación para guardar el archivo de texto que contiene la lista de tablas. Este archivo proporciona una lista de las tablas afectadas por los cambios realizados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Diseñar tablas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

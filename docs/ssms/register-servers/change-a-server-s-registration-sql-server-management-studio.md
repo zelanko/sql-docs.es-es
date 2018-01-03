@@ -3,7 +3,7 @@ title: Cambiar el registro de un servidor (SQL Server Management Studio) | Micro
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a933562956daaaa2113f86c94f664ba859279587
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d99c47617fb43ccfe9e788af1d5c5204463ffb8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Cambiar el registro de un servidor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo cambiar el registro de un servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede cambiar la información de conexión de un servidor registrado en cualquier momento.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  En el cuadro de diálogo **Editar propiedades de registro de servidor** , modifique el servidor, la información de inicio de sesión o las propiedades de conexión y, a continuación, haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Registrar servidores](../../tools/sql-server-management-studio/register-servers.md)  
   
   

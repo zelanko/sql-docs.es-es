@@ -3,7 +3,7 @@ title: Imprimir los resultados de una consulta (Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f3633d69465df3d595d9145dfada1f80bf14d04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimir los resultados de una consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para imprimir los resultados de la consulta, puede copiar el contenido del [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) a otro programa de Windows (como un programa de procesamiento de texto) y, después, darle formato e imprimirlo en el mismo.  
@@ -45,6 +45,6 @@ El Diseñador de consultas y vistas coloca los resultados de la consulta en el P
   
 5.  Dé formato a los resultados e imprímalos.  
   
-## <a name="see-also"></a>Vea también  
-[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+## <a name="see-also"></a>Ver también  
+[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

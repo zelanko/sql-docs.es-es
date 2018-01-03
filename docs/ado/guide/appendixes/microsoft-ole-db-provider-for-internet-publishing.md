@@ -3,7 +3,7 @@ title: "Proveedor Microsoft OLE DB para la publicación en Internet | Documentos
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bac02557dcc9cf816edfcad5b6cc5d927e42f21a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81b34a20948dc53bb16bdd2c9442895af711adb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Proveedor Microsoft OLE DB para la publicación de información general en Internet
 El proveedor Microsoft OLE DB para publicación en Internet permite a ADO para tener acceso a recursos atendido por Microsoft FrontPage o Microsoft Internet Information Server. Los recursos incluyen archivos de código fuente de web, como archivos HTML o carpetas de web de Windows 2000.

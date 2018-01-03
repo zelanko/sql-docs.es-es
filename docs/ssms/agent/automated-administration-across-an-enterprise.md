@@ -3,7 +3,7 @@ title: "Administración automatizada en una empresa | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77867115cb6d169bf7a3c84c8737d54f9657651f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 915518355263cb9977313abf5d2063556dccdd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administración automatizada en una empresa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Automatizar la administración en varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se conoce como *administración multiservidor*. Utilice la administración multiservidor para realizar lo siguiente:  
@@ -84,7 +84,7 @@ Contiene información sobre el reenvío de eventos desde servidores de destino a
 [Optimizar la administración automatizada en una empresa](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Contiene información sobre cómo una administración automatizada en un entorno multiservidor se aprovecha de las características de optimización automática de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Temas de compatibilidad con versiones anteriores para instalar el motor de base de datos de SQL Server](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  
 [Registrar servidores](http://msdn.microsoft.com/en-us/c2a2513e-fa09-419c-99e7-a12d57c5a0db)  
 [sp_add_targetservergroup](http://msdn.microsoft.com/en-us/acb69343-d766-46ff-b771-0c7655c5231a)  

@@ -3,7 +3,7 @@ title: Secuencias de comandos | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46ef9db34ecfc7ee0ba3fbd41a052658a065a010
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ffb70205cbf2c2679cea827ffa0b7445586c795
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-streams"></a>Secuencias de comandos
 ADO siempre ha sido compatible proporcionados por el comando en formato de cadena especificado por el **CommandText** propiedad. Como alternativa, con ADO 2.7 o posterior, también puede utilizar una secuencia de información para la entrada de comando mediante la asignación de la secuencia a la **CommandStream** propiedad. Puede asignar un ADO **flujo** objeto o cualquier objeto que admita el modelo COM **IStream** interfaz.  

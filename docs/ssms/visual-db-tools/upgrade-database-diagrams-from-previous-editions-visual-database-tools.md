@@ -3,7 +3,7 @@ title: Actualizar diagramas de base de datos de ediciones anteriores | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f225eafb6cd6b1a4518a8e98f6b657bdc385cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e4651d6e75744ce33f7e8eb1062de0f2b8daf396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los diagramas de bases de datos creados en ediciones anteriores de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se actualizan automáticamente al preparar la creación de diagramas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Para más pasos de configuración de diagramas, consulte [Configurar el Diseñador de diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
     Así se actualizarán los diagramas almacenados en la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Descripción de la propiedad de un diagrama de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
 [Configurar el Diseñador de diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

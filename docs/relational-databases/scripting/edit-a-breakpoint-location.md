@@ -3,9 +3,9 @@ title: "Modificar la ubicación de un punto de interrupción | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8391d68fe467d7415d98b53c7d48dd88b699401
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e24a5c8e499a973568b92329814062039cf63771
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-a-breakpoint-location"></a>Modificar la ubicación de un punto de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La ubicación del punto de interrupción especifica la línea y el carácter en el que el punto de interrupción reside en un archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede modificar la ubicación del punto de interrupción para moverlo a otra ubicación en el script o a un script diferente.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, después, en el menú contextual, haga clic en **Ubicación** .  
   
-     - O bien -  
+     -O bien-  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, después, en el menú contextual, haga clic en **Ubicación** .  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      La opción para **Permitir que el código fuente sea diferente al de la versión original** no tiene ningún efecto al depurar [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Especificar un número de llamadas](../../relational-databases/scripting/specify-a-hit-count.md)   
  [Especificar una acción del punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-action.md)   
  [Especificar una condición de punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   

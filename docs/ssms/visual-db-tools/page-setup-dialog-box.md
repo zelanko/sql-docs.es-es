@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Configurar página | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e52e80a2de50c69ecc6349a3666e9da5a71f742
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d415cfe737b8b559873b581e094b408495eb386
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="page-setup-dialog-box"></a>Configurar página (cuadro de diálogo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede personalizar el diseño de la página seleccionando las opciones del cuadro de diálogo **Configurar página**. La disponibilidad de algunas opciones depende de los idiomas que estén instalados y habilitados para la edición.  
@@ -48,13 +48,13 @@ Define la distancia entre el borde izquierdo de la página y el borde izquierdo 
 Derecha  
 Define la distancia entre el borde derecho de la página y el borde derecho de las filas alineadas a la derecha y sin aplicar sangría.  
   
-Superior  
+TOP  
 Define la distancia entre la parte superior de la página y la parte superior de la primera línea de la misma.  
   
 Inferior  
 Define la distancia entre la parte inferior de la página y la parte inferior de la primera línea de la misma.  
   
-## <a name="other"></a>Otro  
+## <a name="other"></a>Otros  
 **Vista previa**  
 La imagen de vista previa muestra los efectos de los valores seleccionados.  
   

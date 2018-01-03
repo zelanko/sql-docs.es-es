@@ -3,9 +3,9 @@ title: Usar sqlcmd con variables de script | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eba9a6581d4f93c1eb84e14b3172f1f6cefb312f
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usar sqlcmd con variables de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las variables que se usan en scripts se denominan variables de scripting. Las variables de scripting posibilitan el uso de un script en varias situaciones. Por ejemplo, si desea ejecutar un script en varios servidores, en lugar de modificar el script para cada servidor, puede usar una variable de scripting para el nombre del servidor. Al cambiar el nombre del servidor proporcionado a la variable de scripting, el mismo script puede ejecutarse en diferentes servidores.  
@@ -113,24 +113,24 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variables de scripting sqlcmd  
  Las variables definidas mediante **sqlcmd** se denominan variables de scripting. En la siguiente tabla se enumeran las variables de scripting de **sqlcmd** .  
   
-|        Variable         | Opción relacionada | L/E |         Predeterminado         |
+|        Variable         | Opción relacionada | L/E |         Valor predeterminado         |
 | ----------------------- | -------------- | --- | ----------------------- |
-| SQLCMDUSER*             | -U             | L   | ""                      |
+| SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
-| SQLCMDSERVER*           | -S             | L   | "DefaultLocalInstance"  |
-| SQLCMDWORKSTATION       | -H             | L   | "ComputerName"          |
-| SQLCMDDBNAME            | -d             | L   | ""                      |
+| SQLCMDSERVER*           | -S             | R   | "DefaultLocalInstance"  |
+| SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
+| SQLCMDDBNAME            | -d             | R   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | L/E | "8" (segundos)           |
 | SQLCMDSTATTIMEOUT       | -t             | L/E | "0" = esperar indefinidamente |
 | SQLCMDHEADERS           | -H             | L/E | "0"                     |
 | SQLCMDCOLSEP            | -S             | L/E | "                     |
 | SQLCMDCOLWIDTH          | -w             | L/E | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | L   | "4096"                  |
+| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | L/E | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | L/E | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | L/E | "0" = ilimitado         |
 | SQLCMDEDITOR            |                | L/E | "edit.com"              |
-| SQLCMDINI               |                | L   | ""                      |
+| SQLCMDINI               |                | R   | ""                      |
 
 SQLCMDUSER, SQLCMDPASSWORD y SQLCMDSERVER se establecen cuando se usa **:Connect** .  
 
@@ -334,7 +334,7 @@ C:\> sqlcmd
 >2 GO
 ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cb0435fd5e28952f71cc23ce61af4a3635f06cf
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Cuando existe una carga de trabajo activa, se necesita tener en cuenta la memori
 
 Considere el esquema de tabla optimizada para memoria siguiente:
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -119,21 +119,21 @@ Cada índice hash es una matriz hash de punteros de direcciones de 8 bytes.  El 
   
 Los índices hash consiguen búsquedas de igualdad muy rápidas, por ejemplo:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Los índices no clúster son más rápidos para búsquedas de intervalo como:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 Si va a migrar una tabla basada en disco, puede usar lo siguiente para determinar el número de valores únicos para el índice t1c2_index.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -169,7 +169,7 @@ La memoria que necesitan los índices no clúster se puede calcular de la manera
   
  Los índices no clúster son los más adecuados cuando se emplean para búsquedas de intervalo, como se ilustra en la consulta siguiente:  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  
@@ -200,7 +200,7 @@ Las variables de tabla definidas en un lote de SQL de gran tamaño, en comparaci
 
 Los cálculos anteriores estiman sus necesidades de memoria para la tabla tal y como es actualmente. Además de esta memoria, debe calcular el crecimiento de la tabla y proporcionar la memoria adecuada para permitir ese crecimiento.  Por ejemplo, si prevé un crecimiento del 10 %, necesita multiplicar los resultados anteriores por 1,1 para obtener la memoria total necesaria para la tabla.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

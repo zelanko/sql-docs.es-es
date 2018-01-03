@@ -3,7 +3,7 @@ title: "Dar forma a cláusula COMPUTE | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al formulario secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar funciones de agregado en el elemento secundario **Recordset** o una forma anteriormente **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -85,12 +85,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |State|City|Población|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|o|Medford|200,000|  
-|o|Portland|400,000|  
+|O BIEN|Medford|200,000|  
+|O BIEN|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|o|Corvallis|300,000|  
+|O BIEN|Corvallis|300,000|  
   
  Ahora, ejecute este comando shape:  
   
@@ -114,7 +114,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Referencia a child1|CA|  
 |1,200,000|Referencia a child2|WA|  
-|1,100,000|Referencia a secundario3|o|  
+|1,100,000|Referencia a secundario3|O BIEN|  
   
 ## <a name="child1"></a>Child1  
   
@@ -134,9 +134,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |State|City|Población|  
 |-----------|----------|----------------|  
-|o|Medford|200,000|  
-|o|Portland|400,000|  
-|o|Corvallis|300,000|  
+|O BIEN|Medford|200,000|  
+|O BIEN|Portland|400,000|  
+|O BIEN|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a las filas en un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

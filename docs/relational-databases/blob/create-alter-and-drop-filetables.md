@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3834e2948ea4e43bc5e44a4aed9f1560b2864b64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e9c1bcfec7bd2d009af31b69317f9fd23b68843
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe cómo crear una tabla FileTable nueva, o cómo modificar o quitar una existente.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  En el ejemplo siguiente se crea una nueva FileTable y se especifican valores definidos por el usuario para **FILETABLE_DIRECTORY** y **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -84,7 +84,7 @@ GO
   
  El siguiente ejemplo también crea una nueva FileTable. Puesto que no se especifican valores definidos por el usuario, el valor de **FILETABLE_DIRECTORY** se convierte en el nombre de la FileTable, el valor de **FILETABLE_COLLATE_FILENAME** se convierte en database_default y la clave principal y las restricciones únicas reciben nombres generados por el sistema.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -119,7 +119,7 @@ GO
   
  **Ejemplo**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -150,7 +150,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> Se crean otros objetos de base de datos cuando se crea una FileTable  
  Cuando cree una nueva FileTable, también se crean algunas restricciones y algunos índices definidos por el sistema. No puede modificar ni quitar estos objetos; desaparecen solo cuando se quita el propio objeto FileTable. Para ver la lista de estos objetos, consulte la vista de catálogo [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -187,7 +187,7 @@ GO
   
 -   *\<uniquifier>* es una cadena generada por el sistema para que el nombre sea único. Esta cadena puede contener el nombre de la FileTable y un identificador único.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

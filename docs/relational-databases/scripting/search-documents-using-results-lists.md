@@ -3,9 +3,9 @@ title: Buscar en documentos mediante las listas de resultados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b47e823091e48f25000f9d7fe1d1b927017a657c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6159d723ec52adf4117a5ab571570b6c1ec1166
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-using-results-lists"></a>Buscar en documentos mediante las listas de resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Con el cuadro de diálogo **Buscar y reemplazar**, es posible buscar y reemplazar texto en todos los archivos de un proyecto o una solución, o en una carpeta del sistema de archivos, aunque no estén abiertos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las coincidencias de las búsquedas realizadas con el cuadro de diálogo **Buscar y reemplazar** aparecen en las ventanas Resultados de la búsqueda 1 y Resultados de la búsqueda 2, que permiten ver el texto exacto de la línea que contiene la coincidencia.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  La información de reemplazo aparece de forma predeterminada en la ventana Resultados de la búsqueda 1. Puede examinar los reemplazos si hace doble clic en cada entrada de la ventana Resultados de la búsqueda 1.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
  [Buscar documentos de forma interactiva](../../relational-databases/scripting/search-documents-interactively.md)   
  [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md)   

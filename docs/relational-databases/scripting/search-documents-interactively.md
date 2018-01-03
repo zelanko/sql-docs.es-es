@@ -3,9 +3,9 @@ title: Buscar documentos de forma interactiva | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 894d326c58a11f4c284ef91a3b2ff5bacb4b498b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b85af6717ff7493bdfff482a88015cf47dac1bf9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-interactively"></a>Buscar documentos de forma interactiva
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mediante el cuadro de diálogo **Buscar y reemplazar**, puede buscar en uno o más archivos o ventanas abiertos y desplazarse por las coincidencias una a una. Esta técnica permite revisar cada coincidencia individual en el contexto en que se encuentra. El cuadro de diálogo **Buscar y reemplazar** también ofrece la opción de realizar operaciones de búsqueda masiva y revisión de coincidencias en formato de informe.  
@@ -61,13 +61,13 @@ ms.lasthandoff: 11/17/2017
   
 5.  Haga clic en **Reemplazar**y siga haciendo clic en **Reemplazar** hasta que haya reemplazado la última coincidencia del última archivo. Haga clic en **Buscar siguiente** para omitir una coincidencia que no desea reemplazar.  
   
-     - O bien -  
+     -O bien-  
   
      Elija **Reemplazar todo** para reemplazar todas las coincidencias. Aparecerá un cuadro de mensaje indicando el número total de reemplazos.  
   
  El comando **Reemplazar todo** reemplaza todas las coincidencias de la búsqueda, incluidas aquellas que se han omitido mediante el botón **Buscar siguiente** . Para cancelar **Reemplazar todo**, haga clic en **Deshacer** en el menú **Editar** antes de cerrar cualquiera de los archivos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Buscar en un documento activo de forma incremental](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
  [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
  [Buscar en documentos mediante las listas de resultados](../../relational-databases/scripting/search-documents-using-results-lists.md)   

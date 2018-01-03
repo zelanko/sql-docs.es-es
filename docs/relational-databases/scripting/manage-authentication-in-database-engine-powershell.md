@@ -3,9 +3,9 @@ title: "Administración de la autenticación en PowerShell del motor de base de 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f25118386ef075d6e6b769def7b06c6908a9e4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835a888a5ae50e38a26c0a299564b6bd57a0365c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Administrar la autenticación en PowerShell del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] De forma predeterminada, los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell usan la autenticación de Windows para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Puede usar la autenticación de SQL Server definiendo una unidad virtual de PowerShell o especificando los parámetros **–Username** y **–Password** para **Invoke-Sqlcmd**.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  **Para establecer la autenticación con:**  [Una unidad virtual](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Todas las acciones que se pueden realizar en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se controlan mediante los permisos concedidos a las credenciales de autenticación usadas para conectarse a la instancia. De forma predeterminada, el proveedor y los cmdlets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la cuenta de Windows de ejecución para establecer una conexión de autenticación de Windows con [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Para establecer una conexión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe proporcionar un identificador de inicio de sesión y contraseña de autenticación de SQL Server. Al usar el proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe asociar las credenciales de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una unidad virtual y, después, usar el comando de cambio de directorio (**cd**) para conectarse a esa unidad de disco. En Windows PowerShell, las credenciales de seguridad solo se pueden asociar con unidades virtuales.  
@@ -88,9 +88,9 @@ $pwd = read-host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Proveedor de PowerShell de SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [cmdlet Invoke-Sqlcmd](../../powershell/invoke-sqlcmd-cmdlet.md)  
+ [Cmdlet Invoke-Sqlcmd](../../powershell/invoke-sqlcmd-cmdlet.md)  
   
   

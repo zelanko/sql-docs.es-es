@@ -3,9 +3,9 @@ title: Editores XML (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c7f2e3e338e1d8d2bc7df6cc8fb344213e05ed4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ff569edefb2e65e5586ff645584afe755dd4df9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editores XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Proporciona un conjunto de herramientas visuales para trabajar con esquemas XML, conjuntos de datos ADO.NET y documentos XML. El Diseñador XML admite el lenguaje de definición de esquemas XML (XSD) definido por el World Wide Web Consortium (WC3). El diseñador no admite definiciones de tipo de documento (DTD) ni otros lenguajes de esquemas XML, como el esquema XML simplificado (XDR).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  El diseñador proporciona las tres siguientes vistas (o modos) para trabajar en archivos XML, esquemas XML y conjuntos de datos:  
   
-|Ver|Descripción|Tipos de archivos compatibles|  
+|Ver|Description|Tipos de archivos compatibles|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para crear y modificar visualmente esquemas XML y conjuntos de datos ADO.NET.|.xsd|  
 |**Datos**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="showplan-view"></a>Vista SHOWPLAN  
  Los planes de consulta pueden guardarse en formato XML cuando se crean mediante la opción SET SHOWPLAN_XML ON. Haga doble clic en un archivo con la extensión .showplan para abrir el plan de consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Guardar un plan de ejecución en formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

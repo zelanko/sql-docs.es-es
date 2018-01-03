@@ -3,8 +3,11 @@ title: catalog.add_execution_worker (base de datos de SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5ecc54863b47ef55269a068353cbc25bbd5d008
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b2a534635569d5e317d5bb88b2da2103a6a3ca6
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (base de datos de SSISDB)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Agrega un trabajador de escalabilidad horizontal de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a una instancia de ejecución en la escalabilidad horizontal.
+Agrega un trabajo de escalabilidad horizontal [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a una instancia de ejecución en la escalabilidad horizontal.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,7 +36,7 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 
 ## <a name="arguments"></a>Argumentos
 [ @execution_id = ] *execution_id*  
- Identificador único de la instancia de ejecución. *execution_id* es **bigint**.  
+ Identificador único de la instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.  
  
 [@workeragent_id = ] *workeragent_id*  
 Id. de agente de trabajo del trabajo de escalabilidad horizontal. *workeragent_id* es **uniqueIdentifier**.
@@ -42,16 +45,16 @@ Id. de agente de trabajo del trabajo de escalabilidad horizontal. *workeragent_i
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en la instancia de ejecución  
   
--   Pertenencia al rol de base de datos **ssis_admin**  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor **sysadmin**  
+-   Pertenencia al rol de servidor de **sysadmin**  
  
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -64,6 +67,6 @@ Id. de agente de trabajo del trabajo de escalabilidad horizontal. *workeragent_i
 
 - La ejecución no está en escalabilidad horizontal.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 [Ejecutar paquetes en la escalabilidad horizontal](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

@@ -3,7 +3,7 @@ title: Abrir consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2efbc1e30f7cd67529e0df143e4ac47c5ada294
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32d326f9f2c07413405ce32c0c90de9d567a3bcc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede abrir una consulta existente en el Diseñador de consultas y vistas mediante el comando **Abrir**.  
@@ -40,8 +40,8 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > De manera predeterminada, el Diseñador de consultas y vistas abre todos sus paneles (SQL, Criterios, Diagrama y Resultados), pero este comportamiento predeterminado pueden cambiarse en el cuadro de diálogo **Opciones** . Para abrir estos paneles si están cerrados, en el menú **Diseñador de consultas** , elija **Panel**y, a continuación, haga clic en el panel que desea abrir.  
   
-## <a name="see-also"></a>Vea también  
-[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+## <a name="see-also"></a>Ver también  
+[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Guardar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

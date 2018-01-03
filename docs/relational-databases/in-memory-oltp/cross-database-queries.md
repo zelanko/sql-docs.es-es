@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24549110df950d32ef6a1757d7adc58e1bccc1ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cross-database-queries"></a>Consultas entre bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
 
 1. Cree objetos de prueba.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -87,7 +87,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
 
 2.  Intente ejecutar una consulta a través de las bases de datos. Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -98,7 +98,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
 
 3.  Cree un tipo de tabla optimizada para memoria.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -114,7 +114,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     ```
 
 4.  Vuelva a intentar ejecutar la consulta a través de las bases de datos.  Esta vez, los datos de origen se transmitirán primero a una variable de tabla optimizada para memoria.  Luego los datos de la variable de tabla se transferirán a la tabla optimizada para memoria.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -126,7 +126,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     GO 
     ```
    
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

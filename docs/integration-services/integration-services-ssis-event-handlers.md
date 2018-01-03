@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f467fe7abac22aff8b9f832e879d9b7b229b768c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
   En el tiempo de ejecución, los ejecutables (paquetes y contenedores de bucles Foreach, bucles For, de secuencia y de host de tarea) producen eventos. Por ejemplo un evento OnError se produce cuando se genera un error. Puede crear controladores de eventos personalizados para estos eventos con el fin de ampliar la funcionalidad de paquetes y facilitar la administración de paquetes en el tiempo de ejecución. Los controladores de eventos pueden realizar tareas tales como las siguientes:  
@@ -123,7 +123,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
 7.  Agregue elementos del flujo de control al controlador de eventos y conecte elementos mediante una restricción de precedencia, arrastrando la restricción de un elemento del flujo de control a otro. Para más información, consulte [Control Flow](../integration-services/control-flow/control-flow.md).  
   
-8.  De forma opcional, puede agregar una tarea Flujo de datos y, en la superficie de diseño de la pestaña **Flujo de datos** , crear un flujo de datos para el controlador de eventos. Para más información, consulte [Data Flow](../integration-services/data-flow/data-flow.md).  
+8.  De forma opcional, puede agregar una tarea Flujo de datos y, en la superficie de diseño de la pestaña **Flujo de datos** , crear un flujo de datos para el controlador de eventos. Para obtener más información, consulte [Data Flow](../integration-services/data-flow/data-flow.md).  
   
 9. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete.  
 
@@ -134,7 +134,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
  Para obtener información sobre cómo establecer mediante programación estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obtener información sobre cómo agregar un controlador de eventos a un paquete, vea [agregar un controlador de eventos a un paquete](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   

@@ -3,9 +3,9 @@ title: "Coincidencia automática de pares en la sintaxis | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca8d67e673cefb5fc61562f6b16c9482a030a7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d8d02ee81c5d9bccbac11cbb9a099881598a2f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La coincidencia automática de pares en la sintaxis informa de manera inmediata sobre si están escritos correctamente los elementos de sintaxis que deben ir emparejados en el código. Esto se conoce como coincidencia de delimitadores en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , coincidencia de llaves en el Editor de consultas XMLA de Analysis Services y coincidencia de paréntesis en los editores MDX y DMX.  

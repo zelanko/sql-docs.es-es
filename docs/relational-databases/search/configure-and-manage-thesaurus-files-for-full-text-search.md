@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aada9589beecbd40470ff590a8f67cfd069c49f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 210fd9bd79fa84ac5a1a2fcaaca2144a393ab585
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las consultas de búsqueda de texto completo de 
@@ -204,7 +204,7 @@ Puede configurar el diccionario de sinónimos de un idioma determinado editando 
   
 5.  Use [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) para cargar el contenido del archivo de diccionario de sinónimos en tempdb, especificando el identificador local (LCID) que corresponde al idioma del archivo de diccionario de sinónimos. Por ejemplo, para el archivo de diccionario de sinónimos en inglés, tsenu.xml, el LCID correspondiente es 1033.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO
@@ -230,7 +230,7 @@ Puede configurar el diccionario de sinónimos de un idioma determinado editando 
   
 -   Un diccionario de sinónimos no debe contener ninguna entrada duplicada entre las entradas `<sub>` de los conjuntos de expansión y los elementos `<pat>` de los conjuntos de reemplazo.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

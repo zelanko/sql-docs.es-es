@@ -3,7 +3,7 @@ title: Proveedor Microsoft OLE DB para Microsoft Jet | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a09ad6fb1af544e98f1b7875d1e04c396e46e60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite que ADO tener acceso a las bases de datos de Microsoft Jet.
@@ -152,7 +152,7 @@ Microsoft.Jet.OLEDB.4.0
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Modo|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|

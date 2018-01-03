@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fbbbdd8675aff3dbf19e628b0063b96460f596f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7ab3415d2252e52e79a0129ab5c5d438ad114a76
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Ejecutar un paquete SSIS con código C# en una aplicación .NET
 En este tutorial de inicio rápido se muestra cómo escribir código C# para conectarse a un servidor de bases de datos y ejecutar un paquete SSIS.
 
 Para crear una aplicación de C#, puede usar Visual Studio, Visual Studio Code u otra herramienta de su elección.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de empezar, asegúrese de tener instalado Visual Studio o Visual Studio Code. Descargue la edición gratuita de Visual Studio Community Edition o Visual Studio Code desde [Descargas de Visual Studio](https://www.visualstudio.com/downloads/).
 
@@ -60,7 +60,7 @@ Si sus paquetes se han implementado en Azure SQL Database, obtenga la informaci�
 6. Seleccione el ensamblado (es decir, el archivo .dll) en la carpeta y haga clic en **Agregar**.
 7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Administrador de referencias** y agregue las tres referencias. Para asegurarse de que existen las referencias, consulte la lista **Referencias** en el Explorador de soluciones.
 
-## <a name="add-the-c-code"></a>Agregar el código de C# 
+## <a name="add-the-c-code"></a>Agregar el código C# 
 1. Abra **Program.cs**.
 
 2. Reemplace el contenido de **Program.cs** por el código siguiente. Agregue los valores adecuados para el servidor, la base de datos, el usuario y la contraseña.
@@ -121,7 +121,7 @@ namespace run_ssis_package
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de ejecutar un paquete.
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
-    - [Ejecutar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Ejecutar un paquete SSIS con Transact-SQL (VSCode)](ssis-quickstart-run-tsql-vscode.md)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
     - [Ejecutar un paquete SSIS con PowerShell](ssis-quickstart-run-powershell.md)

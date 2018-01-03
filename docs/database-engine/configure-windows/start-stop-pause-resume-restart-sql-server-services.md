@@ -47,11 +47,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e9ff0f1d6fb35c9c5bc63b973e4ec269f12b3865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, detener, pausar, reanudar o reiniciar los servicios de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](http://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
   
  La detención de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante el comando [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** requiere la pertenencia a los roles fijos de servidor **sysadmin** o **serveradmin** , y no es transferible.  
@@ -276,13 +276,13 @@ ms.lasthandoff: 11/20/2017
   
 -   Para esperar a que finalicen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] y los procedimientos almacenados que se encuentran en ejecución y, a continuación, detener [!INCLUDE[ssDE](../../includes/ssde-md.md)], ejecute la instrucción siguiente.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   Para detener [!INCLUDE[ssDE](../../includes/ssde-md.md)] inmediatamente, ejecute la instrucción siguiente.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   
@@ -360,7 +360,7 @@ ms.lasthandoff: 11/20/2017
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de la documentación de instalación de SQL Server](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)   

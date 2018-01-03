@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Ubicación del paquete**  
  Seleccione el tipo de ubicación de almacenamiento desde la que copiar el paquete.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo de autenticación**  
  Si copia desde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **User name**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **Ruta de acceso del paquete**  
  Escriba la ruta de acceso del paquete o haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Guardar copia del paquete](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Guardar paquetes](../integration-services/save-packages.md)   
  [Servicio Integration Services &#40;servicio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)

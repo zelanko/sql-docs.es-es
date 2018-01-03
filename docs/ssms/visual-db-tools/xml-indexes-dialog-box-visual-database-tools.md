@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Índices XML (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,23 +18,23 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d2fc393ebd15e3c76dd17912e0e9f29c7a369a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2c44720dea321d4fee407bd33d6a41ad4cdcee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Índices XML (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Índices XML** para crear índices para las columnas de tipo de datos XML que no pueden indexarse con el cuadro de diálogo **Índice y claves**. Cada columna XML puede tener más de un índice XML, pero el primero que se cree (principal) será la base de los otros (secundarios). Si elimina el índice XML principal, también se eliminarán los índices secundarios.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Índice XML seleccionado**  
 Enumera los índices XML existentes. Selecciónelo para mostrar sus propiedades en la cuadrícula que aparece a la derecha. Si la lista está vacía, no se ha definido ninguna para la tabla.  
   
 **Agregar**  
 Crea un nuevo índice XML.  
   
-**Delete**  
+**Eliminar**  
 Elimina el índice XML seleccionado en la lista **Índice XML seleccionado** . Si elimina el índice XML principal, se le notificará que con ello eliminará también todos los índices secundarios y que puede elegir entre continuar o cancelar la acción.  
   
 **Categoría General**  
@@ -92,6 +92,6 @@ Calcula las nuevas estadísticas cuando se crea el índice. Al volver a calcular
 **Bloqueos de fila permitidos**  
 Especifique si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Crear índices XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
   

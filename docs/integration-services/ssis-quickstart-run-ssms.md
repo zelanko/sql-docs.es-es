@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b35bade8769e3de11f60046375f082146da579d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53ad81ce3021f14e6d0638e7e60a050f892bb8bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Ejecutar un paquete SSIS con SQL Server Management Studio (SSMS)
 En esta guía de inicio rápido se muestra cómo usar SQL Server Management Studio (SSMS) para conectarse a la base de datos del catálogo de SSIS, y cómo ejecutar un paquete SSIS almacenado en el catálogo de SSIS desde el Explorador de objetos en SSMS.
 
 SQL Server Management Studio es un entorno integrado para administrar cualquier infraestructura de SQL, desde SQL Server a SQL Database. Para obtener más información acerca de SSMS, consulte [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de comenzar, asegúrese de que tiene instalada la última versión de SQL Server Management Studio (SSMS). Para descargar SSMS, consulte [Descarga de SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -33,11 +33,11 @@ Antes de comenzar, asegúrese de que tiene instalada la última versión de SQL 
 Use SQL Server Management Studio para establecer una conexión con el catálogo de SSIS. 
 
 > [!NOTE]
-> Un servidor Azure SQL Database se escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
+> Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
 
 1. Abra SQL Server Management Studio.
 
-2. Escriba la información siguiente en el cuadro de diálogo **Conectarse al servidor**:
+2. En el cuadro de diálogo **Conectar con el servidor**, escriba la información siguiente:
 
    | Configuración       | Valor sugerido | Más información | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -64,7 +64,7 @@ Use SQL Server Management Studio para establecer una conexión con el catálogo 
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de ejecutar un paquete.
     - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package with Transact-SQL (VS Code) (Ejecutar un paquete SSIS con Transact-SQL [VS Code])](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt (Ejecutar un paquete SSIS desde el símbolo del sistema)](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell (Ejecutar un paquete SSIS con PowerShell)](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C# (Ejecutar un paquete SSIS con C#)](./ssis-quickstart-run-dotnet.md) 
+    - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ejecutar un paquete de SSIS con PowerShell)
+    - [Ejecutar un paquete SSIS con C#](./ssis-quickstart-run-dotnet.md) 

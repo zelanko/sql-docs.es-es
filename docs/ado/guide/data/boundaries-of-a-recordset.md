@@ -3,7 +3,7 @@ title: "Los límites de un conjunto de registros | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67a300e30522a5f02bb6c33409a062a3c2434643
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f799f0c99fb1969cd5a1a49348725f7ce27b4f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="boundaries-of-a-recordset"></a>Límites de un conjunto de registros
 **Conjunto de registros** es compatible con la **BOF** y **EOF** propiedades para delinear el principio y al final, respectivamente, del conjunto de datos. Puede pensar en **BOF** y **EOF** como "registros"fantasma situados al principio y al final de"la **conjunto de registros**. Recuento de **BOF** y **EOF**, nuestro ejemplo **Recordset** ahora sería similar al siguiente:  

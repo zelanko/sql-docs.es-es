@@ -3,7 +3,7 @@ title: "Programación ADO en Visual C++ | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8decc959840898d0b82c86c0d955b29a7affddde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO mediante una sintaxis similar a Microsoft Visual Basic. Aunque dirigida a todos los usuarios, los programadores de ADO emplean diversos lenguajes como Visual Basic, Visual C++ (con y sin el **#import** directiva) y Visual J ++ (con el paquete de clases ADO/WFC).  
@@ -121,7 +121,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  Las excepciones a esta regla son los tipos de datos específicos de COM: **Variant**, **BSTR**, y **SafeArray**.  
   
 ### <a name="variant"></a>Variant  
- A **Variant** es un tipo de datos estructurados que contiene un miembro de valor y un miembro de tipo de datos. A **Variant** puede contener una amplia variedad de otros tipos de datos, incluidos otro Variant, BSTR, Boolean, IDispatch, puntero a IUnknown, moneda, fecha etc.. COM también proporciona métodos que facilitan la tarea para convierten a un tipo de datos a otro.  
+ A **Variant** es un tipo de datos estructurados que contiene un miembro de valor y un miembro de tipo de datos. A **Variant** puede contener una amplia variedad de otros tipos de datos, incluidos otro Variant, BSTR, Boolean, IDispatch, puntero a IUnknown, moneda, fecha etc. COM también proporciona métodos que facilitan la tarea para convierten a un tipo de datos a otro.  
   
  El **_variant_t** clase encapsula y administra el **Variant** tipo de datos.  
   

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc87dfeed3317ecd21bd96497e95be06658ab65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e8e62f92b50420a2cbc83ae8c8dcd6431ba8170
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-revision-history-master-data-services"></a>Historial de revisiones de miembro (Master Data Services)
   Cada vez que un miembro cambia, si el tipo de registro de transacciones de la entidad es miembro, se registra un historial de revisiones de miembro.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
 |----------------------|-----------|  
 |Revertir el historial de revisiones de miembro|[Reversión del historial de revisiones de miembro &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   

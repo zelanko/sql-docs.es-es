@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Parametrización de Always Encrypted es una característica de SQL Server Manage
   
 Sin la parametrización, el proveedor de datos .NET Framework pasa cada instrucción que usted crea en el Editor de consultas como una consulta no parametrizada. Si la consulta contiene literales o variables Transact-SQL con columnas cifradas como destino, el proveedor de datos .NET Framework para SQL Server no podrá detectarlas ni cifrarlas antes de enviar la consulta a la base de datos. Como resultado, la consulta presentará un error debido a un error de coincidencia de tipos (entre la variable Transact-SQL literal de texto no cifrado y la columna cifrada). Por ejemplo, la consulta siguiente presentará un error sin parametrización, suponiendo que la columna `SSN` está cifrada.   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -148,7 +148,7 @@ Si la parametrización para Always Encrypted y el comportamiento de Always Encry
 - Se inicializan con un solo literal. Las variables que se inicializan con expresiones que incluyen cualquier operador o función no se parametrizarán.      
 
 A continuación, aparecen ejemplos de variables que SQL Server Management Studio parametrizará.   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 ```
 
 Y, a continuación, algunos ejemplos de variables que SQL Server Management Studio no intentará parametrizar:   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +170,7 @@ Para que un intento de parametrización se realice correctamente:
 - Si el tipo declarado de la variable es un tipo de fecha o un tipo de hora, la variable se debe inicializar con una cadena usando uno de los siguientes formatos compatibles con ISO 8601.   
 
 Estos son ejemplos de declaraciones de variable Transact-SQL que generarán errores de parametrización:   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +192,7 @@ Otro ejemplo que aparece a continuación muestra 2 variables que cumplen con las
 >   [!NOTE]
 >   Como Always Encrypted admite un subconjunto limitado de conversiones de tipo, en muchos casos se requiere que ese tipo de datos de una variable Transact-SQL sea el mismo tipo de la columna de base de datos de destino. Por ejemplo, suponiendo que el tipo de la columna `SSN` de la tabla `Patients` sea `char(11)`, la consulta siguiente presentará un error, debido a que el tipo de la variable `@SSN` , que es `nchar(11)`, no coincide con el tipo de la columna.   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   Sin parametrización, la columna completa, incluidas las conversiones de tipo, se procesan dentro de SQL Server/Azure SQL Database. Con la parametrización habilitada, .NET Framework ejecuta algunas conversiones de tipo dentro de SQL Server Management Studio. Debido a las diferencias entre el sistema de tipo de .NET Framework y el sistema de tipo de SQL Server (por ejemplo, una precisión distinta de algunos tipos, como float), una consulta que se ejecuta con parametrización habilitada puede generar resultados distintos a los de la consulta ejecutada sin la parametrización habilitada. 
 
-#### <a name="permissions"></a>Permissions      
+#### <a name="permissions"></a>Permisos      
 
 Para ejecutar cualquier consulta contra las columnas cifradas, incluidas las consultas que recuperan datos en texto cifrado, necesita los permisos `VIEW ANY COLUMN MASTER KEY DEFINITION` y `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` pen la base de datos.   
 Además de los permisos anteriores, para descifrar cualquier resultado de consulta o para cifrar cualquier parámetro de consulta (generados por la parametrización de las variables Transact-SQL), también debe tener acceso a la clave maestra de columna que protege las columnas de destino:   
@@ -261,7 +261,7 @@ El cuadro de diálogo **Nueva clave de cifrado de columnas** permite generar una
 
 SQL Server Management Studio generará una clave de cifrado de columnas y luego recuperará los metadatos para la clave maestra de columna seleccionada en la base de datos. Después, SQL Server Management Studio usará los metadatos de la clave maestra de columna para ponerse en contacto con el almacén de claves que contiene la clave maestra de columna y cifrar la clave de cifrado de columnas. Por último, se crearán en la base de datos los metadatos de la nueva clave de cifrado de columnas. El cuadro de diálogo consigue esto generando y emitiendo una instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Permisos
 
 Necesita tener los permisos de base de datos *ALTER ANY ENCRYPTION MASTER KEY* y *VIEW ANY COLUMN MASTER KEY DEFINITION* en la base de datos para que el cuadro de diálogo cree los metadatos de la clave de cifrado de columnas y tenga acceso a los metadatos de la clave maestra de columna.
 Para tener acceso a un almacén de claves y usar la clave maestra de columna, es posible que necesite permisos en el almacén de claves o en la clave:
@@ -336,7 +336,7 @@ Si decide quitar la definición de la clave maestra de columna antigua de la bas
 > [!NOTE]
 > Es muy recomendable no eliminar permanentemente la antigua clave maestra de columna después de la rotación. Debería conservarla en su almacén de claves actual o archivarla en otra ubicación segura. Si restaura la base de datos desde un archivo de copia de seguridad a un punto en el tiempo anterior a la configuración de la nueva clave maestra de columna, necesitará la clave antigua para tener acceso a los datos.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Permisos
 
 La rotación de una clave maestra de columna requiere los siguientes permisos de base de datos:
 
@@ -371,7 +371,7 @@ Para realizar la rotación de una clave de cifrado de columnas, use el Asistente
 7.  En la página **Resumen** , revise las opciones que ha seleccionado, haga clic en **Finalizar** y cierre el asistente cuando finalice.
 8.  En el **Explorador de objetos**, vaya a la carpeta **Seguridad &gt; Siempre claves cifradas&gt; Claves de cifrado de columna** y encuentre la clave de cifrado de columnas antigua que quiere quitar de la base de datos. Haga clic con el botón derecho en la clave y seleccione **Eliminar**.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Permisos
 
 La rotación de una clave de cifrado de columnas requiere los siguientes permisos de base de datos: **ALTER ANY COLUMN MASTER KEY** : es obligatorio si se usa una nueva clave de cifrado de columnas generada automáticamente (también se generarán una nueva clave maestra de columna y sus metadatos nuevos).
 **ALTER ANY COLUMN ENCRYPTION KEY** : es necesario para agregar metadatos a la nueva clave de cifrado de columnas.
@@ -404,7 +404,7 @@ Cuando se actualiza una base de datos mediante un DACPAC y el DACPAC o la base d
 > [!NOTE]
 > Si la clave maestra de columna configurada para la columna de la base de datos o del DACPAC está almacenada en el Almacén de claves de Azure, se le pedirá que inicie sesión en Azure (si todavía no lo ha hecho).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Permisos
 
 Para realizar una operación de actualización de DAC si Always Encrypted está configurado en el DACPAC o en la base de datos de destino, podría necesitar algunos de los permisos siguientes o todos, en función de las diferencias que existan entre el esquema del DACPAC y el esquema de la base de datos de destino.
 
@@ -427,7 +427,7 @@ Al importar el BACPAC en una base de datos, los datos cifrados del BACPAC se car
 Si tiene una aplicación que está configurada para modificar o recuperar los datos cifrados almacenados en la base de datos de origen (la que exportó), no tendrá que hacer nada para permitir que la aplicación consulte los datos cifrados en la base de datos de destino, ya que las claves de ambas bases de datos son las mismas.
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Permisos
 
 Necesita los permisos *ALTER ANY COLUMN MASTER KEY* y *ALTER ANY COLUMN ENCRYPTION KEY* en la base de datos de origen. Necesita los permisos *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*y *VIEW ANY COLUMN ENCRYPTION* en la base de datos de destino.
 
@@ -450,7 +450,7 @@ En la tabla siguiente se enumeran los posibles escenarios de migración y su rel
 |Mover datos cifrados sin descifrarlos.<br><br>**Nota:** Las tablas de destino con columnas cifradas deben existir antes de la migración.| Proveedor de datos/controlador: *cualquiera*<br>Valor de cifrado de columnas = Deshabilitado<br><br>(Si se usan el Proveedor de datos de .NET Framework para SQL Server y .NET Framework 4.6 o posterior).| Proveedor de datos/controlador: *cualquiera*<br>Valor de cifrado de columnas = Deshabilitado<br><br>(Si se usan el Proveedor de datos de .NET Framework para SQL Server y .NET Framework 4.6 o posterior).<br><br>El usuario debe tener ALLOW_ENCRYPTED_VALUE_MODIFICATIONS establecido en ON.<br><br>Para obtener más información, vea [Migración de información confidencial protegida mediante Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Permisos
 
 Para **cifrar** o **descifrar** datos almacenados en el origen de datos, necesita tener los permisos *VIEW ANY COLUMN MASTER KEY DEFINITION* y *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* en la base de datos de origen.
 
@@ -461,7 +461,7 @@ También necesita tener acceso a las claves maestras de columna configuradas par
 - **Proveedor de servicios criptográficos (CAPI)** : el permiso y las credenciales que se le podrían solicitar al usar una clave o un almacén de claves dependen del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

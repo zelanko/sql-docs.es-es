@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a70bb2222ca1f07348a69aa2801dd8f3a6678198
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e3abf1a90f136294446c36691a4394fa3582c174
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="move-a-filestream-enabled-database"></a>Mover una base de datos habilitada para FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se muestra cómo mover una base de datos habilitada para FILESTREAM.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Copie el siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas y, a continuación, haga clic en **Ejecutar**. Este script muestra la ubicación de los archivos de base de datos físicos que usa la base de datos FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     USE Archive  
     GO  
     SELECT type_desc, name, physical_name from sys.database_files  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie el siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas y, a continuación, haga clic en **Ejecutar**. Este código pone la base de datos `Archive` sin conexión.  
   
-    ```tsql  
+    ```sql  
     USE master  
     EXEC sp_detach_db Archive  
     GO  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Copie el siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas y, a continuación, haga clic en **Ejecutar**. Este script establece la base de datos `Archive` en línea.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE Archive ON  
     PRIMARY ( NAME = Arch1,  
         FILENAME = 'c:\moved_location\archdat1.mdf'),  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
     GO  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

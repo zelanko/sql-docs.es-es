@@ -3,7 +3,7 @@ title: Cambiar el nombre de las soluciones y los elementos de un proyecto | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4134566cd32c4bfecc3428aff1c9a4eb2c95f9c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b0ad9e159497c6e99624dee4945be1eae6c3016
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rename-solutions-and-project-items"></a>Cambiar el nombre de las soluciones y los elementos de un proyecto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Es posible cambiar el nombre de una solución y sus elementos de proyecto en el Explorador de soluciones.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 12/05/2017
   
 3.  En la ventana Propiedades, modifique la propiedad **(Nombre)** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
   

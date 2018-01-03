@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ El número total de permisos para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14
 [![Permisos de motor de base de datos](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 Una vez que comprenda los permisos, aplique los permisos de nivel de servidor a los inicios de sesión y usuarios de permisos de nivel de base de datos con las instrucciones [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)y [DENY](../../t-sql/statements/deny-transact-sql.md) . Por ejemplo:   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -110,8 +110,8 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |----------------|----------------|  
 |ALTER|Todas las clases de objetos excepto TYPE.|  
 |CONTROL|Todas las clases de objetos: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW y<br />XML SCHEMA COLLECTION|  
-|DELETE|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION y SERVER.|  
-|EXECUTE|Tipos de CLR, scripts externos, procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y sinónimos|  
+|Delete|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION y SERVER.|  
+|Ejecute|Tipos de CLR, scripts externos, procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y sinónimos|  
 |IMPERSONATE|Inicios de sesión y usuarios|  
 |INSERT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
 |RECEIVE|Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
@@ -217,8 +217,8 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
+|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Ejecute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la versión actual).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
@@ -264,8 +264,8 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
+|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|Ejecute|EX|SCHEMA|Ejecute|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
@@ -294,8 +294,8 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
+|SCHEMA|Delete|DL|DATABASE|Delete|  
+|SCHEMA|Ejecute|EX|DATABASE|Ejecute|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
@@ -324,7 +324,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |SERVER|CONNECT SQL|COSQ|No aplicable|No aplicable|  
 |SERVER|CONTROL SERVER|CL|No aplicable|No aplicable|  
 |SERVER|CREATE ANY DATABASE|CRDB|No aplicable|No aplicable|  
-|SERVER|CREATE AVAILABILITY GROUP|CRAC|No aplicable|No aplicable|  
+|SERVER|Crear grupo de disponibilidad|CRAC|No aplicable|No aplicable|  
 |SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|No aplicable|No aplicable|  
 |SERVER|CREATE ENDPOINT|CRHE|No aplicable|No aplicable|  
 |SERVER|CREATE SERVER ROLE|CRSR|No aplicable|No aplicable|  
@@ -352,7 +352,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
-|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|Ejecute|EX|SCHEMA|Ejecute|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -362,7 +362,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
+|XML SCHEMA COLLECTION|Ejecute|EX|SCHEMA|Ejecute|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -424,7 +424,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 ## <a name="secial-considerations-for-column-level-permissions"></a>Consideraciones especiales sobre los permisos de nivel de columna
 
 Los permisos de nivel de columna se conceden con la sintaxis *<nombre_tabla> (<nombre_columna\<)*. Por ejemplo:
-```tsql
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un permiso DENY en la tabla se reemplaza por un permiso GRANT en una columna. Pero un permiso DENY subsiguiente en la tabla quitará la columna GRANT. 
@@ -435,7 +435,7 @@ Un permiso DENY en la tabla se reemplaza por un permiso GRANT en una columna. Pe
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Devolver la lista completa de los permisos que pueden concederse.  
  La siguiente instrucción devuelve todos los permisos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la función `fn_builtin_permissions` . Para obtener más información, vea [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. Devolver los permisos de una clase de objetos concreta  
  En el ejemplo siguiente se usa `fn_builtin_permissions` para ver todos los permisos que están disponibles para una categoría de elemento protegible. El ejemplo devuelve permisos de ensamblados.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. Devolver los permisos de un objeto concedidos a la entidad de seguridad que se ejecuta  
  En el ejemplo siguiente se usa `fn_my_permissions` para devolver una lista de los permisos efectivos que son retenidos por la entidad de seguridad de la llamada sobre un elemento protegible específico. El ejemplo devuelve los permisos de un objeto denominado `Orders55`. Para obtener más información, vea [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,13 +459,13 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. Devolver los permisos aplicables a un objeto especificado  
  El ejemplo siguiente devuelve los permisos aplicables a un objeto denominado `Yttrium`. Observe que la función integrada `OBJECT_ID` se utiliza para recuperar el identificador del objeto `Yttrium`.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   

@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb2b7ee8d96fe02383647345aad7bcf4562ad6f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c962285d10ca05434deafc9cf1d071a09f8cca65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ejecutar un paquete SSIS desde Visual Studio Code con Transact-SQL
 En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y, a continuación, usar instrucciones Transact-SQL para ejecutar un paquete SSIS almacenado en el catálogo de SSIS.
 
 Visual Studio Code es un editor de código para Windows, macOS y Linux que admite extensiones, incluida la extensión `mssql` para conectarse a Microsoft SQL Server, Azure SQL Database o Azure SQL Data Warehouse. Para obtener más información sobre VSCode, consulte [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de empezar, asegúrese de haber instalado la versión más reciente de Visual Studio Code y cargado la extensión `mssql`. Para descargar estas herramientas, consulte las páginas siguientes:
 -   [Descargar Visual Studio Code](https://code.visualstudio.com/Download)
@@ -60,7 +60,7 @@ Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
    | **Nombre del servidor** | Nombre completo del servidor | Si se está conectando a un servidor de Azure SQL Database, el nombre tendrá este formato: `<server_name>.database.windows.net`. |
    | **Nombre de la base de datos** | **SSISDB** | Nombre de la base de datos a la que se va a conectar. |
    | **Autenticación** | Inicio de sesión de SQL| Esta guía de inicio rápido usa la autenticación SQL. |
-   | **Nombre de usuario.** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
+   | **User name** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
    | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |
    | **Enter a name for this profile** (Escriba un nombre para el perfil) | Nombre de perfil, como **mySSISServer** | Un nombre de perfil guardado acelera la conexión en inicios de sesión posteriores. | 
@@ -101,5 +101,5 @@ GO
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
-    - [Ejecutar un paquete SSIS con PowerShell](ssis-quickstart-run-powershell.md)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ejecutar un paquete de SSIS con PowerShell)
     - [Ejecutar un paquete SSIS con C#](./ssis-quickstart-run-dotnet.md) 

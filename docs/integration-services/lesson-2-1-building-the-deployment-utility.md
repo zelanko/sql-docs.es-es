@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d1ad6752ce23a04d3c9989d0f35660c05e904e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4072e0134a01cfa27164f3d83b867a68b097295a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lección 2-1: Generar la utilidad de implementación
 En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
@@ -70,7 +70,7 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Crear una utilidad de implementación](../integration-services/packages/create-a-deployment-utility.md)  
   
   

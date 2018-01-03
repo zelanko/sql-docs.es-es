@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La creación y el mantenimiento de un índice de texto completo implica el rellenado del índice mediante un proceso denominado *rellenado* (también se denomina *rastreo*).  
@@ -58,7 +58,7 @@ Para crear un índice de texto completo sin rellenarlo inmediatamente, especifiq
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Ejemplo: Creación de un índice de texto completo sin ejecutar un rellenado completo  
  En el ejemplo siguiente se crea un índice de texto completo en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks` . Este ejemplo utiliza `WITH CHANGE_TRACKING OFF, NO POPULATION` para retrasar el rellenado completo inicial.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Ejemplo: Ejecución de un rellenado completo en una tabla  
  En el ejemplo siguiente se ejecuta un rellenado completo en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ Hay dos tipos de seguimiento de cambios:
     **Ejemplo: Modificación de un índice de texto completo para utilizar el seguimiento de cambios automático**  
     En el ejemplo siguiente se cambia el índice de texto completo de la tabla `HumanResources.JobCandidate` de la base de datos de ejemplo `AdventureWorks` para usar el seguimiento de cambios con rellenado automático.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ Hay dos tipos de seguimiento de cambios:
     **Ejemplo: Creación de un índice de texto completo con seguimiento de cambios manual**  
     En el ejemplo siguiente se crea un índice de texto completo que utilizará el seguimiento de cambios con rellenado manual en la tabla `HumanResources.JobCandidate` de la base de datos de ejemplo `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ Hay dos tipos de seguimiento de cambios:
     **Ejemplo: Ejecución de un rellenado manual**  
     En el ejemplo siguiente se ejecuta un rellenado manual en el índice de texto completo sometido a seguimiento de la tabla `HumanResources.JobCandidate` de la base de datos de ejemplo `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  
@@ -227,7 +227,7 @@ Las partes variables del nombre de archivo de registro de rastreo son las siguie
   
  Por ejemplo, `SQLFT0000500008.2` es el archivo de registro de rastreo para un identificador de base de datos = 5 y un identificador de catálogo de texto completo = 8. El 2 al final del nombre de archivo indica que existen dos archivos de registro de rastreo para esta pareja de base de datos y catálogo.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Introducción a la búsqueda de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

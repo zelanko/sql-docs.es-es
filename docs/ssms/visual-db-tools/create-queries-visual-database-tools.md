@@ -3,7 +3,7 @@ title: Crear consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44d4501f760e397a9ce6339a9f898f30cbc181fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c000e41faca9bcc3442cd67695f13d9a33e7366f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Crear consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las consultas permiten recuperar datos de las tablas y vistas de la base de datos. El **Diseñador de consultas y vistas**, que permite crear y trabajar con consultas, se compone de cuatro paneles: el [panel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), el [panel Criterios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)y el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
@@ -48,10 +48,10 @@ ms.lasthandoff: 12/05/2017
   
 Para restringir más la consulta, puede cambiar el código SQL en el **panel SQL** o elegir opciones como el criterio de ordenación y los alias de las columnas en el panel **Criterios**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Guardar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Tipos de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

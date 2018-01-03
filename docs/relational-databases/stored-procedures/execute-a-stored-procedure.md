@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ae7abf60c9d2cf540a0daa73bd0bb6ceebb3729
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb605b3caeee875464e91ac811e6b760b0e353d2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,13 +56,13 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   La intercalación de base de datos de llamada se usa al comparar los nombres de los procedimientos del sistema. Por tanto, en las llamadas a procedimientos use siempre el modelo exacto de mayúsculas y minúsculas de los nombres de procedimientos del sistema. Por ejemplo, este código generará un error si se ejecuta en el contexto de una base de datos que tenga una intercalación que distinga mayúsculas de minúsculas:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
      Los procedimientos del sistema comienzan por el prefijo **sp_**. Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de que calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
      En el ejemplo siguiente se muestra el método recomendado para ejecutar un procedimiento definido por el usuario. Observe que el procedimiento acepta un parámetro de entrada. Para obtener más información sobre cómo especificar parámetros de entrada y salida, vea [Especificar parámetros](../../relational-databases/stored-procedures/specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
      O bien  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> Seguridad  
  Para obtener más información, vea [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) y [EXECUTE AS &#40;Cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Para obtener más información, vea la sección "Permisos" de [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/17/2017
      **Pasar valor NULL**  
      Pase un valor NULL como valor del parámetro.  
   
-     **Valor**  
+     **Value**  
      Escriba el valor del parámetro cuando llame al procedimiento.  
   
 5.  Para ejecutar el procedimiento almacenado, haga clic en **Aceptar**.  
@@ -173,7 +173,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se muestra cómo ejecutar un procedimiento almacenado que espera un parámetro. En el ejemplo se ejecuta el procedimiento almacenado `uspGetEmployeeManagers` con el valor  `6` como parámetro `@EmployeeID` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -188,7 +188,7 @@ GO
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se muestra cómo usar [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) para establecer un procedimiento de manera que se ejecute automáticamente.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se muestra cómo usar [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) para que un procedimiento deje de ejecutarse automáticamente.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -213,7 +213,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Especificar parámetros](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Establecer la opción de configuración del servidor Buscar procedimientos de inicio](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

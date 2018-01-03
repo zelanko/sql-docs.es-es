@@ -3,7 +3,7 @@ title: Utilizar marcadores | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cbabea62b99f36adb2adf9f12e52d80644f33ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 A menudo resulta útil volver directamente a un registro específico después de haberse movido por el **Recordset** sin tener que desplazarse a través de cada registro y comparar valores. Por ejemplo, si se intenta buscar un registro mediante el **buscar** método, pero la búsqueda no devuelve ningún registro, se colocan automáticamente en cualquier extremo de la **conjunto de registros**. Si el proveedor es compatible con ellos, se pueden utilizar marcadores para marcar su lugar antes de usar el **buscar** método para que pueda volver a su ubicación. Un marcador es un **Variant** escriba el valor que identifica de forma única un registro en un **Recordset** objeto.  

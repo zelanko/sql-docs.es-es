@@ -23,13 +23,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre principal de servicio para las conexiones con Kerberos
+# <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El uso de la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se cumplan las siguientes condiciones:  
   
 -   Los equipos servidor y cliente deben formar parte del mismo dominio de Windows o estar en dominios de confianza.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 Puede comprobar que una conexión está utilizando Kerberos consultando la vista de administración dinámica sys.dm_exec_connections. Ejecute la consulta siguiente y compruebe el valor de la columna auth_scheme, que será "KERBEROS" si Kerberos está habilitado.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -62,7 +62,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  El método preferido para que los usuarios se autentiquen en SQL Server es la autenticación de Windows. Los clientes que usan la autenticación de Windows se autentican mediante NTLM o Kerberos. En un entorno de Active Directory, se intenta utilizar siempre en primer lugar la autenticación Kerberos. La autenticación Kerberos no está disponible para los clientes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mediante canalizaciones con nombre.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Al iniciarse el servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] , se intenta registrar el nombre principal de servicio (SPN). Si la cuenta con la que se inicia SQL Server no tiene permiso para registrar un SPN en los servicios de dominio de Active Directory, esta llamada producirá un error y se registrará un mensaje de advertencia en el registro de eventos de la aplicación así como en el registro de errores de SQL Server. Para registrar el SPN, se debe ejecutar [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una cuenta integrada, como Sistema local (no se recomienda) o Servicio de red, o bien, en una cuenta que tenga permiso para registrar un SPN, como la de administrador de dominio. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en el sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , se puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una cuenta virtual o una cuenta de servicio administrada (MSA). Las cuentas virtuales y las MSA pueden registrar un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se ejecuta en ninguna de estas cuentas, el SPN no se registrará en el inicio y el administrador de dominio deberá hacerlo manualmente.  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ Las cuentas de servicio se pueden usar como un SPN. Se especifican mediante el a
   
 Para determinar el método de autenticación de una conexión, ejecute la consulta siguiente.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -181,7 +181,7 @@ WHERE session_id = @@SPID;
   
  Si no se puede anular el registro del SPN durante el cierre, se indica el problema en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el cierre continúa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

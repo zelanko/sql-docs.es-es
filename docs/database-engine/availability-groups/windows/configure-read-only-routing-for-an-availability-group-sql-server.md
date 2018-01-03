@@ -23,11 +23,11 @@ caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f0fd76a64d46d8d4cd1efbdfa86e3f4b8c4b97c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0dc198b7f7e40bb99c0e019b9172b647f8bda79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurar el enrutamiento de solo lectura para un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para configurar un grupo de disponibilidad AlwaysOn para admitir el enrutamiento de solo lectura en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], puede usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. El*enrutamiento de solo lectura* hace referencia a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de enrutar las solicitudes de conexión de solo lectura a una [réplica secundaria legible](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) de AlwaysOn disponible (es decir, una réplica configurada para permitir cargas de trabajo de solo lectura al ejecutarse en un rol secundario). Para admitir el enrutamiento de solo lectura, el grupo de disponibilidad debe poseer un [agente de escucha de grupo de disponibilidad](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Los clientes de solo lectura deben dirigir sus solicitudes de conexión a este agente de escucha y las cadenas de conexión del cliente deben especificar el intento de aplicación como de “solo lectura”. Es decir, deben ser *solicitudes de conexión de intento de lectura*.  
@@ -60,7 +60,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -86,7 +86,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
@@ -136,13 +136,13 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
  Por ejemplo, la siguiente carga de la lista de enrutamiento equilibra la solicitud de conexión con intención de lectura entre dos réplicas de solo lectura, `Server1` y `Server2`. Los paréntesis anidados que rodean estos servidores identifican el conjunto con equilibrio de carga. Si ninguna réplica está disponible en dicho conjunto, tratará de conectarse de forma secuencial a las demás réplicas, `Server3` y `Server4`, en la lista de enrutamiento de solo lectura.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), 'Server3', 'Server4')  
 ```  
   
  Tenga en cuenta que cada entrada de la lista de enrutamiento puede ser un conjunto de réplicas de solo lectura con equilibrio de carga. El ejemplo siguiente demuestra este patrón.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5'), 'Server6')  
 ```  
   
@@ -208,7 +208,7 @@ GO
   
 ### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>Configuración y uso del proveedor de SQL Server PowerShell  
   
--   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   

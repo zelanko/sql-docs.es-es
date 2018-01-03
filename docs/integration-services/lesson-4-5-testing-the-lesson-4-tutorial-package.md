@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e16aa094a76f359d65b024fc428f4a2c623700b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lección 4-5: Probar el paquete del tutorial de la lección 4
 En tiempo de ejecución, el archivo dañado, Currency_BAD.txt, no podrá generar una coincidencia en la transformación Lookup Currency Key. Puesto que la salida de errores de Lookup Currency Key se ha configurado para redirigir las filas con errores al nuevo destino de filas con errores, el componente no genera ningún error y el paquete se ejecuta correctamente. Todas las filas que generan un error se escriben en el archivo ErrorOutput.txt.  
@@ -37,7 +37,7 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 **Flujo de control**  
   
-![Controlar el flujo en el paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
+![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
   
 **Flujo de datos**  
   

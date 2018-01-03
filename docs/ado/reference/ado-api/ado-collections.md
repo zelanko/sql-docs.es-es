@@ -3,7 +3,7 @@ title: Colecciones de ADO | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b6bc8649cca88a6a132db440a3294989dfdcadb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 911a1225bc9dd14cbf7bdc68ceb67af77ff819bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-collections"></a>Colecciones de ADO
 Las relaciones entre estas colecciones y los objetos ADO se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -34,7 +34,7 @@ Las relaciones entre estas colecciones y los objetos ADO se representan en el [m
 |||  
 |-|-|  
 |[Errores](../../../ado/reference/ado-api/errors-collection-ado.md)|Contiene todos los **Error** objetos creados en respuesta a un error relacionado con el proveedor.|  
-|[Campos](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los **campo** objetos de un **Recordset** objeto.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los **campo** objetos de un **Recordset** objeto.|  
 |[Parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contiene todos los **parámetro** objetos de un **comando** objeto.|  
 |[Propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contiene todos los **propiedad** objetos de una instancia concreta de un objeto.|  
   

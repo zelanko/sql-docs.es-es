@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 842e5bd0bcae76eaffa174c0fdacaf420ae88c5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lección 1: Crear un proyecto y un paquete básico con SSIS
 
@@ -63,10 +63,10 @@ El destino final de los datos de origen es la tabla de hechos **FactCurrency** d
   
 |Nombre de la columna|Tipo de datos|Tabla de búsqueda|Columna de búsqueda|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|Ninguno|Ninguno|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|Ninguno|Ninguno|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Asignar datos de origen para que sean compatibles con el destino  
 El análisis de los formatos de datos de origen y de destino indica que serán necesarias búsquedas para los valores **CurrencyKey** y **DateKey** . Las transformaciones que realizarán estas búsquedas obtendrán los valores de **CurrencyKey** y **DateKey** usando las claves alternativas de las tablas de dimensiones **DimCurrency** y **DimDate** .  
@@ -75,8 +75,8 @@ El análisis de los formatos de datos de origen y de destino indica que serán n
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|float|  
+|2|DimDate|FullDateAlternateKey|Date|  
+|3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  

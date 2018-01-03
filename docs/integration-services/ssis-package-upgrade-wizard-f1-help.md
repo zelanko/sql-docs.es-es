@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59869c0fdcb73fc30ee9bc763e8665f05f71df90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ayuda F1 del Asistente para actualización del paquete SSIS
   Utilice el Asistente para actualizar paquetes de SSIS si quiere actualizar paquetes creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] al formato de paquete para la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="ssis-upgrade-wizard"></a>Asistente para actualización de SSIS
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **No volver a mostrar esta página.**  
  Omite la página de bienvenida la próxima vez que abre el asistente.  
  
@@ -54,10 +54,10 @@ ms.lasthandoff: 11/20/2017
  **Origen del paquete**  
  Seleccione la ubicación de almacenamiento que contiene los paquetes que se van a actualizar. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Sistema de archivos**|Indica que los paquetes que se van a actualizar están en una carpeta en el equipo local.<br /><br /> Para hacer que el asistente realice una copia de seguridad de los paquetes originales antes de actualizarlos, estos deben estar almacenados en el sistema de archivos. Para obtener más información, vea el tema de procedimientos.|  
-|**Almacén de paquetes SSIS**|Indica que los paquetes que se van a actualizar están en el almacén de paquetes. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra. Para más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas de **Origen del paquete** correspondientes.|  
+|**Almacén de paquetes SSIS**|Indica que los paquetes que se van a actualizar están en el almacén de paquetes. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra. Para obtener más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas de **Origen del paquete** correspondientes.|  
 |**Microsoft SQL Server**|Indica que los paquetes que se van a actualizar son de una instancia existente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas de **Origen del paquete** correspondientes.|  
   
  **Carpeta**  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **Utilizar autenticación de SQL Server**  
  Seleccione esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **User name**  
  Escriba el nombre de usuario que la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará para conectarse al servidor.  
   
  **Contraseña**  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **Origen del paquete**  
  Especifique dónde se van a almacenar los paquetes de actualización. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Sistema de archivos**|Indica que los paquetes actualizados se van a guardar en una carpeta en el equipo local.|  
 |**Almacén de paquetes SSIS**|Indica que los paquetes actualizados se van a guardar en el almacén de paquetes de Integration Services. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio Integration Services administra. Para más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **Utilizar autenticación de SQL Server**  
  Seleccione esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **User name**  
  Escriba el nombre de usuario que se usará con la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor.  
   
  **Contraseña**  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Actualizar las cadenas de conexión para reflejar los nuevos nombres de proveedor**  
  Se actualizan las cadenas de conexión para que usen los nombres de los proveedores siguientes para la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="select-packages-page"></a>Página Seleccionar paquetes
   Utilice la página **Seleccionar paquetes** para seleccionar los paquetes que se van a actualizar. Esta página enumera los paquetes que se almacenan en la ubicación que se especificó en la página **Seleccionar ubicación de origen** del asistente.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre del paquete existente**  
  Seleccione uno o varios paquetes para actualizar.  
   
@@ -215,14 +215,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="complete-the-wizard-page"></a>Página Finalización del asistente
   Utilice la página **Finalización del asistente** para revisar y confirmar las opciones de actualización del paquete que ha seleccionado. Ésta es la última página del asistente desde la que puede volver y cambiar las opciones de esta sesión del asistente.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Resumen de opciones**  
  Revise las opciones de actualización que ha seleccionado en el asistente. Para cambiar alguna opción, haga clic en **Atrás** para volver a las páginas anteriores del asistente.
  
 ## <a name="upgrading-the-packages-page"></a>Página Actualizando los paquetes
   Utilice la página **Actualizando los paquetes** para ver e interrumpir el progreso de la actualización de paquetes. El Asistente para actualización del paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] actualiza los paquetes seleccionados uno a uno.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Panel Mensaje**  
  Muestra mensajes de progreso e información de resumen durante el proceso de actualización.  
   
@@ -258,7 +258,7 @@ En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], en el Explorador de o
   
 En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el Explorador de soluciones, abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, expanda el nodo **Paquetes SSIS** para ver los paquetes actualizados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Actualizar paquetes de Integration Services](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   

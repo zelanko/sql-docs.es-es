@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e21ab2cdfc462485bf15b741dbe6e795c0833de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paquete de Integration Services (SSIS) y parámetros del proyecto
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  La tabla siguiente enumera los tipos de valores.  
   
-|Nombre del valor|Descripción|Tipo del valor|  
+|Nombre del valor|Description|Tipo del valor|  
 |----------------|-----------------|-------------------|  
 |Valor de ejecución|El valor asignado a una instancia específica de la ejecución del paquete. Esta asignación invalida todos los demás valores, pero solo se aplica a una única instancia de ejecución del paquete.|Literal|  
 |Valor de servidor|El valor asignado al parámetro dentro del ámbito del proyecto, una vez que el proyecto se implementa en el servidor de Integration Services. Este valor invalida el valor predeterminado de diseño.|Literal o referencia de variable de entorno|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="create-parameters"></a>Create Parameters
 Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear parámetros de proyecto y parámetros de paquete. Los procedimientos siguientes proporcionan instrucciones paso a paso para crear parámetros de paquete o proyecto.  
   
-> **NOTA:** Si va a convertir un proyecto que creó con una versión anterior de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al modelo de implementación de proyectos, puede usar el **Asistente para conversión de proyectos de Integration Services** con el fin de crear parámetros de acuerdo con las configuraciones. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Package](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
+> **NOTA:** Si va a convertir un proyecto que creó con una versión anterior de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al modelo de implementación de proyectos, puede usar el **Asistente para conversión de proyectos de Integration Services** con el fin de crear parámetros de acuerdo con las configuraciones. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
   
 ### <a name="create-package-parameters"></a>Creación de parámetros del paquete  
   
@@ -129,7 +129,7 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
-    |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
+    |Description|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
     > **NOTA:** Cuando se implementa un proyecto en el catálogo, algunas propiedades más se asocian al proyecto. Para ver todas las propiedades de todos los parámetros del catálogo, use la vista [catalog.object_parameters &#40;base de datos de SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
@@ -160,7 +160,7 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
-    |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
+    |Description|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
 5.  Guarde el proyecto para guardar los cambios realizados en los parámetros. Los valores de parámetro se almacenan en configuraciones en el archivo de proyecto. Guarde el archivo de proyecto para confirmar en el disco los cambios en los valores de parámetro.  
   
@@ -169,7 +169,7 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 El cuadro de diálogo **Parametrizar** permite asociar un parámetro nuevo o existente con una propiedad de una tarea. Abra el cuadro de diálogo haciendo clic con el botón secundario en una tarea o en la pestaña Flujo de control en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y haciendo clic en **Parametrizar**. La siguiente lista describe los elementos de la interfaz de usuario en el cuadro de diálogo. Para más información sobre los parámetros, consulte [Parámetros de Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Propiedad**  
  Seleccione la propiedad de la tarea que desea asociar con un parámetro. Esta lista se rellena con todas las propiedades que se pueden utilizar con parámetros.  
   
@@ -185,10 +185,10 @@ El cuadro de diálogo **Parametrizar** permite asociar un parámetro nuevo o exi
  **Nombre**  
  Especifique el nombre del parámetro que desea crear.  
   
- **Description**  
+ **Descripción**  
  Especifique la descripción del parámetro.  
   
- **Valor**  
+ **Value**  
  Especifique el valor predeterminado del parámetro. Se conoce también como valor predeterminado de diseño, el cual se puede invalidar más adelante durante la fase de implementación.  
   
  **Ámbito**  

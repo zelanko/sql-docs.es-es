@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Cuando una instrucción SQL hace referencia a una vista no indizada, el analizad
 
 Por ejemplo, considere la vista siguiente:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 En función de esta vista, ambas instrucciones SQL realizan las mismas operaciones en las tablas base y producen el mismo resultado:
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ La característica del plan de presentación de [!INCLUDE[ssNoVersion](../includ
 
 Las sugerencias que se colocan en las vistas de una consulta pueden entrar en conflicto con otras sugerencias que se descubren al expandir la vista para obtener acceso a sus tablas base. En ese caso, la consulta devuelve un error. Por ejemplo, considere la siguiente vista que contiene una sugerencia de tabla en su definición:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 Ahora supongamos que usted ingresa la siguiente consulta:
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ Las sugerencias pueden propagarse por los niveles de las vistas anidadas. Por ej
 
 Si se utiliza la sugerencia `FORCE ORDER` en una consulta que contiene una vista, el orden de combinación de las tablas que se encuentran dentro de la vista se determina mediante la posición de la vista en la construcción ordenada. Por ejemplo, la siguiente consulta realiza una selección entre tres tablas y una vista:
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 Y `View1` se define tal como se muestra a continuación:
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ Por ejemplo, imagine un sistema donde una tabla de clientes está dividida en Se
 
 Tome como ejemplo el plan de ejecución que se crea para esta consulta ejecutada en Server1:
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ El plan de ejecución para esta consulta extrae las filas con los valores clave 
 
 El Procesador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también puede crear lógica dinámica en planes de ejecución de consultas para instrucciones SQL. Los valores clave de estas instrucciones no se conocen cuando se tiene que crear el plan. Tome como ejemplo este procedimiento almacenado:
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede predecir el valor de clave que proporcionará el parámetro `@CustomerIDParameter` cada vez que se ejecute el procedimiento. Puesto que el valor de clave no se puede predecir, el procesador de consultas no puede predecir tampoco a qué tabla miembro deberá tenerse acceso. Para tratar este caso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un plan de ejecución con lógica condicional, que se denominada filtros dinámicos, y que sirve para controlar la tabla miembro a la que se tendrá acceso en función del valor del parámetro de entrada. Suponiendo que el procedimiento almacenado `GetCustomer` se ejecutó en Server1, la lógica del plan de ejecución puede representarse como se muestra en el siguiente ejemplo:
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ Cuando se ejecuta una instrucción SQL en [!INCLUDE[ssNoVersion](../includes/ssn
 
 Los algoritmos que hacen coincidir las instrucciones SQL nuevas con los planes de ejecución existentes no utilizados de la caché requieren que todas las referencias a objetos estén completas. Por ejemplo, la primera de estas instrucciones `SELECT` no coincide con un plan existente, pero la segunda sí:
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ El uso de parámetros, incluidos los marcadores de parámetros de las aplicacion
  
 La única diferencia entre las dos instrucciones `SELECT` siguientes son los valores que se comparan en la cláusula `WHERE` :
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ Separar las constantes de la instrucción SQL mediante parámetros ayuda al moto
 
 * En Transact-SQL, utilice `sp_executesql`: 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ Si no incorpora explícitamente parámetros en el diseño de las aplicaciones, p
 
 Cuando se habilita la parametrización forzada, se puede producir la parametrización simple. Por ejemplo, la siguiente consulta no se puede parametrizar según las reglas de parametrización forzada:
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ Si una instrucción SQL se ejecuta sin parámetros, [!INCLUDE[ssNoVersion](../in
 
 Considere esta instrucción:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 El valor 1 del final de la instrucción puede especificarse como un parámetro. El motor relacional genera el plan de ejecución para este lote como si se hubiera especificado un parámetro en lugar del valor 1. Debido a esta parametrización simple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconoce que las dos instrucciones siguientes generan esencialmente el mismo plan de ejecución y reutiliza el primer plan para la segunda instrucción:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ Preparar una instrucción es más eficaz si se utilizan marcadores de parámetro
 
 En la primera, la aplicación puede ejecutar una consulta independiente para cada producto que se solicita:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 En la segunda, la aplicación hace lo siguiente: 
 
 1. Prepara una instrucción que contiene un marcador de parámetros (?):  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ La consulta siguiente cuenta el número de pedidos realizados en un determinado 
 
 Este ejemplo utiliza una tabla y nombres de columnas teóricos.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 Se supone que los índices siguientes están definidos en las tablas `lineitem` y `orders`:
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos mét
 * Nombres de servidores vinculados  
   Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones Transact-SQL mediante nombres que consten de cuatro partes. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos mét
 * Nombres de conectores ad hoc  
   Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. A continuación, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones Transact-SQL: 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ Ahora, la eliminación de particiones se lleva a cabo durante esta operación de
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (como la columna inicial lógica) y posiblemente otras columnas de clave de índice, para a continuación realizar una búsqueda  de segundo nivel con una segunda condición sobre una o más columnas adicionales para cada valor distinto devuelto por la operación de búsqueda de primer nivel. De esta manera, esta operación, denominada búsqueda selectiva, permite al optimizador de consultas realizar una operación de búsqueda o examen en función de una condición con el fin de determinar las particiones a las cuales se va a obtener acceso junto con una operación Index Seek de segundo nivel en el seno de ese operador, que devolverá las filas de las particiones que cumplan con una condición diferente. Por ejemplo, considere la siguiente consulta.
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 En este ejemplo, suponga que la tabla T, definida como `T(a, b, c)`, tiene una partición en la columna a y un índice clúster en la columna b. La siguiente función define los límites de la partición para la tabla T:
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ Estas herramientas le proporcionarán la siguiente información:
 
 Para ver cómo aparece esta información en la salida gráfica tanto del pan de ejecución como del Plan de presentación XML, considere la siguiente consulta sobre la tabla con particiones `fact_sales`. Esta consulta actualiza datos en dos particiones. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ El ejemplo siguiente crea una base de datos de prueba que contiene una única ta
 > [!NOTE]
 > Este ejemplo inserta más de 1 millón de filas en la tabla. En función de su hardware, la ejecución de este ejemplo puede tomar varios minutos. Antes de ejecutar este ejemplo, compruebe que tiene más de 1,5 GB de espacio en disco disponible. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

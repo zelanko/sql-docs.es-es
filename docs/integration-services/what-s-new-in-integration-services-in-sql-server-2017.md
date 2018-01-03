@@ -5,7 +5,7 @@ ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e7b7e796c6badea38ea4423561d26e7f53eb95d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
 En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
@@ -42,7 +42,7 @@ A continuación se presentan las características nuevas más importantes de Int
 ## <a name="new-in-azure-data-factory"></a>Novedades en Azure Data Factory
 
 Con la versión preliminar pública de Azure Data Factory versión 2 de septiembre de 2017, ahora puede hacer lo siguiente:
--   Implementar paquetes en la base de datos de catálogo de SSIS (SSISDB) en Azure SQL Database.
+-   Implementar paquetes en la base de datos del catálogo de SSIS (SSISDB) en Azure SQL Database.
 -   Ejecutar paquetes implementados en Azure en Integration Runtime para la integración de SSIS en Azure, un componente de Azure Data Factory versión 2.
 
 Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
@@ -59,7 +59,7 @@ Ahora puede desarrollar proyectos y paquetes de SSIS para las versiones de SQL S
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>Novedades de SSIS en SQL Server 2017 RC1
 
-### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Características nuevas y modificadas en la escalabilidad horizontal para SSIS
+### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Características nuevas y modificadas en Escalabilidad horizontal para SSIS
 
 -   Patrón de escalabilidad horizontal ahora admite alta disponibilidad. Puede habilitar Always On para SSISDB y configurar el clúster de conmutación por error de Windows Server para el servidor que hospeda el servicio del patrón de escalabilidad horizontal. Al aplicar este cambio al patrón de escalabilidad horizontal, evita un único punto de error y proporciona una alta disponibilidad para la implementación de escalabilidad horizontal completa.
 -   Se mejoró el control de conmutación por error de los registros de ejecución de Trabajadores de escalabilidad horizontal. Los registros de ejecución se guardan en un disco local por si el trabajo de escalabilidad horizontal se detiene inesperadamente. Posteriormente, cuando se reinicia el trabajo, vuelve a cargar los registros persistentes y los sigue guardando en SSISDB.

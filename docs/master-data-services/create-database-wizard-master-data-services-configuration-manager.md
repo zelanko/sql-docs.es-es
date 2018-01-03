@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d45ff186cd3bbd51c135e3a3cbcfb77401cb3b96
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73864b10e7046e74d14245039796441b27fee8b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Asistente Crear base de datos (Administrador de configuración de Master Data Services)
   Utilice el asistente para **Crear base de datos** con el fin de crear una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**Instancia de SQL Server**|Especifique el nombre de la instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que vaya a hospedar a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Puede ser una instancia predeterminada o con nombre en un equipo local o remoto. Especifique la información, para ello escriba:<br /><br /> Un punto (.) para conectarse a la instancia predeterminada en su equipo local.<br /><br /> El nombre del servidor o dirección IP para conectarse a la instancia predeterminada en el equipo local o remoto especificado.<br /><br /> El nombre del servidor o dirección IP y el nombre de instancia para conectarse a la instancia con nombre en el equipo local o remoto especificado. Especifique esta información en el formato *nombre_servidor*\\*nombre_instancia*.|  
 |**Tipo de autenticación**|Seleccione el tipo de autenticación a utilizar en la conexión a la instancia de SQL Server especificada. Las credenciales que utilice para conectarse deben formar parte del rol de servidor **sysadmin** para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. Para obtener más información sobre el rol sysadmin, consulte [Roles de nivel de servidor](../relational-databases/security/authentication-access/server-level-roles.md).<br /><br /> Entre los tipos de autenticación se incluyen:<br /><br /> **Usuario actual: Seguridad integrada**: utiliza la autenticación integrada de Windows para la conexión mediante el uso de las credenciales de la cuenta de usuario de Windows actual. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] utiliza las credenciales de Windows del usuario que inició sesión en el equipo y abrió la aplicación. No puede especificar unas credenciales de Windows diferentes en la aplicación. Si desea conectarse con credenciales diferentes de Windows, debe iniciar sesión en el equipo como ese usuario y, a continuación, abrir [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Cuenta de SQL Server**: utiliza una cuenta de SQL Server para la conexión. Al seleccionar esta opción, se habilitan los campos **Nombre de usuario** y **Contraseña** y es preciso que especifique las credenciales para una cuenta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.|  
-|**Nombre de usuario**|Especifique el nombre de la cuenta de usuario que se utilizará para conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. La cuenta debe inscribirse en el rol **sysadmin** en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.<br /><br /> Cuando el **Tipo de autenticación** sea **Usuario actual: Seguridad integrada**, el cuadro **Nombre de usuario** es de solo lectura y muestra el nombre de la cuenta de usuario de Windows con la que se ha iniciado sesión en el equipo.<br /><br /> Cuando el **Tipo de autenticación** es **Cuenta de SQL Server**, se habilitará el cuadro **Nombre de usuario** y deberá especificar las credenciales para una cuenta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la instancia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.|  
+|**User name**|Especifique el nombre de la cuenta de usuario que se utilizará para conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. La cuenta debe inscribirse en el rol **sysadmin** en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.<br /><br /> Cuando el **Tipo de autenticación** sea **Usuario actual: Seguridad integrada**, el cuadro **Nombre de usuario** es de solo lectura y muestra el nombre de la cuenta de usuario de Windows con la que se ha iniciado sesión en el equipo.<br /><br /> Cuando el **Tipo de autenticación** es **Cuenta de SQL Server**, se habilitará el cuadro **Nombre de usuario** y deberá especificar las credenciales para una cuenta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la instancia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.|  
 |**Contraseña**|Especifique la contraseña asociada a la cuenta de usuario:<br /><br /> Cuando el **Tipo de autenticación** sea **Usuario actual: Seguridad integrada**, el cuadro **Contraseña** es de solo lectura y las credenciales de la cuenta de usuario especificada de Windows se usan para conectarse.<br /><br /> Cuando el **Tipo de autenticación** sea **Cuenta de SQL Server**, se habilitará el cuadro **Contraseña** y deberá especificar la contraseña asociada a la cuenta de usuario especificada.|  
 |**Probar conexión**|Compruebe que la cuenta de usuario especificada pueda conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y que la cuenta tenga permiso para crear una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para esa instancia. Si no hace clic en **Probar conexión**, se probará la conexión cuando haga clic en **Siguiente**.|  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="progress-and-finish"></a>Progreso y Finalizar  
  Muestra el progreso del proceso de creación. Una vez se haya creado la base de datos, haga clic en **Finalizar** para cerrar el asistente de la base de datos y volver a la página **Bases de datos** . La nueva base de datos se habrá seleccionado y podrá ver y modificar la configuración del sistema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Requisitos de base de datos &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   

@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Mantenimiento y solución de problemas del conector de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      Importe la nueva clave asimétrica.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      Cree un nuevo inicio de sesión que se asociará con la nueva clave asimétrica (como se muestra en las instrucciones de TDE).  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      Cree una nueva credencial para asignarse al inicio de sesión.  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      Elija la base de datos cuya clave de cifrado de base de datos le gustaría volver a cifrar.  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      Vuelva a cifrar la clave de cifrado de la base de datos.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ Si actualmente usa la versión 1.0.0.440 o anterior, siga estos pasos para actua
   
 6.  Ejecute la siguiente instrucción para modificar el proveedor de EKM y comenzar a usar la versión más reciente del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Asegúrese de que la ruta del archivo apunte a donde descargó la versión más reciente. (Se puede omitir este paso si se instala la nueva versión en la misma ubicación que la versión original). 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -207,7 +207,7 @@ Para más información sobre Active Directory, consulte [Asociación de las susc
 ##  <a name="AppendixC"></a> C. Explicación de los códigos de error para el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Códigos de error del proveedor:**  
   
-Código de error  |Símbolo  |Descripción    
+Código de error  |Símbolo  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | La operación se ha realizado correctamente.    
 1 | scp_err_Failure | Se produjeron errores en la operación.    
@@ -298,7 +298,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 -   Referencia de [cmdlets del Almacén de claves de Azure](https://msdn.microsoft.com/library/dn868052.aspx) de PowerShell  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  

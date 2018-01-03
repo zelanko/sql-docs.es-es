@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6424fb7bb1f3578848122341990aa97065414270
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfbca740ee6d88dd9baafa286903254ffdd0ec5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
   Todos los componentes que se instalan automáticamente en la máquina local aparecen en el **cuadro de herramientas de SSIS**. Al instalar componentes adicionales, haga clic con el botón derecho en el cuadro de herramientas y, después, haga clic en **Actualizar cuadro de herramientas** para agregar los componentes.  

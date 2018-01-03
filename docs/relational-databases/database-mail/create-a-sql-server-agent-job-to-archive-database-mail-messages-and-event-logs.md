@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Para almacenar mensajes y los registros de Correo electrónico de base de datos mediante:**  [Agente SQL Server](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Las nuevas tablas para almacenar los datos del archivo se pueden ubicar en una base de datos de archivo especial. De forma alternativa, las filas se pudieron exportar a un archivo de texto.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
  En su entorno de producción, puede agregar otros procedimientos de comprobación de errores y enviar un mensaje de correo electrónico a los operadores si el trabajo provoca un error.  
   
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Debe ser miembro del rol fijo de servidor **sysadmin** para ejecutar los procedimientos almacenados que se describen en este tema.  
   
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  En el cuadro **Comando** , escriba la instrucción siguiente para crear una tabla con el nombre del mes anterior y filas anteriores al inicio del mes actual:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  En el cuadro **Comando** , escriba la instrucción siguiente para crear una tabla de datos adjuntos con el nombre del mes anterior y los archivos adjuntos correspondientes a los mensajes transferidos en el paso anterior:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  En el cuadro **Comando** , escriba la instrucción siguiente para crear una tabla de registros con el nombre del mes anterior y las entradas de registro correspondientes a los mensajes transferidos en el paso anterior:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  En el cuadro **Comando** , escriba la instrucción siguiente para quitar las filas anteriores al mes actual de las tablas del Correo electrónico de base de datos:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -191,7 +191,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  En el cuadro **Comando** , escriba la instrucción siguiente para quitar las filas anteriores al mes actual del registro de eventos del Correo electrónico de base de datos:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

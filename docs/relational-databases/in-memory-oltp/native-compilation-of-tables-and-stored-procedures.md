@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] OLTP en memoria introduce el concepto de compilación nativa. 
@@ -41,7 +41,7 @@ OLTP en memoria compila las tablas optimizadas para memoria cuando se crean, y l
 
 La consulta siguiente muestra todos los archivos DLL de tablas y procedimientos almacenados cargados actualmente en la memoria del servidor:
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -65,7 +65,7 @@ Al crear una tabla optimizada para memoria mediante la instrucción **CREATE TAB
 
 Considere el script de ejemplo siguiente, que crea una base de datos y una tabla optimizada para memoria:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -158,7 +158,7 @@ Para obtener más información acerca de los procedimientos almacenados compilad
 
 Considere el procedimiento almacenado de ejemplo siguiente, que inserta filas en la tabla t1 del ejemplo anterior:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -215,8 +215,8 @@ Entre los archivos que se generan cuando se compila una tabla o un procedimiento
 
 No se necesita ninguna interacción del usuario para administrar estos archivos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creará y quitará los archivos según sea necesario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
-[Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

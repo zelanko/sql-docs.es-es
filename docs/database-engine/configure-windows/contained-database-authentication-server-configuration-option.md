@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7d52acb314aee44edb28fee3664c76d8ecd1ab74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 27ec2c2ca3da987f9eb09c9620823f1bfe084bf1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ ms.lasthandoff: 11/20/2017
  Si una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene bases de datos independientes, la configuración de **autenticación de base de datos independiente** se puede establecer en 0 mediante el uso de la instrucción **RECONFIGURE WITH OVERRIDE** . Al establecer **autenticación de base de datos independiente** en 0 se deshabilitará la autenticación de base de datos independiente para las bases de datos independientes.  
   
 > [!IMPORTANT]  
->  Cuando se habilitan las bases de datos independientes, los usuarios de la base de datos con el permiso ALTER ANY USER, como los miembros de los roles de base de datos db_owner y db_accessadmin, pueden otorgar acceso a las bases de datos y, al hacerlo, otorgan acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto significa que el control sobre el acceso al servidor ya no se limita a los miembros con roles fijos de sysadmin y securityadmin, y a los inicios de sesión con el permiso ALTER ANY LOGIN y de servidor de CONTROL de nivel de servidor. Antes de permitir las bases de datos independientes, debe entender los riesgos asociados a ellas. Para más información, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+>  Cuando se habilitan las bases de datos independientes, los usuarios de la base de datos con el permiso ALTER ANY USER, como los miembros de los roles de base de datos db_owner y db_accessadmin, pueden otorgar acceso a las bases de datos y, al hacerlo, otorgan acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto significa que el control sobre el acceso al servidor ya no se limita a los miembros con roles fijos de sysadmin y securityadmin, y a los inicios de sesión con el permiso ALTER ANY LOGIN y de servidor de CONTROL de nivel de servidor. Antes de permitir las bases de datos independientes, debe entender los riesgos asociados a ellas. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se habilitan las bases de datos independientes en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  

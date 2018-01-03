@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>Crear un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Para crear un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Requiere el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento.  
   
 ##  <a name="Procedures"></a> Crear un procedimiento almacenado  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
     |---------------|-----------|  
     |Autor|*Su nombre.*|  
     |Create Date|*La fecha de hoy.*|  
-    |Descripción|Devuelve datos de empleado.|  
+    |Description|Devuelve datos de empleado.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  En el **Editor de consultas**, reemplace la instrucción SELECT por la siguiente instrucción:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

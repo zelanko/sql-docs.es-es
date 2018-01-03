@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Esta aplicación procesa pedidos. Hay mucho trabajo de procesamiento para los pedidos recientes. Sin embargo, hay poco para los pedidos antiguos. Los pedidos recientes están en una tabla optimizada para memoria. Los pedidos antiguos están en una tabla basada en disco. Todos los pedidos posteriores a *hotDate* están en la tabla optimizada para memoria. Todos los pedidos anteriores a *hotDate* están en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="code-listing"></a>Listado de código  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  
@@ -220,7 +220,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ejemplos de código de OLTP en memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

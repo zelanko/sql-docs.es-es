@@ -3,7 +3,7 @@ title: "Páginas de propiedades de SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bbb3f4310dfedc47615f47ba07d95ed44a9416e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propiedades de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En los cuadros de diálogo de páginas de propiedades de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] se usa un formato común para mostrar la información con categorías que se expanden y se contraen. Los campos que aparecen dependen de la propiedad concreta. Las propiedades atenuadas son de solo lectura. Muy cerca de la parte superior de cada página de propiedades se encuentran los botones Por categorías y Alfabético.  

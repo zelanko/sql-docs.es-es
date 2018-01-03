@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c10eafdd991210ceff584c215efc9426446bb40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-editor"></a>Editor avanzado
   Use el cuadro de diálogo **Editor avanzado** para configurar las propiedades del objeto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seleccionado.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  Las propiedades que se muestran varían en función del componente. Para obtener más información sobre las propiedades que pueden mostrarse en el **Editor avanzado**, vea los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Transformaciones de Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

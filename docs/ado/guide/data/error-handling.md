@@ -1,9 +1,9 @@
 ---
-title: Control de errores | Documentos de Microsoft
+title: Tratamiento de errores | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8434e598deba57bf72dfdb8df1c31990113b304c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f62427574d32f7abe95565bd80f2d4dc950f2c1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling"></a>Tratamiento de errores
 ADO utiliza varios métodos diferentes para notificar a una aplicación de errores que se producen. Esta sección describen los tipos de errores que pueden producirse cuando se utiliza ADO y cómo se notifica a la aplicación. Se termina con unas sugerencias sobre cómo controlar los errores.  

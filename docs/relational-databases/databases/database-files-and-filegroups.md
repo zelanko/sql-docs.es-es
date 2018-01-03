@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Como mínimo, todas las bases de datos de [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] tienen dos archivos del sistema operativo: un archivo de datos y un archivo de registro. Los archivos de datos contienen datos y otros objetos, como tablas, índices, procedimientos almacenados y vistas. Los archivos de registro contienen la información necesaria para recuperar todas las transacciones de la base de datos. Los archivos de datos se pueden agrupar en grupos de archivos para su asignación y administración.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="database-files"></a>Archivos de la base de datos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen tres tipos de archivos, tal como se muestra en la tabla siguiente.  
   
-|Archivo|Descripción|  
+|Archivo|Description|  
 |----------|-----------------|  
 |Principal|El archivo de datos principal incluye la información de inicio de la base de datos y apunta a los demás archivos de la misma. Los datos y objetos del usuario se pueden almacenar en este archivo o en archivos de datos secundarios. Cada base de datos tiene un archivo de datos principal. La extensión recomendada para los nombres de archivos de datos principales es .mdf.|  
 |Secundario|Los archivos de datos secundarios son opcionales, están definidos por el usuario y almacenan los datos del usuario. Se pueden utilizar para distribuir datos en varios discos colocando cada archivo en una unidad de disco distinta. Además, si una base de datos supera el tamaño máximo establecido para un archivo de Windows, puede utilizar los archivos de datos secundarios para permitir el crecimiento de la base de datos.<br /><br /> La extensión de nombre de archivo recomendada para los archivos de datos secundarios es .ndf.|  
@@ -97,7 +97,7 @@ La forma de archivo que utiliza una instantánea de base de datos para almacenar
   
  Todos los archivos de datos se almacenan en los grupos de archivos que se indican en la tabla siguiente.  
   
-|Grupo de archivos|Descripción|  
+|Grupo de archivos|Description|  
 |---------------|-----------------|  
 |Principal|Grupo de archivos que contiene el archivo principal. Todas las tablas del sistema se asignan al grupo de archivos principal.|  
 |Definidos por el usuario|Cualquier grupo de archivos creado específicamente por el usuario al crear la base de datos o al modificarla.|  
@@ -110,7 +110,7 @@ La forma de archivo que utiliza una instantánea de base de datos para almacenar
 ### <a name="file-and-filegroup-example"></a>Ejemplo de archivos y grupos de archivos
  En el siguiente ejemplo se crea una base de datos en una instancia de SQL Server. La base de datos tiene un archivo de datos principal, un grupo de archivos definido por el usuario y el archivo de registro. El archivo de datos principal está en el grupo de archivos principal y el grupo de archivos definido por el usuario tiene dos archivos de datos secundarios. Una instrucción ALTER DATABASE hace que el grupo de archivos definido por el usuario sea el grupo predeterminado. A continuación, se crea una tabla que especifica el grupo de archivos definido por el usuario. (En este ejemplo se usa una ruta de acceso genérica `c:\Program Files\Microsoft SQL Server\MSSQL.1` para evitar que se especifique una versión de SQL Server).
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

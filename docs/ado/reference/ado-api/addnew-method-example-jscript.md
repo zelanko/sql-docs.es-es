@@ -3,7 +3,7 @@ title: "Ejemplo del método AddNew (JScript) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2326d40e4e2485f71382517f62f8f4cbe344b18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 324577be55147c47635ec8c20881942d51cd5adf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addnew-method-example-jscript"></a>Ejemplo del método AddNew (JScript)
 Este ejemplo se utiliza la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para crear un nuevo registro con el nombre especificado. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **AddNewJS.asp**.  

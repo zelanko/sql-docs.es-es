@@ -3,9 +3,9 @@ title: Buscar y reemplazar | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="find-what"></a>Buscar  
  Estos controles le permiten especificar la cadena o expresión para la búsqueda de coincidencias.  
   
- **Find what**  
+ **Buscar**  
  Escriba el texto que desea buscar. El cuadro de diálogo intentará rellenar el texto de búsqueda probable utilizando el texto seleccionado con el cursor antes de abrir el cuadro de diálogo, o bien texto cercano o texto que se haya buscado con anterioridad. Podrá reutilizar una de las últimas 20 cadenas de búsqueda seleccionándola en esta lista desplegable.  
   
  **[cadena con caracteres comodín]**  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/17/2017
  **Reemplazar en archivos**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Reemplazar en archivos** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

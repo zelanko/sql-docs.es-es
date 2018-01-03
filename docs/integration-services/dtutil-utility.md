@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 318e2d1481f9398780dafe56b3db3f24545242a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dtutil-utility"></a>dtutil, utilidad
   La utilidad del símbolo del sistema **dtutil** se usa para administrar paquetes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La utilidad puede copiar, mover, eliminar o comprobar la existencia de un paquete. Estas acciones se pueden realizar en cualquier paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] almacenado en una de estas tres ubicaciones: una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos. Si la utilidad tiene acceso a un paquete almacenado en **msdb**, el símbolo del sistema puede requerir un nombre de usuario y una contraseña. Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el símbolo del sistema requiere un nombre de usuario y una contraseña. Si falta el nombre de usuario, **dtutil** intenta iniciar una sesión en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la Autenticación de Windows. El tipo de almacenamiento del paquete se identifica mediante las opciones **/SQL**, **/FILE**y **/DTS** .  
@@ -122,7 +122,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Códigos de salida de dtutil  
  **dtutil** establece un código de salida que le avisa cuando se detectan errores de sintaxis, se usan argumentos incorrectos o se especifican combinaciones no válidas de opciones. En caso contrario, la utilidad presenta el mensaje "La operación se ha realizado correctamente". En la tabla siguiente se muestran los valores que la utilidad **dtutil** puede establecer al salir.  
   
-|Value|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0|La utilidad se ha ejecutado correctamente.|  
 |1|Error de la utilidad.|  
@@ -130,7 +130,7 @@ dtutil /option [value] [/option [value]]...
 |5|La utilidad no puede cargar el paquete solicitado.|  
 |6|La utilidad no puede resolver la línea de comandos porque contiene errores sintácticos o semánticos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  No puede usar archivos de comandos o redireccionamiento con **dtutil**.  
   
  El orden de las opciones de la línea de comandos no es significativo.  
@@ -278,7 +278,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Ejecutar paquetes de Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   

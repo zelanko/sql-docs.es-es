@@ -3,7 +3,7 @@ title: Reglas para actualizar resultados (Visual Database Tools) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e40ed53f2d9b239e5bc565533fda84882a8a030
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2894e4f5b670136e1882689758d8c4ce5f580db5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Reglas para actualizar resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En muchos casos, puede actualizar el conjunto de resultados mostrado en el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Sin embargo, en algunos casos no es posible realizar esta actualización.  
@@ -40,7 +40,7 @@ Si la consulta se basa en una vista, se podrá actualizar. Se aplican las mismas
   
 La siguiente tabla resume casos específicos en los que sería posible o no actualizar los resultados de la consulta en el panel Resultados. En muchos casos, la base de datos que se utiliza establece si se pueden actualizar los resultados de la consulta.  
   
-|Query|¿Pueden actualizarse los resultados?|  
+|Consulta|¿Pueden actualizarse los resultados?|  
 |---------|---------------------------|  
 |Consulta basada en una tabla con clave principal en la lista de resultados|Sí (con la excepción de lo mostrado a continuación).|  
 |Consulta basada en una tabla sin índice único y sin clave principal|Depende de la consulta y de la base de datos. Algunas bases de datos permiten actualizaciones si hay suficiente información disponible para identificar registros de forma exclusiva.|  
@@ -70,6 +70,6 @@ Además, es posible que no pueda actualizar columnas específicas de los resulta
   
 -   Columnas de marca de tiempo o BLOB  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

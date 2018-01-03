@@ -3,9 +3,9 @@ title: "Puntos de interrupción (ventana) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c8b84f4cf69b06e54e8a8d10c1121add1c6026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1d2cbc8ca85606b85f8f4780bfda7bf25527162
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Depurador de Transact-SQL: ventana Puntos de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La ventana **Puntos de interrupción** muestra todos los puntos de interrupción que se establecen en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] actual. Para administrar los puntos de interrupción, utilice la barra de herramientas de la ventana **Puntos de interrupción** . Los puntos de interrupción son las ubicaciones del código en las que la ejecución se pausa en modo de depuración para que se puedan ver los datos de depuración.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  Puede agregar y quitar las columnas siguientes seleccionándolos en la lista **Columnas** .  
   
- **Filtro**  
+ **Filter**  
  Muestra **(ninguno)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
   
  **Al visitar**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="breakpoints-window-toolbar"></a>Barra de herramientas de la ventana Puntos de interrupción  
  Cuando la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] actual tiene puntos de interrupción activos, la ventana **Puntos de interrupción** muestra una barra de herramientas que se puede utilizar para administrarlos.  
   
- **Delete**  
+ **Eliminar**  
  Elimina el punto de interrupción seleccionado.  
   
  **Eliminar todos los puntos de interrupción**  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
  **Columnas**  
  Muestra todas las columnas que se pueden mostrar en la ventana **Puntos de interrupción** . Una casilla indica las columnas que se muestran. Para agregar o quitar una columna en la ventana **Puntos de interrupción** , seleccione la columna en la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

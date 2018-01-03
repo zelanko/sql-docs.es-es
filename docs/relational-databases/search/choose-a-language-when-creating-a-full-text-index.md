@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Al crear un índice de texto completo, tiene que especificar un idioma de columna para la columna indizada. Las consultas de texto completo usarán el [separador de palabras y los lematizadores](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) del idioma especificado en la columna. Hay varios aspectos que deben tenerse en cuenta al elegir el idioma de columna cuando se crea un índice de texto completo. Estas consideraciones se refieren al modo en que se acorta el texto y se indiza a continuación mediante el motor de texto completo.  
   
 > [!NOTE]  
@@ -116,7 +121,7 @@ ms.lasthandoff: 12/01/2017
  De forma predeterminada, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la búsqueda de texto completo analizará los términos de consulta mediante el idioma especificado para cada columna que se incluya en la cláusula de texto completo. Para invalidar este comportamiento, especifique un idioma no predeterminado en el momento de la consulta. Para los idiomas admitidos cuyos recursos estén instalados, se puede usar la cláusula LANGUAGE *language_term* de una consulta [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para especificar el idioma que se usa para la separación de palabras, la lematización, el diccionario de sinónimos y el procesamiento de las palabras irrelevantes de los términos de las consultas.  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

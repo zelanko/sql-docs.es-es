@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b9c1a12ddc536837a805d1d6b9da117e5a2d7087
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7731c50b99ae5602f29de94bfd098cd9906d48d8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="load-files-into-filetables"></a>Cargar archivos en FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe cómo se cargan o migran archivos en FileTables.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Corregir los metadatos de la tabla **PhotoMetadata** , mediante el uso de código parecido al siguiente:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   
@@ -129,7 +129,7 @@ UPDATE PhotoMetadata
 ###  <a name="disabling"></a> Deshabilitar restricciones de FileTable para carga masiva  
  Para realizar la carga masiva de datos en una FileTable sin la sobrecarga que supone la aplicación de restricciones definidas por el sistema, puede deshabilitar temporalmente estas restricciones. Para obtener más información, vea [Administrar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Obtener acceso a FileTables con Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Obtener acceso a FileTables con API de entrada-salida de archivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

@@ -3,7 +3,7 @@ title: "Opciones (Entorno - página General) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4220e4844dc45a33b0a2bc163d2e77a3fe65db3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85771a5858a9be2e8e9cb79830cd0eff8a945b38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---general-page"></a>Opciones (Entorno - Página General)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
@@ -61,7 +61,7 @@ Si esta casilla está seleccionada, solo se cierra la ventana de herramientas ac
 **El botón Ocultar automáticamente afecta solo a la pestaña activa**  
 Si esta casilla está seleccionada, solo se oculta automáticamente la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla no está activada.  
   
-## <a name="display"></a>Presentación  
+## <a name="display"></a>Pantalla  
 **Mostrar n archivos de la lista de archivos recientes**  
 Personaliza el número de proyectos y archivos recientes que aparecen en el menú **Archivo** . Escriba un número entre 1 y 24. El valor predeterminado es 4. Esta es una manera fácil de recuperar los proyectos de script y los proyectos de archivos y script usados recientemente.  
   

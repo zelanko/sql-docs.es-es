@@ -3,9 +3,9 @@ title: "Fragmentos de código de Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b893aabd8a6c602b55365e4658f8f02cc4fc30
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Fragmentos de código de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un fragmento de código [!INCLUDE[tsql](../../includes/tsql-md.md)] es una plantilla que contiene la estructura básica de una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede usar los fragmentos como punto de partida para agregar instrucciones en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede insertar los fragmentos de código predefinidos proporcionados con SQL Server o crear los suyos.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo terminar de compilar una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)] completos después de insertar un fragmento de código.|[Completar fragmentos de código de Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |Describe cómo compilar sus propios fragmentos personalizados y agregarlos al conjunto de fragmentos de SQL Server.|[Agregar fragmentos de código de Transact-SQL](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

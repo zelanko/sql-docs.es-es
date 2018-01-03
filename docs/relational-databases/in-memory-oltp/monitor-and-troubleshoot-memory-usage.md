@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5606c5733472e462b74d32a8ff4598f52ebcf90
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3158ac5784d00ce59964e3de010d68dd873c21c7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consume memoria en patrones distintos a los de las tablas basadas en disco. Puede supervisar la cantidad de memoria asignada y usada por las tablas e índices optimizados para memoria en la base de datos mediante las DMV o los contadores de rendimiento suministrados para la memoria y el subsistema de recolección de elementos no utilizados.  Esto le ofrece visibilidad en los niveles de sistema y de base de datos, y permite evitar problemas debidos al agotamiento de la memoria.  
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Uso de memoria de las tablas e índices optimizados para memoria  
  Puede encontrar el uso de memoria de todas las tablas de usuario, los índices y los objetos del sistema consultando `sys.dm_db_xtp_table_memory_stats` como se muestra a continuación.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -185,7 +185,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>Uso de memoria de las estructuras de sistema internas  
  Los objetos del sistema también usan memoria, por ejemplo, las estructuras transaccionales, los búferes de archivos delta y de datos, las estructuras de recolección de elementos no utilizados, etcétera. Puede encontrar la memoria usada para estos objetos del sistema consultando `sys.dm_xtp_system_memory_consumers` como se muestra aquí.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -224,7 +224,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Uso de memoria en tiempo de ejecución al obtener acceso a las tablas optimizadas para memoria  
  Puede determinar la memoria utilizada por las estructuras de tiempo de ejecución, como la memoria caché de procedimientos con la consulta siguiente: ejecute esta consulta para obtener la memoria utilizada por las estructuras de tiempo de ejecución como para la caché de procedimientos. Todas las estructuras de tiempo de ejecución se etiquetan con XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -257,7 +257,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Memoria usada por el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en la instancia  
  La memoria asignada al motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] y a los objetos optimizados para memoria se administra de la misma forma que cualquier otro consumidor de memoria dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los distribuidores de tipo MEMORYCLERK_XTP tienen en cuenta toda la memoria asignada al motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Use la consulta siguiente para encontrar toda la memoria usada por el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  
@@ -294,7 +294,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  Tome medidas para mitigar los posibles problemas de memoria. Para obtener más información, vea [Resolver problemas de memoria insuficiente](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

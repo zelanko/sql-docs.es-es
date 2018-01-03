@@ -3,7 +3,7 @@ title: 'Tutorial: Agregar y modificar un diagrama de base de datos | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d202d485b27b19a0d7b3461e0f427d996567b4f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7835747f81513f26fb7e69a357094cdc1d8dcfe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Visita guiada: Agregar y modificar un diagrama de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Para completar esta visita guiada, necesitará:  
   
 -   Acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
@@ -125,7 +125,7 @@ Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el 
   
 1.  Cree una nueva tabla en el Diseñador de diagramas con el nombre `Table2` y con las siguientes columnas:  
   
-    |**Nombre de columna**|**Tipo de datos**|**Permitir valores NULL**|  
+    |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|no seleccionado|  
     |**T2col2**|**varchar(50)**|activado|  
@@ -201,7 +201,7 @@ Todos los cambios realizados en el diagrama no se publican en la base de datos h
   
 3.  Si se produce algún error, aparecerá el cuadro de diálogo **Notificaciones después de guardar** con los errores y las causas. Solucione los errores y guarde el diagrama de nuevo.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Este diagrama es básico, únicamente con dos tablas existentes y otras dos nuevas, pero muestra el potencial de la creación de diagramas en una base de datos existente o de la creación de un nuevo esquema visual. Algunas sugerencias de investigación adicional son:  
   
 -   Crear nuevos diagramas que incluyan grupos de tablas relacionadas  
@@ -212,7 +212,7 @@ Este diagrama es básico, únicamente con dos tablas existentes y otras dos nuev
   
 -   Copiar el diagrama en un mapa de bits  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Personalizar la cantidad de información mostrada en los diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
 [Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Agregar tablas a diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  

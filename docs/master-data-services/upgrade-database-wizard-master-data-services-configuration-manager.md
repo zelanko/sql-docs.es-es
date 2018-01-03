@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f37057354b9b4565b4c455f14b46abb846c23a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ba7535afa7c877a151e348d8d0903e1572f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Asistente para actualizar base de datos (Administrador de configuración de Master Data Services)
   Utilice el **Asistente para actualizar base de datos** para actualizar una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="progress-and-finish"></a>Progreso y Finalizar  
  Muestra el progreso del proceso de actualización. Una vez actualizada la base de datos, haga clic en el vínculo al archivo de registro para ver información detallada sobre la actualización o haga clic en **Finalizar** para cerrar el asistente de base de datos y volver a la página **Bases de datos** . La base de datos actualizada se ha seleccionado y podrá ver y modificar la configuración del sistema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Actualizar Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

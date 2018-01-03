@@ -3,7 +3,7 @@ title: "Temas de procedimientos de diseño de consultas y vistas (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 208b7c4819344b1a54dfbff8b5299cb122f01727
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aa5d3107577a7d838d6ba813934b42f497db8a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Diseñador de consultas y vistas le ayuda a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
@@ -47,13 +47,13 @@ Proporciona una lista de las combinaciones de teclas y las operaciones del mouse
 [Herramientas Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
 Proporciona vínculos a temas en los que se describen los distintos componentes del Diseñador de consultas y vistas.  
   
-[Tipos de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 Muestra temas de procedimientos acerca de cómo crear distintos tipos de consultas, como UPDATE, DELETE y MAKE TABLE.  
   
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 Describe lo que puede hacer con los resultados devueltos por una consulta o vista y proporciona vínculos a temas de procedimientos.  
   
-[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Muestra temas en los que se trata la creación, modificación, ejecución y copia de consultas junto con temas básicos acerca de cómo clasificar, ordenar e imprimir los resultados de la búsqueda.  
   
 [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

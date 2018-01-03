@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3f0d5a22242be81f68c218cb5f89f36d4853641f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 83c4872e3e021afc6cb85133d0e02f22f181d612
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  En el ejemplo siguiente se muestra cómo se obtienen los datos de la versión de sincronización inicial y el conjunto de datos inicial.  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Usar las funciones de seguimiento de cambios para obtener los cambios  
  Para obtener las filas cambiadas de una tabla e información sobre los cambios, utilice CHANGETABLE(CHANGES...). Por ejemplo, la consulta siguiente obtiene los cambios de la tabla `SalesLT.Product` .  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -94,7 +94,7 @@ FROM
   
  Normalmente, un cliente deseará obtener los últimos datos de una fila y no solo las claves principales de la fila. Por consiguiente, una aplicación combinaría los resultados de CHANGETABLE(CHANGES...) con los datos de la tabla de usuario. Por ejemplo, la siguiente consulta se combina con la tabla `SalesLT.Product` para obtener los valores de las columnas `Name` y `ListPrice` . Observe el uso de la propiedad `OUTER JOIN`. Esto es necesario para asegurarse de que la información sobre los cambios se devuelve para las filas que han sido eliminadas de la tabla de usuario.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -109,13 +109,13 @@ ON
   
  Para obtener la versión que se usará en la enumeración de cambios siguiente, utilice CHANGE_TRACKING_CURRENT_VERSION(), como se muestra en el ejemplo siguiente.  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  Cuando una aplicación obtiene los cambios, debe utilizar CHANGETABLE(CHANGES...) y CHANGE_TRACKING_CURRENT_VERSION(), como se muestra en el ejemplo siguiente.  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -142,7 +142,7 @@ ON
   
  En el ejemplo siguiente se muestra cómo comprobar la validez del valor de `last_synchronization_version` para cada tabla.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -154,7 +154,7 @@ END
   
  Como se muestra en el ejemplo siguiente, la validez del valor de `last_synchronization_version` se puede comprobar con todas las tablas de la base de datos.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -174,7 +174,7 @@ END
   
  En el ejemplo siguiente, la columna `CT_ThumbnailPhoto` será `NULL` si esa columna no cambió. Esta columna también podría ser `NULL` si cambió a `NULL` ; la aplicación puede usar la columna `CT_ThumbNailPhoto_Changed` para determinar si la columna cambió.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -252,7 +252,7 @@ ON
   
  En el ejemplo siguiente se muestra cómo se habilita el aislamiento de instantánea para una base de datos.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -260,7 +260,7 @@ ALTER DATABASE AdventureWorksLT
   
  Una transacción de instantánea se utiliza como sigue:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -321,7 +321,7 @@ COMMIT TRAN
   
  En el ejemplo siguiente se muestra cómo utilizar la función CHANGETABLE(VERSION …) para comprobar si hay conflictos de la manera más eficaz, sin una consulta independiente. En el ejemplo, `CHANGETABLE(VERSION …)` determina `SYS_CHANGE_VERSION` para la fila especificada por `@product id`. `CHANGETABLE(CHANGES …)` puede obtener la misma información, pero ese procedimiento sería menos eficiente. Si el valor de `SYS_CHANGE_VERSION` para la fila es mayor que el valor de `@last_sync_version`, hay un conflicto. Si hay un conflicto, la fila no se actualizará. La comprobación `ISNULL()` se requiere porque podría no haber ninguna información de cambios disponible para la fila. No existiría ninguna información de cambios si la fila no se hubiera actualizado desde que se habilitó el seguimiento de cambios o desde que se limpió la información de los cambios.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -341,7 +341,7 @@ WHERE
   
  El código siguiente puede comprobar el recuento de filas actualizadas e identificar más información sobre el conflicto.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -367,7 +367,7 @@ END
   
  La información de contexto se suele utilizar para identificar el origen de los cambios. Si el origen del cambio se puede identificar, un almacén de datos puede utilizar esa información para evitar obtener los cambios cuando se sincronice de nuevo.  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -390,7 +390,7 @@ END
 > [!IMPORTANT]  
 >  Recomendamos usar el aislamiento de instantánea y realizar los cambios dentro de una transacción de instantáneas.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
@@ -439,7 +439,7 @@ COMMIT TRAN
   
 -   Cuando un cliente consulte cambios, registre el último número de versión de sincronización para cada cliente en el servidor. Si hay un problema con los datos, los números de última versión sincronizada no coincidirán. Esto indica que se requiere una reinicialización.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Administrar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

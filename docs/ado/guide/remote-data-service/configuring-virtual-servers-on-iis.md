@@ -3,7 +3,7 @@ title: "Configuración de servidores virtuales en IIS | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 085aaafca8390c2c036ea5e67905e194a18401b6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05eaeb3a40093158fbcf82fb2b8239e92204a350
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configuración de servidores virtuales en IIS
 Al crear servidores virtuales en servicios de Internet Information Server 4.0, los siguientes dos pasos adicionales necesarios para configurar el servidor virtual para trabajar con RDS:  

@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab797826f45d019926f4e35055cc18bdece9763b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,25 +45,9 @@ ms.lasthandoff: 11/17/2017
  Un índice con columnas sin clave puede mejorar significativamente el rendimiento de una consulta cuando todas las columnas de la consulta se incluyen como columnas de clave o columnas sin clave. Las mejoras en el rendimiento se consiguen porque el optimizador de consultas puede localizar todos los valores de las columnas del índice, sin tener acceso a los datos de la tabla o del índice clúster, lo que da como resultado menos operaciones de E/S de disco.  
   
 > [!NOTE]  
->  Cuando un índice contiene todas las columnas a las que hace referencia una consulta, normalmente se dice que *abarca la consulta*.  
-  
- **En este tema**  
-  
--   **Antes de empezar:**  
-  
-     [Recomendaciones de diseño](#DesignRecs)  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Seguridad](#Security)  
-  
--   **Para crear un índice con columnas sin clave, use:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+> Cuando un índice contiene todas las columnas a las que hace referencia una consulta, normalmente se dice que *abarca la consulta*.  
+   
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="DesignRecs"></a> Recomendaciones de diseño  
   
@@ -91,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -132,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -143,7 +127,7 @@ ms.lasthandoff: 11/17/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+
+## <a name="related-content"></a>Contenido relacionado  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+[Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)   

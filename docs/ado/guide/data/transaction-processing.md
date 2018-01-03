@@ -3,7 +3,7 @@ title: Procesamiento de transacciones | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55f563b145cf77dc64879801c4603bd51234b0f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-processing"></a>Procesamiento de transacciones
 A *transacciones* delimita el principio y al final de una serie de operaciones de acceso de datos ejecutadas a través de una conexión. Sujeto a las capacidades transaccionales del origen de datos, el **conexión** objeto también le permite crear y administrar las transacciones. Por ejemplo, mediante el proveedor Microsoft OLE DB para SQL Server para tener acceso a una base de datos en Microsoft SQL Server, puede crear varias transacciones anidadas para los comandos que se ejecuta.  

@@ -20,18 +20,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Las actividades de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comunes con una clave asimétrica protegida por Azure Key Vault incluyen las siguientes tres áreas:  
   
 -   Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
   
--   Cifrado de copias de seguridad con una clave asimétrica desde el Almacén de claves  
+-   Cifrado de copias de seguridad con una clave asimétrica desde Key Vault  
   
 -   Cifrado de nivel de columna con una clave asimétrica desde el Almacén de claves  
   
@@ -48,7 +48,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
 1.  **Crear una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el motor de base de datos que se usará para TDE**  
   
-     El motor de base de datos usa la credencial para acceder al Almacén de claves durante la carga de la base de datos. Se recomienda crear otro **id. de cliente** y **secreto** de Azure Active Directory en la parte I para [!INCLUDE[ssDE](../../../includes/ssde-md.md)]con el fin de limitar los permisos del Almacén de claves que se conceden.  
+     El motor de base de datos usa la credencial para acceder a Key Vault durante la carga de la base de datos. Se recomienda crear otro **id. de cliente** y **secreto** de Azure Active Directory en la parte I para [!INCLUDE[ssDE](../../../includes/ssde-md.md)]con el fin de limitar los permisos del Almacén de claves que se conceden.  
   
      Modifique el script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente como se indica a continuación:  
   
@@ -63,7 +63,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
     -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
      Cree un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y agréguele la credencial del Paso 1. En este ejemplo de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se usa la misma clave que se importó anteriormente.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
      La DEK cifrará los archivos de registros y datos en la instancia de la base de datos y se cifrará con la clave asimétrica del Almacén de claves de Azure. La DEK puede crearse con cualquier algoritmo compatible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cualquier longitud de clave.  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
 4.  **Activar TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
      También puede ejecutar el siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Un estado de cifrado de 3 indica que la base de datos está cifrada.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -141,9 +141,9 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
     > [!NOTE]  
     >  La base de datos de `tempdb` se cifra automáticamente cuando cualquier base de datos habilita TDE.  
   
-## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>Cifrado de copias de seguridad con una clave asimétrica desde el Almacén de claves  
+## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>Cifrado de copias de seguridad con una clave asimétrica desde Key Vault  
  Las copias de seguridad cifradas se admiten a partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. En el ejemplo siguiente, se crea y se restaura una copia de seguridad cifrada con una clave de cifrado de datos protegida por la clave asimétrica en el Almacén de claves.  
-El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al acceder al Almacén de claves durante la carga de la base de datos. Se recomienda crear otro id. de cliente y secreto de Azure Active Directory en la parte I para el motor de base de datos con el fin de limitar los permisos que se conceden al Almacén de claves.  
+El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al acceder al Almacén de claves durante la carga de la base de datos. Se recomienda crear otro id. de cliente y secreto de Azure Active Directory en la parte I para el motor de base de datos con el fin de limitar los permisos que se conceden a Key Vault.  
   
 1.  **Crear una credencial de SQL Server para el motor de base de datos para usar con el cifrado de copia de seguridad**  
   
@@ -160,7 +160,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
     -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones*.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
      En este ejemplo se usa la clave asimétrica `CONTOSO_KEY_BACKUP` almacenada en el Almacén de claves, que se puede importar o crear anteriormente para la base de datos maestra, como se describe en la Parte IV, Paso 5, más arriba.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
      
      En el ejemplo siguiente, tenga en cuenta que si la base de datos ya se ha cifrado con TDE y la clave asimétrica `CONTOSO_KEY_BACKUP` es diferente de la clave asimétrica de TDE, la copia de seguridad se cifrará tanto por la clave asimétrica TDE como por `CONTOSO_KEY_BACKUP`. La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de destino necesitará ambas claves para descifrar la copia de seguridad.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
     
      Código de muestra de la restauración:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
  En este ejemplo se usa la clave asimétrica `CONTOSO_KEY_COLUMNS` almacenada en el Almacén de claves, que se puede importar o crear anteriormente, como se describe en el Paso 3, sección 3 de [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure). Para usar esta clave asimétrica en la base de datos de `ContosoDatabase` , debe ejecutar de nuevo la instrucción `CREATE ASYMMETRIC KEY` para proporcionar a la base de datos de `ContosoDatabase` una referencia a la clave.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   
@@ -282,10 +282,10 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Mantenimiento y solución de problemas del conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

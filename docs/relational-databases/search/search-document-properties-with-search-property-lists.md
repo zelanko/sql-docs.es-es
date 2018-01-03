@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Anteriormente, el contenido de las propiedades de documento no podía distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. En cambio, ahora puede configurar un índice de texto completo para efectuar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos en una columna **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o una columna de datos binarios de **imagen** . Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
      Cada propiedad de búsqueda posee un identificador que es único dentro del conjunto de propiedades. Tenga en cuenta que para una propiedad determinada, el identificador puede ser un entero o una cadena; sin embargo, la búsqueda de texto completo admite exclusivamente identificadores enteros.  
   
--   Nombre de la propiedad  
+-   Nombre de propiedad  
   
      Este es el nombre que los usuarios especificarán en las consultas de texto completo para buscar la propiedad. El nombre de una propiedad puede contener espacios internos. La longitud máxima es de 256 caracteres.  
   
@@ -163,7 +163,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Consultar propiedades de búsqueda con CONTAINS  
  La sintaxis básica de [CONTAINS](../../t-sql/queries/contains-transact-sql.md) para una consulta de texto completo referente a propiedades es la siguiente:  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
@@ -228,7 +228,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

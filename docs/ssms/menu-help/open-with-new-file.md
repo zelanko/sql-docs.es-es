@@ -3,7 +3,7 @@ title: Abrir con (nuevo archivo) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, después, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Seleccione el programa que desee usar**  
 Muestra los editores disponibles en [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio para el tipo de archivo seleccionado. Elija en la lista el editor con el que desea abrir el documento o haga clic en **Agregar** para incluir un nuevo editor en la lista.  
   
@@ -47,6 +47,6 @@ Para especificar un editor predeterminado (y las opciones de codificación de le
 > [!NOTE]  
 > En la lista **Seleccione el programa que desee usar**, el nombre del editor predeterminado del tipo de archivo seleccionado aparece seguido de **(Predeterminado)**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Asociación de extensiones de archivo a un editor de código](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   

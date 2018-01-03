@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50274b346c5a404c9d2c8f82dbd8d75664fa6bbe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las bases de datos de SQL Server están habilitadas para texto completo de manera predeterminada. Pero para poder ejecutar consultas de texto completo debe crear primero un catálogo de texto completo y un índice de texto completo en las vistas indexadas o tablas en las que quiere realizar una búsqueda.
@@ -50,7 +50,7 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
   
 1.  Para crear un catálogo de texto completo denominado `AdvWksDocFTCat`, en el ejemplo se usa una instrucción [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) :  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -59,13 +59,13 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
  
 2.  Para crear un índice de texto completo en la tabla Document, antes debe asegurarse de que dicha tabla tiene un índice único, de una sola columna y que no admite valores NULL. La siguiente instrucción [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) crea un índice único, `ui_ukDoc`, en la columna DocumentID de la tabla Document:  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  Después de tener una clave única, puede crear un índice de texto completo en la tabla `Document` mediante la siguiente instrucción [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -108,14 +108,14 @@ Seleccione siempre el índice exclusivo más pequeño disponible para la clave e
   
  Por ejemplo, la siguiente instrucción [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] crea una lista de palabras irrelevantes de texto completo denominada myStoplist copiando la lista de palabras irrelevantes del sistema:  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  La siguiente instrucción [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] modifica una lista de palabras irrelevantes denominada myStoplist; para ello, agrega la palabra "en", primero para el idioma español y, a continuación, para el francés:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

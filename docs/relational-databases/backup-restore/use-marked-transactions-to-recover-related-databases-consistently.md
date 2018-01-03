@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc94325654b02854cff6a20f36519fa8ee46f17a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43c86f6c856ae0e3ba814fcb899ab5c532c4945a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se restaura el registro de transacciones hasta la marca de la transacción marcada denominada `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -135,7 +135,7 @@ RESTORE LOG AdventureWorks
   
  Por ejemplo, suponga que hay una base de datos con particiones en varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En cada instancia hay una base de datos cuyo nombre es `coyote`. Primero, cree un procedimiento almacenado, por ejemplo `sp_SetMark`, en todas las bases de datos:  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -147,7 +147,7 @@ GO
   
  A continuación, cree el procedimiento almacenado `sp_MarkAll` que contenga una transacción que coloque una marca en cada base de datos. `sp_MarkAll` se puede ejecutar desde cualquiera de las instancias.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  
@@ -181,7 +181,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>Recuperar a una transacción marcada  
  Para obtener información sobre cómo recuperar una base de datos con transacciones marcadas a una marca concreta o inmediatamente antes, vea [Recuperación de bases de datos relacionadas que contienen transacciones marcadas](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   

@@ -3,7 +3,7 @@ title: "Crear un servidor de administración central y un grupo de servidores | 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 03053923b6cb9ec0515131f45b1bd36a9aa50854
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 59a0fecfbf924b2ce4ab4d9e559dac678dfcb661
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Crear un servidor de administración central y un grupo de servidores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor de administración central de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los servidores de administración central almacenan una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se organizan en uno o varios grupos de este tipo de servidores. Las acciones que se llevan a cabo mediante un servidor de administración central actúan en todos los servidores del grupo. Esto incluye la conexión a los servidores mediante el Explorador de objetos y la ejecución de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y de directivas de administración basada en directivas en varios servidores al mismo tiempo.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Dos roles de base de datos en la base de datos msdb conceden acceso a los servidores de administración central. Solo los miembros del rol ServerGroupAdministratorRole pueden administrar el servidor de administración central. La pertenencia al rol ServerGroupReaderRole es necesaria para conectarse a un servidor de administración central.  
   
  Dado que las conexiones que mantiene un servidor de administración central se ejecutan en el contexto del usuario, si se usara la autenticación de Windows los permisos vigentes en los servidores registrados podrían variar. Por ejemplo, el usuario podría ser miembro del rol fijo de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, pero tener permisos limitados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Después de crear un servidor de administración central, uno o varios grupos de servidores, y uno o varios servidores registrados, puede ejecutar al mismo tiempo las consultas con un grupo entero. Para obtener más información sobre cómo ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en los servidores de un grupo de servidores al mismo tiempo, vea [Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar varios servidores mediante Servidores de administración central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

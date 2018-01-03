@@ -3,9 +3,9 @@ title: Trabajar con rutas acceso de SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e42b8172f1993b22a50c53e61b93ff8223da063
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ca37c3e7aeaa247512a1334335440b131a5590d
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabajar con rutas acceso de SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Después de haber navegado a un nodo de una ruta de acceso del proveedor de [!INCLUDE[ssDE](../../includes/ssde-md.md)], puede realizar el trabajo o recuperar información mediante los métodos y propiedades de los objetos de administración de [!INCLUDE[ssDE](../../includes/ssde-md.md)] asociados con el nodo.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  **Para trabajar en un nodo de ruta de acceso:**  [Enumerar métodos y propiedades](#ListPropMeth), [Usar métodos y propiedades](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Después de haber navegado a un nodo de una ruta de acceso del proveedor de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , puede realizar dos tipos de acciones:  
   
 -   Puede ejecutar los cmdlets de Windows PowerShell que operan en los nodos, como **Rename-Item**.  
@@ -101,7 +101,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Proveedor de PowerShell de SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Navegar por las rutas de acceso de SQL Server PowerShell](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)   
  [Convertir URN en rutas de acceso del proveedor de SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

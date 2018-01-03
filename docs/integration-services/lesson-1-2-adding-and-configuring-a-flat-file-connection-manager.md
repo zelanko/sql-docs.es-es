@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lección 1-2: Agregar y configurar un administrador de conexiones de archivos planos
 En esta tarea, agregará un administrador de conexiones de archivos planos al paquete que acaba de crear. Un administrador de conexiones de archivos planos permite a un paquete extraer datos de un archivo plano. Mediante el administrador de conexiones de archivos planos puede especificar el nombre y la ubicación del archivo, la configuración regional y la página de códigos, y el formato del archivo, incluyendo los delimitadores de columna, que deben aplicarse cuando el paquete extrae datos del archivo plano. Además, puede especificar de forma manual el tipo de datos para columnas individuales, o usar el cuadro de diálogo **Sugerir tipos de columna** para asignar de forma automática las columnas de datos extraídos a los tipos de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -92,10 +92,10 @@ El administrador de conexiones de archivos planos proporciona información de co
   
     |Columna de archivo plano|Tipo sugerido|Columna de destino|Tipo de destino|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     El tipo de datos sugerido para la columna **CurrencyID** no es compatible con el tipo de datos del campo de la tabla de destino. Puesto que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), **CurrencyID** debe cambiarse de la cadena [DT_STR] a la cadena [DT_WSTR]. Adicionalmente, el campo `DimDate.FullDateAlternateKey` está definido como tipo de datos de fecha; por consiguiente, **CurrencyDate** debe cambiarse del tipo fecha [DT_Date] al tipo fecha de base de datos [DT_DBDATE].  
   
@@ -108,7 +108,7 @@ El administrador de conexiones de archivos planos proporciona información de co
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 3: agregar y configurar un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Administrador de conexiones de archivos planos](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Tipos de datos de Integration Services](../integration-services/data-flow/integration-services-data-types.md)  
   

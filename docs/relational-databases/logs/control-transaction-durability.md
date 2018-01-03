@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_DbControl"></a> Control de nivel de base de datos    
  Como administrador de la base de datos (DBA), con la instrucción siguiente puede controlar si los usuarios pueden usar transacciones de durabilidad diferida en una base de datos. Debe establecer la configuración de durabilidad diferida con ALTER DATABASE.    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -114,7 +114,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> Control de nivel de bloque ATOMIC: procedimientos almacenados compilados de forma nativa    
  El código siguiente va en el interior del bloque ATOMIC.    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -126,7 +126,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **Código de ejemplo**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -149,7 +149,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> Control de nivel COMMIT –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  La sintaxis de COMMIT se ha ampliado para que pueda forzar la durabilidad diferida de transacciones. Si DELAYED_DURABILITY es DISABLED o FORCED en el nivel de base de datos (vea más arriba), esta opción de COMMIT se omite.    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    
@@ -211,7 +211,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Cierre y reinicio de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]     
  En lo que respecta a la durabilidad diferida, no hay ninguna diferencia entre el cierre inesperado y el cierre/reinicio planeado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al igual que en las catástrofes, debe prever una pérdida de datos. En un cierre/reinicio planeado, algunas transacciones que no se han escrito en el disco podrían, en primer lugar, guardarse en el disco, pero no debería contar con ello. Tenga previsto sin embargo que en un cierre/reinicio, bien se haya planeado o no, se pierden datos al igual que en las catástrofes.    
     
-## <a name="see-also"></a>Vea también    
+## <a name="see-also"></a>Ver también    
  [Transacciones con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

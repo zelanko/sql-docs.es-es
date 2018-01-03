@@ -2,32 +2,34 @@
 title: 'PowerShell: Habilitar el TDE con su propia clave de Azure Key Vault | Microsoft Docs'
 description: "Aprenda a configurar un almacén de datos y una base de datos de Azure SQL para empezar a usar el Cifrado de datos transparente (TDE) para el cifrado en reposo mediante PowerShell."
 keywords: 
-services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: Habilitar el Cifrado de datos transparente con su propia clave desde Azure Key Vault
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 En esta guía de procedimientos aprenderá a usar una clave desde Azure Key Vault para el Cifrado de datos transparente (TDE) en un almacén de datos o una base de datos SQL. Para obtener más información sobre la compatibilidad del TDE con Bring Your Own Key (BYOK), vea [TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md) (TDE con Bring Your Own Key en Azure SQL). 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Debe tener una suscripción de Azure y debe ser administrador en esa suscripción.
 - [Recomendado pero opcional] Debería tener un módulo de seguridad de hardware (HSM) o un almacén de claves locales para crear una copia local del material de la clave del protector del TDE.

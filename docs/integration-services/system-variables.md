@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32f85c2442c459932edba13d88f83879280b13fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba8e16a181534aa8881197fd178ebf39661f4d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
  Esta regla se aplica también a las variables definidas por el usuario. No obstante, si bien los tipos de datos de las variables del sistema no se pueden cambiar y usted debe adaptar el uso de estas variables para que se ajusten a los tipos de datos, las variables definidas por el usuario son más flexibles. Las variables definidas por el usuario que se utilizan en enlaces de parámetros generalmente se definen con tipos de datos que son compatibles con los tipos de datos de parámetros a los que se asignan.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

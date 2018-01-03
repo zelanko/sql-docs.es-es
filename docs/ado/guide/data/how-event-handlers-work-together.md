@@ -3,7 +3,7 @@ title: "Cómo funcionan conjuntamente los controladores de eventos | Documentos 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2b826bed21c5fcec7a0e6d957f3b0a03eac858c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72ca437ae2d78395632abd06169feb2b41d4fc50
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-event-handlers-work-together"></a>Cómo funcionan conjuntamente los controladores de eventos
 A menos que está programando en Visual Basic, todos los controladores de eventos para **conexión** y **Recordset** eventos deben estar implementados, independientemente de que procesen realmente todos los eventos. La cantidad de trabajo de implementación que tiene que hacer depende de su lenguaje de programación. Para obtener más información, consulte [creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

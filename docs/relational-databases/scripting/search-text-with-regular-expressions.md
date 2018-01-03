@@ -3,9 +3,9 @@ title: Buscar texto mediante expresiones regulares | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  En la tabla siguiente se describen las expresiones regulares disponibles en la **Lista de referencias**.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expresión|Sintaxis|Description|  
 |----------------|------------|-----------------|  
 |Un carácter cualquiera|.|Devuelve cualquier carácter único excepto un salto de línea.|  
 |Cero o más|*|Devuelve cero o más repeticiones de la expresión anterior, realizando todas las correspondencias posibles.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |Salto de línea|\n|Devuelve un salto de línea independiente de la plataforma. En una expresión de Reemplazar, inserta un salto de línea.|  
 |Un carácter cualquiera del conjunto|[]|Devuelve cualquier carácter situado dentro de []. Para especificar un intervalo de caracteres, escriba los caracteres inicial y final separados por un guión (-), como en [a-z].|  
 |Un carácter cualquiera no perteneciente al conjunto|[^...]|Devuelve cualquier carácter que no se encuentre en el juego de caracteres que sigue a ^.|  
-|O bien|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
+|o bien|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
 |Escape|\|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|  
 |Expresión de etiqueta|{}|Devuelve texto etiquetado con la expresión entre comillas.|  
 |Identificador de C/C++|:i|Devuelve la expresión ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  La lista de todas las expresiones regulares válidas en las operaciones de **Buscar y reemplazar** es más amplia que lo que se puede mostrar en este **Generador de expresiones**. En una cadena **Buscar** también puede insertar las expresiones regulares siguientes:  
   
-|Expresión|Sintaxis|Descripción|  
+|Expresión|Sintaxis|Description|  
 |----------------|------------|-----------------|  
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  En la tabla siguiente se muestra la sintaxis de coincidencias para propiedades estándar de caracteres Unicode. La abreviatura de dos letras es la misma que la que aparece en la base de datos de propiedades de caracteres Unicode. Éstas se pueden especificar como parte de un juego de caracteres. Por ejemplo, la expresión [:Nd:Nl:No] devuelve cualquier tipo de dígito.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expresión|Sintaxis|Description|  
 |----------------|------------|-----------------|  
 |Letra en mayúscula|:Lu|Devuelve cualquier letra en mayúscula. Por ejemplo, :Luhe devuelve "The" pero no "the".|  
 |Letra en minúscula|:Ll|Devuelve cualquier letra en minúscula. Por ejemplo, :Llhe devuelve "the" pero no "The".|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Además de las propiedades de caracteres Unicode, es posible especificar las siguientes propiedades adicionales como parte de un juego de caracteres.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expresión|Sintaxis|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
 |Numérico|:Nu|Devuelve cualquier número o dígito.|  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
 |Katakana|:Ka|Devuelve caracteres Katakana.|  
 |Ideográfico/Han/Kanji|:Id|Devuelve caracteres ideográficos, como Han y Kanji.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
  [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

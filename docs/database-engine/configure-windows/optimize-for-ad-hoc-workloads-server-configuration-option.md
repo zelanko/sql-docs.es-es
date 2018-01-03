@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 207ca8c64cd20e8e98093960bd68ad23b770ea24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96e21a0eb32b9aeecabdfeb574d3e793b3ab99d8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="recommendations"></a>Recomendaciones
 Si el número de planes de uso único usa una parte significativa de memoria de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en un servidor OLTP y estos planes son planes ad hoc, use esta opción de servidor para reducir el uso de memoria con estos objetos.
-Para averiguar el número de planes almacenados en caché de uso único, ejecute la consulta siguiente:
+Para determinar el número de planes almacenados en caché de uso único, ejecute la consulta siguiente:
 
-```t-sql
+```sql
 SELECT objtype, cacheobjtype, 
   AVG(usecounts) AS Avg_UseCount, 
   SUM(refcounts) AS AllRefObjects, 
@@ -56,7 +56,7 @@ GROUP BY objtype, cacheobjtype;
 > Establecer la opción **Optimizar para cargas de trabajo ad hoc** en 1 afecta solo a los planes nuevos; los planes que ya están en la memoria caché del plan no resultan afectados.
 > Para afectar a los planes de consulta que ya están almacenados en caché inmediatamente, es necesario borrar la cache mediante [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) o reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

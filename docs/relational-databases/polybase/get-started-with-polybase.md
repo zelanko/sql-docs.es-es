@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 330a9b9a12312ab22389e8de0849ab164b8f0d47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27265e6d6caf4f1acfc0803839e3077cd1597f67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-polybase"></a>Introducción a PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Dispondrá de ejemplos de consultas que utilizan objetos PolyBase.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Instancia de [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) con lo siguiente:  
   
 -   Microsoft .NET Framework 4.5.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="how-to-confirm-installation"></a>Cómo confirmar la instalación  
  Después de la instalación, ejecute el siguiente comando para confirmar que se ha instalado correctamente PolyBase. Si PolyBase está instalado, devuelve 1; en caso contrario, 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -103,7 +103,7 @@ Hadoop sigue el patrón de "Principal.Secundaria.Versión" para sus versiones nu
 ### <a name="external-data-source-configuration"></a>Configuración del origen de datos externo  
   
 1.  Ejecute la “conectividad de hadoop” [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y establezca un valor adecuado. De forma predeterminada, la conectividad de hadoop se establece en 7. Para hallar el valor, vea [Configuración de PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-      ```tsql  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -289,7 +289,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Consultas ad hoc  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -303,7 +303,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Importar datos  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  
@@ -365,7 +365,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="next-steps"></a>Pasos siguientes  
  Para entender la característica de escalado horizontal, vea [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(Grupos de escalado horizontal de PolyBase).  Para supervisar PolyBase, consulte [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(Solución de problemas de PolyBase). Para solucionar problemas de rendimiento de PolyBase, consulte [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80) (Solución de problemas de PolyBase con vistas de administración dinámica).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)   
  [Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)   
  [Procedimientos almacenados de PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   

@@ -3,9 +3,9 @@ title: Asistente Generar y publicar scripts | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -49,13 +49,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69d2561990609eb94620ab8a3f7abd9c31dbb316
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 801dba9b807d9928f7d7dcb1db83274ca11ee778
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Asistente Generar y publicar scripts
+# <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.  
   
 1.  **Antes de empezar:**  [Publicar en un servicio hospedado](#PubHostSvc), [Permisos](#Permissions)  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  Para publicar una base de datos a un servicio de hospedaje web, seleccione la opción **Publicar en servicio web** en la página **Establecer opciones de scripting** del asistente.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  El permiso mínimo para publicar una base de datos es la pertenencia al rol fijo de base de datos db_ddladmin en la base de datos de origen. El permiso mínimo para publicar un script de base de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el proveedor de hospedaje es la pertenencia al rol fijo de base de datos db_ddladmin en la base de datos de destino.  
   
  Para publicar con el asistente, el usuario también debe proporcionar un nombre de usuario y una contraseña para tener acceso a su cuenta en el proveedor de hospedaje. La base de datos destino se debe crear en el proveedor del hospedaje antes de que la base de datos de origen se publique. Al publicar, se sobrescriben los objetos presentes en la base de datos.  
@@ -178,7 +178,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Incluir enlaces** : genera un script para enlazar los objetos predeterminados y de regla. El valor predeterminado es **False**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) y [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
--   **Incluir intercalación**: incluye información de intercalación en el script. El valor predeterminado es **False**. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   **Incluir intercalación**: incluye información de intercalación en el script. El valor predeterminado es **False**. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   **Generar script de valores predeterminados** : incluye los objetos predeterminados que se usan para establecer los valores en las columnas de tabla. El valor predeterminado es **True**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
@@ -369,7 +369,7 @@ Si establece el [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] como la opción
 
 No se conservarán las opciones establecidas en el paso 4. Si prefiere que se conserven estas opciones, siga las instrucciones de **Cómo establecer opciones de scripting predeterminadas en el Almacenamiento de datos SQL**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instalar SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [Copiar bases de datos en otros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

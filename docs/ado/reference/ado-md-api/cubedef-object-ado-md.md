@@ -3,7 +3,7 @@ title: Objeto CubeDef (ADO MD) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0317420ee6839e3b445784665a0a2594fb1083c1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.  

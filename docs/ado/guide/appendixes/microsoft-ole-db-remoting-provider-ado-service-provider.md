@@ -3,7 +3,7 @@ title: Proveedor de servicios remotos de Microsoft OLE DB (proveedor de servicio
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbc0d0060a58d1e73fe2df94c598a1fa054abd15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Introducción al proveedor Microsoft OLE DB comunicación remota
 El proveedor de servicios remotos de Microsoft OLE DB permite a un usuario local en un equipo cliente invocar proveedores de datos en un equipo remoto. Especifique los parámetros de proveedor de datos para el equipo remoto tal y como lo haría si fuese un usuario local en el equipo remoto. A continuación, especifique los parámetros utilizados por el proveedor de servicios remotos para tener acceso a la máquina remota. A continuación, puede tener acceso a la máquina remota como si fuera un usuario local.

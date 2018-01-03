@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3c3f8ba45c00b5604cb141b2ad355ea37b061e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec9be02546a7402b1451a94ff9bc9fd0357e7210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Funciones escalares definidas por el usuario para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  En el ejemplo siguiente se muestra una UDF escalar de la base de datos de muestra [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) .  
   
-```tsql  
+```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   
 RETURNS varchar(8)   
 WITH NATIVE_COMPILATION, SCHEMABINDING  
@@ -106,7 +106,7 @@ END
   
  Cuando se utiliza una función escalar definida por el usuario y compilada de forma nativa dentro de un procedimiento almacenado compilado de forma nativa, se comprueban los permisos para ejecutar la función definida por el usuario cuando se crea el procedimiento externo. Si el usuario suplantado por el procedimiento externo no tiene permisos de ejecución de la función definida por el usuario, se produce un error en la creación del procedimiento almacenado. Si debido a cambios en los permisos, el usuario ya no vuelve a tener permisos de ejecución, se producirá un error en la ejecución del procedimiento externo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Guardar un plan de ejecución en formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   

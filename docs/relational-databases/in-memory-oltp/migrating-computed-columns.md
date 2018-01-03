@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5af311f2c8957a3d24dfbcaeecf421f04b6467b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcb3ba499f02c5e82bff0027cfa9085e525b681a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="migrating-computed-columns"></a>Migrar columnas calculadas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Debe considerar la necesidad de conservar sus columnas calculadas al migrar las 
 ## <a name="non-persisted-computed-columns"></a>Columnas calculadas no persistentes  
  Para simular los efectos de una columna calculada no persistente, cree una vista en la tabla optimizada para memoria. En la instrucción SELECT que define la vista, agregue la definición de columna calculada en la vista. Excepto en un procedimiento almacenado compilado de forma nativa, las consultas que utilizan los valores de la columna calculada deben leerse en la vista. Dentro de los procedimientos almacenados compilados de forma nativa, debe actualizar cualquier instrucción de selección, actualización o eliminación según la definición de la columna calculada.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -58,7 +58,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>Columnas calculadas persistentes  
  Para simular los efectos de una columna calculada persistente, cree un procedimiento almacenado para insertar en la tabla y otro procedimiento almacenado para actualizar la tabla. Al insertar o actualizar la tabla, invoque estos procedimientos almacenados para realizar estas tareas. En los procedimientos almacenados, calcule el valor para el campo calculado según las entradas, igual que se define la columna calculada en la tabla basada en disco original. A continuación, inserte en la tabla o actualícela según se necesite en el procedimiento almacenado.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -96,7 +96,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -3,7 +3,7 @@ title: Ejemplo de la propiedad CacheSize (VB) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f15787ed44187141da6fbedb630749f3a8a39838
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31c27a9bd613dbb54f198eb98fdcb41340838356
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesize-property-example-vb"></a>Ejemplo de la propiedad CacheSize (VB)
 Este ejemplo se utiliza la [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad que se va a mostrar la diferencia de rendimiento para una operación se realiza con y sin una caché del registro de 30.  

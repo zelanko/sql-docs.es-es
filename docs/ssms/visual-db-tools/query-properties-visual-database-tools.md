@@ -3,7 +3,7 @@ title: Propiedades de la consulta (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7b8519c310eff1942280345c77c630aeea23e56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0140ad78a13b1dda752ee0c3f303094578c4f158
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-properties-visual-database-tools"></a>Propiedades de la consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Estas propiedades aparecen en la ventana Propiedades cuando hay una consulta abierta en Diseñador de consultas y vistas. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades.  
@@ -32,14 +32,14 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Las propiedades de este tema están ordenadas por categoría en lugar de alfabéticamente.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Categoría Identidad**  
 Se expande para mostrar la propiedad **Nombre** .  
   
 **Nombre**  
 Muestra el nombre de la consulta actual. No se puede cambiar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
-**Nombre de la base de datos**  
+**Database Name**  
 Muestra el nombre del origen de datos de la tabla seleccionada  
   
 **Nombre de servidor**  
@@ -88,7 +88,7 @@ Permite especificar que la consulta devolverá solo el primer *n* por ciento de 
 **Con valores equivalentes**  
 Especifica que la vista incluirá una cláusula WITH TIES. WITH TIES es útil si una vista incluye una cláusula ORDER BY y una cláusula TOP basadas en un porcentaje. Si se establece esta opción y el límite del porcentaje queda dentro de un conjunto de filas con valores idénticos en la cláusula ORDER BY, se ampliará la vista hasta que incluya todas las filas que faltan. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o posterior.)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Realizar consultas con parámetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

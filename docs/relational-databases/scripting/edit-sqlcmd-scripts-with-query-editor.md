@@ -3,9 +3,9 @@ title: Modificar scripts SQLCMD con el Editor de consultas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44b90c0b7ce2e12e973e6145551bbb3af4c16e3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e63038dab16cd65b74a8b5eb393e3ec6d101e248
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Con el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es posible escribir y modificar consultas como scripts SQLCMD. Los scripts SQLCMD se usan cuando es necesario procesar comandos del sistema de Windows e instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el mismo script.  
@@ -164,7 +164,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

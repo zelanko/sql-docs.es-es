@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f91073a3fd6ad665f793860efdb2ca7b9c0ce976
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64766039b76c424e7141339d566381bcc2693406
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Jerarquías explícitas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una jerarquía explícita organiza los miembros de una sola entidad de la forma que se especifique. La estructura puede ser irregular y, a diferencia de las jerarquías derivadas, las jerarquías explícitas no se basan en relaciones de atributo basadas en dominio.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
  Los miembros consolidados se pueden usar para agrupar miembros en cualquier nivel, y los miembros hoja y consolidados se ordenan según se determine.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
   El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
  **Connection manager**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** .  
   
  **Usar una tabla o una vista**  
  Seleccione una tabla o vista de la lista o cree una tabla haciendo clic en **Nueva**.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un tabla o una vista mediante el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si una tabla de origen de SQL Server o de Sybase incluye una columna de identidad, debe usar las tareas Ejecutar SQL para habilitar IDENTITY_INSERT antes del destino de ADO NET y para deshabilitarlo nuevamente después. (La propiedad de la columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite que valores explícitos de la tabla de origen se inserten en la columna de identidad de la tabla de destino).  
 >   
->   Para ejecutar las instrucciones SET IDENTITY_INSERT y la carga de datos correctamente, se debe hacer lo siguiente. 
->       1. Use el mismo administrador de conexiones de ADO.NET para las tareas Ejecutar SQL y para el destino de ADO NET. 
->       2. En el administrador de conexiones, establezca la propiedad **RetainSameConnection** y la propiedad **MultipleActiveResultSets** en True. 
->       3. En el destino de ADO.NET, establezca la propiedad **UseBulkInsertWhenPossible** en False. 
+>   Para ejecutar las instrucciones SET IDENTITY_INSERT y la carga de datos correctamente, se debe hacer lo siguiente.  
+>       1. Use el mismo administrador de conexiones de ADO.NET para las tareas Ejecutar SQL y para el destino de ADO NET.  
+>       2. En el administrador de conexiones, establezca la propiedad **RetainSameConnection** y la propiedad **MultipleActiveResultSets** en True.  
+>       3. En el destino de ADO.NET, establezca la propiedad **UseBulkInsertWhenPossible** en False.   
 >
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  En el **Editor de destinos de ADO NET**, haga clic en **Asignaciones**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  En el **Editor de destinos de ADO NET**, haga clic en **Salida de error**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada o salida**  
  Muestra el nombre de la entrada.  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  No se usa.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción de la operación.  
   
  **Establecer este valor en las celdas seleccionadas**  

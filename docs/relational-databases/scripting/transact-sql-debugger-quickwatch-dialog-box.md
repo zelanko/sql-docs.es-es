@@ -3,9 +3,9 @@ title: "Inspección rápida (cuadro de diálogo) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 29db30b65a2ec487cfd56a849b82f645e5bb9e4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4831c5a62987109aba02f29f540fdff908cee5b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Depurador de Transact-SQL: cuadro de diálogo Inspección rápida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el tipo de datos y el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)], como una variable o un parámetro, cuando esté depurando el código de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para inspeccionar varias expresiones, puede agregar también la expresión a una ventana **Inspección** .  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Haga clic con el botón derecho en la expresión y, después, seleccione **Editar valor**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Lista de expresiones**  
  Muestra la expresión seleccionada actualmente. La lista desplegable contiene un conjunto de expresiones que puede seleccionar para mostrarse. Las expresiones de la lista son las que están disponibles en el ámbito del marco de pila que está seleccionado actualmente en la ventana **Pila de llamadas** . Para mostrar una expresión diferente, escríbala o selecciónela en la lista. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite las expresiones siguientes: variables, parámetros y funciones de sistema cuyos nombres comienzan por @@.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  **Nombre**  
  Expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a observar.  
   
- **Valor**  
+ **Value**  
  Muestra el valor que está asignado actualmente a la expresión. Se muestra un espacio en blanco cuando la expresión no tiene ningún valor en este momento.  
   
  Si la longitud de una expresión es mayor que el ancho de la columna **Valor** , una información sobre herramientas muestra el valor completo al mover el puntero sobre la celda **Valor** para esa expresión.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  **Tipo**  
  Muestra el tipo de datos de la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Ventana de inspección](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   

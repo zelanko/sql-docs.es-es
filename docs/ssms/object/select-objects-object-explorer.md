@@ -3,7 +3,7 @@ title: Seleccionar objetos (Explorador de objetos) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27a9e701bc4dede53db94d2f9ab3260e3d305d81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-objects-object-explorer"></a>Seleccionar objetos (Explorador de objetos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Seleccionar estos tipos de objeto**  
 Muestra una lista de los tipos a los que pertenecen los objetos que se van a seleccionar. Los tipos incluyen entidades de seguridad y elementos protegibles de nivel de base de datos y nivel de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Este cuadro se llena con las selecciones efectuadas en el cuadro de diálogo **Seleccionar tipos de objetos** , al que se tiene acceso mediante el botón **Tipo de objeto** .  
   

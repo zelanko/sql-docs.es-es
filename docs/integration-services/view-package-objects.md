@@ -5,7 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48327b0b2b0b964366369699b1800f08375125c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-package-objects"></a>Ver objetos de paquete
   En el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la pestaña **Explorador de paquetes** proporciona una vista de explorador del paquete. La vista refleja la jerarquía de contenedores de la arquitectura de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El contenedor de paquetes se encuentra en la parte superior de la jerarquía y puede expandir el paquete para ver las conexiones, ejecutables, controladores de eventos, proveedores de registro, restricciones de precedencia y variables del paquete.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Haga clic con el botón derecho en un objeto y luego haga clic en **Eliminar**. 
  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tareas de Integration Services](../integration-services/control-flow/integration-services-tasks.md)   
  [Contenedores de Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Restricciones de precedencia](../integration-services/control-flow/precedence-constraints.md)   

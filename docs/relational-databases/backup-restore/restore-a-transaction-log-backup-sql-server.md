@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076c1c9a78441473fccd0435980ecfc4e735803c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e2c0047ec80addecb0825a7c8b85409ef62a0e5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **Desde archivo o cinta**  
   
-         Haga clic en el botón Examinar**...**para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
     |Encabezado|Valor|  
     |------------|-----------|  
-    |**Restaurar**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
+    |**Restauración**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
     |**Componente**|Componente del que se ha realizado una copia de seguridad: **Base de datos**, **Archivo** o \<en blanco> (para registros de transacciones).|  
     |**Base de datos**|Nombre de la base de datos que forma parte de la operación de copia de seguridad.|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
          En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-        |Encabezado|Value|  
+        |Encabezado|Valor|  
         |------------|-----------|  
         |\<blank>|Muestra una casilla para seleccionar la marca.|  
         |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  
@@ -245,14 +245,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  La base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usa el modelo de recuperación simple de forma predeterminada. En los siguientes ejemplos se requiere la modificación de la base de datos para utilizar el modelo de recuperación completa, como se indica a continuación:  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. Aplicar una sola copia de seguridad del registro de transacciones  
  En el siguiente ejemplo se empieza con la restauración de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilizando una copia de seguridad completa de la base de datos que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_1`. A continuación, se aplica la primera copia de seguridad del registro de transacciones, que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_log`. Finalmente, el ejemplo recupera la base de datos.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -270,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. Aplicar varias copias de seguridad del registro de transacciones  
  En el siguiente ejemplo se empieza con la restauración de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilizando una copia de seguridad completa de la base de datos que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_1`. A continuación, se aplican, una por una, las tres primeras copias de seguridad del registro de transacciones, que se encuentran en un dispositivo de copia de seguridad denominado `AdventureWorks2012_log`. Finalmente, el ejemplo recupera la base de datos.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -307,7 +307,7 @@ GO
   
 -   [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   

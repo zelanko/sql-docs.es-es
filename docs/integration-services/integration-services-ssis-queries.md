@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ca875378afdd32cf509767eb3c02dc3ff0154d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas de Integration Services (SSIS)
   La tarea Ejecutar SQL, el origen de OLE DB, el destino de OLE DB y la transformación Búsqueda pueden utilizar consultas de SQL. En la tarea Ejecutar SQL, las instrucciones SQL pueden crear, actualizar y eliminar datos y objetos de bases de datos, ejecutar procedimientos almacenados y ejecutar instrucciones SELECT. En el origen de OLE DB y la transformación Búsqueda, las instrucciones SQL son normalmente instrucciones SELECT o EXEC. Normalmente, éstas últimas ejecutan procedimientos almacenados que devuelven conjuntos de resultados.  
@@ -91,11 +91,11 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
   
  Las transformaciones de búsqueda Aproximada y Búsqueda también pueden utilizar variables con parámetros y códigos de retorno. Además, la información relativa al origen OLE DB se puede aplicar a estas dos transformaciones.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Barra de herramientas**  
  Use la barra de herramientas para administrar conjuntos de datos, seleccionar los paneles que desea mostrar y controlar funciones de consulta.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Mostrar u ocultar panel de diagrama**|Muestra u oculta el panel **Diagrama** .|  
 |**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el panel **Cuadrícula** .|  

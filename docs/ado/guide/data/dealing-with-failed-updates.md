@@ -3,7 +3,7 @@ title: Tratar actualizaciones con errores | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2be023b954040c1c539063c1e1a3d1cf67931ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36abbe53e5217ab9e7bf7d0927bf0f91a375c1e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dealing-with-failed-updates"></a>Tratar actualizaciones con errores
 Cuando una actualización concluye con errores, cómo resolver los errores depende de la naturaleza y la gravedad de los errores y la lógica de la aplicación. Sin embargo, si la base de datos se comparte con otros usuarios, un error habitual es que otro usuario modifica el campo antes de seguir. Este tipo de error se denomina un conflicto. ADO detecta esta situación y notifica un error.  

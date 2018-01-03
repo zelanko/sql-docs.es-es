@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Describe cómo habilitar o deshabilitar la indexación semántica estadística de las columnas seleccionadas que contienen documentos o texto.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  En el ejemplo siguiente, se crea un catálogo de texto completo predeterminado, **ft**. Después, se crea un índice único en la columna **JobCandidateID** de la tabla **HumanResources.JobCandidate** de la base de datos de ejemplo AdventureWorks2012. Este índice único se requiere como columna de clave de un índice de texto completo. Después, en el ejemplo se crea un índice de texto completo y un índice semántico en la columna **Resume** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -90,7 +90,7 @@ GO
   
  En este ejemplo también se especifica que el seguimiento de cambios está desactivado sin rellenado. Posteriormente, durante las horas de menor actividad, en el ejemplo se usa una instrucción **ALTER FULLTEXT INDEX** para iniciar un rellenado completo en el nuevo índice y habilitar el seguimiento automático de cambios.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -113,7 +113,7 @@ GO
   
  Posteriormente, durante horas de menor actividad, el índice se rellena:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -139,7 +139,7 @@ GO
   
  En el ejemplo siguiente se modifica un índice de texto completo existente en la tabla **Production.Document** de la base de datos de ejemplo AdventureWorks2012. En el ejemplo se agrega un índice semántico en la columna **Document** de la tabla **Production.Document** , que ya tiene un índice de texto completo. En el ejemplo se especifica que el índice no se volverá a rellenar automáticamente.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -164,7 +164,7 @@ Puede quitar la indexación semántica cuando modifique un índice de texto comp
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Agregar o quitar un índice semántico con Transact-SQL  
 Para quitar la indexación semántica solo de una columna o de algunas columnas, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP STATISTICAL_SEMANTICS** . Puede quitar la indización de varias columnas en una sola instrucción **ALTER** .  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -176,7 +176,7 @@ GO
   
 Para quitar la indexación de texto completo y semántica de una columna, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP** .  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -202,7 +202,7 @@ GO
   
  Un valor devuelto de 1 indica que la búsqueda de texto completo y la búsqueda semántica están habilitadas para la base de datos; un valor devuelto de 0 indica lo contrario.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -226,7 +226,7 @@ GO
   
      Un valor devuelto de 1 indica que la búsqueda semántica está habilitada para la columna; un valor devuelto de 0 indica lo contrario.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -235,7 +235,7 @@ GO
   
      Un valor de 1 en la columna **statistical_semantics** indica que la columna especificada está habilitada para la indexación semántica además de la indexación de texto completo.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -253,16 +253,16 @@ GO
   
  Consulte la vista de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
   
  Los siguientes idiomas se admiten para la indización semántica. En esta lista se representa la salida de la vista de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), ordenada por LCID.  
   
-|Lenguaje|LCID|  
+|Idioma|LCID|  
 |--------------|----------|  
-|Alemán|1031|  
+|German|1031|  
 |Inglés (Estados Unidos)|3082|  
 |Francés|1036|  
 |Italiano|1040|  

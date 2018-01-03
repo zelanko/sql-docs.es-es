@@ -3,9 +3,9 @@ title: Ejecutar el depurador de Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 016079a4e88a669a8ea4be31652095cfc81b0184
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ejecutar el depurador de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] después de abrir una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A continuación, puede ejecutar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en modo de depuración hasta que se detenga el depurador. Puede establecer las opciones para personalizar cómo se ejecuta el depurador.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
 |**Deshabilitar todos los puntos de interrupción**|No disponible|No disponible|No disponible|Deshabilitar todos los puntos de interrupción.|  
 |No disponible|**Agregar inspección**|No disponible|No disponible|Agregar la expresión seleccionada a la ventana **Inspección** .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

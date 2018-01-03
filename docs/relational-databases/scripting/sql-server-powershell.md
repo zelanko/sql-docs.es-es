@@ -3,9 +3,9 @@ title: SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19eb632fc1b975671f968b9e2db806129eacae27
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite Windows PowerShell, que es un eficaz shell de scripting que permite a los administradores y desarrolladores automatizar la administración de servidores y la implementación de aplicaciones. El lenguaje de Windows PowerShell admite una lógica más compleja que los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] , con lo que se permite a los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generar poderosos scripts de administración. Los scripts de Windows PowerShell también se pueden utilizar para administrar otros productos de servidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esto ofrece a los administradores un lenguaje común de scripting para los diferentes servidores.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo cargar solo los ensamblados SMO sin el proveedor o los cmdlets.|[Cargar ensamblados SMO en Windows PowerShell](../../relational-databases/scripting/load-the-smo-assemblies-in-windows-powershell.md)|  
 |Describe cómo ejecutar una sesión de Windows PowerShell haciendo clic con el botón derecho en un nodo del **Explorador de objetos**. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] inicia una sesión de Windows PowerShell, carga el módulo **sqlps** y establece la ruta de acceso del proveedor de SQL Server al objeto seleccionado.|[Ejecutar Windows PowerShell desde SQL Server Management Studio](../../relational-databases/scripting/run-windows-powershell-from-sql-server-management-studio.md)|  
 |Describe cómo crear los pasos de trabajo del Agente SQL Server que ejecutan un script de Windows PowerShell. Los trabajos entonces se pueden programar para ejecutarse a horas específicas o en respuesta a eventos.|[Ejecutar los pasos Windows PowerShell del Agente SQL Server](../../relational-databases/scripting/run-windows-powershell-steps-in-sql-server-agent.md)|  
-|Describe cómo usar las rutas de acceso del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para navegar por una jerarquía de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Proveedor de PowerShell de SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)|  
+|Describe cómo usar las rutas de acceso del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para navegar por una jerarquía de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Proveedor de SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)|  
 |Describe cómo usar los cmdlets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que especifican acciones de [!INCLUDE[ssDE](../../includes/ssde-md.md)] como ejecutar un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Utilizar los cmdlets del motor de base de datos](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)|  
 |Describe cómo especificar los identificadores delimitados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen caracteres no admitidos por Windows PowerShell.|[Identificadores de SQL Server en PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)|  
 |Describe cómo realizar conexiones con la autenticación de SQL Server. De forma predeterminada, los componentes de PowerShell de SQL Server usan conexiones con autenticación de Windows mediante las credenciales del proceso que ejecuta Windows PowerShell.|[Administrar la autenticación en PowerShell del motor de base de datos](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  

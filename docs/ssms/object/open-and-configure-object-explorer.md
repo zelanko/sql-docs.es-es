@@ -3,7 +3,7 @@ title: Abrir y configurar el Explorador de objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a3731819860d5936242f6db45383117f503c448
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5991794babadb59ed8d9218b6a348c933add1a65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir y configurar el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Abra el Explorador de objetos mediante el menú **Ver** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure las opciones del Explorador de objetos mediante **Opciones** en el menú **Herramientas** .  
@@ -32,7 +32,7 @@ El Explorador de objetos es visible de forma predeterminada en [!INCLUDE[ssManSt
 ## <a name="configuring-object-explorer-options"></a>Configurar las opciones del Explorador de objetos  
 Configurar los valores del Explorador de objetos, en el menú **Herramientas** , hace clic en **Opciones**y, a continuación, hace clic en **Explorador de objetos de SQL Server**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Ver](../../ssms/object/object-explorer.md)  
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Administrar objetos mediante el Explorador de objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)  

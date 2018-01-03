@@ -3,9 +3,9 @@ title: Configurar reglas de firewall antes de ejecutar al depurador de TSQL | Mi
 ms.custom: 
 ms.date: 10/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c2f422427764fce597607afdd9a259b11544a1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar reglas de firewall antes de ejecutar al depurador de TSQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se deben configurar reglas de Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
 
 * El servidor necesita comunicarse de nuevo con el cliente a través de RPC. La cuenta bajo la que se ejecuta el servicio SQL Server tendrá que autenticar los permisos para el cliente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Ejecutar el depurador de Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   

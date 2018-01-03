@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -187,7 +187,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="add-variable-dialog-box"></a>Agregar variable, cuadro de diálogo
 Utilice el cuadro de diálogo **Agregar variable** para especificar las propiedades de una nueva variable.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Contenedor**  
  Seleccione un contenedor de la lista. El contenedor define el ámbito de la variable. El contenedor puede ser el paquete o un ejecutable del mismo.  
   
@@ -200,7 +200,7 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
  **Tipo de valor**  
  Seleccione un tipo de datos.  
   
- **Valor**  
+ **Value**  
  Escriba un valor. El valor debe ser compatible con el tipo de datos especificado en la opción **Tipo de valor** .  
   
  **Solo lectura**  
@@ -313,7 +313,7 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Actualización dinámica de una variable mediante configuraciones  
  Para actualizar dinámicamente las variables, puede crear configuraciones para las variables, implementar las configuraciones con el paquete y después, actualizar los valores de las variables en el archivo de configuración al implementar los paquetes. El paquete utiliza los valores actualizados de las variables en tiempo de ejecución. Para obtener más información, vea [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Usar los valores de variables y parámetros en un paquete secundario](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Asignar parámetros de consulta a variables en un componente de flujo de datos](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

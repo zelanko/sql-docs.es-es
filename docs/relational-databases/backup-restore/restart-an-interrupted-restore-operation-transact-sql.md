@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55cb73039ad0db22f6e58dfb84203b92993ac980
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea2993557756fc3808000064e5a6088ce27c32a4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>Reiniciar una operación de restauración interrumpida (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se explica el modo de reiniciar una operación de restauración interrumpida.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Ejemplo  
  Este ejemplo reinicia una operación de restauración interrumpida.  
   
-```tsql  
+```sql  
 -- Restore a full database backup of the AdventureWorks database.  
 RESTORE DATABASE AdventureWorks  
    FROM DISK = 'C:\AdventureWorks.bck'  
@@ -57,7 +57,7 @@ RESTORE DATABASE AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

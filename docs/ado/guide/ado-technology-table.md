@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, technologies
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c17d4b1877ce350e261e0bf671b8fd661409f47d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a03ed3b7537d81fac8045ceaad2c1c9a1afcaa0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="products-and-technologies-table"></a>Productos y tecnologías tabla
 En la tabla siguiente se enumera los productos de Microsoft, herramientas y tecnologías que se tratan en la Guía del programador de ADO. Se proporcionan vínculos, siempre que sea posible, a temas relevantes en la guía.
 
-|Tecnología o producto de Microsoft|Referencias|
+|Tecnología o producto de Microsoft|References|
 |-------------------------------------|----------------|
 |Access/Jet|[Trabajar con conjuntos de registros](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [Aspectos básicos de ADOX](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Proveedor Microsoft OLE DB para Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Interfaces de servicio de Active Directory (ADSI)|[Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

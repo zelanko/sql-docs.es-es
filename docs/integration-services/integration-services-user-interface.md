@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e491a90b39421fb04501498b205b5e8355eec063
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  
@@ -49,8 +49,8 @@ ms.lasthandoff: 11/20/2017
 |----------------|-------------|------------|  
 |**Introducción**|Tener acceso a ejemplos, tutoriales y vídeos.|En la superficie de diseño de la pestaña **Flujo de control** o de la pestaña **Flujo de datos** , haga clic con el botón derecho y elija **Introducción**.<br /><br /> Para mostrar automáticamente la ventana **Introducción** cada vez que cree un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , seleccione **Mostrar siempre en los proyectos nuevos** en la parte inferior de la ventana.|  
 |**Configurar registros SSIS**|Configurar el registro de un paquete y sus tareas agregando registros y configurando detalles de registro.|En el menú **SSIS** , haga clic en **Registro**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Registro**.|  
-|**Organizador de configuraciones de paquetes**|Agregar y editar configuraciones de paquetes Desde este cuadro de diálogo se ejecuta el Asistente para la configuración de paquetes.|En el menú **SSIS** , haga clic en **Configuraciones de paquetes**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Configuraciones de paquetes**.|  
-|**Firma digital**|Firmar un paquete o quitar la firma del paquete.|En el menú **SSIS** , haga clic en **Firma digital**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Firma digital**.|  
+|**Organizador de configuraciones de paquetes**|Agregar y editar configuraciones de paquetes Desde este cuadro de diálogo se ejecuta el Asistente para la configuración de paquetes.|En el menú **SSIS** , haga clic en **Configuraciones de paquetes**.<br /><br /> -O bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Configuraciones de paquetes**.|  
+|**Firma digital**|Firmar un paquete o quitar la firma del paquete.|En el menú **SSIS** , haga clic en **Firma digital**.<br /><br /> -O bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Firma digital**.|  
 |**Establecer puntos de interrupción**|Habilitar puntos de interrupción en tareas y establecer las propiedades de los puntos de interrupción.|En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en una tarea o contenedor y, luego, haga clic en **Editar puntos de interrupción**. Para establecer un punto de interrupción en el paquete, haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Editar puntos de interrupción**.|  
   
  La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el valor del elemento \<GettingStartedSamples> que especifica la dirección URL de la fuente RSS. El archivo se encuentra en la carpeta *unidad>\<*:\Archivos de programa\Microsoft SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la carpeta *\<unidad>*:\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn.  
@@ -75,8 +75,8 @@ ms.lasthandoff: 11/20/2017
   
 |Ventana|Finalidad|Acceso|  
 |------------|-------------|------------|  
-|**Variables**|Agregar y administrar variables personalizadas.|En el menú **SSIS** , haga clic en **Variables**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Variables**.<br /><br /> - O bien -<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Variables**.|  
-|**Registrar eventos**|Ver entradas del registro en tiempo de ejecución.|En el menú **SSIS** , haga clic en **Registrar eventos**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Registrar eventos**.<br /><br /> - O bien -<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Registrar eventos**.|  
+|**Variables**|Agregar y administrar variables personalizadas.|En el menú **SSIS** , haga clic en **Variables**.<br /><br /> -O bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Variables**.<br /><br /> -O bien-<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Variables**.|  
+|**Registrar eventos**|Ver entradas del registro en tiempo de ejecución.|En el menú **SSIS** , haga clic en **Registrar eventos**.<br /><br /> -O bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Registrar eventos**.<br /><br /> -O bien-<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Registrar eventos**.|  
   
 ## <a name="custom-editors"></a>Editores personalizados  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un cuadro de diálogo personalizado para la mayoría de los contenedores, tareas, orígenes, transformaciones y destinos.  
@@ -119,10 +119,10 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información sobre otras ventanas y menús, vea la documentación sobre Visual Studio.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para más información sobre cómo crear paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vea [Crear paquetes en SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Diseñador SSIS](../integration-services/ssis-designer.md)  
   
   

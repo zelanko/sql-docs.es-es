@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36fd0cd2cc5f7168e4daf7948ab9a9223b21e394
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  En este ejemplo se crea un inicio de sesión para la cuenta de Windows *nombre_de_dominio*`\MAX_CPU` y, después, se concede el permiso VIEW SERVER STATE al inicio de sesión. Este permiso permite comprobar la clasificación que hace el regulador de recursos de las sesiones del inicio de sesión. Después, en el ejemplo se crea un usuario para *nombre_de_dominio*`\MAX_CPU` y se agrega al rol fijo de base de datos db_backupoperator para la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . La función clasificadora del regulador de recursos usará este nombre de usuario.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  En el ejemplo siguiente se usa el nombre de usuario del usuario de ejemplo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado en "Ejemplo A: configurar un inicio de sesión y un usuario (Transact-SQL)", *nombre_de_dominio*`\MAX_CPU`. Reemplace esto por el nombre del usuario del inicio de sesión que piensa usar para crear copias de seguridad comprimidas de prioridad baja.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Comprobar la clasificación de la sesión actual (Transact-SQL)  
  Si lo desea, inicie sesión como el usuario que especificó en la función clasificadora y compruebe la clasificación de la sesión emitiendo la instrucción [SELECT](../../t-sql/queries/select-transact-sql.md) siguiente en el Explorador de objetos:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Ejemplo C: crear una copia de seguridad comprimida (Transact-SQL)  
  En el ejemplo [BACKUP](../../t-sql/statements/backup-transact-sql.md) siguiente se crea una copia de seguridad completa comprimida de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en un archivo de copia de seguridad al que se ha dado formato recientemente, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
@@ -285,7 +285,7 @@ GO
   
  [&#91;Principio&#93;](#Top)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear y probar una función clasificadora definida por el usuario](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  
   

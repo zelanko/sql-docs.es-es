@@ -3,9 +3,9 @@ title: "Agregar fragmentos de código de Transact-SQL| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dd782cbd60c23d139a980bbf943b158cb38561b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86cc59271db6f0f4ec28aca95b7636baacc71d16
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-transact-sql-snippets"></a>Agregar fragmentos de código de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede agregar sus propios fragmentos de código de Transact-SQL al conjunto de fragmentos de código predefinidos que se incluyen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Navegue a la carpeta que contiene el archivo TryCatch.snippet, haga clic en el citado archivo y haga clic en el botón **Abrir** . No debe haber un fragmento de código TryCatch en la carpeta **Mis fragmentos de código** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Insertar fragmentos de código de Transact-SQL para rodear](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

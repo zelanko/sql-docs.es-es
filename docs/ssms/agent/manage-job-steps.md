@@ -3,7 +3,7 @@ title: Administrar pasos de trabajo | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 74a603626ff9e2c076abb09eb27ac2416a525b01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6db3f3c828aa0841372bdc8bc8d493235d0bccb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un paso de trabajo es una acción que el trabajo realiza en una base de datos o un servidor. Cada trabajo debe estar formado por un paso, como mínimo. Los pasos de trabajo pueden ser:  
@@ -200,11 +200,11 @@ Tenga en cuenta que si implementó el paquete en el catálogo de SSIS y especifi
   
 Para más información sobre cómo crear pasos de trabajo que ejecutan paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , consulte [Trabajos del Agente SQL Server para paquetes](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Tema**|  
+|**Descripción**|**Tema**|  
 |Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql_md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
@@ -215,7 +215,7 @@ Para más información sobre cómo crear pasos de trabajo que ejecutan paquetes 
 |Describe cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo.|[Ver información de pasos de trabajo](../../ssms/agent/view-job-step-information.md)|  
 |Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Crear trabajos](../../ssms/agent/create-jobs.md)  
 [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  

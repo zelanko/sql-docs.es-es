@@ -3,7 +3,7 @@ title: "Realizar consultas con parámetros (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a74efc549ad7e04191e518ba17b1a88c230d8cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 66b72b4a855628c20ba06afa465be5ee7997fb6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Realizar consultas con parámetros (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En muchas ocasiones, resulta útil crear una consulta que se pueda usar varias veces en las aplicaciones especificando información diferente cada vez. En esta sección encontrará información sobre cómo crear consultas de parámetros de carácter general.  
@@ -38,9 +38,9 @@ Obtener información sobre consultas de carácter general.
 Crear una consulta mediante parámetros sin nombre.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
-[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Proporciona vínculos a temas en los que se tratan las tareas de consulta más comunes.  
   
-[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Proporciona vínculos a temas sobre las distintas maneras de buscar y cómo buscar lo que se desea.  
   

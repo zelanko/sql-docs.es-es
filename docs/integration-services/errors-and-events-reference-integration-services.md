@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referencia de errores y eventos (Integration Services)
   Esta sección de la documentación contiene información sobre varios errores y eventos relacionados con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se incluye información sobre las causas y la forma de resolver los mensajes de error.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
 |SQLISService_273|Indica que el archivo de configuración no se puede leer o no es válido.|  
 |SQLISService_274|Indica que la entrada del Registro que contiene la ubicación del archivo de configuración no existe o esta vacía.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

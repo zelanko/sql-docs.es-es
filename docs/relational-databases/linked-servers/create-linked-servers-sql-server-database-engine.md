@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6d7a92e154f6e517fe3299a952a78a05aa4b7d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  En el Editor de consultas, escriba el siguiente comando [!INCLUDE[tsql](../../includes/tsql-md.md)] para vincular a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llamada `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Ejecute el siguiente código para configurar el servidor vinculado con el fin de que use las credenciales de dominio del inicio de sesión que usa el servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Ejecute el siguiente código para probar la conexión al servidor vinculado. En este ejemplo se devuelven los nombres de las bases de datos del servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Use nombres de cuatro partes para hacer referencia a un objeto de un servidor vinculado. Ejecute el código siguiente para que se devuelva una lista de todos los inicios de sesión del servidor local y sus inicios de sesión coincidentes en el servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -254,7 +254,7 @@ ms.lasthandoff: 11/17/2017
   
      Cuando se devuelve NULL para el inicio de sesión del servidor vinculado, se indica que el inicio de sesión no existe en el servidor vinculado. Estos inicios de sesión no podrán usar el servidor vinculado a menos que este se configure para pasar un contexto de seguridad distinto o el servidor vinculado acepte conexiones anónimas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

@@ -3,7 +3,7 @@ title: "Cambiar el color, el tamaño y el estilo de la fuente en los diagramas |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb0f8bdb8cdb830825b419321ed15fe6557e1193
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d056b70f7d13c4c6754a9e0eef8486f82e21d39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Cambiar el color, el tamaño y el estilo de la fuente en los diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede personalizar la forma en que aparece el texto en los diagramas de bases de datos modificando el color, el tamaño y el estilo de la fuente. Los cambios se aplican a los nuevos diagramas y a los diagramas existentes cuando se modifican.  
@@ -40,6 +40,6 @@ ms.lasthandoff: 12/05/2017
   
 4.  Cambie la fuente, el tamaño, el elemento de muestra y los colores de primer plano y de fondo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

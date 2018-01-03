@@ -3,7 +3,7 @@ title: Panel Diagrama (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 572d4a03893a080c6e2e97a882965c160574cfba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e339c6f51a7a6baf20ba1d7264c17a339722e466
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Panel Diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El panel Diagrama muestra una presentación gráfica de las tablas o los objetos con valores de tabla que ha seleccionado en la conexión de datos. También muestra todas las relaciones de combinación entre ellos.  
@@ -41,7 +41,7 @@ Al realizar un cambio en el panel Diagrama, el panel Criterios y el panel SQL se
   
 Cada tabla u objeto con valores de tabla aparece como una ventana independiente en el panel Diagrama. El icono de la barra de título de cada rectángulo indica qué tipo de objeto representa el rectángulo, tal y como se ilustra en la tabla siguiente.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Tablas**  
 Muestra las tablas que puede agregar al panel Diagrama. Para agregar una tabla, selecciónela y haga clic en **Agregar**. Para agregar varias tablas al mismo tiempo, selecciónelas y haga clic en **Agregar**.  
   
@@ -101,7 +101,7 @@ Los iconos situados en los extremos de la línea de combinación indican el tipo
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icono de Visual Database Tools")|Combinación uno a varios|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icono de Visual Database Tools")|El Diseñador de consultas y vistas no puede determinar el tipo de combinación|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Panel Criterios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
 [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

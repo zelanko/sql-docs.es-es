@@ -3,7 +3,7 @@ title: Abrir diagramas de base de datos (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56181f69c637a1368d25e633cbd2e847f89beac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ace503d33170b10379ccbdab94b9860e2689946
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Abrir diagramas de base de datos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede abrir diagramas de base de datos para ver o editar la estructura del diagrama.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Haga doble clic en el nombre del diagrama de base de datos que desea abrir.  
   
-    - O bien -  
+    -O bien-  
   
     Haga clic con el botón derecho en el nombre del diagrama de base de datos que desea abrir y, luego, elija **Diagrama de base de datos de diseño**.  
   
@@ -45,7 +45,7 @@ El diagrama de base de datos se abre en el Diseñador de diagramas de base de da
 > [!NOTE]  
 > Solo el propietario del diagrama o un miembro del rol db_owner de la base de datos puede abrir el diagrama.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Descripción de la propiedad de un diagrama de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

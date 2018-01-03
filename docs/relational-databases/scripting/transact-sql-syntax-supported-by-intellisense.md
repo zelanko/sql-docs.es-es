@@ -3,9 +3,9 @@ title: Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6316251928dd147230e0849f0468a3848ef7d779
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -52,17 +52,17 @@ ms.lasthandoff: 11/17/2017
   
 |Instrucción Transact-SQL|Sintaxis compatible|Excepciones|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toda la sintaxis, excepto la cláusula *execute_statement* .|Ninguno|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toda la sintaxis.|Ninguno|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toda la sintaxis.|Ninguno|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toda la sintaxis.|Ninguno|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Toda la sintaxis.|Ninguno|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|Ninguno|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Toda la sintaxis.|Ninguno|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Toda la sintaxis.|Ninguno|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toda la sintaxis, excepto la cláusula *execute_statement* .|None|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toda la sintaxis.|None|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toda la sintaxis.|None|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toda la sintaxis.|None|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Toda la sintaxis.|None|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|None|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Toda la sintaxis.|None|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Toda la sintaxis.|None|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Toda la sintaxis.|No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Toda la sintaxis.|No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Toda la sintaxis.|Ninguno|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Toda la sintaxis.|None|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense en las instrucciones compatibles  
  La característica IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es compatible con los elementos de sintaxis siguientes cuando se utilizan en una de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] compatibles:  

@@ -3,7 +3,7 @@ title: Mover un servidor registrado o un grupo de servidores registrados | Micro
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Mover un servidor registrado o un grupo de servidores registrados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo organizar los servidores en Servidores registrados moviendo un servidor o grupos de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los grupos de servidores pueden contener servidores registrados u otros grupos de servidores. Tanto los servidores como los grupos de servidores pueden moverse de un grupo de servidores a otro.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  En el cuadro de diálogo **Mover registro de servidor** , expanda la lista de grupos de servidores, haga clic en el nodo donde desea que se muestre el servidor o grupo de servidores y, a continuación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Registrar servidores](../../tools/sql-server-management-studio/register-servers.md)   
  [Crear o editar un grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   

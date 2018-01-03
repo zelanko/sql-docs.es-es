@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ece7ad69dc6ed7421b3e2793330e9ecb995575fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funciones - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Si no se especifica un identificador de ejecución, se devuelven estadísticas de rendimiento de varias ejecuciones. Si es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de todas las ejecuciones actuales.  Si no es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de las ejecuciones actuales para las que tiene permisos de lectura. *execution_id* es **BigInt**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En la tabla siguiente se muestran los valores de nombre de contador devueltos por la función dm_execution_performance_counter.  
   
 |Nombre de contador|Description|  
@@ -62,7 +62,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Devolución  
  La función dm_execution_performance_counters devuelve una tabla con las columnas siguientes para una ejecución en curso. La información devuelta corresponde a todos los paquetes contenidos en la ejecución. Si no hay ninguna ejecución en curso, se devuelve una tabla vacía.  
   
-|Nombre de la columna|Tipo de columna|Description|Comentarios|  
+|Nombre de la columna|Tipo de columna|Description|Notas|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** no es un valor válido.|Identificador único para la ejecución que contiene el paquete.||  
 |counter_name|**nvarchar(128)**|Nombre del contador.|Vea la sección **Comentarios** de los valores.|  
@@ -83,14 +83,14 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta función necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en la instancia de ejecución  
   
--   Pertenencia al rol de base de datos **ssis_admin**  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor **sysadmin**  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que la función genere un error.  

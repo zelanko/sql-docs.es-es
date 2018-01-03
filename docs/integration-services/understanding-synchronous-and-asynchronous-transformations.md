@@ -5,7 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: docset-sql-devref
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c258cd2c85a26c20fc50c1a5e860096f7e69f26f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33e3c5b8a8c10a6b4f94d8ae67e68debbd3c8e98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Descripción de las transformaciones sincrónicas y asincrónicas
   Para entender la diferencia que existe entre una transformación sincrónica y una transformación asincrónica en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], lo más fácil es empezar por la descripción de una transformación sincrónica. Si una transformación sincrónica no satisface sus necesidades, puede que su diseño requiera una transformación asincrónica.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  También sería posible crear una transformación asincrónica que emule una transformación sincrónica mediante la copia explícita de cada fila de entrada en la salida. Con este enfoque, podría cambiar el nombre de las columnas o convertir los tipos de datos o los formatos. No obstante, este enfoque disminuye el rendimiento. Puede obtener los mismos resultados con un mayor rendimiento utilizando componentes integrados de Integration Services, como Copiar columna o Conversión de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear una transformación sincrónica con el componente de script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Crear una transformación asincrónica con el componente de script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

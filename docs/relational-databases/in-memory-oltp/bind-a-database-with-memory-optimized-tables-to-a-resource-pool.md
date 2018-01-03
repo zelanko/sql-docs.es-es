@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> Crear la base de datos  
  El código [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente crea una base de datos denominada IMOLTP_DB que contendrá una o varias tablas optimizadas para memoria. La ruta de acceso \<driveAndPath> debe haberse creado antes de ejecutar este comando.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -98,7 +98,7 @@ En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y
   
  El siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un grupo de recursos de servidor denominado Pool_IMOLTP con la mitad de memoria disponible para su uso.  Una vez creado el grupo, hay que reconfigurar el Regulador de recursos para incluir Pool_IMOLTP.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -115,7 +115,7 @@ GO
   
  El siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] define un enlace de la base de datos IMOLTP_DB con el grupo de recursos de servidor Pool_IMOLTP. El enlace no surte efecto hasta que la base de datos pase a estar en línea.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -125,7 +125,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Confirmar el enlace  
  Confirme el enlace, teniendo en cuenta el identificador del grupo de recursos de servidor para IMOLTP_DB. No puede ser NULL.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -134,7 +134,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Activar el enlace  
  Debe poner la base de datos sin conexión y volver a ponerla en línea después de enlazarla al grupo de recursos de servidor para que el enlace surta efecto. Si la base de datos se enlazó a otro grupo diferente, esto quita la memoria asignada del grupo de recursos de servidor anterior y las asignaciones de memoria para la tabla y los índices optimizados para memoria provendrán ahora del grupo de recursos de servidor recién enlazado a la base de datos.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -158,7 +158,7 @@ GO
   
  **Código muestra**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -189,7 +189,7 @@ GO
   
  Una vez que una base de datos se ha enlazado a un grupo de recursos de servidor con nombre, utilice la consulta siguiente para ver las asignaciones de memoria en distintos grupos de recursos de servidor.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -217,7 +217,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Si no enlaza la base de datos a un grupo de recursos de servidor con nombre, se enlaza al grupo “default”. Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el grupo de recursos de servidor predeterminado para la mayoría de las demás asignaciones, no podrá supervisar con precisión la memoria usada por las tablas optimizadas para memoria mediante la DMV sys.dm_resource_governor_resource_pools para la base de datos de interés.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   

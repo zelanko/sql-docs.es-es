@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 030764b39018049a729496177f967f659fb5b08c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Para una demostración más completa de las posibles mejoras de rendimiento de O
   
 3.  Ejecute el T-SQL corto para crear la base de datos y su grupo de archivos optimizados para memoria.  
   
-```tsql  
+```sql  
 go  
 CREATE DATABASE imoltp;    --  Transact-SQL  
 go  
@@ -79,7 +79,7 @@ go
   
 2.  Ejecute el siguiente T-SQL en la base de datos.  
   
-```tsql  
+```sql  
 go  
 DROP PROCEDURE IF EXISTS ncsp;  
 DROP TABLE IF EXISTS sql;  
@@ -131,7 +131,7 @@ go
   
 2.  Vuelva a usar SSMS.exe para ejecutar el siguiente T-SQL en la base de datos.  
   
-```tsql  
+```sql  
 go  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
@@ -194,13 +194,13 @@ go
   
  A continuación se muestran las estadísticas de tiempo de salida generadas por la segunda ejecución de prueba.  
   
-```tsql  
+```sql  
 10453 ms , A: Disk-based table and interpreted Transact-SQL.  
 5626 ms , B: memory-optimized table with hash index and interpreted Transact-SQL.  
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -3,7 +3,7 @@ title: "Propiedades del operador - Nuevo operador (página General) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a488d571176d09e950094328efdbc481157cdcff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb3db6a241f33a91f1eaafb4433b3e26ebe72816
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Propiedades del operador - Nuevo operador (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para ver y modificar las propiedades generales de los operadores del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Nombre**  
 Cambie el nombre del operador.  
   
-**Habilitado**  
+**Enabled**  
 Habilite el operador. Si no se hablita, no se le envía ninguna notificación.  
   
 **Nombre de correo electrónico**  
@@ -55,6 +55,6 @@ Seleccione la hora del día a partir de la cual el Agente [!INCLUDE[ssNoVersion]
 **Fin del día laborable**  
 Seleccione la hora del día a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] deja de enviar mensajes al buscapersonas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Operadores](../../ssms/agent/operators.md)  
   

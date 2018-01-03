@@ -3,7 +3,7 @@ title: "Propiedades de alerta: Nueva alerta (página General) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f3f7d45da8f980797f6ff93a7446cbf827945b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3860afc9e6af4561093350b148b1a36b6c527262
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Propiedades de alerta - Nueva alerta (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para ver y modificar las propiedades generales de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Nombre**  
 Cambie el nombre de la alerta.  
   
@@ -79,10 +79,10 @@ Especifica un valor para el contador.
 **Espacio de nombres**  
 Especifica el espacio de nombres que se utilizará para la instrucción WQL (Lenguaje de consulta WMI). Solo se admite el espacio de nombres del equipo que ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-**Query**  
+**Consulta**  
 Especifica la instrucción WQL que identifica el evento al que responde la alerta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Alertas](../../ssms/agent/alerts.md)  
 [Usar WQL con el proveedor WMI para eventos de servidor](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)  
 [Crear una alerta con un número de error](../../ssms/agent/create-an-alert-using-an-error-number.md)  

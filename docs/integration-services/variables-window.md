@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>Ventana Variables
   Use la ventana **Variables** para crear y modificar variables definidas por el usuario y ver variables del sistema.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Los valores de las propiedades **Nombre** y **Espacio de nombres** deben empezar con una letra, como se define en el Estándar Unicode 2.0, o un carácter de subrayado (_). Los caracteres siguientes pueden ser letras o números, tal como se define en el Estándar Unicode 2.0, o el carácter de subrayado (\_).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Agregar variable**  
  Agrega una variable definida por el usuario.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Raise Change Event**  
  Indica si se activa un evento **OnVariableValueChanged** cuando un valor cambia. Puede actualizar el valor de la variable para variables definidas por el usuario y el sistema. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
- **Description**  
+ **Descripción**  
  Vea la descripción de la variable. Puede cambiar la descripción para variables definidas por el usuario. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
  **Expresión**  
@@ -110,11 +110,11 @@ ms.lasthandoff: 11/20/2017
   
 -   **Desencadenar el evento cuando cambie el valor de la variable**  
   
--   **Description**  
+-   **Descripción**  
   
 -   **Expresión**  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   

@@ -3,7 +3,7 @@ title: Al agregar varios campos | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 545e1aa8853390a5aed0153bef8a312b220d1e96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfeb78bd512c1c0dec5648482f89a09b52991ee0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-multiple-fields-and-values"></a>Agregar varios campos y valores
 En ocasiones, puede que sea más eficaz para pasar una matriz de campos y sus valores correspondientes a la **AddNew** método, en lugar de configuración **valor** varias veces para cada nuevo campo. Si *FieldList* es una matriz, *valores* también debe ser una matriz con el mismo número de miembros; de lo contrario, se produce un error. El orden de los nombres de campo debe coincidir con el orden de los valores de campo en cada matriz. El código siguiente pasa una matriz de campos y una matriz de valores para la **AddNew** método.

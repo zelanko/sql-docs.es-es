@@ -3,7 +3,7 @@ title: "Cuadro de diálogo Abrir archivo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Abrir archivo** para abrir un archivo existente en el disco. Este cuadro de diálogo también se puede utilizar para abrir un archivo ya abierto mediante opciones de codificación de lenguaje distintas.  
@@ -35,7 +35,7 @@ Para tener acceso a este cuadro de diálogo, seleccione **Abrir** en el menú **
 > Antes de abrir un proyecto o un componente en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], asegúrese de que su código es de confianza. El acto de abrir el proyecto o componente en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] puede hacer que su código se ejecute en un proceso de confianza del equipo local.  
   
 ## <a name="option"></a>Opción  
-**Buscar en**  
+**Look in**  
 Busque la carpeta del proyecto actual en este menú desplegable. Al seleccionar una carpeta de la lista, aparece su contenido en el panel principal.  
   
 ## <a name="my-places-bar"></a>Barra Mis direcciones  

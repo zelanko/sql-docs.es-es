@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 204b18d54a65c8fdf3cbc86d04e7daf1850fe84f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86c13345caa59dfb4ef9dad6f9c9cdb0ea324472
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Para buscar las plantillas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vaya a **Ver**, haga clic en **Explorador de plantillas**y, a continuación, seleccione **Plantillas de SQL Server**. **Captura de datos modificados** es una subcarpeta. Bajo esta carpeta, encontrará todas las plantillas a las que se hace referencia en este tema. También existe un icono **Explorador de plantillas** en la barra de herramientas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Para buscar las plantillas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vaya a **Ver**, haga clic en **Explorador de plantillas**y, a continuación, haga clic en **Plantillas de SQL Server**. **Captura de datos modificados** es una subcarpeta donde se pueden buscar todas las plantillas a las que se hace referencia en este tema. También existe un icono **Explorador de plantillas** en la barra de herramientas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -86,7 +86,7 @@ GO
   
  De forma predeterminada, la tabla de cambios se encuentra en el grupo de archivos predeterminado de la base de datos. Los propietarios de base de datos que quieran controlar la ubicación de las tablas de cambios individuales pueden usar el parámetro *@filegroup_name* para especificar un grupo de archivos determinado para la tabla de cambios asociada a la instancia de captura. El grupo de archivos con nombre debe existir previamente. Generalmente, se recomienda que las tablas de cambios se coloquen en un grupo de archivos independiente de las tablas de origen. Consulte la plantilla **Habilitar una tabla que especifique un opción de grupo de archivos** para ver un ejemplo que muestra el uso del parámetro *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -108,7 +108,7 @@ GO
   
  Si prefiere no usar un rol de acceso, debe establecer explícitamente el valor NULL en el parámetro *@role_name* . Vea la plantilla **Enable a Table Without Using a Gating Role** para obtener un ejemplo de cómo habilitar una tabla sin un rol de acceso.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -133,7 +133,7 @@ GO
   
  Vea la plantilla **Enable a Table for All and Net Changes Queries** para obtener un ejemplo que muestre la creación de una instancia de captura con ambas funciones de consulta.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -157,7 +157,7 @@ GO
   
  Vea la plantilla Deshabilitar una instancia de captura para una tabla si desea obtener un ejemplo de deshabilitación de una tabla.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  
@@ -170,7 +170,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Trabajar con datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

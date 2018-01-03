@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77b06bff3d98e39104970adaaeadf9f8d342a357
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Crear un DTC agrupado para un grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema le guiará a través de una configuración completa de un recurso DTC agrupado para un grupo de disponibilidad AlwaysOn de SQL Server. La configuración completa puede tardar una hora en completarse. 
@@ -120,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  Configurar **in-doubt xact resolution** 
 Este script definirá la opción de configuración de servidor **in-doubt xact resolution** para "suponer la confirmación" para las transacciones dudosas.  Ejecute el siguiente script T-SQL en SQL Server Management Studio (SSMS) contra `SQLNODE1` en el **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -161,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4. Crear bases de datos de prueba
 El script creará una base de datos denominada `AG1` en `SQLNODE1` y una base de datos denominada `dtcDemoAG1` en `SQLNODE2`.  Ejecute el siguiente script T-SQL en SSMS contra `SQLNODE1` en el **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -219,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5.   Crear los puntos de conexión
 Este script creará un punto de conexión denominado `AG1_endpoint` que escucha en el puerto TCP `5022`.  Ejecute el siguiente script T-SQL en SSMS contra `SQLNODE1` en el **modo SQLCMD**.
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -252,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6.   Preparar las bases de datos para el grupo de disponibilidad
 El script realizará una copia de seguridad de `AG1` en `SQLNODE1` y la restaurará en `SQLNODE2`.  Ejecute el siguiente script T-SQL en SSMS contra `SQLNODE1` en el **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -285,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7.   Crear grupo de disponibilidad
 Los [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deben crearse con el comando **CREATE AVAILABILITY GROUP** y la cláusula **WITH DTC_SUPPORT = PER_DB**.  Actualmente no se puede modificar un grupo de disponibilidad existente.  El asistente Nuevo grupo de disponibilidad no permite habilitar la compatibilidad con DTC para un nuevo grupo de disponibilidad.  El siguiente script creará el nuevo grupo de disponibilidad y unirá el secundario.  Ejecute el siguiente script T-SQL en SSMS contra `SQLNODE1` en el **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -488,7 +488,7 @@ Con el servicio DTC agrupado completamente configurado, debe detener y reiniciar
 La primera vez que el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] necesita una transacción distribuida, se inscribe con un servicio DTC. El servicio SQL Server seguirá usando ese servicio DTC hasta que se reinicie. Si un servicio DTC agrupado está disponible, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se inscribirá con él. Si hay un servicio DTC agrupado no está disponible, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se inscribirá con él. Para comprobar que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se inscribe con el servicio DTC agrupado, detenga y reinicie cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 
 Siga los pasos contenidos en el siguiente script T-SQL:
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -549,7 +549,7 @@ Esta prueba usa un servidor vinculado desde `SQLNODE1` a `SQLNODE2` para crear u
 ### <a name="create-linked-servers"></a>Crear servidores vinculados  
 El siguiente script creará dos servidores vinculados en `SQLNODE1`.  Ejecute el siguiente script T-SQL en SSMS contra `SQLNODE1`.
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -565,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>Ejecutar una transacción distribuida
 Este script devolverá primero las estadísticas de transacción DTC actuales.  Después, el script ejecutará una transacción distribuida utilizando bases de datos en `SQLNODE1` y `SQLNODE2`.  Luego, el script devolverá las estadísticas de transacción DTC que ahora deberían mostrar un recuento mayor.  Conéctese físicamente a `SQLNODE1` y ejecute el siguiente script T-SQL en SSMS contra `SQLNODE1` en el **modo SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

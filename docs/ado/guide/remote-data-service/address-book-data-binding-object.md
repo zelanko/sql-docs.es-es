@@ -3,7 +3,7 @@ title: Objeto de enlace de datos de la libreta de direcciones | Documentos de Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de enlace de datos de libreta de direcciones
 La aplicación de la libreta de direcciones utiliza el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto que se va a enlazar los datos de la base de datos de SQL Server a un objeto visual (en este caso, una tabla DHTML) en la página de la aplicación cliente HTML. La lógica del programa VBScript controlada por eventos usa el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  

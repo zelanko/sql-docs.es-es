@@ -3,7 +3,7 @@ title: Guardar cambios | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 132a5f61c658d410af36efe597bb48d64c4f3da8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d771efdee7eaa700897ac9614d27c602e59d34e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-changes"></a>Guardar cambios
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Advierte que los cambios en los elementos indicados no se guardarán si no hace clic en **Sí**.  
@@ -38,7 +38,7 @@ Este cuadro de diálogo puede aparecer cuando cierra soluciones, planes de mante
   
 Los cambios en los elementos ya guardados se guardarán automáticamente en su ubicación de almacenamiento. Si un elemento no se ha guardado todavía, aparece el cuadro de diálogo **Guardar archivo como** para solicitar una nueva ubicación de almacenamiento.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **¿Desea guardar los cambios de estos elementos?**  
 Los elementos seleccionados se guardarán. Los elementos se pueden seleccionar y desactivar.  
   

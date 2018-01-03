@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f76478f355ea25c72572ebd52535360697b301cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf437e4047e30beb754fac29c4ed2626de594363
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entities-master-data-services"></a>Entidades (Master Data Services)
   Las entidades son objetos contenidos en modelos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Cada entidad contiene miembros, que son las filas de datos maestros que administra.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Este es un ejemplo basado en la interfaz de usuario (IU) de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La estructura de árbol jerárquica muestra las relaciones entre las entidades y los atributos basados en dominio. El objetivo es mostrar las relaciones más que representar niveles de importancia.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

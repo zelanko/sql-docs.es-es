@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa8e562bc16cdb6430ad0c8eff8b48b0d0b861b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d23639aa98492228fdec5d45799718f59b809425
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implementar un proyecto de SSIS con PowerShell
 Este tutorial de inicio rápido muestra cómo usar un script de PowerShell para conectarse a un servidor de bases de datos e implementar un proyecto de SSIS en el catálogo de SSIS.
@@ -69,13 +69,13 @@ Write-Host "Done."
 - Tenga en cuenta otras formas de implementar un paquete.
     - [Implementar un paquete SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
     - [Implementar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Implementar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md) [Implementar un paquete SSIS con Transact-SQL (VSCode)]
     - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-deploy-cmdline.md)
     - [Implementar un paquete SSIS con C#](./ssis-quickstart-deploy-dotnet.md) 
 - Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para obtener más información, vea los artículos siguientes:
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
-    - [Ejecutar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
-    - [Ejecutar un paquete SSIS con PowerShell](ssis-quickstart-run-powershell.md)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ejecutar un paquete de SSIS con PowerShell)
     - [Ejecutar un paquete SSIS con C#](./ssis-quickstart-run-dotnet.md) 

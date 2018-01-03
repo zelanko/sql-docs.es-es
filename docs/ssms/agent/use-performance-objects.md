@@ -3,7 +3,7 @@ title: Usar objetos de rendimiento | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4f17733ed8ed29839a30da458aee281fefc8486
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34279a9ff92a6cda54ee76ebadad6bc9ed6ca5ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-performance-objects"></a>Usar objetos de rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente 
@@ -41,21 +41,21 @@ Hay objetos y contadores de rendimiento del servicio Agente [!INCLUDE[ssNoVersio
   
 La tabla siguiente muestra cómo se denominan los objetos de rendimiento del servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
   
-|Tipo de instancia|Nombre de objeto|  
+|Tipo de instancia|Nombre del objeto|  
 |-----------------|---------------|  
-|Predeterminado|**SQLAgent:***objeto*:*contador*|  
+|Valor predeterminado|**SQLAgent:***objeto*:*contador*|  
 |Con nombre|**SQLAgent$**<br /> **&#42;nombre_instancia&#42; :***objeto*:*contador*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] incluye los siguientes objetos de rendimiento para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-|Nombre de objeto|Description|  
+|Nombre del objeto|Description|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Información de rendimiento acerca de trabajos que se han iniciado, tasas de éxito y estado actual|  
 |[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|Información de estado acerca de pasos de trabajos|  
 |[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Información acerca del número de alertas y notificaciones|  
 |[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Información general de rendimiento|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Supervisión y optimización del rendimiento](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [Cómo iniciar el Monitor de sistema (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

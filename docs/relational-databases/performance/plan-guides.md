@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>Guías de plan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no quiera cambiar directamente el texto de la consulta real en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Suponga que el siguiente procedimiento almacenado, que usa el parámetro `@Country_region`, está en una aplicación de base de datos que se implementa con la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  Puede solucionar este problema modificando el procedimiento almacenado y agregando la sugerencia de consulta `OPTIMIZE FOR` a la consulta. No obstante, puesto que el procedimiento almacenado se encuentra en una aplicación implementada, no puede modificar directamente el código de la aplicación. En su lugar, puede crear la guía de plan siguiente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>Guía de plan SQL  
  Una guía de plan de SQL compara las consultas que se ejecutan en el contexto de instrucciones independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] y lotes que no forman parte de un objeto de base de datos. Las guías de plan basadas en SQL también se pueden usar para comparar consultas que se parametrizan en un formulario especificado. Las guías de plan de SQL se aplican a las instrucciones y lotes independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Con frecuencia, las aplicaciones envían esas instrucciones usando el procedimiento almacenado del sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Considere, por ejemplo, el siguiente lote independiente:  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Para evitar que se genere un plan de ejecución paralelo en esta consulta, cree la siguiente guía de plan y establezca la sugerencia de consulta `MAXDOP` en `1` en el parámetro `@hints` .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>Requisitos de coincidencia de la guía de plan  
  Las guías de plan tienen como ámbito la base de datos en la que se crean. Por tanto, solo se pueden buscar las coincidencias con la consulta de las guías de plan que existen en la base de datos actual cuando se ejecuta una consulta. Por ejemplo, si [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] es la base de datos actual y se ejecuta la consulta siguiente:  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  Solo las guías de plan de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] serán aptas para buscar las coincidencias con esta consulta. No obstante, si la base de datos actual es [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se ejecutan las instrucciones siguientes:  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -144,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Efecto de la guía de plan en la caché del plan  
  Al crear una guía de plan en un módulo, se quita el plan de consulta para dicho módulo de la caché del plan. Al crear una guía de plan de tipo OBJECT o SQL en un lote, se quita el plan de consulta para un lote que tiene el mismo valor hash. Al crear una guía de plan de tipo TEMPLATE, se quitan todos los lotes de instrucción única de la memoria caché del plan dentro de esa base de datos.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarea|Tema|  
 |----------|-----------|  
@@ -157,7 +157,7 @@ sp_create_plan_guide
 |Describe cómo usar SQL Server Profiler para crear y probar guías de plan.|[Usar SQL Server Profiler para crear y probar guías de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Describe cómo validar las guías de plan.|[Validar guías de planes tras una actualización](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   

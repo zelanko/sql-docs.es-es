@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 |0xC0010007|-1073676281|DTS_E_PACKAGEDESCRIPTIONTOOLONG|La descripción del paquete es demasiado larga. El límite es de 1024 caracteres. Acorte la descripción del paquete.|  
 |0xC0010008|-1073676280|DTS_E_VERCOMMENTSTOOLONG|La propiedad VersionComments es demasiado larga. El límite es de 1024 caracteres. Intente acortar VersionComments.|  
 |0xC0010009|-1073676279|DTS_E_ELEMENTNOTFOUND|No se encuentra el elemento en una colección. Este error se produce si, durante la ejecución del paquete, se intenta recuperar un elemento de una colección de un contenedor y no se encuentra.|  
-|0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|No se pudo cargar el paquete especificado de la base de datos de SQL Server.|  
+|0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|No se pudo cargar el paquete especificado de la base de datos de SQL Server. |  
 |0xC001000C|-1073676276|DTS_E_INVALIDVARIABLEVALUE|El valor asignado a la variable no es válido. Este error se produce si el cliente o una tarea asignan un objeto en tiempo de ejecución a un valor de la variable.|  
 |0xC001000D|-1073676275|DTS_E_RESERVEDNAMESPACE|Error al asignar un espacio de nombres a la variable. El espacio de nombres "System" está reservado para uso del sistema. Este error se produce si un componente o tarea intenta crear una variable con un espacio de nombres "System".|  
 |0xC001000E|-1073676274|DTS_E_CONNECTIONNOTFOUND|No se encuentra la conexión "%1". La colección Connections envía este error cuando no se encuentra el elemento de conexión específico.|  
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 |0xC001201B|-1073668069|DTS_E_CONFIGFILEFAILEDEXPORT|Error al exportar el archivo de configuración.|  
 |0xC0012021|-1073668063|DTS_E_PROPERTIESCOLLECTIONREADONLY|No se puede modificar la colección Properties.|  
 |0xC0012022|-1073668062|DTS_E_DTRXMLSAVEFAILURE|No se puede guardar el archivo de configuración. El archivo puede ser de solo lectura.|  
-|0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propiedad FailPackageOnFailure no es aplicable al contenedor de paquetes.|  
+|0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propiedad FailPackageOnFailure no es aplicable al contenedor de paquetes. |  
 |0xC0012024|-1073668060|DTS_E_TASKPRODUCTLEVEL|No se puede ejecutar la tarea "%1" en la instalación %2 de Integration Services. Requiere %3 o una edición de nivel superior.|  
 |0xC0012029|-1073668055|DTS_E_UNABLETOSAVETOFILE|No se puede guardar el archivo xml en "%1". El archivo puede ser de solo lectura.|  
 |0xC0012037|-1073668041|DTS_E_CONFIGTYPECONVERSIONFAILED|Error al convertir un tipo en la configuración "%1" de la ruta de acceso del paquete "%2".  Esto sucede si no se puede convertir un valor de configuración de una cadena en el tipo de destino adecuado. Compruebe el valor de configuración para asegurarse de que puede convertirse al tipo de la propiedad o variable de destino.|  
@@ -142,8 +142,8 @@ ms.lasthandoff: 11/20/2017
 |0xC001400E|-1073659890|DTS_E_NOSQLPROFILERDLL|El proveedor de registro de SQL Server Profiler no pudo cargar el archivo pfclnt.dll. Compruebe que SQL Server Profiler está instalado.|  
 |0xC001400F|-1073659889|DTS_E_LOGFAILED|Error en la infraestructura de registro de SSIS. Código de error: 0x%1!8.8X!. Este error indica que el error de registro no es atribuible a un proveedor de registro concreto.|  
 |0xC0014010|-1073659888|DTS_E_LOGPROVIDERFAILED|Error del proveedor de registro de SSIS. Código de error: 0x%2!8.8X! (%3).  Este código indica que el error de registro se atribuye al proveedor de registro especificado.|  
-|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|El método SaveToSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida.|  
-|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|El método LoadFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida.|  
+|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|El método SaveToSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida. |  
+|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|El método LoadFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida. |  
 |0xC0014013|-1073659885|DTS_E_REMOVEFROMSQLSERVER_OLEDB|El método RemoveFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2) Error en la instrucción SQL emitida.|  
 |0xC0014014|-1073659884|DTS_E_EXISTSONSQLSERVER_OLEDB|El método ExistsOnSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2). Error en la instrucción SQL emitida.|  
 |0xC0014015|-1073659883|DTS_E_CONNECTIONSTRING|OLE DB no pudo establecer una conexión de base de datos con la cadena de conexión proporcionada.|  
@@ -170,7 +170,7 @@ ms.lasthandoff: 11/20/2017
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|No se puede tener acceso a los datos de la matriz (error: %1). Este error puede producirse dondequiera que se llame a GetDataFromSafeArray.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|No se pudo crear el objeto de ayudante administrado por SSIS. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en CoCreateInstance CLSID_DTSManagedHelper.|  
 |0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|El objeto de tiempo de ejecución de SSIS no pudo dar de alta la conexión OLE DB en una transacción distribuida. Error: 0x%1!8.8X! "%2".|  
-|0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument.|  
+|0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument. |  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|Error al comprobar la envolvente de la firma XML en el paquete. Error: 0x%1!8.8X! "%2". Esto sucede en CPackage::LoadFromXML.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|No se pudo obtener el origen XML del objeto DOM XML. Error: 0x%1!8.8X! "%2". Esto ocurre cuando se produce un error en IXMLDOMDocument::get_xml.|  
 |0xC0014030|-1073659856|DTS_E_PACKAGEVERIFICATIONFAILED|No se pudo comprobar la firma criptográfica del paquete. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en la operación de comprobación de firma.|  
@@ -199,7 +199,7 @@ ms.lasthandoff: 11/20/2017
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|La ruta de acceso del paquete especificada no contiene un nombre de paquete. Esto sucede si la ruta no contiene al menos una barra diagonal inversa o una barra diagonal.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|No se encuentra la carpeta "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Error de OLE DB al intentar buscar una carpeta en SQL. Código de error: 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro. Código de error: 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro.  Código de error: 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Error al obtener la colección ConnectionInfos: 0x%1!8.8X! "%2". Este error se produce cuando no se puede llamar a IDTSApplication100::get_ConnectionInfos.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Se detectó un interbloqueo al intentar bloquear las variables. Los bloqueos no pueden adquirirse después de 16 intentos. Se agotó el tiempo de espera de los bloqueos.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|No se ha devuelto la colección Variables de VariableDispenser. Se intentó realizar una operación que solo se permite en colecciones dispensadas.|  
@@ -1100,7 +1100,7 @@ ms.lasthandoff: 11/20/2017
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|La función SQRT no puede ejecutarse con valores negativos y se ha pasado un valor negativo a la función SQRT.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|La función LN no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LN.|  
 |0xC00470E1|-1073450783|DTS_E_EXPREVALLOGINVALIDPARAM|La función LOG no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LOG.|  
-|0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Los parámetros pasados a la función POWER no pueden evaluarse y han producido un resultado indeterminado.|  
+|0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Los parámetros pasados a la función POWER no pueden evaluarse y han producido un resultado indeterminado. |  
 |0xC00470E3|-1073450781|DTS_E_NOCANCELEVENT|El objeto de tiempo de ejecución no puede proporcionar un evento de cancelación a causa del error 0x%1!8.8X!.|  
 |0xC00470E4|-1073450780|DTS_E_CANCELRECEIVED|La canalización recibió una solicitud de cancelación y se está cerrando.|  
 |0xC00470E5|-1073450779|DTS_E_EXPREVALUNARYOPOVERFLOW|El resultado de la operación de negación unaria "%1" supera el tamaño máximo del tipo de datos de resultados "%2". El tamaño del resultado de la operación desborda el tipo de resultado.|  
@@ -2083,7 +2083,7 @@ ms.lasthandoff: 11/20/2017
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|El archivo o proceso "%1" no se encuentra en la ruta de acceso.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|El asunto está vacío.|  
 |0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|La dirección de la línea "Para" es incorrecta. Falta el símbolo "@" o no es válida.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|La dirección de la línea "De" es incorrecta. Falta el símbolo "@" o no es válida.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|La dirección de la línea "De" es incorrecta. Falta el símbolo "@" o no es válida. |  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Los dos documentos XML son diferentes.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validación DTD utilizará el archivo DTD definido en la línea DOCTYPE del documento XML. No utilizará lo asignado a la propiedad "%1".|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Error al validar la tarea "%1".|  

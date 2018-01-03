@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab9a4a049b49b3b5e0e7f9692fb8df2f7be5a824
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ab5a722213ba96fe591e9d9b8fa64681230d7733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-master-data-services"></a>Seguridad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use la seguridad para asegurarse de que los usuarios tengan acceso a los datos maestros específicos necesarios para realizar su trabajo y para impedir que tengan acceso a datos que no deben estar disponibles para ellos.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  La única advertencia es que toda la seguridad asignada en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no surtirá efecto en Excel hasta que transcurrido un intervalo de 20 minutos. El intervalo se define mediante la configuración de *MdsMaximumUserInformationCacheInterval* en el archivo web.config. Para cambiar el intervalo, puede cambiar el valor y reiniciar IIS.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 |Asignar permisos a los valores de atributo asignando el permiso a los objetos del modelo.|[Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Asignar permisos a los valores de miembro asignando el permiso a los nodos de la jerarquía.|[Asignar los permisos de los miembros de una jerarquía &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Usuarios y grupos &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
  [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   

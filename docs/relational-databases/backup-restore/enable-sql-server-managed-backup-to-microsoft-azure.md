@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d5227792c9f1a658135e1efa5c00bbcfe078cfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee6f5c066b43c91d1317ca833599ac2f178b03fc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con la configuración predeterminada en el nivel de la base de datos y de la instancia. También se describe cómo habilitar las notificaciones de correo electrónico y cómo supervisar la actividad de copia de seguridad.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  En este tutorial se usa Azure PowerShell. Antes de iniciar el tutorial, [descargue e instale Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Si también desea habilitar opciones avanzadas o usar una programación personalizada, configure las opciones antes de habilitar por primera vez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obtener más información, consulte [Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Si también desea habilitar opciones avanzadas o usar una programación personalizada, configure las opciones antes de habilitar por primera vez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obtener más información, consulte [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con valores predeterminados  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  **Cree una credencial de SQL para la URL de SAS:** use el token de SAS para crear una credencial de SQL para la dirección URL del contenedor de blobs. En SQL Server Management Studio, use la siguiente consulta de Transact-SQL para crear la credencial para la dirección URL del contenedor de blobs según el ejemplo siguiente:  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Para habilitar la copia de seguridad administrada en el nivel de instancia, especifique `NULL` para el parámetro `database_name` .  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
   
  Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes usando los mismos procedimientos almacenados del sistema y proporcionar los nuevos valores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

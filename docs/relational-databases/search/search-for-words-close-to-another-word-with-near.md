@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Puede usar el *término de proximidad* **NEAR** en un predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o en una función [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para buscar palabras o frases que están cerca unas de otras. 
@@ -79,7 +79,7 @@ Para más información sobre la sintaxis, vea [CONTAINS &#40;Transact-SQL&#41;](
 ### <a name="example-1"></a>Ejemplo 1
  Por ejemplo, podría buscar 'John' a dos términos de 'Smith', de la manera siguiente:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ Para más información sobre la sintaxis, vea [CONTAINS &#40;Transact-SQL&#41;](
 ### <a name="example-2"></a>Ejemplo 2
  En el siguiente ejemplo se buscan todos los resúmenes de documento que contienen el palabra "reflector" en el mismo documento que la palabra "bracket" en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks` .  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -158,7 +158,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
      El valor de **transformar palabras irrelevantes** afecta a cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata las palabras irrelevantes si se especifican en búsquedas por proximidad. Para más información, vea [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   

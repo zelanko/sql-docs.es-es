@@ -3,7 +3,7 @@ title: 'Paso 5: Control de datos es realizado utilizable (Tutorial de RDS) | Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e7605b16c224e4b299c0f1454dec9372ccd929
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Paso 5: Control de datos es realizado utilizable (Tutorial de RDS)
 El valor devuelto **Recordset** objeto está disponible para su uso. Puede examinar, navegue o editarlo como lo haría con cualquier otro **conjunto de registros**. ¿Qué puede hacer con el **Recordset** depende del entorno. Visual Basic y Visual C++ poseen controles visuales que pueden usar un **Recordset** directa o indirectamente con la Ayuda de un control de datos.  

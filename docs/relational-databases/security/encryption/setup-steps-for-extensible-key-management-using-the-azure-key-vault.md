@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
      Ejecute el siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para configurar [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para usar un proveedor EKM.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
      Cree un proveedor de servicios criptográficos con el Conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , que es un proveedor EKM para el Almacén de claves de Azure.    
     Este ejemplo usa el nombre de `AzureKeyVault_EKM_Prov`.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -326,7 +326,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
     -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
     -   Reemplace `ContosoRSAKey0` con el nombre de la clave en el Almacén de claves de Azure.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
@@ -361,7 +361,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 Ahora que ha completado la configuración básica, consulte cómo [Use SQL Server Connector con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)(Usar el conector de SQL Server con características de cifrado de SQL)   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   

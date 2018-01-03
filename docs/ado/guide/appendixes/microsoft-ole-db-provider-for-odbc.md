@@ -3,7 +3,7 @@ title: Proveedor Microsoft OLE DB para ODBC | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería aquel en los datos que cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando interfaces OLE DB, algunos orígenes de datos aún no están expuestos de esta forma. Sin embargo, la mayoría de los sistemas DBMS en la actualidad son accesibles a través de ODBC.
@@ -189,7 +189,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|solo lectura|solo lectura|solo lectura|solo lectura|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
+|[Filtro](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
@@ -210,19 +210,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Sí|
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sí|Sí|
+|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|no|no|Sí|Sí|
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|Sí|Sí|Sí|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Sí|Sí|Sí|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Sí|Sí|Sí|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Sí|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
-|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Sí|
+|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|no|no|Sí|Sí|
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|
@@ -266,7 +266,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Modo|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|

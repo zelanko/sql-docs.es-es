@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar y administrar separadores de palabras y lematizadores para la búsqueda
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Los separadores de palabras y lematizadores realizan un análisis lingüístico de todos los datos indexados de texto completo. El análisis lingüístico realiza las siguientes dos cosas:
@@ -53,7 +53,7 @@ Para usar los separadores de palabras y lematizadores proporcionados para todos 
 
 Para ver la lista de los idiomas que la búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite, utilice la siguiente instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La presencia de un idioma en esta lista indica que los separadores de palabras se registran para el idioma. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ Para que la búsqueda de texto completo use los separadores de palabras para un 
 
 Para ver la lista de componentes de separadores de palabras registrados, utilice la siguiente instrucción.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ Si agrega, quita o modifica un separador de palabras, necesita actualizar la lis
   
 Para ver el idioma del separador de palabras de determinadas columnas, ejecute la siguiente instrucción.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -99,7 +99,7 @@ Para más información y opciones adicionales, vea [sys.fulltext_index_columns &
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Información sobre el error MSSQLSERVER_30053
   
-|Propiedad|Value|
+|Propiedad|Valor|
 |-|-|
 |Nombre del producto|SQL Server|  
 |Identificador del evento|30053|  
@@ -140,7 +140,7 @@ Para más información y opciones adicionales, vea [sys.fulltext_index_columns &
 Esto es relevante si se importó un catálogo de texto completo cuando una base de datos se actualizó a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un o varios idiomas que Usen los índices de texto completo del catálogo de texto completo podrían estar asociados ahora a nuevos separadores de palabras. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c4026c4495c9c11922f8f4496b0000dfb2c9420
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Los parámetros predeterminados son buenos para un inicio rápido pero debe supe
   
  El valor predeterminado (100 MB) puede no ser suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes o si desea mantener el historial de consultas durante un período de tiempo más largo. Realice un seguimiento del uso de espacio actual y aumente el valor de Tamaño máximo (MB) para impedir que el Almacén de consultas cambie al modo de solo lectura.  Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o ejecute el siguiente script para obtener la información más reciente sobre el tamaño del Almacén de consultas:  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -68,14 +68,14 @@ FROM sys.database_query_store_options;
   
  El siguiente script establece un nuevo valor para Tamaño de máximo (MB):  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Intervalo de recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 1 hora). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use SSMS o Transact-SQL para establecer otro valor para Statistics Collection Interval (Intervalo de recopilación de estadísticas):  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -84,7 +84,7 @@ De forma predeterminada, el Almacén de consultas se configura para conservar lo
   
  Evite mantener datos históricos que no piense utilizar. Esto reducirá cambios al estado de solo lectura. El tamaño de los datos del Almacén de consultas así como el tiempo para detectar y mitigar el problema serán más predecibles. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el siguiente script para configurar la directiva de limpieza basada en el tiempo:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -93,14 +93,14 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  Se recomienda activar la limpieza basada en el tamaño para asegurar que el Almacén de consultas siempre se ejecuta en modo de lectura y escritura y recopila los datos más recientes.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
  **Modo de captura del Almacén de consultas:** Especifica la directiva de captura de consultas para el Almacén de consultas.  
   
--   **All** : Captura todas las consultas. Esta es la opción predeterminada.  
+-   **All** : Captura todas las consultas. Ésta es la opción predeterminada.  
   
 -   **Auto** : Se omiten las consultas poco frecuentes y aquellas con una duración de la compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan internamente.  
   
@@ -108,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  El siguiente script establece el modo de captura de consultas en Automático:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -120,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Habilite el Almacén de consultas mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] como se describe en la sección anterior, o ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -179,7 +179,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 ##  <a name="Verify"></a> Comprobación de que el Almacén de consultas está recopilando datos de consulta continuamente  
  El Almacén de consultas puede cambiar el modo de operación automáticamente. Debe supervisar periódicamente el estado del Almacén de consulta para asegurarse de que está funcionando y tomar medidas para evitar errores debido a causas evitables. Ejecute la siguiente consulta para determinar el modo de operación y ver los parámetros más importantes:  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   Limpie los datos del Almacén de consultas mediante la siguiente instrucción:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
 Puede aplicar uno de estos dos pasos o ambos ejecutando la siguiente instrucción que vuelve a cambiar explícitamente el modo de operación a lectura y escritura:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Estado de error  
  Para recuperar el Almacén de consultas intente establecer explícitamente el modo de lectura y escritura y compruebe de nuevo el estado real.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -240,7 +240,7 @@ FROM sys.database_query_store_options;
  
  Si esto no ha solucionado el problema, puede intentar borrar el Almacén de consultas antes de solicitar el modo de lectura y escritura.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén 
 
  Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -330,7 +330,7 @@ Si cambia el nombre de una base de datos, al forzar el plan se producirá un err
   
   La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de consultas y también permite que SQL Server ejecute consultas antes de que el Almacén de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

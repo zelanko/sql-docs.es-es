@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,16 +20,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae2da517d16980da679de1a596f0aed8f486aa4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f96eca398e23aa1d769baac0ba677d076f67b5e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -70,11 +70,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|Nombre|Descripción|  
+|Nombre|Description|  
 |----------|-----------------|  
 |Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
 |Nombre|El nombre de la entidad.|  
-|Descripción|La descripción de la entidad.|  
+|Description|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
 |Tipo de registro de transacciones|El tipo de registro de transacciones de la entidad.|  
 |Creación automática de código|Especifica si está habilitada la creación automática de código.|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |Actualizada por|Nombre del usuario que actualizó la entidad por última vez.|  
 |Actualizada el|Fecha y hora en que se actualizó la entidad por última vez.|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Edición de una entidad &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

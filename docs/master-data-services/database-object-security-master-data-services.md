@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365b24e35f44154c644afbf2646f8c52738bd90c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7058099b0da0b991327f6ab408e55fc7143f8d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-object-security-master-data-services"></a>Seguridad de objetos de base de datos (Master Data Services)
   En la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , los datos están almacenados en varias tablas de base de datos y se ven en las vistas. La información que pueda haber protegido en la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] está visible para los usuarios con acceso a la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -48,47 +48,47 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Staging"></a> Almacenar datos de forma provisional  
  En la tabla siguiente, cada elemento protegible tiene "name" como parte del nombre. Indica el nombre de la tabla de ensayo que se especificó cuando se creó una entidad. Para obtener más información, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|Acción|Elementos protegibles|Permissions|  
+|Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
 |Crear, actualizar y eliminar miembros hoja y sus atributos.|stg.name_Leaf|Obligatorio: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
-|Cargar datos de la tabla de ensayo Leaf en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Leaf|EXECUTE|  
+|Cargar datos de la tabla de ensayo Leaf en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Leaf|Ejecute|  
 |Crear, actualizar y eliminar miembros consolidados y sus atributos.|stg.name_Consolidated|Obligatorio: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
-|Cargar los datos de la tabla de ensayo Consolidated en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Consolidated|EXECUTE|  
+|Cargar los datos de la tabla de ensayo Consolidated en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Consolidated|Ejecute|  
 |Mover miembros en una jerarquía explícita.|stg.name_Relationship|Obligatorio: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
-|Cargar los datos de la tabla de ensayo Relationship en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Relationship|EXECUTE|  
+|Cargar los datos de la tabla de ensayo Relationship en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Relationship|Ejecute|  
 |Ver los errores producidos cuando se insertaban datos de las tablas de ensayo en tablas de la base de datos de MDS.|stg.udp_name_Relationship|SELECT|  
   
  Para obtener más información, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="rules"></a> Validar datos según las reglas de negocios  
   
-|Acción|Elemento protegible|Permissions|  
+|Acción|Elemento protegible|Permisos|  
 |------------|---------------|-----------------|  
-|Validar una versión de datos según las reglas de negocios|mdm.udpValidateModel|EXECUTE|  
+|Validar una versión de datos según las reglas de negocios|mdm.udpValidateModel|Ejecute|  
   
  Para obtener más información, consulte [Procedimiento almacenado de validación &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 ##  <a name="Versions"></a> Eliminar versiones  
   
-|Acción|Elementos protegibles|Permissions|  
+|Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
 |Determinar el identificador de la versión que desea eliminar|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
-|Eliminar una versión de un modelo|mdm.udpVersionDelete|EXECUTE|  
+|Eliminar una versión de un modelo|mdm.udpVersionDelete|Ejecute|  
   
  Para obtener más información, consulte [Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
 ##  <a name="Hierarchy"></a> Aplicación inmediata de permisos de los miembros de la jerarquía  
   
-|Acción|Elementos protegibles|Permissions|  
+|Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
-|Aplicar los permisos de los miembros inmediatamente|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
+|Aplicar los permisos de los miembros inmediatamente|mdm.udpSecurityMemberProcessRebuildModel|Ejecute|  
   
  Para obtener más información, consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
 ##  <a name="SysSettings"></a> Configuración del sistema  
  Hay opciones del sistema que puede configurar para controlar el comportamiento en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Puede ajustar estos valores en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o, si tiene el acceso ACTUALIZAR, puede ajustarlos directamente en la tabla de base de datos mdm.tblSystemSetting. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

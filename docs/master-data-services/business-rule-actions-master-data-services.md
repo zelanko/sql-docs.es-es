@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6932733e167d16db919fd7fd026a5bcc15411620
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9cf033300908013232449ce22bc9414395c62eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rule-actions-master-data-services"></a>Acciones de reglas de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], las acciones de regla de negocios son el resultado de las evaluaciones de condiciones de reglas de negocios. Si una condición es TRUE, se inicia la acción.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------|-----------------|  
 |**iniciar flujo de trabajo**|Inicia un flujo de trabajo externo. Los datos que provocaron esta acción se pasan al flujo de trabajo. Para obtener más información, vea el artículo sobre [Integración del flujo de trabajo de SharePoint Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Condiciones de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

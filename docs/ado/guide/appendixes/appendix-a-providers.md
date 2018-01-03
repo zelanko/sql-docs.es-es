@@ -3,7 +3,7 @@ title: "Apéndice A: proveedores | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc27499ecc4b67a95067002be0d8d3a5c86c76da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apéndice A: datos y proveedores de servicios
 En esta sección habla sobre tres tipos de proveedores: proveedores de datos, los proveedores de servicios y componentes de servicio. Los proveedores se dividen en dos categorías: aquellos que proporcionan datos y aquellos que proporcionan servicios. A *proveedor de datos* tiene sus propios datos y expone en formato tabular en su aplicación. A *proveedor de servicios* encapsula un servicio al producir y consumir datos, aumentan las características de las aplicaciones ADO. Un proveedor de servicios también se puede definir más como una *componente del servicio*, que debe funcionar conjuntamente con otros componentes o proveedores de servicios.

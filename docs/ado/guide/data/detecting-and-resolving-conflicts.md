@@ -3,7 +3,7 @@ title: Detectar y solucionar conflictos | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ac1ca3e4cd6e9047f6a3f47e8067efc6143ba5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23ed1396e76f0339c2fdda92501aca751d2d4559
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectar y resolver conflictos
 Si está trabajando con el conjunto de registros en el modo inmediato, hay mucho menos posibilidades de problemas de simultaneidad que se produzca. Por otro lado, si la aplicación utiliza la actualización de modo por lotes, puede haber una buena oportunidad de que un usuario cambie un registro antes de guardar los cambios realizados por otro usuario que edita el mismo registro. En tal caso, le interesará la aplicación para controlar correctamente el conflicto. Es posible que prefiera que sea la última persona que enviar una actualización al servidor "gana". O bien, puede que desee permitir que el usuario más reciente para decidir qué actualización debe tener prioridad, permitiéndole elegir entre los dos valores en conflicto.  

@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ En este tema se describe cómo determinar quién tiene permisos para varios obje
 Los roles fijos de servidor y los roles fijos de base de datos tienen permisos preconfigurados que no se pueden cambiar. Para determinar quién es miembro del rol fijo de servidor, ejecute la consulta siguiente.    
 >  [!NOTE] 
 >  No se aplica a SQL Database ni SQL Data Warehouse, donde los permisos de nivel de servidor no están disponibles. La columna `is_fixed_role` de `sys.server_principals` se agregó en SQL Server 2012. No es necesaria para las versiones anteriores de SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Esta consulta comprueba las tablas en la base de datos maestra, pero se puede ejecutar en cualquier base de datos para el producto local. 
 
 Para determinar quién es miembro de un rol fijo de base de datos, ejecute la consulta siguiente en todas las bases de datos.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -92,7 +92,7 @@ Este sistema es muy flexible, lo que significa que puede ser complicado si los u
 
 El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
   
- [![Permisos de motor de base de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Permisos de los motores de bases de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 ### <a name="security-classes"></a>Clases Security
 
@@ -113,7 +113,7 @@ Recuerde que es posible que un usuario de Windows sea miembro de más de un grup
 La consulta siguiente devuelve una lista de los permisos que se han concedido o denegado en el nivel de servidor. Esta consulta debe ejecutarse en la base de datos maestra.   
 >  [!NOTE] 
 >  Los permisos de nivel de servidor se no se pueden conceder ni consultar en la base de datos SQL o SQL Data Warehouse.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Permisos para la base de datos
 
 La consulta siguiente devuelve una lista de los permisos que se han concedido o denegado en el nivel de base de datos. Esta consulta debe ejecutarse en todas las bases de datos.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Cada clase de permiso en la tabla de permisos puede combinarse con otras vistas del sistema que proporcionan información relacionada con esa clase de elemento protegible. Por ejemplo, la consulta siguiente proporciona el nombre del objeto de base de datos que se ve afectado por el permiso.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -152,7 +152,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
 Use la función `HAS_PERMS_BY_NAME` para determinar si un usuario determinado (en este caso `TestUser`) tiene un permiso. Por ejemplo:   
-```tsql
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

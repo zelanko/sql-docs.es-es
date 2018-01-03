@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ffca436fc0c0557950e239fcf979c84b973df6a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bca0580d442c30bc41d46340b3317cbe15515309
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Eliminar o deshabilitar desencadenadores DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En este tema se describe cómo eliminar o deshabilitar un desencadenador DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Para eliminar un desencadenador DML se necesita el permiso ALTER en la tabla o vista en la que está definido el desencadenador.  
   
  Para deshabilitar o habilitar un desencadenador DML, el usuario debe contar como mínimo con el permiso ALTER en la tabla o vista en la que se creó el desencadenador.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copie y pegue los ejemplos siguientes en la ventana de consultas. Ejecute la instrucción [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) para crear el desencadenador `Sales.bonus_reminder` . Para eliminar el desencadenador, ejecute la instrucción [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -112,7 +112,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -130,7 +130,7 @@ GO
   
 3.  Copie y pegue los ejemplos siguientes en la ventana de consultas. Ejecute la instrucción [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) para crear el desencadenador `Sales.bonus_reminder` . Para deshabilitar y habilitar el desencadenador, ejecute las instrucciones [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) y [HABILITE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) , respectivamente.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -146,7 +146,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -163,7 +163,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

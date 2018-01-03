@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bc20a0bfe85f4e4f1a507554ec6e34e98274d624
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3a806029b1583f1c8d8049639d3350f86969dd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar datos espaciales para el vecino más próximo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Una consulta frecuente utilizada con datos espaciales es la de vecino más próximo. Las consultas de vecino más cercano se emplean para encontrar los objetos espaciales más cercanos a un objeto espacial concreto. Por ejemplo, un buscador de tiendas de un sitio web debe encontrar a menudo las ubicaciones de las tiendas más cercanas a la ubicación de un cliente.  
@@ -83,7 +83,7 @@ SELECT TOP ( number )
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra una consulta de vecino más cercano que puede utilizar un índice espacial. En el ejemplo se utiliza la tabla `Person.Address` de la base de datos `AdventureWorks2012` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -98,7 +98,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra una consulta de vecino más cercano que no puede utilizar un índice espacial.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -109,7 +109,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  A la consulta le falta una cláusula **WHERE** que usa `STDistance()` en un formato especificado en la sección de sintaxis, por lo que la consulta no puede usar un índice espacial.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

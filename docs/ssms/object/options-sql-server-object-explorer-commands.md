@@ -3,7 +3,7 @@ title: Opciones (Explorador de objetos de SQL Server - Comandos) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69ada91ed2c98151d052a14604786ece9e27f059
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 74210d90aa66f6bc770e6c9cb56a2e0fa38fff64
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opciones (Explorador de objetos de SQL Server - Comandos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al hacer clic con el botón derecho en una tabla o vista en el Explorador de objetos, se presentan las dos opciones siguientes para mostrar las filas en la tabla:  
@@ -47,6 +47,6 @@ Especifica el número de filas que se debe devolver al editar filas en una tabla
 **Valor para el comando Seleccionar las primeras <n> filas**  
 Especifica el número de filas que se va a devolver y que se especifica en el script del Editor de consultas que se crea. El valor predeterminado es 1000 filas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [SQL Server Audit (motor de base de datos)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

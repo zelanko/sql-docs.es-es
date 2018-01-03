@@ -3,7 +3,7 @@ title: Guardar diagramas de base de datos (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cd40d3be8c74afe886983ab74d6241a70cb941e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6da23abe1967901dad49287cb757bf1832369fa9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Guardar diagramas de base de datos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al guardar un diagrama de base de datos, puede guardar todos los cambios realizados, incluidos los efectuados en las tablas, columnas y otros objetos de base de datos.  
@@ -40,6 +40,6 @@ ms.lasthandoff: 12/05/2017
   
 3.  Haga clic en **Sí** (en **Aceptar** si se trata de un diagrama nuevo) para actualizar la base de datos para hacer que coincida con el diagrama.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

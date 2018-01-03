@@ -3,7 +3,7 @@ title: Agregados secundarios | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43db96d31ff903f72bbd10d7b1824867b56f4e74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bc1b08b652f740c576f96b85d99140913079a8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grandchild-aggregates"></a>Agregados secundarios
 La columna de capítulo creada en una cláusula de un comando shape puede recibir un *nombre de alias de capítulo* (normalmente con la palabra clave AS). Puede identificar cualquier columna de cualquier capítulo de la forma **Recordset** con un nombre completo que identifica el elemento secundario que contiene la columna. Por ejemplo, si el capítulo principal, Cap1, contiene un capítulo secundario, Cap2, tiene una columna de cantidad, amt, entonces el nombre completo sería chap1.chap2.amt. El nombre completo, a continuación, puede usarse como argumento a una de las funciones de agregado (SUM, AVG, MAX, MIN, recuento, STDEV o ninguno).  

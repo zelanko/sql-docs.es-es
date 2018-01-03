@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En el tutorial siguiente se describe cómo configurar las opciones avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Estos procedimientos solo son necesarios si necesita las características que ofrecen. De lo contrario, puede habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] y depender del comportamiento predeterminado.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **Cree un certificado de copia de seguridad o una clave asimétrica:** con el cifrado puede usar tanto un certificado como una clave asimétrica. En el ejemplo siguiente se crea un certificado de copia de seguridad que se utilizará para el cifrado.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -115,10 +115,10 @@ ms.lasthandoff: 11/17/2017
   
     ```  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
  Después de configurar las opciones avanzadas y las programaciones personalizadas, debe habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la base de datos de destino o en la instancia de SQL Server. Para obtener más información, consulte [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

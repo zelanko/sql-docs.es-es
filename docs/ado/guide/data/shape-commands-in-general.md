@@ -3,7 +3,7 @@ title: Forma comandos en General | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 Dar forma a datos define las columnas de una forma **Recordset**, las relaciones entre las entidades representadas por las columnas y la forma en que la **Recordset** se rellena con datos.  
@@ -33,7 +33,7 @@ Dar forma a datos define las columnas de una forma **Recordset**, las relaciones
   
 |Tipo de columna|Description|  
 |-----------------|-----------------|  
-|data|Campos de un **Recordset** devuelto por un comando de consulta a un proveedor de datos, tabla o en forma de anteriormente **conjunto de registros**.|  
+|datos|Campos de un **Recordset** devuelto por un comando de consulta a un proveedor de datos, tabla o en forma de anteriormente **conjunto de registros**.|  
 |capítulo|Una referencia a otro **Recordset**, denominado un *capítulo*. Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y el *secundarios* es el **Recordset** representado por el capítulo.|  
 |agregado|El valor de la columna se deriva ejecutando una *función de agregado* en todas las filas o una columna de todas las filas de un elemento secundario **conjunto de registros**. (Vea funciones de agregado en el tema siguiente, [funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |expresión calculada|El valor de la columna se deriva calculando un ejemplo de Visual Basic para la expresión de aplicaciones en las columnas de la misma fila de la **conjunto de registros**. La expresión es el argumento a la función CALC. (Vea expresión calculada en el tema siguiente, [funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) y en [de Visual Basic para aplicaciones de funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

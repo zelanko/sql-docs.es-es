@@ -3,7 +3,7 @@ title: "Guardar y abrir un ejemplo de los métodos (VB) | Documentos de Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a9026b51e9f658e79e9332f60daab92e37bf8e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26fa69e0c02dfffb208725f61c826068337a8b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-and-open-methods-example-vb"></a>Guardar y abrir un ejemplo de los métodos (VB)
 Estos tres ejemplos se muestra cómo el [guardar](../../../ado/reference/ado-api/save-method.md) y [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos se pueden usar conjuntamente.  

@@ -5,7 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae6560cbdb884fa8009ab33c248f1de426c9c89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30c30eac6d8651886a37f9895c39ab9cfc782903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-master-data-services"></a>Transacciones (Master Data Services)
 
@@ -89,7 +89,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Varios usuarios pueden actualizar los mismos valores de entidad sin que se produzcan errores pese a que estén habilitadas transacciones. Por lo general, prevalecerá la última modificación a un valor en una secuencia temporal. El conflicto de modificación duplicada se puede observar en el historial de transacciones y lo puede corregir el administrador manualmente. El historial de transacciones mostrará las transacciones individuales para **Valor anterior** y **Valor nuevo** para el atributo relevante en cada sesión, pero no solucionará automáticamente el conflicto cuando haya varios **Valores nuevos** para el mismo valor antiguo.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

@@ -3,7 +3,7 @@ title: Usar el cuadro de herramientas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f8899fed233516fce93277a48f2ceb652212ff8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a33bf533868113e2fda6b550a36ac9e9969a96b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se pueden seleccionar y arrastrar elementos, texto y controles del cuadro de herramientas a formularios, páginas y diseñadores, y arrastrar de nuevo elementos de estos orígenes al cuadro de herramientas para volver a usarlos más adelante. Por ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] puede arrastrar una tarea a un plan de mantenimiento.  
@@ -48,6 +48,6 @@ Los elementos del cuadro de herramientas se agrupan en secciones denominadas pes
 |Cambiar la posición de un elemento en una pestaña expandida del cuadro de herramientas|Arrastre el elemento a la nueva ubicación y suelte el botón del mouse.|  
 |Cambiar el nombre a un elemento del cuadro de herramientas|Haga clic con el botón derecho en el elemento del cuadro de herramientas y haga clic en **Cambiar nombre de elemento** en el menú contextual.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Elementos generales de la interfaz de usuario](../ssms/general-user-interface-elements.md)  
   

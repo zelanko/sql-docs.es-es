@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1b5a5839699b44fe0e5a2ff7d08ea7c663915a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS), proyectos y soluciones
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el desarrollo de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -89,7 +89,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
  En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
- ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto")  
+ ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
 ## <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services  
   
@@ -105,7 +105,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
      El nombre de la solución se actualiza automáticamente para que coincida con el nombre del proyecto.  
   
-5.  Para crear una carpeta diferente para el archivo de solución, seleccione **Crear directorio para la solución**. Esta es la opción predeterminada.  
+5.  Para crear una carpeta diferente para el archivo de solución, seleccione **Crear directorio para la solución**. Ésta es la opción predeterminada.  
   
 6.  Si en el equipo hay instalado software de control de código fuente, seleccione **Agregar al control de código fuente**  para asociar el proyecto con el control de código fuente.  
   
@@ -121,7 +121,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
 2.  En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
-     ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto")  
+     ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  Puede crear, mantener y ejecutar paquetes cuyo destino es SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
 

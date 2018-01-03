@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c434a1c9c514018176b1afcc0a7a57c63fc896e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc470ce80e24520283f3a34c9e1f560ab096288
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ Los métodos que funcionan en tipos de segmentos de arco circular usan segmentos
 En el siguiente diagrama se muestran triángulos isósceles idénticos (el triángulo A usa segmentos de línea para definir el triángulo y el triángulo B, segmentos de arco circular):  
 
 ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) En este ejemplo se muestra cómo almacenar los triángulos isósceles anteriores tanto con una instancia de **LineString** como con una instancia de **CircularString**:  
-```tsql
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -125,7 +125,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 Tenga en cuenta que una instancia de **CircularString** requiere siete puntos para definir el triángulo, pero una instancia de **LineString** requiere solo cuatro puntos para definir el triángulo. Esto se debe a que una instancia de **CircularString** almacena los segmentos de arco circular y no los de línea. Por tanto, los lados del triángulo almacenado en la instancia de **CircularString** son ABC, CDE y EFA mientras que los del triángulo almacenado en la instancia de **LineString** son AC, CE y EA.  
 
 Considere el fragmento de código siguiente:  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
@@ -145,16 +145,16 @@ Como se muestra en la ilustración anterior, las instancias de **CircularString*
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparación de LineString y CompoundCurve  
 En los siguientes ejemplos de código se muestra cómo almacenar la misma figura con instancias de **LineString** y **CompoundCurve** :
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-o  
+o Administrador de configuración de  
 
 En los ejemplos anteriores, una instancia de **LineString** o un instancia de **CompoundCurve** pudieron almacenar la figura.  En el siguiente ejemplo se usa **CompoundCurve** para almacenar un segmento de gráfico circular:  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -162,7 +162,7 @@ Una instancia de **CompoundCurve** puede almacenar directamente el segmento de a
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Comparación de CircularString y CompoundCurve  
 En el siguiente ejemplo de código se muestra cómo se puede almacenar el segmento de gráfico circular en una instancia de **CircularString** :  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -170,12 +170,12 @@ SELECT @g.ToString(), @g.STLength();
 
 Para almacenar el segmento de gráfico circular mediante una instancia de **CircularString** se requiere que se usen tres puntos para cada segmento de línea.  Si no se conoce un punto intermedio, se debe calcular o se debe duplicar el extremo del segmento de línea como muestra el siguiente fragmento de código:  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 Las instancias de**CompoundCurve** permiten componentes tanto de **LineString** como de **CircularString** para que solo se necesiten conocer dos puntos en los segmentos de línea del segmento de gráfico circular.  En este ejemplo de código se muestra cómo usar **CompoundCurve** para almacenar la misma figura:  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();
@@ -184,7 +184,7 @@ SELECT @g.ToString(), @g.STLength();
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparación de Polygon y CurvePolygon  
 Las instancias de**CurvePolygon** pueden usar las instancias de **CircularString** y **CompoundCurve** instances when defining their exterior y interior rings.  Las instancias de**Polygon** no pueden usar los tipos de segmento de arco circular: **CircularString** y **CompoundCurve**.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 - [Datos espaciales (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Referencia de los métodos del tipo de datos geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
 - [Referencia de los métodos del tipo de datos geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   

@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describe cómo crear, rellenar y administrar índices de texto completo en SQL Server.
@@ -78,7 +78,7 @@ Para obtener más información, vea [Rellenar índices de texto completo](../../
     |----------|-----------------|  
     |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br />Para obtener más información, vea [Propiedades del índice de texto completo &#40;página General&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
-    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo** , cualquier programación que se cree se asociará a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *nombre_basededatos*.*nombre_tabla*).|  
+    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo** , cualquier programación que se cree se asociará a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *nombre_basededatos*.*nombre_tabla*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
@@ -87,7 +87,7 @@ Para obtener más información, vea [Rellenar índices de texto completo](../../
   
  En la siguiente tabla se enumeran las propiedades de texto completo relacionadas con las tablas y columnas indexadas y sus funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Propiedad|Descripción|Función|  
+|Propiedad|Description|Función|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN de la tabla que contiene la información del tipo de documento de la columna.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Si una columna se ha habilitado para la indización de texto completo.|COLUMNPROPERTY|  
@@ -174,7 +174,7 @@ GO
   
 Observe que el motor de búsqueda de texto completo puede aprovechar los filtros existentes que se instalan en el sistema operativo. Para poder utilizar los separadores de palabras, los lematizadores y los filtros del sistema operativo, debe cargarlos en la instancia del servidor, como sigue:  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

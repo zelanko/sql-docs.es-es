@@ -3,9 +3,9 @@ title: "Administración de marcadores | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>Administrar marcadores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear vínculos a líneas específicas de código en el documento. Puede abrir esta ventana desde el menú **Ver** .  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  **Deshabilitar/Habilitar todos los marcadores**  
  Activa o desactiva las casillas de todos los marcadores de la ventana **Marcadores** . No elimina los marcadores ni modifica las líneas de código marcadas.  
   
- **Delete**  
+ **Eliminar**  
  Quita el marcador seleccionado de la ventana **Marcadores** y del documento donde se encuentra el marcador. No quita la línea de código que se marcó.  
   
  Casillas de marcador  
@@ -84,10 +84,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>Menú contextual de la ventana Marcadores  
  Cuando se hace clic con el botón derecho en una entrada de la ventana **Marcadores** , están disponibles los siguientes comandos en el menú contextual.  
   
- **Delete**  
+ **Eliminar**  
  Quita el marcador seleccionado de la ventana **Marcadores** y del documento donde se encuentra el marcador. No quita la línea de código que se marcó.  
   
- **Rename**  
+ **Cambiar el nombre**  
  Permite asignar un nuevo nombre para mostrar a una carpeta de marcadores.  
   
  **Deshabilitar/Habilitar marcador**  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
  **Deshabilitar/Habilitar todos los marcadores**  
  Activa o desactiva las casillas de todos los marcadores de la ventana **Marcadores** . No elimina los marcadores ni modifica las líneas de código marcadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

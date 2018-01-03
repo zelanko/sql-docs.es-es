@@ -3,8 +3,11 @@ title: Novedades de Integration Services en SQL Server 2016 | Microsoft Docs
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novedades de Integration Services en SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -32,11 +35,11 @@ En este tema, se describen las características que se han agregado o actualizad
 
 Con la versión preliminar pública de Azure Data Factory versión 2 de septiembre de 2017, ahora puede hacer lo siguiente:
 -   Implementar paquetes en la base de datos del catálogo de SSIS (SSISDB) en Azure SQL Database.
--   Ejecutar paquetes implementados en Azure en Azure-SSIS Integration Runtime, un componente de Azure Data Factory versión 2.
+-   Ejecutar paquetes implementados en Azure en Integration Runtime para la integración de SSIS en Azure, un componente de Azure Data Factory versión 2.
 
 Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
 
-Estas nuevas funciones requieren SQL Server Data Tools (SSDT) versión 17.2 o posterior, pero no requieren SQL Server 2017 ni SQL Server 2016. Al implementar paquetes en Azure, el Asistente para la implementación de paquetes siempre actualiza los paquetes al formato más reciente.
+Estas nuevas funcionalidades requieren SQL Server Data Tools (SSDT) versión 17.2 o posterior, pero no requieren SQL Server 2017 o SQL Server 2016. Al implementar paquetes en Azure, el Asistente para la implementación de paquetes siempre actualiza los paquetes al formato más reciente.
 
 ## <a name="2016-improvements-by-category"></a>Mejoras de 2016 por categoría  
   
@@ -157,16 +160,16 @@ Estas nuevas funciones requieren SQL Server Data Tools (SSDT) versión 17.2 o po
   
 -   Restauró la base de datos de una versión anterior de SQL Server.  
   
--   No quitó la base de datos de un grupo de disponibilidad AlwaysOn antes de actualizar la instancia de SQL Server. Esto evita la actualización automática de la base de datos. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   No quitó la base de datos de un grupo de disponibilidad AlwaysOn antes de actualizar la instancia de SQL Server. Esto evita la actualización automática de la base de datos. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- Para obtener más información, vea [Catálogo de SSIS &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md). 
+ Para obtener más información, vea [Catálogo de SSIS &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Compatibilidad con Always On en el catálogo de SSIS  
  La característica Grupos de disponibilidad AlwaysOn es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Un grupo de disponibilidad admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como bases de datos de disponibilidad, que realizan la conmutación por error conjuntamente. Para obtener más información, vea [Grupos de disponibilidad Always On](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  En SQL Server 2016, SSIS incluye nuevas funcionalidades que le permiten implementar fácilmente en un catálogo de SSIS centralizado (es decir, la base de datos de usuario de SSISDB). Para proporcionar alta disponibilidad de la base de datos SSISDB y su contenido, proyectos, paquetes, registros de ejecución, etc., puede agregar la base de datos SSISDB a un grupo de disponibilidad Always On, como en cualquier otra base de datos de usuario. Cuando se produce una conmutación por error, uno de los nodos secundarios se convierte automáticamente en el nuevo nodo principal.  
   
- Para obtener información detallada e instrucciones paso a paso sobre cómo habilitar Always On para SSISDB, vea [SSIS Catalog](../integration-services/service/ssis-catalog.md) (Catálogo de SSIS).  
+ Para obtener información detallada e instrucciones paso a paso sobre cómo habilitar Always On para SSISDB, vea [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) (Catálogo de SSIS).  
 
 ####  <a name="IncrementalDeployment"></a> Implementación incremental de paquetes  
 La característica Implementación incremental de paquetes le permite implementar uno o varios paquetes en un proyecto nuevo o existente sin implementar todo el proyecto. Puede implementar paquetes de forma incremental con las herramientas siguientes.  
@@ -256,7 +259,7 @@ La característica Implementación incremental de paquetes le permite implementa
 ####  <a name="ODatav4"></a> Compatibilidad con orígenes de datos OData v4  
  El origen OData y el Administrador de conexiones de OData admiten ahora los protocolos OData v3 y v4.  
   
--   Protocolo OData V3, el componente admite los formatos de datos JSON y ATOM.  
+-   Para el protocolo OData V3, el componente admite los formatos de datos ATOM y JSON.  
   
 -   Protocolo OData V4, el componente admite el formato de datos JSON.  
   
@@ -316,7 +319,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 ### <a name="better-install-experience"></a>Mejor experiencia de instalación
 
 ####  <a name="Upgrade"></a> Actualización bloqueada cuando SSISDB pertenece a un grupo de disponibilidad  
- Si la base de datos del catálogo de SSIS (SSISDB) pertenece a un grupo de disponibilidad AlwaysOn, tiene que quitar SSISDB del grupo de disponibilidad, actualizar SQL Server y volver a agregar SSISDB al grupo de disponibilidad. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ Si la base de datos del catálogo de SSIS (SSISDB) pertenece a un grupo de disponibilidad AlwaysOn, tiene que quitar SSISDB del grupo de disponibilidad, actualizar SQL Server y volver a agregar SSISDB al grupo de disponibilidad. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Mejor experiencia de diseño
 
@@ -325,7 +328,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 
  En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    
- ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto")  
+ ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
 >   [!IMPORTANT]
 > Si desarrolla extensiones personalizadas para SSIS, vea [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Admitir varias versiones en los componentes personalizados) y [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Conseguir que la compatibilidad con varias versiones de SSDT 2015 para SQL Server 2016 admita extensiones personalizadas de SSIS).  
@@ -368,7 +371,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] ha introducido la propiedad **ValidationDetails** en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Esta nueva propiedad no se anunció ni documentó en su momento. La propiedad **ValidationDetails** también está disponible en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Características compatibles con las ediciones de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
   

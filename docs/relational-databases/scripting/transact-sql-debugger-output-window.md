@@ -3,9 +3,9 @@ title: Resultados (ventana) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 234b8119ae9d1ed11d67a537cd4eab1a56bd7854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fec105932cc901f932d57843639edaf7991f941
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---output-window"></a>Depurador de Transact-SQL: ventana Resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta ventana muestra mensajes de estado de varias características de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los resultados se muestran en paneles especiales de la ventana **Resultados** del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , características de herramientas externas o comandos que se ejecutan en el depurador de **Ventana de comandos**. También están disponibles los resultados que suelen mostrarse en la ventana Símbolo del sistema de herramientas externas, como los archivos .bat o .com.  
@@ -34,14 +34,14 @@ ms.lasthandoff: 11/17/2017
   
 -   En el menú **Ver** , haga clic en **Otras ventanas**y haga clic en **Resultados**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Lista de paneles de resultados**  
  Muestra una lista de paneles de resultados que se pueden consultar. Puede haber diferentes paneles de información, en función de las herramientas que han utilizado la ventana **Resultados** para proporcionar información al usuario.  
   
  **Panel de resultados**  
  Muestra los resultados del panel seleccionado en la **lista de paneles de resultados**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

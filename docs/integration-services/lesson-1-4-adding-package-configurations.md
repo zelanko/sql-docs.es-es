@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69c55653dd8044bc2236025457fa3b5ae180cbed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lección 1-4: Agregar configuraciones de paquetes
 En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
@@ -138,7 +138,7 @@ Creará dos archivos de configuración, DataTransferConfig.dtsConfig y LoadXMLDa
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Configuraciones de paquetes](../integration-services/packages/package-configurations.md)  
 [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md)  
 [Acceso a los archivos usados por los paquetes](../integration-services/security/security-overview-integration-services.md#files)  

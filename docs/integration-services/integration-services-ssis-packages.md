@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
  Los paquetes pueden incluir objetos adicionales que proporcionan características avanzadas o extienden la funcionalidad existente, como controladores de eventos, configuraciones, registro y variables.  
   
 ### <a name="event-handlers"></a>Controladores de eventos  
- Un controlador de eventos es un flujo de trabajo que se ejecuta en respuesta a los eventos provocados por un paquete, una tarea o un contenedor. Por ejemplo, puede usar un controlador de eventos para comprobar el espacio en disco cuando se produce un evento previo a la ejecución o si se produce un error, y enviar un mensaje de correo electrónico que notifique el espacio disponible o la información de error a un administrador. Un controlador de eventos se crea como un paquete, con un flujo de control y flujos de datos opcionales. Los controladores de eventos pueden agregarse a tareas individuales o a contenedores del paquete. Para obtener más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md).  
+ Un controlador de eventos es un flujo de trabajo que se ejecuta en respuesta a los eventos provocados por un paquete, una tarea o un contenedor. Por ejemplo, puede usar un controlador de eventos para comprobar el espacio en disco cuando se produce un evento previo a la ejecución o si se produce un error, y enviar un mensaje de correo electrónico que notifique el espacio disponible o la información de error a un administrador. Un controlador de eventos se crea como un paquete, con un flujo de control y flujos de datos opcionales. Los controladores de eventos pueden agregarse a tareas individuales o a contenedores del paquete. Para más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md).  
   
 ### <a name="configurations"></a>Configuraciones  
  Una configuración es un conjunto de pares propiedad-valor que define las propiedades del paquete y sus tareas, contenedores, variables, conexiones y controladores de eventos cuando se ejecuta el paquete. El uso de configuraciones permite actualizar propiedades sin modificar el paquete. Cuando se ejecuta el paquete, se carga la información de configuración y se actualizan los valores de las propiedades. Por ejemplo, una configuración puede actualizar la cadena de conexión de la conexión.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
   
  Para cambiar el GUID del paquete, debe volver a generar un GUID en la propiedad **ID** y en la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para cambiar el nombre del paquete, puede actualizar el valor de la propiedad **Name** en la ventana Propiedades. También puede utilizar el símbolo del sistema **dtutil** o actualizar el nombre y el GUID mediante programación. Para obtener más información, vea [Establecer las propiedades de paquetes](../integration-services/set-package-properties.md) y [dtutil (utilidad)](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye dos herramientas gráficas para crear paquetes aparte del modelo de objetos [!INCLUDE[ssIS](../includes/ssis-md.md)] : el Diseñador [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el Asistente para importación y exportación de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para obtener detalles, vea los siguientes temas.  
   
 -   [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  

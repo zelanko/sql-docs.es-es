@@ -3,7 +3,7 @@ title: "Creación de instancias de eventos de ADO: ADO y WFC | Documentos de Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8c6afcc5c41535031961f0d96cf756cd4015c9b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creación de instancias de eventos de ADO: ADO y WFC
 ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de ADO y presenta una interfaz de programación de aplicaciones simplificado. En general, ADO/WFC intercepta eventos de ADO, consolida los parámetros de evento en una clase de evento único y, a continuación, llama al controlador de eventos.  

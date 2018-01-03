@@ -3,9 +3,9 @@ title: "Habilitar, deshabilitar y eliminar puntos de interrupción | Microsoft D
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38a596f36d68cc6efd8b21450aaddf5f0a293ab0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2a3bd394023591be8821d1df4488945c835b253
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, deshabilitar y eliminar puntos de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para ver y administrar todos los puntos de interrupción abiertos, puede usar la ventana **Puntos de interrupción**. Use la ventana para ver la información de punto de interrupción y para realizar acciones tales como eliminar, deshabilitar o habilitar puntos de interrupción.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 -   En la barra de herramientas de la ventana **Puntos de interrupción** , haga clic en el botón **Eliminar todos los puntos de interrupción** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Alternar un punto de interrupción](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   

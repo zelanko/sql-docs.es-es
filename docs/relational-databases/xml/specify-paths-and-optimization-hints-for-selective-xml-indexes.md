@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd7817115889688a612e004c6eb44584acb49ff6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: feae81d56a340583d9a48a36abba01cacc7049c4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo especificar rutas de acceso del nodo al índice y sugerencias de optimización para indizar cuando se crean o modifican índices XML selectivos.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  A continuación se muestra un ejemplo de un índice XML selectivo creado con las asignaciones predeterminadas. Para las tres rutas de acceso, se usa el tipo de nodo predeterminado (**xs:untypedAtomic**) y cardinalidad.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -98,7 +98,7 @@ mypath03 = '/a/b/d'
   
  Puede optimizar el índice XML selectivo que se muestra de la manera siguiente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -122,7 +122,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Estudie la siguiente consulta:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -130,7 +130,7 @@ FROM myXMLTable T
   
  La consulta especificada devuelve un valor de la ruta de acceso `/a/b/d` empaquetado en un tipos de datos NVARCHAR(200), por lo que el tipo de datos para especificar el nodo es obvio. Sin embargo, no hay ningún esquema para especificar la cardinalidad del nodo en XML sin tipo. Para especificar que el nodo `d` aparece como máximo una vez en su nodo primario `b`, cree un índice XML selectivo que use la sugerencia de optimización SINGLETON de la manera siguiente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -228,7 +228,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Examine la consulta simple siguiente sobre el [documento XML de ejemplo](#sample) de este tema:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -243,7 +243,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Para mejorar el rendimiento de la instrucción SELECT mostrada anteriormente, puede crear el índice XML selectivo siguiente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -256,7 +256,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Indizar rutas de acceso idénticas  
  No puede promover rutas de acceso idénticas como el mismo tipo de datos con nombres de ruta de acceso diferentes. Por ejemplo, la consulta siguiente genera un error porque `pathOne` y `pathTwo` son idénticas:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -267,7 +267,7 @@ FOR
   
  Sin embargo, puede promover rutas de acceso idénticas como tipos de datos diferentes con nombres distintos. Por ejemplo, la consulta siguiente ahora es aceptable porque los tipos de datos son diferentes:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -283,7 +283,7 @@ FOR
   
  Esta es una expresión XQuery simple que usa el método exist():  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -298,7 +298,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Esta es una variación más compleja de la expresión XQuery anterior a la que se ha aplicado un predicado:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -314,7 +314,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Esta es una consulta más compleja con una cláusula value():  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -332,7 +332,7 @@ FROM myXMLTable T
   
  Esta es una consulta que usa una cláusula FLWOR dentro de una cláusula exist(). (El nombre FLWOR proviene de las cinco cláusulas que pueden crear una expresión FLWOR de XQuery: for, let, where, order by y return).  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -362,8 +362,8 @@ WHERE T.xmldata.exist('
   
 |Sugerencia de optimización|Almacenamiento más eficiente|Rendimiento mejorado|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Sí|No|  
-|**SINGLETON**|No|Sí|  
+|**node()**|Sí|no|  
+|**SINGLETON**|no|Sí|  
 |**DATA TYPE**|Sí|Sí|  
 |**MAXLENGTH**|Sí|Sí|  
   
@@ -372,10 +372,10 @@ WHERE T.xmldata.exist('
   
 |Sugerencia de optimización|Tipos de datos XQuery|Tipos de datos SQL|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Sí|No|  
+|**node()**|Sí|no|  
 |**SINGLETON**|Sí|Sí|  
-|**DATA TYPE**|Sí|No|  
-|**MAXLENGTH**|Sí|No|  
+|**DATA TYPE**|Sí|no|  
+|**MAXLENGTH**|Sí|no|  
   
 ### <a name="node-optimization-hint"></a>Sugerencia de optimización node()  
  Se aplica a: tipos de datos XQuery  
@@ -384,7 +384,7 @@ WHERE T.xmldata.exist('
   
  Considere el ejemplo siguiente:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  
@@ -439,7 +439,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 ```  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Índices XML selectivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Crear, modificar y quitar índices XML selectivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

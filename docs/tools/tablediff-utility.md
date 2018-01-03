@@ -3,7 +3,7 @@ title: tablediff (utilidad) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff, utilidad
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]El **tablediff** utilidad se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
@@ -170,9 +170,9 @@ tablediff
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**0**|Success|  
+|**0**|Correcto|  
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   
@@ -189,12 +189,12 @@ tablediff
 |**smallint**|**int** o **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
-|**varchar(max)**|**text**|  
+|**ntext**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**image**|  
-|**text**|**varchar(max)**|  
+|**varbinary(max)**|**imagen**|  
+|**texto**|**ntext**|  
 |**ntext**|**nvarchar(max)**|  
-|**image**|**varbinary(max)**|  
+|**imagen**|**varbinary(max)**|  
   
  Use la opción **-strict** para no permitir estas asignaciones y llevar a cabo una validación estricta.  
   
@@ -202,7 +202,7 @@ tablediff
   
  El script [!INCLUDE[tsql](../includes/tsql-md.md)] generado para hacer que la tabla de destino converja no incluye los siguientes tipos de datos:  
   
--   **varchar(max)**  
+-   **ntext**  
   
 -   **nvarchar(max)**  
   
@@ -212,13 +212,13 @@ tablediff
   
 -   **xml**  
   
--   **text**  
+-   **texto**  
   
 -   **ntext**  
   
--   **image**  
+-   **imagen**  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permissions  
  Para comparar tablas, necesita los permisos SELECT ALL en los objetos de la tabla que se están comparando.  
   
  Para usar la opción **-et** , debe ser miembro del rol fijo de base de datos db_owner o, como mínimo, tener el permiso CREATE TABLE en la base de datos de suscripciones y el permiso ALTER en el esquema del propietario de destino del servidor de destino.  

@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 3a29c6580a4163bd69d2bb2ee1d037afc04f8108
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurar SQL Server 2017 imágenes del contenedor en Docker
 
@@ -32,7 +32,7 @@ En este tema se explica cómo configurar y usar el [imagen de contenedor mssql-s
 
 ## <a name="pull-and-run-the-container-image"></a>Extraer y ejecutar la imagen de contenedor
 
-Para extraer y ejecutar al Docker imagen de contenedor para SQL Server 2017, siga los pasos y requisitos previos en el siguiente tutorial de inicio rápido:
+Para extraer y ejecutar al Docker imagen de contenedor para SQL Server 2017, siga los requisitos previos y los pasos del tutorial siguiente:
 
 - [Ejecutar la imagen de contenedor de SQL Server 2017 con Docker](quickstart-install-connect-docker.md)
 
@@ -40,7 +40,7 @@ En este tema de configuración proporciona los escenarios de uso adicionales en 
 
 ## <a id="production"></a>Ejecute las imágenes del contenedor de producción
 
-El tutorial de inicio rápido en la sección anterior, ejecuta la edición de desarrollador gratuita de SQL Server de Docker Hub. La mayor parte de la información sigue siendo válido si va a ejecutar imágenes de contenedor, como las ediciones Enterprise, Standard o Web de producción. Sin embargo, hay algunas diferencias que se describen a continuación.
+El inicio rápido en la sección anterior, ejecuta la edición de desarrollador gratuita de SQL Server de Docker Hub. La mayor parte de la información sigue siendo válido si va a ejecutar imágenes de contenedor, como las ediciones Enterprise, Standard o Web de producción. Sin embargo, hay algunas diferencias que se describen a continuación.
 
 - Sólo se puede utilizar SQL Server en un entorno de producción si tiene una licencia válida. Puede obtener una licencia de producción de SQL Server Express gratuita [aquí](https://go.microsoft.com/fwlink/?linkid=857693). Licencias de SQL Server Standard y Enterprise Edition están disponibles a través de [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
 
@@ -56,7 +56,7 @@ El tutorial de inicio rápido en la sección anterior, ejecuta la edición de de
 
    1. A continuación, debe obtener el desarrollador gratuita imagen de contenedor en el almacén de Docker. Vaya a [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), haga clic en **desproteger**y siga las instrucciones.
 
-   1. Revise los requisitos y ejecutar procedimientos en el [tutorial de inicio rápido](quickstart-install-connect-docker.md). Pero hay dos diferencias. Se debe extraer de la imagen **almacén/microsoft/mssql-server-linux:\<nombre de etiqueta\>**  del almacén de Docker. Debe especificar la edición de producción con el **MSSQL_PID** variable de entorno. En el ejemplo siguiente se muestra cómo ejecutar la imagen de contenedor de SQL Server 2017 más reciente para la edición Enterprise:
+   1. Revise los requisitos y ejecutar procedimientos en el [inicio rápido](quickstart-install-connect-docker.md). Pero hay dos diferencias. Se debe extraer de la imagen **almacén/microsoft/mssql-server-linux:\<nombre de etiqueta\>**  del almacén de Docker. Debe especificar la edición de producción con el **MSSQL_PID** variable de entorno. En el ejemplo siguiente se muestra cómo ejecutar la imagen de contenedor de SQL Server 2017 más reciente para la edición Enterprise:
 
       ```bash
       docker run --name sqlenterprise \
@@ -431,6 +431,6 @@ cat errorlog
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Empezar a trabajar con imágenes de contenedores de 2017 de SQL Server en Docker, vaya a través de la [tutorial de inicio rápido](quickstart-install-connect-docker.md).
+Empezar a trabajar con imágenes de contenedores de 2017 de SQL Server en Docker, vaya a través de la [inicio rápido](quickstart-install-connect-docker.md).
 
 Consulte también la [repositorio de GitHub de docker mssql](https://github.com/Microsoft/mssql-docker) para los recursos, comentarios y problemas conocidos.

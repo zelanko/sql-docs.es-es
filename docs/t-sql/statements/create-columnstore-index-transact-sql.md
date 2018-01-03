@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 Convertir una tabla de almacén de filas en un índice de almacén de columnas agrupado o crear un índice no clúster de almacén de columnas. Usar un índice de almacén para ejecutar de forma eficaz los análisis operativos en tiempo real en una carga de trabajo OLTP o para mejorar el rendimiento de la compresión y la consulta de datos para las cargas de trabajo de almacenamiento de datos.  
   
 > [!NOTE]  
->  A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear la tabla como un índice de almacén de columnas agrupado.   Ya no es necesario crear primero una tabla de almacén de filas y, a continuación, convertirlo en un índice de almacén de columnas agrupado.  
-  
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear la tabla como un índice de almacén de columnas agrupado.   Ya no es necesario crear primero una tabla de almacén de filas y, a continuación, convertirlo en un índice de almacén de columnas agrupado.  
+
+> [!TIP]
+> Para obtener información sobre las directrices para diseñar índices, consulte la [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
 Vaya a ejemplos:  
 -   [Ejemplos para convertir una tabla de almacén de filas en el almacén de columnas](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Ejemplos para los índices no agrupados](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ Crea el índice especificado en el grupo de archivos predeterminado.
   
 El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"**predeterminado**"** u ON **[**predeterminado**]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="GenRemarks"></a>Notas generales  
@@ -299,20 +302,20 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 **Cada columna de un índice de almacén de columnas debe ser de uno de los tipos de datos empresariales comunes siguientes:** 
 -   DateTimeOffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   Date  
 -   tiempo [(  *n*  )]  
 -   float [(  *n*  )]  
 -   real [(  *n*  )]  
 -   decimal [( *precisión* [ *, escala* ] **)** ]
 -   numérico [( *precisión* [ *, escala* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   INT  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y base de datos de SQL de Azure en premium tarifa, en los índices de almacén de columnas agrupado solo)   
@@ -350,7 +353,7 @@ Si la tabla subyacente tiene una columna de un tipo de datos que no se admite pa
  **Índices de almacén de columnas no se puede combinar con las siguientes características:**  
 -   Columnas calculadas A partir de SQL Server 2017, un índice de almacén de columnas agrupado puede contener una columna calculada no persistente. Sin embargo, en SQL Server 2017, índices de almacén de columnas agrupado no pueden contener columnas calculadas persistentes y no se puede crear índices no agrupados en columnas calculadas. 
 -   Compresión de página y fila, y **vardecimal** el formato de almacenamiento (un índice de almacén de columnas ya está comprimido en un formato diferente).  
--   Replicación  
+-   REPLICATION  
 -   Secuencia de archivos
 
 No puede utilizar los cursores o desencadenadores en una tabla con un índice de almacén de columnas agrupado. Esta restricción no se aplica a los índices no agrupados; Puede utilizar los cursores y desencadenadores en una tabla con un índice no clúster de almacén de columnas.

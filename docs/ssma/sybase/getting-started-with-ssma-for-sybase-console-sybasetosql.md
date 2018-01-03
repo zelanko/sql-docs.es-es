@@ -3,7 +3,7 @@ title: "Introducción a SSMA para Sybase consola (SybaseToSQL) | Documentos de M
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d2c78871f1fdd0da18877741a198b2e11f1fbb5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 689cd4339d926cd4f8e20c799a0c074adb29b81f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introducción a SSMA para Sybase consola (SybaseToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a trabajar con SSMA para Sybase aplicación de consola. También se muestran en los ejemplos se utilizan las convenciones en una ventana de salida de consola SSMA típica.  

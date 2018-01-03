@@ -3,7 +3,7 @@ title: "sqllogship (aplicación) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllogship
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **sqllogship** aplicación realiza una copia de seguridad, copiar, o la operación de restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
@@ -58,12 +58,12 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Especifica el nivel de mensajes agregados al historial de trasvase de registros. *level* es uno de los siguientes enteros:  
   
-|level|Descripción|  
+|level|Description|  
 |-----------|-----------------|  
 |0|No se obtienen mensajes de depuración ni de seguimiento.|  
 |1|Se obtienen mensajes de control de errores.|  
 |2|Se obtienen mensajes de control de errores y advertencias.|  
-|**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Es el valor predeterminado.|  
+|**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Este es el valor predeterminado.|  
 |4|Se obtienen todos los mensajes de depuración y traza.|  
   
  **–logintimeout** *timeout_value*  
@@ -79,10 +79,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  La aplicación **sqllogship** , SqlLogShip.exe, está instalada en el directorio x:\Archivos de programa\Microsoft SQL Server\130\Tools\Binn.  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permissions  
  **sqllogship** usa la autenticación de Windows. La cuenta de la autenticación de Windows donde se ejecuta el comando requiere acceso al directorio de Windows y permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El requisito depende de si el comando **sqllogship** especifica la opción **-backup**, **-copy**o **-restore** .  
   
-|Opción|Acceso al directorio|Permisos|  
+|Opción|Acceso al directorio|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|Requiere acceso de lectura/escritura al directorio de copia de seguridad.|Requiere los mismos permisos que la instrucción BACKUP. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md).|  
 |**-copy**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el procedimiento almacenado [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .|  

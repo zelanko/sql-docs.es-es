@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 284c184a7e77842ec798dbff6d32c193ce9055f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6ddb3472f19ce2fda8bc368cd07f7ea602d74a02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ ROW_NUMBER ( )
 
 La siguiente consulta devuelve las tablas del cuatro sistema en orden alfabético.
 
-```t-sql
+```sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -89,7 +89,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|name    |recovery_model_desc |  
+|NAME    |recovery_model_desc |  
 |-----------  |------------ |  
 |maestra |SIMPLE |
 |model |FULL |
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 
 Para agregar una columna de número de fila delante de cada fila, agregue una columna con el `ROW_NUMBER` función, en este caso denominada `Row#`. Debe mover el `ORDER BY` cláusula hasta el `OVER` cláusula.
 
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -108,7 +108,7 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Fila # |name    |recovery_model_desc |  
+|Fila # |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |maestra |SIMPLE |
 |2 |model |FULL |
@@ -117,7 +117,7 @@ WHERE database_id < 5;
 
 Agregar un `PARTITION BY` en la cláusula de la `recovery_model_desc` columna, se reiniciará la numeración cuando el `recovery_model_desc` cambia el valor. 
  
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -127,7 +127,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Fila # |name    |recovery_model_desc |  
+|Fila # |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |maestra |SIMPLE |
@@ -138,7 +138,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. Devolver el número de fila de vendedor  
  En el ejemplo siguiente se calcula un número de fila para los vendedores de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] según la categoría de ventas anuales hasta la fecha.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -172,7 +172,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>C. Devolver un subconjunto de filas  
  En el ejemplo siguiente se calculan los números de fila para todas las filas de la tabla `SalesOrderHeader` en el orden de `OrderDate` y solo se devuelven las filas `50` a `60` inclusive.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -189,7 +189,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>D. Usar ROW_NUMBER() con PARTITION  
  En el ejemplo siguiente se usa el argumento `PARTITION BY` para crear particiones del conjunto de resultados de la consulta por la columna `TerritoryName`. La cláusula `ORDER BY` especificada en la cláusula `OVER` ordena las filas de cada partición por la columna `SalesYTD`. La cláusula `ORDER BY` de la instrucción `SELECT` ordena todo el conjunto de resultados de la consulta por `TerritoryName`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -227,7 +227,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Devolver el número de fila de vendedor  
  El ejemplo siguiente devuelve el `ROW_NUMBER` para los representantes de ventas en función de sus cuotas de ventas asignado.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>F. Usar ROW_NUMBER() con PARTITION  
  El ejemplo siguiente muestra cómo utilizar la función `ROW_NUMBER` con el argumento `PARTITION BY`. Esto hace que el `ROW_NUMBER` función para numerar las filas de cada partición.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batches-of-sql-statements"></a>Lotes de instrucciones SQL
 Un lote de instrucciones SQL es un grupo de dos o más instrucciones SQL o una sola instrucción SQL que tiene el mismo efecto que un grupo de dos o más instrucciones SQL. En algunas implementaciones, se ejecuta la instrucción del lote completo antes de que todos los resultados estén disponibles. Esto suele ser más eficaz que enviar las instrucciones por separado, porque a menudo se puede reducir el tráfico de red y el origen de datos a veces puede optimizar la ejecución de un lote de instrucciones SQL. En otras implementaciones, al llamar a **SQLMoreResults** desencadena la ejecución de la siguiente instrucción del lote. ODBC admite los siguientes tipos de lotes:  

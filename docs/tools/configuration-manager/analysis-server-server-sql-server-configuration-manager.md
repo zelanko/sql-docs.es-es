@@ -3,7 +3,7 @@ title: "Analysis Server &lt;server&gt; (Administrador de configuración de SQL S
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6cef690f4e9a0c034d0564e7938ce56a34811b10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f13670410d9e6e0032b0fd49521658bb7906d028
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server &lt;server&gt; (Administrador de configuración de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Éste es el servicio que admite Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para ver las propiedades del servicio, en el panel de detalles, haga clic con el botón derecho en el servicio y, después, haga clic en **Propiedades**.  

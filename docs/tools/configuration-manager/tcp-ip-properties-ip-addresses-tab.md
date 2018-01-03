@@ -3,7 +3,7 @@ title: "Propiedades de TCP/IP (pestaña de direcciones IP) | Documentos de Micro
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 018d6474b242e80cfb483fc4ebea76d777af77e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propiedades de TCP/IP (pestaña Direcciones IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **propiedades de TCP/IP (pestaña de direcciones IP)** cuadro de diálogo para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/05/2017
 ## <a name="dynamic-ports"></a>Puertos dinámicos  
  Al iniciar, cuando una instancia de SQL Server está configurada para escuchar en puertos dinámicos, comprueba la existencia en el sistema operativo de un puerto disponible y abre un extremo para dicho puerto. Las conexiones entrantes deben especificar dicho número de puerto para conectarse. Puesto que el número de puerto puede cambiar cada vez que se inicia SQL Server, SQL Server proporciona el servicio SQL Server Browser para supervisar los puertos y dirigir las conexiones entrantes al puerto actual para dicha instancia. El uso de puertos dinámicos dificulta la conexión de SQL Server mediante un firewall porque el número de puerto puede cambiar cuando SQL Server se reinicia, lo que implica tener que hacer cambios en la configuración del firewall. Para evitar problemas de conexión a través de un firewall, configure SQL Server para que use un puerto estático.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Activo**  
  Indica que la dirección IP está activa en el equipo. No está disponible para **IPAll**.  
   
- **Habilitado**  
+ **Enabled**  
  Si la propiedad **Escuchar todo** del cuadro de diálogo **Propiedades de TCP/IP (pestaña Protocolo)** se ha establecido en **No**, esta propiedad indicará si SQL Server está escuchando en la dirección IP. Si la propiedad **Escuchar todo** del cuadro de diálogo **Propiedades de TCP/IP (pestaña Protocolo)** se ha establecido en **Sí**, se omitirá esta propiedad. No está disponible para **IPAll**.  
   
  **Dirección IP**  

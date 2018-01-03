@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ En la tabla anterior, **atributo** puede tener los valores siguientes:
   
 |Opción|Valor|  
 |------------|-----------|  
-|Ninguno|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -148,7 +148,7 @@ En la tabla anterior, **atributo** puede tener los valores siguientes:
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Devolver los atributos de un plan concreto  
  En el ejemplo siguiente se devuelven todos los atributos de un plan especificado. La vista de administración dinámica `sys.dm_exec_cached_plans` se consulta primero para obtener el identificador del plan especificado. En la segunda consulta, sustituya `<plan_handle>` por el valor del identificador del plan de la primera consulta.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. Devolver las opciones SET para los planes compilados y el identificador SQL para los planes almacenados en caché  
  En el ejemplo siguiente se devuelve un valor que representa las opciones con las que se compiló cada plan. Además, se devuelve el identificador SQL para todos los planes en caché.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

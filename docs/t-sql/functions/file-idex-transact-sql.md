@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60963e998c98ea5f6a5de4b2ebc43b75de964fad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 75882e2c74b6a432f49b9b7e14b83af05e961af7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ FILE_IDEX ( file_name )
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Recuperar el Id. de archivo de un archivo especificado  
 El siguiente ejemplo devuelve el Id. de archivo para el archivo `AdventureWorks_Data`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
@@ -85,7 +85,7 @@ File ID
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Recuperar el Id. de archivo cuando se desconoce el nombre del archivo  
 En el ejemplo siguiente se devuelve el identificador de archivo de la `AdventureWorks` archivo de registro, seleccione el nombre de archivo lógico de la `sys.database_files` donde el tipo de archivo es igual a la vista de catálogo `1` (registro).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
@@ -103,7 +103,7 @@ File ID
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Recuperar el Id. de archivo de un archivo de catálogo de texto completo  
 En el ejemplo siguiente se devuelve el identificador de archivo de un archivo de texto completo seleccionando el nombre de archivo lógico de la `sys.database_files` donde el tipo de archivo es igual a la vista de catálogo `4` (texto). En este ejemplo se devuelve NULL si no existe ningún catálogo de texto completo.  
   
-```tsql  
+```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  

@@ -3,7 +3,7 @@ title: Instalar Distributed Replay | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad107252ba6c6dc86e6720a7a07dfa87d82b2a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede instalar Distributed Replay en una de estas tres maneras:  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/05/2017
   
     -   Cuenta virtual y MSA (cuenta de servicio administrada)  
   
-    -   Servicios de red, servicios locales y sistema  
+    -   Network Services, servicios locales y sistema  
   
      No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/05/2017
 |Componente|Parámetro|  
 |---------------|---------------|  
 |Controlador de Distributed Replay|**DREPLAY_CTLR**|  
-|Distributed Replay Client|**DREPLAY_CLT**|  
+|Servicio cliente de Distributed Replay|**DREPLAY_CLT**|  
 |Herramienta de administración|**Herramientas**|  
   
 > [!IMPORTANT]  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/05/2017
   
  Use los parámetros de la tabla siguiente para desarrollar scripts de la línea de comandos para la instalación.  
   
-|Parámetro|Descripción|Valores admitidos:|  
+|Parámetro|Description|Valores admitidos:|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Cuenta de servicio para el servicio Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Contraseña de la cuenta de servicio de Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  

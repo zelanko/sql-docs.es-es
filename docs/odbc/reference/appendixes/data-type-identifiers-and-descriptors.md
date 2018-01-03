@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0040a426bd11048a993e98015a536c76e1b4381c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1f54638aa02c885ee0e6fe8d14310d319dafb11c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificadores de tipo de datos y los descriptores de
 Los tipos de datos enumeran en el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) y [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) secciones anteriormente en este apéndice son tipos de datos "concisa": cada identificador hace referencia a un tipo de datos único. Hay una correspondencia uno a uno entre el identificador y el tipo de datos. Descriptores, sin embargo, hacer no en todos los casos utilice un valor único para identificar los tipos de datos. En algunos casos, usan un tipo de datos "detallados" y un subcódigo de tipo. Para todos los tipos de datos excepto los tipos de datos datetime e interval, el identificador de tipo detallado es el mismo que el identificador de tipo concisa y el valor de SQL_DESC_DATETIME_INTERVAL_CODE es igual a 0. Para los tipos de datos datetime e interval, sin embargo, un tipo detallado (SQL_DATETIME o SQL_INTERVAL) se almacena en SQL_DESC_TYPE, un tipo conciso se almacena en SQL_DESC_CONCISE_TYPE y un subcódigo para cada tipo concisa se almacena en SQL_DESC_DATETIME_INTERVAL_CODE. Configuración de uno de estos campos afecta a los demás. Para obtener más información acerca de estos campos, vea el [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) descripción de la función.  

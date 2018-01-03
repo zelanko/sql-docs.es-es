@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Crear una notificación de eventos en el ámbito de un servidor  
  En el ejemplo siguiente se crean los objetos necesarios para configurar un servicio de destino utilizando [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El servicio de destino hace referencia al contrato y tipo de mensaje del servicio de inicio específicamente para notificaciones de eventos. Después, se crea una notificación de eventos en el servicio de destino que envía una notificación cada vez que tiene lugar un evento de seguimiento `Object_Created` en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +167,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. Crear una notificación de eventos en el ámbito de una base de datos  
  El ejemplo siguiente crea una notificación de eventos en el mismo servicio de destino que el ejemplo anterior. La notificación de eventos se activa después de un evento `ALTER_TABLE` en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +186,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. Obtener información sobre una notificación de eventos en el ámbito de una base de datos  
  El ejemplo siguiente realiza una consulta en la vista de catálogo `sys.event_notifications` respecto de metadatos sobre la notificación de eventos `Notify_ALTER_T1` creada en el ámbito de una base de datos.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

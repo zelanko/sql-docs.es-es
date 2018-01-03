@@ -1,7 +1,7 @@
 ---
 title: "Asignación de las bases de datos de MySQL a esquemas SQL Server (MySQLToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77a150ac9568f614869b3e6f168c96eb47d2e764
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4dd351ebbb052515d953f02ae74282dd1e1d62f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Asignación de las bases de datos de MySQL a esquemas SQL Server (MySQLToSQL)
 De forma predeterminada, SSMA para MySQL migra todos los objetos de un esquema de MySQL para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o con el nombre para el esquema de base de datos de SQL Azure. Sin embargo, puede personalizar la asignación entre esquemas de MySQL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o bases de datos de SQL Azure.  
@@ -75,7 +75,7 @@ Si personaliza la asignación entre un esquema de MySQL y un esquema de SQL Serv
   
 1.  En la pestaña asignación de esquema, seleccione una fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos predeterminada y el esquema.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Si desea analizar la conversión de objetos de MySQL en objetos de SQL Server o SQL Azure, también puede [crear un informe de conversión](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) en caso contrario, puede [convertir las definiciones de objeto de base de datos de MySQL](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) en esquemas de SQL Server o SQL Azure  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,7 +1,7 @@
 ---
 title: Conectar con Oracle (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9f2db42d3770626ef983b4d45473ad5827c604f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Conectar con Oracle (OracleToSQL)
 Use la **conectar con Oracle** cuadro de diálogo para conectarse a la base de datos de Oracle que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar con Oracle**. Si se ha conectado anteriormente, el comando es **volver a conectar con Oracle**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Proveedor**  
 Seleccione el proveedor de acceso de datos para la conexión a la base de datos de Oracle. Proveedores disponibles están en el proveedor de cliente de Oracle y el proveedor OLE DB. El valor predeterminado es el proveedor de cliente de Oracle.  
   
@@ -62,7 +62,7 @@ Escriba al SID de la base de datos. El SID es un identificador que distingue la 
   
 Se trata de una opción de modo estándar.  
   
-**Nombre de usuario.**  
+**User name**  
 Escriba el nombre de usuario que va a usar SSMA para conectarse a la base de datos de Oracle.  
   
 **Contraseña**  

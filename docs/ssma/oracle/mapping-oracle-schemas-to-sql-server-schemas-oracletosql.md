@@ -1,7 +1,7 @@
 ---
 title: "Asignación de esquemas de Oracle a esquemas SQL Server (OracleToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 592c5385efd4c9457405ffec77eac723109fdf6e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Asignación de esquemas de Oracle a esquemas SQL Server (OracleToSQL)
 En Oracle, cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de Oracle para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el nombre para el esquema de la base de datos. Sin embargo, puede personalizar la asignación entre esquemas de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] las bases de datos.  
@@ -65,7 +65,7 @@ Si personaliza la asignación entre un esquema de Oracle y un [!INCLUDE[ssNoVers
   
 1.  En la pestaña asignación de esquema, seleccione una fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos predeterminada y el esquema.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Si desea analizar la conversión de objetos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, también puede [crear un informe de conversión](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). En caso contrario, puede [convertir las definiciones de objeto de base de datos de Oracle](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definiciones de objetos.  
   
 ## <a name="see-also"></a>Vea también  

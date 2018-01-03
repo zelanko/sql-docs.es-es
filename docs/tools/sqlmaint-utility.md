@@ -3,7 +3,7 @@ title: sqlmaint (utilidad) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,13 +25,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqlmaint-utility"></a>sqlmaint (utilidad)
+# <a name="sqlmaint-utility"></a>sqlmaint, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El**sqlmaint** utilidad realiza un conjunto especificado de operaciones de mantenimiento en una o más bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Se requiere el nombre UNC completo del archivo para *html_file* cuando **sqlmaint** tiene acceso a un servidor remoto.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Especifica que debe eliminarse cualquier informe HTML en el directorio de informes si supera el intervalo de tiempo posterior a la creación del archivo del informe \< *time_period*>. **-DelHtmlRpt** busca archivos cuyo nombre se ajuste al patrón generado a partir del parámetro *html_file* . Si *html_file* es c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, entonces **- DelHtmlRpt** hace **sqlmaint** para eliminar los archivos cuyos nombres coincidan con el patrón de C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm y que sean más antiguos que el especificado \< *time_period*>.  
+ Especifica que debe eliminarse cualquier informe HTML en el directorio de informes si supera el intervalo de tiempo posterior a la creación del archivo del informe \< *time_period*>. **-DelHtmlRpt** busca archivos cuyo nombre se ajuste al patrón generado a partir del parámetro *html_file*. Si *html_file* es c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, entonces **- DelHtmlRpt** hace **sqlmaint** para eliminar los archivos cuyos nombres coincidan con el patrón de C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm y que sean más antiguos que el especificado \< *time_period*>.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Especifica que se quite el espacio no usado de la base de datos especificada en **-D**. Esta opción solo resulta útil para aquellas bases de datos definidas para crecer automáticamente. *Threshold_percent* especifica en megabytes el tamaño que debe alcanzar la base de datos antes de que **sqlmaint** intente quitar el espacio de datos no usado. Si la base de datos es menor que el valor de *threshold_percent*, no se realiza ninguna acción. *Free_percent* especifica la cantidad de espacio no usado que debe conservarse en la base de datos, especificado como porcentaje del tamaño final de la base de datos. Por ejemplo, si una base de datos de 200 MB contiene 100 MB de datos y se especifica el valor 10 para *free_percent* , el tamaño final de la base de datos será de 110 MB. Tenga en cuenta que una base de datos no se ampliará si ocupa menos espacio que la suma de *free_percent* más el espacio ocupado por los datos de la base de datos. Por ejemplo, si una base de datos de 108 MB tiene 100 MB de datos y se especifica 10 para *free_percent* , la base de datos no se ampliará a 110 MB; se mantendrá con un espacio de 108 MB.  
@@ -244,7 +244,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Si se detecta un error general.  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permissions  
  La utilidad **sqlmaint** puede ejecutarla cualquier usuario de Windows con permiso de **lectura y ejecución** para `sqlmaint.exe`, que está almacenado de manera predeterminada en la carpeta `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` . Además, el inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificado con **-login_ID** debe tener los permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarios para realizar la acción indicada. Si la conexión con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la autenticación de Windows, el inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asignado al usuario de Windows autenticado debe tener los permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarios para realizar la acción especificada.  
   
  Por ejemplo, para usar **-BkUpDB** , es necesario tener permiso para ejecutar la instrucción BACKUP. Para usar el argumento **-UpdOptiStats** , es necesario tener permiso para ejecutar la instrucción UPDATE STATISTICS. Para obtener más información, vea las secciones sobre permisos en los temas correspondientes de los Libros en pantalla.  

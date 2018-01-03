@@ -1,7 +1,7 @@
 ---
 title: Actualizar desde la base de datos (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: e7e5adccc23ad12ea2550f7c2f217c097fa27cbe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-oracletosql"></a>Actualizar desde la base de datos (OracleToSQL)
 El **actualizar desde la base de datos** cuadro de diálogo permite seleccionar los objetos que desea actualizar desde la base de datos de Oracle. Filas en el cuadro de diálogo están codificadas mediante colores en función del estado de los metadatos:  
@@ -38,7 +38,7 @@ Puede especificar la configuración de actualización de objeto predeterminado e
   
 Para tener acceso a la **actualizar desde la base de datos** cuadro de diálogo, haga un objeto en el Explorador de metadatos de Oracle y haga clic en **actualizar desde la base de datos**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Contraer (-)**  
 Contraer todos los grupos de objetos para ocultar objetos individuales.  
   

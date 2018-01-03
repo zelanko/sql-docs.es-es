@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8ee4a2bd5672c3113c495c46f00b88b11c03e26
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperability"></a>Interoperabilidad
 *Interoperabilidad* es la capacidad de una sola aplicación para que funcione con muchos DBMS diferentes. La necesidad de escribir aplicaciones e interoperables, genéricas fue uno de los principales factores que conducen al desarrollo de ODBC. Sin embargo, interoperabilidad no es una ruta de acceso simple seguido de "no es interoperable" a "completamente interoperable". La ruta de acceso tiene muchas bifurcaciones y cada una requiere equilibrar el tiempo de desarrollo, velocidad, la complejidad del código y características.  

@@ -3,7 +3,7 @@ title: Elemento TuningTimeInMin (DTA) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed0440a28276fa64aa94dad3bbfcdbb287dc28d7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f96f2d58bdc3e5bed18e9dd76fbdd7813a24f8a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica la longitud máxima de una sesión de optimización en minutos.  
@@ -38,9 +38,9 @@ ms.lasthandoff: 12/05/2017
       <TuningTimeInMin>...</TuningTimeInMin>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**unsignedInt**, longitud ilimitada.|  
 |**Valor predeterminado**|480 minutos (8 horas).|  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/05/2017
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos secundarios**|Ninguno|  
+|**Elementos secundarios**|None|  
   
 ## <a name="example"></a>Ejemplo  
   
-## <a name="description"></a>Descripción  
+## <a name="description"></a>Description  
  En el siguiente ejemplo de código se muestra cómo establecer un tiempo de optimización máximo de 12 horas:  
   
 ## <a name="code"></a>código  

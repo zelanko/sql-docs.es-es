@@ -1,13 +1,12 @@
 ---
 title: dbo.slo_assignment_history (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -53,12 +52,12 @@ ms.lasthandoff: 11/09/2017
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Nombre de la base de datos.|  
 |database_id|**int**|Identificador de la base de datos.|  
-|create_date|**DateTimeOffset(7)**|Fecha de creación de la base de datos.|  
+|create_date|**datetimeoffset(7)**|Fecha de creación de la base de datos.|  
 |service_objective_name|**sysname**|Nombre del SLO (objetivo de nivel de servicio).|  
 |service_objective_id|**uniqueidentifier**|Identificador del SLO.|  
 |operation_id|**uniqueidentifier**|Identificador de la operación.|  
-|operation_start_time|**DateTimeOffset(7)**|Hora de inicio de la solicitud de cambio de SLO de la base de datos.|  
-|operation_end_time|**DateTimeOffset(7)**|Hora de finalización de la solicitud de cambio de SLO de la base de datos.|  
+|operation_start_time|**datetimeoffset(7)**|Hora de inicio de la solicitud de cambio de SLO de la base de datos.|  
+|operation_end_time|**datetimeoffset(7)**|Hora de finalización de la solicitud de cambio de SLO de la base de datos.|  
 |error_code|**int**|Código de error de la solicitud de cambio de SLO de la base de datos.|  
 |error_desc|**nvarchar**|Descripción del error de la solicitud de cambio de SLO de la base de datos.|  
   

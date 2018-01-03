@@ -3,7 +3,7 @@ title: "Propiedades de Analysis Server (pestaña iniciar sesión) | Documentos d
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0206adf0e7e21f5674339f1f36bc546f77d5d726
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 479c764b97cbca85ca2eaffbba365eb86f91861b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Propiedades de Analysis Server (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **iniciar sesión** pestaña de la **propiedades de Analysis Server** cuadro de diálogo para especificar la cuenta utilizada por el [!INCLUDE[ssAS](../../includes/ssas-md.md)] servicio y para iniciar y detener el servicio.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Cuando cambie el **Nombre de cuenta** utilizado por un servicio en una instancia en clúster, la nueva cuenta debe formar parte del grupo de dominios que haya especificado durante la instalación del servicio modificado, o bien debe tener permiso para agregar miembros a ese grupo. Si no tiene permisos para modificar la pertenencia al grupo, póngase en contacto con el administrador del dominio.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Cuenta de sistema local**  
  Especifique una cuenta de sistema local, que no requiere una contraseña. No obstante, la cuenta del sistema local puede restringir la interacción del servicio con otros servidores, en función de los privilegios que se le hayan concedido.  
   

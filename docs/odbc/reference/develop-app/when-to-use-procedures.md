@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f62c820f57fba7af608a870e00e0b2ddf0ad13b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-to-use-procedures"></a>Cuándo se debe utilizar procedimientos
 Hay una serie de ventajas de utilizar procedimientos, todos basada en el hecho de que con los procedimientos mueve instrucciones SQL desde la aplicación al origen de datos. Lo que queda en la aplicación es una llamada a procedimiento interoperable. Estas ventajas incluyen:  

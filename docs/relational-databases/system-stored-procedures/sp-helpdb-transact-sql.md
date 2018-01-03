@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**Nombre**|**nchar(128)**|Nombre de archivo lógico.|  
 |**FileID**|**smallint**|Identificador de archivo.|  
 |**nombre de archivo**|**nchar(260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
-|**grupo de archivos**|**nvarchar (128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
-|**tamaño**|**nvarchar(18)**|Tamaño del archivo, en megabytes.|  
+|**grupo de archivos**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
+|**size**|**nvarchar(18)**|Tamaño del archivo, en megabytes.|  
 |**MaxSize**|**nvarchar(18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crecimiento**|**nvarchar(18)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo que se necesita espacio cada vez.|  
 |**uso de**|**varchar (9)**|Uso del archivo. Para un archivo de datos, el valor es **'solo datos'** y el archivo de registro es el valor de **'registro'**.|  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. Devolver información acerca de una sola base de datos  
  En el siguiente ejemplo se muestra información sobre la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. Devolver información acerca de todas las bases de datos  
  En el ejemplo siguiente se muestra información acerca de todas las bases de datos del servidor donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

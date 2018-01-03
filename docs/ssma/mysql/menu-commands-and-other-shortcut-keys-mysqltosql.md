@@ -1,7 +1,7 @@
 ---
 title: "Comandos de menú y otras teclas de método abreviado (MySQLToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5080cb5af9e80651d60dbabc55249617c7d31907
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd2d8321fb6fe50e952bf9a92ee07e1d97f29bc6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menú y otras teclas de método abreviado (MySQLToSQL)
 En las siguientes secciones se describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se utiliza en varios cuadros de diálogo de SSMA para la aplicación de MySQL.  

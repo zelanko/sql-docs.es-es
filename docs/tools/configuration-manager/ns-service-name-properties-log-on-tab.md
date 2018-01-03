@@ -3,7 +3,7 @@ title: "NS$&lt;nombre del servicio&gt; propiedades (pestaña iniciar sesión) | 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2df08f361dfea2acf97f79632343c2d04183c316
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f14473aba288e4f68b08472d77e6cacbd99061c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;nombre del servicio&gt; propiedades (pestaña iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **iniciar sesión** pestaña de la **propiedades de Notification Services** cuadro de diálogo para especificar la cuenta utilizada por el [!INCLUDE[ssNS](../../includes/ssns-md.md)] servicio y para iniciar y detener el servicio.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Cuenta de sistema local**  
  Especifique una cuenta de sistema local, que no requiere una contraseña. No obstante, la cuenta del sistema local puede restringir la interacción del servicio con otros servidores, en función de los privilegios que se le hayan concedido.  
   

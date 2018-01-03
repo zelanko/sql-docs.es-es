@@ -3,7 +3,7 @@ title: Seleccionar y configurar afectados objetos (SybaseToSQL) | Documentos de 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016fc9d6f7250756a098cd4b1876ca74ed67e3cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Seleccionar y configurar afectados objetos (SybaseToSQL)
 En esta página puede seleccionar tablas y claves externas, cambios en el que se deben comparar SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -35,7 +35,7 @@ En el árbol de objetos de Sybase situado en el lado izquierdo de la ventana, co
   
 Si no se puede comprobar el evaluador de SSMA cualquiera de estos objetos, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se pueden comparar estos objetos y anule la selección de objetos incorrectos.  
   
-## <a name="table"></a>Tabla  
+## <a name="table"></a>Table  
 La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionada. La cuadrícula contiene la siguiente información acerca de la tabla seleccionada:  
   
 -   Nombre de la columna  
@@ -48,7 +48,7 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
   
 -   Regla  
   
--   Predeterminado  
+-   Valor predeterminado  
   
 -   Identidad  
   

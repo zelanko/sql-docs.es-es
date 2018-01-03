@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar las herramientas de línea de comandos de SQL Server de sqlcmd y bcp en Linux
 
@@ -261,7 +261,7 @@ Para instalar manualmente estos paquetes, siga estos pasos:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener un ejemplo de cómo usar **sqlcmd** para conectarse a SQL Server y crear una base de datos, vea uno de lo siguiente rápida iniciar tutoriales:
+Para obtener un ejemplo de cómo usar **sqlcmd** para conectarse a SQL Server y crear una base de datos, vea uno de los siguientes tutoriales:
 
 - [Instalar en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

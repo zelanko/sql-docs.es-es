@@ -3,7 +3,7 @@ title: Sqlcmd (utilidad) | Documentos de Microsoft
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,13 +33,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqlcmd-utility"></a>sqlcmd (utilidad)
+# <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para SQL Server 2014 e inferior, consulte [utilidad sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
@@ -372,7 +372,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  **-y** *anchura_de_visualización_de_tipo_de_longitud_variable*  
  Establece la variable de scripting de **sqlcmd** `SQLCMDMAXVARTYPEWIDTH`. El valor predeterminado es 256. Limita el número de caracteres que se devuelve para tipos de datos de longitud variable y gran tamaño:  
   
--   **varchar(max)**  
+-   **ntext**  
   
 -   **nvarchar(max)**  
   
@@ -386,7 +386,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
 -   **ntext**  
   
--   **image**  
+-   **imagen**  
   
 > [!NOTE]  
 >  Los UDT pueden ser de longitud fija, en función de la implementación. Si esta longitud de un UDT de longitud fija es más corta que *anchura_de_visualización*, el valor del UDT devuelto no se ve afectado. No obstante, si la longitud es mayor que *anchura_de_visualización*, la salida queda truncada.  
@@ -505,24 +505,24 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
 ## <a name="sqlcmd-scripting-variables"></a>Variables de scripting sqlcmd  
   
-|Variable|Modificador relacionado|L/E|Predeterminado|  
+|Variable|Modificador relacionado|L/E|Valor predeterminado|  
 |--------------|--------------------|----------|-------------|  
-|SQLCMDUSER|-U|L|""|  
+|SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
-|SQLCMDSERVER|-S|L|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|L|"ComputerName"|  
-|SQLCMDDBNAME|-d|L|""|  
+|SQLCMDSERVER|-S|R|"DefaultLocalInstance"|  
+|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
+|SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/E|"8" (segundos)|  
 |SQLCMDSTATTIMEOUT|-t|L/E|"0" = esperar indefinidamente|  
 |SQLCMDHEADERS|-H|L/E|"0"|  
 |SQLCMDCOLSEP|-S|L/E|"|  
 |SQLCMDCOLWIDTH|-w|L/E|"0"|  
-|SQLCMDPACKETSIZE|-A|L|"4096"|  
+|SQLCMDPACKETSIZE|-A|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/E|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/E|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/E|"0" = ilimitado|  
 |SQLCMDEDITOR||L/E|"edit.com"|  
-|SQLCMDINI||L|""|
+|SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | L/E | "" |  
   
  SQLCMDUSER, SQLCMDPASSWORD y SQLCMDSERVER se establecen cuando se usa **:Connect** .  

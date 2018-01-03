@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -223,14 +223,14 @@ Para obtener un tutorial de inicio rápido que muestra cómo conectarse a una ba
 ### <a name="simple-example"></a>Ejemplo sencillo  
  Un ejemplo sencillo para crear una base de datos.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>Ejemplo sencillo con edición  
  Un ejemplo sencillo para crear una base de datos estándar.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>Ejemplo con opciones adicionales  
  Un ejemplo de cómo utilizar varias opciones.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>Crear una copia  
  Un ejemplo de creación de una copia de una base de datos.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Crear una base de datos en un grupo elástico  
  Crea la base de datos en el grupo llamado S3M100:  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Crear una copia de una base de datos en otro servidor  
  En el ejemplo siguiente se crea una copia de la base de datos db_original denominado db_copy en el nivel de rendimiento P2 para una sola base de datos.  Esto es cierto independientemente de si db_original está en un grupo elástico o un nivel de rendimiento de una sola base de datos.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  En el ejemplo siguiente se crea una copia de la base de datos db_original denominado db_copy en un grupo elástico denominado ep1.  Esto es cierto independientemente de si db_original está en un grupo elástico o un nivel de rendimiento de una sola base de datos.  Si db_original está en un grupo elástico con un nombre diferente, db_copy todavía se crea en ep1.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 En el ejemplo siguiente se establece la intercalación del catálogo en DATABASE_DEFAULT durante la creación de la base de datos, que establece la intercalación de catálogo que se va a ser la misma que la intercalación de base de datos.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

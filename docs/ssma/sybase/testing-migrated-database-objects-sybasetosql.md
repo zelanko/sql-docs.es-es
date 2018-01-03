@@ -3,7 +3,7 @@ title: Pruebas migran objetos de base de datos (SybaseToSQL) | Documentos de Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6359268254ee4b430380e6de91ad4ac0dc5f9ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a20ba21c0e142db53579500cf7e9f87f15fa556
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Pruebas migran objetos de base de datos (SybaseToSQL)
 Microsoft SQL Server Migration Assistant para Sybase evaluador (SSMA evaluador) prueba automáticamente la conversión del objeto de base de datos y la migración de datos realizadas por SSMA. Después de que haya finalizado todos los pasos de migración de SSMA, use SSMA evaluador para comprobar que los objetos convertidos funcionan del mismo modo y que todos los datos se transfirió correctamente.  
@@ -55,7 +55,7 @@ SSMA evaluador ejecuta objetos seleccionados para realizar pruebas en Sybase y s
 > [!NOTE]  
 > ¡Atención! Nunca utilice SSMA evaluador en sistemas de producción. Durante la ejecución de la herramienta de comprobación se modifican el esquema de origen y los datos. Mientras tanto, la restauración completa del estado original puede ser imposible para algunos tipos de código probado.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Si desea usar la herramienta de comprobación de SSMA, instalar paquete de extensión de SSMA Sybase con los **instalar bases de datos de evaluador** opción activada.  
   
 Además, compruebe lo siguiente:  

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  La selección de la sesión como sujeto de interbloqueo depende de la prioridad de interbloqueo de cada sesión:  
   
--   Si ambas sesiones tienen la misma prioridad de interbloqueo, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elige la sesión cuya reversión como sujeto de interbloqueo resulta menos costosa. Por ejemplo, si ambas sesiones tienen la prioridad de interbloqueo establecida en HIGH, la instancia elige como sujeto de interbloqueo la sesión cuya reversión considera menos costosa.  
+-   Si ambas sesiones tienen la misma prioridad de interbloqueo, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elige la sesión cuya reversión como sujeto de interbloqueo resulta menos costosa. Por ejemplo, si ambas sesiones tienen la prioridad de interbloqueo establecida en HIGH, la instancia elige como sujeto de interbloqueo la sesión cuya reversión considera menos costosa. El costo se determina comparando el número de bytes de registro escritos en ese punto en cada transacción. (Puede ver este valor como "Utilizado del registro" en un gráfico de interbloqueo).
   
 -   Si las sesiones tienen distintas prioridades de interbloqueo, la sesión con la prioridad de interbloqueo inferior se elige como el sujeto de interbloqueo.  
   

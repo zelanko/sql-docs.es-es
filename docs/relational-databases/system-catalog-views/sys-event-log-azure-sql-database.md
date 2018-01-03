@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**event_type**|**nvarchar(64)**|El tipo de evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**event_subtype**|**int**|Subtipo del evento que se está produciendo.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**event_subtype_desc**|**nvarchar(64)**|Descripción del subtipo de evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**gravedad**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1 = Advertencia<br />2 = Error|  
+|**severity**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1 = Advertencia<br />2 = Error|  
 |**event_count**|**int**|El número de veces que se ha producido este evento en la base de datos especificada en el intervalo de tiempo especificado (**start_time** y **end_time**).|  
 |**Descripción**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**additional_data**|**XML**|*Nota: Este valor siempre es NULL para V12 de base de datos de SQL Azure. Vea [ejemplos](#Deadlock) sección para saber cómo recuperar eventos de interbloqueo para V12.*<br /><br /> Para **interbloqueo** eventos, esta columna contiene el gráfico de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  Esta vista no incluye todos los posibles errores de base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que pueden producirse, solo los mostrados aquí. Es posible que en futuras versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se agreguen categorías, tipos de evento y subtipos adicionales.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**gravedad**|**Descripción**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Descripción**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
 |**conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  Por ejemplo, si debido a que el nombre de inicio de sesión no es válido, un usuario intenta conectarse a la base de datos Database1 siete veces entre las 11:00 y las 11:05 el 5/2/2012 (UTC) y no lo consigue, esta información está disponible en una sola fila de esta vista:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**gravedad**|**event_count**|**Descripción**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Descripción**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -174,7 +174,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>Ámbito de base de datos de eventos extendidos  
  Utilice el siguiente código de ejemplo para configurar la sesión de eventos extendidos (XEvent) con ámbito de base de datos:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Utilice la siguiente consulta para comprobar si hay un interbloqueo.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

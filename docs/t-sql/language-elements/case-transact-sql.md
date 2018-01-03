@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +122,7 @@ END
   
  La instrucción CASE devuelve las condiciones de forma secuencial y se detiene en la primera condición cuya condición se cumple. En algunas situaciones, se evalúa una expresión antes de que una instrucción CASE reciba los resultados de la expresión como entrada. Los errores de evaluación de estas expresiones son posibles. Las expresiones de agregado que aparecen en los argumentos WHEN para una instrucción CASE se evalúan primero y, a continuación, se proporcionan a la instrucción CASE. Por ejemplo, la siguiente consulta genera un error de división por cero al obtener el valor de agregado MAX. Esto ocurre antes de evaluar la expresión CASE.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   

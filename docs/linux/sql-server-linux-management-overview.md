@@ -15,28 +15,36 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: b9a28793d63f20a983f5eec92641f33978f6888b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0f775666ae0ba3e5bc9140e52ec2f532d6b92e0c
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Elija la herramienta adecuada para administrar SQL Server en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Hay varias maneras para administrar SQL Server 2017 en Linux. En la siguiente sección proporciona una introducción rápida de técnicas con punteros a más recursos y herramientas de administración diferente.
+Hay varias maneras para administrar SQL Server 2017 en Linux. La siguiente sección proporciona una introducción rápida de técnicas con punteros a más recursos y herramientas de administración diferente.
 
 ## <a name="mssql-conf"></a>MSSQL-conf 
 El **mssql-conf** herramienta configura SQL Server en Linux. Para obtener más información, consulte [configurar SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Casi todo lo que puede hacer en una herramienta cliente también se puede lograr con las instrucciones de Transact-SQL. SQL Server proporciona [vistas de administración dinámica (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) que consultar el estado y la configuración de SQL Server. También hay [comandos Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) para tareas de administración de base de datos. Puede ejecutar estos comandos en cualquier herramienta de cliente que admite la conexión a SQL Server y ejecutar consultas Transact-SQL. Algunos ejemplos son [sqlcmd](sql-server-linux-setup-tools.md), [código de Visual Studio](sql-server-linux-develop-use-vscode.md), y [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
+Casi todo lo que puede hacer en una herramienta cliente también se puede lograr con las instrucciones de Transact-SQL. SQL Server proporciona [vistas de administración dinámica (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) que consultar el estado y la configuración de SQL Server. También hay [comandos Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) para tareas de administración de base de datos. Puede ejecutar estos comandos en cualquier herramienta de cliente que admite la conexión a SQL Server y ejecutar consultas de Transact-SQL, por ejemplo [sqlcmd](sql-server-linux-setup-tools.md) o [código de Visual Studio](sql-server-linux-develop-use-vscode.md).
+
+## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (versión preliminar)
+
+La nueva Microsoft SQL operaciones Studio (vista previa) es una herramienta multiplataforma para la administración de SQL Server. Para obtener más información, consulte [¿qué es Microsoft SQL operaciones Studio (versión preliminar)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio en Windows
 
 SQL Server Management Studio (SSMS) es una aplicación de Windows que proporciona una interfaz gráfica de usuario para la administración de SQL Server. Aunque actualmente se ejecuta sólo en Windows, puede usarlo para conectarse remotamente a las instancias de SQL Server de Linux. Para obtener más información sobre el uso de SSMS para administrar SQL Server, vea [utilice SSMS para administrar SQL Server en Linux](sql-server-linux-manage-ssms.md).
+
+## <a name="mssql-cli-preview"></a>MSSQL-cli (versión preliminar)
+
+Microsoft ha lanzado una nueva herramienta de scripting de multiplataforma para SQL Server, [mssql cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Esta herramienta está actualmente en vista previa.
 
 ## <a name="powershell"></a>PowerShell
 

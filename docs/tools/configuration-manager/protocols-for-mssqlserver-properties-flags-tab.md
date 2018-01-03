@@ -3,7 +3,7 @@ title: "Protocolos de propiedades de MSSQLSERVER (pestaña marcas) | Documentos 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a04a6eb74cbdf0f66896653b369f26e4065dca42
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ed0d315ee6b469fddcf3f6e10d8016f43653eda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Marcas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cuando se instala un certificado en el servidor, use la **marcas** pestaña en el **protocolos para MSSQLSERVER propiedades** cuadro de diálogo para ver o especificar el cifrado de protocolo y ocultar opciones de la instancia. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se debe reiniciar **ForceEncryption** .  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="cluster-servers"></a>Servidores de clúster  
  Si desea utilizar el cifrado con clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster de dos nodos, con nodos con nombre "test1.  *\<su empresa >*.com "y" test2. *\<su empresa >*.com "y un servidor virtual denominado"virtsql", debe instalar un certificado para" virtsql. *\<su empresa >*.com "en ambos nodos. A continuación, puede activar la casilla **ForceEncryption** en el **Administrador de configuración de SQL Server** para configurar el cifrado del clúster de conmutación por error.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **ForceEncryption**  
  Fuerce el cifrado de protocolos. El cifrado es un método para mantener la confidencialidad de la información reservada y consiste en alterar los datos para darles un formato ilegible. El cifrado asegura que los datos permanecen seguros, incluso si se ven los paquetes durante el proceso de transmisión. Para utilizar el enlace del canal, active **Forzar cifrado** en **Activado** y configure **Protección ampliada** en la pestaña **Opciones avanzadas** .  
   

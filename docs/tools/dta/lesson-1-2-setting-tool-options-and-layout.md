@@ -3,7 +3,7 @@ title: "Establecer opciones de herramienta y el diseño | Documentos de Microsof
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lección 1-2-opciones de la herramienta de configuración y diseño
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede establecer opciones que permiten configurar lo que mostrará la interfaz gráfica de usuario de Asistente para la optimización de motor de base de datos (GUI) durante el inicio, las fuentes utilizadas, y otras funciones para ofrecer la mejor cómo utilizarlo. Las prácticas de esta página le permitirán familiarizarse con las opciones que puede configurar y el modo de hacerlo.  

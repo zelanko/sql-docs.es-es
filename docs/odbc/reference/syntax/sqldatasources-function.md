@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09c64ec707be4d99bb66547f8583f707dd281277
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources (función)
 **Conformidad**  
@@ -72,7 +72,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *ServerName*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength1*, el nombre de origen de datos en \* *ServerName* se trunca a *BufferLength1* menos la longitud de un carácter de terminación null.  
   
- *Descripción*  
+ *Description*  
  [Salida] Puntero a un búfer en el que se va a devolver la descripción del controlador asociado con el origen de datos. Por ejemplo, dBASE o SQL Server.  
   
  Si *descripción* es NULL, *NameLength2Ptr* devolverá el número total de caracteres (excepto el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por *Descripción*.  

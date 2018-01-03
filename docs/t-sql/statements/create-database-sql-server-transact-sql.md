@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL de SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      Especifica el nivel de acceso no transaccional de FILESTREAM a la base de datos.  
   
-    |Valor|Descripción|  
+    |Valor|Description|  
     |-----------|-----------------|  
     |OFF|El acceso no transaccional está deshabilitado.|  
     |READONLY|Los procesos no transaccionales pueden leer los datos de FILESTREAM en esta base de datos.|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  No puede ser el tamaño especificado cuando la *nombre_de_archivo_de_sistema_operativo* se especifica como una ruta de acceso UNC. SIZE no se aplica a un grupo de archivos FILESTREAM.  
   
- *tamaño*  
+ *size*  
  Es el tamaño inicial del archivo.  
   
  Cuando *tamaño* no se proporciona para el archivo principal, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza el tamaño del archivo principal de la base de datos de modelo. El tamaño predeterminado del modelo es de 8 MB (partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) o 1 MB (para versiones anteriores). Cuando se especifica un archivo de datos secundario o un archivo de registro, pero *tamaño* no se especifica para el archivo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] hace que el archivo de 8 MB (partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) o 1 MB (para versiones anteriores). El tamaño especificado para el archivo principal debe tener al menos el tamaño del archivo principal de la base de datos model.  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Crear una base de datos que especifica los archivos de datos y de registro de transacciones  
  En el ejemplo siguiente se crea la base de datos `Sales`. Debido a que no se usa la palabra clave PRIMARY, el primer archivo (`Sales_dat`) se convierte en el principal. Como no se especifica MB ni KB en el parámetro SIZE del archivo `Sales_dat` , se utiliza MB y el tamaño se asigna en megabytes. Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la base de datos `Sales_log` se asigna en megabytes porque el sufijo `MB` se ha indicado explícitamente en el parámetro `SIZE` .  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Crear una base de datos especificando múltiples archivos de datos y de registro de transacciones  
  En el ejemplo siguiente se crea la base de datos `Archive`, que tiene tres archivos de datos de `100-MB` y dos archivos de registro de transacciones de `100-MB`. El archivo principal es el primer archivo de la lista y se especifica explícitamente con la palabra clave `PRIMARY`. Los archivos de registro de transacciones se especifican a continuación de las palabras clave `LOG ON`. Tenga en cuenta las extensiones usadas para los archivos en la opción `FILENAME`: `.mdf` se usa para archivos de datos principales, `.ndf` para archivos de datos secundarios y `.ldf` para archivos de registro de transacciones. En este ejemplo se coloca la base de datos en la unidad `D:`, en lugar de con la base de datos `master`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  En este ejemplo se colocan los archivos de datos y de registro en discos diferentes para mejorar el rendimiento.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. Adjuntar una base de datos  
  En el ejemplo siguiente se separa la base de datos `Archive` creada en el ejemplo D y, a continuación, se adjunta mediante la cláusula `FOR ATTACH`. `Archive` se ha definido para contener varios archivos de datos y de registro. Sin embargo, dado que la ubicación de los archivos no ha cambiado desde que se crearon, solo es necesario especificar el archivo principal en la cláusula `FOR ATTACH`. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], los archivos de texto completo que formen parte de la base de datos que se va a adjuntar se adjuntarán con la base de datos.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  La base de datos de origen en este ejemplo es la base de datos `Sales` creada en el ejemplo D.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Crear una base de datos y especificar un nombre de intercalación y sus opciones  
  En el ejemplo siguiente se crea la base de datos `MyOptionsTest`. Se especifica un nombre de intercalación y las opciones `TRUSTYWORTHY` y `DB_CHAINING` se establecen en `ON`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Adjuntar un catálogo de texto completo que se ha movido  
  En el ejemplo siguiente se adjunta el catálogo de texto completo `AdvWksFtCat` junto con los archivos de datos y de registro de `AdventureWorks2012`. En el ejemplo, el catálogo de texto completo se mueve desde su ubicación predeterminada hasta una nueva ubicación `c:\myFTCatalogs`. Los archivos de datos y de registro permanecen en sus ubicaciones predeterminadas.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes` contiene los datos FILESTREAM. Contiene un contenedor de datos FILESTREAM, `FSResumes`, que se encuentra en `C:\MyFSfolder\Resumes`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. Crear una base de datos que tenga un grupo de archivos FILESTREAM con varias filas  
  En el ejemplo siguiente se crea la base de datos `BlobStore1`. La base de datos se crea con un grupo de archivos de filas y un grupo de archivos FILESTREAM, `FS`. El grupo de archivos FILESTREAM contiene dos archivos, `FS1` y `FS2`. Después, la base de datos se altera agregando un tercer archivo, `FS3`, al grupo de archivos FILESTREAM.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

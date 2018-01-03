@@ -1,7 +1,7 @@
 ---
 title: Marcas de seguimiento (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - marcas de seguimiento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**2371**|Cambia el umbral de las estadísticas de actualización automática fijo para el umbral de las estadísticas de actualización automática dinámica. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/2754171).<br /><br />**Nota:** a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y, en la [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, este comportamiento se controla mediante el motor y marca de seguimiento 2371 no tiene ningún efecto.<br /><br />**Ámbito**: global solo|
 |**2389**|Habilitar había generado automáticamente estadísticas rápidas para ascendente claves (modificación de histograma). Si se establece la marca de seguimiento 2389 y una columna de estadísticas iniciales se marca como ascendente, se ajustará el histograma utilizado para calcular la cardinalidad en tiempo de compilación de la consulta. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/2801413).<br /><br />**Nota:** , asegúrese de probar exhaustivamente esta opción, antes de ponerlo en un entorno de producción.<br /><br />**Nota:** esta marca de seguimiento no se aplica a CE versión 120 o superior. Utilice el indicador de traza 4139 en su lugar.<br /><br />**Ámbito**: global o sesión o consulta|
 |**2390**|Habilitar estadísticas rápidas generadas automáticamente para las claves de orden ascendentes o desconocidas (modificación de histograma). Si se establece la marca de seguimiento 2390 y una columna de estadísticas iniciales se marca como ascendente o desconocido, se ajustará el histograma utilizado para calcular la cardinalidad en tiempo de compilación de la consulta. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/2801413).<br /><br />**Nota:** , asegúrese de probar exhaustivamente esta opción, antes de ponerlo en un entorno de producción.<br /><br />**Nota:** esta marca de seguimiento no se aplica a CE versión 120 o superior. Utilice el indicador de traza 4139 en su lugar.<br /><br />**Ámbito**: global o sesión o consulta|
+|**2430**|Permite alternar la limpieza de la clase de bloqueo. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/2754301).<br /><br />**Ámbito**: global solo| 
 |**2453**|Permite que una variable de tabla desencadenar recompile cuando se cambia suficiente número de filas. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/2952444).<br /><br />**Nota:** , asegúrese de probar exhaustivamente esta opción, antes de ponerlo en un entorno de producción.<br /><br />**Ámbito**: global o sesión o consulta|
 |**2528**|Deshabilita la comprobación en paralelo de objetos por parte de DBCC CHECKDB, DBCC CHECKFILEGROUP y DBCC CHECKTABLE. De manera predeterminada, el procesador de consultas determina automáticamente el grado de paralelismo. El grado de paralelismo máximo se configura igual que el de las consultas en paralelo. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).<br /><br />**Nota:** DBCC en paralelo comprueba normalmente debe estar habilitado (valor predeterminado). El procesador de consultas vuelve a evaluar y ajusta automáticamente el paralelismo para cada tabla o proceso por lotes de tablas comprobados por parte de DBCC CHECKDB.<br /><br />El escenario de uso típico es cuando un administrador del sistema sabe que aumentará la carga del servidor antes de DBCC CHECKDB se complete y, por lo que decide reducir de forma manual o deshabilitar el paralelismo, con el fin de aumentar la simultaneidad con otra carga de trabajo de usuario. Sin embargo, deshabilitar comprobaciones paralelas de DBCC CHECKDB puede provocar que se tarde más en completarse.<br /><br />**Nota:** si se ejecuta DBCC CHECKDB con la opción TABLOCK y paralelismo está deshabilitado, puede bloquear las tablas durante periodos más largos de tiempo.<br /><br />**Nota:** a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2, hay una opción MAXDOP invalidar la opción max degree of parallelism configuración de sp_configure para la instrucción.<br /><br />**Ámbito**: global o sesión|
 |**2549**|Ejecuta el comando DBCC CHECKDB suponiendo que cada archivo de base de datos está en una única unidad de disco. Comando DBCC CHECKDB genera una lista interna de páginas leídas por unidad de disco único en todos los archivos de base de datos. Esta lógica determina las unidades de disco únicas en función de la letra de unidad del nombre de archivo físico de cada archivo.<br /><br />**Nota:** no utilice esta marca de seguimiento a menos que sepa que cada archivo se basa en un único disco físico.<br /><br />**Nota:** aunque esta marca de seguimiento mejora el rendimiento de DBCC CHECKDB comandos qué uso de destino de la opción PHYSICAL_ONLY, algunos usuarios no pueden ver cualquier mejora del rendimiento. Aunque esta marca de seguimiento mejora el uso de recursos de E/S de disco, el rendimiento de los recursos de disco subyacente puede limitar el rendimiento general del comando DBCC CHECKDB. Para obtener más información, consulte [artículo de Microsoft Support](http://support.microsoft.com/kb/2634571).<br /><br />**Ámbito**: global solo| 
@@ -165,13 +166,13 @@ Use la `DBCC TRACESTATUS` comando para determinar qué marcas de seguimiento est
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se establece la marca de seguimiento 3205 en para todas las sesiones en el nivel de servidor mediante el uso de DBCC TRACEON.  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 Puede habilitar todas las revisiones que afectan al plan controladas por marcas de seguimiento 4199 y 4137 para una consulta determinada.
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

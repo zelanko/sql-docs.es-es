@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34636d9ead963cf9548d8ff1345424f4283fd1fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Crear instrucciones SQL Interoperable
 Como se mencionó en las secciones anteriores, aplicaciones interoperables deben usar la gramática de SQL de ODBC. Sin embargo, aparte de emplear esta gramática, una serie de problemas adicionales se enfrenta por aplicaciones interoperables. Por ejemplo, ¿qué hace una aplicación si desea usar una característica, como las combinaciones externas, que no es compatible con todos los orígenes de datos?  

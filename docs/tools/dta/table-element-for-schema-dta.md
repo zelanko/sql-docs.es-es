@@ -3,7 +3,7 @@ title: Elemento de la tabla de esquema (DTA) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 730783951f15814c4ffd02dba76b8b45d95d61ad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6ebf5a4a05d02281f7335d7244fc17bbca7e2b3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-element-for-schema-dta"></a>Table (DTA, elemento de Schema)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica la tabla para la optimización.  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo|Descripción|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**NumberOfRows**|Opcional. Entero que permite simular tablas de diferentes tamaños.|  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, entre 1 y 255 caracteres.|  
 |**Valor predeterminado**|Ninguno.|  

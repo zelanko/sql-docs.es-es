@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 67b5d9300d4be84d16b2a650265e812eba1988a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b736272f07e8767840076fc69cbd5ac3d86d377d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### <a name="a-compare-values-between-years"></a>A. Comparar valores entre años  
  La consulta usa la función LEAD para devolver la diferencia en cuotas de venta para un empleado específico durante años posteriores. Observe que como no hay ningún valor inicial disponible para la última fila, se devuelve el valor predeterminado de cero (0).  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -92,7 +92,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de particiones  
  En el ejemplo siguiente se usa la función LEAD para comparar las ventas anuales hasta la fecha entre los empleados. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por territorio de ventas. La función LEAD se aplica a cada partición por separado y el cálculo se reinicia para cada partición. La cláusula ORDER BY especificada en la cláusula OVER ordena las filas de cada partición antes de que se aplique la función. La cláusula ORDER BY de la instrucción SELECT ordena las filas del conjunto de resultados completo. Observe que como no hay ningún valor inicial disponible para la última fila de cada partición, se devuelve el valor predeterminado de cero (0).  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -118,7 +118,7 @@ Northwest                280              1352577.1325          0.00
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Especificar expresiones arbitrarias  
  En el ejemplo siguiente se muestra cómo especificar una serie de expresiones arbitrarias en la sintaxis de la función LEAD.  
   
-```t-sql  
+```sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -146,7 +146,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: comparar valores entre los trimestres  
  En el ejemplo siguiente se muestra la función LEAD. La consulta obtiene la diferencia en los valores de cuota de ventas para un determinado empleado por trimestres naturales posteriores. Tenga en cuenta que, dado que no hay ningún valor inicial disponible después de la última fila, se utiliza el valor predeterminado de cero (0).  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

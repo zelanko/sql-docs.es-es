@@ -3,7 +3,7 @@ title: "Referencia (Asistente para la optimización de motor de base de datos) d
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc25f556fdafc18f530ac48e176aba94b55c432d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f9ce7751a34f63d0ef235c86c1d1a993e467f893
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referencia del archivo de entrada XML (Asistente para la optimización de motor de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] Asistente para la optimización puede utilizar un archivo de entrada XML para optimizar una base de datos. Este archivo XML designa las bases de datos, las tablas, los archivos o las tablas de carga de trabajo y las opciones de optimización que se van a utilizar durante la sesión de optimización. También se puede utilizar este archivo para definir una configuración especificada por el usuario para realizar análisis de escenarios condicionales.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)  
   
--   [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md)  
+-   [Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md)  
   
 -   [Workload &#40;DTA, elemento&#41;](../../tools/dta/workload-element-dta.md)  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="configuration-elements"></a>Elementos Configuration  
   
--   [Elemento Server de Configuration &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)  
+-   [Server &#40;DTA, elemento de Configuration&#41;](../../tools/dta/server-element-for-configuration-dta.md)  
   
 -   [Elemento Database de Configuration &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)  
   

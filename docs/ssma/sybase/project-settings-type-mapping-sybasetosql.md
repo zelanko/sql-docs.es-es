@@ -3,7 +3,7 @@ title: "(Asignación de tipos) de la configuración del proyecto (SybaseToSQL) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea1b35e6943e89236aee72e7b0c31c545e100f88
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>(Asignación de tipos) de la configuración del proyecto (SybaseToSQL)
 La página de asignación de tipo de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte los tipos de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de datos.  
@@ -35,7 +35,7 @@ La página de asignación de tipo está disponible en la **configuración del pr
   
 -   Para especificar la configuración para el proyecto actual, en la **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, seleccione **Type Mapping** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Tipo de origen**  
 El tipo de datos de ASE asignado.  
   
@@ -69,15 +69,15 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**char**|**char**|  
 |**carácter variable**|**varchar**|  
 |**char varying [\*... 8000]**|**varchar [\*]**|  
-|**char varying [8001..\*]**|**varchar(max)**|  
+|**char varying [8001..\*]**|**ntext**|  
 |**char[\*.. 8000]**|**char[\*]**|  
-|**Char [8001..\*;]**|**varchar(max)**|  
+|**Char [8001..\*;]**|**ntext**|  
 |**carácter**|**char**|  
 |**carácter variable**|**varchar**|  
 |**carácter variable [\*... 8000]**|**varchar [\*]**|  
-|**carácter variable [8001..\*]**|**varchar(max)**|  
+|**carácter variable [8001..\*]**|**ntext**|  
 |**caracteres [\*... 8000]**|**char[\*]**|  
-|**caracteres [8001..\*]**|**varchar(max)**|  
+|**caracteres [8001..\*]**|**ntext**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**diciembre**|**decimal**|  
@@ -90,7 +90,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**float**|**float [53]**|  
 |**float [\*... 15]**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
-|**image**|**image**|  
+|**imagen**|**imagen**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
@@ -128,7 +128,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*... \*]**|**nvarchar [255]**|  
-|**text**|**text**|  
+|**texto**|**texto**|  
 |**time**|**hora [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
@@ -151,5 +151,5 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**varbinary [8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
 |**varchar [\*... 8000]**|**varchar [\*]**|  
-|**varchar [8001..\*]**|**varchar(max)**|  
+|**varchar [8001..\*]**|**ntext**|  
   

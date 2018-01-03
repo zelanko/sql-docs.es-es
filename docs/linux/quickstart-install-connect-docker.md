@@ -1,6 +1,6 @@
 ---
 title: "Introducción a SQL Server 2017 en Docker | Documentos de Microsoft"
-description: "Este tutorial de inicio rápido muestra cómo usar Docker para ejecutar la imagen de contenedor de 2017 de SQL Server. A continuación, crear y consultar una base de datos con sqlcmd."
+description: "Este tutorial rápido muestra cómo usar Docker para ejecutar la imagen de contenedor de 2017 de SQL Server. A continuación, crear y consultar una base de datos con sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,24 +15,24 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Ejecutar la imagen de contenedor de SQL Server 2017 con Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tutorial de inicio rápido, usar Docker para extraer y ejecutar la imagen de contenedor 2017 de SQL Server, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
+En este tutorial rápido, usar Docker para extraer y ejecutar la imagen de contenedor 2017 de SQL Server, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
 Esta imagen se compone de SQL Server que se ejecutan en Linux en función de Ubuntu 16.04. Se puede utilizar con el motor de Docker 1.8 + en Linux o en Docker para Mac y Windows.
 
 > [!NOTE]
 > Este tutorial se centra específicamente en usando el mssql-server -**linux** imagen. La imagen de Windows no está cubierta, pero puede obtener más información sobre la [mssql-server-windows-página para desarrolladores Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Requisitos previos
+## <a id="requirements"></a> Prerequisites
 
 - Motor de docker 1.8 + en cualquier admite la distribución de Linux o Docker para Mac y Windows. Para obtener más información, consulte [instalar Docker](https://docs.docker.com/engine/installation/).
 - Mínimo de 2 GB de espacio en disco
@@ -240,6 +240,8 @@ Otras herramientas comunes para conectarse a SQL Server incluyen:
 
 - [Código de Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) en Windows](sql-server-linux-develop-use-ssms.md)
+- [Studio de operaciones de SQL Server (versión preliminar)](../sql-operations-studio/what-is.md)
+- [MSSQL-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Quitar el contenedor
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > Detener y quitar un contenedor de forma permanente eliminan los datos de SQL Server en el contenedor. Si tiene que conservar los datos, [crear y copiar un archivo de copia de seguridad fuera del contenedor](tutorial-restore-backup-in-sql-server-container.md) o usar un [técnica de persistencia de datos de contenedor](sql-server-linux-configure-docker.md#persist).
+
+## <a name="docker-demo"></a>Demostración de docker
+
+Una vez que se ha intentado usar la imagen de contenedor de SQL Server para Docker, debe saber cómo Docker se usa para mejorar el desarrollo y las pruebas. El vídeo siguiente muestra cómo se puede utilizar Docker en un escenario de implementación y la integración continua.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>Pasos siguientes
 

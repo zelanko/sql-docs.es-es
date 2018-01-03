@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93aec7a71f3522114bc9ef6c2d19edaccaac2e57
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,15 +78,15 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-A083-8cbd2d6f617a")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma")  
   
  En cada paso del histograma:  
   
--   Línea gruesa representa el valor de límite superior (*range_high_key*) y el número de veces que tiene lugar (*equal_rows*)  
+-   La línea gruesa representa el valor de límite superior (*range_high_key*) y el número de veces que tiene lugar (*equal_rows*).  
   
--   Área sólida a la izquierda de *range_high_key* representa el intervalo de valores de columna y el promedio de veces que aparece cada valor de columna (*average_range_rows*). El *average_range_rows* del histograma primer paso es siempre 0.  
+-   El área de color sólido situada a la izquierda de *range_high_key* representa el rango de valores de columna y el número medio de veces que tiene lugar cada valor de columna (*average_range_rows*). El valor de *average_range_rows* en el primer paso del histograma siempre es 0.  
   
--   Líneas de puntos representan los valores de las muestras utilizados para calcular el número total de valores distintos en el intervalo (*distinct_range_rows*) y el número total de valores en el intervalo (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.  
+-   Las líneas de puntos representan los valores de las muestras utilizados para estimar el número total de valores distintos que hay en el rango (*distinct_range_rows*) y el número total de valores que hay en el rango (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.  
   
  El optimizador de consultas define los pasos del histograma en función de su importancia estadística. Utiliza un algoritmo de diferencias máximas para minimizar el número de pasos del histograma a la vez que minimiza las diferencias entre los valores límite. El número máximo de pasos es 200. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por ejemplo, una columna con 100 valores distintos puede tener un histograma con menos de 100 puntos de límite.  
   
@@ -99,7 +99,7 @@ Necesita que el usuario tenga permisos de selección en columnas de estadística
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo    
 En el ejemplo siguiente se crea y rellena una tabla sencilla. A continuación, crea las estadísticas en la `Country_Name` columna.
 
-```tsql
+```sql
 CREATE TABLE Country
 (Country_ID int IDENTITY PRIMARY KEY,
 Country_Name varchar(120) NOT NULL);
@@ -109,13 +109,12 @@ CREATE STATISTICS Country_Stats
     ON Country (Country_Name) ;  
 ```   
 Ocupa la clave principal `stat_id` el número 1, por lo que se llame a `sys.dm_db_stats_histogram` para `stat_id` número 2, para devolver el histograma de estadísticas para la `Country` tabla.    
-```tsql     
+```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-
 ### <a name="b-useful-query"></a>B. Consulta útil:   
-```tsql  
+```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
 FROM sys.stats AS s
@@ -126,14 +125,14 @@ WHERE s.[name] = N'<statistic_name>';
 ### <a name="c-useful-query"></a>C. Consulta útil:
 En el ejemplo siguiente se seleccionan de tabla `Country` con un predicado en la columna `Country_Name`.
 
-```tsql  
+```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
 En el ejemplo siguiente se examina la estadística creada anteriormente en la tabla `Country` y columna `Country_Name` para el paso del histograma coincidencia del predicado de la consulta anterior.
 
-```tsql  
+```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
     shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
 FROM sys.stats ss
@@ -149,7 +148,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>Vea también  
-
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Funciones (Transact-SQL) y vistas de administración dinámica relacionadas con objetos](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

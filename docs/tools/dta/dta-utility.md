@@ -3,7 +3,7 @@ title: DTA (utilidad) | Documentos de Microsoft
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dta-utility"></a>dta, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **dta** utilidad es la versión de línea de comandos del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* especificado con la opción **–D**||  
 |*owner_name*|**dbo**|*owner_name* debe ser **dbo**. Si se especifica otro valor, la ejecución de **dta** es errónea y devuelve un error.|  
-|*table_name*|Ninguno||  
+|*table_name*|None||  
   
  Si se usa un archivo, especifique .xml como extensión. Por ejemplo, TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **dta** usa el parámetro **-fa****IDX**predeterminado.  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |IDX_IV|Índices y vistas indizadas.|  
 |IDX|Solo índices.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica las estructuras de diseño físico existentes que **dta** debe conservar cuando genere su recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Ninguno|Ninguna estructura existente|  
 |ALL|Todas las estructuras existentes|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica si se deben crear particiones de las nuevas estructuras de diseño físico (índices y vistas indexadas) que **dta** propone y cómo se deben crear esas particiones. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Ninguno|No crear particiones|  
 |FULL|Particiones completas (para mejorar el rendimiento)|  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica si las estructuras de diseño físico se crean en línea. En la tabla siguiente se muestran y describen los valores que pueden especificarse para este argumento:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |OFF|No se pueden crear en línea las estructuras recomendadas de diseño físico.|  
 |ON|Se pueden crear en línea todas las estructuras recomendadas de diseño físico.|  

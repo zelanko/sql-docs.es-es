@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Crear una guía de plan a partir de un plan de consulta en la caché del plan  
  En el ejemplo siguiente se especifica un plan de consulta desde la caché del plan para crear una guía de plan para una única instrucción SELECT. El ejemplo comienza ejecutando una sencilla instrucción `SELECT` para la que se creará la guía de plan. El plan para esta consulta se examina mediante las vistas de administración dinámica `sys.dm_exec_sql_text` y `sys.dm_exec_text_query_plan`. A continuación, se crea la guía de plan para la consulta después de especificar el plan de consulta en la caché del plan asociada a la consulta. La última instrucción del ejemplo comprueba que la guía de plan existe.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b8ee79d871f207b59ccaf5cc0562d7e125e596a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (índices XML selectivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ identifier
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra una instrucción ALTER INDEX. Esta instrucción agrega la ruta de acceso `'/a/b/m'` a la parte XQuery del índice y elimina la ruta de acceso `'/a/b/e'` de la parte SQL del índice creado en el ejemplo del tema [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md). La ruta de acceso que se va a eliminar se identifica por el nombre que se especificó cuando se creó.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -167,7 +167,7 @@ FOR
   
  En el ejemplo siguiente se muestra una instrucción ALTER INDEX que especifica opciones de índice. Se permiten opciones de índice porque la instrucción no usa una cláusula FOR para agregar o quitar rutas de acceso.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  

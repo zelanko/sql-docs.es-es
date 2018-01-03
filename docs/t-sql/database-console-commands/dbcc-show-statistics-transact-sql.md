@@ -1,7 +1,7 @@
 ---
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -38,11 +38,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6b82cb2c44d049f44378cd86955373004bb0cb5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +101,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 |Nombre de columna|Description|  
 |-----------------|-----------------|  
 |Nombre|Nombre del objeto de estadísticas.|  
-|Actualizado|Fecha y hora de la última actualización de las estadísticas. El [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) función es un medio alternativo para recuperar esta información.|  
+|Actualizado|Fecha y hora de la última actualización de las estadísticas. El [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) función es un medio alternativo para recuperar esta información. Para obtener más información, consulte el [comentarios](#Remarks) sección en esta página.|  
 |Filas|Número total de filas que tenía la tabla o vista indizada la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla. Para obtener más información, consulte[estadísticas](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Número total de filas muestreadas para cálculos de estadísticas. Si Rows Sampled < Rows, el histograma y los resultados de la densidad que se muestren serán estimaciones extraídas de las filas muestreadas.|  
 |Pasos|Número de pasos del histograma. Cada paso abarca un intervalo de valores de columna seguido de un valor de columna límite superior. Los pasos del histograma se definen en la primera columna de clave de las estadísticas. El número máximo de pasos es 200.|  
@@ -130,16 +130,18 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 |DISTINCT_RANGE_ROWS|Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior.|  
 |AVG_RANGE_ROWS|Número medio de filas que tienen valores de columna duplicados en un paso del histograma, sin incluir el límite superior (RANGE_ROWS/DISTINCT_RANGE_ROWS para DISTINCT_RANGE_ROWS > 0).| 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="Remarks"></a> Comentarios 
+
+Fecha de actualización de estadísticas se almacena en la [statistics, objeto blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](#histogram) y [vector de densidad](#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas, no está disponible, la fecha y la *actualizar* columna es NULL. Este es el caso de las estadísticas filtradas para que el predicado no devuelve ninguna fila, o para nuevas tablas vacías.
   
-## <a name="histogram"></a>Histograma  
+## <a name="histogram"></a> Histograma  
 Un histograma mide la frecuencia de aparición de cada valor distinto en un conjunto de datos. El optimizador de consultas calcula un histograma de los valores de la primera columna de clave del objeto de estadísticas; para ello, selecciona los valores de la columna tomando una muestra estadística de las filas o realizando un análisis completo de todas las filas de la tabla o vista. Si el histograma se crea a partir de muestras de un conjunto de filas, los totales almacenados para el número de filas y el número de valores distintos son las estimaciones y no es necesario que sean números enteros.
   
 Para crear el histograma, el optimizador de consultas ordena los valores de columna, calcula el número de valores que coinciden con cada valor de columna distinto y, a continuación, agrupa los valores de columna en un máximo de 200 pasos de histograma contiguos. Cada paso incluye un intervalo de valores de columna seguido de un valor de columna de límite superior. El intervalo incluye todos los valores de columna posibles comprendidos entre los valores límite (sin incluir los propios valores límite). El valor de columna ordenado más pequeño es el valor del límite superior del primer paso del histograma.
   
 En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-A083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 En cada paso del histograma:
 -   La línea gruesa representa el valor de límite superior (RANGE_HI_KEY) y el número de veces que tiene lugar (EQ_ROWS).  
@@ -148,8 +150,8 @@ En cada paso del histograma:
   
 El optimizador de consultas define los pasos del histograma en función de su importancia estadística. Utiliza un algoritmo de diferencias máximas para minimizar el número de pasos del histograma a la vez que minimiza las diferencias entre los valores límite. El número máximo de pasos es 200. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por ejemplo, una columna con 100 valores distintos puede tener un histograma con menos de 100 puntos de límite.
   
-## <a name="density-vector"></a>Vector de densidad  
-El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indizada. El vector de densidad contiene una densidad para cada prefijo de columnas del objeto de estadísticas. Por ejemplo, si un objeto de estadísticas tiene las columnas de clave `CustomerId`, `ItemId` y `Price`, densidad se calcula en cada uno de los siguientes prefijos de columna.
+## <a name="density"></a> Vector de densidad  
+El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indizada. El vector de densidad contiene una densidad para cada prefijo de columnas del objeto de estadísticas. Por ejemplo, si un objeto de estadísticas tiene las columnas de clave `CustomerId`, `ItemId` y `Price`, la densidad se calcula en cada uno de los siguientes prefijos de columna.
   
 |Prefijo de columna|Densidad calculada en|  
 |---|---|
@@ -157,7 +159,7 @@ El optimizador de consultas utiliza las densidades para mejorar las estimaciones
 |(IdCliente, IdArtículo)|Filas con valores que se corresponden con IdCliente e IdArtículo|  
 |(IdCliente, IdArtículo, Precio)|Filas con valores que se corresponden con IdCliente, IdArtículo y Precio|  
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions"></a>Restrictions  
  DBCC SHOW_STATISTICS no proporciona estadísticas de índices de almacén de columnas optimizadas en memoria xVelocity o espaciales.  
   
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Permisos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
@@ -185,7 +187,7 @@ DBCC SHOW_STATISTICS no se admite en tablas externas.
 ### <a name="a-returning-all-statistics-information"></a>A. Devolver información de todas las estadísticas  
 En el ejemplo siguiente se muestra toda la información de estadísticas para la `AK_Address_rowguid` índice de la `Person.Address` tabla el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +195,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. Especificar la opción HISTOGRAM  
 Esto limita la información de estadísticas mostrada para Customer_LastName a los datos del HISTOGRAMA.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +204,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Mostrar el contenido de las estadísticas de un objeto  
  En el ejemplo siguiente se muestra el contenido de las estadísticas de Customer_LastName en la tabla DimCustomer.  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   

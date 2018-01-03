@@ -1,12 +1,12 @@
 ---
 title: Agregar SQLRUserGroup como un usuario de base de datos | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,19 +19,25 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 97a571a9a91ac31e955f6833e27a975f87267218
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7de60bccb72364e124656f03f043c03e812187db
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Agregar SQLRUserGroup como un usuario de base de datos
 
-Durante la instalación de [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] o [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], se crean nuevas cuentas de usuario de Windows para ejecutar tareas en el token de seguridad de la [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servicio. Cuando un usuario envía un script desde un cliente externo, de aprendizaje automático [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activa una cuenta de trabajo disponible, lo asigna a la identidad del usuario que realiza la llamada y se ejecuta la secuencia de comandos en nombre del usuario. Este nuevo servicio del motor de base de datos admite la ejecución segura de scripts externos, denominado *autenticación implícita*.
+En este artículo se explica cómo conceder al grupo de cuentas de trabajo utilizada los servicios de aprendizaje de máquina de SQL Server los permisos necesitan para conectarse a la base de datos y ejecutar trabajos de R o Python en nombre del usuario.
 
-Puede ver estas cuentas en el grupo de usuarios de Windows **SQLRUserGroup**. De forma predeterminada, se crean 20 cuentas de trabajo, que normalmente es más que suficiente para ejecutar código R trabajos.
+## <a name="what-is-sqlrusergroup"></a>¿Qué es SQLRUserGroup?
 
-Sin embargo, si necesita ejecutar scripts de R desde un cliente de ciencia de datos remotos y usa la autenticación de Windows, debe conceder estas cuentas de trabajo permiso para iniciar sesión en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia en su nombre.
+Durante la instalación de [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] o [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], se crean nuevas cuentas de usuario de Windows para admitir la ejecución de R o Python script tareas en el token de seguridad de la [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servicio.
+
+Puede ver estas cuentas en el grupo de usuarios de Windows **SQLRUserGroup**. De forma predeterminada, se crean 20 cuentas de trabajo, que normalmente es más que suficiente para ejecutar el aprendizaje automático de trabajos.
+
+Cuando un usuario envía un script desde un cliente externo, de aprendizaje automático [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activa una cuenta de trabajo disponible, lo asigna a la identidad del usuario que realiza la llamada y se ejecuta la secuencia de comandos en nombre del usuario. Este nuevo servicio del motor de base de datos admite la ejecución segura de scripts externos, denominado *autenticación implícita*.
+
+Sin embargo, si necesita ejecutar scripts de R o Python desde un cliente de ciencia de datos remotos, y está usando la autenticación de Windows, debe asignar a estas cuentas de trabajo permiso para iniciar sesión en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia en su nombre.
 
 ## <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Agregar SQLRUserGroup como un inicio de sesión de SQL Server
 
@@ -55,8 +61,8 @@ Sin embargo, si necesita ejecutar scripts de R desde un cliente de ciencia de da
 
 5. Desplácese por la lista de cuentas de grupo en el servidor hasta que encuentre una que comience con `SQLRUserGroup`.
     
-    + El nombre del grupo que esté asociada con el servicio Launchpad para la _instancia predeterminada_ es siempre **SQLRUserGroup**. Seleccione esta cuenta solo para la instancia predeterminada.
-    + Si usas un _con el nombre de instancia_, el nombre de instancia se anexa al nombre predeterminado `SQLRUserGroup`. Por lo tanto, si la instancia se denomina "MLTEST", el nombre del grupo de usuario predeterminada para esta instancia sería **SQLRUserGroupMLTest**.
+    + El nombre del grupo que esté asociada con el servicio Launchpad para la _instancia predeterminada_ siempre es **SQLRUserGroup**, independientemente de si ha instalado R, Python o ambos. Seleccione esta cuenta para la instancia predeterminada solo.
+    + Si usas un _con el nombre de instancia_, el nombre de instancia se anexa al nombre del nombre del grupo de trabajo de forma predeterminada, `SQLRUserGroup`. Por lo tanto, si la instancia se denomina "MLTEST", el nombre del grupo de usuario predeterminada para esta instancia sería **SQLRUserGroupMLTest**.
  
      ![Ejemplo de grupos de servidor](media/implied-auth-login5.png "ejemplo de grupos de servidor")
    

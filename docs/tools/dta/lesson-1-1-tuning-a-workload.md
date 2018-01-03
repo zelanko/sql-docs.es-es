@@ -3,7 +3,7 @@ title: Optimizar una carga de trabajo | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 56041b15a6fa78bc88d62c409f0df958d0dd862a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 534f4ab58ee49d3bfce6899bf3858404fb7b3fd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Lección 1-1-optimizar una carga de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El Asistente para la optimización de motor de base de datos puede utilizarse para encontrar el mejor diseño físico de la base de datos de rendimiento de las consultas en las bases de datos y tablas que seleccionó para la optimización.  

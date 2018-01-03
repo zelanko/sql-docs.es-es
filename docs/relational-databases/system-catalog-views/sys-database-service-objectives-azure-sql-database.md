@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72cc970e8e6b37988399707b5cef77cbda3afd36
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,7 +41,7 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
   
 |Nombre de la columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|INT|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edición|sysname|El nivel de servicio para el almacenamiento de datos o base de datos: **básica**, **estándar**, **Premium** o **almacenamiento de datos**.|  
 |service_objective|sysname|El nivel de precios de la base de datos. Devuelve si la base de datos está en un grupo elástico, **ElasticPool**.<br /><br /> En el **básica** capa, devuelve **básica**.<br /><br /> **Base de datos único en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2 o S3.<br /><br /> **Base de datos único en un nivel premium** devuelve de las siguientes acciones: P1, P2, P4, P3/P6 o P11.<br /><br /> **Almacenamiento de datos SQL** devuelve DW100 a través de DW2000.|  
 |elastic_pool_name|sysname|El nombre de la [grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que pertenece la base de datos. Devuelve **NULL** si la base de datos es una base de datos o un warehoue de datos.|  
@@ -52,7 +52,7 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se puede ejecutar en la base de datos maestra o en las bases de datos de usuario. La consulta devuelve el nombre, el servicio y la información de nivel de rendimiento de las bases de datos.  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

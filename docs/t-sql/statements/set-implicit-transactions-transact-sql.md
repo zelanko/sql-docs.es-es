@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (vea la excepción a continuación)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
+|Delete|OPEN|UPDATE|  
 |DROP|.|.|  
   
  Cuando OFF, cada una de las instrucciones de T-SQL anteriores está limitada por una instrucción BEGIN TRANSACTION ocultas y una instrucción COMMIT TRANSACTION ocultas. Cuando es OFF, se dice que es el modo de transacción *confirmación automática*. Si el código de T-SQL visiblemente emite una instrucción BEGIN TRANSACTION, se dice que es el modo de transacción *explícita*.  
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>Ejemplos  
  El siguiente script de Transact-SQL ejecuta unos distintos casos de prueba. También se proporciona el texto de salida, que muestra el comportamiento detallado y resultados de cada caso de prueba.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +169,7 @@ go
   
  A continuación figura la salida de texto de la secuencia de comandos de Transact-SQL anterior.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

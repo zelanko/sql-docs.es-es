@@ -3,7 +3,7 @@ title: "&lt;Alias&gt; propiedades (pestaña Alias) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8fe43fb1322109dbd90cdb6923669503ae1ff41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cadb0bdb27b29c3f1a34e5db94154d0aaeda0382
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; propiedades (pestaña Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un alias es un nombre alternativo que puede usarse para realizar una conexión. El alias encapsula los elementos necesarios de una cadena de conexión y los expone con un nombre elegido por el usuario. Use la página **Alias** del cuadro de diálogo **\<**Nombre de alias**> Propiedades** para ver o especificar los elementos de la cadena de conexión de un alias.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Alias Name**  
  Nombre (alias) que desee usar para hacer referencia a esta conexión.  
   

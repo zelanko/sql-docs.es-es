@@ -1,7 +1,7 @@
 ---
 title: "Configuración global (cuadros de diálogo) (OracleToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: 7dd6771528c3ccf971c19cf7f26caa5d3c2f49ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa5f62dbde4489b17f2863fcbe1ebbf751e1198d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Configuración global (cuadros de diálogo) (OracleToSQL)
 Use la página de los cuadros de diálogo de la **configuración Global** cuadro de diálogo para especificar la acción predeterminada del usuario y la configuración de advertencia de SSMA.  
   
 Para acceder a la configuración del cuadro de diálogo en el **herramientas** menú, seleccione **configuración Global**, haga clic en **GUI** en la parte inferior del panel izquierdo y, a continuación, seleccione **cuadros de diálogo**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Advertir antes de sobrescribir objetos**  
 Cuando SSMA convierte los objetos en SQL Server, es podrán que algunos objetos ya existan en los metadatos del proyecto SQL Server. Estos objetos pueden ya convertidos a o los objetos simplemente pueden tener el mismo nombre en el esquema de destino como objetos que se va a convertir.  
   

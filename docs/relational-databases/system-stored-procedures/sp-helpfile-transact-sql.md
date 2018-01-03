@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa55f12c6e68df15f1ee9497c28133d4be3470aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f17fa70885b833fcaeabaa221382c738a5885eb6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**FileID**|**smallint**|Identificador numérico del archivo. No se devuelve si *nombre* se especifica*.*|  
 |**nombre de archivo**|**nchar(260)**|Nombre de archivo físico.|  
 |**grupo de archivos**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
-|**tamaño**|**nvarchar (15)**|Tamaño del archivo en kilobytes.|  
+|**size**|**nvarchar (15)**|Tamaño del archivo en kilobytes.|  
 |**MaxSize**|**nvarchar (15)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crecimiento**|**nvarchar (15)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo cada vez que se necesita más ese espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
 |**uso de**|**varchar (9)**|Archivo de datos, el valor es **'solo datos'** y el archivo de registro es el valor de **'registro'**.|  
@@ -68,7 +68,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelve información acerca de los archivos de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfile;  

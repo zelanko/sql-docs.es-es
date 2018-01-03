@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Funciones de partición  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -123,22 +123,22 @@ sys.dm_sql_referenced_entities (
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
-|Tabla|Sí*|Sí|  
+|Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
 |Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
-|procedimiento almacenado CLR|No|Sí|  
+|procedimiento almacenado CLR|no|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|No|Sí|  
-|Desencadenador CLR (DML y DDL)|No|No|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Procedimientos almacenados extendidos|No|Sí|  
-|Cola|No|Sí|  
-|Synonym (Sinónimo)|No|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
-|Colección de esquemas XML|No|Sí|  
-|Función de partición|No|Sí|  
+|Función CLR definida por el usuario|no|Sí|  
+|Desencadenador CLR (DML y DDL)|no|no|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Procedimientos almacenados extendidos|no|Sí|  
+|Cola|no|Sí|  
+|Synonym (Sinónimo)|no|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|no|Sí|  
+|Colección de esquemas XML|no|Sí|  
+|Función de partición|no|Sí|  
   
  \*Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
   
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Devolver las entidades a las que se hace referencia mediante un desencadenador DDL de nivel de base de datos  
  El ejemplo siguiente devuelve las entidades (tablas y columnas) a las que hace referencia el desencadenador DDL de base de datos `ddlDatabaseTriggerLog`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Devolver las entidades a las que hace referencia un objeto  
  El ejemplo siguiente devuelve las entidades a las que hace referencia la función definida por el usuario `dbo.ufnGetContactInformation`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. Devolver las dependencias de las columnas  
  El ejemplo siguiente crea la tabla `Table1` con la columna calculada `c`, definida como la suma de las columnas `a` y `b`. A continuación, se llama a la vista `sys.dm_sql_referenced_entities`. La vista devuelve dos filas, una para cada columna definida en la columna calculada.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Devolver dependencias de las columnas no enlazadas a esquema  
  En el ejemplo siguiente se quita `Table1` y se crea `Table2` y el procedimiento almacenado `Proc1`. El procedimiento hace referencia a `Table2` y a la tabla no existente `Table1`. La vista `sys.dm_sql_referenced_entities` se ejecuta con el procedimiento almacenado especificado como la entidad de referencia. El conjunto de resultados muestra una fila para `Table1` y tres filas para `Table2`. Como `Table1` no existe, no se pueden resolver las dependencias de columna y se devuelve el error 2020. La columna `is_all_columns_found` devuelve 0 para `Table1`, lo que indica que había columnas que no se pudieron detectar.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. Ejemplo de mantenimiento dinámico de las dependencias  
  El ejemplo siguiente amplía el ejemplo D y muestra cómo se mantienen dinámicamente las dependencias. En primer lugar, el ejemplo vuelve a crear `Table1`, que se quitó en el ejemplo D. A continuación, se ejecuta de nuevo `sys.dm_sql_referenced_entities` con el procedimiento almacenado especificado como entidad de referencia. El conjunto de resultados muestra que se devuelven las tablas y sus columnas respectivas definidas en el procedimiento almacenado. Además, la columna `is_all_columns_found` devuelve un 1 para todos los objetos y columnas.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63d461ff997a9a438965e039a727999876b3d7a3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1d4790ab20c01be27868696b989ed8228acec6c6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**Step_name**|**sysname**|Nombre del paso.|  
 |**sql_message_id**|**int**|Id. de los mensajes de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devueltos si el trabajo genera algún error.|  
 |**sql_severity**|**int**|Gravedad de cualquier error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Mensaje**|**nvarchar(4000)**|Texto de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si existe.|  
+|**message**|**nvarchar(4000)**|Texto de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si existe.|  
 |**run_status**|**int**|Estado de la ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado|  
 |**run_date**|**int**|Fecha en que se empezó a ejecutar el trabajo o paso. En el caso de un historial En curso, es la fecha y hora en que fue escrito.|  
 |**tiempo de ejecución**|**int**|Hora a la que comenzó el trabajo o paso.|  
@@ -54,12 +54,12 @@ ms.lasthandoff: 11/17/2017
 |**operator_id_netsent**|**int**|Id. del operador al que se notificó con un mensaje la terminación del trabajo.|  
 |**operator_id_paged**|**int**|Id. del operador al que se notificó por buscapersonas la terminación del trabajo.|  
 |**retries_attempted**|**int**|Número de intentos de ejecución del trabajo o paso.|  
-|**servidores**|**sysname**|Nombre del servidor en el que se ejecutó el trabajo.|  
+|**servidor**|**sysname**|Nombre del servidor en el que se ejecutó el trabajo.|  
   
   ## <a name="example"></a>Ejemplo
  El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta convertirá la **tiempo de ejecución** y **run_duration** columnas en un formato descriptivo más.  Ejecute el script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

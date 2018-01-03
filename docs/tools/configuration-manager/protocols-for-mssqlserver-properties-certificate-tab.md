@@ -3,7 +3,7 @@ title: "Protocolos de propiedades de MSSQLSERVER (pestaña certificado) | Docume
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 906539a3d5bf160a7d4eae77f5503830becb0b72
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22aed889fcc7884a34f770e7931cf82ac6983061
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **certificado** pestaña en el **protocolos para MSSQLSERVER propiedades** cuadro de diálogo para seleccionar un certificado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o para ver las propiedades de un certificado. Todos los campos están en blanco hasta que se selecciona un certificado.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
  **Certificado**  
  Nombre del certificado determinado por el proveedor de seguridad. Seleccione un certificado para ver los detalles en la cuadrícula de propiedades.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Fecha de expiración  
  Fecha final del período de validez del certificado.  
   

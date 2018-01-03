@@ -3,7 +3,7 @@ title: Conectarse a Sybase (SybaseToSQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f565c0acba658142e0542ce2a1806d0216f4f8b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectarse a Sybase (SybaseToSQL)
 Use la **conectar para Sybase** cuadro de diálogo para conectarse a la instancia de Sybase Adaptive Server Enterprise (ASE) que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar para Sybase**. Si se ha conectado anteriormente, el comando es **conectarse de nuevo a Sybase**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Proveedor**  
 Seleccione cualquiera de lo proveedor instalado en el equipo para conectarse al servidor de Sybase.  
   
@@ -44,7 +44,7 @@ Escriba o seleccione el nombre o dirección IP del servidor adaptable. El nombre
 **Puerto del servidor**  
 Si se usa un puerto no predeterminado para las conexiones a ASE, escriba el número de puerto. El número de puerto predeterminado es 5000. Se trata de una opción de modo estándar.  
   
-**Nombre de usuario.**  
+**User name**  
 Escriba el nombre de usuario que se usa para conectarse a ASE. Se trata de una opción de modo estándar.  
   
 **Contraseña**  
@@ -61,9 +61,9 @@ Las cadenas de conexión se componen de pares de nombre y valor de parámetro. L
   
     |Configuración|Parámetro de Sybase 12,5|Parámetro de Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nombre del servidor|Nombre de servidor|Server|  
+    |Nombre del servidor|Nombre del servidor|Servidor|  
     |Puerto|Dirección de puerto del servidor|Puerto|  
-    |Nombre de usuario.|Id. de usuario|Id. de usuario|  
+    |Nombre de usuario|Id. de usuario|Id. de usuario|  
     |Contraseña|Contraseña|Contraseña|  
     |Proveedor|Proveedor|Proveedor|  
   
@@ -80,7 +80,7 @@ Las cadenas de conexión se componen de pares de nombre y valor de parámetro. L
     |Configuración|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nombre del controlador|controlador|  
-    |Nombre de servidor|Server|  
+    |Nombre del servidor|Servidor|  
     |Nombre de usuario|UID|  
     |Contraseña|PWD|  
     |Número de puerto|Puerto|  
@@ -93,7 +93,7 @@ Las cadenas de conexión se componen de pares de nombre y valor de parámetro. L
   
     |Configuración|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nombre de servidor|Server|  
+    |Nombre del servidor|Servidor|  
     |Nombre de usuario|UID|  
     |Contraseña|PWD|  
     |Número de puerto|Puerto|  

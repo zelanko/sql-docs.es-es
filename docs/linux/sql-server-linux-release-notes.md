@@ -4,7 +4,7 @@ description: "Este tema contiene las notas de la versión y características adm
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -35,7 +35,7 @@ Las siguientes notas se aplican a SQL Server 2017 ejecutando en Linux. El siguie
 | Motor de docker 1.8 + en Windows, Mac o Linux | N/D | [Guía de instalación](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Revise el [requisitos del sistema](sql-server-linux-setup.md#system) para SQL Server en Linux.
+> Para obtener más detalles, revise la [requisitos del sistema](sql-server-linux-setup.md#system) para SQL Server en Linux. Para la directiva de soporte técnico más reciente para SQL Server 2017, consulte el [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="supported-client-tools"></a>Herramientas de cliente admitidos
 
@@ -127,9 +127,9 @@ Las siguientes características y servicios no están disponibles en Linux en es
 | &nbsp; | (XP_CMDSHELL, etcetera) los procedimientos almacenados extendidos del sistema |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Conjunto de ensamblados CLR con EXTERNAL_ACCESS o UNSAFE permiso |
-| &nbsp; | Extensión del grupo de búferes |
+| &nbsp; | Buffer Pool Extension |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, lector de cola, SSIS, SSAS, SSRS |
-| &nbsp; | Alertas |
+| &nbsp; | Trabajos |
 | &nbsp; | Agente de registro del LOG |
 | &nbsp; | Captura de datos modificados |
 | &nbsp; | Copia de seguridad administrada |
@@ -289,7 +289,7 @@ Las siguientes limitaciones se aplican a SSMS en Windows conectados a SQL Server
 
 ### <a name="next-steps"></a>Pasos siguientes
 
-Para empezar, vea los siguientes tutoriales de inicio rápido:
+Para empezar, vea los siguientes tutoriales:
 
 - [Instalar en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

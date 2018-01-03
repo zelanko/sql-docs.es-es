@@ -3,7 +3,7 @@ title: Guardar seguimientos y plantillas de seguimiento | Documentos de Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3e447a1b51919fcece9560a0d37cb5f526a615a3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>Guardar seguimientos y plantillas de seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Es importante distinguir guardar archivos de seguimiento de guardar plantillas de seguimiento. Guardar un archivo de seguimiento implica guardar los datos de eventos capturados en un lugar especificado. Guardar una plantilla de seguimiento implica guardar la definición del seguimiento, como las columnas de datos, las clases de eventos o los filtros especificados.  

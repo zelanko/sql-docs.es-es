@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.lasthandoff: 11/27/2017
   
 ||||  
 |-|-|-|  
-|**Nombre de columna**|**Tipo**|**Description**|  
-|*clase*|**int**|1 = Objeto o columna (incluye módulos, XP, vistas, sinónimos y tablas).<br /><br /> 4 = entidad de seguridad de base de datos<br /><br /> 5 = Ensamblado<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (índice de texto completo)<br /><br /> 12 = desencadenador DDL de base de datos<br /><br /> 19 = Ruta<br /><br /> 30 = Especificación de auditoría|  
+|**Nombre de columna**|**Tipo**|**Descripción**|  
+|*class*|**int**|1 = Objeto o columna (incluye módulos, XP, vistas, sinónimos y tablas).<br /><br /> 4 = entidad de seguridad de base de datos<br /><br /> 5 = Ensamblado<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (índice de texto completo)<br /><br /> 12 = desencadenador DDL de base de datos<br /><br /> 19 = Ruta<br /><br /> 30 = Especificación de auditoría|  
 |*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Una de las siguientes acciones para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *clase* = 1, entonces object_id<br /><br /> Si *clase* = 4, entonces sys.database_principals.principal_id.<br /><br /> Si *clase* = 5, entonces sys.assemblies.assembly_id.<br /><br /> Si *clase* = 6, entonces sys.types.user_type_id.<br /><br /> Si *clase* = 7, entonces sys.indexes.index_id.<br /><br /> Si *clase* = 12, entonces sys.triggers.object_id.<br /><br /> Si *clase* = 19, entonces sys.routes.route_id.<br /><br /> Si *clase* = 30, entonces sys. database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|Si la clase es un módulo, devuelve el número de línea en el que se encuentra el uso del objeto no contenido.  De lo contrario, el valor es NULL.|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea un procedimiento denominado P1 y, a continuación, se consulta `sys.dm_db_uncontained_entities`. La consulta notifica que P1 usa **sys.endpoints** , que está fuera de la base de datos.  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

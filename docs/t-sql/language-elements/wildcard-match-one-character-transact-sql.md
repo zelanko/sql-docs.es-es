@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f6134bec732593480cd20973eb7687a29cfbf2b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 63f4d48f77556f04f1d9d2c3c381afd859a7c240
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (comodín, coincidir un carácter) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Utilice el carácter de subrayado _ para hacer coincidir cualquier carácter ind
 
 El ejemplo siguiente devuelve todos los nombres que comienzan por la letra de la base de datos `m` y tener la letra `d` como la tercera letra. El carácter de subrayado especifica que el segundo carácter del nombre puede ser cualquier letra. El `model` y `msdb` las bases de datos cumplan este criterio. El `master` base de datos no lo hace.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +65,7 @@ Puede usar varios caracteres de subrayado para representar varios caracteres. Ca
 ### <a name="b-more-complex-example"></a>B: ejemplo más complejo
  En el ejemplo siguiente se usa el operador de _ para buscar todas las personas en la `Person` tabla, que tienen un apellido de tres letras que termina en `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +76,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C: escape el carácter de subrayado   
 El ejemplo siguiente devuelve los nombres de los roles fijos de base de datos como `db_owner` y `db_ddladmin`, pero también devuelve la `dbo` usuario. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 El carácter de subrayado en la tercera posición de carácter se toma como un carácter comodín y no se filtran solo las entidades a partir de las letras `db_`. Como escape el carácter de subrayado entre corchetes `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   

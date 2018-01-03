@@ -3,7 +3,7 @@ title: "Lección 1: Asistente para la optimización de motor de navegación bás
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dd5bbaafbd076779463bf205208c12ce0d39b7ea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1eeead53bf2d2f1a6ff1c5117395e134b1af8acd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Asistente para la optimización de motor de base de datos ofrece una interfaz gráfica de usuario (GUI) para ver sesiones de optimización e informes de recomendaciones de optimización. Esta lección muestra cómo iniciar la herramienta y configurar la presentación. Al final de esta lección, habrá aprendido las diferentes formas de iniciar la herramienta y cómo configurar su presentación para proporcionar compatibilidad con las tareas de optimización que realiza regularmente.  

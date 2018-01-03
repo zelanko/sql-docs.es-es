@@ -1,6 +1,6 @@
 ---
 title: "Introducción a SQL Server 2017 en Ubuntu | Documentos de Microsoft"
-description: "Este tutorial de inicio rápido muestra cómo instalar SQL Server 2017 en Ubuntu y, a continuación, crear y consultar una base de datos con sqlcmd."
+description: "Este tutorial rápido muestra cómo instalar SQL Server 2017 en Ubuntu y, a continuación, crear y consultar una base de datos con sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: d708c0711c1b1fd4ccf79d9c4bfbd382c8d97486
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 17d6ebb3df10a5bc8b5801c11cc8ac12cde372a2
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Instalar a SQL Server y crear una base de datos en Ubuntu
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tutorial de inicio rápido, primero instalar SQL Server 2017 en Ubuntu 16.04. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
+En este tutorial rápido, primero instalar SQL Server 2017 en Ubuntu 16.04. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
 > [!TIP]
 > Este tutorial requiere la intervención del usuario y una conexión a internet. Si está interesado en el [desatendida](sql-server-linux-setup.md#unattended) o [sin conexión](sql-server-linux-setup.md#offline) procedimientos de instalación, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Debe tener una máquina Ubuntu 16.04 con **al menos 2 GB** de memoria.
 
@@ -124,6 +124,11 @@ Para crear una base de datos, debe conectarse con una herramienta que se puede e
    ```
 
 > [!TIP]
-> **Sqlcmd** es simplemente una herramienta para conectarse a SQL Server para ejecutar consultas y realizar tareas de administración y desarrollo. Otras herramientas incluyen [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) y [código de Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** es simplemente una herramienta para conectarse a SQL Server para ejecutar consultas y realizar tareas de administración y desarrollo. Otras herramientas incluyen:
+>
+> * [Studio de operaciones de SQL Server (versión preliminar)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Código de Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [MSSQL-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

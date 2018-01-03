@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ match_expression [ NOT ] LIKE pattern
   
  Una comparación de cadenas con un patrón que contenga **char** y **varchar** datos pueden no pasar una comparación LIKE debido a cómo se almacenan los datos. Es importante conocer el almacenamiento de cada tipo de datos y dónde puede generar errores una comparación LIKE. En el ejemplo siguiente se pasa una variable local **char** variable a un procedimiento almacenado y, a continuación, para encontrar todos los empleados cuyo apellidos empiecen por un conjunto especificado de caracteres de coincidencia de patrón de usos.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  Sin embargo, en el ejemplo siguiente se realiza correctamente porque los espacios en blanco no se agregan a un **varchar** variable.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  A continuación se ofrece una serie de ejemplos donde se muestran las diferencias entre las filas devueltas tras la operación de búsqueda de coincidencias de patrón con LIKE para ASCII y Unicode.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Por ejemplo, la siguiente consulta muestra todas las vistas de administración dinámica de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], porque todas empiezan por las letras `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Utilizar LIKE con el carácter comodín %  
  En el siguiente ejemplo se buscan todos los números de teléfono de la tabla `415` cuyo código de área sea `PersonPhone`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilizar NOT LIKE con el carácter comodín %  
  En el siguiente ejemplo se buscan todos los números de teléfono de la tabla `PersonPhone` cuyos códigos de área no sean `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. Utilizar la cláusula ESCAPE  
  En el ejemplo siguiente se utiliza la cláusula `ESCAPE` y el carácter de escape para buscar exactamente la cadena de caracteres `10-15%` en la columna `c1` de la tabla `mytbl2`.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizar el carácter comodín [ ]  
  El ejemplo siguiente busca empleados en la `Person` tabla con el nombre de `Cheryl` o `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  En el siguiente ejemplo se buscan las filas con empleados en la tabla `Person` con el apellido de `Zheng` o `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizar LIKE con el carácter comodín %  
  En el ejemplo siguiente se buscan todos los empleados en la `DimEmployee` tabla con números de teléfono que comiencen por `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilizar NOT LIKE con el carácter comodín %  
  En el ejemplo siguiente se busca todos los números de teléfono en el `DimEmployee` tabla que no se inician con `612`.  .  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Utilizar LIKE con el carácter comodín _  
  En el ejemplo siguiente se busca todos los números de teléfono que tienen un código de área a partir de `6` y finales de `2` en el `DimEmployee` tabla. Tenga en cuenta que el carácter comodín % también se incluye al final del patrón de búsqueda, ya que el código de área es la primera parte del número de teléfono y existan los caracteres adicionales después del valor de columna.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Se pueden especificar instrucciones individuales dentro del lote.  
   
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,7 +118,7 @@ Cuando se utiliza una consulta "ad hoc" [simple](../../relational-databases/quer
   
  Primero, recupere el SPID (Id. de proceso del servidor) para el proceso que está ejecutando la consulta o proceso por lotes mediante el uso del procedimiento almacenado `sp_who`:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +127,7 @@ GO
   
  El conjunto de resultados que devuelve `sp_who` indica que el SPID es `54`. Puede utilizar el SPID con la vista de administración dinámica `sys.dm_exec_requests` para recuperar el identificador del plan mediante la siguiente consulta:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +137,7 @@ GO
   
  La tabla devuelta por **sys.dm_exec_requests** indica que el identificador del plan de consulta o lote de ejecución lenta es `0x06000100A27E7C1FA821B10600`. En el ejemplo siguiente se devuelve el plan de consulta del identificador del plan especificado y se usan los valores predeterminados 0 y -1 para devolver todas las instrucciones en la consulta o el lote.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +148,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recuperar todos los planes de consulta de caché del plan  
  Para recuperar una instantánea de todos los planes de consulta que residen en la caché del plan, recupere los identificadores de todos los planes de consulta de la caché; para ello, consulte la vista de administración dinámica `sys.dm_exec_cached_plans`. Los identificadores del plan se almacenan en la columna `plan_handle` de `sys.dm_exec_cached_plans`. Acto seguido, utilice el operador CROSS APPLY para pasar los identificadores del plan a `sys.dm_exec_text_query_plan` como se indica a continuación. El plan de presentación de salida de cada planes almacenados actualmente en la caché del plan se muestra en la `query_plan` columna de la tabla que se devuelve.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +160,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Recuperar todos los planes de consulta para los que el servidor ha reunido estadísticas de consultas procedentes de la memoria caché de plan  
  Para recuperar una instantánea de todos los planes de consulta para los que el servidor ha reunido estadísticas que residen actualmente en la caché del plan, recupere los identificadores de estos planes de la caché; para ello, consulte la vista de administración dinámica `sys.dm_exec_query_stats`. Los identificadores del plan se almacenan en la columna `plan_handle` de `sys.dm_exec_query_stats`. Acto seguido, utilice el operador CROSS APPLY para pasar los identificadores del plan a `sys.dm_exec_text_query_plan` como se indica a continuación. La salida del plan de presentación de cada plan está en la columna `query_plan` de la tabla que se devuelve.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +171,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Al recuperar la información acerca de las cinco mejores consultas por promedio de tiempo de CPU  
  En el ejemplo siguiente se devuelven los planes de consulta y el promedio de tiempo de CPU de las cinco mejores consultas. El **sys.dm_exec_text_query_plan** función especifica los valores predeterminados 0 y -1 para devolver todas las instrucciones del lote en el plan de consulta.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  

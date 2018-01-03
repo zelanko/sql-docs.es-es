@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c62e19d2d7c2c856b358649955a5b1540a802a12
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 14d3ca332605e2d40d967e0e8b27b54e82613f46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Controladores y aplicaciones compatibles con estándares
 Una aplicación compatible con los estándares o el controlador es aquella que se ajusta a las especificaciones de CAE grupo Open "datos de administración: SQL nivel de llamada Interface (CLI)" y la norma ISO/IEC 9075-3:1995 interfaz de nivel de llamada (E) (SQL/CLI).  

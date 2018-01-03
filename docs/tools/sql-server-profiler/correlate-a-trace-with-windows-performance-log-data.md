@@ -3,7 +3,7 @@ title: Correlacionar un seguimiento con datos del registro de rendimiento de Win
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef4781a05da3e06bc1d098dacce544dd599d647b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe3b9fbc7a0b1b7eed6b478fff11ef4abb2cde83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Correlacionar un seguimiento con datos del registro de rendimiento de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede abrir un registro de rendimiento de Microsoft Windows, elija los contadores que desea correlacionar con un seguimiento y mostrar los contadores de rendimiento seleccionados junto con el seguimiento de la [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] interfaz gráfica de usuario. Al seleccionar un evento en la ventana de seguimiento, una barra vertical roja en el panel de la ventana de datos del Monitor de sistema del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indica los datos del registro de rendimiento que se correlacionan con el evento de seguimiento seleccionado.  

@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tablas de aplicación de capa de datos - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |**dac_object_name_posttran**|**sysname**|Nombre del objeto después de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
 |**en SqlScript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa una acción en una base de datos o inicio de sesión.|  
 |**carga**|**varbinary(max)**|Definición de paquete DAC guardada en una cadena con codificación binaria.|  
-|**Comentarios**|**varchar(max)**|Registra el inicio de sesión de un usuario que ha aceptado una pérdida de datos potencial en una actualización de DAC.|  
+|**Comentarios**|**ntext**|Registra el inicio de sesión de un usuario que ha aceptado una pérdida de datos potencial en una actualización de DAC.|  
 |**ERROR_STRING**|**nvarchar(max)**|Mensaje de error generado si la acción encuentra un error.|  
 |**created_by**|**sysname**|Inicio de sesión que inició la acción que creó esta entrada.|  
 |**Date_Created**|**datetime**|Fecha y hora en que se creó esta entrada.|  
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|crear|dacpac|  
 |12|1|crear|login|  
-|12|2|crear|database|  
-|12|3|cambiar el nombre|database|  
+|12|2|crear|Base de datos|  
+|12|3|cambiar el nombre|Base de datos|  
   
  Operaciones de DAC, como la eliminación, no quitan filas de **sysdac_history_internal**. Puede usar la siguiente consulta para eliminar manualmente las filas de las DAC que ya no se implementen en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  

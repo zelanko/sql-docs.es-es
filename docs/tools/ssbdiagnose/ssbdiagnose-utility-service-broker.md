@@ -3,7 +3,7 @@ title: Utilidad ssbdiagnose (Service Broker) | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **ssbdiagnose** utilidad informa de los problemas de [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversaciones o la configuración de [!INCLUDE[ssSB](../../includes/sssb-md.md)] servicios. Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>Variables de entorno de sqlcmd  
  La utilidad **ssbdiagnose** admite las variables de entorno SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD y SQLCMDLOGINTIMOUT que también emplea la utilidad **sqlcmd** . Puede establecer las variables de entorno mediante el comando SET del símbolo del sistema o el comando **setvar** en los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] que ejecute con **sqlcmd**. Para obtener más información sobre cómo usar **setvar** en **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permissions  
  En cada cláusula **connectionoptions** , el inicio de sesión especificado con los parámetros **-E** o **-U** debe ser miembro del rol fijo de servidor **sysadmin** en la instancia especificada en **-S**.  
   
 ## <a name="examples"></a>Ejemplos  

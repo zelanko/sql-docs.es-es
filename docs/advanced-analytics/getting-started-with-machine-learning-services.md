@@ -1,11 +1,11 @@
 ---
 title: "Introducción a aprendizaje automático en SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Introducción a aprendizaje automático en SQL Server
 
@@ -83,7 +83,7 @@ También puede instalar [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md
 
 + [Tutoriales de aprendizaje de máquina](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Empiece aquí para buscar una lista de todos los recursos para aprender sobre soluciones de aprendizaje de máquina mediante [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] o [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Empiece aquí para buscar una lista de todos los recursos para aprender sobre soluciones de aprendizaje de máquina con SQL Server 2016 y 2017 de SQL Server.
 
 ### <a name="r-tutorials"></a>Tutoriales de R
 
@@ -95,7 +95,7 @@ También puede instalar [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md
 
 + [Explorar R y ScaleR en 25 funciones cortas](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   ¿No está familiarizado con R? ¿Se pregunta cómo Microsoft R (o RevoScaleR) se compara con R estándar? Puede encontrar estos inicia rápida R Server.
+   ¿No está familiarizado con R? ¿Se pregunta cómo Microsoft R (o RevoScaleR) se compara con R estándar? Puede encontrar estos inicia rápida R Server y servidor de aprendizaje de máquina.
 
 ### <a name="python-tutorials"></a>Tutoriales de Python
 

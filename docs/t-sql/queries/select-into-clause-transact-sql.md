@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>Seleccione - INTO (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ Si se cumple alguna de estas condiciones, la columna se crea como NOT NULL en lu
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Crear una tabla especificando columnas de varios orígenes  
  En el ejemplo siguiente se crea la tabla `dbo.EmployeeAddresses` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] seleccionando siete columnas de varias tablas relacionadas con empleados y direcciones.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertar las filas utilizando el registro mínimo  
  El ejemplo siguiente crea la tabla `dbo.NewProducts` e inserta filas de la tabla `Production.Product`. El ejemplo supone que el modelo de recuperación de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] está establecido en FULL. Para asegurarse de que se utiliza el registro mínimo, el modelo de recuperación de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] se establece en BULK_LOGGED antes de que las filas se inserten y se restablece en FULL después de la instrucción SELECT...INTO. De esta manera se asegura de que la instrucción SELECT...INTO use el espacio mínimo en el registro de transacciones y funcione eficazmente.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Crear una columna de identidad utilizando la función IDENTITY  
  En el ejemplo siguiente se utiliza la función IDENTITY para crear una columna de identidad en la nueva tabla `Person.USAddress` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Se requiere esto porque la instrucción SELECT que define la tabla contiene una unión, que hace que la propiedad IDENTITY no transfiera a la nueva tabla. Tenga en cuenta que los valores de inicialización e incremento especificados en la función IDENTITY son diferentes de los de la columna `AddressID` de la tabla de origen `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **Se aplica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **Se aplica a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ El ejemplo siguiente se muestra la creación de una tabla nueva como una copia d
 
  **Se aplica a:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

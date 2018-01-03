@@ -1,7 +1,7 @@
 ---
 title: Ejecutar la consola SSMA (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39b41addf566e326174a004a210a2ba2b1cdf311
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ejecutar la consola SSMA (MySQLToSQL)
 Microsoft proporciona un conjunto robusto de script de comandos del archivo para ejecutar y controlar las actividades SSMA.  
@@ -295,7 +295,7 @@ informe de evaluación generar
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <generate-assessment-report  
@@ -369,7 +369,7 @@ convertir esquema
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <convert-schema  
@@ -429,7 +429,7 @@ migrar datos
   
 </migrate-data>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <migrate-data  
@@ -517,7 +517,7 @@ destino sincronizar
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +526,7 @@ o bien
   
   object-type="<object-category>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target>  
@@ -582,7 +582,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +591,7 @@ o bien
   
    object-type="<object-category>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database>  
@@ -641,7 +641,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <save-as-script  
@@ -717,7 +717,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 </convert-sql-statement>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +742,7 @@ o bien
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```  
 <convert-sql-statement  

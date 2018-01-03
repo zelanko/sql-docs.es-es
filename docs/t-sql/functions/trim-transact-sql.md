@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ De forma predeterminada `TRIM` función quita el carácter de espacio `char(32)`
 ## <a name="examples"></a>Ejemplos
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Quita el carácter de espacio de ambos lados de cadena   
 En el ejemplo siguiente se quita los espacios de antes y después de la palabra `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Quita los caracteres de ambos lados de cadena especificados   
 En el ejemplo siguiente se quita un punto final y los espacios finales.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

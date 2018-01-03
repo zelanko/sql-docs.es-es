@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: a66c65ea0eae4d3f1704f5bbeafb78ff657ab9ed
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Ejemplo: Script de instalación desatendida de SQL Server para Red Hat Enterprise Linux
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 Esta secuencia de comandos de ejemplo intensiva de errores instala SQL Server 2017 en Red Hat Enterprise Linux (RHEL) sin entrada interactiva. Proporciona ejemplos de cómo instalar el motor de base de datos, las herramientas de línea de comandos de SQL Server, Agente SQL Server y sigue los pasos posteriores a la instalación. Opcionalmente, puede instalar la búsqueda de texto completo y crear un usuario administrativo.
 
 > [!TIP]
-> Si no necesita una secuencia de comandos de instalación desatendida, la manera más rápida para instalar SQL Server es seguir el [tutorial de inicio rápido para Red Hat](quickstart-install-connect-red-hat.md). Para otros datos de configuración, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
+> Si no necesita una secuencia de comandos de instalación desatendida, la manera más rápida para instalar SQL Server es seguir el [inicio rápido para Red Hat](quickstart-install-connect-red-hat.md). Para otros datos de configuración, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. Otros los sistemas de archivos, como **BTRFS**, no son compatibles.
@@ -39,7 +39,7 @@ Esta secuencia de comandos de ejemplo intensiva de errores instala SQL Server 20
 Guardar el script de ejemplo en un archivo y, a continuación, para personalizarlo, reemplace los valores de variables en el script. También puede establecer cualquiera de las variables de secuencias de comandos como variables de entorno, siempre y cuando se eliminen en el archivo de script.
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

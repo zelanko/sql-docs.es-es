@@ -3,7 +3,7 @@ title: "Configuración (sincronización) (SybaseToSQL) del proyecto | Documentos
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba7bda5c531dd688c512973b3293a2166dbde741
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23b91803d96e77e171bb32e4af7d42dc45872b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Configuración del proyecto (la sincronización) (SybaseToSQL)
 La página de sincronización de la **configuración del proyecto** cuadro de diálogo contiene opciones que personalizan la forma en que SSMA carga los objetos de base de datos, como tablas y procedimientos almacenados, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
@@ -35,7 +35,7 @@ Puede tener acceso a dos páginas diferentes de sincronización que contengan lo
   
 -   Para especificar la configuración para el proyecto actual, en la **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, seleccione **sincronización** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Intentos**  
 Especifica el número de intentos de SSMA debe realizar cuando carga los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Objetos que no se cargan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en el intento actual se intentará de nuevo hasta que SSMA alcanza el número máximo de intentos en el proceso de sincronización actual.  
   

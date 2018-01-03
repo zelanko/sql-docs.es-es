@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 507d136d24a9c9b7b68435a46952b79aecb1f688
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 55cafd4b779faf5cd3a77b24800682ec3b6c5bb5
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: Script de instalación desatendida de SQL Server para Ubuntu
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 Esta secuencia de comandos de ejemplo Bash instala SQL Server 2017 en Ubuntu 16.04 sin entrada interactiva. Proporciona ejemplos de cómo instalar el motor de base de datos, las herramientas de línea de comandos de SQL Server, Agente SQL Server y sigue los pasos posteriores a la instalación. Opcionalmente, puede instalar la búsqueda de texto completo y crear un usuario administrativo.
 
 > [!TIP]
-> Si no necesita una secuencia de comandos de instalación desatendida, la manera más rápida para instalar SQL Server es seguir el [tutorial de inicio rápido para Ubuntu](quickstart-install-connect-ubuntu.md). Para otros datos de configuración, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
+> Si no necesita una secuencia de comandos de instalación desatendida, la manera más rápida para instalar SQL Server es seguir el [inicio rápido para Ubuntu](quickstart-install-connect-ubuntu.md). Para otros datos de configuración, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. Otros los sistemas de archivos, como **BTRFS**, no son compatibles.
@@ -38,7 +38,7 @@ Esta secuencia de comandos de ejemplo Bash instala SQL Server 2017 en Ubuntu 16.
 ## <a name="sample-script"></a>Script de ejemplo
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

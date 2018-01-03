@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23952b00480291dc5e73b1e729af36ebb2912747
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>Instrucción ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Cambiar una cláusula WHERE de auditoría de servidor  
  En el ejemplo siguiente se modifica la donde cláusula creada en el ejemplo C de [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). La nueva cláusula WHERE filtra el evento definido por el usuario si de 27.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -204,7 +204,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>D. Quitar una cláusula WHERE  
  En el ejemplo siguiente se quita una expresión de predicado de cláusula WHERE.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -217,7 +217,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>E. Cambiar el nombre de una auditoría de servidor  
  En el ejemplo siguiente se cambia el nombre de la auditoría de servidor de `FilterForSensitiveData` a `AuditDataAccess`.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  

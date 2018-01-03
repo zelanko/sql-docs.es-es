@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Desencadenadores DDL de nivel de servidor   
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -104,22 +104,22 @@ sys.dm_sql_referencing_entities (
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
-|Tabla|Sí*|Sí|  
+|Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
 |Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
-|procedimiento almacenado CLR|No|Sí|  
+|procedimiento almacenado CLR|no|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|No|Sí|  
-|Desencadenador CLR (DML y DDL)|No|No|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Procedimientos almacenados extendidos|No|Sí|  
-|Cola|No|Sí|  
-|Synonym (Sinónimo)|No|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
-|Colección de esquemas XML|No|Sí|  
-|Función de partición|No|Sí|  
+|Función CLR definida por el usuario|no|Sí|  
+|Desencadenador CLR (DML y DDL)|no|no|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Procedimientos almacenados extendidos|no|Sí|  
+|Cola|no|Sí|  
+|Synonym (Sinónimo)|no|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|no|Sí|  
+|Colección de esquemas XML|no|Sí|  
+|Función de partición|no|Sí|  
   
  \*Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
   
@@ -148,7 +148,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Devolver las entidades que hacen referencia a una entidad determinada  
  El ejemplo siguiente devuelve las entidades en la base de datos actual que hacen referencia a la tabla especificada.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Devolver las entidades que hacen referencia a un tipo determinado  
  El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas en el `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT en la tabla, se devolverá ninguna fila para el `HumanResources.Employee`tabla.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

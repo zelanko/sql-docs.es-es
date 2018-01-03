@@ -3,7 +3,7 @@ title: "Revise los resultados de la reproducción | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Después de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] característica Distributed Replay completa una reproducción distribuida, la actividad de reproducción para cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados en cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="column-descriptions-for-result-trace"></a>Descripciones de columna para el seguimiento de resultados  
  En la tabla siguiente se describen las columnas de los datos de seguimiento de resultados.  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Nombre de la clase de eventos.|1|  
 |EventSequence|**bigint**|Para los errores de proveedor y los errores internos y advertencias, este es el flujo de eventos de captura que corresponde al error o advertencia.<br /><br /> Para todas las demás clase de eventos, esta es la secuencia del evento en los datos de seguimiento originales.|2|  

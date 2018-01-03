@@ -3,7 +3,7 @@ title: "Cuadros de diálogo de SQL Server Profiler | Documentos de Microsoft"
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -48,11 +48,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una herramienta que captura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos desde un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y las opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -115,7 +115,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 |Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** .  
 |**Mostrar todos los eventos**|Se muestran todos los eventos disponibles. Esta opción está activada de forma predeterminada si crea una nueva plantilla que no se base en una plantilla existente. Desactive esta opción para ocultar todos los eventos no seleccionados en la cuadrícula **Selección de eventos** .  
 |**Mostrar todas las columnas**|Muestra todas las columnas de datos disponibles. Esta opción está activada de forma predeterminada si crea una nueva plantilla que no se base en una plantilla existente. Desactive esta opción para ocultar todas las columnas de datos no seleccionadas en la cuadrícula **Selección de eventos** .  
-|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** , que muestra un icono de filtro a la izquierda de la etiqueta de columna de datos. Utilice el cuadro de diálogo **Editar filtro** para editar los filtros de las columnas de datos.  
+|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro**, que muestra un icono de filtro a la izquierda de la etiqueta de columna de datos. Utilice el cuadro de diálogo **Editar filtro** para editar los filtros de las columnas de datos.  
 |**Organizar columnas**|Cambia el orden de las columnas del seguimiento y agrupa los resultados en una o más columnas. 
 ## <a name="trace-file-properties"></a>Propiedades de archivo de seguimiento 
 ### <a name="general-tab"></a>Pestaña General
@@ -153,7 +153,7 @@ Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler
 |Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** .  
 |**Mostrar todos los eventos**|Se muestran todos los eventos disponibles. De forma predeterminada, solo se muestran las filas de la cuadrícula **Selección de eventos** que están seleccionadas. Desactive esta casilla para ocultar todos los eventos que no estén seleccionados en la cuadrícula **Selección de eventos** . Si se activa **Mostrar todos los eventos** y se está viendo un archivo o una tabla de seguimiento, todos los eventos que se grabaron en el seguimiento se mostrarán en la ventana de seguimiento.  
 |**Mostrar todas las columnas**|Muestra todas las columnas de datos disponibles. De forma predeterminada, solo se muestran las columnas de datos seleccionadas. Desactive esta casilla para ocultar todas las columnas de datos que no estén seleccionadas en la cuadrícula **Selección de eventos** .  
-|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** , en el que se muestra un icono de filtro a la izquierda de la etiqueta de la columna. Puede utilizar este cuadro de diálogo para editar los filtros de las columnas de datos.  
+|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro**, en el que se muestra un icono de filtro a la izquierda de la etiqueta de la columna. Puede utilizar este cuadro de diálogo para editar los filtros de las columnas de datos.  
 |**Organizar columnas** |Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
 ## <a name="performance-counters-limit"></a>Límite de contadores de rendimiento
 Utilice el cuadro de diálogo Límite de contadores de rendimiento para limitar la información de un archivo de registro de rendimiento del Monitor de sistema cuando lo correlacione con un seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Puede utilizar este cuadro de diálogo para seleccionar los contadores que deben mostrarse y utilizarse para la correlación.  

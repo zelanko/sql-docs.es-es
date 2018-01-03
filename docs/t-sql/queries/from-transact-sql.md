@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -290,7 +290,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<search_condition >  
  Especifica la condición en la que se basa la combinación. La condición puede especificar cualquier predicado, aunque se suelen utilizar columnas y operadores de comparación; por ejemplo:  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -435,7 +435,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. Usar una cláusula FROM sencilla  
  En el siguiente ejemplo se recuperan las columnas `TerritoryID` y `Name` de la tabla `SalesTerritory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +462,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Usar las sugerencias del optimizador TABLOCK y HOLDLOCK  
  En la siguiente transacción parcial se muestra cómo colocar un bloqueo explícito de tabla compartida en `Employee` y cómo leer el índice. El bloqueo se mantiene durante toda la transacción.  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. Usar la sintaxis FULL OUTER JOIN de SQL-92  
  En el siguiente ejemplo se devuelve el nombre del producto y los pedidos de venta correspondientes de la tabla `SalesOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Además, se devuelven todos los pedidos de venta que no incluyen ningún producto en la tabla `Product` y todos los productos con un pedido de venta distinto del especificado en la tabla `Product`.  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. Usar la sintaxis LEFT FULL OUTER de SQL-92  
  Este ejemplo combina dos tablas en `ProductID` y mantiene las filas no coincidentes de la tabla izquierda. La tabla `Product` coincide con la tabla `SalesOrderDetail` en las columnas `ProductID` de cada tabla. Todos los productos, ordenados y no ordenados, aparecen en el conjunto de resultados.  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +504,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. Usar la sintaxis INNER JOIN de SQL-92  
  En el siguiente ejemplo se devuelven todos los nombres de productos e identificadores de pedidos de venta.  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. Usar la sintaxis RIGHT OUTER JOIN de SQL-92  
  Este ejemplo combina dos tablas en `TerritoryID` y mantiene las filas no coincidentes de la tabla derecha. La tabla `SalesTerritory` coincide con la tabla `SalesPerson` en la columna `TerritoryID` de cada tabla. Todos los vendedores aparecen en el conjunto de resultados con independencia de que tengan un territorio asignado.  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +530,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  Después de especificar una sugerencia de combinación, la palabra clave INNER ya no es opcional y se tiene que incluir explícitamente para hacer combinaciones INNER JOIN.  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +543,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>I. Usar una tabla derivada  
  En el siguiente ejemplo se utiliza una tabla derivada y una instrucción `SELECT` después de la cláusula `FROM` para devolver los nombres y apellidos de todos los empleados y las ciudades en que residen.  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +559,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. Usar TABLESAMPLE para leer datos de un ejemplo de filas de una tabla  
  En el siguiente ejemplo se utiliza `TABLESAMPLE` en la cláusula `FROM` para devolver aproximadamente el `10` por ciento de todas las filas de la tabla `Customer`.  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +577,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  En el ejemplo se utiliza `APPLY` para devolver todos los departamentos y todos los empleados de cada departamento. Si un departamento concreto no tiene ningún empleado, no se devuelve ninguna fila para dicho departamento.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  Si desea que la consulta genere filas para los departamentos sin empleados, lo que genera valores NULL para las columnas `EmpID`, `EmpLastName` y `EmpSalary`, utilice `OUTER APPLY`.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>L. Usar CROSS APPLY  
  En el ejemplo siguiente se recupera una instantánea de todos los planes de consulta que residen en la memoria caché del plan mediante una consulta a la vista de administración dinámica `sys.dm_exec_cached_plans` para recuperar los identificadores de todos los planes de consulta almacenados en la memoria caché. A continuación se especifica el operador `CROSS APPLY` para pasar los identificadores del plan a `sys.dm_exec_query_plan`. La salida del plan de presentación XML de todos los planes almacenados actualmente en la caché del plan se muestra en la columna `query_plan` de la tabla devuelta.  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +607,7 @@ GO
   
  En el ejemplo siguiente se utiliza el argumento de date_time_literal_or_variable FOR SYSTEM_TIME AS OF para devolver filas de tabla que fueron reales (actuales) a partir del 1 de enero de 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +619,7 @@ WHERE ManagerID = 5;
   
  En el ejemplo siguiente se usa el date_time_literal_or_variable FOR SYSTEM_TIME FROM al argumento date_time_literal_or_variable para devolver todas las filas que estaban activas durante el período definido como a partir del 1 de enero de 2013 y terminando con el 1 de enero de 2014 exclusivo del límite superior.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +631,7 @@ WHERE ManagerID = 5;
   
  En el ejemplo siguiente se utiliza el date_time_literal_or_variable para entre SYSTEM_TIME y argumento date_time_literal_or_variable para devolver todas las filas que estaban activas durante el período definido como a partir del 1 de enero de 2013 y terminando con el 1 de enero de 2014 favorecer el límite superior.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +643,7 @@ WHERE ManagerID = 5;
   
  En el ejemplo siguiente se utiliza el argumento SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable, date_time_literal_or_variable) para devolver todas las filas que se abrieron y cerraron durante el período definido como a partir del 1 de enero de 2013 y terminando con 1 de enero de 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +655,7 @@ WHERE ManagerID = 5;
   
  En el ejemplo siguiente se utiliza una variable en lugar de un literal para proporcionar los valores de fecha límite para la consulta.  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +673,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>N. Usar la sintaxis INNER JOIN  
  El ejemplo siguiente devuelve el `SalesOrderNumber`, `ProductKey`, y `EnglishProductName` columnas de la `FactInternetSales` y `DimProduct` tablas donde la clave de combinación, `ProductKey`, coincide con en ambas tablas. El `SalesOrderNumber` y `EnglishProductName` columnas cada existen en una de las tablas, por lo que no es necesario especificar el alias de tabla con estas columnas, como se muestra; estos alias se incluyen para mejorar la legibilidad. La palabra **AS** antes de un alias de nombre no es necesario, pero se recomienda para mejorar la legibilidad y se ajusta al estándar ANSI.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
   
  Puesto que la `INNER` palabra clave no es necesario para las combinaciones internas, esta misma consulta podría escribirse como:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +695,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  Un `WHERE` cláusula también podría usarse con esta consulta para limitar los resultados. Este ejemplo limita los resultados a `SalesOrderNumber` los valores superiores a 'SO5000':  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Mediante la sintaxis LEFT OUTER JOIN y RIGHT OUTER JOIN  
  El ejemplo siguiente se combina el `FactInternetSales` y `DimProduct` tablas en el `ProductKey` columnas. La sintaxis de combinación externa izquierda mantiene las filas no coincidentes de la izquierda (`FactInternetSales`) tabla. Puesto que la `FactInternetSales` tabla no contiene ninguno `ProductKey` valores que no coinciden con la `DimProduct` tabla, esta consulta devuelve las mismas filas que el primer ejemplo de combinación interna anterior.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +722,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  En las combinaciones externas derechas, se conservan las filas no coincidentes de la tabla derecha. El ejemplo siguiente devuelve las mismas filas que el anterior ejemplo de combinación externa izquierda.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  La consulta siguiente utiliza el `DimSalesTerritory` tabla como la tabla izquierda en una combinación externa izquierda. Recupera el `SalesOrderNumber` los valores de la `FactInternetSales` tabla. Si no hay ningún pedidos de un determinado `SalesTerritoryKey`, la consulta devolverá un valor NULL para la `SalesOrderNumber` para esa fila. Esta consulta está ordenada por la `SalesOrderNumber` columna, por lo que cualquier valores NULL en esta columna aparecerá en la parte superior de los resultados.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +745,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Esta consulta se podría volver a escribir con una combinación externa derecha para recuperar los mismos resultados:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. Mediante la sintaxis FULL OUTER JOIN  
  En el ejemplo siguiente se muestra una combinación externa completa, que devuelve todas las filas de ambas tablas combinadas, pero devuelve NULL para los valores que no coinciden de la otra tabla.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +770,7 @@ ORDER BY fis.SalesOrderNumber;
   
  También se podría escribir esta consulta sin la `OUTER` palabra clave.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>Q. Usar la sintaxis CROSS JOIN  
  El ejemplo siguiente devuelve el producto cruzado de la `FactInternetSales` y `DimSalesTerritory` tablas. Una lista de todas las combinaciones posibles de `SalesOrderNumber` y `SalesTerritoryKey` se devuelven. Tenga en cuenta la ausencia de la `ON` cláusula de la consulta de combinación cruzada.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>R. Usar una tabla derivada  
  En el ejemplo siguiente se usa una tabla derivada (un `SELECT` instrucción después de la `FROM` cláusula) para devolver el `CustomerKey` y `LastName` columnas de todos los clientes en la `DimCustomer` tabla con `BirthDate` valores a más tardar el 1 de enero, 1970 y el apellido "Smith".  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +809,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S. REDUCIR el ejemplo de sugerencia de combinación  
  En el ejemplo siguiente se usa el `REDUCE` sugerencia de combinación para modificar el procesamiento de la tabla derivada en la consulta. Cuando se usa el `REDUCE` sugerencia de combinación en esta consulta, el `fis.ProductKey` se proyectan, replica y realizan distintas y se unen a `DimProduct` durante el orden aleatorio de `DimProduct` en `ProductKey`. La tabla derivada resultante se distribuye en `fis.ProductKey`.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +825,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T. Ejemplo de sugerencia de combinación REPLICAR  
  En el ejemplo siguiente se muestra la misma consulta que el ejemplo anterior, salvo que un `REPLICATE` se utiliza la sugerencia de combinación en lugar de la `REDUCE` sugerencia de combinación. El uso de la `REPLICATE` sugerencia hace que los valores de la `ProductKey` columna (unión) de la `FactInternetSales` tabla para replicarse en todos los nodos. El `DimProduct` tabla se combina con la versión replicada de esos valores.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +843,7 @@ ORDER BY SalesOrderNumber;
   
  En el ejemplo siguiente, la sugerencia de redistribuir fuerza un movimiento de orden aleatorio en la tabla FactInternetSales porque ProductKey es la columna de distribución de DimProduct y no es la columna de distribución de FactInternetSales.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  

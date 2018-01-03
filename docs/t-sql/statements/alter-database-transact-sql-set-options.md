@@ -2,7 +2,7 @@
 title: MODIFICAR opciones de SET de base de datos (Transact-SQL) | Documentos de Microsoft
 description: "Obtenga información acerca de cómo establecer opciones de base de datos como el cifrado de optimización, automática, el almacén de consultas en un SQL Server y la base de datos de SQL Azure"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -384,11 +384,11 @@ SET
  El [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fuerza automáticamente el último plan buena conocido en el [!INCLUDE[tsql_md](../../includes/tsql_md.md)] donde nuevo plan SQL hace que las regresiones de rendimiento de las consultas. El [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuas supervisa el rendimiento de las consultas de la [!INCLUDE[tsql_md](../../includes/tsql_md.md)] consulta con el plan forzado. Si no hay mejoras de rendimiento, el [!INCLUDE[ssde_md](../../includes/ssde_md.md)] seguirá utilizando último plan buena conocida. Si no se detectan mejoras de rendimiento, la [!INCLUDE[ssde_md](../../includes/ssde_md.md)] generará un nuevo plan SQL. La instrucción se producirá un error si el almacén de consultas no está habilitado o si no está en *lectura y escritura* modo.   
 
  OFF  
- El [!INCLUDE[ssde_md](../../includes/ssde_md.md)] informa de posibles regresiones de rendimiento de consultas provocadas por cambios de plan SQL en [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vista. Sin embargo, estas recomendaciones no se aplican automáticamente. Usuario puede supervisar corregir identifican los problemas y recomendaciones activas aplicando [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencias de comandos que se muestran en la vista. Es el valor predeterminado.
+ El [!INCLUDE[ssde_md](../../includes/ssde_md.md)] informa de posibles regresiones de rendimiento de consultas provocadas por cambios de plan SQL en [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vista. Sin embargo, estas recomendaciones no se aplican automáticamente. Usuario puede supervisar corregir identifican los problemas y recomendaciones activas aplicando [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencias de comandos que se muestran en la vista. Este es el valor predeterminado.
 
  **\<change_tracking_option >:: =**  
   
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No está disponible en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Controla las opciones de seguimiento de cambios. Puede habilitar el seguimiento de cambios, establecer y cambiar opciones, y deshabilitar el seguimiento de cambios. Para ver ejemplos, consulte la sección de ejemplos más adelante en este tema.  
   
@@ -666,12 +666,12 @@ MULTI_USER
   
  **\<mixed_page_allocation_option >:: =**  
   
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)). No está disponible en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)). No está disponible en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  MIXED_PAGE_ALLOCATION {DESACTIVADO | EN} controles si la base de datos puede crear páginas iniciales con una extensión mixta para las primeras ocho páginas de una tabla o índice.  
   
  OFF  
- La base de datos siempre crea páginas iniciales usar extensiones uniformes. Es el valor predeterminado.  
+ La base de datos siempre crea páginas iniciales usar extensiones uniformes. Este es el valor predeterminado.  
   
  ON  
  La base de datos puede crear páginas iniciales con extensiones mixtas.  
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Controla si el almacén de consultas está habilitado en esta base de datos y también controla la eliminación del contenido del almacén de consultas.  
@@ -702,7 +702,7 @@ ON
  Habilita el almacén de consultas.  
   
 OFF  
- Deshabilita el almacén de consultas.  Es el valor predeterminado.   
+ Deshabilita el almacén de consultas.  Este es el valor predeterminado.   
   
 CLEAR  
  Quite el contenido del almacén de consultas.  
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | DESACTIVAR
   
  El estado de esta opción se puede determinar mediante el examen de la columna is_arithabort_on de la vista de catálogo sys.databases o la propiedad IsArithmeticAbortEnabled de la función DATABASEPROPERTYEX.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1123,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | DESACTIVAR
 |\<db_user_access_option >|Sí|Sí|  
 |\<db_update_option >|Sí|Sí|  
 |\<delayed_durability_option >|Sí|Sí|  
-|\<external_access_option >|Sí|No|  
-|\<cursor_option >|Sí|No|  
-|\<auto_option >|Sí|No|  
-|\<sql_option >|Sí|No|  
-|\<recovery_option >|Sí|No|  
-|\<target_recovery_time_option >|No|Sí|  
-|\<database_mirroring_option >|No|No|  
-|ALLOW_SNAPSHOT_ISOLATION|No|No|  
-|READ_COMMITTED_SNAPSHOT|No|Sí|  
+|\<external_access_option >|Sí|no|  
+|\<cursor_option >|Sí|no|  
+|\<auto_option >|Sí|no|  
+|\<sql_option >|Sí|no|  
+|\<recovery_option >|Sí|no|  
+|\<target_recovery_time_option >|no|Sí|  
+|\<database_mirroring_option >|no|no|  
+|ALLOW_SNAPSHOT_ISOLATION|no|no|  
+|READ_COMMITTED_SNAPSHOT|no|Sí|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sí|Sí|  
-|\<service_broker_option >|Sí|No|  
+|\<service_broker_option >|Sí|no|  
 |DATE_CORRELATION_OPTIMIZATION|Sí|Sí|  
 |\<parameterization_option >|Sí|Sí|  
 |\<change_tracking_option >|Sí|Sí|  
-|\<db_encryption >|Sí|No|  
+|\<db_encryption >|Sí|no|  
   
  La memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se borra si se establece alguna de las opciones siguientes:  
   
@@ -1223,7 +1223,7 @@ GO
   
  El conjunto de resultados muestra que el marco de aislamiento de instantánea está habilitado.  
   
- |name |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
  |AdventureWorks2012   |1                        | ON |  
   
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Habilitar el almacén de consultas  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  En el ejemplo siguiente se habilita el almacén de consultas y configura los parámetros de almacén de consultas.  
   

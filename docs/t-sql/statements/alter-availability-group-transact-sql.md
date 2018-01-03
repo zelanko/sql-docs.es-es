@@ -1,7 +1,7 @@
 ---
 title: GRUPO de disponibilidad de ALTER (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  Especifica el nombre del nuevo grupo de disponibilidad. *nombre_grupo* debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador y deben ser único en todos los grupos de disponibilidad del clúster de WSFC.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRINCIPAL | SECONDARY_ONLY | SECUNDARIO | NINGUNO}  
- Especifica una preferencia sobre cómo un trabajo de copia de seguridad debe evaluar la réplica principal cuando elige realizar copias de seguridad. Puede crear un script con un trabajo de copia de seguridad para que se tenga en cuenta la preferencia de copia de seguridad automatizada. Es importante entender que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas.  
+ Especifica una preferencia sobre cómo un trabajo de copia de seguridad debe evaluar la réplica principal cuando elige realizar copias de seguridad. Puede crear un script con un trabajo de copia de seguridad para que se tenga en cuenta la preferencia de copia de seguridad automatizada. Es importante entender que no se aplica la preferencia por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por lo que no tiene efecto en las copias de seguridad ad hoc.  
   
  Solo se admite en la réplica principal.  
   
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden considerar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
   
 > [!IMPORTANT]  
->  No se aplica el valor AUTOMATED_BACKUP_PREFERENCE. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. La configuración de preferencia de copia de seguridad automatizada no tiene ningún efecto sobre las copias de seguridad ad hoc. Para obtener más información, vea [Configurar copia de seguridad en réplicas de disponibilidad &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  No se aplica el valor AUTOMATED_BACKUP_PREFERENCE. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. La configuración de preferencia de copia de seguridad automatizada no influye en las copias de seguridad ad hoc. Para obtener más información, vea [Configurar copia de seguridad en réplicas de disponibilidad &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  Para ver la preferencia de copia de seguridad automatizada de un grupo de disponibilidad existente, seleccione la **automated_backup_preference** o **automated_backup_preference_desc** columna de la [ Sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) vista de catálogo. Además, [sys.fn_hadr_backup_is_preferred_replica &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) puede utilizarse para determinar la réplica de copia de seguridad preferida.  Esta función siempre devolverá 1 al menos para una de las réplicas, incluso aunque `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
@@ -302,7 +302,7 @@ ALTER AVAILABILITY GROUP group_name
 
    Para obtener más información, consulte [única réplica de configuración](../../linux/sql-server-linux-availability-group-ha.md).
     
- AVAILABILITY_MODE es obligatorio en la cláusula ADD REPLICA ON y opcional en la cláusula MODIFY REPLICA ON. Para obtener más información, vea [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ AVAILABILITY_MODE es obligatorio en la cláusula ADD REPLICA ON y opcional en la cláusula MODIFY REPLICA ON. Para obtener más información, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {AUTOMÁTICA | MANUAL}  
  Especifica el modo de conmutación por error de la réplica de disponibilidad que está definiendo.  
@@ -337,7 +337,7 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 indica que esta réplica de disponibilidad nunca se elegirá para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  
   
- Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Especifica la configuración específica del rol que se aplicará si esta réplica de disponibilidad posee actualmente el rol secundario (es decir, siempre que sea una réplica secundaria). Dentro de los paréntesis, especifique una o ambas de las opciones de rol secundario. Si se especifican ambas, utilice una lista separada por comas.  
@@ -601,8 +601,8 @@ ALTER AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permisos  
- Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
+### <a name="permissions"></a>Permissions  
+ Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  También requiere el permiso ALTER ANY DATABASE.   
   
 ## <a name="examples"></a>Ejemplos  
   

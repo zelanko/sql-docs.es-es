@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** devuelve la siguiente información  
   
-|Columna|Data type|Description|  
+|columna|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica la marca de tiempo de creación de la fila. Cada fila de un conjunto de filas único tiene la misma marca de tiempo.|  
 |**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente o para un grupo de disponibilidad AlwaysOn de nivel de instancia:<br /><br /> instancia<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**nombre_componente**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nombre del grupo de disponibilidad >*|  
-|**estado**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: desconocido<br /><br /> 1: correcto<br /><br /> 2: advertencia<br /><br /> 3: error|  
-|**datos**|**varchar (max)**|Especifica los datos que son específicos del componente.|  
+|**data**|**varchar (max)**|Especifica los datos que son específicos del componente.|  
   
  Estas son las descripciones de los cinco componentes:  
   
@@ -107,7 +107,7 @@ es necesario contar con el permiso VIEW SERVER STATE en el servidor.
   
 ## <a name="examples"></a>Ejemplos  
 Se recomienda utilizar sesiones extendidas para capturar la información de estado y guardarla en un archivo que se encuentre fuera de SQL Server. Por consiguiente, todavía puede acceder a ella si hay un error. En el siguiente ejemplo se guarda el resultado de una sesión de eventos en un archivo:  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 La consulta de ejemplo siguiente lee el archivo de registro de sesión extendido:  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 En el siguiente ejemplo se captura el resultado de sp_server_diagnostics en una tabla en un modo no repetido:  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-La consulta de ejemplo siguiente lee el resumen de la tabla de salida:  
-```tsql  
+En la consulta de ejemplo siguiente se lee la salida de resumen de la tabla:  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-La consulta de ejemplo siguiente lee parte de los resultados detallados del cada componente en la tabla:  
-```tsql  
+En la consulta de ejemplo siguiente se leen parte de los resultados detallados de cada componente de la tabla:  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

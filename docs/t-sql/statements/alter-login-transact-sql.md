@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0bc7681bdb3404f3b6114d0725cbed7ef8f388e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -262,28 +262,28 @@ En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], datos de inicio de sesión nec
 ### <a name="a-enabling-a-disabled-login"></a>A. Habilitar un inicio de sesión deshabilitado  
  En el ejemplo siguiente se habilita el inicio de sesión `Mary5`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### <a name="b-changing-the-password-of-a-login"></a>B. Cambiar la contraseña de un inicio de sesión  
  En el ejemplo siguiente se cambia la contraseña del inicio de sesión `Mary5` a una contraseña segura.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### <a name="c-changing-the-name-of-a-login"></a>C. Cambiar el nombre de un inicio de sesión  
  En el ejemplo siguiente se cambia el nombre del inicio de sesión `Mary5` a `John2`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### <a name="d-mapping-a-login-to-a-credential"></a>D. Asignar un inicio de sesión a una credencial  
  En el ejemplo siguiente se asigna el inicio de sesión `John2` a la credencial `Custodian04`.  
   
-```tsql  
+```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
@@ -293,7 +293,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -303,7 +303,7 @@ GO
  Para desbloquear un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute la instrucción siguiente, reemplazando **** con la contraseña de cuenta deseada.  
   
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
 
 GO  
@@ -311,7 +311,7 @@ GO
   
  Para desbloquear un inicio de sesión sin cambiar la contraseña, desactive la directiva de comprobación y, a continuación, inicie sesión de nuevo.  
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -322,7 +322,7 @@ GO
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  

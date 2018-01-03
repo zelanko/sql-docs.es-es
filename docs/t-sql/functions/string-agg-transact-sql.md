@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -70,8 +70,8 @@ Tipo de valor devuelto es depende en el primer argumento (expresión). Si el arg
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1.. 4000) |NVARCHAR (4000) |
-|VARCHAR (1.. 8000) |VARCHAR(8000) |
+|NVARCHAR (1. 4000) |NVARCHAR (4000) |
+|VARCHAR (1. 8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
 
 
@@ -90,7 +90,7 @@ Se omiten los valores NULL y no se agrega el separador correspondiente. Para dev
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generar la lista de nombres separados en las líneas nuevas 
 En el ejemplo siguiente se genera una lista de nombres en una celda individual de resultados, separados por retornos de carro.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -98,7 +98,7 @@ FROM Person.Person;
 
 |csv | 
 |--- |
-|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
+|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />… | 
 
 `NULL`valores que se encuentran en `name` celdas no se devuelven en el resultado.   
 > [!NOTE]  
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Generar la lista de nombres separados por coma sin valores NULL   
 En el ejemplo siguiente se reemplaza los valores null con n '/' y devuelve los nombres separados por comas en una celda individual de resultados.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. Generar valores separados por comas 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -132,7 +132,7 @@ FROM Person.Person;
 
 |nombres | 
 |--- |
-|Ken Sánchez (8 de febrero de 2003 12:00 A.M.) <br />Terri Duffy (24 de febrero de 2002 12:00 A.M.) <br />Roberto Tamburello (5 de diciembre de 2001 12:00 A.M.) <br />Rob Walters (29 de diciembre de 2001 12:00 A.M.) <br />... |
+|Ken Sánchez (8 de febrero de 2003 12:00 A.M.) <br />Terri Duffy (24 de febrero de 2002 12:00 A.M.) <br />Roberto Tamburello (5 de diciembre de 2001 12:00 A.M.) <br />Rob Walters (29 de diciembre de 2001 12:00 A.M.) <br />… |
 
 > [!NOTE]  
 >  Si utiliza el Editor de consultas de Management Studio, el **resultados a cuadrícula** opción no puede implementar el retorno de carro. Cambie a **resultados a texto** ver el resultado establecido correctamente.   
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Devolver artículos de noticias con etiquetas relacionadas 
 
 Artículo y sus etiquetas se dividen en tablas diferentes. Programador desea devolver una fila por cada artículo con todas las etiquetas asociadas. Uso de consulta siguiente: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Generar la lista de mensajes de correo electrónico por ciudades
 
 La siguiente consulta busca las direcciones de correo electrónico de los empleados y los agrupa por ciudades: 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ Mensajes de correo electrónico se devuelven en los correos electrónicos de col
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Generar una lista ordenada de mensajes de correo electrónico por ciudades   
    
 Similar al ejemplo anterior, la siguiente consulta busca las direcciones de correo electrónico de los empleados, los agrupa por ciudad y ordena alfabéticamente los correos electrónicos:   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 

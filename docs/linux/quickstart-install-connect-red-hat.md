@@ -1,6 +1,6 @@
 ---
 title: "Introducción a SQL Server 2017 en Red Hat Enterprise Linux | Documentos de Microsoft"
-description: "Este tutorial de inicio rápido muestra cómo instalar SQL Server 2017 en Red Hat Enterprise Linux y, a continuación, crear y consultar una base de datos con sqlcmd."
+description: "Este tutorial rápido muestra cómo instalar SQL Server 2017 en Red Hat Enterprise Linux y, a continuación, crear y consultar una base de datos con sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 1826b003083d374aa052943016296079491ae158
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Instalar a SQL Server y crear una base de datos en Red Hat
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-En este tutorial de inicio rápido, primero instalar SQL Server 2017 en Red Hat Enterprise Linux (RHEL) 7.3 +. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
+En este tutorial rápido, primero instalar SQL Server 2017 en Red Hat Enterprise Linux (RHEL) 7.3 +. A continuación, conecte con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
 > [!TIP]
 > Este tutorial requiere la intervención del usuario y una conexión a internet. Si está interesado en el [desatendida](sql-server-linux-setup.md#unattended) o [sin conexión](sql-server-linux-setup.md#offline) procedimientos de instalación, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Debe tener un 7.3 RHEL o máquina 7.4 con **al menos 2 GB** de memoria.
 
@@ -117,6 +117,11 @@ Para crear una base de datos, debe conectarse con una herramienta que se puede e
    ```
 
 > [!TIP]
-> **Sqlcmd** es simplemente una herramienta para conectarse a SQL Server para ejecutar consultas y realizar tareas de administración y desarrollo. Otras herramientas incluyen [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) y [código de Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** es simplemente una herramienta para conectarse a SQL Server para ejecutar consultas y realizar tareas de administración y desarrollo. Otras herramientas incluyen:
+>
+> * [Studio de operaciones de SQL Server (versión preliminar)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Código de Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [MSSQL-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

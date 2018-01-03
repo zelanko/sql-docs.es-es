@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +234,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilizar CREATE STATISTICS con SAMPLE number PERCENT  
  En el ejemplo siguiente, se crean las estadísticas `ContactMail1` a partir de una muestra aleatoria del 5 por ciento de las columnas `BusinessEntityID` y `EmailPromotion` de la tabla `Contact` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +243,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. Utilizar CREATE STATISTICS con FULLSCAN y NORECOMPUTE  
  En el ejemplo siguiente se crean las estadísticas `ContactMail2` para todas las filas de las columnas `BusinessEntityID` y `EmailPromotion` de la tabla `Contact` y se deshabilita la posibilidad de volver a calcular las estadísticas automáticamente.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +252,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. Utilizar CREATE STATISTICS para crear estadísticas filtradas  
  En el ejemplo siguiente se crean las estadísticas filtradas `ContactPromotion1`. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestrea el 50 por ciento de los datos y, a continuación, selecciona las filas cuyo valor `EmailPromotion` es igual a 2.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +265,7 @@ GO
   
  Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa datos de la tabla externa en una tabla temporal para crear estadísticas, la opción de examen completo tardará mucho más tiempo. Para una tabla grande, el método de muestreo predeterminado es generalmente es suficiente.  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +276,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilizar CREATE STATISTICS con FULLSCAN y PERSIST_SAMPLE_PERCENT  
  En el ejemplo siguiente se crea el `ContactMail2` estadísticas para todas las filas de la `BusinessEntityID` y `EmailPromotion` columnas de la `Contact` de tabla y establece un porcentaje de muestreo del 100 por ciento de todas las actualizaciones subsiguientes que realice explícitamente no especifican un muestreo porcentaje.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +287,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. Crear estadísticas en dos columnas  
  En el ejemplo siguiente se crea el `CustomerStats1` estadísticas, tomando como base la `CustomerKey` y `EmailAddress` columnas de la `DimCustomer` tabla. Las estadísticas se crean en función de un muestreo estadísticamente significativo de las filas de la `Customer` tabla.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. Crear estadísticas mediante un examen completo  
  En el ejemplo siguiente se crea el `CustomerStatsFullScan` estadísticas, en función de examen de todas las filas en el `DimCustomer` tabla.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +302,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Especifica el porcentaje de ejemplo para crear estadísticas  
  En el ejemplo siguiente se crea el `CustomerStatsSampleScan` estadísticas, en función de examen el 50 por ciento de las filas de la `DimCustomer` tabla.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  

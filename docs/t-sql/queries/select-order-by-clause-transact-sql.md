@@ -1,7 +1,7 @@
 ---
 title: "ORDER BY (cláusula de Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -44,11 +44,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Seleccione - ORDER BY (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,9 +61,12 @@ ms.lasthandoff: 11/17/2017
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY no se admite en SELECT / INTO o las instrucciones de crear tabla AS seleccione (CTAS) en [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## <a name="syntax"></a>Sintaxis  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -131,7 +134,7 @@ ORDER BY order_by_expression
  En los planes de ejecución de consulta, se muestra el valor de recuento de filas de desplazamiento en el **filas** o **arriba** atributo del operador de consulta TOP.  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Evite especificar enteros en la cláusula ORDER BY como representaciones posicionales de las columnas en la lista de selección. Por ejemplo, aunque una instrucción como `SELECT ProductID, Name FROM Production.Production ORDER BY 2` es válida, otros usuarios no la entenderán tan bien como si especificase el nombre de la columna real. Además, para realizar cambios en la lista de selección, como modificar el orden de las columnas o agregar otras nuevas, será preciso modificar la cláusula ORDER BY a fin de evitar resultados inesperados.  
+ Evite especificar enteros en la cláusula ORDER BY como representaciones posicionales de las columnas en la lista de selección. Por ejemplo, aunque una instrucción como `SELECT ProductID, Name FROM Production.Production ORDER BY 2` es válida, otros usuarios no la entenderán tan bien como si especificase el nombre de la columna real. Además, cambia a la lista de selección, como cambiar el orden de las columnas o agregar nuevas columnas, es necesario modificando la cláusula ORDER BY con el fin de evitar resultados inesperados.  
   
  En la parte superior seleccione (*N*) (instrucción), utilice siempre una cláusula ORDER BY. Esta es la única manera de indicar previsiblemente a qué filas afecta TOP. Para obtener más información, vea [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +162,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Además, cuando la instrucción incluye un operador UNION, EXCEPT o INTERSECT, los nombres o los alias de columna deben ser los especificados en la lista de selección de la primera consulta (lado izquierdo).  
+ Además, cuando la instrucción incluye una unión, EXCEPT o INTERSECT operador, los nombres de columna o alias de columna deben especificarse en la lista de selección de la primera consulta (izquierda).  
   
- En una consulta que utiliza los operadores UNION, INTERSECT o EXCEPT, ORDER BY se permite únicamente al final de la instrucción. Esta restricción se aplica únicamente cuando se especifica UNION, EXCEPT e INTERSECT en una consulta de nivel superior y no en una subconsulta. Vea la sección Ejemplos que aparece más adelante.  
+ En una consulta que utiliza los operadores UNION, INTERSECT o EXCEPT, ORDER BY se permite únicamente al final de la instrucción. Esta restricción se aplica únicamente cuando especifica UNION, EXCEPT e INTERSECT en una consulta de nivel superior y no en una subconsulta. Vea la sección Ejemplos que aparece más adelante.  
   
  La cláusula ORDER BY no es válida en vistas, funciones insertadas, tablas derivadas y subconsultas, a menos que se especifiquen también las cláusulas TOP u OFFSET y FETCH. Cuando ORDER BY se utiliza en estos objetos, la cláusula únicamente se utiliza para determinar las filas devueltas por la cláusula TOP o las cláusulas OFFSET Y FETCH. La cláusula ORDER BY no garantiza resultados ordenados cuando se consulten estos constructores, a menos que también se especifique ORDER BY en la misma consulta.  
   
@@ -267,8 +270,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. Especificar un orden ascendente  
- En el siguiente ejemplo se ordena el conjunto de resultados en orden ascendente según la columna `Name`. Observe que los caracteres están ordenados alfabéticamente, no numéricamente. Es decir, 10 se ordena antes que 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Especificar un orden ascendente  
+ En el siguiente ejemplo se ordena el conjunto de resultados en orden ascendente según la columna `Name`. Los caracteres se ordenan alfabéticamente, no numéricamente. Es decir, 10 se ordena antes que 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +316,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>Especificar un orden condicional  
- En los ejemplos siguientes se utiliza la expresión CASE en una cláusula ORDER BY para determinar de manera condicional el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'United States' y según la columna `CountryRegionName` en las demás filas.  
+ Los ejemplos siguientes usan la expresión CASE en una cláusula ORDER BY para determinar de forma condicional el criterio de ordenación de las filas según un valor de la columna especificada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'United States' y según la columna `CountryRegionName` en las demás filas.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

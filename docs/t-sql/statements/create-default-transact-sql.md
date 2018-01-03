@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc9282956afda2a41751dd57c2447da6314fb528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. Crear un valor predeterminado de caracteres de tipo sencillo  
  En el siguiente ejemplo se crea un valor predeterminado de caracteres denominado `unknown`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,7 +108,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Como no existe un valor predeterminado llamado `phonedflt`, se producirá un error en la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este ejemplo solo tiene propósitos ilustrativos.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  

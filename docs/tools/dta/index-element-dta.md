@@ -3,7 +3,7 @@ title: "Índice de elemento (DTA) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13ff4535227d924b5da7bc27a36f5ecf082ba60f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene información acerca de un índice que desea crear o quitar una configuración especificada por el usuario.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo Index|Tipo de datos|Descripción|  
+|Atributo Index|Tipo de datos|Description|  
 |---------------------|---------------|-----------------|  
 |**Clúster**|**boolean**|Opcional. Especifica un índice clúster. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
 |**Único**|**boolean**|Opcional. Especifica un índice único. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Unique="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
